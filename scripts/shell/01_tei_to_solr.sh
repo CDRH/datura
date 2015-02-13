@@ -7,7 +7,7 @@ PROJECTNAME=$1
 if  [ $PROJECTNAME ]; then
 
   TEIPATH=("/var/www/html/data/projects/"$PROJECTNAME"/tei/")
-  XSLTLOCATION="/var/www/html/data/scripts/xslt/cdrh_to_solr/solr_transform.xsl"
+  XSLTLOCATION="/var/www/html/data/scripts/xslt/cdrh_to_solr/solr_transform_tei.xsl"
   OUTPUT=("/var/www/html/data/solr/"$PROJECTNAME"/")
 
   for i in `ls $TEIPATH`; do

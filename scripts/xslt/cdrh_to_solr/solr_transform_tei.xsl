@@ -3,8 +3,95 @@
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/">
 	<xsl:output indent="yes" omit-xml-declaration="yes"/>
-
 	
+	<xsl:param name="date"/>
+	<xsl:param name="string"/>
+	<xsl:param name="site_location">http://rosie.unl.edu/transmississippi/</xsl:param>
+	<xsl:param name="file_location">http://rosie.unl.edu/data/projects/</xsl:param>
+	<xsl:include href="lib/common.xsl"/>
+	
+	<xsl:template match="/" exclude-result-prefixes="#all">
+		<xsl:variable name="filename" select="tokenize(base-uri(.), '/')[last()]"/>
+		<!-- The part of the url after the main document structure and before the filename. 
+			Collected so we can link to files, even if they are nested, i.e. whitmanarchive/manuscripts -->
+		<xsl:variable name="slug" select="substring-before(substring-before(substring-after(base-uri(.),'data/projects/'),$filename),'/')"/>
+		
+		<!-- Split the filename using '\.' -->
+		<xsl:variable name="filenamepart" select="substring-before($filename, '.xml')"/>
+		
+		<!-- Set file type, based on containing folder -->
+		<!--<xsl:variable name="type">
+			<xsl:variable name="path">
+				<xsl:text>data/projects/</xsl:text>
+				<xsl:value-of select="$slug"></xsl:value-of>
+				<xsl:text>/</xsl:text>
+			</xsl:variable>
+			<xsl:value-of select="substring-before(substring-before(substring-after(base-uri(.),$path),$filename), '/')"/>
+		</xsl:variable>-->
+		
+		
+		<xsl:call-template name="tei_template">
+			<xsl:with-param name="filenamepart" select="$filenamepart"/>
+			<xsl:with-param name="slug" select="$slug"/>
+		</xsl:call-template>
+		
+	</xsl:template>
+
+	<!-- ==============================
+	resource identification 
+	===================================-->
+	
+	<!-- id -->
+	<!-- slug -->
+	<!-- project -->
+	<!-- uri -->
+	<!-- uriXML -->
+	<!-- uriHTML -->
+	<!-- dataType --> <!-- tei, dublin_core, csv, vra_core -->
+	
+	
+	<!-- ==============================
+	Dublin Core 
+	===================================-->
+	
+	<!-- title -->
+	<!-- titleSort -->
+	<!-- creator -->
+	<!-- creators -->
+	<!-- subject -->
+	<!-- subjects -->
+	<!-- description -->
+	<!-- publisher -->
+	<!-- contributor -->
+	<!-- contributors -->
+	<!-- date -->
+	<!-- dateDisplay -->
+	<!-- type -->
+	<!-- format -->
+	<!-- medium -->
+	<!-- extent -->
+	<!-- language -->
+	<!-- relation -->
+	<!-- coverage -->
+	<!-- source -->
+	<!-- rightsHolder -->
+	<!-- rights -->
+	<!-- rightsURI -->
+	
+	
+	
+	
+	<!-- ==============================
+	CDRH specific 
+	===================================-->
+	
+	<!-- category -->
+	<!-- subCategory -->
+	<!-- topic -->
+	<!-- keywords -->
+	<!-- people -->
+	<!-- places -->
+	<!-- works -->
 
 	<xsl:template name="tei_template" exclude-result-prefixes="#all">
 		<xsl:param name="filenamepart"/>
@@ -12,15 +99,68 @@
 		
 		<add>
 			<doc>
+				
+				<!-- ==============================
+				resource identification 
+				===================================-->
+				
+				<!-- id -->
+				
 				<field name="id">
 					<xsl:value-of select="$filenamepart"/>
 				</field>
 				
+				<!-- slug -->
+				
 				<field name="slug">
-					<xsl:value-of select="slug"/>
+					<xsl:value-of select="$slug"/>
 				</field>
 				
-				<field name="title">
+				<!-- project -->
+				
+				<field name="project">
+					<xsl:value-of select="/TEI/teiHeader/fileDesc/publicationStmt/authority[1]"/>
+				</field>
+				
+				<!-- uri -->
+				
+				<field name="uri"><xsl:value-of select="$site_location"/><xsl:text>files/</xsl:text><xsl:value-of select="$filenamepart"/>.html</field>
+				
+				<!-- uriXML -->
+				
+				<field name="uriXML">
+					<xsl:value-of select="$file_location"/>
+					<xsl:value-of select="$slug"/>
+					<xsl:text>/tei/</xsl:text>
+					<xsl:value-of select="$filenamepart"/>
+					<xsl:text>.xml</xsl:text>
+				</field>
+				
+				<!-- uriHTML -->
+				
+				<field name="uriHTML">
+					<xsl:value-of select="$file_location"/>
+					<xsl:value-of select="$slug"/>
+					<xsl:text>/html/</xsl:text>
+					<xsl:value-of select="$filenamepart"/>
+					<xsl:text>.xml.txt</xsl:text>
+				</field>
+				
+				<!-- dataType -->
+				
+				<field name="dataType">
+					<xsl:text>tei</xsl:text>
+				</field>
+				
+				
+				<!-- ==============================
+				Dublin Core 
+				===================================-->
+				
+				<!-- title -->
+				
+				<!-- set title -->
+				<xsl:variable name="title">
 					<xsl:choose>
 						<xsl:when test="/TEI/teiHeader/fileDesc/titleStmt/title[@type='main']">
 							<xsl:value-of select="/TEI/teiHeader/fileDesc/titleStmt/title[@type='main'][1]"/>
@@ -29,19 +169,25 @@
 							<xsl:value-of select="/TEI/teiHeader/fileDesc/titleStmt/title[1]"/>
 						</xsl:otherwise>
 					</xsl:choose>
+				</xsl:variable>
+				
+				<field name="title">
+					<xsl:value-of select="$title"/>
 				</field>
 				
-				<!-- alternate title, used for display and sorting purposes -->
-
+				<!-- titleSort -->
+				
 				<field name="titleSort">
 					<xsl:call-template name="normalize_name">
 						<xsl:with-param name="string">
-									<xsl:value-of select="/TEI/teiHeader/fileDesc/titleStmt/title[@type='main']"/>
+							<xsl:value-of select="$title"/>
 						</xsl:with-param>
 					</xsl:call-template>
 				</field>
 				
-				<!-- Creators -->
+				<!-- creator -->
+				<!-- creators -->
+				
 				<xsl:choose>
 					<!-- When handled in header -->
 					<xsl:when test="/TEI/teiHeader/fileDesc/titleStmt/author != ''">
@@ -80,11 +226,13 @@
 							</field>
 						</xsl:for-each-group>
 					</xsl:when>
-
+					
 					<xsl:otherwise></xsl:otherwise>
 				</xsl:choose>
 				
-				
+				<!-- subject -->
+				<!-- subjects -->
+				<!-- description -->
 				<!-- publisher -->
 				
 				<xsl:if test="/TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/publisher[1] and /TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/publisher[1] != ''">
@@ -93,6 +241,7 @@
 					</field>
 				</xsl:if>
 				
+				<!-- contributor -->
 				<!-- contributors -->
 				
 				<!-- All in one field -->
@@ -110,6 +259,8 @@
 					</field>
 				</xsl:for-each-group>
 				
+				<!-- date -->
+				<!-- dateDisplay -->
 				
 				<!-- date -->
 				
@@ -131,8 +282,8 @@
 						i.e. pulling all the things that happened on a certain date -->
 					
 					
-						
-						<!--<xsl:choose>
+					
+					<!--<xsl:choose>
 							<!-\- Only have an exact date when document has an exact date. Used when pulling documents from a certain date -\->
 							<xsl:when test="translate($doc_date, '1234567890-', '') = '' and string-length(dc:date) = 10">
 								<field name="datesExact">
@@ -144,7 +295,7 @@
 							</xsl:when>
 							<xsl:otherwise><!-\- blank for no date -\-></xsl:otherwise>
 						</xsl:choose>-->
-						
+					
 					
 					
 					<field name="dateDisplay">
@@ -156,6 +307,7 @@
 					
 				</xsl:if>
 				
+				<!-- type -->
 				
 				<!-- format -->
 				
@@ -176,7 +328,14 @@
 					</xsl:choose>
 				</field>
 				
-				<!-- repository -->
+				<!-- medium -->
+				<!-- extent -->
+				
+				<!-- language -->
+				<!-- relation -->
+				<!-- coverage -->
+				<!-- source -->
+				<!-- rightsHolder -->
 				
 				<xsl:if test="/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/repository[1] != ''">
 					<field name="source">
@@ -184,22 +343,16 @@
 					</field>
 				</xsl:if>
 				
-				<!-- sourceURI (if applicable) -->
+				<!-- rights -->
+				<!-- rightsURI -->
 				
-				<!-- project/related 
-				There's probably a better place for this, but this will do for now. 
-				The Spec seems to say that related should be used for related files. -->
 				
-				<field name="related">
-					<xsl:value-of select="/TEI/teiHeader/fileDesc/publicationStmt/authority"></xsl:value-of>
-				</field>
+				<!-- ==============================
+				Other elements 
+				===================================-->
 				
-				<!-- ==================== -->
-				
-				<!-- CDRH fields -->
-				
-				<!-- Principal Investigators -->
-				<!-- Not in Dublin core, but I wanted to record this info -->
+				<!-- principalInvestigator -->
+				<!-- principalInvestigators -->
 				
 				<!-- All in one field -->
 				<field name="principalInvestigator">
@@ -216,15 +369,33 @@
 					</field>
 				</xsl:for-each-group>
 				
+				<!-- place -->
+				<!-- placeName -->
+				
+				
+				
+				
+				<!-- ==============================
+				CDRH specific 
+				===================================-->
+				
 				<!-- category -->
 				
-				<xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='category'][1]/term">
-					<xsl:if test="normalize-space(.) != ''">
-						<field name="category">
-							<xsl:value-of select="."/>
-						</field>
-					</xsl:if>
-				</xsl:for-each>
+				<xsl:choose>
+					<xsl:when test="/TEI/teiHeader/profileDesc/textClass/keywords[@n='category'][1]/term">
+						<xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='category'][1]/term">
+							<xsl:if test="normalize-space(.) != ''">
+								<field name="category">
+									<xsl:value-of select="."/>
+								</field>
+							</xsl:if>
+						</xsl:for-each>
+					</xsl:when>
+					<xsl:otherwise>
+						<field name="category">texts</field>
+					</xsl:otherwise>
+				</xsl:choose>
+				
 				
 				<!-- subCategory -->
 				
@@ -236,7 +407,9 @@
 					</xsl:if>
 				</xsl:for-each>
 				
+				
 				<!-- topic -->
+				
 				<xsl:for-each
 					select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='topic']/term">
 					<xsl:if test="normalize-space(.) != ''">
@@ -247,6 +420,7 @@
 				</xsl:for-each>
 				
 				<!-- keywords -->
+				
 				<xsl:for-each
 					select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='keywords']/term">
 					<xsl:if test="normalize-space(.) != ''">
@@ -257,6 +431,7 @@
 				</xsl:for-each>
 				
 				<!-- people -->
+				
 				<xsl:for-each
 					select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='people']/term">
 					<xsl:if test="normalize-space(.) != ''">
@@ -267,6 +442,7 @@
 				</xsl:for-each>
 				
 				<!-- places -->
+				
 				<xsl:for-each
 					select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='places']/term">
 					<xsl:if test="normalize-space(.) != ''">
@@ -277,6 +453,7 @@
 				</xsl:for-each>
 				
 				<!-- works -->
+				
 				<xsl:for-each
 					select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='works']/term">
 					<xsl:if test="normalize-space(.) != ''">
@@ -285,6 +462,8 @@
 						</field>
 					</xsl:if>
 				</xsl:for-each>
+				
+			
 				
 				<!-- text -->
 				

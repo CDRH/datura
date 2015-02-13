@@ -6,16 +6,16 @@ PROJECTNAME=$1
 
 if  [ $PROJECTNAME ]; then
 
-  CSVXMLPATH=("/var/www/html/data/projects/"$PROJECTNAME"/spreadsheets/xml/")
-  SOLRFILELOCATION=("/var/www/html/data/solr/"$PROJECTNAME"/")
-  XSLTLOCATION=("/var/www/html/data/scripts/xslt/cdrh_csv_solr_to_html/solr_xml_to_html.xsl")
-  OUTPUT=("/var/www/html/data/projects/"$PROJECTNAME"/html/")
+  FILELOCATION=("/var/www/html/data/projects/"$PROJECTNAME"/spreadsheets/xml/")
+  XSLTLOCATION=("/var/www/html/data/projects/"$PROJECTNAME"/spreadsheets/scripts/csvXML2HTML.xsl")
+  #OUTPUT=("/var/www/html/data/projects/"$PROJECTNAME"/html/")
 
-  for i in `ls $CSVXMLPATH`; do
+  for i in `ls $FILELOCATION`; do
 
   echo "Now converting ${i} "
 	
-  java -jar /var/lib/saxon/saxon9he.jar $SOLRFILELOCATION${i} $XSLTLOCATION > $OUTPUT${i}
+	#java -jar /var/lib/saxon/saxon9he.jar $FILELOCATION${i} $XSLTLOCATION > $OUTPUT${i}
+  java -jar /var/lib/saxon/saxon9he.jar -ext:on $FILELOCATION${i} $XSLTLOCATION
  
   done; 
 

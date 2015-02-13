@@ -14,7 +14,7 @@ if  [ $PROJECTNAME ]; then
 
   echo "Now converting ${i} "
 	
-  java -jar /var/lib/saxon/saxon9he.jar $TEIPATH${i} $XSLTLOCATION > $OUTPUT${i}
+  java -jar /var/lib/saxon/saxon9he.jar $TEIPATH${i} $XSLTLOCATION > $OUTPUT${i}.txt
  
   done; 
 

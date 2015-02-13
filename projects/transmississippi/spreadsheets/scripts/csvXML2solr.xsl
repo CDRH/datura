@@ -6,8 +6,20 @@
 
     <xsl:output indent="yes" omit-xml-declaration="yes"/>
     
+    
+    
     <xsl:param name="date"/>
     <xsl:param name="string"/>
+    <xsl:param name="site_location">http://rosie.unl.edu/transmississippi/</xsl:param>
+    <xsl:param name="file_location">http://rosie.unl.edu/data/projects/</xsl:param>
+    
+    <xsl:variable name="filename" select="tokenize(base-uri(.), '/')[last()]"/>
+    <!-- The part of the url after the main document structure and before the filename. 
+			Collected so we can link to files, even if they are nested, i.e. whitmanarchive/manuscripts -->
+    <xsl:variable name="slug" select="substring-before(substring-before(substring-after(base-uri(.),'data/projects/'),$filename),'/')"/>
+    
+    <!-- Split the filename using '\.' -->
+    <xsl:variable name="filenamepart" select="substring-before($filename, '.xml')"/>
     
     <!-- I used this online converter with the default options to get the XML.
     http://www.convertcsv.com/csv-to-xml.htm
@@ -23,6 +35,8 @@
     <!-- project -->
     <!-- uri -->
     <!-- uriXML -->
+    <!-- uriHTML -->
+    <!-- dataType -->
     
     
     <!-- ==============================
@@ -72,8 +86,6 @@
     <!-- people -->
     <!-- places -->
     <!-- works -->
-    
-    <xsl:variable name="slug"><xsl:text>transmississippi_test</xsl:text></xsl:variable>
 
     <xsl:template match="/">
 
@@ -83,6 +95,22 @@
                 
                 <xsl:if test="id != ''">
                 <doc>
+                    
+                    <!-- ==============================
+	               Project specific dynamic fields 
+	               ===================================-->
+                    
+                    <xsl:if test="pages != ''">
+                        <field name="pages_i">
+                            <xsl:value-of select="pages"/>
+                        </field>
+                    </xsl:if>
+                    
+                    <xsl:if test="collection != ''">
+                        <field name="collection_s">
+                            <xsl:value-of select="collection"/>
+                        </field>
+                    </xsl:if>
                     
                     <!-- ==============================
 	               resource identification 
@@ -103,10 +131,33 @@
                     <field name="project"><xsl:text>Trans-Mississippi and International Exposition</xsl:text></field>
                     
                     <!-- uri-->
-                    <field name="uri">http://trans-mississippi.unl.edu/photographs/view/<xsl:value-of select="id"/>.html</field>
+                    <field name="uri">http://trans-mississippi.unl.edu/files/<xsl:value-of select="id"/>.html</field>
                     
-                    <!-- uriXML-->
-                    <!--<field name="uriXML">http://trans-mississippi.unl.edu/memorabilia/view/<xsl:value-of select="id"/>.xml</field>-->
+                    <!-- uriXML -->
+                    
+                    <!--<field name="uriXML">
+                        <xsl:value-of select="$file_location"/>
+                        <xsl:value-of select="$slug"/>
+                        <xsl:text>/tei/</xsl:text>
+                        <xsl:value-of select="$filenamepart"/>
+                        <xsl:text>.xml</xsl:text>
+                    </field>-->
+                    
+                    <!-- uriHTML -->
+                    
+                    <field name="uriHTML">
+                        <xsl:value-of select="$file_location"/>
+                        <xsl:value-of select="$slug"/>
+                        <xsl:text>/html/</xsl:text>
+                        <xsl:value-of select="$filenamepart"/>
+                        <xsl:text>.xml.txt</xsl:text>
+                    </field>
+                    
+                    <!-- dataType -->
+                    
+                    <field name="dataType">
+                        <xsl:text>csv</xsl:text>
+                    </field>
                     
                     
                     <!-- ==============================
@@ -171,11 +222,21 @@
                     
                     <!-- contributors -->
                     <!-- date -->
+                    
+                    <xsl:if test="date != ''">
+                        <field name="date">
+                            <xsl:value-of select="dateNormalized"/>
+                            <xsl:text>T00:00:00Z</xsl:text>
+                        </field>
+                    </xsl:if>
+                    
                     <!-- dateDisplay -->
                     
-                    <field name="dateDisplay">
-                        <xsl:value-of select="date"/>
-                    </field>
+                    <xsl:if test="dateDisplay != ''">
+                        <field name="dateDisplay">
+                            <xsl:value-of select="date"/>
+                         </field>
+                    </xsl:if>
                     
                     <!-- type -->
                     <!-- format -->
@@ -187,6 +248,18 @@
                    
                         <xsl:value-of select="extent_size"/>
                     </field>-->
+                    
+                    <!-- medium -->
+                    
+                    <field name="medium">
+                        <xsl:value-of select="medium"/>
+                    </field>
+                    
+                    <!-- extent -->
+                    
+                    <field name="extent">
+                        <xsl:value-of select="size"/>
+                    </field>
                     
                     <!-- language -->
                     
@@ -264,6 +337,12 @@
                     
                     <!-- topic -->
                     <!-- keywords -->
+                    
+                    <xsl:if test="keywords != ''">
+                        <xsl:for-each select="tokenize(keywords, ',')">
+                            <field name="keywords"><xsl:value-of select="normalize-space(.)"></xsl:value-of></field>
+                        </xsl:for-each>                        
+                    </xsl:if>
                     <!-- people -->
                     <!-- places -->
                     <!-- works -->
