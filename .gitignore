@@ -1,1 +1,5 @@
 **/config.xsl
+# ignore yml files
+**/*.yml
+# except those yml files that are examples
+!**/*.example.yml
