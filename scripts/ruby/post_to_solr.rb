@@ -5,88 +5,29 @@
 # Post to Solr  #
 #################
 
-require 'optparse'
-require 'yaml'
-require 'net/http'
+require 'net/http'  # used by helpers.rb for http request
+require 'optparse'  # used by parser.rb for parameter handling
+require 'yaml'      # used to helpers.rb to read config files
+require_relative 'helpers.rb'
+require_relative 'parser.rb'
+require_relative 'transformer.rb'
 # TODO might be nice to use ansicolor gem for terminal output
 
-######################
-# Handle Parameters  #
-######################
+# directory containing this script
+dir = File.dirname(__FILE__)
 
-usage = "Usage: ruby post_to_solr.rb [project] -[options]..."
+# handle the incoming command parameters (-f, -h, etc)
+options = handle_parameters
 
-options = {}  # will hold all the options passed in by user
-
-optparse = OptionParser.new do |opts|
-  # Set a banner
-  opts.banner = usage
-  # set the available options
-  opts.on( '-h', '--help', 'Computer, display script options.' ) do
-    puts opts
-    exit
-  end
-
-  # default format to tei
-  options[:format] = "tei"
-  opts.on( '-f', '--format [input]', 'Specify format (tei, csv, dublin-core)') do |input|
-    if input == "tei" || input == "csv" || input == "dublin-core"
-      options[:format] = input
-    else
-      puts "Format #{input} is not recognized."
-      puts "Allowed formats are tei, csv, and dublin-core"
-      exit
-    end
-  end
-
-  options[:verbose] = false
-  opts.on( '-v', '--verbose', 'More messages, stacktraces than ever before!') do
-    options[:verbose] = true
-  end
-end
-
-# magic
-optparse.parse!
-
-# put this after calling parse! on the incoming option flags
-# or the flags will be picked up as args also
-if ARGV.length == 0
-  puts "CRITICAL ERROR! You must specify a project that you want to post!"
-  puts usage
-  exit
-elsif ARGV.length == 1
-  options[:project] = ARGV[0]
-else
-  # they entered too many projects! (or something else is terribly wrong)
-  puts "Captain, sensors detect more than one project!"
-  puts usage
-  exit
-end
-
-puts "Options set:\n\t #{options}" if options[:verbose]
-
-#########################
-# Read the config files #
-#########################
-
-begin
-  config_main = YAML.load_file('../../config/general.yml')
-  proj_data = config_main["project_data_dir"]
-  # TODO having problems getting this to work
-  # config_prj = YAML.load_file("#{proj_data}#{options[:project]}/config.yml")
-  config_prj = YAML.load_file("../../projects/#{options[:project]}/config.yml")
-rescue Exception => e
-  puts "There was an error reading a config file: #{e.message}"
-  puts "Stacktrace: \n\t#{e.backtrace.inspect}" if options[:verbose]
-  exit
-end
+# Read the config files related to the specified project
+config = read_configs(dir, options)
 
 ##########################################
 # Transform some format to solr readable #
 ##########################################
 
 # TODO let's pretend it's done already
-
+transform_to_solr(config, options, dir)
 
 ###################
 # Post files solr #
@@ -97,7 +38,7 @@ errors[:failed_files] = []
 errors[:solr_errors] = []
 
 # TODO hardcoding this for now
-dir_path = "../../solr/test_data/"
+dir_path = "#{dir}/../../solr/test_data/"
 files = Dir["#{dir_path}*"]  # grab all the files inside that directory
 if files.length == 0
   puts "There are no files in the directory #{dir_path}. Ending script"
@@ -109,29 +50,36 @@ files.each do |file_path|
   file = IO.read(file_path)
   puts "could not find requested file #{file_path}" if file.nil?
 
-  # url = URI.parse("#{config_main["server_path"]}#{options[:project]}/update")
-  url = URI.parse("#{config_main["server_path"]}jessica_testing/upd")
+  # url = URI.parse("#{config[:main]["server_path"]}#{options[:project]}/update")
+  url = "#{config[:main]["server_path"]}jessica_testing/update"
+  # create an http / request object and post Solr format XML
   puts "posting data to #{url} from #{file_path}" if options[:verbose]
+  res = post_xml(url, file)
 
-  # create an http / request object
-  http = Net::HTTP.new(url.host, url.port)
-  request = Net::HTTP::Post.new(url.request_uri)
-  request.body = file
-  request["Content-Type"] = "application/xml"
-
-  res = http.request(request)
   if res.code == "200"
-    puts "Posted #{file} successfully"
+    puts "Posted #{file_path} successfully"
   else
     puts "FAILURE. The request to #{url} returned with an error.  Status #{res.code}"
-    puts res.body if options[:verbose]
-    errors[:failed_files] << file
+    # puts res.body if options[:verbose]
+    errors[:failed_files] << file_path
     errors[:solr_errors] << res.body
   end
-  puts "response from solr post #{res.message}" if options[:verbose]
+  if errors[:failed_files].length == 0
+    # create another request and post the commit message
+    commit_res = post_xml(url, "<commit/>")
+    if commit_res.code == "200"
+      puts "SUCCESS! Committed your changes to Solr index"
+    else
+      puts "UNABLE TO COMMIT YOUR CHANGES TO SOLR."
+      puts "Please view in web portal to reattempt commit."
+      puts res.body
+      errors[:solr_errors] << res.body
+    end
+  end
+
+  # Report any errors
+  summarize_errors(errors)
+
 end
-
-
-
 
 
