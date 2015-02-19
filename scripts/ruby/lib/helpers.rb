@@ -1,13 +1,33 @@
+require 'fileutils'
 require 'yaml'
 
+# This is the most terrifying of functions
+def clear_tmp_directory(dir, verbose_flag=false)
+  if !dir.nil? && dir.length > 0 && dir != "." && dir != "../"
+    # IMPORTANT: Make sure that directory exists or you'll be wiping 
+    # something like your /tmp directory which is not desirable.
+    puts "Wiping any files in #{dir}/tmp" if verbose_flag
+    files = FileUtils.rm_rf(Dir.glob("#{dir}/tmp/*"))
+    puts "Removed #{files.length} file(s) from tmp directory" if verbose_flag
+  else
+    raise "repo_directory is required in config/general.yml file"
+  end
+end
+
+def create_temp_name(dir, ext)
+  time_stamp = Time.now.to_i
+  return "#{dir}/tmp/#{time_stamp}.#{ext}"
+end
+
 # get_directory_files
+#   Note: do not end with /
 #   params: directory (string)
 #   returns: returns array of all files found ([] if none),
 #     returns nil if no directory by that name exists
 def get_directory_files(directory)
   exists = File.directory?(directory)
   if exists
-    files = Dir["#{directory}*"]  # grab all the files inside that directory
+    files = Dir["#{directory}/*"]  # grab all the files inside that directory
     return files
   else
     puts "Unable to find a directory at #{directory}."
@@ -24,11 +44,9 @@ end
 #   returns: if unable to read, exits with error, else returns hash
 def read_configs(dir, project, verbose_flag=false)
   begin
-    config_main = YAML.load_file("#{dir}/../../config/general.yml")
-    proj_data = config_main["project_data_dir"]
-    # TODO having problems getting this to work
-    # config_prj = YAML.load_file("#{proj_data}#{options[:project]}/config.yml")
-    config_prj = YAML.load_file("#{dir}/../../projects/#{project}/config.yml")
+    config_main = YAML.load_file("#{dir}/../../config/config.yml")
+    proj_data = config_main["repo_directory"]
+    config_prj = YAML.load_file("#{dir}/../../projects/#{project}/config/config.yml")
     return { :main => config_main, :proj => config_prj }
   rescue Exception => e
     puts "There was an error reading a config file: #{e.message}"

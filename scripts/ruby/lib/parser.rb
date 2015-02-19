@@ -20,14 +20,19 @@ def handle_parameters
       exit
     end
 
-    options[:commit] = true
-    opts.on('-nc', '--no-commit', 'Post to solr but do not commit') do
-      options[:commit] = false
+    options[:environment] = "test"
+    opts.on( '-e', '--environment [input]', 'Environment (test, production)') do |input|
+      if input == "test" || input == "production"
+        options[:environment] = input
+      else
+        puts "Must choose environment of test or production"
+        exit
+      end
     end
 
-    # default format to tei
-    options[:format] = "tei"
-    opts.on( '-f', '--format [input]', 'Specify format (tei, csv, dublin-core)') do |input|
+    # default to no restricted format
+    options[:format] = nil
+    opts.on( '-f', '--format [input]', 'Restrict to one format (tei, csv, dublin-core)') do |input|
       if input == "tei" || input == "csv" || input == "dublin-core"
         options[:format] = input
       else
@@ -35,6 +40,16 @@ def handle_parameters
         puts "Allowed formats are tei, csv, and dublin-core"
         exit
       end
+    end
+
+    options[:commit] = true
+    opts.on('-n', '--no-commit', 'Post files to solr but do not commit') do
+      options[:commit] = false
+    end
+
+    options[:transform_only] = false
+    opts.on('-t', '--transform-only', 'Do not post to solr or erase tmp/') do
+      options[:transform_only] = true
     end
 
     options[:verbose] = false

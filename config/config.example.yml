@@ -1,0 +1,20 @@
+# Configuration for all projects, server, etc
+
+# NOTE this is the most important thing in here
+# and if you put in a route like "/" you WILL start
+# erasing any non-root things in your / directory
+# so make sure you've got a real path like
+# /var/www/html/awesome_project  (no ending line)
+repo_directory: /Users/jdussault2/Desktop/repos/data
+
+test:
+  solr_path: http://server.unl.edu:port/path/
+production:
+  solr_path: http://server.unl.edu:port/path/
+
+# script location from the root of the repository
+xsl_scripts:
+  # TODO may need to specify p5 etc
+  tei: scripts/xslt/cdrh_to_solr/solr_transform_tei.xsl
+  vra: scripts/xslt/cdrh_to_solr/solr_transform_vra.xsl
+  dc: scripts/xslt/cdrh_to_solr/solr_transform_dc.xsl

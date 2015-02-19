@@ -1,5 +1,19 @@
 require 'net/http'
 
+# returns an error or nil
+def commit_solr(url)
+  commit_res = post_xml(url, "<commit/>")
+  if commit_res.code == "200"
+    puts "SUCCESS! Committed your changes to Solr index"
+    return nil
+  else
+    puts "UNABLE TO COMMIT YOUR CHANGES TO SOLR."
+    puts res.body
+    return res.body
+  end
+end
+
+
 # post_xml
 #   posts a request with an xml body
 #   params: url_string ("http://www.hello.com"), content: "<xml>Stuff</xml>"

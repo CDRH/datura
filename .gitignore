@@ -3,3 +3,6 @@
 **/*.yml
 # except those yml files that are examples
 !**/*.example.yml
+
+# ignore tmp directory even though will need to create it each time
+tmp/*

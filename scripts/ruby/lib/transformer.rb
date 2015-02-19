@@ -1,20 +1,45 @@
 require 'open3'
 
-def transform_to_solr(config, options, dir)
-  # depending on the option sent in, pick a different script type
-  script_hash = {
-    "tei" => ""
-  }
+# TODO if anything is going to be asynchronous, this would be a great spot
+def transform(dir, project, format, xslt_location, verbose_flag=false)
+  project_path = "#{dir}/projects/#{project}"
+  # go check the project directory for files of specific format
+  if format.nil? || format == "tei"
+    files = get_directory_files("#{project_path}/tei")
+    if !files.nil?
+      puts "xslt location #{xslt_location['tei']}"
+      files.each do |file|
+        _transform(file, xslt_location["tei"], dir, verbose_flag)
+      end
+    end
+  end
 
-  source = "projects/test_data/tei/transmiss.per.hatchet.1898.xml"
-  xslt = "scripts/xslt/cdrh_to_solr/solr_transform_tei.xsl"
-  output = "testing.xml"
+  if format.nil? || format == "dc"
+    files = get_directory_files("#{project_path}/dublin_core")
+    if !files.nil?
+      puts "xslt location #{xslt_location['dc']}"
+      files.each do |file|
+        _transform(file, xslt_location["dc"], dir, verbose_flag)
+      end
+    end
+  end
+
+  if format.nil? || format == "vra"
+    files = get_directory_files("#{project_path}/vra_core")
+    if !files.nil?
+      puts "xslt location #{xslt_location['vra']}"
+      files.each do |file|
+        _transform(file, xslt_location["vra"], dir, verbose_flag)
+      end
+    end
+  end
+end
+
+# _transform
+#    Transforms xml file with xslt and assigns to tmp file
+def _transform(source, xslt, dir, verbose_flag=false)
+  output = create_temp_name(dir, "xml")  # name for new file
   saxon = "saxon -s:#{source} -xsl:#{xslt} -o:#{output}"
-
-  # You may execute the below line instead of using Open3
-  # but it does not have the same amount of stderr abilities
-  # `saxon -s:#{source} -xsl:#{xslt} -o:#{output}`
-
   # execute the saxon command and make sure that you don't get a stderr!
   Open3.popen3(saxon) do |stdin, stdout, stderr|
     out = stdout.read
@@ -24,11 +49,7 @@ def transform_to_solr(config, options, dir)
       puts "#{err}"
       exit
     else
-      puts "Saxon transformation successful" if options[:verbose]
+      puts "Saxon transformation successful" if verbose_flag
     end
   end
-  # TODO collect saxon errors
-  # The above command is routed through a custom /usr/bin command
-  # that doesn't have a whole lot of stdout and no stderr
-  # so it's hard to tell if this thing even worked.
 end

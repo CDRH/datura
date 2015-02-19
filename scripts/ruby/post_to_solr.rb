@@ -7,72 +7,59 @@
 
 require_relative 'lib/helpers.rb'      # helper functions
 require_relative 'lib/parser.rb'       # parses script flags
-require_relative 'lib/transformer.rb'  # transforms tei / csv to solr format
+require_relative 'lib/transformer.rb'  # transforms tei/csv to solr/html
 require_relative 'lib/solr_poster.rb'  # posts a string (file) to solr
 
 # variables
-dir = File.dirname(__FILE__)  # directory containing this script
-errors = {}                   # keeper of everything that has gone wrong
-errors[:failed_files] = []    # array of strings with file names that did not post
-errors[:solr_errors] = []     # array of errors from solr to display at the end
+this_dir = File.dirname(__FILE__)  # directory containing this script
+errors = {}                        # keeper of everything that has gone wrong
+errors[:failed_files] = []         # array of strings with file names that did not post
+errors[:solr_errors] = []          # array of errors from solr to display at the end
 
-# handle the incoming command parameters (-f, -h, etc)
 options = handle_parameters
+project = options[:project]
 verbose_flag = options[:verbose] == true  # set verbose flag
-# Read the config files related to the specified project
-config = read_configs(dir, options[:project], verbose_flag)
+env = options[:environment]
 
-# Run an XSLT transformation on the docs
-transform_to_solr(config, options, dir)
+config = read_configs(this_dir, project, verbose_flag)
+# clear out anything in the tmp directory before doing anything else
+dir = config[:main]["repo_directory"]
+clear_tmp_directory(dir, verbose_flag)
+transform(dir, project, options[:format], config[:main]["xsl_scripts"], verbose_flag)
 
-# TODO temp hardcoded
-hardcoded_dir = "#{dir}/../../solr/test_data/"
-files = get_directory_files(hardcoded_dir)
+# only post to solr if the user has not specified that this should be transform_only
+if !options[:transform_only]
+  files = get_directory_files("#{dir}/tmp")
+  if files.nil?
+    puts "tmp directory in your repository was not found."
+    exit
+  else
+    url = "#{config[:main][env]["solr_path"]}#{config[:proj]["solr_core"]}/update"
+    files.each do |file_path|
+      # read in each file and post to solr
+      file = IO.read(file_path)
+      puts "posting data to #{url} from #{file_path}" if verbose_flag
+      res = post_xml(url, file)
 
-if files.nil?
-  puts "Please check that you have the correct location specified."
-  exit
-else
-  # url = URI.parse("#{config[:main]["server_path"]}#{options[:project]}/update")
-  # TODO build real url
-  url = "#{config[:main]["server_path"]}jessica_testing/update"
-  files.each do |file_path|
-    # read in each file and post to solr
-    file = IO.read(file_path)
-
-    # create an http / request object and post Solr format XML
-    puts "posting data to #{url} from #{file_path}" if verbose_flag
-    res = post_xml(url, file)
-
-    if res.code == "200"
-      puts "Posted #{file_path} successfully"
-    else
-      puts "FAILURE. The request to #{url} returned with an error.  Status #{res.code}"
-      # puts res.body if options[:verbose]
-      errors[:failed_files] << file_path
-      errors[:solr_errors] << res.body
-    end
-  end  # ends files each loop
-
-  # commit to solr
-  if options[:commit]
-    if errors[:failed_files].length == 0
-      # create another request and post the commit message
-      commit_res = post_xml(url, "<commit/>")
-      if commit_res.code == "200"
-        puts "SUCCESS! Committed your changes to Solr index"
+      if res.code == "200"
+        puts "Posted #{file_path} successfully"
       else
-        puts "UNABLE TO COMMIT YOUR CHANGES TO SOLR."
-        puts "Please view in web portal to reattempt commit."
-        puts res.body
+        puts "FAILURE. The request to #{url} returned with an error.  Status #{res.code}"
+        errors[:failed_files] << file_path
         errors[:solr_errors] << res.body
       end
-    else
-      puts "No files were committed to solr because one or more files failed to post."
-      exit
+    end  # ends files each loop
+
+    # commit your changes to solr unless if otherwise specified
+    if options[:commit]
+      commit_error = commit_solr(url)
+      if !commit_error.nil?
+        errors[:solr_errors] << commit_error
+      end
     end
+    summarize_errors(errors)
+    # clear anything written to the tmp directory again
+    clear_tmp_directory(dir, verbose_flag)
   end
-  # Report any errors
-  summarize_errors(errors)
-end
+end # ends posting to solr
 
