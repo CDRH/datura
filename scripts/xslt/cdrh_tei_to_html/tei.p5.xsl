@@ -9,16 +9,7 @@
   
   <!-- For display in TEI framework, have changed all namespace declarations to http://www.tei-c.org/ns/1.0. If different (e.g. Whitman), will need to change -->
   
-  <xsl:output method="xhtml" indent="no" encoding="UTF-8" omit-xml-declaration="yes"/>
-  
-  <!-- failed attempt at using docbook for documentation. Delete later unless someone else can get it working -KD -->
-  <!--<xd:doc scope="stylesheet">
-    <xd:desc>
-      <xd:p><xd:b>Created on:</xd:b> April 9, 2014</xd:p>
-      <xd:p><xd:b>Author:</xd:b> Karin Dalziel</xd:p>
-      <xd:p>CDRH Default Stylesheet</xd:p>
-    </xd:desc>
-  </xd:doc>-->
+  <xsl:output method="xhtml" indent="yes" encoding="UTF-8" omit-xml-declaration="yes"/>
   
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     PARAMETERS
@@ -28,13 +19,13 @@
   <xsl:param name="pagetype"></xsl:param>
   <xsl:param name="subpagetype"></xsl:param>
   
-  <xsl:param name="metadata">true</xsl:param> <!-- true/false Toggle metadata box on and off  -->
+  <xsl:param name="metadata_box">false</xsl:param> <!-- true/false Toggle metadata box on and off  -->
   <xsl:param name="figures">true</xsl:param> <!-- true/false Toggle figures on and off  -->
   <xsl:param name="fw">true</xsl:param> <!-- true/false Toggle fw's on and off  -->
   <xsl:param name="pb">true</xsl:param> <!-- true/false Toggle pb's on and off  -->
   
   <!-- link locations - unsure about how these will work in the "real world" -->
-  <xsl:param name="fig_location"><xsl:text>../../figures/</xsl:text></xsl:param> <!-- set figure location  -->
+  <xsl:param name="fig_location"><xsl:text>http://rosie.unl.edu/data_images/projects/transmississippi/figures/</xsl:text></xsl:param> <!-- set figure location  -->
   <xsl:param name="keyword_link"><xsl:text>../../</xsl:text></xsl:param> <!-- set keyword link location  -->
 
   <!-- Include project specific xsl -->
@@ -214,8 +205,10 @@
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
   
   <xsl:template match= "/TEI/text[1]">
+    
     <div class="main_content">
-    <xsl:if test="$metadata = 'true'">
+   
+    <xsl:if test="$metadata_box = 'true'">
     <xsl:call-template name="metadata"/>
     </xsl:if>
     <xsl:apply-templates/>

@@ -9,7 +9,7 @@
     <xsl:param name="date"/>
     <xsl:param name="string"/>
     <xsl:param name="site_location">http://rosie.unl.edu/transmississippi/</xsl:param>
-    <xsl:param name="file_location">http://rosie.unl.edu/data/projects/</xsl:param>
+    <xsl:param name="fig_location"><xsl:text>http://rosie.unl.edu/data_images/projects/transmississippi/figures/</xsl:text></xsl:param> <!-- set figure location  -->
     
     <xsl:variable name="filename" select="tokenize(base-uri(.), '/')[last()]"/>
     <!-- The part of the url after the main document structure and before the filename. 
@@ -32,7 +32,7 @@
      
            
            <xsl:for-each select="/ROWSET/ROW">
-               <xsl:result-document href="/var/www/html/data/tmp/{id}.xml.txt">
+               <xsl:result-document href="/var/www/html/data/projects/transmississippi/html/{id}.xml.txt">
                    <div>
                 <xsl:for-each select="tokenize(description, '&#10;')">
                     <xsl:if test="normalize-space(.) != ''">
@@ -49,7 +49,7 @@
                                </xsl:call-template>
                            </xsl:when>
                            <xsl:otherwise>
-                               <img src="../figures/large/{id}.jpg"/>
+                               <img src="{$fig_location}large/{id}.jpg"/>
                            </xsl:otherwise>
                        </xsl:choose>
                        
@@ -191,7 +191,7 @@
                             <xsl:text>prettyPhoto[pp_gal]</xsl:text>
                         </xsl:attribute>
                         <xsl:attribute name="href">
-                            <xsl:text>../figures/</xsl:text>
+                            <xsl:value-of select="$fig_location"/>
                             <xsl:text>large/</xsl:text>
                             <xsl:value-of select="id"/>
                             <xsl:text>-</xsl:text>
@@ -202,7 +202,7 @@
                         <span class="thumbnail_div">
                             <img>
                                 <xsl:attribute name="src">
-                                    <xsl:text>../figures/</xsl:text>
+                                    <xsl:value-of select="$fig_location"/>
                                     <xsl:text>medium/</xsl:text>
                                     <xsl:value-of select="id"/>
                                     <xsl:text>-</xsl:text>
@@ -219,7 +219,7 @@
             <xsl:otherwise>
                 <img>
                     <xsl:attribute name="src">
-                        <xsl:text>../figures/</xsl:text>
+                        <xsl:value-of select="$fig_location"/>
                         <xsl:text>large/</xsl:text>
                         <xsl:value-of select="id"/>
                         <xsl:text>-</xsl:text>
