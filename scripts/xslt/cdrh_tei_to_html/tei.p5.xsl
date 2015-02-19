@@ -25,7 +25,7 @@
   <xsl:param name="pb">true</xsl:param> <!-- true/false Toggle pb's on and off  -->
   
   <!-- link locations - unsure about how these will work in the "real world" -->
-  <xsl:param name="fig_location"><xsl:text>http://rosie.unl.edu/data_images/projects/transmississippi/figures/</xsl:text></xsl:param> <!-- set figure location  -->
+  <xsl:param name="fig_location"><xsl:text>http://rosie.unl.edu/data_images/projects/cody/figures/</xsl:text></xsl:param> <!-- set figure location  -->
   <xsl:param name="keyword_link"><xsl:text>../../</xsl:text></xsl:param> <!-- set keyword link location  -->
 
   <!-- Include project specific xsl -->
@@ -300,6 +300,13 @@
   
   <xsl:template match="pb">
     <xsl:if test="$pb = 'true'">
+      <!-- zzz fix -->
+      <xsl:variable name="figure_id">
+        <xsl:choose>
+          <xsl:when test="@xml:id"><xsl:value-of select="@xml:id"></xsl:value-of></xsl:when>
+          <xsl:when test="@facs"><xsl:value-of select="@face"></xsl:value-of></xsl:when>
+        </xsl:choose>
+      </xsl:variable>
       <span class="hr">&#160;</span>
       <span>
         <xsl:attribute name="class">
@@ -310,7 +317,7 @@
           <xsl:attribute name="href">
             <xsl:value-of select="$fig_location"/>
             <xsl:text>large/</xsl:text>
-            <xsl:value-of select="@xml:id"/>
+            <xsl:value-of select="$figure_id"/>
             <xsl:text>.jpg</xsl:text>
           </xsl:attribute>
           <xsl:attribute name="rel">
@@ -320,7 +327,7 @@
             <xsl:text>&lt;a href="</xsl:text>
             <xsl:value-of select="$fig_location"/>
             <xsl:text>large/</xsl:text>
-            <xsl:value-of select="@xml:id"/>
+            <xsl:value-of select="$figure_id"/>
             <xsl:text>.jpg</xsl:text>
             <xsl:text>" target="_blank" &gt;open image in new window&lt;/a&gt;</xsl:text>
           </xsl:attribute>
@@ -329,7 +336,7 @@
             <xsl:attribute name="src">
               <xsl:value-of select="$fig_location"/>
               <xsl:text>thumbnails/</xsl:text>
-              <xsl:value-of select="@xml:id"/>
+              <xsl:value-of select="$figure_id"/>
               <xsl:text>.jpg</xsl:text>
             </xsl:attribute>
             <xsl:attribute name="class">

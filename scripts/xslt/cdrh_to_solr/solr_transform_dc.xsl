@@ -3,6 +3,45 @@
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/">
 	<xsl:output indent="yes" omit-xml-declaration="yes"/>
+	
+	
+	<xsl:param name="date"/>
+	<xsl:param name="string"/>
+	<xsl:param name="site_location">http://rosie.unl.edu/transmississippi/</xsl:param>
+	<xsl:param name="file_location">http://rosie.unl.edu/data/projects/</xsl:param>
+	<xsl:include href="lib/common.xsl"/>
+	
+	<xsl:template match="/" exclude-result-prefixes="#all">
+		
+		<xsl:value-of select="$test"></xsl:value-of>
+		
+		<xsl:variable name="filename" select="tokenize(base-uri(.), '/')[last()]"/>
+		<!-- The part of the url after the main document structure and before the filename. 
+			Collected so we can link to files, even if they are nested, i.e. whitmanarchive/manuscripts -->
+		<xsl:variable name="slug" select="substring-before(substring-before(substring-after(base-uri(.),'data/projects/'),$filename),'/')"/>
+		
+		<!-- Split the filename using '\.' -->
+		<xsl:variable name="filenamepart" select="substring-before($filename, '.xml')"/>
+		
+		<!-- Set file type, based on containing folder -->
+		<!--<xsl:variable name="type">
+			<xsl:variable name="path">
+				<xsl:text>data/projects/</xsl:text>
+				<xsl:value-of select="$slug"></xsl:value-of>
+				<xsl:text>/</xsl:text>
+			</xsl:variable>
+			<xsl:value-of select="substring-before(substring-before(substring-after(base-uri(.),$path),$filename), '/')"/>
+		</xsl:variable>-->
+		
+		
+		<xsl:call-template name="dc_template">
+			<xsl:with-param name="filenamepart" select="$filenamepart"/>
+			<xsl:with-param name="slug" select="$slug"/>
+		</xsl:call-template>
+		
+	</xsl:template>
+	
+	
 
 
 	<xsl:template name="dc_template" xpath-default-namespace="" exclude-result-prefixes="#all">
@@ -14,9 +53,17 @@
 			<xsl:for-each select="rdf:RDF/rdf:Description">
 				<doc>
 					
+					<!-- ==============================
+					resource identification 
+					===================================-->
+					
+					<!-- id -->
+					
 					<field name="id">
 						<xsl:value-of select="@about"/>
 					</field>
+					
+					<!-- slug -->
 					
 					<field name="slug">
 						<xsl:value-of select="$slug"/>
@@ -25,9 +72,32 @@
 						<xsl:text>.xml</xsl:text>
 					</field>
 					
+					<!-- project -->
+					
+					<field name="project">
+						<xsl:if test="starts-with($filenamepart, 'wfc')">
+							<xsl:text>The William F. Cody Archive</xsl:text>
+						</xsl:if>
+					</field>
+					
+					<!-- uri -->
+					<!-- uriXML -->
+					<!-- uriHTML -->
+					<!-- dataType --> <!-- tei, dublin_core, csv, vra_core -->
+					
+					
+					
+					<!-- ==============================
+					Dublin Core 
+					===================================-->
+					
+					<!-- title -->
+					
 					<field name="title">
 						<xsl:value-of select="dc:title"/>
 					</field>
+					
+					<!-- titleSort -->
 					
 					<field name="titleSort">
 						<xsl:call-template name="normalize_name">
@@ -37,14 +107,28 @@
 						</xsl:call-template>
 					</field>
 					
+					<!-- creator -->
+					
 					<field name="creator">
 						<xsl:value-of select="dc:creator"/>
 					</field>
 					
-					<!--<field name="creators"/>-->
-					<!--<field name="publisher"/>-->
-					<!--<field name="contributor"/>-->
-					<!--<field name="contributors"/>-->
+					<!-- creators -->
+					<!-- subject -->
+					<!-- subjects -->
+					<!-- description -->
+					
+					<xsl:if test="dc:description != ''">
+						<field name="text">
+							<xsl:value-of select="dc:description"/>
+							
+						</field>
+					</xsl:if>
+					
+					<!-- publisher -->
+					<!-- contributor -->
+					<!-- contributors -->
+					<!-- date -->
 					
 					<xsl:choose>
 						<xsl:when test="normalize-space(dc:date) = ''"><!-- do nothing, empty--></xsl:when>
@@ -83,26 +167,9 @@
 						</xsl:when>
 						<xsl:otherwise><!-- blank for no date --></xsl:otherwise>
 					</xsl:choose>
-						
 					
+					<!-- dateDisplay -->
 					
-					<!-- datesExact - a multivalued field for matching exact dates: 
-						i.e. pulling all the things that happened on a certain date -->
-
-					<xsl:choose>
-						<!-- Only have an exact date when document has an exact date. Used when pulling documents from a certain date -->
-						<xsl:when test="translate(dc:date, '1234567890-', '') = '' and string-length(dc:date) = 10">
-							<field name="datesExact">
-								<xsl:call-template name="date_standardize">
-									<xsl:with-param name="datebefore"><xsl:value-of select="dc:date"/></xsl:with-param>
-								</xsl:call-template>
-								<xsl:text>T00:00:00Z</xsl:text>
-							</field>
-						</xsl:when>
-						<xsl:otherwise><!-- blank for no date --></xsl:otherwise>
-					</xsl:choose>
-						
-
 					<field name="dateDisplay">
 						<xsl:choose>
 							<xsl:when test="contains(dc:date, 'circa')">
@@ -121,32 +188,55 @@
 						</xsl:choose>
 					</field>
 					
+					<!-- type -->
 					<!-- format -->
 					
 					<field name="format">
 						<xsl:text>image</xsl:text>
 					</field>
 					
+					<!-- medium -->
+					<!-- extent -->
+					<!-- language -->
+					<!-- relation -->
+					<!-- coverage -->
+					<!-- source -->
+					
 					<field name="source">
 						<xsl:value-of select="dc:source"/>
 					</field>
+					
+					<!-- rightsHolder -->
+					<!-- rights -->
 					
 					<field name="sourceURI">
 						<xsl:value-of select="dc:rights"/>
 					</field>
 					
-					<field name="related">
-						<xsl:if test="starts-with($filenamepart, 'wfc')">
-							<xsl:text>The William F. Cody Archive</xsl:text>
-						</xsl:if>
-					</field>
+					<!-- rightsURI -->
 					
-					<!-- projectInvestigator -->
-					<!-- projectInvestigators -->
+					
+					<!-- ==============================
+					Other Elements 
+					===================================-->
+					
+					<!-- principalInvestigator -->
+					<!-- principalInvestigators -->
+					<!-- place -->
+					<!-- placeName -->
+					
+					
+					<!-- ==============================
+					CDRH specific 
+					===================================-->
+					
+					<!-- category -->
 					
 					<field name="category">
 						<xsl:text>images</xsl:text>
 					</field>
+					
+					<!-- subCategory -->
 					
 					<field name="subCategory">
 						<xsl:value-of select="substring-after($filenamepart, 'wfc.')"></xsl:value-of>
@@ -162,16 +252,35 @@
 						</xsl:if>
 					</xsl:for-each>
 					
+					<!-- keywords -->
 					<!-- people -->
 					<!-- places -->
 					<!-- works -->
 					
-					<xsl:if test="dc:description != ''">
-						<field name="text">
-							<xsl:value-of select="dc:description"/>
-							
-						</field>
-					</xsl:if>
+					
+					<!-- ==============================
+					Project specific 
+					===================================-->
+					
+					<!-- datesExact_dts -->
+					
+					<xsl:choose>
+						<!-- Only have an exact date when document has an exact date. Used when pulling documents from a certain date -->
+						<xsl:when test="translate(dc:date, '1234567890-', '') = '' and string-length(dc:date) = 10">
+							<field name="datesExact_dts">
+								<xsl:call-template name="date_standardize">
+									<xsl:with-param name="datebefore"><xsl:value-of select="dc:date"/></xsl:with-param>
+								</xsl:call-template>
+								<xsl:text>T00:00:00Z</xsl:text>
+							</field>
+						</xsl:when>
+						<xsl:otherwise><!-- blank for no date --></xsl:otherwise>
+					</xsl:choose>
+						
+					
+					
+					
+					
 					
 				</doc>
 			</xsl:for-each>

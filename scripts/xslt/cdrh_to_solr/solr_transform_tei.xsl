@@ -79,19 +79,16 @@
 	<!-- rightsURI -->
 	
 	
-	
-	
 	<!-- ==============================
-	CDRH specific 
+	Other Elements 
 	===================================-->
 	
-	<!-- category -->
-	<!-- subCategory -->
-	<!-- topic -->
-	<!-- keywords -->
-	<!-- people -->
-	<!-- places -->
-	<!-- works -->
+	<!-- principalInvestigator -->
+	<!-- principalInvestigators -->
+	<!-- place -->
+	<!-- placeName -->
+	
+	
 
 	<xsl:template name="tei_template" exclude-result-prefixes="#all">
 		<xsl:param name="filenamepart"/>
