@@ -1,4 +1,10 @@
-# requires optparse
+require 'optparse'
+
+# this function is specific to the post_to_solr.rb script
+# and so will exit if required parameters are not met
+# TODO use OptionParser::MissingArgument exception?
+
+# returns options hash
 
 def handle_parameters
   usage = "Usage: ruby post_to_solr.rb [project] -[options]..."
@@ -7,10 +13,16 @@ def handle_parameters
   optparse = OptionParser.new do |opts|
     # Set a banner
     opts.banner = usage
+
     # set the available options
     opts.on( '-h', '--help', 'Computer, display script options.' ) do
       puts opts
       exit
+    end
+
+    options[:commit] = true
+    opts.on('-nc', '--no-commit', 'Post to solr but do not commit') do
+      options[:commit] = false
     end
 
     # default format to tei
@@ -33,6 +45,8 @@ def handle_parameters
 
   # magic
   optparse.parse!
+
+
 
   # put this after calling parse! on the incoming option flags
   # or the flags will be picked up as args also
