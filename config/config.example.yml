@@ -7,6 +7,10 @@
 # /var/www/html/awesome_project  (no ending line)
 repo_directory: /Users/jdussault2/Desktop/repos/data
 
+log_old_number: 4   # number of log files before beginning to erase
+log_size: 1024000   # size of log file in bytes
+log_level: Logger::WARN  # could change to INFO for more detail
+
 # Make sure that you put a / on the end of the solr_paths
 test:
   solr_path: http://server.unl.edu:port/solr/

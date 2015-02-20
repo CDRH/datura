@@ -4,6 +4,7 @@
 # Post to Solr  #
 #################
 
+require 'logger'                       # logging functionality
 require_relative 'lib/helpers.rb'      # helper functions
 require_relative 'lib/parser.rb'       # parses script flags
 require_relative 'lib/transformer.rb'  # transforms tei/csv to solr/html
@@ -21,8 +22,10 @@ verbose_flag = options[:verbose] == true  # set verbose flag
 env = options[:environment]
 
 config = read_configs(this_dir, project, verbose_flag)
-# clear out anything in the tmp directory before doing anything else
 dir = config[:main]["repo_directory"]
+log = Logger.new("#{dir}/logs/post_to_solr.log", config[:main]["log_old_number"], config[:main]["log_size"])
+# log.error("TESTING IF THIS WORKS")
+# clear out anything in the tmp directory before doing anything else
 clear_tmp_directory(dir, verbose_flag)
 # make a new transformer
 transformer = Transformer.new(dir, project, config[:main]["xsl_scripts"], options[:solr_or_html], verbose_flag)
@@ -71,4 +74,6 @@ if !options[:transform_only] && options[:solr_or_html] != "html"
     clear_tmp_directory(dir, verbose_flag)
   end
 end # ends posting to solr
+
+log.close
 
