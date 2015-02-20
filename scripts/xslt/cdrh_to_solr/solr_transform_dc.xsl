@@ -7,13 +7,14 @@
 	
 	<xsl:param name="date"/>
 	<xsl:param name="string"/>
-	<xsl:param name="site_location">http://rosie.unl.edu/transmississippi/</xsl:param>
+	<xsl:param name="site_location">http://codyarchive.org/</xsl:param>
 	<xsl:param name="file_location">http://rosie.unl.edu/data/projects/</xsl:param>
+	<xsl:param name="project">The William F. Cody Archive</xsl:param>
 	<xsl:include href="lib/common.xsl"/>
 	
 	<xsl:template match="/" exclude-result-prefixes="#all">
 		
-		<xsl:value-of select="$test"></xsl:value-of>
+		
 		
 		<xsl:variable name="filename" select="tokenize(base-uri(.), '/')[last()]"/>
 		<!-- The part of the url after the main document structure and before the filename. 
@@ -22,16 +23,7 @@
 		
 		<!-- Split the filename using '\.' -->
 		<xsl:variable name="filenamepart" select="substring-before($filename, '.xml')"/>
-		
-		<!-- Set file type, based on containing folder -->
-		<!--<xsl:variable name="type">
-			<xsl:variable name="path">
-				<xsl:text>data/projects/</xsl:text>
-				<xsl:value-of select="$slug"></xsl:value-of>
-				<xsl:text>/</xsl:text>
-			</xsl:variable>
-			<xsl:value-of select="substring-before(substring-before(substring-after(base-uri(.),$path),$filename), '/')"/>
-		</xsl:variable>-->
+	
 		
 		
 		<xsl:call-template name="dc_template">
@@ -67,23 +59,54 @@
 					
 					<field name="slug">
 						<xsl:value-of select="$slug"/>
-						<xsl:text>/</xsl:text>
-						<xsl:value-of select="$filenamepart"/>
-						<xsl:text>.xml</xsl:text>
 					</field>
 					
 					<!-- project -->
 					
 					<field name="project">
-						<xsl:if test="starts-with($filenamepart, 'wfc')">
-							<xsl:text>The William F. Cody Archive</xsl:text>
-						</xsl:if>
+						<xsl:value-of select="$project"></xsl:value-of>
 					</field>
 					
 					<!-- uri -->
+					
+					<!-- Currently built specifically for cody, we'll want to change this when we have more generic URL's e.g. codyarchive.org/view/item_number -->
+					<field name="uri">
+						<xsl:value-of select="$site_location"></xsl:value-of>
+						<xsl:text>images/view/</xsl:text>
+						<xsl:value-of select="substring-after($filenamepart,'.')"/>
+						<xsl:text>/</xsl:text>
+						<xsl:value-of select="@about"/>
+					</field>
+					
 					<!-- uriXML -->
+					
+					<field name="uriXML">
+						<xsl:value-of select="$file_location"/>
+						<xsl:value-of select="$slug"/>
+						<xsl:text>/dublin_core/</xsl:text>
+						<xsl:value-of select="$filenamepart"/>
+						<xsl:text>.xml</xsl:text>
+					</field>
+					
 					<!-- uriHTML -->
+					
+					<field name="uriHTML">
+						<xsl:value-of select="$file_location"></xsl:value-of>
+						<xsl:value-of select="$slug"/>
+						<xsl:text>/html-generated/</xsl:text>
+						<xsl:value-of select="@about"/>
+						<xsl:text>.txt</xsl:text>
+						<!--<xsl:text>images/view/</xsl:text>
+						<xsl:value-of select="substring-after($filenamepart,'.')"/>
+						<xsl:text>/</xsl:text>
+						<xsl:value-of select="@about"/>-->
+					</field>
+					
 					<!-- dataType --> <!-- tei, dublin_core, csv, vra_core -->
+					
+					<field name="dataType">
+						<xsl:text>dublin_core</xsl:text>
+					</field>
 					
 					
 					
@@ -119,7 +142,7 @@
 					<!-- description -->
 					
 					<xsl:if test="dc:description != ''">
-						<field name="text">
+						<field name="description">
 							<xsl:value-of select="dc:description"/>
 							
 						</field>
@@ -278,8 +301,13 @@
 					</xsl:choose>
 						
 					
-					
-					
+					<!-- text -->
+					<xsl:if test="dc:description != ''">
+						<field name="text">
+							<xsl:value-of select="dc:description"/>
+							
+						</field>
+					</xsl:if>
 					
 					
 				</doc>

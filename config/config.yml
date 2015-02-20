@@ -1,0 +1,11 @@
+repo_directory: /var/www/html/data
+
+test:
+  solr_path: http://rosie.unl.edu:8080/solr/
+production:
+  solr_path:
+
+xsl_scripts:
+  tei: scripts/xslt/cdrh_to_solr/solr_transform_tei.xsl
+  vra: scripts/xslt/cdrh_to_solr/solr_transform_vra.xsl
+  dc: scripts/xslt/cdrh_to_solr/solr_transform_dc.xsl

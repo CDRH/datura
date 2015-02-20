@@ -300,13 +300,14 @@
   
   <xsl:template match="pb">
     <xsl:if test="$pb = 'true'">
-      <!-- zzz fix -->
+      
       <xsl:variable name="figure_id">
         <xsl:choose>
           <xsl:when test="@xml:id"><xsl:value-of select="@xml:id"></xsl:value-of></xsl:when>
-          <xsl:when test="@facs"><xsl:value-of select="@face"></xsl:value-of></xsl:when>
+          <xsl:when test="@facs"><xsl:value-of select="@facs"></xsl:value-of></xsl:when>
         </xsl:choose>
       </xsl:variable>
+      
       <span class="hr">&#160;</span>
       <span>
         <xsl:attribute name="class">

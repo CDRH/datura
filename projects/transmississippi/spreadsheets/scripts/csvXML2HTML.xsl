@@ -10,6 +10,7 @@
     <xsl:param name="string"/>
     <xsl:param name="site_location">http://rosie.unl.edu/transmississippi/</xsl:param>
     <xsl:param name="fig_location"><xsl:text>http://rosie.unl.edu/data_images/projects/transmississippi/figures/</xsl:text></xsl:param> <!-- set figure location  -->
+    <xsl:param name="repo_directory">/var/www/html/data/</xsl:param>
     
     <xsl:variable name="filename" select="tokenize(base-uri(.), '/')[last()]"/>
     <!-- The part of the url after the main document structure and before the filename. 
@@ -32,7 +33,7 @@
      
            
            <xsl:for-each select="/ROWSET/ROW">
-               <xsl:result-document href="/var/www/html/data/projects/transmississippi/html/{id}.xml.txt">
+               <xsl:result-document href="{$repo_directory}projects/transmississippi/html-generated/{id}.txt">
                    <div>
                 <xsl:for-each select="tokenize(description, '&#10;')">
                     <xsl:if test="normalize-space(.) != ''">
