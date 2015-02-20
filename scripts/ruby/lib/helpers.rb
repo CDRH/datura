@@ -9,11 +9,13 @@ def clear_tmp_directory(dir, verbose_flag=false)
     puts "Wiping any files in #{dir}/tmp" if verbose_flag
     files = FileUtils.rm_rf(Dir.glob("#{dir}/tmp/*"))
     puts "Removed #{files.length} file(s) from tmp directory" if verbose_flag
+    return true
   else
     raise "repo_directory is required in config/general.yml file"
   end
 end
 
+# TODO add checking for dir / ext before returning file name
 def create_temp_name(dir, ext)
   time_stamp = Time.now.to_i
   return "#{dir}/tmp/#{time_stamp}.#{ext}"
@@ -24,7 +26,7 @@ end
 #   params: directory (string)
 #   returns: returns array of all files found ([] if none),
 #     returns nil if no directory by that name exists
-def get_directory_files(directory, verbose_flag)
+def get_directory_files(directory, verbose_flag=false)
   exists = File.directory?(directory)
   if exists
     files = Dir["#{directory}/*"]  # grab all the files inside that directory
