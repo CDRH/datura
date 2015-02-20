@@ -4,6 +4,48 @@ This will be the test central repo for CDRH files, including TEI, dublin core, s
 
 This file will also contain documentation for scripts which will aid in data creation and manipulation. 
 
+### To Transform Files and Post Them to Solr
+
+Make sure that you have your project config file set up (see the section below on adding a project) and that the path to the solr instance is correct in the main config file (data/config/config.yml).
+
+Verify that saxon is installed as a command line argument (executed by typing "saxon" rather than as java -jar etc).  If it is not, then see below about how to install and run saxon as a command.
+
+Check your version of Ruby by typing `ruby -v`.  This project currently uses ruby 2.1.3.  If you have a different version installed on your machine, it is recommended to use rvm to use multiple versions of ruby without messing up the good thing you've already got going on.  https://rvm.io/
+
+If your scripts/ruby/post_to_solr.rb script is executable, then you may run it by simply typing `./scripts/ruby/post_to_solr.rb`.  Otherwise you can manually run it with `ruby scripts/ruby/post_to_solr.rb`.
+
+You have several options for running it:
+```
+Usage: ruby post_to_solr.rb [project] -[options]...
+    -h, --help                       Computer, display script options.
+    -e, --environment [input]        Environment (test, production)
+    -f, --format [input]             Restrict to one format (tei, csv, dublin-core)
+    -n, --no-commit                  Post files to solr but do not commit
+    -t, --transform-only             Do not post to solr
+    -v, --verbose                    More messages and stacktraces than ever before!
+```
+It should look something like this if you want to post only tei to a production environment for a whitman project:
+```
+./post_to_solr.rb whitman -e production -f tei
+```
+
+
+### To Add A New Project
+
+Execute the following command with the name of your project subbed in.
+
+```
+mkdir -p myProject/{config,html,tei}
+```
+Depending on the data associated with your project, you may also need to create subfolders for vra/, dublin_core/, spreadsheets/, and scripts/.
+
+Copy the config.yml file from an existing project's config directory and update it with this project's solr core name.  Run these permissions so that the config file will not be accessible from the web.  If you have not created a new solr core for the project, now would be a great time before you run a script and start getting errors back!
+
+```
+sudo chown apache projects/[project_name]/config/config.yml
+sudo chmod u-rwx projects/[project_name]/config/config.yml
+```
+
 ### To set up Saxon command
 
 Install your preferred edition / version of saxon on the server and put it in a memorable place, such as `/var/lib/saxon/saxon9he.jar`, but it does not matter where it is as long as the location is accessible (not your home directory or a restricted directory).
