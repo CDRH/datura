@@ -52,6 +52,22 @@ def handle_parameters
       options[:transform_only] = true
     end
 
+    options[:update_time] = nil
+    opts.on('-', '--update [2015-01-01T18:24]', 'Transform and post only new files') do |input|
+      if input.length == 0
+        puts "Please specify date (req) and time (opt): 2015-01-01T18:24"
+        exit
+      else
+        # TODO should verify that this is a correct date and turn it into a time object
+        datetime = timify(input)
+        if datetime.nil?
+          exit
+        else
+          options[:update_time] = datetime
+        end
+      end
+    end
+
     options[:verbose] = false
     opts.on( '-v', '--verbose', 'More messages and stacktraces than ever before!') do
       options[:verbose] = true
@@ -81,4 +97,31 @@ def handle_parameters
   puts "Options set:\n\t #{options}" if options[:verbose]
 
   return options
+end
+
+# helpers
+
+# take a string in utc and create a time object with it
+# Expects something from this format: 2015-01-01T18:24
+def timify(time_string)
+  datetime = nil
+  begin
+    arr = time_string.split(/[-T:]/)
+    # if the y, m, or d are not filled out, return nil
+    if arr[0].empty? || arr[1].empty? || arr[2].empty?
+      puts "Must enter a valid date"
+    else
+      # if there are only three, convert to date time
+      if arr.length == 3
+        datetime = Time.new(arr[0], arr[1], arr[2])
+      elsif arr.length == 5 && !arr[3].empty? && !arr[4].empty?
+        datetime = Time.new(arr[0], arr[1], arr[2], arr[3], arr[4])
+      else
+        puts "Unable to understand the entered date."
+      end
+    end
+  rescue Exception => e
+    puts "Unable to understand entered date time: #{e}"
+  end
+  return datetime
 end

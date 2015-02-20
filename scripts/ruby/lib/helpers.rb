@@ -24,13 +24,13 @@ end
 #   params: directory (string)
 #   returns: returns array of all files found ([] if none),
 #     returns nil if no directory by that name exists
-def get_directory_files(directory)
+def get_directory_files(directory, verbose_flag)
   exists = File.directory?(directory)
   if exists
     files = Dir["#{directory}/*"]  # grab all the files inside that directory
     return files
   else
-    puts "Unable to find a directory at #{directory}."
+    puts "Unable to find a directory at #{directory}" if verbose_flag
     return nil
   end
 end
@@ -55,6 +55,21 @@ def read_configs(dir, project, verbose_flag=false)
   end
 end
 # end read_configs
+
+# should_update?
+#   determines if a user has changed a file since specified date
+#   params: file (string path), since_date (Time format or nil)
+#   returns: boolean
+def should_update?(file, since_date=nil)
+  if since_date.nil?
+    # if there is no specified date, then update everything
+    return true
+  else
+    # if a file has been updated since a time specified by user
+    file_date = File.mtime(file)
+    return file_date > since_date
+  end
+end
 
 # summarize_errors
 #   outputs to stdout if there were any errors

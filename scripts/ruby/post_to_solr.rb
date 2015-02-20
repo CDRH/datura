@@ -25,11 +25,11 @@ config = read_configs(this_dir, project, verbose_flag)
 # clear out anything in the tmp directory before doing anything else
 dir = config[:main]["repo_directory"]
 clear_tmp_directory(dir, verbose_flag)
-transform(dir, project, options[:format], config[:main]["xsl_scripts"], verbose_flag)
+transform(dir, project, options[:format], config[:main]["xsl_scripts"], options[:update_time], verbose_flag)
 
 # only post to solr if the user has not specified that this should be transform_only
 if !options[:transform_only]
-  files = get_directory_files("#{dir}/tmp")
+  files = get_directory_files("#{dir}/tmp", verbose_flag)
   if files.nil?
     puts "tmp directory in your repository was not found."
     exit
