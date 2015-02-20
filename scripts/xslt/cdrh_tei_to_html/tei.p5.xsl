@@ -15,28 +15,25 @@
     PARAMETERS
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
   
-  <!-- Left for project display rules -->
+  <!-- Left for project display rules, currently unused -->
   <xsl:param name="pagetype"></xsl:param>
   <xsl:param name="subpagetype"></xsl:param>
   
-  <xsl:param name="metadata_box">false</xsl:param> <!-- true/false Toggle metadata box on and off  -->
+  <!-- delete --><xsl:param name="metadata_box">false</xsl:param> <!-- true/false Toggle metadata box on and off  -->
   <xsl:param name="figures">true</xsl:param> <!-- true/false Toggle figures on and off  -->
   <xsl:param name="fw">true</xsl:param> <!-- true/false Toggle fw's on and off  -->
   <xsl:param name="pb">true</xsl:param> <!-- true/false Toggle pb's on and off  -->
   
   <!-- link locations - unsure about how these will work in the "real world" -->
   <xsl:param name="fig_location"><xsl:text>http://rosie.unl.edu/data_images/projects/cody/figures/</xsl:text></xsl:param> <!-- set figure location  -->
-  <xsl:param name="keyword_link"><xsl:text>../../</xsl:text></xsl:param> <!-- set keyword link location  -->
-
-  <!-- Include project specific xsl -->
-  <!-- Can't get this to work gonna give up blah -KMD -->
-  <!--<xsl:include href="project.xsl"/>-->
+  <!-- delete --><xsl:param name="keyword_link"><xsl:text>../../</xsl:text></xsl:param> <!-- set keyword link location  -->
   
   
   <!-- ===================================================================================
     CODE TO INCLUDE
     =================================================================================== -->
   
+  <!-- DELETE THIS AND PULL METADATA FROM SOLR -->
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     METADATA BOX
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->

@@ -8,8 +8,7 @@
 
     <xsl:output indent="yes" omit-xml-declaration="yes"/>
     
-    <xsl:param name="date"/>
-    <xsl:param name="string"/>
+    
     <xsl:param name="site_location">http://rosie.unl.edu/transmississippi/</xsl:param>
     <xsl:param name="fig_location"><xsl:text>http://rosie.unl.edu/data_images/projects/transmississippi/figures/</xsl:text></xsl:param> <!-- set figure location  -->
     <xsl:param name="repo_directory">/var/www/html/data/</xsl:param>
@@ -95,7 +94,7 @@
     
     
     <xsl:template name="normalize_name">
-        <xsl:param name="string"><xsl:value-of select="$string"/></xsl:param>
+        <xsl:param name="string"></xsl:param>
         
         <xsl:variable name="string_lower"><xsl:value-of select="normalize-space(translate(lower-case($string), '“‘&quot;', ''))"/></xsl:variable>
         
@@ -167,74 +166,7 @@
             <xsl:otherwise></xsl:otherwise></xsl:choose>
     </xsl:template>
     
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        recurse_till_x ||| Recursive template
-        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-    
-    <xsl:template name="recurse_till_x" xpath-default-namespace="">
-        <xsl:param name="num">1</xsl:param>
-        <xsl:param name="times"/>
-        
-        <!-- Build HTML. Consider moving this outside the recurse till x template later so it is reusable -->
-        <xsl:choose>
-            <!-- Currently showing thumbnails if more than 10 images. May want to decrease this, or show all as thumbnails? -->
-            <xsl:when test="$times > 10">
-                <div class="thumbnail_listing_images">
-                    
-                    <a>
-                        <xsl:attribute name="rel">
-                            <xsl:text>prettyPhoto[pp_gal]</xsl:text>
-                        </xsl:attribute>
-                        <xsl:attribute name="href">
-                            <xsl:value-of select="$fig_location"/>
-                            <xsl:text>large/</xsl:text>
-                            <xsl:value-of select="id"/>
-                            <xsl:text>-</xsl:text>
-                            <xsl:value-of select="format-number(number($num), '000')"/>
-                            <xsl:text>.jpg</xsl:text>
-                        </xsl:attribute>
-                        
-                        <span class="thumbnail_div">
-                            <img>
-                                <xsl:attribute name="src">
-                                    <xsl:value-of select="$fig_location"/>
-                                    <xsl:text>medium/</xsl:text>
-                                    <xsl:value-of select="id"/>
-                                    <xsl:text>-</xsl:text>
-                                    <xsl:value-of select="format-number(number($num), '000')"/>
-                                    <xsl:text>.jpg</xsl:text>
-                                    
-                                </xsl:attribute>
-                            </img>
-                        </span>
-                    </a>
-                    
-                </div><!-- /thumbnail_listing -->
-            </xsl:when>
-            <xsl:otherwise>
-                <img>
-                    <xsl:attribute name="src">
-                        <xsl:value-of select="$fig_location"/>
-                        <xsl:text>large/</xsl:text>
-                        <xsl:value-of select="id"/>
-                        <xsl:text>-</xsl:text>
-                        <xsl:value-of select="format-number(number($num), '000')"/>
-                        <xsl:text>.jpg</xsl:text>
-                    </xsl:attribute>
-                </img>
-            </xsl:otherwise>
-        </xsl:choose>
-        
-        <!-- The recursion part -->
-        
-        <xsl:if test="$num != $times">
-            
-            <xsl:call-template name="recurse_till_x">
-                <xsl:with-param name="num"><xsl:value-of select="$num + 1"/></xsl:with-param>
-                <xsl:with-param name="times" as="xs:integer"><xsl:value-of select="$times"/></xsl:with-param>
-            </xsl:call-template>
-        </xsl:if>
-    </xsl:template>
+   
     
     
     
