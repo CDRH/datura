@@ -8,6 +8,8 @@
 	<xsl:param name="string"/>
 	<xsl:param name="site_location">http://rosie.unl.edu/transmississippi/</xsl:param>
 	<xsl:param name="file_location">http://rosie.unl.edu/data/projects/</xsl:param>
+	<xsl:param name="project" select="/TEI/teiHeader/fileDesc/publicationStmt/authority[1]"></xsl:param>
+	
 	<xsl:include href="lib/common.xsl"/>
 	
 	<xsl:template match="/" exclude-result-prefixes="#all">
@@ -79,19 +81,16 @@
 	<!-- rightsURI -->
 	
 	
-	
-	
 	<!-- ==============================
-	CDRH specific 
+	Other Elements 
 	===================================-->
 	
-	<!-- category -->
-	<!-- subCategory -->
-	<!-- topic -->
-	<!-- keywords -->
-	<!-- people -->
-	<!-- places -->
-	<!-- works -->
+	<!-- principalInvestigator -->
+	<!-- principalInvestigators -->
+	<!-- place -->
+	<!-- placeName -->
+	
+	
 
 	<xsl:template name="tei_template" exclude-result-prefixes="#all">
 		<xsl:param name="filenamepart"/>
@@ -119,7 +118,7 @@
 				<!-- project -->
 				
 				<field name="project">
-					<xsl:value-of select="/TEI/teiHeader/fileDesc/publicationStmt/authority[1]"/>
+					<xsl:value-of select="$project"/>
 				</field>
 				
 				<!-- uri -->
