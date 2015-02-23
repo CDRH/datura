@@ -16,7 +16,7 @@ errors = {}                        # keeper of everything that has gone wrong
 errors[:failed_files] = []         # array of strings with file names that did not post
 errors[:solr_errors] = []          # array of errors from solr to display at the end
 
-options = handle_parameters
+options = post_to_solr_params
 project = options[:project]
 verbose_flag = options[:verbose] == true  # set verbose flag
 env = options[:environment]
@@ -42,7 +42,7 @@ if !options[:transform_only]
       res = post_xml(url, file)
       if !res.nil?
         if res.code == "200"
-          puts "Posted #{file_path} successfully"
+          puts "Posted #{file_path} successfully" if verbose_flag
         else
           puts "FAILURE. The request to #{url} returned with an error.  Status #{res.code}"
           errors[:failed_files] << file_path
@@ -57,7 +57,7 @@ if !options[:transform_only]
     # commit your changes to solr unless if otherwise specified
     if options[:commit]
       commit_res = commit_solr(url)
-      if !commit_res.nil? && !commit_res.body.nil?
+      if !commit_res.nil? && !commit_res.body.nil? && commit_res.code != "200"
         errors[:solr_errors] << commit_res.body
       end
     end

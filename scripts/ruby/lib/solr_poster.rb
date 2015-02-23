@@ -1,5 +1,32 @@
 require 'net/http'
 
+# TODO this is very similar to the below _by_regex function
+# so could stick them together later
+def clear_index(url)
+  del_str = "<delete><query>*:*</query></delete>"
+  res = post_xml(url, del_str)
+  if res.code == "200"
+    puts "Successfully cleared index of requested entries"
+  else
+    puts "Unable to clear index!"
+  end
+  return res
+end
+
+def clear_index_by_regex(url, field, regex)
+  puts "reg #{regex}"
+  exp = "/.*#{regex}.*/"  # pad the regex so solr knows how to handle it
+  del_str = "<delete><query>#{field}:#{exp}</query></delete>"
+  puts "del string #{del_str}"
+  res = post_xml(url, del_str)
+  if res.code == "200"
+    puts "Successfully cleared index of requested entries"
+  else
+    puts "Unable to clear files from index!"
+  end
+  return res
+end
+
 # returns an error or nil
 def commit_solr(url)
   commit_res = post_xml(url, "<commit/>")

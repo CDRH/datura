@@ -6,7 +6,7 @@ require 'optparse'
 
 # returns options hash
 
-def handle_parameters
+def post_to_solr_params
   usage = "Usage: ruby post_to_solr.rb [project] -[options]..."
   options = {}  # will hold all the options passed in by user
 
@@ -82,29 +82,75 @@ def handle_parameters
   # magic
   optparse.parse!
 
+  options[:project] = argv_projects(ARGV)
+  puts "Options set:\n\t #{options}" if options[:verbose]
 
+  return options
+end
 
+def clear_index_params
+  usage = "Usage: ruby clear_index.rb [project] -[options]..."
+  options = {}  # will hold all the options passed in by user
+
+  optparse = OptionParser.new do |opts|
+    # Set a banner
+    opts.banner = usage
+
+    # set the available options
+    opts.on( '-h', '--help', 'Computer, display script options.' ) do
+      puts opts
+      exit
+    end
+
+    options[:environment] = "test"
+    opts.on( '-e', '--environment [input]', 'Environment (test, production)') do |input|
+      if input == "test" || input == "production"
+        options[:environment] = input
+      else
+        puts "Must choose environment of test or production"
+        exit
+      end
+    end
+
+    options[:field] = nil
+    opts.on('-f', '--field [input]', 'The specific field regex is run on') do |input|
+      options[:field] = input
+    end
+
+    options[:regex] = nil
+    opts.on('-r', '--regex [input]', 'Used as criteria for removing item (books.*, etc') do |input|
+      options[:regex] = input
+    end
+  end
+
+  # magic
+  optparse.parse!
+
+  options[:project] = argv_projects(ARGV)
+
+  return options
+end # ends clear_index_params
+
+# helpers
+
+def argv_projects(argv)
+  project = nil
   # put this after calling parse! on the incoming option flags
   # or the flags will be picked up as args also
-  if ARGV.length == 0
+  if argv.length == 0
     puts "CRITICAL ERROR! You must specify a project that you want to post!"
     puts usage
     exit
-  elsif ARGV.length == 1
-    options[:project] = ARGV[0]
+  elsif argv.length == 1
+    project = argv[0]
   else
     # they entered too many projects! (or something else is terribly wrong)
     puts "Captain, sensors detect more than one project!"
     puts usage
     exit
   end
-
-  puts "Options set:\n\t #{options}" if options[:verbose]
-
-  return options
+  return project
 end
-
-# helpers
 
 # take a string in utc and create a time object with it
 # Expects something from this format: 2015-01-01T18:24
