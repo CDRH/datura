@@ -25,7 +25,7 @@ config = read_configs(this_dir, project, verbose_flag)
 # clear out anything in the tmp directory before doing anything else
 dir = config[:main]["repo_directory"]
 clear_tmp_directory(dir, verbose_flag)
-transform(dir, project, options[:format], config[:main]["xsl_scripts"], options[:update_time], verbose_flag)
+transform(dir, project, options[:format], config[:main]["xsl_scripts"], options[:update_time], options[:regex], verbose_flag)
 
 # only post to solr if the user has not specified that this should be transform_only
 if !options[:transform_only]
@@ -40,21 +40,25 @@ if !options[:transform_only]
       file = IO.read(file_path)
       puts "posting data to #{url} from #{file_path}" if verbose_flag
       res = post_xml(url, file)
-
-      if res.code == "200"
-        puts "Posted #{file_path} successfully"
+      if !res.nil?
+        if res.code == "200"
+          puts "Posted #{file_path} successfully"
+        else
+          puts "FAILURE. The request to #{url} returned with an error.  Status #{res.code}"
+          errors[:failed_files] << file_path
+          errors[:solr_errors] << res.body
+        end
       else
-        puts "FAILURE. The request to #{url} returned with an error.  Status #{res.code}"
-        errors[:failed_files] << file_path
-        errors[:solr_errors] << res.body
+        # TODO add a log line
+        exit
       end
     end  # ends files each loop
 
     # commit your changes to solr unless if otherwise specified
     if options[:commit]
-      commit_error = commit_solr(url)
-      if !commit_error.nil?
-        errors[:solr_errors] << commit_error
+      commit_res = commit_solr(url)
+      if !commit_res.nil? && !commit_res.body.nil?
+        errors[:solr_errors] << commit_res.body
       end
     end
     summarize_errors(errors)

@@ -47,13 +47,18 @@ def handle_parameters
       options[:commit] = false
     end
 
+    options[:regex] = nil
+    opts.on('-r', '--regex [input]', 'Only post files matching this regex') do |input|
+      options[:regex] = input
+    end
+
     options[:transform_only] = false
     opts.on('-t', '--transform-only', 'Do not post to solr or erase tmp/') do
       options[:transform_only] = true
     end
 
     options[:update_time] = nil
-    opts.on('-', '--update [2015-01-01T18:24]', 'Transform and post only new files') do |input|
+    opts.on('-u', '--update [2015-01-01T18:24]', 'Transform and post only new files') do |input|
       if input.length == 0
         puts "Please specify date (req) and time (opt): 2015-01-01T18:24"
         exit
@@ -108,8 +113,8 @@ def timify(time_string)
   begin
     arr = time_string.split(/[-T:]/)
     # if the y, m, or d are not filled out, return nil
-    if arr[0].empty? || arr[1].empty? || arr[2].empty?
-      puts "Must enter a valid date"
+    if arr[0].nil? || arr[1].nil? || arr[2].nil?
+      puts "Must enter a valid date with at least YYYY-MM-DD"
     else
       # if there are only three, convert to date time
       if arr.length == 3
@@ -117,7 +122,7 @@ def timify(time_string)
       elsif arr.length == 5 && !arr[3].empty? && !arr[4].empty?
         datetime = Time.new(arr[0], arr[1], arr[2], arr[3], arr[4])
       else
-        puts "Unable to understand the entered date."
+        puts "Unable to understand the entered date time."
       end
     end
   rescue Exception => e

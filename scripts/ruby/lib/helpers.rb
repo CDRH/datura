@@ -58,6 +58,23 @@ def read_configs(dir, project, verbose_flag=false)
 end
 # end read_configs
 
+# regex_files
+#   looks through a directory's files for those matching the regex
+#   params: files (array of file names), regex (regular expression)
+#   returns: array ([] if none matched or if regex is nil)
+def regex_files(files, regex=nil)
+  array = files.nil? ? [] : files
+  if !files.nil? && !regex.nil?
+    exp = Regexp.new(regex)
+    array = files.select do |file|
+      file_name = File.basename(file, ".*")
+      match = exp.match(file_name)
+      !match.nil?  # return this line
+    end
+  end
+  return array
+end
+
 # should_update?
 #   determines if a user has changed a file since specified date
 #   params: file (string path), since_date (Time format or nil)

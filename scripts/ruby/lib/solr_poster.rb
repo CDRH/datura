@@ -5,12 +5,10 @@ def commit_solr(url)
   commit_res = post_xml(url, "<commit/>")
   if commit_res.code == "200"
     puts "SUCCESS! Committed your changes to Solr index"
-    return nil
   else
     puts "UNABLE TO COMMIT YOUR CHANGES TO SOLR."
-    puts res.body
-    return res.body
   end
+  return commit_res
 end
 
 
@@ -19,13 +17,13 @@ end
 #   params: url_string ("http://www.hello.com"), content: "<xml>Stuff</xml>"
 #   returns: a response object that can be used with http
 def post_xml(url_string, content)
-  if url_string.nil?
+  if url_string.nil? || url_string.empty?
     puts "Missing Solr URL!  Unable to continue."
-    exit
-  elsif content.nil?
+    return nil
+  elsif content.nil? || content.empty?
     puts "Missing content to index to Solr. Please check that files are"
     puts "available to be converted to Solr format and that they were transformed."
-    exit
+    return nil
   else
     url = URI.parse(url_string)
     http = Net::HTTP.new(url.host, url.port)

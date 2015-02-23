@@ -15,16 +15,19 @@ RSpec.describe "Helper Test:" do
         expect(Dir["#{fixtures}/tmp/*"].length).to equal(4)
         # now remove them
         expect(clear_tmp_directory("#{fixtures}")).to be_truthy
-        # TODO want this to also NOT be an exception and that isn't working
         expect(Dir["#{fixtures}/tmp/*"].length).to equal(0)
       end
     end
     context "given a bad directory" do
-      #expect().to raise_error
       it "should raise exception" do
-        skip
-        # TODO THIS ISN'T WORKING EITHER I'M SO MAD
-        # expect(clear_tmp_directory(".")).to raise_error(RuntimeError)
+        begin
+          clear_tmp_directory(".")
+        rescue RuntimeError => e
+          expect(true).to be_truthy
+        else
+          # should not have gotten to this step
+          expect(true).to be_falsey 
+        end
       end
     end
   end  # ends clear_tmp_directory
@@ -84,6 +87,46 @@ RSpec.describe "Helper Test:" do
       end
     end
   end  # ends read_configs
+
+  describe "regex_files" do
+    test_files = ["/path/to/cody.book.001.xml", 
+                  "/path/to/cody.book.002.xml", 
+                  "/path/to/cody.news.001.xml",
+                  "/path/to/transmiss.mem.001.xml"]
+    context "given incomplete info" do
+      it "should return empty array when no files" do
+        files = regex_files([], "d")
+        expect(files.length).to be(0)
+      end
+      it "should return original array when no regex" do
+        files = regex_files(test_files)
+        expect(files.length).to be(test_files.length)
+      end
+    end
+    context "given complete info" do
+      it "should return only cody files" do
+        files = regex_files(test_files, "cody")
+        expect(files.length).to be(3)
+        expect(files[0]).to eq("/path/to/cody.book.001.xml")
+      end
+      it "should return only transmiss files" do
+        files = regex_files(test_files, "miss")
+        expect(files.length).to be(1)
+        expect(files[0]).to eq("/path/to/transmiss.mem.001.xml")
+      end
+      it "should return only books" do
+        files = regex_files(test_files, "book\.")
+        expect(files.length).to be(2)
+      end
+      it "should return all news or mem" do
+        files = regex_files(test_files, "news|mem")
+        expect(files.length).to be(2)
+        expect(files[0]).to eq("/path/to/cody.news.001.xml")
+        expect(files[1]).to eq("/path/to/transmiss.mem.001.xml")
+      end
+    end
+  end  # ends regex_files
+
 
   describe "should_update?" do
     context "given file and time" do
