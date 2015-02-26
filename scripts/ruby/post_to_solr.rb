@@ -1,5 +1,4 @@
-#! /Users/jdussault2/.rvm/rubies/ruby-2.1.3/bin/ruby
-# #! /usr/local/rvm/rubies/ruby-2.1.3/bin/ruby
+#! /usr/local/rvm/rubies/ruby-2.1.3/bin/ruby
 
 #################
 # Post to Solr  #

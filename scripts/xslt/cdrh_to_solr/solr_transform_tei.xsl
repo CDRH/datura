@@ -89,6 +89,31 @@
 	<!-- principalInvestigators -->
 	<!-- place -->
 	<!-- placeName -->
+	<!-- recipient -->
+	<!-- recipients -->
+	
+	<!-- ==============================
+	Other Elements 
+	===================================-->
+	
+	<!-- principalInvestigator -->
+	<!-- principalInvestigators -->
+	<!-- place -->
+	<!-- placeName -->
+	<!-- recipient -->
+	<!-- recipients -->
+	
+	<!-- ==============================
+	CDRH specific categorization
+	===================================-->
+	
+	<!-- category -->
+	<!-- subCategory -->
+	<!-- topic -->
+	<!-- keywords -->
+	<!-- people -->
+	<!-- places -->
+	<!-- works -->
 	
 	
 
@@ -140,14 +165,14 @@
 				<field name="uriHTML">
 					<xsl:value-of select="$file_location"/>
 					<xsl:value-of select="$slug"/>
-					<xsl:text>/html/</xsl:text>
+					<xsl:text>/html-generated/</xsl:text>
 					<xsl:value-of select="$filenamepart"/>
-					<xsl:text>.xml.txt</xsl:text>
+					<xsl:text>.txt</xsl:text>
 				</field>
 				
 				<!-- dataType -->
 				
-				<field name="dataType">
+				<field name="dataType"> 
 					<xsl:text>tei</xsl:text>
 				</field>
 				
@@ -334,10 +359,17 @@
 				<!-- relation -->
 				<!-- coverage -->
 				<!-- source -->
+				
+				<xsl:if test="/TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/title[@level='j'] != ''">
+					<field name="source">
+						<xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/title[@level='j']"/>
+					</field>
+				</xsl:if>
+				
 				<!-- rightsHolder -->
 				
 				<xsl:if test="/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/repository[1] != ''">
-					<field name="source">
+					<field name="rightsHolder">
 						<xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/repository"/>
 					</field>
 				</xsl:if>
@@ -371,7 +403,22 @@
 				<!-- place -->
 				<!-- placeName -->
 				
+				<!-- recipient -->
+				<!-- recipients -->
 				
+				<!-- This is currently the way we encode for Neihardt. Other projects may need special rules. 
+					Also, the TEI rules for may change.
+					Currently, there is only one persName per letter, but that too could change
+				-->
+				<xsl:if test="/TEI/teiHeader/profileDesc/particDesc/person[@role='recipient']/persName != ''">
+					<field name="recipient">
+						<xsl:value-of select="/TEI/teiHeader/profileDesc/particDesc/person[@role='recipient']/persName"/>
+					</field>
+					<field name="recipients">
+						<xsl:value-of select="/TEI/teiHeader/profileDesc/particDesc/person[@role='recipient']/persName"/>
+					</field>
+					
+				</xsl:if>
 				
 				
 				<!-- ==============================

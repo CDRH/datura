@@ -11,7 +11,7 @@ def transform(dir, project, format, xslt_location, update_time, regex, verbose_f
       if should_update?(file, update_time)
         # construct a new filename for html generation
         file_name = File.basename(file, ".*")
-        file_path = "#{project_path}/html-generated/#{file_name}.html"
+        file_path = "#{project_path}/html-generated/#{file_name}.txt"
         _transform(file, xslt_location["tei"], dir, nil, verbose_flag)
         _transform(file, xslt_location["html"], dir, file_path, verbose_flag)
       else
