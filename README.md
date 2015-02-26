@@ -116,13 +116,39 @@ You only want to add files with a specific regex (make sure to \ escape regex ch
 - Do you have correct permissions to run all of the files? Check that permissions / ownership was not changed on files (and that the tei / vra / dc are all readable)
 - If you type "saxon" into the command line, does it find the command?  Make sure saxon can be executed from the command line
 - Run the tests and make sure that various components are working on their own. This may hone in on specific issues.
+- if ./command fails to work, try running it with `ruby command` instead, or point at a specific version of ruby before running the command
+
 
 Managing Your Solr Data
 ------
 ##### <a href="clear"></a> Management Script
-
+"Management" script is a bit misleading, as this script is just meant for straight up deleting things.  It will clear an entire solr core or it will look for specific entries to remove.
+```
+Usage: ruby clear_index.rb [project] -[options]...
+    -h, --help                       Computer, display script options.
+    -e, --environment [input]        Environment (test, production)
+    -f, --field [input]              The specific field regex is run on
+    -r, --regex [input]              Used as criteria for removing item (books.*, etc)
+```
+If you wanted to clear an entire test solr core, you would say something like this:
+```
+./scripts/ruby/clear_index.rb whitman
+```
+You would need to specify production if you really meant business:
+```
+./scripts/ruby/clear_index.rb whitman -e production
+```
+You could also search for only a specific id or group of ids to erase
+```
+./scripts/ruby/clear_index.rb cody -r txt\.001
+```
+If you want to erase items from the core by a specific field, use the field flag:
+```
+./scripts/ruby/clear_idex.rb transmississippi -f category -r memorabilia
+```
 ##### <a href="trouble_clear"></a> Troubleshooting
-
+- The config files will need to be filled out correctly for this script to run
+- Remember that the -r flag is regex.  Entering something like .* will look for all characters multiple times, not something that literally as ".*" in the title.
 
 Developer Guide
 ------
@@ -167,7 +193,7 @@ None of the libraries used in the ruby scripts require gems -- they are all buil
 ##### <a href="main_config"></a> Main Config
 
 
-
+```
 sudo chmod +x name_of_command
 ```
 
