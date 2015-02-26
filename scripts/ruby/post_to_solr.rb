@@ -24,10 +24,16 @@ config = read_configs(this_dir, project, verbose_flag)
 # clear out anything in the tmp directory before doing anything else
 dir = config[:main]["repo_directory"]
 clear_tmp_directory(dir, verbose_flag)
-transform(dir, project, options[:format], config[:main]["xsl_scripts"], options[:update_time], options[:regex], verbose_flag)
+# make a new transformer
+transformer = Transformer.new(dir, project, config[:main]["xsl_scripts"], options[:solr_or_html], verbose_flag)
+# figure out which update times should go with which formats#
+
+transformer.transform(options[:format], options[:regex], options[:update_time], options[:html])
+
+# transform(dir, project, options[:format], config[:main]["xsl_scripts"], options[:update_time], options[:regex], verbose_flag)
 
 # only post to solr if the user has not specified that this should be transform_only
-if !options[:transform_only]
+if !options[:transform_only] && options[:solr_or_html] != "html"
   files = get_directory_files("#{dir}/tmp", verbose_flag)
   if files.nil?
     puts "tmp directory in your repository was not found."

@@ -42,6 +42,11 @@ def post_to_solr_params
       end
     end
 
+    options[:solr_or_html] = "both"
+    opts.on('-x', '--html-only', 'Will not generate solr snippets, only html') do
+      options[:solr_or_html] = "html"
+    end
+
     options[:commit] = true
     opts.on('-n', '--no-commit', 'Post files to solr but do not commit') do
       options[:commit] = false
@@ -50,6 +55,11 @@ def post_to_solr_params
     options[:regex] = nil
     opts.on('-r', '--regex [input]', 'Only post files matching this regex') do |input|
       options[:regex] = input
+    end
+
+    opts.on('-s', '--solr-only', 'Will not generate html snippets') do
+      # if they also entered html only, go ahead and run them both because the user is confused
+      options[:solr_or_html] = options[:solr_or_html] == "html" ? "both" : "solr"
     end
 
     options[:transform_only] = false

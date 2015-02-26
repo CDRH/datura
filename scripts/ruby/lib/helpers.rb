@@ -47,8 +47,8 @@ end
 def read_configs(dir, project, verbose_flag=false)
   begin
     config_main = YAML.load_file("#{dir}/../../config/config.yml")
-    proj_data = config_main["repo_directory"]
-    config_prj = YAML.load_file("#{dir}/../../projects/#{project}/config/config.yml")
+    root = config_main["repo_directory"]
+    config_prj = YAML.load_file("#{root}/projects/#{project}/config/config.yml")
     return { :main => config_main, :proj => config_prj }
   rescue Exception => e
     puts "There was an error reading a config file: #{e.message}"

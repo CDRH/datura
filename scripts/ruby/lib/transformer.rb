@@ -1,63 +1,92 @@
 require 'open3'
+require_relative './helpers.rb'
 
-# TODO if anything is going to be asynchronous, this would be a great spot
-def transform(dir, project, format, xslt_location, update_time, regex, verbose_flag=false)
-  project_path = "#{dir}/projects/#{project}"
-  # go check the project directory for files of specific format
-  if format.nil? || format == "tei"
-    all_files = get_directory_files("#{project_path}/tei", verbose_flag)
+class Transformer
+  def initialize(main_directory, project, xslt_location, solr_or_html, verbose_flag=false)
+    # Instance variables
+    @dir = main_directory
+    @project = project
+    @project_path = "#{main_directory}/projects/#{project}"
+    @xslt_location = xslt_location
+    @solr_html = solr_or_html
+    @verbose = verbose_flag
+  end
+
+  # expect a specific format -- cannot be "nil" or "all"
+  # so this is likely going to be called multiple times
+  def transform(format, regex, update_time=nil, html=false)
+    # depending on the format, treat transformation differently
+    # run all types of transformation if the user did not specify
+    if format.nil? || format == "tei" 
+       _transform_tei_html(regex, update_time, html)
+    end
+    if (format.nil? || format == "vra") && @solr_html != "html"
+      _transform_vra(regex, update_time)
+    end
+    if (format.nil? || format == "dublin_core") && @solr_html != "html"
+      _transform_dc(regex, update_time)
+    end
+  end
+
+  def _transform_tei_html(regex, update_time, html)
+    all_files = get_directory_files("#{@project_path}/tei", @verbose)
     files = regex_files(all_files, regex)
     files.each do |file|
       if should_update?(file, update_time)
-        # construct a new filename for html generation
-        file_name = File.basename(file, ".*")
-        file_path = "#{project_path}/html-generated/#{file_name}.txt"
-        _transform(file, xslt_location["tei"], dir, nil, verbose_flag)
-        _transform(file, xslt_location["html"], dir, file_path, verbose_flag)
+        # transform the tei if they requested it
+        if @solr_html != "html"
+          _transform(file, @xslt_location["tei"])
+        end
+        if @solr_html != "solr"
+          # make a name for the html snippet and transform it
+          file_name = File.basename(file, ".*")
+          file_path = "#{@project_path}/html-generated/#{file_name}.txt"
+          _transform(file, @xslt_location["html"], file_path)
+        end
+      end
+    end
+  end
+
+  def _transform_vra(regex, update_time)
+    all_files = get_directory_files("#{@project_path}/vra", @verbose)
+    files = regex_files(all_files, regex)
+    files.each do |file|
+      if should_update?(file, update_time)
+        _transform(file, @xslt_location["vra"])
+      end
+    end
+  end
+
+  def _transform_dc(regex, update_time)
+    all_files = get_directory_files("#{@project_path}/dublin_core", @verbose)
+    files = regex_files(all_files, regex)
+    files.each do |file|
+      if should_update?(file, update_time)
+        _transform(file, @xslt_location["dc"])
+      end
+    end
+  end
+
+  # _transform
+  #    Transforms xml file with xslt and assigns to tmp file
+  def _transform(source, xslt, file_path=nil)
+    output = file_path.nil? ? create_temp_name(@dir, "xml") : file_path
+    xslt_loc = "#{@dir}/#{xslt}"  # make absolute path so that script can be run anywhere
+    puts "output file #{output}" if @verbose
+    saxon = "saxon -s:#{source} -xsl:#{xslt_loc} -o:#{output}"
+    successBool = false
+    # execute the saxon command and make sure that you don't get a stderr!
+    Open3.popen3(saxon) do |stdin, stdout, stderr|
+      out = stdout.read
+      err = stderr.read
+      if err.length > 0
+        puts "There was an error with the saxon transformation: "
+        puts "#{err}"
       else
-        puts "file #{file} has not been changed since #{update_time}" if verbose_flag
+        successBool = true
+        puts "Saxon transformation successful"
       end
     end
-  end
-
-  if format.nil? || format == "dc"
-    all_files = get_directory_files("#{project_path}/dublin_core", verbose_flag)
-    files = regex_files(all_files, regex)
-    files.each do |file|
-      if should_update?(file, update_time)
-        _transform(file, xslt_location["dc"], dir, verbose_flag)
-      end
-    end
-  end
-
-  if format.nil? || format == "vra"
-    all_files = get_directory_files("#{project_path}/vra_core", verbose_flag)
-    files = regex_files(all_files, regex)
-    files.each do |file|
-      if should_update?(file, update_time)
-        _transform(file, xslt_location["vra"], dir, verbose_flag)
-      end
-    end
-  end
-end
-
-# _transform
-#    Transforms xml file with xslt and assigns to tmp file
-def _transform(source, xslt, dir, file_name=nil, verbose_flag=false)
-  output = file_name.nil? ? create_temp_name(dir, "xml") : file_name
-  xslt_loc = "#{dir}/#{xslt}"  # make absolute path so that script can be run anywhere
-  puts "output file #{output}" if verbose_flag
-  saxon = "saxon -s:#{source} -xsl:#{xslt_loc} -o:#{output}"
-  # execute the saxon command and make sure that you don't get a stderr!
-  Open3.popen3(saxon) do |stdin, stdout, stderr|
-    out = stdout.read
-    err = stderr.read
-    if err.length > 0
-      puts "There was an error with the saxon transformation: "
-      puts "#{err}"
-      exit
-    else
-      puts "Saxon transformation successful" if verbose_flag
-    end
+    return successBool
   end
 end
