@@ -7,7 +7,7 @@ PROJECTNAME=$1
 if  [ $PROJECTNAME ]; then
 
   FILELOCATION=("/var/www/html/data/projects/"$PROJECTNAME"/spreadsheets/xml/")
-  XSLTLOCATION=("/var/www/html/data/projects/"$PROJECTNAME"/spreadsheets/scripts/csvXML2HTML.xsl")
+  XSLTLOCATION=("/var/www/html/data/projects/"$PROJECTNAME"/scripts/csvXML2HTML.xsl")
   #OUTPUT=("/var/www/html/data/projects/"$PROJECTNAME"/html/")
 
   for i in `ls $FILELOCATION`; do

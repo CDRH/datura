@@ -7,7 +7,7 @@ PROJECTNAME=$1
 if  [ $PROJECTNAME ]; then
 
   CSVXMLPATH=("/var/www/html/data/projects/"$PROJECTNAME"/spreadsheets/xml/")
-  XSLTLOCATION=("/var/www/html/data/projects/"$PROJECTNAME"/spreadsheets/scripts/csvXML2solr.xsl")
+  XSLTLOCATION=("/var/www/html/data/projects/"$PROJECTNAME"/scripts/csvXML2solr.xsl")
   OUTPUT=("/var/www/html/data/solr/"$PROJECTNAME"/")
 
   for i in `ls $CSVXMLPATH`; do
