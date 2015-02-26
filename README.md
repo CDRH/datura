@@ -60,12 +60,13 @@ Depending on the data associated with your project, you may also need to create 
 
 Assuming that you have p5 tei, you can upload it directly to the server into the `data/projects/project_name/tei` directory with scp, ftp, or whatever you preferred method is for file transfers.  Put any vra or dublin core files into those directories (not into the tei directory).
 
-### To Transform Files and Post Them to Solr
-
-
-Check your version of Ruby by typing `ruby -v`.  This project currently uses ruby 2.1.3.  If you have a different version installed on your machine, it is recommended to use rvm to use multiple versions of ruby without messing up the good thing you've already got going on.  https://rvm.io/
+Indexing (Adding) Data to Solr
+------
+##### <a href="post"></a> Running the Script
 
 If your scripts/ruby/post_to_solr.rb script is executable, then you may run it by simply typing `./scripts/ruby/post_to_solr.rb`.  Otherwise you can manually run it with `ruby scripts/ruby/post_to_solr.rb`.
+
+You should be able to run it from anywhere inside the data repository, but it is recommend that you run it from the root of the directory.
 
 You have several options for running it:
 ```
@@ -74,31 +75,65 @@ Usage: ruby post_to_solr.rb [project] -[options]...
     -e, --environment [input]        Environment (test, production)
     -f, --format [input]             Restrict to one format (tei, csv, dublin-core)
     -n, --no-commit                  Post files to solr but do not commit
-    -t, --transform-only             Do not post to solr
+    -r, --regex [input]              Only post files matching this regex
+    -t, --transform-only             Do not post to solr or erase tmp/
+    -u, --update [2015-01-01T18:24]  Transform and post only new files
     -v, --verbose                    More messages and stacktraces than ever before!
 ```
+- help => displays the above script
+- environment => defaults to test if not specified
+- format => will run everything if not specified. Use if you only want to post new vra files, etc.
+- no-commit => Posts all your files but does not "save." You can then manually commit changes through solr web ui
+- regex => Looks for the tei / vra / dc files matching that regex and posts only those
+- transform-only => Generates html snippets from tei and creates solr ready files in the tmp/ directory, does not post
+- update => Only uploads files that have been changed after given time. Can also accept date (YYYY-MM-DD)
+- verbose => Gives you lots of messages. Recommended if you are experiencing an issue
+
+
 It should look something like this if you want to post only tei to a production environment for a whitman project:
 ```
-./post_to_solr.rb whitman -e production -f tei
+./scripts/ruby/post_to_solr.rb whitman -e production -f tei
+```
+You just added two files on Feb 26 but you don't want to rerun everything!
+```
+./scripts/ruby/post_to_solr.rb neihardt -u 2015-02-26 
+```
+You only want to add files related to Buffalo Bill Cody's books (example title: cody.book.001.xml)
+```
+./scripts/ruby/post_to_solr.rb cody -r book
+```
+You only want to add files with a specific regex (make sure to \ escape regex characters like .*[, etc)
+```
+./scripts/ruby/post_to_solr.rb cody -r \.book\.00[0-9]\.xml
 ```
 
+##### <a href="trouble_post"></a> Troubleshooting
 
-### To Add A New Project
+- Run it again with the -v flag so that you can see extra debug lines.
+- Determine where the problem is occurring.  Is it happening when reading in files, transforming, or posting to solr?
+- Make sure that all of your configuration information is correct, including those in the data/config/config.yml file
+- Is your solr core set up to handle the api schema?
+- Do you have correct permissions to run all of the files? Check that permissions / ownership was not changed on files (and that the tei / vra / dc are all readable)
+- If you type "saxon" into the command line, does it find the command?  Make sure saxon can be executed from the command line
+- Run the tests and make sure that various components are working on their own. This may hone in on specific issues.
 
-Execute the following command with the name of your project subbed in.
+Managing Your Solr Data
+------
+##### <a href="clear"></a> Management Script
 
-```
-mkdir -p myProject/{config,html-generated,tei}
-```
-Depending on the data associated with your project, you may also need to create subfolders for vra/, dublin_core/, spreadsheets/, and scripts/.
-
+##### <a href="trouble_clear"></a> Troubleshooting
 
 
-### To set up Saxon command
+Developer Guide
+------
+##### <a href="solr_core"></a> Setting up Solr / Tomcat
 
+##### <a href="apache"></a> Apache Directory Permissions
+
+##### <a href="saxon"></a> Saxon Executable
 Install your preferred edition / version of saxon on the server and put it in a memorable place, such as `/var/lib/saxon/saxon9he.jar`, but it does not matter where it is as long as the location is accessible (not your home directory or a restricted directory).
 
-Now go to the /usr/bin directory.  You'll be adding a script that essentially acts as an alias to run saxon.  Use a text editor running under sudo / root to create a new file in /usr/bin and make sure that you name it something like "saxon" or "xslt" or something logical.  Ours is named "saxon".  Add the following code to the file.
+Now go to the /usr/bin directory.  You'll be adding a script that essentially acts as an alias to run saxon.  Use a text editor running under sudo / root to create a new file in /usr/bin and make sure that you name it "saxon".  Add the following code to the file.
 
 ```
 #!/bin/sh
@@ -116,9 +151,23 @@ fi
 exec "$java" -jar "/var/lib/saxon/saxon9he.jar" "$@"
 exit 1
 ```
-
 You will need to change the path in the second to last line to your own saxon jar.  Save, quit, and then change the permissions of your file to make it executable for anybody on the system.
 ```
+sudo chmod +x name_of_command
+```
+Now you should be able to type your command into the terminal and it will pass all the parameters directly to the real saxon.  This saves you some typing and hardcoding in the long run.
+
+##### <a href="ruby"></a> Ruby / Gems
+Check your version of Ruby by typing `ruby -v`.  This project currently uses ruby 2.1.3.  If you have a different version installed on your machine, it is recommended to use rvm to use multiple versions of ruby without messing up the good thing you've already got going on.  https://rvm.io/
+
+None of the libraries used in the ruby scripts require gems -- they are all built into Ruby.  If you want to run tests, however, you will need gems.  TODO
+
+##### <a href="tests"></a> Running Tests
+
+##### <a href="main_config"></a> Main Config
+
+
+
 sudo chmod +x name_of_command
 ```
 
