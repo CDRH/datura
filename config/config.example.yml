@@ -7,8 +7,9 @@
 # /var/www/html/awesome_project  (no ending line)
 repo_directory: /Users/jdussault2/Desktop/repos/data
 
+# Make sure that you put a / on the end of the solr_paths
 test:
-  solr_path: http://server.unl.edu:port/path/
+  solr_path: http://server.unl.edu:port/solr/
 production:
   solr_path: http://server.unl.edu:port/path/
 
@@ -18,3 +19,4 @@ xsl_scripts:
   tei: scripts/xslt/cdrh_to_solr/solr_transform_tei.xsl
   vra: scripts/xslt/cdrh_to_solr/solr_transform_vra.xsl
   dc: scripts/xslt/cdrh_to_solr/solr_transform_dc.xsl
+  html: scripts/xslt/cdrh_tei_to_html/tei.p5.xsl

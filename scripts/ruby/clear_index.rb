@@ -1,5 +1,4 @@
-#! /Users/jdussault2/.rvm/rubies/ruby-2.1.3/bin/ruby
-# #! /usr/local/rvm/rubies/ruby-2.1.3/bin/ruby
+#! /usr/local/rvm/rubies/ruby-2.1.3/bin/ruby
 
 ##################
 #  Manage Index  #
@@ -23,6 +22,7 @@ confirm = STDIN.gets.chomp
 if confirm && (confirm == "y" || confirm == "Y" || confirm == "Yes" || confirm == "yes")
   config = read_configs(this_dir, options[:project])
   url = "#{config[:main][env]["solr_path"]}#{config[:proj]["solr_core"]}/update"
+  puts "Clearing index at #{url}"
   if !options[:regex].nil?
     field = options[:field].nil? ? "id" : options[:field]
     res = clear_index_by_regex(url, field, options[:regex])

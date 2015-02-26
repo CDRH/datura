@@ -45,8 +45,9 @@ end
 #    Transforms xml file with xslt and assigns to tmp file
 def _transform(source, xslt, dir, file_name=nil, verbose_flag=false)
   output = file_name.nil? ? create_temp_name(dir, "xml") : file_name
+  xslt_loc = "#{dir}/#{xslt}"  # make absolute path so that script can be run anywhere
   puts "output file #{output}" if verbose_flag
-  saxon = "saxon -s:#{source} -xsl:#{xslt} -o:#{output}"
+  saxon = "saxon -s:#{source} -xsl:#{xslt_loc} -o:#{output}"
   # execute the saxon command and make sure that you don't get a stderr!
   Open3.popen3(saxon) do |stdin, stdout, stderr|
     out = stdout.read
