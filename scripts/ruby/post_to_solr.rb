@@ -24,16 +24,18 @@ env = options[:environment]
 config = read_configs(this_dir, project, verbose_flag)
 dir = config[:main]["repo_directory"]
 log = Logger.new("#{dir}/logs/post_to_solr.log", config[:main]["log_old_number"], config[:main]["log_size"])
-# log.error("TESTING IF THIS WORKS")
+log.info("Starting script at #{Time.now}")
+log.info("Script running with following options: #{options}")
 # clear out anything in the tmp directory before doing anything else
 clear_tmp_directory(dir, verbose_flag)
-# make a new transformer
+# make a new transformer and run it
 transformer = Transformer.new(dir, project, config[:main]["xsl_scripts"], options[:solr_or_html], verbose_flag)
-# figure out which update times should go with which formats#
-
-transformer.transform(options[:format], options[:regex], options[:update_time], options[:html])
-
-# transform(dir, project, options[:format], config[:main]["xsl_scripts"], options[:update_time], options[:regex], verbose_flag)
+transform_errors = transformer.transform(options[:format], options[:regex], options[:update_time])
+if transform_errors.empty?
+  log.info("Transformed all specified files for #{project} successfully")
+else
+  log.error("Failed to transform followed files for #{project}: #{transform_errors.join("; ")}")
+end
 
 # only post to solr if the user has not specified that this should be transform_only
 if !options[:transform_only] && options[:solr_or_html] != "html"
@@ -55,9 +57,10 @@ if !options[:transform_only] && options[:solr_or_html] != "html"
           puts "FAILURE. The request to #{url} returned with an error.  Status #{res.code}"
           errors[:failed_files] << file_path
           errors[:solr_errors] << res.body
+          log.error("Failed to post temp files to solr: #{res.body}")
         end
       else
-        # TODO add a log line
+        log.error("Did not receive any response from solr")
         exit
       end
     end  # ends files each loop
@@ -67,6 +70,7 @@ if !options[:transform_only] && options[:solr_or_html] != "html"
       commit_res = commit_solr(url)
       if !commit_res.nil? && !commit_res.body.nil? && commit_res.code != "200"
         errors[:solr_errors] << commit_res.body
+        log.error("Failed to commit changes to solr: #{errors[:solr_errors]}")
       end
     end
     summarize_errors(errors)
@@ -75,5 +79,6 @@ if !options[:transform_only] && options[:solr_or_html] != "html"
   end
 end # ends posting to solr
 
+log.info("Script finished running at #{Time.now}")
 log.close
 
