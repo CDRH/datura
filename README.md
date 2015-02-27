@@ -56,13 +56,13 @@ You'll need to fill in the name of this project's solr core (not the url to it, 
 
 Depending on the data associated with your project, you may also need to create subfolders for vra/, dublin_core/, spreadsheets/ (csv files, etc), and scripts/.
 
-##### <a href="tei"></a> Upload TEI
+##### <a name="tei"></a> Upload TEI
 
 Assuming that you have p5 tei, you can upload it directly to the server into the `data/projects/project_name/tei` directory with scp, ftp, or whatever you preferred method is for file transfers.  Put any vra or dublin core files into those directories (not into the tei directory).
 
 Indexing (Adding) Data to Solr
 ------
-##### <a href="post"></a> Running the Script
+##### <a name="post"></a> Running the Script
 
 If your scripts/ruby/post_to_solr.rb script is executable, then you may run it by simply typing `./scripts/ruby/post_to_solr.rb`.  Otherwise you can manually run it with `ruby scripts/ruby/post_to_solr.rb`.
 
@@ -107,7 +107,7 @@ You only want to add files with a specific regex (make sure to \ escape regex ch
 ./scripts/ruby/post_to_solr.rb cody -r \.book\.00[0-9]\.xml
 ```
 
-##### <a href="trouble_post"></a> Troubleshooting
+##### <a name="trouble_post"></a> Troubleshooting
 
 - Run it again with the -v flag so that you can see extra debug lines.
 - Determine where the problem is occurring.  Is it happening when reading in files, transforming, or posting to solr?
@@ -121,7 +121,7 @@ You only want to add files with a specific regex (make sure to \ escape regex ch
 
 Managing Your Solr Data
 ------
-##### <a href="clear"></a> Management Script
+##### <a name="clear"></a> Management Script
 "Management" script is a bit misleading, as this script is just meant for straight up deleting things.  It will clear an entire solr core or it will look for specific entries to remove.
 ```
 Usage: ruby clear_index.rb [project] -[options]...
@@ -146,17 +146,28 @@ If you want to erase items from the core by a specific field, use the field flag
 ```
 ./scripts/ruby/clear_idex.rb transmississippi -f category -r memorabilia
 ```
-##### <a href="trouble_clear"></a> Troubleshooting
+##### <a name="trouble_clear"></a> Troubleshooting
 - The config files will need to be filled out correctly for this script to run
 - Remember that the -r flag is regex.  Entering something like .* will look for all characters multiple times, not something that literally as ".*" in the title.
 
 Developer Guide
 ------
-##### <a href="solr_core"></a> Setting up Solr / Tomcat
+##### <a name="solr_core"></a> Setting up Solr / Tomcat
+If you have access to the CDRH intranet, you can find instructions for setting up solr here:  http://libinfo.unl.edu/cdrh/index.php/Solr_Setup.  Otherwise, please refer to solr's documentation about running it as a tomcat webapp.  An example of the type of schema that the CDRH is using for this project can be found here:  TODO put in a link and a document example
 
-##### <a href="apache"></a> Apache Directory Permissions
+##### <a name="apache"></a> Apache Directory Permissions
+Assuming that you place this project in your web tree, you will need to take care to protect any sensitive information you place it in that you do not want to be accessible through the browser (copywritten material, drafts, passwords, etc).  To protect the configuration files that contain information about your solr instance, you should put these lines in your main apache configuration file.  If you have an older version of Apache, you may need to specify `Order deny,allow` and `Deny from all` instead of using `Require all denied`.
+```
+#
+# Prevent config.yml files that might be in the webtree from being viewable
+#
+<FilesMatch ".*config\.yml">
+    Require all denied
+</FilesMatch>
+```
+Otherwise, you should not need to do anything with apache assuming that you already had it set up with a webtree.
 
-##### <a href="saxon"></a> Saxon Executable
+##### <a name="saxon"></a> Saxon Executable
 Install your preferred edition / version of saxon on the server and put it in a memorable place, such as `/var/lib/saxon/saxon9he.jar`, but it does not matter where it is as long as the location is accessible (not your home directory or a restricted directory).
 
 Now go to the /usr/bin directory.  You'll be adding a script that essentially acts as an alias to run saxon.  Use a text editor running under sudo / root to create a new file in /usr/bin and make sure that you name it "saxon".  Add the following code to the file.
@@ -183,15 +194,33 @@ sudo chmod +x name_of_command
 ```
 Now you should be able to type your command into the terminal and it will pass all the parameters directly to the real saxon.  This saves you some typing and hardcoding in the long run.
 
-##### <a href="ruby"></a> Ruby / Gems
+##### <a name="ruby"></a> Ruby / Gems
 Check your version of Ruby by typing `ruby -v`.  This project currently uses ruby 2.1.3.  If you have a different version installed on your machine, it is recommended to use rvm to use multiple versions of ruby without messing up the good thing you've already got going on.  https://rvm.io/
 
-None of the libraries used in the ruby scripts require gems -- they are all built into Ruby.  If you want to run tests, however, you will need gems.  TODO
+None of the libraries used in the ruby scripts require gems -- they are all built into Ruby.  If you want to run tests, however, you will need gems.  You'll need to consult the rvm documentation to see how to install gems for your particular setup (multi-user, single-user, etc), but if you want to just see what happens, run `bundle install`.  If rvm is set up correctly, it will install the rspec testing gem on your system.
 
-##### <a href="tests"></a> Running Tests
+##### <a name="tests"></a> Running Tests
 
-##### <a href="main_config"></a> Main Config
+Tests are located in `test/ruby/lib_tests` currently.  Test fixtures are located at `test/ruby/fixtures` and include things like tei, files that can be "touched" to update their timestamp, and a tmp directory that will be filled and wiped by specific tests.  There are currently only tests for the helper functions, etc, so you would run tests as follows:
 
+All tests:
+```
+rspec test/ruby/lib_tests/*
+```
+Specific group of tests (with documentation flag for a different progress reporter)
+```
+rspec test/ruby/lib_tests/transformer_test.rb --format documentation
+```
+At the end of the test run, you should see something like this:
+```
+Finished in 6.17 seconds (files took 0.57802 seconds to load)
+47 examples, 0 failures, 9 pending
+```
+The pending ones are expected, as they just haven't been finished but those tests should be written in the future.  Failures are what you want to watch out for!
+
+##### <a name="main_config"></a> Main Config
+
+The main configuration file resides at `config/config.yml` and can be created by copying the config.example.yml file found in the config directory.  You will need to change the repo_directory path to reflect the location of the project from the root of your file system.  You can probably ignore the logging settings unless if you feel very strongly about the number of files that will be saved.  You will also need to give instructions for the location of your test and production solr instances.  Make sure that you end the solr urls with a /
 
 ```
 sudo chmod +x name_of_command
