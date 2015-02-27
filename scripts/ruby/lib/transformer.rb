@@ -124,6 +124,7 @@ class Transformer
     if solr_res.nil?
       @solr_errors << "There was no content associated with #{source} to post to solr"
     elsif solr_res.code != "200"
+      puts "Failure to push to solr #{solr_res.body}"
       @solr_errors << solr_res.body
       @solr_failed_files << source
     end

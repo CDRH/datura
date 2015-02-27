@@ -23,7 +23,9 @@ env = options[:environment]
 
 config = read_configs(this_dir, project, verbose_flag)
 dir = config[:main]["repo_directory"]
-log = Logger.new("#{dir}/logs/post_to_solr.log", config[:main]["log_old_number"], config[:main]["log_size"])
+log = Logger.new("#{dir}/logs/#{project}.log", config[:main]["log_old_number"], config[:main]["log_size"])
+log.info("===========================================")
+log.info("===========================================")
 log.info("Starting script at #{Time.now}")
 log.info("Script running with following options: #{options}")
 # clear out anything in the tmp directory before doing anything else
