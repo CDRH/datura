@@ -42,7 +42,7 @@ def post_to_solr_params
       end
     end
 
-    options[:solr_or_html] = "both"
+    options[:solr_or_html] = nil
     opts.on('-x', '--html-only', 'Will not generate solr snippets, only html') do
       options[:solr_or_html] = "html"
     end

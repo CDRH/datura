@@ -28,56 +28,40 @@ log.info("Starting script at #{Time.now}")
 log.info("Script running with following options: #{options}")
 # clear out anything in the tmp directory before doing anything else
 clear_tmp_directory(dir, verbose_flag)
-# make a new transformer and run it
-transformer = Transformer.new(dir, project, config[:main]["xsl_scripts"], options[:solr_or_html], verbose_flag)
+
+# create a new solr instance that will be used by the transformer
+url = "#{config[:main][env]["solr_path"]}#{config[:proj]["solr_core"]}/update"
+solr = SolrPoster.new(url, options[:commit])
+# make a new transformer and run it (pass it an instance of solr)
+transformer = Transformer.new(dir, project, config[:main]["xsl_scripts"], solr, options[:transform_only], options[:solr_or_html], verbose_flag)
 transform_errors = transformer.transform(options[:format], options[:regex], options[:update_time])
+
+# write the saxon errors to a log
 if transform_errors.empty?
   log.info("Transformed all specified files for #{project} successfully")
 else
-  log.error("Failed to transform followed files for #{project}: #{transform_errors.join("; ")}")
+  log.error("Failed to transform following files for #{project}: #{transform_errors.join("\n ")}")
 end
 
-# only post to solr if the user has not specified that this should be transform_only
-if !options[:transform_only] && options[:solr_or_html] != "html"
-  files = get_directory_files("#{dir}/tmp", verbose_flag)
-  if files.nil?
-    puts "tmp directory in your repository was not found."
-    exit
-  else
-    url = "#{config[:main][env]["solr_path"]}#{config[:proj]["solr_core"]}/update"
-    files.each do |file_path|
-      # read in each file and post to solr
-      file = IO.read(file_path)
-      puts "posting data to #{url} from #{file_path}" if verbose_flag
-      res = post_xml(url, file)
-      if !res.nil?
-        if res.code == "200"
-          puts "Posted #{file_path} successfully" if verbose_flag
-        else
-          puts "FAILURE. The request to #{url} returned with an error.  Status #{res.code}"
-          errors[:failed_files] << file_path
-          errors[:solr_errors] << res.body
-          log.error("Failed to post temp files to solr: #{res.body}")
-        end
-      else
-        log.error("Did not receive any response from solr")
-        exit
-      end
-    end  # ends files each loop
+# write the solr errors to a log
+solr_errors = transformer.solr_errors.compact
+solr_failed = transformer.solr_failed_files
+if solr_errors.empty? && solr_failed.empty?
+  log.info("Posted all specified files for #{project} successfully")
+else
+  log.error("Failed to post the following files for #{project}: #{solr_failed.join("\n ")}")
+end
 
-    # commit your changes to solr unless if otherwise specified
-    if options[:commit]
-      commit_res = commit_solr(url)
-      if !commit_res.nil? && !commit_res.body.nil? && commit_res.code != "200"
-        errors[:solr_errors] << commit_res.body
-        log.error("Failed to commit changes to solr: #{errors[:solr_errors]}")
-      end
-    end
-    summarize_errors(errors)
-    # clear anything written to the tmp directory again
-    clear_tmp_directory(dir, verbose_flag)
+# commit your changes to solr unless if otherwise specified
+if options[:commit]
+  commit_res = solr.commit_solr
+  if !commit_res.nil? && !commit_res.body.nil? && commit_res.code != "200"
+    errors[:solr_errors] << commit_res.body
+    log.error("Failed to commit changes to solr: #{errors[:solr_errors]}")
   end
-end # ends posting to solr
+end
+
+clear_tmp_directory(dir, verbose_flag)
 
 log.info("Script finished running at #{Time.now}")
 log.close

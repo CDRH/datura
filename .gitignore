@@ -6,3 +6,5 @@
 
 # ignore tmp directory even though will need to create it each time
 tmp/*
+
+# note:  not ignoring logs because this way we can see when files were last updated even if it was locally
