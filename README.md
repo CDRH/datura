@@ -32,7 +32,7 @@ This file will also contain documentation for scripts which will aid in data cre
 
 Overview
 ------
-TODO
+This project seeks to create an API for the CDRH's TEI projects.  The information for each project is housed in the projects directory, while scripts to transform the documents and post them to solr are in the scripts directory.  TEI files are transformed into html snippets that can be easily displayed in pages and are also uploaded to a solr core, which can then be queried.
 
 Setting up a New Project
 ------
@@ -222,8 +222,9 @@ The pending ones are expected, as they just haven't been finished but those test
 
 The main configuration file resides at `config/config.yml` and can be created by copying the config.example.yml file found in the config directory.  You will need to change the repo_directory path to reflect the location of the project from the root of your file system.  You can probably ignore the logging settings unless if you feel very strongly about the number of files that will be saved.  You will also need to give instructions for the location of your test and production solr instances.  Make sure that you end the solr urls with a /
 
-```
-sudo chmod +x name_of_command
-```
+##### <a name="executable"></a> Executing the Script
+Assuming that `ruby -v` gives you the correct version of ruby for the ruby scripts, you may run the script with `ruby scripts/ruby/post_to_solr.rb`.  If you would like to run it as a command, however, then you will need to modify the file to be executable, if it has not already been.  post_to_solr.rb and clear_index.rb both have shebangs at the top of them describing the location of Ruby in the filesystem, but if this is incorrect for your system you will need to modify the shebangs to point at your location.  To make the file executable, type the following:
 
-Now you should be able to type your command into the terminal and it will pass all the parameters directly to the real saxon.  This saves you some typing and hardcoding in the long run.
+```
+sudo chmod +x scripts/ruby/post_to_solr.rb
+```
