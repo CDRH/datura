@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://jetson.unl.edu/cdrh/schemas/tei_all.rng"  type="xml"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="xml_test_001">
+<teiHeader>
+<fileDesc>
+<titleStmt>
+<title level="m" type="main">Test XML file</title>
+<title level="m" type="sub"></title>
+<author>Karin Dalziel</author>
+<author>Laura Weakly</author>
+<principal>Weakly, Laura</principal>
+<principal>Dalziel, Karin</principal>
+</titleStmt>
+<editionStmt>
+<edition>
+<date>2014</date>
+</edition>
+</editionStmt>
+<publicationStmt>
+<idno>xml_test_001</idno>
+<authority>Default XSL Stylesheet Project</authority>
+<publisher>University of Nebraska&#8211;Lincoln</publisher>
+<distributor>
+<name>Center for Digital Research in the Humanities</name>
+<address>
+<addrLine>319 Love Library</addrLine>
+<addrLine>University of Nebraska&#8211;Lincoln</addrLine>
+<addrLine>Lincoln, NE 68588-4100</addrLine>
+<addrLine>cdrh@unlnotes.unl.edu</addrLine>
+</address>
+</distributor>
+<date>2014</date>
+<availability>
+<p>Copyright &#169; 2010 by University of Nebraska&#8211;Lincoln, all rights reserved. Redistribution or republication in any medium, except as allowed under the Fair Use provisions of U.S. copyright law, requires express written consent from the editors and advance notification of the publisher, the University of Nebraska&#8211;Lincoln.</p>
+</availability>
+</publicationStmt>
+
+<notesStmt>
+<note type="project"></note>
+</notesStmt>
+
+<sourceDesc>
+
+<bibl>
+<title level="j">The journal for testing xsl</title>
+<author></author>
+<publisher>CDRH</publisher>
+<pubPlace>Lincoln, NE</pubPlace>
+<extent>20 pages</extent>
+<date when="2014-04-08">April 8, 2014</date>
+</bibl>
+</sourceDesc>
+
+</fileDesc>
+
+<encodingDesc>
+<editorialDecl>
+<p></p>
+</editorialDecl>
+</encodingDesc>
+
+    <profileDesc>
+        <textClass>
+            <keywords scheme="original" n="category">
+                <term>Correspondence</term>
+            </keywords>
+            <keywords scheme="original" n="subcategory">
+                <term>Business</term>
+            </keywords>
+            <keywords scheme="original" n="topic">
+                <term></term>
+            </keywords>
+            <keywords scheme="original" n="keywords">
+                <term></term>
+                <term>study</term>
+                <term>poems</term>
+                <term>appreciation</term>
+                <term>poet</term>
+                <term>beauty</term>
+
+            </keywords>
+            <keywords scheme="lcsh" n="people">
+                <term>Woodberry, George Edward, 1855-1930</term>
+                <term>Shelley, Percy Bysshe, 1792-1822</term>
+                <term>Keats, John, 1795-1821</term>
+                <term>Ledoux, Louis V. (Louis Vernon), 1880-1948</term>
+            </keywords>
+            <keywords scheme="original" n="places">
+                <term>New York</term>
+                <term>Sicily</term></keywords>
+            <keywords scheme="original" n="works">
+                <term>He ate the Laurel and is Mad</term>
+                <term>Siena</term>
+            </keywords>
+        </textClass>
+    </profileDesc>
+
+<revisionDesc>
+<change when="2014-04-08"><name>Karin Dalziel</name> Initial Encoding
+</change>
+</revisionDesc>
+
+</teiHeader>
+
+<text>
+<body>
+    <div1>
+        <head>Tests of common problems with encoding</head>
+        <p>
+            Note: these should be checked for accessibility concerns.
+        </p>  
+    </div1>
+<div1>
+  <head>Test 1</head>
+<p>
+    This is some text before the blockquote
+    
+    
+    
+    <quote>This is the blockquote</quote>
+    This is some text after the blockquote.
+</p>  
+    
+</div1>
+    
+    <div1>
+        <head>Test 2</head>
+        
+            <p>Some text before the blockquote and line group
+                
+                <quote>
+                    <lg>
+                        <l>Line 1</l>
+                        <l>Line 2</l>
+                        <l>Line 3</l>
+                    </lg>
+                </quote>
+                Some text after the blockquote and line group
+        </p>  
+        
+    </div1>
+    
+    
+    <div1>
+        <head>Test 3</head>
+        
+        <p>Some text before the blockquote and line group
+            <w>hi</w>
+            <fw>owdjsfisiodf</fw>
+            Some text after the blockquote and line group
+        </p>  
+        
+    </div1>
+    
+   
+    
+
+</body>
+
+</text>
+</TEI>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://jetson.unl.edu/cdrh/schemas/tei_all.rng"  type="xml"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="xml_test_001">
+<teiHeader>
+<fileDesc>
+<titleStmt>
+<title level="m" type="main">Test XML file</title>
+<title level="m" type="sub"></title>
+<author>Karin Dalziel</author>
+<author>Laura Weakly</author>
+<principal>Weakly, Laura</principal>
+<principal>Dalziel, Karin</principal>
+</titleStmt>
+<editionStmt>
+<edition>
+<date>2014</date>
+</edition>
+</editionStmt>
+<publicationStmt>
+<idno>xml_test_001</idno>
+<authority>Default XSL Stylesheet Project</authority>
+<publisher>University of Nebraska&#8211;Lincoln</publisher>
+<distributor>
+<name>Center for Digital Research in the Humanities</name>
+<address>
+<addrLine>319 Love Library</addrLine>
+<addrLine>University of Nebraska&#8211;Lincoln</addrLine>
+<addrLine>Lincoln, NE 68588-4100</addrLine>
+<addrLine>cdrh@unlnotes.unl.edu</addrLine>
+</address>
+</distributor>
+<date>2014</date>
+<availability>
+<p>Copyright &#169; 2010 by University of Nebraska&#8211;Lincoln, all rights reserved. Redistribution or republication in any medium, except as allowed under the Fair Use provisions of U.S. copyright law, requires express written consent from the editors and advance notification of the publisher, the University of Nebraska&#8211;Lincoln.</p>
+</availability>
+</publicationStmt>
+
+<notesStmt>
+<note type="project"></note>
+</notesStmt>
+
+<sourceDesc>
+
+<bibl>
+<title level="j">The journal for testing xsl</title>
+<author></author>
+<publisher>CDRH</publisher>
+<pubPlace>Lincoln, NE</pubPlace>
+<extent>20 pages</extent>
+<date when="2014-04-08">April 8, 2014</date>
+</bibl>
+</sourceDesc>
+
+</fileDesc>
+
+<encodingDesc>
+<editorialDecl>
+<p></p>
+</editorialDecl>
+</encodingDesc>
+
+    <profileDesc>
+        <textClass>
+            <keywords scheme="original" n="category">
+                <term>Correspondence</term>
+            </keywords>
+            <keywords scheme="original" n="subcategory">
+                <term>Business</term>
+            </keywords>
+            <keywords scheme="original" n="topic">
+                <term></term>
+            </keywords>
+            <keywords scheme="original" n="keywords">
+                <term></term>
+                <term>study</term>
+                <term>poems</term>
+                <term>appreciation</term>
+                <term>poet</term>
+                <term>beauty</term>
+
+            </keywords>
+            <keywords scheme="lcsh" n="people">
+                <term>Woodberry, George Edward, 1855-1930</term>
+                <term>Shelley, Percy Bysshe, 1792-1822</term>
+                <term>Keats, John, 1795-1821</term>
+                <term>Ledoux, Louis V. (Louis Vernon), 1880-1948</term>
+            </keywords>
+            <keywords scheme="original" n="places">
+                <term>New York</term>
+                <term>Sicily</term></keywords>
+            <keywords scheme="original" n="works">
+                <term>He ate the Laurel and is Mad</term>
+                <term>Siena</term>
+            </keywords>
+        </textClass>
+    </profileDesc>
+
+<revisionDesc>
+<change when="2014-04-08"><name>Karin Dalziel</name> Initial Encoding
+</change>
+</revisionDesc>
+
+</teiHeader>
+
+<text>
+
+<pb n="Cover" xml:id="xml_test_001.001" />
+
+<front>
+
+<titlePage>
+<docTitle>
+<titlePart type="main">Every Week</titlePart>
+<titlePart type="price">3 &#162;</titlePart>
+</docTitle>
+<docImprint>
+<publisher>Every Week Corporation, 34 Thirty-Fourth St., Brooklyn, New York</publisher>
+<pubPlace>Executive Offices, 95 Madison Avenue, New York</pubPlace>
+<docDate>June 28, 1915</docDate>
+</docImprint>
+<docEdition>Vol. 1 No. 9</docEdition>
+
+<figure n="illustration">
+<head>A Wise Jane By Frank Goewey Jones</head>
+<ab type="credit">Dannenberg</ab>
+<p>Seeing America&#8212;Last</p>
+<figDesc></figDesc>
+</figure>
+
+</titlePage>
+</front>
+
+
+<group>
+
+<pb n="Page 2" xml:id="ew.issue.19150628.p002" />
+
+<text type="nonfiction" xml:id="ducey.19150628">
+<body>
+
+<head type="main">"I'm Going to Marry Peggy"</head>
+<byline>By <persName type="author" key="#Ducey, Lilian">LILIAN DUCEY</persName></byline>
+
+<p>I WANT to marry Robert. (There! It took courage to write that even in this little book I never expect any one to peer into.)</p>
+
+<p>Yes, I have an overwhelming desire to marry him, and he wants to marry me, as every one as well as myself knows. To be sure, other men have asked me to marry them since Tom died, and more than once I have been inclined to agree, which is why I hesitate until my head sets its seal of approval upon my heart's desire.</p>
+
+<cb n="2" />
+
+<p><hi rend="bold">EXAMPLE OF PARAGRAPH SPANNING A FIGURE</hi> "Then the sooner you begin to look for her, the sooner you will be settled in life.
+
+<figure n="illustration">
+<head></head>
+<p><hi rend="italic">"Look sharp now! I'm going to kiss you!"</hi></p>
+<figDesc></figDesc>
+</figure>
+
+It's too bad, Robert, that you bothered so long with me."</p>
+
+<p>He rose angrily. Before I realized he was going, the hall door&#8212;<hi rend="italic">slammed</hi>.</p>
+
+<p>I CAME back this evening on the same train with Robert, and, as if the fates had arranged things, every seat in the car
+
+<cb n="3"></cb>
+
+was taken except the one beside him. And so with sudden daring I said:</p>
+
+<p>Ever since that day on the train I have been fighting despair. And this day, the day on which he told me he was to be married, came a letter from him.</p>
+
+<floatingText>
+<body>
+<p><hi rend="bold">FLOATING TEXT</hi> DEAR MARGARET: I am writing this in the office, with Peggy beside me. Tomorrow, as I told you, is the appointed time. But Peggy refuses&#8212;flatly refuses. She knows (from what source I can not gather) that I have been your suitor for many years, and she thinks you are still my lodestar. I have, talked and argued with her. She's adamant! But she says this: that if you will tell her with your own lips, here in this office, that you will never marry me, she will, notwithstanding the rumor that I am still devoted to you.</p> 
+</body>
+</floatingText>
+
+<p>God has been good to&#8212;Peggy. And I believe she will gradually oust that sophisticated, skeptical Margaret.</p>
+
+</body>
+</text>
+
+<pb n="Page 3" xml:id="ew.issue.19150628.p003" />
+
+<text type="flag">
+<body>
+<figure n="flag">
+<figDesc></figDesc>
+<p>Volume 1 Number 9<lb/>
+<lb/>
+
+Every Week<lb/>
+<lb/>
+
+June 28, 1915</p>
+</figure>
+</body>
+</text>
+
+<text type="nonfiction" xml:id="model.19150628">
+<body>
+
+<head type="main">New York's Most Famous Child Model</head>
+
+<div1>
+<p>IN New York there is a girl model sixteen years old who has been posing for fourteen years. Her name is Irene Marcellus, and she has long been celebrated among artists as one of the most gifted child models in the profession.</p>
+
+</div1>
+
+<div1>
+<head type="sub">A Magazine Cover Girl</head>
+
+<p>THE girl has posed all through her childhood and little girlhood for illustrators, photographers, and sculptors, for magazine covers, for calendars, for fashion magazines, even for classic designs for the decoration of public buildings. Posing has never tired or bored her, and her mother has seen to it that neither her health nor her schooling was neglected.</p>
+
+<p>A year ago, during a rather difficult pose which kept her arms outstretched, Irene wanted something to occupy her mind, and asked for a bit of clay to play with while the sculptor worked. When she stopped for rest she showed him a
+
+<figure n="photograph">
+<head></head>
+<ab type="credit">Photograph by Arnold Gentile</ab>
+<p><hi rend="italic">She is sixteen, and has been posing for fourteen years.</hi></p>
+<figDesc></figDesc>
+</figure>
+
+tiny Venus, excellently proportioned, and executed with genuine originality. After that she was welcome to all the clay she wanted, and she would come early and stay late to work with it. Then she took some clay home and made herself tools out of a couple of wire hairpins and some old penholders. Her mother moved the dishes out of the three top shelves of the kitchen cupboard&#8212;and thus began Irene's atelier.</p>
+
+<p>Now Irene wants to model all the time; but so far it hasn't made her impatient with posing. There is a new interest for her now in watching sculptors at their work.</p>
+</div1>
+
+
+</body>
+</text>
+
+
+
+<pb n="Page 18" xml:id="ew.issue.19150628.p018" />
+
+<text type="advertisement" xml:id="ipswich.19150628">
+<body>
+
+<figure n="advertisement">
+<head>All Your Foot Troubles May be in Your Socks!</head>
+<p></p>
+<figDesc>Advertisement for Ipswich Mills</figDesc>
+</figure>
+
+<figure n="advertisement">
+<head>Beautifies at Night!</head>
+<p></p>
+<figDesc>Advertisement for The Popmeian Mfg. Co.</figDesc>
+</figure>
+
+<figure n="advertisement">
+<head>White Frost Sanitary Refrigerator</head>
+<p></p>
+<figDesc>Advertisement for White Frost Refrigerator Co.</figDesc>
+</figure>
+
+
+</body>
+</text>
+
+
+
+</group>
+</text>
+</TEI>

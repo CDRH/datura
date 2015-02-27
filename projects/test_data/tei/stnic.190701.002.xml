@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TEI SYSTEM "everything_and_illustrator.dtd">
+<TEI xml:id="stnic.190701.002" xmlns="http://www.tei-c.org/ns/1.0">
+    <!-- In the above line, change the xml:id to the id of your file: stnic.YYYYMM.001 
+        (the 001 can be changed to 002, etc if we are encoding more than one piece from a particular month) -->
+
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="a" type="main">Christmas Without the Christmas Tree</title>
+                <!-- List title of story or article here (with no period at the end) -->
+                <title level="j" type="main">St. Nicholas</title>
+                <!-- Title of magazine here -->
+                <principal>Amanda Gailey</principal>
+                <sponsor>
+                    <name>Humanities Digital Workshop</name>
+                    <name>Washington University in St.Louis</name>
+                </sponsor>
+                <funder>
+                    <name>Center for Programs</name>
+                    <name>Washington University in St. Louis</name>
+                </funder>
+                <funder>
+                    <name>Ideas for Creative Exploration</name>
+                    <name>University of Georgia</name>
+                </funder>
+                <funder>
+                    <name>National Endowment for the Humanities</name>
+                </funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno/>
+                <authority>Race and Children's Literature of the Gilded Age</authority>
+                <publisher>University of Nebraska&#8211;Lincoln</publisher>
+                <distributor>
+                    <name>Center for Digital Research in the Humanities</name>
+                    <address>
+                        <addrLine>319 Love Library</addrLine>
+                        <addrLine>University of Nebraska&#8211;Lincoln</addrLine>
+                        <addrLine>Lincoln, NE 68588-4100</addrLine>
+                        <addrLine>cdrh@unlnotes.unl.edu</addrLine>
+                    </address></distributor>
+                <date>2009</date>
+                <availability>
+                    <p>Copyright &#169; 2012 by University of Nebraska&#8211;Lincoln, all rights
+                        reserved. Redistribution or republication in any medium, except as allowed
+                        under the Fair Use provisions of U.S. copyright law, requires express
+                        written consent from the editors and advance notification of the publisher,
+                        the University of Nebraska&#8211;Lincoln.</p>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note type="project"/>
+            </notesStmt>
+            <sourceDesc>
+                <bibl>
+                    <!-- Insert title and date again here -->
+                    <title level="a">Christmas Without the Christmas Tree</title>
+                    <editor/>
+                    <!-- Make an author or illustrator line for each one mentioned in the piece. -->
+                    <author>May Snyder</author>
+                    <title level="j">St. Nicholas</title>
+                    <date when="190701">January 1907</date>
+                    <publisher>Scribner &amp; Co.</publisher>
+                    <pubPlace>New York</pubPlace>
+                    <orgName> </orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p/>
+            </editorialDecl>
+        </encodingDesc>
+        <!-- Leave this alone for the time being -->
+        <profileDesc>
+            <textClass>
+                <keywords scheme="genre">
+                    <term/>
+                </keywords>
+                <keywords scheme="">
+                    <term/>
+                    <term/>
+                </keywords>
+            </textClass>
+        </profileDesc>
+        <revisionDesc>
+            <!-- Add your name and change the date-->
+            <change when="2012-06-05">
+                <name>Julie Ward</name>Transcription and encoding.</change>
+        </revisionDesc>
+    </teiHeader>
+    <!-- START ENCODING DOCUMENT HERE -->
+    <text>
+        <body>
+            <!-- Insert a pb tag at the beginning of each page. 
+                pb tags are empty (self-closing) tags. 
+                For the facs attribute, put the name of the image file. 
+                The name of the image should be the id of the file (stnic.YYYYMM.001) 
+                plus a two-digit number (starting with 01) and the jpg extension: stnic.YYYYMM.001.01.jpg -->
+            <pb facs="stnic.190701.002.001.jpg"/>
+            <!-- Wrap the whole story in a div, and nest divs as needed of the story is broken into sections. -->
+            <div>
+                <!-- The title goes in a <head>. You can have more than one <head> if there is also a subtitle -->
+                <head>Christmas Without the Christmas Tree</head>
+                <!-- The milestone is an empty tag that notes a simple typographical ornament like a line. -->
+
+                <!-- Put the author in a byline -->
+                <byline>By May Snyder</byline>
+
+
+                <!-- When you encounter an illustration, put a <figure> wherever it occurs in the text. 
+                    Inside <figure> make a <figDesc> that includes a simple, short description of the illustration. 
+                    If the illustration has a caption, use a <head> to transcribe it. 
+                    If it has an illustrator name or other additional text, use an <ab> tag for that (after the head). -->
+
+                <p>AUNT MANDY'S face beamed with satisfaction as she put the finishing touches to
+                    her Christmas tree. She laughed softly. Never <figure>
+                        <figDesc>Four children decorating a Christmas tree as a man and woman
+                            watch</figDesc>
+                        <head>"De 'freshments am free an' malicious."</head>
+                    </figure> in all her experience had she trimmed such a tree as this. And she had
+                    trimmed many.</p>
+                <p>"Well, sah! no one nebber made Christmas trees out'n umbrellas in my time," said
+                    Aunt Mandy, "but them chillun's boun' to hab sumpin' to hang dey praisents on,
+                    an dat sho am jes' a hifalutin tree!" She stood with her hands on her hips and
+                    surveyed the tree intently. </p>
+                <p>The frame of the old umbrella spread its bare ribs above an empty soap box to
+                    which the handle had been rudely fastened. Strings of popcorn and cranberries
+                    afforded the principal decorations, while cookies, apples and sticks of candy
+                    were suspended by strings of various kinds and colors. The presents consisted of
+                    mysterious looking bundles of many shapes and sizes.</p>
+                <p>Aunt Mandy had worked long and patiently, and now she turned away, saying as she
+                    closed the door behind her; "Clar' to goodness, hit do look mighty
+                    scrumptious&#8212; 'deed hit do!"</p>
+                <p>Only a few hours more, and the tree in all its grandeur would be displayed. Never
+                    had there been such excitement in Aunt Mandy's cabin. The pickaninnies, dressed
+                    in their Sunday-best, indulged in low whispers and smothered giggles. Even the
+                    perky bows on 'Liza's and Maria's pigtails seemed to stir with life and quiver
+                    with eagerness.</p>
+                <p>Supper over, Uncle Mose led the <unclear reason="torn"/> to <pb
+                        facs="stnic.190701.002.002.jpg"/> the best room. As he threw open the door, a
+                    shout went up from the delighted pickaninnies. </p>
+                <p>"Chillun," said Uncle Mose, with a low bow and a flourish of the hand, "on dis
+                    mos' 'spicuous 'casion, yo' suttinly hab a lubbly tree to celebrate yo' Krismus
+                    day. An' I will now reced to constribute yo' praisents.</p>
+                <p>"Fust, foahmos', an' to begin wid, I puhsent yo', George Washington Lincoln
+                    Harrison Grant, wid a pair o' skates, from yo' lubbin mammy.</p>
+                <p>"An yo', 'Rastus Robinson Carter Keller, gits a football from yo' 'fectionate
+                    daddy.</p>
+                <p>"Liza Jane Arabella Helen, git right up on yo' feet an' make yo' bow. I puhsent
+                    yo' wid a bran' new dress from yo' lubbin mammy.</p>
+                <p>"Maria Melissa Wallace Winifred, what yo' gwine to say to yo' mammy when yo'
+                    'cepts dis bonnet, de work ob her lubbin han's? Now, chillun, yo' can walk up
+                    an' he'p yo'se'fs. De 'freshments am free an' malicious."</p>
+                <p>With a wild howl the youngsters made a rush for the spreading ree. "Dey's mo'
+                    praisents!" "Golly, what's dis?" "Huc-come dis heah?" "De tree's ben'in over!"
+                    "Hol' on!" were the exclamations that came crowding one upon another. Then the
+                    uproar became deafening, and the Christmas folic was on. </p>
+                <p>Uncle Mose stood for a moment in happy contemplation, then his eyes fell on Aunt
+                    Mandy's smiling face. "Mandy Mehitable Sonora Frances Somers," he said, "yo'
+                    'strabagance an' he'plessness befo', an' I's glad, 'deed I is, honey&#8212;'case
+                    I nevah 'spected hit." Uncle Mose bowed, waved his hands airily and took his
+                    seat. The perspiration stood in beads on his forehead, but his smile did not
+                    vanish. Christmas cheer was stirring in his heart, and Christmas angels were
+                    hovering over the little cabin.</p>
+                <p>When the clock on the mantel struck the midnight hour, doors were locked, lights
+                    snuffed out and silence fell upon the happy home. Little black faces smiled up
+                    from soft, white pillows, for their dreams were sweet that Christmas night. Aunt
+                    Mandy felt well repaid for all her extra care and trouble, and Uncle Mose,
+                    wearied with his speech-making, soon fell asleep.</p>
+                <p>The old umbrella, bare and forlorn, stood in the darkened corner, stretching its
+                    bent ribs into vacancy. It had fulfilled its mission. Christmas without a tree
+                    and Christmas with an umbrella was a success in Aunt Mandy's cabin.</p>
+
+                <milestone unit="line"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </body>
+    </text>
+</TEI>

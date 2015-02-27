@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nyp.00250">    
+    <teiHeader>        
+        <fileDesc>            
+            <titleStmt>
+                <title level="m" type="main">Mem. Sept 29 1865</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <name>The Walt Whitman Archive Staff</name>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>The National Endowment for the Humanities</funder>
+            </titleStmt>            
+            <editionStmt>
+                <edition>
+                    <date>2011</date>
+                </edition>
+            </editionStmt>            
+            <publicationStmt>
+                <idno>nyp.00250</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2011 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>            
+            <notesStmt>
+                <note type="project" target="#dat1">Whitman's date suggests that this manuscript was composed on September 29, 1865. It is written on stationery headed "Attorney General's Office." Following Whitman's dismissal from his clerkship in the Office of Indian Affairs, effective June 30, 1865, Whitman held a clerkship at the Attorney General's Office from July 1865 until January 1872.</note>
+                <note type="project">The following are responsible for particular readings or for changes to this file, as noted: 
+                    <persName xml:id="bb">Brett Barney</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="al">Ashley Lawson</persName>
+                    <persName xml:id="tj">Tim Jackson</persName>
+                </note>
+            </notesStmt>                       
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>          
+                    <title>"Mem[orandaum]"; Washington, 1865 September 29.</title>
+                    <date xml:id="dat1" cert="high" when="1865-09-29">1865</date>
+                    <orgName>Oscar Lion Collection, New York Public Library</orgName>
+                    <note type="project">Transcribed from our own digital image of the original manuscript.</note>
+                </bibl>
+            </sourceDesc>            
+        </fileDesc>        
+        <revisionDesc>
+            <change when="2012-11-14" who="#bb">removed brackets from titleStmt; corrected spacing between adds and dels; corrected typo</change>
+            <change when="2012-03-01" who="#al">applied corrections from spreadsheet</change>
+            <change when="2011-09-01" who="#el">blessed</change>
+            <change when="2010-12-15" who="#tj">checked</change>
+            <change when="2010-09-02" who="#al">transcribed; encoded</change>
+        </revisionDesc>        
+    </teiHeader>
+    
+    <text type="manuscript">
+        
+        <body>            
+            <pb xml:id="leaf001r" facs="nyp.00250.001.jpg" type="recto"/>                       
+            
+            <note type="authorial" place="top" rend="underline">Mem. Sept 29 1865</note>                        
+            
+            <opener>
+                <handShift rend="printed"/>
+                <address>
+                    <addrLine>Attorney General's Office,</addrLine>                    
+                </address>
+                    <dateline>Washington, <handShift rend="manuscript"/>Sept. 29, <handShift rend="printed"/>18<handShift rend="manuscript"/>65</dateline>
+            </opener>           
+            
+            <p>The acting Secretary of the Interior, <subst><del rend="overstrike" seq="1">Judge</del> <add rend="insertion" place="supralinear" seq="2">Wm. T.</add></subst> Otto, <subst><del rend="overstrike" seq="1">stopt</del> <add place="supralinear" rend="unmarked" seq="2">on his way to cabinet meeting, called</add></subst> at the Att'y Gen's Office, <del rend="overstrike">&#38;</del> on business, &#38; stopt at my desk a moment.  He said <add place="supralinear" rend="unmarked">to Mr. W.</add>, "I hope you are well situated here&#8212;I <subst><del rend="overstrike" seq="1">am</del> <add place="supralinear" rend="unmarked" seq="2">was</add></subst> sorry to <subst><del rend="overstrike" seq="1">have lost</del> <add place="supralinear" rend="unmarked" seq="2">lose</add></subst> your services in our Department, <subst><del rend="overstrike" seq="1">as</del> <add place="supralinear" rend="unmarked" seq="2">for</add></subst> I considered them <del rend="overstrike">rel</del> valuable. <subst><del rend="overstrike" seq="1">Your dismissal</del> <add place="supralinear" rend="unmarked" seq="2">The affair <del rend="overstrike">was</del></add></subst>" (<subst><del rend="overstrike" seq="1"><gap reason="illegible" extent="one letter" unit="chars" quantity="1"/></del> <add place="supralinear" rend="unmarked" seq="2">my</add></subst> dismissal) "was settled upon before I knew of it."</p>
+            
+            <p>In the course of <subst><del rend="overstrike" seq="1">some</del> <add place="supralinear" rend="unmarked" seq="3">the</add> <del rend="overstrike" seq="2"><add place="supralinear" rend="unmarked">a</add></del></subst> <del rend="overstrike">brief</del> conversation, <add place="supralinear" rend="unmarked">then &#38; there</add> the question was asked <subst><del rend="overstrike" seq="1">him</del> <add place="supralinear" rend="insertion" seq="2">Mr. Otto</add></subst> <subst><del rend="overstrike" seq="1">about</del> <add place="supralinear" rend="unmarked" seq="2">of</add></subst> the <add place="supralinear" rend="insertion">particular</add> <subst><del rend="overstrike" seq="1">volume</del> <add rend="unmarked" place="infralinear" seq="2">copy</add></subst> of "Leaves of Grass" which Mr. Harlan had <add place="supralinear" rend="unmarked"><del rend="overstrike">as</del> in his room, as alluded to in his conversation with the Ass't Atty Gen</add> <subst><del rend="overstrike" seq="1">if</del> <add rend="insertion" place="supralinear" seq="2">whether</add></subst> it was a volume bound in blue paper covers, <add place="supralinear" rend="insertion">&#8212;&#38; any thing like <del rend="overstrike">one</del> this&#8212;(<del rend="overstrike">showing him</del> pointing to a volume <add place="supralinear" rend="insertion">of Leaves</add> paper bound, <add rend="insertion" place="supralinear">about the same thickness</add> but octavo. &#38;</add> He said he had had no <add place="supralinear" rend="unmarked">special</add> conference with Mr. Harlan on the volume. <add place="supralinear" rend="insertion">(a 500 page paper bound vol. lying on <subst><del rend="overstrike" seq="1">the</del> <add place="infralinear" rend="unmarked" seq="2">my</add></subst> table was shown him, &#38; asked if it was such a vol.</add>  He said that <add place="supralinear" rend="insertion"><del rend="overstrike">he had seen</del></add> <del rend="overstrike">a volume of Leaves</del> <add place="interlinear" rend="unmarked">he had seen on Mr. Harlan's desk, a volume of Leaves</add> of Grass, in blue paper covers, &#38; the pages of the <del rend="overstrike">conten</del> poems marked more or less all through the book, <del rend="overstrike">had been shown him, he thinks by one of the clerks, but he had paid no particular attention to; but he remembered seeing <subst><del rend="overstrike" seq="1">that</del> <add place="supralinear" rend="unmarked" seq="2">a</add></subst> blue paper covered copy on Mr. Harlan’s desk</del>; he remembers this volume being shown him <add place="supralinear" rend="insertion">&#38; opened</add> by some one who saw on his, Mr. O's, table a copy of Drum Taps.</p>
+            
+            <pb xml:id="leaf001v" facs="nyp.00250.002.jpg" type="verso"/> 
+            
+        </body>
+    </text>
+</TEI>
+
+

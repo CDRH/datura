@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://jetson.unl.edu/cdrh/schemas/tei_all.rng" type="xml"?>
+
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="cww.01131">
+    
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>           
+                <title level="m" type="main">Armory Square Hospital Gazette, 20 January 1864</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <principal>Susan C. Lawrence</principal>
+                <principal>Kenneth M. Price</principal>
+                <principal>Kenneth J. Winkle</principal>
+                <respStmt>
+                    <resp>transcription and encoding</resp>
+<name xml:id="al">Ashley Lawson</name>
+                    <name xml:id="el">Elizabeth Lorang</name>
+                    <name xml:id="ajh">AJ Howell</name>
+                    </respStmt>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>            
+                <idno>cww.01131</idno>        
+                <authority>Civil War Washington</authority>
+                <publisher>University of Nebraska–Lincoln</publisher>
+                <distributor>
+                    <name>Center for Digital Research in the Humanities</name>
+                    <address>
+                        <addrLine>319 Love Library</addrLine>
+                        <addrLine>University of Nebraska–Lincoln</addrLine>
+                        <addrLine>Lincoln, NE 68588-4100</addrLine>
+                        <addrLine>cdrh@unlnotes.unl.edu</addrLine>
+                    </address>
+                </distributor>
+                <date>2012</date>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+                        <p>Licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License (http://creativecommons.org/licenses/by-nc-sa/3.0/). Derivatives must be credited to Civil War Washington, made available non-commercially, and distributed under the same terms. Requests for permission for commercial publication or other use should be emailed to the project team.</p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <title level="j">Armory Square Hospital Gazette</title>
+                    <biblScope type="volume">1</biblScope>
+                    <biblScope type="issue">3</biblScope>
+                    <date when="1864-01-20">20 January 1864</date>
+                    <orgName>Center for the History of Medicine, Countway Library of Medicine, Harvard University</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+<change who="#el" when="2012-03-05">revised header</change>
+<change who="#al" when="2012-02-21">checked</change>
+            <change who="#el" when="2012-01-13">added orgName to bibl; updated header</change>
+            <change who="#ajh" when="2011-11-30">created file; filled out TEI header and added page breaks</change>
+        </revisionDesc>
+    </teiHeader>
+    
+    <text>
+        <body>
+            <div>
+                
+                
+                <pb facs="cww.01131.001.jpg" />
+                
+                <pb facs="cww.01131.002.jpg" />
+                
+                <pb facs="cww.01131.003.jpg" />
+                
+                <pb facs="cww.01131.004.jpg" />
+            
+                
+            </div>
+        </body>
+    </text>
+    </TEI>

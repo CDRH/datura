@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="bos.00002">
+
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title level="m" type="main">(result of year in army hospitals</title>
+        <title level="m" type="sub">a machine readable transcription</title>
+        <author>Walt Whitman</author>
+        <editor>Kenneth M. Price</editor>
+        <editor>Ed Folsom</editor>
+        <respStmt>
+          <resp>Transcription and encoding</resp>
+          <persName xml:id="bb">Brett Barney</persName>
+          <persName xml:id="el">Elizabeth Lorang</persName>
+          <persName xml:id="tj">Tim Jackson</persName>
+          <persName xml:id="al">Ashley Lawson</persName>
+        </respStmt>
+        <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+        <sponsor>University of Iowa</sponsor>
+        <funder>The National Endowment for the Humanities</funder>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <date>2013</date>
+        </edition>
+      </editionStmt>
+      <publicationStmt>
+        <idno>bos.00002</idno>
+        <distributor>The Walt Whitman Archive</distributor>
+        <address>
+          <addrLine>Center for Digital Research in the Humanities</addrLine>
+          <addrLine>319 Love Library</addrLine>
+          <addrLine>University of Nebraska-Lincoln</addrLine>
+          <addrLine>P.O. Box 884100</addrLine>
+          <addrLine>Lincoln, NE 68588-4100</addrLine>
+        </address>
+        <availability>
+          <p>Copyright &#169; 2013 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+        </availability>
+      </publicationStmt>
+      <notesStmt>
+        <note type="project" target="#dat1">Whitman's note at the top of the page suggests that this manuscript was written in late 1863 or in 1864, following his first year in Washington, D.C.</note>
+      </notesStmt>
+      <sourceDesc>
+        <bibl>
+          <author>Walt Whitman</author>          
+          <title>"I have had one feeling . . . "</title> 
+          <date xml:id="dat1" cert="medium" notBefore="1863" notAfter="1864">1864</date>          
+          <orgName>The Alice and Rollo G. Silver Collection, Department of Special Collections, Boston University</orgName>
+          <note type="project">Transcribed from our own digital image of original manuscript.</note>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <revisionDesc>
+      <change when="2013-01-25" who="#bb">corrected title in sourceDesc; moved list of responsible parties to titleStmt; changed "margintop" to "top"</change>
+      <change when="2011-09-01" who="#el">added title to sourceDesc</change>
+      <change when="2011-03-24" who="#el #bb">blessed</change>
+      <change when="2010-11-20" who="#al">checked</change>
+      <change when="2010-03-08" who="#tj">encoded</change>
+      <change when="2010-04-02" who="#tj">transcribed</change>
+    </revisionDesc>
+  </teiHeader>
+
+  <text type="manuscript">
+    <body>
+        <pb xml:id="leaf001r" facs="bos.00002.001.jpg" type="recto"/>
+        
+     <note type="authorial" place="top">(result of year in army hospitals </note>
+      <p>I have had one feeling <del rend="overstrike">steadily</del> aroused &#38; brought forward&#8212;that of compassion, (veined with <add rend="insertion" place="supralinear">a good deal of</add> indignant bitter) that this huge &#38; <del rend="overstrike">most</del> noble myriad of the ranks <add rend="insertion" place="supralinear">of America, has been &#38;</add> <subst><del rend="overstrike" seq="1">has</del> <del rend="overstrike" seq="2"><add rend="unmarked" place="inline">is</add></del> <add rend="unmarked" place="inline" seq="3">is</add></subst>
+        <add rend="unmarked" place="supralinear">yet through its regiments, brigades, divisions, corps &#38; armies,</add> quite entirely without commissioned officers, <subst><del rend="overstrike" seq="1">of any rank whatever,</del> <add rend="unmarked" place="supralinear" seq="2">in any of the grades</add></subst> (except <add rend="insertion" place="supralinear">perhaps</add> a very few of the highest <del rend="overstrike">rank</del>,) who appreciate <subst><del rend="overstrike" seq="1">them</del> <del rend="overstrike" seq="2"><add rend="unmarked" place="supralinear">the</add></del> <add rend="unmarked" place="supralinear" seq="3">the <add rend="unmarked" place="supralinear">army of the</add> people</add></subst>, &#38; entertain in their souls the true Democracy, out of which only a<add rend="unmarked" place="inline">n</add> <del rend="overstrike">great</del> army worthy of America <del rend="overstrike">&#38; of <add rend="unmarked" place="supralinear">the</add> modern</del> can be wielded. I have found plenty <add rend="insertion" place="supralinear">enough</add> of good-hearted officers, <subst><del rend="overstrike" seq="1">so</del> <add rend="unmarked" place="supralinear" seq="2">middling</add></subst> plenty <add rend="unmarked" place="supralinear">of officers,</add> that the men generally like &#38; respect, but I have the terrible</p> 
+          
+        <pb xml:id="leaf001v" facs="bos.00002.002.jpg" type="verso"/>
+              
+    </body>
+  </text>
+</TEI>
