@@ -53,7 +53,7 @@ else
 end
 
 # commit your changes to solr unless if otherwise specified
-if options[:commit]
+if options[:commit] && options[:solr_or_html] != "html"
   commit_res = solr.commit_solr
   if !commit_res.nil? && !commit_res.body.nil? && commit_res.code != "200"
     errors[:solr_errors] << commit_res.body

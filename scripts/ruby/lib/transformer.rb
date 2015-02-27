@@ -108,20 +108,25 @@ class Transformer
         puts "#{err}"
         error = source
       else
-        puts "Transformed #{source}"
+        puts "Successfully transformed #{source}"
         # now post it to solr if it is not an html snippet and if user did not specify against posting
         if for_solr && !@transform_only
-          puts "posting #{source} to solr"
-          solr_res = @solr.post_file(output)
-          if solr_res.nil?
-            @solr_errors << "There was no content associated with #{source} to post to solr"
-          elsif solr_res.code != "200"
-            @solr_errors << solr_res.body
-            @solr_failed_files << source
-          end
+          puts "Posting to solr: #{source}"
+          _post(source, output)
         end
       end
     end
     return error
   end
+
+  def _post(source, output)
+    solr_res = @solr.post_file(output)
+    if solr_res.nil?
+      @solr_errors << "There was no content associated with #{source} to post to solr"
+    elsif solr_res.code != "200"
+      @solr_errors << solr_res.body
+      @solr_failed_files << source
+    end
+  end
+
 end
