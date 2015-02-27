@@ -37,7 +37,13 @@ This project seeks to create an API for the CDRH's TEI projects.  The informatio
 Setting up a New Project
 ------
 ##### <a name="req_intro"></a> Check Requirements
-Before you start, you'll want to make sure that you have access to a solr instance.  Make sure that you have your project config file set up (see the section below on adding a project) and that the path to the solr instance is correct in the main config file (data/config/config.yml).  You'll also need to make sure that you can execute the saxon xsl transformer from the command line.  See the developer section at the bottom if you have any questions.  You will also need ruby installed.
+- Access to solr instance (write / push privileges)
+- Set up project config file with project's solr core name
+- Confirm solr url, xsl locations, in main config file are correct
+- Command line access to saxon xsl transformer
+- Ruby 2.1.3
+- Apache server with exposed webtree
+See the developer guide at the bottom of this readme for information about the above requirements
 
 ##### <a name="core"></a> Adding a Core and Schema
 Navigate in the server where your Solr cores are located.  You will either need to copy an existing directory or use an example core found here (TODO put in an example of our schema, etc).  TODO put in instructions for updating the name of the core and then adding it to the solr.xml file
