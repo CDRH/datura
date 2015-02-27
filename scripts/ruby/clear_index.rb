@@ -22,17 +22,17 @@ confirm = STDIN.gets.chomp
 if confirm && (confirm == "y" || confirm == "Y" || confirm == "Yes" || confirm == "yes")
   config = read_configs(this_dir, options[:project])
   url = "#{config[:main][env]["solr_path"]}#{config[:proj]["solr_core"]}/update"
-  puts "Clearing index at #{url}"
+  # create a new solr object
+  solr = SolrPoster.new(url)
+  puts "Clearing index at #{solr.url}"
   if !options[:regex].nil?
     field = options[:field].nil? ? "id" : options[:field]
-    res = clear_index_by_regex(url, field, options[:regex])
+    res = solr.clear_index_by_regex(field, options[:regex])
   else
-    res = clear_index(url)
+    res = solr.clear_index
   end
-  commit_res = commit_solr(url)
+  commit_res = solr.commit_solr
 else
   puts "exiting"
   exit
 end 
-
-# TODO add more options like only removing certain things from index, etc
