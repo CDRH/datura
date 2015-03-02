@@ -77,6 +77,7 @@ clear_tmp_directory(dir, verbose_flag)
 
 end_time = Time.now
 total_time = end_time - start_time
+puts "script finished in #{total_time} seconds"
 log.info("Script finished running at #{end_time}")
 log.info("Script completed in #{total_time} seconds")
 log.close
