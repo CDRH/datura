@@ -52,10 +52,10 @@ class Transformer
     files_to_run = regex_files(all_files, regex)
     # Start an asynchronous process so that it doesn't wait for each
     # file before continuing on
-    filesChunked = files_to_run.each_slice(100).to_a
+    filesChunked = files_to_run.each_slice(50).to_a
     filesChunked.each do |files_subset|
       threads = files_subset.each_with_index.map do |file, index|
-        Thread.new(index) do |index|
+        Thread.new do
           if should_update?(file, update_time)
             # Uncomment to see which file is currently getting sucked in
             puts "Threading file number: #{files_subset.find_index(file)}"
@@ -106,16 +106,21 @@ class Transformer
   #    Transforms xml file with xslt and assigns to tmp file
   def _transform_and_post(source, xslt, for_solr=true, file_path=nil)
     error = nil
-    output = file_path.nil? ? create_temp_name(@dir, "xml") : file_path
     xslt_loc = "#{@dir}/#{xslt}"  # make absolute path so that script can be run anywhere
-    puts "output file #{output}" if @verbose
-    saxon = "saxon -s:#{source} -xsl:#{xslt_loc} -o:#{output}"
+    saxon = ""
+    if !file_path.nil?
+      puts "Transforming #{source} to #{file_path}"
+      saxon = "saxon -s:#{source} -xsl:#{xslt_loc} -o:#{file_path}"
+    else
+      puts "Transforming #{source}"
+      saxon = "saxon -s:#{source} -xsl:#{xslt_loc}"
+    end
     # execute the saxon command and make sure that you don't get a stderr!
     Open3.popen3(saxon) do |stdin, stdout, stderr|
       out = stdout.read
       err = stderr.read
       if err.length > 0
-        puts "There was an error with the saxon transformation: "
+        puts "There was an error transforming #{source}: "
         puts "#{err}"
         error = source
       else
@@ -123,22 +128,11 @@ class Transformer
         # now post it to solr if it is not an html snippet and if user did not specify against posting
         if for_solr && !@transform_only
           puts "Posting to solr: #{source}"
-          _post(source, output)
+          @solr.post_xml(out)
         end
       end
     end
     return error
-  end
-
-  def _post(source, output)
-    solr_res = @solr.post_file(output)
-    if solr_res.nil?
-      @solr_errors << "There was no content associated with #{source} to post to solr"
-    elsif solr_res.code != "200"
-      puts "Failure to push to solr #{solr_res.body}"
-      @solr_errors << solr_res.body
-      @solr_failed_files << source
-    end
   end
 
 end
