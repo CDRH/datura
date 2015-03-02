@@ -50,20 +50,29 @@ class Transformer
     errors = []
     all_files = get_directory_files("#{@project_path}/tei", @verbose)
     files = regex_files(all_files, regex)
-    files.each do |file|
-      if should_update?(file, update_time)
-        # transform the tei if they requested it
-        if @solr_html != "html"
-          errors << _transform_and_post(file, @xslt_location["tei"])
-        end
-        if @solr_html != "solr"
-          # make a name for the html snippet and transform it
-          file_name = File.basename(file, ".*")
-          file_path = "#{@project_path}/html-generated/#{file_name}.txt"
-          errors << _transform_and_post(file, @xslt_location["html"], false, file_path)
+    # Start an asynchronous process so that it doesn't wait for each
+    # file before continuing on
+    # TODO if this is too intensive, could lump into groups of 10 or so
+    threads = files.each_with_index.map do |file, index|
+      Thread.new(index) do |index|
+        if should_update?(file, update_time)
+          # Uncomment to see which file is currently getting sucked in
+          puts "Threading file number: #{files.find_index(file)}"
+          # transform the tei if they requested it
+          if @solr_html != "html"
+            errors << _transform_and_post(file, @xslt_location["tei"])
+          end
+          if @solr_html != "solr"
+            # make a name for the html snippet and transform it
+            file_name = File.basename(file, ".*")
+            file_path = "#{@project_path}/html-generated/#{file_name}.txt"
+            errors << _transform_and_post(file, @xslt_location["html"], false, file_path)
+          end
         end
       end
     end
+    # wait for all the files to process before moving on with the script
+    threads.each {|t| t.join}
     return errors
   end
 

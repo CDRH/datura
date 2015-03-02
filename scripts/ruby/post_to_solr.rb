@@ -26,7 +26,8 @@ dir = config[:main]["repo_directory"]
 log = Logger.new("#{dir}/logs/#{project}.log", config[:main]["log_old_number"], config[:main]["log_size"])
 log.info("===========================================")
 log.info("===========================================")
-log.info("Starting script at #{Time.now}")
+start_time = Time.now
+log.info("Starting script at #{start_time}")
 log.info("Script running with following options: #{options}")
 # clear out anything in the tmp directory before doing anything else
 clear_tmp_directory(dir, verbose_flag)
@@ -40,18 +41,27 @@ transform_errors = transformer.transform(options[:format], options[:regex], opti
 
 # write the saxon errors to a log
 if transform_errors.empty?
-  log.info("Transformed all specified files for #{project} successfully")
+  msg = "Transformed all specified files for #{project} successfully"
+  log.info(msg)
+  puts msg
 else
   log.error("Failed to transform following files for #{project}: #{transform_errors.join("\n ")}")
+  puts "#{transform_errors.length} FILE(S) FAILED TO TRANSFORM."
+  puts "Please check the logs for more information."
 end
 
 # write the solr errors to a log
 solr_errors = transformer.solr_errors.compact
 solr_failed = transformer.solr_failed_files
 if solr_errors.empty? && solr_failed.empty?
-  log.info("Posted all specified files for #{project} successfully")
+  msg = "Posted all specified files for #{project} successfully"
+  log.info(msg)
+  puts msg
 else
   log.error("Failed to post the following files for #{project}: #{solr_failed.join("\n ")}")
+  log.error(solr_errors.join("\n"))
+  puts "#{solr_failed.length} FILE(S) FAILED TO POST TO SOLR"
+  puts "Please check the logs for more information"
 end
 
 # commit your changes to solr unless if otherwise specified
@@ -65,6 +75,9 @@ end
 
 clear_tmp_directory(dir, verbose_flag)
 
-log.info("Script finished running at #{Time.now}")
+end_time = Time.now
+total_time = end_time - start_time
+log.info("Script finished running at #{end_time}")
+log.info("Script completed in #{total_time} seconds")
 log.close
 

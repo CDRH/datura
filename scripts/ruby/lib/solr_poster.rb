@@ -46,9 +46,9 @@ class SolrPoster
     if @commit
       commit_res = post_xml("<commit/>")
       if commit_res.code == "200"
-        puts "SUCCESS! Committed your changes to Solr index"
+        puts "Committed changes to Solr (failed files were not committed)"
       else
-        puts "UNABLE TO COMMIT YOUR CHANGES TO SOLR."
+        puts "UNABLE TO COMMIT YOUR CHANGES TO SOLR. Please commit manually"
       end
     end
     return commit_res
