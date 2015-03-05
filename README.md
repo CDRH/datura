@@ -176,13 +176,12 @@ Otherwise, you should not need to do anything with apache assuming that you alre
 ##### <a name="saxon"></a> Saxon Executable
 Install your preferred edition / version of saxon on the server and put it in a memorable place, such as `/var/lib/saxon/saxon9he.jar`, but it does not matter where it is as long as the location is accessible (not your home directory or a restricted directory).
 
-Now go to the /usr/bin directory.  You'll be adding a script that essentially acts as an alias to run saxon.  Use a text editor running under sudo / root to create a new file in /usr/bin and make sure that you name it "saxon".  Add the following code to the file.
+Now go to the /usr/bin directory.  You'll be adding a script that essentially acts as an alias to run saxon.  Use a text editor running under sudo / root to create a new file in /usr/bin and make sure that you name it "saxon".  Add the following code to the file.  Make sure that there are no "echo" lines or anything that would output to stdout in the below script, if you try tinkering with it.
 
 ```
 #!/bin/sh
 # adapted from https://coderwall.com/p/ssuaxa/how-to-make-a-jar-file-linux-executable
 
-echo "Running saxon"
 THISFILE=`which "$0" 2>/dev/null`
 [ $? -gt 0 -a -f "$0" ] && THISFILE="./$0"
 java=java
