@@ -6,48 +6,6 @@ this_dir = File.dirname(__FILE__)
 fixtures = "#{this_dir}/../fixtures"
 
 RSpec.describe "Helper Test:" do
-  
-  describe "clear_tmp_directory" do
-    context "given a good directory" do
-      4.times { |i| FileUtils.touch("#{fixtures}/tmp/#{i}.txt")}
-      it "should remove files inside" do
-        # check that the new files are there first
-        expect(Dir["#{fixtures}/tmp/*"].length).to equal(4)
-        # now remove them
-        expect(clear_tmp_directory("#{fixtures}")).to be_truthy
-        expect(Dir["#{fixtures}/tmp/*"].length).to equal(0)
-      end
-    end
-    context "given a bad directory" do
-      it "should raise exception" do
-        begin
-          clear_tmp_directory(".")
-        rescue RuntimeError => e
-          expect(true).to be_truthy
-        else
-          # should not have gotten to this step
-          expect(true).to be_falsey 
-        end
-      end
-    end
-  end  # ends clear_tmp_directory
-
-
-  describe "create_temp_name" do
-    path = "/var/log"
-    ext = "xml"
-    context "given directory and extension" do
-      it "should return a file name" do
-        res = create_temp_name(path, "xml")
-        expect(res).to end_with ext
-        expect(res).to start_with path
-      end
-    end
-    context "lacking directory and/or extension" do
-      it "TODO"
-    end
-  end  # ends create_temp_name
-
 
   describe "get_directory_files" do
     context "given real directory" do
@@ -150,9 +108,5 @@ RSpec.describe "Helper Test:" do
     end
   end  # ends should_update?
 
-
-  describe "summary_errors" do
-    it "should not return anything but also could cause exception"
-  end  # ends summarize_errors
 
 end  # ends RSpec Helper Test describe

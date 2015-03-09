@@ -7,7 +7,7 @@ class Transformer
   attr_accessor :solr_errors
   attr_accessor :solr_failed_files
 
-  def initialize(main_directory, project, xslt_location, solr, transform_only, solr_or_html, verbose_flag=false)
+  def initialize(main_directory, project, xslt_location, solr, transform_only, xslt_params, solr_or_html, verbose_flag=false)
     # file locations, etc
     @dir = main_directory
     @project = project
@@ -21,6 +21,10 @@ class Transformer
     @solr_html = solr_or_html
     @verbose = verbose_flag
     @transform_only = transform_only
+
+    # xslt parameters
+    @xslt_param_json = xslt_params
+    @xslt_param_string = _stringify_params(xslt_params)
 
     # error holder
     @saxon_errors = []
@@ -44,6 +48,14 @@ class Transformer
     end
     # squish out nil values and hope for the best
     return @saxon_errors.compact
+  end
+
+  def _stringify_params(param_hash)
+    params = ""
+    if !param_hash.nil?
+      params = param_hash.map{|key, value| "#{key}=#{value}" }.join(" ")
+    end
+    return params
   end
 
   def _transform_tei_html(regex, update_time)
@@ -107,13 +119,14 @@ class Transformer
   def _transform_and_post(source, xslt, for_solr=true, file_path=nil)
     error = nil
     xslt_loc = "#{@dir}/#{xslt}"  # make absolute path so that script can be run anywhere
+    puts "Saxon parameters: #{@xslt_param_string}" if @verbose
     saxon = ""
     if !file_path.nil?
       puts "Transforming #{source} to #{file_path}"
-      saxon = "saxon -s:#{source} -xsl:#{xslt_loc} -o:#{file_path}"
+      saxon = "saxon -s:#{source} -xsl:#{xslt_loc} -o:#{file_path} #{@xslt_param_string}"
     else
       puts "Transforming #{source}"
-      saxon = "saxon -s:#{source} -xsl:#{xslt_loc}"
+      saxon = "saxon -s:#{source} -xsl:#{xslt_loc} #{@xslt_param_string}"
     end
     # execute the saxon command and make sure that you don't get a stderr!
     Open3.popen3(saxon) do |stdin, stdout, stderr|

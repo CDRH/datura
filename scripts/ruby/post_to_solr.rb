@@ -29,14 +29,12 @@ log.info("===========================================")
 start_time = Time.now
 log.info("Starting script at #{start_time}")
 log.info("Script running with following options: #{options}")
-# clear out anything in the tmp directory before doing anything else
-clear_tmp_directory(dir, verbose_flag)
 
 # create a new solr instance that will be used by the transformer
 url = "#{config[:main][env]["solr_path"]}#{config[:proj]["solr_core"]}/update"
 solr = SolrPoster.new(url, options[:commit])
 # make a new transformer and run it (pass it an instance of solr)
-transformer = Transformer.new(dir, project, config[:main]["xsl_scripts"], solr, options[:transform_only], options[:solr_or_html], verbose_flag)
+transformer = Transformer.new(dir, project, config[:main]["xsl_scripts"], solr, options[:transform_only], config[:proj]["xslt"], options[:solr_or_html], verbose_flag)
 transform_errors = transformer.transform(options[:format], options[:regex], options[:update_time])
 
 # write the saxon errors to a log
@@ -72,8 +70,6 @@ if options[:commit] && options[:solr_or_html] != "html"
     log.error("Failed to commit changes to solr: #{errors[:solr_errors]}")
   end
 end
-
-clear_tmp_directory(dir, verbose_flag)
 
 end_time = Time.now
 duration = end_time - start_time

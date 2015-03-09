@@ -1,26 +1,6 @@
 require 'fileutils'
 require 'yaml'
 
-# This is the most terrifying of functions
-def clear_tmp_directory(dir, verbose_flag=false)
-  if !dir.nil? && dir.length > 0 && dir != "." && dir != "../"
-    # IMPORTANT: Make sure that directory exists or you'll be wiping 
-    # something like your /tmp directory which is not desirable.
-    puts "Wiping any files in #{dir}/tmp" if verbose_flag
-    files = FileUtils.rm_rf(Dir.glob("#{dir}/tmp/*"))
-    puts "Removed #{files.length} file(s) from tmp directory" if verbose_flag
-    return true
-  else
-    raise "repo_directory is required in config/general.yml file"
-  end
-end
-
-# TODO add checking for dir / ext before returning file name
-def create_temp_name(dir, ext)
-  time_stamp = Time.now.to_i
-  return "#{dir}/tmp/#{time_stamp}.#{ext}"
-end
-
 # get_directory_files
 #   Note: do not end with /
 #   params: directory (string)
@@ -89,25 +69,3 @@ def should_update?(file, since_date=nil)
     return file_date > since_date
   end
 end
-
-# summarize_errors
-#   outputs to stdout if there were any errors
-#   params: error hash object with :solr_errors and :failed_files arrays
-#   returns: nothing of great value
-def summarize_errors(errors)
-  if errors[:solr_errors].length > 0
-    puts "==============================================="
-    puts "============  Errors from Solr ================"
-    puts "==============================================="
-    puts "#{errors[:solr_errors]} solr error(s) reported!"
-    puts "#{errors[:solr_errors].join('\n')}"
-  end
-  if errors[:failed_files].length > 0
-    puts "==============================================="
-    puts "==============  Failed Files =================="
-    puts "==============================================="
-    puts "#{errors[:failed_files].length} file(s) failed to upload"
-    puts "#{errors[:failed_files].join('\n')}"
-  end
-end
-# end summarize_errors

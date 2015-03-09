@@ -5,21 +5,12 @@
 # TODO if the names are different on test and production this code will need to be changed
 solr_core: name_of_core
 
-fig_location: location_of_figures_per_project
-keyword_link: unknown
-# TODO this should probably be specific to test and production
-site_location: base_url
+fig_location: http://rosie.unl.edu/data_images/projects/example/figures/
 
 # XSL Options
-metadata_box: DELETE
-figures: true
-fw: true
-pb: true
-project: full_name_of_project
-slug: short_name_of_project
-
-# This might be a good way to put the url into the xslt as a param
-development:
-  base_url: rosie.unl.edu/test_site
-production:
-  base_url: test_site.unl.edu
+xslt:
+  figures: true
+  fw: true        # form works (page nums, etc)
+  pb: true        # page breaks
+  project: full_name_of_project
+  slug: short_name_of_project
