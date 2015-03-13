@@ -1,0 +1,101 @@
+
+ 
+
+<div class="main_content">
+   
+   
+   <div class=" ">
+      
+      <h3>Tests of common problems with encoding</h3>
+      
+      <p>
+         Note: these should be checked for accessibility concerns.
+         
+      </p>  
+      
+   </div>
+   
+   <div class=" doublespace ">
+      
+      <h4>Test 1</h4>
+      
+      <p>
+         This is some text before the blockquote
+         
+         
+         
+         
+      </p>
+      <p>
+         <blockquote>
+            <p>This is the blockquote</p>
+         </blockquote>
+      </p>
+      <p>
+         This is some text after the blockquote.
+         
+      </p>  
+      
+      
+   </div>
+   
+   
+   <div class=" doublespace ">
+      
+      <h4>Test 2</h4>
+      
+      
+      <p>Some text before the blockquote and line group
+         
+         
+      </p>
+      <p>
+         <blockquote>
+            
+            <div class="lg">
+               
+               <div class="l">Line 1 </div>
+               
+               <div class="l">Line 2 </div>
+               
+               <div class="l">Line 3 </div>
+               
+            </div>
+            
+         </blockquote>
+      </p>
+      <p>
+         Some text after the blockquote and line group
+         
+      </p>  
+      
+      
+   </div>
+   
+   
+   
+   <div class=" doublespace ">
+      
+      <h4>Test 3</h4>
+      
+      
+      <p>Some text before the blockquote and line group
+         hi
+         
+      </p>
+      <h6 class="fw">owdjsfisiodf</h6>
+      <p>
+         Some text after the blockquote and line group
+         
+      </p>  
+      
+      
+   </div>
+   
+   
+   
+   
+   
+   
+   
+</div>
