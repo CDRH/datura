@@ -5,12 +5,20 @@
 # TODO if the names are different on test and production this code will need to be changed
 solr_core: name_of_core
 
-fig_location: http://rosie.unl.edu/data_images/projects/example/figures/
-
-# XSL Options
 xslt:
-  figures: true
-  fw: true        # form works (page nums, etc)
-  pb: true        # page breaks
-  project: full_name_of_project
-  slug: short_name_of_project
+  test:
+    fig_location: http://rosie.unl.edu/data_images/projects/example/figures/
+    file_location: http://rosie.unl.edu/data/projects/
+    figures: true
+    fw: true        # form works (page nums, etc)
+    pb: true        # page breaks
+    project: full_name_of_project
+    slug: short_name_of_project
+  production:
+    fig_location: http://cdrhsites.unl.edu/data_images/projects/example/figures/
+    file_location: http://cdrhsites.unl.edu/data/projects/
+    figures: true
+    fw: true        # form works (page nums, etc)
+    pb: true        # page breaks
+    project: full_name_of_project
+    slug: short_name_of_project
