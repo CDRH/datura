@@ -33,8 +33,9 @@ log.info("Script running with following options: #{options}")
 # create a new solr instance that will be used by the transformer
 url = "#{config[:main][env]["solr_path"]}#{config[:proj]["solr_core"]}/update"
 solr = SolrPoster.new(url, options[:commit])
+xsl_params = config[:proj]["xslt"][env]
 # make a new transformer and run it (pass it an instance of solr)
-transformer = Transformer.new(dir, project, config[:main]["xsl_scripts"], solr, options[:transform_only], config[:proj]["xslt"], options[:solr_or_html], verbose_flag)
+transformer = Transformer.new(dir, project, config[:main]["xsl_scripts"], solr, options[:transform_only], xsl_params, options[:solr_or_html], verbose_flag)
 transform_errors = transformer.transform(options[:format], options[:regex], options[:update_time])
 
 # write the saxon errors to a log
