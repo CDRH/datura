@@ -92,6 +92,8 @@ Indexing (Adding) Data to Solr
 ------
 ##### <a name="post"></a> Running the Script
 
+TODO: Add a section explaining how to add an alternate indexing script
+
 If your scripts/ruby/post_to_solr.rb script is executable, then you may run it by simply typing `./scripts/ruby/post_to_solr.rb`.  Otherwise you can manually run it with `ruby scripts/ruby/post_to_solr.rb`.
 
 You should be able to run it from anywhere inside the data repository, but it is recommend that you run it from the root of the directory.
