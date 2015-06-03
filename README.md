@@ -56,7 +56,19 @@ Name your folder appropriately, add your project name in your /core/projectName/
   
 And add your new project to your solr.xml file. (Note, these instructions will change with subsequent versions of Solr)
 
-Restart Solr, Tomcat, or other web container, and then check your install in the Solr web admin interface to make sure everything is configured correctly. 
+Restart Solr, Tomcat, or other web container, and then check your install in the Solr web admin interface to make sure everything is configured correctly.
+
+In case of permission errors, you may have to change group: 
+
+`sudo chown -R tomcat api_projectName_test/`
+
+and add write permissions
+
+`sudo chmod -R g+w api_projectName_test/`
+
+This is why creating the data structure from an existing config may be easier, those commands listed below just in case
+
+`mkdir -p <project_name>/{bin,data,lib,conf/xslt}` and `cp -R <existing_project>/conf/* <project_name>/conf/`
 
 ##### <a name="proj_config"></a> Configure Directory
 You will need to add a directory for your new project in this data repository.  Under projects/, run the following with your own project name subbed in:
