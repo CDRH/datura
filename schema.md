@@ -5,6 +5,7 @@ I have not compared these fields to every project to make sure they fit, but her
 ## Resource Identification:
 
 ### id
+* **id**
 * **slug** (I have been using this in some contexts to indicate where the files are found, i.e. cody/xml/tei/. Should include the shorthand version of the project, i.e. “cody” at the least)
 * **project** (the full CDRH name of the resource, e.g. “The William F. Cody Archive”)
 * **uri** (full URI of resource)
