@@ -46,7 +46,17 @@ Setting up a New Project
 See the developer guide at the bottom of this readme for information about the above requirements
 
 ##### <a name="core"></a> Adding a Core and Schema
-Navigate in the server where your Solr cores are located.  You will either need to copy an existing directory or use an example core found here (TODO put in an example of our schema, etc).  TODO put in instructions for updating the name of the core and then adding it to the solr.xml file
+Navigate in the server where your Solr cores are located.  
+
+Copy our example core (note, tested on Solr v. 4.10.1) from /solr_example_files/api_projectName_test to your solr cores folder. Alternately, you can copy existing files and use our schema ([/solr_example_files/api_projectName_test/conf/schema.xml](/solr_example_files/api_projectName_test/conf/schema.xml)) as a starting point. 
+
+Name your folder appropriately, add your project name in your /core/projectName/conf/schema.xml file:
+
+  <schema name="api_projectName_test" version="1.5">
+  
+And add your new project to your solr.xml file. (Note, these instructions will change with subsequent versions of Solr)
+
+Restart Solr, Tomcat, or other web container, and then check your install int he Solr web admin interface to make sure everything is configured correctly. 
 
 ##### <a name="proj_config"></a> Configure Directory
 You will need to add a directory for your new project in this data repository.  Under projects/, run the following with your own project name subbed in:
