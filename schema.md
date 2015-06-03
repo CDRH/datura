@@ -65,7 +65,7 @@ I’ve included a couple of extra elements here as they make sense to support th
 
 ## Dynamic Fields
 
-Some projects may require fields which do not yet exist. Below are the field suffixes to use in this case. See example schema for implementation.
+Some projects may require fields which do not yet exist. Below are the field suffixes to use in this case. See [example schema](example_solr_schema.xml) for implementation.
 
     <dynamicField name="*_i"  type="int"    indexed="true"  stored="true"/>
     <dynamicField name="*_is" type="int"    indexed="true"  stored="true"  multiValued="true"/>
