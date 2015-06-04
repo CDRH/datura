@@ -5,6 +5,8 @@
 # TODO if the names are different on test and production this code will need to be changed
 solr_core: name_of_core
 
+override_scripts:
+  tei: projects/oscys/scripts/solr_transform_tei.xsl
 xslt:
   test:
     fig_location: http://rosie.unl.edu/data_images/projects/example/figures/
@@ -14,6 +16,7 @@ xslt:
     pb: true        # page breaks
     project: full_name_of_project
     slug: short_name_of_project
+    override_tei_xslt: true
   production:
     fig_location: http://cdrhsites.unl.edu/data_images/projects/example/figures/
     file_location: http://cdrhsites.unl.edu/data/projects/
@@ -22,3 +25,4 @@ xslt:
     pb: true        # page breaks
     project: full_name_of_project
     slug: short_name_of_project
+    override_tei_xslt: true

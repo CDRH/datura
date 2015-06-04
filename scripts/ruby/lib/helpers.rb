@@ -17,6 +17,21 @@ def get_directory_files(directory, verbose_flag=false)
   end
 end
 # end get_directory_files
+# takes the the config files organized like config = { :proj => {}, :main => {}}
+# and returns the xslt that is supposed to be used, as some projects override the default
+def get_xslt_path(configs, project, env)
+  if configs[:proj]["xslt"][env]["override_tei_xslt"] == true
+    puts "Should be using an alternate script"
+    # check for the existence of the other path
+    if configs[:proj]["override_scripts"]["tei"]
+      # substitute in the tei xslt path that should be used
+      configs[:main]["xsl_scripts"]["tei"] = configs[:proj]["override_scripts"]["tei"]
+    else
+      raise Exception("Config file is missing the override script for xslt")
+    end
+  end
+  return configs
+end
 
 # read_configs
 #   reads the main config file and extrapolates the project config file from that information

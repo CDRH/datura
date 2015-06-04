@@ -34,6 +34,7 @@ log.info("Script running with following options: #{options}")
 url = "#{config[:main][env]["solr_path"]}#{config[:proj]["solr_core"]}/update"
 solr = SolrPoster.new(url, options[:commit])
 xsl_params = config[:proj]["xslt"][env]
+config = get_xslt_path(config, project, env)
 # make a new transformer and run it (pass it an instance of solr)
 transformer = Transformer.new(dir, project, config[:main]["xsl_scripts"], solr, options[:transform_only], xsl_params, options[:solr_or_html], verbose_flag)
 transform_errors = transformer.transform(options[:format], options[:regex], options[:update_time])
