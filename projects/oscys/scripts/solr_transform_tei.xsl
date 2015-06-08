@@ -379,7 +379,7 @@
 				
 				
 				<!-- ==============================
-				Other elements 
+				OSCYS Specific elements 
 				===================================-->
 				
 				<!-- principalInvestigator -->
@@ -487,8 +487,6 @@
 					</xsl:if>
 				</xsl:for-each>
 				
-				<!-- TODO: Ask Kaci why these are listed out seperateley -->
-				
 				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person/persName">
 					<xsl:if test="normalize-space(.) != ''">
 					<field name="people">
@@ -523,7 +521,9 @@
 				</xsl:for-each>
 				
 				
-				<!-- OSCYS Specific fields -->
+				<!-- ===============================
+					OSCYS Specific fields
+				==================================== -->
 				
 				<!-- plaintiff -->
 				
@@ -550,6 +550,32 @@
 				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person[@role='defendant']/persName">
 					<xsl:if test="normalize-space(.) != ''">
 						<field name="defendant_ss"> 
+							<xsl:value-of select="."/>
+						</field>
+					</xsl:if>
+				</xsl:for-each>
+				
+				<!-- attorney all -->
+				
+				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person[@role='attorney_petitioner']/persName">
+					<xsl:if test="normalize-space(.) != ''">
+						<field name="attorney_ss"> 
+							<xsl:value-of select="."/>
+						</field>
+					</xsl:if>
+				</xsl:for-each>
+				
+				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person[@role='attorney_plaintiff']/persName">
+					<xsl:if test="normalize-space(.) != ''">
+						<field name="attorney_ss"> 
+							<xsl:value-of select="."/>
+						</field>
+					</xsl:if>
+				</xsl:for-each>
+				
+				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person[@role='attorney_defendant']/persName">
+					<xsl:if test="normalize-space(.) != ''">
+						<field name="attorney_ss"> 
 							<xsl:value-of select="."/>
 						</field>
 					</xsl:if>
@@ -596,15 +622,85 @@
 					</xsl:if>
 				</xsl:for-each>
 					
+				<!-- Related cases (for case pages) -->
 				
+				<!-- related case ID -->
+				
+				<xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/classCode/ref[@type='related.case']">
+					<xsl:if test="normalize-space(.) != ''">
+						<field name="relatedCaseID_ss"> 
+							<xsl:value-of select="."/>
+						</field>
+					</xsl:if>
+				</xsl:for-each>
+				
+				<!-- related case Name -->
+				
+				<xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/classCode/ref[@type='related.case']">
+					<xsl:if test="normalize-space(.) != ''">
+						<field name="relatedCaseIDName_ss"> 
+							<xsl:value-of select="."/>
+							<xsl:text>/</xsl:text>
+							<xsl:variable name="caseDocID"><xsl:text>../tei/</xsl:text><xsl:value-of select="."/><xsl:text>.xml</xsl:text></xsl:variable>
+							<xsl:for-each select="document($caseDocID)">
+								<xsl:value-of select="//title"/>
+							</xsl:for-each>
+							
+						</field>
+					</xsl:if>
+				</xsl:for-each>
 				
 				<!-- case ID -->
 				
-						<!-- add this when case id is determined -->
+				<xsl:for-each select="//idno[@type='case']">
+					<xsl:if test="normalize-space(.) != ''">
+						<field name="caseID_ss"> 
+							<xsl:value-of select="."/>
+						</field>
+					</xsl:if>
+				</xsl:for-each>
 				
 				<!-- case Name -->
 				
-						<!-- Add this when we determine way to generate case name -->
+				<xsl:for-each select="//idno[@type='case']">
+					<xsl:if test="normalize-space(.) != ''">
+						<field name="caseIDName_ss"> 
+							<xsl:value-of select="."/>
+							<xsl:text>/</xsl:text>
+							<xsl:variable name="caseDocID"><xsl:text>../tei/</xsl:text><xsl:value-of select="."/><xsl:text>.xml</xsl:text></xsl:variable>
+							<xsl:for-each select="document($caseDocID)">
+								<xsl:value-of select="//title"/>
+							</xsl:for-each>
+							
+						</field>
+					</xsl:if>
+				</xsl:for-each>
+				
+				<!-- Person ID and Name -->
+				
+				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person/persName">
+					<xsl:if test="normalize-space(.) != ''">
+						<field name="peopleIDName_ss">
+							<xsl:value-of select="../@xml:id"></xsl:value-of>
+							<xsl:text>/</xsl:text>
+							<xsl:value-of select="."/>
+						</field>
+					</xsl:if>
+				</xsl:for-each>
+				
+				<!-- Person ID -->
+				
+				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person/persName">
+					<xsl:if test="normalize-space(.) != ''">
+						<field name="peopleID_ss">
+							<xsl:value-of select="../@xml:id"></xsl:value-of>
+						</field>
+					</xsl:if>
+				</xsl:for-each>
+				
+				
+				
+				
 			
 				
 				<!-- text -->
