@@ -298,12 +298,25 @@
   <xsl:template match="pb">
     <xsl:if test="$pb = 'true'">
       
+      <!-- grab the figure id, first looking in @facs, then @xml:id, and if there is a .jpg, chop it off -->
       <xsl:variable name="figure_id">
+        <xsl:variable name="figure_id_full">
+          <xsl:choose>
+            <xsl:when test="@facs"><xsl:value-of select="@facs"></xsl:value-of></xsl:when>
+            <xsl:when test="@xml:id"><xsl:value-of select="@xml:id"></xsl:value-of></xsl:when>
+          </xsl:choose>
+        </xsl:variable>
         <xsl:choose>
-          <xsl:when test="@xml:id"><xsl:value-of select="@xml:id"></xsl:value-of></xsl:when>
-          <xsl:when test="@facs"><xsl:value-of select="@facs"></xsl:value-of></xsl:when>
+          <xsl:when test="contains($figure_id_full,'.jpg')">
+            <xsl:value-of select="substring-before($figure_id_full,'.jpg')"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="$figure_id_full"/>
+          </xsl:otherwise>
         </xsl:choose>
+        
       </xsl:variable>
+
       
       <span class="hr">&#160;</span>
       <span>
