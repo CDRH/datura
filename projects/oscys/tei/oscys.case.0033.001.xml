@@ -3,7 +3,7 @@
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>Cordelia Wilson v. Brown &amp; George Miller. Petition for Freedom</title>
+<title>Cordelia Wilson v. Brown. Petition for Freedom</title>
 <principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
 <principal n="Muñoz, Trevor" xml:id="tm">Trevor Muñoz</principal>
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
@@ -80,6 +80,7 @@
 <keywords scheme="lcsh" n="people">  
 <term xml:id="per.000003">Brent, William, 1774-1848</term>
 <term xml:id="per.000273">McDowell, E.</term>
+<term xml:id="per.000278">Miller, George</term>
 <term xml:id="per.000274">Morrell, James S.</term>
 <term xml:id="per.000014">Rapine, Daniel</term>
 <term xml:id="per.000275">Torrey, Jesse</term>
@@ -101,9 +102,6 @@
 <person role="defendant" xml:id="per.000277">
 <persName>Brown</persName>
 </person>
-<person role="defendant" xml:id="per.000278">
-<persName>Miller, George</persName>
-</person>
 <person role="attorney_petitioner" xml:id="per.000001">
 <persName>Key, Francis Scott, 1779-1843</persName>
 </person>
@@ -122,6 +120,7 @@
 </profileDesc>
        
 <revisionDesc>
+<change when="2015-06-16" who="#kln">removed Miller from parties, added to people</change>
 <change when="2014-08-18" who="#lkw">added xml:ids</change>
 <change when="2014-06-09" who="#wgt">reviewed</change>
 <change when="2014-06-02" who="#kln">converted to new TEI</change>

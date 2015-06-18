@@ -3,7 +3,7 @@
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>Rosanna Brown v. Bennett &amp; George Miller. Petition for Freedom</title>
+<title>Rosanna Brown v. Bennett. Petition for Freedom</title>
 <principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
 <principal n="Muñoz, Trevor" xml:id="tm">Trevor Muñoz</principal>
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
@@ -79,6 +79,7 @@
     
 <keywords scheme="lcsh" n="people">  
 <term xml:id="per.000003">Brent, William, 1774-1848</term>
+<term xml:id="per.000278">Miller, George</term>
 <term xml:id="per.000044">Morsell, James Sewall</term>
 <term xml:id="per.000014">Rapine, Daniel</term>
 <term xml:id="per.000275">Torrey, Jesse</term>
@@ -103,9 +104,6 @@
 <person role="defendant" xml:id="per.000281">
 <persName>Bennett</persName>
 </person>
-<person role="defendant" xml:id="per.000278">
-<persName>Miller, George</persName>
-</person>
 <person role="attorney_petitioner" xml:id="per.000194">
 <persName>Caldwell, Elias Boudinot, 1776-1825</persName>
 </person>
@@ -127,6 +125,7 @@
 </profileDesc>
 
 <revisionDesc>
+<change when="2015-06-16" who="#kln">removed Miller from parties, added to people</change>
 <change when="2014-08-18" who="#lkw">added xml:ids; added Key as attorney_petitioner</change>
 <change when="2014-06-09" who="#wgt">reviewed</change>
 <change when="2014-06-04" who="#kln">converted to new TEI</change>
@@ -168,7 +167,7 @@ Daniel Rapine</p>
                 
 <p>Rosanna Brown<lb/>
 vs<lb/>
-      Barnett</p>
+&#160; &#160; &#160; Bennett</p>
                 
 <p>Petn for Freedom</p>
                 
