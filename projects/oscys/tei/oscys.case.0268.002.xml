@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://digitalhumanities.unl.edu/resources/schemas/tei/TEIP5.2.6.0/tei_all.rng" type="xml"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0166.006">
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://digitalhumanities.unl.edu/resources/schemas/tei/TEIP5.2.6.0/tei_all.rng" type="xml"?> 
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0268.002">
     
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>Lucy Williams v. George Hope. Summons of George Hope</title>
+<title>Rachel Johnston v. Morris Adler. Motion for New Trial</title>
 <principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
-<principal n="Muñoz, Trevor" xml:id="tm">Trevor Muñoz</principal>
+<principal n="Mu&#241;oz, Trevor" xml:id="tm">Trevor Mu&#241;oz</principal>
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
 <respStmt>
 <resp>transcription and encoding</resp>
+<name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
 <name n="Camerone, Stephanie N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
 </respStmt>
@@ -30,13 +34,13 @@
 <name>Center for Digital Research in the Humanities</name>
 <address>
 <addrLine>319 Love Library</addrLine>
-<addrLine>University of Nebraska–Lincoln</addrLine>
+<addrLine>University of Nebraska&#8211;Lincoln</addrLine>
 <addrLine>Lincoln, NE 68588-4100</addrLine>
 <addrLine>cdrh@unl.edu</addrLine>
 </address>
 </distributor>
-<idno type="project">oscys.case.0166.006</idno>
-<idno type="case">oscys.caseid.0168</idno>
+<idno type="project">oscys.case.0268.002</idno>
+<idno type="case">oscys.caseid.0288</idno>
 
 <availability>
 <licence>http://creativecommons.org/licenses/by-nc-sa/3.0/</licence>
@@ -46,15 +50,15 @@
             
 <sourceDesc>
 <bibl>
-<title level="m" type="main">Summons of George Hope</title>
-<date when="1852-07-17">July 17, 1852</date>
+<title level="m" type="main">Motion for New Trial</title>
+<date when="1849-12-13">December 13, 1849</date>
 <note type="project">Our transcription is based on a digital image of the original.</note>
 </bibl>
 <msDesc>
 <msIdentifier>
 <repository>National Archives and Records Administration</repository>
 <collection>Record Group 21.6</collection>
-<idno>Box 761, Folder 161</idno>
+<idno>Box 763, Folder 75</idno>
 </msIdentifier>
 </msDesc>
 </sourceDesc>
@@ -67,7 +71,7 @@
 </keywords>
     
 <keywords scheme="original" n="subcategory">
-<term>Summons</term>
+<term>Motion</term>
 </keywords>
 
 <keywords scheme="original" n="type">
@@ -79,32 +83,33 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term xml:id="per.000004">Cranch, William, 1769-1855</term>
-<term>Smith, John A.</term>
-<term>Wallach, Robert</term>
+<term>Johnston, John</term>
+<term>Turner, Thomas</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
-<term>Washington County (D.C.)</term>
-<term>Washington (D.C.)</term>
+<term/>
 </keywords>
 
+<keywords scheme="original" n="outcome">
+<term>Motion for New Trial</term>
+</keywords>
 
 </textClass>
             
 <particDesc>   
 <listPerson>            
 <person role="petitioner">
-<persName>Williams, Lucy</persName>
+<persName>Johnston, Rachel</persName>
 </person>
 <person role="defendant">
-<persName>Hope, George</persName>
+<persName>Adler, Morris</persName>
 </person>
 <person role="attorney_petitioner">
-<persName>Hall, David A.</persName>
+<persName/>
 </person>
 <person role="attorney_defendant">
-<persName/>
+<persName>Marbury, John</persName>
 </person>
 </listPerson>
             
@@ -117,9 +122,10 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>   
-<change when="2015-05-06" who="kln">reviewed; edited</change>            
-<change when="2015-03-05" who="snc">Encoded and transcribed</change>
+<revisionDesc>
+<change when="2015-06-23" who="kln">reviewed; edited</change>        
+<change when="2015-06-18" who="ea">changed xml id, added case id</change>     
+<change when="2015-03-10" who="snc">Encoded and transcribed</change>
 </revisionDesc>
 
 </teiHeader>
@@ -130,51 +136,42 @@
                
 <div1 type="case">
 
-<pb xml:id="p001" facs="oscys.case.0166.006.001.jpg"/>
+<pb xml:id="p001" facs="oscys.case.0268.002.001.jpg"/>
 
 <div2 type="caption">
 
-<p>District of Columbia, to wit:<lb/>
-The United States of America,<lb/>
-To the Marshal of the District of Columbia, Greeting:</p>
+<p>21 app</p>
+
+<p>Ratchel Johnson by her next friend Jno Johnston<lb/>
+vs<lb/>
+Morris Adler admr of Thomas Turner</p>
+
+<p>Motion for new Trial</p>
 
 </div2>
 
 <div2 type="body">
 
-<p>We command you that you <del>take</del> sum. George Hope <del>late of Washington County, if shall be found within the County of Washington in your said District, and safely keep, so that you have body</del> before the Circuit Court of the District of Columbia, to be held for the County aforesaid, at the City of Washington, on the 3d Monday of October next, to answer <del>unto</del> the petition for freedom of Lucy White &amp;c.</p>
+<p>Reasons.<lb/>
+For Error in the instruction of the court on the construction of the law:</p>
 
-<p>Hereof fail not, at your peril, and have you then and there this writ.</p>
+<p>On the ground of newly discovered evidence unknown to the Deft at the time of the trial.</p>
 
-<p>Witness W Cranch Esquire, Chief Judge of our said Court at the City of Washington, the 22d day of May Anno Domini one thousand eight hundred and 52.</p>
-
-<p>Issued the 17th day of July 1852.</p>
-
-<p>Jno A Smith Clk</p>
-
-<p>Hall</p>
+<p>Marbury for Deft</p>
      
 </div2>
 
-<pb xml:id="p002" facs="oscys.case.0166.006.002.jpg"/>
+<pb xml:id="p002" facs="oscys.case.0268.002.002.jpg"/>
 
 <div2 type="back">
 
-<p>161.</p>
+<p><del>21.</del></p>
 
-<p>Lucy Williams<lb/>
-vs<lb/>
-George Hope</p>
+<p>Appears</p>
 
-<p>Sub.<lb/>
-9 Bre</p>
+<p>Reason for New Trial</p>
 
-<p>+<lb/>
-Pet. for freedom</p>
-
-<p>Non est<lb/>
-R Wallach<lb/>
-Marshal</p>
+<p>Filed 13th Decr. 1849</p>
 
 </div2>
 
