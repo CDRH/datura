@@ -9,6 +9,7 @@
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
 <respStmt>
 <resp>transcription and encoding</resp>
+<name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
 <name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
@@ -85,6 +86,10 @@
 <term/>
 </keywords>
 
+<keywords scheme="original" n="outcome">
+<term>Verdict for Defendant</term>
+</keywords>
+
 
 </textClass>
             
@@ -114,6 +119,7 @@
 </profileDesc>
                 
 <revisionDesc>
+<change when="2015-06-25" who="ea">added case outcome</change>
 <change when="2014-08-04" who="#lkw">added xml:ids</change>
 <change when="2014-06-18" who="#kln">converted to new TEI</change>
 <change when="2014-05-30" who="#wgt">reviewed</change>
