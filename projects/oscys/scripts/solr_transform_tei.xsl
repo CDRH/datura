@@ -79,9 +79,9 @@
 					<xsl:call-template name="tei_document"/>
 				</doc>
 				<!-- testing to see if I can add a person to a case from a document -->
-				<doc>
+				<!--<doc>
 					
-				</doc>
+				</doc>-->
 			</xsl:otherwise>
 			
 		</xsl:choose>
@@ -804,12 +804,6 @@
 		
 
 		
-		<!-- id -->
-		
-		<field name="id">
-			<xsl:value-of select="$filenamepart"/>
-		</field>
-		
 		
 		
 		<!-- text -->
@@ -834,11 +828,7 @@
 	<xsl:template name="tei_document" exclude-result-prefixes="#all">
 	
 		
-		<!-- id -->
 		
-		<field name="id">
-			<xsl:value-of select="$filenamepart"/>
-		</field>
 		
 		<!-- text -->
 		
