@@ -60,19 +60,44 @@ IÕve included a couple of extra elements here as they make sense to support the 
 * **places** (multivalued)
 * **works** (multivalued)
 
-### OSCYS Fields
-* **peopleID_ss** The id of a person appearing in the file
+### OSCYS General Fields
+* **peopleID_ss** The id of a person appearing in the file. for person files this should be repeated from ID
 * **peopleIDName_ss** The ID and name of any people appearing in the file (Format: ID/Title)
-* **caseID_ss** (documents only) The id of any cases associate with this document
-* **caseIDName_ss** (documents only) the ID and Name of any cases associated with this document (e.g. "oscys.caseid.0002/Ann Shorter v. Thomas Corcoran")
 * **plaintiff_ss**
 * **defendant_ss**
 * **attorneyP_ss**
 * **attorneyD_ss**
 * **term_ss**
 * **attorney_ss**
+
+
+### OSCYS Person Fields
+
+* **ss_personAffiliation**
+* **ss_personAge**
+* **ss_personBibl**
+* **ss_personBirth**
+* **ss_personDeath**
+* **ss_personEvent**
+* **ss_personIdnoVIAF**
+* **ss_personNationality**
+* **ss_personNote**
+* **ss_personOccupation**
+* **ss_personName**
+* **ss_personResidence**
+* **ss_personSex**
+* **ss_personSocecStatus"**
+* **ss_personColor**
+
+### OSCYS CaseID Fields
+
 * **relatedCaseID_ss** - related cases ID
 * **relatedCaseIDName_ss** - related cases ID + Name
+
+### OSCYS Documents Fields
+
+* **caseID_ss** (documents only) The id of any cases associate with this document
+* **caseIDName_ss** (documents only) the ID and Name of any cases associated with this document (e.g. "oscys.caseid.0002/Ann Shorter v. Thomas Corcoran")
 
 ### Generic Text field: (much of the above is copied into this for text searching)
 

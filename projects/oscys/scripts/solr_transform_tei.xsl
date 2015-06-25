@@ -12,14 +12,23 @@
 	
 	<xsl:include href="../../../scripts/xslt/cdrh_to_solr/lib/common.xsl"/>
 	
+	<xsl:variable name="filename" select="tokenize(base-uri(.), '/')[last()]"/>
+	<!-- The part of the url after the main document structure and before the filename. 
+		Collected so we can link to files, even if they are nested, i.e. whitmanarchive/manuscripts -->
+	<xsl:variable name="slug" select="substring-before(substring-before(substring-after(base-uri(.),'data/projects/'),$filename),'/')"/>
+	
+	<!-- Split the filename using '\.' -->
+	<xsl:variable name="filenamepart" select="substring-before($filename, '.xml')"/>
+	<xsl:variable name="doctype">
+		<xsl:choose>
+			<xsl:when test="//body//listPerson">person</xsl:when>
+			<xsl:when test="contains($filenamepart,'caseid')">caseid</xsl:when>
+			<xsl:otherwise>document</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+	
 	<xsl:template match="/" exclude-result-prefixes="#all">
-		<xsl:variable name="filename" select="tokenize(base-uri(.), '/')[last()]"/>
-		<!-- The part of the url after the main document structure and before the filename. 
-			Collected so we can link to files, even if they are nested, i.e. whitmanarchive/manuscripts -->
-		<xsl:variable name="slug" select="substring-before(substring-before(substring-after(base-uri(.),'data/projects/'),$filename),'/')"/>
 		
-		<!-- Split the filename using '\.' -->
-		<xsl:variable name="filenamepart" select="substring-before($filename, '.xml')"/>
 		
 		<!-- Set file type, based on containing folder -->
 		<!--<xsl:variable name="type">
@@ -31,98 +40,69 @@
 			<xsl:value-of select="substring-before(substring-before(substring-after(base-uri(.),$path),$filename), '/')"/>
 		</xsl:variable>-->
 		
+		<add>
+		<xsl:choose>
+			<!-- Act differenly on personography -->
+			<xsl:when test="$doctype = 'person'">
+				<!--<xsl:for-each select="//trait">
+					<xsl:for-each select="./*/node-name(.)">
+						<xsl:text>
+</xsl:text><xsl:value-of select="."></xsl:value-of>
+					</xsl:for-each>
+					
+				</xsl:for-each>-->
+				<xsl:for-each select="//person">
+					<doc>
+				<xsl:call-template name="tei_general">
+					<xsl:with-param name="filenamepart" select="$filenamepart"/>
+					<xsl:with-param name="slug" select="$slug"/>
+				</xsl:call-template>
+				<xsl:call-template name="tei_person"/>
+				</doc>
+				</xsl:for-each>
+			</xsl:when>
+			<xsl:when test="$doctype = 'caseid'">
+				<doc>
+					<xsl:call-template name="tei_general">
+						<xsl:with-param name="filenamepart" select="$filenamepart"/>
+						<xsl:with-param name="slug" select="$slug"/>
+					</xsl:call-template>
+					<xsl:call-template name="tei_caseid"/>
+				</doc>
+			</xsl:when>
+			<xsl:otherwise>
+				<doc>
+				<xsl:call-template name="tei_general">
+					<xsl:with-param name="filenamepart" select="$filenamepart"/>
+					<xsl:with-param name="slug" select="$slug"/>
+				</xsl:call-template>
+					<xsl:call-template name="tei_document"/>
+				</doc>
+				<!-- testing to see if I can add a person to a case from a document -->
+				<doc>
+					
+				</doc>
+			</xsl:otherwise>
+			
+		</xsl:choose>
+		</add>
 		
-		<xsl:call-template name="tei_template">
-			<xsl:with-param name="filenamepart" select="$filenamepart"/>
-			<xsl:with-param name="slug" select="$slug"/>
-		</xsl:call-template>
+		
 		
 	</xsl:template>
-
-	<!-- ==============================
-	resource identification 
-	===================================-->
-	
-	<!-- id -->
-	<!-- slug -->
-	<!-- project -->
-	<!-- uri -->
-	<!-- uriXML -->
-	<!-- uriHTML -->
-	<!-- dataType --> <!-- tei, dublin_core, csv, vra_core -->
 	
 	
 	<!-- ==============================
-	Dublin Core 
-	===================================-->
-	
-	<!-- title -->
-	<!-- titleSort -->
-	<!-- creator -->
-	<!-- creators -->
-	<!-- subject -->
-	<!-- subjects -->
-	<!-- description -->
-	<!-- publisher -->
-	<!-- contributor -->
-	<!-- contributors -->
-	<!-- date -->
-	<!-- dateDisplay -->
-	<!-- type -->
-	<!-- format -->
-	<!-- medium -->
-	<!-- extent -->
-	<!-- language -->
-	<!-- relation -->
-	<!-- coverage -->
-	<!-- source -->
-	<!-- rightsHolder -->
-	<!-- rights -->
-	<!-- rightsURI -->
-	
-	
-	<!-- ==============================
-	Other Elements 
-	===================================-->
-	
-	<!-- principalInvestigator -->
-	<!-- principalInvestigators -->
-	<!-- place -->
-	<!-- placeName -->
-	<!-- recipient -->
-	<!-- recipients -->
-	
-	<!-- ==============================
-	Other Elements 
-	===================================-->
-	
-	<!-- principalInvestigator -->
-	<!-- principalInvestigators -->
-	<!-- place -->
-	<!-- placeName -->
-	<!-- recipient -->
-	<!-- recipients -->
-	
-	<!-- ==============================
-	CDRH specific categorization
-	===================================-->
-	
-	<!-- category -->
-	<!-- subCategory -->
-	<!-- topic -->
-	<!-- keywords -->
-	<!-- people -->
-	<!-- places -->
-	<!-- works -->
+	See OSCYS Schema at: https://github.com/CDRH/data/blob/master/projects/oscys/schema.md
+	=================================== -->
 	
 	
 
-	<xsl:template name="tei_template" exclude-result-prefixes="#all">
+	<xsl:template name="tei_general" exclude-result-prefixes="#all">
 		<xsl:param name="filenamepart"/>
 		<xsl:param name="slug"/>
 		
-		<add>
-			<doc>
+
 				
 				<!-- ==============================
 				resource identification 
@@ -130,9 +110,14 @@
 				
 				<!-- id -->
 				
-				<field name="id">
-					<xsl:value-of select="$filenamepart"/>
-				</field>
+				<xsl:if test="$doctype != 'person'">
+					<field name="id">
+						<xsl:value-of select="$filenamepart"/>
+					</field>
+				</xsl:if>
+				
+						
+				<!-- ID Moved to individual templates below since person is treated differently -->
 				
 				<!-- slug -->
 				
@@ -185,14 +170,23 @@
 				
 				<!-- set title -->
 				<xsl:variable name="title">
-					<xsl:choose>
-						<xsl:when test="/TEI/teiHeader/fileDesc/titleStmt/title[@type='main']">
-							<xsl:value-of select="/TEI/teiHeader/fileDesc/titleStmt/title[@type='main'][1]"/>
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:value-of select="/TEI/teiHeader/fileDesc/titleStmt/title[1]"/>
-						</xsl:otherwise>
-					</xsl:choose>
+				<xsl:choose>
+					<xsl:when test="$doctype = 'person'">
+						<xsl:value-of select='persName'/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:choose>
+							<xsl:when test="/TEI/teiHeader/fileDesc/titleStmt/title[@type='main']">
+								<xsl:value-of select="/TEI/teiHeader/fileDesc/titleStmt/title[@type='main'][1]"/>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="/TEI/teiHeader/fileDesc/titleStmt/title[1]"/>
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:otherwise>
+				</xsl:choose>
+		
+					
 				</xsl:variable>
 				
 				<field name="title">
@@ -697,28 +691,166 @@
 						</field>
 					</xsl:if>
 				</xsl:for-each>
-				
-				
-				
-				
+
+	</xsl:template>
+	
+	
+	
+<!-- ==================================
+	Person
+	=================================== -->
+	
+	<xsl:template name="tei_person" exclude-result-prefixes="#all">
+		<!-- All are within the //person for-each -->
+		
+		<!-- id -->
+		
+		<field name="id">
+			<xsl:value-of select="@xml:id"/>
+		</field>
+		
+		<xsl:for-each select="affiliation[normalize-space()]">
+			<field name="ss_personAffiliation"><xsl:value-of select="."/></field>
+		</xsl:for-each>
+		<xsl:for-each select="age[normalize-space()]">
+			<field name="ss_personAge"><xsl:value-of select="."/></field>
+		</xsl:for-each>
+		<xsl:for-each select="bibl[normalize-space()]">
+			<field name="ss_personBibl"><xsl:value-of select="."/></field>
+		</xsl:for-each>
+		<xsl:for-each select="birth[normalize-space()]">
+			<field name="ss_personBirth"><xsl:value-of select="."/></field>
+		</xsl:for-each>
+		<xsl:for-each select="death[normalize-space()]">
+			<field name="ss_personDeath"><xsl:value-of select="."/></field>
+		</xsl:for-each>
+		<xsl:for-each select="event[normalize-space()]">
+			<field name="ss_personEvent"><xsl:value-of select="."/></field>
+		</xsl:for-each>
+		<xsl:for-each select="idno[@type='viaf'][normalize-space()]">
+			<field name="ss_personIdnoVIAF"><xsl:value-of select="."/></field>
+		</xsl:for-each>
+		<xsl:for-each select="nationality[normalize-space()]">
+			<field name="ss_personNationality"><xsl:value-of select="."/></field>
+		</xsl:for-each>
+		<xsl:for-each select="note[normalize-space()]">
+			<field name="ss_personNote"><xsl:value-of select="."/></field>
+		</xsl:for-each>
+		<xsl:for-each select="occupation[normalize-space()]">
+			<field name="ss_personOccupation"><xsl:value-of select="."/></field>
+		</xsl:for-each>
+		<xsl:for-each select="persName[normalize-space()]">
+			<field name="ss_personName"><xsl:value-of select="."/></field>
+		</xsl:for-each>
+		<xsl:for-each select="residence[normalize-space()]">
+			<field name="ss_personResidence"><xsl:value-of select="."/></field>
+		</xsl:for-each>
+		<xsl:for-each select="sex[normalize-space()]">
+			<field name="ss_personSex"><xsl:value-of select="."/></field>
+		</xsl:for-each>
+		<xsl:for-each select="socecStatus[normalize-space()]">
+			<field name="ss_personSocecStatus"><xsl:value-of select="."/></field>
+		</xsl:for-each>
+		<xsl:for-each select="trait[@type='color'][normalize-space()]">
+			<field name="ss_personColor"><xsl:value-of select="."/></field>
+		</xsl:for-each>
+		
+	
+		
+		<!-- 
+		affiliation
+		age
+		bibl
+		birth
+		death
+		event
+		*idno
+		nationality
+		note
+		occupation
+		persName
+		residence
+		sex
+		socecStatus
+		trait -> type='color' //multivalued
+		-->
+			<!--<field name="s_personBirth"><xsl:value-of select="birth"/></field>
+		<field name="s_personDeath"><xsl:value-of select="death"/></field>
+		<field name="ss_personSex"><xsl:value-of select="death"/></field>
+		<field name="s_personColor"><xsl:value-of select="trait[@type='color']"/></field>
+		<field name="s_personColor"><xsl:value-of select="trait[@type='color']"/></field>
+		<field name="ss_personOccupation"><xsl:value-of select="occupation"/></field>
+		<field name="ss_personViafID"><xsl:value-of select="idno[@type='viaf']"/></field>
+		<field name="ss_personResidence"><xsl:value-of select="residence"/></field>
+		<field name="ss_personSocecStatus"><xsl:value-of select="socecStatus"/></field>
+		<field name="s_personNote"><xsl:value-of select="note"/></field>-->
+		
+		<field name="text">
 			
-				
-				<!-- text -->
-				
-				<field name="text">
-					<xsl:for-each select="//text">
-						<xsl:text> </xsl:text>
-						<xsl:value-of select="normalize-space(.)"/>
-						<xsl:text> </xsl:text>
-					</xsl:for-each>
-				</field>
-				
-				
-			</doc>
-		</add>
+				<xsl:text> </xsl:text>
+				<xsl:value-of select="normalize-space(.)"/>
+				<xsl:text> </xsl:text>
 			
+		</field>
+
+
+	</xsl:template>
+	
+	<!-- ==================================
+	case ID
+	=================================== -->
+	
+	<xsl:template name="tei_caseid" exclude-result-prefixes="#all">
 		
 
+		
+		<!-- id -->
+		
+		<field name="id">
+			<xsl:value-of select="$filenamepart"/>
+		</field>
+		
+		
+		
+		<!-- text -->
+		
+		<field name="text">
+			<xsl:for-each select="//text">
+				<xsl:text> </xsl:text>
+				<xsl:value-of select="normalize-space(.)"/>
+				<xsl:text> </xsl:text>
+			</xsl:for-each>
+		</field>
+		
+		
+		
+		
+	</xsl:template>
+	
+	<!-- ==================================
+	Case Doc
+	=================================== -->
+	
+	<xsl:template name="tei_document" exclude-result-prefixes="#all">
+	
+		
+		<!-- id -->
+		
+		<field name="id">
+			<xsl:value-of select="$filenamepart"/>
+		</field>
+		
+		<!-- text -->
+		
+		<field name="text">
+			<xsl:for-each select="//text">
+				<xsl:text> </xsl:text>
+				<xsl:value-of select="normalize-space(.)"/>
+				<xsl:text> </xsl:text>
+			</xsl:for-each>
+		</field>
+		
+		
 	</xsl:template>
 
 
