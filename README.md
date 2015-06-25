@@ -104,8 +104,10 @@ Usage: ruby post_to_solr.rb [project] -[options]...
     -h, --help                       Computer, display script options.
     -e, --environment [input]        Environment (test, production)
     -f, --format [input]             Restrict to one format (tei, csv, dublin-core)
+    -x, --html-only                  Will not generate solr snippets, only html
     -n, --no-commit                  Post files to solr but do not commit
     -r, --regex [input]              Only post files matching this regex
+    -s, --solr-only                  Will not generate html snippets
     -t, --transform-only             Do not post to solr or erase tmp/
     -u, --update [2015-01-01T18:24]  Transform and post only new files
     -v, --verbose                    More messages and stacktraces than ever before!
