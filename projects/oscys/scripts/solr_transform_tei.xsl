@@ -4,18 +4,27 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/">
 	<xsl:output indent="yes" omit-xml-declaration="yes"/>
 	
+	<!-- ======================================
+		Params passed in from ruby script
+		====================================== -->
 	<xsl:param name="date"/>
 	<xsl:param name="string"/>
-	<xsl:param name="site_location"></xsl:param><!-- will be lassed in from config.yml -->
-	<xsl:param name="file_location"></xsl:param><!-- will be lassed in from config.yml -->
+	<xsl:param name="site_location"/><!-- will be lassed in from config.yml -->
+	<xsl:param name="file_location"/><!-- will be lassed in from config.yml -->
 	<xsl:param name="project" select="/TEI/teiHeader/fileDesc/publicationStmt/authority[1]"></xsl:param>
+	<xsl:param name="slug"/><!-- will be lassed in from config.yml -->
+	
 	
 	<xsl:include href="../../../scripts/xslt/cdrh_to_solr/lib/common.xsl"/>
+	
+	<!-- ======================================
+		Variables
+		====================================== -->
 	
 	<xsl:variable name="filename" select="tokenize(base-uri(.), '/')[last()]"/>
 	<!-- The part of the url after the main document structure and before the filename. 
 		Collected so we can link to files, even if they are nested, i.e. whitmanarchive/manuscripts -->
-	<xsl:variable name="slug" select="substring-before(substring-before(substring-after(base-uri(.),'data/projects/'),$filename),'/')"/>
+	<!--<xsl:variable name="slug" select="substring-before(substring-before(substring-after(base-uri(.),'data/projects/'),$filename),'/')"/>-->
 	
 	<!-- Split the filename using '\.' -->
 	<xsl:variable name="filenamepart" select="substring-before($filename, '.xml')"/>
@@ -26,6 +35,10 @@
 			<xsl:otherwise>document</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
+	
+	<!-- ======================================
+		Basic structure of xml post and calling templates
+		====================================== -->
 	
 	<xsl:template match="/" exclude-result-prefixes="#all">
 		
@@ -109,15 +122,12 @@
 				===================================-->
 				
 				<!-- id -->
-				
+				<!-- if person, in person template below -->
 				<xsl:if test="$doctype != 'person'">
 					<field name="id">
 						<xsl:value-of select="$filenamepart"/>
 					</field>
 				</xsl:if>
-				
-						
-				<!-- ID Moved to individual templates below since person is treated differently -->
 				
 				<!-- slug -->
 				
@@ -472,6 +482,7 @@
 				
 				<!-- people -->
 				
+				<xsl:if test="$doctype != 'person'">
 				<xsl:for-each
 					select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='people']/term">
 					<xsl:if test="normalize-space(.) != ''">
@@ -488,12 +499,13 @@
 					</field>
 					</xsl:if>
 				</xsl:for-each>
+				</xsl:if>
 				
 				
 				
 				
 				<!-- places -->
-				
+				<xsl:if test="$doctype != 'person'">
 				<xsl:for-each
 					select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='places']/term">
 					<xsl:if test="normalize-space(.) != ''">
@@ -502,6 +514,7 @@
 						</field>
 					</xsl:if>
 				</xsl:for-each>
+				</xsl:if>
 				
 				<!-- works -->
 				
@@ -709,50 +722,73 @@
 			<xsl:value-of select="@xml:id"/>
 		</field>
 		
+		<!-- people -->
+		
+		<field name="people"><xsl:value-of select='persName'/></field>
+		<field name="places"></field>
+		
+		<!-- OSCYS Specific -->
+		
+		<field name="peopleIDName_ss">
+					<xsl:value-of select="@xml:id"></xsl:value-of>
+					<xsl:text>/</xsl:text>
+					<xsl:value-of select='persName'/>
+		</field>
+		
+		<!-- Person ID -->
+		
+		<field name="peopleID_ss">
+			<xsl:value-of select="@xml:id"></xsl:value-of>
+		</field>
+		
+		<!-- People Specific -->
+		
+		
+		
 		<xsl:for-each select="affiliation[normalize-space()]">
-			<field name="personAffiliation_ss"><xsl:value-of select="."/></field>
+			<field name="personAffiliation_ss"><xsl:value-of select="normalize-space(.)"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="age[normalize-space()]">
-			<field name="personAge_ss"><xsl:value-of select="."/></field>
+			<field name="personAge_ss"><xsl:value-of select="normalize-space(.)"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="bibl[normalize-space()]">
-			<field name="personBibl_ss"><xsl:value-of select="."/></field>
+			<field name="personBibl_ss"><xsl:value-of select="normalize-space(.)"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="birth[normalize-space()]">
-			<field name="personBirth_ss"><xsl:value-of select="."/></field>
+			<field name="personBirth_ss"><xsl:value-of select="normalize-space(.)"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="death[normalize-space()]">
-			<field name="personDeath_ss"><xsl:value-of select="."/></field>
+			<field name="personDeath_ss"><xsl:value-of select="normalize-space(.)"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="event[normalize-space()]">
-			<field name="personEvent_ss"><xsl:value-of select="."/></field>
+			<field name="personEvent_ss"><xsl:value-of select="normalize-space(.)"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="idno[@type='viaf'][normalize-space()]">
-			<field name="personIdnoVIAF_ss"><xsl:value-of select="."/></field>
+			<field name="personIdnoVIAF_ss"><xsl:value-of select="normalize-space(.)"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="nationality[normalize-space()]">
-			<field name="personNationality_ss"><xsl:value-of select="."/></field>
+			<field name="personNationality_ss"><xsl:value-of select="normalize-space(.)"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="note[normalize-space()]">
-			<field name="personNote_ss"><xsl:value-of select="."/></field>
+			<field name="personNote_ss"><xsl:value-of select="normalize-space(.)"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="occupation[normalize-space()]">
-			<field name="personOccupation_ss"><xsl:value-of select="."/></field>
+			<field name="personOccupation_ss"><xsl:value-of select="normalize-space(.)"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="persName[normalize-space()]">
-			<field name="personName_ss"><xsl:value-of select="."/></field>
+			<field name="personName_ss"><xsl:value-of select="normalize-space(.)"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="residence[normalize-space()]">
-			<field name="personResidence_ss"><xsl:value-of select="."/></field>
+			<field name="personResidence_ss"><xsl:value-of select="normalize-space(.)"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="sex[normalize-space()]">
-			<field name="personSex_ss"><xsl:value-of select="."/></field>
+			<field name="personSex_ss"><xsl:value-of select="normalize-space(.)"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="socecStatus[normalize-space()]">
-			<field name="personSocecStatus_ss"><xsl:value-of select="."/></field>
+			<field name="personSocecStatus_ss"><xsl:value-of select="normalize-space(.)"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="trait[@type='color'][normalize-space()]">
-			<field name="personColor_ss"><xsl:value-of select="."/></field>
+			<field name="personColor_ss"><xsl:value-of select="normalize-space(.)"/></field>
 		</xsl:for-each>
 		
 	
