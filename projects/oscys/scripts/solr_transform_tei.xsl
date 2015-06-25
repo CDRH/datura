@@ -710,80 +710,53 @@
 		</field>
 		
 		<xsl:for-each select="affiliation[normalize-space()]">
-			<field name="ss_personAffiliation"><xsl:value-of select="."/></field>
+			<field name="personAffiliation_ss"><xsl:value-of select="."/></field>
 		</xsl:for-each>
 		<xsl:for-each select="age[normalize-space()]">
-			<field name="ss_personAge"><xsl:value-of select="."/></field>
+			<field name="personAge_ss"><xsl:value-of select="."/></field>
 		</xsl:for-each>
 		<xsl:for-each select="bibl[normalize-space()]">
-			<field name="ss_personBibl"><xsl:value-of select="."/></field>
+			<field name="personBibl_ss"><xsl:value-of select="."/></field>
 		</xsl:for-each>
 		<xsl:for-each select="birth[normalize-space()]">
-			<field name="ss_personBirth"><xsl:value-of select="."/></field>
+			<field name="personBirth_ss"><xsl:value-of select="."/></field>
 		</xsl:for-each>
 		<xsl:for-each select="death[normalize-space()]">
-			<field name="ss_personDeath"><xsl:value-of select="."/></field>
+			<field name="personDeath_ss"><xsl:value-of select="."/></field>
 		</xsl:for-each>
 		<xsl:for-each select="event[normalize-space()]">
-			<field name="ss_personEvent"><xsl:value-of select="."/></field>
+			<field name="personEvent_ss"><xsl:value-of select="."/></field>
 		</xsl:for-each>
 		<xsl:for-each select="idno[@type='viaf'][normalize-space()]">
-			<field name="ss_personIdnoVIAF"><xsl:value-of select="."/></field>
+			<field name="personIdnoVIAF_ss"><xsl:value-of select="."/></field>
 		</xsl:for-each>
 		<xsl:for-each select="nationality[normalize-space()]">
-			<field name="ss_personNationality"><xsl:value-of select="."/></field>
+			<field name="personNationality_ss"><xsl:value-of select="."/></field>
 		</xsl:for-each>
 		<xsl:for-each select="note[normalize-space()]">
-			<field name="ss_personNote"><xsl:value-of select="."/></field>
+			<field name="personNote_ss"><xsl:value-of select="."/></field>
 		</xsl:for-each>
 		<xsl:for-each select="occupation[normalize-space()]">
-			<field name="ss_personOccupation"><xsl:value-of select="."/></field>
+			<field name="personOccupation_ss"><xsl:value-of select="."/></field>
 		</xsl:for-each>
 		<xsl:for-each select="persName[normalize-space()]">
-			<field name="ss_personName"><xsl:value-of select="."/></field>
+			<field name="personName_ss"><xsl:value-of select="."/></field>
 		</xsl:for-each>
 		<xsl:for-each select="residence[normalize-space()]">
-			<field name="ss_personResidence"><xsl:value-of select="."/></field>
+			<field name="personResidence_ss"><xsl:value-of select="."/></field>
 		</xsl:for-each>
 		<xsl:for-each select="sex[normalize-space()]">
-			<field name="ss_personSex"><xsl:value-of select="."/></field>
+			<field name="personSex_ss"><xsl:value-of select="."/></field>
 		</xsl:for-each>
 		<xsl:for-each select="socecStatus[normalize-space()]">
-			<field name="ss_personSocecStatus"><xsl:value-of select="."/></field>
+			<field name="personSocecStatus_ss"><xsl:value-of select="."/></field>
 		</xsl:for-each>
 		<xsl:for-each select="trait[@type='color'][normalize-space()]">
-			<field name="ss_personColor"><xsl:value-of select="."/></field>
+			<field name="personColor_ss"><xsl:value-of select="."/></field>
 		</xsl:for-each>
 		
 	
-		
-		<!-- 
-		affiliation
-		age
-		bibl
-		birth
-		death
-		event
-		*idno
-		nationality
-		note
-		occupation
-		persName
-		residence
-		sex
-		socecStatus
-		trait -> type='color' //multivalued
-		-->
-			<!--<field name="s_personBirth"><xsl:value-of select="birth"/></field>
-		<field name="s_personDeath"><xsl:value-of select="death"/></field>
-		<field name="ss_personSex"><xsl:value-of select="death"/></field>
-		<field name="s_personColor"><xsl:value-of select="trait[@type='color']"/></field>
-		<field name="s_personColor"><xsl:value-of select="trait[@type='color']"/></field>
-		<field name="ss_personOccupation"><xsl:value-of select="occupation"/></field>
-		<field name="ss_personViafID"><xsl:value-of select="idno[@type='viaf']"/></field>
-		<field name="ss_personResidence"><xsl:value-of select="residence"/></field>
-		<field name="ss_personSocecStatus"><xsl:value-of select="socecStatus"/></field>
-		<field name="s_personNote"><xsl:value-of select="note"/></field>-->
+	
 		
 		<field name="text">
 			
