@@ -139,9 +139,16 @@ class Transformer
       else
         puts "Successfully transformed #{source}"
         # now post it to solr if it is not an html snippet and if user did not specify against posting
+        # TODO I do not like that this posting is happening here or that @solr is a thing in the transformer
         if for_solr && !@transform_only
-          puts "Posting to solr: #{source}"
-          @solr.post_xml(out)
+          solr_res = @solr.post_xml(out)
+          if solr_res.code == "200"
+            puts "File #{source} successfully posted to solr (not committed)" if @verbose
+            return nil  # no errors
+          else
+            puts "ERROR: file #{source} not committed to solr (received code #{solr_res.code}"
+            return solr_res
+          end
         end
       end
     end
