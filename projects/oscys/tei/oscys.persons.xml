@@ -100,7 +100,13 @@ This file was compiled from information found in
 
 <listPerson type="cases">
 
-<!-- oscys.case.0001.001 start -->
+    <!-- TMP, for troubleshooting -->
+    <person  xml:id="per.000000">
+        <persName>Person does not yet have an ID</persName>
+    </person>
+    
+    
+    <!-- oscys.case.0001.001 start -->
 
 <person  xml:id="per.000001" source="http://earlywashingtondc.org/cases/oscys.case.0001.001">
 <persName ref="#viaf" key="824500"><surname>Key</surname>, <forename type="first" full="yes">Francis</forename> <forename type="middle">Scott</forename></persName>

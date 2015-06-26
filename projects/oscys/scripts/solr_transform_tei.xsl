@@ -91,6 +91,9 @@
 				</xsl:call-template>
 					<xsl:call-template name="tei_document"/>
 				</doc>
+				
+					<xsl:call-template name="tei_document_join"/>
+				
 				<!-- testing to see if I can add a person to a case from a document -->
 				<!--<doc>
 					
@@ -531,10 +534,12 @@
 				<!-- ===============================
 					OSCYS Specific fields
 				==================================== -->
+		
+		<xsl:call-template name="people"/>
 				
-				<!-- plaintiff -->
+				<!--<!-\- plaintiff -\->
 				
-				<!-- earlier docs used petitioner instead of plaintiff -->
+				<!-\- earlier docs used petitioner instead of plaintiff -\->
 				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person[@role='petitioner']/persName">
 					<xsl:if test="normalize-space(.) != ''">
 					<field name="plaintiff_ss"> 
@@ -551,7 +556,7 @@
 					</xsl:if>
 				</xsl:for-each>
 				
-				<!-- defendant -->
+				<!-\- defendant -\->
 				
 				
 				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person[@role='defendant']/persName">
@@ -562,7 +567,7 @@
 					</xsl:if>
 				</xsl:for-each>
 				
-				<!-- attorney all -->
+				<!-\- attorney all -\->
 				
 				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person[@role='attorney_petitioner']/persName">
 					<xsl:if test="normalize-space(.) != ''">
@@ -589,7 +594,7 @@
 				</xsl:for-each>
 				
 				
-				<!-- attorney P -->
+				<!-\- attorney P -\->
 				
 				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person[@role='attorney_petitioner']/persName">
 					<xsl:if test="normalize-space(.) != ''">
@@ -608,7 +613,7 @@
 				</xsl:for-each>
 				
 				
-				<!-- attorney D -->
+				<!-\- attorney D -\->
 				
 				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person[@role='attorney_defendant']/persName">
 					<xsl:if test="normalize-space(.) != ''">
@@ -617,6 +622,34 @@
 						</field>
 					</xsl:if>
 				</xsl:for-each>
+		
+		
+		<!-\- Person ID and Name -\->
+		
+		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person/persName">
+			<xsl:if test="normalize-space(.) != ''">
+				<field name="peopleIDName_ss">
+					<xsl:value-of select="../@xml:id"></xsl:value-of>
+					<xsl:text>/</xsl:text>
+					<xsl:value-of select="."/>
+				</field>
+			</xsl:if>
+		</xsl:for-each>
+		
+		<!-\- Person ID -\->
+		
+		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person/persName">
+			<xsl:if test="normalize-space(.) != ''">
+				<field name="peopleID_ss">
+					<xsl:value-of select="../@xml:id"></xsl:value-of>
+				</field>
+			</xsl:if>
+		</xsl:for-each>-->
+		
+		
+		
+		
+		
 				
 				<!-- term -->
 				
@@ -683,27 +716,19 @@
 					</xsl:if>
 				</xsl:for-each>
 				
-				<!-- Person ID and Name -->
 				
-				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person/persName">
-					<xsl:if test="normalize-space(.) != ''">
-						<field name="peopleIDName_ss">
-							<xsl:value-of select="../@xml:id"></xsl:value-of>
-							<xsl:text>/</xsl:text>
-							<xsl:value-of select="."/>
-						</field>
-					</xsl:if>
-				</xsl:for-each>
-				
-				<!-- Person ID -->
-				
-				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person/persName">
-					<xsl:if test="normalize-space(.) != ''">
-						<field name="peopleID_ss">
-							<xsl:value-of select="../@xml:id"></xsl:value-of>
-						</field>
-					</xsl:if>
-				</xsl:for-each>
+		
+		<!-- Text -->
+		
+		<xsl:if test="$doctype != 'person'">
+		<field name="text">
+			<xsl:for-each select="//text">
+				<xsl:text> </xsl:text>
+				<xsl:value-of select="normalize-space(.)"/>
+				<xsl:text> </xsl:text>
+			</xsl:for-each>
+		</field>
+		</xsl:if>
 
 	</xsl:template>
 	
@@ -813,21 +838,6 @@
 		
 
 		
-		
-		
-		<!-- text -->
-		
-		<field name="text">
-			<xsl:for-each select="//text">
-				<xsl:text> </xsl:text>
-				<xsl:value-of select="normalize-space(.)"/>
-				<xsl:text> </xsl:text>
-			</xsl:for-each>
-		</field>
-		
-		
-		
-		
 	</xsl:template>
 	
 	<!-- ==================================
@@ -838,19 +848,179 @@
 	
 		
 		
+	</xsl:template>
+	
+	<!-- ==================================
+	Case Doc Join (info to go in a caseid record from a case document) 
+	=================================== -->
+	
+	<xsl:template name="tei_document_join" exclude-result-prefixes="#all">
 		
-		<!-- text -->
-		
-		<field name="text">
-			<xsl:for-each select="//text">
-				<xsl:text> </xsl:text>
-				<xsl:value-of select="normalize-space(.)"/>
-				<xsl:text> </xsl:text>
+		<xsl:for-each select="//idno[@type='case'][normalize-space()]">
+			<doc>
+				<field name="id"> 
+					<xsl:value-of select="."/>
+				</field>
+			<xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='outcome']/term">
+				<!-- TODO: Make this JSON if it works out on Jessica's end -->
+				<field update="add" name="outcomeID_ss">
+					<xsl:value-of select="normalize-space(.)"/>
+					<xsl:text>|</xsl:text>
+					<xsl:value-of select="/TEI/@xml:id"></xsl:value-of>
+				</field>
 			</xsl:for-each>
+				<xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='outcome']/term">
+					<field update="add" name="outcome_ss">
+						<xsl:value-of select="normalize-space(.)"/>
+					</field>
+				</xsl:for-each>
+				
+				<xsl:call-template name="people">
+					<xsl:with-param name="updateType">caseID</xsl:with-param></xsl:call-template>
+			</doc>
+		</xsl:for-each>
+
+	</xsl:template>
+	
+	
+	<!-- PersonField (So I don't have to repeat my code over and over...) -->
+	
+	<xsl:template name="personField" exclude-result-prefixes="#all">
+		<xsl:param name="fieldName"/>
+		<xsl:param name="personCode"/>
+		<xsl:param name="updateType"/>
+		
+		
+		
+		<xsl:variable name="personID">
+		<xsl:choose>
+			<xsl:when test="../@xml:id">
+				<xsl:value-of select="../@xml:id"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:text>per.000000</xsl:text>
+			</xsl:otherwise>
+		</xsl:choose>
+		</xsl:variable>
+		
+		<field>
+			<xsl:attribute name="name"><xsl:value-of select="$fieldName"/><xsl:text>_ss</xsl:text></xsl:attribute>
+			<xsl:value-of select="normalize-space(.)"/>
 		</field>
 		
-		
+		<field>
+			<xsl:attribute name="name"><xsl:value-of select="$fieldName"/><xsl:text>ID_ss</xsl:text></xsl:attribute>
+			<xsl:if test="$updateType = 'caseID'"><xsl:attribute name="update">add</xsl:attribute></xsl:if>
+			
+			<xsl:text>{"id":"</xsl:text>
+			<xsl:value-of select="$personID"/>
+			<xsl:text>","name":"</xsl:text>
+			<xsl:value-of select="normalize-space(.)"/>
+			<xsl:text>"}</xsl:text>
+		</field>	
 	</xsl:template>
+	
+	
+	<!-- ==================================
+	People (template so can be repeated in caseid and case documents)
+	=================================== -->
+	
+	<xsl:template name="people"  exclude-result-prefixes="#all">
+		<xsl:param name="updateType"/><!--
+		
+		{{{<xsl:value-of select="$updateType"></xsl:value-of>}}}-->
+		
+		<!-- plaintiff -->
+		
+		<!-- earlier docs used petitioner instead of plaintiff -->
+		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person[@role='petitioner']/persName[normalize-space()]">
+			<xsl:call-template name="personField">
+				<xsl:with-param name="fieldName">plaintiff</xsl:with-param>
+				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+				<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+			</xsl:call-template>
+
+		</xsl:for-each>
+		
+		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person[@role='plaintiff']/persName[normalize-space()]">
+			<xsl:call-template name="personField">
+				<xsl:with-param name="fieldName">plaintiff</xsl:with-param>
+				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+				<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+			</xsl:call-template>
+
+				
+		</xsl:for-each>
+		
+		<!-- defendant -->
+		
+		
+		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person[@role='defendant']/persName[normalize-space()]">
+			<xsl:call-template name="personField">
+				<xsl:with-param name="fieldName">defendant</xsl:with-param>
+				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+				<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+			</xsl:call-template>
+		</xsl:for-each>
+		
+		<!-- attorney P -->
+		
+		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person[@role='attorney_petitioner']/persName[normalize-space()]">
+			<xsl:call-template name="personField">
+				<xsl:with-param name="fieldName">attorneyP</xsl:with-param>
+				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+				<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+			</xsl:call-template>
+			<xsl:call-template name="personField">
+				<xsl:with-param name="fieldName">attorney</xsl:with-param>
+				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+				<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+			</xsl:call-template>
+		</xsl:for-each>
+		
+		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person[@role='attorney_plaintiff']/persName[normalize-space()]">
+			<xsl:call-template name="personField">
+				<xsl:with-param name="fieldName">attorneyP</xsl:with-param>
+				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+				<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+			</xsl:call-template>
+			<xsl:call-template name="personField">
+				<xsl:with-param name="fieldName">attorney</xsl:with-param>
+				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+				<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+			</xsl:call-template>
+		</xsl:for-each>
+		
+		
+		<!-- attorney D -->
+		
+		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person[@role='attorney_defendant']/persName[normalize-space()]">
+			<xsl:call-template name="personField">
+				<xsl:with-param name="fieldName">attorneyD</xsl:with-param>
+				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+				<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+			</xsl:call-template>
+			<xsl:call-template name="personField">
+				<xsl:with-param name="fieldName">attorney</xsl:with-param>
+				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+				<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+			</xsl:call-template>
+		</xsl:for-each>
+		
+		
+		<!-- Person ID and Name -->
+		
+		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person/persName[normalize-space()]">
+			<xsl:call-template name="personField">
+				<xsl:with-param name="fieldName">person</xsl:with-param>
+				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+				<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+			</xsl:call-template>
+		</xsl:for-each>
+
+	</xsl:template>
+	
+
 
 
 </xsl:stylesheet>
