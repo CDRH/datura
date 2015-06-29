@@ -71,16 +71,17 @@ I've included a couple of extra elements here as they make sense to support the 
 
 ### OSCYS general
 
-Many fields have JSON in them so that the programmer can, for instance, build a link by grabbing the name of a person and the id in order to link it to the solr search for that person. The JSON Field will either have "IDName" or "Data" in it. The fields are:
+Many fields have JSON in them so that the programmer can, for instance, build a link by grabbing the name of a person and the id in order to link it to the solr search for that person. The JSON Field will end in "Data_ss". The fields are:
 
-* **id**: the id of the file/person/whatever. Usually this will be used to construct a link. the ID may be a source of the information.
-* **label**: The name/title of the item. 
-* **date**: sometimes there will be multiple bits of information distinguished by a date. The format should be whatever is to be displayed, this is not sortable. 
+* id: the id of the file/person/whatever. Usually this will be used to construct a link. the ID may be a source of the information.
+* label: The name/title of the item. 
+* date: sometimes there will be multiple bits of information distinguished by a date. The format should be whatever is to be displayed, this is not sortable. 
 
 Fields with a name and ID attached will contain three versions:
-    * noun_ss - the label for the item, which will be the title/name. 
-    * nounID_ss - the id of the item, so we can do a solr search 
-    * nounIDLabel - the JSON field with any and all info to grab. 
+
+* noun_ss - the label for the item, which will be the title/name. 
+* nounID_ss - the id of the item, so we can do a solr search 
+* nounData - the JSON field with any and all info to grab. 
 
 ### OSCYS General Fields
 * **recordType_s** Usually we would handle this with category and subCategory, but OSCYS is using it for document type. See ID at the top for description. Choices are:
@@ -90,27 +91,27 @@ Fields with a name and ID attached will contain three versions:
 * **People** (additional to "people" field for OSCYS related purposes)
     * **people_ss**
     * **peopleID_ss** The id of a person appearing in the file. for person files this should be repeated from ID
-    * **peopleIDName_ss** The ID and name of any people appearing in the file (Format: ID/Title)
+    * **peopleData_ss** The ID and name of any people appearing in the file (Format: ID/Title)
 * **Plaintiff**
     * **plaintiff_ss**
     * **plaintiffID_ss**
-    * **plaintiffIDName_ss**
+    * **plaintiffData_ss**
 * **Defendant**
     * **defendant_ss**
     * **defendantID_ss**
-    * **defendantIDName_ss**
+    * **defendantData_ss**
 * **Attorney for the Plaintiff**
     * **attorneyP_ss**
     * **attorneyPID_ss**
-    * **attorneyPIDName_ss**
+    * **attorneyPData_ss**
 * **Attorney for the Defendant**
     * **attorneyD_ss**
     * **attorneyDID_ss**
-    * **attorneyDIDName_ss**
-* **All Attourneys**
+    * **attorneyDData_ss**
+* **All Attorneys**
     * **attorney_ss**
     * **attorneyID_ss**
-    * **attorneyIDName_ss**
+    * **attorneyData_ss**
 * **term_ss**
 
 ### OSCYS Person Fields
@@ -149,12 +150,12 @@ Not all these fields will need the "data" field but I am including them all righ
 ### OSCYS CaseID Fields
 
 * **relatedCaseID_ss** - related cases ID
-* **relatedCaseIDName_ss** - related cases ID + Name
+* **relatedCaseData_ss** - JSON of ID + Label
 
 ### OSCYS Documents Fields
 
-* **caseID_ss** (documents only) The id of any cases associate with this document
-* **caseIDName_ss** (documents only) the ID and Name of any cases associated with this document (e.g. "oscys.caseid.0002/Ann Shorter v. Thomas Corcoran")
+* **caseID_ss**  The id of any cases associate with this document
+* **caseData_ss**  - JSON of ID + Label
 
 ### Generic Text field: (much of the above is copied into this for text searching)
 
