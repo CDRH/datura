@@ -99,15 +99,15 @@ Fields with a name and ID attached will contain three versions:
     * **defendant_ss**
     * **defendantID_ss**
     * **defendantIDName_ss**
-* *Attorney for the Plaintiff**
+* **Attorney for the Plaintiff**
     * **attorneyP_ss**
     * **attorneyPID_ss**
     * **attorneyPIDName_ss**
-* *Attorney for the Defendant**
+* **Attorney for the Defendant**
     * **attorneyD_ss**
     * **attorneyDID_ss**
     * **attorneyDIDName_ss**
-* *All Attourneys**
+* **All Attourneys**
     * **attorney_ss**
     * **attorneyID_ss**
     * **attorneyIDName_ss**
