@@ -1,4 +1,4 @@
-# Generalized SOLR Schema
+# OSCYS Schema description
 
 I have not compared these fields to every project to make sure they fit, but here is my preliminary list of general CDRH SOLR fields. All are single valued unless indicated:
 
@@ -7,13 +7,13 @@ I have not compared these fields to every project to make sure they fit, but her
 ### id
 * **id**
    * oscys.case.XXXX.XXX - Case Documents.  ID pulled from filename
-        * recordType_s:document
+        * **recordType_s:document**
    * oscys.mb*, oscys.report*, Supplementary case documents.  ID pulled from filename. 
-        * recordType_s:document.
+        * **recordType_s:document**
    * oscys.caseid.XXXX - Case ID record. Describes a case. ID pulled from filename. 
-        * recordType_s:caseid
+        * **recordType_s:caseid**
    * per.XXXXX - Person record, describes a person. All come from 1 file: oscys.persons.xml  ID pulled from xml:id of person element. 
-        * recordType_s:person
+        * **recordType_s:person**
    
 * **slug** (I have been using this in some contexts to indicate where the files are found, i.e. cody/xml/tei/. Should include the shorthand version of the project, i.e. "cody" at the least)
 * **project** (the full CDRH name of the resource, e.g. "The William F. Cody Archive")
@@ -61,7 +61,7 @@ I've included a couple of extra elements here as they make sense to support the 
 
 ### CDRH specific categorization (all pulled directly from the profileDesc)
 
-* **category**
+* **category** - a way to categorize files. for OSCYS, the basic distinctions of document, caseid, and person are handled with recordType_s
 * **subCategory**
 * **topics** (multivalued)
 * **keywords** (multivalued)
@@ -69,34 +69,82 @@ I've included a couple of extra elements here as they make sense to support the 
 * **places** (multivalued)
 * **works** (multivalued)
 
-### OSCYS General Fields
-* **peopleID_ss** The id of a person appearing in the file. for person files this should be repeated from ID
-* **peopleIDName_ss** The ID and name of any people appearing in the file (Format: ID/Title)
-* **plaintiff_ss**
-* **defendant_ss**
-* **attorneyP_ss**
-* **attorneyD_ss**
-* **term_ss**
-* **attorney_ss**
+### OSCYS general
 
+Many fields have JSON in them so that the programmer can, for instance, build a link by grabbing the name of a person and the id in order to link it to the solr search for that person. The JSON Field will either have "IDName" or "Data" in it. The fields are:
+
+* **id**: the id of the file/person/whatever. Usually this will be used to construct a link. the ID may be a source of the information.
+* **label**: The name/title of the item. 
+* **date**: sometimes there will be multiple bits of information distinguished by a date. The format should be whatever is to be displayed, this is not sortable. 
+
+Fields with a name and ID attached will contain three versions:
+    * noun_ss - the label for the item, which will be the title/name. 
+    * nounID_ss - the id of the item, so we can do a solr search 
+    * nounIDLabel - the JSON field with any and all info to grab. 
+
+### OSCYS General Fields
+* **recordType_s** Usually we would handle this with category and subCategory, but OSCYS is using it for document type. See ID at the top for description. Choices are:
+    * document
+    * caseid
+    * person
+* **People** (additional to "people" field for OSCYS related purposes)
+    * **people_ss**
+    * **peopleID_ss** The id of a person appearing in the file. for person files this should be repeated from ID
+    * **peopleIDName_ss** The ID and name of any people appearing in the file (Format: ID/Title)
+* **Plaintiff**
+    * **plaintiff_ss**
+    * **plaintiffID_ss**
+    * **plaintiffIDName_ss**
+* **Defendant**
+    * **defendant_ss**
+    * **defendantID_ss**
+    * **defendantIDName_ss**
+* *Attorney for the Plaintiff**
+    * **attorneyP_ss**
+    * **attorneyPID_ss**
+    * **attorneyPIDName_ss**
+* *Attorney for the Defendant**
+    * **attorneyD_ss**
+    * **attorneyDID_ss**
+    * **attorneyDIDName_ss**
+* *All Attourneys**
+    * **attorney_ss**
+    * **attorneyID_ss**
+    * **attorneyIDName_ss**
+* **term_ss**
 
 ### OSCYS Person Fields
 
+Not all these fields will need the "data" field but I am including them all right now. This section will be reworked as we make more sense of the personography. 
+
 * **personAffiliation_ss**
+    * **personAffiliationData_ss**
 * **personAge_ss**
+    * **personAgeDate_ss**
 * **personBibl_ss**
+    * **personBiblData_ss**
 * **personBirth_ss**
+    * **personData_ss**
 * **personDeath_ss**
+    * **personDeathData_ss**
 * **personEvent_ss**
+    * **personEventData_ss**
 * **personIdnoVIAF_ss**
 * **personNationality_ss**
+    * **personNationalityData_ss**
 * **personNote_ss**
+    * **personNoteData_ss**
 * **personOccupation_ss**
+    * **personOccupationData_ss**
 * **personName_ss**
+    * **personNameData_ss**
 * **personResidence_ss**
+    * **personResidenceData_ss**
 * **personSex_ss**
 * **personSocecStatus_ss**
+    * **personSocecStatusData_ss**
 * **personColor_ss**
+    * **personColorData_ss**
 
 ### OSCYS CaseID Fields
 
