@@ -6,6 +6,11 @@ I have not compared these fields to every project to make sure they fit, but her
 
 ### id
 * **id**
+   * oscys.case.XXXX.XXX - Case Documents. recordType_s:document. ID pulled from filename
+   * oscys.mb*, oscys.report*, Supplementary case documents. recordType_s:document. ID pulled from filename. 
+   * oscys.caseid.XXXX - Case ID record. Describes a case. recordType_s:caseid. ID pulled from filename. 
+   * per.XXXXX - Person record, describes a person. All come from 1 file: oscys.persons.xml  recordType_s:person. ID pulled from xml:id of person element. 
+   
 * **slug** (I have been using this in some contexts to indicate where the files are found, i.e. cody/xml/tei/. Should include the shorthand version of the project, i.e. "cody" at the least)
 * **project** (the full CDRH name of the resource, e.g. "The William F. Cody Archive")
 * **uri** (full URI of resource)
