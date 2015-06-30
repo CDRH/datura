@@ -1,6 +1,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"
 	xpath-default-namespace="http://www.tei-c.org/ns/1.0"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:tei="http://www.tei-c.org/ns/1.0"
 	xmlns:dc="http://purl.org/dc/elements/1.1/">
 	<xsl:output indent="yes" omit-xml-declaration="yes"/>
 	
@@ -570,6 +571,10 @@
 						</field>
 					</xsl:if>
 				</xsl:for-each>
+		
+		<xsl:for-each select="//orgName">
+			<field name="jurisdiction_ss"><xsl:value-of select="."/></field>
+		</xsl:for-each>
 				
 				
 		
@@ -778,8 +783,28 @@
 				
 				<xsl:call-template name="people">
 					<xsl:with-param name="updateType">caseID</xsl:with-param></xsl:call-template>
+			
+			
+			<xsl:for-each select="//orgName">
+				<field name="jurisdiction_ss" update="add"><xsl:value-of select="."/></field>
+			</xsl:for-each>
+				
+				<field name="caseDocumentID_ss" update="add">
+					<xsl:value-of select="normalize-space(.)"/>
+				</field>
+				
+				<field name="caseDocumentData_ss" update="add">
+					<xsl:text>{"label":"</xsl:text>
+					<xsl:value-of select="normalize-space(.)"/>
+					<xsl:text>","id":"</xsl:text>
+					<xsl:value-of select="/TEI/teiHeader/fileDesc/titleStmt/title[1]"/>
+					<xsl:text>"}</xsl:text>
+				</field>
+				
 			</doc>
 		</xsl:for-each>
+		
+		
 
 	</xsl:template>
 	
@@ -807,13 +832,18 @@
 		</xsl:choose>
 		</xsl:variable>
 		
+		<!--[[[
+		<xsl:copy-of select="$personCode"></xsl:copy-of>
+		]]]-->
 		
-		
-		<field>
+		<xsl:for-each select="$personCode">
+			<field>
 			<xsl:attribute name="name"><xsl:value-of select="$fieldName"/><xsl:text>_ss</xsl:text></xsl:attribute>
 			<xsl:if test="$updateType = 'caseID'"><xsl:attribute name="update">add</xsl:attribute></xsl:if>
-			<xsl:value-of select="normalize-space(persName)"/>
+			<xsl:value-of select="normalize-space(person/persName)"></xsl:value-of>
 		</field>
+		</xsl:for-each>
+		
 		
 		<field>
 			<xsl:attribute name="name"><xsl:value-of select="$fieldName"/><xsl:text>ID_ss</xsl:text></xsl:attribute>
@@ -821,6 +851,7 @@
 			<xsl:value-of select="$personID"/>
 		</field>
 		
+		<xsl:for-each select="$personCode">
 		<field>
 			<xsl:attribute name="name"><xsl:value-of select="$fieldName"/><xsl:text>Data_ss</xsl:text></xsl:attribute>
 			<xsl:if test="$updateType = 'caseID'"><xsl:attribute name="update">add</xsl:attribute></xsl:if>
@@ -828,9 +859,12 @@
 			<xsl:text>{"id":"</xsl:text>
 			<xsl:value-of select="$personID"/>
 			<xsl:text>","label":"</xsl:text>
-			<xsl:value-of select="normalize-space(persName)"/>
+			<xsl:value-of select="normalize-space(person/persName)"/>
+			<xsl:text>","source":"</xsl:text>
+			<xsl:copy-of select="$filenamepart"/>
 			<xsl:text>"}</xsl:text>
-		</field>	
+		</field>
+		</xsl:for-each>
 	</xsl:template>
 	
 	
