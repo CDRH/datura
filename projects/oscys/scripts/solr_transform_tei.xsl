@@ -832,6 +832,7 @@
 		</xsl:choose>
 		</xsl:variable>
 		
+		<!-- for troubleshooting, remove later -->
 		<!--[[[
 		<xsl:copy-of select="$personCode"></xsl:copy-of>
 		]]]-->
@@ -840,7 +841,8 @@
 			<field>
 			<xsl:attribute name="name"><xsl:value-of select="$fieldName"/><xsl:text>_ss</xsl:text></xsl:attribute>
 			<xsl:if test="$updateType = 'caseID'"><xsl:attribute name="update">add</xsl:attribute></xsl:if>
-			<xsl:value-of select="normalize-space(person/persName)"></xsl:value-of>
+				<!-- todo: when TEI is fixed so no more than 1 persName per person, take out the [1] -->
+			<xsl:value-of select="normalize-space(person/persName[1])"/>
 		</field>
 		</xsl:for-each>
 		
@@ -859,7 +861,8 @@
 			<xsl:text>{"id":"</xsl:text>
 			<xsl:value-of select="$personID"/>
 			<xsl:text>","label":"</xsl:text>
-			<xsl:value-of select="normalize-space(person/persName)"/>
+			<!-- todo: when TEI is fixed so no more than 1 persName per person, take out the [1] -->
+			<xsl:value-of select="normalize-space(person/persName[1])"/>
 			<xsl:text>","source":"</xsl:text>
 			<xsl:copy-of select="$filenamepart"/>
 			<xsl:text>"}</xsl:text>
@@ -874,6 +877,16 @@
 	
 	<xsl:template name="people"  exclude-result-prefixes="#all">
 		<xsl:param name="updateType"/>
+		
+		<!-- Person ID and Name -->
+		
+		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person/persName[normalize-space()]">
+			<xsl:call-template name="personField">
+				<xsl:with-param name="fieldName">person</xsl:with-param>
+				<xsl:with-param name="personCode"><person><xsl:copy-of select="."/></person></xsl:with-param>
+				<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+			</xsl:call-template>
+		</xsl:for-each>
 		
 		<!-- plaintiff -->
 		
@@ -953,15 +966,7 @@
 		</xsl:for-each>
 		
 		
-		<!-- Person ID and Name -->
 		
-		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person/persName[normalize-space()]">
-			<xsl:call-template name="personField">
-				<xsl:with-param name="fieldName">person</xsl:with-param>
-				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
-				<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
-			</xsl:call-template>
-		</xsl:for-each>
 
 	</xsl:template>
 	
