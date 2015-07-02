@@ -824,12 +824,12 @@
 			</xsl:for-each>
 				
 				<field name="caseDocumentID_ss" update="add">
-					<xsl:value-of select="normalize-space(.)"/>
+					<xsl:value-of select="/TEI/@xml:id"/>
 				</field>
 				
 				<field name="caseDocumentData_ss" update="add">
 					<xsl:text>{"label":"</xsl:text>
-					<xsl:value-of select="normalize-space(.)"/>
+					<xsl:value-of select="/TEI/@xml:id"/>
 					<xsl:text>","id":"</xsl:text>
 					<xsl:value-of select="/TEI/teiHeader/fileDesc/titleStmt/title[1]"/>
 					<xsl:text>"}</xsl:text>
