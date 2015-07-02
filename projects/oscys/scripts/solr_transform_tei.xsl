@@ -82,7 +82,15 @@
 		</xsl:choose>
 		</add>
 		
+		<!--<xsl:variable name="TESTTEST" select="/TEI/@xml:id"/>
 		
+		<xsl:for-each select="/TEI/teiHeader[1]/fileDesc[1]/titleStmt[1]/title[@n = $TESTTEST or not(@n)]">
+			[[[
+			<xsl:value-of select="."></xsl:value-of>
+			]]]
+		</xsl:for-each>-->
+			
+			
 		
 	</xsl:template>
 	
@@ -635,9 +643,9 @@
 		
 		<!-- Person ID -->
 		
-		<field name="peopleID_ss">
+		<!--<field name="peopleID_ss">
 			<xsl:value-of select="@xml:id"></xsl:value-of>
-		</field>
+		</field>-->
 		
 		<!-- People Specific -->
 		
@@ -684,10 +692,13 @@
 				<xsl:value-of select="substring-after(@source,'oscys')"/>
 				<xsl:text>","label":"</xsl:text>
 				<xsl:value-of select="normalize-space(.)"/>
-				<xsl:text>","date":"</xsl:text>
-				<xsl:if test="@notAfter[normalize-space()]"><xsl:text>Not After </xsl:text><xsl:value-of select="@notAfter"/></xsl:if>
-				<xsl:if test="@notBefore[normalize-space()]"><xsl:text>Not Before </xsl:text><xsl:value-of select="@notBefore"/></xsl:if>
-				<xsl:value-of select="@when"></xsl:value-of>
+				<xsl:text>"</xsl:text>
+				<xsl:if test="@notAfter[normalize-space()] or @notBefore[normalize-space()] or @when[normalize-space()]">
+					<xsl:text>,"date":"</xsl:text>
+					<xsl:if test="@notAfter[normalize-space()]"><xsl:text>Not After </xsl:text><xsl:value-of select="@notAfter"/></xsl:if>
+					<xsl:if test="@notBefore[normalize-space()]"><xsl:text>Not Before </xsl:text><xsl:value-of select="@notBefore"/></xsl:if>
+					<xsl:value-of select="@when"></xsl:value-of>
+				</xsl:if>
 				<xsl:text>"}</xsl:text>
 			</field>
 		</xsl:for-each>
@@ -702,8 +713,12 @@
 				<xsl:value-of select="substring-after(@source,'oscys')"/>
 				<xsl:text>","label":"</xsl:text>
 				<xsl:value-of select="normalize-space(.)"/>
-				<xsl:text>","date":"</xsl:text>
-				<xsl:value-of select="@when"></xsl:value-of>
+				<xsl:if test="@notAfter[normalize-space()] or @notBefore[normalize-space()] or @when[normalize-space()]">
+					<xsl:text>,"date":"</xsl:text>
+					<xsl:if test="@notAfter[normalize-space()]"><xsl:text>Not After </xsl:text><xsl:value-of select="@notAfter"/></xsl:if>
+					<xsl:if test="@notBefore[normalize-space()]"><xsl:text>Not Before </xsl:text><xsl:value-of select="@notBefore"/></xsl:if>
+					<xsl:value-of select="@when"></xsl:value-of>
+				</xsl:if>
 				<xsl:text>"}</xsl:text>
 			</field>
 		</xsl:for-each>
@@ -715,8 +730,13 @@
 					<xsl:value-of select="substring-after(@source,'oscys')"/>
 				<xsl:text>","label":"</xsl:text>
 					<xsl:value-of select="normalize-space(.)"/>
-				<xsl:text>","date":"</xsl:text>
+				<xsl:text>"</xsl:text>
+				<xsl:if test="@notAfter[normalize-space()] or @notBefore[normalize-space()] or @when[normalize-space()]">
+					<xsl:text>,"date":"</xsl:text>
+					<xsl:if test="@notAfter[normalize-space()]"><xsl:text>Not After </xsl:text><xsl:value-of select="@notAfter"/></xsl:if>
+					<xsl:if test="@notBefore[normalize-space()]"><xsl:text>Not Before </xsl:text><xsl:value-of select="@notBefore"/></xsl:if>
 					<xsl:value-of select="@when"></xsl:value-of>
+				</xsl:if>
 				<xsl:text>"}</xsl:text>
 			</field>
 		</xsl:for-each>
@@ -781,9 +801,23 @@
 					</field>
 				</xsl:for-each>
 				
+				
+				
+				
+				<xsl:variable name="caseid" select="normalize-space(.)"></xsl:variable>
+				
+				<!--[[[{<xsl:value-of select="//listPerson[1]/@type"/>}{<xsl:value-of select="$caseid"/>}]]]-->
+				<!--/TEI/teiHeader[1]/fileDesc[1]/titleStmt[1]/title[@n = $TESTTEST or not(@n)]-->
+				
+				
 				<xsl:call-template name="people">
-					<xsl:with-param name="updateType">caseID</xsl:with-param></xsl:call-template>
-			
+						<xsl:with-param name="updateType">caseID</xsl:with-param>
+						<xsl:with-param name="caseid"><xsl:value-of select="$caseid"></xsl:value-of></xsl:with-param>
+				</xsl:call-template>
+					
+				
+				
+
 			
 			<xsl:for-each select="//orgName">
 				<field name="jurisdiction_ss" update="add"><xsl:value-of select="."/></field>
@@ -837,53 +871,79 @@
 		<xsl:copy-of select="$personCode"></xsl:copy-of>
 		]]]-->
 		
-		<xsl:for-each select="$personCode">
+	
+		
 			<field>
-			<xsl:attribute name="name"><xsl:value-of select="$fieldName"/><xsl:text>_ss</xsl:text></xsl:attribute>
-			<xsl:if test="$updateType = 'caseID'"><xsl:attribute name="update">add</xsl:attribute></xsl:if>
+				<xsl:attribute name="name"><xsl:value-of select="$fieldName"/><xsl:text>_ss</xsl:text></xsl:attribute>
+				<xsl:if test="$updateType = 'caseID'"><xsl:attribute name="update">add</xsl:attribute></xsl:if>
+					<!-- todo: when TEI is fixed so no more than 1 persName per person, take out the [1] -->
+					<!--<xsl:value-of select="normalize-space($personCode/person/persName)"/>-->
+					<xsl:value-of select="normalize-space($personCode/person/persName[1])"></xsl:value-of>
+			</field>
+		
+		
+		
+			<field>
+				<xsl:attribute name="name"><xsl:value-of select="$fieldName"/><xsl:text>ID_ss</xsl:text></xsl:attribute>
+				<xsl:if test="$updateType = 'caseID'"><xsl:attribute name="update">add</xsl:attribute></xsl:if>
+				<xsl:value-of select="$personID"/>
+			</field>
+		
+		
+			<field>
+				<xsl:attribute name="name"><xsl:value-of select="$fieldName"/><xsl:text>Data_ss</xsl:text></xsl:attribute>
+				<xsl:if test="$updateType = 'caseID'"><xsl:attribute name="update">add</xsl:attribute></xsl:if>
+				
+				<xsl:text>{"id":"</xsl:text>
+				<xsl:value-of select="$personID"/>
+				<xsl:text>","label":"</xsl:text>
 				<!-- todo: when TEI is fixed so no more than 1 persName per person, take out the [1] -->
-			<xsl:value-of select="normalize-space(person/persName[1])"/>
-		</field>
-		</xsl:for-each>
+				<xsl:value-of select="normalize-space($personCode/person/persName[1])"/>
+				<xsl:text>","sourcefile":"</xsl:text>
+				<xsl:copy-of select="$filenamepart"/>
+				<xsl:text>"}</xsl:text>
+			</field>
 		
-		
-		<field>
-			<xsl:attribute name="name"><xsl:value-of select="$fieldName"/><xsl:text>ID_ss</xsl:text></xsl:attribute>
-			<xsl:if test="$updateType = 'caseID'"><xsl:attribute name="update">add</xsl:attribute></xsl:if>
-			<xsl:value-of select="$personID"/>
-		</field>
-		
-		<xsl:for-each select="$personCode">
-		<field>
-			<xsl:attribute name="name"><xsl:value-of select="$fieldName"/><xsl:text>Data_ss</xsl:text></xsl:attribute>
-			<xsl:if test="$updateType = 'caseID'"><xsl:attribute name="update">add</xsl:attribute></xsl:if>
-			
-			<xsl:text>{"id":"</xsl:text>
-			<xsl:value-of select="$personID"/>
-			<xsl:text>","label":"</xsl:text>
-			<!-- todo: when TEI is fixed so no more than 1 persName per person, take out the [1] -->
-			<xsl:value-of select="normalize-space(person/persName[1])"/>
-			<xsl:text>","source":"</xsl:text>
-			<xsl:copy-of select="$filenamepart"/>
-			<xsl:text>"}</xsl:text>
-		</field>
-		</xsl:for-each>
 	</xsl:template>
 	
 	
 	<!-- ==================================
 	People (template so can be repeated in caseid and case documents)
+	
+	This template pulls all people out of the teiHeader and inserts into the respective documents. 
 	=================================== -->
 	
 	<xsl:template name="people"  exclude-result-prefixes="#all">
 		<xsl:param name="updateType"/>
+		<xsl:param name="caseid"/>
+		
+		<!-- Generic people in keywords rather than a listPerson -->
+
+		
+		<xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='people']/term">
+			<xsl:call-template name="personField">
+				<xsl:with-param name="fieldName">person</xsl:with-param>
+				<xsl:with-param name="personCode">
+					<person xmlns="http://www.tei-c.org/ns/1.0" xml:id="{@xml:id}">
+						<persName><xsl:value-of select="."/></persName>
+					</person>
+				</xsl:with-param>
+				<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+			</xsl:call-template>
+		</xsl:for-each>
+	
+		
+		<!-- Explanation of listPerson[@type = $caseid or not(@type)]
+		In order to match up the people in the documents with more than one case, they have been seperated 
+		into seperate listpersons with the case id on type. see file oscys.case.0017.003 for an example. 
+		This xpath matches the value ont he listperson to the caseid, or pulls everything if there is no caseid -->
 		
 		<!-- Person ID and Name -->
 		
-		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person/persName[normalize-space()]">
+		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person/persName[normalize-space()]">
 			<xsl:call-template name="personField">
 				<xsl:with-param name="fieldName">person</xsl:with-param>
-				<xsl:with-param name="personCode"><person><xsl:copy-of select="."/></person></xsl:with-param>
+				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
 				<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
 			</xsl:call-template>
 		</xsl:for-each>
@@ -891,7 +951,7 @@
 		<!-- plaintiff -->
 		
 		<!-- earlier docs used petitioner instead of plaintiff -->
-		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person[@role='petitioner']/persName[normalize-space()]">
+		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='petitioner']/persName[normalize-space()]">
 			<xsl:call-template name="personField">
 				<xsl:with-param name="fieldName">plaintiff</xsl:with-param>
 				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
@@ -900,7 +960,7 @@
 
 		</xsl:for-each>
 		
-		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person[@role='plaintiff']/persName[normalize-space()]">
+		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='plaintiff']/persName[normalize-space()]">
 			<xsl:call-template name="personField">
 				<xsl:with-param name="fieldName">plaintiff</xsl:with-param>
 				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
@@ -913,7 +973,7 @@
 		<!-- defendant -->
 		
 		
-		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person[@role='defendant']/persName[normalize-space()]">
+		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='defendant']/persName[normalize-space()]">
 			<xsl:call-template name="personField">
 				<xsl:with-param name="fieldName">defendant</xsl:with-param>
 				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
@@ -923,7 +983,7 @@
 		
 		<!-- attorney P -->
 		
-		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person[@role='attorney_petitioner']/persName[normalize-space()]">
+		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='attorney_petitioner']/persName[normalize-space()]">
 			<xsl:call-template name="personField">
 				<xsl:with-param name="fieldName">attorneyP</xsl:with-param>
 				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
@@ -936,7 +996,7 @@
 			</xsl:call-template>
 		</xsl:for-each>
 		
-		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person[@role='attorney_plaintiff']/persName[normalize-space()]">
+		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='attorney_plaintiff']/persName[normalize-space()]">
 			<xsl:call-template name="personField">
 				<xsl:with-param name="fieldName">attorneyP</xsl:with-param>
 				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
@@ -952,7 +1012,7 @@
 		
 		<!-- attorney D -->
 		
-		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person[@role='attorney_defendant']/persName[normalize-space()]">
+		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='attorney_defendant']/persName[normalize-space()]">
 			<xsl:call-template name="personField">
 				<xsl:with-param name="fieldName">attorneyD</xsl:with-param>
 				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>

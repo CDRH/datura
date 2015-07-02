@@ -76,6 +76,7 @@ Many fields have JSON in them so that the programmer can, for instance, build a 
 * id: the id of the file/person/whatever. Usually this will be used to construct a link. the ID may be a source of the information.
 * label: The name/title of the item. 
 * date: sometimes there will be multiple bits of information distinguished by a date. The format should be whatever is to be displayed, this is not sortable. 
+* sourcefile: this is just for troubleshooting, will probably be removed later
 
 Fields with a name and ID attached will contain three versions:
 
@@ -113,6 +114,7 @@ Fields with a name and ID attached will contain three versions:
     * **attorneyID_ss**
     * **attorneyData_ss**
 * **term_ss**
+* **jurisdiction_ss** pulled form orgName for now
 
 ### OSCYS Person Fields
 
@@ -151,11 +153,13 @@ Not all these fields will need the "data" field but I am including them all righ
 
 * **relatedCaseID_ss** - related cases ID
 * **relatedCaseData_ss** - JSON of ID + Label
+* **caseDocumentID_ss** - inserting in all the documents into caseID filesm so we don't have to run a seperate solr query. I may be going overboard here. 
+* **caseDocumentData_ss**
 
 ### OSCYS Documents Fields
 
-* **caseID_ss**  The id of any cases associate with this document
-* **caseData_ss**  - JSON of ID + Label
+* **documentCaseID_ss**  The id of any cases associate with this document
+* **documentCaseData_ss**  - JSON of ID + Label
 
 ### Generic Text field: (much of the above is copied into this for text searching)
 
