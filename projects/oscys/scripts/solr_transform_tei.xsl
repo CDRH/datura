@@ -899,8 +899,9 @@
 				<xsl:text>","label":"</xsl:text>
 				<!-- todo: when TEI is fixed so no more than 1 persName per person, take out the [1] -->
 				<xsl:value-of select="normalize-space($personCode/person/persName[1])"/>
-				<xsl:text>","sourcefile":"</xsl:text>
-				<xsl:copy-of select="$filenamepart"/>
+				<!-- source file for testing only. Leaving it on messes with person disambiguation -->
+				<!--<xsl:text>","sourcefile":"</xsl:text>
+				<xsl:copy-of select="$filenamepart"/>-->
 				<xsl:text>"}</xsl:text>
 			</field>
 		
