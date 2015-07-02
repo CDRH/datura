@@ -341,9 +341,10 @@
 				<!-- coverage -->
 				<!-- source -->
 				
-				<xsl:if test="/TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/title[@level='j'] != ''">
+				<!-- todo: check with Kaci and Laura on how to format -->
+		<xsl:if test="/TEI/teiHeader[1]/fileDesc[1]/sourceDesc[1]/bibl[1] != ''">
 					<field name="source">
-						<xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/title[@level='j']"/>
+						<xsl:value-of select="/TEI/teiHeader[1]/fileDesc[1]/sourceDesc[1]/bibl[1]"/>
 					</field>
 				</xsl:if>
 				
