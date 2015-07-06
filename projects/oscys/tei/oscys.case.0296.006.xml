@@ -1,17 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://digitalhumanities.unl.edu/resources/schemas/tei/TEIP5.2.6.0/tei_all.rng" type="xml"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0131.001">
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://digitalhumanities.unl.edu/resources/schemas/tei/TEIP5.2.6.0/tei_all.rng" type="xml"?> 
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0296.006">
     
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>George Coats v. William Morton. Summons of William Morton</title>
+<title>Ellen Johnson v. Morris Adler. Defendant's 4th Bill of Exceptions</title>
 <principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
-<principal n="Muñoz, Trevor" xml:id="tm">Trevor Muñoz</principal>
+<principal n="Mu&#241;oz, Trevor" xml:id="tm">Trevor Mu&#241;oz</principal>
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
 <respStmt>
 <resp>transcription and encoding</resp>
-<name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
+<name n="Camerone, Stephanie N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
-<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -31,13 +33,13 @@
 <name>Center for Digital Research in the Humanities</name>
 <address>
 <addrLine>319 Love Library</addrLine>
-<addrLine>University of Nebraska–Lincoln</addrLine>
+<addrLine>University of Nebraska&#8211;Lincoln</addrLine>
 <addrLine>Lincoln, NE 68588-4100</addrLine>
 <addrLine>cdrh@unl.edu</addrLine>
 </address>
 </distributor>
-<idno type="project">oscys.case.0131.001</idno>
-<idno type="case">oscys.caseid.0131</idno>
+<idno type="project">oscys.case.0296.006</idno>
+<idno type="case">oscys.caseid.0298</idno>
 
 <availability>
 <licence>http://creativecommons.org/licenses/by-nc-sa/3.0/</licence>
@@ -47,15 +49,15 @@
             
 <sourceDesc>
 <bibl>
-<title level="m" type="main">Summons of William Morton</title>
-<date when="1836-11-22">November 22, 1836</date>
+<title level="m" type="main">Defendant's 4th Bill of Exceptions</title>
+<date when="1849-12-11">December 11, 1849</date> 
 <note type="project">Our transcription is based on a digital image of the original.</note>
 </bibl>
 <msDesc>
 <msIdentifier>
 <repository>National Archives and Records Administration</repository>
 <collection>Record Group 21.6</collection>
-<idno>Box 561, Folder 570</idno>
+<idno>Box 772, Folder 48</idno>
 </msIdentifier>
 </msDesc>
 </sourceDesc>
@@ -68,7 +70,7 @@
 </keywords>
     
 <keywords scheme="original" n="subcategory">
-<term>Summons</term>
+<term>Bill of Exceptions</term>
 </keywords>
 
 <keywords scheme="original" n="type">
@@ -76,33 +78,31 @@
 </keywords>
 
 <keywords scheme="original" n="term">
-<term>November 1836</term>
+<term>October 1853</term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term xml:id="per.000003">Brent, William 1774-1848</term>
-<term xml:id="per.000004">Cranch, William, 1769-1855</term>
-<term xml:id="per.000739">Hunter, Alexander</term>
+<term>Cranch, William, 1769-1855</term>
+<term>Morsell, James Sewall</term>
+<term>Turner, Thomas</term>
 </keywords>
 
-<keywords scheme="lcsh" n="places"> 
-<term>Washington County (D.C.)</term>
-<term>Washington (D.C.)</term>
+<keywords scheme="lcsh" n="places">  
+<term/>
 </keywords>
-
 
 </textClass>
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner" xml:id="per.001014">
-<persName>Coats, George</persName>
+<person role="petitioner">
+<persName>Johnson, Ellen</persName>
 </person>
-<person role="defendant" xml:id="per.001015">
-<persName>Morton, William</persName>
+<person role="defendant">
+<persName>Adler, Morris</persName>
 </person>
-<person role="attorney_petitioner" xml:id="per.001016">
-<persName>Dandridge</persName>
+<person role="attorney_petitioner">
+<persName/>
 </person>
 <person role="attorney_defendant">
 <persName/>
@@ -118,10 +118,9 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>    
-<change when="2015-06-30" who="#lkw">added xml:ids</change>
-<change when="2015-01-22" who="#kln">reviewed; edited</change>              
-<change when="2014-10" who="#snc">encoded</change>
+<revisionDesc>             
+<change when="2015-06-26" who="kln">reviewed; edited</change>
+<change when="2015-03-25" who="snc">transcribed, encoded</change>
 </revisionDesc>
 
 </teiHeader>
@@ -132,50 +131,32 @@
                
 <div1 type="case">
 
-<pb xml:id="p001" facs="oscys.case.0131.001.001.jpg"/>
+<pb xml:id="p001" facs="oscys.case.0296.006.001.jpg"/>
 
 <div2 type="caption">
 
-<p>District of Columbia, to wit:<lb/>
-The United States of America,<lb/>
-To the Marshal of the District of Columbia, Greeting:</p>
+<p>Ellen Johnson &amp; others<lb/>
+v<lb/>
+Morris Adler admr of Tho Turner decd.</p>
 
 </div2>
 
 <div2 type="body">
+    
+<p>On the trial of the above cause this Defendant to support the issue on his part offered evidence by a competent witness testimony to prove that the <gap extent="several words" reason="strikethrough"/> petitioners <gap extent="several words" reason="strikethrough"/> resided near him on an adjoining lot &amp; had been well known by him for <del>many</del> about 15 years. That they were generally understood &amp; reputed to be the slaves of the late Thomas Turner &amp; not free people. to which said Evidence so offered by the Defendant the Petitioners by their counsel objected &amp; the court refused to permit the same to be given &amp; thereupon the Defendant excepts thereato &amp; prays the court to sign &amp; seal this his fourth bill of exceptions which is done accordingly this 11 Decr 1849</p>
 
-<p>You are hereby commanded to summon William Morton if he shall be found in the County of Washington, that (all excuses set aside) he be and appear before the Circuit Court of the District of Columbia, to be held for the County of Washington, in the City of Washington, on 4th Monday of November inst <del>next,</del> to <del>testify on the part of</del> answer the petition for Freedom of George Coats filed in said Court</p>
-
-<p>Hereof, fail not at your peril; and have you then and there this precept.</p>
-
-<p>Witness, W. Cranch Esquire, Chief Judge of the said Court.</p>
-
-<p>Issued the 22d day of November 1836</p>
-
-<p>Wm Brent Clk</p>
-
-<p>Dandridge</p>
+<p>W. Cranch (seal)<lb/>
+Jas. S. Morsell (seal)</p>
 
 </div2>
 
-<pb xml:id="p002" facs="oscys.case.0131.001.002.jpg"/>
+<pb xml:id="p002" facs="oscys.case.0296.006.002.jpg"/>
 
 <div2 type="back">
 
-<p>570</p>
+<p>Defendants 4th Exception relating to the offer to prove general reputation as to the freedom or slavery of the Petitioners</p>
 
-<p>George Coats<lb/>
-vs<lb/>
-William Morton</p>
-
-<p>Sbpa</p>
-
-<p>Peto. for Freedom</p>
-
-<p>+<lb/>
-Summd<lb/>
-Alexr Hunter<lb/>
-Marshal</p>
+<p>not in this case</p> 
 
 </div2>
 </div1>
