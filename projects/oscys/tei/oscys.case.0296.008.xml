@@ -40,6 +40,7 @@
 </distributor>
 <idno type="project">oscys.case.0296.008</idno>
 <idno type="case">oscys.caseid.0298</idno>
+<idno type="case">oscys.caseid.0288</idno>
 
 <availability>
 <licence>http://creativecommons.org/licenses/by-nc-sa/3.0/</licence>
@@ -89,7 +90,7 @@
 <term>Magruder, Kitty</term>
 <term>Morsell, James Sewall</term>
 <term>Smith, John A.</term>
-<term>Turner, Thomas</term>
+<term>Turner Jr., Thomas</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">  
@@ -99,13 +100,12 @@
 
 </textClass>
             
-<particDesc>   
-<listPerson>            
-<person role="petitioner">
+<particDesc>             
+<listPerson type="oscys.caseid.0298"> 
+<person role="petitioner"> 
 <persName>Johnson, Ellen</persName>
 <persName>Johnson, John Thomas</persName>
 <persName>Johnson, Louisa</persName>
-<persName>Johnson, Rachel</persName>
 <persName>Johnson, Robert</persName>
 </person>
 <person role="defendant">
@@ -116,6 +116,21 @@
 </person>
 <person role="attorney_defendant">
 <persName>Marbury, John</persName>
+</person>
+</listPerson>
+
+<listPerson type="oscys.caseid.0288">            
+<person role="petitioner">
+<persName>Johnson, Rachel</persName>
+</person>
+<person role="defendant">
+<persName>Adler, Morris</persName>
+</person>
+<person role="attorney_petitioner">
+<persName/>
+</person>
+<person role="attorney_defendant">
+<persName/>
 </person>
 </listPerson>
             
@@ -129,8 +144,8 @@
 </profileDesc>
         
 <revisionDesc>             
-<change when="2015-07-06" who="kln">reviewed; edited</change>
-<change when="2015-03-25" who="snc">transcribed, encoded</change>
+<change when="2015-07-06" who="#kln">reviewed; edited</change>
+<change when="2015-03-25" who="#snc">transcribed, encoded</change>
 </revisionDesc>
 
 </teiHeader>
