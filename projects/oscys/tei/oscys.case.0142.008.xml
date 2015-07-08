@@ -82,45 +82,50 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Bell, John</term>
-<term>Bell, Roger</term>
-<term>Bell, William</term>
-<term>Bickers, Robert</term>
-<term>Brockinaw</term>
-<term>Brownlow</term>
-<term>Burgess, Thomas</term>
-<term>Chew, John J.</term>
-<term>Cockburn, Robert</term>
-<term>Conway, Catted</term>
-<term>Dawney, Alexander</term>
-<term>Day, Henry</term>
-<term>Duncan, Alexander</term>
-<term>Griman, Daniel</term>
-<term>Grimes, Reuben</term>
-<term>Lindsay, Nancy</term>
-<term>Lindsay, William</term>
-<term>Moore, Reuben</term>
-<term>Patton, Robert</term>
-<term>Richards, Thomas</term>
-<term>Rucker, Peter</term>
-<term>Shepherd, Alexander</term>
-<term>Shepherd, Andrew</term>
-<term>Shepherd, Catharine</term>
-<term>Shepherd, Elizabeth</term>
-<term>Shepherd, George</term>
-<term>Shepherd, Harriet</term>
-<term>Shepherd, Helen</term>
-<term>Shepherd, James</term>
-<term>Shepherd, John</term>
-<term>Shepherd, Mary</term>
-<term>Shepherd, Robert</term>
-<term>Shepherd, Thomson</term>
-<term>Shepherd, William</term>
-<term>Singleton, Daniel</term>
-<term>Taliafens, William</term>
-<term>Taylor, John</term>
-<term>Tilly, James</term>
-<term>Verdier</term>
+<term xml:id="per.001078">Bell, John</term>
+<term xml:id="per.001079">Bell, Roger</term>
+<term xml:id="per.001080">Bell, William</term>
+<term xml:id="per.001081">Bickers, Robert</term>
+<term xml:id="per.001082">Brockinaw</term>
+<term xml:id="per.001083">Brownlow</term>
+<term xml:id="per.001084">Burgess, Thomas</term>
+<term xml:id="per.001085">Chew, John J.</term>
+<term xml:id="per.001086">Cockburn, Robert</term>
+<term xml:id="per.001087">Conway, Catted</term>
+<term xml:id="per.001088">Dawney, Alexander</term>
+<term xml:id="per.001089">Day</term><!-- widow of Henry Day -->
+<term xml:id="per.001090">Day, Henry</term>
+<term xml:id="per.001091">Duncan, Alexander</term>
+<term xml:id="per.001092">Griman, Daniel</term>
+<term xml:id="per.001093">Grimes, Reuben</term>
+<term xml:id="per.001094">Lindsay, Nancy</term>
+<term xml:id="per.001095">Lindsay, William</term>
+<term xml:id="per.001096">Moore, Reuben</term>
+<term xml:id="per.001097">Patton, Robert</term>
+<term xml:id="per.001098">Richards, Thomas</term>
+<term xml:id="per.001099">Rucker</term><!-- widow -->
+<term xml:id="per.001100">Rucker, Peter</term>
+<term xml:id="per.001101">Shepherd, Alexander</term>
+<term xml:id="per.001077">Shepherd, Andrew</term><!-- father -->
+<term xml:id="per.001102">Shepherd, Andrew</term><!-- son -->
+<term xml:id="per.001103">Shepherd, Catharine</term>
+<!-- <term>Shepherd, Elizabeth</term> -->
+<term xml:id="per.001104">Shepherd, George</term>
+<term xml:id="per.001105">Shepherd, Harriet</term>
+<term xml:id="per.001106">Shepherd, Helen</term>
+<term xml:id="per.001107">Shepherd, James</term>
+<term xml:id="per.001108">Shepherd, John</term>
+<term xml:id="per.001109">Shepherd, Mary</term>
+<term xml:id="per.001110">Shepherd, Robert</term>
+<term xml:id="per.001111">Shepherd, Thomson</term>
+<term xml:id="per.001112">Shepherd, William</term>
+<term xml:id="per.001113">Singleton, Daniel</term>
+<term xml:id="per.001114">Taliafens, William</term>
+<term xml:id="per.001115">Taylor, John</term>
+<term xml:id="per.001116">Tilly, James</term>
+<term xml:id="per.001117">Verdier</term>
+<term xml:id="per.001118">Pompey</term>
+<term xml:id="per.001119">Jerry</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -136,15 +141,25 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001067">
 <persName>Gibson, Francis</persName>
+</person>
+<person role="petitioner" xml:id="per.001073">
 <persName>Gibson, Henry</persName>
+</person>
+<person role="petitioner" xml:id="per.001071">
 <persName>Gibson, Lucy</persName>
+</person>
+<person role="petitioner" xml:id="per.001072">
 <persName>Gibson, Sarah</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001068">
 <persName>Hall, James C.</persName>
-<persName>Laurie, Elizabeth B.</persName> 
+</person>
+<person role="defendant" xml:id="per.001069">
+<persName>Laurie, Elizabeth B.</persName>
+</person>
+<person role="defendant" xml:id="per.001070">
 <persName>Laurie, James</persName>
 </person>
 <person role="attorney_petitioner">
@@ -165,7 +180,7 @@
 </profileDesc>
         
 <revisionDesc>   
-<change when="2015-07-06" who="lkw">added xml:ids</change>      transcription
+<change when="2015-07-06" who="lkw">added xml:ids; transcription; added Day, Rucker, Pompey, Jerry and Andrew Shepherd (father) to people; commented out Elizabeth Shepherd who is Elizabeth B. Laurie one of the defendants</change>      
 <change when="2014-01-08" who="#kln">reviewed; edited</change>      
 <change when="2014-11" who="#snc">encoded</change>
 </revisionDesc>
@@ -195,7 +210,7 @@ and his heirs (that is my son, who is next older to her) and in case of his deat
 
 <pb xml:id="p002" facs="oscys.case.0142.008.002.jpg"/>
 
-terms &amp; conditions as the two tracts or parcels of land, bequeathed to Robert in case of his death, but not that either of my said sons James, Thomson or John, shall have a right to hold the lands given to Robert &amp; Harriet, in case of their deaths &amp; without issue living at their deaths, but only to have right to his or her part, as the case should happen, for him to succeed as above mentioned &amp; meant, that is, not any one of my said sons, Robert, James, Thomson nor John, or either of their heirs, to have both the said demised lands, unless in the case of the death of all these children, but one of them, and who it is my will shall &amp; his heirs, have a right to both the said demised parcels of land, which is to be in part of his share &amp; right of every other part of my Estate or property,that he might have a right to otherways, and in case he should have received any part of my property before such an event happening, he or his heirs is to return the same to my Executors, to be by them divided among my other children or their heirs, as my other property is directed to be divided amonsgt them. [[It is my will, that my son William, shall dispose of my following lands, as soon after my death, as may by him and my Executors, tthought to be advisable, Viz. The land bought of Thomas Burgess, Peter Rucker, the widow Rucker, that which belonged to Wm Bell, decd, by the name of the Church or Pinny wood tract, and that I bought of Robert Bickers and the produce of the sales thereof to be divided amongst my children, George, William, Alexander, Helen, Mary Andrew, Catharine and Elizabeth, or theirs, so as to make each have near an equal share reckoning &amp; accounting on what each of them, or their husbands, may have had, as will appear by their accounts respectively, on my books, entered to them as my sons, as my sons in laws, or as my daughters, and likeways, if any acct should be due from them, to be reckoned  &amp; entered to them with the other, likeways, what may be collected from the debts, that may due me (after what I owe is paid) to be divided among my last children or their heirs, in same manner as proceeds of the lands last mentioned, only with the exception &amp; reserve, that whatever part of the said demises, from the sales of the said land, or what may be recovered from debts due me, that my daughters, Helen, Mary, Catharine &amp; Elizabeth, or their heirs, (from their present husbands) may have a right to the same, to be put out to interest having undoubted security for the forthcoming of both principal &amp; interest thereof, &amp; the last thereof, to wit; the interest to be applied towards my said daughters &amp; their heirs as above, their individual maintenance &amp; support; and at the death of either of my said daughters, such part, shall in the same manner, be applied to the maintenance of such child or children of their present husbands until the youngest thereof, shall arrive to lawful age, when the principal &amp; Interest, that may be due such child or children, shall then by vested in hi, her or them, the husbands of my said four daughters, are to have no further interest nor concern, with any more of my Estate or property, than what they already have had &amp; for which they are charged in my books, as my sons in laws.]] It is my will that my son William, and in case of his death, my Executors, do sell &amp; dispose as soon as may be thought advisable my land in Albermarle County, containing by deed Eight hundred Acres, likewise all my negroes, that may be thereon, together with the whole stock of every kind and plantation utensils
+terms &amp; conditions as the two tracts or parcels of land, bequeathed to Robert in case of his death, but not that either of my said sons James, Thomson or John, shall have a right to hold the lands given to Robert &amp; Harriet, in case of their deaths &amp; without issue living at their deaths, but only to have right to his or her part, as the case should happen, for him to succeed as above mentioned &amp; meant, that is, not any one of my said sons, Robert, James, Thomson nor John, or either of their heirs, to have both the said demised lands, unless in the case of the death of all these children, but one of them, and who it is my will shall &amp; his heirs, have a right to both the said demised parcels of land, which is to be in part of his share &amp; right of every other part of my Estate or property,that he might have a right to otherways, and in case he should have received any part of my property before such an event happening, he or his heirs is to return the same to my Executors, to be by them divided among my other children or their heirs, as my other property is directed to be divided amonsgt them. [[It is my will, that my son William, shall dispose of my following lands, as soon after my death, as may by him and my Executors, tthought to be advisable, Viz. The land bought of Thomas Burgess, Peter Rucker, the widow Rucker, that which belonged to Wm Bell, decd, by the name of the Church or Pinny wood tract, and that I bought of Robert Bickers and the produce of the sales thereof to be divided amongst my children, George, William, Alexander, Helen, Mary Andrew, Catharine and Elizabeth, or theirs, so as to make each have near an equal share reckoning &amp; accounting on what each of them, or their husbands, may have had, as will appear by their accounts respectively, on my books, entered to them as my sons, as my sons in laws, or as my daughters, and likeways, if any acct should be due from them, to be reckoned  &amp; entered to them with the other, likeways, what may be collected from the debts, that may due me (after what I owe is paid) to be divided among my last children or their heirs, in same manner as proceeds of the lands last mentioned, only with the exception &amp; reserve, that whatever part of the said demises, from the sales of the said land, or what may be recovered from debts due me, that my daughters, Helen, Mary, Catharine &amp; Elizabeth, or their heirs, (from their present husbands) may have a right to the same, to be put out to interest having undoubted security for the forthcoming of both principal &amp; interest thereof, &amp; the last thereof, to wit; the interest to be applied towards my said daughters &amp; their heirs as above, their individual maintenance &amp; support; and at the death of either of my said daughters, such part, shall in the same manner, be applied to the maintenance of such child or children of their present husbands until the youngest thereof, shall arrive to lawful age, when the principal &amp; Interest, that may be due such child or children, shall then by vested in him, her or them, the husbands of my said four daughters, are to have no further interest nor concern, with any more of my Estate or property, than what they already have had &amp; for which they are charged in my books, as my sons in laws.]] It is my will that my son William, and in case of his death, my Executors, do sell &amp; dispose as soon as may be thought advisable my land in Albermarle County, containing by deed Eight hundred Acres, likewise all my negroes, that may be thereon, together with the whole stock of every kind and plantation utensils
 
 <fw>Andrew Shepherd<lb/>
 continued to 3d page</fw>
@@ -206,7 +221,7 @@ utensils, that may be thereon, &amp; belonging to me, which sold to be made for 
 
 <pb xml:id="p003" facs="oscys.case.0142.008.003.jpg"/>
 
-provision here after made for that purpose, should amount to more than may be sufficient, then the Surplus to be added to said Prinl from whence it arises, whenever my Son Thomson or James, should arrive at the age of Twenty, the part of my Estate, that they may have a right to, agreeable to what my elder children have, they are to have the same out of the said Principal arising from the Albemarle Property, provided they or either of them should not have a right to any of the lands devised to my Son Robert &amp; Harriet, and which circumstance I think, is already fully expressed as to the intention &amp; meaning of that succession. It is my desire that my Meadow Plantation, and the other lands that <unclear reason="illegible">go's</unclear> all under the same meaning, and devised to Robert &amp; Harriet, with the negroes, stock &amp;c thereon, shall be occupied in the Same manner, as it has been heretofore, and that the proceeds arising yearly from the Same, shall be applied towards the education &amp; maintenance of my young children as above expressed, likewise the profits, that may arise from my black Smith's, Pompey &amp; Jerry, and  the Surplus of those funds, with the other above mentioned for said purpose, to be applied in the Same way mentioned as to that, it is my desire that however may be employed as Overseer or Manager of my said Madison Plantation, that they are not to cut down any timber towards clearing &amp; Culterating any of the lands further than what may be necessary for rails, firewood &amp; support of the buildings, which must be got promiscuously, on that part called Cockburn's, or that I bought of Moore, as may Suit best for the Purpose wanted, at the same not to have any young thriving timber of any kind made use of, when other kind will answer. [[It is my Will that whatever other kind of property, I may be possessed, with either of Slaves or any other, that is not already devised, or disposed of otherwise, that such be either sold, or given to some of my children &amp; their heirs, as it may best suit, on the same terms and conditions, as any other part they may have a right to, &amp; such property to be valued by my Executors, or by such persons as they may appoint for that purpose, &amp; which is to be charged to such child or children accordingly.]] As my Son John will be the first (if he lives) of my five youngest children, that will be of the age of Twenty one years, I would choose that the Consideration for which my lott &amp; houses sold to Mr Verdier, should be reserved for him towards his share of my property, that he may have a right to, as he may want to go into some Mercantile business, and that I expect, will be as readily procured for him as any otherway, however, ti must be observed, &amp; it is my desire, that it should by my Executors, that in Case he my said son John, Thomson, James or Robert, should appear to them or the majority of them, of their own knowledge, or from Sufficient information of any other creditable person, to have the inclination to gaming, drinking, idleness or dissipation of any kind before they arrive to the age of twenty one, in that case it is my will, that such child shall have no right or claim, to any part of my Estate or property intended for them until they give sufficient proof, that they have left off such bad practice they have followed &amp; been guilty of, &amp; are really fully reclaimed from
+provision here after made for that purpose, should amount to more than may be sufficient, then the Surplus to be added to said Prinl from whence it arises, whenever my Son Thomson or James, should arrive at the age of Twenty, the part of my Estate, that they may have a right to, agreeable to what my elder children have, they are to have the same out of the said Principal arising from the Albemarle Property, provided they or either of them should not have a right to any of the lands devised to my Son Robert &amp; Harriet, and which circumstance I think, is already fully expressed as to the intention &amp; meaning of that succession. It is my desire that my Meadow Plantation, and the other lands that <unclear reason="illegible">go's</unclear> all under the same meaning, and devised to Robert &amp; Harriet, with the negroes, stock &amp;c thereon, shall be occupied in the Same manner, as it has been heretofore, and that the proceeds arising yearly from the Same, shall be applied towards the education &amp; maintenance of my young children as above expressed, likewise the profits, that may arise from my black Smith's, Pompey &amp; Jerry, and  the Surplus of those funds, with the other above mentioned for said purpose, to be applied in the Same way mentioned as to that, it is my desire that however may be employed as Overseer or Manager of my said Madison Plantation, that they are not to cut down any timber towards clearing &amp; Cultivating any of the lands further than what may be necessary for rails, firewood &amp; support of the buildings, which must be got promiscuously, on that part called Cockburn's, or that I bought of Moore, as may Suit best for the Purpose wanted, at the same not to have any young thriving timber of any kind made use of, when other kind will answer. [[It is my Will that whatever other kind of property, I may be possessed, with either of Slaves or any other, that is not already devised, or disposed of otherwise, that such be either sold, or given to some of my children &amp; their heirs, as it may best suit, on the same terms and conditions, as any other part they may have a right to, &amp; such property to be valued by my Executors, or by such persons as they may appoint for that purpose, &amp; which is to be charged to such child or children accordingly.]] As my Son John will be the first (if he lives) of my five youngest children, that will be of the age of Twenty one years, I would choose that the Consideration for which my lott &amp; houses sold to Mr Verdier, should be reserved for him towards his share of my property, that he may have a right to, as he may want to go into some Mercantile business, and that I expect, will be as readily procured for him as any otherway, however, it must be observed, &amp; it is my desire, that it should by my Executors, that in Case he my said son John, Thomson, James or Robert, should appear to them or the majority of them, of their own knowledge, or from Sufficient information of any other creditable person, to have the inclination to gaming, drinking, idleness or dissipation of any kind before they arrive to the age of twenty one, in that case it is my will, that such child shall have no right or claim, to any part of my Estate or property intended for them until they give sufficient proof, that they have left off such bad practice they have followed &amp; been guilty of, &amp; are really fully reclaimed from
 
 <fw>Andrew Shepherd<lb/> 
 continued to 4th page</fw>
