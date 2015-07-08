@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?oxygen RNGSchema="http://digitalhumanities.unl.edu/resources/schemas/tei/TEIP5.2.6.0/tei_all.rng" type="xml"?> 
 
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0294.004">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0299.001">
     
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>Rose Herbert v. Mary Ringgold. Petition for Freedom</title>
+<title>Priscilla King v. William Wilkinson. Summons of William Wilkinson</title>
 <principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
 <principal n="Mu&#241;oz, Trevor" xml:id="tm">Trevor Mu&#241;oz</principal>
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
@@ -38,8 +38,8 @@
 <addrLine>cdrh@unl.edu</addrLine>
 </address>
 </distributor>
-<idno type="project">oscys.case.0294.004</idno>
-<idno type="case">oscys.caseid.0296</idno>
+<idno type="project">oscys.case.0299.001</idno>
+<idno type="case">oscys.caseid.0301</idno>
 
 <availability>
 <licence>http://creativecommons.org/licenses/by-nc-sa/3.0/</licence>
@@ -49,15 +49,15 @@
             
 <sourceDesc>
 <bibl>
-<title level="m" type="main">Petition for Freedom</title>
-<date when="1853-07-09">July 9, 1853</date>
+<title level="m" type="main">Summons of William Wilkinson</title>
+<date when="1854-01-09">January 9, 1854</date>
 <note type="project">Our transcription is based on a digital image of the original.</note>
 </bibl>
 <msDesc>
 <msIdentifier>
 <repository>National Archives and Records Administration</repository>
 <collection>Record Group 21.6</collection>
-<idno>Box 782, Folder 5</idno>
+<idno>Box 776, Folder 64</idno>
 </msIdentifier>
 </msDesc>
 </sourceDesc>
@@ -70,7 +70,7 @@
 </keywords>
     
 <keywords scheme="original" n="subcategory">
-<term>Petition</term>
+<term>Summons</term>
 </keywords>
 
 <keywords scheme="original" n="type">
@@ -78,11 +78,11 @@
 </keywords>
 
 <keywords scheme="original" n="term">
-<term>October 1854</term>
+<term>March 1854</term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Cranch, William, 1769-1855</term>
+<term xml:id="per.000004">Cranch, William, 1769-1855</term>
 <term>Hoover, Jonah D.</term>
 <term>Smith, John A.</term>
 </keywords>
@@ -92,28 +92,19 @@
 <term>Washington (D.C.)</term>
 </keywords>
 
-<classCode scheme="original">
-<ref type="related.case"/>
-</classCode>
 </textClass>
             
 <particDesc>   
 <listPerson>            
 <person role="petitioner">
-<persName>Herbert, Edward</persName>
-<persName>Herbert, Elizabeth</persName>
-<persName>Herbert, John</persName>
-<persName>Herbert, Robert</persName>
-<persName>Herbert, Rose</persName>
-<persName>Herbert, Sandy</persName>
-<persName>Herbert, Theodosia</persName>
-<persName>Herbert, William</persName>
+<persName>King, Priscilla</persName>
 </person>
 <person role="defendant">
-<persName>Ringgold, Mary</persName>
+<persName>Wilkinson, William</persName>
 </person>
 <person role="attorney_petitioner">
-<persName>Smith, J. B. H.</persName>
+<persName>Ratcliffe, Daniel</persName>
+<persName>Kennedy, James C.</persName>
 </person>
 <person role="attorney_defendant">
 <persName/>
@@ -129,9 +120,9 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc> 
-<change when="2015-06-25" who="#kln">reviewed; edited</change>              
-<change when="2015-04-01" who="#snc">Encoded and transcribed</change>
+<revisionDesc>     
+<change when="2015-07-08" who="#kln">reviewed; edited</change>         
+<change when="2015-03-30" who="snc">Encoded and transcribed</change>
 </revisionDesc>
 
 </teiHeader>
@@ -142,38 +133,50 @@
                
 <div1 type="case">
 
-<pb xml:id="p001" facs="oscys.case.0294.004.001.jpg"/>
+<pb xml:id="p001" facs="oscys.case.0299.001.001.jpg"/>
 
 <div2 type="caption">
 
-<p>To the Honble the Circuit Court.</p>
+<p>District of Columbia, to wit:<lb/>
+The United States of America,<lb/>
+To the Marshal of the District of Columbia&#8212;Greeting:</p>
 
 </div2>
 
 <div2 type="body">
-     
-<p>Your Petitioner Rose Herbert and your Petitioners William, Theodosia, John and Sandy, Elizabeth, Edward and Robert Herbert children of the said Rose respectfully represent to your Honorable Court that they are free but that one Mary D. C. Ringgold claims them as her slaves and although they have for years been going about acting &amp; recognized as free persons yet that the said Mary Ringgold now threatens to take possession of &#38; sell them as her slaves: therefore your Petitioners pray the protection of your Honble Court and that a writ of subpoena be issued to said Mary Ringgold commanding her to appear &amp; answer this petition</p>
 
-<p>J B H Smith<lb/>
-atty of Petitioners</p>
+<p>We command you that you <del>take</del> summon William Wilkinson <del>late of Washington County, if shall be found within the County of Washington in your said District, and safely keep, so that you have bod</del> before the Circuit Court of the District of Columbia, to be held for the County aforesaid, at the City of Washington, on the 4th Monday of March next, to answer <del>unto</del> the petition for freedom of Priscilla King.</p>
+
+<p>Hereof fail not, at your peril, and have you then and there this writ.</p>
+
+<p>Witness W Cranch Esquire, Chief Judge of the said court, at the City of Washington, the 3d day of Jany Anno Domini one thousand eight hundred and 54</p>
+
+<p>Issued the 9th day of Jany 1854.</p>
+
+<p>Jno: A. Smith Clk</p>
+
+<p>R. &amp; K.</p>
      
 </div2>
 
-<pb xml:id="p002" facs="oscys.case.0294.004.002.jpg"/>
+<pb xml:id="p002" facs="oscys.case.0299.001.002.jpg"/>
 
 <div2 type="back">
 
-<p><del>83.</del> <del>128.</del> 5.</p>
+<p>64</p>
 
-<p>Rose Herbert &amp; William, Theodosia, John, Sandy, Elizabeth, Edward &amp; Robert Rose<lb/>
-v<lb/>
-Mary Rinngold</p>
+<p>Priscilla King<lb/>
+vs<lb/>
+William Wilkinson</p>
 
-<p>Filed 9th July 1853.</p>
+<p>sub<lb/>
+1 Bre</p>
 
-<p>The Clerk will please issue summons on this Petitioner.<lb/>
-J. B. H. Smith atty<lb/>
-July 9th 1853</p>
+<p>Pet. for Freed.</p>
+
+<p>Non Est<lb/>
+J D Hoover<lb/>
+Marshal</p>
 
 </div2>
 </div1>

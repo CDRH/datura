@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?oxygen RNGSchema="http://digitalhumanities.unl.edu/resources/schemas/tei/TEIP5.2.6.0/tei_all.rng" type="xml"?> 
 
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0294.004">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0298.004">
     
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>Rose Herbert v. Mary Ringgold. Petition for Freedom</title>
+<title>Sarah Stewart v. James C McGuire. Summons of James C McGuire</title>
 <principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
 <principal n="Mu&#241;oz, Trevor" xml:id="tm">Trevor Mu&#241;oz</principal>
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
@@ -38,8 +38,8 @@
 <addrLine>cdrh@unl.edu</addrLine>
 </address>
 </distributor>
-<idno type="project">oscys.case.0294.004</idno>
-<idno type="case">oscys.caseid.0296</idno>
+<idno type="project">oscys.case.0298.004</idno>
+<idno type="case">oscys.caseid.0300</idno>
 
 <availability>
 <licence>http://creativecommons.org/licenses/by-nc-sa/3.0/</licence>
@@ -49,15 +49,15 @@
             
 <sourceDesc>
 <bibl>
-<title level="m" type="main">Petition for Freedom</title>
-<date when="1853-07-09">July 9, 1853</date>
+<title level="m" type="main">Summons of James C McGuire</title>
+<date when="1852-11-11">November 11, 1852</date>
 <note type="project">Our transcription is based on a digital image of the original.</note>
 </bibl>
 <msDesc>
 <msIdentifier>
 <repository>National Archives and Records Administration</repository>
 <collection>Record Group 21.6</collection>
-<idno>Box 782, Folder 5</idno>
+<idno>Box 773, Folder 188</idno>
 </msIdentifier>
 </msDesc>
 </sourceDesc>
@@ -70,7 +70,7 @@
 </keywords>
     
 <keywords scheme="original" n="subcategory">
-<term>Petition</term>
+<term>Summons</term>
 </keywords>
 
 <keywords scheme="original" n="type">
@@ -78,13 +78,13 @@
 </keywords>
 
 <keywords scheme="original" n="term">
-<term>October 1854</term>
+<term>October 1853</term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">
 <term>Cranch, William, 1769-1855</term>
-<term>Hoover, Jonah D.</term>
 <term>Smith, John A.</term>
+<term>Todd, John Payne, 1792-1858</term> <!-- really died in 1852 -->
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -92,31 +92,21 @@
 <term>Washington (D.C.)</term>
 </keywords>
 
-<classCode scheme="original">
-<ref type="related.case"/>
-</classCode>
 </textClass>
             
 <particDesc>   
 <listPerson>            
 <person role="petitioner">
-<persName>Herbert, Edward</persName>
-<persName>Herbert, Elizabeth</persName>
-<persName>Herbert, John</persName>
-<persName>Herbert, Robert</persName>
-<persName>Herbert, Rose</persName>
-<persName>Herbert, Sandy</persName>
-<persName>Herbert, Theodosia</persName>
-<persName>Herbert, William</persName>
+<persName>Stewart, Sarah</persName>
 </person>
 <person role="defendant">
-<persName>Ringgold, Mary</persName>
+<persName>McGuire, J. C. (James Clark), 1812-1888</persName>
 </person>
 <person role="attorney_petitioner">
-<persName>Smith, J. B. H.</persName>
+<persName>Bradley, Joseph H.</persName>
 </person>
 <person role="attorney_defendant">
-<persName/>
+<persName>Wallach, Charles S.</persName>
 </person>
 </listPerson>
             
@@ -129,9 +119,9 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc> 
-<change when="2015-06-25" who="#kln">reviewed; edited</change>              
-<change when="2015-04-01" who="#snc">Encoded and transcribed</change>
+<revisionDesc>      
+<change when="2015-07-08" who="#kln">reviewed; edited</change>           
+<change when="2015-03-30" who="snc">Encoded and transcribed</change>
 </revisionDesc>
 
 </teiHeader>
@@ -142,40 +132,59 @@
                
 <div1 type="case">
 
-<pb xml:id="p001" facs="oscys.case.0294.004.001.jpg"/>
+<pb xml:id="p001" facs="oscys.case.0298.004.001.jpg"/>
 
 <div2 type="caption">
 
-<p>To the Honble the Circuit Court.</p>
+<p>District of Columbia, to wit:<lb/>
+The United States of America,<lb/>
+To the Marshal of the District of Columbia, Greeting:</p>
 
 </div2>
 
 <div2 type="body">
-     
-<p>Your Petitioner Rose Herbert and your Petitioners William, Theodosia, John and Sandy, Elizabeth, Edward and Robert Herbert children of the said Rose respectfully represent to your Honorable Court that they are free but that one Mary D. C. Ringgold claims them as her slaves and although they have for years been going about acting &amp; recognized as free persons yet that the said Mary Ringgold now threatens to take possession of &#38; sell them as her slaves: therefore your Petitioners pray the protection of your Honble Court and that a writ of subpoena be issued to said Mary Ringgold commanding her to appear &amp; answer this petition</p>
 
-<p>J B H Smith<lb/>
-atty of Petitioners</p>
+<p>We command you that you <del>take</del>James C McGuire admor of John P. Todd <del>late of Washington County, if shall be found within the County of Washington in your said District, and safely keep, so that you have bod</del> before the Circuit Court of the District of Columbia, to be held for the County aforesaid, at the City of Washington, on the fourth Monday of March next, to answer <del>unto</del> the Petition for freedom of Sarah Stewart &amp;c</p>
+
+<p>Hereof fail not, at your peril, and have you then and there this writ.</p>
+
+<p>Witness W Cranch Esquire, Chief Judge of our said Court at the City of Washington, the 11th day of Novr. Anno Domini one thousand eight hundred and 52.</p>
+
+<p>Issued the 12th day of Novr 1852.</p>
+
+<p>Jno A. Smith Clk</p>
+
+<p>Bradley</p>
      
 </div2>
 
-<pb xml:id="p002" facs="oscys.case.0294.004.002.jpg"/>
+<pb xml:id="p002" facs="oscys.case.0298.004.002.jpg"/>
 
 <div2 type="back">
 
-<p><del>83.</del> <del>128.</del> 5.</p>
+<p>service acknowledged<lb/>
+CS Wallach<lb/>
+for Deft</p>
 
-<p>Rose Herbert &amp; William, Theodosia, John, Sandy, Elizabeth, Edward &amp; Robert Rose<lb/>
-v<lb/>
-Mary Rinngold</p>
+<p><del>25.</del> <del>378.</del> <del>288.</del> 187.</p>
 
-<p>Filed 9th July 1853.</p>
+<p>Sarah Stewart<lb/>
+vs<lb/>
+James C. McGuire adr. of John P. Todd</p>
 
-<p>The Clerk will please issue summons on this Petitioner.<lb/>
-J. B. H. Smith atty<lb/>
-July 9th 1853</p>
+<p>sub<lb/>
+1 Bre</p>
+
+<p>Pet for Freedom.</p>
+
+<p>The Clerk will please to bring this case forward to the trial docket of October Term 1852.<lb/>
+Jos. H. Bradley<lb/>
+atty for Pltff.<lb/>
+Chas Wallach<lb/>
+for Deft</p>
 
 </div2>
+
 </div1>
     
 </body>
