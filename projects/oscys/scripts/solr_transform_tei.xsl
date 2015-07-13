@@ -651,109 +651,109 @@
 		<!-- People Specific -->
 		
 		
+		<xsl:for-each select="idno[@type='viaf'][normalize-space()]">
+			<field name="personIdnoVIAF_ss"><xsl:value-of select="normalize-space(.)"/></field>
+			<!--<field name="personData_ss"><xsl:call-template name="dataIDSourceData"/></field>-->
+		</xsl:for-each>
 		
+		<!-- ??? -->
+		<xsl:for-each select="persName[normalize-space()]">
+			<field name="personName_ss"><xsl:value-of select="normalize-space(.)"/></field>
+			<field name="personNameData_ss"><xsl:call-template name="dataIDSourceData"/></field>
+		</xsl:for-each>
+		
+		<xsl:for-each select="sex[normalize-space()]">
+			<field name="personSex_ss"><xsl:value-of select="normalize-space(.)"/></field>
+			<field name="personSexData_ss"><xsl:call-template name="dataIDSourceData"/></field>
+		</xsl:for-each>
 		<xsl:for-each select="affiliation[normalize-space()]">
 			<field name="personAffiliation_ss"><xsl:value-of select="normalize-space(.)"/></field>
+			<field name="personAffiliationData_ss"><xsl:call-template name="dataIDSourceData"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="age[normalize-space()]">
 			<field name="personAge_ss"><xsl:value-of select="normalize-space(.)"/></field>
+			<field name="personAgeData_ss"><xsl:call-template name="dataIDSourceData"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="bibl[normalize-space()]">
 			<field name="personBibl_ss"><xsl:value-of select="normalize-space(.)"/></field>
+			<field name="personBiblData_ss"><xsl:call-template name="dataIDSourceData"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="birth[normalize-space()]">
 			<field name="personBirth_ss"><xsl:value-of select="normalize-space(.)"/></field>
+			<field name="personBirthData_ss"><xsl:call-template name="dataIDSourceData"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="death[normalize-space()]">
 			<field name="personDeath_ss"><xsl:value-of select="normalize-space(.)"/></field>
+			<field name="personDeathData_ss"><xsl:call-template name="dataIDSourceData"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="event[normalize-space()]">
 			<field name="personEvent_ss"><xsl:value-of select="normalize-space(.)"/></field>
-		</xsl:for-each>
-		<xsl:for-each select="idno[@type='viaf'][normalize-space()]">
-			<field name="personIdnoVIAF_ss"><xsl:value-of select="normalize-space(.)"/></field>
+			<field name="personEventData_ss"><xsl:call-template name="dataIDSourceData"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="nationality[normalize-space()]">
 			<field name="personNationality_ss"><xsl:value-of select="normalize-space(.)"/></field>
+			<field name="personNationalityData_ss"><xsl:call-template name="dataIDSourceData"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="note[normalize-space()]">
 			<field name="personNote_ss"><xsl:value-of select="normalize-space(.)"/></field>
+			<field name="personNoteData_ss"><xsl:call-template name="dataIDSourceData"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="occupation[normalize-space()]">
 			<field name="personOccupation_ss"><xsl:value-of select="normalize-space(.)"/></field>
-		</xsl:for-each>
-		<xsl:for-each select="persName[normalize-space()]">
-			<field name="personName_ss"><xsl:value-of select="normalize-space(.)"/></field>
+			<field name="personOccupationData_ss"><xsl:call-template name="dataIDSourceData"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="residence[normalize-space()]">
 			<field name="personResidence_ss"><xsl:value-of select="normalize-space(.)"/></field>
-			<field name="personResidenceData_ss">
-				<xsl:text>{"id":"</xsl:text>
-				<xsl:text>oscys</xsl:text>
-				<xsl:value-of select="substring-after(@source,'oscys')"/>
-				<xsl:text>","label":"</xsl:text>
-				<xsl:value-of select="normalize-space(.)"/>
-				<xsl:text>"</xsl:text>
-				<xsl:if test="@notAfter[normalize-space()] or @notBefore[normalize-space()] or @when[normalize-space()]">
-					<xsl:text>,"date":"</xsl:text>
-					<xsl:if test="@notAfter[normalize-space()]"><xsl:text>Not After </xsl:text><xsl:value-of select="@notAfter"/></xsl:if>
-					<xsl:if test="@notBefore[normalize-space()]"><xsl:text>Not Before </xsl:text><xsl:value-of select="@notBefore"/></xsl:if>
-					<xsl:value-of select="@when"></xsl:value-of>
-				</xsl:if>
-				<xsl:text>"}</xsl:text>
-			</field>
-		</xsl:for-each>
-		<xsl:for-each select="sex[normalize-space()]">
-			<field name="personSex_ss"><xsl:value-of select="normalize-space(.)"/></field>
+			<field name="personResidenceData_ss"><xsl:call-template name="dataIDSourceData"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="socecStatus[normalize-space()]">
 			<field name="personSocecStatus_ss"><xsl:value-of select="normalize-space(.)"/></field>
-			<field name="personSocecStatusData_ss">
-				<xsl:text>{"id":"</xsl:text>
-				<xsl:text>oscys</xsl:text>
-				<xsl:value-of select="substring-after(@source,'oscys')"/>
-				<xsl:text>","label":"</xsl:text>
-				<xsl:value-of select="normalize-space(.)"/>
-				<xsl:if test="@notAfter[normalize-space()] or @notBefore[normalize-space()] or @when[normalize-space()]">
-					<xsl:text>,"date":"</xsl:text>
-					<xsl:if test="@notAfter[normalize-space()]"><xsl:text>Not After </xsl:text><xsl:value-of select="@notAfter"/></xsl:if>
-					<xsl:if test="@notBefore[normalize-space()]"><xsl:text>Not Before </xsl:text><xsl:value-of select="@notBefore"/></xsl:if>
-					<xsl:value-of select="@when"></xsl:value-of>
-				</xsl:if>
-				<xsl:text>"}</xsl:text>
-			</field>
+			<field name="personSocecStatusData_ss"><xsl:call-template name="dataIDSourceData"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="trait[@type='color'][normalize-space()]">
 			<field name="personColor_ss"><xsl:value-of select="normalize-space(.)"/></field>
-			<field name="personColorData_ss">
-				<xsl:text>{"id":"</xsl:text>
-					<xsl:text>oscys</xsl:text>
-					<xsl:value-of select="substring-after(@source,'oscys')"/>
-				<xsl:text>","label":"</xsl:text>
-					<xsl:value-of select="normalize-space(.)"/>
-				<xsl:text>"</xsl:text>
-				<xsl:if test="@notAfter[normalize-space()] or @notBefore[normalize-space()] or @when[normalize-space()]">
-					<xsl:text>,"date":"</xsl:text>
-					<xsl:if test="@notAfter[normalize-space()]"><xsl:text>Not After </xsl:text><xsl:value-of select="@notAfter"/></xsl:if>
-					<xsl:if test="@notBefore[normalize-space()]"><xsl:text>Not Before </xsl:text><xsl:value-of select="@notBefore"/></xsl:if>
-					<xsl:value-of select="@when"></xsl:value-of>
-				</xsl:if>
-				<xsl:text>"}</xsl:text>
-			</field>
+			<field name="personColorData_ss"><xsl:call-template name="dataIDSourceData"/></field>
 		</xsl:for-each>
-		
-	
-	
+
 		
 		<field name="text">
-			
 				<xsl:text> </xsl:text>
 				<xsl:value-of select="normalize-space(.)"/>
 				<xsl:text> </xsl:text>
-			
 		</field>
 
 
+	</xsl:template>
+	
+	<xsl:template name="dataIDSourceData">
+		
+		
+		<xsl:text>{"id":"</xsl:text>
+		<xsl:choose>
+			<xsl:when test="contains(@source,'viaf')">
+				<xsl:value-of select="//sourceDesc[1]//bibl[1]/ref"></xsl:value-of>
+			</xsl:when>
+			<xsl:when test="@source">
+				<xsl:text>oscys</xsl:text>
+				<xsl:value-of select="substring-after(@source,'oscys')"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:text>oscys</xsl:text>
+				<xsl:value-of select="substring-after(../@source,'oscys')"></xsl:value-of>
+			</xsl:otherwise>
+		</xsl:choose>
+		
+		<xsl:text>","label":"</xsl:text>
+		<xsl:value-of select="normalize-space(.)"/>
+		<xsl:text>"</xsl:text>
+		<xsl:if test="@notAfter[normalize-space()] or @notBefore[normalize-space()] or @when[normalize-space()]">
+			<xsl:text>,"date":"</xsl:text>
+			<xsl:if test="@notAfter[normalize-space()]"><xsl:text>Not After </xsl:text><xsl:value-of select="@notAfter"/></xsl:if>
+			<xsl:if test="@notBefore[normalize-space()]"><xsl:text>Not Before </xsl:text><xsl:value-of select="@notBefore"/></xsl:if>
+			<xsl:value-of select="@when"></xsl:value-of>
+			<xsl:text>"</xsl:text>
+		</xsl:if>
+		<xsl:text>}</xsl:text>
 	</xsl:template>
 	
 	<!-- ==================================
