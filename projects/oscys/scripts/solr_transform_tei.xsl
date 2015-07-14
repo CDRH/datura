@@ -804,10 +804,10 @@
 				</field>
 			<xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='outcome']/term">
 				<field update="add" name="outcomeID_ss">
-					<xsl:text>{"label":"</xsl:text>
-					<xsl:value-of select="normalize-space(.)"/>
-					<xsl:text>","id":"</xsl:text>
+					<xsl:text>{"id":"</xsl:text>
 					<xsl:value-of select="/TEI/@xml:id"/>
+					<xsl:text>","label":"</xsl:text>
+					<xsl:value-of select="normalize-space(.)"/>
 					<xsl:text>"}</xsl:text>
 				</field>
 			</xsl:for-each>
@@ -844,9 +844,9 @@
 				</field>
 				
 				<field name="caseDocumentData_ss" update="add">
-					<xsl:text>{"label":"</xsl:text>
+					<xsl:text>{"id":"</xsl:text>
 					<xsl:value-of select="/TEI/@xml:id"/>
-					<xsl:text>","id":"</xsl:text>
+					<xsl:text>","label":"</xsl:text>
 					<xsl:value-of select="/TEI/teiHeader/fileDesc/titleStmt/title[1]"/>
 					<xsl:text>"}</xsl:text>
 				</field>
