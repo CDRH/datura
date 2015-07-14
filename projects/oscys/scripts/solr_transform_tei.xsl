@@ -842,17 +842,36 @@
 				<field name="jurisdiction_ss" update="add"><xsl:value-of select="."/></field>
 			</xsl:for-each>
 				
-				<field name="caseDocumentID_ss" update="add">
-					<xsl:value-of select="/TEI/@xml:id"/>
-				</field>
 				
-				<field name="caseDocumentData_ss" update="add">
-					<xsl:text>{"id":"</xsl:text>
-					<xsl:value-of select="/TEI/@xml:id"/>
-					<xsl:text>","label":"</xsl:text>
-					<xsl:value-of select="/TEI/teiHeader/fileDesc/titleStmt/title[1]"/>
-					<xsl:text>"}</xsl:text>
-				</field>
+				<!-- split into case documents and related documents -->
+				<xsl:choose>
+					<xsl:when test="normalize-space(//keywords[@n='category']) = 'Case Papers'">
+						<field name="caseDocumentID_ss" update="add">
+							<xsl:value-of select="/TEI/@xml:id"/>
+						</field>
+						<field name="caseDocumentData_ss" update="add">
+							<xsl:text>{"id":"</xsl:text>
+							<xsl:value-of select="/TEI/@xml:id"/>
+							<xsl:text>","label":"</xsl:text>
+							<xsl:value-of select="/TEI/teiHeader/fileDesc/titleStmt/title[1]"/>
+							<xsl:text>"}</xsl:text>
+						</field>
+					</xsl:when>
+					<xsl:otherwise>
+						<field name="caseRelatedDocumentID_ss" update="add">
+							<xsl:value-of select="/TEI/@xml:id"/>
+						</field>
+						<field name="caseRelatedDocumentData_ss" update="add">
+							<xsl:text>{"id":"</xsl:text>
+							<xsl:value-of select="/TEI/@xml:id"/>
+							<xsl:text>","label":"</xsl:text>
+							<xsl:value-of select="/TEI/teiHeader/fileDesc/titleStmt/title[1]"/>
+							<xsl:text>"}</xsl:text>
+						</field>
+					</xsl:otherwise>
+				</xsl:choose>
+				
+				
 				
 			</doc>
 		</xsl:for-each>
