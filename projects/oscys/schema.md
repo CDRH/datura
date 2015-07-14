@@ -157,6 +157,8 @@ Not all these fields will need the "data" field but I am including them all righ
 * **relatedCaseData_ss** - JSON of ID + Label
 * **caseDocumentID_ss** - inserting in all the documents into caseID filesm so we don't have to run a seperate solr query. I may be going overboard here. 
 * **caseDocumentData_ss**
+* **caseRelatedDocumentID_ss** - for related documents so we can pull them seperately - everything that is not category=Case Papers 
+* **caseRelatedDocumentData_ss**
 * **caseidHasNarrative_s**
 
 ### OSCYS Documents Fields
