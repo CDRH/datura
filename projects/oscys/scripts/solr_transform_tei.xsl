@@ -776,6 +776,9 @@
 	=================================== -->
 	
 	<xsl:template name="tei_caseid" exclude-result-prefixes="#all">
+		<xsl:if test="normalize-space(//div1[@type='case']) != ''">
+			<field name="caseidHasNarrative_s">true</field>
+		</xsl:if>
 		
 
 		
