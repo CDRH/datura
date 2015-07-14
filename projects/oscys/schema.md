@@ -115,6 +115,7 @@ Fields with a name and ID attached will contain three versions:
     * **attorneyData_ss**
 * **term_ss**
 * **jurisdiction_ss** pulled form orgName for now
+* **titleLetter_a** - first letter of title for sorting purposes
 
 ### OSCYS Person Fields
 
@@ -123,11 +124,11 @@ Not all these fields will need the "data" field but I am including them all righ
 * **personAffiliation_ss**
     * **personAffiliationData_ss**
 * **personAge_ss**
-    * **personAgeDate_ss**
+    * **personAgeData_ss**
 * **personBibl_ss**
     * **personBiblData_ss**
 * **personBirth_ss**
-    * **personData_ss**
+    * **personBirthData_ss**
 * **personDeath_ss**
     * **personDeathData_ss**
 * **personEvent_ss**

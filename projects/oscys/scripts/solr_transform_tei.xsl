@@ -187,6 +187,20 @@
 					</xsl:otherwise>
 				</xsl:choose>
 				</xsl:variable>
+		
+		<xsl:variable name="titleSort">
+			<xsl:call-template name="normalize_name">
+				<xsl:with-param name="string">
+					<xsl:value-of select="$title"/>
+				</xsl:with-param>
+			</xsl:call-template>
+		</xsl:variable>
+		
+		<xsl:variable name="titleLetter">
+			<xsl:value-of select="substring($titleSort,1,1)"></xsl:value-of>
+		</xsl:variable>
+		
+		
 				
 		<field name="title" update="add">
 					<xsl:value-of select="$title"/>
@@ -195,12 +209,13 @@
 				<!-- titleSort -->
 				
 		<field name="titleSort" update="add">
-					<xsl:call-template name="normalize_name">
-						<xsl:with-param name="string">
-							<xsl:value-of select="$title"/>
-						</xsl:with-param>
-					</xsl:call-template>
+					<xsl:value-of select="$titleSort"/>
 				</field>
+		
+		<field name="titleLetter_s" update="add">
+			<xsl:value-of select="$titleLetter"/>
+		</field>
+		
 				
 				<!-- creator -->
 				<!-- creators -->
