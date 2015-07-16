@@ -915,7 +915,36 @@
 				<xsl:if test="$updateType = 'caseID'"><xsl:attribute name="update">add</xsl:attribute></xsl:if>
 					<!-- todo: when TEI is fixed so no more than 1 persName per person, take out the [1] -->
 					<!--<xsl:value-of select="normalize-space($personCode/person/persName)"/>-->
-					<xsl:value-of select="normalize-space($personCode/person/persName[1])"></xsl:value-of>
+					<!--<xsl:value-of select="normalize-space($personCode/person/persName[1])"></xsl:value-of>-->
+				<xsl:for-each select="$personCode/person/persName[1]">
+					<xsl:value-of select="surname[not(@type)][normalize-space()]"/><!-- [not(@*)] not working :( -->
+					<xsl:if test="(surname and forename) or (surname and rolename) or (surname and genName)"><xsl:text>, </xsl:text></xsl:if>
+					<xsl:if test="roleName != ''">
+						<xsl:text> </xsl:text>
+						<xsl:value-of select="normalize-space(roleName)"/>
+					</xsl:if>
+					<xsl:if test="forename[@type='first']">
+						<xsl:text> </xsl:text>
+						<xsl:value-of select="normalize-space(forename[@type='first'])"/>
+					</xsl:if>
+					<xsl:if test="forename[@type='middle']">
+						<xsl:text> </xsl:text>
+						<xsl:value-of select="normalize-space(forename[@type='middle'])"/>
+					</xsl:if>
+					<xsl:if test="genName[normalize-space()]">
+						<xsl:text> </xsl:text>
+						<xsl:value-of select="normalize-space(genName)"/>
+					</xsl:if>
+					<xsl:if test="surname[@type='maiden']">
+						<xsl:text> </xsl:text>
+						<xsl:value-of select="normalize-space(surname[@type='maiden'])"/>
+					</xsl:if>
+					
+			
+				</xsl:for-each>
+				
+				
+				<!--<xsl:value-of select="normalize-space($personCode/person/persName[1])"></xsl:value-of>-->
 			</field>
 		
 		
@@ -974,7 +1003,7 @@
 		<!-- Explanation of listPerson[@type = $caseid or not(@type)]
 		In order to match up the people in the documents with more than one case, they have been seperated 
 		into seperate listpersons with the case id on type. see file oscys.case.0017.003 for an example. 
-		This xpath matches the value ont he listperson to the caseid, or pulls everything if there is no caseid -->
+		This xpath matches the value on the listperson to the caseid, or pulls everything if there is no caseid -->
 		
 		<!-- Person ID and Name -->
 		
@@ -1069,11 +1098,13 @@
 	</xsl:template>
 	
 
-
+	<!-- ==================================
+	JSON Formatting 
+	=================================== -->
 
 <!-- Call this for formatting JSON
 	
-	
+	from: https://github.com/doekman/xml2json-xslt/blob/master/xml2json.xslt
 	
 	<xsl:call-template name="escape-string">
 			<xsl:with-param name="s" select="."/>
