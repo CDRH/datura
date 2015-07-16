@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -79,43 +80,43 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Bell, Ann</term>
-<term>Ben</term>
-<term>Betty</term>
-<term>Billy</term>
+<term xml:id="per.000772">Bell, Ann</term>
+<term xml:id="per.000803">Ben</term>
+<term xml:id="per.000804">Betty</term>
+<term xml:id="per.000805">Billy</term>
 <term xml:id="per.000003">Brent, William 1774-1848</term>
-<term>Clarke, William</term>
+<term xml:id="per.001146">Clarke, William</term>
 <term xml:id="per.000004">Cranch, William, 1769-1855</term>
-<term>Daniels, Joseph H.</term>
-<term>Elizabeth</term>
-<term>Ferguson, John W.</term>
-<term>Ford, Joseph B.</term>
-<term>Greenfield, Gerard T.</term>
-<term>Greenfield, Maria Anne T.</term>
-<term>George</term>
-<term>Grimes, John</term>
-<term>Henry</term>
-<term>Hunter, Alexander</term>
-<term>Kitty</term>
-<term>Lewis</term>
-<term>Maria</term>
-<term>Mary</term>
-<term>Manson</term>
-<term>McPherson, Henry H.</term>
-<term>Morsell, James Sewall</term>
-<term>Nathaniel</term>
-<term>Orme, W. C.</term>
-<term>Owens, Thomas</term>
-<term>Phillips, George W.</term>
-<term>Phillips, Samuel</term>
-<term>Purdy, John</term>
-<term>Rebecca</term>
-<term>Sophia</term>
-<term>Taney, Roger Brooke, 1777-1864</term>
-<term>Thruston, Buckner, 1763-1845</term>
-<term>Toney</term>
-<term>Turner, A. W.</term>
-<term>Waters, William N.</term>
+<term xml:id="per.001147">Daniels, Joseph H.</term>
+<term xml:id="per.000810">Elizabeth</term>
+<term xml:id="per.001148">Ferguson, John W.</term>
+<term xml:id="per.001149">Ford, Joseph B.</term>
+<term xml:id="per.000775">Greenfield, Gerard T.</term>
+<term xml:id="per.000777">Greenfield, Maria Anne T.</term>
+<term xml:id="per.000811">George</term>
+<term xml:id="per.000813">Grimes, John</term>
+<term xml:id="per.000814">Henry</term>
+<term xml:id="per.000739">Hunter, Alexander</term>
+<term xml:id="per.000817">Kitty</term>
+<term xml:id="per.000818">Lewis</term>
+<term xml:id="per.000820">Maria</term>
+<term xml:id="per.000821">Mary</term>
+<term xml:id="per.000819">Manson</term> <!-- or Mansa -->
+<term xml:id="per.000977">McPherson, Henry H.</term>
+<term xml:id="per.000044">Morsell, James Sewall</term>
+<term xml:id="per.000822">Nathaniel</term>
+<term xml:id="per.001150">Orme, W. C.</term>
+<term xml:id="per.001151">Owens, Thomas</term>
+<term xml:id="per.001152">Phillips, George W.</term>
+<term xml:id="per.001153">Phillips, Samuel</term>
+<term xml:id="per.001154">Purdy, John</term>
+<term xml:id="per.000824">Rebecca</term>
+<term xml:id="per.000825">Sophia</term>
+<term xml:id="per.001155">Taney, Roger Brooke, 1777-1864</term>
+<term xml:id="per.000064">Thruston, Buckner, 1763-1845</term>
+<term xml:id="per.000827">Toney</term>
+<term xml:id="per.001156">Turner, A. W.</term>
+<term xml:id="per.000979">Waters, William N.</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places"> 
@@ -131,16 +132,16 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.000816">
 <persName>Ash, James</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001145" >
 <persName>Williams, William H.</persName>
 </person>
-<person role="attorney_petitioner">
+<person role="attorney_petitioner" xml:id="per.000829">
 <persName>Bradley, Joseph H.</persName>
 </person>
-<person role="attorney_defendant">
+<person role="attorney_defendant" xml:id="per.000830">
 <persName>Marbury, John</persName>
 </person>
 </listPerson>
@@ -155,6 +156,7 @@
 </profileDesc>
         
 <revisionDesc>     
+<change when="2015-07-13" who="lkw">added xml:ids</change>  
 <change when="2014-01-08" who="#kln">reviewed; edited</change>         
 <change when="2014-10" who="#snc">encoded</change>
 </revisionDesc>
