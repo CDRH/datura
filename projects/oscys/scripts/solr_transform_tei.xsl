@@ -173,7 +173,11 @@
 				<xsl:choose>
 					<!-- if person, take PersName. todo: add more complicated rules.  -->
 					<xsl:when test="$doctype = 'person'">
-						<xsl:value-of select='persName'/>
+						<!--<xsl:value-of select='persName'/>-->
+						<xsl:for-each select="persName">
+							<xsl:call-template name="persNameFormatter"/>
+						</xsl:for-each>
+						
 					</xsl:when>
 					<xsl:otherwise>
 						<xsl:choose>
@@ -554,15 +558,25 @@
 				<xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/classCode/ref[@type='related.case']">
 					<xsl:if test="normalize-space(.) != ''">
 						<field name="relatedCaseData_ss" update="add"> 
-							<xsl:text>{"id":"</xsl:text>
-							<xsl:value-of select="."/>
-							<xsl:text>","label":"</xsl:text>
+							<xsl:text>{</xsl:text>
+							
+							<!-- Label -->
+							<xsl:text>"label":"</xsl:text>
 							<!-- go to another document to get the case name -->
 							<xsl:variable name="caseDocID"><xsl:text>../tei/</xsl:text><xsl:value-of select="."/><xsl:text>.xml</xsl:text></xsl:variable>
 							<xsl:for-each select="document($caseDocID)">
 								<xsl:value-of select="//title"/>
 							</xsl:for-each>
-							<xsl:text>"}</xsl:text>
+							<xsl:text>"</xsl:text>
+							
+							<xsl:text>,</xsl:text>
+							
+							<!-- ID -->
+							<xsl:text>"id":"</xsl:text>
+							<xsl:value-of select="."/>
+							<xsl:text>"</xsl:text>
+							
+							<xsl:text>}</xsl:text>
 						</field>
 					</xsl:if>
 				</xsl:for-each>
@@ -583,15 +597,25 @@
 				<xsl:for-each select="//idno[@type='case']">
 					<xsl:if test="normalize-space(.) != ''">
 						<field name="documentCaseData_ss"> 
-							<xsl:text>{"id":"</xsl:text>
-							<xsl:value-of select="."/>
-							<xsl:text>","label":"</xsl:text>
+							<xsl:text>{</xsl:text>
+							
+							<!-- Label -->
+							<xsl:text>"label":"</xsl:text>
 							<!-- go to another document to get the case name -->
 							<xsl:variable name="caseDocID"><xsl:text>../tei/</xsl:text><xsl:value-of select="."/><xsl:text>.xml</xsl:text></xsl:variable>
 							<xsl:for-each select="document($caseDocID)">
 								<xsl:value-of select="//title"/>
 							</xsl:for-each>
-							<xsl:text>"}</xsl:text>
+							<xsl:text>"</xsl:text>
+							
+							<xsl:text>,</xsl:text>
+							
+							<!-- ID -->
+							<xsl:text>"id":"</xsl:text>
+							<xsl:value-of select="."/>
+							<xsl:text>"</xsl:text>
+								
+							<xsl:text>}</xsl:text>
 						</field>
 					</xsl:if>
 				</xsl:for-each>
@@ -673,41 +697,49 @@
 		
 		<!-- ??? -->
 		<xsl:for-each select="persName[normalize-space()]">
-			<field name="personName_ss"><xsl:value-of select="normalize-space(.)"/></field>
-			<field name="personNameData_ss"><xsl:call-template name="dataIDSourceData"/></field>
+			<field name="personName_ss"><xsl:call-template name="persNameFormatter"></xsl:call-template></field>
+			<field name="personNameData_ss">
+				<xsl:call-template name="dataIDSourceData">
+					<xsl:with-param name="label"><xsl:call-template name="persNameFormatter"/></xsl:with-param>
+				</xsl:call-template>
+			</field>
+		</xsl:for-each>
+		
+		<xsl:for-each select="persName/addName[normalize-space()]">
+			<field name="personAltName_ss"><xsl:value-of select="normalize-space(.)"></xsl:value-of></field>
 		</xsl:for-each>
 		
 		<xsl:for-each select="sex[normalize-space()]">
 			<field name="personSex_ss"><xsl:value-of select="normalize-space(.)"/></field>
-			<field name="personSexData_ss"><xsl:call-template name="dataIDSourceData"/></field>
+			<field name="personSexData_ss"><xsl:call-template name="dataIDSourceData"><xsl:with-param name="label" select="normalize-space(.)"/></xsl:call-template></field>
 		</xsl:for-each>
 		<xsl:for-each select="affiliation[normalize-space()]">
 			<field name="personAffiliation_ss"><xsl:value-of select="normalize-space(.)"/></field>
-			<field name="personAffiliationData_ss"><xsl:call-template name="dataIDSourceData"/></field>
+			<field name="personAffiliationData_ss"><xsl:call-template name="dataIDSourceData"><xsl:with-param name="label" select="normalize-space(.)"/></xsl:call-template></field>
 		</xsl:for-each>
 		<xsl:for-each select="age[normalize-space()]">
 			<field name="personAge_ss"><xsl:value-of select="normalize-space(.)"/></field>
-			<field name="personAgeData_ss"><xsl:call-template name="dataIDSourceData"/></field>
+			<field name="personAgeData_ss"><xsl:call-template name="dataIDSourceData"><xsl:with-param name="label" select="normalize-space(.)"/></xsl:call-template></field>
 		</xsl:for-each>
 		<xsl:for-each select="bibl[normalize-space()]">
 			<field name="personBibl_ss"><xsl:value-of select="normalize-space(.)"/></field>
-			<field name="personBiblData_ss"><xsl:call-template name="dataIDSourceData"/></field>
+			<field name="personBiblData_ss"><xsl:call-template name="dataIDSourceData"><xsl:with-param name="label" select="normalize-space(.)"/></xsl:call-template></field>
 		</xsl:for-each>
 		<xsl:for-each select="birth[normalize-space()]">
 			<field name="personBirth_ss"><xsl:value-of select="normalize-space(.)"/></field>
-			<field name="personBirthData_ss"><xsl:call-template name="dataIDSourceData"/></field>
+			<field name="personBirthData_ss"><xsl:call-template name="dataIDSourceData"><xsl:with-param name="label" select="normalize-space(.)"/></xsl:call-template></field>
 		</xsl:for-each>
 		<xsl:for-each select="death[normalize-space()]">
 			<field name="personDeath_ss"><xsl:value-of select="normalize-space(.)"/></field>
-			<field name="personDeathData_ss"><xsl:call-template name="dataIDSourceData"/></field>
+			<field name="personDeathData_ss"><xsl:call-template name="dataIDSourceData"><xsl:with-param name="label" select="normalize-space(.)"/></xsl:call-template></field>
 		</xsl:for-each>
 		<xsl:for-each select="event[normalize-space()]">
 			<field name="personEvent_ss"><xsl:value-of select="normalize-space(.)"/></field>
-			<field name="personEventData_ss"><xsl:call-template name="dataIDSourceData"/></field>
+			<field name="personEventData_ss"><xsl:call-template name="dataIDSourceData"><xsl:with-param name="label" select="normalize-space(.)"/></xsl:call-template></field>
 		</xsl:for-each>
 		<xsl:for-each select="nationality[normalize-space()]">
 			<field name="personNationality_ss"><xsl:value-of select="normalize-space(.)"/></field>
-			<field name="personNationalityData_ss"><xsl:call-template name="dataIDSourceData"/></field>
+			<field name="personNationalityData_ss"><xsl:call-template name="dataIDSourceData"><xsl:with-param name="label" select="normalize-space(.)"/></xsl:call-template></field>
 		</xsl:for-each>
 		<xsl:for-each select="note[normalize-space()]">
 			<field name="personNote_ss"><xsl:value-of select="normalize-space(.)"/></field>
@@ -715,19 +747,19 @@
 		</xsl:for-each>
 		<xsl:for-each select="occupation[normalize-space()]">
 			<field name="personOccupation_ss"><xsl:value-of select="normalize-space(.)"/></field>
-			<field name="personOccupationData_ss"><xsl:call-template name="dataIDSourceData"/></field>
+			<field name="personOccupationData_ss"><xsl:call-template name="dataIDSourceData"><xsl:with-param name="label" select="normalize-space(.)"/></xsl:call-template></field>
 		</xsl:for-each>
 		<xsl:for-each select="residence[normalize-space()]">
 			<field name="personResidence_ss"><xsl:value-of select="normalize-space(.)"/></field>
-			<field name="personResidenceData_ss"><xsl:call-template name="dataIDSourceData"/></field>
+			<field name="personResidenceData_ss"><xsl:call-template name="dataIDSourceData"><xsl:with-param name="label" select="normalize-space(.)"/></xsl:call-template></field>
 		</xsl:for-each>
 		<xsl:for-each select="socecStatus[normalize-space()]">
 			<field name="personSocecStatus_ss"><xsl:value-of select="normalize-space(.)"/></field>
-			<field name="personSocecStatusData_ss"><xsl:call-template name="dataIDSourceData"/></field>
+			<field name="personSocecStatusData_ss"><xsl:call-template name="dataIDSourceData"><xsl:with-param name="label" select="normalize-space(.)"/></xsl:call-template></field>
 		</xsl:for-each>
 		<xsl:for-each select="trait[@type='color'][normalize-space()]">
 			<field name="personColor_ss"><xsl:value-of select="normalize-space(.)"/></field>
-			<field name="personColorData_ss"><xsl:call-template name="dataIDSourceData"/></field>
+			<field name="personColorData_ss"><xsl:call-template name="dataIDSourceData"><xsl:with-param name="label" select="normalize-space(.)"/></xsl:call-template></field>
 		</xsl:for-each>
 
 		
@@ -741,9 +773,29 @@
 	</xsl:template>
 	
 	<xsl:template name="dataIDSourceData">
+		<xsl:param name="label"/>
 		
 		
-		<xsl:text>{"id":"</xsl:text>
+		<xsl:text>{</xsl:text>
+		
+		<!-- Label -->
+		<xsl:text>"label":"</xsl:text>
+		<xsl:value-of select="$label"></xsl:value-of>
+		<xsl:text>"</xsl:text>
+		
+		<!-- Date -->
+		<xsl:if test="@notAfter[normalize-space()] or @notBefore[normalize-space()] or @when[normalize-space()]">
+			<xsl:text>,"date":"</xsl:text>
+			<xsl:if test="@notAfter[normalize-space()]"><xsl:text>Not After </xsl:text><xsl:value-of select="@notAfter"/></xsl:if>
+			<xsl:if test="@notBefore[normalize-space()]"><xsl:text>Not Before </xsl:text><xsl:value-of select="@notBefore"/></xsl:if>
+			<xsl:value-of select="@when"></xsl:value-of>
+			<xsl:text>"</xsl:text>
+		</xsl:if>
+		
+		<xsl:text>,</xsl:text>
+		
+		<!-- ID -->
+		<xsl:text>"id":"</xsl:text>
 		<xsl:choose>
 			<xsl:when test="contains(@source,'viaf')">
 				<xsl:value-of select="//sourceDesc[1]//bibl[1]/ref"></xsl:value-of>
@@ -757,17 +809,10 @@
 				<xsl:value-of select="substring-after(../@source,'oscys')"></xsl:value-of>
 			</xsl:otherwise>
 		</xsl:choose>
-		
-		<xsl:text>","label":"</xsl:text>
-		<xsl:value-of select="normalize-space(.)"/>
 		<xsl:text>"</xsl:text>
-		<xsl:if test="@notAfter[normalize-space()] or @notBefore[normalize-space()] or @when[normalize-space()]">
-			<xsl:text>,"date":"</xsl:text>
-			<xsl:if test="@notAfter[normalize-space()]"><xsl:text>Not After </xsl:text><xsl:value-of select="@notAfter"/></xsl:if>
-			<xsl:if test="@notBefore[normalize-space()]"><xsl:text>Not Before </xsl:text><xsl:value-of select="@notBefore"/></xsl:if>
-			<xsl:value-of select="@when"></xsl:value-of>
-			<xsl:text>"</xsl:text>
-		</xsl:if>
+		
+
+		
 		<xsl:text>}</xsl:text>
 	</xsl:template>
 	
@@ -806,11 +851,21 @@
 				</field>
 			<xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='outcome']/term">
 				<field update="add" name="outcomeID_ss">
-					<xsl:text>{"id":"</xsl:text>
-					<xsl:value-of select="/TEI/@xml:id"/>
-					<xsl:text>","label":"</xsl:text>
+					<xsl:text>{</xsl:text>
+					
+					<!-- Label -->
+					<xsl:text>"label":"</xsl:text>
 					<xsl:value-of select="normalize-space(.)"/>
-					<xsl:text>"}</xsl:text>
+					<xsl:text>"</xsl:text>
+					
+					<xsl:text>,</xsl:text>
+					
+					<!-- ID -->
+					<xsl:text>"id":"</xsl:text>
+					<xsl:value-of select="/TEI/@xml:id"/>
+					<xsl:text>"</xsl:text>
+						
+					<xsl:text>}</xsl:text>
 				</field>
 			</xsl:for-each>
 				<xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='outcome']/term">
@@ -819,9 +874,7 @@
 					</field>
 				</xsl:for-each>
 				
-				
-				
-				
+
 				<xsl:variable name="caseid" select="normalize-space(.)"></xsl:variable>
 				
 				<!--[[[{<xsl:value-of select="//listPerson[1]/@type"/>}{<xsl:value-of select="$caseid"/>}]]]-->
@@ -849,11 +902,21 @@
 							<xsl:value-of select="/TEI/@xml:id"/>
 						</field>
 						<field name="caseDocumentData_ss" update="add">
-							<xsl:text>{"id":"</xsl:text>
-							<xsl:value-of select="/TEI/@xml:id"/>
-							<xsl:text>","label":"</xsl:text>
+							<xsl:text>{</xsl:text>
+							
+							<!-- Label -->
+							<xsl:text>"label":"</xsl:text>
 							<xsl:value-of select="/TEI/teiHeader/fileDesc/titleStmt/title[1]"/>
-							<xsl:text>"}</xsl:text>
+							<xsl:text>"</xsl:text>
+							
+							<xsl:text>,</xsl:text>
+							
+							<!-- ID -->
+							<xsl:text>"id":"</xsl:text>
+							<xsl:value-of select="/TEI/@xml:id"/>
+							<xsl:text>"</xsl:text>
+								
+							<xsl:text>}</xsl:text>
 						</field>
 					</xsl:when>
 					<xsl:otherwise>
@@ -861,11 +924,21 @@
 							<xsl:value-of select="/TEI/@xml:id"/>
 						</field>
 						<field name="caseRelatedDocumentData_ss" update="add">
-							<xsl:text>{"id":"</xsl:text>
-							<xsl:value-of select="/TEI/@xml:id"/>
-							<xsl:text>","label":"</xsl:text>
+							<xsl:text>{</xsl:text>
+							
+							<!-- Label -->
+							<xsl:text>"label":"</xsl:text>
 							<xsl:value-of select="/TEI/teiHeader/fileDesc/titleStmt/title[1]"/>
-							<xsl:text>"}</xsl:text>
+							<xsl:text>"</xsl:text>
+							
+							<xsl:text>,</xsl:text>
+							
+							<!-- ID -->
+							<xsl:text>"id":"</xsl:text>
+							<xsl:value-of select="/TEI/@xml:id"/>
+							<xsl:text>"</xsl:text>
+							
+							<xsl:text>}</xsl:text>
 						</field>
 					</xsl:otherwise>
 				</xsl:choose>
@@ -879,6 +952,48 @@
 
 	</xsl:template>
 	
+	
+	<!-- ==================================
+	Person Name Formatter
+	=================================== -->
+	
+	<xsl:template name="persNameFormatter">
+		<xsl:choose>
+			<xsl:when test="not(child::*)">
+				<xsl:value-of select="normalize-space(.)"></xsl:value-of>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="surname[not(@type)][normalize-space()]"/><!-- [not(@*)] not working :( -->
+				<xsl:if test="(surname and forename) or (surname and roleName) or (surname and genName)"><xsl:text>,</xsl:text></xsl:if>
+				<xsl:if test="roleName != ''">
+					<xsl:text> </xsl:text>
+					<xsl:value-of select="normalize-space(roleName)"/>
+				</xsl:if>
+				<xsl:if test="forename[@type='first'] != ''">
+					<xsl:text> </xsl:text>
+					<xsl:for-each select="forename[@type='first']">
+						<xsl:value-of select="normalize-space(.)"/>
+					</xsl:for-each>
+				</xsl:if>
+				<xsl:if test="forename[@type='middle'] != ''">
+					<xsl:text> </xsl:text>
+					<xsl:for-each select="forename[@type='middle']">
+						<xsl:value-of select="normalize-space(.)"/>
+					</xsl:for-each>
+					
+				</xsl:if>
+				<xsl:if test="genName != ''">
+					<xsl:text> </xsl:text>
+					<xsl:value-of select="normalize-space(genName)"/>
+				</xsl:if>
+				<xsl:if test="surname[@type='maiden'] != ''">
+					<xsl:text> </xsl:text>
+					<xsl:value-of select="normalize-space(surname[@type='maiden'])"/>
+				</xsl:if>
+			</xsl:otherwise>
+		</xsl:choose>
+		
+	</xsl:template>
 	
 	<!-- ==================================
 	Person Field
@@ -908,43 +1023,21 @@
 		<xsl:copy-of select="$personCode"></xsl:copy-of>
 		]]]-->
 		
+		<xsl:variable name="personName">
+			<xsl:for-each select="$personCode/person/persName[1]">
+				
+				<xsl:call-template name="persNameFormatter"/>
+				
+			</xsl:for-each>
+		</xsl:variable>
+		
 	
 		
 			<field>
 				<xsl:attribute name="name"><xsl:value-of select="$fieldName"/><xsl:text>_ss</xsl:text></xsl:attribute>
 				<xsl:if test="$updateType = 'caseID'"><xsl:attribute name="update">add</xsl:attribute></xsl:if>
-					<!-- todo: when TEI is fixed so no more than 1 persName per person, take out the [1] -->
-					<!--<xsl:value-of select="normalize-space($personCode/person/persName)"/>-->
-					<!--<xsl:value-of select="normalize-space($personCode/person/persName[1])"></xsl:value-of>-->
-				<xsl:for-each select="$personCode/person/persName[1]">
-					<xsl:value-of select="surname[not(@type)][normalize-space()]"/><!-- [not(@*)] not working :( -->
-					<xsl:if test="(surname and forename) or (surname and rolename) or (surname and genName)"><xsl:text>, </xsl:text></xsl:if>
-					<xsl:if test="roleName != ''">
-						<xsl:text> </xsl:text>
-						<xsl:value-of select="normalize-space(roleName)"/>
-					</xsl:if>
-					<xsl:if test="forename[@type='first']">
-						<xsl:text> </xsl:text>
-						<xsl:value-of select="normalize-space(forename[@type='first'])"/>
-					</xsl:if>
-					<xsl:if test="forename[@type='middle']">
-						<xsl:text> </xsl:text>
-						<xsl:value-of select="normalize-space(forename[@type='middle'])"/>
-					</xsl:if>
-					<xsl:if test="genName[normalize-space()]">
-						<xsl:text> </xsl:text>
-						<xsl:value-of select="normalize-space(genName)"/>
-					</xsl:if>
-					<xsl:if test="surname[@type='maiden']">
-						<xsl:text> </xsl:text>
-						<xsl:value-of select="normalize-space(surname[@type='maiden'])"/>
-					</xsl:if>
 					
-			
-				</xsl:for-each>
-				
-				
-				<!--<xsl:value-of select="normalize-space($personCode/person/persName[1])"></xsl:value-of>-->
+				<xsl:value-of select="$personName"/>
 			</field>
 		
 		
@@ -960,15 +1053,21 @@
 				<xsl:attribute name="name"><xsl:value-of select="$fieldName"/><xsl:text>Data_ss</xsl:text></xsl:attribute>
 				<xsl:if test="$updateType = 'caseID'"><xsl:attribute name="update">add</xsl:attribute></xsl:if>
 				
-				<xsl:text>{"id":"</xsl:text>
+				<xsl:text>{</xsl:text>
+				
+				<!-- Label -->
+				<xsl:text>"label":"</xsl:text>
+				<xsl:value-of select="$personName"/>
+				<xsl:text>"</xsl:text>
+				
+				<xsl:text>,</xsl:text>
+				
+				<!-- ID -->
+				<xsl:text>"id":"</xsl:text>
 				<xsl:value-of select="$personID"/>
-				<xsl:text>","label":"</xsl:text>
-				<!-- todo: when TEI is fixed so no more than 1 persName per person, take out the [1] -->
-				<xsl:value-of select="normalize-space($personCode/person/persName[1])"/>
-				<!-- source file for testing only. Leaving it on messes with person disambiguation -->
-				<!--<xsl:text>","sourcefile":"</xsl:text>
-				<xsl:copy-of select="$filenamepart"/>-->
-				<xsl:text>"}</xsl:text>
+				<xsl:text>"</xsl:text>
+				
+				<xsl:text>}</xsl:text>
 			</field>
 		
 	</xsl:template>
@@ -987,7 +1086,7 @@
 		<!-- Generic people in keywords rather than a listPerson -->
 
 		
-		<xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='people']/term[normalize-space()]">
+		<xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='people']/term[1][normalize-space()]">
 			<xsl:call-template name="personField">
 				<xsl:with-param name="fieldName">person</xsl:with-param>
 				<xsl:with-param name="personCode">
@@ -1018,7 +1117,7 @@
 		<!-- plaintiff -->
 		
 		<!-- earlier docs used petitioner instead of plaintiff -->
-		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='petitioner']/persName[normalize-space()]">
+		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='petitioner']/persName[1][normalize-space()]">
 			<xsl:call-template name="personField">
 				<xsl:with-param name="fieldName">plaintiff</xsl:with-param>
 				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
@@ -1027,7 +1126,7 @@
 
 		</xsl:for-each>
 		
-		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='plaintiff']/persName[normalize-space()]">
+		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='plaintiff']/persName[1][normalize-space()]">
 			<xsl:call-template name="personField">
 				<xsl:with-param name="fieldName">plaintiff</xsl:with-param>
 				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
@@ -1040,7 +1139,7 @@
 		<!-- defendant -->
 		
 		
-		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='defendant']/persName[normalize-space()]">
+		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='defendant']/persName[1][normalize-space()]">
 			<xsl:call-template name="personField">
 				<xsl:with-param name="fieldName">defendant</xsl:with-param>
 				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
@@ -1050,7 +1149,7 @@
 		
 		<!-- attorney P -->
 		
-		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='attorney_petitioner']/persName[normalize-space()]">
+		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='attorney_petitioner']/persName[1][normalize-space()]">
 			<xsl:call-template name="personField">
 				<xsl:with-param name="fieldName">attorneyP</xsl:with-param>
 				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
@@ -1063,7 +1162,7 @@
 			</xsl:call-template>
 		</xsl:for-each>
 		
-		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='attorney_plaintiff']/persName[normalize-space()]">
+		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='attorney_plaintiff']/persName[1][normalize-space()]">
 			<xsl:call-template name="personField">
 				<xsl:with-param name="fieldName">attorneyP</xsl:with-param>
 				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
@@ -1079,7 +1178,7 @@
 		
 		<!-- attorney D -->
 		
-		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='attorney_defendant']/persName[normalize-space()]">
+		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='attorney_defendant']/persName[1][normalize-space()]">
 			<xsl:call-template name="personField">
 				<xsl:with-param name="fieldName">attorneyD</xsl:with-param>
 				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
