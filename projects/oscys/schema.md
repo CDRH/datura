@@ -122,6 +122,7 @@ Fields with a name and ID attached will contain three versions:
 
 Not all these fields will need the "data" field but I am including them all right now. This section will be reworked as we make more sense of the personography. 
 
+* **personAltName_ss**
 * **personAffiliation_ss**
     * **personAffiliationData_ss**
 * **personAge_ss**
