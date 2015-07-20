@@ -115,6 +115,8 @@ Fields with a name and ID attached will contain three versions:
     * **attorneyData_ss**
 * **term_ss**
 * **jurisdiction_ss** pulled form orgName for now
+* **titleLetter_a** - first letter of title for sorting purposes
+
 
 ### OSCYS Person Fields
 
@@ -123,11 +125,11 @@ Not all these fields will need the "data" field but I am including them all righ
 * **personAffiliation_ss**
     * **personAffiliationData_ss**
 * **personAge_ss**
-    * **personAgeDate_ss**
+    * **personAgeData_ss**
 * **personBibl_ss**
     * **personBiblData_ss**
 * **personBirth_ss**
-    * **personData_ss**
+    * **personBirthData_ss**
 * **personDeath_ss**
     * **personDeathData_ss**
 * **personEvent_ss**
@@ -155,6 +157,9 @@ Not all these fields will need the "data" field but I am including them all righ
 * **relatedCaseData_ss** - JSON of ID + Label
 * **caseDocumentID_ss** - inserting in all the documents into caseID filesm so we don't have to run a seperate solr query. I may be going overboard here. 
 * **caseDocumentData_ss**
+* **caseRelatedDocumentID_ss** - for related documents so we can pull them seperately - everything that is not category=Case Papers 
+* **caseRelatedDocumentData_ss**
+* **caseidHasNarrative_s**
 
 ### OSCYS Documents Fields
 

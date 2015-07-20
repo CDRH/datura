@@ -187,6 +187,20 @@
 					</xsl:otherwise>
 				</xsl:choose>
 				</xsl:variable>
+		
+		<xsl:variable name="titleSort">
+			<xsl:call-template name="normalize_name">
+				<xsl:with-param name="string">
+					<xsl:value-of select="$title"/>
+				</xsl:with-param>
+			</xsl:call-template>
+		</xsl:variable>
+		
+		<xsl:variable name="titleLetter">
+			<xsl:value-of select="substring($titleSort,1,1)"></xsl:value-of>
+		</xsl:variable>
+		
+		
 				
 		<field name="title" update="add">
 					<xsl:value-of select="$title"/>
@@ -195,12 +209,13 @@
 				<!-- titleSort -->
 				
 		<field name="titleSort" update="add">
-					<xsl:call-template name="normalize_name">
-						<xsl:with-param name="string">
-							<xsl:value-of select="$title"/>
-						</xsl:with-param>
-					</xsl:call-template>
+					<xsl:value-of select="$titleSort"/>
 				</field>
+		
+		<field name="titleLetter_s" update="add">
+			<xsl:value-of select="$titleLetter"/>
+		</field>
+		
 				
 				<!-- creator -->
 				<!-- creators -->
@@ -651,109 +666,109 @@
 		<!-- People Specific -->
 		
 		
+		<xsl:for-each select="idno[@type='viaf'][normalize-space()]">
+			<field name="personIdnoVIAF_ss"><xsl:value-of select="normalize-space(.)"/></field>
+			<!--<field name="personData_ss"><xsl:call-template name="dataIDSourceData"/></field>-->
+		</xsl:for-each>
 		
+		<!-- ??? -->
+		<xsl:for-each select="persName[normalize-space()]">
+			<field name="personName_ss"><xsl:value-of select="normalize-space(.)"/></field>
+			<field name="personNameData_ss"><xsl:call-template name="dataIDSourceData"/></field>
+		</xsl:for-each>
+		
+		<xsl:for-each select="sex[normalize-space()]">
+			<field name="personSex_ss"><xsl:value-of select="normalize-space(.)"/></field>
+			<field name="personSexData_ss"><xsl:call-template name="dataIDSourceData"/></field>
+		</xsl:for-each>
 		<xsl:for-each select="affiliation[normalize-space()]">
 			<field name="personAffiliation_ss"><xsl:value-of select="normalize-space(.)"/></field>
+			<field name="personAffiliationData_ss"><xsl:call-template name="dataIDSourceData"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="age[normalize-space()]">
 			<field name="personAge_ss"><xsl:value-of select="normalize-space(.)"/></field>
+			<field name="personAgeData_ss"><xsl:call-template name="dataIDSourceData"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="bibl[normalize-space()]">
 			<field name="personBibl_ss"><xsl:value-of select="normalize-space(.)"/></field>
+			<field name="personBiblData_ss"><xsl:call-template name="dataIDSourceData"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="birth[normalize-space()]">
 			<field name="personBirth_ss"><xsl:value-of select="normalize-space(.)"/></field>
+			<field name="personBirthData_ss"><xsl:call-template name="dataIDSourceData"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="death[normalize-space()]">
 			<field name="personDeath_ss"><xsl:value-of select="normalize-space(.)"/></field>
+			<field name="personDeathData_ss"><xsl:call-template name="dataIDSourceData"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="event[normalize-space()]">
 			<field name="personEvent_ss"><xsl:value-of select="normalize-space(.)"/></field>
-		</xsl:for-each>
-		<xsl:for-each select="idno[@type='viaf'][normalize-space()]">
-			<field name="personIdnoVIAF_ss"><xsl:value-of select="normalize-space(.)"/></field>
+			<field name="personEventData_ss"><xsl:call-template name="dataIDSourceData"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="nationality[normalize-space()]">
 			<field name="personNationality_ss"><xsl:value-of select="normalize-space(.)"/></field>
+			<field name="personNationalityData_ss"><xsl:call-template name="dataIDSourceData"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="note[normalize-space()]">
 			<field name="personNote_ss"><xsl:value-of select="normalize-space(.)"/></field>
+			<field name="personNoteData_ss"><xsl:call-template name="dataIDSourceData"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="occupation[normalize-space()]">
 			<field name="personOccupation_ss"><xsl:value-of select="normalize-space(.)"/></field>
-		</xsl:for-each>
-		<xsl:for-each select="persName[normalize-space()]">
-			<field name="personName_ss"><xsl:value-of select="normalize-space(.)"/></field>
+			<field name="personOccupationData_ss"><xsl:call-template name="dataIDSourceData"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="residence[normalize-space()]">
 			<field name="personResidence_ss"><xsl:value-of select="normalize-space(.)"/></field>
-			<field name="personResidenceData_ss">
-				<xsl:text>{"id":"</xsl:text>
-				<xsl:text>oscys</xsl:text>
-				<xsl:value-of select="substring-after(@source,'oscys')"/>
-				<xsl:text>","label":"</xsl:text>
-				<xsl:value-of select="normalize-space(.)"/>
-				<xsl:text>"</xsl:text>
-				<xsl:if test="@notAfter[normalize-space()] or @notBefore[normalize-space()] or @when[normalize-space()]">
-					<xsl:text>,"date":"</xsl:text>
-					<xsl:if test="@notAfter[normalize-space()]"><xsl:text>Not After </xsl:text><xsl:value-of select="@notAfter"/></xsl:if>
-					<xsl:if test="@notBefore[normalize-space()]"><xsl:text>Not Before </xsl:text><xsl:value-of select="@notBefore"/></xsl:if>
-					<xsl:value-of select="@when"></xsl:value-of>
-				</xsl:if>
-				<xsl:text>"}</xsl:text>
-			</field>
-		</xsl:for-each>
-		<xsl:for-each select="sex[normalize-space()]">
-			<field name="personSex_ss"><xsl:value-of select="normalize-space(.)"/></field>
+			<field name="personResidenceData_ss"><xsl:call-template name="dataIDSourceData"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="socecStatus[normalize-space()]">
 			<field name="personSocecStatus_ss"><xsl:value-of select="normalize-space(.)"/></field>
-			<field name="personSocecStatusData_ss">
-				<xsl:text>{"id":"</xsl:text>
-				<xsl:text>oscys</xsl:text>
-				<xsl:value-of select="substring-after(@source,'oscys')"/>
-				<xsl:text>","label":"</xsl:text>
-				<xsl:value-of select="normalize-space(.)"/>
-				<xsl:if test="@notAfter[normalize-space()] or @notBefore[normalize-space()] or @when[normalize-space()]">
-					<xsl:text>,"date":"</xsl:text>
-					<xsl:if test="@notAfter[normalize-space()]"><xsl:text>Not After </xsl:text><xsl:value-of select="@notAfter"/></xsl:if>
-					<xsl:if test="@notBefore[normalize-space()]"><xsl:text>Not Before </xsl:text><xsl:value-of select="@notBefore"/></xsl:if>
-					<xsl:value-of select="@when"></xsl:value-of>
-				</xsl:if>
-				<xsl:text>"}</xsl:text>
-			</field>
+			<field name="personSocecStatusData_ss"><xsl:call-template name="dataIDSourceData"/></field>
 		</xsl:for-each>
 		<xsl:for-each select="trait[@type='color'][normalize-space()]">
 			<field name="personColor_ss"><xsl:value-of select="normalize-space(.)"/></field>
-			<field name="personColorData_ss">
-				<xsl:text>{"id":"</xsl:text>
-					<xsl:text>oscys</xsl:text>
-					<xsl:value-of select="substring-after(@source,'oscys')"/>
-				<xsl:text>","label":"</xsl:text>
-					<xsl:value-of select="normalize-space(.)"/>
-				<xsl:text>"</xsl:text>
-				<xsl:if test="@notAfter[normalize-space()] or @notBefore[normalize-space()] or @when[normalize-space()]">
-					<xsl:text>,"date":"</xsl:text>
-					<xsl:if test="@notAfter[normalize-space()]"><xsl:text>Not After </xsl:text><xsl:value-of select="@notAfter"/></xsl:if>
-					<xsl:if test="@notBefore[normalize-space()]"><xsl:text>Not Before </xsl:text><xsl:value-of select="@notBefore"/></xsl:if>
-					<xsl:value-of select="@when"></xsl:value-of>
-				</xsl:if>
-				<xsl:text>"}</xsl:text>
-			</field>
+			<field name="personColorData_ss"><xsl:call-template name="dataIDSourceData"/></field>
 		</xsl:for-each>
-		
-	
-	
+
 		
 		<field name="text">
-			
 				<xsl:text> </xsl:text>
 				<xsl:value-of select="normalize-space(.)"/>
 				<xsl:text> </xsl:text>
-			
 		</field>
 
 
+	</xsl:template>
+	
+	<xsl:template name="dataIDSourceData">
+		
+		
+		<xsl:text>{"id":"</xsl:text>
+		<xsl:choose>
+			<xsl:when test="contains(@source,'viaf')">
+				<xsl:value-of select="//sourceDesc[1]//bibl[1]/ref"></xsl:value-of>
+			</xsl:when>
+			<xsl:when test="@source">
+				<xsl:text>oscys</xsl:text>
+				<xsl:value-of select="substring-after(@source,'oscys')"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:text>oscys</xsl:text>
+				<xsl:value-of select="substring-after(../@source,'oscys')"></xsl:value-of>
+			</xsl:otherwise>
+		</xsl:choose>
+		
+		<xsl:text>","label":"</xsl:text>
+		<xsl:value-of select="normalize-space(.)"/>
+		<xsl:text>"</xsl:text>
+		<xsl:if test="@notAfter[normalize-space()] or @notBefore[normalize-space()] or @when[normalize-space()]">
+			<xsl:text>,"date":"</xsl:text>
+			<xsl:if test="@notAfter[normalize-space()]"><xsl:text>Not After </xsl:text><xsl:value-of select="@notAfter"/></xsl:if>
+			<xsl:if test="@notBefore[normalize-space()]"><xsl:text>Not Before </xsl:text><xsl:value-of select="@notBefore"/></xsl:if>
+			<xsl:value-of select="@when"></xsl:value-of>
+			<xsl:text>"</xsl:text>
+		</xsl:if>
+		<xsl:text>}</xsl:text>
 	</xsl:template>
 	
 	<!-- ==================================
@@ -761,8 +776,10 @@
 	=================================== -->
 	
 	<xsl:template name="tei_caseid" exclude-result-prefixes="#all">
+		<xsl:if test="normalize-space(//div1[@type='case']) != ''">
+			<field name="caseidHasNarrative_s">true</field>
+		</xsl:if>
 		
-
 		
 	</xsl:template>
 	
@@ -789,10 +806,10 @@
 				</field>
 			<xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='outcome']/term">
 				<field update="add" name="outcomeID_ss">
-					<xsl:text>{"label":"</xsl:text>
-					<xsl:value-of select="normalize-space(.)"/>
-					<xsl:text>","id":"</xsl:text>
+					<xsl:text>{"id":"</xsl:text>
 					<xsl:value-of select="/TEI/@xml:id"/>
+					<xsl:text>","label":"</xsl:text>
+					<xsl:value-of select="normalize-space(.)"/>
 					<xsl:text>"}</xsl:text>
 				</field>
 			</xsl:for-each>
@@ -824,17 +841,36 @@
 				<field name="jurisdiction_ss" update="add"><xsl:value-of select="."/></field>
 			</xsl:for-each>
 				
-				<field name="caseDocumentID_ss" update="add">
-					<xsl:value-of select="/TEI/@xml:id"/>
-				</field>
 				
-				<field name="caseDocumentData_ss" update="add">
-					<xsl:text>{"label":"</xsl:text>
-					<xsl:value-of select="/TEI/@xml:id"/>
-					<xsl:text>","id":"</xsl:text>
-					<xsl:value-of select="/TEI/teiHeader/fileDesc/titleStmt/title[1]"/>
-					<xsl:text>"}</xsl:text>
-				</field>
+				<!-- split into case documents and related documents -->
+				<xsl:choose>
+					<xsl:when test="normalize-space(//keywords[@n='category']) = 'Case Papers'">
+						<field name="caseDocumentID_ss" update="add">
+							<xsl:value-of select="/TEI/@xml:id"/>
+						</field>
+						<field name="caseDocumentData_ss" update="add">
+							<xsl:text>{"id":"</xsl:text>
+							<xsl:value-of select="/TEI/@xml:id"/>
+							<xsl:text>","label":"</xsl:text>
+							<xsl:value-of select="/TEI/teiHeader/fileDesc/titleStmt/title[1]"/>
+							<xsl:text>"}</xsl:text>
+						</field>
+					</xsl:when>
+					<xsl:otherwise>
+						<field name="caseRelatedDocumentID_ss" update="add">
+							<xsl:value-of select="/TEI/@xml:id"/>
+						</field>
+						<field name="caseRelatedDocumentData_ss" update="add">
+							<xsl:text>{"id":"</xsl:text>
+							<xsl:value-of select="/TEI/@xml:id"/>
+							<xsl:text>","label":"</xsl:text>
+							<xsl:value-of select="/TEI/teiHeader/fileDesc/titleStmt/title[1]"/>
+							<xsl:text>"}</xsl:text>
+						</field>
+					</xsl:otherwise>
+				</xsl:choose>
+				
+				
 				
 			</doc>
 		</xsl:for-each>
@@ -922,7 +958,7 @@
 		<!-- Generic people in keywords rather than a listPerson -->
 
 		
-		<xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='people']/term">
+		<xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='people']/term[normalize-space()]">
 			<xsl:call-template name="personField">
 				<xsl:with-param name="fieldName">person</xsl:with-param>
 				<xsl:with-param name="personCode">
@@ -1033,6 +1069,98 @@
 	</xsl:template>
 	
 
+
+
+<!-- Call this for formatting JSON
+	
+	
+	
+	<xsl:call-template name="escape-string">
+			<xsl:with-param name="s" select="."/>
+		</xsl:call-template>
+	
+	-->
+
+	
+	<!-- Main template for escaping strings; used by above template and for object-properties 
+       Responsibilities: placed quotes around string, and chain up to next filter, escape-bs-string -->
+	<xsl:template name="escape-string">
+		<xsl:param name="s"/>
+		<xsl:text>"</xsl:text>
+		<xsl:call-template name="escape-bs-string">
+			<xsl:with-param name="s" select="$s"/>
+		</xsl:call-template>
+		<xsl:text>"</xsl:text>
+	</xsl:template>
+	
+	<!-- Escape the backslash (\) before everything else. -->
+	<xsl:template name="escape-bs-string">
+		<xsl:param name="s"/>
+		<xsl:choose>
+			<xsl:when test="contains($s,'\')">
+				<xsl:call-template name="escape-quot-string">
+					<xsl:with-param name="s" select="concat(substring-before($s,'\'),'\\')"/>
+				</xsl:call-template>
+				<xsl:call-template name="escape-bs-string">
+					<xsl:with-param name="s" select="substring-after($s,'\')"/>
+				</xsl:call-template>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:call-template name="escape-quot-string">
+					<xsl:with-param name="s" select="$s"/>
+				</xsl:call-template>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+	
+	<!-- Escape the double quote ("). -->
+	<xsl:template name="escape-quot-string">
+		<xsl:param name="s"/>
+		<xsl:choose>
+			<xsl:when test="contains($s,'&quot;')">
+				<xsl:call-template name="encode-string">
+					<xsl:with-param name="s" select="concat(substring-before($s,'&quot;'),'\&quot;')"/>
+				</xsl:call-template>
+				<xsl:call-template name="escape-quot-string">
+					<xsl:with-param name="s" select="substring-after($s,'&quot;')"/>
+				</xsl:call-template>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:call-template name="encode-string">
+					<xsl:with-param name="s" select="$s"/>
+				</xsl:call-template>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+	
+	<!-- Replace tab, line feed and/or carriage return by its matching escape code. Can't escape backslash
+       or double quote here, because they don't replace characters (&#x0; becomes \t), but they prefix 
+       characters (\ becomes \\). Besides, backslash should be seperate anyway, because it should be 
+       processed first. This function can't do that. -->
+	<xsl:template name="encode-string">
+		<xsl:param name="s"/>
+		<xsl:choose>
+			<!-- tab -->
+			<xsl:when test="contains($s,'&#x9;')">
+				<xsl:call-template name="encode-string">
+					<xsl:with-param name="s" select="concat(substring-before($s,'&#x9;'),'\t',substring-after($s,'&#x9;'))"/>
+				</xsl:call-template>
+			</xsl:when>
+			<!-- line feed -->
+			<xsl:when test="contains($s,'&#xA;')">
+				<xsl:call-template name="encode-string">
+					<xsl:with-param name="s" select="concat(substring-before($s,'&#xA;'),'\n',substring-after($s,'&#xA;'))"/>
+				</xsl:call-template>
+			</xsl:when>
+			<!-- carriage return -->
+			<xsl:when test="contains($s,'&#xD;')">
+				<xsl:call-template name="encode-string">
+					<xsl:with-param name="s" select="concat(substring-before($s,'&#xD;'),'\r',substring-after($s,'&#xD;'))"/>
+				</xsl:call-template>
+			</xsl:when>
+			<xsl:otherwise><xsl:value-of select="$s"/></xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
 
 
 </xsl:stylesheet>
