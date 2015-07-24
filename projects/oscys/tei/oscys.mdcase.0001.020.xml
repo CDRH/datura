@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?oxygen RNGSchema="http://digitalhumanities.unl.edu/resources/schemas/tei/TEIP5.2.6.0/tei_all.rng" type="xml"?> 
 
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.mdcase.0001.019">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.mdcase.0001.020">
     
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>Edward Queen v. John Ashton. Summons of John Ashton</title>
+<title>Edward Queen v. John Ashton. Extract from the Will of James Carroll</title>
 <principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
 <principal n="Mu&#241;oz, Trevor" xml:id="tm">Trevor Mu&#241;oz</principal>
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
@@ -38,8 +38,7 @@
 <addrLine>cdrh@unl.edu</addrLine>
 </address>
 </distributor>
-<idno type="project">oscys.mdcase.0001.019</idno>
-<idno type="case">oscys.caseid.0338</idno>
+<idno type="project">oscys.mdcase.0001.020</idno>
 
 <availability>
 <licence>http://creativecommons.org/licenses/by-nc-sa/3.0/</licence>
@@ -49,8 +48,8 @@
             
 <sourceDesc>
 <bibl>
-<title level="m" type="main">Summons of John Ashton</title>
-<date when="1791-10-17">October 17, 1791</date>
+<title level="m" type="main">Extract from the Will of James Carroll</title>
+<date when="1728-02-12">February 12, 1728</date>
 <note type="project">Our transcription is based on a digital image of the original.</note>
 </bibl>
 <msDesc>
@@ -70,7 +69,7 @@
 </keywords>
     
 <keywords scheme="original" n="subcategory">
-<term>Summons</term>
+<term>Exhibit</term>
 </keywords>
 
 <keywords scheme="original" n="type">
@@ -82,12 +81,14 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Chase, Samuel, 1741-1811</term>
-<term>Gwinn, John, fl. 1770</term>
-<term>Williams, J.</term>
+<term>Carroll, Anthony</term>
+<term>Carroll, James</term>
+<term>Gassarray, John</term>
+<term>Henry</term>
+<term>Queen, Mary</term>
 </keywords>
 
-<keywords scheme="lcsh" n="places">  
+<keywords scheme="lcsh" n="places">
 <term>Anne Arundel County (Md.)</term>
 </keywords>
 
@@ -102,7 +103,7 @@
 <persName>Ashton, John</persName>
 </person>
 <person role="attorney_petitioner">
-<persName>Duvall, Gabriel, 1752-1844</persName>
+<persName/>
 </person>
 <person role="attorney_defendant">
 <persName/>
@@ -118,15 +119,12 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>
-<change when="2015-07-22" who="kln">reviewed; edited</change>                
+<revisionDesc>    
+<change when="2015-07-22" who="kln">reviewed; edited</change>             
 <change when="2015-05-20" who="ea">Encoded and transcribed.</change>
-<change when="2013-08-13" who="kln">edited header</change>
-<change when="2013-07-29" who="kln">edited encoding</change>
 <change when="2013-04-23" who="kln">added attorneys to header</change>
-<change when="2012-11-01" who="kln">updated titleStmt and facs names</change>
-<change when="2012-10-31" who="kln">removed particDesc and ref tags</change>
-<change when="2012-10-30" who="kln">transcribed, encoded</change>
+<change when="2013-01-11" who="kln">edits to tei header</change>
+<change when="2012-11-05" who="kln">transcribed, encoded</change>
 </revisionDesc>
 
 </teiHeader>
@@ -137,40 +135,25 @@
                
 <div1 type="case">
 
-<pb xml:id="p001" facs="oscys.mdcase.0001.019.001.jpg"/>
-
-<div2 type="caption">
-
-<p>The State of Maryland Set. To the Sheriff of Ann Arundel County Greeting</p>
-
-</div2>
+<pb xml:id="p001" facs="oscys.mdcase.0001.020.001.jpg"/>
 
 <div2 type="body">
 
-<p>We command you that you Summons the Revd John Ashton that all delays and excuses set aside he be and appear before the Judges of our General Court at Annapolis immediately to answer unto the Petition of Edward Queen preferred against him for Freedom hereof he is not to fail, and fail not at your Peril and have you then and there this Writ. Witness The Honorable Samuel Chase Esquire Chief Judge of our said Court the 11th day of October Anno Domini 1791.</p>   
+<p>I bequeath to my Cousin Anthony Carroll now with me two Negroes vizt. Henry and Mary to be delivered if alive to him the tenth of October after my decease the better to enable him to seat his five hundred acres of Land which is to be laid out in a convenient form where he shall think fit to seat if he settles it first</p>
 
-<p>Issued the 17th day of October 1791.</p>
+<p>In Testimony that the above is a true extract from the Will of James Carroll bearing date the twelfth Day of February one thousand seven hundred and twenty eight and proved June the 27th 1727 recorded in Liber CC No. 2 one of the <unclear reason="illegible"> Catoprerogative</unclear> Records I have hereto Set my Hand and affixed my Seal of Office this 19th day of May in the year of our Lord 1794</p>
 
-<p>Jno. Gwinn Clk</p>
-
-<p>G. D.</p>  
+<p>Jno Gassarray Reg Wills AA Coty</p>     
      
+<p>Cost 3/1&#189;</p>
+
 </div2>
 
-<pb xml:id="p002" facs="oscys.mdcase.0001.019.002.jpg"/>
+<pb xml:id="p002" facs="oscys.mdcase.0001.020.002.jpg"/>
 
 <div2 type="back">
 
-<p>Edward Queen<lb/>
-v<lb/>
-Revd John Ashton</p>
-
-<p>Sums.</p>
-
-<p>Ann Arundel</p>
-
-<p><gap extent="one word" reason="illegible"/><lb/>
-J Williams Sheriff</p>
+<p>Ashton's</p>
 
 </div2>
 
