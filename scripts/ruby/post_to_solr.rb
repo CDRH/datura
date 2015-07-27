@@ -32,6 +32,8 @@ log.info("Script running with following options: #{options}")
 
 # create a new solr instance that will be used by the transformer
 url = "#{config[:main][env]["solr_path"]}#{config[:proj]["solr_core"]}/update"
+"Using solr url: #{url}" if verbose_flag
+log.info("Solr URL: #{url}")
 solr = SolrPoster.new(url, options[:commit])
 xsl_params = config[:proj]["xslt"][env]
 config = get_xslt_path(config, project, env)

@@ -146,8 +146,9 @@ class Transformer
             puts "File #{source} successfully posted to solr (not committed)" if @verbose
             return nil  # no errors
           else
-            puts "ERROR: file #{source} not committed to solr (received code #{solr_res.code}"
-            return solr_res
+            puts "ERROR: file #{source} not committed to solr (received code #{solr_res.code})"
+            puts "HTTP RESPONSE: #{solr_res.inspect}"	
+return solr_res
           end
         end
       end
