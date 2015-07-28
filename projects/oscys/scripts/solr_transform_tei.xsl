@@ -564,9 +564,9 @@
 							<xsl:text>"label":"</xsl:text>
 							<!-- go to another document to get the case name -->
 							<xsl:variable name="caseDocID"><xsl:text>../tei/</xsl:text><xsl:value-of select="."/><xsl:text>.xml</xsl:text></xsl:variable>
-							<!--<xsl:for-each select="document($caseDocID)">
+							<xsl:for-each select="document($caseDocID)">
 								<xsl:value-of select="//title"/>
-							</xsl:for-each>-->
+							</xsl:for-each>
 							<xsl:text>"</xsl:text>
 							
 							<xsl:text>,</xsl:text>
@@ -603,11 +603,11 @@
 							<xsl:text>"label":"</xsl:text>
 							<!-- go to another document to get the case name -->
 							<xsl:variable name="caseDocID"><xsl:text>../tei/</xsl:text><xsl:value-of select="."/><xsl:text>.xml</xsl:text></xsl:variable>
-							<!--<xsl:if test="document($caseDocID)">
+							<xsl:if test="document($caseDocID)">
 								<xsl:for-each select="document($caseDocID)">
 									<xsl:value-of select="//title"/>
 								</xsl:for-each>
-							</xsl:if>-->
+							</xsl:if>
 							<xsl:text>"</xsl:text>
 							
 							<xsl:text>,</xsl:text>
