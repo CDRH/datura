@@ -534,7 +534,7 @@
 
 				<!-- term -->
 				
-				<xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='term']/term">
+				<xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='term']/term/date/@when">
 					<xsl:if test="normalize-space(.) != ''">
 						<field name="term_ss"> 
 							<xsl:value-of select="."/>
