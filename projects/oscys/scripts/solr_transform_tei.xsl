@@ -174,7 +174,7 @@
 					<!-- if person, take PersName. todo: add more complicated rules.  -->
 					<xsl:when test="$doctype = 'person'">
 						<!--<xsl:value-of select='persName'/>-->
-						<xsl:for-each select="persName">
+						<xsl:for-each select="persName[@type='display']">
 							<xsl:call-template name="persNameFormatter"/>
 						</xsl:for-each>
 						
@@ -697,8 +697,9 @@
 			<!--<field name="personData_ss"><xsl:call-template name="dataIDSourceData"/></field>-->
 		</xsl:for-each>
 		
-		<!-- ??? -->
-		<xsl:for-each select="persName[normalize-space()]">
+		<!-- personName -->
+		<!-- I added the [1] qualifier because otherwise  -->
+		<xsl:for-each select="persName[1][normalize-space()]">
 			<field name="personName_ss"><xsl:call-template name="persNameFormatter"></xsl:call-template></field>
 			<field name="personNameData_ss">
 				<xsl:call-template name="dataIDSourceData">
@@ -965,33 +966,7 @@
 				<xsl:value-of select="normalize-space(.)"></xsl:value-of>
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:value-of select="surname[not(@type)][normalize-space()]"/><!-- [not(@*)] not working :( -->
-				<xsl:if test="(surname and forename) or (surname and roleName) or (surname and genName)"><xsl:text>,</xsl:text></xsl:if>
-				<xsl:if test="roleName != ''">
-					<xsl:text> </xsl:text>
-					<xsl:value-of select="normalize-space(roleName)"/>
-				</xsl:if>
-				<xsl:if test="forename[@type='first'] != ''">
-					<xsl:text> </xsl:text>
-					<xsl:for-each select="forename[@type='first']">
-						<xsl:value-of select="normalize-space(.)"/>
-					</xsl:for-each>
-				</xsl:if>
-				<xsl:if test="forename[@type='middle'] != ''">
-					<xsl:text> </xsl:text>
-					<xsl:for-each select="forename[@type='middle']">
-						<xsl:value-of select="normalize-space(.)"/>
-					</xsl:for-each>
-					
-				</xsl:if>
-				<xsl:if test="genName != ''">
-					<xsl:text> </xsl:text>
-					<xsl:value-of select="normalize-space(genName)"/>
-				</xsl:if>
-				<xsl:if test="surname[@type='maiden'] != ''">
-					<xsl:text> </xsl:text>
-					<xsl:value-of select="normalize-space(surname[@type='maiden'])"/>
-				</xsl:if>
+				<xsl:value-of select="normalize-space(.)"></xsl:value-of>
 			</xsl:otherwise>
 		</xsl:choose>
 		
