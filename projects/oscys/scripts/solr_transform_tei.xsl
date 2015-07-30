@@ -361,9 +361,26 @@
 				
 				<!-- todo: check with Kaci and Laura on how to format -->
 		<xsl:if test="/TEI/teiHeader[1]/fileDesc[1]/sourceDesc[1]/bibl[1] != ''">
-					<field name="source">
-						<xsl:value-of select="/TEI/teiHeader[1]/fileDesc[1]/sourceDesc[1]/bibl[1]"/>
+			<xsl:for-each select="/TEI/teiHeader/fileDesc/sourceDesc[1]">
+				<field name="source">
+					<xsl:choose>
+						<xsl:when test="msDesc">
+							<xsl:value-of select="msDesc/msIdentifier/repository"/><xsl:text>, </xsl:text>
+							<xsl:if test="msDesc/msIdentifier/collection"><xsl:value-of select="msDesc/msIdentifier/collection"/><xsl:text>, </xsl:text></xsl:if>
+							<xsl:value-of select="msDesc/msIdentifier/idno"/>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="bibl/author"></xsl:value-of><xsl:text>, </xsl:text>
+							<xsl:value-of select="bibl/title"></xsl:value-of><xsl:text>, </xsl:text>
+							<xsl:value-of select="bibl/biblScope"></xsl:value-of><xsl:text>, </xsl:text>
+							<xsl:value-of select="bibl/pubPlace"></xsl:value-of><xsl:text>: </xsl:text>
+							<xsl:value-of select="bibl/publisher"></xsl:value-of><xsl:text> </xsl:text>
+							<xsl:text>(</xsl:text><xsl:value-of select="bibl/date"></xsl:value-of><xsl:text>) </xsl:text>
+						</xsl:otherwise>
+					</xsl:choose>
 					</field>
+			</xsl:for-each>
+					
 				</xsl:if>
 				
 				<!-- rightsHolder -->
