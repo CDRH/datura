@@ -952,6 +952,16 @@
 							<!-- Label -->
 							<xsl:text>"label":"</xsl:text>
 							<xsl:value-of select="/TEI/teiHeader/fileDesc/titleStmt/title[1]"/>
+							<xsl:if test="/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@when">
+								
+								<!-- adding the date to the end of the title -->
+								<xsl:text> (</xsl:text>
+								<xsl:call-template name="extractDate"><xsl:with-param name="date" select="/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@when"/></xsl:call-template>
+								<xsl:text>)</xsl:text>
+								
+							</xsl:if>
+							
+							
 							<xsl:text>"</xsl:text>
 							
 							<xsl:text>,</xsl:text>
