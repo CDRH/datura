@@ -92,22 +92,34 @@
 
 <particDesc>   
 <listPerson>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.000708">
 <persName>Derrick, Louisa</persName>
-<persName>Derrick, Lucy</persName>
-<persName>Derrick, Matilda</persName>
-<persName>Derrick, Matilda</persName>
 </person>
-<person role="defendant">
+<person role="petitioner" xml:id="per.000709">
+<persName>Derrick, Lucy</persName>
+</person>
+<person role="petitioner" xml:id="per.000710">
+<persName>Derrick, Matilda</persName><!-- mother -->
+</person>
+<person role="petitioner" xml:id="per.000711">
+<persName>Derrick, Matilda</persName><!-- child -->
+</person>
+<person role="defendant" xml:id="per.000712">
 <persName>Mason, George</persName>
+</person>
+<person role="defendant" xml:id="per.000713">
 <persName>Moore, Alexander</persName>
 </person>
 <person role="attorney_petitioner">
 <persName>Taney, August</persName>
+</person>
+<person role="attorney_petitioner">
 <persName>Turner, Thomas</persName>
 </person>
 <person role="attorney_defendant">
 <persName>Jones, Walter</persName>
+</person>
+<person role="attorney_defendant">
 <persName>Lear, B. L.</persName>
 </person>
 </listPerson>
