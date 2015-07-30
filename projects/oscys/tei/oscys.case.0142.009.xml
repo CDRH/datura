@@ -40,6 +40,7 @@
 <idno type="case">oscys.caseid.0142</idno>
 <idno type="case">oscys.caseid.0143</idno>
 <idno type="case">oscys.caseid.0144</idno>
+<idno type="case">oscys.caseid.0152</idno>
 
 <availability>
 <licence>http://creativecommons.org/licenses/by-nc-sa/3.0/</licence>
@@ -127,13 +128,13 @@
 <person role="petitioner" xml:id="per.001067">
 <persName>Gibson, Francis</persName>
 </person>
-<person role="defendant" xml:id="per.001068">
+<person role="defendant" corresp="per.001068">
 <persName>Hall, James C.</persName>
 </person>
-<person role="defendant" xml:id="per.001069">
+<person role="defendant" corresp="per.001069">
 <persName>Laurie, Elizabeth B.</persName>
 </person>
-<person role="defendant" xml:id="per.001070">
+<person role="defendant" corresp="per.001070">
 <persName>Laurie, James</persName>
 </person>
 <person role="attorney_petitioner">
@@ -151,13 +152,13 @@
 <person role="petitioner" xml:id="per.001072">
 <persName>Gibson, Sarah</persName>
 </person>
-<person role="defendant" xml:id="per.001068">
+<person role="defendant" corresp="per.001068">
 <persName>Hall, James C.</persName>
 </person>
-<person role="defendant" xml:id="per.001069">
+<person role="defendant" corresp="per.001069">
 <persName>Laurie, Elizabeth B.</persName>
 </person>
-<person role="defendant" xml:id="per.001070">
+<person role="defendant" corresp="per.001070">
 <persName>Laurie, James</persName>
 </person>
 <person role="attorney_petitioner">
@@ -168,6 +169,18 @@
 </person>
 </listPerson>
             
+<listPerson type="oscys.caseid.0152">            
+<person role="petitioner" corresp="per.001122">
+<persName>Crawford, Joe</persName>
+</person>
+<person role="defendant" corresp="per.001127">
+<persName>Slye, Roberta</persName>
+</person>
+<person role="attorney_petitioner" xml:id="per.000464">
+<persName>Wallach, Richard</persName>
+</person>
+</listPerson>
+
 <listOrg>
 <org>
 <orgName>United States. Circuit Court (District of Columbia)</orgName>
@@ -178,7 +191,7 @@
 </profileDesc>
         
 <revisionDesc>
-<change when="2015-07-06" who="lkw">added xml:ids; transcription, changed "sales" to "slaves"</change> 
+<change when="2015-07-06" who="lkw">added xml:ids; transcription, changed "sales" to "slaves"; added caseid.0152; changed xml:ids to corresps</change> 
 <change when="2014-01-08" who="#kln">reviewed; edited</change>             
 <change when="2014-11" who="#snc">encoded</change>
 </revisionDesc>

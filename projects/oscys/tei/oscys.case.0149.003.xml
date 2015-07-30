@@ -12,6 +12,7 @@
 <name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -95,14 +96,16 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001167">
 <persName>Peters, Jeffrey</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001168">
 <persName>McKinstrey, Joseph</persName>
 </person>
-<person role="attorney_petitioner">
+<person role="attorney_petitioner" xml:id="per.000737">
 <persName>Brent, Robert James</persName>
+</person>
+<person role="attorney_petitioner" xml:id="per.000738">
 <persName>Brent, William Leigh</persName>
 </person>
 <person role="attorney_defendant">
@@ -119,7 +122,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>         
+<revisionDesc>       
+<change when="2015-07-13" who="lkw">added xml:ids</change>   
 <change when="2015-06-23" who="#ea">added case outcome</change>
 <change when="2015-01-26" who="#kln">reviewed; edited</change>    
 <change when="2014-10" who="#snc">encoded</change>
