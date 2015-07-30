@@ -161,6 +161,9 @@ Not all these fields will need the "data" field but I am including them all righ
 * **caseRelatedDocumentID_ss** - for related documents so we can pull them seperately - everything that is not category=Case Papers 
 * **caseRelatedDocumentData_ss**
 * **caseidHasNarrative_s**
+* **outcome_ss**
+* **outcomeID_ss**
+* **outcomeData_ss** - includes label, date (from document) and id of source
 
 ### OSCYS Documents Fields
 

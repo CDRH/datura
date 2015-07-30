@@ -317,8 +317,7 @@
 					
 					<field name="dateDisplay">
 						<xsl:call-template name="extractDate">
-							<xsl:with-param name="date"
-								select="$doc_date"/>
+							<xsl:with-param name="date" select="$doc_date"/>
 						</xsl:call-template>
 					</field>
 					
@@ -868,6 +867,49 @@
 					<xsl:value-of select="/TEI/@xml:id"/>
 					<xsl:text>"</xsl:text>
 						
+					<xsl:text>}</xsl:text>
+				</field>
+				
+				<field update="add" name="outcomeData_ss">
+					<xsl:text>{</xsl:text>
+					
+					<!-- Label -->
+					<xsl:text>"label":"</xsl:text>
+					<xsl:value-of select="normalize-space(.)"/>
+					<xsl:text>"</xsl:text>
+					
+					<xsl:text>,</xsl:text>
+					
+					<!-- Date -->
+					
+					<xsl:variable name="doc_date">
+						<xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@when"/>
+					</xsl:variable>
+					
+					<xsl:text>"date":"</xsl:text>
+					
+					<!-- choose whatever is in the when. If we want pretty dates, commet out this and use one below.  -->
+					<xsl:value-of select="$doc_date"></xsl:value-of>
+
+					
+					<!-- If we want pretty dates in the JSON -->
+						<!--<xsl:call-template name="extractDate">
+							<xsl:with-param name="date"
+								select="$doc_date"/>
+						</xsl:call-template>-->
+					
+						
+						<xsl:text>"</xsl:text>
+						<xsl:text>,</xsl:text>
+					
+					
+					
+					
+					<!-- ID -->
+					<xsl:text>"id":"</xsl:text>
+					<xsl:value-of select="/TEI/@xml:id"/>
+					<xsl:text>"</xsl:text>
+					
 					<xsl:text>}</xsl:text>
 				</field>
 			</xsl:for-each>
