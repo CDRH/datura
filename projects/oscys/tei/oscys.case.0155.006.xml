@@ -13,6 +13,7 @@
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="McCormick, Kylie L." xml:id="klm">Kylie L. McCormick</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -82,8 +83,9 @@
     
 <keywords scheme="lcsh" n="people">
 <term xml:id="per.000004">Cranch, William, 1769-1855</term>
-<term>Smith, John A.</term>
-<term>Wallace, Richard</term>
+<term xml:id="per.000740">Smith, John A.</term>
+<!-- <term xml:id="per.000748">Wallace, Richard</term> -->
+<term xml:id="per.000753">Wallach, Robert</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places"> 
@@ -99,14 +101,16 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001178">
 <persName>Smith, John R.</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001179">
 <persName>Haynes, Thomas</persName>
 </person>
-<person role="attorney_petitioner">
+<person role="attorney_petitioner" xml:id="per.001180">
 <persName>Morgan, Edwin C.</persName>
+</person>
+<person role="attorney_petitioner" xml:id="per.000751">
 <persName>Ratcliffe, Daniel</persName>
 </person>
 <person role="attorney_defendant">
@@ -124,6 +128,7 @@
 </profileDesc>
         
 <revisionDesc> 
+<change when="2015-07-30" who="lkw">added xml:ids; changed Wallace to Wallach</change>
 <change when="2015-06-23" who="#ea">added case outcome</change>
 <change when="2015-01-26" who="#kln">reviewed; edited</change>         
 <change when="2014-10" who="#snc">encoded</change>
