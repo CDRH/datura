@@ -906,14 +906,14 @@
 					<xsl:text>"date":"</xsl:text>
 					
 					<!-- choose whatever is in the when. If we want pretty dates, commet out this and use one below.  -->
-					<xsl:value-of select="$doc_date"></xsl:value-of>
+					<!--<xsl:value-of select="$doc_date"></xsl:value-of>-->
 
 					
 					<!-- If we want pretty dates in the JSON -->
-						<!--<xsl:call-template name="extractDate">
+						<xsl:call-template name="extractDate">
 							<xsl:with-param name="date"
 								select="$doc_date"/>
-						</xsl:call-template>-->
+						</xsl:call-template>
 					
 						
 						<xsl:text>"</xsl:text>
