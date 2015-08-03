@@ -382,11 +382,12 @@
     match="byline | docDate | sp | speaker | letter | 
     notesStmt | titlePart | docDate | ab | trailer | 
     front | lg | l | bibl | dateline | salute | trailer | titlePage | closer | floatingText">
-    <div>
+    <span>
       <xsl:attribute name="class">
         <xsl:value-of select="name()"/>
         <xsl:if test="@type"><xsl:text> </xsl:text><xsl:value-of select="@type"/></xsl:if>
         <xsl:if test="@rend"><xsl:text> </xsl:text><xsl:value-of select="@rend"/></xsl:if>
+        <xsl:if test="not(parent::p)"><xsl:text> p</xsl:text></xsl:if>
       </xsl:attribute>
       <xsl:choose>
         <!-- This is for CWW, check to see if this is done correctly, will it add two handwritten classses? -KMD -->
@@ -403,7 +404,7 @@
         </xsl:otherwise>
       </xsl:choose>
       <xsl:text> </xsl:text>
-    </div>
+    </span>
   </xsl:template>
   
   <!-- Special case, if encoding is fixed, can fold into rule above-->
