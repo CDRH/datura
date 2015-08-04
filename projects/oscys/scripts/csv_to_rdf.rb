@@ -13,8 +13,8 @@ tei_path = File.join(File.dirname(__FILE__), '../tei/oscys.persons.xml')
 output = File.join(File.dirname(__FILE__), '../rdf/oscys.relationships.ttl')
 
 PREFIXES = {
-  :oscys => 'http://cdrhsites.unl.edu/data/projects/oscys/rdf/oscys.objectproperties.owl#',
-  :osrdf => 'http://cdrhsites.unl.edu/data/projects/oscys/rdf/oscys.relationships#',
+  :oscys => 'http://cdrhsearch.unl.edu/data/projects/oscys/rdf/oscys.objectproperties.owl#',
+  :osrdf => 'http://cdrhsearch.unl.edu/data/projects/oscys/rdf/oscys.relationships#',
   :rdf => 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'
 }
 
@@ -24,7 +24,7 @@ PREFIXES = {
 
 def assemble_traits(xml)
   traits = {}
-  traits['fullname'] = get_text(xml, "[type='display']")
+  traits['fullname'] = get_text(xml, "persName[type='display']")
   traits['birth'] = get_text(xml, 'birth')
   traits['death'] = get_text(xml, 'death')
   traits['sex'] = get_text(xml, 'sex')
