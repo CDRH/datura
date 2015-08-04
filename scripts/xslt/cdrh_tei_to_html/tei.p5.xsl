@@ -403,7 +403,8 @@
           <xsl:apply-templates/>
         </xsl:otherwise>
       </xsl:choose>
-      <xsl:text> </xsl:text>
+      <!-- Don't know why this was here, commenting out for now -KMD -->
+      <!--<xsl:text> </xsl:text>-->
     </span>
   </xsl:template>
   
