@@ -82,6 +82,7 @@
     <rdfs:range rdf:resource="#Person"/>
     <owl:Inverseof rdf:resource="#clientOf"/>
     <owl:Inverseof rdf:resource="#attorneyFor"/>
+    <rdfs:subPropertyOf rdf:resource="#legal"/>
 </owl:ObjectProperty>
 
 <!-- http://cdrhsites.unl.edu/data/projects/oscys/rdf/oscys.objectproperties.owl#attorneyAgainst -->    
