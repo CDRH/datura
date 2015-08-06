@@ -499,6 +499,27 @@
 						<field name="people">
 							<xsl:apply-templates/>
 						</field>
+						<xsl:if test="@xml:id">
+							<field name="person_ss"><xsl:value-of select="normalize-space(.)"/></field>
+							<field name="personID_ss"><xsl:value-of select="@xml:id"/></field>
+							<field name="personData_ss">
+								<xsl:text>{</xsl:text>
+								
+								<!-- Label -->
+								<xsl:text>"label":"</xsl:text>
+								<xsl:value-of select="normalize-space(.)"/>
+								<xsl:text>"</xsl:text>
+								
+								<xsl:text>,</xsl:text>
+								
+								<!-- ID -->
+								<xsl:text>"id":"</xsl:text>
+								<xsl:value-of select="@xml:id"/>
+								<xsl:text>"</xsl:text>
+								
+								<xsl:text>}</xsl:text>
+							</field>
+						</xsl:if>
 					</xsl:if>
 				</xsl:for-each>
 				
