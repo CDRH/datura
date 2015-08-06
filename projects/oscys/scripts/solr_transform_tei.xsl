@@ -762,7 +762,7 @@
 		</xsl:for-each>
 		<xsl:for-each select="note[normalize-space()]">
 			<field name="personNote_ss"><xsl:value-of select="normalize-space(.)"/></field>
-			<field name="personNoteData_ss"><xsl:call-template name="dataIDSourceData"/></field>
+			<field name="personNoteData_ss"><xsl:call-template name="dataIDSourceData"><xsl:with-param name="label" select="normalize-space(.)"/></xsl:call-template></field>
 		</xsl:for-each>
 		<xsl:for-each select="occupation[normalize-space()]">
 			<field name="personOccupation_ss"><xsl:value-of select="normalize-space(.)"/></field>
@@ -799,7 +799,7 @@
 		
 		<!-- Label -->
 		<xsl:text>"label":"</xsl:text>
-		<xsl:value-of select="$label"></xsl:value-of>
+		<xsl:call-template name="escape-string"><xsl:with-param name="s" select="$label"/></xsl:call-template>
 		<xsl:text>"</xsl:text>
 		
 		<!-- Date -->
@@ -1262,11 +1262,11 @@
        Responsibilities: placed quotes around string, and chain up to next filter, escape-bs-string -->
 	<xsl:template name="escape-string">
 		<xsl:param name="s"/>
-		<xsl:text>"</xsl:text>
+		<xsl:text></xsl:text>
 		<xsl:call-template name="escape-bs-string">
 			<xsl:with-param name="s" select="$s"/>
 		</xsl:call-template>
-		<xsl:text>"</xsl:text>
+		<xsl:text></xsl:text>
 	</xsl:template>
 	
 	<!-- Escape the backslash (\) before everything else. -->
