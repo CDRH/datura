@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?oxygen RNGSchema="http://digitalhumanities.unl.edu/resources/schemas/tei/TEIP5.2.6.0/tei_all.rng" type="xml"?> 
 
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0295.005">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0301.008">
     
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>Mary Taylor et al. v. James M. A. Mushett. Summons of James M. A. Mushett</title>
+<title>Mary Ann Bond et al. v. Thomas C. Magruder. Agreement</title>
 <principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
 <principal n="Mu&#241;oz, Trevor" xml:id="tm">Trevor Mu&#241;oz</principal>
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
 <respStmt>
 <resp>transcription and encoding</resp>
-<name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
+<name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
@@ -38,8 +38,8 @@
 <addrLine>cdrh@unl.edu</addrLine>
 </address>
 </distributor>
-<idno type="project">oscys.case.0295.005</idno>
-<idno type="case">oscys.caseid.0297</idno>
+<idno type="project">oscys.case.0301.008</idno>
+<idno type="case">oscys.caseid.0303</idno>
 
 <availability>
 <licence>http://creativecommons.org/licenses/by-nc-sa/3.0/</licence>
@@ -49,15 +49,15 @@
             
 <sourceDesc>
 <bibl>
-<title level="m" type="main">Summons of James M. A. Mushett</title>
-<date when="1855-06-13">June 13, 1855</date>
+<title level="m" type="main">Agreement</title>
+<date/>
 <note type="project">Our transcription is based on a digital image of the original.</note>
 </bibl>
 <msDesc>
 <msIdentifier>
 <repository>National Archives and Records Administration</repository>
 <collection>Record Group 21.6</collection>
-<idno>Box 796, Folder 179</idno>
+<idno>Box 778, Folder 275</idno>
 </msIdentifier>
 </msDesc>
 </sourceDesc>
@@ -70,7 +70,7 @@
 </keywords>
     
 <keywords scheme="original" n="subcategory">
-<term>Summons</term>
+<term>Agreement</term>
 </keywords>
 
 <keywords scheme="original" n="type">
@@ -78,45 +78,60 @@
 </keywords>
 
 <keywords scheme="original" n="term">
-<term><date when="1855-10">October 1855</date></term>
+<term><date when="1854-03">March 1854</date></term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Alexander, Sandy</term>
-<term xml:id="per.000004">Cranch, William, 1769-1855</term>
-<term>Hoover, Jonah D.</term>
-<term>Smith, John A.</term>
+<term>Boothe, Thomas</term>
+<term>Campbell, Alice</term>
+<term>Mareman, Ann</term>
+<term>Mareman, Susan</term>
+<term>Winifred</term>
 </keywords>
 
-<keywords scheme="lcsh" n="places">    
-<term>Washington County (D.C.)</term>
-<term>Washington (D.C.)</term>
+<keywords scheme="lcsh" n="places">
+<term>Saint Mary's County (Md.)</term>
 </keywords>
 
 </textClass>
-
+            
 <particDesc>   
 <listPerson>            
 <person role="petitioner">
-<persName>Taylor, Emily</persName>
+<persName>Bond, Mary Ann</persName>
 </person>
 <person role="petitioner">
-<persName>Taylor, Henry</persName>
+<persName>Campbell, Alice</persName>
 </person>
 <person role="petitioner">
-<persName>Taylor, Ida</persName>
+<persName>Dorsey, Elizabeth</persName>
 </person>
 <person role="petitioner">
-<persName>Taylor, Mary</persName>
+<persName>Dorsey, John Henry</persName>
+</person>
+<person role="petitioner">
+<persName>Eglin, Julia Ann</persName>
+</person>
+<person role="petitioner">
+<persName>Eglin, Maria Louisa</persName>
+</person>
+<person role="petitioner">
+<persName>Eglin, Mary Ellana</persName>
 </person>
 <person role="defendant">
-<persName>Mushett, James M. A.</persName>
+<persName>Magruder, Thomas C.</persName>
 </person>
 <person role="attorney_petitioner">
-<persName>Wallach, Charles S.</persName>
+<persName>Carrington, E. C.</persName>
 </person>
 <person role="attorney_defendant">
-<persName/>
+<persName>Bradley, Joseph H.</persName>
+</person>
+<person role="attorney_defendant">
+<persName>Carlisle, James M.</persName>
+</person>
+<person role="attorney_defendant">
+<persName>Morgan, Edwin C.</persName>
 </person>
 </listPerson>
             
@@ -129,9 +144,9 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>  
-<change when="2015-06-25" who="#kln">reviewed; edited</change>            
-<change when="2015-04-07" who="#snc">transcribed; encoded</change>
+<revisionDesc>    
+<change when="2015-08-04" who="#kln">reviewed; edited</change>         
+<change when="2015-04-02" who="ea">Encoded and transcribed.</change>
 </revisionDesc>
 
 </teiHeader>
@@ -142,53 +157,40 @@
                
 <div1 type="case">
 
-<pb xml:id="p001" facs="oscys.case.0295.005.001.jpg"/>
+<pb xml:id="p001" facs="oscys.case.0301.008.001.jpg"/>
 
 <div2 type="caption">
 
-<p>District of Columbia, to wit:<lb/>
-The United States of America,<lb/>
-To the Marshal of the District of Columbia&#8212;Greeting:</p>
+<p>Alice Campbell &amp; Others<lb/>
+v<lb/>
+Magruder admr Booth</p>
+
+<p>Petition for freedom</p>
 
 </div2>
 
 <div2 type="body">
      
-<p>We command you that you <del>take</del> summon Jas M. A. Mushett <del>late of Washington County, if shall be found within the County of Washington in your said District, and safely keep, so that you have body</del> before the Circuit Court of the District of Columbia, to be held for the County aforesaid, at the City of Washington, on the third Monday of October next, to answer unto Mary, Henry, Emily &#38; Ida Taylor's petition for freedom</p>
+<p>It is agreed in this case that Winifred the mother of all the Petitioners except Alice was the slave of Susan Merryman in St Marys County Maryd. That the said Susanna made her last will as follows [<gap extent="one word" reason="illegible"/> the same] That Thomas Booth married Ann Merryman named in the said will, <del>went into possession</del> by his said marriage became possessed <del>of</del> of said Winifred with the other property of said Ann. That all the Petitioners except Alice were born <del>after the said marriage</del> in the life time of said Thomas Booth. That said Booth made his will as follows [<gap extent="one word" reason="illegible"/> the same] His wife survived him and executed the deed of manumission under which petitioners claim. That Alice was the individual property of Thomas Booth</p>     
 
-<p>Hereof fail not, at your peril, and have you then and there this writ.</p>
+<pb xml:id="p002" facs="oscys.case.0301.008.002.jpg"/>
 
-<p>Witness, W. Cranch Esquire, Chief Judge of our said Court, at the City of Washington, the 5t day of June Anno Domini one thousand eight hundred and 55.</p>
+<p>E. C. Carrington for Pets</p>
 
-<p>Issued the 13t day of June 1855.</p>
+<p>Bradley, Carlisle &amp; Morgan for defts</p>
 
-<p>Jno: A. Smith Clk</p>
-
-<p>Wallh.</p>
-     
 </div2>
-
-<pb xml:id="p002" facs="oscys.case.0295.005.002.jpg"/>
 
 <div2 type="back">
 
-<p>179</p>
+<p>275 Trials</p>
 
-<p>Mary, Henry, Emily &amp; Ida Taylor by next friend Sandy Alexander<lb/>
+<p>Campbell &amp; al <gap extent="one word" reason="illegible"/><lb/>
 vs<lb/>
-Jas. M. A. Mushett</p>
-
-<p>Sub<lb/>
-6 Bre</p>
-
-<p>Pet. for freedom<lb/>
-+</p>
-
-<p>Non est<lb/>
-J D Hoover<lb/>
-Marshal</p>
+Magruder admr of Boothe</p>
 
 </div2>
+
 </div1>
     
 </body>

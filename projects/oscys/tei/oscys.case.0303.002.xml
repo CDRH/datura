@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?oxygen RNGSchema="http://digitalhumanities.unl.edu/resources/schemas/tei/TEIP5.2.6.0/tei_all.rng" type="xml"?> 
 
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0295.005">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0303.002">
     
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>Mary Taylor et al. v. James M. A. Mushett. Summons of James M. A. Mushett</title>
+<title>Stephen Ambush v. James G. Robinson. Petition for Freedom</title>
 <principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
 <principal n="Mu&#241;oz, Trevor" xml:id="tm">Trevor Mu&#241;oz</principal>
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
 <respStmt>
 <resp>transcription and encoding</resp>
-<name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
+<name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
@@ -38,8 +38,8 @@
 <addrLine>cdrh@unl.edu</addrLine>
 </address>
 </distributor>
-<idno type="project">oscys.case.0295.005</idno>
-<idno type="case">oscys.caseid.0297</idno>
+<idno type="project">oscys.case.0303.002</idno>
+<idno type="case">oscys.caseid.0305</idno>
 
 <availability>
 <licence>http://creativecommons.org/licenses/by-nc-sa/3.0/</licence>
@@ -49,15 +49,15 @@
             
 <sourceDesc>
 <bibl>
-<title level="m" type="main">Summons of James M. A. Mushett</title>
-<date when="1855-06-13">June 13, 1855</date>
+<title level="m" type="main">Petition for Freedom</title>
+<date when="1853-01-20">January 20, 1853</date>
 <note type="project">Our transcription is based on a digital image of the original.</note>
 </bibl>
 <msDesc>
 <msIdentifier>
 <repository>National Archives and Records Administration</repository>
 <collection>Record Group 21.6</collection>
-<idno>Box 796, Folder 179</idno>
+<idno>Box 784, Folder 251</idno>
 </msIdentifier>
 </msDesc>
 </sourceDesc>
@@ -70,7 +70,7 @@
 </keywords>
     
 <keywords scheme="original" n="subcategory">
-<term>Summons</term>
+<term>Petition</term>
 </keywords>
 
 <keywords scheme="original" n="type">
@@ -78,42 +78,33 @@
 </keywords>
 
 <keywords scheme="original" n="term">
-<term><date when="1855-10">October 1855</date></term>
+<term><date when="1854-10">October 1854</date></term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Alexander, Sandy</term>
-<term xml:id="per.000004">Cranch, William, 1769-1855</term>
-<term>Hoover, Jonah D.</term>
-<term>Smith, John A.</term>
+<term/>
 </keywords>
 
-<keywords scheme="lcsh" n="places">    
+<keywords scheme="lcsh" n="places">
 <term>Washington County (D.C.)</term>
 <term>Washington (D.C.)</term>
 </keywords>
 
 </textClass>
-
+            
 <particDesc>   
 <listPerson>            
 <person role="petitioner">
-<persName>Taylor, Emily</persName>
-</person>
-<person role="petitioner">
-<persName>Taylor, Henry</persName>
-</person>
-<person role="petitioner">
-<persName>Taylor, Ida</persName>
-</person>
-<person role="petitioner">
-<persName>Taylor, Mary</persName>
+<persName>Ambush, Stephen</persName>
 </person>
 <person role="defendant">
-<persName>Mushett, James M. A.</persName>
+<persName>Robinson, James G.</persName>
 </person>
 <person role="attorney_petitioner">
-<persName>Wallach, Charles S.</persName>
+<persName>Waters, David L.</persName>
+</person>
+<person role="attorney_petitioner">
+<persName>Ratcliffe, Daniel</persName>
 </person>
 <person role="attorney_defendant">
 <persName/>
@@ -129,9 +120,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>  
-<change when="2015-06-25" who="#kln">reviewed; edited</change>            
-<change when="2015-04-07" who="#snc">transcribed; encoded</change>
+<revisionDesc>             
+<change when="2015-04-03" who="ea">Encoded and transcribed.</change>
 </revisionDesc>
 
 </teiHeader>
@@ -142,53 +132,43 @@
                
 <div1 type="case">
 
-<pb xml:id="p001" facs="oscys.case.0295.005.001.jpg"/>
+<pb xml:id="p001" facs="oscys.case.0303.002.001.jpg"/>
 
 <div2 type="caption">
 
-<p>District of Columbia, to wit:<lb/>
-The United States of America,<lb/>
-To the Marshal of the District of Columbia&#8212;Greeting:</p>
+<p>To the Honorable the Circuit Court of the United States for the District of Columbia and County of Washington.</p>
 
 </div2>
 
 <div2 type="body">
-     
-<p>We command you that you <del>take</del> summon Jas M. A. Mushett <del>late of Washington County, if shall be found within the County of Washington in your said District, and safely keep, so that you have body</del> before the Circuit Court of the District of Columbia, to be held for the County aforesaid, at the City of Washington, on the third Monday of October next, to answer unto Mary, Henry, Emily &#38; Ida Taylor's petition for freedom</p>
 
-<p>Hereof fail not, at your peril, and have you then and there this writ.</p>
+<p>The petition of Stephen Ambush, a coloured person, humbly sheweth unto the said Honorable Court, that your petitioner is entitled to his freedom and is unjustly held in bondage by James G Robinson, who claims your petitioner as a slave; and your petitioner prays the said Honorable Court, to grant a Subpoena directed to the said James G Robinson, and such other relief in the premises, as may be according to law</p>
 
-<p>Witness, W. Cranch Esquire, Chief Judge of our said Court, at the City of Washington, the 5t day of June Anno Domini one thousand eight hundred and 55.</p>
-
-<p>Issued the 13t day of June 1855.</p>
-
-<p>Jno: A. Smith Clk</p>
-
-<p>Wallh.</p>
+<p>David L Waters<lb/>
+Atty for Petitioner</p>     
      
 </div2>
 
-<pb xml:id="p002" facs="oscys.case.0295.005.002.jpg"/>
+<pb xml:id="p002" facs="oscys.case.0303.002.002.jpg"/>
 
 <div2 type="back">
 
-<p>179</p>
+<p><del>227</del></p>
 
-<p>Mary, Henry, Emily &amp; Ida Taylor by next friend Sandy Alexander<lb/>
+<p>Stephen Ambush<lb/>
 vs<lb/>
-Jas. M. A. Mushett</p>
+James G Robinson</p>
 
-<p>Sub<lb/>
-6 Bre</p>
+<p>Petition for Freedom</p>
 
-<p>Pet. for freedom<lb/>
-+</p>
+<p>The Clerk will please file this Petition for Freedom<lb/>
+Danl Ratcliffe<lb/>
+Atty for Petitioner</p>
 
-<p>Non est<lb/>
-J D Hoover<lb/>
-Marshal</p>
+<p>Filed 20th Jany 1853.</p>
 
 </div2>
+
 </div1>
     
 </body>
