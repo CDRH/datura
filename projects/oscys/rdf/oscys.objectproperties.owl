@@ -100,6 +100,7 @@
     <owl:Inverseof rdf:resource="#attorneyAgainst"/>
     <rdfs:subPropertyOf rdf:resource="#legal"/>
 </owl:ObjectProperty>
+
 <!-- http://cdrhsites.unl.edu/data/projects/oscys/rdf/oscys.objectproperties.owl#opposingAttorneys -->    
 <owl:ObjectProperty rdf:about="#opposingAttorneys">
     <rdfs:domain rdf:resource="#Person"/>
@@ -108,19 +109,24 @@
     <rdfs:subPropertyOf rdf:resource="#legal"/>
 </owl:ObjectProperty>
 
-<!-- http://cdrhsites.unl.edu/data/projects/oscys/rdf/oscys.objectproperties.owl#witnessedBy -->    
-<owl:ObjectProperty rdf:about="#witnessedBy">
-    <rdfs:domain rdf:resource="#Person"/>
-    <rdfs:range rdf:resource="#Person"/>
-    <owl:Inverseof rdf:resource="#witnessOf"/>
-    <rdfs:subPropertyOf rdf:resource="#legal"/>
-</owl:ObjectProperty>
-
 <!-- http://cdrhsites.unl.edu/data/projects/oscys/rdf/oscys.objectproperties.owl#witnessOf -->    
 <owl:ObjectProperty rdf:about="#witnessOf">
     <rdfs:domain rdf:resource="#Person"/>
     <rdfs:range rdf:resource="#Person"/>
-    <owl:Inverseof rdf:resource="#witnessedBy"/>
+    <rdfs:subPropertyOf rdf:resource="#legal"/>
+</owl:ObjectProperty>
+
+<!-- http://cdrhsites.unl.edu/data/projects/oscys/rdf/oscys.objectproperties.owl#witnessFor -->    
+<owl:ObjectProperty rdf:about="#witnessFor">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="#Person"/>
+    <rdfs:subPropertyOf rdf:resource="#legal"/>
+</owl:ObjectProperty>
+
+<!-- http://cdrhsites.unl.edu/data/projects/oscys/rdf/oscys.objectproperties.owl#witnessAgainst -->    
+<owl:ObjectProperty rdf:about="#witnessAgainst">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="#Person"/>
     <rdfs:subPropertyOf rdf:resource="#legal"/>
 </owl:ObjectProperty>
 
@@ -254,6 +260,7 @@
     <rdfs:range rdf:resource="#Person"/>
     <rdfs:subPropertyOf rdf:resource="#legal"/>
 </owl:ObjectProperty>
+
 <!-- http://cdrhsites.unl.edu/data/projects/oscys/rdf/oscys.objectproperties.owl#sued -->    
 <owl:ObjectProperty rdf:about="#sued">
     <rdfs:domain rdf:resource="#Person"/>
@@ -366,6 +373,13 @@
     <rdf:type rdf:resource="&owl;SymmetricProperty"/>
 </owl:ObjectProperty>
 
+<!-- http://cdrhsites.unl.edu/data/projects/oscys/rdf/oscys.objectproperties.owl#businessRelationshipWith -->    
+<owl:ObjectProperty rdf:about="#businessRelationshipWith">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="#Person"/>
+    <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+</owl:ObjectProperty>
+
 <!-- http://cdrhsites.unl.edu/data/projects/oscys/rdf/oscys.objectproperties.owl#ownerOf -->    
 <owl:ObjectProperty rdf:about="#ownerOf">
     <rdfs:domain rdf:resource="#Person"/>
@@ -411,6 +425,14 @@
     <rdfs:domain rdf:resource="#Person"/>
     <rdfs:range rdf:resource="#Person"/>
     <owl:Inverseof rdf:resource="#employerOf"/>
+    <rdfs:subPropertyOf rdf:resource="#work"/>
+</owl:ObjectProperty>
+
+<!-- http://cdrhsites.unl.edu/data/projects/oscys/rdf/oscys.objectproperties.owl#secretaryOf -->
+
+<owl:ObjectProperty rdf:about="#secretaryOf">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="#Person"/>
     <rdfs:subPropertyOf rdf:resource="#work"/>
 </owl:ObjectProperty>
 
