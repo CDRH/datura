@@ -499,27 +499,27 @@
 						<field name="people">
 							<xsl:apply-templates/>
 						</field>
-						<xsl:if test="@xml:id">
+						<!--<xsl:if test="@xml:id">
 							<field name="person_ss"><xsl:value-of select="normalize-space(.)"/></field>
 							<field name="personID_ss"><xsl:value-of select="@xml:id"/></field>
 							<field name="personData_ss">
 								<xsl:text>{</xsl:text>
 								
-								<!-- Label -->
+								<!-\- Label -\->
 								<xsl:text>"label":"</xsl:text>
 								<xsl:value-of select="normalize-space(.)"/>
 								<xsl:text>"</xsl:text>
 								
 								<xsl:text>,</xsl:text>
 								
-								<!-- ID -->
+								<!-\- ID -\->
 								<xsl:text>"id":"</xsl:text>
 								<xsl:value-of select="@xml:id"/>
 								<xsl:text>"</xsl:text>
 								
 								<xsl:text>}</xsl:text>
 							</field>
-						</xsl:if>
+						</xsl:if>-->
 					</xsl:if>
 				</xsl:for-each>
 				
@@ -706,25 +706,6 @@
 			</xsl:call-template>
 		
 		
-		<!--<field name="people"><xsl:value-of select='persName'/></field>-->
-		<!-- todo, fill this in from personography -->
-		<!--<field name="places"></field>-->
-		
-		<!-- OSCYS Specific -->
-		
-		<!--<field name="peopleData_ss">
-			<xsl:text>{"id":"</xsl:text>
-			<xsl:value-of select="@xml:id"/>
-			<xsl:text>","label":"</xsl:text>
-			<xsl:value-of select='persName'/>
-			<xsl:text>"}</xsl:text>
-		</field>-->
-		
-		<!-- Person ID -->
-		
-		<!--<field name="peopleID_ss">
-			<xsl:value-of select="@xml:id"></xsl:value-of>
-		</field>-->
 		
 		<!-- People Specific -->
 		
@@ -1066,6 +1047,14 @@
 	Person Field
 	=================================== -->
 	
+	<!-- Incoming XML Must look like: 
+	
+	<person xmlns="http://www.tei-c.org/ns/1.0" xml:id="{@xml:id}">
+						<persName><xsl:value-of select="."/></persName>
+					</person>
+	
+	-->
+	
 	<xsl:template name="personField" exclude-result-prefixes="#all">
 		<xsl:param name="fieldName"/>
 		<xsl:param name="personCode"/>
@@ -1152,18 +1141,19 @@
 		
 		<!-- Generic people in keywords rather than a listPerson -->
 
-		
-		<xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='people']/term[1][normalize-space()]">
-			<xsl:call-template name="personField">
-				<xsl:with-param name="fieldName">person</xsl:with-param>
-				<xsl:with-param name="personCode">
-					<person xmlns="http://www.tei-c.org/ns/1.0" xml:id="{@xml:id}">
-						<persName><xsl:value-of select="."/></persName>
-					</person>
-				</xsl:with-param>
-				<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
-			</xsl:call-template>
-		</xsl:for-each>
+		<xsl:if test="/TEI/teiHeader/profileDesc/textClass/keywords[@n='people']/term[1] != ''">
+			<xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='people']/term">
+				<xsl:call-template name="personField">
+					<xsl:with-param name="fieldName">person</xsl:with-param>
+					<xsl:with-param name="personCode">
+						<person xmlns="http://www.tei-c.org/ns/1.0" xml:id="{@xml:id}">
+							<persName><xsl:value-of select="."/></persName>
+						</person>
+					</xsl:with-param>
+					<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+				</xsl:call-template>
+			</xsl:for-each>
+		</xsl:if>
 	
 		
 		<!-- Explanation of listPerson[@type = $caseid or not(@type)]
