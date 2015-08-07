@@ -9,7 +9,7 @@
   
   <!-- For display in TEI framework, have changed all namespace declarations to http://www.tei-c.org/ns/1.0. If different (e.g. Whitman), will need to change -->
   
-  <xsl:output method="xhtml" indent="yes" encoding="UTF-8" omit-xml-declaration="yes"/>
+  <xsl:output method="xhtml" indent="no" encoding="UTF-8" omit-xml-declaration="yes"/>
   
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     PARAMETERS
@@ -382,11 +382,12 @@
     match="byline | docDate | sp | speaker | letter | 
     notesStmt | titlePart | docDate | ab | trailer | 
     front | lg | l | bibl | dateline | salute | trailer | titlePage | closer | floatingText">
-    <div>
+    <span>
       <xsl:attribute name="class">
         <xsl:value-of select="name()"/>
         <xsl:if test="@type"><xsl:text> </xsl:text><xsl:value-of select="@type"/></xsl:if>
         <xsl:if test="@rend"><xsl:text> </xsl:text><xsl:value-of select="@rend"/></xsl:if>
+        <xsl:if test="not(parent::p)"><xsl:text> p</xsl:text></xsl:if>
       </xsl:attribute>
       <xsl:choose>
         <!-- This is for CWW, check to see if this is done correctly, will it add two handwritten classses? -KMD -->
@@ -402,8 +403,9 @@
           <xsl:apply-templates/>
         </xsl:otherwise>
       </xsl:choose>
-      <xsl:text> </xsl:text>
-    </div>
+      <!-- Don't know why this was here, commenting out for now -KMD -->
+      <!--<xsl:text> </xsl:text>-->
+    </span>
   </xsl:template>
   
   <!-- Special case, if encoding is fixed, can fold into rule above-->
@@ -513,6 +515,9 @@
     match="term | foreign | emph | title[not(@level='a')] | biblScope[@type='volume'] | 
     hi[@rend='italic'] | hi[@rend='italics']">
     <em>
+      <xsl:attribute name="class">
+        <xsl:value-of select="name()"/>
+      </xsl:attribute>
       <xsl:apply-templates/>
     </em>
   </xsl:template>
@@ -593,6 +598,8 @@
     HEADS
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
   
+  <!-- Started heads at h3 because h1 is the site title and h2 is normally the page title, which is normally pulled from solr or a database.  -->
+  
   <xsl:template match="head">
     <!-- need to fix for handwritten text -KD -->
     <xsl:choose>
@@ -606,6 +613,53 @@
           <xsl:apply-templates/>
         </span>
       </xsl:when>
+      
+      <!-- I added the div1 code for OSCYS, but I assume it will pop up elsewhere. 
+      First I test if the div1 has a head. If it does not, I start the div2's on the h3's and work from there.
+      -->
+      <xsl:when test="//div1">
+        <xsl:choose>
+          <xsl:when test="//div1/head">
+            <xsl:choose>
+              <xsl:when test="parent::div1">
+                <h3><xsl:apply-templates/></h3>
+              </xsl:when>
+              <xsl:when test="parent::div2">
+                <h4><xsl:apply-templates/></h4>
+              </xsl:when>
+              <xsl:when test="parent::div3">
+                <h5><xsl:apply-templates/></h5>
+              </xsl:when>
+              <xsl:when test="parent::div4 or parent::div5 or parent::div6 or parent::div7  ">
+                <h6><xsl:apply-templates/></h6>
+              </xsl:when>
+              <xsl:otherwise>
+                <h4><xsl:apply-templates/></h4>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:choose>
+              <xsl:when test="parent::div2">
+                <h3><xsl:apply-templates/></h3>
+              </xsl:when>
+              <xsl:when test="parent::div3">
+                <h4><xsl:apply-templates/></h4>
+              </xsl:when>
+              <xsl:when test="parent::div4">
+                <h5><xsl:apply-templates/></h5>
+              </xsl:when>
+              <xsl:when test="parent::div5 or parent::div6 or parent::div7  ">
+                <h6><xsl:apply-templates/></h6>
+              </xsl:when>
+              <xsl:otherwise>
+                <h4><xsl:apply-templates/></h4>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:when>
+      
       <xsl:when test=".[@type='sub']">
         <h4>
           <xsl:apply-templates/>
@@ -729,8 +783,55 @@
     References
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
   
+  <!-- we need a better way to determine when references are notes, when they are internal to the site, and then they are external links -->
   <xsl:template match="ref">
     <xsl:choose>
+      <!-- When target starts with #, assume it is an in page link (anchor) -->
+      <xsl:when test="starts-with(@target, '#')">
+        <xsl:variable name="n" select="@target"/>
+        <xsl:text> </xsl:text>
+        <a>
+          <xsl:attribute name="id">
+            <xsl:text>ref</xsl:text>
+            <xsl:value-of select="@target"/>
+          </xsl:attribute>
+          <xsl:attribute name="class">
+            <xsl:text>inlinenote</xsl:text>
+          </xsl:attribute>
+          <xsl:attribute name="href">
+            <xsl:text>#note</xsl:text>
+            <xsl:value-of select="@target"/>
+          </xsl:attribute>
+          <xsl:text>[note </xsl:text>
+          <xsl:apply-templates/>
+          <xsl:text>]</xsl:text>
+        </a>
+        <xsl:text> </xsl:text>
+      </xsl:when>
+      <!-- when marked as link, treat as an external link -->
+      <xsl:when test="@type='link'">
+        <a href="{@target}">
+          <xsl:apply-templates/>
+        </a>
+      </xsl:when>
+      <!-- external link -->
+      <xsl:when test="starts-with(@target, 'http://') or starts-with(@target, 'https://')">
+        <a href="{@target}">
+          <xsl:apply-templates/>
+        </a>
+      </xsl:when>
+      <!-- if the above are not true, it is assumed to be an internal to the site link -->
+      <!-- TODO talk to jessica about relative vs absolute links - maybe se should use sub domains to make everything absolute?
+      Right now I am using relative, assuming documents will always be one level up-->
+      <xsl:otherwise>
+        <a href="../doc/{@target}" class="internal_link">
+          <xsl:apply-templates/>
+        </a>
+      </xsl:otherwise>
+    </xsl:choose>
+    
+    <!-- Old rules preserved here - TODO KMD needs to check with Laura to see which need to be kept -->
+    <!--<xsl:choose>
       <xsl:when test="starts-with(@target, 'n')">
         <xsl:variable name="n" select="@target"/>
         <xsl:text> </xsl:text>
@@ -773,7 +874,7 @@
         </a>
         <xsl:text> </xsl:text>
       </xsl:otherwise>
-    </xsl:choose>
+    </xsl:choose>-->
   </xsl:template>
   
 
