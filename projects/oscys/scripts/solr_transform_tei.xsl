@@ -630,7 +630,7 @@
 				</xsl:for-each>
 				
 				<!-- case Name -->
-				
+				<!-- data in JSON -->
 				<xsl:for-each select="//idno[@type='case']">
 					<xsl:if test="normalize-space(.) != ''">
 						<field name="documentCaseData_ss"> 
@@ -694,7 +694,7 @@
 			<xsl:value-of select="@xml:id"/>
 		</field>
 		
-		<xsl:variable name="updateType"></xsl:variable>
+		<xsl:variable name="updateType"/>
 		
 		<!-- people -->
 		
