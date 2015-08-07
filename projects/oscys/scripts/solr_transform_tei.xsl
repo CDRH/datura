@@ -359,7 +359,7 @@
 				<!-- coverage -->
 				<!-- source -->
 				
-				<!-- todo: check with Kaci and Laura on how to format -->
+				
 		<xsl:if test="/TEI/teiHeader[1]/fileDesc[1]/sourceDesc[1]/bibl[1] != ''">
 			<xsl:for-each select="/TEI/teiHeader/fileDesc/sourceDesc[1]">
 				<field name="source">
@@ -682,7 +682,7 @@
 	
 	
 <!-- ==================================
-	Person
+	tei_person
 	=================================== -->
 	
 	<xsl:template name="tei_person" exclude-result-prefixes="#all">
@@ -1044,14 +1044,14 @@
 	</xsl:template>
 	
 	<!-- ==================================
-	Person Field
+	personField
 	=================================== -->
 	
-	<!-- Incoming XML Must look like: 
+	<!-- Incoming XML must look like: 
 	
 	<person xmlns="http://www.tei-c.org/ns/1.0" xml:id="{@xml:id}">
-						<persName><xsl:value-of select="."/></persName>
-					</person>
+	    <persName>Smith, John</persName>
+	</person>
 	
 	-->
 	
@@ -1130,10 +1130,12 @@
 	
 	
 	<!-- ==================================
-	People (template so can be repeated in caseid and case documents)
+	people 
+	=======================================
 	
+	(template so can be repeated in caseid and case documents)
 	This template pulls all people out of the teiHeader and inserts into the respective documents. 
-	=================================== -->
+	 -->
 	
 	<xsl:template name="people"  exclude-result-prefixes="#all">
 		<xsl:param name="updateType"/>
@@ -1158,95 +1160,202 @@
 		
 		<!-- Explanation of listPerson[@type = $caseid or not(@type)]
 		In order to match up the people in the documents with more than one case, they have been seperated 
-		into seperate listpersons with the case id on type. see file oscys.case.0017.003 for an example. 
+		into listpersons with the case id on @type. see file oscys.case.0017.003 for an example. 
 		This xpath matches the value on the listperson to the caseid, or pulls everything if there is no caseid -->
+		
+		<!-- The when test="$updateType = 'caseid' is necessary because otherwise, when the template is run for the document, 
+			none of the people make it in to the document record because no caseid is set. -->
 		
 		<!-- Person ID and Name -->
 		
-		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person/persName[normalize-space()]">
-			<xsl:call-template name="personField">
-				<xsl:with-param name="fieldName">person</xsl:with-param>
-				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
-				<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
-			</xsl:call-template>
-		</xsl:for-each>
+		
+		<xsl:choose>
+			<xsl:when test="$updateType = 'caseid'">
+				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person/persName[normalize-space()]">
+					<xsl:call-template name="personField">
+						<xsl:with-param name="fieldName">person</xsl:with-param>
+						<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+						<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+					</xsl:call-template>
+				</xsl:for-each>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person/persName[normalize-space()]">
+					<xsl:call-template name="personField">
+						<xsl:with-param name="fieldName">person</xsl:with-param>
+						<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+						<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+					</xsl:call-template>
+				</xsl:for-each>
+			</xsl:otherwise>
+		</xsl:choose>
+		
 		
 		<!-- plaintiff -->
 		
 		<!-- earlier docs used petitioner instead of plaintiff -->
-		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='petitioner']/persName[1][normalize-space()]">
-			<xsl:call-template name="personField">
-				<xsl:with-param name="fieldName">plaintiff</xsl:with-param>
-				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
-				<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
-			</xsl:call-template>
-
-		</xsl:for-each>
+		<xsl:choose>
+			<xsl:when test="$updateType = 'caseid'">
+				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='petitioner']/persName[1][normalize-space()]">
+					<xsl:call-template name="personField">
+						<xsl:with-param name="fieldName">plaintiff</xsl:with-param>
+						<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+						<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+					</xsl:call-template>
+				</xsl:for-each>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person[@role='petitioner']/persName[1][normalize-space()]">
+					<xsl:call-template name="personField">
+						<xsl:with-param name="fieldName">plaintiff</xsl:with-param>
+						<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+						<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+					</xsl:call-template>
+				</xsl:for-each>
+			</xsl:otherwise>
+		</xsl:choose>
 		
-		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='plaintiff']/persName[1][normalize-space()]">
-			<xsl:call-template name="personField">
-				<xsl:with-param name="fieldName">plaintiff</xsl:with-param>
-				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
-				<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
-			</xsl:call-template>
-
-				
-		</xsl:for-each>
+		<xsl:choose>
+			<xsl:when test="$updateType = 'caseid'">
+				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='plaintiff']/persName[1][normalize-space()]">
+					<xsl:call-template name="personField">
+						<xsl:with-param name="fieldName">plaintiff</xsl:with-param>
+						<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+						<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+					</xsl:call-template>
+				</xsl:for-each>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person[@role='plaintiff']/persName[1][normalize-space()]">
+					<xsl:call-template name="personField">
+						<xsl:with-param name="fieldName">plaintiff</xsl:with-param>
+						<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+						<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+					</xsl:call-template>
+				</xsl:for-each>
+			</xsl:otherwise>
+		</xsl:choose>
 		
 		<!-- defendant -->
 		
-		
-		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='defendant']/persName[1][normalize-space()]">
-			<xsl:call-template name="personField">
-				<xsl:with-param name="fieldName">defendant</xsl:with-param>
-				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
-				<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
-			</xsl:call-template>
-		</xsl:for-each>
+		<xsl:choose>
+			<xsl:when test="$updateType = 'caseid'">
+				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='defendant']/persName[1][normalize-space()]">
+					<xsl:call-template name="personField">
+						<xsl:with-param name="fieldName">defendant</xsl:with-param>
+						<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+						<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+					</xsl:call-template>
+				</xsl:for-each>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person[@role='defendant']/persName[1][normalize-space()]">
+					<xsl:call-template name="personField">
+						<xsl:with-param name="fieldName">defendant</xsl:with-param>
+						<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+						<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+					</xsl:call-template>
+				</xsl:for-each>
+			</xsl:otherwise>
+		</xsl:choose>
 		
 		<!-- attorney P -->
 		
-		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='attorney_petitioner']/persName[1][normalize-space()]">
-			<xsl:call-template name="personField">
-				<xsl:with-param name="fieldName">attorneyP</xsl:with-param>
-				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
-				<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
-			</xsl:call-template>
-			<xsl:call-template name="personField">
-				<xsl:with-param name="fieldName">attorney</xsl:with-param>
-				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
-				<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
-			</xsl:call-template>
-		</xsl:for-each>
+		<xsl:choose>
+			<xsl:when test="$updateType = 'caseid'">
+				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='attorney_petitioner']/persName[1][normalize-space()]">
+					<xsl:call-template name="personField">
+						<xsl:with-param name="fieldName">attorneyP</xsl:with-param>
+						<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+						<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+					</xsl:call-template>
+					<xsl:call-template name="personField">
+						<xsl:with-param name="fieldName">attorney</xsl:with-param>
+						<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+						<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+					</xsl:call-template>
+				</xsl:for-each>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person[@role='attorney_petitioner']/persName[1][normalize-space()]">
+					<xsl:call-template name="personField">
+						<xsl:with-param name="fieldName">attorneyP</xsl:with-param>
+						<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+						<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+					</xsl:call-template>
+					<xsl:call-template name="personField">
+						<xsl:with-param name="fieldName">attorney</xsl:with-param>
+						<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+						<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+					</xsl:call-template>
+				</xsl:for-each>
+			</xsl:otherwise>
+		</xsl:choose>
 		
-		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='attorney_plaintiff']/persName[1][normalize-space()]">
-			<xsl:call-template name="personField">
-				<xsl:with-param name="fieldName">attorneyP</xsl:with-param>
-				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
-				<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
-			</xsl:call-template>
-			<xsl:call-template name="personField">
-				<xsl:with-param name="fieldName">attorney</xsl:with-param>
-				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
-				<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
-			</xsl:call-template>
-		</xsl:for-each>
+		<xsl:choose>
+			<xsl:when test="$updateType = 'caseid'">
+				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='attorney_plaintiff']/persName[1][normalize-space()]">
+					<xsl:call-template name="personField">
+						<xsl:with-param name="fieldName">attorneyP</xsl:with-param>
+						<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+						<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+					</xsl:call-template>
+					<xsl:call-template name="personField">
+						<xsl:with-param name="fieldName">attorney</xsl:with-param>
+						<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+						<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+					</xsl:call-template>
+				</xsl:for-each>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person[@role='attorney_plaintiff']/persName[1][normalize-space()]">
+					<xsl:call-template name="personField">
+						<xsl:with-param name="fieldName">attorneyP</xsl:with-param>
+						<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+						<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+					</xsl:call-template>
+					<xsl:call-template name="personField">
+						<xsl:with-param name="fieldName">attorney</xsl:with-param>
+						<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+						<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+					</xsl:call-template>
+				</xsl:for-each>
+			</xsl:otherwise>
+		</xsl:choose>
 		
 		
 		<!-- attorney D -->
 		
-		<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='attorney_defendant']/persName[1][normalize-space()]">
-			<xsl:call-template name="personField">
-				<xsl:with-param name="fieldName">attorneyD</xsl:with-param>
-				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
-				<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
-			</xsl:call-template>
-			<xsl:call-template name="personField">
-				<xsl:with-param name="fieldName">attorney</xsl:with-param>
-				<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
-				<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
-			</xsl:call-template>
-		</xsl:for-each>
+		<xsl:choose>
+			<xsl:when test="$updateType = 'caseid'">
+				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson[@type = $caseid or not(@type)]/person[@role='attorney_defendant']/persName[1][normalize-space()]">
+					<xsl:call-template name="personField">
+						<xsl:with-param name="fieldName">attorneyD</xsl:with-param>
+						<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+						<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+					</xsl:call-template>
+					<xsl:call-template name="personField">
+						<xsl:with-param name="fieldName">attorney</xsl:with-param>
+						<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+						<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+					</xsl:call-template>
+				</xsl:for-each>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/listPerson/person[@role='attorney_defendant']/persName[1][normalize-space()]">
+					<xsl:call-template name="personField">
+						<xsl:with-param name="fieldName">attorneyD</xsl:with-param>
+						<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+						<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+					</xsl:call-template>
+					<xsl:call-template name="personField">
+						<xsl:with-param name="fieldName">attorney</xsl:with-param>
+						<xsl:with-param name="personCode"><xsl:copy-of select="../."/></xsl:with-param>
+						<xsl:with-param name="updateType"><xsl:value-of select="$updateType"/></xsl:with-param>
+					</xsl:call-template>
+				</xsl:for-each>
+			</xsl:otherwise>
+		</xsl:choose>
 		
 		
 		
