@@ -649,6 +649,7 @@ This file was compiled from information found in
 
 <!-- oscys.case.0011.003 start -->
 
+<!-- duplicate 
 <person xml:id="per.000060" source="http://earlywashingtondc.org/cases/oscys.case.0011.002">
 <persName type="display">Morsell, James Sewall</persName> 
 <persName type="full"> <surname>Morsell</surname>, <forename type="first" full="yes">James</forename> <forename type="middle" full="yes">Sewall</forename></persName>
@@ -657,6 +658,7 @@ This file was compiled from information found in
 <affiliation></affiliation>
 <occupation>attorney</occupation>
 </person>
+ --> 
 
 <!-- oscys.case.0011.003 end -->
 
@@ -1764,7 +1766,7 @@ This file was compiled from information found in
 <persName type="display">Sevena</persName>
 <persName type="full"> <forename type="first" full="yes">Sevena</forename></persName>
 <sex>female</sex>
-<trait type="color"><ab>negress</ab></trait>
+<trait type="color"><ab>negro</ab></trait>
 <socecStatus>enslaved</socecStatus>
 <note>Last name unknown.</note>
 </person>
@@ -3997,7 +3999,7 @@ This file was compiled from information found in
 <person xml:id="per.000453" source="http://earlywashingtondc.org/cases/oscys.case.0042.001">
 <persName type="display">Lingan, Janet</persName>
 <persName type="full"> <surname>Lingan</surname>, <forename type="first" full="yes">Janet</forename></persName>
-<sex>Janet</sex>
+<sex>female</sex>
 <trait type="color"><ab></ab></trait>
 </person>
 
@@ -4110,7 +4112,6 @@ This file was compiled from information found in
 </trait>
 <trait type="color" when="1822-10"  source="http://earlywashingtondc.org/cases/oscys.case.0046.004">
 <ab>black</ab>
-<note source="http://earlywashingtondc.org/cases/oscys.case.0046.003">rather bright complexion</note>
 </trait>
 <socecStatus when="1822-10" source="http://earlywashingtondc.org/cases/oscys.case.0046.001">enslaved</socecStatus>
 <residence notAfter="1801" source="http://earlywashingtondc.org/cases/oscys.case.0046.005">Washington (D.C.)</residence>
@@ -4118,7 +4119,7 @@ This file was compiled from information found in
 <residence when="1806" source="http://earlywashingtondc.org/cases/oscys.case.0046.003">Alexandria (Va.)</residence>
 <age when="1822-10" source="http://earlywashingtondc.org/cases/oscys.case.0046.004">32</age>
 <birth source="http://earlywashingtondc.org/cases/oscys.case.0046.005"><placeName>Maryland</placeName></birth>
-<note>See physical description in http://earlywashingtondc.org/cases/oscys.case.0046.004.</note>
+<note>See physical description in http://earlywashingtondc.org/cases/oscys.case.0046.003 and http://earlywashingtondc.org/cases/oscys.case.0046.004.</note>
 </person>
 
 <person xml:id="per.000463" source="http://earlywashingtondc.org/cases/oscys.case.0046.001">
@@ -4962,7 +4963,7 @@ This file was compiled from information found in
 <persName type="display">Betty</persName>
 <persName type="full"> <forename type="first" full="yes">Betty</forename></persName>
 <sex>female</sex>
-<trait type="color"><ab>negress</ab></trait>
+<trait type="color"><ab>negro</ab></trait>
 <socecStatus notAfter="1790-09-20">enslaved</socecStatus>
 <socecStatus when="1790-09-20">free</socecStatus>
 </person>
@@ -4994,7 +4995,7 @@ This file was compiled from information found in
 <persName type="display">Eliza</persName>
 <persName type="full"> <forename type="first" full="yes">Eliza</forename></persName>
 <sex>female</sex>
-<trait type="color"><ab>negress</ab></trait>
+<trait type="color"><ab>negro</ab></trait>
 </person>
 
 <person xml:id="per.000557" source="http://earlywashingtondc.org/cases/oscys.case.0062.001">
@@ -7008,8 +7009,8 @@ This file was compiled from information found in
 <person xml:id="per.000760" source="http://earlywashingtondc.org/cases/oscys.case.0103.004">
 <persName type="display">Coburn, John</persName>
 <persName type="full"> <surname>Coburn</surname>, <forename type="first" full="yes">John</forename></persName>
-<sex></sex>
-<trait type="color"><ab>male</ab></trait>
+<sex>male</sex>
+<trait type="color"><ab></ab></trait>
 <note>May be the same John Coburn (per.000592) as in http://earlywashingtondc.org/cases/oscys.case.0070.002.</note>
 </person>
 
@@ -7025,7 +7026,7 @@ This file was compiled from information found in
 <persName type="display">Wells, J.</persName>
 <persName type="full"> <surname>Wells</surname>, <forename type="first" full="init">J.</forename> <genName>Junior</genName></persName>
 <sex>male</sex>
-<trait type="color"><ab>justice of the peace</ab></trait>
+<occupation>justice of the peace</occupation>
 </person>
 
 <!-- oscys.case.0103.004 end -->
@@ -10822,6 +10823,33 @@ This file was compiled from information found in
 <!-- no unique people oscys.case.0155.004 -->
 <!-- no unique people oscys.case.0155.005 -->
 <!-- no unique people oscys.case.0155.006 -->
+
+
+<!-- addition to case oscys.case.0018.003 start -->
+
+<person xml:id="per.001181" source="http://earlywashingtondc.org/cases/oscys.case.case.0018.003">
+<persName type="display">Bentley, Eleanor</persName>
+<persName type="full"> <surname></surname>, <forename type="first" full="yes"></forename></persName>
+<sex>female</sex>
+<trait type="color"><ab></ab></trait>
+<note>This is not Eleanor Bentley (per.000034) from case http://earlywashingtondc.org/cases/oscys.case.0008.001.</note>
+</person>
+
+<!-- end addition to case oscys.case.0018.003 end -->
+
+<!-- addition to case oscys.case.0019.001 start -->
+
+<person xml:id="per.001182" source="http://earlywashingtondc.org/cases/oscys.case.0019.001">
+<persName type="display">Davis, George</persName> 
+<persName type="full"> <surname>Davis</surname>, <forename type="first" full="yes">George</forename></persName>
+<sex>male</sex>
+<trait type="color"><ab></ab></trait>
+<socecStatus when="1809-08-15">enslaved</socecStatus>
+</person>
+
+<!-- end addition to case oscys.case.0019.001 end -->
+
+
 
 
 <!-- 172 - STUDENT -->
