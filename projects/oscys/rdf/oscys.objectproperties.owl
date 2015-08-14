@@ -575,7 +575,6 @@
     <rdfs:subPropertyOf rdf:resource="#acquaintanceOf"/>
 </owl:ObjectProperty>
 -->
--->
 
 <!-- http://cdrhsites.unl.edu/data/projects/oscys/rdf/oscys.objectproperties.owl#provenance -->
 
@@ -660,6 +659,10 @@
 <!-- http://cdrhsites.unl.edu/data/projects/oscys/rdf/oscys.objectproperties.owl#pubYear -->
 
 <owl:DatatypeProperty rdf:about="#pubYear"/>
+
+<!-- http://cdrhsites.unl.edu/data/projects/oscys/rdf/oscys.objectproperties.owl#sameAs -->
+
+<owl:DatatypeProperty rdf:about="#sameAs"/>
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
