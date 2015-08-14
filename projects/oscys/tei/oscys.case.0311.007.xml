@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?oxygen RNGSchema="http://digitalhumanities.unl.edu/resources/schemas/tei/TEIP5.2.6.0/tei_all.rng" type="xml"?> 
 
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0322.002">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0311.007">
     
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>Elizabeth Ann Proctor et al. v. Notley T. Dutton. Summons of Notley T. Dutton</title>
+<title>Joseph Green v. Henry Green &amp; Peter Wheeler. Summons of Henry Green &amp; Peter Wheeler</title>
 <principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
 <principal n="Mu&#241;oz, Trevor" xml:id="tm">Trevor Mu&#241;oz</principal>
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
 <respStmt>
 <resp>transcription and encoding</resp>
-<name n="Camerone, Stephanie N." xml:id="snc">Steph N. Camerone</name>
+<name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
@@ -38,8 +38,8 @@
 <addrLine>cdrh@unl.edu</addrLine>
 </address>
 </distributor>
-<idno type="project">oscys.case.0322.002</idno>
-<idno type="case">oscys.caseid.0323</idno>
+<idno type="project">oscys.case.0311.007</idno>
+<idno type="case">oscys.caseid.0313</idno>
 
 <availability>
 <licence>http://creativecommons.org/licenses/by-nc-sa/3.0/</licence>
@@ -49,15 +49,15 @@
             
 <sourceDesc>
 <bibl>
-<title level="m" type="main">Summons of Notley T. Dutton</title>
-<date when="1858-06-05">June 5, 1858</date>
+<title level="m" type="main">Summons of Henry Green &amp; Peter Wheeler</title>
+<date when="1858-11-11">November 11, 1858</date>
 <note type="project">Our transcription is based on a digital image of the original.</note>
 </bibl>
 <msDesc>
 <msIdentifier>
 <repository>National Archives and Records Administration</repository>
 <collection>Record Group 21.6</collection>
-<idno>Box 874, Folder 55</idno>
+<idno>Box 886, Folder 127</idno>
 </msIdentifier>
 </msDesc>
 </sourceDesc>
@@ -78,14 +78,13 @@
 </keywords>
 
 <keywords scheme="original" n="term">
-<term><date when="1858-10">October 1858</date></term>
+<term><date when="1859-01">January 1859</date></term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">
 <term xml:id="per.000476">Dunlop, James, 1793-</term>
 <term>Selden, William</term>
 <term xml:id="per.000740">Smith, John A.</term>
-<term>Yates, Jane</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -98,19 +97,16 @@
 <particDesc>   
 <listPerson>            
 <person role="petitioner">
-<persName>Proctor, Cynthia Eleanor</persName>
-</person>
-<person role="petitioner">
-<persName>Proctor, Elizabeth Ann</persName>
-</person>
-<person role="petitioner">
-<persName>Proctor, Steven Washington</persName>
+<persName>Green, Joseph</persName>
 </person>
 <person role="defendant">
-<persName>Dutton, Notley T.</persName>
+<persName>Green, Henry</persName>
+</person>
+<person role="defendant">
+<persName>Wheeler, Peter</persName>
 </person>
 <person role="attorney_petitioner">
-<persName>Swann, Edward</persName>
+<persName>Carrington, Edward C.</persName>
 </person>
 <person role="attorney_defendant">
 <persName/>
@@ -127,8 +123,8 @@
 </profileDesc>
         
 <revisionDesc>    
-<change when="2015-07-17" who="#kln">reviewed; edited</change>          
-<change when="2015-04-20" who="#snc">transcribed; encoded</change>
+<change when="2015-08-13" who="#kln">reviewed; edited</change>          
+<change when="2015-04-21" who="ea">Encoded and transcribed.</change>
 </revisionDesc>
 
 </teiHeader>
@@ -139,7 +135,7 @@
                
 <div1 type="case">
 
-<pb xml:id="p001" facs="oscys.case.0322.002.001.jpg"/>
+<pb xml:id="p001" facs="oscys.case.0311.007.001.jpg"/>
 
 <div2 type="caption">
 
@@ -151,41 +147,42 @@ To the Marshal of the District of Columbia&#8212;Greeting:</p>
 
 <div2 type="body">
 
-<p>We command you that you <del>take</del> summon Notley. T. Dutton <del>late of Washington County, if shall be found within the County of Washington, in your said District, and safely keep, so that you have bod</del> before the Circuit Court of the District of Columbia, to be held for the County aforesaid, at the City of Washington, on the 3rd Monday of October next, to answer <del>unto</del> the Petition of freedom of <del>for</del> Elizabeth A. Proctor, Cynthia E. Proctor. &amp; Steven. M. Proctor</p>
+<p>We command you that you <del>take</del> summon Peter Wheeler &amp; Henry Green <del>late of Washington County, if shall be found within the County of Washington, in your said District, and safely keep, so that you have bod</del> before the Circuit Court of the District of Columbia, to be held for the County aforesaid, at the City of Washington, on the 3rd Monday of January next, to answer <del>unto</del> the petition for freedom of Joseph Green</p>
 
 <p>Hereof fail not at your peril, and have you then and there this writ.</p>
 
-<p>Witness, James Dunlop Esquire, Chief Justice of our said Court, at the City of Washington, the 4th day of June Anno Domini one thousand eight hundred and 58</p>
+<p>Witness, Jas. Dunlop Esquire, Chief Justice of our said Court, at the City of Washington, the 10th day of Novr. Anno Domini one thousand eight hundred and 58</p>
 
-<p>Issued the 5th day of June 1858</p>
+<p>Issued the 11th day of Novr. 1858</p>
 
 <p>Jno. A. Smith Clk</p>
 
-<p>Swann</p>
+<p>Carrington</p>     
      
 </div2>
 
-<pb xml:id="p002" facs="oscys.case.0322.002.002.jpg"/>
+<pb xml:id="p002" facs="oscys.case.0311.007.002.jpg"/>
 
 <div2 type="back">
 
-<p>55</p>
+<p>127</p>
 
-<p>Elizabeth A. Cyntha E &amp; Steven W. Proctor<lb/>
+<p>Joseph Green<lb/>
 <lb/>
-Notley. T. Dutton Exor Jane Yates</p>
+Peter Wheeler &amp; Henry Green</p>
 
-<p>Caps.<lb/>
-2 Bre</p>
+<p>Sub.<lb/>
+7 Bre</p>
 
-<p>+<lb/>
-Pet for. freedom</p>
+<p>Pet. for freedom<lb/>
++</p>
 
-<p>Non Est<lb/>
-W. Selden<lb/>
+<p>Non sunt<lb/>
+W Selden<lb/>
 Marshal</p>
 
 </div2>
+
 </div1>
     
 </body>
