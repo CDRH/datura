@@ -4366,6 +4366,20 @@ osrdf:per.001011 a "person";
    oscys:sex "male";
    oscys:soldSlaveTo osrdf:per.001010 .
 
+osrdf:per.001184 a "person";
+   oscys:clientOf osrdf:per.000757;
+   oscys:enslavedBy osrdf:per.001185;
+   oscys:fullName "Thornton, John";
+   oscys:petitionerAgainst osrdf:per.001185;
+   oscys:sex "male" .
+
+osrdf:per.001185 a "person";
+   oscys:attorneyedAgainst osrdf:per.000757;
+   oscys:defendantAgainst osrdf:per.001184;
+   oscys:fullName "Davis, Orvin";
+   oscys:ownerOf osrdf:per.001184;
+   oscys:sex "male" .
+
 osrdf:per.000002 a "person";
    oscys:clientOf osrdf:per.000001;
    oscys:enslavedBy osrdf:per.000005;
@@ -4772,7 +4786,7 @@ osrdf:per.000003 a "person";
    oscys:deposed osrdf:per.000873;
    oscys:fullName "Brent, William";
    oscys:fullname "Brent, William";
-   oscys:sameAs "18936621";
+   oscys:sameAs "https://viaf.org/viaf/18936621";
    oscys:sex "male" .
 
 osrdf:per.000010 a "person";
@@ -9371,23 +9385,6 @@ osrdf:per.000708 a "person";
    oscys:judgedBy osrdf:per.000725;
    oscys:sex "female" .
 
-osrdf:per.000757 a "person";
-   oscys:attorneyAgainst osrdf:per.000755,
-     osrdf:per.000756,
-     osrdf:per.000891,
-     osrdf:per.000866,
-     osrdf:per.001061,
-     osrdf:per.001062;
-   oscys:attorneyFor osrdf:per.000754,
-     osrdf:per.000772,
-     osrdf:per.000773,
-     osrdf:per.000774,
-     osrdf:per.000890,
-     osrdf:per.001060;
-   oscys:fullName "Giberson, Gilbert L.";
-   oscys:fullname "Giberson, Gilbert L.";
-   oscys:sex "male" .
-
 osrdf:per.000919 a "person";
    oscys:fullName "Dyer, John";
    oscys:fullname "Dyer, John";
@@ -9582,6 +9579,25 @@ osrdf:per.000453 a "person";
      osrdf:per.000452;
    oscys:sex "Janet",
      "female" .
+
+osrdf:per.000757 a "person";
+   oscys:attorneyAgainst osrdf:per.000755,
+     osrdf:per.000756,
+     osrdf:per.000891,
+     osrdf:per.000866,
+     osrdf:per.001061,
+     osrdf:per.001062,
+     osrdf:per.001185;
+   oscys:attorneyFor osrdf:per.000754,
+     osrdf:per.000772,
+     osrdf:per.000773,
+     osrdf:per.000774,
+     osrdf:per.000890,
+     osrdf:per.001060,
+     osrdf:per.001184;
+   oscys:fullName "Giberson, Gilbert L.";
+   oscys:fullname "Giberson, Gilbert L.";
+   oscys:sex "male" .
 
 osrdf:per.000758 a "person";
    oscys:clientOf osrdf:per.000464;
@@ -10543,6 +10559,8 @@ osrdf:per.000737 a "person";
      osrdf:per.001166,
      osrdf:per.001167,
      osrdf:per.001172;
+   oscys:birth "1811";
+   oscys:death "1872";
    oscys:fullName "Brent, Robert James";
    oscys:fullname "Brent, Robert James";
    oscys:sex "male" .
@@ -10846,10 +10864,12 @@ osrdf:per.000738 a "person";
      osrdf:per.001166,
      osrdf:per.001167,
      osrdf:per.001172;
+   oscys:birth "1784";
+   oscys:death "1848";
    oscys:fullName "Brent, William Leigh";
    oscys:fullname "Brent, William Leigh";
    oscys:opposingAttorneys osrdf:per.000830;
-   oscys:sameAs "38728091";
+   oscys:sameAs "https://viaf.org/viaf/38728091";
    oscys:sex "male" .
 
 osrdf:per.000894 a "person";
@@ -11271,7 +11291,7 @@ osrdf:per.000001 a "person";
    oscys:fullName "Key, Francis Scott";
    oscys:fullname "Key, Francis Scott";
    oscys:opposingAttorneys osrdf:per.000584;
-   oscys:sameAs "824500";
+   oscys:sameAs "https://viaf.org/viaf/824500";
    oscys:sex "male" .
 
 osrdf:per.000004 a "person";
@@ -11631,5 +11651,5 @@ osrdf:per.000004 a "person";
      osrdf:per.001179;
    oscys:legal osrdf:per.001159,
      osrdf:per.001160;
-   oscys:sameAs "27114318";
+   oscys:sameAs "https://viaf.org/viaf/27114318";
    oscys:sex "male" .
