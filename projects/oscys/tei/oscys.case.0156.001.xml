@@ -3,7 +3,7 @@
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>John Thornton v. Irvine Davis. Petition for Freedom</title>
+<title>John Thornton v. Orvin Davis. Petition for Freedom</title>
 <principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
 <principal n="Muñoz, Trevor" xml:id="tm">Trevor Muñoz</principal>
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -91,13 +92,13 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001184">
 <persName>Thornton, John</persName>
 </person>
-<person role="defendant">
-<persName>Davis, Irvine</persName>
+<person role="defendant" xml:id="per.001185">
+<persName>Davis, Orvin</persName>
 </person>
-<person role="attorney_petitioner">
+<person role="attorney_petitioner" xml:id="per.000757">
 <persName>Giberson, Gilbert L.</persName>
 </person>
 <person role="attorney_defendant">
@@ -115,6 +116,7 @@
 </profileDesc>
         
 <revisionDesc>
+<change when="2015-08-17" who="#lkw">added xml:ids; changed defendant Irvine to Orvin</change>   
 <change when="2015-01-26" who="#kln">reviewed; edited</change>             
 <change when="2014-10" who="#snc">encoded</change>
 </revisionDesc>

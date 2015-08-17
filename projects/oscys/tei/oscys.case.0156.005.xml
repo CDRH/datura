@@ -3,7 +3,7 @@
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>John Thornton v. Irvine Davis. Bond</title>
+<title>John Thornton v. Orvin Davis. Bond</title>
 <principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
 <principal n="Muñoz, Trevor" xml:id="tm">Trevor Muñoz</principal>
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -80,8 +81,7 @@
     
 <keywords scheme="lcsh" n="people">
 <term xml:id="per.000003">Brent, William 1774-1848</term>
-<term>Davis, Orvin</term>
-<term>Hunter, Alexander</term>
+<term xml:id="per.000739">Hunter, Alexander</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places"> 
@@ -93,11 +93,11 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001184">
 <persName>Thornton, John</persName>
 </person>
-<person role="defendant">
-<persName>Davis, Irvine</persName>
+<person role="defendant" xml:id="per.001185">
+<persName>Davis, Orvin</persName>
 </person>
 <person role="attorney_petitioner">
 <persName/>
@@ -117,6 +117,7 @@
 </profileDesc>
         
 <revisionDesc>        
+<change when="2015-08-17" who="#lkw">added xml:ids; changed defendant Irvine to Orvin and deleted Orvin from people</change>   
 <change when="2015-01-26" who="#kln">reviewed; edited</change>       
 <change when="2014-10" who="#snc">encoded</change>
 </revisionDesc>
@@ -147,7 +148,7 @@ Orvin Davis</p>
 
 <p>Circuit Court of the District of Columbia county of Washington towit</p>
 
-<p>You Orvin Davis &amp; Alexander Hunter (with the law of the court) do acknowledge yourselves jointly and severally to <gap extent="one word" reason="illegible"/> and stand justly indebted to the United States of America in the sum of twelve hundred dollars to be levied of your bodies, goods, and chattels lands and tenements to and for the use of the said United in case default be made in the underwritten condition: which condition is that if the said Orvin Davis shall have John Thornton, a negro who has petitioned for his freedom against the said Orvin Davis by the name of Irvine Davis in the District of Columbia so as to enable him to attend this Court on the first day of the next term from time to time in support of his said petition for freedom and show not obstruct him therein or therefore and <del>in support of his said pe</del> in the mean time shall feed clothe and use him well then the above recognizance shall be void otherwise shall remain in full force and virtue. (Turn over)</p>
+<p>You Orvin Davis &amp; Alexander Hunter (with the law of the court) do acknowledge yourselves jointly and severally to <unclear reason="illegible">owe</unclear> and stand justly indebted to the United States of America in the sum of twelve hundred dollars to be levied of your bodies, goods, and chattels lands and tenements to and for the use of the said United in case default be made in the underwritten condition: which condition is that if the said Orvin Davis shall have John Thornton, a negro who has petitioned for his freedom against the said Orvin Davis by the name of Irvine Davis in the District of Columbia so as to enable him to attend this Court on the first day of the next term from time to time in support of his said petition for freedom and show not obstruct him therein or therefore and <del>in support of his said pe</del> in the mean time shall feed clothe and use him well then the above recognizance shall be void otherwise shall remain in full force and virtue. (Turn over)</p>
 
 <pb xml:id="p002" facs="oscys.case.0156.005.002.jpg"/>
 

@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -81,7 +82,7 @@
 <keywords scheme="lcsh" n="people">
 <term xml:id="per.000003">Brent, William 1774-1848</term>
 <term xml:id="per.000004">Cranch, William, 1769-1855</term>
-<term>Hunter, Alexander</term>
+<term xml:id="per.000739">Hunter, Alexander</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places"> 
@@ -93,10 +94,10 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001188">
 <persName>Joseph</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001189">
 <persName>Hatton, Basil</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.000001">
@@ -117,6 +118,7 @@
 </profileDesc>
         
 <revisionDesc>      
+<change when="2015-08-17" who="#lkw">added xml:ids; transcription</change>
 <change when="2015-01-26" who="#kln">reviewed; edited</change>     
 <change when="2014-10" who="#snc">encoded</change>
 </revisionDesc>
@@ -143,7 +145,7 @@ To the Marshal of the District of Columbia--Greeting:</p>
 
 <p>We command you that you <del>take</del> summon Basil Hatton late of Washington County, if he shall be found within the County of Washington, in your said District, <del>and safely keep,</del> so that <del>you have</del> he be &amp; <del>bod</del> appear before the Circuit Court of the District of Columbia, to be held for the County aforesaid, at the City of Washington, on the fourth Monday of November next, to answer <del>unto</del> negro Joseph's Petition for freedom filed in the said Court against him.</p>
 
-<p>Hereof tai not, at your peril, and have you then and there this writ.</p>
+<p>Hereof fail not, at your peril, and have you then and there this writ.</p>
 
 <p>Witness Wm Cranch Esquire, Chief Judge of our said Court, at the City of Washington, the 2d day of May Anno Domini, one thousand eight hundred and 35.</p>
 

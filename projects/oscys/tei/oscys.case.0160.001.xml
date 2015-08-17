@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -80,11 +81,10 @@
     
 <keywords scheme="lcsh" n="people">
 <term xml:id="per.000003">Brent, William 1774-1848</term>
-<term>Brooke, Edmund</term>
-<term>Brooke, Mary</term>
-<term>Scott, John D.</term>
+<term xml:id="per.001197">Brooke, Edmund</term>
+<term xml:id="per.001198">Brooke, Mary</term>
+<term xml:id="per.001199">Scott, John D.</term>
 </keywords>
-
 <keywords scheme="lcsh" n="places"> 
 <term>Washington County (D.C.)</term>
 <term>Washington (D.C.)</term>
@@ -94,16 +94,16 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001200">
 <persName>Kitty</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001201">
 <persName>McPherson, Samuel</persName>
 </person>
-<person role="attorney_petitioner">
+<person role="attorney_petitioner" xml:id="per.000044">
 <persName>Morsell, James Sewall</persName>
 </person>
-<person role="attorney_petitioner">
+<person role="attorney_petitioner" xml:id="per.001202">
 <persName>Turner, Thomas</persName>
 </person>
 <person role="attorney_defendant">
@@ -121,6 +121,7 @@
 </profileDesc>
         
 <revisionDesc>   
+<change when="2015-08-17" who="#lkw">added xml:ids</change>
 <change when="2015-01-27" who="#kln">reviewed; edited</change>       
 <change when="2014-10" who="#snc">encoded</change>
 </revisionDesc>
@@ -186,7 +187,7 @@ June 22 1831</p>
 
 <div2 type="body">
 
-<p>This will be brought by the <gap extent="one word"/> and is the <gap extent="one word"/> Mr. Brent will forthwith issue the subpa &amp; writ of injunction. As the woman is now in jail &amp; may be <gap extent="one word"/>to be removed. Mr <gap extent="one word"/> obligd by <gap extent="one word"/> the jailer of the injunction &amp; require him to return her <gap extent="one word"/> it <unclear>sets into her hands</unclear> the Marshall for fear the <gap extent="sixteen words"/></p>
+<p>This will be brought by the <gap extent="one word"/> and is the <gap extent="one word"/> Mr. Brent will forthwith issue the subpa &amp; writ of injunction. As the woman is now in jail &amp; may be <gap extent="one word"/>to be removed. Mr <gap extent="one word"/> obligd by <!-- apprising --> <gap extent="one word"/> the jailer of the injunction &amp; require him to return her <gap extent="one word"/> it <unclear>sets into her hands</unclear> the Marshall for fear the <gap extent="sixteen words"/></p>
 
 <p>Thos. Turner</p>
 
