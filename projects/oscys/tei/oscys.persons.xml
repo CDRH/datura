@@ -5256,13 +5256,14 @@ This file was compiled from information found in
 <occupation></occupation>
 </person>
 
+<!-- duplicate person. see per.000679 
 <person xml:id="per.000583" source="http://earlywashingtondc.org/cases/oscys.case.0068.001">
-<persName type="display">Reddin, W.</persName>
-<persName type="full"> <surname>Reddin</surname>, <forename type="first" full="yes">W.</forename></persName>
+<persName type="display">Redin, W.</persName>
+<persName type="full"> <surname>Redin</surname>, <forename type="first" full="yes">W.</forename></persName>
 <sex>male</sex>
 <trait type="color"><ab></ab></trait>
 <occupation>lawyer</occupation>
-</person>
+</person>-->
 
 <!-- oscys.case.0068.001 end -->
 
@@ -6052,13 +6053,14 @@ This file was compiled from information found in
 
 <!--  oscys.case.0083.006 start -->
 
-    <person xml:id="per.000663" source="http://earlywashingtondc.org/cases/oscys.case.0083.006">
+<!-- this is H. M. Morfit, per.000770 
+<person xml:id="per.000663" source="http://earlywashingtondc.org/cases/oscys.case.0083.006">
 <persName type="display">Morbet, H. M.</persName>
 <persName type="full"> <surname>Morbet</surname>, <forename type="first" full="init">H.</forename> <forename type="middle" full="init">M.</forename></persName>
 <sex>male</sex>
 <trait type="color"><ab></ab></trait>
 <occupation>attorney</occupation>
-</person>
+</person>-->
 
 <!-- oscys.case.0083.006 end -->
 
@@ -6208,8 +6210,8 @@ This file was compiled from information found in
 </person>
 
 <person xml:id="per.000679" source="http://earlywashingtondc.org/cases/oscys.case.0087.001">
-<persName type="display">Reddin, W.</persName>
-<persName type="full"> <surname>Redin</surname>, <forename type="first" full="init">W.</forename></persName>
+<persName type="display">Redin, William</persName>
+<persName type="full"> <surname>Redin</surname>, <forename type="first">William</forename></persName>
 <sex>male</sex>
 <trait type="color"><ab></ab></trait>
 <occupation>attorney</occupation>
@@ -7118,12 +7120,15 @@ This file was compiled from information found in
 <!-- oscys.case.0103.011 start -->
 
 <person xml:id="per.000770" source="http://earlywashingtondc.org/cases/oscys.case.0103.011">
-<persName type="display">Morfit, H. M.</persName>
-<persName type="full"> <surname>Morfit</surname>, <forename type="first" full="init">H.</forename> <forename type="middle" full="init">M.</forename></persName>
+<persName type="display">Morfit, Henry Mason</persName>
+<persName type="full"> <surname>Morfit</surname>, <forename type="first">Henry</forename> <forename type="middle">Mason</forename></persName>
+<birth when="1793" source="#viaf">1793</birth>
+<death when="1865" source="#viaf">1865</death>
 <sex>male</sex>
 <trait type="color"><ab></ab></trait>
 <occupation>attorney</occupation>
 </person>
+
 
 <!-- oscys.case.0103.011 end -->
 <!-- 104 - STUDENT, but not in folder -->
