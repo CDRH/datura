@@ -1068,6 +1068,12 @@
 			<xsl:when test="@xml:id">
 				<xsl:value-of select="@xml:id"/>
 			</xsl:when>
+			<xsl:when test="@corresp">
+				<xsl:value-of select="@corresp"/>
+			</xsl:when>
+			<xsl:when test="../@corresp">
+				<xsl:value-of select="../@corresp"/>
+			</xsl:when>
 			<xsl:otherwise>
 				<xsl:text>per.000000</xsl:text>
 			</xsl:otherwise>
