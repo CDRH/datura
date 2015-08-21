@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -79,10 +80,10 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Atkins, David</term>
-<term>Gardner, Richard B.</term>
-<term>Schell</term>
-<term>Semmes</term>
+<term xml:id="per.001236">Atkins, David</term>
+<term xml:id="per.001238">Gardner, Richard B.</term>
+<term xml:id="per.001243">Schell</term>
+<term xml:id="per.001244">Semmes</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -94,17 +95,17 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001239">
 <persName>Atkins, Alfred</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001240">
 <persName>Atkins, Margaret Norah</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001241">
 <persName>Bowling, Francis</persName>
 </person>
-<person role="defendant">
-<persName>Gardner, Clarissa</persName>
+<person role="defendant" xml:id="per.001242">
+<persName>Gardner, Clarissa B.</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.000829">
 <persName>Bradley, Joseph H. (Joseph Habersham), 1802-1887</persName>
@@ -124,6 +125,7 @@
 </profileDesc>
         
 <revisionDesc>             
+<change when="2015-08-17" who="#lkw">added xml:ids</change>
 <change when="2014-01-30" who="#kln">Encoded and transcribed.</change>
 <change when="2014-01-29" who="#ea">Encoded and transcribed.</change>
 </revisionDesc>

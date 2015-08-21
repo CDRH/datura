@@ -12,6 +12,7 @@
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="McCormick, Kylie, L." xml:id="klm">Kylie L. McCormick</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -82,7 +83,6 @@
 <keywords scheme="lcsh" n="people">
 <term xml:id="per.000004">Cranch, William, 1769-1855</term>
 <term xml:id="per.000740">Smith, John A.</term>
-<term xml:id="per.000753">Wallach, Richard, 1816-1881</term> <!-- not served til after 12/4/49 appointment to marshal? -->
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -94,16 +94,16 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001213">
 <persName>Lucas, Letty</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001214">
 <persName>Ratcliffe, John R.</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.000847">
 <persName>Carlisle, James M.</persName>
 </person>
-<person role="attorney_petitioner" corresp="per.000753"> <!-- issued before 12/4/49 appointment to marshal -->
+<person role="attorney_petitioner" corresp="per.000753">
 <persName>Wallach, Richard, 1816-1881</persName>
 </person>
 <person role="attorney_defendant">
@@ -121,6 +121,7 @@
 </profileDesc>
         
 <revisionDesc> 
+<change when="2015-08-17" who="#lkw">added xml:ids</change>
 <change when="2015-08-12" who="#kln">changed Wallach sr to Wallch jr</change> 
 <change when="2015-02-03" who="#kln">reviewed; edited</change>             
 <change when="2014-10" who="#snc">encoded</change>

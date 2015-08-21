@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -79,7 +80,7 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Montgomery, Francis</term>
+<term xml:id="per.001221">Montgomery, Francis</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places"> 
@@ -92,13 +93,13 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001218">
 <persName>Harris, Lidia</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001219">
 <persName>Lewis, William M.</persName>
 </person>
-<person role="attorney_petitioner">
+<person role="attorney_petitioner" xml:id="per.001220">
 <persName>Dandridge</persName>
 </person>
 <person role="attorney_defendant">
@@ -115,7 +116,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>             
+<revisionDesc>        
+<change when="2015-08-17" who="#lkw">added xml:ids</change>     
 <change when="2015-02-04" who="#kln">reviewed; edited</change>
 <change when="2014-10" who="#snc">encoded</change>
 </revisionDesc>

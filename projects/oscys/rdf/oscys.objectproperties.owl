@@ -44,6 +44,7 @@
     <owl:Inverseof rdf:resource="#judgedBy"/>
     <rdfs:subPropertyOf rdf:resource="#legal"/>
 </owl:ObjectProperty>
+
 <!-- http://cdrhsites.unl.edu/data/projects/oscys/rdf/oscys.objectproperties.owl#judgedBy -->    
 <owl:ObjectProperty rdf:about="#judgedBy">
     <rdfs:domain rdf:resource="#Person"/>

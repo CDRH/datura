@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Stephanie N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -80,7 +81,7 @@
     
 <keywords scheme="lcsh" n="people">
 <term xml:id="per.000004">Cranch, William, 1769-1855</term>
-<term>Hoover, Jonah D.</term>
+<term xml:id="per.001216">Hoover, Jonah D.</term>
 <term xml:id="per.000740">Smith, John A.</term>
 </keywords>
 
@@ -93,13 +94,13 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001222">
 <persName>Woodward, Louisa</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001223">
 <persName>Monroe, Jane</persName>
 </person>
-<person role="attorney_petitioner">
+<person role="attorney_petitioner" xml:id="per.001224">
 <persName>Addison, J. E.</persName>
 </person>
 <person role="attorney_defendant">
@@ -117,6 +118,7 @@
 </profileDesc>
         
 <revisionDesc>         
+<change when="2015-08-17" who="#lkw">added xml:ids</change>
 <change when="2015-04-30" who="#kln">reviewed; edited</change>     
 <change when="2015-03-16" who="#snc">Encoded and transcribed</change>
 </revisionDesc>

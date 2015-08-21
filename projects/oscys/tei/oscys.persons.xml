@@ -4311,7 +4311,7 @@ This file was compiled from information found in
 <sex></sex>
 <trait type="color"><ab></ab></trait>
 <occupation>attorney</occupation>
-<note>Forename unknown.</note>
+<note>Likely Fleet Smith, per.000558.</note>
 </person>
 
 <!-- oscys.case.0049.001 end -->
@@ -4789,11 +4789,12 @@ This file was compiled from information found in
 </person>
 
 <person xml:id="per.000533" source="http://earlywashingtondc.org/cases/oscys.case.0058.001">
-<persName type="display">Hall, D. A.</persName>
-<persName type="full"> <surname>Hall</surname>, <forename type="first" full="init">D.</forename> <forename type="middle" full="init">A.</forename></persName>
+<persName type="display">Hall, David A.</persName>
+<persName type="full"> <surname>Hall</surname>, <forename type="first">David</forename> <forename type="middle" full="init">A.</forename></persName>
 <sex>male</sex>
 <trait type="color"><ab></ab></trait>
 <occupation>lawyer</occupation>
+<occupation source="http://earlywashingtondc.org/cases/oscys.case.0221.004">justice of the peace</occupation>
 </person>
 
 <!-- oscys.case.0058.001 end -->
@@ -5014,6 +5015,7 @@ This file was compiled from information found in
 <sex>male</sex>
 <trait type="color"><ab></ab></trait>
 <occupation>attorney</occupation>
+<occupation source="http://earlywashingtondc.org/cases/oscys.case.0178.006" when="1836-01-05">justice of the peace</occupation>
 </person>
 
 <!-- oscys.case.0062.001 end -->
@@ -5254,13 +5256,14 @@ This file was compiled from information found in
 <occupation></occupation>
 </person>
 
+<!-- duplicate person. see per.000679 
 <person xml:id="per.000583" source="http://earlywashingtondc.org/cases/oscys.case.0068.001">
-<persName type="display">Reddin, W.</persName>
-<persName type="full"> <surname>Reddin</surname>, <forename type="first" full="yes">W.</forename></persName>
+<persName type="display">Redin, W.</persName>
+<persName type="full"> <surname>Redin</surname>, <forename type="first" full="yes">W.</forename></persName>
 <sex>male</sex>
 <trait type="color"><ab></ab></trait>
 <occupation>lawyer</occupation>
-</person>
+</person>-->
 
 <!-- oscys.case.0068.001 end -->
 
@@ -6050,13 +6053,14 @@ This file was compiled from information found in
 
 <!--  oscys.case.0083.006 start -->
 
-    <person xml:id="per.000663" source="http://earlywashingtondc.org/cases/oscys.case.0083.006">
+<!-- this is H. M. Morfit, per.000770 
+<person xml:id="per.000663" source="http://earlywashingtondc.org/cases/oscys.case.0083.006">
 <persName type="display">Morbet, H. M.</persName>
 <persName type="full"> <surname>Morbet</surname>, <forename type="first" full="init">H.</forename> <forename type="middle" full="init">M.</forename></persName>
 <sex>male</sex>
 <trait type="color"><ab></ab></trait>
 <occupation>attorney</occupation>
-</person>
+</person>-->
 
 <!-- oscys.case.0083.006 end -->
 
@@ -6206,8 +6210,8 @@ This file was compiled from information found in
 </person>
 
 <person xml:id="per.000679" source="http://earlywashingtondc.org/cases/oscys.case.0087.001">
-<persName type="display">Reddin, W.</persName>
-<persName type="full"> <surname>Redin</surname>, <forename type="first" full="init">W.</forename></persName>
+<persName type="display">Redin, William</persName>
+<persName type="full"> <surname>Redin</surname>, <forename type="first">William</forename></persName>
 <sex>male</sex>
 <trait type="color"><ab></ab></trait>
 <occupation>attorney</occupation>
@@ -6377,7 +6381,7 @@ This file was compiled from information found in
 <sex>male</sex>
 <trait type="color"><ab></ab></trait>
 <occupation>lawyer</occupation>
-<note>May be the same person as per.000483 from Vincent Garner v. Thompson Simpson (http://earlywashingtondc.org/cases/oscys.case.0049.001) and/or Fleet Smith per.000558 from Eliza v. William Hayman (http://earlywashingtondc.org/cases/oscys.case.0062.001).</note>
+<note>Likely Fleet Smith, per.000558.</note>
 </person>
 
 
@@ -7116,12 +7120,15 @@ This file was compiled from information found in
 <!-- oscys.case.0103.011 start -->
 
 <person xml:id="per.000770" source="http://earlywashingtondc.org/cases/oscys.case.0103.011">
-<persName type="display">Morfit, H. M.</persName>
-<persName type="full"> <surname>Morfit</surname>, <forename type="first" full="init">H.</forename> <forename type="middle" full="init">M.</forename></persName>
+<persName type="display">Morfit, Henry Mason</persName>
+<persName type="full"> <surname>Morfit</surname>, <forename type="first">Henry</forename> <forename type="middle">Mason</forename></persName>
+<birth when="1793" source="#viaf">1793</birth>
+<death when="1865" source="#viaf">1865</death>
 <sex>male</sex>
 <trait type="color"><ab></ab></trait>
 <occupation>attorney</occupation>
 </person>
+
 
 <!-- oscys.case.0103.011 end -->
 <!-- 104 - STUDENT, but not in folder -->
@@ -7613,7 +7620,7 @@ This file was compiled from information found in
 <!-- oscys.case.0104.011 start -->
 
 <person xml:id="per.000829" source="http://earlywashingtondc.org/cases/oscys.case.0104.011">
-<persName type="display">Bradley, Joseph H.</persName>
+<persName type="display">Bradley, Joseph H. (Joseph Habersham), 1802-1887</persName>
 <persName type="full"> <surname>Bradley</surname>, <forename type="first" full="yes">Joseph</forename> <forename type="middle" full="init">H.</forename></persName>
 <birth when="1802" source="#viaf">1802</birth>
 <death when="1887" source="#viaf">1887</death>
@@ -9191,7 +9198,9 @@ This file was compiled from information found in
 
 <person xml:id="per.001002" source="http://earlywashingtondc.org/cases/oscys.case.0129.001">
 <persName type="display">Fendall, P. R.</persName>
-<persName type="full"> <surname>Fendall</surname>, <forename type="first" full="init">P.</forename> <forename type="middle">R.</forename></persName>
+<persName type="full"> <surname>Fendall</surname>, <forename type="first">Philip</forename> <forename type="middle">Ricard</forename></persName>
+<birth when="1794" source="#viaf">1794</birth>
+<death when="1868" source="#viaf">1868</death>
 <sex>male</sex>
 <trait type="color"><ab></ab></trait>
 <occupation>attorney</occupation>
@@ -9203,7 +9212,7 @@ This file was compiled from information found in
 <sex>male</sex>
 <trait type="color"><ab></ab></trait>
 <occupation>attorney</occupation>
-<note>May be the same Smith as per.000483 in http://earlywashingtondc.org/cases/oscys.case.0049.</note>
+<note>May be J. B. H. Smith or B. P. Smith</note>
 </person>
 
 <!-- oscys.case.0129.001 end -->
@@ -11081,6 +11090,460 @@ This file was compiled from information found in
 <trait type="color"><ab></ab></trait>
 <note>May be the same James Williams as per.000424 in oscys.case.0036.010.</note>
 </person>
+
+<!-- oscys.case.0160.002 end -->
+
+<!-- oscys.case.0161.001 start -->
+
+<person xml:id="per.001205" source="http://earlywashingtondc.org/cases/oscys.case.0161.001">
+<persName type="display">Duckett, Barbara</persName>
+<persName type="full"> <surname>Duckett</surname>, <forename type="first" full="yes">Barbara</forename></persName>
+<sex>female</sex>
+<trait type="color"><ab></ab></trait>
+<socecStatus>enslaved</socecStatus>
+</person>
+
+<person xml:id="per.001206" source="http://earlywashingtondc.org/cases/oscys.case.0161.001">
+<persName type="display">Duckett, Julia</persName>
+<persName type="full"> <surname>Duckett</surname>, <forename type="first" full="yes">Julia</forename></persName>
+<sex>female</sex>
+<trait type="color"><ab></ab></trait>
+<socecStatus>enslaved</socecStatus>
+</person>
+
+<person xml:id="per.001207" source="http://earlywashingtondc.org/cases/oscys.case.0161.001">
+<persName type="display">Duckett, Letha</persName>
+<persName type="full"> <surname>Duckett</surname>, <forename type="first" full="yes">Letha</forename></persName>
+<sex>female</sex>
+<trait type="color"><ab></ab></trait>
+<socecStatus>enslaved</socecStatus>
+</person>
+
+<person xml:id="per.001208" source="http://earlywashingtondc.org/cases/oscys.case.0161.001">
+<persName type="display">Duckett, Lewis</persName>
+<persName type="full"> <surname>Duckett</surname>, <forename type="first" full="yes">Lewis</forename></persName>
+<sex>male</sex>
+<trait type="color"><ab></ab></trait>
+<socecStatus>enslaved</socecStatus>
+</person>
+
+<person xml:id="per.001209" source="http://earlywashingtondc.org/cases/oscys.case.0161.001">
+<persName type="display">Duckett, Mary</persName>
+<persName type="full"> <surname>Duckett</surname>, <forename type="first" full="yes">Mary</forename></persName>
+<sex>female</sex>
+<trait type="color"><ab></ab></trait>
+<socecStatus>enslaved</socecStatus>
+</person>
+
+<person xml:id="per.001210" source="http://earlywashingtondc.org/cases/oscys.case.0161.001">
+<persName type="display">Duckett, Thomas</persName>
+<persName type="full"> <surname>Duckett</surname>, <forename type="first" full="yes">Thomas</forename></persName>
+<sex>male</sex>
+<trait type="color"><ab></ab></trait>
+<socecStatus>enslaved</socecStatus>
+</person>
+
+<person xml:id="per.001211" source="http://earlywashingtondc.org/cases/oscys.case.0161.001">
+<persName type="display">McCutchen, John</persName>
+<persName type="full"> <surname>McCutchen</surname>, <forename type="first" full="yes">John</forename></persName>
+<sex>male</sex>
+<trait type="color"><ab></ab></trait>
+</person>
+
+<person xml:id="per.001212" source="http://earlywashingtondc.org/cases/oscys.case.0161.001">
+<persName type="display">McCutchen, John H. G.</persName>
+<persName type="full"> <surname>McCutchen</surname>, <forename type="first" full="yes">John</forename> <forename type="middle" full="init">H.</forename> <forename type="middle" full="init">G.</forename></persName>
+<sex>male</sex>
+<trait type="color"><ab></ab></trait>
+</person>
+
+<!-- oscys.case.0161.001 end -->
+
+<!-- no unique people oscys.case.0161.002 -->
+<!-- no unique people oscys.case.0161.003 -->
+
+<!-- oscys.case.0162.001 start -->
+
+<person xml:id="per.001213" source="http://earlywashingtondc.org/cases/oscys.case.0162.001">
+<persName type="display">Lucas, Letty</persName>
+<persName type="full"> <surname>Lucas</surname>, <forename type="first" full="yes">Letty</forename></persName>
+<sex>female</sex>
+<trait type="color"><ab></ab></trait>
+</person>
+
+<person xml:id="per.001214" source="http://earlywashingtondc.org/cases/oscys.case.0162.001">
+<persName type="display">Ratcliffe, John R.</persName>
+<persName type="full"> <surname>Ratcliffe</surname>, <forename type="first" full="yes">John</forename> <forename type="middle" full="init">R.</forename></persName>
+<sex>male</sex>
+<trait type="color"><ab></ab></trait>
+</person>
+
+<person xml:id="per.001215" source="http://earlywashingtondc.org/cases/oscys.case.0162.001">
+<persName type="display">Robertson, H. B.</persName>
+<persName type="full"><surname>Robertson</surname>, <forename type="first" full="init">H.</forename> <forename type="middle" full="init">B.</forename></persName>
+<sex>male</sex>
+<trait type="color"><ab></ab></trait>
+<note>This may be Henry B. Robertson (per.0124.001) from oscys.case.0124.001.</note>
+</person>
+
+<!-- oscys.case.0162.001 end -->
+
+<!-- no unique people oscys.case.0162.002 -->
+<!-- no unique people oscys.case.0162.003 -->
+<!-- no unique people oscys.case.0162.004 -->
+<!-- no unique people oscys.case.0162.005 -->
+<!-- no unique people oscys.case.0162.006 -->
+<!-- no unique people oscys.case.0162.007 -->
+<!-- no unique people oscys.case.0162.008 -->
+<!-- no unique people oscys.case.0162.009 -->
+<!-- no unique people oscys.case.0162.010 -->
+<!-- no unique people oscys.case.0162.011 -->
+<!-- no unique people oscys.case.0162.012 -->
+<!-- no unique people oscys.case.0162.013 -->
+<!-- no unique people oscys.case.0162.014 -->
+<!-- no unique people oscys.case.0162.015 -->
+
+<!-- oscys.case.0162.016 start -->
+
+<person xml:id="per.001216" source="http://earlywashingtondc.org/cases/oscys.case.0162.016">
+<persName type="display">Hoover, Jonah D.</persName>
+<persName type="full"> <surname>Hoover</surname>, <forename type="first" full="yes">Hoover, Jonah</forename> <forename type="middle" full="init">D.</forename></persName>
+<sex>male</sex>
+<trait type="color"><ab></ab></trait>
+<occupation>marshal</occupation>
+</person>
+
+<!-- oscys.case.0162.016 end -->
+
+<!-- no unique people oscys.case.0162.017 -->
+<!-- no unique people oscys.case.0162.018 -->
+<!-- no unique people oscys.case.0162.019 -->
+<!-- no unique people oscys.case.0162.020 -->
+<!-- no unique people oscys.case.0162.021 -->
+<!-- no unique people oscys.case.0162.022 -->
+<!-- no unique people oscys.case.0162.023 -->
+<!-- no unique people oscys.case.0162.024 -->
+<!-- no unique people oscys.case.0162.025 -->
+
+
+<!-- oscys.case.0162.026 start -->
+
+<person xml:id="per.001217" source="http://earlywashingtondc.org/cases/oscys.case.0162.026">
+<persName type="display">Selden, William</persName>
+<persName type="full"> <surname>Selden</surname>, <forename type="first" full="yes">William</forename></persName>
+<sex>male</sex>
+<trait type="color"><ab></ab></trait>
+<occupation>marshal</occupation>
+</person>
+
+<!-- oscys.case.0162.026 end -->
+
+<!-- no unique people oscys.case.0162.027 -->
+<!-- no unique people oscys.case.0162.028 -->
+<!-- no unique people oscys.case.0162.029 -->
+
+<!-- oscys.case.0163.001 start -->
+
+<person xml:id="per.001218" source="http://earlywashingtondc.org/cases/oscys.case.0163.001">
+<persName type="display">Harris, Lidia</persName>
+<persName type="full"> <surname></surname>, <forename type="first" full="yes"></forename> <addName type="first" subtype="alternate">Ledia</addName></persName>
+<sex>female</sex>
+<age when="1836-06-29">over 28</age>
+<trait type="color"><ab></ab></trait>
+</person>
+
+<person xml:id="per.001219" source="http://earlywashingtondc.org/cases/oscys.case.0163.001">
+<persName type="display">Lewis, William M.</persName>
+<persName type="full"> <surname>Lewis</surname>, <forename type="first" full="yes">William</forename> <forename type="middle" full="init">M.</forename></persName>
+<sex>male</sex>
+<trait type="color"><ab></ab></trait>
+</person>
+
+<person xml:id="per.001220" source="http://earlywashingtondc.org/cases/oscys.case.0163.001">
+<persName type="display">Dandridge</persName>
+<persName type="full"> <surname>Dandridge</surname></persName>
+<sex>male</sex>
+<trait type="color"><ab></ab></trait>
+<occupation>attorney</occupation>
+<note>May be the same Dandridge as per.001016 in oscys.case.0131.001.</note>
+</person>
+
+<person xml:id="per.001221" source="http://earlywashingtondc.org/cases/oscys.case.0163.001">
+<persName type="display">Montgomery, Francis</persName>
+<persName type="full"> <surname>Montgomery</surname>, <forename type="first" full="yes">Francis</forename></persName>
+<sex></sex>
+<trait type="color"><ab></ab></trait>
+</person>
+
+<!-- oscys.case.0163.001 end -->
+
+<!-- no unique people oscys.case.0163.002 -->
+<!-- no unique people oscys.case.0163.003 -->
+<!-- no unique people oscys.case.0163.004 -->
+<!-- no unique people oscys.case.0163.005 -->
+<!-- no unique people oscys.case.0163.006 -->
+
+<!-- oscys.case.0164.001 start -->
+
+<person xml:id="per.001222" source="http://earlywashingtondc.org/cases/oscys.case.0164.001">
+<persName type="display">Woodward, Louisa</persName>
+<persName type="full"> <surname>Woodward</surname>, <forename type="first" full="yes">Louisa</forename></persName>
+<sex>female</sex>
+<trait type="color"><ab></ab></trait>
+</person>
+
+<person xml:id="per.001223" source="http://earlywashingtondc.org/cases/oscys.case.0164.001">
+<persName type="display">Monroe, Jane</persName>
+<persName type="full"> <surname>Monroe</surname>, <forename type="first" full="yes">Jane</forename></persName>
+<sex>female</sex>
+<trait type="color"><ab></ab></trait>
+</person>
+
+<person xml:id="per.001224" source="http://earlywashingtondc.org/cases/oscys.case.0164.001">
+<persName type="display">Addison, J. E.</persName>
+<persName type="full"> <surname>Addison</surname>, <forename type="first" full="init">J.</forename> <forename type="middle" full="init">E.</forename></persName>
+<sex>male</sex>
+<trait type="color"><ab></ab></trait>
+<occupation>attorney</occupation>
+</person>
+
+<!-- oscys.case.0164.001 end -->
+
+<!-- no unique people oscys.case.0164.002 -->
+<!-- no unique people oscys.case.0164.003 -->
+<!-- no unique people oscys.case.0164.004 -->
+<!-- no unique people oscys.case.0164.005 -->
+<!-- no unique people oscys.case.0164.006 -->
+<!-- no unique people oscys.case.0164.007 -->
+<!-- no unique people oscys.case.0164.008 -->
+<!-- no unique people oscys.case.0164.009 -->
+<!-- no unique people oscys.case.0164.010 -->
+<!-- no unique people oscys.case.0164.011 -->
+<!-- no unique people oscys.case.0164.012 -->
+<!-- no unique people oscys.case.0164.013 -->
+<!-- no unique people oscys.case.0164.014 -->
+<!-- no unique people oscys.case.0164.015 -->
+
+<!-- oscys.case.0164.016 start -->
+
+<person xml:id="per.001225" source="http://earlywashingtondc.org/cases/oscys.case.0164.016">
+<persName type="display">Car, C.</persName>
+<persName type="full"> <surname>Car</surname>, <forename type="first" full="yes">C.</forename></persName>
+<sex>male</sex>
+<trait type="color"><ab></ab></trait>
+<occupation>attorney</occupation>
+</person>
+
+<!-- oscys.case.0164.016 end -->
+
+<!-- oscys.case.0165.001 start -->
+
+<person xml:id="per.001226" source="http://earlywashingtondc.org/cases/oscys.case.0165.001">
+<persName type="display">Crawford, Lucy</persName>
+<persName type="full"> <surname></surname>, <forename type="first" full="yes"></forename></persName>
+<sex></sex>
+<trait type="color" when="1845-10-18"><ab>colored</ab></trait>
+<socecStatus>enslaved</socecStatus>
+</person>
+
+<person xml:id="per.001227" source="http://earlywashingtondc.org/cases/oscys.case.0165.001">
+<persName type="display">Scott, Martha A.</persName>
+<persName type="full"> <surname></surname>, <forename type="first" full="yes"></forename></persName>
+<sex></sex>
+<trait type="color"><ab></ab></trait>
+</person>
+
+
+<!-- oscys.case.0165.001 end -->
+
+<!-- no unique people oscys.case.0165.002 -->
+<!-- no unique people oscys.case.0165.003 -->
+
+<!-- oscys.case.0166.001 start -->
+
+<person xml:id="per.001228" source="http://earlywashingtondc.org/cases/oscys.case.0166.001">
+<persName type="display">Williams, Lucy</persName>
+<persName type="full"> <surname>Williams</surname>, <forename type="first" full="yes">Lucy</forename> <surname type="maiden">Bright</surname> <surname type="maiden">White</surname></persName>
+<sex>female</sex>
+<trait type="color"><ab>colored</ab></trait>
+<socecStatus>enslaved</socecStatus>
+</person>
+
+<person xml:id="per.001229" source="http://earlywashingtondc.org/cases/oscys.case.0166.001">
+<persName type="display">Hope, George</persName>
+<persName type="full"> <surname>Hope</surname>, <forename type="first" full="yes">George</forename></persName>
+<sex>male</sex>
+<trait type="color"><ab></ab></trait>
+</person>
+
+<!-- oscys.case.0166.001 end -->
+
+<!-- oscys.case.0166.002 start -->
+
+<person xml:id="per.001230" source="http://earlywashingtondc.org/cases/oscys.case.0166.002">
+<persName type="display">Lenox, Walter</persName>
+<persName type="full"> <surname>Lenox</surname>, <forename type="first" full="yes">Walter</forename></persName>
+<sex>male</sex>
+<trait type="color"><ab></ab></trait>
+<occupation>attorney</occupation>
+</person>
+
+<!-- oscys.case.0166.002 end -->
+
+<!-- no unique people oscys.case.0166.003 -->
+<!-- no unique people oscys.case.0166.004 -->
+<!-- no unique people oscys.case.0166.005 -->
+<!-- no unique people oscys.case.0166.006 -->
+<!-- no unique people oscys.case.0166.007 -->
+<!-- no unique people oscys.case.0166.008 -->
+<!-- no unique people oscys.case.0166.009 -->
+<!-- no unique people oscys.case.0166.010 -->
+
+<!-- oscys.case.0166.011 start -->
+
+<person xml:id="per.001231" source="http://earlywashingtondc.org/cases/oscys.case.0166.011">
+<persName type="display">Hope, George</persName>
+<persName type="full"> <surname>Hope</surname>, <forename type="first" full="yes">George</forename> <genName>senior</genName></persName>
+<death notAfter="1849-03-14">before March 14, 1849</death>
+<sex>male</sex>
+<trait type="color"><ab></ab></trait>
+<residence>Portsmouth, Virginia</residence>
+<note>Not the same George Hope as per.001229.</note>
+</person>
+
+<!-- oscys.case.0166.011 end -->
+
+<!-- oscys.case.0167.001 start -->
+
+<person xml:id="per.001232" source="http://earlywashingtondc.org/cases/oscys.case.0167.001">
+<persName type="display">Herbert, William</persName>
+<persName type="full"> <surname>Herbert</surname>, <forename type="first" full="yes">William</forename></persName>
+<sex>male</sex>
+<trait type="color"><ab></ab></trait>
+<note>Likely not the same William Herbert as per.000634 in oscys.case.0077.001.</note>
+</person>
+
+<person xml:id="per.001233" source="http://earlywashingtondc.org/cases/oscys.case.0167.001">
+<persName type="display">Glasgow, Manuel</persName>
+<persName type="full"> <surname>Glasgow</surname>, <forename type="first" full="yes">Manuel</forename></persName>
+<sex>male</sex>
+<trait type="color"><ab></ab></trait>
+<socecStatus>enslaved</socecStatus>
+</person>
+
+<person xml:id="per.001234" source="http://earlywashingtondc.org/cases/oscys.case.0167.001">
+<persName type="display">Simmons, Washington</persName>
+<persName type="full"> <surname>Simmons</surname>, <forename type="first" full="yes">Washington</forename></persName>
+<sex>male</sex>
+<trait type="color"><ab>negro</ab></trait>
+<socecStatus>free</socecStatus>
+</person>
+
+<person xml:id="per.001235" source="http://earlywashingtondc.org/cases/oscys.case.0167.001">
+<persName type="display">Woodward, William R.</persName>
+<persName type="full"> <surname>Woodward</surname>, <forename type="first" full="yes">William</forename> <forename type="middle" full="init">R.</forename></persName>
+<sex>male</sex>
+<trait type="color"><ab></ab></trait>
+<occupation>attorney</occupation>
+</person>
+
+<!-- oscys.case.0167.001 end -->
+
+<!-- no unique people oscys.case.0167.002 -->
+
+<!-- oscys.case.0168.001 start -->
+
+<person xml:id="per.001236" source="http://earlywashingtondc.org/cases/oscys.case.0168.001">
+<persName type="display">Atkins, David</persName>
+<persName type="full"> <surname>Atkins</surname>, <forename type="first" full="yes">David</forename></persName>
+<sex>male</sex>
+<trait type="color"><ab></ab></trait>
+</person>
+
+<person xml:id="per.001237" source="http://earlywashingtondc.org/cases/oscys.case.0168.001">
+<persName type="display">Dyer, E.</persName>
+<persName type="full"> <surname>Dyer</surname>, <forename type="first" full="init">E.</forename></persName>
+<sex></sex>
+<trait type="color"><ab></ab></trait>
+</person>
+
+<person xml:id="per.001238" source="http://earlywashingtondc.org/cases/oscys.case.0168.001">
+<persName type="display">Gardner, Richard B.</persName>
+<persName type="full"> <surname>Gardner</surname>, <forename type="first" full="yes">Richard</forename> <forename type="middle" full="init">B.</forename></persName>
+<death notAfter="1843-01-27">before January 27, 1843</death>
+<sex>male</sex>
+<trait type="color"><ab></ab></trait>
+<residence>Washington County, District of Columbia</residence>
+</person>
+
+<person xml:id="per.001239" source="http://earlywashingtondc.org/cases/oscys.case.0168.001">
+<persName type="display">Atkins, Alfred</persName>
+<persName type="full"> <surname>Atkins</surname>, <forename type="first" full="yes">Alfred</forename></persName>
+<sex>male</sex>
+<trait type="color"><ab></ab></trait>
+<socecStatus>enslaved</socecStatus>
+</person>
+
+<person xml:id="per.001240" source="http://earlywashingtondc.org/cases/oscys.case.0168.001">
+<persName type="display">Atkins, Margaret Norah</persName>
+<persName type="full"> <surname>Atkins</surname>, <forename type="first" full="yes">Margaret</forename> <forename type="middle" full="yes">Norah</forename></persName>
+<sex>female</sex>
+<trait type="color"><ab></ab></trait>
+<socecStatus>enslaved</socecStatus>
+</person>
+
+<person xml:id="per.001241" source="http://earlywashingtondc.org/cases/oscys.case.0168.001">
+<persName type="display">Bowling, Francis</persName>
+<persName type="full"> <surname>Bowling</surname>, <forename type="first" full="yes">Francis</forename></persName>
+<sex></sex>
+<trait type="color"><ab></ab></trait>
+</person>
+
+<person xml:id="per.001242" source="http://earlywashingtondc.org/cases/oscys.case.0168.001">
+<persName type="display">Gardner, Clarissa B.</persName>
+<persName type="full"> <surname>Gardner</surname>, <forename type="first" full="yes">Clarissa</forename> <forename type="middle" full="init">B.</forename></persName>
+<sex>female</sex>
+<trait type="color"><ab></ab></trait>
+</person>
+
+<!-- oscys.case.0168.001 end -->
+
+<!-- no unique people oscys.case.0168.002 -->
+<!-- no unique people oscys.case.0168.003 -->
+<!-- no unique people oscys.case.0168.004 -->
+<!-- no unique people oscys.case.0168.005 -->
+<!-- no unique people oscys.case.0168.006 -->
+<!-- no unique people oscys.case.0168.007 -->
+<!-- no unique people oscys.case.0168.008 -->
+<!-- no unique people oscys.case.0168.009 -->
+<!-- no unique people oscys.case.0168.010 -->
+<!-- no unique people oscys.case.0168.011 -->
+<!-- no unique people oscys.case.0168.012 -->
+<!-- no unique people oscys.case.0168.013 -->
+<!-- no unique people oscys.case.0168.014 -->
+<!-- no unique people oscys.case.0168.015 -->
+<!-- no unique people oscys.case.0168.016 -->
+
+<!-- oscys.case.0168.017 start -->
+
+<person xml:id="per.001243" source="http://earlywashingtondc.org/cases/oscys.case.0168.017">
+<persName type="display">Schell</persName>
+<persName type="full"><surname>Schell</surname></persName>
+<sex></sex>
+<trait type="color"><ab></ab></trait>
+</person>
+
+<person xml:id="per.001244" source="http://earlywashingtondc.org/cases/oscys.case.0168.017">
+<persName type="display">Semmes</persName>
+<persName type="full"><surname>Semmes</surname></persName>
+<sex></sex>
+<trait type="color"><ab></ab></trait>
+</person>
+
+<!-- oscys.case.0168.017 end -->
+
+<!-- oscys.case.0169.001 start -->
+
 
 
 <!-- 172 - STUDENT -->

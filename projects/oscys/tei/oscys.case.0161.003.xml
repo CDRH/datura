@@ -13,6 +13,7 @@
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="McCormick, Kylie L." xml:id="klm">Kylie L. McCormick</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -96,31 +97,31 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001205">
 <persName>Duckett, Barbara</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001206">
 <persName>Duckett, Julia</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001207">
 <persName>Duckett, Letha</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001208">
 <persName>Duckett, Lewis</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001209">
 <persName>Duckett, Mary</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001210">
 <persName>Duckett, Thomas</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001211">
 <persName>McCutchen, John</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001212">
 <persName>McCutchen, John H. G.</persName>
 </person>
-<person role="attorney_petitioner">
+<person role="attorney_petitioner" xml:id="per.000533">
 <persName>Hall, David A.</persName>
 </person>
 <person role="attorney_defendant">
@@ -138,6 +139,7 @@
 </profileDesc>
         
 <revisionDesc> 
+<change when="2015-08-17" who="#lkw">added xml:ids</change>
 <change when="2015-06-23" who="#ea">added case outcome</change>
 <change when="2015-01-27" who="#kln">reviewed, edited</change>
 <change when="2014-10" who="#snc">encoded</change>

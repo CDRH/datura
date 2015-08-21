@@ -60,7 +60,7 @@ def oscys_it(input)
   return RDF::URI.new("#{prefix}#{input}")
 end
 
-def osrdf_it(input, is_subject=false)
+def osrdf_it(input, is_subject=false, is_viaf=false)
   regex = /per\.[0-9]{6}$/  # should match per.000001 etc
   input = input.nil? ? "" : input.strip  # cannot be nil, remove line breaks, etc
   # if it is a person then it is a URI, else return a literal
@@ -68,6 +68,8 @@ def osrdf_it(input, is_subject=false)
     return RDF::URI.new("#{PREFIXES[:osrdf]}#{input}")
   elsif is_subject
     return nil  # if the regex did not match and this is the subject, flag up as a bad thing
+  elsif is_viaf
+    return "https://viaf.org/viaf/#{input}"
   else
     return input  # if it's not the subject then go ahead and just return the literal
   end
@@ -84,9 +86,10 @@ puts "Reading CSV file line by line"
 CSV.foreach(csv_path, { :headers => true }) do |row|
   # TODO should we be checking that per.000000 rdf:type person before adding other stuff?
   error_msg(row)
+  viaf = (row[1] == "sameAs") ? true : false
   subj = osrdf_it(row[0], true)  # if the subject doesn't match the regex then reject
   pred = oscys_it(row[1])
-  obj = osrdf_it(row[2])
+  obj = osrdf_it(row[2], false, viaf)
   # the subject must be a valid person or else the triple won't work
   if subj
     repository << [subj, pred, obj]
