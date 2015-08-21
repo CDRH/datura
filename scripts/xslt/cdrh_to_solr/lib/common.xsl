@@ -72,6 +72,7 @@
             (Y:"<xsl:value-of select="$YYYY" />" M:"<xsl:value-of select="$MM" />" D:"<xsl:value-of select="$DD" />")
         -->
         <xsl:choose>
+            <xsl:when test="not(matches($date,'[0-9].*$'))"></xsl:when>
             <xsl:when test="($DD != '') and ($MM != '') and ($DD != '')">
                 <xsl:call-template name="lookUpMonth"><xsl:with-param name="numValue" select="$MM" /></xsl:call-template><xsl:text> </xsl:text> <xsl:number format="1" value="$DD" />, <xsl:value-of select="$YYYY" />
             </xsl:when>
