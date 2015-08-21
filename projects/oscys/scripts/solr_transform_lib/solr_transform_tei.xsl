@@ -17,7 +17,6 @@
 	
 	
 	<xsl:include href="../../../scripts/xslt/cdrh_to_solr/lib/common.xsl"/>
-	<!--<xsl:include href="./solr_transform_lib/solr_transform_tei.xsl"/>-->
 	
 	<!-- ======================================
 		Variables
@@ -514,7 +513,27 @@
 						<field name="people">
 							<xsl:apply-templates/>
 						</field>
-						
+						<!--<xsl:if test="@xml:id">
+							<field name="person_ss"><xsl:value-of select="normalize-space(.)"/></field>
+							<field name="personID_ss"><xsl:value-of select="@xml:id"/></field>
+							<field name="personData_ss">
+								<xsl:text>{</xsl:text>
+								
+								<!-\- Label -\->
+								<xsl:text>"label":"</xsl:text>
+								<xsl:value-of select="normalize-space(.)"/>
+								<xsl:text>"</xsl:text>
+								
+								<xsl:text>,</xsl:text>
+								
+								<!-\- ID -\->
+								<xsl:text>"id":"</xsl:text>
+								<xsl:value-of select="@xml:id"/>
+								<xsl:text>"</xsl:text>
+								
+								<xsl:text>}</xsl:text>
+							</field>
+						</xsl:if>-->
 					</xsl:if>
 				</xsl:for-each>
 				
@@ -603,7 +622,26 @@
 								</xsl:with-param>
 							</xsl:call-template>
 							
+							<!--
+							<xsl:text>{</xsl:text>
 							
+							<!-\- Label -\->
+							<xsl:text>"label":"</xsl:text>
+							<!-\- go to another document to get the case name -\->
+							<xsl:variable name="caseDocID"><xsl:text>../tei/</xsl:text><xsl:value-of select="."/><xsl:text>.xml</xsl:text></xsl:variable>
+							<xsl:for-each select="document($caseDocID)">
+								<xsl:value-of select="//title"/>
+							</xsl:for-each>
+							<xsl:text>"</xsl:text>
+							
+							<xsl:text>,</xsl:text>-->
+							
+							<!-- ID -->
+							<!--<xsl:text>"id":"</xsl:text>
+							<xsl:value-of select="."/>
+							<xsl:text>"</xsl:text>
+							
+							<xsl:text>}</xsl:text>-->
 						</field>
 					</xsl:if>
 				</xsl:for-each>
@@ -642,7 +680,25 @@
 							
 							<xsl:text>{</xsl:text>
 							
+							<!--<!-\- Label -\->
+							<xsl:text>"label":"</xsl:text>
+							<!-\- go to another document to get the case name -\->
+							<xsl:variable name="caseDocID"><xsl:text>../tei/</xsl:text><xsl:value-of select="."/><xsl:text>.xml</xsl:text></xsl:variable>
+							<xsl:if test="document($caseDocID)">
+								<xsl:for-each select="document($caseDocID)">
+									<xsl:value-of select="//title"/>
+								</xsl:for-each>
+							</xsl:if>
+							<xsl:text>"</xsl:text>
 							
+							<xsl:text>,</xsl:text>-->
+							
+							<!-- ID -->
+							<!--<xsl:text>"id":"</xsl:text>
+							<xsl:value-of select="."/>
+							<xsl:text>"</xsl:text>
+								
+							<xsl:text>}</xsl:text>-->
 						</field>
 					</xsl:if>
 				</xsl:for-each>
@@ -812,7 +868,44 @@
 			</xsl:with-param>
 		</xsl:call-template>
 		
+		<!--<xsl:text>{</xsl:text>
 		
+		<!-\- Label -\->
+		<xsl:text>"label":"</xsl:text>
+		<xsl:call-template name="escape-string"><xsl:with-param name="s" select="$label"/></xsl:call-template>
+		<xsl:text>"</xsl:text>-->
+		
+		<!-- Date -->
+		<!--<xsl:if test="@notAfter[normalize-space()] or @notBefore[normalize-space()] or @when[normalize-space()]">
+			<xsl:text>,"date":"</xsl:text>
+			<xsl:if test="@notAfter[normalize-space()]"><xsl:text>Not After </xsl:text><xsl:value-of select="@notAfter"/></xsl:if>
+			<xsl:if test="@notBefore[normalize-space()]"><xsl:text>Not Before </xsl:text><xsl:value-of select="@notBefore"/></xsl:if>
+			<xsl:value-of select="@when"></xsl:value-of>
+			<xsl:text>"</xsl:text>
+		</xsl:if>
+		
+		<xsl:text>,</xsl:text>-->
+		
+		<!-- ID -->
+		<!--<xsl:text>"id":"</xsl:text>
+		<xsl:choose>
+			<xsl:when test="contains(@source,'viaf')">
+				<xsl:value-of select="//sourceDesc[1]//bibl[1]/ref"></xsl:value-of>
+			</xsl:when>
+			<xsl:when test="@source">
+				<xsl:text>oscys</xsl:text>
+				<xsl:value-of select="substring-after(@source,'oscys')"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:text>oscys</xsl:text>
+				<xsl:value-of select="substring-after(../@source,'oscys')"></xsl:value-of>
+			</xsl:otherwise>
+		</xsl:choose>
+		<xsl:text>"</xsl:text>
+		
+
+		
+		<xsl:text>}</xsl:text>-->
 	</xsl:template>
 	
 	<!-- ==================================
@@ -849,7 +942,23 @@
 					<xsl:value-of select="."/>
 				</field>
 			<xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='outcome']/term">
-				
+				<!--<field update="add" name="outcomeID_ss">
+					<xsl:text>{</xsl:text>
+					
+					<!-\- Label -\->
+					<xsl:text>"label":"</xsl:text>
+					<xsl:value-of select="normalize-space(.)"/>
+					<xsl:text>"</xsl:text>
+					
+					<xsl:text>,</xsl:text>
+					
+					<!-\- ID -\->
+					<xsl:text>"id":"</xsl:text>
+					<xsl:value-of select="/TEI/@xml:id"/>
+					<xsl:text>"</xsl:text>
+						
+					<xsl:text>}</xsl:text>
+				</field>-->
 				
 				<field update="add" name="outcomeData_ss">
 					
@@ -867,7 +976,47 @@
 							<xsl:value-of select="/TEI/@xml:id"/>
 						</xsl:with-param>
 					</xsl:call-template>
-			
+					
+					<!--<xsl:text>{</xsl:text>-->
+					
+					<!-- Label -->
+					<!--<xsl:text>"label":"</xsl:text>
+					<xsl:value-of select="normalize-space(.)"/>
+					<xsl:text>"</xsl:text>
+					
+					<xsl:text>,</xsl:text>
+					-->
+					<!-- Date -->
+					
+					<!--<xsl:variable name="doc_date">
+						<xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@when"/>
+					</xsl:variable>
+					
+					<xsl:text>"date":"</xsl:text>
+					
+					<!-\- choose whatever is in the when. If we want pretty dates, commet out this and use one below.  -\->
+					<!-\-<xsl:value-of select="$doc_date"></xsl:value-of>-\->
+
+					
+					<!-\- If we want pretty dates in the JSON -\->
+						<xsl:call-template name="extractDate">
+							<xsl:with-param name="date"
+								select="$doc_date"/>
+						</xsl:call-template>
+					
+						
+						<xsl:text>"</xsl:text>
+						<xsl:text>,</xsl:text>
+					-->
+					
+					
+					
+					<!-- ID -->
+					<!--<xsl:text>"id":"</xsl:text>
+					<xsl:value-of select="/TEI/@xml:id"/>
+					<xsl:text>"</xsl:text>
+					
+					<xsl:text>}</xsl:text>-->
 				</field>
 			</xsl:for-each>
 				<xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='outcome']/term">
@@ -922,7 +1071,11 @@
 										<xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@when"/>
 									</xsl:if>
 								</xsl:with-param>
-								
+								<!--<xsl:with-param name="json_dateDisplay">
+									<xsl:if test="/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@when">
+										<xsl:call-template name="extractDate"><xsl:with-param name="date" select="/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@when"/></xsl:call-template>
+									</xsl:if>
+								</xsl:with-param>-->
 								<xsl:with-param name="json_id"><xsl:value-of select="/TEI/@xml:id"/></xsl:with-param>
 							</xsl:call-template>
 							
@@ -1314,7 +1467,6 @@
 		</xsl:if>
 		
 		<!-- Date -->
-		<!-- If there is a date, do both date and date display -->
 		<xsl:if test="$json_date != ''">
 			<xsl:if test="$json_label != ''">
 				<xsl:text>,</xsl:text>
@@ -1322,10 +1474,19 @@
 			<xsl:text>"date":"</xsl:text>
 			<xsl:call-template name="escape-string"><xsl:with-param name="s" select="$json_date"/></xsl:call-template>
 			<xsl:text>"</xsl:text>
+		</xsl:if>
 		
+		
+		<!--<xsl:call-template name="extractDate">
+			<xsl:with-param name="date"
+				select="$doc_date"/>
+		</xsl:call-template>-->
 		
 		<!-- DateDisplay -->
-			<xsl:text>,</xsl:text>
+		<xsl:if test="$json_date != ''">
+			
+				<xsl:text>,</xsl:text>
+			
 			<xsl:text>"dateDisplay":"</xsl:text>
 			<xsl:call-template name="escape-string">
 				<xsl:with-param name="s">
@@ -1333,9 +1494,7 @@
 				</xsl:with-param>
 			</xsl:call-template>
 			<xsl:text>"</xsl:text>
-		
 		</xsl:if>
-		
 		
 		<!-- ID -->
 		<xsl:if test="$json_id != ''">
