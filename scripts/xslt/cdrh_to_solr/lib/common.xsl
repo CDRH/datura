@@ -72,7 +72,11 @@
             (Y:"<xsl:value-of select="$YYYY" />" M:"<xsl:value-of select="$MM" />" D:"<xsl:value-of select="$DD" />")
         -->
         <xsl:choose>
-            <xsl:when test="not(number(substring(@date,1,1)) = number(substring(@vdate,1,1)) )"><xsl:value-of select="$date"></xsl:value-of></xsl:when>
+            <!--<xsl:when test="not(contains('0123456789', substring($date,1,1)))"> Works, but dumb -->
+            <xsl:when test="matches($date, '([A-Za-z])')"><!-- if date contains a letter, show as is. todo fix date handling -->
+                
+                <xsl:value-of select="$date"/>
+            </xsl:when>
             <xsl:when test="($DD != '') and ($MM != '') and ($DD != '')">
                 <xsl:call-template name="lookUpMonth"><xsl:with-param name="numValue" select="$MM" /></xsl:call-template><xsl:text> </xsl:text> <xsl:number format="1" value="$DD" />, <xsl:value-of select="$YYYY" />
             </xsl:when>
