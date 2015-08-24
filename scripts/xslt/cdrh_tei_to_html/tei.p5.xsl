@@ -1072,11 +1072,15 @@
       </xsl:when>
       <xsl:otherwise>
         <del>
-          <xsl:attribute name="class">
+          
+            <xsl:if test="@reason">
+              <xsl:attribute name="class">
             <xsl:value-of select="@reason"/>
-            <xsl:apply-templates/>
-          </xsl:attribute>
-          <xsl:value-of select="."/>
+              </xsl:attribute>
+            </xsl:if>
+            
+          
+          <xsl:apply-templates/>
           <!-- <xsl:text>[?]</xsl:text> -->
         </del>
       </xsl:otherwise>
