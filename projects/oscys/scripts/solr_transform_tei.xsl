@@ -640,7 +640,7 @@
 								</xsl:with-param>
 							</xsl:call-template>
 							
-							<xsl:text>{</xsl:text>
+							
 							
 							
 						</field>
