@@ -1320,15 +1320,15 @@
 				<xsl:text>,</xsl:text>
 			</xsl:if>
 			<xsl:text>"date":"</xsl:text>
-<!--			 Commented this out because it is breaking the script. todo kmd figure out why-->
-			<!--<xsl:call-template name="escape-string"><xsl:with-param name="s" select="$json_date"/></xsl:call-template>-->
-			<xsl:value-of  select="$json_date"/>
+
+			<xsl:call-template name="escape-string"><xsl:with-param name="s" select="$json_date"/></xsl:call-template>
+			<!--<xsl:value-of  select="$json_date"/>-->
 			<xsl:text>"</xsl:text>
 		
 		
 		<!-- DateDisplay -->
 			<xsl:text>,</xsl:text>
- 
+			<xsl:text>"dateDisplay":"</xsl:text>
 			<xsl:call-template name="escape-string">
 				<xsl:with-param name="s">
 					<xsl:call-template name="extractDate"><xsl:with-param name="date" select="$json_date"/></xsl:call-template>
