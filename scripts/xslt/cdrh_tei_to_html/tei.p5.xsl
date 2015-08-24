@@ -1020,6 +1020,7 @@
   <xsl:template match="gap">
     <span>
       <xsl:attribute name="class">
+        <xsl:text>gap </xsl:text>
         <xsl:value-of select="@reason"/>
       </xsl:attribute>
       <xsl:apply-templates/>
@@ -1036,6 +1037,7 @@
   <xsl:template match="unclear">
     <span>
       <xsl:attribute name="class">
+        <xsl:text>unclear </xsl:text>
         <xsl:value-of select="@reason"/>
       </xsl:attribute>
       <xsl:text>[</xsl:text>
