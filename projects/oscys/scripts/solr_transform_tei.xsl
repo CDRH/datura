@@ -1320,7 +1320,9 @@
 				<xsl:text>,</xsl:text>
 			</xsl:if>
 			<xsl:text>"date":"</xsl:text>
+
 			<xsl:call-template name="escape-string"><xsl:with-param name="s" select="$json_date"/></xsl:call-template>
+			<!--<xsl:value-of  select="$json_date"/>-->
 			<xsl:text>"</xsl:text>
 		
 		
