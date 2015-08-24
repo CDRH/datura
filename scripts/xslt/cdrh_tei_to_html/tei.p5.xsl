@@ -387,7 +387,7 @@
         <xsl:value-of select="name()"/>
         <xsl:if test="@type"><xsl:text> </xsl:text><xsl:value-of select="@type"/></xsl:if>
         <xsl:if test="@rend"><xsl:text> </xsl:text><xsl:value-of select="@rend"/></xsl:if>
-        <xsl:if test="not(parent::p)"><xsl:text> p</xsl:text></xsl:if>
+        <!--<xsl:if test="not(parent::p)"><xsl:text> p</xsl:text></xsl:if>--> <!-- this is breaking some displays but commeting it out might break others. May need more consideration -todo KMD -->
       </xsl:attribute>
       <xsl:choose>
         <!-- This is for CWW, check to see if this is done correctly, will it add two handwritten classses? -KMD -->
