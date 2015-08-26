@@ -8928,20 +8928,6 @@ osrdf:per.000581 a "person";
    oscys:petitionerAgainst osrdf:per.000582;
    oscys:sex "female" .
 
-osrdf:per.000616 a "person";
-   oscys:childOf osrdf:per.000615,
-     osrdf:per.000626;
-   oscys:clientOf osrdf:per.000572;
-   oscys:enslavedBy osrdf:per.000617;
-   oscys:fullName "Lee, Lizette";
-   oscys:fullname "Lee, Lizette";
-   oscys:judgedBy osrdf:per.000004;
-   oscys:nextFriendOf osrdf:per.000623;
-   oscys:parentOf osrdf:per.000623;
-   oscys:petitionerAgainst osrdf:per.000617;
-   oscys:sex "female";
-   oscys:siblingOf osrdf:per.000619 .
-
 osrdf:per.000638 a "person";
    oscys:defendantAgainst osrdf:per.000636,
      osrdf:per.000637;
@@ -9003,30 +8989,6 @@ osrdf:per.000655 a "person";
    oscys:parentOf osrdf:per.000658;
    oscys:sex "male";
    oscys:slaveholderOf osrdf:per.000654 .
-
-osrdf:per.000683 a "person";
-   oscys:childOf osrdf:per.000682;
-   oscys:clientOf osrdf:per.000584;
-   oscys:enslavedBy osrdf:per.000681;
-   oscys:fullName "Clagett, Truman";
-   oscys:fullname "Clagett, Truman";
-   oscys:judgedBy osrdf:per.000004;
-   oscys:oppositionsAttorney osrdf:per.000001;
-   oscys:petitionerAgainst osrdf:per.000685;
-   oscys:setFreeBy osrdf:per.000681;
-   oscys:sex "male" .
-
-osrdf:per.000684 a "person";
-   oscys:childOf osrdf:per.000682;
-   oscys:clientOf osrdf:per.000584;
-   oscys:enslavedBy osrdf:per.000681;
-   oscys:fullName "Clagett, Mary";
-   oscys:fullname "Clagett, Mary";
-   oscys:judgedBy osrdf:per.000004;
-   oscys:oppositionsAttorney osrdf:per.000001;
-   oscys:petitionerAgainst osrdf:per.000685;
-   oscys:setFreeBy osrdf:per.000681;
-   oscys:sex "female" .
 
 osrdf:per.000685 a "person";
    oscys:administratorFor osrdf:per.000681;
@@ -9425,6 +9387,21 @@ osrdf:per.000582 a "person";
      osrdf:per.000580,
      osrdf:per.000581 .
 
+osrdf:per.000616 a "person";
+   oscys:childOf osrdf:per.000615,
+     osrdf:per.000626;
+   oscys:clientOf osrdf:per.000572;
+   oscys:enslavedBy osrdf:per.000617;
+   oscys:fullName "Lee, Lizette";
+   oscys:fullname "Lee, Lizette";
+   oscys:judgedBy osrdf:per.000004;
+   oscys:nextFriendOf osrdf:per.000623;
+   oscys:parentOf osrdf:per.000623;
+   oscys:petitionerAgainst osrdf:per.000617;
+   oscys:sex "female";
+   oscys:siblingOf osrdf:per.000619,
+     osrdf:per.000630 .
+
 osrdf:per.000682 a "person";
    oscys:clientOf osrdf:per.000584;
    oscys:enslavedBy osrdf:per.000681,
@@ -9438,6 +9415,32 @@ osrdf:per.000682 a "person";
    oscys:petitionerAgainst osrdf:per.000685;
    oscys:setFreeBy osrdf:per.000681;
    oscys:sex "female" .
+
+osrdf:per.000683 a "person";
+   oscys:childOf osrdf:per.000682;
+   oscys:clientOf osrdf:per.000584;
+   oscys:enslavedBy osrdf:per.000681;
+   oscys:fullName "Clagett, Truman";
+   oscys:fullname "Clagett, Truman";
+   oscys:judgedBy osrdf:per.000004;
+   oscys:oppositionsAttorney osrdf:per.000001;
+   oscys:petitionerAgainst osrdf:per.000685;
+   oscys:setFreeBy osrdf:per.000681;
+   oscys:sex "male";
+   oscys:siblingOf osrdf:per.000684 .
+
+osrdf:per.000684 a "person";
+   oscys:childOf osrdf:per.000682;
+   oscys:clientOf osrdf:per.000584;
+   oscys:enslavedBy osrdf:per.000681;
+   oscys:fullName "Clagett, Mary";
+   oscys:fullname "Clagett, Mary";
+   oscys:judgedBy osrdf:per.000004;
+   oscys:oppositionsAttorney osrdf:per.000001;
+   oscys:petitionerAgainst osrdf:per.000685;
+   oscys:setFreeBy osrdf:per.000681;
+   oscys:sex "female";
+   oscys:siblingOf osrdf:per.000683 .
 
 osrdf:per.000847 a "person";
    oscys:attorneyAgainst osrdf:per.000846,
@@ -9669,19 +9672,6 @@ osrdf:per.000619 a "person";
    oscys:siblingOf osrdf:per.000630,
      osrdf:per.000616 .
 
-osrdf:per.000630 a "person";
-   oscys:childOf osrdf:per.000615,
-     osrdf:per.000626;
-   oscys:clientOf osrdf:per.000631,
-     osrdf:per.000629;
-   oscys:enslavedBy osrdf:per.000617;
-   oscys:fullName "Lee, John Baptist";
-   oscys:fullname "Lee, John Baptist";
-   oscys:judgedBy osrdf:per.000004;
-   oscys:petitionerAgainst osrdf:per.000617;
-   oscys:sex "male";
-   oscys:siblingOf osrdf:per.000619 .
-
 osrdf:per.000681 a "person";
    oscys:fullName "Gibson, Gerard";
    oscys:fullname "Gibson, Gerard";
@@ -9852,6 +9842,20 @@ osrdf:per.000304 a "person";
      osrdf:per.000325,
      osrdf:per.000322,
      osrdf:per.000339 .
+
+osrdf:per.000630 a "person";
+   oscys:childOf osrdf:per.000615,
+     osrdf:per.000626;
+   oscys:clientOf osrdf:per.000631,
+     osrdf:per.000629;
+   oscys:enslavedBy osrdf:per.000617;
+   oscys:fullName "Lee, John Baptist";
+   oscys:fullname "Lee, John Baptist";
+   oscys:judgedBy osrdf:per.000004;
+   oscys:petitionerAgainst osrdf:per.000617;
+   oscys:sex "male";
+   oscys:siblingOf osrdf:per.000619,
+     osrdf:per.000616 .
 
 osrdf:per.000836 a "person";
    oscys:defendantAgainst osrdf:per.000831,
