@@ -12,6 +12,7 @@
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="McCormick, Kylie L." xml:id="klm">Kylie L. McCormick</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -80,16 +81,16 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Armistead, Robert</term>
-<term>Clarke, Edward W.</term>
-<term>Darby, Cleveland</term>
-<term>Lucas, Sarah</term>
-<term>Mattingley, Elizabeth</term>
-<term>Naylor</term>
-<term>Riley, Hany</term>
-<term>Ross, John</term>
-<term>Valentine, Daniel</term>
-<term>Vinott, Louis</term>
+<term xml:id="per.001255">Armistead, Robert</term>
+<term xml:id="per.000870">Clarke, Edward W.</term>
+<term xml:id="per.001256">Darby, Cleveland</term>
+<term xml:id="per.000785">Lucas, Sarah</term>
+<term xml:id="per.000787">Mattingly, Elizabeth</term>
+<term xml:id="per.001257">Naylor</term>
+<term xml:id="per.000789">Riley, Mary</term>
+<term xml:id="per.001258">Ross, John</term>
+<term xml:id="per.000790">Valentine, Daniel</term>
+<term xml:id="per.001259">Vinott, Louis</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places"> 
@@ -100,10 +101,10 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001253">
 <persName>Bell, Mary</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001254">
 <persName>Armistead, Susan</persName>
 </person>
 <person role="attorney_petitioner">
@@ -124,6 +125,7 @@
 </profileDesc>
         
 <revisionDesc>      
+<change when="2015-08-26" who="#lkw">added xml:ids</change>
 <change when="2015-01-09" who="#kln">reviewed; edited</change>       
 <change when="2014-11" who="#snc">encoded</change>
 </revisionDesc>
@@ -152,7 +154,7 @@ March 31st 1837</p>
 <p>Washington Asylum<lb/>
 March 31 1837</p>
 
-<p>I would stat, not having been long time acquainted with Mr. Armstead, and having rendered him what service lay in my power during his enfeebled condition, that he was for the most part of the time, in not the whole, completely childless &amp; disqualified, having no use of the powers of person or speech to render his capable or intelligible to any one. The was a piece of writing drawn up at the Asylum during Mr. Armstead's stay at the Aslum, in relation to him, under the managed of Doctor Clark, and an Attorney whom I believe to have been Mr. Naylor, the same I understand to be a Will. This to the best of my belief.</p>
+<p>I would state, not having been long time acquainted with Mr. Armstead, and having rendered him what service lay in my power during his enfeebled condition, that he was for the most part of the time, in not the whole, completely childless &amp; disqualified, having no use of the powers of person or speech to render his capable or intelligible to any one. The was a piece of writing drawn up at the Asylum during Mr. Armstead's stay at the Aslum, in relation to him, under the managed of Doctor Clark, and an Attorney whom I believe to have been Mr. Naylor, the same I understand to be a Will. This to the best of my belief.</p>
 
 <p>Daniel Valentine x his mark</p>
 
@@ -172,7 +174,7 @@ March 31 1837</p>
 
 <p>My opinion is that Mr. Armstead during his residence at the Asylum, was not in a proper state of mind, necessary to the performance of a man's duties; whether of sickness or of old age he was certainly childless and not capable of any business or duty requiring consideration. Having had dealings of domestic character, of housewifery with him, I perceived this situation of him even in small particulars. I understand some persons attended Doctor Clark in making out a will, but who those persons were I am unable to state, but considered from my information obtained at the time the proceeding was not one to be approved by discreet Elders</p>
 
-<p>Hany Riley x mark</p>
+<p>Mary Riley x mark</p>
 
 <p>Witness Cleveland Darby</p>
 
