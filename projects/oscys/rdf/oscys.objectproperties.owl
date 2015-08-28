@@ -98,7 +98,7 @@
 <owl:ObjectProperty rdf:about="#attorneyAgainst">
     <rdfs:domain rdf:resource="#Person"/>
     <rdfs:range rdf:resource="#Person"/>
-    <owl:Inverseof rdf:resource="#attorneyedAgainst"/>
+    <owl:Inverseof rdf:resource="#oppositionsAttorney"/>
     <rdfs:subPropertyOf rdf:resource="#legalRelationship"/>
 </owl:ObjectProperty>
 
@@ -453,7 +453,7 @@
 <owl:ObjectProperty rdf:about="#enslavedBy">
     <rdfs:domain rdf:resource="#Person"/>
     <rdfs:range rdf:resource="#Person"/>
-    <owl:Inverseof rdf:resource="#ownerOf"/>
+    <owl:Inverseof rdf:resource="#slaveholderOf"/>
     <rdfs:subPropertyOf rdf:resource="#workRelationship"/>
 </owl:ObjectProperty>
 
