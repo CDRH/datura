@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -79,7 +80,7 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Howard, Thomas</term>
+<term xml:id="per.001269">Howard, Thomas</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places"> 
@@ -91,13 +92,13 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001270">
 <persName>Shinor, Michael</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001271">
 <persName>Howard, Ann</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001272">
 <persName>Howard, William E.</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.000744">
@@ -117,7 +118,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>             
+<revisionDesc>        
+<change when="2015-08-26" who="#lkw">added xml:ids; transcription</change>     
 <change when="2015-02-17" who="#kln">reviewed; encoded</change>
 <change when="2014-10" who="#snc">encoded</change>
 </revisionDesc>
@@ -156,7 +158,7 @@
 
 <p>Michael Shinor<lb/>
 vs<lb/>
-Ann Howard &amp; William E Howard Exrs. of This Howard dcd</p>
+Ann Howard &amp; William E Howard Exrs. of Thos Howard dcd</p>
 
 <p>Petition for freedom</p>
 

@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -79,20 +80,20 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Bender, Jacob</term>
-<term>Brooke, Edward</term>
-<term>Campbell, Daniel</term>
-<term>Dashiell, George W.</term>
-<term>Freeling</term>
-<term>Goddard, John H.</term>
-<term>Hoff, Lawrence</term>
-<term>King, Vincent</term>
-<term>Little</term>
-<term>Lusby, James</term>
-<term>MacGill, Thomas</term>
-<term>Middleton, B. J.</term>
-<term>Nevitt, Robert K.</term>
-<term>Reily, Thomas B.</term>
+<term xml:id="per.001280">Bender, Jacob</term>
+<term xml:id="per.001281">Brooke, Edward</term><!-- may be Edmund Brooke per.001197 -->
+<term xml:id="per.001282">Campbell, Daniel</term>
+<term xml:id="per.001283">Dashiell, George W.</term>
+<term xml:id="per.001284">Freeling</term>
+<term xml:id="per.001285">Goddard, John H.</term>
+<term xml:id="per.001286">Hoff, Lawrence</term>
+<term xml:id="per.001287">King, Vincent</term>
+<term xml:id="per.001288">Little</term>
+<term xml:id="per.001289">Lusby, James</term>
+<term xml:id="per.001290">MacGill, Thomas</term>
+<term xml:id="per.001291">Middleton, B. J.</term>
+<term xml:id="per.001292">Nevitt, Robert K.</term>
+<term xml:id="per.001293">Reily, Thomas B.</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places"> 
@@ -105,10 +106,10 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001277">
 <persName>Bell, Moses</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001278">
 <persName>Rhodes, James</persName>
 </person>
 <person role="attorney_petitioner">
@@ -129,6 +130,7 @@
 </profileDesc>
         
 <revisionDesc>
+<change when="2015-08-26" who="#lkw">added xml:ids</change>
 <change when="2015-01-12" who="#kln">reviewed; edited</change>               
 <change when="2014-10" who="#snc">encoded</change>
 </revisionDesc>
