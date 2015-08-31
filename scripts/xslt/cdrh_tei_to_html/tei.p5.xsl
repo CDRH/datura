@@ -785,6 +785,11 @@
         </a>
       </xsl:when>
       <!-- if the above are not true, it is assumed to be an internal to the site link -->
+      <xsl:when test="@type='sitelink'">
+        <a href="../{@target}" class="internal_link">
+          <xsl:apply-templates/>
+        </a>
+      </xsl:when>
       <!-- TODO talk to jessica about relative vs absolute links - maybe se should use sub domains to make everything absolute?
       Right now I am using relative, assuming documents will always be one level up-->
       <xsl:otherwise>
