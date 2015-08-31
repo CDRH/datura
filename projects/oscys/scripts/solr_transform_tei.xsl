@@ -101,6 +101,18 @@
 	=================================== -->
 	
 	
+	<xsl:variable name="doc_date">
+		<xsl:choose>
+			<xsl:when test="//keywords[@n='subcategory']/term = 'Court Report'">
+				<xsl:value-of select="//keywords[@n='term']/term/date/@when"></xsl:value-of>
+			</xsl:when>
+			<xsl:when test="/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@when">
+				<xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@when"/>
+			</xsl:when>
+			<xsl:otherwise>n.d.</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+	
 
 	<xsl:template name="tei_general" exclude-result-prefixes="#all">
 		<xsl:param name="filenamepart"/>
@@ -298,17 +310,7 @@
 				
 				<!-- date -->
 				
-		<xsl:variable name="doc_date">
-			<xsl:choose>
-				<xsl:when test="//keywords[@n='subcategory']/term = 'Court Report'">
-					 <xsl:value-of select="//keywords[@n='term']/term/date/@when"></xsl:value-of>
-				</xsl:when>
-				<xsl:when test="/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@when">
-					<xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@when"/>
-				</xsl:when>
-				<xsl:otherwise>n.d.</xsl:otherwise>
-			</xsl:choose>
-		</xsl:variable>
+		
 					
 					<field name="date">
 						<xsl:choose>
@@ -858,7 +860,7 @@
 							<xsl:value-of select="normalize-space(.)"/>
 						</xsl:with-param>
 						<xsl:with-param name="json_date">
-							<xsl:variable name="doc_date">
+							<!--<xsl:variable name="doc_date">
 								<xsl:choose>
 									<xsl:when test="//keywords[@n='subcategory']/term = 'Court Report'">
 										<xsl:value-of select="//keywords[@n='term']/term/date/@when"></xsl:value-of>
@@ -868,9 +870,9 @@
 									</xsl:when>
 									<xsl:otherwise>n.d.</xsl:otherwise>
 								</xsl:choose>
-								<!--<xsl:value-of select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='term']/term/date/@when"/>-->
-								<!--<xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@when"/>-->
-							</xsl:variable>
+								<!-\-<xsl:value-of select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='term']/term/date/@when"/>-\->
+								<!-\-<xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@when"/>-\->
+							</xsl:variable>-->
 							<xsl:value-of select="$doc_date"/>
 						</xsl:with-param>
 						<xsl:with-param name="json_id">
@@ -949,7 +951,10 @@
 									<xsl:value-of select="/TEI/teiHeader/fileDesc/titleStmt/title[1]"/>
 									<!-- adding the date to the end of the title -->
 									<xsl:text> (</xsl:text>
-									<xsl:call-template name="extractDate"><xsl:with-param name="date" select="/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@when"/></xsl:call-template>
+									<xsl:call-template name="extractDate">
+										<!--<xsl:with-param name="date" select="/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@when"/>-->
+										<xsl:with-param name="date" select="$doc_date"/>
+									</xsl:call-template>
 									<xsl:text>)</xsl:text>
 								</xsl:with-param>
 								<xsl:with-param name="json_id">
