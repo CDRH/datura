@@ -567,7 +567,7 @@
 				</field>
 
 				<!-- term -->
-				
+				               
 				<xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='term']/term/date/@when">
 					<xsl:if test="normalize-space(.) != ''">
 						<field name="term_ss"> 
@@ -579,8 +579,7 @@
 				<!-- Related cases (for case pages) -->
 				
 				<!-- related case ID -->
-				
-				<xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/classCode/ref[@type='related.case']">
+				<xsl:for-each select="//ref[@type='related.case']">
 					<xsl:if test="normalize-space(.) != ''">
 						<field name="relatedCaseID_ss" update="add"> 
 							<xsl:value-of select="."/>
@@ -589,7 +588,7 @@
 				</xsl:for-each>
 				
 				<!-- related case Data (In JSON) -->
-				<xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/classCode/ref[@type='related.case']">
+				<xsl:for-each select="//ref[@type='related.case']">
 					<xsl:if test="normalize-space(.) != ''">
 						<field name="relatedCaseData_ss" update="add"> 
 							
