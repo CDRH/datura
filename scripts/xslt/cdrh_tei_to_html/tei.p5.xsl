@@ -323,7 +323,7 @@
         <xsl:attribute name="class">
           <xsl:text>pageimage</xsl:text>
         </xsl:attribute>
-        &#160;<!-- I don't know why this works, but oscys file oscys.mb.oo16.002.xml was broken without it -kmd -->
+        &#32;<!-- I don't know why this works, but oscys file oscys.mb.oo16.002.xml was broken without it -kmd -->
         <a>
           <xsl:attribute name="href">
             <xsl:value-of select="$fig_location"/>
@@ -351,7 +351,7 @@
               <xsl:text>.jpg</xsl:text>
             </xsl:attribute>
             <xsl:attribute name="class">
-              <xsl:text>display</xsl:text>
+              <xsl:text>display</xsl:text>&#160;
             </xsl:attribute>
           </img>
         </a>
