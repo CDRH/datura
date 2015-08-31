@@ -323,7 +323,7 @@
         <xsl:attribute name="class">
           <xsl:text>pageimage</xsl:text>
         </xsl:attribute>
-        &#32;<!-- I don't know why this works, but oscys file oscys.mb.oo16.002.xml was broken without it -kmd -->
+        
         <a>
           <xsl:attribute name="href">
             <xsl:value-of select="$fig_location"/>
@@ -693,7 +693,7 @@
     
 
     <xsl:for-each select="$content/node()">
-      <xsl:if test="normalize-space(.) != ''">
+      <!--<xsl:if test="normalize-space(.) != ''">--> <!-- Commented this out to fix another problem, but may cause problems elsewhere. Look out -kmd -->
       <xsl:choose>
         <!-- Check for block level HTML elements -->
         <xsl:when test="name() = 'h6' or name() = 'h5'">
@@ -705,7 +705,7 @@
           </p>
         </xsl:otherwise>
       </xsl:choose>
-      </xsl:if>
+      <!--</xsl:if>-->
     </xsl:for-each>
   </xsl:template>
   
