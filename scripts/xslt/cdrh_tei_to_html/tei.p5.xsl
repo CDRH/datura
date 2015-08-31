@@ -950,18 +950,21 @@
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
   
   <xsl:template match="list">
+    <xsl:if test="head">
+      <div class="tei_list_head"><xsl:apply-templates select="head/node()"/></div>
+    </xsl:if>
     <xsl:choose>
       <xsl:when test="@type='handwritten'">
         <ul>
           <xsl:attribute name="class">
             <xsl:text>handwritten</xsl:text>
           </xsl:attribute>
-          <xsl:apply-templates/>
+          <xsl:apply-templates select="item"/>
         </ul>
       </xsl:when>
       <xsl:otherwise>
         <ul>
-          <xsl:apply-templates/>
+          <xsl:apply-templates select="item"/>
         </ul>
       </xsl:otherwise>
     </xsl:choose>
