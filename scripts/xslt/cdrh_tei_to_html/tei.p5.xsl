@@ -260,14 +260,22 @@
   
   <xsl:template match="fw">
     <xsl:if test="$fw = 'true'">
-      <xsl:if test="not(@type='sub')">
-        <h6>
-          <xsl:attribute name="class">
-            <xsl:value-of select="name()"/>
-          </xsl:attribute>
-          <xsl:apply-templates/>
-        </h6>
-      </xsl:if>
+      <xsl:choose>
+        <xsl:when test="ancestor::p">
+          <span class="h6"><xsl:apply-templates/></span>
+        </xsl:when>
+      
+      <xsl:otherwise>
+        <xsl:if test="not(@type='sub')">
+          <h6>
+            <xsl:attribute name="class">
+              <xsl:value-of select="name()"/>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+          </h6>
+        </xsl:if>
+      </xsl:otherwise>
+      </xsl:choose>
     </xsl:if>
   </xsl:template>
   
@@ -684,59 +692,15 @@
   
   
   
-  <!-- Greatly simplified from TEI-C stylesheets, kept here because P currently only place that references it -->
-  
-  <xsl:template  name="splitHTMLBlocks">
-    <xsl:param name="element"/>
-    <xsl:param name="content"/>
-    
-    
-
-    <xsl:for-each select="$content/node()">
-      <!--<xsl:if test="normalize-space(.) != ''">--> <!-- Commented this out to fix another problem, but may cause problems elsewhere. Look out -kmd -->
-      <xsl:choose>
-        <!-- Check for block level HTML elements -->
-        <xsl:when test="name() = 'h6' or name() = 'h5'">
-          <xsl:copy-of select="."></xsl:copy-of>
-        </xsl:when>
-        <xsl:otherwise>
-          <p>
-            <xsl:copy-of select="."/>
-          </p>
-        </xsl:otherwise>
-      </xsl:choose>
-      <!--</xsl:if>-->
-    </xsl:for-each>
-  </xsl:template>
   
   
+  
+  <!-- todo - build a better sheet. Right now, paragraphs could appear in other paragraphs, need to find a way to account for the weirdest encoding -KMD -->
   <xsl:template match="p">
-    <xsl:choose>
-      
-      <xsl:when test="
-        descendant::*[name() = 'p'] or
-        descendant::*[name() = 'quote'] or
-        descendant::*[name() = 'fw']">
-        <xsl:call-template name="splitHTMLBlocks">
-          <xsl:with-param name="element">p</xsl:with-param>
-          <xsl:with-param name="content">
-            <xsl:apply-templates/>
-          </xsl:with-param>
-        </xsl:call-template>
-      </xsl:when>
-      <xsl:otherwise>
-        <p><xsl:apply-templates/></p>
-      </xsl:otherwise>
-    </xsl:choose>
+   <p><xsl:apply-templates/></p>
     
   </xsl:template>
  
-    <!-- This didn't work but I would really like it to -KMD -->
-<!--  <xsl:template match="p[descendant::*[name() = 'quote']]/node() |
-                       p[descendant::*[name() = 'fw']]/node()">
-    [[[zzz<!-\-<xsl:copy-of select="."></xsl:copy-of>-\-><xsl:apply-templates select="text()"/>]]]
-  </xsl:template>-->
-  
  
   
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
