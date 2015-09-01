@@ -52,8 +52,10 @@
             <xsl:number format="00001" level="any"/>
           </field>
           
+          <xsl:variable name="title" select="/TEI/teiHeader[1]/fileDesc[1]/titleStmt[1]/title[@type='main']"/>
+          <xsl:variable name="title_normalized" select="replace(lower-case($title), ' ', '_')"/>
           <field name="novel">
-            <xsl:value-of select="/TEI/teiHeader[1]/fileDesc[1]/titleStmt[1]/title[@type='main']"/>
+            <xsl:value-of select="$title_normalized"/>
           </field>
           
           <field name="chapter"><xsl:value-of select="ancestor::div/@n"/></field>
