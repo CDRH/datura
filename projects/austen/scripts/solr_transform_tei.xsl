@@ -57,6 +57,10 @@
           <field name="novel">
             <xsl:value-of select="$title_normalized"/>
           </field>
+
+          <!-- <field name="novel_display">
+            <xsl:value-of select="$title"/>
+          </field> -->
           
           <field name="chapter"><xsl:value-of select="ancestor::div/@n"/></field>
           
