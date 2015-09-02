@@ -5,7 +5,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">Pride and prejudice</title>
+        <title type="main">Pride and Prejudice</title>
         <author>Austen, Jane, 1775-1817</author>
         <principal>White, Laura Mooneyham</principal>
       </titleStmt>
@@ -88,7 +88,11 @@
       </textClass>
       <particDesc>
         <listPerson type="fictional">
-          <person xml:id="aus.001.mrb">
+
+<!-- start main characters -->  
+
+
+          <person xml:id="aus.001.mrb" role="main">
             <persName>
               <roleName type="honorific" full="abb">Mr.</roleName>
               <surname>Bennet</surname>
@@ -99,8 +103,11 @@
             <state type="marital">
               <p>married</p>
             </state>
+            <trait type="char">
+              <p>fool</p>
+            </trait>
           </person>
-          <person xml:id="aus.001.mrsb">
+          <person xml:id="aus.001.mrsb" role="main">
             <persName>
               <roleName type="honorific" full="abb">Mrs.</roleName>
               <surname>Bennet</surname>
@@ -115,7 +122,7 @@
               <p>fool</p>
             </trait>
           </person>
-          <person xml:id="aus.001.jane">
+          <person xml:id="aus.001.jane" role="main">
             <persName>
               <forename>Jane</forename>
               <surname>Bennet</surname>
@@ -130,7 +137,7 @@
               <p>heroine</p>
             </trait>
           </person>
-          <person xml:id="aus.001.eliz">
+          <person xml:id="aus.001.eliz" role="main">
             <persName>
               <forename>Elizabeth</forename>
               <surname>Bennet</surname>
@@ -145,7 +152,7 @@
               <p>heroine</p>
             </trait>
           </person>
-          <person xml:id="aus.001.mary">
+          <person xml:id="aus.001.mary" role="main">
             <persName>
               <forename>Mary</forename>
               <surname>Bennet</surname>
@@ -160,22 +167,23 @@
               <p>fool</p>
             </trait>
           </person>
-          <person xml:id="aus.001.lyd">
+          <person xml:id="aus.001.lyd" role="main">
             <persName>
               <forename>Lydia</forename>
               <surname>Bennet</surname>
             </persName>
             <sex>female</sex>
             <socecStatus>landed gentry</socecStatus>
-            <age>out</age>
+                    <age>young married</age>
+                    <age>out</age>
             <state type="marital">
-              <p>unmarried</p>
+              <p>mda</p>
             </state>
             <trait type="char">
               <p>fool</p>
             </trait>
           </person>
-          <person xml:id="aus.001.kit">
+          <person xml:id="aus.001.kit" role="main">
             <persName>
               <forename>Kitty</forename>
               <surname>Bennet</surname>
@@ -190,15 +198,15 @@
               <p>fool</p>
             </trait>
           </person>
-          <person xml:id="aus.001.char">
+          <person xml:id="aus.001.char" role="main">
             <persName>
               <forename>Charlotte</forename>
               <surname>Lucas</surname>
             </persName>
             <sex>female</sex>
             <socecStatus>gentry</socecStatus>
-            <age>out</age>
-            <age>young married</age>
+                    <age>young married</age>
+                    <age>out</age>
             <state type="marital">
               <p>mda</p>
             </state>
@@ -206,7 +214,7 @@
               <p>neutral</p>
             </trait>
           </person>
-          <person xml:id="aus.001.ladyl">
+          <person xml:id="aus.001.ladyl" role="main">
             <persName>
               <roleName type="nobility">Lady</roleName>
               <surname>Lucas</surname>
@@ -221,7 +229,7 @@
               <p>fool</p>
             </trait>
           </person>
-          <person xml:id="aus.001.sirl">
+          <person xml:id="aus.001.sirl" role="main">
             <persName>
               <roleName type="nobility">Sir</roleName>
               <forename>William</forename>
@@ -237,19 +245,7 @@
               <p>fool</p>
             </trait>
           </person>
-          <person xml:id="aus.001.boyl">
-            <persName>A young <surname>Lucas</surname> boy</persName>
-            <sex>male</sex>
-            <socecStatus>gentry</socecStatus>
-            <age>child</age>
-            <state type="marital">
-              <p>unmarried</p>
-            </state>
-            <trait type="char">
-              <p>fool</p>
-            </trait>
-          </person>
-          <person xml:id="aus.001.marl">
+          <person xml:id="aus.001.marl" role="main">
             <persName>
               <forename>Maria</forename>
               <surname>Lucas</surname>
@@ -264,7 +260,7 @@
               <p>fool</p>
             </trait>
           </person>
-          <person xml:id="aus.001.dar">
+          <person xml:id="aus.001.dar" role="main">
             <persName>
               <roleName type="honorific">Mr.</roleName>
               <surname>Darcy</surname>
@@ -279,7 +275,7 @@
               <p>hero</p>
             </trait>
           </person>
-          <person xml:id="aus.001.bing">
+          <person xml:id="aus.001.bing" role="main">
             <persName>
               <roleName type="honorific">Mr.</roleName>
               <surname>Bingley</surname>
@@ -294,7 +290,7 @@
               <p>hero</p>
             </trait>
           </person>
-          <person xml:id="aus.001.msb">
+          <person xml:id="aus.001.msb" role="main">
             <persName>
               <roleName type="honorific">Miss</roleName>
               <surname>Bingley</surname>
@@ -309,7 +305,7 @@
               <p>fool</p>
             </trait>
           </person>
-          <person xml:id="aus.001.mrsh">
+          <person xml:id="aus.001.mrsh" role="main">
             <persName>
               <roleName type="honorific">Mrs.</roleName>
               <surname>Hurst</surname>
@@ -324,7 +320,7 @@
               <p>fool</p>
             </trait>
           </person>
-          <person xml:id="aus.001.mrh">
+          <person xml:id="aus.001.mrh" role="main">
             <persName>
               <roleName type="honorific">Mr.</roleName>
               <surname>Hurst</surname>
@@ -339,7 +335,7 @@
               <p>fool</p>
             </trait>
           </person>
-          <person xml:id="aus.001.coll">
+          <person xml:id="aus.001.coll" role="main">
             <persName>
               <roleName type="honorific">Mr.</roleName>
               <surname>Collins</surname>
@@ -351,20 +347,23 @@
             <state type="marital">
               <p>mda</p>
             </state>
+<!-- fool and heir -->
             <trait type="char">
               <p>fool</p>
             </trait>
+            <trait type="char">
+              <p>heir</p>
+            </trait>
             <occupation>clergyman</occupation>
           </person>
-          <person xml:id="aus.001.wick">
+          <person xml:id="aus.001.wick" role="main">
             <persName>
               <roleName type="honorific">Mr.</roleName>
               <surname>Wickham</surname>
             </persName>
             <sex>male</sex>
-            <age>out</age>
-            <age>young married</age>
-            <socecStatus>professional class</socecStatus>
+                    <age>young married</age>
+                    <age>out</age>
             <state type="marital">
               <p>mda</p>
             </state>
@@ -373,23 +372,7 @@
             </trait>
             <occupation>soldier</occupation>
           </person>
-          <person xml:id="aus.001.deb">
-            <persName>
-              <roleName type="nobility">Lady</roleName>
-              <forename>Catherine</forename>
-              <surname>de Bourgh</surname>
-            </persName>
-            <sex>female</sex>
-            <age>old</age>
-            <socecStatus>aristocrat</socecStatus>
-            <state type="marital">
-              <p>widowed</p>
-            </state>
-            <trait type="char">
-              <p>fool</p>
-            </trait>
-          </person>
-          <person xml:id="aus.001.mrg">
+          <person xml:id="aus.001.mrg" role="main">
             <persName>
               <roleName type="honorific">Mr.</roleName>
               <surname>Gardiner</surname>
@@ -405,7 +388,7 @@
             </trait>
             <occupation>lawyer</occupation>
           </person>
-          <person xml:id="aus.001.mrsg">
+          <person xml:id="aus.001.mrsg" role="main">
             <persName>
               <roleName type="honorific">Mrs.</roleName>
               <surname>Gardiner</surname>
@@ -420,7 +403,7 @@
               <p>neutral</p>
             </trait>
           </person>
-          <person xml:id="aus.001.fitz">
+          <person xml:id="aus.001.fitz" role="main">
             <persName>
               <roleName type="military">Colonel</roleName>
               <surname>Fitzwilliam</surname>
@@ -436,7 +419,7 @@
             </trait>
             <occupation>soldier</occupation>
           </person>
-          <person xml:id="aus.001.rey">
+          <person xml:id="aus.001.rey" role="main">
             <persName>
               <roleName type="honorific">Mrs.</roleName>
               <surname>Reynolds</surname>
@@ -448,11 +431,45 @@
               <p>widowed</p>
             </state>
             <trait type="char">
-              <p>servant</p>
+              <p>neutral</p>
             </trait>
             <occupation>servant</occupation>
           </person>
-          <person xml:id="aus.001.hill">
+
+<!-- end main characters -->
+<!-- start minor characters -->   
+
+          <person xml:id="aus.001.deb" role="minor">
+            <persName>
+              <roleName type="nobility">Lady</roleName>
+              <forename>Catherine</forename>
+              <surname>de Bourgh</surname>
+            </persName>
+            <sex>female</sex>
+            <age>old</age>
+            <socecStatus>aristocrat</socecStatus>
+            <state type="marital">
+              <p>widowed</p>
+            </state>
+            <trait type="char">
+              <p>fool</p>
+            </trait>
+          </person>
+
+          <person xml:id="aus.001.boyl" role="minor">
+            <persName>A young <surname>Lucas</surname> boy</persName>
+            <sex>male</sex>
+            <socecStatus>gentry</socecStatus>
+            <age>child</age>
+            <state type="marital">
+              <p>unmarried</p>
+            </state>
+            <trait type="char">
+              <p>fool</p>
+            </trait>
+          </person>
+
+          <person xml:id="aus.001.hill" role="minor">
             <persName>
               <roleName type="honorific">Mrs.</roleName>
               <surname>Hill</surname>
@@ -464,21 +481,21 @@
               <p>widowed</p>
             </state>
             <trait type="char">
-              <p>servant</p>
+              <p></p>
             </trait>
             <occupation>servant</occupation>
           </person>
-          <person xml:id="aus.001.butler">
+          <person xml:id="aus.001.butler" role="minor">
             <persName>Butler</persName>
             <sex>male</sex>
             <age>middle-aged</age>
             <socecStatus>working class</socecStatus>
             <trait type="char">
-              <p>servant</p>
+              <p></p>
             </trait>
             <occupation>servant</occupation>
           </person>
-          <person xml:id="aus.001.mrd">
+          <person xml:id="aus.001.mrd" role="minor">
             <persName>
               <roleName type="honorific">Mr.</roleName>
               <surname>Denny</surname>
@@ -490,7 +507,7 @@
               <p>unmarried</p>
             </state>
           </person>
-          <person xml:id="aus.001.ug">
+          <person xml:id="aus.001.ug" role="minor">
             <persName>Unknown girl</persName>
             <sex>female</sex>
             <age>out</age>
@@ -499,7 +516,7 @@
               <p>unmarried</p>
             </state>
           </person>
-          <person xml:id="aus.001.mrsp">
+          <person xml:id="aus.001.mrsp" role="minor">
             <persName>
               <roleName type="honorific">Mrs.</roleName>
               <surname>Phillips</surname>
@@ -511,20 +528,24 @@
               <p>married</p>
             </state>
           </person>
-          <relationGrp type="to_female_protagonist">
+ <!--         <relationGrp type="to_female_protagonist">
             <relation name="mother" active="#mrsb"/>
             <relation name="father" active="#mrb"/>
             <relation name="older_sister" active="#jane"/>
-            <relation name="younger_sister" active="#mary #lyd #kit"/>
-          </relationGrp>
+            <relation name="younger_sister" active="#mary #lyd #kit"/> 
+          </relationGrp>-->
         </listPerson>
+
+
         <listPerson type="narrator">
 
-          <person xml:id="aus.001.nar">
+<!-- start narrator -->
+
+          <person xml:id="aus.001.nar" role="main_nar">
             <persName>Narrator</persName>
           </person>
-          <person xml:id="aus.001.nar_mrb">
-            <persName> Narrator as <roleName type="honorific" full="abb">Mr.</roleName>
+          <person xml:id="aus.001.nar_mrb"  role="main_nar">
+            <persName>Narrator as <roleName type="honorific" full="abb">Mr.</roleName>
               <surname>Bennet</surname>
             </persName>
             <sex>male</sex>
@@ -534,8 +555,13 @@
               <p>married</p>
             </state>
           </person>
-          <person xml:id="aus.001.nar_mrsb">
-            <persName> Narrator as <roleName type="honorific" full="abb">Mrs.</roleName>
+
+<!-- end narrator -->
+
+<!-- start narrator as a main character -->
+
+          <person xml:id="aus.001.nar_mrsb" role="main_nar" corresp="#aus.001.mrsb">
+            <persName>Narrator as <roleName type="honorific" full="abb">Mrs.</roleName>
               <surname>Bennet</surname>
             </persName>
             <sex>female</sex>
@@ -548,8 +574,8 @@
               <p>fool</p>
             </trait>
           </person>
-          <person xml:id="aus.001.nar_jane">
-            <persName> Narrator as <forename>Jane</forename>
+          <person xml:id="aus.001.nar_jane" role="main_nar" corresp="#aus.001.jane">
+            <persName>Narrator as <forename>Jane</forename>
               <surname>Bennet</surname>
             </persName>
             <sex>female</sex>
@@ -562,8 +588,8 @@
               <p>heroine</p>
             </trait>
           </person>
-          <person xml:id="aus.001.nar_eliz">
-            <persName> Narrator as <forename>Elizabeth</forename>
+          <person xml:id="aus.001.nar_eliz" role="main_nar" corresp="#aus.001.eliz">
+            <persName>Narrator as <forename>Elizabeth</forename>
               <surname>Bennet</surname>
             </persName>
             <sex>female</sex>
@@ -576,8 +602,8 @@
               <p>heroine</p>
             </trait>
           </person>
-          <person xml:id="aus.001.nar_mary">
-            <persName> Narrator as <forename>Mary</forename>
+          <person xml:id="aus.001.nar_mary" role="main_nar" corresp="#aus.001.mary">
+            <persName>Narrator as <forename>Mary</forename>
               <surname>Bennet</surname>
             </persName>
             <sex>female</sex>
@@ -590,8 +616,8 @@
               <p>fool</p>
             </trait>
           </person>
-          <person xml:id="aus.001.nar_lyd">
-            <persName> Narrator as <forename>Lydia</forename>
+          <person xml:id="aus.001.nar_lyd" role="main_nar" corresp="#aus.001.lyd">
+            <persName>Narrator as <forename>Lydia</forename>
               <surname>Bennet</surname>
             </persName>
             <sex>female</sex>
@@ -604,8 +630,8 @@
               <p>fool</p>
             </trait>
           </person>
-          <person xml:id="aus.001.nar_kit">
-            <persName> Narrator as <forename>Kitty</forename>
+          <person xml:id="aus.001.nar_kit" role="main_nar" corresp="#aus.001.kit">
+            <persName>Narrator as <forename>Kitty</forename>
               <surname>Bennet</surname>
             </persName>
             <sex>female</sex>
@@ -618,8 +644,8 @@
               <p>fool</p>
             </trait>
           </person>
-          <person xml:id="aus.001.nar_char">
-            <persName> Narrator as <forename>Charlotte</forename>
+          <person xml:id="aus.001.nar_char" role="main_nar" corresp="#aus.001.char">
+            <persName>Narrator as <forename>Charlotte</forename>
               <surname>Lucas</surname>
             </persName>
             <sex>female</sex>
@@ -633,8 +659,8 @@
               <p>neutral</p>
             </trait>
           </person>
-          <person xml:id="aus.001.nar_ladyl">
-            <persName> Narrator as <roleName type="nobility">Lady</roleName>
+          <person xml:id="aus.001.nar_ladyl" role="main_nar" corresp="#aus.001.ladyl">
+            <persName>Narrator as <roleName type="nobility">Lady</roleName>
               <surname>Lucas</surname>
             </persName>
             <sex>female</sex>
@@ -647,8 +673,8 @@
               <p>fool</p>
             </trait>
           </person>
-          <person xml:id="aus.001.nar_sirl">
-            <persName> Narrator as <roleName type="nobility">Sir</roleName>
+          <person xml:id="aus.001.nar_sirl" role="main_nar" corresp="#aus.001.sirl">
+            <persName>Narrator as <roleName type="nobility">Sir</roleName>
               <forename>William</forename>
               <surname>Lucas</surname>
             </persName>
@@ -662,20 +688,8 @@
               <p>fool</p>
             </trait>
           </person>
-          <person xml:id="aus.001.nar_boyl">
-            <persName>Narrator as A young <surname>Lucas</surname> boy</persName>
-            <sex>male</sex>
-            <socecStatus>gentry</socecStatus>
-            <age>child</age>
-            <state type="marital">
-              <p>unmarried</p>
-            </state>
-            <trait type="char">
-              <p>fool</p>
-            </trait>
-          </person>
-          <person xml:id="aus.001.nar_marl">
-            <persName> Narrator as <forename>Maria</forename>
+          <person xml:id="aus.001.nar_marl" role="main_nar" corresp="#aus.001.marl">
+            <persName>Narrator as <forename>Maria</forename>
               <surname>Lucas</surname>
             </persName>
             <sex>female</sex>
@@ -688,8 +702,8 @@
               <p>fool</p>
             </trait>
           </person>
-          <person xml:id="aus.001.nar_dar">
-            <persName> Narrator as <roleName type="honorific">Mr.</roleName>
+          <person xml:id="aus.001.nar_dar" role="main_nar" corresp="#aus.001.dar">
+            <persName>Narrator as <roleName type="honorific">Mr.</roleName>
               <surname>Darcy</surname>
             </persName>
             <sex>male</sex>
@@ -702,8 +716,8 @@
               <p>hero</p>
             </trait>
           </person>
-          <person xml:id="aus.001.nar_bing">
-            <persName> Narrator as <roleName type="honorific">Mr.</roleName>
+          <person xml:id="aus.001.nar_bing" role="main_nar" corresp="#aus.001.bing">
+            <persName>Narrator as <roleName type="honorific">Mr.</roleName>
               <surname>Bingley</surname>
             </persName>
             <sex>male</sex>
@@ -716,8 +730,8 @@
               <p>hero</p>
             </trait>
           </person>
-          <person xml:id="aus.001.nar_msb">
-            <persName> Narrator as <roleName type="honorific">Miss</roleName>
+          <person xml:id="aus.001.nar_msb" role="main_nar" corresp="#aus.001.msb">
+            <persName>Narrator as <roleName type="honorific">Miss</roleName>
               <surname>Bingley</surname>
             </persName>
             <sex>female</sex>
@@ -730,8 +744,8 @@
               <p>fool</p>
             </trait>
           </person>
-          <person xml:id="aus.001.nar_mrsh">
-            <persName> Narrator as <roleName type="honorific">Mrs.</roleName>
+          <person xml:id="aus.001.nar_mrsh" role="main_nar" corresp="#aus.001.mrsh">
+            <persName>Narrator as <roleName type="honorific">Mrs.</roleName>
               <surname>Hurst</surname>
             </persName>
             <sex>female</sex>
@@ -744,8 +758,8 @@
               <p>fool</p>
             </trait>
           </person>
-          <person xml:id="aus.001.nar_mrh">
-            <persName> Narrator as <roleName type="honorific">Mr.</roleName>
+          <person xml:id="aus.001.nar_mrh" role="main_nar" corresp="#aus.001.mrh">
+            <persName>Narrator as <roleName type="honorific">Mr.</roleName>
               <surname>Hurst</surname>
             </persName>
             <sex>male</sex>
@@ -758,8 +772,8 @@
               <p>fool</p>
             </trait>
           </person>
-          <person xml:id="aus.001.nar_coll">
-            <persName> Narrator as <roleName type="honorific">Mr.</roleName>
+          <person xml:id="aus.001.nar_coll" role="main_nar" corresp="#aus.001.coll">
+            <persName>Narrator as <roleName type="honorific">Mr.</roleName>
               <surname>Collins</surname>
             </persName>
             <sex>male</sex>
@@ -774,8 +788,8 @@
             </trait>
             <occupation>clergyman</occupation>
           </person>
-          <person xml:id="aus.001.nar_wick">
-            <persName> Narrator as <roleName type="honorific">Mr.</roleName>
+          <person xml:id="aus.001.nar_wick" role="main_nar" corresp="#aus.001.wick">
+            <persName>Narrator as <roleName type="honorific">Mr.</roleName>
               <surname>Wickham</surname>
             </persName>
             <sex>male</sex>
@@ -790,8 +804,8 @@
             </trait>
             <occupation>soldier</occupation>
           </person>
-          <person xml:id="aus.001.nar_deb">
-            <persName> Narrator as <roleName type="nobility">Lady</roleName>
+          <person xml:id="aus.001.nar_deb" role="main_nar" corresp="#aus.001.deb">
+            <persName>Narrator as <roleName type="nobility">Lady</roleName>
               <forename>Catherine</forename>
               <surname>de Bourgh</surname>
             </persName>
@@ -805,8 +819,8 @@
               <p>fool</p>
             </trait>
           </person>
-          <person xml:id="aus.001.nar_mrg">
-            <persName> Narrator as <roleName type="honorific">Mr.</roleName>
+          <person xml:id="aus.001.nar_mrg" role="main_nar" corresp="#aus.001.mrg">
+            <persName>Narrator as <roleName type="honorific">Mr.</roleName>
               <surname>Gardiner</surname>
             </persName>
             <sex>male</sex>
@@ -820,8 +834,8 @@
             </trait>
             <occupation>lawyer</occupation>
           </person>
-          <person xml:id="aus.001.nar_mrsg">
-            <persName> Narrator as <roleName type="honorific">Mrs.</roleName>
+          <person xml:id="aus.001.nar_mrsg" role="main_nar" corresp="#aus.001.mrsg">
+            <persName>Narrator as <roleName type="honorific">Mrs.</roleName>
               <surname>Gardiner</surname>
             </persName>
             <sex>female</sex>
@@ -834,8 +848,8 @@
               <p>neutral</p>
             </trait>
           </person>
-          <person xml:id="aus.001.nar_fitz">
-            <persName> Narrator as <roleName type="military">Colonel</roleName>
+          <person xml:id="aus.001.nar_fitz" role="main_nar" corresp="#aus.001.fitz">
+            <persName>Narrator as <roleName type="military">Colonel</roleName>
               <surname>Fitzwilliam</surname>
             </persName>
             <sex>male</sex>
@@ -849,8 +863,8 @@
             </trait>
             <occupation>soldier</occupation>
           </person>
-          <person xml:id="aus.001.nar_rey">
-            <persName> Narrator as <roleName type="honorific">Mrs.</roleName>
+          <person xml:id="aus.001.nar_rey" role="main_nar" corresp="#aus.001.rey">
+            <persName>Narrator as <roleName type="honorific">Mrs.</roleName>
               <surname>Reynolds</surname>
             </persName>
             <sex>female</sex>
@@ -860,12 +874,29 @@
               <p>widowed</p>
             </state>
             <trait type="char">
-              <p>servant</p>
+              <p></p>
             </trait>
             <occupation>servant</occupation>
           </person>
-          <person xml:id="aus.001.nar_hill">
-            <persName> Narrator as <roleName type="honorific">Mrs.</roleName>
+
+<!-- end narrator as a main character -->
+
+<!-- start narrator as minor character -->
+
+          <person xml:id="aus.001.nar_boyl" role="minor_nar">
+            <persName>Narrator as A young <surname>Lucas</surname> boy</persName>
+            <sex>male</sex>
+            <socecStatus>gentry</socecStatus>
+            <age>child</age>
+            <state type="marital">
+              <p>unmarried</p>
+            </state>
+            <trait type="char">
+              <p>fool</p>
+            </trait>
+          </person>
+          <person xml:id="aus.001.nar_hill" role="minor_nar">
+            <persName>Narrator as <roleName type="honorific">Mrs.</roleName>
               <surname>Hill</surname>
             </persName>
             <sex>female</sex>
@@ -875,22 +906,22 @@
               <p>widowed</p>
             </state>
             <trait type="char">
-              <p>servant</p>
+              <p></p>
             </trait>
             <occupation>servant</occupation>
           </person>
-          <person xml:id="aus.001.nar_butler">
+          <person xml:id="aus.001.nar_butler" role="minor_nar">
             <persName>Narrator as Butler</persName>
             <sex>male</sex>
             <age>middle-aged</age>
             <socecStatus>working class</socecStatus>
             <trait type="char">
-              <p>servant</p>
+              <p></p>
             </trait>
             <occupation>servant</occupation>
           </person>
-          <person xml:id="aus.001.nar_mrd">
-            <persName> Narrator as <roleName type="honorific">Mr.</roleName>
+          <person xml:id="aus.001.nar_mrd" role="minor_nar">
+            <persName>Narrator as <roleName type="honorific">Mr.</roleName>
               <surname>Denny</surname>
             </persName>
             <sex>male</sex>
@@ -900,7 +931,7 @@
               <p>unmarried</p>
             </state>
           </person>
-          <person xml:id="aus.001.nar_ug">
+          <person xml:id="aus.001.nar_ug" role="minor_nar">
             <persName>Narrator as Unknown girl</persName>
             <sex>female</sex>
             <age>out</age>
@@ -909,8 +940,8 @@
               <p>unmarried</p>
             </state>
           </person>
-          <person xml:id="aus.001.nar_mrsp">
-            <persName> Narrator as <roleName type="honorific">Mrs.</roleName>
+          <person xml:id="aus.001.nar_mrsp" role="minor_nar">
+            <persName>Narrator as <roleName type="honorific">Mrs.</roleName>
               <surname>Phillips</surname>
             </persName>
             <sex>female</sex>
@@ -924,6 +955,7 @@
       </particDesc>
     </profileDesc>
     <revisionDesc>
+      <change when="2015-02"><name>Weakly, Laura</name> Added roles to personography</change>
       <change when="2012-11"><name>Weakly, Laura</name> Normalization and proofreading</change>
       <change when="2012"><name xml:id="cm">McCue, Carmen</name> Encoding of free indirect discourse</change>
       <change when="2011-12-02">
@@ -937,7 +969,7 @@
     <body>
 
 
-      <div n="1" xml:id="chap01" type="chapter">
+      <div xml:id="chap01" type="chapter">
         <head>Chapter 1. </head>
         <p>
           <seg>
@@ -1155,7 +1187,7 @@
       </div>
 
 
-      <div n="2" xml:id="chap02" type="chapter">
+      <div xml:id="chap02" type="chapter">
         <head>Chapter 2. </head>
         <p>
           <seg>
@@ -1354,7 +1386,7 @@
       </div>
 
 
-      <div n="3" xml:id="chap03" type="chapter">
+      <div xml:id="chap03" type="chapter">
         <head>Chapter 3</head>
         <p>
           <seg>
@@ -1565,7 +1597,7 @@
         </p>
       </div>
 
-      <div n="4" xml:id="chap04" type="chapter">
+      <div xml:id="chap04" type="chapter">
         <head>Chapter 4 </head>
         <p>
           <seg>
@@ -1708,7 +1740,7 @@
         </p>
       </div>
 
-      <div n="5" xml:id="chap05" type="chapter">
+      <div xml:id="chap05" type="chapter">
         <head>Chapter 5</head>
         <p>
           <seg>
@@ -1904,7 +1936,7 @@
         </p>
       </div>
 
-      <div n="6" xml:id="chap06" type="chapter">
+      <div xml:id="chap06" type="chapter">
         <head>Chapter 6</head>
         <p>
           <seg>
@@ -2320,7 +2352,7 @@
         </p>
       </div>
 
-      <div n="7" xml:id="chap07" type="chapter">
+      <div xml:id="chap07" type="chapter">
         <head>Chapter 7</head>
         <p>
           <seg>
@@ -2721,7 +2753,7 @@
         </p>
       </div>
 
-      <div n="8" xml:id="chap08" type="chapter">
+      <div xml:id="chap08" type="chapter">
         <head>Chapter 8</head>
         <p>
           <seg>
@@ -3176,7 +3208,7 @@
         </p>
       </div>
 
-      <div n="9" xml:id="chap09" type="chapter">
+      <div xml:id="chap09" type="chapter">
         <head>Chapter 9</head>
         <p>
           <seg>
@@ -3496,7 +3528,7 @@
         </p>
       </div>
 
-      <div n="10" xml:id="chap10" type="chapter">
+      <div xml:id="chap10" type="chapter">
         <head>Chapter 10</head>
         <p>
           <seg>
@@ -3950,7 +3982,7 @@
         </p>
       </div>
 
-      <div n="11" xml:id="chap11" type="chapter">
+      <div xml:id="chap11" type="chapter">
         <head>Chapter 11</head>
         <p>
           <seg>
@@ -4219,7 +4251,7 @@
         </p>
       </div>
 
-      <div n="12" xml:id="chap12" type="chapter">
+      <div xml:id="chap12" type="chapter">
         <head>Chapter 12</head>
         <p>
           <seg>
@@ -4318,7 +4350,7 @@
         </p>
       </div>
 
-      <div n="13" xml:id="chap13" type="chapter">
+      <div xml:id="chap13" type="chapter">
         <head>Chapter 13</head>
         <p>
           <seg>
@@ -4594,7 +4626,7 @@
         </p>
       </div>
 
-      <div n="14" xml:id="chap14" type="chapter">
+      <div xml:id="chap14" type="chapter">
         <head>Chapter 14</head>
         <p>
           <seg>
@@ -4772,7 +4804,7 @@
         </p>
       </div>
 
-      <div n="15" xml:id="chap15" type="chapter">
+      <div xml:id="chap15" type="chapter">
         <head>Chapter 15</head>
         <p>
           <seg>
@@ -4963,7 +4995,7 @@
         </p>
       </div>
 
-      <div n="16" xml:id="chap16" type="chapter">
+      <div xml:id="chap16" type="chapter">
         <head>Chapter 16</head>
         <p>
           <seg>
@@ -5485,7 +5517,7 @@
         </p>
       </div>
 
-      <div n="17" xml:id="chap17" type="chapter">
+      <div xml:id="chap17" type="chapter">
         <head>Chapter 17</head>
         <p>
           <seg>
@@ -5648,7 +5680,7 @@
         </p>
       </div>
 
-      <div n="18" xml:id="chap18" type="chapter">
+      <div xml:id="chap18" type="chapter">
         <head>Chapter 18</head>
         <p>
           <seg>
@@ -6388,7 +6420,7 @@
         </p>
       </div>
 
-      <div n="19" xml:id="chap19" type="chapter">
+      <div xml:id="chap19" type="chapter">
         <head>Chapter 19</head>
         <p>
           <seg>
@@ -6600,7 +6632,7 @@
         </p>
       </div>
 
-      <div n="20" xml:id="chap20" type="chapter">
+      <div xml:id="chap20" type="chapter">
         <head>Chapter 20</head>
         <p>
           <seg>
@@ -6863,7 +6895,7 @@
         </p>
       </div>
 
-      <div n="21" xml:id="chap21" type="chapter">
+      <div xml:id="chap21" type="chapter">
         <head>Chapter 21</head>
         <p>
           <seg>
@@ -7139,7 +7171,7 @@
         </p>
       </div>
 
-      <div n="22" xml:id="chap22" type="chapter">
+      <div xml:id="chap22" type="chapter">
         <head>Chapter 22</head>
         <p>
           <seg>
@@ -7353,7 +7385,7 @@
         </p>
       </div>
 
-      <div n="23" xml:id="chap23" type="chapter">
+      <div xml:id="chap23" type="chapter">
         <head>Chapter 23</head>
         <p>
           <seg>
@@ -7603,7 +7635,7 @@
         </p>
       </div>
 
-      <div n="24" xml:id="chap24" type="chapter">
+      <div xml:id="chap24" type="chapter">
         <head>Chapter 24</head>
         <p>
           <seg>
@@ -7867,7 +7899,7 @@
         </p>
       </div>
 
-      <div n="25" xml:id="chap25" type="chapter">
+      <div xml:id="chap25" type="chapter">
         <head>Chapter 25</head>
         <p>
           <seg>
@@ -8058,7 +8090,7 @@
         </p>
       </div>
 
-      <div n="26" xml:id="chap26" type="chapter">
+      <div xml:id="chap26" type="chapter">
         <head>Chapter 26</head>
         <p>
           <seg>
@@ -8338,7 +8370,7 @@
         </p>
       </div>
 
-      <div n="27" xml:id="chap27" type="chapter">
+      <div xml:id="chap27" type="chapter">
         <head>Chapter 27</head>
         <p>
           <seg>
@@ -8526,7 +8558,7 @@
         </p>
       </div>
 
-      <div n="28" xml:id="chap28" type="chapter">
+      <div xml:id="chap28" type="chapter">
         <head>Chapter 28</head>
         <p>
           <seg>
@@ -8712,7 +8744,7 @@
         </p>
       </div>
 
-      <div n="29" xml:id="chap29" type="chapter">
+      <div xml:id="chap29" type="chapter">
         <head>Chapter 29</head>
         <p>
           <seg>
@@ -9077,7 +9109,7 @@
         </p>
       </div>
 
-      <div n="30" xml:id="chap30" type="chapter">
+      <div xml:id="chap7" type="chapter">
         <head>Chapter 30</head>
         <p>
           <seg>
@@ -9217,7 +9249,7 @@
         </p>
       </div>
 
-      <div n="31" xml:id="chap31" type="chapter">
+      <div xml:id="chap31" type="chapter">
         <head>Chapter 31</head>
         <p>
           <seg>
@@ -9457,7 +9489,7 @@
         </p>
       </div>
 
-      <div n="32" xml:id="chap32" type="chapter">
+      <div xml:id="chap32" type="chapter">
         <head>Chapter 32</head>
         <p>
           <seg>
@@ -9705,7 +9737,7 @@
         </p>
       </div>
 
-      <div n="33" xml:id="chap33" type="chapter">
+      <div xml:id="chap33" type="chapter">
         <head>Chapter 33</head>
         <p>
           <seg>
@@ -10054,7 +10086,7 @@
         </p>
       </div>
 
-      <div n="34" xml:id="chap34" type="chapter">
+      <div xml:id="chap34" type="chapter">
         <head>Chapter 34</head>
         <p>
           <seg>
@@ -10339,7 +10371,7 @@
         </p>
       </div>
 
-      <div n="35" xml:id="chap35" type="chapter">
+      <div xml:id="chap35" type="chapter">
         <head>Chapter 35</head>
         <p>
           <seg>
@@ -10524,7 +10556,7 @@
         </floatingText>
       </div>
 
-      <div n="36" xml:id="chap36" type="chapter">
+      <div xml:id="chap36" type="chapter">
         <head>Chapter 36</head>
         <p>
           <seg>
@@ -10745,7 +10777,7 @@
         </p>
       </div>
 
-      <div n="37" xml:id="chap37" type="chapter">
+      <div xml:id="chap37" type="chapter">
         <head>Chapter 37</head>
         <p>
           <seg>
@@ -10953,7 +10985,7 @@
         </p>
       </div>
 
-      <div n="38" xml:id="chap38" type="chapter">
+      <div xml:id="chap38" type="chapter">
         <head>Chapter 38</head>
         <p>
           <seg>
@@ -11112,7 +11144,7 @@
         </p>
       </div>
 
-      <div n="39" xml:id="chap39" type="chapter">
+      <div xml:id="chap39" type="chapter">
         <head>Chapter 39</head>
         <p>
           <seg>
@@ -11342,7 +11374,7 @@
         </p>
       </div>
       <!-- start -->
-      <div n="40" xml:id="chap40" type="chapter">
+      <div xml:id="chap40" type="chapter">
         <head>Chapter 40</head>
         <p>
           <seg>
@@ -11616,7 +11648,7 @@
         </p>
       </div>
 
-      <div n="41" xml:id="chap41" type="chapter">
+      <div xml:id="chap41" type="chapter">
         <head>Chapter 41</head>
         <p>
           <seg>
@@ -11977,7 +12009,7 @@
         </p>
       </div>
 
-      <div n="42" xml:id="chap42" type="chapter">
+      <div xml:id="chap42" type="chapter">
         <head>Chapter 42</head>
         <p>
           <seg>
@@ -12204,7 +12236,7 @@
 
 
       <!-- start -->
-      <div n="43" xml:id="chap43" type="chapter">
+      <div xml:id="chap43" type="chapter">
         <head>Chapter 43</head>
         <p>
           <seg>
@@ -13004,7 +13036,7 @@
         </p>
       </div>
       <!-- start -->
-      <div n="44" xml:id="chap44" type="chapter">
+      <div xml:id="chap44" type="chapter">
         <head>Chapter 44</head>
         <p>
           <seg>
@@ -13259,7 +13291,7 @@
         </p>
       </div>
 
-      <div n="45" xml:id="chap45" type="chapter">
+      <div xml:id="chap45" type="chapter">
         <head>Chapter 45</head>
         <p>
           <seg>
@@ -13475,7 +13507,7 @@
         </p>
       </div>
 
-      <div n="46" xml:id="chap46" type="chapter">
+      <div xml:id="chap46" type="chapter">
         <head>Chapter 46</head>
         <p>
           <seg>
@@ -13805,7 +13837,7 @@
         </p>
       </div>
 
-      <div n="47" xml:id="chap47" type="chapter">
+      <div xml:id="chap47" type="chapter">
         <head>Chapter 47</head>
         <p>
           <seg>
@@ -14377,7 +14409,7 @@
         </p>
       </div>
       <!-- start -->
-      <div n="48" xml:id="chap48" type="chapter">
+      <div xml:id="chap48" type="chapter">
         <head>Chapter 48</head>
         <p>
           <seg>
@@ -14701,7 +14733,7 @@
         </p>
       </div>
 
-      <div n="49" xml:id="chap49" type="chapter">
+      <div xml:id="chap49" type="chapter">
         <head>Chapter 49</head>
         <p>
           <said who="aus.001.nar" direct="true" aloud="false"><hi rend="sc(1)">Two</hi> days after Mr. Bennet's return, as Jane and Elizabeth were walking
@@ -15136,7 +15168,7 @@
         </p>
       </div>
 
-      <div n="50" xml:id="chap50" type="chapter">
+      <div xml:id="chap50" type="chapter">
         <head>Chapter 50</head>
         <p>
           <seg>
@@ -15380,7 +15412,7 @@
         </p>
       </div>
       <!-- start -->
-      <div n="51" xml:id="chap51" type="chapter">
+      <div xml:id="chap51" type="chapter">
         <head>Chapter 51</head>
         <p>
           <seg>
@@ -15684,7 +15716,7 @@
         </p>
       </div>
 
-      <div n="52" xml:id="chap52" type="chapter">
+      <div xml:id="chap52" type="chapter">
         <head>Chapter 52</head>
         <p>
           <seg>
@@ -16117,7 +16149,7 @@
         </p>
       </div>
 
-      <div n="53" xml:id="chap53" type="chapter">
+      <div xml:id="chap53" type="chapter">
         <head>Chapter 53</head>
         <p>
           <seg>
@@ -16639,7 +16671,7 @@
         </p>
       </div>
 
-      <div n="54" xml:id="chap54" type="chapter">
+      <div xml:id="chap54" type="chapter">
         <head>Chapter 54</head>
         <p>
           <seg>
@@ -16943,7 +16975,7 @@
         </p>
       </div>
       <!-- start -->
-      <div n="55" xml:id="chap55" type="chapter">
+      <div xml:id="chap55" type="chapter">
         <head>Chapter 55</head>
         <p>
           <seg>
@@ -17383,7 +17415,7 @@
         </p>
       </div>
 
-      <div n="56" xml:id="chap56" type="chapter">
+      <div xml:id="chap56" type="chapter">
         <head>Chapter 56</head>
         <p>
           <seg>
@@ -17914,7 +17946,7 @@
         </p>
       </div>
       <!-- start -->
-      <div n="57" xml:id="chap57" type="chapter">
+      <div xml:id="chap57" type="chapter">
         <head>Chapter 57</head>
         <p>
           <seg>
@@ -18159,7 +18191,7 @@
         </p>
       </div>
 
-      <div n="58" xml:id="chap58" type="chapter">
+      <div xml:id="chap58" type="chapter">
         <head>Chapter 58</head>
         <p>
           <seg>
@@ -18553,7 +18585,7 @@
         </p>
       </div>
 
-      <div n="59" xml:id="chap59" type="chapter">
+      <div xml:id="chap59" type="chapter">
         <head>Chapter 59</head>
         <p>
           <seg>
@@ -18985,7 +19017,7 @@
         </p>
       </div>
 
-      <div n="60" xml:id="chap60" type="chapter">
+      <div xml:id="chap60" type="chapter">
         <head>Chapter 60</head>
         <p>
           <hi rend="sc(1)">Elizabeth's</hi>
@@ -19219,7 +19251,7 @@
         </p>
       </div>
 
-      <div n="61" xml:id="chap61" type="chapter">
+      <div xml:id="chap61" type="chapter">
         <head>Chapter 61</head>
         <p>
           <seg>

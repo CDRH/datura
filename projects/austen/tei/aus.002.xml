@@ -10,7 +10,7 @@
             </titleStmt>
             <editionStmt>
                 <edition>
-                    <date>2012</date>
+                    <date>2015</date>
                 </edition>
             </editionStmt>
             <publicationStmt>
@@ -74,7 +74,10 @@
             <particDesc>
 
                 <listPerson type="fictional">
-                    <person xml:id="aus.002.sirwalt">
+                   
+<!-- start main characters -->   
+ 
+                    <person xml:id="aus.002.sirwalt" role="main">
                         <persName>
                             <roleName>Sir</roleName>
                             <forename>Walter</forename>
@@ -82,32 +85,34 @@
                         </persName>
                         <sex>male</sex>
                         <age>middle-aged</age>
-                        <socecStatus>gentry</socecStatus>
+                        <socecStatus>aristocrat</socecStatus>
                         <state type="marital">
                             <p>widowed</p>
                         </state>
-                        <trait>
-                            <p/>
+                        <trait type="char">
+                            <p>fool</p>
                         </trait>
                         <occupation>baronet</occupation>
                     </person>
 
-                    <person xml:id="aus.002.eliz">
+                    <person xml:id="aus.002.eliz" role="main">
                         <persName>
-                            <roleName/>
                             <forename>Elizabeth</forename>
                             <surname>Elliot</surname>
                         </persName>
                         <sex>female</sex>
                         <age>out</age>
-                        <socecStatus>gentry</socecStatus>
+                        <socecStatus>aristocrat</socecStatus>
                         <state type="marital">
                             <p>unmarried</p>
                         </state>
+                        <trait type="char">
+                            <p>fool</p>
+                        </trait>
                     </person>
-                    <person xml:id="aus.002.mary">
+                    
+                    <person xml:id="aus.002.mary" role="main">
                         <persName>
-                            <roleName/>
                             <forename>Mary</forename>
                             <surname>Musgrove</surname>
                         </persName>
@@ -121,7 +126,8 @@
                             <p>fool</p>
                         </trait>
                     </person>
-                    <person xml:id="aus.002.char">
+                    
+                    <person xml:id="aus.002.char" role="main">
                         <persName>
                             <forename>Charles</forename>
                             <surname>Musgrove</surname>
@@ -132,17 +138,18 @@
                         <state type="marital">
                             <p>married</p>
                         </state>
-                        <trait>
-                            <p/>
+                        <trait type="char">
+                            <p>neutral</p>
                         </trait>
                     </person>
-                    <person xml:id="aus.002.anne">
+                    
+                    <person xml:id="aus.002.anne" role="main">
                         <persName>
                             <forename>Anne</forename>
                             <surname>Elliot</surname>
                         </persName>
                         <sex>female</sex>
-                        <socecStatus>gentry</socecStatus>
+                        <socecStatus>aristocrat</socecStatus>
                         <age>out</age>
                         <state type="marital">
                             <p>unmarried</p>
@@ -151,24 +158,26 @@
                             <p>heroine</p>
                         </trait>
                     </person>
-                    <person xml:id="aus.002.lruss">
+
+                    <person xml:id="aus.002.lruss" role="main">
                         <persName>
                             <roleName>Lady</roleName>
                             <surname>Russell</surname>
                         </persName>
                         <sex>female</sex>
-                        <socecStatus>gentry</socecStatus>
+                        <socecStatus>aristocrat</socecStatus>
                         <age>middle-aged</age>
                         <state type="marital">
-                            <p/>
+                            <p>widowed</p>
                         </state>
-                        <trait>
-                            <p/>
+                        <trait type="char">
+                            <p>neutral</p>
                         </trait>
                     </person>
-                    <person xml:id="aus.002.shep">
+
+                    <person xml:id="aus.002.shep" role="main">
                         <persName>
-                            <roleName>Mr</roleName>
+                            <roleName>Mr.</roleName>
                             <surname>Shepherd</surname>
                         </persName>
                         <sex>male</sex>
@@ -178,58 +187,62 @@
                             <p/>
                         </state>
                         <trait type="char">
-                            <p/>
+                            <p>neutral</p>
                         </trait>
                         <occupation>lawyer</occupation>
                     </person>
-                    <person xml:id="aus.002.clay">
+
+                    <person xml:id="aus.002.clay" role="main">
                         <persName>
                             <roleName>Mrs.</roleName>
-                            <forename>Penelope</forename>
+                            <!-- <forename>Penelope</forename> -->
                             <surname>Clay</surname>
                         </persName>
                         <sex>female</sex>
-                        <socecStatus/>
-                        <age>middle-aged</age>
+                        <socecStatus>professional class</socecStatus>
+                        <age>out</age>
                         <state type="marital">
-                            <p>married</p>
+                            <p>widowed</p>
                         </state>
                         <trait type="char">
                             <p>fool</p>
                         </trait>
                     </person>
-                    <person xml:id="aus.002.mrsmus">
+                    
+                    <person xml:id="aus.002.mrmus" role="main">
                         <persName>
-                            <roleName>Mrs.</roleName>
+                            <roleName>Mr.</roleName>
                             <surname>Musgrove</surname>
                         </persName>
-                        <sex>female</sex>
+                        <sex>male</sex>
                         <socecStatus>landed gentry</socecStatus>
                         <age>middle-aged</age>
                         <state type="marital">
                             <p>married</p>
                         </state>
-                        <trait>
-                            <p/>
+                        <trait type="char">
+                            <p>neutral</p>
                         </trait>
                     </person>
-                    <person xml:id="aus.002.mrsc">
+                                      
+                    <person xml:id="aus.002.mrsc" role="main">
                         <persName>
                             <roleName>Mrs.</roleName>
-                            <forename>Sophia</forename>
+                            <!-- <forename>Sophia</forename> -->
                             <surname>Croft</surname>
                         </persName>
                         <sex>female</sex>
                         <socecStatus>gentry</socecStatus>
-                        <age>old</age>
+                        <age>middle-aged</age>
                         <state type="marital">
                             <p>married</p>
                         </state>
-                        <trait>
-                            <p/>
+                        <trait type="char">
+                            <p>neutral</p>
                         </trait>
                     </person>
-                    <person xml:id="aus.002.admr">
+                    
+                    <person xml:id="aus.002.admr" role="main">
                         <persName>
                             <roleName>Admiral</roleName>
                             <forename/>
@@ -237,34 +250,36 @@
                         </persName>
                         <sex>male</sex>
                         <socecStatus>gentry</socecStatus>
-                        <age>old</age>
+                        <age>middle-aged</age>
                         <state type="marital">
                             <p>married</p>
                         </state>
-                        <trait>
-                            <p/>
+                        <trait type="char">
+                            <p>neutral</p>
                         </trait>
-                        <occupation>Naval officer</occupation>
+                        <occupation>naval officer</occupation>
                     </person>
-                    <person xml:id="aus.002.loui">
+                    
+                    <person xml:id="aus.002.loui" role="main">
                         <persName>
                             <forename>Louisa</forename>
                             <surname>Musgrove</surname>
                         </persName>
                         <sex>female</sex>
-                        <socecStatus>gentry</socecStatus>
+                        <socecStatus>landed gentry</socecStatus>
                         <age>out</age>
                         <state type="marital">
                             <p>unmarried</p>
                         </state>
-                        <trait>
-                            <p/>
+                        <trait type="char">
+                            <p>fool</p>
                         </trait>
                     </person>
-                    <person xml:id="aus.002.went">
+                    
+                    <person xml:id="aus.002.went" role="main">
                         <persName>
                             <roleName>Captain</roleName>
-                            <forename>Frederick</forename>
+                            <!-- <forename>Frederick</forename> -->
                             <surname>Wentworth</surname>
                         </persName>
                         <sex>male</sex>
@@ -276,9 +291,10 @@
                         <trait type="char">
                             <p>hero</p>
                         </trait>
-                        <occupation>Naval officer</occupation>
+                        <occupation>naval officer</occupation>
                     </person>
-                    <person xml:id="aus.002.henr">
+                    
+                    <person xml:id="aus.002.henr" role="main">
                         <persName>
                             <forename>Henrietta</forename>
                             <surname>Musgrove</surname>
@@ -289,45 +305,67 @@
                         <state type="marital">
                             <p>unmarried</p>
                         </state>
-                        <trait>
-                            <p/>
+                        <trait type="char">
+                            <p>fool</p>
                         </trait>
                     </person>
-                    <person xml:id="aus.002.chayt">
+                    
+                    
+                    <person xml:id="aus.002.chayt" role="main">
                         <persName>
                             <forename>Charles</forename>
                             <surname>Hayter</surname>
                         </persName>
                         <sex>male</sex>
                         <age>out</age>
-                        <socecStatus>working class</socecStatus>
+                        <socecStatus>landed gentry</socecStatus>
                         <state type="marital">
                             <p>unmarried</p>
                         </state>
-                        <trait>
-                            <p/>
+                        <trait type="char">
+                            <p>neutral</p>
                         </trait>
                     </person>
-                    <person xml:id="aus.002.harv">
+                    
+                    
+                    <person xml:id="aus.002.harv" role="main">
                         <persName>
                             <roleName>Captain</roleName>
                             <surname>Harville</surname>
                         </persName>
                         <sex>male</sex>
-                        <age/>
+                        <age>middle-aged</age>
                         <socecStatus>gentry</socecStatus>
                         <state type="marital">
                             <p>married</p>
                         </state>
-                        <trait>
-                            <p/>
+                        <trait type="char">
+                            <p>neutral</p>
                         </trait>
-                        <occupation>sailor</occupation>
+                        <occupation>naval officer</occupation>
                     </person>
-                    <person xml:id="aus.002.mrel">
+                    
+                    <person xml:id="aus.002.mrsharv" role="main">
                         <persName>
-                            <roleName>Mr</roleName>
-                            <forename>William</forename>
+                            <roleName>Mrs.</roleName>
+                            <surname>Harville</surname>
+                        </persName>
+                        <sex>female</sex>
+                        <age>middle-aged</age>
+                        <socecStatus>gentry</socecStatus>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p>neutral</p>
+                        </trait>
+                        <occupation/>
+                    </person>
+                    
+                    <person xml:id="aus.002.mrel" role="main">
+                        <persName>
+                            <roleName>Mr.</roleName>
+                            <!-- <forename>William</forename> -->
                             <surname>Elliot</surname>
                         </persName>
                         <sex>male</sex>
@@ -339,24 +377,84 @@
                         <trait type="char">
                             <p>heir</p>
                         </trait>
+                        <trait type="char">
+                            <p>cad</p>
+                        </trait>
                     </person>
-                    <person xml:id="aus.002.smith">
+              
+                    <person xml:id="aus.002.smith" role="main">
                         <persName>
-                            <roleName>Mrs</roleName>
+                            <roleName>Mrs.</roleName>
                             <surname>Smith</surname>
                         </persName>
                         <sex>female</sex>
                         <age>middle-aged</age>
-                        <socecStatus>working class</socecStatus>
+                        <socecStatus>gentry</socecStatus>
                         <state type="marital">
                             <p>widowed</p>
                         </state>
                         <trait type="char">
-                            <p/>
+                            <p>neutral</p>
                         </trait>
                         <occupation/>
                     </person>
-                    <person xml:id="aus.002.ldal">
+
+                    <person xml:id="aus.002.rooke" role="main">
+                        <persName>
+                            <roleName>Nurse</roleName>
+                            <surname>Rooke</surname>
+                        </persName>
+                        <sex>female</sex>
+                        <age/>
+                        <socecStatus>working class</socecStatus>
+                        <state type="marital">
+                            <p/>
+                        </state>
+                        <trait type="char">
+                            <p>neutral</p>
+                        </trait>
+                        <occupation>nurse</occupation>
+                    </person>
+
+                    <person xml:id="aus.002.mrsmus" role="main">
+                        <persName>
+                            <roleName>Mrs.</roleName>
+                            <surname>Musgrove</surname>
+                        </persName>
+                        <sex>female</sex>
+                        <socecStatus>landed gentry</socecStatus>
+                        <age>middle-aged</age>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p>neutral</p>
+                        </trait>
+                    </person>
+
+                    <person xml:id="aus.002.benw" role="main">
+                        <persName>
+                            <roleName>Captain</roleName>
+                            <forename/>
+                            <surname>Benwick</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <socecStatus>gentry</socecStatus>
+                        <age>out</age>
+                        <state type="marital">
+                            <p>unmarried</p>
+                        </state>
+                        <trait type="char">
+                            <p>fool</p>
+                        </trait>
+                        <occupation>naval officer</occupation>
+                    </person>
+                    
+<!-- end main characters -->
+<!-- start minor characters -->              
+
+     
+                    <person xml:id="aus.002.ldal" role="minor">
                         <persName>
                             <roleName>Lady</roleName>
                             <surname>Dalrymple</surname>
@@ -372,22 +470,1756 @@
                         </trait>
                         <occupation/>
                     </person>
+                    
+                    <person xml:id="aus.002.colwal" role="minor">
+                        <persName>
+                            <roleName>Colonel</roleName>
+                            <surname>Wallis</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <age>old</age>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation/>
+                    </person>
+                    
+                    <person xml:id="aus.002.mrswall" role="minor">
+                        <persName>
+                            <roleName>Mrs.</roleName>
+                            <surname>Wallis</surname>
+                        </persName>
+                        <sex>female</sex>
+                        <age>old</age>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation/>
+                    </person>
+                    
+                    <person xml:id="aus.002.waiter" role="minor">
+                        <persName>
+                            <roleName>waiter</roleName>
+                            <surname/>
+                        </persName>
+                        <sex>male</sex>
+                        <age/>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p/>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation>waiter</occupation>
+                    </person>
+                    
+                    <person xml:id="aus.002.servant" role="minor">
+                        <persName>
+                            <roleName>servant</roleName>
+                            <surname/>
+                        </persName>
+                        <sex>male</sex>
+                        <age/>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p/>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation>servant</occupation>
+                    </person>
+                    
+                    
+                    <person xml:id="aus.002.bathservant" role="minor">
+                        <persName>
+                            <roleName>servant</roleName>
+                            <surname/>
+                        </persName>
+                        <sex>male</sex>
+                        <age/>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p/>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation>servant</occupation>
+                    </person>
+                    
+                    <person xml:id="aus.002.innskeep" role="minor">
+                        <persName>
+                            <roleName>innskeeper</roleName>
+                            <surname/>
+                        </persName>
+                        <sex>male</sex>
+                        <age/>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p/>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation>innskeeper</occupation>
+                    </person>
+                    
+                    <person xml:id="aus.002.gunsmith" role="minor">
+                        <persName>
+                            <roleName>gunsmith</roleName>
+                            <surname/>
+                        </persName>
+                        <sex>male</sex>
+                        <age/>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p/>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation>gunsmith</occupation>
+                    </person>
+                    
+                    
+                    <person xml:id="aus.002.mrrob" role="minor">
+                        <persName>
+                            <roleName>Mr.</roleName>
+                            <surname>Robinson</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <age/>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p/>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation></occupation>
+                    </person>
+                    
+                    
+                    <person xml:id="aus.002.drshir" role="minor">
+                        <persName>
+                            <roleName>Dr.</roleName>
+                            <surname>Shirley</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <age/>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation>rector</occupation>
+                    </person>
+                    
+                    
+                    
+                    
+                    <person xml:id="aus.002.sarah" role="minor">
+                        <persName>
+                            <roleName/>
+                            <forename>Sarah</forename>
+                            <surname/>
+                        </persName>
+                        <sex>female</sex>
+                        <age>old</age>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p/>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation>nursery maid</occupation>
+                    </person>
+                    
+                    
+                    <person xml:id="aus.002.gov" role="minor">
+                        <persName>
+                            <roleName>governess</roleName>
+                            <forename/>
+                            <surname/>
+                        </persName>
+                        <sex>female</sex>
+                        <age>old</age>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p/>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation>governess</occupation>
+                    </person>
+                    
+                    
+                    <person xml:id="aus.002.jemi" role="minor">
+                        <persName>
+                            <roleName/>
+                            <forename>Jemima</forename>
+                            <surname/>
+                        </persName>
+                        <sex>female</sex>
+                        <age>old</age>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p/>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation>maid</occupation>
+                    </person>
+                    
+                    
+                    <person xml:id="aus.002.marrppl" role="minor">
+                        <persName>
+                            <roleName>married people</roleName>
+                            <forename/>
+                            <surname/>
+                        </persName>
+                        <sex/>
+                        <age/>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation/>
+                    </person>
+                    
+                    
+                    <person xml:id="aus.002.mrsat" role="minor">
+                        <persName>
+                            <roleName>Miss</roleName>
+                            <forename/>
+                            <surname>Atkinson</surname>
+                        </persName>
+                        <sex>female</sex>
+                        <age>out</age>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p>unmarried</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation/>
+                    </person>
+                    
+                    
+                    <person xml:id="aus.002.unknownlady" role="minor">
+                        <persName>
+                            <roleName>Lady</roleName>
+                            <forename/>
+                            <surname/>
+                        </persName>
+                        <sex>female</sex>
+                        <age/>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p/>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation/>
+                    </person>
+
+                    <person xml:id="aus.002.dick" role="minor">
+                        <persName>
+                            <roleName>Mr.</roleName>
+                            <forename>Richard</forename>
+                            <surname>Musgrove</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <socecStatus/>
+                        <age>out</age>
+                        <state type="marital">
+                            <p>unmarried</p>
+                        </state>
+                        <trait type="char">
+                            <p>fool</p>
+                        </trait>
+                        <occupation></occupation>
+                    </person>
+                    
+                    <person xml:id="aus.002.surg" role="minor">
+                        <persName>
+                            <roleName>surgeon</roleName>
+                            <forename/>
+                            <surname/>
+                        </persName>
+                        <sex>male</sex>
+                        <age/>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p/>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation>surgeon</occupation>
+                    </person>
+                    
+<!-- Should non-anne be minor or together or another designation? -->
+
+                    <person xml:id="aus.002.non-anne" role="minor">
+                        <persName>Not 
+                            <roleName>Miss</roleName>
+                            <forename>Anne</forename>
+                            <surname>Elliot</surname>
+                        </persName>
+                        <sex>female</sex>
+                        <socecStatus>gentry</socecStatus>
+                        <age>out</age>
+                        <state type="marital">
+                            <p>unmarried</p>
+                        </state>
+                        <trait type="char">
+                            <p>heroine</p>
+                        </trait>
+                    </person>
+
+<!-- end minor characters -->
+<!-- start characters speaking together -->
+
+                    <person xml:id="aus.002.louihenr" role="together">
+                        <persName>Speaking together 
+                            <roleName>Miss</roleName>
+                            <forename>Louisa</forename>
+                            <surname>Musgrove</surname> and 
+<roleName>Miss</roleName><forename>Henrietta</forename><surname>Musgrove</surname></persName>
+                        <sex>female</sex>
+                        <age>out</age>
+                        <socecStatus>gentry</socecStatus>
+                        <state type="marital">
+                            <p>unmarried</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                    </person>
+
+                    <person xml:id="aus.002.harvmrsharv" role="together">
+                        <persName>Speaking together 
+                            <roleName>Captain</roleName>
+                            <surname>Harville</surname> and 
+<roleName>Mrs.</roleName> <surname>Harville</surname></persName>
+                      <!--   <sex>male, female</sex> -->
+                        <age/>
+                        <socecStatus>gentry</socecStatus>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <!-- <occupation>sailor</occupation> -->
+                    </person>
+
+                    <person xml:id="aus.002.charhenrwent" role="together">
+                        <persName>Speaking together 
+                            <roleName>Mr.</roleName>
+                            <forename>Charles</forename>
+                            <surname>Musgrove</surname>, 
+                        <roleName>Miss</roleName> <forename>Henrietta</forename> <surname>Musgrove</surname> and 
+<roleName>Captain</roleName> <forename>Frederick</forename> <surname>Wentworth</surname></persName>
+                        <!-- <sex>male, female</sex> -->
+                        <!-- <socecStatus>landed gentry, gentry</socecStatus> -->
+                        <!-- <age>young married, out</age> -->
+                        <!-- <state type="marital">
+                            <p>married, unmarried</p>
+                        </state> -->
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                    </person>
+
+                    <person xml:id="aus.002.charwent" role="together">
+                        <persName>Speaking together
+                            <roleName>Mr.</roleName>
+                            <forename>Charles</forename>
+                            <surname>Musgrove</surname>
+and <roleName>Captain</roleName> <forename>Frederick</forename> <surname>Wentworth</surname></persName>
+                        <sex>male</sex>
+                        <!-- <socecStatus>landed gentry, gentry</socecStatus> -->
+                        <!-- <age>young married, out</age> -->
+                        <!-- <state type="marital">
+                            <p>married, unmarried</p>
+                        </state> -->
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                    </person>
+
+
+                    <person xml:id="aus.002.sirwaltelizclay" role="together">
+                        <persName>Speaking together 
+                            <roleName>Sir</roleName>
+                            <forename>Walter</forename>
+                            <surname>Elliot</surname>, 
+                   <roleName>Miss</roleName> <forename>Elizabeth</forename> <surname>Elliot</surname> and <roleName>Mrs</roleName> <forename>Penelope</forename> <surname>Clay</surname></persName>
+                        <!-- <sex>male, female</sex> -->
+                        <!-- <age>middle-aged, out</age> -->
+                        <socecStatus>gentry</socecStatus>
+                        <!-- <state type="marital">
+                            <p>widowed, unmarried, married</p>
+                        </state> -->
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <!-- <occupation>baronet, baronet's daughter</occupation> -->
+                    </person>
+
+                    <person xml:id="aus.002.elizclay" role="together">
+                        <persName>Speaking together 
+                            <forename>Elizabeth</forename>
+                            <surname>Elliot</surname>
+                        and <roleName>Mrs.</roleName> <!-- <forename>Penelope</forename> --> <surname>Clay</surname></persName>
+                        <sex>female</sex>
+                        <!-- <age>out, middle-aged</age> -->
+                        <socecStatus>gentry</socecStatus>
+                        <!-- <state type="marital">
+                            <p>unmarried, married</p>
+                        </state> -->
+                        <trait type="char">
+                            <p></p>
+                        </trait>
+                    </person>
+
+                    <person xml:id="aus.002.mrscadmr" role="together">
+                        <persName>Speaking together 
+                            <roleName>Mrs.</roleName>
+                            <!-- <forename>Sophia</forename> -->
+                            <surname>Croft</surname>
+                         and <roleName>Admiral</roleName> <surname>Croft</surname></persName>
+                        <!-- <sex>female, male</sex> -->
+                        <socecStatus>gentry</socecStatus>
+                        <age>old</age>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                    </person>
+
+                    <person xml:id="aus.002.mrsmusmrmushenr" role="together">
+                        <persName>Speaking together 
+                            <roleName>Mrs.</roleName>
+                            <surname>Musgrove</surname>, 
+                       <roleName>Mr.</roleName> <surname>Musgrove</surname> and <forename>Henrietta</forename><surname>Musgrove</surname></persName>
+                        <!-- <sex>female, male</sex> -->
+                        <socecStatus>landed gentry</socecStatus>
+                        <!-- <age>middle-aged, out</age> -->
+                        <!-- <state type="marital">
+                            <p>married, unmarried</p>
+                        </state> -->
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                    </person>
+
+                    <person xml:id="aus.002.mrsmusmrmus" role="together">
+                        <persName>Speaking together 
+                            <roleName>Mrs.</roleName>
+                            <surname>Musgrove</surname> and 
+                        <roleName>Mr</roleName> <surname>Musgrove</surname></persName>
+                        <!-- <sex>female, male</sex> -->
+                        <socecStatus>landed gentry</socecStatus>
+                        <age>middle-aged</age>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                    </person>
+
+                    <person xml:id="aus.002.annelruss" role="together">
+                        <persName>Speaking together 
+                            <forename>Anne</forename>
+                            <surname>Elliot</surname>
+                         and <roleName>Lady</roleName><surname>Russell</surname></persName>
+                        <sex>female</sex>
+                        <socecStatus>gentry</socecStatus>
+                        <!-- <age>out, middle-aged</age> -->
+                        <state type="marital">
+                            <p>unmarried</p>
+                        </state>
+                        <trait type="char">
+                            <p>heroine</p>
+                        </trait>
+                    </person>
+
+                    <person xml:id="aus.002.marychar" role="together">
+                        <persName>Speaking together 
+                            <forename>Mary</forename>
+                            <surname>Musgrove</surname>
+and <forename>Charles</forename> <surname>Musgrove</surname></persName>
+                        <!-- <sex>female, male</sex> -->
+                        <age>young married</age>
+                        <socecStatus>landed gentry</socecStatus>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p>fool</p>
+                        </trait>
+                    </person>
+
+                    <person xml:id="aus.002.mrsclruss" role="together">
+                        <persName>Speaking together 
+                            <roleName>Mrs.</roleName>
+                            <surname>Croft</surname>
+and <roleName>Lady</roleName> <surname>Russell</surname></persName>
+                        <sex>female</sex>
+                        <socecStatus>gentry</socecStatus>
+                        <!-- <age>old, middle-aged</age> -->
+                        <state type="marital">
+                            <p/>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                    </person>
+
+                    <person xml:id="aus.002.sirwalteliz" role="together">
+                        <persName>Speaking together 
+                            <roleName>Sir</roleName>
+                            <forename>Walter</forename>
+                            <surname>Elliot</surname>
+and <forename>Elizabeth</forename> <surname>Elliot</surname></persName>
+                        <!-- <sex>male, female</sex> -->
+                        <!-- <age>middle-aged, out</age> -->
+                        <socecStatus>gentry</socecStatus>
+                        <!-- <state type="marital">
+                            <p>widowed, unmarried</p>
+                        </state> -->
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <!-- <occupation>baronet, baronet's daughter</occupation> -->
+                    </person>
+
+<!-- end characters speaking together -->
+<!-- start characters speaking as another character -->
+
+
+                    <person xml:id="aus.002.admr_shep" role="asanother" corresp="#aus.002.shep">
+                        <persName>Admiral Croft speaking as
+                            <roleName>Mr.</roleName>
+                            <surname>Shepherd</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <socecStatus>professional class</socecStatus>
+                        <age>middle-aged</age>
+                        <state type="marital">
+                            <p/>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation>lawyer</occupation>
+                    </person>
+                    <person xml:id="aus.002.mary_char" role="asanother" corresp="#aus.002.char">
+                        <persName>Mary Musgrove speaking as 
+                            <forename>Charles</forename>
+                            <surname>Musgrove</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <socecStatus>landed gentry</socecStatus>
+                        <age>young married</age>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                    </person>
+                    <person xml:id="aus.002.mary_mrsmus" role="asanother" corresp="#aus.002.mrsmus">
+                        <persName>Mary Musgrove speaking as
+                            <roleName>Mrs.</roleName>
+                            <surname>Musgrove</surname>
+                        </persName>
+                        <sex>female</sex>
+                        <socecStatus>landed gentry</socecStatus>
+                        <age>middle-aged</age>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                    </person>
+                    <person xml:id="aus.002.loui_mrsmusmrmus" role="asanother">
+                        <persName>Lousia Musgrove speaking as
+                            <roleName>Mr.</roleName>
+                            <surname>Musgrove</surname> and 
+                            <roleName>Mrs.</roleName>
+                            <surname>Musgrove</surname>
+                        </persName>
+                        <!-- <sex>female, male</sex> -->
+                        <socecStatus>landed gentry</socecStatus>
+                        <age>middle-aged</age>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                    </person>
+                    <person xml:id="aus.002.mary_mrsc" role="asanother" corresp="#aus.002.mrsc">
+                        <persName>Mary Musgrove speaking as
+                            <roleName>Mrs.</roleName>
+                            <!-- <forename>Sophia</forename> -->
+                            <surname>Croft</surname>
+                        </persName>
+                        <sex>female</sex>
+                        <socecStatus>gentry</socecStatus>
+                        <age>old</age>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                    </person>
+                    <person xml:id="aus.002.loui_mrscadmr" role="asanother">
+                        <persName>Louisa Musgrove speaking as
+                            <roleName>Mrs.</roleName>
+                            <!-- <forename>Sophia</forename> -->
+                            <surname>Croft</surname>
+and 
+                            <roleName>Admiral</roleName>
+                            <surname>Croft</surname>
+                        </persName>
+                       <!--  <sex>female, male</sex> -->
+                        <socecStatus>gentry</socecStatus>
+                        <age>old</age>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                    </person>
+
+                    <person xml:id="aus.002.anne_went" role="asanother" corresp="#aus.002.went">
+                        <persName>Anne Elliot speaking as 
+                            <roleName>Captain</roleName>
+                            <forename>Frederick</forename>
+                            <surname>Wentworth</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <socecStatus>gentry</socecStatus>
+                        <age>out</age>
+                        <state type="marital">
+                            <p>unmarried</p>
+                        </state>
+                        <trait type="char">
+                            <p>hero</p>
+                        </trait>
+                        <occupation>naval officer</occupation>
+                    </person>
+
+                    <person xml:id="aus.002.mary_went" role="asanother" corresp="#aus.002.went">
+                        <persName>Mary Musgrove speaking as
+                            <roleName>Captain</roleName>
+                            <!-- <forename>Frederick</forename> -->
+                            <surname>Wentworth</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <socecStatus>gentry</socecStatus>
+                        <age>out</age>
+                        <state type="marital">
+                            <p>unmarried</p>
+                        </state>
+                        <trait type="char">
+                            <p>hero</p>
+                        </trait>
+                        <occupation>naval officer</occupation>
+                    </person>
+
+                    <person xml:id="aus.002.admr_went" role="asanother" corresp="#aus.002.went">
+                        <persName>Admiral Croft speaking as
+                            <roleName>Captain</roleName>
+                            <!-- <forename>Frederick</forename> -->
+                            <surname>Wentworth</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <socecStatus>gentry</socecStatus>
+                        <age>out</age>
+                        <state type="marital">
+                            <p>unmarried</p>
+                        </state>
+                        <trait type="char">
+                            <p>hero</p>
+                        </trait>
+                        <occupation>naval officer</occupation>
+                    </person>
+
+                    <person xml:id="aus.002.mary_mrsharv" role="asanother" corresp="#aus.002.mrsharv">
+                        <persName>Mary Musgrove speaking as
+                            <roleName>Mrs.</roleName>
+                            <surname>Harville</surname>
+                        </persName>
+                        <sex>female</sex>
+                        <age/>
+                        <socecStatus>gentry</socecStatus>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation/>
+                    </person>
+                    <person xml:id="aus.002.smith_mrel" role="asanother" corresp="#aus.002.mrel">
+                        <persName>Mrs. Smith speaking as
+                            <roleName>Mr.</roleName>
+                            <!-- <forename>William</forename> -->
+                            <surname>Elliot</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <age/>
+                        <socecStatus>gentry</socecStatus>
+                        <state type="marital">
+                            <p>widowed</p>
+                        </state>
+                        <trait type="char">
+                            <p>heir</p>
+                        </trait>
+                    </person>
+
+                    <person xml:id="aus.002.smith_mrswall" role="asanother">
+                        <persName>Mrs. Smith speaking as
+                            <roleName>Mrs.</roleName>
+                            <surname>Wallis</surname>
+                        </persName>
+                        <sex>female</sex>
+                        <age>old</age>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation/>
+                    </person>
+                    <person xml:id="aus.002.waiter_servant" role="asanother">
+                        <persName>Waiter speaking as
+                            <roleName>servant</roleName>
+                            <surname/>
+                        </persName>
+                        <sex>male</sex>
+                        <age/>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p/>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation>servant</occupation>
+                    </person>
+                    <person xml:id="aus.002.char_gunsmith" role="asanother">
+                        <persName>Charles Musgrove speaking as
+                            <roleName>gunsmith</roleName>
+                            <surname/>
+                        </persName>
+                        <sex>male</sex>
+                        <age/>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p/>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation>gunsmith</occupation>
+                    </person>
+                    <person xml:id="aus.002.henr_drshir" role="asanother">
+                        <persName>Henrietta Musgrove speaking as
+                            <roleName>Dr.</roleName>
+                            <surname>Shirley</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <age/>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation>rector</occupation>
+                    </person>
+                    <person xml:id="aus.002.smith_rooke" role="asanother" corresp="#aus.002.rooke">
+                        <persName>Mrs. Smith speaking as
+                            <roleName>Nurse</roleName>
+                            <surname>Rooke</surname>
+                        </persName>
+                        <sex>female</sex>
+                        <age/>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p/>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation>nurse</occupation>
+                    </person>
+                    <person xml:id="aus.002.mary_jemi" role="asanother">
+                        <persName>Mary Musgrove speaking as
+                            <roleName/>
+                            <forename>Jemima</forename>
+                            <surname/>
+                        </persName>
+                        <sex>female</sex>
+                        <age>old</age>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p/>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation>maid</occupation>
+                    </person>
+
+                    <person xml:id="aus.002.went_marrppl" role="asanother">
+                        <persName>Captain Frederick Wentworth speaking as
+                            <roleName>married people</roleName>
+                            <forename/>
+                            <surname/>
+                        </persName>
+                        <sex/>
+                        <age/>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation/>
+                    </person>
+
+                    <person xml:id="aus.002.unknownlady_mrsat" role="asanother">
+                        <persName>Unknown Lady speaking as
+                            <roleName>Miss</roleName>
+                            <forename/>
+                            <surname>Atkinson</surname>
+                        </persName>
+                        <sex>female</sex>
+                        <age>out</age>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p>unmarried</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation/>
+                    </person>
+                    
+                    
+                    <person xml:id="aus.002.mary_benw" role="asanother" corresp="#aus.002.benw">
+                        <persName>Mary Musgrove speaking as
+                            <roleName>Captain</roleName>
+                            <forename/>
+                            <surname>Benwick</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <socecStatus>gentry</socecStatus>
+                        <age/>
+                        <state type="marital">
+                            <p>unmarried</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation>naval officer</occupation>
+                    </person>
+                    
+                    <person xml:id="aus.002.char_benw" role="asanother" corresp="#aus.002.benw">
+                        <persName>Charles Musgrove speaking as
+                            <roleName>Captain</roleName>
+                            <forename/>
+                            <surname>Benwick</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <socecStatus>gentry</socecStatus>
+                        <age/>
+                        <state type="marital">
+                            <p>unmarried</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation>naval officer</occupation>
+                    </person>
+                    
+                    <person xml:id="aus.002.sirwalt_sirbas" role="asanother">
+                        <persName>Sir Walter Elliott speaking as 
+                            <roleName>Sir</roleName>
+                            <forename>Basil</forename>
+                            <surname>Morley</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <age>middle-aged</age>
+                        <socecStatus>gentry</socecStatus>
+                        <state type="marital">
+                            <p/>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation>baronet</occupation>
+                    </person>
+        </listPerson>
+
+
+        <listPerson type="narrator">
+
+<!-- start narrator -->
+
+                    <person xml:id="aus.002.nar" role="main_nar">
+                        <persName>
+                            <roleName>narrator</roleName>
+                            <forename/>
+                            <surname/>
+                        </persName>
+                        <sex/>
+                        <age/>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p/>
+                        </state>
+                        <trait type="char">
+                            <p>narrator</p>
+                        </trait>
+                        <occupation/>
+                    </person>
+
+<!-- end narrator -->
+
+<!-- start narrator as a main character -->
+
+                    <person xml:id="aus.002.nar_sirwalt" role="main_nar" corresp="#aus.002.sirwalt">
+                        <persName>Narrator as 
+                            <roleName>Sir</roleName>
+                            <forename>Walter</forename>
+                            <surname>Elliot</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <age>middle-aged</age>
+                        <socecStatus>gentry</socecStatus>
+                        <state type="marital">
+                            <p>widowed</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation>baronet</occupation>
+                    </person>
+                    <person xml:id="aus.002.nar_eliz" role="main_nar" corresp="#aus.002.eliz">
+                        <persName>Narrator as 
+                            <!-- <roleName>Miss</roleName> -->
+                            <forename>Elizabeth</forename>
+                            <surname>Elliot</surname>
+                        </persName>
+                        <sex>female</sex>
+                        <age>out</age>
+                        <socecStatus>gentry</socecStatus>
+                        <state type="marital">
+                            <p>unmarried</p>
+                        </state>
+                        <trait type="char">
+                            <p></p>
+                        </trait>
+                    </person>
+                    <person xml:id="aus.002.nar_mary" role="main_nar" corresp="#aus.002.mary">
+                        <persName>Narrator as 
+                            <!-- <roleName>Mrs</roleName> -->
+                            <forename>Mary</forename>
+                            <surname>Musgrove</surname>
+                        </persName>
+                        <sex>female</sex>
+                        <age>young married</age>
+                        <socecStatus>landed gentry</socecStatus>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p>fool</p>
+                        </trait>
+                    </person>
+                    <person xml:id="aus.002.nar_char" role="main_nar" corresp="#aus.002.char">
+                        <persName>Narrator as 
+                            <!-- <roleName>Mr</roleName> -->
+                            <forename>Charles</forename>
+                            <surname>Musgrove</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <socecStatus>landed gentry</socecStatus>
+                        <age>young married</age>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                    </person>
+                    <person xml:id="aus.002.nar_anne" role="main_nar" corresp="#aus.002.anne">
+                        <persName>Narrator as 
+                            <!-- <roleName>Miss</roleName> -->
+                            <forename>Anne</forename>
+                            <surname>Elliot</surname>
+                        </persName>
+                        <sex>female</sex>
+                        <socecStatus>gentry</socecStatus>
+                        <age>out</age>
+                        <state type="marital">
+                            <p>unmarried</p>
+                        </state>
+                        <trait type="char">
+                            <p>heroine</p>
+                        </trait>
+                    </person>
+                    <person xml:id="aus.002.nar_lruss" role="main_nar" corresp="#aus.002.lruss">
+                        <persName>Narrator as 
+                            <roleName>Lady</roleName>
+                            <surname>Russell</surname>
+                        </persName>
+                        <sex>female</sex>
+                        <socecStatus>gentry</socecStatus>
+                        <age>middle-aged</age>
+                        <state type="marital">
+                            <p/>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                    </person>
+                    <person xml:id="aus.002.nar_shep" role="main_nar" corresp="#aus.002.nar_shep">
+                        <persName>Narrator as 
+                            <roleName>Mr.</roleName>
+                            <surname>Shepherd</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <socecStatus>professional class</socecStatus>
+                        <age>middle-aged</age>
+                        <state type="marital">
+                            <p/>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation>lawyer</occupation>
+                    </person>
+                    <person xml:id="aus.002.nar_clay" role="main_nar" corresp="#aus.002.clay">
+                        <persName>Narrator as 
+                            <roleName>Mrs.</roleName>
+                            <!-- <forename>Penelope</forename> -->
+                            <surname>Clay</surname>
+                        </persName>
+                        <sex>female</sex>
+                        <socecStatus/>
+                        <age>middle-aged</age>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p>fool</p>
+                        </trait>
+                    </person>
+                    <person xml:id="aus.002.nar_mrmus" role="main_nar" corresp="#aus.002.mrmus">
+                        <persName>Narrator as 
+                            <roleName>Mr.</roleName>
+                            <surname>Musgrove</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <socecStatus>landed gentry</socecStatus>
+                        <age>middle-aged</age>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                    </person>
+                    <person xml:id="aus.002.nar_loui" role="main_nar" corresp="#aus.002.loui">
+                        <persName>Narrator as 
+                            <!-- <roleName>Miss</roleName> -->
+                            <forename>Louisa</forename>
+                            <surname>Musgrove</surname>
+                        </persName>
+                        <sex>female</sex>
+                        <socecStatus>gentry</socecStatus>
+                        <age>out</age>
+                        <state type="marital">
+                            <p>unmarried</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                    </person>
+                    <person xml:id="aus.002.nar_went" role="main_nar" corresp="#aus.002.went">
+                        <persName>Narrator as 
+                            <roleName>Captain</roleName>
+                            <!-- <forename>Frederick</forename> -->
+                            <surname>Wentworth</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <socecStatus>gentry</socecStatus>
+                        <age>out</age>
+                        <state type="marital">
+                            <p>unmarried</p>
+                        </state>
+                        <trait type="char">
+                            <p>hero</p>
+                        </trait>
+                        <occupation>naval officer</occupation>
+                    </person>
+                    <person xml:id="aus.002.nar_chayt" role="main_nar" corresp="#aus.002.chayt">
+                        <persName>Narrator as 
+                            <!-- <roleName>Mr</roleName> -->
+                            <forename>Charles</forename>
+                            <surname>Hayter</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <age>out</age>
+                        <socecStatus>working class</socecStatus>
+                        <state type="marital">
+                            <p>unmarried</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                    </person>
+                    <person xml:id="aus.002.nar_mrsharv" role="main_nar" corresp="#aus.002.mrsharv">
+                        <persName>Narrator as 
+                            <roleName>Mrs.</roleName>
+                            <surname>Harville</surname>
+                        </persName>
+                        <sex>female</sex>
+                        <age/>
+                        <socecStatus>gentry</socecStatus>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation/>
+                    </person>
+                    <person xml:id="aus.002.nar_mrel" role="main_nar" corresp="#aus.002.mrel">
+                        <persName>Narrator as 
+                            <roleName>Mr.</roleName>
+                            <!-- <forename>William</forename> -->
+                            <surname>Elliot</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <age/>
+                        <socecStatus>gentry</socecStatus>
+                        <state type="marital">
+                            <p>widowed</p>
+                        </state>
+                        <trait type="char">
+                            <p>heir</p>
+                        </trait>
+                    </person>
+                    <person xml:id="aus.002.nar_mrsmus" role="main_nar" corresp="#aus.002.mrsmus">
+                        <persName>Narrator as 
+                            <roleName>Mrs.</roleName>
+                            <surname>Musgrove</surname>
+                        </persName>
+                        <sex>female</sex>
+                        <socecStatus>landed gentry</socecStatus>
+                        <age>middle-aged</age>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                    </person>
+                    <person xml:id="aus.002.nar_smith" role="main_nar" corresp="#aus.002.nar_smith">
+                        <persName>Narrator as 
+                            <roleName>Mrs.</roleName>
+                            <surname>Smith</surname>
+                        </persName>
+                        <sex>female</sex>
+                        <age>middle-aged</age>
+                        <socecStatus>working class</socecStatus>
+                        <state type="marital">
+                            <p>widowed</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation/>
+                    </person>
+                    <person xml:id="aus.002.nar_benw" role="main_nar" corresp="#aus.002.benw">
+                        <persName>Narrator as 
+                            <roleName>Captain</roleName>
+                            <forename/>
+                            <surname>Benwick</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <socecStatus>gentry</socecStatus>
+                        <age/>
+                        <state type="marital">
+                            <p>unmarried</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation>naval officer</occupation>
+                    </person>
+
+                    <person xml:id="aus.002.nar_henr" role="main_nar" corresp="#aus.002.henr">
+                        <persName>Narrator as 
+                            <!-- <roleName>Miss</roleName> -->
+                            <forename>Henrietta</forename>
+                            <surname>Musgrove</surname>
+                        </persName>
+                        <sex>female</sex>
+                        <age>out</age>
+                        <socecStatus>gentry</socecStatus>
+                        <state type="marital">
+                            <p>unmarried</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                    </person>
+
+
+<!-- end narrator as a main character -->
+
+<!-- start narrator as minor character -->
+
+                <person xml:id="aus.002.nar_sarah" role="minor_nar">
+                        <persName>Narrator as 
+                            <roleName/>
+                            <forename>Sarah</forename>
+                            <surname/>
+                        </persName>
+                        <sex>female</sex>
+                        <age>old</age>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p/>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation>nursery maid</occupation>
+                    </person>
+                    <person xml:id="aus.002.nar_gov" role="minor_nar">
+                        <persName>Narrator as 
+                            <roleName>governess</roleName>
+                            <forename/>
+                            <surname/>
+                        </persName>
+                        <sex>female</sex>
+                        <age>old</age>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p/>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation>governess</occupation>
+                    </person>
+
+
+                    <person xml:id="aus.002.nar_surg" role="minor_nar">
+                        <persName>Narrator as 
+                            <roleName>surgeon</roleName>
+                            <forename/>
+                            <surname/>
+                        </persName>
+                        <sex>male</sex>
+                        <age/>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p/>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation>surgeon</occupation>
+                    </person>
+
+                    <person xml:id="aus.002.nar_mrrob" role="minor_nar">
+                        <persName>Narrator as 
+                            <roleName>Mr</roleName>
+                            <surname>Robinson</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <age/>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p/>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation></occupation>
+                    </person>
+
+<!-- end narrator as minor character -->
+
+<!-- start narrator as characters speaking together -->
+
+
+                    <person xml:id="aus.002.nar_mrsmusmrmus" role="together_nar">
+                        <persName>Narrator as 
+                            <roleName>Mr.</roleName>
+                            <surname>Musgrove</surname>
+                        and <roleName>Mrs.</roleName><surname>Musgrove</surname></persName>
+                        <!-- <sex>female, male</sex> -->
+                        <socecStatus>landed gentry</socecStatus>
+                        <age>middle-aged</age>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                    </person>
+                    <person xml:id="aus.002.nar_mrsmusmrmushenr" role="together_nar">
+                        <persName>Narrator as 
+                            <roleName>Mr.</roleName>
+                            <forename></forename>
+                            <surname>Musgrove</surname>, 
+<roleName>Mrs.</roleName> <surname>Musgrove</surname>
+                        and <!-- <roleName>Mrs.</roleName> --><forename>Henrietta</forename><surname>Musgrove</surname></persName>
+                        <!-- <sex>female, male</sex> -->
+                        <socecStatus>landed gentry</socecStatus>
+                        <!-- <age>middle-aged, out</age> -->
+                        <!-- <state type="marital">
+                            <p>married, unmarried</p>
+                        </state> -->
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                    </person>
+                    <person xml:id="aus.002.nar_sirwalteliz" role="together_nar">
+                        <persName>Narrator as 
+                            <roleName>Sir</roleName>
+                            <forename>Walter</forename>
+                            <surname>Elliot</surname> and 
+<forename>Elizabeth</forename> <surname>Elliot</surname>
+                        </persName>
+                        <!-- <sex>male, female</sex>
+                        <age>middle-aged, out</age>
+                        <socecStatus>gentry</socecStatus>
+                        <state type="marital">
+                            <p>widowed, unmarried</p>
+                        </state> -->
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <!-- <occupation>baronet, baronet's daughter</occupation> -->
+                    </person>
+
+
+                    <person xml:id="aus.002.nar_annelruss" role="together_nar">
+                        <persName>Narrator as 
+                            <roleName>Miss</roleName>
+                            <forename>Anne</forename>
+                            <surname>Elliot</surname>
+                        and 
+<roleName>Lady</roleName>
+<surname>Russell</surname>
+</persName>
+                        <sex>female</sex>
+                        <socecStatus>gentry</socecStatus>
+                        <!-- <age>out, middle-aged</age> -->
+                        <state type="marital">
+                            <p>unmarried</p>
+                        </state>
+                        <trait type="char">
+                            <p>heroine</p>
+                        </trait>
+                    </person>
+
+
+                    <person xml:id="aus.002.nar_elizclay" role="together_nar">
+                        <persName>Narrator as 
+                            <roleName>Miss</roleName>
+                            <forename>Elizabeth</forename>
+                            <surname>Elliot</surname>
+                        and <roleName>Mrs.</roleName> <!-- <forename>Penelope</forename> --> <surname>Clay</surname></persName>
+                        <sex>female</sex>
+                        <!-- <age>out, middle-aged</age> -->
+                        <socecStatus>gentry</socecStatus>
+                        <!-- <state type="marital">
+                            <p>unmarried, married</p>
+                        </state> -->
+                        <trait type="char">
+                            <p></p>
+                        </trait>
+                    </person>
+
+                    <person xml:id="aus.002.nar_harvmrsharv" role="together_nar">
+                        <persName>Narrator as 
+                            <roleName>Captain</roleName>
+                            <surname>Harville</surname>
+                        and <roleName>Mrs.</roleName> <surname>Harville</surname></persName>
+                        <!-- <sex>male, female</sex> -->
+                        <age/>
+                        <socecStatus>gentry</socecStatus>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation>sailor</occupation>
+                    </person>
+
+                    <person xml:id="aus.002.nar_marychar" role="together_nar">
+                        <persName>Narrator as 
+                            <!-- <roleName>Mr.</roleName> -->
+                            <forename>Charles</forename>
+                            <surname>Musgrove</surname>
+                         and <!-- <roleName>Mrs.</roleName> --> <forename>Mary</forename> <surname>Musgrove</surname></persName>
+                        <!-- <sex>female, male</sex> -->
+                        <age>young married</age>
+                        <socecStatus>landed gentry</socecStatus>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p>fool</p>
+                        </trait>
+                    </person>
+
+                    <person xml:id="aus.002.nar_charwent" role="together_nar">
+                        <persName>Narrator as 
+                            <!-- <roleName>Mr.</roleName> -->
+                            <forename>Charles</forename>
+                            <surname>Musgrove</surname>
+                        and <roleName>Captain</roleName> <!-- <forename>Frederick</forename>--> <surname>Wentworth</surname></persName>
+                        <sex>male</sex>
+                        <!-- <socecStatus>landed gentry, gentry</socecStatus> -->
+                        <!-- <age>young married, out</age> -->
+                        <!-- <state type="marital">
+                            <p>married, unmarried</p>
+                        </state> -->
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                    </person>
+
+                    <person xml:id="aus.002.nar_louihenr" role="together_nar">
+                        <persName>Narrator as 
+                            <!-- <roleName>Miss</roleName> -->
+                            <forename>Louisa</forename>
+                            <surname>Musgrove</surname>
+                         and <!-- <roleName>Miss</roleName>--> <forename>Henrietta</forename> <surname>Musgrove</surname></persName>
+                        <sex>female</sex>
+                        <age>out</age>
+                        <socecStatus>gentry</socecStatus>
+                        <state type="marital">
+                            <p>unmarried</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                    </person>
+
+                    <person xml:id="aus.002.nar_mrscadmr" role="together_nar">
+                        <persName>Narrator as 
+                            <roleName>Admiral</roleName>
+                            <surname>Croft</surname>
+                        and <roleName>Mrs.</roleName> <surname>Croft</surname></persName>
+                        <!-- <sex>female, male</sex> -->
+                        <socecStatus>gentry</socecStatus>
+                        <age>old</age>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                    </person>
+
+                    <person xml:id="aus.002.nar_mrsclruss" role="together_nar">
+                        <persName>Narrator as 
+                            <roleName>Mrs.</roleName>
+                            <!-- <forename>Sophia</forename> -->
+                            <surname>Croft</surname>
+                        and <roleName>Lady</roleName> <surname>Russell</surname></persName>
+                        <sex>female</sex>
+                        <socecStatus>gentry</socecStatus>
+                        <!-- <age>old, middle-aged</age> -->
+                        <state type="marital">
+                            <p/>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                    </person>
+
+<!-- end narrator as characters speaking together -->
+
+<!-- start narrator speaking as one character speaking as another -->
+
+                    <person xml:id="aus.002.nar_anne_mary" role="asanother_nar" corresp="#aus.002.mary">
+                        <persName>Narrator as Anne Elliot as 
+                            <!-- <roleName>Mrs.</roleName> -->
+                            <forename>Mary</forename>
+                            <surname>Musgrove</surname>
+                        </persName>
+                        <sex>female</sex>
+                        <age>young married</age>
+                        <socecStatus>landed gentry</socecStatus>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p>fool</p>
+                        </trait>
+                    </person>
+                    <person xml:id="aus.002.nar_anne_char" role="asanother_nar" corresp="#aus.002.char">
+                        <persName>Narrator as Anne Elliot as
+                            <roleName>Mr</roleName>
+                            <forename>Charles</forename>
+                            <surname>Musgrove</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <socecStatus>landed gentry</socecStatus>
+                        <age>young married</age>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                    </person>
+
+                    <person xml:id="aus.002.nar_mrel_anne" role="asanother_nar" corresp="#aus.002.anne">
+                        <persName>Narrator as Mr. Elliot as 
+                            <roleName>Miss</roleName>
+                            <forename>Anne</forename>
+                            <surname>Elliot</surname>
+                        </persName>
+                        <sex>female</sex>
+                        <socecStatus>gentry</socecStatus>
+                        <age>out</age>
+                        <state type="marital">
+                            <p>unmarried</p>
+                        </state>
+                        <trait type="char">
+                            <p>heroine</p>
+                        </trait>
+                    </person>
+
+                    <person xml:id="aus.002.nar_anne_clay" role="asanother_nar" corresp="#aus.002.clay">
+                        <persName>Narrator as Anne Elliot as
+                            <roleName>Mrs</roleName>
+                            <!-- <forename>Penelope</forename> -->
+                            <surname>Clay</surname>
+                        </persName>
+                        <sex>female</sex>
+                        <socecStatus/>
+                        <age>middle-aged</age>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p>fool</p>
+                        </trait>
+                    </person>
+
+
+    
+                    <person xml:id="aus.002.nar_sirwalteliz_colwal" role="asanother_nar" corresp="#aus.002.colwal">
+                        <persName>Narrator as Sir Walter Elliot and Elizabeth Elliot as 
+                            <roleName>Colonel</roleName>
+                            <surname>Wallis</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <age>old</age>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation/>
+                    </person>
+                    <person xml:id="aus.002.nar_sirwalt_colwal" role="asanother_nar" corresp="#aus.002.colwal">
+                        <persName>Narrator as Sir Walter Elliot as
+                            <roleName>Colonel</roleName>
+                            <surname>Wallis</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <age>old</age>
+                        <socecStatus/>
+                        <state type="marital">
+                            <p>married</p>
+                        </state>
+                        <trait type="char">
+                            <p/>
+                        </trait>
+                        <occupation/>
+                    </person>
+                    <person xml:id="aus.002.nar_sirwalteliz_mrel" role="asanother_nar" corresp="#aus.002.mrel">
+                        <persName>Narrator as Sir Walter Elliott and Elizabeth Elliott as 
+                            <roleName>Mr.</roleName>
+                            <!-- <forename>William</forename> -->
+                            <surname>Elliot</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <age/>
+                        <socecStatus>gentry</socecStatus>
+                        <state type="marital">
+                            <p>widowed</p>
+                        </state>
+                        <trait type="char">
+                            <p>heir</p>
+                        </trait>
+                    </person>
+                    <person xml:id="aus.002.nar_lruss_mrel" role="asanother_nar" corresp="#aus.002.mrel">
+                        <persName>Narrator as Lacy Russell as
+                            <roleName>Mr.</roleName>
+                            <!-- <forename>William</forename> -->
+                            <surname>Elliot</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <age/>
+                        <socecStatus>gentry</socecStatus>
+                        <state type="marital">
+                            <p>widowed</p>
+                        </state>
+                        <trait type="char">
+                            <p>heir</p>
+                        </trait>
+                    </person>
+                    <person xml:id="aus.002.nar_anne_mrel"  role="asanother_nar" corresp="#aus.002.mrel">
+                        <persName>Narrator as Anne Elliot as 
+                            <roleName>Mr.</roleName>
+                            <!-- <forename>William</forename> -->
+                            <surname>Elliot</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <age/>
+                        <socecStatus>gentry</socecStatus>
+                        <state type="marital">
+                            <p>widowed</p>
+                        </state>
+                        <trait type="char">
+                            <p>heir</p>
+                        </trait>
+                    </person>
+
+                    <person xml:id="aus.002.nar_anne_went" role="asanother_nar" corresp="#aus.002.went">
+                        <persName>Narrator as Anne Elliot as 
+                            <roleName>Captain</roleName>
+                            <!-- <forename>Frederick</forename> -->
+                            <surname>Wentworth</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <socecStatus>gentry</socecStatus>
+                        <age>out</age>
+                        <state type="marital">
+                            <p>unmarried</p>
+                        </state>
+                        <trait type="char">
+                            <p>hero</p>
+                        </trait>
+                        <occupation>naval officer</occupation>
+                    </person>
+
+                    <person xml:id="aus.002.nar_char_went" role="asanother_nar" corresp="#aus.002.went">
+                        <persName>Narrator as Charles Wentworth as 
+                            <roleName>Captain</roleName>
+                            <!-- <forename>Frederick</forename> -->
+                            <surname>Wentworth</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <socecStatus>gentry</socecStatus>
+                        <age>out</age>
+                        <state type="marital">
+                            <p>unmarried</p>
+                        </state>
+                        <trait type="char">
+                            <p>hero</p>
+                        </trait>
+                        <occupation>naval officer</occupation>
+                    </person>
+
+                    <person xml:id="aus.002.nar_mrsc_went" role="asanother_nar" corresp="#aus.002.went">
+                        <persName>Narrator as Mrs. Croft as 
+                            <roleName>Captain</roleName>
+                            <!-- <forename>Frederick</forename> -->
+                            <surname>Wentworth</surname>
+                        </persName>
+                        <sex>male</sex>
+                        <socecStatus>gentry</socecStatus>
+                        <age>out</age>
+                        <state type="marital">
+                            <p>unmarried</p>
+                        </state>
+                        <trait type="char">
+                            <p>hero</p>
+                        </trait>
+                        <occupation>naval officer</occupation>
+                    </person>
+
+<!-- end narrator speaking as one character speaking as another -->
 
 
                 </listPerson>
+
+
+
+
             </particDesc>
         </profileDesc>
         <revisionDesc>
+      <change when="2015-02"><name>Weakly, Laura</name> Added roles to personography</change>
+            <change when="2014-12"><name>McCue, Carmen</name> populated personography</change>
+            <change when="2013-01"><name xml:id="cm">McCue, Carmen</name> Encoding of free indirect discourse and narration</change>
             <change when="2012-11"><name xml:id="lkw">Weakly, Laura K.</name> Proofreading</change>
             <change when="2012-10"><name xml:id="jw">Ward, Julie</name> Original encoding and personography</change>
-            <change when="2013-01"><name xml:id="cm">McCue, Carmen</name> Encoding of free indirect discourse and narration</change>
         </revisionDesc>
     </teiHeader>
 
     <text>
         <body>
             <pb/>
-            <div n="1" xml:id="chap01" type="chapter">
+            <div xml:id="chap1" type="chapter">
 
                 <head type="main">Chapter 1</head>
 
@@ -683,7 +2515,7 @@
                         pride.</said>
                 </p>
             </div>
-            <div n="2" xml:id="chap02" type="chapter">
+            <div xml:id="chap2" type="chapter">
 
                 <head type="main">Chapter 2</head>
 
@@ -921,7 +2753,7 @@
                         therefore an object of first-rate importance.</said>
                 </p>
             </div>
-            <div n="3" xml:id="chap03" type="chapter">
+            <div xml:id="chap3" type="chapter">
 
                 <head type="main">Chapter 3</head>
 
@@ -1286,7 +3118,7 @@
                     </seg>
                 </p>
             </div>
-            <div n="4" xml:id="chap04" type="chapter">
+            <div xml:id="chap4" type="chapter">
 
                 <head type="main">Chapter 4</head>
 
@@ -1459,7 +3291,7 @@
                         any particular awkwardness.</said>
                 </p>
             </div>
-            <div n="5" xml:id="chap05" type="chapter">
+            <div xml:id="chap5" type="chapter">
 
                 <head type="main">Chapter 5</head>
 
@@ -1900,7 +3732,7 @@
                         invitation.</said>
                 </p>
             </div>
-            <div n="6" xml:id="chap06" type="chapter">
+            <div xml:id="chap6" type="chapter">
 
                 <head type="main">Chapter 6</head>
 
@@ -2317,7 +4149,7 @@
                     <said who="aus.002.nar" direct="true" aloud="false">The resolution of doing so helped to form the comfort of their evening.</said>
                 </p>
             </div>
-            <div n="7" xml:id="chap07" type="chapter">
+            <div xml:id="chap7" type="chapter">
 
                 <head type="main">Chapter 7</head>
 
@@ -2739,7 +4571,7 @@
                     </seg>
                 </p>
             </div>
-            <div n="8" xml:id="chap08" type="chapter">
+            <div xml:id="chap8" type="chapter">
 
                 <head type="main">Chapter 8</head>
 
@@ -3250,7 +5082,7 @@
                         politeness, his ceremonious grace, were worse than anything.</said>
                 </p>
             </div>
-            <div n="9" xml:id="chap09" type="chapter">
+            <div xml:id="chap9" type="chapter">
 
                 <head type="main">Chapter 9</head>
 
@@ -3565,7 +5397,7 @@
                         stepping forward to her relief, the manner, the silence in which it had passed, the little particulars of the circumstance,</said>
                     <said who="aus.002.nar" direct="true" aloud="false">with the conviction soon forced on her by the noise he was studiously making with the
                         child,</said>
-                    <said who="aus.002.nar_anne" direct="false" aloud="false"><certainty locus="name" target="aus.02.nar_anne" degree=".6"/>that he meant to
+                    <said who="aus.002.nar_anne" direct="false" aloud="false"><certainty locus="name" target="aus.002.nar_anne" degree=".6"/>that he meant to
                         avoid hearing her thanks, and rather sought to testify that her conversation was the last of his wants,</said>
                     <said who="aus.002.nar" direct="true" aloud="false">produced such a confusion of varying, but very painful agitation, as she could not
                         recover from, till enabled by the entrance of Mary and the Miss Musgroves to make over her little patient to their cares, and leave the
@@ -3587,7 +5419,7 @@
                         her.</said>
                 </p>
             </div>
-            <div n="10" xml:id="chap10" type="chapter">
+            <div xml:id="chap10" type="chapter">
 
                 <head type="main">Chapter 10</head>
 
@@ -4090,7 +5922,7 @@
                     <said who="aus.002.nar" direct="true" aloud="false">found herself safely deposited by them at the Cottage.</said>
                 </p>
             </div>
-            <div n="11" xml:id="chap11" type="chapter">
+            <div xml:id="chap11" type="chapter">
 
                 <head type="main">Chapter 11</head>
 
@@ -4288,7 +6120,7 @@
                     <said who="aus.002.nar" direct="false" aloud="false">Louisa,</said>
                     <said who="aus.002.nar" direct="true" aloud="false">by whom she found herself walking, burst forth into raptures of admiration and delight
                         on the character of the navy; their friendliness, their brotherliness, their openness, their uprightness;</said>
-                    <said who="aus.02.nar" direct="false" aloud="false">protesting that</said>
+                    <said who="aus.002.nar" direct="false" aloud="false">protesting that</said>
                     <said who="aus.002.nar_loui" direct="false" aloud="true"><certainty locus="name" target="aus.002.nar_loui" degree=".7"/>she was convinced of
                         sailors having more worth and warmth than any other set of men in England;</said>
                     <said who="aus.002.nar" direct="false" aloud="false">that</said>
@@ -4367,7 +6199,7 @@
                         great moralists and preachers, she had been eloquent on a point in which her own conduct would ill bear examination.</said>
                 </p>
             </div>
-            <div n="12" xml:id="chap12" type="chapter">
+            <div xml:id="chap12" type="chapter">
 
                 <head type="main">Chapter 12</head>
 
@@ -4506,14 +6338,14 @@
 
                 <p>
                     <seg>
-                        <said who="waiter" direct="true" aloud="true">"Yes, Sir, a Mr Elliot, a gentleman of large fortune, came in last night from Sidmouth.
+                        <said who="aus.002.waiter" direct="true" aloud="true">"Yes, Sir, a Mr Elliot, a gentleman of large fortune, came in last night from Sidmouth.
                             Dare say you heard the carriage, sir, while you were at dinner; and going on now for Crewkherne, in his way to Bath and
                             London."</said>
                     </seg>
                 </p>
 
                 <p>
-                    <said who="waiter" direct="true" aloud="true">"Elliot!"</said>
+                    <said who="aus.002.waiter" direct="true" aloud="true">"Elliot!"</said>
                     <said who="aus.002.nar" direct="true" aloud="false">Many had looked on each other, and many had repeated the name, before all this had been
                         got through, even by the smart rapidity of a waiter.</said>
                 </p>
@@ -4533,9 +6365,9 @@
 
                 <p>
                     <seg>
-                        <said who="waiter" direct="true" aloud="true">"No, ma'am, he did not mention no particular family; but</said>
-                        <said who="waiter" direct="false" aloud="true">he said</said>
-                        <said who="waiter_servant" direct="false" aloud="true"><certainty locus="name" target="aus.002.waiter_servant" degree="1"/>his master
+                        <said who="aus.002.waiter" direct="true" aloud="true">"No, ma'am, he did not mention no particular family; but</said>
+                        <said who="aus.002.waiter" direct="false" aloud="true">he said</said>
+                        <said who="aus.002.waiter_servant" direct="false" aloud="true"><certainty locus="name" target="aus.002.waiter_servant" degree="1"/>his master
                             was a very rich gentleman, and would be a baronight some day."</said>
                     </seg>
                 </p>
@@ -4824,12 +6656,12 @@
 
                 <p>
                     <said who="aus.002.nar" direct="true" aloud="false">They were not off the Cobb, before the Harvilles met them.</said>
-                    <said who="aus.002.nar_harmrsharv" direct="false" aloud="true"><certainty locus="name" target="aus.002.nar_harvmrsharv" degree=".3"/>Captain
+                    <said who="aus.002.nar_harvmrsharv" direct="false" aloud="true"><certainty locus="name" target="aus.002.nar_harvmrsharv" degree=".3"/>Captain
                         Benwick had been seen flying by their house, with a countenance which showed something to be wrong; and they had set off immediately,
                         informed and directed as they passed, towards the spot.</said>
                     <said who="aus.002.nar" direct="true" aloud="false">Shocked as Captain Harville was, he brought senses and nerves that could be instantly
                         useful; and a look between him and his wife decided what was to be done.</said>
-                    <said who="aus.002.nar_harmrsharv" direct="false" aloud="true"><certainty locus="name" target="aus.002.nar_harvmrsharv" degree="1"/>She must
+                    <said who="aus.002.nar_harvmrsharv" direct="false" aloud="true"><certainty locus="name" target="aus.002.nar_harvmrsharv" degree="1"/>She must
                         be taken to their house; all must go to their house; and await the surgeon's arrival there.</said>
                     <said who="aus.002.nar" direct="true" aloud="false">They would not listen to scruples: he was obeyed; they were all beneath his roof; and
                         while Louisa, under Mrs Harville's direction, was conveyed up stairs, and given possession of her own bed, assistance, cordials,
@@ -5075,7 +6907,7 @@
 
             <!-- start -->
 
-            <div n="13" xml:id="chap13" type="chapter">
+            <div xml:id="chap13" type="chapter">
 
                 <head type="main">Chapter 13</head>
 
@@ -5407,7 +7239,7 @@
                     <said who="aus.002.nar" direct="true" aloud="false">and she smiled over the many anxious feelings she had wasted on the subject.</said>
                 </p>
             </div>
-            <div n="14" xml:id="chap14" type="chapter">
+            <div xml:id="chap14" type="chapter">
 
                 <head type="main">Chapter 14</head>
 
@@ -5783,7 +7615,7 @@
                         Rivers Street.</said>
                 </p>
             </div>
-            <div n="15" xml:id="chap15" type="chapter">
+            <div xml:id="chap15" type="chapter">
 
                 <head type="main">Chapter 15</head>
 
@@ -6100,7 +7932,7 @@
                         Camden Place could have passed so well!</said>
                 </p>
             </div>
-            <div n="16" xml:id="chap16" type="chapter">
+            <div xml:id="chap16" type="chapter">
 
                 <head type="main">Chapter 16</head>
 
@@ -6122,7 +7954,7 @@
                         <said who="aus.002.eliz" direct="true" aloud="true">"That must not be any reason, indeed. I assure you I feel it none. She is nothing to
                             me, compared with you;"</said>
                         <said who="aus.002.nar" direct="true" aloud="false">and she was in full time to hear her father say,</said>
-                        <said who="sir walt" direct="true" aloud="true">"My dear madam, this must not be. As yet, you have seen nothing of Bath. You have been
+                        <said who="aus.002.sirwalt" direct="true" aloud="true">"My dear madam, this must not be. As yet, you have seen nothing of Bath. You have been
                             here only to be useful. You must not run away from us now. You must stay to be acquainted with Mrs Wallis, the beautiful Mrs Wallis.
                             To your fine mind, I well know the sight of beauty is a real gratification."</said>
                     </seg>
@@ -6417,7 +8249,7 @@
                         promote her father's getting great acquaintance was more than excusable in the view of defeating her.</said>
                 </p>
             </div>
-            <div n="17" xml:id="chap17" type="chapter">
+            <div xml:id="chap17" type="chapter">
 
                 <head type="main">Chapter 17</head>
 
@@ -6818,7 +8650,7 @@
                         seeing him receive the hand of her beloved Anne in Kellynch church, in the course of the following autumn.</said>
                 </p>
             </div>
-            <div n="18" xml:id="chap18" type="chapter">
+            <div xml:id="chap18" type="chapter">
 
                 <head type="main">Chapter 18</head>
 
@@ -7371,7 +9203,7 @@
                     </seg>
                 </p>
             </div>
-            <div n="19" xml:id="chap19" type="chapter">
+            <div xml:id="chap19" type="chapter">
 
                 <head type="main">Chapter 19</head>
 
@@ -7551,45 +9383,45 @@
 
                 <p>
                     <seg>
-                        <said who="aus.002.unknown lady" direct="true" aloud="true">"Mr Elliot does not dislike his cousin, I fancy?"</said>
+                        <said who="aus.002.unknownlady" direct="true" aloud="true">"Mr Elliot does not dislike his cousin, I fancy?"</said>
                         <!--LKW: adding aus.002. to unknown lady here and in the following CM -->
                     </seg>
                 </p>
 
                 <p>
                     <seg>
-                        <said who="aus.002.unknown lady" direct="true" aloud="true">"Oh! no, that is clear enough. One can guess what will happen there. He is
+                        <said who="aus.002.unknownlady" direct="true" aloud="true">"Oh! no, that is clear enough. One can guess what will happen there. He is
                             always with them; half lives in the family, I believe. What a very good-looking man!"</said>
                     </seg>
                 </p>
 
                 <p>
                     <seg>
-                        <said who="aus.002.unknown lady" direct="true" aloud="true">"Yes, and</said>
-                        <said who="aus.002.unknown lady" direct="false" aloud="true">Miss Atkinson,</said>
-                        <said who="aus.002.unknown lady" direct="true" aloud="true">who dined with him once at the Wallises,</said>
-                        <said who="aus.002.unknown lady" direct="false" aloud="true">says</said>
-                        <said who="aus.002.unknown lady_mrsat" direct="false" aloud="true"><certainty locus="name" target="aus.002.unknown lady_mrsat"
+                        <said who="aus.002.unknownlady" direct="true" aloud="true">"Yes, and</said>
+                        <said who="aus.002.unknownlady" direct="false" aloud="true">Miss Atkinson,</said>
+                        <said who="aus.002.unknownlady" direct="true" aloud="true">who dined with him once at the Wallises,</said>
+                        <said who="aus.002.unknownlady" direct="false" aloud="true">says</said>
+                        <said who="aus.002.unknownlady_mrsat" direct="false" aloud="true"><certainty locus="name" target="aus.002.unknownlady_mrsat"
                                 degree=".7"/>he is the most agreeable man she ever was in company with."</said>
                     </seg>
                 </p>
 
                 <p>
                     <seg>
-                        <said who="aus.002.unknown lady" direct="true" aloud="true">"She is pretty, I think; Anne Elliot; very pretty, when one comes to look at
+                        <said who="aus.002.unknownlady" direct="true" aloud="true">"She is pretty, I think; Anne Elliot; very pretty, when one comes to look at
                             her. It is not the fashion to say so, but I confess I admire her more than her sister."</said>
                     </seg>
                 </p>
 
                 <p>
                     <seg>
-                        <said who="aus.002.unknown lady" direct="true" aloud="true">"Oh! so do I."</said>
+                        <said who="aus.002.unknownlady" direct="true" aloud="true">"Oh! so do I."</said>
                     </seg>
                 </p>
 
                 <p>
                     <seg>
-                        <said who="aus.002.unknown lady" direct="true" aloud="true">"And so do I. No comparison. But the men are all wild after Miss Elliot.
+                        <said who="aus.002.unknownlady" direct="true" aloud="true">"And so do I. No comparison. But the men are all wild after Miss Elliot.
                             Anne is too delicate for them."</said>
                     </seg>
                 </p>
@@ -7725,7 +9557,7 @@
                         and not sorry to be obliged, to hurry away.</said>
                 </p>
             </div>
-            <div n="20" xml:id="chap20" type="chapter">
+            <div xml:id="chap20" type="chapter">
 
                 <head type="main">Chapter 20</head>
 
@@ -8186,7 +10018,7 @@
                 </p>
             </div>
 
-            <div n="21" xml:id="chap21" type="chapter">
+            <div xml:id="chap21" type="chapter">
 
                 <head type="main">Chapter 21</head>
 
@@ -9126,7 +10958,7 @@
                         full liberty to communicate to her friend everything relative to Mrs Smith, in which his conduct was involved.</said>
                 </p>
             </div>
-            <div n="22" xml:id="chap22" type="chapter">
+            <div xml:id="chap22" type="chapter">
 
                 <head type="main">Chapter 22</head>
 
@@ -9775,7 +11607,7 @@
 
                 <p>
                     <seg>
-                        <said who="Mary" direct="true" aloud="true">"Only think of Elizabeth's including everybody!"</said>
+                        <said who="aus.002.mary" direct="true" aloud="true">"Only think of Elizabeth's including everybody!"</said>
                         <said who="aus.002.nar" direct="true" aloud="false">whispered Mary very audibly.</said>
                         <said who="aus.002.mary" direct="true" aloud="true">"I do not wonder Captain Wentworth is delighted! You see he cannot put the card out
                             of his hand."</said>
@@ -9834,7 +11666,7 @@
                     </seg>
                 </p>
             </div>
-            <div n="23" xml:id="chap23" type="chapter">
+            <div xml:id="chap23" type="chapter">
 
                 <head type="main">Chapter 23</head>
 
@@ -10645,7 +12477,7 @@
                     </seg>
                 </p>
             </div>
-            <div n="24" xml:id="chap24" type="chapter">
+            <div xml:id="chap24" type="chapter">
 
                 <head type="main">Chapter 24</head>
 
