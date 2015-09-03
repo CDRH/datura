@@ -337,6 +337,22 @@
     <rdfs:subPropertyOf rdf:resource="#familyRelationship"/>
 </owl:ObjectProperty>
 
+<!-- http://cdrhsites.unl.edu/data/projects/oscys/rdf/oscys.objectproperties.owl#descendantOf -->    
+<owl:ObjectProperty rdf:about="#descendantOf">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="#Person"/>
+    <owl:Inverseof rdf:resource="#ancestorOf"/>
+    <rdfs:subPropertyOf rdf:resource="#familyRelationship"/>
+</owl:ObjectProperty>
+
+<!-- http://cdrhsites.unl.edu/data/projects/oscys/rdf/oscys.objectproperties.owl#ancestorOf -->    
+<owl:ObjectProperty rdf:about="#ancestorOf">
+    <rdfs:domain rdf:resource="#Person"/>
+    <rdfs:range rdf:resource="#Person"/>
+    <owl:Inverseof rdf:resource="#descendantOf"/>
+    <rdfs:subPropertyOf rdf:resource="#familyRelationship"/>
+</owl:ObjectProperty>
+
 <!-- http://cdrhsites.unl.edu/data/projects/oscys/rdf/oscys.objectproperties.owl#spouseOf -->
 
 <owl:ObjectProperty rdf:about="#spouseOf">
