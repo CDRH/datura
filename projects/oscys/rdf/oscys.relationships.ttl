@@ -2296,8 +2296,8 @@ osrdf:per.000160 a "person";
 
 osrdf:per.000168 a "person";
    oscys:defendantAgainst osrdf:per.000160;
-   oscys:fullName "Swan, Caleb";
-   oscys:fullname "Swan, Caleb";
+   oscys:fullName "Swann, Caleb";
+   oscys:fullname "Swann, Caleb";
    oscys:sex "male" .
 
 osrdf:per.000186 a "person";
@@ -4312,6 +4312,13 @@ osrdf:per.001297 a "person";
      osrdf:per.001299,
      osrdf:per.001298;
    oscys:sex "male" .
+
+osrdf:per.001304 a "person";
+   oscys:clientOf osrdf:per.000011;
+   oscys:enslavedBy osrdf:per.000189;
+   oscys:fullName "Davis, Sarah";
+   oscys:fullname "Davis, Sarah";
+   oscys:sex "female" .
 
 osrdf:per.000005 a "person";
    oscys:defendantAgainst osrdf:per.000002;
@@ -6642,7 +6649,7 @@ osrdf:per.000189 a "person";
    oscys:judgedBy osrdf:per.000004;
    oscys:oppositionsAttorney osrdf:per.000011;
    oscys:sex "male";
-   oscys:slaveholderOf osrdf:per.000165 .
+   oscys:slaveholderOf osrdf:per.001304 .
 
 osrdf:per.000191 a "person";
    oscys:clientOf osrdf:per.000194;
@@ -10027,11 +10034,11 @@ osrdf:per.001067 a "person";
    oscys:sex "male" .
 
 osrdf:per.001181 a "person";
+   oscys:descendantOf osrdf:per.000028;
    oscys:fullName "Bentley, Eleanor";
    oscys:fullname "Bentley, Eleanor";
    oscys:sex "female";
-   oscys:siblingOf osrdf:per.000028,
-     osrdf:per.000159,
+   oscys:siblingOf osrdf:per.000159,
      osrdf:per.000169 .
 
 osrdf:per.000030 a "person";
@@ -10066,7 +10073,7 @@ osrdf:per.000153 a "person";
 osrdf:per.000161 a "person";
    oscys:clientOf osrdf:per.000011;
    oscys:descendantOf osrdf:per.000028;
-   oscys:fullName "Davis, Ann Anne";
+   oscys:fullName "Davis, Ann";
    oscys:fullname "Davis, Ann";
    oscys:judgedBy osrdf:per.000063,
      osrdf:per.000064,
@@ -10112,6 +10119,19 @@ osrdf:per.000164 a "person";
    oscys:siblingOf osrdf:per.000162,
      osrdf:per.000163,
      osrdf:per.000165 .
+
+osrdf:per.000165 a "person";
+   oscys:fullName "Davis, Sarah";
+   oscys:fullname "Davis, Sarah";
+   oscys:judgedBy osrdf:per.000063,
+     osrdf:per.000064,
+     osrdf:per.000004;
+   oscys:petitionerAgainst osrdf:per.000166,
+     osrdf:per.000189;
+   oscys:sex "female";
+   oscys:siblingOf osrdf:per.000162,
+     osrdf:per.000163,
+     osrdf:per.000164 .
 
 osrdf:per.000166 a "person";
    oscys:defendantAgainst osrdf:per.000161,
@@ -10628,21 +10648,6 @@ osrdf:per.000150 a "person";
    oscys:petitionerAgainst osrdf:per.000153;
    oscys:sex "female";
    oscys:siblingOf osrdf:per.000161 .
-
-osrdf:per.000165 a "person";
-   oscys:clientOf osrdf:per.000011;
-   oscys:enslavedBy osrdf:per.000189;
-   oscys:fullName "Davis, Sarah";
-   oscys:fullname "Davis, Sarah";
-   oscys:judgedBy osrdf:per.000063,
-     osrdf:per.000064,
-     osrdf:per.000004;
-   oscys:petitionerAgainst osrdf:per.000166,
-     osrdf:per.000189;
-   oscys:sex "female";
-   oscys:siblingOf osrdf:per.000162,
-     osrdf:per.000163,
-     osrdf:per.000164 .
 
 osrdf:per.000453 a "person";
    oscys:defendantAgainst osrdf:per.000449,
@@ -12537,7 +12542,7 @@ osrdf:per.000011 a "person";
      osrdf:per.000162,
      osrdf:per.000163,
      osrdf:per.000164,
-     osrdf:per.000165,
+     osrdf:per.001304,
      osrdf:per.001182;
    oscys:fullName "Hiort, Henry";
    oscys:fullname "Hiort, Henry";
