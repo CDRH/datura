@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <collection id="zzz.00055">
+        <agentSet>
+            <display>William Kurtz?</display>
+            <agent>
+                <name type="personal" vocab="lccn" refid="nr96024138">Kurtz, William, 1833-1904</name>            
+                <dates type="life">
+                    <earliestDate circa="false">1833</earliestDate>
+                    <latestDate circa="false">1904</latestDate>
+                </dates>
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>                
+        </agentSet>        
+        <dateSet>
+            <display>ca. late 1860s</display>
+            <date type="creation">                
+                <earliestDate circa="true">1865</earliestDate>
+                <latestDate circa="true">1869</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>Kurtz's "Rembrandt" style of light and shadow is suggested here. If this photograph is indeed by Kurtz, then it is from after 1865, when Kurtz first opened his New York studio.</tei:p><tei:p>There is no Saunders number for this photograph.</tei:p></description>
+        </descriptionSet>           
+        <relationSet>
+            <relation type="sourceFor" relids="loc.05085"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+            <subject>
+                <term type="geographicPlace" vocab="lccn" refid="n79007751"> New York (N.Y.)</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300046300">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by William Kurtz?, ca. late 1860s</title>
+        </titleSet>  
+        <work id="loc.05085" pref="true">
+            <locationSet>
+                <location type="repository">
+                    <name>Library of Congress</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00055"/>
+                <relation type="imageIs" relids="image029"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="publicDomain">
+                    <text>Public domain</text>
+                </rights>
+            </rightsSet>                    
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300128349">print</worktype>            
+            </worktypeSet>
+            <image id="image029">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">Library of Congress</name>
+                        <role>creator of master digital image</role>
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">1995</earliestDate>
+                        <latestDate circa="true">2000</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="loc.05085"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="publicDomain">
+                        <rightsHolder>Library of Congress</rightsHolder>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+    </collection>        
+</vra>
+

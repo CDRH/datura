@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <collection id="zzz.00115">
+        <agentSet>
+            <display>Frederick Gutekunst</display>
+            <agent>
+                <name type="personal" vocab="ULAN" refid="500037003">Gutekunst, Frederick</name>            
+                <dates type="life">
+                    <earliestDate circa="false">1831</earliestDate>
+                    <latestDate circa="false">1917</latestDate>
+                </dates>  
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>                
+        </agentSet>        
+        <dateSet>
+            <display>1889</display>
+            <date type="creation">                
+                <earliestDate circa="false">1889</earliestDate>
+                <latestDate circa="false">1889</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>This is one of multiple photos from the 1889 Gutekunst sitting, and clearly a candidate for the photo Whitman said was "destined for the fire."<tei:ptr target="http://www.whitmanarchive.org/criticism/disciples/traubel/WWWiC/6/med.00006.237.html"/></tei:p><tei:p>There is no Saunders number for this photograph.</tei:p></description>
+        </descriptionSet>           
+        <relationSet>
+            <relation type="sourceFor" relids="wwh.00019"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+            <subject>
+                <term type="geographicPlace" vocab="lccn" refid="n78095520">Philadelphia (Pa.)</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300046300">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by Frederick Gutekunst, 1889</title>
+        </titleSet>  
+        <work id="wwh.00019" pref="true">
+            <locationSet>
+                <location type="repository">
+                    <name>Walt Whitman House, Camden (N.J.)</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00115"/>
+                <relation type="imageIs" relids="image112"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <rightsHolder>Walt Whitman House, Camden (N.J.)</rightsHolder>
+                    <text>Contact holding institution.</text>
+                </rights>
+            </rightsSet>                    
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300128349">print</worktype>            
+            </worktypeSet>
+            <image id="image112">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">Walt Whitman House, Camden (N.J.)</name>
+                        <role>creator of master digital image</role>
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">1995</earliestDate>
+                        <latestDate circa="true">2000</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="wwh.00019"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="other">
+                        <rightsHolder>Walt Whitman House, Camden (N.J.)</rightsHolder>
+                        <text>Used with permission. For permission to reproduce this image, contact the holding institution.</text>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+    </collection>        
+</vra>

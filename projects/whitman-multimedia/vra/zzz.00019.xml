@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    
+    <collection id="zzz.00019">
+            <agentSet>
+                <agent>
+                <display>Alexander Gardner</display>   
+                <name type="personal" vocab="ULAN" refid="500115196">Gardner, Alexander</name> 
+                <dates type="life">
+                    <earliestDate circa="false">1821</earliestDate>                    
+                    <latestDate circa="false">1882</latestDate>
+                </dates>
+                <role vocab="AAT" refid="300025687">photographer</role>
+                </agent>
+            </agentSet>      
+        <dateSet>
+            <display>ca. 1864 - 1865</display> 
+            <date type="creation">                
+                <earliestDate circa="false">1863</earliestDate>
+                <latestDate circa="false">1866</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>Note similarity of sitting, dress, and style, to image 011,<tei:ptr target="http://whitmanarchive.org/multimedia/image011.html"/> image 014<tei:ptr target="http://whitmanarchive.org/multimedia/image014.html"/> and image 016a.<tei:ptr target="http://whitmanarchive.org/multimedia/image016a.html"/> Whitman said this photo was "one of the best...my mother's favorite picture of me."<tei:ptr target="http://www.whitmanarchive.org/criticism/disciples/traubel/WWWiC/3/med.00003.52.html"/></tei:p><tei:p>There is no Saunders number for this picture.</tei:p></description>
+            </descriptionSet>
+        <relationSet>
+            <relation type="sourceFor" relids="owu.00040"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+            <subject>
+                <term type="geographicPlace" vocab="lccn" refid="n79018774">Washington, D.C.</term>
+            </subject>
+            <subject>
+                <term type="conceptTopic" vocab="lccn" refid="sh85140205">United States History Civil War, 1861-1865</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300046300">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by Alexander Gardner, ca. 1864 - 1865</title>
+        </titleSet>
+        
+        <work id="owu.00040" pref="true">
+            <locationSet>
+                <location type="repository">
+                    <name>Ohio Wesleyan University</name>
+                </location>
+                <location type="other">
+                    <name>Bayley Collection</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00019"/>
+                <relation type="imageIs" relids="image015"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <rightsHolder>Bayley Collection, Ohio Wesleyan University</rightsHolder>
+                    <text>Used with permission. For permission to reproduce this image, contact the holding institution.</text>
+                </rights>
+            </rightsSet>                 
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300128349">print</worktype>           
+            </worktypeSet>
+            
+            <image id="image015">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">Bayley Collection, Ohio Wesleyan University</name>
+                        <role>creator of master digital image</role> 
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">2000</earliestDate>
+                        <latestDate circa="true">2006</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="owu.00040"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="other">
+                        <rightsHolder>Bayley Collection, Ohio Wesleyan University</rightsHolder>
+                        <text>Used with permission. For permission to reproduce this image, contact the holding institution.</text>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+    </collection>        
+</vra>

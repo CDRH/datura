@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <collection id="zzz.00028">
+        <agentSet>
+            <display>G. Frank Pearsall?</display>
+            <agent>
+                <name type="personal" vocab="wwa">Pearsall, G.F.</name>            
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>
+        </agentSet>        
+        <dateSet>
+            <display>ca. early 1870s</display>
+            <date type="creation">                
+                <earliestDate circa="true">1870</earliestDate>
+                <latestDate circa="true">1872</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>This photo has been dated variously from 1863 to 1888, and ascribed to photographers such as Mathew Brady, J. Gurney, and Pearsall. Whitman said of this photo, "it's stiff, a little too much up and down, but really a good likeness I suppose. . . .If you can't call it a picture, you may call it a curio."<tei:ptr target="http://www.whitmanarchive.org/criticism/disciples/traubel/WWWiC/2/med.00002.86.html"/></tei:p> <tei:p> This is Saunders number 27.</tei:p></description>
+        </descriptionSet>           
+        <relationSet>
+            <relation type="sourceFor" relids="loc.05053"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+            <subject>
+                <term type="geographicPlace" vocab="lccn" refid="n80040311"> Brooklyn (New York, N.Y.)</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="30004630">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by G. Frank Pearsall?, ca. early 1870s</title>
+        </titleSet>  
+        <work id="loc.05053" pref="true">
+            <agentSet>
+                <agent>
+                    <name type="personal" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</name>
+                    <role vocab="AAT" refid="300121785">inscriber</role>
+                </agent>
+            </agentSet>
+            <inscriptionSet>            
+                <inscription>
+                    <author type="personal" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</author>
+                    <position>On the recto</position>
+                    <text type="other">See note Oct 8 18[?]</text>
+                </inscription>            
+            </inscriptionSet> 
+            <locationSet>
+                <location type="repository">
+                    <name>Charles E. Feinberg Collection, Library of Congress</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00028"/>
+                <relation type="imageIs" relids="image040a"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="publicDomain">
+                    <text>Public domain</text>
+                </rights>
+            </rightsSet>                    
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300162872">stereoview [right half missing]</worktype>            
+            </worktypeSet>
+            <image id="image040a">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">Charles E. Feinberg Collection, Library of Congress</name>
+                        <role>creator of master digital image</role>
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">1995</earliestDate>
+                        <latestDate circa="true">2000</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="loc.05053"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="publicDomain">
+                        <rightsHolder>Public domain</rightsHolder>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+    </collection>        
+</vra>

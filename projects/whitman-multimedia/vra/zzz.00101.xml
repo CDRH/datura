@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <collection id="zzz.00101">
+        <agentSet>
+            <display>George C. Cox</display>
+            <agent>
+                <name type="personal" vocab="lccn" refid="n 2007065013">Cox, George C. (George Collins), 1851-1902</name>    
+                <dates type="life">
+                    <earliestDate circa="false">1851</earliestDate>
+                    <latestDate circa="false">1902</latestDate>
+                </dates>  
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>                
+        </agentSet>        
+        <dateSet>
+            <display>April 15, 1887</display>
+            <date type="creation">                
+                <earliestDate circa="false">1887</earliestDate>
+                <latestDate circa="false">1887</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>On the morning of April 15th, 1887, George Cox took several photographs of Whitman, who was celebrating the success of his New York lecture on Lincoln, delivered the day before. Whitman recalls that "six or seven" photos were made during the session, but Whitman's friend Jeannette Gilder, an observer of the session, said there were many more than that: "He must have had twenty pictures taken, yet he never posed for a moment. He simply sat in the big revolving chair and swung himself to the right or to the left, as Mr. Cox directed, or took his hat off or put it on again, his expression and attitude remaining so natural that no one would have supposed he was sitting for a photograph."</tei:p><tei:p>A few months later, Whitman was angry that Cox apparently was selling copies of the photos with forged signatures and was refusing to send Whitman copies of the proofs to allow Whitman to decide which ones should be printed, but the problem was straightened out and Cox began sending Whitman modest payments for the sale of photos. By October 1888, Whitman was calling Cox "the premier exception" among photographers and claimed to have received around one hundred dollars in royalties. Cox copyrighted two of the photos from this sitting, the only time he ever did so, apparently to protect Whitman's financial interest in them, and he sold the photos only to aid Whitman.</tei:p><tei:p>Until now, only seven photos from this session have been known to exist; this collection adds five more, bringing the total to twelve. Whitman's lace collar, very visible here, was the handiwork of his housekeeper, Mary Davis, who made Whitman's shirts; he was particularly fond of this one and kept it for special occasions. See the reappearance of the lace in the 1889 Gutekunst photos.</tei:p><tei:p>There is no Saunders number for this photograph.</tei:p></description>
+        </descriptionSet>           
+        <relationSet>
+            <relation type="sourceFor" relids="loc.05131"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+            <subject>
+                <term type="geographicPlace" vocab="lccn" refid="n79007751"> New York (N.Y.)</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300046300">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by George C. Cox, April 15, 1887</title>
+        </titleSet>  
+        <work id="loc.05131" pref="true">
+            <locationSet>
+                <location type="repository">
+                    <name>Library of Congress</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00101"/>
+                <relation type="imageIs" relids="image099"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="publicDomain">
+                    <text>Public domain</text>
+                </rights>
+            </rightsSet>  
+            <sourceSet>
+                <display>Library of Congress</display>
+                <source>
+                    <name type="electronic" href="www.loc.gov/pictures/">Library of Congress Prints and Photographs Online Catalog</name>
+                    <refid href="www.loc.gov/pictures/item/2003670028/"/>
+                </source>
+            </sourceSet>  
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300127104">photographic print</worktype>                  
+            </worktypeSet>
+            <image id="image099">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">Library of Congress</name>
+                        <role>creator of master digital image</role>
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">1995</earliestDate>
+                        <latestDate circa="true">2000</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="loc.05131"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="publicDomain">
+                        <rightsHolder>Library of Congress</rightsHolder>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+    </collection>        
+</vra>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <collection id="zzz.00119">
+        <agentSet>
+            <display>Dr. John Johnston, Bolton, England</display>
+            <agent>
+                <name type="personal" vocab="WWA">Dr. John Johnston</name>            
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>                
+        </agentSet>        
+        <dateSet>
+            <display>1890</display>
+            <date type="creation">                
+                <earliestDate circa="false">1890</earliestDate>
+                <latestDate circa="false">1890</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>Taken on Camden wharf.</tei:p><tei:p>This is Saunders number 110.</tei:p></description>
+        </descriptionSet>           
+        <relationSet>
+            <relation type="sourceFor" relids="owu.00082"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+      
+            <subject>
+                <term type="geographicPlace" vocab="lccn" refid="n80010449">Camden (N.J.)</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300046300">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by Dr. John Johnston, 1890</title>
+        </titleSet>  
+        <work id="owu.00082" pref="true">
+            <locationSet>
+                <location type="repository">
+                    <name>Ohio Wesleyan University, Bayley Collection</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00119"/>
+                <relation type="imageIs" relids="image119"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <text>Contact holding institution.</text>
+                </rights>
+            </rightsSet>                    
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300128349">print</worktype>            
+            </worktypeSet>
+            <image id="image119">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">Ohio Wesleyan University, Bayley Collection</name>
+                        <role>creator of master digital image</role>
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">1995</earliestDate>
+                        <latestDate circa="true">2000</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="owu.00082"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="other">
+                        <rightsHolder>Ohio Wesleyan University, Bayley Collection</rightsHolder>
+                        <text>Used with permission. For permission to reproduce this image, contact the holding institution.</text>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+    </collection>        
+</vra>

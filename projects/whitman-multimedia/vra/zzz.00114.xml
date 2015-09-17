@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <collection id="zzz.00114">
+        <agentSet>
+            <display>Frederick Gutekunst</display>
+            <agent>
+                <name type="personal" vocab="lccn" refid="500037003">Gutekunst, Frederick</name>          
+                <dates type="life">
+                    <earliestDate circa="false">1831</earliestDate>
+                    <latestDate circa="false">1917</latestDate>
+                </dates> 
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>                
+        </agentSet>        
+        <dateSet>
+            <display>1889</display>
+            <date type="creation">                
+                <earliestDate circa="false">1889</earliestDate>
+                <latestDate circa="false">1889</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>Whitman commented that the photos from this sitting were all successful, "in fact would be considered very fine&#8212;”in their smoothification&#8212;”the quality that never pleases me." But this may be the pose that Whitman disliked and joked with Horace Traubel about: "it is destined for the fire&#8212;”irrevocably: look at the formal pose&#8212;”the expression, too, a damnable one!"<tei:ptr target="http://www.whitmanarchive.org/criticism/disciples/traubel/WWWiC/6/med.00006.237.html"/></tei:p> <tei:p> On the Library of Congress copy, Traubel has written, "Except for the photograph taken by Eakins-O'Donovan. . . . in Walt's own room in November 1891, the Gutekunst sittings, of which this is one result, were the last secured from him by a photographer."</tei:p><tei:p>This is Saunders number 111.</tei:p></description>
+        </descriptionSet>           
+        <relationSet>
+            <relation type="sourceFor" relids="owu.00079"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+            <subject>
+                <term type="geographicPlace" vocab="lccn" refid="n78095520">Philadelphia (Pa.)</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300046300">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by Frederick Gutekunst, 1889</title>
+        </titleSet>  
+        <work id="owu.00079" pref="true">
+            <locationSet>
+                <location type="repository">
+                    <name>Ohio Wesleyan University, Bayley Collection</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00114"/>
+                <relation type="imageIs" relids="image111"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <rightsHolder>Ohio Wesleyan University, Bayley Collection</rightsHolder>
+                    <text>Contact holding institution.</text>
+                </rights>
+            </rightsSet>                    
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300128349">print</worktype>            
+            </worktypeSet>
+            <image id="image111">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">Ohio Wesleyan University, Bayley Collection</name>
+                        <role>creator of master digital image</role>
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">1995</earliestDate>
+                        <latestDate circa="true">2000</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="owu.00079"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="other">
+                        <rightsHolder>Ohio Wesleyan University, Bayley Collection</rightsHolder>
+                        <text>Used with permission. For permission to reproduce this image, contact the holding institution.</text>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+        <work id="loc.05698" pref="true">
+            <agentSet>
+                <agent>
+                    <name type="personal" vocab="ULAN" refid="500338166">Traubel, Horace</name>
+                    <role vocab="AAT" refid="300121785">inscriber</role>
+                </agent>
+            </agentSet>
+            <inscriptionSet>            
+                <inscription>
+                    <author type="personal" vocab="ULAN" refid="500338166">Traubel, Horace</author>
+                    <position>unknown</position>
+                    <text type="other">Except for the photograph taken by Eakins-O'Donovan. . . . in Walt's own room in November 1891, the Gutekunst sittings, of which this is one result, were the last secured from him by a photographer.</text>
+                </inscription>            
+            </inscriptionSet> 
+            <locationSet>
+                <location type="repository">
+                    <name>Library of Congress</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00114"/>
+                <relation type="imageIs" relids="image111"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="publicDomain">
+                    <text>Public domain</text>
+                </rights>          
+                </rightsSet>
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300128349">print</worktype>            
+            </worktypeSet>
+        </work>
+        <work id="uva.00465" pref="true">
+            <locationSet>
+                <location type="repository">
+                    <name>Clifton Waller Barrett Library of American Literature, Special Collections, University of Virginia Library</name>
+                </location>
+                <location type="other">
+                    <name>Papers of Walt Whitman</name>
+                </location>
+                <location type="other">
+                    <name>Box-folder 5:43</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00114"/>
+                <relation type="imageIs" relids="image111"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <rightsHolder>Clifton Waller Barrett Library of American Literature, Special Collections, University of Virginia Library</rightsHolder>
+                    <text>Contact holding institution.</text>
+                </rights>
+            </rightsSet>                     
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300046300">photograph</worktype>            
+                </worktypeSet>
+        </work>
+    </collection>        
+</vra>

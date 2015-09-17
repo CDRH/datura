@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <collection id="zzz.00107">
+        <agentSet>
+            <display>George C. Cox</display>
+            <agent>
+                <name type="personal" vocab="lccn" refid="n 2007065013">Cox, George C. (George Collins), 1851-1902</name>            
+                <dates type="life">
+                    <earliestDate circa="false">1851</earliestDate>
+                    <latestDate circa="false">1902</latestDate>
+                </dates>  
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>                
+        </agentSet>        
+        <dateSet>
+            <display>April 15, 1887</display>
+            <date type="creation">                
+                <earliestDate circa="false">1887</earliestDate>
+                <latestDate circa="false">1887</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>One of twelve extant photographs taken during the Cox sitting, this one with Nigel and Catherine Cholmeley-Jones, the nephew and niece of Jeannette Gilder, editor of <title type="newspaper">The Critic</title>, who accompanied Whitman to Cox's studio. Gilder was a friend of both Whitman and Cox, and she would end up raising these children after the death of their mother. This and three other photographs echo the 1879 Kurtz photographs of Whitman with Harry and Kitty Johnston; Cox saw these children as "soul extensions" of Whitman.</tei:p><tei:p>This is Saunders number 97.3.</tei:p></description>
+        </descriptionSet>           
+        <relationSet>
+            <relation type="sourceFor" relids="owu.00076"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+            <subject>
+                <term type="personalName" vocab="WWA">Nigel Cholmeley-Jones</term>
+            </subject>
+            <subject>
+                <term type="personalName" vocab="WWA">Catherine Cholmeley-Jones</term>
+            </subject>
+            <subject>
+                <term type="geographicPlace" vocab="lccn" refid="n79007751"> New York (N.Y.)</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300046300">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman with Nigel and Catherine Cholmeley-Jones by George C. Cox, April 15, 1887</title>
+        </titleSet>  
+        <work id="owu.00076" pref="true">
+            <locationSet>
+                <location type="repository">
+                    <name>Ohio Wesleyan University, Bayley Collection</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00107"/>
+                <relation type="imageIs" relids="image105"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <text>Contact holding institution.</text>
+                </rights>
+            </rightsSet>                    
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300128349">print</worktype>            
+            </worktypeSet>
+            <image id="image105">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">Ohio Wesleyan University, Bayley Collection</name>
+                        <role>creator of master digital image</role>
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">1995</earliestDate>
+                        <latestDate circa="true">2000</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="owu.00076"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="other">
+                        <rightsHolder>Ohio Wesleyan University, Bayley Collection</rightsHolder>
+                        <text>Used with permission. For permission to reproduce this image, contact the holding institution.</text>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+    </collection>        
+</vra>

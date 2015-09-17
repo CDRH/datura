@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <collection id="zzz.00037">
+        <agentSet>
+            <display>Henry Ulke and Brothers</display>
+            <agent>
+                <name type="personal" vocab="ULAN" refid="500026677">Ulke, Henry</name>
+                <dates type="life">
+                    <earliestDate circa="false">1821</earliestDate>
+                    <latestDate circa="false">1910</latestDate>
+                </dates>                    
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>                
+        </agentSet>        
+        <dateSet>
+            <display>1871</display>
+            <date type="creation">                
+                <earliestDate circa="false">1871</earliestDate>
+                <latestDate circa="false">1871</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>Whitman spoke of people's reaction to this photo, "Some of them say my face there has a rogue in it. [William] O'Connor called it my sea-captain face. Some newspaper got hold of a copy of the photograph and said it bore out the notion that Walt Whitman was a sensualist. I offered one to a woman in Washington. She said she'd rather have a picture that had more love in it. It's a little rough and tumble, but it's not a face I could hate."<tei:ptr target="http://www.whitmanarchive.org/criticism/disciples/traubel/WWWiC/2/med.00002.54.html"></tei:ptr></tei:p><tei:p>This is Saunders number 34.</tei:p></description>
+        </descriptionSet>           
+        <relationSet>
+            <relation type="sourceFor" relids="owu.00046"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+            <subject>
+                <term type="geographicPlace" vocab="lccn" refid="n79018774">Washington (D.C.)</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300046300">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by Henry Ulke and Brothers, 1871</title>
+        </titleSet>  
+        <work id="owu.00046" pref="true">
+            <locationSet>
+                <location type="repository">
+                    <name>Ohio Wesleyan University, Bayley Collection</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00037"/>
+                <relation type="imageIs" relids="image045"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <text>Contact holding institution.</text>
+                </rights>
+            </rightsSet>                    
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300128349">print</worktype>            
+            </worktypeSet>
+            <image id="image045">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">Ohio Wesleyan University, Bayley Collection</name>
+                        <role>creator of master digital image</role>
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">1995</earliestDate>
+                        <latestDate circa="true">2000</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="owu.00046"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="other">
+                        <rightsHolder>Ohio Wesleyan University, Bayley Collection</rightsHolder>
+                        <text>Used with permission. For permission to reproduce this image, contact the holding institution.</text>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+        <work id="uva.00533" pref="true">
+            <agentSet>
+                <agent>
+                    <name type="personal" vocab="wwa">Unknown</name>
+                    <role vocab="AAT" refid="300121785">inscriber</role>
+                </agent>
+            </agentSet>
+            <inscriptionSet>            
+                <inscription>
+                    <author type="personal" vocab="wwa">Unknown</author>
+                    <position>On the verso</position>
+                    <text type="other">Presented to Mr. [C. O. Maillong ?] by Mrs. Mary O. Davis May 20th 1903.</text>
+                </inscription>            
+            </inscriptionSet> 
+            <locationSet>
+                <location type="repository">
+                    <name>Clifton Waller Barrett Library of American Literature, Special Collections, University of Virginia Library</name>
+                </location>
+                <location type="other">
+                    <name>Papers of Walt Whitman</name>
+                </location>
+                <location type="other">
+                    <name>Box-folder 4:71</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00037"/>
+                <relation type="imageIs" relids="image045"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <rightsHolder>Clifton Waller Barrett Library of American Literature, Special Collections, University of Virginia Library</rightsHolder>
+                    <text>Contact holding institution.</text>
+                </rights>
+            </rightsSet> 
+            <sourceSet>
+                <display>A Guide to the Papers of Walt Whitman, 1838-1987, A Collection in, The Clifton Waller Barrett Library, Special Collections, The University of Virginia Library</display>
+                <source><name type="electronic" href="http://ead.lib.virginia.edu/vivaxtf/view?docId=uva-sc/viu03978.xml">A Guide to the Papers of Walt Whitman, 1838-1987, A Collection in, The Clifton Waller Barrett Library, Special Collections, The University of Virginia Library</name></source>
+            </sourceSet> 
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300128349">print</worktype>                  
+            </worktypeSet>
+        </work>        
+    </collection>        
+</vra>
+

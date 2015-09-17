@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    
+    <collection id="zzz.00135">
+        <agentSet>
+            <agent>
+                <display>J.W. Black of Black and Batchelder</display>   
+                <name type="personal" vocab="WWA" >Black, J.W.</name> 
+                
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>
+        </agentSet>      
+        <dateSet>
+            <display>1860</display> 
+            <date type="creation">                
+                <earliestDate circa="false">1860</earliestDate>
+                <latestDate circa="false">1860</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>Writing in 1860 about his trip to Boston, Whitman said, "I create an immense sensation in Washington street. Everybody here is so like everybody else&#8212;and I am Walt Whitman!&#8212;Yankee curosity and cuteness, for once, is thoroughly stumped, confounded, petrified, made desperate."<tei:ptr target="http://www.whitmanarchive.org/biography/correspondence/tei/pml.00011.html"/> J. W. Black's gallery was on Washington Street, known as the "photography row" of Boston.</tei:p></description>
+        </descriptionSet>
+        <relationSet>
+            <relation type="sourceFor" relids="owu.00036"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300127141">carte-de-visite</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by J.W. Black of Black and Batchelder, 1860</title>
+        </titleSet>
+        
+        <work id="owu.00084" pref="true">
+            
+            <locationSet>
+                <location type="repository">
+                    <name>Ohio Wesleyan University</name>
+                </location>
+                <location type="other">
+                    <name>Bayley Collection</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00135"/>
+                <relation type="imageIs" relids="image008"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <rightsHolder>Bayley Collection, Ohio Wesleyan University</rightsHolder>
+                    <text>Used with permission. For permission to reproduce this image, contact the holding institution.</text>
+                </rights>
+            </rightsSet>                 
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300127141">carte-de-visite</worktype>            
+            </worktypeSet>
+            
+            <image id="image008">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">Bayley Collection, Ohio Wesleyan University</name>
+                        <role>creator of master digital image</role> 
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">2000</earliestDate>
+                        <latestDate circa="true">2006</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="owu.00038"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="other">
+                        <rightsHolder>Bayley Collection, Ohio Wesleyan University</rightsHolder>
+                        <text>Used with permission. For permission to reproduce this image, contact the holding institution.</text>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+        
+    </collection>        
+</vra>

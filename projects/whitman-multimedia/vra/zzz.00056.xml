@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <collection id="zzz.00056">
+        <agentSet>
+            <display>Mathew Brady</display>
+            <agent>
+                <name type="personal" vocab="ULAN" refid="500126201">Brady, Mathew B.</name>            
+                <dates type="life">
+                    <earliestDate circa="false">1823</earliestDate>                    
+                    <latestDate circa="false">1896</latestDate>
+                </dates>
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>                
+        </agentSet>        
+        <dateSet>
+            <display>ca. 1867</display>
+            <date type="creation">                
+                <earliestDate circa="true">1866</earliestDate>
+                <latestDate circa="true">1868</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>'How do you like that for free and easy?' Laughing mildly. 'Some of the fellows in Washington said no&#8212;they wouldn't have it on any terms: they said to me: you like to make yourself look tough." One fellow said: "You do all you can to encourage the people in their belief that you are a tough." Is that the picture of a tough? Maybe I am too sensitive&#8212;”maybe I am tough&#8212;”maybe the people who don't like toughs, don't like me, are right.' He called my attention to the dent in the hat. "Somebody once called it a sauce-pan&#8212;”said I wore sauce-pan hats'"<tei:ptr target="http://www.whitmanarchive.org/criticism/disciples/traubel/WWWiC/1/med.00001.71.html"/> (WWWC, 1: 276).</tei:p><tei:p>This is Saunders number 26.</tei:p></description>
+        </descriptionSet>           
+        <relationSet>
+            <relation type="sourceFor" relids="pgm.00001"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+            <subject>
+                <term type="geographicPlace" vocab="lccn" refid="n79018774">Washington (D.C.)</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300046300">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by Mathew Brady, ca. 1867</title>
+        </titleSet>  
+        <work id="pgm.00001" pref="true">
+            <agentSet>
+                <agent>
+                    <name>Unknown</name>
+                    <role vocab="AAT" refid="300121785">inscriber</role>
+                </agent>
+            </agentSet>
+            <inscriptionSet>            
+                <inscription>
+                    <author>Unknown</author>
+                    <position>On the recto, below portrait</position>
+                    <text type="other">Walt Whitman</text>
+                </inscription>              
+            </inscriptionSet> 
+            <locationSet>
+                <location type="repository">
+                    <name>J. Paul Getty Museum</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00056"/>
+                <relation type="imageIs" relids="image024"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <text>Contact holding institution.</text>
+                </rights>
+            </rightsSet>                    
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300127141">imperial carte-de-visite</worktype>            
+            </worktypeSet>
+            <image id="image024">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">J. Paul Getty Museum</name>
+                        <role>creator of master digital image</role>
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">1995</earliestDate>
+                        <latestDate circa="true">2000</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="pgm.00001"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="other">
+                        <rightsHolder>J. Paul Getty Museum</rightsHolder>
+                        <text>Used with permission. For permission to reproduce this image, contact the holding institution.</text>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+    </collection>        
+</vra>
+

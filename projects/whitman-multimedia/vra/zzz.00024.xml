@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <collection id="zzz.00024">
+        <agentSet>
+            <display>Mathew Brady</display>
+            <agent>
+                <name type="personal" vocab="ULAN">Brady, Mathew B.</name> 
+                <dates type="life">
+                <earliestDate circa="false">1823</earliestDate>                    
+                <latestDate circa="false">1896</latestDate>
+                </dates>
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>
+        </agentSet>        
+        <dateSet>
+            <display>ca. 1869 - 1871</display>
+            <date type="creation">                
+                <earliestDate circa="true">1869</earliestDate>
+                <latestDate circa="true">1871</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>In Library of Congress copies, Whitman dates this and the previous photograph 1871. The photograph has to be on or before that year, since on June 8, Whitman wrote to Ellen O'Connor, telling her he had procured a copy for her ("the one with the hand up, which you liked"<tei:ptr target="http://whitmanarchive.org/biography/correspondence/reconstruction/tei/nyp.00297.html"/>). A few years later he wrote to Ellen again, describing the photo as "the one with the hand up at the right side of the head&#8212;”so?"<tei:ptr target="http://whitmanarchive.org/biography/correspondence/reconstruction/tei/nyp.00302.html"/></tei:p> <tei:p>Whitman identified it as a Brady photo. In 1889 he guessed "it must have been taken fully twenty years ago" on one of his "flying trips" to New York from Washington. It was while looking at this photo in 1889 that Whitman explained what he saw to be the difficulty of photographing him properly: "my red, florid, blooded complexion&#8212;”my gray dull eyes&#8212;”don't consort well together: they require different trimmings: it is very hard to adjust the camera to both."</tei:p> <tei:p>Whitman attributed his photogenic qualities to his relaxed and natural attitude before the camera: "I don't fix up when I go to have the picture taken: they tell me nearly everybody does: that is a great item. . . . Startle, strikingness, brilliancy, are not factors in my appearance&#8212;”not a touch of them. As for me I think the greatest aid is in my <hi rend="italic">insouciance</hi>&#8212;”my utter indifference: my going as if it meant nothing unusual. . . ."<tei:ptr target="http://www.whitmanarchive.org/criticism/disciples/traubel/WWWiC/3/med.00003.78.html"/></tei:p> <tei:p> This is Saunders number 45.</tei:p></description>
+        </descriptionSet>           
+        <relationSet>
+            <relation type="sourceFor" relids="loc.05051"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+            <subject>
+                <term type="geographicPlace" vocab="lccn" refid="n79007751"> New York (N.Y.)</term>
+            </subject>
+            <subject>
+                <term type="geographicPlace" vocab="lccn" refid="n79018774"> Washington (D.C.)</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="30004630">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by Mathew Brady, ca. 1869 - 1871</title>
+        </titleSet>  
+        <work id="loc.05051" pref="true">
+            <locationSet>
+                <location type="repository">
+                    <name>Library of Congress</name>
+                </location>
+            </locationSet>
+            <agentSet>
+                <agent>
+                    <name type="personal" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</name>
+                    <role vocab="AAT" refid="300121785">inscriber</role>
+                </agent>
+            </agentSet>
+            <inscriptionSet>
+                <inscription>
+                    <position>On the recto</position> 
+                    <text type="other">Walt Whitman | 1871.</text>
+                </inscription>
+            </inscriptionSet>    
+            <measurementsSet>
+                <measurements>unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00024"/>
+                <relation type="imageIs" relids="image049"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="publicDomain">
+                    <text>Public domain</text>
+                </rights>
+            </rightsSet>                    
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300128349">print</worktype>            
+            </worktypeSet>
+            <image id="image049">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">Library of Congress</name>
+                        <role>creator of master digital image</role>
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">1995</earliestDate>
+                        <latestDate circa="true">2000</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="loc.05051"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="publicDomain">
+                        <rightsHolder>Public domain</rightsHolder>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+    </collection>        
+</vra>

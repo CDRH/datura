@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <collection id="zzz.00011">
+        <agentSet>
+            <display>Mathew Brady? or Alexander Gardner?</display> 
+            <agent>
+                <name type="personal" vocab="ULAN" refid="500126201">Brady, Mathew B.</name> 
+                <dates type="life">
+                    <earliestDate circa="false">1823</earliestDate>                    
+                    <latestDate circa="false">1896</latestDate>
+                </dates>
+            </agent>
+            <agent>
+                <name type="personal" vocab="ULAN" refid="500115196">Gardner, Alexander</name>           
+                <dates type="life">
+                    <earliestDate circa="false">1821</earliestDate>                    
+                    <latestDate circa="false">1882</latestDate>
+                </dates>
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>           
+        </agentSet>        
+        <dateSet>
+            <display>ca. 1862</display> 
+            <date type="creation">                
+                <earliestDate circa="true">1861</earliestDate>
+                <latestDate circa="true">1863</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>Whitman described this photo as having "a sort of Moses in the burning bush look."<tei:ptr target="http://www.whitmanarchive.org/criticism/disciples/traubel/WWWiC/1/med.00001.79.html"/> Talking about this photo in 1888, Whitman said, "Somebody used to say I sometimes wore the face of a man who was sorry for the world. Is this my sorry face? I am not sorry&#8212;I am glad&#8212;for the world."<tei:ptr target="http://www.whitmanarchive.org/criticism/disciples/traubel/WWWiC/1/med.00001.79.html"/> "This picture was much better when it was taken&#8212;it has faded out," Whitman noted; "I always rather favored it."<tei:ptr target="http://www.whitmanarchive.org/criticism/disciples/traubel/WWWiC/1/med.00001.79.html"/> This portrait might have been taken between an exhibition, which Whitman may have attended, of Alexander Gardner's Antietam photographs at Mathew Brady's New York studio in late September 1862 and Whitman's departure for Fredericksburg in December. In an 1863 notebook, Whitman records receiving photos from Brady.</tei:p></description> 
+        </descriptionSet>           
+        <relationSet>
+            <relation type="sourceFor" relids="loc.05045"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+            <subject>
+                <term type="geographicPlace" vocab="lccn" refid="n79007751">New York (N.Y.)</term> 
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300046300">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by Mathew Brady? or Alexander Gardner?, ca. 1862</title> 
+        </titleSet>  
+        <work id="loc.05045" pref="true">
+            <locationSet>
+                <location type="repository">
+                    <name>Library of Congress</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00011"/>
+                <relation type="imageIs" relids="image019"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="publicDomain">
+                    <text>Public domain</text>
+                </rights>
+            </rightsSet>                    
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300127141">carte-de-visite</worktype>          
+            </worktypeSet>
+            <image id="image019">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">Library of Congress</name>
+                        <role>creator of master digital image</role> 
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">2000</earliestDate>
+                        <latestDate circa="true">2006</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="loc.05045"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="publicDomain">
+                        <rightsHolder>Public domain</rightsHolder>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+    </collection>        
+</vra>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <collection id="zzz.00025">
+        <agentSet>
+            <display>G. Frank Pearsall</display>
+            <agent>
+                <name type="personal" vocab="wwa">Pearsall, G. Frank</name>            
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>
+        </agentSet>        
+        <dateSet>
+            <display>ca. 1869 - 1872</display>
+            <date type="creation">                
+                <earliestDate circa="true">1869</earliestDate>
+                <latestDate circa="true">1872</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>This photo has often been dated around 1869, but Pearsall's Fulton St. gallery is not listed in directories until 1872, and the similarity of this photograph to other Pearsall photographs of Whitman suggests they may have all been taken in one sitting. The Library of Congress copy is dated on the back in unknown hand, 1870.</tei:p> <tei:p> This is Saunders number 31.</tei:p></description>
+        </descriptionSet>           
+        <relationSet>
+            <relation type="sourceFor" relids="owu.00043"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+            <subject>
+                <term type="geographicPlace" vocab="lccn" refid="n80040311">Brooklyn (New York, N.Y.)</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="30004630">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by G. Frank Pearsall, ca. 1869 - 1872</title>
+        </titleSet>  
+        <work id="owu.00043" pref="true">
+            <locationSet>
+                <location type="repository">
+                    <name>Ohio Wesleyan University, Bayley Collection</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00025"/>
+                <relation type="imageIs" relids="image036"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <rightsHolder>Ohio Wesleyan University, Bayley Collection</rightsHolder>
+                    <text>Contact holding institution.</text>
+                </rights>
+            </rightsSet>                    
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300128349">print</worktype>            
+            </worktypeSet>
+            <image id="image036">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">Ohio Wesleyan University, Bayley Collection</name>
+                        <role>creator of master digital image</role>
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">1995</earliestDate>
+                        <latestDate circa="true">2000</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="owu.00043"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="other">
+                        <rightsHolder>Ohio Wesleyan University, Bayley Collection</rightsHolder>
+                        <text>Used with permission. For permission to reproduce this image, contact the holding institution.</text>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+        <work id="loc.07048" pref="true">
+            <agentSet>
+                <agent>
+                    <name type="personal" vocab="wwa">Unknown</name>
+                    <role vocab="AAT" refid="300121785">inscriber</role>
+                </agent>
+            </agentSet>
+            <inscriptionSet>            
+                <inscription>
+                    <author vocab="wwa">Unknown</author>
+                    <position>On the verso</position>
+                    <text type="other">1870</text>
+                </inscription>
+            </inscriptionSet> 
+            <locationSet>
+                <location type="repository">
+                    <name>Charles E. Feinberg Collection, Library of Congress</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00025"/>
+                <relation type="imageIs" relids="image036"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="publicDomain">
+                    <text>Public domain</text>
+                </rights>
+            </rightsSet>                    
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300128349">print</worktype>            
+            </worktypeSet>
+        </work>
+        <work id="uva.00526" pref="true">
+            <agentSet>
+                <agent>
+                    <name type="personal" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</name>
+                    <role vocab="AAT" refid="300121785">inscriber</role>
+                </agent>
+            </agentSet>
+            <inscriptionSet>            
+                <inscription>
+                    <author type="personal" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</author>
+                    <position>On the recto</position>
+                    <text type="other">Walt Whitman Jan 1-1878</text>
+                </inscription>            
+            </inscriptionSet> 
+            <locationSet>
+                <location type="repository">
+                    <name>Clifton Waller Barrett Library of American Literature, Special Collections, University of Virginia Library</name>
+                </location>
+                <location type="other">
+                    <name>Papers of Walt Whitman</name>
+                </location>
+                <location type="other">
+                    <name>Box-folder 4:69</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements type="width" unit="in">8</measurements>
+                <measurements type="height" unit="in">10</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00025"/>
+                <relation type="imageIs" relids="image036"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <rightsHolder>Clifton Waller Barrett Library of American Literature, Special Collections, University of Virginia Library</rightsHolder>
+                    <text>Contact holding institution.</text>
+                </rights>
+            </rightsSet> 
+            <sourceSet>
+                <display>A Guide to the Papers of Walt Whitman, 1838-1987, A Collection in, The Clifton Waller Barrett Library, Special Collections, The University of Virginia Library</display>
+                <source><name type="electronic" href="http://ead.lib.virginia.edu/vivaxtf/view?docId=uva-sc/viu03978.xml">A Guide to the Papers of Walt Whitman, 1838-1987, A Collection in, The Clifton Waller Barrett Library, Special Collections, The University of Virginia Library</name></source>
+            </sourceSet> 
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300128349">print</worktype>                  
+            </worktypeSet>
+        </work>        
+    </collection>        
+</vra>

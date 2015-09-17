@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <collection id="zzz.00076">
+        <agentSet>
+            <display>Frederick Gutekunst</display>
+            <agent>
+                <name type="personal" vocab="ULAN" refid="500037003">Gutekunst, Frederick</name>        
+                <dates type="life">
+                    <earliestDate circa="false">1831</earliestDate>
+                    <latestDate circa="false">1917</latestDate>
+                </dates>  
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>                
+        </agentSet>        
+        <dateSet>
+            <display>1880</display>
+            <date type="creation">                
+                <earliestDate circa="false">1880</earliestDate>
+                <latestDate circa="false">1880</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>This photograph appears in 1889 <tei:title type="book">Leaves</tei:title> (pocket edition). Whitman asked Horace Traubel about this photo: "Do you think it glum? severe? I have had that suspicion but most people won't hear to it." When Traubel dissented, Whitman said, "I hope your view is correct: I don't want to figure anywhere as misanthropic, sour, doubtful: as a discourager&#8212;as a putter-out of lights."<tei:ptr target="http://www.whitmanarchive.org/criticism/disciples/traubel/WWWiC/3/med.00003.3.html"/> Whitman records in his daybooks receiving photos from Gutekunst in March 1880.</tei:p><tei:p>This is Saunders number 80.</tei:p></description>
+        </descriptionSet>           
+        <relationSet>
+            <relation type="sourceFor" relids="uva.00455"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300046300">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by Frederick Gutekunst, 1880</title>
+        </titleSet>  
+        <work id="uva.00455" pref="true">
+            <agentSet>
+                <agent>
+                    <name type="personal" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</name>
+                    <role vocab="AAT" refid="300121785">inscriber</role>
+                </agent>
+            </agentSet>
+            <inscriptionSet>            
+                <inscription>
+                    <author type="personal" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</author>
+                    <position>On the recto, below the portrait</position>
+                    <text type="other">Walt Whitman</text>
+                </inscription>            
+            </inscriptionSet> 
+            <locationSet>
+                <location type="repository">
+                    <name>Alderman Library, University of Virginia</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00076"/>
+                <relation type="imageIs" relids="image069"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <text>Contact holding institution.</text>
+                </rights>
+            </rightsSet>                    
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300128349">print</worktype>            
+            </worktypeSet>
+            <image id="image069">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">Alderman Library, University of Virginia</name>
+                        <role>creator of master digital image</role>
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">1995</earliestDate>
+                        <latestDate circa="true">2000</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="uva.00455"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="other">
+                        <rightsHolder>Alderman Library, University of Virginia</rightsHolder>
+                        <text>Used with permission. For permission to reproduce this image, contact the holding institution.</text>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>  
+        <work id="uva.00540" pref="true">
+            <agentSet>
+                <agent>
+                    <name type="personal" vocab="wwa" >Unknown</name>
+                    <role vocab="AAT" refid="300121785">inscriber</role>
+                </agent>
+            </agentSet>
+            <inscriptionSet>            
+                <inscription>
+                    <author type="personal" vocab="wwa">Unknown</author>
+                    <position>On the recto, under image</position>
+                    <text type="other">Walt Whitman, 1887</text>
+                </inscription>            
+            </inscriptionSet> 
+            <locationSet>
+                <location type="repository">
+                    <name>Clifton Waller Barrett Library of American Literature, Special Collections, University of Virginia Library</name>
+                </location>
+                <location type="other">
+                    <name>Papers of Walt Whitman</name>
+                </location>
+                <location type="other">
+                    <name>Box-folder 5:20</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00076"/>
+                <relation type="imageIs" relids="image069"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <rightsHolder>Clifton Waller Barrett Library of American Literature, Special Collections, University of Virginia Library</rightsHolder>
+                    <text>Contact holding institution.</text>
+                </rights>
+            </rightsSet> 
+            <sourceSet>
+                <display>A Guide to the Papers of Walt Whitman, 1838-1987, A Collection in, The Clifton Waller Barrett Library, Special Collections, The University of Virginia Library</display>
+                <source><name type="electronic" href="http://ead.lib.virginia.edu/vivaxtf/view?docId=uva-sc/viu03978.xml">A Guide to the Papers of Walt Whitman, 1838-1987, A Collection in, The Clifton Waller Barrett Library, Special Collections, The University of Virginia Library</name></source>
+            </sourceSet> 
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300128349">print</worktype>                  
+            </worktypeSet>
+        </work>                
+    </collection>        
+</vra>

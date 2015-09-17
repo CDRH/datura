@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <collection id="zzz.00052">
+        <agentSet>
+            <display>Mathew Brady</display>
+            <agent>
+                <name type="personal" vocab="ULAN" refid="500126201">Brady, Mathew B.</name>            
+                <dates type="life">
+                    <earliestDate circa="false">1823</earliestDate>                    
+                    <latestDate circa="false">1896</latestDate>
+                </dates>
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>                
+        </agentSet>        
+        <dateSet>
+            <display>ca. 1865 - 1867</display>
+            <date type="creation">                
+                <earliestDate circa="true">1865</earliestDate>
+                <latestDate circa="true">1867</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>The negative for this image was purchased from Brady for the National Archives in 1873.</tei:p><tei:p> This is Saunders number 24.</tei:p></description>
+        </descriptionSet>           
+        <relationSet>
+            <relation type="sourceFor" relids="nar.03609"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+            <subject>
+                <term type="geographicPlace" vocab="lccn" refid="n79018774">Washington (D.C.)</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300046300">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by Mathew Brady, ca. 1865 - 1867</title>
+        </titleSet>  
+        <work id="nar.03609" pref="true">
+            <locationSet>
+                <location type="repository">
+                    <name>National Archives</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00052"/>
+                <relation type="imageIs" relids="image022"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="publicDomain">
+                    <text>Public domain</text>
+                </rights>
+            </rightsSet>                    
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300134674">wet plate negative</worktype>            
+            </worktypeSet>
+            <image id="image022">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">National Archive</name>
+                        <role>creator of master digital image</role>
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">1995</earliestDate>
+                        <latestDate circa="true">2000</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="nar.03609"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="publicDomain">
+                        <rightsHolder>National Archive</rightsHolder>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work> 
+        <work id="uva.00523" pref="true">
+            <agentSet>
+                
+                <agent>
+                    <name type="other">unknown</name>
+                    <role vocab="AAT" refid="300121785">inscriber</role>
+                </agent>
+            </agentSet>
+            <inscriptionSet>
+              
+                <inscription>
+                    <author vocab="other">unknown</author>
+                    <position>verso</position>
+                    <text type="other">5-18-54 Purchased from W. H. [Louder?] 715 12th St. NW Washington DC for 7.00, in frame. P. A. Jones official of WHL the owner. Says he had it framed about 25 years ago at Cooper's Art Shop 1324 G St N.W. long since out of business. That's all he recollects. Believes this print was made in 1890's. Couldn't recall from where he...was born in '92.</text>
+                </inscription>
+            </inscriptionSet>
+            <locationSet>
+                <location type="repository">
+                    <name>Clifton Waller Barrett Library of American Literature, Special Collections, University of Virginia Library</name>
+                </location>
+                <location type="other">
+                    <name>Papers of Walt Whitman</name>
+                </location>
+                <location type="other">
+                    <name>Box-folder 4:65</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00052"/>
+                <relation type="imageIs" relids="image022"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <rightsHolder>Clifton Waller Barrett Library of American Literature, Special Collections, University of Virginia Library</rightsHolder>
+                    <text>Contact holding institution.</text>
+                </rights>
+            </rightsSet>    
+            <sourceSet>
+                <display>A Guide to the Papers of Walt Whitman, 1838-1987, A Collection in, The Clifton Waller Barrett Library, Special Collections, The University of Virginia Library</display>
+                <source><name type="electronic" href="http://ead.lib.virginia.edu/vivaxtf/view?docId=uva-sc/viu03978.xml">A Guide to the Papers of Walt Whitman, 1838-1987, A Collection in, The Clifton Waller Barrett Library, Special Collections, The University of Virginia Library</name></source>
+            </sourceSet>     
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300127104">photographic print</worktype>
+            </worktypeSet>
+        </work>             
+        <work id="uva.00524" pref="true">
+            <locationSet>
+                <location type="repository">
+                    <name>Clifton Waller Barrett Library of American Literature, Special Collections, University of Virginia Library</name>
+                </location>
+                <location type="other">
+                    <name>Papers of Walt Whitman</name>
+                </location>
+                <location type="other">
+                    <name>Box-folder 5:35</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00003"/>
+                <relation type="imageIs" relids="image022"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <rightsHolder>Clifton Waller Barrett Library of American Literature, Special Collections, University of Virginia Library</rightsHolder>
+                    <text>Contact holding institution.</text>
+                </rights>
+            </rightsSet>    
+            <sourceSet>
+                <display>A Guide to the Papers of Walt Whitman, 1838-1987, A Collection in, The Clifton Waller Barrett Library, Special Collections, The University of Virginia Library</display>
+                <source><name type="electronic" href="http://ead.lib.virginia.edu/vivaxtf/view?docId=uva-sc/viu03978.xml">A Guide to the Papers of Walt Whitman, 1838-1987, A Collection in, The Clifton Waller Barrett Library, Special Collections, The University of Virginia Library</name></source>
+            </sourceSet>     
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300127104">photographic print</worktype>          
+            </worktypeSet>
+        </work>                
+    </collection>        
+</vra>

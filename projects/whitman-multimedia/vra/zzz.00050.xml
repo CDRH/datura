@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    
+    <collection id="zzz.00050">
+            <agentSet>
+                <agent>
+                <display>Mathew Brady</display>   
+                    <name type="personal" vocab="ULAN" refid="500126201">Brady, Mathew</name> 
+                    <dates type="life">
+                        <earliestDate circa="false">1823</earliestDate>                    
+                        <latestDate circa="false">1896</latestDate>
+                    </dates>
+                    <role vocab="AAT" refid="300025687">photographer</role>
+                </agent>
+            </agentSet>      
+        <dateSet>
+            <display>ca. 1866</display> 
+            <date type="creation">                
+                <earliestDate circa="false">1865</earliestDate>
+                <latestDate circa="false">1867</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>Whitman recalled that this was one of Anne Gilchrist's favorite photos, though Whitman worried about "a suspicion of theatricality in it." "I have no great admiration for the picture myself," Whitman noted; "it is one of many, only&#8212;not many in one: the sort of picture useful in totaling a man but not a total in itself." The photo, Whitman said, "is not permanent&#8212;will not last: it is too self satisfied."<tei:ptr target="http://www.whitmanarchive.org/criticism/disciples/traubel/WWWiC/3/med.00003.10.html"/></tei:p><tei:p>There is no Saunders number for this picture.</tei:p></description>
+            </descriptionSet>
+        <relationSet>
+            <relation type="sourceFor" relids="owu.00051"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+            <subject>
+                <term type="geographicPlace" vocab="lccn" refid="n79018774">Washington, D.C.</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300046300">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by Mathew Brady, ca. 1866</title>
+        </titleSet>
+        
+        <work id="owu.00051" pref="true">
+            <agentSet>
+                <agent>
+                    <name type="personal" refid="n79081476">Whitman, Walt, 1819-1892</name>
+                    <role vocab="AAT" refid="300121785">inscriber</role>
+                </agent>
+                <agent>
+                    <name type="other">unknown</name>
+                    <role vocab="AAT" refid="300121785">inscriber</role>
+                </agent>
+            </agentSet>
+            <inscriptionSet>
+                <inscription>
+                    <author vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</author>
+                        <position>middle left</position>
+                            <text type="signature">Walt Whitman</text>
+                </inscription>
+                <inscription>
+                    <author vocab="other">unknown</author>
+                        <position>lower margin</position>
+                            <text type="other">Photo. Brady</text>
+                </inscription>
+            </inscriptionSet>
+            <locationSet>
+                <location type="repository">
+                    <name>Bayley Collection, Ohio Wesleyan University</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00050"/>
+                <relation type="imageIs" relids="image020"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <rightsHolder>Bayley Collection, Ohio Wesleyan University</rightsHolder>
+                    <text>Used with permission. For permission to reproduce this image, contact the holding institution.</text>
+                </rights>
+            </rightsSet>                 
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300127104">photographic print</worktype>              
+            </worktypeSet>
+            
+            <image id="image020">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">Bayley Collection, Ohio Wesleyan University</name>
+                        <role>creator of master digital image</role> 
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">2000</earliestDate>
+                        <latestDate circa="true">2006</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="owu.00051"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="other">
+                        <rightsHolder>Bayley Collection, Ohio Wesleyan University</rightsHolder>
+                        <text>Used with permission. For permission to reproduce this image, contact the holding institution.</text>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+    </collection>        
+</vra>

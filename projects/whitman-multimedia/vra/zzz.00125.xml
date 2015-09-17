@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <collection id="zzz.00125">
+        <agentSet>
+            <display>Thomas Eakins? Samuel Murray?</display>
+            <agent>
+                <name type="personal" vocab="ULAN" refid="500115198">Eakins, Thomas</name>            
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>  
+            <agent>
+                <name type="personal" vocab="ULAN" refid="500062301">Murray, Samuel</name>            
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>              
+        </agentSet>        
+        <dateSet>
+            <display>1891</display>
+            <date type="creation">                
+                <earliestDate circa="false">1891</earliestDate>
+                <latestDate circa="false">1891</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>Both Eakins and Murray (Eakins' student and associate) took photographs of Whitman during 1891, and distinguishing them is difficult. Whitman is in the same chair wearing the same clothes and tapestry cape as in two similar photographs. The photograph was taken in the first-floor parlor of Whitman's home.</tei:p><tei:p>There is no Saunders number for this photograph.</tei:p></description>
+        </descriptionSet>           
+        <relationSet>
+            <relation type="sourceFor" relids="bpl.00034"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+            <subject>
+                <term type="geographicPlace" vocab="lccn" refid="n80010449">Camden (N.J.)</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300046300">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by Thomas Eakins? Samuel Murray?, 1891</title>
+        </titleSet>  
+        <work id="bpl.00034" pref="true">
+            <locationSet>
+                <location type="repository">
+                    <name>Boston Public Library</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00125"/>
+                <relation type="imageIs" relids="image125"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <text>Contact holding institution.</text>
+                </rights>
+            </rightsSet>                    
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300128349">print</worktype>            
+            </worktypeSet>
+            <image id="image125">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">Boston Public Library</name>
+                        <role>creator of master digital image</role>
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">1995</earliestDate>
+                        <latestDate circa="true">2000</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="bpl.00034"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="other">
+                        <rightsHolder>Boston Public Library</rightsHolder>
+                        <text>Used with permission. For permission to reproduce this image, contact the holding institution.</text>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+    </collection>        
+</vra>
