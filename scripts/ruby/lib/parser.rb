@@ -20,12 +20,12 @@ def post_to_solr_params
       exit
     end
 
-    options[:environment] = "test"
-    opts.on( '-e', '--environment [input]', 'Environment (test, production)') do |input|
-      if input == "test" || input == "production"
+    options[:environment] = "development"
+    opts.on( '-e', '--environment [input]', 'Environment (development, production)') do |input|
+      if input == "development" || input == "production"
         options[:environment] = input
       else
-        puts "Must choose environment of test or production"
+        puts "Must choose environment of development or production"
         exit
       end
     end
@@ -112,12 +112,12 @@ def clear_index_params
       exit
     end
 
-    options[:environment] = "test"
-    opts.on( '-e', '--environment [input]', 'Environment (test, production)') do |input|
-      if input == "test" || input == "production"
+    options[:environment] = "development"
+    opts.on( '-e', '--environment [input]', 'Environment (development, production)') do |input|
+      if input == "development" || input == "production"
         options[:environment] = input
       else
-        puts "Must choose environment of test or production"
+        puts "Must choose environment of development or production"
         exit
       end
     end
@@ -148,14 +148,14 @@ def argv_projects(argv)
   # put this after calling parse! on the incoming option flags
   # or the flags will be picked up as args also
   if argv.length == 0
-    puts "CRITICAL ERROR! You must specify a project that you want to post!"
+    puts "Crisis! Oh no! You must specify a project that you want to post!"
     puts usage
     exit
   elsif argv.length == 1
     project = argv[0]
   else
     # they entered too many projects! (or something else is terribly wrong)
-    puts "Captain, sensors detect more than one project!"
+    puts "Captain, sensors detect more than one project requested!"
     puts usage
     exit
   end

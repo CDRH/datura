@@ -6,6 +6,7 @@
 
 require 'logger'                       # logging functionality
 require_relative 'lib/helpers.rb'      # helper functions
+require_relative 'lib/options.rb'      # compiles all the options from configs and user input
 require_relative 'lib/parser.rb'       # parses script flags
 require_relative 'lib/transformer.rb'  # transforms tei/csv to solr/html
 require_relative 'lib/solr_poster.rb'  # posts a string (file) to solr
@@ -16,14 +17,13 @@ errors = {}                        # keeper of everything that has gone wrong
 errors[:failed_files] = []         # array of strings with file names that did not post
 errors[:solr_errors] = []          # array of errors from solr to display at the end
 
-options = post_to_solr_params
+params = post_to_solr_params      # user supplied parameters via command line
+options = Options.new(params, "#{this_dir}/../../../config/config.yml", "#{this_dir}/../../../projects/#{options[:project]}/config/config.yml")
 project = options[:project]
 verbose_flag = options[:verbose] == true  # set verbose flag
-env = options[:environment]
 
-config = read_configs(this_dir, project, verbose_flag)
-dir = config[:main]["repo_directory"]
-log = Logger.new("#{dir}/logs/#{project}.log", config[:main]["log_old_number"], config[:main]["log_size"])
+repodir = config[:main]["repo_directory"]
+log = Logger.new("#{repodir}/logs/#{project}.log", config[:main]["log_old_number"], config[:main]["log_size"])
 log.info("===========================================")
 log.info("===========================================")
 start_time = Time.now
@@ -31,14 +31,13 @@ log.info("Starting script at #{start_time}")
 log.info("Script running with following options: #{options}")
 
 # create a new solr instance that will be used by the transformer
-url = "#{config[:main][env]["solr_path"]}#{config[:proj]["solr_core"]}/update"
-"Using solr url: #{url}" if verbose_flag
+url = "#{options["solr_path"]}#{options["solr_core"]}/update"
+puts "Using solr url: #{url}" if verbose_flag
 log.info("Solr URL: #{url}")
 solr = SolrPoster.new(url, options[:commit])
-xsl_params = config[:proj]["xslt"][env]
-config = get_xslt_path(config, project, env)
+
 # make a new transformer and run it (pass it an instance of solr)
-transformer = Transformer.new(dir, project, config[:main]["xsl_scripts"], solr, options[:transform_only], xsl_params, options[:solr_or_html], verbose_flag)
+transformer = Transformer.new(repodir, solr, options)
 transform_errors = transformer.transform(options[:format], options[:regex], options[:update_time])
 
 # write the saxon errors to a log
