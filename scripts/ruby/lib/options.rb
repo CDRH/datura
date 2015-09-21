@@ -7,14 +7,14 @@ class Options
 
   def initialize(params, general_config_path, project_config_path)
     @directory = File.dirname(__FILE__)
-    @project_dir = params[:project]
-    @environment = params[:environment]
+    @project_dir = params["project"]
+    @environment = params["environment"]
 
     # read and store raw config files
     @general_config = read_config(general_config_path)
     @project_config = read_config(project_config_path)
     # make a smushed version that overrides like this: general < project < user specified
-    @all = smash_configs.merge(params)
+    @all = smash_configs.merge!(params)
   end
 
   # read_config
@@ -23,9 +23,7 @@ class Options
     begin
       return config = YAML.load_file(path)
     rescue Exception => e
-      puts "There was an error reading config file #{path}: #{e.message}"
-      # puts "Stacktrace: \n\t#{e.backtrace.inspect}"
-      exit
+      raise("There was an error reading config file #{path}: #{e.message}")
     end
   end
   # end read_configs

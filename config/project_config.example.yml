@@ -4,5 +4,8 @@
 
 development:
     solr_core: name_of_core
+    # you can optionally override things from the general config file
+    # tei_xsl: projects/name_of_project/scripts/xslt/solr_transform_tei.xsl
+    # solr_path: new/path/to/solr/url
 production:
     solr_core: name_of_core

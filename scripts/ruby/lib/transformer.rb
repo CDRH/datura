@@ -10,7 +10,7 @@ class Transformer
   def initialize(main_directory, solr, options)
     # file locations, etc
     @dir = main_directory
-    @project = options[:project]
+    @project = options["project"]
     @project_path = "#{main_directory}/projects/#{@project}"
     @options = options
 
@@ -18,12 +18,12 @@ class Transformer
     @solr = solr
 
     # options
-    @solr_html = options["solr_or_html"]
-    @verbose = ["verbose_flag"]
-    @transform_only = ["transform_only"]
-    @format = @options[:format]
-    @regex = @options[:regex]
-    @update_time = @options[:update_time] || nil
+    @solr_html = @options["solr_or_html"]
+    @verbose = @options["verbose_flag"]
+    @transform_only = @options["transform_only"]
+    @format = @options["format"]
+    @regex = @options["regex"]
+    @update_time = @options["update_time"] || nil
 
     # xslt parameters
     @xslt_param_json = options["xslt_params"]
@@ -37,7 +37,7 @@ class Transformer
 
   # expect a specific format -- cannot be "nil" or "all"
   # so this is likely going to be called multiple times
-  def transform
+  def transform_all
     if @format.nil? || @format == "tei" 
        @saxon_errors += _transform_tei_html
     end

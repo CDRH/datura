@@ -20,10 +20,10 @@ def post_to_solr_params
       exit
     end
 
-    options[:environment] = "development"
+    options["environment"] = "development"
     opts.on( '-e', '--environment [input]', 'Environment (development, production)') do |input|
       if input == "development" || input == "production"
-        options[:environment] = input
+        options["environment"] = input
       else
         puts "Must choose environment of development or production"
         exit
@@ -31,10 +31,10 @@ def post_to_solr_params
     end
 
     # default to no restricted format
-    options[:format] = nil
+    options["format"] = nil
     opts.on( '-f', '--format [input]', 'Restrict to one format (tei, csv, dublin-core, vra)') do |input|
       if input == "tei" || input == "csv" || input == "dublin-core" || input == "vra"
-        options[:format] = input
+        options["format"] = input
       else
         puts "Format #{input} is not recognized."
         puts "Allowed formats are tei, csv, vra, and dublin-core"
@@ -42,32 +42,32 @@ def post_to_solr_params
       end
     end
 
-    options[:solr_or_html] = nil
+    options["solr_or_html"] = nil
     opts.on('-x', '--html-only', 'Will not generate solr snippets, only html') do
-      options[:solr_or_html] = "html"
+      options["solr_or_html"] = "html"
     end
 
-    options[:commit] = true
+    options["commit"] = true
     opts.on('-n', '--no-commit', 'Post files to solr but do not commit') do
-      options[:commit] = false
+      options["commit"] = false
     end
 
-    options[:regex] = nil
+    options["regex"] = nil
     opts.on('-r', '--regex [input]', 'Only post files matching this regex') do |input|
-      options[:regex] = input
+      options["regex"] = input
     end
 
     opts.on('-s', '--solr-only', 'Will not generate html snippets') do
       # if they also entered html only, go ahead and run them both because the user is confused
-      options[:solr_or_html] = options[:solr_or_html] == "html" ? "both" : "solr"
+      options["solr_or_html"] = options["solr_or_html"] == "html" ? "both" : "solr"
     end
 
-    options[:transform_only] = false
+    options["transform_only"] = false
     opts.on('-t', '--transform-only', 'Do not post to solr or erase tmp/') do
-      options[:transform_only] = true
+      options["transform_only"] = true
     end
 
-    options[:update_time] = nil
+    options["update_time"] = nil
     opts.on('-u', '--update [2015-01-01T18:24]', 'Transform and post only new files') do |input|
       if input.length == 0
         puts "Please specify date (req) and time (opt): 2015-01-01T18:24"
@@ -78,22 +78,22 @@ def post_to_solr_params
         if datetime.nil?
           exit
         else
-          options[:update_time] = datetime
+          options["update_time"] = datetime
         end
       end
     end
 
-    options[:verbose] = false
+    options["verbose"] = false
     opts.on( '-v', '--verbose', 'More messages and stacktraces than ever before!') do
-      options[:verbose] = true
+      options["verbose"] = true
     end
   end
 
   # magic
   optparse.parse!
 
-  options[:project] = argv_projects(ARGV)
-  puts "Options set:\n\t #{options}" if options[:verbose]
+  options["project"] = argv_projects(ARGV)
+  puts "User entered parameters:\n\t #{options}" if options["verbose"]
 
   return options
 end
@@ -112,31 +112,31 @@ def clear_index_params
       exit
     end
 
-    options[:environment] = "development"
+    options["environment"] = "development"
     opts.on( '-e', '--environment [input]', 'Environment (development, production)') do |input|
       if input == "development" || input == "production"
-        options[:environment] = input
+        options["environment"] = input
       else
         puts "Must choose environment of development or production"
         exit
       end
     end
 
-    options[:field] = nil
+    options["field"] = nil
     opts.on('-f', '--field [input]', 'The specific field regex is run on') do |input|
-      options[:field] = input
+      options["field"] = input
     end
 
-    options[:regex] = nil
+    options["regex"] = nil
     opts.on('-r', '--regex [input]', 'Used as criteria for removing item (books.*, etc') do |input|
-      options[:regex] = input
+      options["regex"] = input
     end
   end
 
   # magic
   optparse.parse!
 
-  options[:project] = argv_projects(ARGV)
+  options["project"] = argv_projects(ARGV)
 
   return options
 end # ends clear_index_params

@@ -1,4 +1,11 @@
-# Configuration for all projects, server, etc
+############################################
+#      CONFIGURATION FOR ALL PROJECTS      #
+############################################
+
+# Note:  if you make changes to this file you are potentially altering
+#   every project
+#   It is recommended that you override only those parts that you need in
+#   the project specific configuration files (projects/name/config/config.yml)
 
 log_old_number: 4   # number of log files before beginning to erase
 log_size: 1024000   # size of log file in bytes
@@ -31,8 +38,9 @@ development:
 
   # optionally run some script before or after xsl
   # script will need to be set up with #! in order to execute
-  pre_xsl:
-  post_xsl:
+  # WARNING:  Functionality does not yet exist
+  # pre_xsl:
+  # post_xsl:
 
 ##################
 #   Production   #
@@ -58,5 +66,5 @@ production:
     slug: short_name_of_project
   # optionally run some script before or after xsl
   # script will need to be set up with #! in order to execute
-  pre_xsl:
-  post_xsl:
+  # pre_xsl:
+  # post_xsl:

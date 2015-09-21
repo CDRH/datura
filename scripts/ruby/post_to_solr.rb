@@ -12,33 +12,35 @@ require_relative 'lib/transformer.rb'  # transforms tei/csv to solr/html
 require_relative 'lib/solr_poster.rb'  # posts a string (file) to solr
 
 # variables
-this_dir = File.dirname(__FILE__)  # directory containing this script
-errors = {}                        # keeper of everything that has gone wrong
-errors[:failed_files] = []         # array of strings with file names that did not post
-errors[:solr_errors] = []          # array of errors from solr to display at the end
+this_dir = File.dirname(__FILE__)   # directory containing this script
+repo_dir = "#{this_dir}/../.."     # directory of the entire data repository
+errors = {}                         # keeper of everything that has gone wrong
+errors["failed_files"] = []         # array of strings with file names that did not post
+errors["solr_errors"] = []          # array of errors from solr to display at the end
 
 params = post_to_solr_params      # user supplied parameters via command line
-options = Options.new(params, "#{this_dir}/../../../config/config.yml", "#{this_dir}/../../../projects/#{options[:project]}/config/config.yml")
-project = options[:project]
-verbose_flag = options[:verbose] == true  # set verbose flag
+options = Options.new(params, "#{repo_dir}/config/config.yml", "#{repo_dir}/projects/#{params['project']}/config/config.yml").all
+project = options["project"]
+verbose_flag = options["verbose"] == true
+puts "Running with following options #{options}" if verbose_flag
 
-repodir = config[:main]["repo_directory"]
-log = Logger.new("#{repodir}/logs/#{project}.log", config[:main]["log_old_number"], config[:main]["log_size"])
+# logging setup
+log = Logger.new("#{repo_dir}/logs/#{project}-#{options['environment']}.log", options["log_old_number"], options["log_size"])
 log.info("===========================================")
 log.info("===========================================")
 start_time = Time.now
 log.info("Starting script at #{start_time}")
-log.info("Script running with following options: #{options}")
+log.info("Script running with following options: #{options}") if verbose_flag
 
 # create a new solr instance that will be used by the transformer
 url = "#{options["solr_path"]}#{options["solr_core"]}/update"
 puts "Using solr url: #{url}" if verbose_flag
 log.info("Solr URL: #{url}")
-solr = SolrPoster.new(url, options[:commit])
+solr = SolrPoster.new(url, options["commit"])
 
 # make a new transformer and run it (pass it an instance of solr)
-transformer = Transformer.new(repodir, solr, options)
-transform_errors = transformer.transform(options[:format], options[:regex], options[:update_time])
+transformer = Transformer.new(repo_dir, solr, options)
+transform_errors = transformer.transform_all
 
 # write the saxon errors to a log
 if transform_errors.empty?
@@ -66,11 +68,13 @@ else
 end
 
 # commit your changes to solr unless if otherwise specified
-if options[:commit] && options[:solr_or_html] != "html"
+if options["commit"] && options["solr_or_html"] != "html"
   commit_res = solr.commit_solr
   if !commit_res.nil? && !commit_res.body.nil? && commit_res.code != "200"
-    errors[:solr_errors] << commit_res.body
-    log.error("Failed to commit changes to solr: #{errors[:solr_errors]}")
+    errors["solr_errors"] << commit_res.body
+    log.error("Failed to commit changes to solr: #{errors["solr_errors"]}")
+  else
+    puts "Committing changes to solr index"
   end
 end
 

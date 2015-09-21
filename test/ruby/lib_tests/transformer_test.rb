@@ -8,7 +8,7 @@ repo_dir = "#{this_dir}/../../../"
 fixtures = "#{this_dir}/../fixtures"
 general_config = "#{fixtures}/configs/general.yml"
 project_simple = "#{fixtures}/configs/project_simple.yml"
-options = Options.new({:environment => "development", :project => "test_data"}, general_config, project_simple).all
+options = Options.new({"environment" => "development", "project" => "test_data"}, general_config, project_simple).all
 solr = SolrPoster.new("http://rosie.unl.edu:8080/solr/jessica_testing/update")
 
 tei = "#{fixtures}/tei.xml"
