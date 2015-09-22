@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    
+    <collection id="zzz.00004">
+        <agentSet>
+            <display>William Kuebler, Jr., or Louis Kuebler of Kuebler Photography</display>
+            <agent>
+                <name type="personal" vocab="WWA">Kuebler, William, Jr.</name>            
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>
+            <agent>
+                <name type="personal" vocab="WWA">Kuebler, Louis</name>            
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>
+            <agent>
+                <name type="corporate" vocab="WWA">Kuebler Photography</name>
+                <role vocab="AAT" refid="300312296">photography studio</role>
+            </agent>            
+        </agentSet>        
+        <dateSet>
+            <display>ca. 1889</display>
+            <date type="creation">                
+                <earliestDate circa="true">1889</earliestDate>
+                <latestDate circa="true">1892</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>Kuebler Photography, at 1204 Chestnut Street in Philadelphia, was co-owned and operated by brothers William, Jr. and Louis H. Kuebler. According to the 1890 Philadelphia city directory, William, Jr. lived at 864 41st Street, and Louis lived at 866 41st St.&#8212;also the address of William, Sr., an optician. The photo was taken in Whitman's room in Camden, and the photograph seen in the background is of John Addington Symonds, which Symonds sent to Whitman in 1889.</tei:p><tei:p> When asked by Horace Traubel what he thought of John White Alexander's portrait of Whitman, Thomas Eakins replied, "Did you hear, that he finally made the picture from a photo?" William Rudolph O'Donovan explained that "the great difficulty was the hair&#8212;to give the sense of its mass yet also of its thinness."<tei:ptr target="http://www.whitmanarchive.org/criticism/disciples/traubel/WWWiC/8/med.00008.93.html"/> Judging by the pose and the position of the hair in this photograph, it appears that it may have been used as Alexander's study.</tei:p><tei:p>There is no Saunders number for this picture.</tei:p></description>
+        </descriptionSet>           
+        <relationSet>
+            <relation type="sourceFor" relids="loc.04690"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300046300">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by William Kuebler, Jr., or Louis Kuebler, 1889?</title>
+        </titleSet>  
+        <work id="loc.04690" pref="true">
+            <locationSet>
+                <location type="repository">
+                    <name>Library of Congress</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00004"/>
+                <relation type="imageIs" relids="image114"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="publicDomain">
+                    <text>Public domain</text>
+                </rights>
+            </rightsSet>                    
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300127104">photographic print</worktype>            
+            </worktypeSet>
+            <image id="image114">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">Library of Congress</name>
+                        <role>creator of master digital image</role>
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">2000</earliestDate>
+                        <latestDate circa="true">2006</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="loc.04690"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="publicDomain">
+                        <rightsHolder>Public domain</rightsHolder>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+    </collection>        
+</vra>

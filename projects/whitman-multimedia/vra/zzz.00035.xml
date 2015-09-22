@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <collection id="zzz.00035">
+        <agentSet>
+            <display>Mathew Brady?</display>
+            <agent>
+                <name type="personal" vocab="ULAN" refid="500126201">Brady, Mathew B.</name>            
+                <dates type="life">
+                    <earliestDate circa="false">1823</earliestDate>                    
+                    <latestDate circa="false">1896</latestDate>
+                </dates>
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>
+        </agentSet>        
+        <dateSet>
+            <display>ca. early 1870s</display>
+            <date type="creation">                
+                <earliestDate circa="true">1870</earliestDate>
+                <latestDate circa="true">1872</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>Horace Traubel, when he got the photo from Whitman, had trouble identifying the photographer too, speculating that it was a Sarony, but that seems unlikely.</tei:p><tei:p>There is no Saunders number for this photograph.</tei:p></description>
+        </descriptionSet>           
+        <relationSet>
+            <relation type="sourceFor" relids="gwa.00003"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300046300">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by Mathew Brady?, ca. early 1870s</title>
+        </titleSet>  
+        <work id="gwa.00003" pref="true">
+            <locationSet>
+                <location type="personal collection">
+                    <name>Gay Wilson Allen</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00035"/>
+                <relation type="imageIs" relids="image047"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <rightsHolder>Gay Wilson Allen</rightsHolder>
+                    <text>Contact Whitman Archive</text>
+                </rights>
+            </rightsSet>                    
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300128349">print</worktype>            
+            </worktypeSet>
+            <image id="image047">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">Whitman Archive Staff</name>
+                        <role>creator of master digital image</role>
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">1995</earliestDate>
+                        <latestDate circa="true">2000</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="gwa.00003"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="other">
+                        <rightsHolder>Walt Whitman Archive</rightsHolder>
+                        <text>Used with permission. For permission to reproduce this image, contact the holding institution.</text>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+    </collection>        
+</vra>

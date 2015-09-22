@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <collection id="zzz.00096">
+        <agentSet>
+            <display>Frank P. Harned</display>
+            <agent>
+                <name type="personal" vocab="WWA">Frank P. Harned</name>            
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>                
+        </agentSet>        
+        <dateSet>
+            <display>ca. 1886 - 1887</display>
+            <date type="creation">                
+                <earliestDate circa="true">1885</earliestDate>
+                <latestDate circa="true">1888</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>Frank Harned was the brother of Thomas Harned, Whitman's close friend and one of his literary executors. Horace Traubel dates the photo 1886 or 1887 and identifies Frank Harned as the photographer; Whitman signed one copy in June 1887. This and the following are the first photos of Whitman in his home. Whitman liked Harned, but did not care for his photographs: "I don't know why&#8212;”never do. I have feelings about things, nothing more."<tei:ptr target="http://www.whitmanarchive.org/criticism/disciples/traubel/WWWiC/1/med.00001.98.html"/></tei:p><tei:p>This is Saunders number 96.</tei:p></description>
+        </descriptionSet>           
+        <relationSet>
+            <relation type="sourceFor" relids="owu.00070"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+            <subject>
+                <term type="geographicPlace" vocab="lccn" refid="n 80010449">Camden, (N.J.)</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300046300">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by Frank P. Harned, ca. 1886 - ca. 1887</title>
+        </titleSet>  
+        <work id="owu.00070" pref="true">
+            <agentSet>
+                <agent>
+                    <name type="personal" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</name>
+                    <role vocab="AAT" refid="300121785">inscriber</role>
+                </agent>
+            </agentSet>
+            <inscriptionSet>            
+                <inscription>
+                    <author type="personal" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</author>
+                    <position>On the recto, below the portrait</position>
+                    <text type="other">Walt Whitman</text>
+                </inscription>
+            </inscriptionSet>   
+            <locationSet>
+                <location type="repository">
+                    <name>Ohio Wesleyan University, Bayley Collection</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00096"/>
+                <relation type="imageIs" relids="image093"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <rightsHolder>Ohio Wesleyan University, Bayley Collection</rightsHolder>
+                    <text>Contact holding institution.</text>
+                </rights>
+            </rightsSet>                    
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300127141">carte-de-visite</worktype>            
+            </worktypeSet>
+            <image id="image093">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">Ohio Wesleyan University, Bayley Collection</name>
+                        <role>creator of master digital image</role>
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">1995</earliestDate>
+                        <latestDate circa="true">2000</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="owu.00070"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="other">
+                        <rightsHolder>Ohio Wesleyan University, Bayley Collection</rightsHolder>
+                        <text>Used with permission. For permission to reproduce this image, contact the holding institution.</text>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+        <work id="uva.00468" pref="true">
+            <agentSet>
+                <agent>
+                    <name type="personal" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</name>
+                    <role vocab="AAT" refid="300121785">inscriber</role>
+                </agent>
+            </agentSet>
+            <inscriptionSet>            
+                <inscription>
+                    <author type="personal" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</author>
+                    <position>On the recto</position>
+                    <text type="other">Walt Whitman</text>
+                </inscription>
+            </inscriptionSet>   
+            <locationSet>
+                <location type="repository">
+                    <name>Clifton Waller Barrett Library of American Literature, Special Collections, University of Virginia Library</name>
+                </location>
+                <location type="other">
+                    <name>Papers of Walt Whitman</name>
+                </location>
+                <location type="other">
+                    <name>Box-folder 5:22</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00096"/>
+                <relation type="imageIs" relids="image093"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <rightsHolder>Clifton Waller Barrett Library of American Literature, Special Collections, University of Virginia Library</rightsHolder>
+                    <text>Contact holding institution.</text>
+                </rights>
+            </rightsSet>      
+            <sourceSet>
+                <display>Library of Congress</display>
+                <source>
+                    <display>A Guide to the Papers of Walt Whitman, 1838-1987, A Collection in, The Clifton Waller Barrett Library, Special Collections, The University of Virginia Library</display>
+                    <source><name type="electronic" href="http://ead.lib.virginia.edu/vivaxtf/view?docId=uva-sc/viu03978.xml">A Guide to the Papers of Walt Whitman, 1838-1987, A Collection in, The Clifton Waller Barrett Library, Special Collections, The University of Virginia Library</name></source>
+                </source>
+            </sourceSet>
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300046300">photograph</worktype>            
+            </worktypeSet>
+        </work>
+        <work id="uva.00469" pref="true">
+            <agentSet>
+                <agent>
+                    <name type="personal" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</name>
+                    <role vocab="AAT" refid="300121785">inscriber</role>
+                </agent>
+            </agentSet>
+            <inscriptionSet>            
+                <inscription>
+                    <author type="personal" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</author>
+                    <position>On the verso</position>
+                    <text type="other">To J H Johnston Camden NJ Feb 24 1893 Taken in Camden by F. P. Harned about 188[9?</text>
+                </inscription>
+            </inscriptionSet>   
+            <locationSet>
+                <location type="repository">
+                    <name>Clifton Waller Barrett Library of American Literature, Special Collections, University of Virginia Library</name>
+                </location>
+                <location type="other">
+                    <name>Papers of Walt Whitman</name>
+                </location>
+                <location type="other">
+                    <name>Box-folder 5:22</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00096"/>
+                <relation type="imageIs" relids="image093"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <rightsHolder>Clifton Waller Barrett Library of American Literature, Special Collections, University of Virginia Library</rightsHolder>
+                    <text>Contact holding institution.</text>
+                </rights>
+            </rightsSet>       
+            <sourceSet>
+                <display>Library of Congress</display>
+                <source>
+                    <display>A Guide to the Papers of Walt Whitman, 1838-1987, A Collection in, The Clifton Waller Barrett Library, Special Collections, The University of Virginia Library</display>
+                </source>
+                    <source><name type="electronic" href="http://ead.lib.virginia.edu/vivaxtf/view?docId=uva-sc/viu03978.xml">A Guide to the Papers of Walt Whitman, 1838-1987, A Collection in, The Clifton Waller Barrett Library, Special Collections, The University of Virginia Library</name></source>
+                </sourceSet>            
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300046300">photograph</worktype>            
+            </worktypeSet>
+        </work>
+    </collection>        
+</vra>

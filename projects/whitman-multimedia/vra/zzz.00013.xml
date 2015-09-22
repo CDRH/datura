@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <collection id="zzz.00013">
+        <agentSet>
+            <display>Frederick Gutekunst</display>
+            <agent>
+                <name type="personal" vocab="ULAN" refid="500037003"> Gutekunst, Frederick</name>
+                <dates type="life">
+                    <earliestDate circa="false">1831</earliestDate>
+                    <latestDate circa="false">1917</latestDate>
+                </dates>   
+                <role vocab="AAT" refid="300025687">photogapher</role>
+            </agent>
+        </agentSet>        
+        <dateSet>
+            <display>1880</display>
+            <date type="creation">                
+                <earliestDate circa="false">1880</earliestDate>
+                <latestDate circa="false">1880</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>Obviously from the same sitting as another Gutekunst photograph (Saunders #80). Looking at this photograph, Whitman said, "how weak! how sizzled out! I like it, passably: but it is not one of the best. Perhaps . . . there is enough of me to survive even the worst ordeal: I hope so. . . ."<tei:ptr target="http://www.whitmanarchive.org/criticism/disciples/traubel/WWWiC/3/med.00003.51.html"/></tei:p> 
+            </description>
+        </descriptionSet>           
+        <relationSet>
+            <relation type="sourceFor" relids="loc.05055"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300046300">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="desciptive">Walt Whitman by Frederick Gutekunst, 1880</title>
+        </titleSet>  
+        <work id="loc.05055" pref="true">
+            <locationSet>
+                <location type="repository">
+                    <name>Library of Congress</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versonOf" relids="zzz.00013"/>
+                <relation type="imageIs" relids="image070"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <rightsHolder>Library of Congress</rightsHolder>
+                </rights>
+            </rightsSet>                    
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300128349">print</worktype>            
+            </worktypeSet>
+            <image id="image070">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">Library of Congress</name>
+                        <role>creator of master digital image</role>
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">1995</earliestDate>
+                        <latestDate circa="true">2000</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="loc.05055"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="publicDomain">
+                        <rightsHolder>Publicdomain</rightsHolder>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+    </collection>        
+</vra>

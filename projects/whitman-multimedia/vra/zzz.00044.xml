@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <collection id="zzz.00044">
+        <agentSet>
+            <display>Jacob Spieler at the Charles H. Spieler Studio</display>
+            <agent>
+                <name type="personal" vocab="WWA">Jacob Spieler</name>            
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>                
+        </agentSet>        
+        <dateSet>
+            <display>ca. 1876</display>
+            <date type="creation">                
+                <earliestDate circa="true">1876</earliestDate>
+                <latestDate circa="true">1876</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>This is one of three photographs taken by Jacob Spieler as studies for Sidney H. Morse's bust of Whitman. On September 7, Morse paid a week's rent for an "extemporized studio" at 1223 Chestnut St. in Philadelphia. Morse later wrote: "One part of the preliminary business was the visit to a photographer. [Whitman] knew of one who could be 'bossed.' He climbed the flights easily enough, but the heat under the skylight was oppressive. He doffed his coat and sat in his shirt sleeves. A profile of him taken at that sitting shows him looking very old." The Spieler Studio was at 722 Chestnut&#8212;and is entered in the <tei:title type="book">Daybooks and Notebooks</tei:title> with the note "top floor / son Jacob." About September 10, Jake Spieler is listed among the people to whom Whitman sends a copy of the second printing of the Centennial Edition of <tei:title type="book">Leaves of Grass</tei:title>. When Hattie came to visit Whitman in October 1876, Whitman recorded taking her to Spieler's to have her photograph taken. This was the frontispiece to the <tei:title type="book">Complete Poems and Prose of Walt Whitman 1855 . . . 1888</tei:title>.</tei:p><tei:p> Whitman came to call this photo the "Spieler profile," and he sent copies to friends. Whitman's friend Thomas Donaldson remembers an anti-slavery anniversary celebration in Philadelphia in December 1883 when Whitman brought a copy of the photo for John Greenleaf Whittier, who never showed up. In 1888, when deciding on this photo for the frontispiece to his <tei:title type="book">Complete Poems and Prose</tei:title>, Whitman said, "It was made seven or eight years ago&#8212;made by Spieler. I think I am the only one who likes it. . . ."<tei:ptr target="http://www.whitmanarchive.org/criticism/disciples/traubel/WWWiC/2/med.00002.78.html"/> Once he even called it "the best picture. . . . not only as a work of art (where it is effective, refined), but because so thoroughly characteristic of me&#8212;of the book&#8212; falls in line with the purposes we had in view at the start."<tei:ptr target="http://www.whitmanarchive.org/criticism/disciples/traubel/WWWiC/3/med.00003.37.html"/> One of those purposes had to do with the nature of the profile itself: "It is appropriate: the looking out: the face away from the book. Had it looked in how different would have been its significance. . . . I am after nature first of all: the out look of the face in the book is no chance."<tei:ptr target="http://www.whitmanarchive.org/criticism/disciples/traubel/WWWiC/2/med.00002.88.html"/> Whitman felt this portrait "resembles the beautiful medallions we sometimes see."</tei:p><tei:p> He was disappointed that the original print had been touched up and that a "top-knot and Romeo Italian curls"<tei:ptr target="http://www.whitmanarchive.org/criticism/disciples/traubel/WWWiC/2/med.00002.92.html"/> had been added (he instructed the photoengraver that "Walt Whitman never has had, has not now, Italian curls&#8212;or the semblance of 'em"), and he was relieved when they were successfully removed. He worked at reading the significance of this photo: "What does it express? . . . it says nothing in particular&#8212;suggests, what? Not inattention, not intentness, not devil-may-care, not intellectuality: then what is it? . . . It is truth&#8212;that is enough to say: it is strong&#8212;it preserves the features: yet it is also indefinite with an indefiniteness that has a fascination of its own. I know this head is not favored, but I approve it&#8212;have liked it from the first."<tei:ptr target="http://www.whitmanarchive.org/criticism/disciples/traubel/WWWiC/2/med.00002.101.html"/>
+            </tei:p><tei:p>This is Saunders number 101.</tei:p></description>
+        </descriptionSet>           
+        <relationSet>
+            <relation type="sourceFor" relids="uva.00442"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+            <subject>
+                <term type="geographicPlace" vocab="lccn" refid="n 78095520">Philadelphia (Pa.)</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300046300">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by Jacob Spieler at the Charles H. Spieler Studio, ca. 1876</title>
+            <title type="popular">Spieler profile</title>
+        </titleSet>  
+        <work id="uva.00442" pref="true">
+            <locationSet>
+                <location type="repository">
+                    <name>University of Virginia</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00044"/>
+                <relation type="imageIs" relids="image087"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <text>Contact holding institution.</text>
+                </rights>
+            </rightsSet>                    
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300128349">print</worktype>            
+            </worktypeSet>
+            <image id="image087">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">University of Virginia</name>
+                        <role>creator of master digital image</role>
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">2000</earliestDate>
+                        <latestDate circa="true">2007</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="uva.00442"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="other">
+                        <rightsHolder>University of Virginia</rightsHolder>
+                        <text>Used with permission. For permission to reproduce this image, contact the holding institution.</text>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+    </collection>        
+</vra>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <collection id="zzz.00117">
+        <agentSet>
+            <display>Dr. John Johnston, Bolton, England</display>
+            <agent>
+                <name type="personal" vocab="WWA">Dr. John Johnston</name>            
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>                
+        </agentSet>        
+        <dateSet>
+            <display>1890</display>
+            <date type="creation">                
+                <earliestDate circa="false">1890</earliestDate>
+                <latestDate circa="false">1890</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>Taken on Camden wharf. With Warren Fritzinger, Whitman's last and favorite nurse. "Warry," Whitman said, "is faithful, true, and loyal." Whitman called him his "sailor boy," and he indeed had spent years at sea. He was the son of a friend of Mary Davis, Whitman's housekeeper; when Warry's parents died, Mary became his guardian, and she talked him into becoming Whitman's nurse. He was a comfort to Whitman in the last years: "I like to look at him&#8212;he is health to look at: young, strong, lithe."</tei:p><tei:p> Dr. J. Johnston, one of Whitman's English admirers and a founder of the "Eagle Street College," arrived in Philadelphia to visit Whitman on July 15, 1890, and that evening photographed Whitman and Fritzinger, who were out for a walk, Fritzinger pushing Whitman in his wheel chair (which had replaced his phaeton as a mode of transportation in 1889): "As we approached the wharf he exclaimed: 'How delicious the air is!' On the wharf he allowed me to photograph himself and Warry (it was almost dusk and the light unfavourable), after which I sat down on a log of wood beside him, and he talked in the most free and friendly manner for a full hour, facing the golden sunset, in the cool evening breeze, with the summer lightning playing around us, and the ferry-boats crossing and re-crossing the Delaware."</tei:p><tei:p>This is Saunders number 108.</tei:p></description>
+        </descriptionSet>           
+        <relationSet>
+            <relation type="sourceFor" relids="loc.05137"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+            <subject>
+                <term type="personalName" vocab="WWA">Warren Fritzinger</term>
+            </subject>
+            <subject>
+                <term type="geographicPlace" vocab="lccn" refid="n80010449">Camden (N.J.)</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300046300">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman and Warren Fritzinger by Dr. John Johnston, 1890</title>
+        </titleSet>  
+        <work id="loc.05137" pref="true">
+            <locationSet>
+                <location type="repository">
+                    <name>Charles E. Feinberg Collection, Library of Congress</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00117"/>
+                <relation type="imageIs" relids="image117"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="publicDomain">
+                    <text>Public domain</text>
+                </rights>
+            </rightsSet>                    
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300128349">print</worktype>            
+            </worktypeSet>
+            <image id="image117">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">Charles E. Feinberg Collection, Library of Congress</name>
+                        <role>creator of master digital image</role>
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">1995</earliestDate>
+                        <latestDate circa="true">2000</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="loc.05137"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="publicDomain">
+                        <rightsHolder>Charles E. Feinberg Collection, Library of Congress</rightsHolder>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>  
+        <work id="uva.00549" pref="true">
+            <agentSet>
+                <agent>
+                    <name type="personal" vocab="wwa">Unknown</name>
+                    <role vocab="AAT" refid="300121785">inscriber</role>
+                </agent>
+            </agentSet>
+            <inscriptionSet>            
+                <inscription>
+                    <author type="personal" vocab="wwa">Unknown</author>
+                    <position>Below photograph</position>
+                    <text type="other">Whitman on the Wharf at Camden, N.J.</text>
+                </inscription>            
+            </inscriptionSet> 
+            <locationSet>
+                <location type="repository">
+                    <name>Clifton Waller Barrett Library of American Literature, Special Collections, University of Virginia Library</name>
+                </location>
+                <location type="other">
+                    <name>Papers of Walt Whitman</name>
+                </location>
+                <location type="other">
+                    <name>Box-folder 5:43</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00117"/>
+                <relation type="imageIs" relids="image117"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <rightsHolder>Clifton Waller Barrett Library of American Literature, Special Collections, University of Virginia Library</rightsHolder>
+                    <text>Contact holding institution.</text>
+                </rights>
+            </rightsSet> 
+            <sourceSet>
+                <display>A Guide to the Papers of Walt Whitman, 1838-1987, A Collection in, The Clifton Waller Barrett Library, Special Collections, The University of Virginia Library</display>
+                <source><name type="electronic" href="http://ead.lib.virginia.edu/vivaxtf/view?docId=uva-sc/viu03978.xml">A Guide to the Papers of Walt Whitman, 1838-1987, A Collection in, The Clifton Waller Barrett Library, Special Collections, The University of Virginia Library</name></source>
+            </sourceSet> 
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300128349">print</worktype>                  
+            </worktypeSet>
+        </work>                
+    </collection>        
+</vra>
+
