@@ -1,15 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://digitalhumanities.unl.edu/resources/schemas/tei/TEIP5.2.6.0/tei_all.rng" type="xml"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0282.012">
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://digitalhumanities.unl.edu/resources/schemas/tei/TEIP5.2.6.0/tei_all.rng" type="xml"?> 
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0252.003">
     
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>Sarah H. Medulla v. Georgiana Munroe. Summons of Georgiana Munroe</title>
+<title>Primos Garner v. William Mills. Summons of William Mills</title>
 <principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
-<principal n="Muñoz, Trevor" xml:id="tm">Trevor Muñoz</principal>
+<principal n="Mu&#241;oz, Trevor" xml:id="tm">Trevor Mu&#241;oz</principal>
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
 <respStmt>
 <resp>transcription and encoding</resp>
-<name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
+<name n="McCormick, Kylie L." xml:id="klm">Kylie L. McCormick</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
@@ -30,13 +33,13 @@
 <name>Center for Digital Research in the Humanities</name>
 <address>
 <addrLine>319 Love Library</addrLine>
-<addrLine>University of Nebraska–Lincoln</addrLine>
+<addrLine>University of Nebraska&#8211;Lincoln</addrLine>
 <addrLine>Lincoln, NE 68588-4100</addrLine>
 <addrLine>cdrh@unl.edu</addrLine>
 </address>
 </distributor>
-<idno type="project">oscys.case.0282.012</idno>
-<idno type="case">oscys.caseid.0280</idno>
+<idno type="project">oscys.case.0252.003</idno>
+<idno type="case">oscys.caseid.0253</idno>
 
 <availability>
 <licence>http://creativecommons.org/licenses/by-nc-sa/3.0/</licence>
@@ -46,15 +49,15 @@
             
 <sourceDesc>
 <bibl>
-<title level="m" type="main">Summons of Georgiana Munroe</title>
-<date when="1857-11-16">November 16, 1857</date>
+<title level="m" type="main">Summons of William Mills</title>
+<date when="1852-07-17">July 17, 1852</date>
 <note type="project">Our transcription is based on a digital image of the original.</note>
 </bibl>
 <msDesc>
 <msIdentifier>
 <repository>National Archives and Records Administration</repository>
 <collection>Record Group 21.6</collection>
-<idno>Box 850, Folder 118</idno>
+<idno>Box 761, Folder 187</idno>
 </msIdentifier>
 </msDesc>
 </sourceDesc>
@@ -75,14 +78,13 @@
 </keywords>
 
 <keywords scheme="original" n="term">
-<term><date when="1858-01">January 1858</date></term>
+<term><date when="1852-10">October 1852</date></term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term xml:id="per.000476">Dunlop, James, 1793-</term>
-<term xml:id="per.001216">Hoover, Jonah D.</term>
-<term>Medulla, Rebecca</term>
+<term xml:id="per.000004">Cranch, William, 1769-1855</term>
 <term xml:id="per.000740">Smith, John A.</term>
+<term xml:id="per.000753">Wallach, Richard, 1816-1881</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">    
@@ -90,25 +92,18 @@
 <term>Washington (D.C.)</term>
 </keywords>
 
-
 </textClass>
-
+            
 <particDesc>   
 <listPerson>            
 <person role="petitioner">
-<persName>Medulla, Charles Henry</persName>
-</person>
-<person role="petitioner">
-<persName>Medulla, Samuel A.</persName>
-</person>
-<person role="petitioner">
-<persName>Medulla, Sarah Henrietta</persName>
+<persName>Garner, Primos</persName>
 </person>
 <person role="defendant">
-<persName>Munroe, Georgiana</persName>
+<persName>Mills, William</persName>
 </person>
-<person role="attorney_petitioner" xml:id="per.000847">
-<persName>Carlisle, James M.</persName>
+<person role="attorney_petitioner" xml:id="per.001180">
+<persName>Morgan, Edwin C.</persName>
 </person>
 <person role="attorney_defendant">
 <persName/>
@@ -124,9 +119,9 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>      
-<change when="2015-06-04" who="#kln">reviewed; edited</change>         
-<change when="2015-04-15" who="#snc">transcribed; encoded</change>
+<revisionDesc>   
+<change when="2015-09-22" who="#kln">reviewed; edited</change>                 
+<change when="2015-03-09" who="#klm">transcribed; encoded</change>
 </revisionDesc>
 
 </teiHeader>
@@ -137,53 +132,55 @@
                
 <div1 type="case">
 
-<pb xml:id="p001" facs="oscys.case.0282.012.001.jpg"/>
+<pb xml:id="p001" facs="oscys.case.0252.003.001.jpg"/>
 
 <div2 type="caption">
 
+
 <p>District of Columbia, to wit:<lb/>
 The United States of America,<lb/>
-To the Marshal of the District of Columbia—Greeting:</p>
+To the Marshal of the District of Columbia, Greeting:</p>
 
 </div2>
 
 <div2 type="body">
      
-<p>We command you that you <del>take</del> summon Georgiana Munroe <del>late of Washington County, if shall be found within the County of Washington in your said District, and safely keep, so that you have body</del> before the Circuit Court of the District of Columbia, to be held for the County aforesaid, at the City of Washington, on the third Monday of January next, to answer <del>unto</del> the Petition of Freedom of Sarah H. Medalla</p>
+<p>We command that you <del>take</del> sum: William Mills <del>late of Washington County, if shall be found within the County of Washington in your said District, and safely keep, so that you have bod</del> before the Circuit Court of the District of Columbia, to be held for the County aforesaid, at the City of Washington, on the 3d Monday of October next, to answer unto Primas Garner his petition for Freedom &amp;c.</p>
 
-<p>Hereof fail not at your peril, and have you then and there this writ.</p>
+<p>Hereof fail not, at your peril, and have you then and there this writ.</p>
 
-<p>Witness, Jas. Dunlop Esquire, Chief Justice of our said Court, at the City of Washington, the 16th day of Novr Anno Domini one thousand eight hundred and 57</p>
+<p>Witness W Cranch Esquire, Chief Judge of our said Court at the City of Washington, the 22d day of May Anno Domini on thousand eight hundred and 52</p>
 
-<p>Issued the 17th day of Novr 1857.</p>
+<p>Issued the 17th day of July 1852.</p>
 
-<p>Jno: A Smith Clk</p>
+<p>Jno. A. Smith Clk</p>
 
-<p>C &amp; C</p>
+<p>Morgan</p>
      
 </div2>
 
-<pb xml:id="p002" facs="oscys.case.0282.012.002.jpg"/>
+<pb xml:id="p002" facs="oscys.case.0252.003.002.jpg"/>
 
 <div2 type="back">
 
-<p>118</p>
+<p>187</p>
 
-<p>Sarah H. Medulla by Rebecca.<lb/>
+<p>Primas Garner<lb/>
 vs<lb/>
-Georgiana Munroe</p>
+William Mills</p>
 
-<p>sub<lb/>
-12 Bre</p>
+<p>Sub.<lb/>
+5 Bre</p>
 
-<p>Pet for freedom</p>
+<p>Pet. for Freedom<lb/>
++</p>
 
-<p>+<lb/>
-Non Est<lb/>
-J.D. Hoover<lb/>
+<p>Non est<lb/>
+R Wallach<lb/>
 Marshal</p>
 
 </div2>
+
 </div1>
     
 </body>
