@@ -115,8 +115,8 @@ class Transformer
     return errors
   end
 
-  # _transform
-  #    Transforms xml file with xslt and assigns to tmp file
+  # _transform_and_post
+  #    Transforms xml file with xslt and posts to solr
   def _transform_and_post(source, xslt, for_solr=true, file_path=nil)
     error = nil
     xslt_loc = "#{@dir}/#{xslt}"  # make absolute path so that script can be run anywhere
@@ -149,7 +149,8 @@ class Transformer
           else
             puts "ERROR: file #{source} not committed to solr (received code #{solr_res.code})"
             puts "HTTP RESPONSE: #{solr_res.inspect}"	
-return solr_res
+            @solr_failed_files << source
+            @solr_errors << solr_res.inspect
           end
         end
       end
