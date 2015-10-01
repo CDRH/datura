@@ -19,7 +19,7 @@ class Transformer
 
     # options
     @solr_html = @options["solr_or_html"]
-    @verbose = @options["verbose_flag"]
+    @verbose = @options["verbose"]
     @transform_only = @options["transform_only"]
     @format = @options["format"]
     @regex = @options["regex"]
@@ -129,6 +129,7 @@ class Transformer
       puts "Transforming #{source}"
       saxon = "saxon -s:#{source} -xsl:#{xslt_loc} #{@xslt_param_string}"
     end
+    puts "transformation line: #{saxon}" if @verbose
     # execute the saxon command and make sure that you don't get a stderr!
     Open3.popen3(saxon) do |stdin, stdout, stderr|
       out = stdout.read
