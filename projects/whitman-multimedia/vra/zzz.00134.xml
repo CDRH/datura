@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    
+    <collection id="zzz.00134">
+        <agentSet>
+            <agent>
+                <display>J.W. Black of Black and Batchelder</display>   
+                <name type="personal" vocab="WWA" >Black, J.W.</name> 
+               
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>
+        </agentSet>      
+        <dateSet>
+            <display>ca. 1860</display> 
+            <date type="creation">                
+                <earliestDate circa="true">1859</earliestDate>
+                <latestDate circa="true">1861</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>Whitman late in his life identified the date of this photo as between 1845 and 1850, but no one has agreed with him; Dr. Bucke guessed 1856, but most estimates have been a later date. Seeing this photo late in his life, Whitman exclaimed, "How shaggy! looks like a returned Californian, out of the mines, or Coloradoan," but he was fascinated with "the expression of benignity" that shone through, though he felt "such benignity, such sweetness, such satisfiedness&#8212;it does not belong. I know it often appears&#8212;” but that's the trick of the camera, the photographer." <tei:ptr target="http://www.whitmanarchive.org/criticism/disciples/traubel/WWWiC/4/med.00004.26.html"/></tei:p><tei:p>Whitman called it his "young man" picture ("when did I not look old? At twenty-five or twenty-six they used already to remark it"), and claimed "it is me, me, un formed, undeveloped&#8212;hits off phases not common in my photos."<tei:ptr target="http://www.whitmanarchive.org/criticism/disciples/traubel/WWWiC/4/med.00004.27.html"/>He described his physique at the time: "I was very much slenderer then: weighed from one hundred and fifty-five to one hundred and sixty-five pounds: had kept that weight for about thirty years: then got heavier." Whitman was amused by the clothing&#8212;"how natural the clothes! . . . the suit was a beautiful misfit, as usual, eh?"&#8212;and he was impressed with "its calm don't-care-a-damnativeness&#8212;its go-to-hell-and-find-outativeness: it has that air strong, yet is not impertinent: defiant: yet it is genial."</tei:p><tei:p>Whitman was mystified by this portrait&#8212;he began calling it "the mysterious photograph"&#8212;when he first saw it in 1889: "When it could have been taken&#8212;by whom&#8212;where&#8212;I cannot even guess. . . . it's a devilish, tantalizing mystery. . . ."</tei:p><tei:p>A copy in the Library of Congress notes (in Traubel's handwriting): "The only photographic copy of this picture known is in the possession of McKay, Phila. Used by W.W. In the pocket Edition of L of G. 1889." An engraving of the J. W. Black photograph appeared in "Walt Whitman," New York Illustrated News 2 (2 June 1860), 60.</tei:p></description>
+        </descriptionSet>
+        <relationSet>
+            <relation type="sourceFor" relids="owu.00036"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300046300">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by J.W. Black of Black and Batchelder, ca. 1860</title>
+        </titleSet>
+        
+        <work id="owu.00036" pref="true">
+            
+            <locationSet>
+                <location type="repository">
+                    <name>Ohio Wesleyan University</name>
+                </location>
+                <location type="other">
+                    <name>Bayley Collection</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00134"/>
+                <relation type="imageIs" relids="image007"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <rightsHolder>Bayley Collection, Ohio Wesleyan University</rightsHolder>
+                    <text>Used with permission. For permission to reproduce this image, contact the holding institution.</text>
+                </rights>
+            </rightsSet>                 
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300046300">photograph</worktype>            
+            </worktypeSet>
+            
+            <image id="image007">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">Bayley Collection, Ohio Wesleyan University</name>
+                        <role>creator of master digital image</role> 
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">2000</earliestDate>
+                        <latestDate circa="true">2006</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="owu.00038"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="other">
+                        <rightsHolder>Bayley Collection, Ohio Wesleyan University</rightsHolder>
+                        <text>Used with permission. For permission to reproduce this image, contact the holding institution.</text>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+        <work id="loc.07049" pref="true">
+            <agentSet>
+                <agent>
+                    <name type="personal" vocab="ULAN" refid="500338166">Traubel, Horace (American author and printer, 1858-1919)</name>
+                    <role vocab="AAT" refid="300121785">inscriber</role>
+                </agent>
+            </agentSet>
+            <inscriptionSet>            
+                <inscription>
+                    <author type="personal" vocab="ULAN" refid="500338166">Traubel, Horace (American author and printer, 1858-1919)</author>
+                    <position>On the verso</position>
+                        <text type="other">The only photographic copy of this picture known is in the possession of McKay, Phila. Used by W.W. In the pocket Edition of L of G. 1889</text>
+                </inscription>            
+            </inscriptionSet> 
+            <locationSet>
+                <location type="repository">
+                    <name>Library of Congress</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00134"/>
+                <relation type="imageIs" relids="image007"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="publicDomain">
+                    <text>Public domain</text>
+                </rights>
+            </rightsSet>                    
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300128349">print</worktype>            
+            </worktypeSet>
+            </work>
+    </collection>        
+</vra>

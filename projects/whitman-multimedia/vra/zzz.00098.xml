@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <collection id="zzz.00098">
+        <agentSet>
+            <display>George C. Cox</display>
+            <agent>
+                <name type="personal" vocab="lccn" refid="n 2007065013">Cox, George C. (George Collins), 1851-1902</name>     
+                <dates type="life">
+                    <earliestDate circa="false">1851</earliestDate>
+                    <latestDate circa="false">1902</latestDate>
+                </dates>  
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>                
+        </agentSet>        
+        <dateSet>
+            <display>April 15, 1887</display>
+            <date type="creation">                
+                <earliestDate circa="false">1887</earliestDate>
+                <latestDate circa="false">1887</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>On the morning of April 15th, 1887, George Cox took several photographs of Whitman, who was celebrating the success of his New York lecture on Lincoln, delivered the day before. Whitman recalls that "six or seven" photos were made during the session, but Whitman's friend Jeannette Gilder, an observer of the session, said there were many more than that: "He must have had twenty pictures taken, yet he never posed for a moment. He simply sat in the big revolving chair and swung himself to the right or to the left, as Mr. Cox directed, or took his hat off or put it on again, his expression and attitude remaining so natural that no one would have supposed he was sitting for a photograph."</tei:p><tei:p> A few months later, Whitman was angry that Cox apparently was selling copies of the photos with forged signatures and was refusing to send Whitman copies of the proofs to allow Whitman to decide which ones should be printed, but the problem was straightened out and Cox began sending Whitman modest payments for the sale of photos. By October 1888, Whitman was calling Cox "the premier exception" among photographers and claimed to have received around one hundred dollars in royalties. Cox copyrighted two of the photos from this sitting, the only time he ever did so, apparently to protect Whitman's financial interest in them, and he sold the photos only to aid Whitman.</tei:p><tei:p>Until now, only seven photos from this session have been known to exist; this collection adds five more, bringing the total to twelve. Regarding this particular photograph, Whitman once told Traubel he couldn't recall the name of the photographer, but he worried a great deal about his image in this portrait: "Does it look glum&#8212;sickish&#8212;painful? Has it that in it? They say so. I hate to think of myself as pensive, despondent, melancholy. . . . Does it look unkind? No man has any excuse for looking morose or cruel: he should do better. . . . That is so important to me: to not look downcast&#8212;cloud up things. . . . If you should ever use this portrait in any way&#8212;for this, that&#8212;be sure to say Walt Whitman was not a glum man despite his photographers."<tei:ptr target="http://www.whitmanarchive.org/criticism/disciples/traubel/WWWiC/3/med.00003.54.html"/></tei:p><tei:p>This is Saunders number 99.</tei:p></description>
+        </descriptionSet>           
+        <relationSet>
+            <relation type="sourceFor" relids="owu.00071"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+            <subject>
+                <term type="geographicPlace" vocab="lccn" refid="n79007751"> New York (N.Y.)</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300046300">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by George C. Cox, April 15, 1887</title>
+        </titleSet>  
+        <work id="owu.00071" pref="true">
+            <locationSet>
+                <location type="repository">
+                    <name>Ohio Wesleyan University, Bayley Collection</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00098"/>
+                <relation type="imageIs" relids="image096"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <text>Contact holding institution.</text>
+                </rights>
+            </rightsSet>                    
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300128349">print</worktype>            
+            </worktypeSet>
+            <image id="image096">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">Ohio Wesleyan University, Bayley Collection</name>
+                        <role>creator of master digital image</role>
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">1995</earliestDate>
+                        <latestDate circa="true">2000</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="owu.00071"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="other">
+                        <rightsHolder>Ohio Wesleyan University, Bayley Collection</rightsHolder>
+                        <text>Used with permission. For permission to reproduce this image, contact the holding institution.</text>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+    </collection>        
+</vra>

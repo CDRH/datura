@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    
+    <collection id="zzz.00018">
+            <agentSet>
+                <agent>
+                <display>Alexander Gardner</display>   
+                <name type="personal" vocab="ULAN" refid="500115196">Gardner, Alexander</name> 
+                <dates type="life">
+                    <earliestDate circa="false">1821</earliestDate>                    
+                    <latestDate circa="false">1882</latestDate>
+                </dates>
+                <role vocab="AAT" refid="300025687">photographer</role>
+                </agent>
+            </agentSet>      
+        <dateSet>
+            <display>ca. 1864 - 1865</display> 
+            <date type="creation">                
+                <earliestDate circa="false">1863</earliestDate>
+                <latestDate circa="false">1866</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>According to some sources, this photo dates from 1864.</tei:p><tei:p>There is no Saunders number for this picture.</tei:p></description>
+        </descriptionSet>           
+        <relationSet>
+            <relation type="sourceFor" relids="uva.00436"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+            <subject>
+                <term type="geographicPlace" vocab="lccn" refid="n79018774">Washington, D.C.</term>
+            </subject>
+            <subject>
+                <term type="conceptTopic" vocab="lccn" refid="sh85140205">United States History Civil War, 1861-1865</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300046300">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by Alexander Gardner, ca. 1864 - 1865</title>
+        </titleSet>
+        
+        <work id="uva.00436" pref="true">
+            <agentSet>
+                <agent>
+                    <name type="personal" refid="n79081476">Whitman, Walt, 1819-1892</name>
+                    <role vocab="AAT" refid="300121785">inscriber</role>
+                </agent>
+            </agentSet>
+            <inscriptionSet>
+                <author vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</author>
+                <position>upper left</position>
+                <text type="signature">Walt Whitman 1865</text>
+            </inscriptionSet>
+            <inscriptionSet>
+                <author vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</author>
+                <position>lower right</position>
+                <text type="other">born May 31, 1819</text>
+            </inscriptionSet>
+            <inscriptionSet>
+                <author vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</author>
+                <position>verso</position>
+                <text type="other">Given to a Comrade as a Memento in Washington City, June 29, 1865.</text>
+            </inscriptionSet>
+            <locationSet>
+                <location type="repository">
+                    <name>University of Virginia</name>
+                </location>
+                <location type="other">
+                    <name>Alderman Library</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00018"/>
+                <relation type="imageIs" relids="image014"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <rightsHolder>Alderman Library, University of Virginia</rightsHolder>
+                    <text>Used with permission. For permission to reproduce this image, contact the holding institution.</text>
+                </rights>
+            </rightsSet>                 
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300046300">photograph</worktype>            
+            </worktypeSet>
+            
+            <image id="image014">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">Alderman Library, University of Virginia</name>
+                        <role>creator of master digital image</role> 
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">2000</earliestDate>
+                        <latestDate circa="true">2006</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="uva.00436"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="other">
+                        <rightsHolder>Alderman Library, University of Virginia</rightsHolder>
+                        <text>Used with permission. For permission to reproduce this image, contact the holding institution.</text>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+    </collection>        
+</vra>

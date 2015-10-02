@@ -58,9 +58,9 @@
             <xsl:value-of select="$title_normalized"/>
           </field>
 
-          <!-- <field name="novel_display">
-            <xsl:value-of select="$title"/>
-          </field> -->
+
+
+
           
           <field name="chapter"><xsl:value-of select="ancestor::div/@n"/></field>
           
@@ -69,8 +69,16 @@
           <field name="speaker_id"><xsl:value-of select="@who"/></field>
           
           <field name="speaker_name">
-            <xsl:variable name="who"><xsl:value-of select="@who"/></xsl:variable>
-            <xsl:value-of select="normalize-space(//person[@xml:id = $who]/persName)"/>
+            <!-- Some speakers do not have personography entries, so will put in Unknown so there is a speaker everywhere -->
+            <xsl:variable name="speaker"><xsl:value-of select="@who"/></xsl:variable>
+            <xsl:choose>
+              <xsl:when test="//person[@xml:id = $speaker]">
+                <xsl:value-of select="normalize-space(//person[@xml:id = $speaker]/persName)"/>
+              </xsl:when>
+              <xsl:otherwise>Unknown</xsl:otherwise>
+            </xsl:choose>
+            
+            
           </field>
           
           <xsl:variable name="who"><xsl:value-of select="@who"/></xsl:variable>
@@ -80,35 +88,35 @@
             </field>
           </xsl:for-each>
           
-          <xsl:variable name="who"><xsl:value-of select="@who"/></xsl:variable>
+
           <xsl:for-each select="//person[@xml:id = $who]/occupation">
             <field name="occupation">
               <xsl:value-of select="normalize-space(.)"></xsl:value-of>
             </field>
           </xsl:for-each>
           
-          <xsl:variable name="who"><xsl:value-of select="@who"/></xsl:variable>
+
           <xsl:for-each select="//person[@xml:id = $who]/sex">
             <field name="sex">
               <xsl:value-of select="normalize-space(.)"></xsl:value-of>
             </field>
           </xsl:for-each>
           
-          <xsl:variable name="who"><xsl:value-of select="@who"/></xsl:variable>
+
           <xsl:for-each select="//person[@xml:id = $who]/socecStatus">
             <field name="class_status">
               <xsl:value-of select="normalize-space(.)"></xsl:value-of>
             </field>
           </xsl:for-each>
           
-          <xsl:variable name="who"><xsl:value-of select="@who"/></xsl:variable>
+
           <xsl:for-each select="//person[@xml:id = $who]/state">
             <field name="marriage_status">
               <xsl:value-of select="normalize-space(.)"></xsl:value-of>
             </field>
           </xsl:for-each>
 
-          <xsl:variable name="who"><xsl:value-of select="@who"/></xsl:variable>
+
           <xsl:for-each select="//person[@xml:id = $who]/trait">
             <field name="character_type">
               <xsl:value-of select="normalize-space(.)"></xsl:value-of>

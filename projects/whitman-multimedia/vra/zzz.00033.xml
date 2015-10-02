@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <collection id="zzz.00033">
+        <agentSet>
+            <display>William J. Linton</display>
+            <agent>
+                <name type="personal" vocab="ULAN" refid="500015928">Linton, W. J.</name>            
+                <dates type="life">
+                    <earliestDate circa="false">1812</earliestDate>
+                    <latestDate circa="false">1898</latestDate>
+                </dates>    
+                <role vocab="AAT" refid="300025165">engraver (printmaker)</role>
+            </agent>          
+        </agentSet>        
+        <dateSet>
+            <display>ca. 1871</display>
+            <date type="creation">                
+                <earliestDate circa="true">1870</earliestDate>
+                <latestDate circa="true">1872</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>Included here because of its familiarity as a portrait of Whitman; Whitman used it in the 1876 <tei:title type="book">Leaves</tei:title> and wrote a poem, "Out from Behind This Mask," inspired by the engraving: "This common curtain of the face contain'd in me for me. . . ./ These burin'd eyes, flashing to you to pass to future time. . . ."<tei:ptr target="http://www.whitmanarchive.org/published/LG/1881/poems/212"/> When choosing to print this image in the 1889 <tei:title type="book">Leaves</tei:title>, Whitman told Traubel, "I always have liked it."</tei:p><tei:p>This is Saunders number 44a.</tei:p></description>
+        </descriptionSet>           
+        <relationSet>
+            <relation type="sourceFor" relids="gwa.00002"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300053225">engraving (printing process)</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by William J. Linton (engraver), ca. 1871</title>
+        </titleSet>  
+        <work id="gwa.00002" pref="true">
+            <locationSet>
+                <location type="personal collection">
+                    <name>Gay Wilson Allen</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00033"/>
+                <relation type="imageIs" relids="image044"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <rightsHolder>Estate of Gay Wilson Allen</rightsHolder>
+                    <text>Contact holding institution.</text>
+                </rights>
+            </rightsSet>                    
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300041340">engraving (print)</worktype>            
+            </worktypeSet>
+            <image id="image044">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">Whitman Archive Staff</name>
+                        <role>creator of master digital image</role>
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">1995</earliestDate>
+                        <latestDate circa="true">2000</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="gwa.00002"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="other">
+                        <rightsHolder>Estate of Gay Wilson Allen</rightsHolder>
+                        <text>Used with permission. For permission to reproduce this image, contact the holding institution.</text>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+        <work id="uva.00470" pref="true">
+            <locationSet>
+                <location type="repository">
+                    <name>Clifton Waller Barrett Library of American Literature, Special Collections, University of Virginia Library</name>
+                </location>
+                <location type="other">
+                    <name>Papers of Walt Whitman</name>
+                </location>
+                <location type="other">
+                    <name>Box-folder 4:74</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00033"/>
+                <relation type="imageIs" relids="image044"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <rightsHolder>Clifton Waller Barrett Library of American Literature, Special Collections, University of Virginia Library</rightsHolder>
+                    <text>Contact holding institution.</text>
+                </rights>
+            </rightsSet>                   
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300041340">engraving (print)</worktype>            
+            </worktypeSet>
+            </work>
+    </collection>        
+</vra>

@@ -32,12 +32,12 @@ def post_to_solr_params
 
     # default to no restricted format
     options[:format] = nil
-    opts.on( '-f', '--format [input]', 'Restrict to one format (tei, csv, dublin-core)') do |input|
-      if input == "tei" || input == "csv" || input == "dublin-core"
+    opts.on( '-f', '--format [input]', 'Restrict to one format (tei, csv, dublin-core, vra)') do |input|
+      if input == "tei" || input == "csv" || input == "dublin-core" || input == "vra"
         options[:format] = input
       else
         puts "Format #{input} is not recognized."
-        puts "Allowed formats are tei, csv, and dublin-core"
+        puts "Allowed formats are tei, csv, vra, and dublin-core"
         exit
       end
     end

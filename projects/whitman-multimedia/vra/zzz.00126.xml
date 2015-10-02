@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <collection id="zzz.00126">
+        <agentSet>
+            <display>Thomas Eakins? Samuel Murray?</display>
+            <agent>
+                <name type="personal" vocab="ULAN" refid="500115198">Eakins, Thomas</name>            
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>  
+            <agent>
+                <name type="personal" vocab="ULAN" refid="500062301">Murray, Samuel</name>            
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>              
+        </agentSet>           
+        <dateSet>
+            <display>1891</display>
+            <date type="creation">                
+                <earliestDate circa="false">1891</earliestDate>
+                <latestDate circa="false">1891</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>This photograph was ascribed to Eakins when it was printed in the Small, Maynard edition of <tei:title type="book">Leaves</tei:title> (1898), but it is very similar to two other photographs, the second of which is clearly ascribed to Murray. At this point, Whitman had a wolf-skin draped across the back of his rocker in the first-floor parlor of his home, where this was taken.</tei:p><tei:p>This is Saunders number 123.</tei:p></description>
+        </descriptionSet>           
+        <relationSet>
+            <relation type="sourceFor" relids="hmu.00002"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+            <subject>
+                <term type="geographicPlace" vocab="lccn" refid="n80010449">Camden (N.J.)</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300046300">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by Thomas Eakins? Samuel Murray?, 1891</title>
+        </titleSet>  
+        <work id="hmu.00002" pref="true">
+            <locationSet>
+                <location type="repository">
+                    <name>Hirshhorn Musuem and Sculpture Garden, Smithsonian Institution</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                    <measurements type="height" unit="in">4</measurements>
+                <measurements type="width" unit="in">5</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00126"/>
+                <relation type="imageIs" relids="image127"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <text>Contact holding institution.</text>
+                </rights>
+            </rightsSet>                    
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300127173">glass plate negative (4 x 5in.)</worktype>            
+            </worktypeSet>
+            <image id="image127">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">Hirshhorn Musuem and Sculpture Garden, Smithsonian Institution</name>
+                        <role>creator of master digital image</role>
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">1995</earliestDate>
+                        <latestDate circa="true">2000</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="hmu.00002"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="other">
+                        <rightsHolder>Hirshhorn Musuem and Sculpture Garden, Smithsonian Institution</rightsHolder>
+                        <text>Used with permission. For permission to reproduce this image, contact the holding institution.</text>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+    </collection>        
+</vra>

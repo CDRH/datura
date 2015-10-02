@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <collection id="zzz.00110">
+        <agentSet>
+            <display>Frederick Gutekunst?</display>
+            <agent>
+                <name type="personal" vocab="ULAN" refid="500037003">Gutekunst, Frederick</name>            
+                <dates type="life">
+                    <earliestDate circa="false">1831</earliestDate>
+                    <latestDate circa="false">1917</latestDate>
+                </dates>  
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>                
+        </agentSet>        
+        <dateSet>
+            <display>ca. 1888</display>
+            <date type="creation">                
+                <earliestDate circa="true">1888</earliestDate>
+                <latestDate circa="true">1888</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>Frontispiece for <tei:title type="book">November Boughs</tei:title> (1888), and in 1889 <tei:title type="book">Leaves</tei:title>. Whitman labeled it "Walt Whitman in his 70th year," and claimed "the picture is in the nature of a surprise: my niece was here the other day&#8212;found it lying around&#8212;asked for it. It seems to me a satisfying picture, all in all." Whitman was disappointed that "no one likes the frontispiece. . . . All the boys turn up their noses&#8212;smell something wrong&#8212;think it won't do," but Whitman believed it "serves our purpose&#8212;is appropriate." He admitted to Thomas Harned that it was not "high art" but insisted he was "not looking for high art": "sometimes a picture which is elementally very simple, crude, has something to say, says something, in fact, which no amount of added finesse would strengthen or improve."</tei:p><tei:p>Whitman was not so pleased with the "technicalities" of the photoengraving, but, he said, "damn the technicalities if the rest is all right!" Horace Traubel complained to the photoengraver that he had done a bad job, and the engraver replied, "It is bum&#8212;I wouldn't have been surprised if you had turned it down." But Whitman believed the photo fit <tei:title type="book">November Boughs</tei:title>: "it has the same air, tone, ring, color: the same ruggedness, unstudiedness, unconventionality."<tei:ptr target="http://www.whitmanarchive.org/criticism/disciples/traubel/WWWiC/2/med.00002.41.html"/></tei:p><tei:p>This is Saunders number 100.</tei:p></description>
+        </descriptionSet>           
+        <relationSet>
+            <relation type="sourceFor" relids="owu.00078"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+            <subject>
+                <term type="geographicPlace" vocab="lccn" refid="n78095520">Philadelphia (Pa.)</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300046300">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by Frederick Gutekunst?, ca. 1888</title>
+            <title type="popular">November Boughs frontispiece</title>
+        </titleSet>  
+        <work id="owu.00078" pref="true">
+            <locationSet>
+                <location type="repository">
+                    <name>Ohio Wesleyan University, Bayley Collection</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00110"/>
+                <relation type="imageIs" relids="image109"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <text>Contact holding institution.</text>
+                </rights>
+            </rightsSet>                    
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300154382">photogravure</worktype>            
+            </worktypeSet>
+            <image id="image109">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">Ohio Wesleyan University, Bayley Collection</name>
+                        <role>creator of master digital image</role>
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">1995</earliestDate>
+                        <latestDate circa="true">2000</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="owu.00078"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="other">
+                        <rightsHolder>Ohio Wesleyan University, Bayley</rightsHolder>
+                        <text>Used with permission. For permission to reproduce this image, contact the holding institution.</text>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+        <work id="uva.00548" pref="true">
+            
+            <locationSet>
+                <location type="repository">
+                    <name>Clifton Waller Barrett Library of American Literature, Special Collections, University of Virginia Library</name>
+                </location>
+                <location type="other">
+                    <name>Papers of Walt Whitman</name>
+                </location>
+                <location type="other">
+                    <name>Box-folder 5:26</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00110"/>
+                <relation type="imageIs" relids="image109"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <rightsHolder>Clifton Waller Barrett Library of American Literature, Special Collections, University of Virginia Library</rightsHolder>
+                    <text>Contact holding institution.</text>
+                </rights>
+            </rightsSet> 
+            <sourceSet>
+                <display>A Guide to the Papers of Walt Whitman, 1838-1987, A Collection in, The Clifton Waller Barrett Library, Special Collections, The University of Virginia Library</display>
+                <source><name type="electronic" href="http://ead.lib.virginia.edu/vivaxtf/view?docId=uva-sc/viu03978.xml">A Guide to the Papers of Walt Whitman, 1838-1987, A Collection in, The Clifton Waller Barrett Library, Special Collections, The University of Virginia Library</name></source>
+            </sourceSet> 
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300128349">print</worktype>                  
+            </worktypeSet>
+        </work>        
+    </collection>        
+</vra>

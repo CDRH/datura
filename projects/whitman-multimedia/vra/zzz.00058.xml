@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://jetson.unl.edu/cdrh/schemas/vra-tei-strict.xsd"?>
+
+
+<vra xmlns="http://www.vraweb.org/vracore4.htm"
+    xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <collection id="zzz.00058">
+        <agentSet>
+            <display>William Kurtz</display>
+            <agent>
+                <name type="personal" vocab="lccn" refid="nr96024138">Kurtz, William, 1833-1804</name>            
+                <dates type="life">
+                    <earliestDate circa="false">1833</earliestDate>
+                    <latestDate circa="false">1904</latestDate>
+                </dates>
+                <role vocab="AAT" refid="300025687">photographer</role>
+            </agent>                
+        </agentSet>        
+        <dateSet>
+            <display>ca. 1867 - 1869</display>
+            <date type="creation">                
+                <earliestDate circa="true">1867</earliestDate>
+                <latestDate circa="true">1869</latestDate>
+            </date>
+        </dateSet>
+        <descriptionSet>            
+            <description source="Walt Whitman Archive"><tei:p>Clara Barrus said that this photograph was "taken by Kurtz in the <tei:title type="newspaper">Brooklyn Eagle</tei:title> office in 1873," but 1873 seems an unlikely year for any photographs, since Whitman suffered a paralytic stroke in January, was devastated further by his mother's death in May, and moved to Camden in July.</tei:p><tei:p> Note the similarity of clothing and pose to other Kurtz photographs from this period. Clearly this photo is in Kurtz's "Rembrandt" style of shadow and light, a style he did not introduce until 1867. An engraved version of this photograph appeared in <tei:title type="newspaper">Frank Leslie's Illustrated Newspaper</tei:title> on April 8, 1876, with the caption, "Walt Whitman-Photographed by W. Kurtz."</tei:p><tei:p>This is Saunders number 42.</tei:p></description>
+        </descriptionSet>           
+        <relationSet>
+            <relation type="sourceFor" relids="duk.00776"/>
+        </relationSet>            
+        <subjectSet>
+            <subject>
+                <term type="personalName" vocab="lccn" refid="n79081476">Whitman, Walt, 1819-1892</term>
+            </subject>
+            <subject>
+                <term type="geographicPlace" vocab="lccn" refid="n79007751"> New York (N.Y.)</term>
+            </subject>
+        </subjectSet>
+        <techniqueSet>
+            <technique vocab="AAT" refid="300046300">photograph</technique>
+        </techniqueSet>   
+        <titleSet>
+            <title type="descriptive">Walt Whitman by William Kurtz, ca. 1867 - 1869</title>
+        </titleSet>  
+        <work id="duk.00776" pref="true">
+            <agentSet>
+                <name>Unknown</name>
+                <role vocab="AAT" refid="300121785">inscriber</role>
+            </agentSet>
+            <inscriptionSet>            
+                <inscription>
+                    <author>Unknown</author>
+                    <position>On the recto, under the portrait</position>
+                    <text type="other">Walt Whitman</text>
+                </inscription>            
+            </inscriptionSet> 
+            <locationSet>
+                <location type="repository">
+                    <name>William R. Perkins Library, Duke University, Trent Collection</name>
+                </location>
+            </locationSet>
+            <measurementsSet>
+                <measurements>Unknown</measurements>
+            </measurementsSet>
+            <relationSet>
+                <relation type="versionOf" relids="zzz.00058"/>
+                <relation type="imageIs" relids="image027"/>
+            </relationSet>
+            <rightsSet>
+                <rights type="other">
+                    <text>Contact holding institution.</text>
+                </rights>
+            </rightsSet>                    
+            <worktypeSet>
+                <worktype vocab="AAT" refid="300128349">print</worktype>            
+            </worktypeSet>
+            <image id="image027">
+                <agentSet>
+                    <agent>
+                        <name type="corporate">William R. Perkins Library, Duke University, Trent Collection</name>
+                        <role>creator of master digital image</role>
+                    </agent>
+                </agentSet>
+                <dateSet>
+                    <date>
+                        <earliestDate circa="true">1995</earliestDate>
+                        <latestDate circa="true">2000</latestDate>
+                    </date>
+                </dateSet>
+                <relationSet>
+                    <relation type="imageOf" relids="duk.00776"/>
+                </relationSet>
+                <rightsSet>
+                    <rights type="other">
+                        <rightsHolder>William R. Perkins Library, Duke University, Trent Collection</rightsHolder>
+                        <text>Used with permission. For permission to reproduce this image, contact the holding institution.</text>
+                    </rights>
+                </rightsSet> 
+                <worktypeSet>
+                    <worktype vocab="AAT" refid="300215302">digital image</worktype>
+                </worktypeSet>
+            </image>
+        </work>    
+    </collection>        
+</vra>
+
