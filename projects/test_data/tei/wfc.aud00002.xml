@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://jetson.unl.edu/cdrh/schemas/tei_all.rng"  type="xml"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="wfc.aud00002">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Cody's Tribute to Edison</title>
+                <author>Cody, William Frederick, 1846-1917</author>
+                <principal>Johnston, Jeremy</principal>
+                <principal>Christianson, Frank</principal>
+                <principal>Seefeldt, Douglas, 1964-</principal>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2011</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <authority>William F. Cody Archive</authority>
+                <publisher>University of Nebraska-Lincoln</publisher>
+                <distributor>
+                    <name>Center for Digital Research in the Humanities</name>
+                    <address>
+                        <addrLine>319 Love Library</addrLine>
+                        <addrLine>University of Nebraska&#8211;Lincoln</addrLine>
+                        <addrLine>Lincoln, NE 68588-4100</addrLine>
+                        <addrLine>cdrh@unlnotes.unl.edu</addrLine>
+                    </address>
+                </distributor>
+                <pubPlace>Lincoln, Nebraska</pubPlace>
+                <address>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <idno type="module"/>
+                <idno type="project">wfc.aud00002</idno>
+                <availability>
+                    <p/>
+                </availability>
+            </publicationStmt>
+
+            <notesStmt>
+                <note/>
+            </notesStmt>
+
+            <sourceDesc>
+                <bibl>
+                    <title level="m" type="main">Cody's Tribute to Edison</title>
+                    <author n="Cody, William Frederick, 1846-1917">William F. Cody</author>
+                    <publisher/>
+                    <note/>
+                    <date/>
+                    <pubPlace/>
+                    <extent/>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+
+        <encodingDesc>
+            <editorialDecl>
+                <correction>
+                    <p/>
+                </correction>
+                <normalization>
+                    <p/>
+                </normalization>
+            </editorialDecl>
+        </encodingDesc>
+
+        <profileDesc>
+            <textClass>
+                <keywords scheme="original" n="category">
+                    <term>Multimedia</term>
+                </keywords>
+                <keywords scheme="original" n="subcategory">
+                    <term>Audio</term>
+                </keywords>
+                <keywords scheme="lcsh" n="subject">
+                    <term/>
+                </keywords>
+                <keywords scheme="lcsh" n="people">
+                    <term>Edison, Thomas A. (Thomas Alva), 1847-1931</term>
+                </keywords>
+                <keywords scheme="lcsh" n="keywords">
+                    <term>Technology</term>
+                    <term>Phonograph</term>
+
+                </keywords>
+            </textClass>
+        </profileDesc>
+
+        <revisionDesc>
+            <change when="2011-08-29"><name xml:id="jah">Heppler, Jason</name> Initial transcription
+                and markup</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text>
+        <body>
+            <div1 type="html">
+
+
+                <h3>Cody's Tribute to Edison</h3>
+
+                <audio controls="controls">
+                    <source src="../audio/mp3/codyedison.mp3" type="audio/mpeg"/>
+                    <source src="../audio/ogg/codyedison.ogg" type="audio/ogg"/>
+
+                    <embed src="http://www.google.com/reader/ui/3523697345-audio-player.swf"
+                        flashvars="audioUrl=../audio/mp3/codyedison.mp3"
+                        type="application/x-shockwave-flash" width="230" height="27" quality="best"
+                    />
+                </audio>
+
+                <p>It is a great pleasure to see this wonder working man at his task and to find
+                    that though he is super man to all the world, he is very human at home and among
+                    those who labor with him.</p>
+
+                <p>He has made the dynamo that has changed the world. It seems almost uncanny that
+                    the voice in this place can be perpetuated and that he has set out to the world
+                    his phonograph, which have given more entertainment and pleasure than any
+                    invention in the history of the world.</p>
+
+                <p>Courtesy of the G. Robert Vincent Voice Library of the Michigan State University
+                    Libraries.</p>
+
+            </div1>
+
+        </body>
+    </text>
+</TEI>

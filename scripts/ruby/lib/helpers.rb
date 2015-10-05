@@ -17,41 +17,6 @@ def get_directory_files(directory, verbose_flag=false)
   end
 end
 # end get_directory_files
-# takes the the config files organized like config = { :proj => {}, :main => {}}
-# and returns the xslt that is supposed to be used, as some projects override the default
-def get_xslt_path(configs, project, env)
-  if configs[:proj]["xslt"][env]["override_tei_xslt"] == true
-    puts "Should be using an alternate script"
-    # check for the existence of the other path
-    if configs[:proj]["override_scripts"]["tei"]
-      # substitute in the tei xslt path that should be used
-      configs[:main]["xsl_scripts"]["tei"] = configs[:proj]["override_scripts"]["tei"]
-    else
-      raise Exception("Config file is missing the override script for xslt")
-    end
-  end
-  return configs
-end
-
-# read_configs
-#   reads the main config file and extrapolates the project config file from that information
-#   params: dir (directory with general config), 
-#     project (string of name),
-#     verbose_flag (if extra reporting is desired)
-#   returns: if unable to read, exits with error, else returns hash
-def read_configs(dir, project, verbose_flag=false)
-  begin
-    config_main = YAML.load_file("#{dir}/../../config/config.yml")
-    root = config_main["repo_directory"]
-    config_prj = YAML.load_file("#{root}/projects/#{project}/config/config.yml")
-    return { :main => config_main, :proj => config_prj }
-  rescue Exception => e
-    puts "There was an error reading a config file: #{e.message}"
-    puts "Stacktrace: \n\t#{e.backtrace.inspect}" if verbose_flag
-    exit
-  end
-end
-# end read_configs
 
 # regex_files
 #   looks through a directory's files for those matching the regex
