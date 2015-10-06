@@ -2,8 +2,8 @@ require_relative './helpers.rb'
 
 class Options
   attr_reader :all
-  # attr_reader :xslt_params
-  # attr_reader :xslt_location
+  # attr_reader :xsl_params
+  # attr_reader :xsl_location
 
   def initialize(params, general_config_path, project_config_path)
     @directory = File.dirname(__FILE__)

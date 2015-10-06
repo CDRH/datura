@@ -25,9 +25,9 @@ class Transformer
     @regex = @options["regex"]
     @update_time = @options["update_time"] || nil
 
-    # xslt parameters
-    @xslt_param_json = options["xslt_params"]
-    @xslt_param_string = _stringify_params(options["xslt_params"])
+    # xsl parameters
+    @xslt_param_json = options["xsl_params"]
+    @xslt_param_string = _stringify_params(options["xsl_params"])
 
     # error holder
     @saxon_errors = []
