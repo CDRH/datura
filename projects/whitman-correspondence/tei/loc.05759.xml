@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>  
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05759">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Hannah L. Taylor to Walt Whitman, 10 December 1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Hannah L. Taylor</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="no">Natalie O'Neal</persName>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05759</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>           
+            <sourceDesc>
+                <bibl>
+                    <author>Hannah L. Taylor</author>
+                    <title>Hannah L. Taylor to Walt Whitman, 10 December 1880</title>
+                    <date cert="high" when="1880-12-10" xml:id="dat1">December 10, 1880</date>
+                    <idno type="callno">MSS18630, Box 33</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Taylor, Hannah L.">Hannah L. Taylor</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-01-05" who="#nhg">corrected annotation</change>
+            <change when="2014-11-22" who="#nhg">checked, corrected</change>
+            <change when="2014-11-07" who="#ak">corrected transcription and encoding</change>
+            <change when="2014-09-30" who="#no">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body> 
+
+            <pb xml:id="leaf001r" facs="loc_ej.00929c.jpg" type="recto"/>
+
+            <opener>
+                <dateline rend="right">
+                    <date when="1880-12-10">12.10.80.</date><ptr target="loc.05759_n1"/>
+                </dateline>
+                <salute>Mr. Walt Whitman:</salute>
+                <salute>Respected Sir,</salute>
+            </opener>
+
+            <p>Your kindness was received and <unclear reason="illegible" resp="#nhg" cert="low">I</unclear> hopefully appreciated this evening.</p>
+
+            <p>Please accept my sincere thanks for your favor.</p>
+
+            <closer>
+                <salute>Very gratefully yours</salute>
+                <signed>Hannah L. Taylor</signed>
+                <address><addrLine>Cambridge, N.J.</addrLine></address>
+            </closer>
+           </body> 
+        <!-- This page has other letters attached to it -->
+        
+        <pb xml:id="leaf001v" facs="loc_ej.00928.jpg" type="verso"/>
+        <!-- Whitman wrote prose on this page - unrelated to letter -->
+        
+    </text>
+</TEI>

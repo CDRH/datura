@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05934">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt> 
+                <title level="m" type="main">Richard Maurice Bucke to Walt Whitman, 15 September
+                    1885</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Richard Maurice Bucke</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2015</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05934</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <editor>Artem Lozynsky</editor>
+                        <title xml:id="al">The Letters of Dr. Richard Maurice Bucke to Walt
+                            Whitman</title>
+                        <imprint>
+                            <pubPlace>Detroit</pubPlace>
+                            <publisher>Wayne State University Press</publisher>
+                            <date when="1977">1977</date>
+                            <biblScope type="page">27</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Richard Maurice Bucke</author>
+                    <title>Richard Maurice Bucke to Walt Whitman, 15 September 1885</title>
+                    <date cert="high" when="1885-09-15" xml:id="dat1">September 15, 1885</date>
+                    <idno type="callno">Box 4, Reel 2-3</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Bucke, Richard Maurice" ref="n0119">Richard Maurice Bucke</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-07-15" who="#kb">edited</change>
+            <change when="2015-06-11" who="#if">edited</change>
+            <change when="2015-04-12" who="#ss">added annotations</change>
+            <change when="2015-01-24" who="#ss">Transcribed, encoded and annotated from
+                Lozynsky</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place">[London,]</name>
+                    <date when="1885-09-15">15 Sept [188]5</date>
+                </dateline>
+                <salute>Dear Walt</salute>
+            </opener>
+            <p>I have your card of day before yesterday.<ptr target="loc.05934_n1"/></p>
+            <p>O'Connor left here yesterday for Buffalo, N. Y., Philadelphia, and home&#8212;You
+                will likely see him about 20th or a few days later.<ptr target="loc.05934_n2"/> I
+                expect to see you about middle of next month at which time I leave here for a good
+                long holiday. I am pretty tired out. Mrs. B. &#38; children are well, weather
+                delightfull here and the place looks well</p>
+            <p>I am quite anxious to see you again and have a long chat. What about Mary Smith? is
+                she married? Is she back in America, or is she coming back soon?<ptr
+                    target="loc.05934_n3"/></p>
+            <closer>
+                <salute>Your friend</salute>
+                <signed>R M Bucke</signed>
+            </closer>
+        </body>
+    </text> 
+</TEI>

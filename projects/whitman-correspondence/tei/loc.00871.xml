@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.00871">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Bayard Taylor to Walt Whitman, 12 November 1866</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Bayard Taylor</author>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="bb">Brett Barney</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+               <persName xml:id="hb">Heidi Bean</persName>
+               <persName xml:id="ec">Elise Cook</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>loc.00871</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <author>Bayard Taylor</author>
+               <title>Bayard Taylor to Walt Whitman, 12 November 1866</title>
+               <date when="1866-11-12">November 12, 1866</date>
+               <orgName xml:id="loc">Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Taylor, Bayard">Bayard Taylor</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#bb" when="2010-04-09">corrected encoding of salutation; edited annotations</change>
+         <change who="#vs" when="2009-08-27">proofread and edited annotations</change>
+         <change who="#vs" when="2009-08-13">added annotations</change>
+         <change who="#hb" when="2008-11-06">Encoded</change>
+         <change who="#ec" when="2008-10-25">Transcribed</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         <pb facs="loc_vm.00455.jpg" type="recto"/>
+            <opener rend="right">
+               <dateline>
+                  <name type="place">Kennett Square, Penna.</name>
+                  <date when="1866-11-12">Nov. 12, 1866</date>
+               </dateline>
+               <salute>My dear Sir:</salute>
+            </opener>
+         <p>I<ptr target="loc.00871_n100"/> send to you by the same mail which takes this note, a copy of my last poem The Picture of St. John.  I do not know whether the subject of the poem (the growth and development of the artist-nature, and its relation to life) will much interest you, but I hope you will here and there find something drawn immediately from nature.  I am, at least, not aware that anything in the book is simulated or forced:  whether successful or not, it is an honest conscientious effort.</p>
+            <p>I value, above all things, sincerity  in literature; hence I am 
+               
+               <pb facs="loc_vm.00456.jpg" type="verso"/>
+               
+               not one of those who overlook your remarkable powers of expression, your broad, vital reverence for humanity, because some things you have said repel them.  The age is over-squeamish, and, for my part, I prefer the honest nude to the suggestive half-draped.  I think the proper question to be asked is:  does a certain thing need to be said?  If so, let it be said!  The worst form of immorality, I have found, veils itself in decent words.</p>
+            <p>There is one quality I recognize in you, which warmly and constantly attracts me.  That is, your deep and tender reverence for Man&#8212;your <choice><orig>un-
+               
+               <pb facs="loc_vm.00457.jpg" type="recto"/>
+               
+               wearied</orig><reg>unwearied</reg></choice>, affectionate, practical fraternity.  There is too little of this quality in the world, and the race will be better and happier in proportion as it is manifested.</p>
+            <p>I shall be in Washington on the 27th of December, to lecture, and hope that I shall then be able to meet you personally.  If you can spare me an hour or two after the lecture, you will greatly oblige</p>
+            <closer rend="right">
+               <salute>Your friend,</salute>
+               <signed>Bayard Taylor</signed>
+            </closer>
+         
+         <pb facs="loc_vm.00458.jpg" type="verso"/>
+         
+      </body>
+   </text>
+</TEI>

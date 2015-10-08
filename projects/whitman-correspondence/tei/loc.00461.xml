@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.00461">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Thomas Jefferson Whitman  to Louisa Van Velsor Whitman, 7 February 1873</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Thomas Jefferson Whitman</author>
+            <editor>Dennis Berthold</editor>
+            <editor>Kenneth M. Price</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+
+               <persName xml:id="kk">Kathryn Kruger</persName>
+               <persName xml:id="al">April Lambert</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>loc.00461</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Thomas Jefferson Whitman</author>
+                  <editor>Dennis Berthold</editor>
+                  <editor>Kenneth M. Price</editor>
+                  <title xml:id="dbw">Dear Brother Walt: The Letters of Thomas Jefferson Whitman</title>
+                  <imprint>
+                     <pubPlace>Kent, Ohio</pubPlace>
+                     <publisher>Kent State University Press</publisher>
+                     <date>1984</date>
+                     <biblScope type="page">154-155</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Thomas Jefferson Whitman</author>
+               <title>Thomas Jefferson Whitman  to Louisa Van Velsor Whitman, 7 February 1873</title>
+               <date when="1873-02-07">February 7, 1873</date>
+               <orgName xml:id="loc">Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Thomas Jefferson">Thomas Jefferson Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#el" when="2008-07-21">updated TEI header</change>
+         <change who="#kk" when="2008-04-01">checked and proofed</change>
+         <change who="#al" when="2006-10-03">Transcribed, Encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <dateline rend="right">
+                  <name type="place">St. Louis,</name>
+                  <date when="1873-02-07">Feb 7th 1873</date>
+               </dateline>
+               <salute>My dear Mother</salute>
+            </opener>
+            <p>I wrote you a few days ago apprising you as to Mattie's health  I do not see that there is any change since then&#8212;if any she is somewhat easier&#8212;that is these terrible fits of coughing and choking do not come so often&#8212;yet when they do come I hardly expect her to come out of them</p>
+            <p>The weather has been exceedingly pleasant here for four or five days now and I have had Mattie out in the buggy for about an hour each day&#8212;this seems to do her more good than anything else</p>
+            <p>To-day, if I can arrange it I intend to take her to a photograph gallery to have another picture taken</p>
+            <p>She speaks often and much about you&#8212;and wants to see you very, very much&#8212;I suppose you would hardly dare undertake the journey&#8212;and it would be impossible for me to leave her to come for you&#8212;of course I would arrange all the money matters if you could come&#8212;I suppose you know how the coming would be&#8212;you would take a "section" in one of the through sleeping cars&#8212;you would be abt 40 hours on the car&#8212;this car would bring you to East St. Louis&#8212;where I would meet you&#8212;here we would take a carriage that would take you to the house&#8212;Of course I can understand that you may not feel able for the journey&#8212;but I feel positive that if you once did get here you would feel better than you do<ptr target="loc.00461_n1"/>&#8212;</p>
+            <p>I will write you as soon as I can again  Love to George and Loo and Eddy&#8212;I hope you are feeling pretty well dear Mother</p>
+            <closer rend="right">
+               <signed>affectionately Jeff</signed>
+            </closer>
+         
+      </body>
+   </text>
+</TEI>

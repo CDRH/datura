@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>  
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05773">
+    <teiHeader>
+        <fileDesc> 
+            <titleStmt> 
+                <title level="m" type="main">Hatch &#38; Foote [?] to Walt Whitman, 15 November 1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Hatch &#38; Foote [?]</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="no">Natalie O'Neal</persName>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05773</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>           
+            <sourceDesc>
+                <bibl>
+                    <author>Hatch &#38; Foote [?]</author>
+                    <title>Hatch &#38; Foote [?] to Walt Whitman, 15 November 1880</title>
+                    <date cert="high" when="1880-11-15" xml:id="dat1">November 15, 1880</date>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Hatch &#38; Foote, Bankers">Hatch &#38; Foote [?]</persName>
+                </person>
+                <person role="recipient" xml:id="ww">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2014-11-21" who="#nhg">checked, corrected</change>
+            <change when="2014-11-07" who="#ak">corrected transcription and encoding</change>
+            <change when="2014-10-10" who="#no">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <pb xml:id="leaf001r" facs="loc_ej.00935_large.jpg" type="recto"/>
+            
+            <note type="editorial" place="top" resp="#ww">Books sent by express</note>
+            
+            <opener> 
+                <dateline>
+                    <name type="place"><handShift rend="printed"/>Hatch &#38; Foote,<ptr target="loc.05773_n1"/> <lb/>Bankers</name>
+                    <name type="place">12 WALL STREET. NEW YORK.</name>
+                    <milestone unit="undeclared" rend="horbar-short-left"/>
+                    <name type="place">P. O. Box 3766.</name>
+                    <date when="1880-11-15"><handShift rend="manuscript"/>Nov 15 <handShift rend="printed"/>188<handShift rend="manuscript"/>0</date>
+                </dateline>
+                <salute>Walt Whitman Esq</salute>
+                <salute>Dear Sir:</salute> 
+            </opener>
+            
+            <p>Will you please send to my address by Express the two volumes of your poems referred to so pleasantly, by your friend E. C. Stedman in
+                <gap reason="cut away" unit="lines" quantity="3"/></p>
+            <!-- letter incomplete -->
+                
+            <pb xml:id="leaf002v" facs="loc_ej.00934_large.jpg" type="verso"/>
+            <!-- Whitman wrote some prose on this page - unrelated to letter -->
+
+    </body>  
+    </text>
+</TEI>

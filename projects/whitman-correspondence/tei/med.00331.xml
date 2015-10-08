@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="med.00331">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Henry Clapp, Jr. to Walt Whitman, 14 May 1860</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Henry Clapp, Jr.</author>
+            <editor>Kenneth M. Price</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+               <persName xml:id="kk">Kathryn Kruger</persName>
+               <persName xml:id="jw">Joshua Ware</persName>
+               <persName xml:id="nhg">Nicole Gray</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2009</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>med.00331</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Horace Traubel</author>
+                  <title xml:id="wwwc">With Walt Whitman in Camden</title>
+                  <imprint>
+                     <pubPlace>New York</pubPlace>
+                     <publisher>D. Appleton</publisher>
+                     <date when="1908">1908</date>
+                     <biblScope type="volume">2</biblScope>
+                     <biblScope type="page">375-76</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Henry Clapp, Jr.</author>
+               <title>Henry Clapp, Jr. to Walt Whitman, 14 May 1860</title>
+               <date when="1860-05-14">May 14, 1860</date>
+               <orgName xml:id="med">Location of original letter manuscript is unknown.</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Clapp Jr., Henry">Henry Clapp, Jr.</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+         <change who="#nhg" when="2014-09-22">corrected date</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#vs" when="2010-04-16">proofreading changes</change>
+         <change who="#kk" when="2010-04-13">updated Juliette Beach annotation</change>
+         <change who="#jw" when="2009-09-08">Added the footnote for Charles Gardette</change>
+         <change who="#vs" when="2009-07-31">added annotations</change>
+         <change who="#vs" when="2009-07-16">Transcribed, Encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener rend="right">
+               <dateline>
+                  <name type="place">N.Y.</name>
+                  <date when="1860-05-14">Monday May 14, '60</date>
+               </dateline>
+            </opener>
+            <p>
+               <hi rend="italic">My dear Walt</hi>: I<ptr target="med.00331_n100"/> spent much time yesterday reading your poems, and am more charmed with them than ever. I think you would have done well to follow Mr. Emerson's advice, but you may have done better as it is. At any rate, the book is bound to sell, if money enough is spent circulating the Reprints and advertising it generally. It is a fundamental principle in political economy that everything succeeds if money enough is spent on it. If I could spend five hundred dollars in one week on the Saturday Press I would make five thousand dollars by the operation. Ditto you with the L. of G.</p>  
+            <p>You should send copies at once to Vanity Fair, Momus, The Albion, The Day Book, The Journal of Commerce, Crayon&#8212;also to Mrs. Juliette H. Beach, Albion, N.Y.,<ptr target="med.00331_n3"/> who will do you great justice in the S.P. (for we shall have a <hi rend="italic">series</hi> of articles)&#8212;to Charles D. Gardette Esq,<ptr target="med.00331_n101"/> No 910 Walnut Street, Philadelphia, to Evening Journal, Philadelphia, and also some dozen copies to me to be distributed at discretion. Do not hereafter ask the editors to notice at any particular time or at all: for the effect is bad.</p>
+            <p>I want to do great things for you with the book, and as soon as I get over my immediate troubles will do so. But just now I am in a state of despair even in respect to getting out another issue of the S.P. and all for want of a paltry two or three hundred dollars which would take the thing to a paying point, and make it worth ten thousand dollars as a transferable piece of property.</p>
+            <closer rend="right">
+               <salute>Yours in haste,</salute>
+               <signed>Henry Clapp, Jr.</signed>
+            </closer>
+         
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.04624">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Samuel B. Wright to Walt Whitman, 21 May 1885</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Samuel B. Wright</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.04624</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Samuel B. Wright</author>
+                    <title>Samuel B. Wright to Walt Whitman, 21 May 1885</title>
+                    <date cert="high" when="1885-05-21" xml:id="dat1">May 21, 1885</date>
+                    <idno type="callno">MSS18630 Box 18</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Wright, Samuel B." ref="n5000">Samuel B. Wright</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-08-04" who="#nhg">corrected</change>
+            <change when="2015-06-28" who="#kb">edited</change>
+            <change when="2015-05-25" who="#if">edited</change>
+            <change when="2015-02-28" who="#ss">annotated</change>
+            <change when="2014-12-02" who="#ss">checked and corrected</change>
+            <change when="2014-12-01" who="#ak">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_vm.02437_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">Oskaloosa Iowa</name>
+                    <date when="1885-05-21">May 21&#8212;85</date>
+                </dateline>
+                <salute>Dear Sir:</salute>
+            </opener>
+            <p> Have you any other volume published besides "Leaves of Grass" and "Specimen Days
+                &amp; Collect"? I have these two, and have been
+                acquainted with your writings for some time, <choice>
+                    <abbr>altho</abbr>
+                    <expan>although</expan>
+                </choice> but a young man as yet. I will be glad to procure any other volume you may
+                have. I have seen in some public library (I think at Minneapolis and Cincinnati) a
+                volume of biography, <choice>
+                    <abbr>altho</abbr>
+                    <expan>although</expan>
+                </choice> it seems to me now there were two different ones. </p>
+            <p> I would be pleased also to have a large picture of yourself, if any has ever been
+                published. A cabinet photograph, at any rate. I will remit you whatever these may be
+                worth. I understand you have no publisher now, <choice>
+                    <abbr>altho</abbr>
+                    <expan>although</expan>
+                </choice> "David McKay <choice><abbr>Phila.</abbr><expan>Philadelphia</expan></choice>" appears on the title page of your books&#8212;</p>
+            
+            <closer>
+                <salute>Awaiting with interest a line from you, I am </salute>
+                <salute>Your Young Friend &amp; Well-wisher</salute>
+                <signed>Samuel B. Wright</signed>
+            <salute/>
+                <salute>To Walt Whitman:</salute>
+                    <salute>Camden N.J.</salute>
+            </closer>
+            <pb xml:id="leaf001v" facs="loc_vm.02438_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

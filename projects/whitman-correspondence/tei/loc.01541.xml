@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.01541">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Peter Doyle, 16 February 1872</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="el">Elizabeth Lorang</persName><persName xml:id="kk">Kathryn Kruger</persName><persName xml:id="zk">Zachary King</persName><persName xml:id="ec">Eric Conrad</persName><persName xml:id="ak">Alex Kinnaman</persName><persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska–Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.01541</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska–Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2014 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Peter Doyle, 16 February 1872</title>
+
+                    <date cert="high" when="1872-02-16" xml:id="dat1">February 16, 1872</date>
+                    <idno type="callno">MSS18630, Box 9, Reel 5-6</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="unk"><persName key="Unknown">Unknown</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                     <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Doyle, Peter" ref="n0752">Peter Doyle</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-04-17">checked, corrected, added ref</change>
+            <change who="#ak" when="2014-11-03">added annotations</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+<change when="2014-08-12" who="#el">made basic checking changes to file</change>
+            <change when="2012-01-04" who="#kk">checked</change>
+            <change when="2010-12-08" who="#zk">encoded</change>
+            <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body> <pb xml:id="leaf001r" facs="loc.01541.003_large.jpg" type="recto"/>
+            <note type="editorial" resp="#unk" place="top"><hi rend="underline">Saturday</hi></note>
+            <opener> 
+                <dateline>
+                    <name type="place" rend="right">Brooklyn,<ptr target="loc.01541_n2" /> <lb/>107 north Portland av.</name>
+                    <date when="1872-02-16" rend="right"><choice><abbr>Feb.</abbr><expan>February</expan></choice> 16, 1872</date>.
+                    
+                </dateline>
+                <salute>Dear Pete,</salute>
+                <salute>Dear, dear son,</salute>
+            </opener>
+
+            <p>We are having a very cold spell here, the severest of the winter&#8212;freezes up the pipes through the house, 
+                &amp; burst them yesterday, causing great trouble&#8212;I too have got a bad cold, my head all stopped&#8212;</p> 
+            
+            <p>&#8212;I came through all right last Saturday,<ptr target="loc.01541_n1"/> on time&#8212;quite a pleasant trip&#8212;Mother is very well, 
+                full as well as usual&#8212;I am having quiet good <pb xml:id="leaf001v" facs="loc.01523.004_large.jpg" type="verso"/>times home here, with Mother&#8212;stay in the house 
+                more than usual, on account of the bitter cold, (but go out two or three hours during the day)&#8212;</p>
+            
+            <p>I will only write this very short letter to you this time, but send you my love, my darling son&#8212;I think about you every day dear son&#8212;will write more, soon&#8212;here is a kiss for you dear loving son.
+            </p>
+
+            <closer>
+                <signed rend="right">Walt</signed>
+            </closer>
+            <pb xml:id="leaf002r" facs="loc.01541.005_large.jpg" type="recto"/>
+            
+            <postscript>
+                
+                <p>Pete, I am making out a poor scraggy letter to you this time&#8212;I feel pretty well, 
+                    but don't seem to feel like writing&#8212;Good bye for to-day, my loving boy&#8212;</p>
+                
+                <p>Your true Father &amp; Comrade always
+                </p>
+                
+            </postscript>
+            <pb xml:id="leaf002v" facs="loc.01541.006_large.jpg" type="verso"/>
+            
+           <pb xml:id="leaf003r" facs="loc.01541.001_large.jpg" type="recto"/>
+            <pb xml:id="leaf003v" facs="loc.01541.002_large.jpg" type="verso"/>
+        </body></text>
+    
+</TEI>

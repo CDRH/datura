@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="har.00057">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to William D. O'Connor, 10 January
+               [1867?]</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Kenneth M. Price</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="jyc">Jonathan Y. Cheng</persName>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+               <persName xml:id="ak">Alex Kinnaman</persName>
+               <persName xml:id="nhg">Nicole Gray</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of
+               Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2014</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>har.00057</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in
+                  the Archive may be shared in accordance with the Fair Use provisions of U.S.
+                  copyright law. Redistribution or republication on other terms, in any medium,
+                  requires express written consent from the editors and advance notification of the
+                  publisher, Center for Digital Research in the Humanities. Permission to reproduce
+                  the graphic images in this archive has been granted by the owners of the originals
+                  for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <editor>Ted Genoways</editor>
+                  <author>Walt Whitman</author>
+                  <title xml:id="tg">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>Iowa City</pubPlace>
+                     <publisher>University of Iowa Press</publisher>
+                     <date>2004</date>
+                     <biblScope type="volume">7</biblScope>
+                     <biblScope type="page">27</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to William D. O'Connor, 10 January [1867?]</title>
+               <date cert="medium" when="1867-01-10" xml:id="dat1">January 10, 1867</date>
+               <orgName xml:id="har">Manuscripts Department, Houghton Library, Harvard
+                  University</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="O'Connor, William D." ref="n2002">William D. O'Connor</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+         <change who="#ak" when="2015-04-20">added correspondent ref</change>
+         <change who="#nhg" when="2015-02-24">checked, corrected</change>
+         <change who="#ak" when="2014-11-06">added annotations</change>
+         <change who="#jyc" when="2014-09-24">checked, revised</change>
+         <change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#nnk" when="2014-06-03">transcribed, encoded</change>
+
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+
+         <opener>
+            <dateline><date when="1867-01-10" rend="right">January 10<ptr target="har.00057_n1"/></date>
+               <date><lb/>3 o'clock p.
+               m.</date></dateline>
+            <salute rend="left">Dear William,</salute> 
+         </opener> 
+         <p>Mr. Trowbridge<ptr target="har.00057_n2"/> is going to start for Boston to-night in 7
+            o'clock train&#8212;should you wish to send any word, (or any thing else) to Nelly
+            personally, he will deliver it. I suppose you can find him at Mr. Newton's<ptr
+               target="har.00057_n3"/> at the barracks cor 17th &amp; I till about 6 p. m.</p>
+         <closer rend="right">
+            <salute/>
+            <signed>Walt.</signed>
+         </closer>
+
+      </body>
+   </text>
+</TEI>

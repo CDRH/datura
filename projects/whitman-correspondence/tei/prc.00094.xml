@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="prc.00094">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to Edward P. Clark, 13 June
+               1874</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Kenneth M. Price</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="ak">Alex Kinnaman</persName>
+               <persName xml:id="jyc">Jonathan Y. Cheng</persName>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="nnk">Nima Najafi Kianfar</persName>               
+               <persName xml:id="nhg">Nicole Gray</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of
+               Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2014</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>prc.00094</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in
+                  the Archive may be shared in accordance with the Fair Use provisions of U.S.
+                  copyright law. Redistribution or republication on other terms, in any medium,
+                  requires express written consent from the editors and advance notification of the
+                  publisher, Center for Digital Research in the Humanities. Permission to reproduce
+                  the graphic images in this archive has been granted by the owners of the originals
+                  for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <editor>Ted Genoways</editor>
+                  <author>Walt Whitman</author>
+                  <title xml:id="tg">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>Iowa City</pubPlace>
+                     <publisher>University of Iowa Press</publisher>
+                     <date>2004</date>
+                     <biblScope type="volume">7</biblScope>
+                     <biblScope type="page">40</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to Edward P. Clark, 13 June 1874</title>
+               <date cert="high" when="1874-06-13" xml:id="dat1">June 13, 1874</date>
+               <orgName xml:id="prc">Private collection of Dr. Kendall Reed. A facsimile of the manuscript is in Ted Genoways, "The Correspondence of Walt Whitman: A Third Supplement with Addenda to the Calendar of Letters Written to Whitman," <hi rend="italic">Walt Whitman Quarterly Review</hi> 18 (Summer/Fall 2000), 3&#8211;59.</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Clark, Edward P." ref="prc.00094_n1">Edward P. Clark</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+         <change who="#ak" when="2015-04-20">added correspondent ref</change>
+         <change who="#nhg" when="2015-03-03">checked, corrected</change>
+         <change who="#ak" when="2014-11-04">added annotations</change>
+         <change who="#jyc" when="2014-09-30">checked, revised</change>
+         <change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#nnk" when="2014-06-04">transcribed, encoded</change>
+
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+
+         <opener>
+            <dateline><name type="place" rend="right">431 Stevens st. <lb/>cor West. Camden, N.
+                  Jersey</name> 
+               <date when="1874-06-13" rend="right">June 13. '74</date></dateline>
+            <salute rend="left">Edward P. Clark</salute>
+            <salute rend="left">Dear Sir,</salute>
+         </opener>
+         <p>In answer to your note I send enclosed a copy of my poem for Tuft's College on the
+            17th&#8212;which you are at liberty to publish on the 18th.<ptr target="prc.00094_n2"/>
+            I am not well enough to journey to College Hill, but have sent the piece &amp; requested
+            that it be read in its place on the programme, 17th, exactly the same as though I were
+            present&#8212;which doubtless will be done.</p>
+         <closer rend="right">
+            <signed>Walt Whitman</signed>
+         </closer>
+
+      </body>
+   </text>
+</TEI>

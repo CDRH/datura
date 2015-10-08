@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="whm.00001">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Edwin Booth, 21 August 1884</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>whm.00001</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">376</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Edwin Booth, 21 August 1884</title>
+                    <date cert="low" when="1884-08-21" xml:id="dat1">August 21, 1884</date>
+                    <orgName xml:id="whm">The Walter Hampden Memorial Library, The Players, New
+                        York</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Booth, Edwin" ref="loc.05827_n1">Edwin Booth</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-08-11" who="#nhg">checked, corrected</change>
+            <change when="2015-07-22" who="#kb">edited</change>
+            <change when="2015-06-02" who="#if">edited</change>
+            <change when="2015-02-14" who="#ss">added annotations</change>
+            <change when="2014-09-16" who="#ss">transcribed, encoded and partially
+                annotated.</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter"> 
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place">328 Mickle Street</name>
+                    <name type="place">Camden New Jersey</name>
+                    <date when="1884-08-21" rend="right">Aug: 21 '84</date>
+                </dateline>
+                <salute>My dear Sir</salute>
+            </opener> 
+            <p>First begging your pardon &#38; hoping "I dont intrude" (yet knowing I do)&#8212;I am
+                writing for the magazine market&#8212;or rather have written&#8212;a reminiscence of
+                the actors &#38; plays &#38; "the old Bowery" of my youthful days&#8212;the chief
+                figure in it being your father&#8212;by far the greatest histrion I have ever seen
+                in my life (&#38; I have always been a theatre goer)&#8212;</p>
+            <p>What I write to you now for, I want a good characteristic portrait of your father
+                either in citizen's costume, or, (if <hi rend="italic">very good</hi>) in one of his
+                dramatic characters, to wood-engrave an illustration from&#8212;say to make a
+                picture to fill <choice><abbr>ab't</abbr><expan>about</expan></choice> the size of one of the Harper's Magazine pages. Can you help me
+                to it?<ptr target="whm.00001_n1"/> </p>
+            <p>I am disabled <choice><abbr>coop'd</abbr><expan>cooped</expan></choice> up here, &#38; can't get about to get things for myself&#8212;or
+                I wouldn't trouble you&#8212;</p>
+            <p>Won't you allow me to send you an autograph copy of my "Leaves of Grass" as a nibble
+                at recompense?</p>
+            <closer><signed>Walt Whitman</signed></closer>
+
+        </body>
+    </text>
+</TEI> 

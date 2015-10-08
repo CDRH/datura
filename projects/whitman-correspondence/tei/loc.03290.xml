@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03290">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">James Redpath to Walt Whitman, 23 October 1885</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>James Redpath</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="smb">Stephanie Blalock</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03290</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>James Redpath</author>
+                    <title>James Redpath to Walt Whitman, 23 October 1885</title>
+                    <date cert="high" when="1885-10-23" xml:id="dat1">October 23, 1885</date>
+                    <idno type="callno">Box 14, Reel 8-9</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Redpath, James" ref="n4981">James Redpath</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-07-16" who="#smb">corrected</change>
+            <change when="2015-07-13" who="#smb">final check</change>
+            <change when="2015-06-12" who="#if">edited</change>
+            <change when="2015-04-12" who="#ss">added annotations</change>
+            <change when="2014-11-20" who="#ss">checked and corrected</change>
+            <change when="2014-11-14" who="#ak">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.03290.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <handShift rend="printed"/>  
+                    <name type="place">The North American Review.</name>
+                    <name type="place"><hi rend="italic">30 Lafayette Place.</hi></name>
+                    <name type="place"><hi rend="italic">ALLEN THORNDIKE RICE,</hi> <lb/><hi rend="italic">Editor and Proprietor.</hi></name>
+                    <name type="place"><hi rend="italic">New York City,</hi></name>
+                    <date when="1885-10-23"><handShift rend="manuscript"/>Oct. 23, <handShift
+                            rend="printed"/>1885.</date>
+                    <!-- letterhead includes seal explaining a dictated letter -->
+                </dateline>
+                <handShift rend="manuscript"/>
+                <salute>My Dear Walt Whitman:</salute>
+            </opener>
+            <p> I am very, very sorry to learn that your physical condition is so low and that it
+                prevents you from doing much work. What I want to know is whether, if I send a
+                stenographer over to you, he could do your work, that is to say, could you dictate
+                with perfect ease the article on Lincoln and such other articles as you may have
+                intended for the North American Review, or any other of Mr. Rice's<ptr
+                    target="loc.02206_n4"/> literary enterprises. I think I can manage to give you
+                this help if you could utilize it.<ptr target="loc.03290_n1"/>
+            </p>
+            <closer>
+                <salute>Very truly yours,</salute>
+                <signed>Jas Redpath</signed>
+                <salute></salute>
+                <salute>Walt Whitman, <choice><abbr>Esq.</abbr><expan>Esquire</expan></choice></salute>
+                <address><addrLine>Camden, N. J.</addrLine></address>
+            </closer>
+            <pb xml:id="leaf001v" facs="loc.03290.002_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

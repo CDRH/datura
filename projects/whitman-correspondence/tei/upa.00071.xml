@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="upa.00071">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Herbert Gilchrist, [28 May
+                    1879]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>upa.00071</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Herbert Gilchrist, [28 May 1879]</title>
+                    <date cert="medium" when="1879-05-28" xml:id="dat1">May 28, 1879</date>
+                    <orgName xml:id="upa">Walt Whitman Collection, 1842&#8211;1957, Rare Book &#38;
+                        Manuscript Library, University of Pennsylvania</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Gilchrist, Herbert">Herbert Gilchrist</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-07" who="#nhg">checked transcription against images</change>
+            <change when="2013-05-01" who="#km">checked</change>
+            <change when="2013-01-15" who="#ej">Checked and Corrected</change>
+            <change when="2012-12-18" who="#gt">checked</change>
+            <change when="2012-10-26" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="upa.00071.001_large.jpg" type="recto"/>
+            <p>Herb yours <choice>
+                    <abbr>rec'd</abbr>
+                    <expan>received</expan>
+                </choice> &#38; welcomed&#8212;Nothing very new with me here&#8212;have enjoyed the
+                past seven weeks hugely&#8212;but am quite ready to go back&#8212;You must be having
+                first-rate times there&#8212;Bee was here to see me Monday&#8212;looks
+                    well&#8212;Eaton<ptr target="upa.00071_n2"/> is still in Canada, I
+                hear&#8212;Some artists here, last evening&#8212;(one of the Morans,<ptr
+                    target="upa.00071_n3"/> &#38; wife)&#8212;Herb I suppose you get the papers I
+                send you<ptr target="upa.00071_n4"/>&#8212;I am well&#8212;great <hi rend="underline"
+                    >Tom Moore Centenary</hi><ptr target="upa.00071_n1"/> here in N Y
+                to night&#8212;I have been formally invited&#8212;but shall not attend&#8212;</p>
+
+            <closer>
+                <signed rend="right">W W</signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="upa.00071.002_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

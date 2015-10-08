@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>  
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05763">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">George Heard to Walt Whitman, 25 October 1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>George Heard</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="no">Natalie O'Neal</persName>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05763</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>           
+            <sourceDesc>
+                <bibl>
+                    <author>George Heard</author>
+                    <title>George Heard to Walt Whitman, 25 October 1880</title>
+                    <date cert="high" when="1880-10-25" xml:id="dat1">October 25, 1880</date>
+                    <idno type="callno">MSS18630, Box 33</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="ww"><persName key="Whitman, Walt">Walt Whitman</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Heard, George">George Heard</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2014-11-19" who="#nhg">checked, corrected</change>
+            <change when="2014-11-07" who="#ak">corrected transcription and encoding</change>
+            <change when="2014-10-07" who="#no">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <pb xml:id="leaf001r" facs="loc_ej.00931.jpg" type="recto"/>
+            
+                       <note type="editorial" place="top" resp="#ww">Books sent</note>
+           
+            <opener>
+                <dateline rend="right">
+                    <name type="place"><handShift rend="printed"/>GEO. HEARD,<ptr target="loc.05763_n1"/> <lb/>BROKER IN PETROLEUM</name>
+                    <name type="place">OIL CITY, PA.,</name>
+                    <date when="1880-10-25"><handShift rend="manuscript"/>Oct. 25th <handShift rend="printed"/>188<handShift rend="manuscript"/>0</date>
+                </dateline>
+                <salute>Mr. Walt Whitman,</salute>
+                <salute>Camden N.J.</salute>
+                <salute>Dear Sir,</salute>
+            </opener>
+
+            <p>Enclosed herein please find New York 
+                draft for ten dollars, for which please 
+                send me the "Centennial Edition" of your 
+                works. I get the information that you sell 
+                these books yourself from a foot note to
+                
+                <pb xml:id="leaf001v" facs="loc_ej.00930.jpg" type="verso"/>
+                <!-- Whitman wrote prose on this page - unrelated to letter -->
+                
+                <pb xml:id="leaf002r" facs="loc_ej.00947.jpg" type="recto"/>
+                <!-- this is still part of the original first page - was connected to loc_no.00009_large.jpg -->
+                
+                an article on you in the November 
+                Number of <choice><sic>Scribners</sic><corr>Scribner's</corr></choice> Monthly, by Edmund 
+                C. <choice><sic>Steadman</sic><corr>Stedman</corr></choice>.
+            </p>
+            <p>A reply to this in your own hand writing will be highly appreciated.</p>
+
+            <closer>
+                <salute>Very truly yours,</salute>
+                <signed>Geo. Heard.</signed>
+            </closer>
+            
+            <pb xml:id="leaf002v" facs="loc_ej.00946.jpg" type="recto"/>
+            <!-- Whitman put more prose on this page, possibly related to loc_no.00009_large.jpg (above) -->
+
+        </body>
+    </text>
+</TEI>

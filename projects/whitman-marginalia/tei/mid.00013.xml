@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?><?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules_mss.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="mid.00013">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Barthold Niebuhr</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author xml:id="ww">Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="lmg">Lauren Grewe</persName><persName xml:id="mc">Matt Cohen</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>University of Texas at Austin</sponsor>
+                <sponsor>University of Nebraska-Lincoln</sponsor>
+                <funder>The National Endowment for the Humanities</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>mid.00013</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                    <addrLine>kprice@unlnotes.unl.edu</addrLine>
+                    <addrLine>Ed-Folsom@uiowa.edu</addrLine>
+                    <addrLine>bbarney2@unlnotes.unl.edu</addrLine>
+                </address>
+                <availability><p>The text of the original document is in the public domain. Subject to certain exceptions, public domain works may be freely copied or used in the creation of derivative works without permission, or authorization, of the former copyright owners.</p><p>The text encoding was created and/or prepared by the Walt Whitman Archive and is governed by a <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref> (CC BY 4.0).</p><p>Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p></availability>
+            </publicationStmt>                 
+            <notesStmt>                 
+                <note type="project" target="#dat1">Grier estimates that this was written in the late 1850s (<hi rend="italic">Walt Whitman: Notebooks and Unpublished Manuscripts</hi>, ed. Edward F. Grier [New York: New York University Press, 1984], 5:1838). "German Literature" refers to Joseph Gostwick's <hi rend="italic">German Literature</hi>, which Lippincott published in 1854.</note>             
+            </notesStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Manuscripts</title>
+                    <idno type="callno"/>
+                    <date notBefore="1854-01-01" notAfter="1892-05-26">1854 or later</date>
+                    <orgName xml:id="mid">Middlebury College Library, Special Collections</orgName>
+                    <note type="project">Transcribed from digital images of the original item.</note>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="h1" scribeRef="#ww" medium="black-ink"/>
+            </handNotes>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-03-16">corrected</change>
+            <change who="#lmg" when="2013-06-27">Transcribed and encoded.</change>
+            <change who="#lmg" when="2014-02-05">Checked.</change>
+            <change who="#mc" when="2015-03-14">Proofed.</change>
+        </revisionDesc>
+    </teiHeader>
+<text type="annotations">
+    <body>
+        <pb xml:id="leaf001r" facs="mid.00013.001.jpg" type="recto"/>
+        <span rend="bracket-right" xml:id="s1" from="#s1" to="#s2"/><head type="main-authorial"><handShift new="#h1"/>Barthold
+        Niebuhr</head><anchor xml:id="s2"/> <ab>1776&#8211;1831&#8212;55 years
+        <milestone unit="undeclared" rend="horbar-short-left"/>
+        Born at Copenhagen&#8212;during
+        youth visited London and
+        Edinburgh&#8212;Was an occupant
+        of political offices for the
+        younger‑manhood years of
+        his life&#8212;but in 1823,&#8212;(aged
+        47) retired to Bonn, and
+        became the great <hi rend="underline">Reformer
+        of Roman History</hi>, (and ancient
+        History generally,)&#8212;</ab>
+        <ab>Was much excited by the French
+        Revolution of July, 1830&#8212;said
+        to have hastened his death Jan 1831.
+        &#8212;see page 249&#8211;50&#8211;51 "German
+        Literature")</ab>
+    </body>
+</text>
+</TEI>

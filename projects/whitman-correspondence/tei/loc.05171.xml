@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05171">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Benjamin Ticknor to Walt Whitman, 14 November
+                    1881</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Benjamin Ticknor</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05171</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Benjamin Ticknor</author>
+                    <title>Benjamin Ticknor to Walt Whitman, 14 November 1881</title>
+                    <date cert="high" when="1881-11-14" xml:id="dat1">November 14, 1881</date>
+                    <orgName xml:id="loc">The Thomas Biggs Harned Collection of the Papers of Walt Whitman, 1842&#8211;1937, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Ticknor, Benjamin">Benjamin Ticknor</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-07-03" who="#nhg">added image references, updated transcription</change>
+            <change when="2014-04-24" who="#ss">annotations added</change>
+            <change when="2014-04-18" who="#nhg">checked, corrected</change>
+            <change when="2014-03-12" who="#nnk">proofed</change>
+            <change when="2014-03-06" who="#ss">checked</change>
+            <change when="2014-03-03" who="#kc">Transcribed and Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+<pb xml:id="leaf001r" facs="loc_nk.00346_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place"><handShift rend="printed"/>211 Tremont Street.</name>
+                    <name type="place">Boston,</name>
+                    <date when="1881-11-14" rend="right"><handShift rend="manuscript"/>Nov. 14 <handShift rend="printed"/>1881.</date>
+                </dateline>
+                <salute><handShift rend="manuscript"/>Dear Mr. Whitman:</salute>
+            </opener>
+            
+            <p>The book starts well and is already receiving the correct mingling of voices in the chorus
+                that is arising over it.<!--<ptr target="n3056"/>--></p>
+
+            <p>I want to ask, if you could, by way of a latter day benefaction to some survivors of
+                the army that you devoted your labors of love to nearly twenty years ago&#8212;let
+                me have some little thing for the paper to be published during the Fair of which I
+                enclose a circular?</p>
+            
+            <p>It's a noble object to get the remaining poor fellows out of the
+                almshouses and into a home of their own. I am doing what little I can &amp; among
+                other things, helping to get contributions for "<hi rend="underline">The Sword and the
+                Pen</hi>,"&#8212;so the paper is to be called.</p>
+            <p>If you can help me, it will please
+            me much and aid the cause more.</p>
+            <closer>
+                <salute>With best regards</salute>
+                <salute>Very Truly Yours:</salute>
+                <signed>B. H. Ticknor</signed>
+                <salute>Walt Whitman Esq</salute>
+            </closer>
+            <postscript>
+                <p>PS. The first edition is all gone &amp; we are binding up the second.</p>
+            </postscript>
+<pb xml:id="leaf001v" facs="loc_nk.00347_large.jpg" type="verso"/>
+            <pb xml:id="leaf002r" facs="loc_nk.00242_large.jpg" type="recto"/>
+            <pb xml:id="leaf002v" facs="loc_nk.00243_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

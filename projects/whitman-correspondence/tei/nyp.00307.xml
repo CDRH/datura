@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nyp.00307">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title level="m" type="main">Walt Whitman to Louisa Van Velsor Whitman, [19 February 1873]</title>
+        <title level="m" type="sub">a machine readable transcription</title>
+        <author>Walt Whitman</author>
+        <editor>Kenneth M. Price</editor>
+        <editor>Ed Folsom</editor>
+        <respStmt>
+          <resp>Transcription and encoding</resp>
+          <name>The Walt Whitman Archive Staff</name>
+        </respStmt>
+        <sponsor>Center for Digital Research in the Humanities, University of
+          Nebraska-Lincoln</sponsor>
+        <sponsor>University of Iowa</sponsor>
+        <funder>National Historical Publications and Records Commission</funder>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <date>2012</date>
+        </edition>
+      </editionStmt>
+      <publicationStmt>
+        <idno>nyp.00307</idno>
+        <distributor>The Walt Whitman Archive</distributor>
+        <address>
+          <addrLine>Center for Digital Research in the Humanities</addrLine>
+          <addrLine>319 Love Library</addrLine>
+          <addrLine>University of Nebraska-Lincoln</addrLine>
+          <addrLine>P.O. Box 884100</addrLine>
+          <addrLine>Lincoln, NE 68588-4100</addrLine>
+        </address>
+        <availability>
+          <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights
+            reserved. Items in the Archive may be shared in accordance with the Fair Use
+            provisions of U.S. copyright law. Redistribution or republication on other
+            terms, in any medium, requires express written consent from the editors and
+            advance notification of the publisher, Center for Digital Research in the
+            Humanities. Permission to reproduce the graphic images in this archive has
+            been granted by the owners of the originals for this publication only.</p>
+        </availability>
+      </publicationStmt>
+      <notesStmt>
+        <note type="project" anchored="true">The following are responsible for particular readings or for
+          changes to this file, as noted: 
+<persName xml:id="kmp">Kenneth M. Price</persName>
+          <persName xml:id="kk">Kathryn Kruger</persName>
+          <persName xml:id="zk">Zachary King</persName>
+          <persName xml:id="ec">Eric Conrad</persName>
+        </note>
+      </notesStmt>
+      <sourceDesc>
+
+        <biblStruct>
+          <monogr>
+            <editor>Edwin Haviland Miller</editor>
+<author>Walt Whitman</author>
+<title xml:id="ehm">The Correspondence</title>
+<imprint>
+              <pubPlace>New York</pubPlace>
+              <publisher>New York University Press</publisher>
+              <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+              <biblScope type="page">199</biblScope>
+                <biblScope type="volume">2</biblScope>
+            </imprint>
+          </monogr>
+        </biblStruct>
+
+        <bibl>
+          <author>Walt Whitman</author>
+          <title>Walt Whitman to Louisa Van Velsor Whitman, [19 February 1873]</title>
+          <date cert="low" when="1873-02-19" xml:id="dat1">February 19, 1873</date>
+            <orgName xml:id="nyp">The Oscar Lion Papers, New York Public Library</orgName>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <particDesc>
+        <person role="sender">
+          <persName key="Whitman, Walt">Walt Whitman</persName>
+        </person>
+        <person role="recipient">
+          <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+        </person>
+      </particDesc>
+    </profileDesc>
+    <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+<change when="2012-05-18" who="#kmp">blessed</change>
+      <change when="2011-07-22" who="#kk">Updated Oscar Lion orgName</change>
+      <change when="2011-01-26" who="#zk">encoded</change>
+      <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+    </revisionDesc>
+  </teiHeader>
+
+  <text type="letter">
+    <body>
+      <opener>
+        <dateline>
+          <name type="place" rend="right">535 Fifteenth st.</name>
+          <date when="1873-02-19" rend="right">Wednesdady afternoon <lb/>3 o'clock.</date>
+        </dateline>
+        <salute/>
+      </opener>
+
+      <p>Mother dear, I suppose you got a letter from me telling you that I had been down stairs 
+        &amp; out on Monday&#8212;it was more exertion than I could bear, and I have not been so well since. 
+        I got two letters from Jeff to-day, the last one dated the 16th<ptr target="nyp.00307_n1"/>&#8212;Matt had rested well the night before&#8212;
+        poor, poor Mat, I am ready to hear to her departure any day&#8212;it seems terrible&#8212;
+      </p>
+      
+      <p>Things are going on as well as could be expected with me, but slowly&#8212;
+        I overdid the matter day before yesterday, and am now waiting&#8212;
+        I am sitting up by the stove alone writing this. Love [to] you, dearest Mother, and to all&#8212;
+      </p>
+      
+      <closer>
+        <signed rend="right">Walt.</signed>
+      </closer>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="upa.00081">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt> 
+                <title level="m" type="main">Walt Whitman to Herbert Gilchrist, 15 December
+                    1885</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>upa.00081</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Herbert Gilchrist, 15 December 1885</title>
+                    <date cert="high" when="1885-12-15" xml:id="dat1">December 15, 1885</date>
+                    <orgName xml:id="upa">Walt Whitman Collection, 1842&#8211;1957, Rare Book &#38;
+                        Manuscript Library, University of Pennsylvania</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="unk"><persName key="Unknown">Unknown</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Gilchrist, Herbert" ref="n0262">Herbert Gilchrist</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-03-02" who="#kb">edited</change>
+            <change when="2014-10-04" who="#ss">encoded and annotated from Miller.</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <note type="editorial" resp="#unk" place="top">Sprague Collection No 31</note>
+            <opener>
+                
+                <pb xml:id="leaf001r" facs="upa.00081.001_large.jpg" type="recto"/>
+                <dateline>
+                    <name type="place">328 Mickle street</name>
+                    <name type="place">Camden New Jersey<ptr target="upa.00081_n1"/></name>
+                    <date when="1885-12-15" rend="right">Dec. 15 1885</date>
+                </dateline>
+                <salute>Dear Herbert</salute>
+            </opener>
+            <p>I have rec'd your letter. Nothing now remains but a sweet &#38; rich
+                memory&#8212;none more beautiful, all time, all life, all the earth&#8212;</p><p>&#8212;I cannot
+                write any thing of a letter to-day. I must sit alone &#38; think.<ptr
+                    target="upa.00081_n2"/></p>
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="upa.00081.002_large.jpg" type="verso"/>
+            <pb xml:id="leaf002r" facs="loc.02180.001_large.jpg" type="recto"/>
+            <pb xml:id="leaf002v" facs="loc.02180.002_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>  

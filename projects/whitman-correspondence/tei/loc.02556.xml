@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.02556">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to John H. Johnston, 6 November
+                    1881</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.02556</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to John H. Johnston, 6 November 1881</title>
+                    <date cert="high" when="1881-11-06" xml:id="dat1">November 6, 1881</date>
+                    <idno type="callno">MSS18630, Box 69</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Johnston, John H.">John H. Johnston</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-07-03" who="#nhg">corrected</change>
+            <change when="2014-02-14" who="#nhg">checked, corrected</change>
+            <change when="2014-01-24" who="#ej">Checked and Corrected</change>
+            <change when="2013-10-10" who="#nnk">proofed</change>
+            <change when="2013-09-20" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.02556.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">431 Stevens Street</name>
+                    <name type="place">Camden New Jersey<ptr
+                            target="loc.02556_n1"/></name>
+                    <date when="1881-11-06">Nov: 6 '81&#8212;<choice><orig>Evn'g</orig><reg>Evening</reg>
+                    </choice></date>
+                </dateline>
+                <salute>Dear friend</salute>
+            </opener>
+            <p>I made a good smooth fast trip back to Camden that afternoon&#8212;find every thing
+                here moving on about the same&#8212;life here is pretty monotonous any time, &#38;
+                especially after banging about &#38; seeing so many folks &#38; being made so much
+                of as I for the last three or four months&#8212;but I
+                
+                <pb xml:id="leaf001v" facs="loc.02556.002_large.jpg" type="verso"/>feel pretty well &#38; find myself    
+                enjoying most things &#38; times&#8212;this beautiful day among the rest&#8212;(now
+                toward sundown, &#38; I am writing this alone up in my room, 3d story&#8212;have had
+                a nice quiet day)&#8212;The valise came all right&#8212;Thought it best to write to
+                Leibkeucher,<ptr target="loc.02556_n2"/> Newark, to ask whether I should send
+                him the two vol. &#36;10 edition, or the one vol. &#36;2 one&#8212;which I have accordingly
+                done&#8212;How are you Alma? How are you Ally boy?</p>
+            <closer>
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+            <pb xml:id="leaf002r" facs="loc.02556.003_large.jpg" type="recto"/>
+            <pb xml:id="leaf002v" facs="loc.02556.004_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

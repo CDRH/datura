@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="upa.00211">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Anne Gilchrist, 18 February [1878]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>                   
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>
+                    <persName xml:id="ad">Anthony Dreesen</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>upa.00211</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date when="1964">1964</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">106</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>               
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Anne Gilchrist, 18 February [1878]</title>
+                    <date cert="medium" when="1878-02-18" xml:id="dat1">February 18, 1878</date>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>              
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Gilchrist, Anne">Anne Gilchrist</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-03-29" who="#km">checked</change>
+            <change when="2013-01-07" who="#ad">checked</change>
+            <change when="2012-11-29" who="#gt">checked</change>
+            <change when="2012-09-12" who="#el">checked</change>
+            <change when="2012-08-30" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">Kirkwood N J</name><ptr target="loc.03960_n2"/>
+                    <date when="1878-02-18" rend="right">Monday evening Feb 18</date>
+                </dateline>
+                <salute>Dear friend, &#38; Bee, Herby &#38; Giddy&#8212;</salute>  
+            </opener>
+
+            <p>I am down here at Kirkwood&#8212;Came down here some four days ago<ptr target="loc.03960_n1"/>&#8212;am having a real hearty old-fashioned time, for me&#8212;Harry came up for me in the light wagon, the day but one after I was last at your house&#8212;a delightful ride down here&#8212;&#38; yesterday afternoon one of those nice long rambling drives with George Stafford, in the roomy old light wagon, (a good part of the road through the piney woods, which I always enjoy so much)&#8212;</p>
+            
+            <p>The weather has been &#38; is pleasant&#8212;a little cool to-day, but the sun shining out as I write&#8212;I was down by the creek most of the forenoon&#8212;&#38; shall go down for an hour again this evening&#8212;bright moonlight nights&#8212;I am quite happy here, for me&#8212;We live well, keep good wood fires&#8212;&#38; have plenty of chicken, eggs &#38; fresh pork (they kill a hog about every two or three weeks)&#8212;Mr Stafford is pretty well&#8212;he has been out all day with the team hauling marl&#8212;Mrs Stafford is well&#8212;Harry &#38; the rest ditto&#8212;Mrs Stafford thanks you kindly for the medicine&#8212;I don't know what day I shall come up&#8212;Love to you all&#8212;</p>
+            
+            <closer>
+                <signed rend="right">W. W.</signed>
+            </closer>
+        </body>
+        </text>
+</TEI>

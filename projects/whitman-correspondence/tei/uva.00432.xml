@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="uva.00432">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">[Charles A. Raymond?] to Walt Whitman, 27 March
+                    1878</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Charles A. Raymond</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="bbb">Blake Bronson-Bartlett</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>uva.00432</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Charles A. Raymond</author>
+                    <title>[Charles A. Raymond?] to Walt Whitman, 27 March 1878</title>
+                    <date cert="high" when="1878-03-27" xml:id="dat1">March 27, 1878</date>
+                    <orgName xml:id="uva">Papers of Walt Whitman (MSS 3829), Clifton Waller Barrett
+                        Library of American Literature, Albert H. Small Special Collections Library,
+                        University of Virginia</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+
+                <person role="sender">
+                    <persName key="Raymond, Charles A.">Charles A. Raymond</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-08-13" who="#nhg">checked, corrected</change>
+            <change when="2014-08-04" who="#ss">checked, corrected, annotated</change>
+            <change when="2014-07-19" who="#bbb">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+ 
+            <pb xml:id="leaf001r" facs="uva_jc.00101_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place"><handShift rend="printed"/>The Daily Tribune</name>
+                    <name type="place" rend="right">Denver, Colorado,</name>
+                    <date when="1878-03-27"><handShift rend="manuscript"/>Mch 27th <handShift
+                        rend="printed"/>187<handShift rend="manuscript"/>8</date><ptr
+                            target="uva.00432_n1"/>
+                </dateline>
+                <salute>Mr Walt Whitman</salute>
+                <salute>My Dear Sir</salute>
+            </opener>
+
+            <p>I am one of those ubiquitous autograph hunters and have written you several times
+                asking the favor of your name, but so far have never received a reply from you. Now if you could take a <unclear reason="cut away"
+                    cert="high" resp="bbb">peep</unclear> into my album, which I have been over
+                fifteen years in making, and see my fine collection of autograph notes from
+                    Tennyson<!--<ptr target="n0625"/>--> down, I am sure you would be glad to add yours to
+                the number.</p>
+            <p>If you have made a rule never to reply to requests of this kind, please
+                make an exception in my case and oblige,</p>
+
+            <closer>
+                <salute>Yours obediently</salute>
+                <signed><unclear reason="cut away" cert="medium" resp="bbb">Charles A.
+                        Raymond</unclear></signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="uva_jc.00100_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

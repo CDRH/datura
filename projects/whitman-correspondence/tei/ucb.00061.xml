@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="ucb.00061">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">James Scovel to Walt Whitman, 7 February 1879</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>James Scovel</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>ucb.00061</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>James Scovel</author>
+                    <title>James Scovel to Walt Whitman, 7 February 1879</title>
+                    <date cert="high" when="1879-02-07" xml:id="dat1">February 7, 1879</date>
+                    <orgName xml:id="ucb">Walt Whitman Collection, The Bancroft Library, University
+                        of California, Berkeley</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Scovel, James">James Scovel</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-03" who="#nhg">checked, corrected</change>
+            <change when="2014-03-26" who="#ej">Checked and Corrected</change>
+            <change when="2014-03-20" who="#nnk">proofed</change>
+            <change when="2014-03-18" who="#kc">Transcribed and Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="ucb.00023.002_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place"><handShift rend="printed"/>LAW OFFICES
+                        <lb/>JAMES M. SCOVEL,
+                        <lb/><address><addrLine>No. 113 ARCH STREET</addrLine></address>
+                        <lb/>Camden, N. J.,</name>
+                    <date when="1879-02-07" rend="right"><handShift rend="manuscript"/><choice>
+                            <abbr>Fey</abbr>
+                            <expan>February</expan>
+                        </choice> 7 <handShift rend="printed"/>18<handShift rend="manuscript"/>79<ptr target="ucb.00061_n1"/></date>
+                </dateline>
+                <salute>My Dear Walt</salute>
+            </opener>
+
+            <p>Friday has come &amp; gone<ptr target="n1049"/>&#8212;&amp; no report as the dinner with the author
+                of the, I fear, (abortive?) "Bride of Gettysburg"</p>
+
+            <p>I wrote him that unless I wrote <hi rend="underline">au contraire</hi> we <choice>
+                    <abbr>w<hi rend="superscript">d</hi></abbr>
+                    <expan>would</expan>
+                </choice> be there on Gods Holy Day. "Watchman tell us of the night"&#8212;war
+                worn Veteran!&#8212;who like a true soldier wear your "wounds <hi
+                    rend="underline">&amp; Honors</hi> a' front", speak to me!</p>
+
+            <p>Badinage aside, you cheered me, lustily, over that milk punch. Thy talk was like a
+                crisp Healthful winters day&#8212;</p>
+
+            <closer>
+                <salute rend="right">Thine Tenderly,</salute>
+                <signed rend="right">James</signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="ucb.00023.001_large.jpg" type="verso"/>
+            <!--manuscript notes on verso (nhg) <add>
+                <p>These notes are all diverted from their first purpose. My plan was originally to
+                    make a Nature poem, consecutive and intact, that should for a few hours carry
+                    one's experiences of commencing at noon-flush and so through the after-part of
+                    the day, ending with night&#8212;(I suppose led to such idea by the fact that,
+                    my own life's afternoon has arrived)&#8212;But I find I can move with more
+                    ease&#8212;indeed careless &amp; slip-shod, which this piece avowedly
+                    is&#8212;extracting verbatim from the fresh-written notes just mentioned at
+                    curious times, various reasons&#8212;<gap extent="one word" unit="chars"
+                        quantity="12"/> the verses&#8212;and lay <hi rend="underline">melanging</hi>
+                    the whole thing&#8212;which I now proceed to do. </p>
+            </add>-->
+        </body>
+    </text>
+</TEI>

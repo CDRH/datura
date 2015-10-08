@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="med.00306">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to John Swinton, 3 February 1865</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+
+               <persName xml:id="ao">Alyssa Olson</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>med.00306</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Walt Whitman</author>
+                  <editor>Edwin Haviland Miller</editor>
+                  <title xml:id="ehm">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>New York</pubPlace>
+                     <publisher>New York University Press</publisher>
+                     <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                     <biblScope type="volume">1</biblScope>
+                     <biblScope type="page">252-253</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to John Swinton, 3 February 1865</title>
+               <date when="1865-02-03">February 3, 1865</date>
+               <orgName xml:id="med">Location of original letter manuscript is unknown.</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Swinton, John">John Swinton</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#el" when="2010-04-03">proofread and edited</change>
+         <change who="#vs" when="2009-08-31">proofread and edited annotations</change>
+         <change who="#vs" when="2008-10-10">added main TEI markup</change>
+         <change who="#el" when="2008-07-30">added TEI header structure w/o IDs and titles; added minimal TEI markup</change>
+         <change who="#ao" when="2008-07-29">pulled transcription from Primary Source Media</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <dateline rend="right">
+                  <name type="place">Washington,</name>
+                  <date when="1865-02-03">Feb 3, 1865</date>
+               </dateline>
+               <salute>My dear friend,<ptr target="med.00306_n1"/>
+               </salute>
+            </opener>
+            <p>From the deep distress of my mother whose health is getting affected,<ptr target="med.00306_n2"/> &amp; of my sister&#8212;&amp; thinking it worth the trial myself, I write this hastily to ask you to do, or rather if you have an objection to do, as follows:</p>
+            <p>Write a brief letter, not filling more than one page, letter paper, to Lt. Gen. Grant. Date it from the office of the <hi rend="italic">Times</hi>, which will add to its effect, &amp; recal you to Gen. Grant. It is to request him to give directions, that one of the special exchanges (of which they are now making quite a number) shall be made, in favor of my brother George, and also another officer same regiment. State in short terms that Capt. Whitman has been in active military service of U. S. since April, 1861, nearly four years, has borne his part bravely in battles in nearly every part of the war in the United States, east &amp; west, including Vicksburgh &amp; Jackson, Miss.&#8212;has an aged widowed mother in deepest distress. Ask Gen. G. to order a special exchange of</p>
+            <p>Capt George W. Whitman, 51st New York Vol.
+     &amp; Lieut Samuel Pooley,25 51st New York Vol.</p>
+            <p>both of whom are now, or were lately, in C. S. Military Prison, in Danville, Va. (both the above officers have been promoted from the ranks for conduct on the field)&#8212;</p>
+            <closer rend="right">
+               <signed>Walt Whitman</signed>
+            </closer>
+         
+         <postscript>
+            <p>My address is simply to Washington D. C. as I go to post office for my letters.</p>
+         </postscript>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00746">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Peter Doyle, 2 July [1877]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="ad">Anthony Dreesen</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2010</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00746</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">90</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Peter Doyle, 2 July [1877]</title>
+                    <date cert="medium" when="1877-07-02" xml:id="dat1">July 2, 1877</date>
+                    <orgName xml:id="duk">The Trent Collection of Walt Whitman Manuscripts, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Doyle, Peter">Peter Doyle</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-11-15" who="#nhg">corrected date format in bibl</change>
+            <change when="2013-02-22" who="#km">checked</change>
+            <change when="2013-01-18" who="#ej">Checked and Corrected</change>
+            <change when="2012-12-06" who="#ab">checked</change>
+            <change when="2012-10-09" who="#ad">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">Kirkwood New Jersey</name>
+                    <date when="1877-07-02">July 2&#8212;</date>
+                </dateline>
+                <salute>Dear boy Pete</salute>
+            </opener>
+
+            <p>I still keep pretty well, &#38; am again down here at the farm in the country, for a couple of weeks, &#38; to stay over 4th of July. Nothing particularly new in my affairs. As I write this (Monday 10 a m) it is a beautiful bright breezy forenoon&#8212;&#38; I am going now down to the creek &#38; spring to take a bath&#8212;it is about 90 rods distant, &#38; I walk there &#38; back&#8212;Love, love, love,</p>
+            
+            <closer>
+                <signed rend="right">Your old Walt</signed>
+            </closer>
+            <postscript>
+                <p>I still make my headquarters in Camden&#8212;</p>
+            </postscript>
+        </body>
+    </text>
+</TEI>

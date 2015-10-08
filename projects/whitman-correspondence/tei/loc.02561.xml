@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.02561">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to John H. Johnston, 29 December 1883</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="am">Alicia Meyer</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.02561</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>           
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to John H. Johnston, 29 December 1883</title>
+                    <date cert="high" when="1883-12-29" xml:id="dat1">December 29, 1883</date>
+                    <idno type="callno">MSS18630, Box 53</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Johnston, John H.">John H. Johnston</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-08-04" who="#nhg">checked, corrected</change>
+            <change when="2014-02-26" who="#kc">checked, corrected</change>
+            <change when="2014-01-21" who="#ss">checked</change>
+            <change when="2013-12-07" who="#am">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.02561.001_large.jpg" type="recto"/>
+            
+            <opener>
+                <dateline>
+                    <name type="place">Camden</name>
+                    <date when="1883-12-29" rend="right">Dec 29 '83<lb/> noon</date>
+                </dateline>
+                <salute>Dear friend</salute>
+            </opener>
+            <p>Yours <choice><abbr>rec'd</abbr><expan>received</expan></choice>&#8212;The little poem you speak of was sent to <hi rend="underline">Harpers</hi>, accepted at once &#38; paid for<ptr target="loc.02561_n1"/>&#8212;when it will appear I know not&#8212;</p> 
+            <p>&#8212;I am well as usual. Don't know why I have not come on to N Y to visit you&#8212;but I think of you all&#8212;you Alma &#38; Ally<ptr target="loc.02561_n2"/>&#8212;with the same old love, &#38; shall be with you again before long. John, I am <hi rend="underline">not</hi> favorable <pb xml:id="leaf001v" facs="loc.02561.002_large.jpg" type="verso"/> to the select extracts plan you mentioned four or five weeks ago&#8212;Get the next <hi rend="underline">Baldwin's Monthly</hi>&#8212;it has a little reminiscence of mine in it<ptr target="loc.02561_n3"/>&#8212;</p>
+            <p>I go out to Germantown quite frequently&#8212;have some very good Quaker friends there&#8212;long rides every afternoon<ptr target="loc.02561_n4"/>&#8212;A spell of real winter here, cold, snow, fog, &#38;c&#8212;but bright &amp; sunny to-day as I write.</p>
+                      <closer>
+                          <salute><hi rend="underline">Happy New Years to all</hi>&#8212;</salute>
+                <signed rend="middle">Walt Whitman</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

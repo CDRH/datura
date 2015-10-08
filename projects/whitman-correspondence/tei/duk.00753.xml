@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00753">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Samuel Van Wyck, 28 May 1879</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00753</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date when="1964">1964</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">157</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Samuel Van Wyck, 28 May 1879</title>
+                    <date cert="high" when="1879-05-28" xml:id="dat1">May 28, 1879</date>
+                    <orgName xml:id="duk">The Trent Collection of Walt Whitman Manuscripts, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Van Wyck, Samuel">Samuel Van Wyck</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-05-01" who="#km">checked</change>
+            <change when="2013-01-15" who="#ej">Checked and Corrected</change>
+            <change when="2012-12-18" who="#gt">checked</change>
+            <change when="2012-10-26" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">1309 Fifth av: near 86th Street<ptr target="duk.00753_n1"/></name>
+                    <date when="1879-05-28" rend="right">May 28 '79</date>
+                </dateline>
+                <salute>My dear Sir</salute>
+            </opener>
+
+            <p>Yours of May 23d has reach'd me here&#8212;I am unable to give you any information on the genealogic points you speak of&#8212;wish I could&#8212;I have an idea there are town records or documents at Huntington, that are accessible, &#38; that might throw light on the Van Wyck and Whitman families&#8212;I have seen such records alluded to, &#38; printed extracts from them&#8212;where they are, or what office, in Huntington I think, or who keeps them, I can not say&#8212;Yes I was born at West Hills&#8212;my father Walter Whitman&#8212;I trace the Whitmans there four generations&#8212;my grandmother (father's mother) was Hannah <hi rend="italic">Brush</hi><ptr target="duk.00753_n2"/></p>
+            
+            <p>I am here on a visit&#8212;go back, last of next week, to Camden New Jersey, my regular p o address.</p>
+
+            <closer>
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

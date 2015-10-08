@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00337">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">George Washington Whitman  to Walt Whitman, 6 February 1863</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>George Washington Whitman</author>
+            <editor>Jerome M. Loving</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="kk">Kathryn Kruger</persName>
+               <persName xml:id="gp">Gillian Price</persName>
+               <persName xml:id="al">April Lambert</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>duk.00337</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>George Washington Whitman</author>
+                  <editor>Jerome M. Loving</editor>
+                  <title xml:id="cwl">Civil War Letters of George Washington Whitman</title>
+                  <imprint>
+                     <pubPlace>Durham, North Carolina</pubPlace>
+                     <publisher>Duke University Press</publisher>
+                     <date>1975</date>
+                     <biblScope type="page">84</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>George Washington Whitman</author>
+               <title>George Washington Whitman  to Walt Whitman, 6 February 1863</title>
+               <date when="1863-02-06">February 6, 1863</date>
+               <orgName xml:id="duk">Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, George Washington">George Washington Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#kk" when="2010-01-06">Proofread</change>
+         <change who="#el" when="2008-07-21">updated TEI header</change>
+         <change who="#kk" when="2008-04-01">checked and proofed</change>
+         <change who="#gp" when="2006-12-18">copy-edited transcription against source text and made necessary
+corrections</change>
+         <change who="#al" when="2006-12-15">Transcribed, Encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <dateline rend="right">
+                  <name type="place">Camp near Falmouth Va.<lb/>
+                  </name>
+                  <date when="1863-02-06">Feb 6th/63</date>
+               </dateline>
+               <salute>Dear Walt.</salute>
+            </opener>
+            <p>We have just received orders to cook three days rations and be ready to march immediately  I beleive the whole of the 9th Army Corps are ordered to report at Fortress Monroe. If so I suppose we will march to Aquia Creek, and go on board of Transports  My own oppinion is that Burnside<ptr target="duk.00337_n1"/> is to collect a force at Fortress Monroe, and start off again on his own hook with a sepperate command. I wrote you a few days since,<ptr target="duk.00337_n2"/> to send home for Mother to send you $20 by express and for you to bring it, when you came down here. Of course you will keep it, untill we get to some place where you can either send it by express or bring it yourself. We will probaly stay somewhere around Fortress Monroe for some time, if so you can take a run down there and see me,  I will write you as soon as we get there. I have my house nearly finished, and was going to have a nice warm place. Capt Sims<ptr target="duk.00337_n3"/> left here yesterday for home on a leave of absence for 10 days. I was going to apply as soon as he came back and was makeing lots of reckoning of going home for a few days, but I suppose there will be no getting away now for some time.</p>
+            <p>Walt, I have not received the letter you sent with the money, nor have I received any letter from you since the 27th of Jan. I wish you would write home telling them that we are going to leave here, as I dont know that I shall get a chance to write before we start. I will write to them as soon as we get to Fortress Monroe or wherever we may go. The mail is about closeing so I must stop. Good bye for the present</p>
+            <closer rend="right">
+               <signed>G.W.W.</signed>
+            </closer>
+         
+      </body>
+   </text>
+</TEI>

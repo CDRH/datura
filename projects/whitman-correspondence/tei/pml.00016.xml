@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="pml.00016">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to Abby H. Price, 27 October 1866</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="bb">Brett Barney</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+
+               <persName xml:id="ao">Alyssa Olson</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>pml.00016</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Walt Whitman</author>
+                  <editor>Edwin Haviland Miller</editor>
+                  <title xml:id="ehm">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>New York</pubPlace>
+                     <publisher>New York University Press</publisher>
+                     <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                     <biblScope type="volume">1</biblScope>
+                     <biblScope type="page">291-292</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to Abby H. Price, 27 October 1866</title>
+               <date when="1866-10-27">October 27, 1866</date>
+               <orgName xml:id="pml">Pierpont Morgan Library</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Price, Abby H.">Abby H. Price</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#bb" when="2010-04-12">added annotations for several individuals</change>
+         <change who="#vs" when="2009-08-27">proofread and edited annotations</change>
+         <change who="#vs" when="2008-10-28">added main TEI markup</change>
+         <change who="#el" when="2008-07-30">added TEI header structure w/o IDs and titles; added minimal TEI markup</change>
+         <change who="#ao" when="2008-07-29">pulled transcription from Primary Source Media</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <dateline rend="right">
+                  <name type="place">ATTORNEY GENERAL'S OFFICE, <hi rend="italic">Washington</hi>,</name>
+                  <date when="1866-10-27">Oct. 27, <hi rend="italic">1866.</hi>
+                  <ptr target="pml.00016_n100"/>
+               </date>
+               </dateline>
+               <salute>Mrs. Price,<ptr target="pml.00016_n2"/> &amp; all | My dear friends,</salute>
+            </opener>
+            <p>I sent you a telegram, ten minutes ago, telling you that I have just succeeded in getting an order from the Attorney General for Mr. Parker's pardon.<ptr target="pml.00016_n3"/> The pardon will probably go from here, (from the State Department,) on Monday next&#8212;the day you will receive this note&#8212;it will be directed to the Jail at Plymouth. I have had much more of a struggle than I anticipated&#8212;the pardon clerk knew the case, &amp; was filled with Mr. Dana's<ptr target="pml.00016_n4"/> reports upon it. When we meet, (or perhaps by letter, before) I will give you a more detailed account of the progress of the affair here, &amp; its fluctuations. But no matter&#8212;it has ended successfully.</p>
+            <p>I have written to Aurelia Parker, &amp; sent the news, the same mail as this.</p>
+            <p>I am fearfully well&#8212;indeed so red &amp; fat that people stop in the street &amp; gaze at me.</p>
+            <p>In the office, &amp; my work, every thing goes on as usual. We are having delicious weather, coolish &amp; bright.
+Has Arthur<ptr target="pml.00016_n5"/> gone, then? Well you will value him all the more, when you have him again.</p>
+            <p>Helen &amp; Emmy,<ptr target="pml.00016_n6"/> my dear friends, I send you my best love&#8212;Go over &amp; see my mother when you can&#8212;Best remembrance to Mr. Arnold<ptr target="pml.00016_n7"/>&#8212;also to Mr. Price.<ptr target="pml.00016_n8"/>
+            </p>
+            <closer rend="right">
+               <signed>Walt</signed>
+            </closer>
+         
+      </body>
+   </text>
+</TEI>

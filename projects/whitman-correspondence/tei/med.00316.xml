@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="med.00316">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to John Burroughs, 2 July 1866</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="jc">Janel Cayer</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+
+               <persName xml:id="ao">Alyssa Olson</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>med.00316</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Walt Whitman</author>
+                  <editor>Edwin Haviland Miller</editor>
+                  <title xml:id="ehm">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>New York</pubPlace>
+                     <publisher>New York University Press</publisher>
+                     <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                     <biblScope type="volume">1</biblScope>
+                     <biblScope type="page">281</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to John Burroughs, 2 July 1866</title>
+               <date when="1866-07-02">July 2, 1866</date>
+               <orgName xml:id="med">Location of original letter manuscript is unknown.</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Burroughs, John">John Burroughs</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#jc" when="2012-10-22">edited annotation on O'Connor</change>
+         <change who="#vs" when="2009-08-27">proofread and edited annotations</change>
+         <change who="#vs" when="2008-10-24">added main TEI markup</change>
+         <change who="#el" when="2008-07-30">added TEI header structure w/o IDs and titles; added minimal TEI markup</change>
+         <change who="#ao" when="2008-07-29">pulled transcription from Primary Source Media</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+         <p>I went up to your house<ptr target="med.00316_n100"/> this morning and took a look at the garden&#8212;Everything growing first rate&#8212;potatoes, tomatoes, corn, cabbages, and all&#8212;I guess upon the whole the garden never looked better at this time of year. We have had opportune rains&#8212;I inquired about the cow, and received a favorable report. . . .</p>
+            <p>John, about coming, I am not able to say anything decisive in this letter. . . . Up in your Bureau all seems to go on as usual . . . John, I send you the July Atlantic.<ptr target="med.00316_n2"/> . . .</p>
+            <p>I am feeling hearty and in good spirits&#8212;go around more than usual&#8212;go to such doings as base-ball matches and the music Performances in the Public grounds&#8212;Marine Band, etc. . . .</p>
+            <p>I hope your parents are well&#8212;I wish you to give them my love&#8212;tho' I don't know them, I hope to one of these days&#8212;remember me to the wife, also.</p>
+            <p>I am writing this by my window in the office&#8212;the breeze is blowing moderate, and the view down the river and off along Virginia hills opposite is most delightful&#8212;the pardon clerks are middling busy&#8212;I have plenty of leisure, as usual&#8212;I spent yesterday afternoon at the Hospital, and took tea in the evening at O'Connor's.<ptr target="med.00316_n3"/>
+            </p>
+            <p>Piatt<ptr target="med.00316_n4"/> is trying to get transferred to New York, to the Custom House&#8212;Well, good by for present, you dear friend, and God bless you and wife, and bring you both safe back&#8212;</p>
+            <closer rend="right">
+               <signed>Walt</signed>
+            </closer>
+         
+      </body>
+   </text>
+</TEI>

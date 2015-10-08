@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.00850">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">John Burroughs to Walt Whitman, 28 June 1864</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>John Burroughs</author>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+               <persName xml:id="lh">Luke Hollis</persName>
+               <persName xml:id="bbb">Blake Bronson-Bartlett</persName>
+               <persName xml:id="hb">Heidi Bean</persName>
+               <persName xml:id="nhg">Nicole Gray</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>loc.00850</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <author>John Burroughs</author>
+               <title>John Burroughs to Walt Whitman, 28 June 1864</title>
+               <date when="1864-06-28">June 28, 1864</date>
+               <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Burroughs, John">John Burroughs</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+         <change who="#nhg" when="2014-08-24">corrected</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#vs" when="2010-04-15">proofreading changes</change>
+         <change who="#lh" when="2009-08-31">proofed and edited</change>
+         <change who="#bbb" when="2009-08-05">updated annotations</change>
+         <change who="#el" when="2009-08-03">added encoding for page breaks</change>
+         <change who="#vs" when="2009-07-24">Added encoding for annotations made by John from UVA.</change>
+         <change who="#vs" when="2009-04-01">Compared Transcription to Manuscript Image and Made Corrections</change>
+         <change who="#hb" when="2008-10-14">Transcribed, Encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         <pb facs="loc.00850.001.jpg" xml:id="leaf001r" type="recto"/>
+         
+            <opener rend="right">
+               <dateline>
+                  <name type="place">Olive N.Y.</name>
+                  <date when="1864-06-28">June 28th <lb/>
+[1864]</date>
+               </dateline>
+               <salute>Dear Walt</salute> 
+            </opener>
+         <p>It was my purpose to write to you while home, but ill health prevented me from fulfilling half my plans.  I<ptr target="loc.00850_n100"/> am much better now but by no means well.  The Comptroller has given me another week of grace in which time I hope to get well.  I have just rec<hi rend="superscript">d</hi> a letter from Benton saying I must come and see him and bring you with me.<ptr target="loc.00850_n2"/>  This is why I am writing.  Can you not come.  If you are in N.Y. surely you can.  Benton would be delighted; so should I.  I shall <del type="overstrike" status="unremarkable">leave</del> go to Benton next Saturday and stay till Wednesday.  If you could not come till Monday or Tuesday even, do so.  From N.Y. you will take the Harlem R.R. to Amenia, Dutches Co.  Benton lives about a mile from there and keeps the Leedsville P.O.  If you should write direct to Leedsville N.Y.  With much love</p>
+            <closer rend="right">
+               <salute>I am yours truly</salute>
+               <signed>John Burroughs</signed>
+            </closer>
+         
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="lcl.00001">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to William Michael Rossetti, 30 May
+                    1886</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>lcl.00001</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to William Michael Rossetti, 30 May 1886</title>
+                    <date cert="high" when="1886-05-30" xml:id="dat1">May 30, 1886</date>
+                    <orgName xml:id="lcl">Liverpool Central Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Rossetti, William Michael" ref="n0522">William Michael Rossetti</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-07-24" who="#nhg">added verso image</change>
+            <change when="2015-03-16" who="#kb">edited</change>
+            <change when="2014-10-09" who="#ss">encoded and annotated from Miller.</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <opener>
+                <pb xml:id="leaf001r" facs="lcl.00001.001.jpg" type="recto"/>
+                <dateline>
+                    <name type="place">328 Mickle street</name>
+                    <name type="place">Camden New Jersey U S America</name>
+                    <date when="1886-05-30" rend="right">May 30 1886</date>
+                </dateline>
+                <salute>My dear friend</salute>
+            </opener>
+            <p>Yours of May 17, enclosing the fifth instalment &#163;29.18.3 is just now safely
+                received, making altogether&#8212;<table>
+                <row>
+                    <cell>September 1885&#8212;</cell>
+                    <cell>&#163; 22. 2.6</cell>
+                </row>
+                <row>
+                    <cell>October 20 " </cell>
+                    <cell>37.12.</cell>
+                </row>
+                <row>
+                    <cell>November 28 " </cell>
+                    <cell>31.19.</cell>
+                </row>
+                <row>
+                    <cell>January 25, 1886</cell>
+                    <cell>33.16.<ptr target="lcl.00001_n1"/></cell>
+                </row>
+                <row>
+                    <cell>May 17 " </cell>
+                    <cell><hi rend="underline">29.18.3</hi></cell>
+                </row>
+                <row>
+                    <cell/>
+                    <cell>&#163; 155.9.9</cell>
+                    
+                </row> 
+            </table></p>
+<p>                for which I indeed, indeed thank you, and all&#8212;We have beautiful sunshiny
+                weather here, &#38; I am sitting by my open window writing this&#8212;</p><p>&#8212;If Herbert
+                    Gilchrist<ptr target="n0262"/> prints the circular you spoke of, send it me&#8212;send me three or four
+                copies. I send best respects &#38; love to my British contributor-friends&#8212;they
+                have done me more good than they think for.<ptr target="lcl.00001_n2"/></p>
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="lcl.00001.002.jpg" type="verso"/>
+        </body>
+    </text> 
+</TEI>

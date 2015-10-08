@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03896">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to George and Susan Stafford, 10 June
+                    [1880]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03896</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to George and Susan Stafford, 10 June [1880]</title>
+                    <date cert="medium" when="1880-06-10" xml:id="dat1">June 10, 1880</date>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Stafford, Susan">Susan Stafford</persName>
+                    
+                </person>
+                <person role="recipient">
+                    
+                    <persName key="Stafford, George">George Stafford</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-03-30" who="#ss">annotations added</change>
+            <change when="2014-01-27" who="#nhg">checked, corrected</change>
+            <change when="2014-01-11" who="#nnk">proofed</change>
+            <change when="2013-12-14" who="#ss">checked</change>
+            <change when="2013-12-11" who="#ej">Transcribed and Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_jc.00484_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place"><hi rend="underline">London Ontario Canada</hi></name>
+                    <date when="1880-06-10"><hi rend="underline">June 10</hi><ptr target="n0852"/></date>
+                </dateline>
+                <salute/>
+            </opener>
+
+            <p>I have now been a week in Canada enjoying every thing quietly but finely&#8212;I live
+                much outdoors&#8212;go riding or some short jaunt or around the farm, most <unclear
+                    reason="damge" cert="low" resp="#ej">every</unclear> day&#8212;I have a good
+                room&#8212;good table <gap reason="illegible" extent="one word" unit="chars"
+                    quantity="5"/>
+                <unclear reason="damaged" resp="#nhg" cert="low">plenty</unclear> of young folks (young ladies) &amp; a
+                small army of fine children&#8212;a large, quiet library&#8212;but the best thing is
+                my <hi rend="underline">hostess</hi>, one of those blessed sisterly women I have had
+                the good luck to meet in life's grim journey &amp; have for a friend, more than
+                once&#8212;Canada is a far finer country than I supposed&#8212;very fair land, the
+                people nicely
+                off&#8212;I see none very poor&#8212;I remain well for me&#8212;am to go to Lake
+                Huron next week for a few days, to return here of course&#8212;Harry dear boy, how
+                are you? &amp; Mont<ptr target="n0910"/> and Van<ptr target="n0883"/> and Debby<ptr target="n0844"/>&#8212;Love to all&#8212;</p>
+
+            <closer>
+                <salute/>
+                <signed><choice>
+                        <abbr>W W</abbr>
+                        <expan>Walt Whitman</expan>
+                    </choice></signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="loc_jc.00483_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

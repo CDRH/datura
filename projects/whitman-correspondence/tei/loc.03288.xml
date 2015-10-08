@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03288">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to James Redpath, [12 August 1885]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03288</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to James Redpath, [12 August 1885]</title>
+                    <date cert="low" when="1885-08-12" xml:id="dat1">August 12, 1885</date>
+                    <idno type="callno">Box 14, Reel 8-6</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the
+                        Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington,
+                        D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="ht"><persName key="Traubel, Horace">Horace Traubel</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender" xml:id="ww">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Redpath, James" ref="n4981">James Redpath</persName>
+                </person>
+            </particDesc>      
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-07-22" who="#nhg">corrected</change>
+            <change when="2015-02-16" who="#kb">edited</change>
+            <change when="2014-10-03" who="#ss">encoded and annotated from Miller.</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body> 
+            
+            <pb xml:id="leaf001r" facs="loc.03288.001_large.jpg" type="recto"/>
+            <note resp="#ht" place="top" type="editorial">see notes July 29, '88 | also Aug 1</note>
+            <p>All right my dear J R<ptr target="loc.03288_n2"/>&#8212;$60 for the Booth article will do, in full<ptr target="loc.03288_n1"/>&#8212;(I
+                reserve the right of printing it in future collections of my writings&#8212;this is
+                indispensable.) I have been &#38; am lingering under the miserable inertia following
+                my sunstroke&#8212;otherwise should have sent you one or two articles&#8212;have
+                them on the stocks&#8212;</p>
+            <p>Am very slowly gaining the tally of my previous strength&#8212;had none to spare
+                before&#8212;</p>
+            <p>Thank you, dear friend, for your services &#38; affectionate good will.</p>
+            
+            <note type="editorial" resp="#ww" place="bottom">Sent James Redpath | Aug. 12, '1885.</note>
+            <pb xml:id="leaf001v" facs="loc.03288.002_large.jpg" type="verso"/>
+        </body> 
+    </text>
+ </TEI>  

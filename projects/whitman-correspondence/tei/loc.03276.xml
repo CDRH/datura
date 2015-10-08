@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03276">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">William D. O'Connor to Walt Whitman, 10 March
+                    1883</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>William D. O'Connor</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03276</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>William D. O'Connor</author>
+                    <title>William D. O'Connor to Walt Whitman, 10 March 1883</title>
+                    <date cert="high" when="1883-03-10" xml:id="dat1">March 10, 1883</date>
+                    <idno type="callno">MSS18630, Box 14, Reel 8-9</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="O'Connor, William D.">William D. O'Connor</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-06-05" who="#nhg">checked, corrected</change>
+            <change when="2014-02-20" who="#nnk">proofed</change>
+            <change when="2014-01-30" who="#kc">checked, corrected</change>
+            <change when="2013-12-12" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.03276.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">Washington D.C.</name>
+                    <date when="1883-03-10" rend="right">March 10, 1883</date>
+                </dateline>
+                <salute>Dear Walt:</salute>
+            </opener>
+            <p>I just got your postal of the 9th instant.</p>
+            <p>Jeannie is so ill up at Providence that I must go up there, and expect to leave here
+                on Monday (the 12th). If you don't hear from me again, please <pb xml:id="leaf001v"
+                    facs="loc.03276.002_large.jpg" type="verso"/> mail the proofs to me at
+                Providence, care of Dr. Channing.</p>
+            <p>The address is&#8212;
+            <address>
+                <addrLine>Dr. W. F. Channing</addrLine>
+                <addrLine>No 98 Congdon Street,</addrLine>
+                <addrLine>Providence,</addrLine>
+                <addrLine>Rhode Island.</addrLine>
+                <addrLine>Box 393.</addrLine>
+            </address></p>
+           
+            <p>I shall probably remain at Providence until the last of the month&#8212;maybe longer.
+                    <pb xml:id="leaf002r" facs="loc.03276.003_large.jpg" type="recto"/> If anything
+                happens to prevent my leaving on Monday, I will let you know of my detention. I say
+                this because I am worried <choice>
+                    <orig>to day</orig>
+                    <reg>today</reg>
+                </choice> by Kimball not being at the office (he has not been well lately) when I am
+                anxious to be off, and it is necessary, except in case of dire necessity, that one
+                of us should be <pb xml:id="leaf002v" facs="loc.03276.004_large.jpg" type="verso"/>
+                here in charge.</p>
+            <p>The proofs shall be promptly returned to you. Of course, if by any accident you
+                should have sent them here before you got this, they will be forwarded to me, and
+                the delay would be slight.</p>
+            <p>Dr. Bucke writes me that you like my Introductory.</p>
+            <closer>
+                <salute rend="middle">Faithfully</salute>
+                <signed rend="right">W. D. O'Connor.</signed>
+                <salute>Walt Whitman.</salute>
+            </closer>
+        </body>
+    </text>
+</TEI>

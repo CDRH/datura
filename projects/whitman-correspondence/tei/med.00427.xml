@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="med.00427">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title level="m" type="main">Walt Whitman to William Michael Rossetti, 11 April 1873</title>
+        <title level="m" type="sub">a machine readable transcription</title>
+        <author>Walt Whitman</author>
+        <editor>Kenneth M. Price</editor>
+        <editor>Ed Folsom</editor>
+        <respStmt>
+          <resp>Transcription and encoding</resp>
+          <name>The Walt Whitman Archive Staff</name>
+        </respStmt>
+        <sponsor>Center for Digital Research in the Humanities, University of
+          Nebraska-Lincoln</sponsor>
+        <sponsor>University of Iowa</sponsor>
+        <funder>National Historical Publications and Records Commission</funder>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <date>2012</date>
+        </edition>
+      </editionStmt>
+      <publicationStmt>
+        <idno>med.00427</idno>
+        <distributor>The Walt Whitman Archive</distributor>
+        <address>
+          <addrLine>Center for Digital Research in the Humanities</addrLine>
+          <addrLine>319 Love Library</addrLine>
+          <addrLine>University of Nebraska-Lincoln</addrLine>
+          <addrLine>P.O. Box 884100</addrLine>
+          <addrLine>Lincoln, NE 68588-4100</addrLine>
+        </address>
+        <availability>
+          <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+            reserved. Items in the Archive may be shared in accordance with the Fair Use
+            provisions of U.S. copyright law. Redistribution or republication on other
+            terms, in any medium, requires express written consent from the editors and
+            advance notification of the publisher, Center for Digital Research in the
+            Humanities. Permission to reproduce the graphic images in this archive has
+            been granted by the owners of the originals for this publication only.</p>
+        </availability>
+      </publicationStmt>
+      <notesStmt>
+        <note type="project">The following are responsible for particular readings or for
+          changes to this file, as noted: 
+          <persName xml:id="jc">Janel Cayer</persName>
+<persName xml:id="kmp">Kenneth M. Price</persName>
+<persName xml:id="el">Elizabeth Lorang</persName>
+ <persName xml:id="kk">Kathryn Kruger</persName>
+          <persName xml:id="zk">Zachary King</persName>
+          <persName xml:id="ec">Eric Conrad</persName>
+        </note>
+      </notesStmt>
+      <sourceDesc>
+
+        <biblStruct>
+          <monogr>
+            <editor>Edwin Haviland Miller</editor>
+<author>Walt Whitman</author>
+<title xml:id="ehm">The Correspondence</title>
+<imprint>
+              <pubPlace>New York</pubPlace>
+              <publisher>New York University Press</publisher>
+              <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+              <biblScope type="page">296</biblScope>
+                <biblScope type="volume">5</biblScope>
+            </imprint>
+          </monogr>
+        </biblStruct>
+
+        <bibl>
+          <author>Walt Whitman</author>
+          <title>Walt Whitman to William Michael Rossetti, 11 April 1873</title>
+
+          <date cert="high" when="1873-04-11" xml:id="dat1">April 11, 1873</date>
+          <orgName xml:id="med">The location of the original manuscript is unknown.</orgName>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <particDesc>
+        <person role="sender">
+           <persName key="Whitman, Walt">Walt Whitman</persName>
+        </person>
+        <person role="recipient">
+          <persName key="Rossetti, William Michael">William Michael Rossetti</persName>
+        </person>
+      </particDesc>
+    </profileDesc>
+    <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+      <change when="2012-08-01" who="#jc">extracted notes and inserted pointers</change>
+<change when="2012-05-18" who="#kmp">blessed</change><change when="2011-01-25" who="#kk">checked</change>
+      <change when="2011-02-26" who="#zk">encoded</change>
+      <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+    </revisionDesc>
+  </teiHeader>
+
+  <text type="letter">
+    <body>
+      <opener>
+        <dateline>
+          <name type="place" rend="right">Washington</name>,
+          <date when="1873-04-11" rend="right">April 11, 1873</date>.
+     <ptr target="med.00427_n1"/>
+        </dateline>
+        <salute>My dear Rossetti,</salute>
+      </opener>
+
+      <p>The bearer of this note is Col. Richard J. Hinton, of this city (though English by birth), 
+        a friend of mine, who calls to make your acquaintance.</p>
+      
+      <closer>
+        <salute>Truly yours,</salute>
+        <signed rend="right">Walt Whitman.</signed>
+      </closer>
+      
+      <postscript>
+        <p>I have been very ill, from paralysis, but am recovering.</p>
+        
+        <p>Your books (two sets) reached me safely, and gave me great pleasure. I am perfectly satisfied 
+          with the selections from my poems&#8212;and feel grateful to you for your kindness to me throughout 
+          the books. I do not forget you. I will write again when I feel well. My address remains the same&#8212;Solicitor's Office, Treasury, here.</p>
+      </postscript>
+      
+      <closer>
+        <signed rend="right">W.W.</signed>
+      </closer>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03279">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">William D. O'Connor to Walt Whitman, 19 March 1883</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>William D. O'Connor</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03279</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>            
+            <sourceDesc>
+                <bibl>
+                    <author>William D. O'Connor</author>
+                    <title>William D. O'Connor to Walt Whitman, 19 March 1883</title>
+                    <date cert="high" when="1883-03-19" xml:id="dat1">March 19, 1883</date>
+                    <idno type="callno">MSS18630, Box 14</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="O'Connor, William D.">William D. O'Connor</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2014-12-15" who="#nhg">checked, corrected</change>
+            <change when="2014-12-15" who="#ak">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.03279.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">Providence, R.I</name>
+                    <date when="1883-03-19">March 19, 1883</date>
+                </dateline>
+                <salute>Dear Walt:</salute>
+            </opener>
+            <p>
+                Wendell Phillips wrote long
+                ago about the <hi rend="underline">G.G.P.</hi> that
+                Longinus-like, I was in
+                the pamphlet all I described,
+                or words to this
+                effect. If the appendix
+                is wholly composed of
+                my compositions, and if
+                Dr. Bucke agreed with
+                W.P., Pope's lines in
+                <pb xml:id="leaf001v" facs="loc.03279.002_large.jpg" type="verso"/>
+                the Essay on Criticism
+                about Longinus, would
+                be no bad epigraph
+                for the appendix.
+                It is the height of
+                modesty in me to make
+                the suggestion, but we
+                writing-fellows think
+                no small beer of
+                ourselves, and I don't propose to be singular
+                among my tribe! The
+                <pb xml:id="leaf002r" facs="loc.03279.003_large.jpg" type="recto"/>
+                lines are as follows:
+            </p>
+            <milestone unit="undeclared" rend="horbar-short-center"/>
+            <quote who="Alexander Pope"><lg type="poem">
+                <l>Thee, bold Longinus! all the Nine inspire,</l>
+                <l>And bless their critic with a poet's fire!</l>
+                <l>An ardent judge, who, zealous in his trust,</l>
+                <l>With warmth gives sentence, yet is always just;</l>
+                <l>Whose own example strengthens all his laws,</l>
+                <l>And is himself that great Sublime he draws.</l>
+            </lg></quote>
+            <p><hi rend="underline">Pope: Essay on Criticism.</hi></p>
+            <p>How is this for high!!</p>
+            <pb xml:id="leaf002v" facs="loc.03279.004_large.jpg" type="verso"/>
+            <p>
+                I have not yet thought
+                of anything better. How would
+                the lines in Hamlet do?&#8212;
+            </p>
+            <quote><lg>
+                <l><hi rend="underline">Francisco</hi>.&#8212;Stand ho! Who is there!</l>
+                <l><hi rend="underline">Horatio</hi>.&#8212;Friends to this ground.</l>
+                <l><hi rend="underline">Marcellus</hi>.&#8212;And liegemen to the Dane.</l>
+            </lg></quote>
+            <p>
+                &#8212;Your card of
+                the 18th just received.
+            </p>
+            <closer>
+                <salute>Faithfully</salute>
+                <signed>W D O'Connor.</signed>
+                <salute>W.W.</salute>
+            </closer>
+        </body>
+    </text>
+</TEI>

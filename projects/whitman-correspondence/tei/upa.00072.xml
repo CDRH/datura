@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="upa.00072">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Herbert Gilchrist, 24 April
+                    [1880]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>upa.00072</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+               
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Herbert Gilchrist, 24 April [1880]</title>
+                    <date cert="medium" when="1880-04-24" xml:id="dat1">April 24, 1880</date>
+                    <orgName xml:id="upa">Walt Whitman Collection, 1842&#8211;1957, Rare Book &#38;
+                        Manuscript Library, University of Pennsylvania</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Gilchrist, Herbert">Herbert Gilchrist</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-05-26" who="#nhg">revised for final check</change>
+            <change when="2014-04-22" who="#nhg">updated transcription based on images</change>
+            <change when="2013-05-03" who="#km">checked</change>
+            <change when="2013-01-14" who="#ej">Checked and Corrected</change>
+            <change when="2012-12-19" who="#gt">checked</change>
+            <change when="2012-11-04" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="upa.00072.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">Kirkwood (Glendale) New Jersey</name>
+                    <name type="place" rend="right">U S America<ptr target="upa.00072_n1"/></name>
+                    <date when="1880-04-24"><hi rend="underline">April 24</hi>&#8212;</date>
+                </dateline>
+            </opener>
+
+            <p>Down here on one of my visits<ptr target="upa.00072_n2"/>&#8212;Mr and Mrs S
+                and all the young folks well as usual&#8212;E is still over at Laurel Mills,
+                &#38; is well &#38; hearty&#8212;H runs the store here&#8212;(the store is
+                doing middling well)&#8212;M and V and R and G<ptr
+                    target="upa.00072_n3"/> all right &#38; growing fast&#8212;</p>
+
+            <p>&#8212;Begins to look like spring&#8212;apple trees all in bloom, &#38; the sprouting wheat
+                a rich emerald, beautiful&#8212;(but just to-day is raw and half-raining &#38;
+                darkish)&#8212;the l[ecture] went off fairly, it was good fun for me, grave as the
+                subject was&#8212;I sent you a short report&#8212;I am surprised about
+                    B<ptr target="upa.00072_n4"/>&#8212;my health &#38; strength
+                fair</p>
+
+            <closer>
+                <signed rend="right">W W</signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="upa.00072.002_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

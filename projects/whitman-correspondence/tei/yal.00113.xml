@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="yal.00113">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to James R. Osgood &#38; Company, 10
+                    December 1881</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>yal.00113</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to James R. Osgood &#38; Company, 10 December 1881</title>
+                    <date cert="high" when="1881-12-10" xml:id="dat1">December 10, 1881</date>
+                    <orgName xml:id="yal">Yale Collection of American Literature, Beinecke Rare Book
+                        and Manuscript Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Osgood, James R.">James R. Osgood &#38; Company</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-07-03" who="#nhg">corrected</change>
+            <change when="2014-02-18" who="#nhg">checked, corrected</change>
+            <change when="2014-01-29" who="#ej">Checked and Corrected</change>
+            <change when="2013-10-10" who="#nnk">proofed</change>
+            <change when="2013-09-25" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="yal.00113.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">431 Stevens Street</name>
+                    <name type="place">Camden New Jersey</name>
+                    <date when="1881-12-10" rend="right">Dec: 10 '81</date>
+                </dateline>
+                <salute>Dear Sirs</salute>
+            </opener>
+            <p>Please send me here by express fifteen free copies <hi rend="underline">Leaves of
+                    Grass</hi> for my disposal to editors, for notice&#8212;will send you list as
+                disposed&#8212;Send also in same parcel thirty sets of the sheets of the new poems
+                printed on one side&#8212;(see that <hi rend="underline">both sheets</hi> are
+                sent)&#8212;</p>
+            <p>Then another thing: I have a few copies remaining (between one &#38; two hundred
+                sets) of my old &#36;10 centennial authographic two-Volume personal edition of <choice><abbr>L of G.</abbr><expan>Leaves of Grass</expan></choice>,
+                moderately sought after <hi rend="underline">by collectors and specialists
+                    mostly in England</hi>&#8212;which I should like to sell whenever applied
+                to&#8212;price &#36;10&#8212;<pb xml:id="leaf001v" facs="yal.00113.002_large.jpg" type="verso"/><pb xml:id="leaf002r" facs="yal.00113.003_large.jpg"
+                    type="recto"/>You have no
+                objections to my selling them? I <choice>
+                    <orig>dont</orig>
+                    <reg>don't</reg>
+                </choice> think it would affect the new edition the
+                slightest unfavorably&#8212;probably indeed do more good than harm to it&#8212;but
+                is not of much importance any how&#8212;only (to me) as putting a few dollars in my
+                pocket now &#38; then&#8212;which I need&#8212;</p>
+            <p>Shall not sell them if you object<ptr
+                    target="yal.00113_n1"/>&#8212;</p>
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+            <pb xml:id="leaf002v" facs="yal.00113.004_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

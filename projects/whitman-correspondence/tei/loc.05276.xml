@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05276">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to John Fraser, 27 November 1878</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05276</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date when="1969">1969</date>
+                            <biblScope type="volume">5</biblScope>
+                            <biblScope type="page">305&#8211;306</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to John Fraser, 27 November 1878</title>
+                    <date cert="high" when="1878-11-27" xml:id="dat1">November 27, 1878</date>
+                    <idno type="callno">MSS18630, Box 10, Reel 6</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Fraser, John">John Fraser</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-02" who="#nhg">checked, corrected</change>
+            <change when="2014-03-20" who="#nnk">proofed</change>
+            <change when="2014-03-11" who="#kc">checked, corrected</change>
+            <change when="2014-02-26" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                <name type="place">431 Stevens Street</name>
+                <name type="place">Camden New Jersey</name>
+                <name type="place">U S America</name>
+                <date when="1878-11-27" rend="right"><choice>
+                        <abbr>Nov</abbr>
+                        <expan>November</expan>
+                    </choice> 27 '78</date></dateline>
+                <salute>Dear Sir</salute>
+            </opener>
+
+            <p>Mr Child tells me you would like a piece from me for the <hi rend="italic">Tobacco
+                    Plant</hi>.<ptr target="loc.05276_n1"/> Will this do? The price is
+                $12&#8212;(? two pounds eight <choice>
+                    <abbr>shil</abbr><expan>shillings</expan></choice>)&#8212;</p>
+            <p>If you print it I hope you have a good proof reader, &#38; that he will be very
+                particular with it&#8212;</p>
+
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+
+            <postscript>
+                <p>Also please send me three copies, &#38; direct a copy each to</p>
+                <list>
+                    <item>Wm M Rosetti 56 Euston Sq London n w</item>
+                    <item>Thos: Dixon 15 Sunderland st. Sunderland</item>
+                    <item>Prof: Edward Dowden, Temple Rd. Winsted, Rathmines, Dublin</item>
+                    <item>Rafe Leycester, Toft, Knutsford, Country Cheshire</item>
+                    <item>Edward Carpenter, 45 Brunswick Sq. Brighton</item>
+                    <item>J A Symonds, Clifton Hill House, Bristol</item>
+                    <item>Robt Buchanan, Editor <hi rend="italic">Light</hi>, London</item>
+                    <item>Alfred Tennyson, Eaton Square, London</item>
+                    <item>J Leicester Warren, 67 Onslow Sq: London s w<ptr target="loc.05276_n2"/></item>
+                </list>
+                <p>P S&#8212;I am <hi rend="italic">not</hi> an anti-tobacconist&#8212;On the
+                    contrary have seen how important &#38; valuable the sedative was in the
+                    extensive military hospitals of our Secession war&#8212;Still I do not smoke or
+                    chew myself&#8212;Sometimes wish I did smoke now in my old age &#38;
+                    invalidism&#8212;but it is too late to learn&#8212;</p>
+                <p>But my brothers &#38; all my near friends are smokers, &#38; I am accustomed to
+                    it&#8212;live among smokers, &#38; always carry cigars in my pocket to give
+                    special friends who prize them&#8212;</p>
+            </postscript>
+        </body>
+    </text>
+</TEI>

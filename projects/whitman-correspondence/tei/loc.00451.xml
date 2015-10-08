@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.00451">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Thomas Jefferson Whitman  to George Washington Whitman, 8 September 1868</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Thomas Jefferson Whitman</author>
+            <editor>Dennis Berthold</editor>
+            <editor>Kenneth M. Price</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+
+               <persName xml:id="kk">Kathryn Kruger</persName>
+               <persName xml:id="al">April Lambert</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>loc.00451</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Thomas Jefferson Whitman</author>
+                  <editor>Dennis Berthold</editor>
+                  <editor>Kenneth M. Price</editor>
+                  <title xml:id="dbw">Dear Brother Walt: The Letters of Thomas Jefferson Whitman</title>
+                  <imprint>
+                     <pubPlace>Kent, Ohio</pubPlace>
+                     <publisher>Kent State University Press</publisher>
+                     <date>1984</date>
+                     <biblScope type="page">133-134</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Thomas Jefferson Whitman</author>
+               <title>Thomas Jefferson Whitman  to George Washington Whitman, 8 September 1868</title>
+               <date when="1868-09-08">September 8, 1868</date>
+               <orgName xml:id="loc">Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Thomas Jefferson">Thomas Jefferson Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, George Washington">George Washington Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#el" when="2008-07-21">updated TEI header</change>
+         <change who="#kk" when="2008-04-01">checked and proofed</change>
+         <change who="#al" when="2006-10-03">Transcribed, Encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <dateline rend="right">
+                  <name type="place">St. Louis,</name>
+                  <date when="1868-09-08">Sept. 8th 1868</date>
+               </dateline>
+               <salute>Dear George,</salute>
+            </opener>
+            <p>I mailed you yesterday draft on Jay Cooke &amp; Co. for $510<ptr target="loc.00451_n1"/>&#8212;which I presume has come to hand</p>
+            <p>How soon will your house be done&#8212;Do you intend Mother shall move there and live for awhile?<ptr target="loc.00451_n2"/>&#8212;[these] are the two questions that are in my mind just now&#8212;</p>
+            <p>Mattie has a bad cough and I have had several first class physicians to see her and they all unite in saying that a trip east for a few months would cure her<ptr target="loc.00451_n3"/>&#8212;I have been very unfortunate in the selection of a house&#8212;and unfortunately have a lease of two years on it under very stringent papers too&#8212;It occurred to me that if Mother was not going to move I would try and get a furnished room in your neighborhood and send Mat and Jess on and if your new house was in the neighborhood of completion and you proposed to move in it I thought perhaps you could hire Mat a room in that.</p>
+            <p>The house is damp and I cannot seem to bettr it. I have spent abt $125 on it trying to fix it. I'm in a pretty tight place and will have to "wiggle" out of it&#8212;I am looking just now for some sort of a boarding school to send Hat for a few months till I can see how the matter is going to turn out&#8212;. The doctors all unite in declaring that Mat has no disease of the lungs<ptr target="loc.00451_n4"/>&#8212;it is all in the bronchial tubes of the throat&#8212;of course it is going to be hard for us to break up just now&#8212;but I do not think it worth while to risk everything in trying to "stick" it out in a bad bargain&#8212;</p>
+            <p>Give my love to Mother&#8212;tell her Mat has a letter written to her<ptr target="loc.00451_n5"/> that I will mail in the morning&#8212;and write me in regard to questions asked</p>
+            <closer rend="right">
+               <signed>affectionately Jeff</signed>
+            </closer>
+         
+      </body>
+   </text>
+</TEI>

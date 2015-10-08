@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?><?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules_mss.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00677">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">The Teutonic includes</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author xml:id="ww">Walt Whitman</author>
+                <author xml:id="unk">Unknown</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="lmg">Lauren Grewe</persName><persName xml:id="nhg">Nicole Gray</persName><persName xml:id="tra">Ty Alyea</persName><persName xml:id="mc">Matt Cohen</persName>
+                </respStmt>
+                <sponsor>University of Texas at Austin</sponsor>
+                <sponsor>University of Nebraska-Lincoln</sponsor>
+                <funder>The National Endowment for the Humanities</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2011</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00677</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                    <addrLine>kprice@unlnotes.unl.edu</addrLine>
+                    <addrLine>Ed-Folsom@uiowa.edu</addrLine>
+                    <addrLine>bbarney2@unlnotes.unl.edu</addrLine>
+                </address>
+                <availability><p>The text of the original document is in the public domain. Subject to certain exceptions, public domain works may be freely copied or used in the creation of derivative works without permission, or authorization, of the former copyright owners.</p><p>The text encoding was created and/or prepared by the Walt Whitman Archive and is governed by a <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref> (CC BY 4.0).</p><p>Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p></availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Miscellaneous Notes, Chiefly Literary</title>
+                    <idno type="callno">II-5 101</idno>
+                    <date notBefore="1850-05-31" notAfter="1892-03-26">Undated</date>
+                    <orgName xml:id="duk">Trent Collection of Whitmaniana, David M. Rubenstein Rare Book &amp; Manuscript Library, Duke University</orgName>
+                    <note type="project">Transcribed from digital images of the original item.</note>
+                </bibl>
+                <bibl type="pasteon" xml:id="r1">
+                    <author>Unknown author</author>
+                    <title level="a">How America was Peopled</title>
+                    <title level="j">unknown periodical</title>
+                    <date/>
+                    <biblScope type="vol"/>
+                    <biblScope type="pp"/>
+                    <note type="project"/>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="h1" scribeRef="#ww" medium="pencil"/>
+                <handNote xml:id="h2" scribeRef="#unk" medium="typescript"/>
+                <handNote xml:id="h3" scribeRef="#ww" medium="black-ink"/>
+            </handNotes>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-03-08">completed date information</change>
+            <change who="#nhg" when="2015-01-26">added schematron declaration, updated schema declaration, changed text type to annotations</change><change who="#lmg" when="2011-09-04">Transcribed and encoded.</change>
+            <change who="#nhg" when="2011-10-09">Checked, revised.</change>
+            <change who="#tra" when="2013-12-09">Checked and revised bibliographical encoding.</change>
+            <change who="#lmg" when="2014-03-08">Added dimensions to pasteons, checked cbs, footnotes.</change>
+            <change who="#mc" when="2014-09-06">Proofed.</change>
+        </revisionDesc> 
+    </teiHeader>
+    <text type="annotations"><!--Checked against Grier, p. 1983.-->
+        <body>
+            <pb xml:id="leaf001r" facs="duk.00677.002.jpg" type="recto"/>
+            <ab><handShift new="#h1"/>The <hi rend="underline">Teutonic</hi> includes the <hi rend="underline">Scandinavian</hi>&#8212;the
+            Sc. is a branch or or portion of the Teutonic</ab>
+            <milestone unit="unknown" rend="horbar-full"/>
+            <ab>Visigoth&#8212;a western Goth, one from the western shores of the
+                Baltic, in distinction from an
+                Ostrogoth, or eastern <subst><del rend="overwrite" seq="1">g</del><add rend="overwrite" seq="2" place="over">G</add></subst>oth.&#8212;</ab>
+            <milestone unit="unknown" rend="horbar-short-left"/>
+            <ab>Asia now contains and has from time immemorial
+                contained  <add rend="insertion" place="supralinear">more than</add> <hi rend="underline">half the population of the earth</hi>
+                and more than one third the land of
+                the earth&#8212;China alone has <add rend="insertion" place="supralinear">(so estimated)</add> 360,000,000 inhabitants</ab>
+            <milestone unit="unknown" rend="horbar-full"/>
+            <ab>Scythia (the name given to the northern<!--Grier capitalizes "northern".--> part of Asia, and
+                Europe adjoining to Asia&#8212;(<!--Grier has the parenthesis going the other direction.-->from the same
+                root as Scot&#8212;from a word meaning woods, or shade
+                &#8212;viz. Scot&#8212;a man of the woods&#8212;</ab>
+            <add rend="pasteon" source="#r1"><handShift new="#h2"/>
+                <q who="unknown" type="written">
+                                <floatingText rend="flat">
+                                    <body>
+                                        <pb xml:id="leaf002r" facs="duk.00677.002.jpg" type="recto" rend="col-4"/>
+                <head type="main-authorial"><hi rend="smallcaps">HOW AMERICA WAS PEOPLED</hi></head><p>&#8212;Rev. Dr. Hawks,
+                a learned and eloquent scholar, has recently
+                been delivering a series of lectures, intended to
+                show that this continent was peopled by successive
+                migrations from the old world, at different
+                eras and by different races. First from the shores
+                of the Mediterranean, which was the earliest
+                seat of commercial enterprise, and the people
+                from which have left their record upon the vast
+                ruins of Yucatan; next from China and Japan
+                to Mexico, Central and South America, and next
+                from Northern Asia, from which the American
+                tribes of Indians came. Those theories are sustained
+                by remarkable analogies between the
+                languages prevailing in different parts of the
+                Eastern continent with those to be found on this
+                continent.</p>
+                                    </body><pb xml:id="leaf002v" facs="duk_ap_00006.jpg" type="verso" rend="col-4"/>
+                                </floatingText>
+                </q>
+            </add>
+            <add rend="pasteon"><handShift new="#h3"/>
+                <q who="unknown" type="written">
+                    <floatingText rend="flat">
+                        <body>
+                            <pb xml:id="leaf003r" facs="duk.00677.001.jpg" type="recto" rend="col-6"/>
+                            <ab xml:id="a1"/><note type="authorial" resp="#h1" corresp="#a1">ancient
+                                Numidia, Getulia, &amp;c
+                            &#8212;Northern part of Africa, on
+                                the Mediterranean now
+                                Algiers, Tripoli, &amp;c</note>
+                        </body>
+                    </floatingText>
+                </q>
+            </add>
+        </body>
+    </text>
+</TEI>

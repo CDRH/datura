@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?><?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules_mss.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00642">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">73 Specimen Days</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author xml:id="ww">Walt Whitman</author>
+                <author xml:id="unk">Unknown author</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="lmg">Lauren Grewe</persName><persName xml:id="nhg">Nicole Gray</persName><persName xml:id="tra">Ty Alyea</persName><persName xml:id="mc">Matt Cohen</persName>
+                </respStmt>
+                <sponsor>University of Texas at Austin</sponsor>
+                <sponsor>University of Nebraska-Lincoln</sponsor>
+                <funder>The National Endowment for the Humanities</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2011</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00642</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                    <addrLine>kprice@unlnotes.unl.edu</addrLine>
+                    <addrLine>Ed-Folsom@uiowa.edu</addrLine>
+                    <addrLine>bbarney2@unlnotes.unl.edu</addrLine>
+                </address>
+                <availability><p>The text of the original document is in the public domain. Subject to certain exceptions, public domain works may be freely copied or used in the creation of derivative works without permission, or authorization, of the former copyright owners.</p><p>The text encoding was created and/or prepared by the Walt Whitman Archive and is governed by a <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref> (CC BY 4.0).</p><p>Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p></availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Specimen Days Oct 31 '84 Presidential Election</title>
+                    <idno type="callno">MS 2o 46</idno>
+                    <date notBefore="1884-10-01" notAfter="1892-03-26">October 1884 or later</date>
+                    <orgName xml:id="duk">Trent Collection of Whitmaniana, David M. Rubenstein Rare Book &amp; Manuscript Library, Duke University</orgName>
+                    <note type="project">Transcribed from digital images of the original item.</note>
+                </bibl>
+                <bibl type="pasteon" xml:id="r1">
+                    <author>unknown author</author>
+                    <title level="a">"A Poet on Politics"</title>
+                    <title level="j">unknown periodical</title>
+                    <date>October 1884</date>
+                    <biblScope type="vol"/>
+                    <biblScope type="pp"/>
+                    <note type="project">Whitman claims in this note dated October 31, 1884, that the article referenced appeared, possibly in <hi rend="italic">The Philadelphia Press</hi>, on the day before (October 30, 1884).</note>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="h1" scribeRef="#ww" medium="purple-pencil"/>
+                <handNote xml:id="h2" scribeRef="#ww" medium="pencil"/>
+                <handNote xml:id="h3" scribeRef="#unk" medium="typescript"/>
+                <handNote xml:id="h4" scribeRef="#unk" medium="blue-pencil"/>
+                <handNote xml:id="h5" scribeRef="#ww" medium="black-ink"/>
+            </handNotes>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-03-10">completed date information, tweaked encoding</change>
+            <change who="#nhg" when="2015-01-26">added schematron declaration, updated schema declaration, changed text type to annotations</change><change who="#lmg" when="2011-09-24">Transcribed and encoded.</change>
+            <change who="#nhg" when="2011-10-02">Checked, revised.</change>
+            <change who="#tra" when="2013-12-03">Checked and revised bibliographical encoding.</change>
+            <change who="#lmg" when="2014-03-08">Added dimensions to pasteons, checked cbs, footnotes.</change>
+            <change who="#lmg" when="2014-04-02">Revised floatingText.</change>
+            <change who="#mc" when="2014-11-02">Proofed.</change>
+        </revisionDesc> 
+    </teiHeader>
+    <text type="annotations"><!--Checked against Grier, p. 1204.-->
+        <body>
+            <pb xml:id="leaf001r" facs="duk.00642.001.jpg" type="recto"/>
+            <div1 type="section">
+            <note type="editorial" resp="#h4" place="top">73</note> <note type="authorial" resp="#h1" place="top" rend="circled">Specimen Days</note> <note type="authorial" resp="#h1" place="right">Oct 31 '84</note>
+            <note type="authorial" resp="#h2" place="left">[for new Ed?]</note> <note type="authorial" resp="#h2" place="right">["Election day November
+            1884"]</note>
+            <head type="main-authorial" rend="center"><handShift new="#h1"/><hi rend="underline">Presidential Election</hi></head>
+            <p><hi rend="underline">Oct. 31 '84</hi>&#8212;The political parties
+            are trying <del rend="overstrike">to</del>&#8212;but mostly in vain&#8212;to
+            get up some <del rend="overstrike">ex</del> fervor of excitement
+            on the pending Presidential election. It
+            comes off next Tuesday. There is
+            no question at issue of any importance. <add rend="unmarked" place="supralinear">I cannot 'enthuse' at all.</add>
+            I think of the elections of 30 and 20
+            years ago. <add rend="insertion" place="supralinear">Then there <hi rend="underline">was</hi> something to arouse a fellow.</add> But I like well the <hi rend="underline">fact</hi>
+            of <subst><del rend="overstrike" seq="1">this</del> <add rend="unmarked" place="supralinear" seq="2">all</add></subst> these National Elections&#8212;have
+            written a little poem about it (to order
+            &#8212;published in a Philadelphia daily <ref target="#note1">*</ref>
+            of 26th instant. One of the <subst><del rend="overstrike" seq="1">reporters</del> <add rend="unmarked" place="supralinear" seq="2">papers</add></subst> <del rend="overstrike">has</del>
+            <choice><orig>interview'd</orig><reg>interviewed</reg></choice> me early in the week, and <del rend="overstrike">his</del>
+            printed the following yesterday:</p>
+            <add rend="pasteon" source="#r1"><handShift new="#h3"/>
+                <q who="unknown" type="written">
+                     <floatingText rend="flat">
+                         <body>
+                             <pb xml:id="leaf002r" facs="duk.00642.001a.jpg" type="recto" rend="col-4"/>
+                         <head type="main-authorial" rend="center">A POET ON POLITICS.</head>
+                         <milestone unit="unknown" rend="horbar-short-center"/>
+                         <head type="sub" rend="center">Walt Whitman May Vote for Blaine, but has
+                         a Good Word for the Other Side.</head>
+                             <p>"Yes," said old democratic Walt Whitman
+                             to a gentleman connected with T<hi rend="smallcaps">HE</hi> P<hi rend="smallcaps">RESS</hi>,
+                             seated in the parlor of his little brown wooden
+                             house in Camden the other day, "I may vote
+                             for Blaine&#8212;undoubtedly shall&#8212;and yet I am
+                             an out and out opponent of the high tariff
+                             system, and respect and admire Governor
+                             Cleveland personally. They say Blaine is a
+                             mighty good fellow. Did you ever meet him
+                             much personally? He is a large man, isn't
+                             he?"</p>
+                             <p>"Rather large; he is above the medium
+                             height, broad shouldered, in excellent health,
+                             and is a jolly good fellow, physically and
+                             mentally."</p>
+                             <p>"So my friends tell me, but I never met
+                             him."</p>
+                             <p>"Don't you think, Mr. Whitman, there
+                             was something commendable in Mr. Blaine's
+                             South American policy?"</p>
+                             <p xml:id="p1a" next="#p1b">"I do, decidedly. The United States, as
+                             the biggest and eldest brother, may well come
+                             forward and say to the South American
+                             states, 'Let us all form a bond of union, not
+                             only to increase our prosperity in a commercial
+                             point of view, but to resent and resist anything
+                             like foreign aggression.' I think no
+                             American can object to it. I believe Blaine
+                             is going to be elected. He will then come
+                             out well, I have no doubt. When a man
+                             is made President he soon gets a profound
+                             sense of his responsibilities, and an earnest
+                             desire to render his country good service. In
+                             looking back over the list, I cannot think of
+                             a single President who did not do the best he</p>
+                         </body>
+                     </floatingText>
+                </q>
+            </add><cb/>
+                <add rend="pasteon" source="#r1"><handShift new="#h3"/>
+                <q who="unknown" type="written">
+                    <floatingText rend="flippy">
+                        <body>
+                            <pb xml:id="leaf003r" facs="duk.00642.001b.jpg" type="recto" rend="col-4 new"/>
+                            <div1 type="section">
+                            <p xml:id="p1b" prev="#p1b">knew how from his point of view, although
+                            mistakes, and some pretty bad ones, have
+                            occurred. Even Fillmore, Buchanan and
+                            Andrew Johnson must be given the credit of
+                            patriotic intentions, whatever errors they
+                            made."</p>
+                            <p>Mr. Whitman, in cheeriness and good
+                            heart at any rate, is a man who does not
+                            seem to age rapidly. A series of paralytic
+                            strokes, received in Washington soon after
+                            the close of the Secession War, while he was a
+                            clerk in the Attorney-General's office under
+                            Grant's administration&#8212;the result of over
+                            two years' exhaustive personal labor in the
+                            army hospitals and on the field&#8212;destroyed
+                            his activity to some extent, but he has recuperated,
+                            and now manages, with the aid of
+                            a cane, to take an occasional short walk. He
+                            still wields the pen in moderation.</p>
+                            <p>In appearance and conversation he is much
+                            the same as the Walt Whitman of fourteen
+                            years ago. He is one of the cluster of writers
+                            engaged to furnish the living history of the
+                            Secession War, now just begun by General
+                            Beauregard in "The Century." Whitman is
+                            to write the Army Hospital article. He said
+                            to the writer, half in jest, he should write
+                            the Indian Summer of his poetry yet, if life
+                            and health are spared.</p>
+                            <milestone unit="horbar-short-center"/>
+      </div1>
+                        </body>
+                    </floatingText>
+                </q>
+            </add>
+            <note xml:id="note1" type="authorial" resp="#h1" place="left">*"If I should need
+            to Name, O Western
+            World," <hi rend="underline">Press</hi>. Oct
+            26.</note>
+            </div1>
+            <add rend="pasteon" source="#r1"><handShift new="#h3"/>
+                <q who="unknown" type="written">
+                    <floatingText rend="flippy">
+                        <body>
+                            <pb xml:id="leaf003v" facs="duk.00642.002.jpg" type="verso"/>
+                            <div1 type="verso">
+                                <p> </p>
+                            </div1>
+                        </body>
+                    </floatingText>
+                </q>
+            </add>
+            <pb xml:id="leaf001v" facs="duk.00642.003.jpg" type="verso"/>
+            <delSpan rend="hashmark" spanTo="#a01" hand="#h5"/><div1 type="letter">
+                <opener><address><addrLine><handShift new="#h2"/>Dion Thomas</addrLine>
+                <addrLine><handShift new="#h2"/><hi rend="underline" hand="#h2">Nassau st. bet Beekman &amp; Spru<gap reason="cut away" extent="2" unit="letter"/></hi></addrLine></address>
+                <handShift new="#h2"/>
+                    <dateline rend="right">
+                        <name type="place">Washington</name> <date>Oct. 13</date>
+                    </dateline>
+                    <salute>Dear Sir:</salute>
+                </opener>
+                <p>I write to <del rend="overstrike" hand="#h5">you to</del>
+                ask your <del rend="overstrike">assist</del> kind offices in
+                the following described matter:</p>
+                <delSpan rend="hashmark" spanTo="#a02"/><p>I <del rend="overstrike">se</del> <del rend="overstrike">re</del> sent <del rend="overstrike">an order to
+                Dol</del> to Doolady <del rend="overstrike">over</del> six
+                weeks ago an order</p><anchor xml:id="a02"/>
+                <p>Mr. James Gray, Bookbinder
+                16 Spruce st. 4th floor, is the
+                custodian of the sheets of my
+                Leaves of Grass, &amp; has been <del rend="overstrike"><unclear reason="illegible" resp="#lmg" cert="medium">a</unclear></del>
+                the binder <del rend="overstrike">of them</del> for me.
+                <del rend="overstrike">There is in&#8212;</del> <subst><del rend="overstrike" seq="1">They</del> <add rend="insertion" place="supralinear" seq="2">The sheets</add></subst> are now
+                at his place.</p>
+                <p>I hear that he has become
+                involved&#8212;in fact has failed.
+                If so, I regret it much.</p>
+                <p>I have been waiting <del rend="overstrike">f</del> now
+                <subst><del rend="overstrike" hand="#h5" seq="1">some</del> <add rend="unmarked" place="supralinear" seq="2"><handShift new="#h5"/>over</add></subst> <handShift new="#h2"/>six weeks for the <choice><sic>ful
+                filment</sic><corr>fulfillment</corr></choice> of orders I have sent
+                <subst><del rend="overstrike" seq="1">on there</del> <add rend="unmarked" place="supralinear" seq="2">him</add></subst> for bound books&#8212;&amp; now,
+                under that state of things, I suppose
+                <del rend="overstrike">I cannot get the work done by him.</del>
+                    it will <subst><del rend="overstrike" hand="#h5" seq="1">be impossible</del> <add rend="unmarked" place="supralinear" seq="2">not be possible</add></subst> for him to
+                do the work.</p>
+            </div1><anchor xml:id="a01"/>
+        </body>
+    </text>
+</TEI>

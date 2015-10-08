@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="tex.00155">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Lucia Jane Russell Briggs to Walt Whitman, 21 April 1864</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Lucia Jane Russell Briggs</author>
+            <editor>Kenneth M. Price</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+               <persName xml:id="jc">Janel Cayer</persName>
+               <persName xml:id="ss">Sarah Synovec</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2009</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>tex.00155</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Thomas Donaldson</author>
+                  <title xml:id="wwtm">Walt Whitman the Man</title>
+                  <imprint>
+                     <pubPlace>New York</pubPlace>
+                     <publisher>Francis P. Harper</publisher>
+                     <date>1896</date>
+                     <biblScope type="page">151&#8211;52</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Lucia Jane Russell Briggs</author>
+               <title>Lucia Jane Russell Briggs to Walt Whitman, 21 April 1864</title>
+               <date when="1864-04-21">April 21, 1864</date>
+               <orgName xml:id="tex">Humanities Research Center at the University of Texas</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Briggs, Lucia Jane Russell">Lucia Jane Russell Briggs</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#vs" when="2010-04-15">proofreading changes</change>
+         <change who="#jc" when="2009-09-04">entered bibliographic information in sourceDesc; added annotation</change>
+         <change who="#ss" when="2009-09-03">checked and proofed</change>
+         <change who="#vs" when="2009-07-17">Transcribed, Encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <salute>Mr. Whitman:</salute>
+            </opener>
+         <p>I<ptr target="tex.00155_n100"/> have been very much interested in your hospital work, of which I have heard through my brother, Dr. Russell of Boston. I inclose seventy&#8211;five dollars, which I have collected among a few friends in Salem, and which I hope may be of some little service to our brave boys, who surely should not suffer while we have the power to help them. You have our warmest sympathy in your generous work, and though sad to witness so much suffering, it is indeed a privilege to be able to do something to alleviate it.</p>
+            <p>I hope to be able to send you an addition to this contribution, and thought of waiting for a larger sum, but I see that you are having numbers of sick sent in to Washington daily, so you will be in immediate want of money.</p>  
+            <closer rend="right">
+               <salute>Very Gratefully Your Friend,</salute>
+               <signed>Mrs. George W. Briggs, April 21. Salem, Mass.</signed>
+            </closer>
+         
+      </body>
+   </text>
+</TEI>

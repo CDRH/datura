@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="uro.00001">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to Nathaniel Bloom, 5 September 1863</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="tj">Tim Jackson</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+
+               <persName xml:id="ao">Alyssa Olson</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>uro.00001</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Walt Whitman</author>
+                  <editor>Edwin Haviland Miller</editor>
+                  <title xml:id="ehm">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>New York</pubPlace>
+                     <publisher>New York University Press</publisher>
+                     <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                     <biblScope type="volume">1</biblScope>
+                     <biblScope type="page">141-143</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to Nathaniel Bloom, 5 September 1863</title>
+               <date when="1863-09-05">September 5, 1863</date>
+               <orgName xml:id="uro">Charles A. Brown Collection, University of Rochester</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Bloom, Nathaniel">Nathaniel Bloom</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#tj" when="2009-08-25">proofread and modified; need to return to address query</change>
+         <change who="#vs" when="2008-09-23">added main TEI markup</change>
+         <change who="#el" when="2008-07-30">added TEI header structure w/o IDs and titles; added minimal TEI markup</change>
+         <change who="#ao" when="2008-07-29">pulled transcription from Primary Source Media</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <dateline rend="right">
+                  <name type="place">Washington</name>
+                  <date when="1863-09-05">September 5 1863</date>
+               </dateline>
+               <salute>Dear Nat<ptr target="uro.00001_n1"/>
+               </salute>
+            </opener>
+            <p>I wish you were here if only to enjoy the bright &amp; beautiful weather we are having here now for about two weeks&#8212;then it is sufficiently cool, &amp; the air buoyant &amp; inspiriting&#8212;dear friend, how long it is since we have seen each other, since those pleasant meetings &amp; those hot spiced rums &amp; suppers &amp; our dear friends Gray &amp; Chauncey, &amp; Russell, &amp; Fritschy too, (who for a while at first used to sit so silent,) &amp; Perkins &amp; our friend Raymond&#8212;how long it seems&#8212;how much I enjoyed it all. What a difference it is with me here&#8212;I tell you, Nat, my evenings are frequently spent in scenes that make a terrible difference&#8212;for I am still a hospital visitor, there has not passed a day for months (or at least not more than two) that I have not been among the sick &amp; wounded, either in hospitals or down in camp&#8212;occasionally here I spend the evenings in hospital&#8212;the experience is a profound one, beyond all else, &amp; touches me personally, egotistically, in unprecedented ways&#8212;I mean the way often the amputated, sick, sometimes dying soldiers cling &amp; cleave to me as it were as a man overboard to a plank, &amp; the perfect content they have if I will remain with them, sit on the side of the cot awhile, some youngsters often, &amp; caress them &amp;c.&#8212;It is delicious to be the object of so much love &amp; reliance, &amp; to do them such good, soothe &amp; pacify torments of wounds &amp;c&#8212;You will doubtless see in what I have said the reason I continue so long in this kind of life&#8212;as I am entirely on my own hook too.</p>
+            <p>Life goes however quite well with me here&#8212;I work a few hours a day at copying &amp;c, occasionally write a newspaper letter, &amp; make enough money to pay my expenses&#8212;I have a little room, &amp; live a sort of German or Parisian student life&#8212;always get my breakfast in my room, (have a little spirit lamp) &amp; rub on free &amp; happy enough, untrammeled by business, for I make what little employment I have suit my moods&#8212;walk quite a good deal, &amp; in this weather the rich &amp; splendid environs of Washington are an unfailing fountain to me&#8212;go down the river, or off into Virginia once in a while&#8212;All around us here are forts, by the score&#8212;great ambulance &amp; teamsters' camps &amp;c&#8212;these I go to&#8212;some have little hospitals, I visit, &amp;c &amp;c&#8212;</p>
+            <p>Dear Nat, your good &amp; friendly letter came safe, &amp; was indeed welcome&#8212;I had not thought you had forgotten me, but I wondered why you did not write&#8212;What comfort you must take out there in the country, by the river&#8212;I have read your letter many times, as I do from all my dear friends &amp; boys there in New York&#8212;Perkins lately wrote me a first-rate letter, &amp; I will reply to it soon&#8212;I wish to see you all very much&#8212;I wish you to give my love to Fritschy, &amp; Fred Gray&#8212;I desire both to write to me&#8212;Nat, you also, my dear comrade, &amp; tell me all about the boys &amp; everything, all the little items are so good&#8212;should Charles Russell visit New York, I wish you to say to him I send him my love&#8212;I wish you the same to Perk, &amp; to Kingsley<ptr target="uro.00001_n2"/> &amp; Ben Knower&#8212;So good bye, my comrade, till we meet, &amp; God bless you, dear friend&#8212;</p>
+            <closer rend="right">
+               <signed>Walt</signed>
+            </closer>
+         
+         <postscript>
+            <p>address me care Major Hapgood, Paymaster U S A, cor 15th &amp; F Washington D C&#8212;</p>
+         </postscript>
+      </body>
+   </text>
+</TEI>

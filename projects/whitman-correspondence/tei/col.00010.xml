@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="col.00010">
+    <teiHeader> 
+        <fileDesc> 
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Talcott Williams, 9 October
+                    1884</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>col.00010</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Talcott Williams, 9 October 1884</title>
+                    <date cert="high" when="1884-10-09" xml:id="dat1">October 9, 1884</date>
+                    <orgName xml:id="col">Columbia University Libraries, Rare Book &amp; Manuscript
+                        Library, New York</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Williams, Talcott" ref="loc.05142_n5">Talcott Williams</persName>
+                </person>
+            </particDesc>
+        </profileDesc> 
+        <revisionDesc>
+            <change when="2014-09-21" who="#ss">transcribed, encoded and annotated from
+            Miller.</change>
+            <change when="2015-01-06" who="#kb">edited</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <pb xml:id="leaf001r" facs="col.00010.001_large.jpg" type="recto"/>
+                <dateline>
+                    <date when="1884-10-09" rend="right">Thursday P M</date>
+                    <date when="1884-10-09" rend="right"><hi rend="underline">Oct:</hi> 9 '84</date>
+                    
+                </dateline>
+                <salute>My dear Williams</salute>
+            </opener>
+            <p>I leave you this in hopes you can use it in to-morrow's paper&#8212;(as the Red
+                Jacket affair has come off to-day at Buffalo.)&#8212;I should like $5 for it.</p>
+            <p>I am well as usual&#8212;only very lame&#8212;</p>
+
+            <closer><signed>Walt Whitman</signed></closer>
+            <postscript>
+                <p><hi rend="underline">Have the proof read carefully by copy<ptr target="col.00010_n1"
+                        /></hi></p>
+            </postscript>
+            
+        </body>
+    </text>
+</TEI>

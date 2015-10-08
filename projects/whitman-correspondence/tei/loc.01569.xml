@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.01569">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Edmund Routledge, 17
+                    January 1868</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <name>The Walt Whitman Archive Staff</name>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2010</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.01569</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2010 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note type="project">The following are responsible for particular readings or for
+                    changes to this file, as noted:
+<persName xml:id="kmp">Kenneth M. Price</persName> <persName xml:id="el">Elizabeth
+                        Lorang</persName>
+                    <persName xml:id="zk">Zachary King</persName>
+                    <persName xml:id="ec">Eric Conrad</persName>
+                </note>
+            </notesStmt>
+            <sourceDesc>
+
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author><editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961–1977</date><biblScope type="volume">2</biblScope>
+                            <biblScope type="volume">2</biblScope>
+                            <biblScope type="page">13–14</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Edmund Routledge, 17 January 1868</title>
+                    <date cert="high" when="1868-01-17" xml:id="dat1">January 17, 1868</date>
+                    <idno type="callno">MSS18630, Box 15</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839-1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Routledge, Edmund">Edmund Routledge</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+<change when="2012-03" who="#kp">blessed</change>
+            <change when="2010-12-17" who="#el">checked</change>
+            <change when="2010-10-07" who="#zk">encoded</change>
+            <change when="2010-08-20" who="#ec">extracted transcription from Major Authors
+                cd</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <opener>
+                <dateline>
+                    <date when="1868-01-17">Sent Jan 17, '68 <lb/>probably left N. Y. Jan 18,
+                        '68</date><ptr target="loc.01569_n1"/>
+                </dateline>
+                <salute>Edmund Routledge:</salute>
+                <lb/>
+                <salute>Dear Sir:</salute>
+            </opener>
+
+            <p>In compliance with request in your name in letter from George Routledge &amp;
+                Sons, New York, of December 28th &amp; my own reply thereto of December
+                    30th,<ptr target="loc.01569_n2"/> I send you herewith a poem for the
+                Magazine, if found acceptable. For my own convenience &amp; to insure
+                correctness I have had the MS. put in type, &amp; thus transmit it to you in the
+                shape of a printed proof. The price is $120<ptr target="loc.01569_n3"/> in
+                gold, payable here, and I should like 30 copies of the Magazine, sent me here. It is
+                to be distinctly understood that I <hi rend="italic">reserve</hi> the right to print
+                it in any future editions of my book. Hoping success to the Magazine, &amp; that
+                my piece may be found acceptable for it, I remain</p>
+
+            <closer>
+                <salute>Respectfully &amp;c yours,</salute>
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+
+            <postscript>
+                <p>My address is at Attorney General's Office, Washington City, U.S.A.</p>
+            </postscript>
+        </body>
+    </text>
+</TEI>

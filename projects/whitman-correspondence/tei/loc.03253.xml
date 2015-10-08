@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03253">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to John Lucas, 13 November [1877]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="ad">Anthony Dreesen</persName>                                   
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2010</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03253</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+
+            <sourceDesc>       
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to John Lucas, 13 November [1877]</title>
+                    <date cert="medium" when="1877-11-13" xml:id="dat1">November 13, 1877</date>
+                    <idno type="callno">MSS03253</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Lucas, John">John Lucas</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-02-10" who="#nhg">corrected</change>
+            <change when="2013-03-29" who="#km">checked</change>
+            <change when="2013-03-13" who="#km">checked</change>
+            <change when="2013-01-22" who="#ej">Checked and Corrected</change>
+            <change when="2012-12-17" who="ab">checked</change>
+             <change when="2012-09-12" who="ad">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.03253.001.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">Camden <choice><abbr>NY</abbr><expan>New York</expan></choice></name>
+                    <date when="1877-11-13"><choice><abbr>Nov</abbr><expan>November</expan></choice> 13</date>
+                </dateline>
+                <salute><name>Mr. John Lucas</name><ptr target="loc.03253_n1"/></salute>
+                <salute>Dear Sir</salute>
+            </opener>
+            <p>This is to introduce a young man, a friend of mine J Horner Stafford, son of Montgomery Stafford, of Glendale&#8212;He has been for some months studying &amp; practicing Telegraphy&#8212;&amp; perhaps you could give him something to do&#8212;At any rate I take the liberty of introducing him to you, to talk it over. He is a young man of intelligence &amp; first class integrity.</p>
+            <closer>
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+            <postscript>
+            <p>I want to come down before long, &amp; make you a call or short visit, &amp; see your works.<ptr target="loc.03253_n2"/></p>
+            </postscript>
+            
+            <pb xml:id="leaf001v" facs="loc.03253.002.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

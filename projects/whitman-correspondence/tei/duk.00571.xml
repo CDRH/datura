@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00571">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, [21 October 1863]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00571</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, [21 October 1863]</title>
+                    <date cert="high" when="1863-10-21" xml:id="dat1">October 21, 1863</date>
+                    <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                    <relatedItem>
+                        <ptr target="duk.00347"/>
+                    </relatedItem>
+                    <note type="project">Louisa wrote this letter on a letter she received from George Washington Whitman. She forwarded George's letter to Walt Whitman and included this note on the verso of the last page of George's letter.</note>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-03-06" who="#el">Revised date to 21 October 1863, a Wednesday, zWR Approved</change>
+            <change when="2013-11-07" who="#el">added pb for verso</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-10-21" who="#el">updated TEI header for info on duk.00347 and revised header to WWA conventions</change>
+            <change when="2013-06-21" who="#wr">Rename from duk.00347.004 to duk.00571, fix TEI xml:id, bibl idno, and pb
+                xml:id, facs, and type; and note listed in EHM Correspondence.</change>
+            <change when="2013-05-20" who="#wr">Minor proofreading corrections.</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent Proof</change>
+            <change when="2013-02-18" who="#wr">Minor Proofreading corrections in notes.</change>
+            <change when="2013-02-17" who="#wr">Proofreading corrections.</change>
+            <change when="2013-02-15" who="#wr">Annotate all the enclosed letters</change>
+            <change when="1863-02-14" who="#wr">Add annotations: date, George's letter and George,
+                Jeff, Martha, Nancy, Hannah.</change>
+            <change when="2013-02-09" who="#wr">Transcribe 1 Page</change>
+        </revisionDesc>
+    </teiHeader>
+    
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="duk.00571.001.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <choice><orig>wensday</orig><reg>Wednesday</reg></choice> evening 9 oclock<ptr target="duk.00571_n1"/>
+                </dateline>
+                <salute>dear walt</salute>
+            </opener>
+           
+            <p>i send you georges letter<ptr target="duk.00571_n2"/> you will know where to direct too he says he will write to you but i thought he might not and you would be glad any how to see it as i was i thought he was in <choice><orig>tenesee</orig><reg>Tennessee</reg></choice> and if i wrote he would never get it O i was so glad to get this letter i sat right down and wrote to him it seems strang<unclear reason="cut away" cert="medium" resp="#wr">e</unclear> he has not got the letters you have sent him<ptr target="duk.00571_n11"/> Andrew<ptr target="duk.00571_n6"/> has been here this afternoon he went down town and walked up but was very muc<unclear reason="cut away" cert="medium" resp="#wr">h</unclear> fatigued when he got here he <choice><orig>laied</orig><reg>laid</reg></choice> down on the sofa <unclear reason="damage" cert="medium" resp="#wr">a</unclear>while before he went home he is about the same jess<ptr target="duk.00439_n11"/> went home with him and took some rice pudding matty<ptr target="duk.00465_n9"/> made him he c<unclear reason="damage" cert="medium" resp="#wr">an</unclear> seem to eat that better i made him some broth yesterday boiled the beef a long time and put a little salt in it and he could not take much of it i told him i would make him some more to morrow and not put any salt in it i gave him the 2 dollar you sent and the letter <unclear reason="damage" cert="medium" resp="#wr">to re</unclear>ad he worries about things i give him money <choice><orig>wheneve</orig><reg>whenever</reg></choice> i have it if he could only eat without such misery he could get along better he came here last sunday morning and staid all day matty washed his neck and gave him a clean shirt and while he was here she went round and gave nance<ptr target="duk.00423_n4"/> a real talking too told her she ought to have patience she is so very high temper<unclear reason="damage" cert="medium" resp="#wr">d</unclear> poor han<ptr target="duk.00467_n1"/> i wonder how she is i think so much about her some nights i cant sleep if she wou<unclear reason="illegible" cert="medium" resp="#wr">ld</unclear> only write to me) my <choice><orig>coughf</orig><reg>cough</reg></choice> is little better</p>
+            <closer>
+                <signed><unclear reason="damage" cert="medium" resp="#wr">y</unclear>our mother<ptr target="duk.00425_n3"/></signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="duk.00347.003.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

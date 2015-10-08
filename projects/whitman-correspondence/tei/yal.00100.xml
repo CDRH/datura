@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="yal.00100">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Julius W. Mason to Walt Whitman, 16 February 1865</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Julius W. Mason</author>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+<persName xml:id="nhg">Nicole Gray</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2009</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>yal.00100</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <author>Julius W. Mason</author>
+               <title>Julius W. Mason to Walt Whitman, 16 February 1865</title>
+               <date when="1865-02-16">February 16, 1865</date>
+               <orgName xml:id="yal">Yale Walt Whitman Collection, Beinecke Rare Book and Manuscript Library</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Mason, Julius W.">Julius W. Mason</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+         <change who="#nhg" when="2014-08-29">updated sender name formatting in persName keys</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#el" when="2010-04-03">proofread and edited</change>
+         <change who="#el" when="2009-09-09">transcribed, encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         <pb facs="yal.00100.001.jpg" type="recto"/>
+
+            <opener>
+               <dateline>
+                  <name type="place">City Point Va</name> 
+                  <date when="1865-02-16">Feby 16th 1865</date>
+               </dateline>
+               <salute>My Dear Friend,</salute>
+            </opener>
+            <p>The Box for your brother, Captain Whitman, was sent on the 10th. There will be no doubt of its reaching him as it was delivered to Col. Mulford personally who promised to give it particular attention. The letter will go by 1st Flag of Truce. I am very glad to be able to do all this for you, and anything else you may desire.</p>
+            <closer>
+               <salute>Truly your friend</salute>
+               <signed>J. W. Mason</signed>
+            </closer>
+         
+         <postscript>
+            <p>Walt Whitman}</p>
+         </postscript>
+         <pb facs="yal.00100.002.jpg" type="verso"/>
+      </body>
+   </text>
+</TEI>

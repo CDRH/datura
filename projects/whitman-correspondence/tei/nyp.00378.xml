@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nyp.00378">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title level="m" type="main">Walt Whitman to Peter Doyle, 25 September [1874 or 1875]</title>
+        <title level="m" type="sub">a machine readable transcription</title>
+        <author>Walt Whitman</author>
+        <editor>Kenneth M. Price</editor>
+        <editor>Ed Folsom</editor>
+        <respStmt>
+          <resp>Transcription and encoding</resp>
+          <name>The Walt Whitman Archive Staff</name>
+        </respStmt>
+        <sponsor>Center for Digital Research in the Humanities, University of
+          Nebraska-Lincoln</sponsor>
+        <sponsor>University of Iowa</sponsor>
+        <funder>National Historical Publications and Records Commission</funder>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <date>2012</date>
+        </edition>
+      </editionStmt>
+      <publicationStmt>
+        <idno>nyp.00378</idno>
+        <distributor>The Walt Whitman Archive</distributor>
+        <address>
+          <addrLine>Center for Digital Research in the Humanities</addrLine>
+          <addrLine>319 Love Library</addrLine>
+          <addrLine>University of Nebraska-Lincoln</addrLine>
+          <addrLine>P.O. Box 884100</addrLine>
+          <addrLine>Lincoln, NE 68588-4100</addrLine>
+        </address>
+        <availability>
+          <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights
+            reserved. Items in the Archive may be shared in accordance with the Fair Use
+            provisions of U.S. copyright law. Redistribution or republication on other
+            terms, in any medium, requires express written consent from the editors and
+            advance notification of the publisher, Center for Digital Research in the
+            Humanities. Permission to reproduce the graphic images in this archive has
+            been granted by the owners of the originals for this publication only.</p>
+        </availability>
+      </publicationStmt>
+      <notesStmt>
+        <note type="project" anchored="true">The following are responsible for particular readings or for
+          changes to this file, as noted: 
+<persName xml:id="kmp">Kenneth M. Price</persName>
+<persName xml:id="el">Elizabeth Lorang</persName>
+ <persName xml:id="kk">Kathryn Kruger</persName>
+          <persName xml:id="zk">Zachary King</persName>
+          <persName xml:id="ec">Eric Conrad</persName>
+        </note>
+      </notesStmt>
+      <sourceDesc>
+
+        <biblStruct>
+          <monogr>
+            <editor>Edwin Haviland Miller</editor>
+<author>Walt Whitman</author>
+<title xml:id="ehm">The Correspondence</title>
+<imprint>
+              <pubPlace>New York</pubPlace>
+              <publisher>New York University Press</publisher>
+              <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+              <biblScope type="page">348</biblScope>
+                <biblScope type="volume">2</biblScope>
+            </imprint>
+          </monogr>
+        </biblStruct>
+
+        <bibl>
+          <author>Walt Whitman</author>
+          <title>Walt Whitman to Peter Doyle, 25 September [1874 or 1875]</title>
+
+          <date cert="medium" notBefore="1874-09-25" notAfter="1875-09-25" xml:id="dat1">September 25, 1874 or 1875</date>
+          <orgName xml:id="nyp">The Henry W. and Albert A. Berg Collection of English and American Literature, New York Public Library</orgName>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <particDesc>
+        <person role="sender">
+           <persName key="Whitman, Walt">Walt Whitman</persName>
+        </person>
+        <person role="recipient">
+          <persName key="Doyle, Peter">Peter Doyle</persName>
+        </person>
+      </particDesc>
+    </profileDesc>
+    <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+        <change when="2013-02-26" who="#el">removed "Postcard from" from titleStmt</change>
+<change when="2012-05-18" who="#kmp">blessed</change><change when="2012-02-07" who="#kk">checked</change>
+      <change when="2011-04-20" who="#zk">encoded</change>
+      <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+    </revisionDesc>
+  </teiHeader>
+
+  <text type="letter">
+    <body>
+      <opener>
+        <dateline>
+          <name type="place" rend="right">431 Stevens <choice><abbr>St.</abbr><expan>Street</expan></choice> Camden <lb/><choice><abbr>N.</abbr><expan>New</expan></choice> Jersey</name>
+          <date notBefore="1874-09-25" notAfter="1875-09-25" rend="right"><choice><abbr>Sept.</abbr><expan>September</expan></choice> 25</date>.<ptr target="nyp.00378_n1"/>
+        </dateline>
+      </opener>
+
+      <p>About the same sort of a week&#8212;</p>
+      
+      <closer>
+        <signed rend="right">WW</signed>
+      </closer>
+    </body>
+  </text>
+</TEI>

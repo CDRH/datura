@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.07000">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Aleck, 13 May [1885]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.07000</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Aleck, 13 May [1885]</title>
+                    <date cert="medium" when="1885-05-13" xml:id="dat1">May 13, 1885</date>
+                    <idno type="callno">MSS18630 Box 19</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="unk"><persName key="Unknown">Unknown</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Aleck" ref="n5000">Aleck</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-07-15" who="#kb">edited</change>
+            <change when="2015-05-27" who="#if">edited</change>
+            <change when="2015-02-28" who="#ss">annotated (loc.07000_n1 is by #ak)</change>
+            <change when="2014-12-05" who="#ss">checked and corrected</change>
+            <change when="2014-12-04" who="#ak">transcribed, encoded, and annotated</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_vm.01684_large.jpg" type="recto"/>
+            <note type="editorial" resp="#unk" place="top">(1885)</note>
+            <!--Probably an archival note-->
+            <opener>
+                <dateline>
+                    <date>Wednesday <choice><abbr>Evn'g</abbr><expan>evening</expan></choice></date>
+                    <date when="1885-05-13">May 13</date>
+                </dateline>
+            </opener>
+            <p> Aleck dear boy I cannot find "Locusts &amp; Wild Honey" this moment&#8212;but let
+                me lend you another of John Burroughs's<ptr target="n0129"/> books&#8212;(thought by some to be his
+                best.)&#8212;"Birds and Poets"&#8212;hope it will please you &amp; your mother and
+                sister. </p>
+            <closer>
+                <salute>Your friend</salute>
+                <signed>W W</signed>
+            </closer>
+            <postscript>
+                <p>Aleck boy here is a copy slip of my little new poem just out in <hi
+                    rend="underline">Harpers' Weekly</hi> of May 16.<ptr target="loc.07000_n2"/></p>
+            </postscript>
+            <pb xml:id="leaf001v" facs="loc_vm.01685_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

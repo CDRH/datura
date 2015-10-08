@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="tex.00357">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Edward Carpenter, 28 September 1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>                   
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>tex.00357</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">186&#8211;187</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Edward Carpenter, 28 September 1880</title>
+                    <date cert="high" when="1880-09-28" xml:id="dat1">September 28, 1880</date>
+                    <idno type="callno">Container 3.1</idno>
+                    <orgName xml:id="tex">T. E. Hanley Collection, Harry Ransom Humanities Research Center, The University of Texas at Austin</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Carpenter, Edward">Edward Carpenter</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-05-13" who="#km">checked</change>
+            <change when="2013-01-22" who="#ej">Checked and Corrected</change>
+            <change when="2012-12-26" who="#ab">checked</change>
+            <change when="2012-11-13" who="#gt">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">Niagara Falls America<ptr target="tex.00357_n1"/></name>
+                    <date when="1880-09-28">September 28 1880</date>
+                </dateline>
+                <salute>Dear Edward Carpenter<ptr target="tex.00357_n2"/></salute>
+            </opener>
+
+            <p>I will just write you a line or two&#8212;it will be very short&#8212;but show you that I am still in the land of the living, &amp; have not forgotten you&#8212;My four months jaunt in this noble ample healthy Canada country is done (it has been a great success to me)&#8212;I have traveled several thousand miles&#8212;mostly on the Lakes &amp; St Lawrence, very comfortably &amp; I am now on my way back home to Camden, stopping here only a short time. I am feeling heartier physically than for years&#8212;Camden will be my permanent P O address&#8212;Love to you&#8212;</p>
+       
+            <closer>
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="ucb.00056">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to John Burroughs, 23 November [1879]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>                   
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>ucb.00056</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date when="1964">1964</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">170&#8211;171</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to John Burroughs, 23 November [1879]</title>
+                    <date cert="medium" when="1879-11-23" xml:id="dat1">November 23, 1879</date>
+                    <orgName xml:id="ucb">Walt Whitman Collection, The Bancroft Library, University of California, Berkeley </orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Burroughs, John">John Burroughs</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-01-21" who="#ss">checked</change>
+            <change when="2013-05-02" who="#km">checked</change>
+            <change when="2013-01-14" who="#ej">Checked and Corrected</change>
+            <change when="2013-01-02" who="#gt">checked</change>
+            <change when="2012-11-01" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">2316 Pine Street</name>
+                    <name type="place" rend="right">St Louis Missouri<ptr target="ucb.00056_n1"/></name>
+                    <date when="1879-11-23" rend="right">Sunday afternoon <choice><abbr>Nov</abbr><expan>November</expan></choice> 23</date>
+                </dateline>
+                <salute>Dear friend</salute>
+            </opener>
+
+            <p>I am still here&#8212;not yet (as an old Long Island aunt used to say) "not yet out of my misery" but I go out on the streets, or to the Public Library, most every day, &#38; have no doubt I shall be as well as usual before long&#8212;I believe I told you I was in nice quarters &#38; very comfortable here<ptr target="ucb.00056_n2"/>&#8212;I send you Mrs Gilchrist's letter, which you needn't return<ptr target="ucb.00056_n3"/>&#8212;Gilder's, which I also enclose, I wish you to send back, some time<ptr target="ucb.00056_n4"/>&#8212;Upon receiving this, post me a card&#8212;tell me how the mother is &#38; 'Sula, also the baby, also Smith<ptr target="ucb.00056_n5"/>&#8212;Just got a postal from Mrs Gilchrist giving her address.</p>
+                        
+            <ab>
+                <address>
+                    <addrLine>1 Elm Villas Elm Road</addrLine>
+                    <addrLine>Heath street Hampstead</addrLine>
+                    <addrLine>London <choice><abbr>Eng:</abbr><expan>England</expan></choice></addrLine>
+                </address>
+            </ab>
+            
+            <p>The rough map enclosed gives you some idea of my present jaunt, on the red line (the blue lines are old travels of mine)<ptr target="ucb.00056_n6"/>&#8212;I have seen the December <hi rend="italic">Scribner's</hi>&#8212;What you say of me in <hi rend="italic">Nature &#38; the Poets</hi> thoroughly delights, satisfies &#38; <hi rend="italic">prides</hi> me<ptr target="ucb.00056_n7"/>&#8212;I saw in the Library a late London <hi rend="italic">Fortnightly</hi> in which J A Symonds, touching briefly but very commendingly &#38; mentioning my name, makes quite an extract from <hi rend="italic">Dem[ocratic] Vistas</hi> (summing up the general spirit of British literature as being markedly sombre &#38; bilious)<ptr target="ucb.00056_n8"/>&#8212;A B Alcott is expected here, to talk&#8212;I may see him&#8212;This is quite a place for the most toploftical Hegelian transcendentalists, a small knot but smart&#8212;the principal of them, W T Harris,<ptr target="ucb.00056_n9"/> editor of <hi rend="italic">Speculative Philosophy</hi>, has been often to see me, has been very kind, &#38; I like him much&#8212;Probably ten days more will end my stay here, (but I am not fixed)<ptr target="ucb.00056_n10"/>&#8212;A fine day as I write, &#38; I am feeling comfortable. Best love to 'Sula&#8212;</p>
+
+            <closer>
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

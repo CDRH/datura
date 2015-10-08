@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.00880">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Peter Eckler to Walt Whitman, 26 April 1865</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Peter Eckler</author>
+            <editor>Kenneth M. Price</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+
+
+               <persName xml:id="ec">Eric Conrad</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2009</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>loc.00880</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <author>Peter Eckler</author>
+               <title>Peter Eckler to Walt Whitman, 26 April 1865</title>
+               <date when="1865-04-26">April 26, 1865</date>
+               <orgName xml:id="loc">Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Eckler, Peter">Peter Eckler</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#el" when="20010-04-06">proofread and edited</change>
+         <change who="#el" when="2009-09-10">revised based on Ted's proofreading</change>
+         <change who="#el" when="2009-08-18">added encoding for page breaks</change>
+         <change who="#ec" when="2009-08-14">annotations</change>
+         <change who="#vs" when="2009-07-30">added annotations</change>
+         <change who="#vs" when="2009-07-09">Transcribed, Encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         <pb facs="loc.00880.001.jpg" type="recto"/>
+         
+            <opener rend="right">
+               <dateline>
+                  <name type="place">New York</name>
+                  <date when="1865-04-22">April 22, 1865<ptr target="loc.00880_n100"/>
+               </date>
+               </dateline>
+               <salute>Mr. Whitman</salute> 
+            </opener>
+            <p>Your book is now to proofs &amp; will be ready for the Binder next Monday morning. As there was nothing done yesterday &amp; the day before on account of the funeral, my waiting for your reply did not retard the book much. Alvords foreman promises to do a good job &amp; I hope he will <gap reason="illegible"/> I sent you record of <gap reason="illegible"/> page Mr Belts <gap reason="illegible"/> Send you a copy as soon as published &amp; another copy to Congressional Library of Washington. What will complete your copyright&#8212;His office is in Beckman <unclear reason="illegible" resp="#jc" cert="medium">01&#8212;in Johnston's </unclear> Old Theater.</p>
+            <closer rend="right">
+               <salute>Respectfully</salute>
+               <signed>P. Eckler</signed>
+            </closer>
+         
+      </body>
+   </text>
+</TEI>

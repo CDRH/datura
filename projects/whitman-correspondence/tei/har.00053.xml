@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="har.00053">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to John T. Trowbridge, 31 August 1865</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Kenneth M. Price</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="ak">Alex Kinnaman</persName>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+               <persName xml:id="nhg">Nicole Gray</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2009</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>har.00053</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <editor>Ted Genoways</editor>
+                  <author>Walt Whitman</author>
+                  <title xml:id="tg">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>Iowa City</pubPlace>
+                     <publisher>University of Iowa Press</publisher>
+                     <date>2004</date>
+                     <biblScope type="volume">7</biblScope>
+                     <biblScope type="page">26</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to John T. Trowbridge, 31 August 1865</title>
+               <date when="1865-08-31">August 31, 1865</date>
+               <orgName xml:id="har">Manuscripts Department, Houghton Library, Harvard University</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Trowbridge, John T.">John T. Trowbridge</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+         <change who="#nhg" when="2015-03-05">checked, corrected</change>
+         <change who="#ak" when="2015-01-30">corrected orgName, transcribed and annotated</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#vs" when="2009-08-27">proofread and edited annotations</change>
+         <change who="#vs" when="2009-07-17">Transcribed, Encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener rend="right">
+               <dateline>
+                  <name type="place">ATTORNEY GENERAL'S OFFICE.</name>
+                  <name type="place">Washington,</name>
+                  <date when="1865-08-31">Aug 31, 1865.</date>
+               </dateline>
+               <salute>My dear friend,</salute>
+            </opener>
+            <p>I have just received your note.</p>
+         <p>I should be truly glad to see you&#8212;perhaps best to call at Att'y Gen's office,<ptr target="har.00053_n1"/> Treasury Building&#8212;say from 1/2 past 10 to 12, soon as convenient after receiving this.</p>
+         <closer>Walt Whitman</closer>
+         
+      </body>
+   </text>
+</TEI>

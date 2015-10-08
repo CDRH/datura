@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.01181">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">John Burroughs to Walt Whitman, 9 August [1882]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>John Burroughs</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.01181</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>John Burroughs</author>
+                    <title>John Burroughs to Walt Whitman, 9 August [1882]</title>
+                    <date cert="medium" when="1882-08-09" xml:id="dat1">August 9, 1882</date>
+                    <idno type="callno">MSS18630, Box 7, Reel 4-5</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Burroughs, John">John Burroughs</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-05-08" who="#nhg">checked, corrected</change>
+            <change when="2014-03-05" who="#ej">Checked and Corrected</change>
+            <change when="2014-02-12" who="#nnk">proofed</change>
+            <change when="2013-11-18" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                
+                <pb xml:id="leaf001v" facs="loc.01181.002_large.jpg" type="verso"/>
+                <dateline>
+                    <name type="place" rend="right">Esopus,</name>
+                    <date when="1882-08-09" rend="right">Aug 9<hi rend="superscript"><hi rend="underline">th</hi></hi></date>
+                </dateline>
+            </opener>
+            <p>We are home again all well &#38; very glad to be back; had a fine passage over. I
+                have never heard from you since I left home. Drop me a line how &#38; where you are
+                &#38; how the battle of the book goes on. I saw W<hi rend="superscript"><hi rend="underline">m</hi></hi> O'C.<hi rend="superscript">s</hi> letters in the
+                Tribune&#8212;two of them.</p>
+            <closer>
+                <signed rend="right">J.B.</signed>
+            </closer>
+            <pb xml:id="leaf001r" facs="loc.01181.001_large.jpg" type="recto"/>
+        </body>
+    </text>
+</TEI>

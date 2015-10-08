@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="prc.00007">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to Lucia Jane Russell Briggs, 26 April 1864</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Kenneth M. Price</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+               <persName xml:id="jc">Janel Cayer</persName>
+               <persName xml:id="ss">Sarah Synovec</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2009</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>prc.00007</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Walt Whitman</author>
+                  <editor>Ted Genoways</editor>
+                  <title level="m">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>Iowa City</pubPlace>
+                     <publisher>University of Iowa Press</publisher>
+                     <date when="2004">2004</date>
+                     <biblScope type="volume">7</biblScope>
+                     <biblScope type="page">22&#8211;23</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to Lucia Jane Russell Briggs, 26 April 1864</title>
+               <date when="1864-04-26">April 26, 1864</date>
+               <orgName xml:id="prc">Private collection</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Briggs, Lucia Jane Russell">Lucia Jane Russell Briggs</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#vs" when="2010-04-15">proofreading changes</change>
+         <change who="#jc" when="2009-09-04">added annotation</change>
+         <change who="#ss" when="2009-09-03">checked and proofed</change>
+         <change who="#vs" when="2009-07-17">Transcribed, Encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener rend="right">
+               <dateline>
+                  <name type="place">Washington /</name>
+                  <date when="1864-04-26">April 26 1864</date>
+               </dateline>
+               <salute>Dear Madam<ptr target="prc.00007_n1"/>
+            </salute> 
+            </opener>
+            <p>Your generous remittance of $75 for the wounded &amp; sick was duly received by letter of 21st &amp; is most acceptable. So much good may be done with it. A little I find may go a great ways. It is perhaps like having a store of medicines&#8212;the difficulty is not so much in getting the medicines, it is not so important about having a great store, as it is important to apply them by rare perception, honest personal investigation, true love, &amp; if possible the inspiration &amp; tact we in other fields call genius.</p>
+            <p>The hospitals here are again full, as nearly all last week trains were arriving off &amp; on from front with sick. Very many of these however will be transferred north as soon as practicable.</p>
+            <p>Unfortunately large numbers are irreparably injured in these jolting railroad &amp; ambulance journeys, numbers dying on the road.&#8212;Of these come in lately, diarrhea, rheumatism &amp; the old camp fevers are most prevalent. The wrecks in these forms of so many hundreds of dear young American men come in lately, are terrible, &amp; make one's heart ache.</p>
+            <p>Numerically the sick are the last four or five weeks becoming alarmingly greater, &amp; in quality the cases grow more intense. I have noticed a steady deepening of this intensity of the cases of sickness, the year &amp; a half I have been with the soldiers. Hospital accommodations here are being extensively added to. Large tents are being put up, &amp; others got ready.</p>
+            <p>My friend, you must accept the men's thanks, through me. I shall remain here among the soldiers in hospital through the summer, with short excursions down in field, &amp; what help you can send me for the wounded &amp; sick I need hardly say how gladly I shall receive it &amp; apply it personally to them.</p>
+            <closer rend="right">
+               <signed>Walt Whitman</signed>
+            </closer>
+         
+         <postscript>
+            <p>address) Care Major Hapgood / paymaster U S Army / Washington D C</p>
+         </postscript>
+      </body>
+   </text>
+</TEI>

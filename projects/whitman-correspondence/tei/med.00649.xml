@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="med.00649">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to the Staffords, 15[&#8211;17] April
+                    [1881]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="nnk">Niima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>med.00649</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">220&#8211;221</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to the Staffords, 15[&#8211;17] April [1881]</title>
+                    <date cert="medium" when="1881-04-15" xml:id="dat1">April 15&#8211;17, 1881</date>
+                    <orgName xml:id="med">Miller's transcription is derived from <hi rend="italic">Alpress Broadsides</hi>, ed. Frank Ankenbrand, Jr. (1935).</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Stafford, George and Susan">the Staffords</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-02-05" who="#nhg">checked, corrected</change>
+            <change when="2014-01-29" who="#ej">Checked and Corrected</change>
+            <change when="2013-10-08" who="#nnk">proofed</change>
+            <change when="2013-09-25" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <p>Well here I am in a grand old hotel, the finest in town&#8212;the proprietor Mr
+                    Ferrin<ptr target="med.00649_n1"/> (a stranger too) sent and invited me to stop
+                here as the guest of the house &#38; no bill to pay&#8212;nice room large, fire in
+                it, first rate grub (too good, I am tempted too much)&#8212;When I got up this
+                morning, snow falling thick &#38; every thing dark &#38; cloudy &#38;
+                wintry&#8212;but looks a little brighter now&#8212;I am feeling pretty
+                well&#8212;went out around yesterday &#38; last night&#8212;great bright stirring
+                city, this&#8212;great people, these Yankees&#8212;I like them&#8212;I am used tip
+                top here&#8212;friends call all the time<ptr target="med.00649_n2"/>&#8212;lecture
+                comes off to-night.</p>
+            <p>Saturday Evening Lecture went off first rate last night&#8212;best I have had yet,
+                better audience (better than New York or Philadelphia)&#8212;I am enjoying myself
+                well&#8212;have been out riding today &#38; shall go again to-morrow. I <choice>
+                    <orig>dont</orig>
+                    <reg>don't</reg>
+                </choice> know
+                that I can tell you anything particularly to interest you but I suppose you will
+                like to have a word. I am to stop here till Tuesday or Wednesday next. Love to Harry
+                &#38; Ed&#8212;I send you a paper&#8212;</p>
+            <closer>
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+            <postscript>
+                <p>Boston Friday now April 15</p>
+            </postscript>
+        </body>
+    </text>
+</TEI>

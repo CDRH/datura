@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="upa.00205">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Herbert Gilchrist, 31 March
+                    1882</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>upa.00205</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">272</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Herbert Gilchrist, 31 March 1882</title>
+                    <date cert="high" when="1882-03-31" xml:id="dat1">March 31, 1882</date>
+                    <orgName xml:id="upa">Walt Whitman Collection, 1842&#8211;1957, Rare Book &#38;
+                        Manuscript Library, University of Pennsylvania</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Gilchrist, Herbert">Herbert Gilchrist</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-03-07" who="#nhg">checked, corrected</change>
+            <change when="2014-02-07" who="#ej">Checked and Corrected</change>
+            <change when="2013-10-22" who="#nnk">proofed</change>
+            <change when="2013-10-02" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <opener>
+                <dateline>
+                    <name type="place">Kirkwood (Glendale)<ptr
+                            target="upa.00205_n1"/></name>
+                    <date when="1882-03-31" rend="right">March 31 '82</date>
+                    <name type="place">U S A</name>
+                </dateline>
+            </opener>
+            <p>Down here again spending a few days&#8212;nothing very different&#8212;pretty much
+                the same story of all my letters&#8212;but I knew you would like to hear&#8212;Mrs
+                S[tafford] and all the family well as usual&#8212;they often speak of you &#38; of
+                the old times&#8212;I was over to the creek and by the old walnut-trees last
+                week&#8212;all beautiful &#38; refreshing as ever&#8212;</p>
+            <p>Harry is still at Clementon&#8212;Mont is with B. S. at Kirkwood station&#8212;Ed has
+                gone up to <choice>
+                    <orig>Phila:</orig>
+                    <reg>Philadelphia</reg>
+                </choice> to-day for store goods&#8212;Do you know of David Bogue,<ptr
+                    target="upa.00205_n2"/> bookseller, Trafalgar <choice>
+                        <orig>Sq:</orig>
+                        <reg>Square</reg>
+                    </choice> who publishes my book in
+                London? Have you ever been in his place? I go up to Camden this evening&#8212;Yours
+                of last <choice>
+                    <orig>Jan:</orig>
+                    <reg>January</reg>
+                </choice> &#38; your mother's of <choice>
+                    <orig>Feb.</orig>
+                    <reg>February</reg>
+                </choice> 6 <choice>
+                    <orig>rec'd</orig><reg>received</reg></choice><ptr target="upa.00205_n3"
+                />&#8212;</p>
+            <closer>
+                <signed rend="right">W W</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

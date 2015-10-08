@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nyp.00186">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to Thomas P. Sawyer, 20 (?) November 1863</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="tj">Tim Jackson</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+
+               <persName xml:id="ao">Alyssa Olson</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>nyp.00186</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Walt Whitman</author>
+                  <editor>Edwin Haviland Miller</editor>
+                  <title xml:id="ehm">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>New York</pubPlace>
+                     <publisher>New York University Press</publisher>
+                     <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                     <biblScope type="volume">1</biblScope>
+                     <biblScope type="page">185-186</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to Thomas P. Sawyer, 20 (?) November 1863</title>
+               <date when="1863-11-20">November 20, 1863</date>
+               <orgName xml:id="nyp">Henry W. and Albert A. Berg Collection, New York Public Library</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Sawyer, Thomas P.">Thomas P. Sawyer</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#tj" when="2009-09-01">proofread and modified</change>
+         <change who="#vs" when="2008-09-30">added main TEI markup</change>
+         <change who="#el" when="2008-07-30">added TEI header structure w/o IDs and titles; added minimal TEI markup</change>
+         <change who="#ao" when="2008-07-29">pulled transcription from Primary Source Media</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <salute>Dear brother,<ptr target="nyp.00186_n100"/>
+            </salute>
+            </opener>
+            <p>I am here in Brooklyn, New York, spending a few weeks home at my mother's. I left Washington Nov 2d, &amp; shall return there next week. I wrote to you six or seven weeks ago, the last time.<ptr target="nyp.00186_n2"/> I am well &amp; fat, eat my rations regular, &amp; weigh about 200&#8212;so you see I am not very delicate. Here in Brooklyn &amp; New York where I was raised, I have so many friends, I believe, now I am here they will kill me with kindness, I go around too much, &amp; I think it would be policy for me to put back to Washington. I have a brother here, very sick, I do not think he can recover, he has been in the army&#8212;I have another brother in the 9th Army Corps, has been out 26 months. But the greatest patriot in the family is my old mother. She always wants to hear about the soldiers, &amp; would give her last dime<ptr target="nyp.00186_n3"/> to any soldier that needed it.</p>
+            <p>Every thing looks on the rush here in these great cities, more people, more business, more prosperity, &amp; more of every thing to eat &amp; wear, than ever. Tom, I was home in time to vote. The elections went bully. How are you copperheads? I think these last elections will be a settler for all traitors north, &amp; they are the worst.</p>
+            <p>I shall be back in Washington next Tuesday. My room is 456 Sixth street. But my letters are still addrest care of Major Hapgood, paymaster U S A, Washington D C.</p>
+            <p>Well, comrade, I must close. I do not know why you do not write to me. Do you wish to shake me off? That I cannot believe, for I have the same love for you that I exprest in my letters last spring, &amp; I am confident you have the same for me. Anyhow I go on my own gait, &amp; wherever I am in this world, while I have a meal, or a dollar, or if I should have some shanty of my own, no living man will ever be more welcome there than Tom Sawyer. So good by, dear comrade, &amp; God bless you, &amp; if fortune should keep you from me here, in this world, it must not hereafter.</p>
+         
+      </body>
+   </text>
+</TEI>

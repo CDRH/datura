@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="amh.00013">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to Charles W. Eldridge, [29 (?) October (?)
+               1873]</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Kenneth M. Price</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="jyc">Jonathan Y. Cheng</persName>
+               <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="ak">Alex Kinnaman</persName>
+               <persName xml:id="nhg">Nicole Gray</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of
+               Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2014</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>amh.00013</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in
+                  the Archive may be shared in accordance with the Fair Use provisions of U.S.
+                  copyright law. Redistribution or republication on other terms, in any medium,
+                  requires express written consent from the editors and advance notification of the
+                  publisher, Center for Digital Research in the Humanities. Permission to reproduce
+                  the graphic images in this archive has been granted by the owners of the originals
+                  for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to Charles W. Eldridge, [29 (?) October (?) 1873]</title>
+               <date cert="medium" when="1868-10-29" xml:id="dat1">October 29, 1873</date>
+               <orgName xml:id="amh">Amherst College Archives and Special Collections</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person> 
+            <person role="recipient">
+               <persName key="Eldridge, Charles" ref="n0210">Charles Eldridge</persName>
+            </person>
+         </particDesc> 
+      </profileDesc>
+      <revisionDesc>
+         <change who="#nhg" when="2015-04-17">checked, corrected, added ref</change>
+         <change who="#ak" when="2014-11-05">added annotations</change>
+         <change who="#jyc" when="2014-10-01">checked, revised</change>
+         <change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#nnk" when="2014-06-08">transcribed, encoded</change>
+      </revisionDesc>     
+   </teiHeader>
+   <text type="letter">
+      <body>
+         <pb xml:id="leaf001r" facs="amh.00013.001_large.jpg" type="recto"/>
+         <opener>
+            <salute>Dear Charley,</salute>
+         </opener>
+         <p>My condition continues favorable&#8212;&amp; if I dared to hope <hi rend="underline">this</hi> will last &amp;
+            improve in proportion&#8212;indicates recovery at least, as definitely as any thing
+            hitherto&#8212;I think more definitely&#8212;I send you &amp; P.O. order&#8212;which please
+            get &amp; pay Godey. Write me a line Thursday or Friday.<ptr target="amh.00013_n1"/></p>
+
+         <pb xml:id="leaf001v" facs="amh.00013.002_large.jpg" type="verso"/>
+
+      </body>
+   </text>
+</TEI>

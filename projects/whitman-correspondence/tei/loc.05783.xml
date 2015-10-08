@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>  
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05783">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Colin Mackenzie to Walt Whitman, 11 November 1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Colin Mackenzie</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="no">Natalie O'Neal</persName>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt> 
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05783</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>           
+            <sourceDesc>
+                <bibl>
+                    <author>Colin Mackenzie</author><!--Genoways says W. Colin Mackenzie, but the name in the letter looks like Mr. Colin Mackenzie -nhg-->
+                    <title>Colin Mackenzie to Walt Whitman, 11 November 1880</title>
+                    <date cert="high" when="1880-11-11" xml:id="dat1">November 11, 1880</date>
+                    <idno type="callno">MSS18630, Box 33</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="ww"><persName key="Whitman, Walt">Walt Whitman</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Mackenzie, Colin">Colin Mackenzie</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2014-11-11" who="#nhg">checked, corrected</change>
+            <change when="2014-11-07" who="#ak">corrected transcriptions and encoding</change>
+            <change when="2014-10-10" who="#no">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <pb xml:id="leaf001r" facs="loc_ej.00955_large.jpg" type="recto"/>
+            
+            <opener>
+                <dateline rend="right">
+                    <name type="place">Windsor Hotel,<ptr target="loc.05783_n1"/></name>
+                    <name type="place">New York</name>
+                    <date when="1880-11-11">11 Nov 1880.</date>
+                    <name type="place">Mr. Colin Mackenzie (of Edinburgh, Scotland)</name>
+                </dateline>
+                
+             </opener>
+            
+                <p><gap reason="cut away" unit="lines" quantity="1"/></p>
+                
+            <pb xml:id="leaf001v" facs="loc_ej.00954_large.jpg" type="verso"/> 
+            <!-- Whitman wrote prose on this page - unrelated to letter -->
+            
+            <pb xml:id="leaf002r" facs="loc_ej.00965_large.jpg" type="recto"/>
+               
+            <p><gap reason="cut away" unit="lines" quantity="1"/> is anxious to become the possessor of a copy of The Authors Edition of Mr. Walt Whitman's collectible works.</p>
+            
+               <p>And Mr. Mackenzie would feel greatly obliged by a line from W.W. to say how he can receive the work &#38; pay the price which he believes is $10.</p>
+            
+            <p>An answer to 
+                <address>
+                    <addrLine>care of Scottish Union <unclear reason="illegible" resp="#nhg" cert="low">Insu</unclear> Co </addrLine>
+                    <addrLine> 64 Pearl St. Hartford <hi rend="underline">Con.</hi></addrLine>
+                </address> 
+                will be esteemed a favour.</p>    
+            
+        <note type="editorial" place="interlinear" resp="#ww">answer letter sent | enc: circ</note>
+    
+            <pb xml:id="leaf002v" facs="loc_ej.00964_large.jpg" type="verso"/>
+            <!-- Whitman wrote more prose on this page - unrelated to letter, possibly related to prose on loc_no.00025_large.jpg (above) -->
+        
+        </body>  
+    </text>
+</TEI>

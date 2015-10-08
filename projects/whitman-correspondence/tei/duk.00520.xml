@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00520">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, [13, 20, or 27? March 1868]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="zk">Zachary King</persName>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00520</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, [13, 20, or 27? March 1868]</title>
+                    <date cert="medium" notBefore="1868-03-13" notAfter="1868-03-27" xml:id="dat1">March 13, 20, or 27, 1868</date>
+                    <idno type="callno">III-5D</idno>
+                    <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-08-06" who="#el">checked</change>
+            <change when="2013-08-06" who="#el">moved notes to external notes file and added pts</change>
+            <change when="2013-08-06" who="#el">merged files; began checking process</change>
+            <change when="2013-05-22" who="#wr">Duke proofreading corrections</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent Proof</change>
+            <change when="2012-12-14" who="#wr">Proofreading Corrections of notes.</change>
+            <change when="2012-08-20" who="#wr">Updated notes, proofreading</change>
+            <change when="2012-08-11" who="#wr">Proofreading corrections, date annotation, header revision, and Bucke as hand</change>
+            <change when="2012-01-27" who="#fw">update annotation</change>
+            <change when="2011-12-21" who="#fw">annotation</change>
+            <change when="2011-12-20" who="#fw">correct spacing</change>
+            <change when="2011-07-31" who="#zk">corrected date format in title; added call no., annotations</change>
+            <change when="2011-03-19" who="#wr">Review text and update annotation</change>
+            <change when="2011-03-16" who="#fw">Annotate O'Connor</change>
+            <change when="2011-03-15" who="#fw">Annotate Burroughs</change>
+            <change when="2011-02-21" who="#fw">Correct 4 surfaces</change>
+            <change when="2011-02-09" who="#fw">Correct 4 surfaces</change>
+            <change when="2011-01-24" who="#fw">Transcribe 4 surfaces</change>
+        </revisionDesc>
+    </teiHeader>
+    
+    <text type="letter">
+        
+        <body>
+            
+            <pb xml:id="leaf001r" facs="duk.00520.001.jpg" type="recto"/>
+            
+            <note type="editorial" resp="#rmb" place="top">13 March 68</note>
+            
+            <opener>
+                <dateline>
+                    <date notBefore="1868-03-13" notAfter="1868-03-27"><choice><orig>friday</orig> <reg>Friday</reg></choice> afternoon<ptr target="duk.00520_n16"/></date>
+                </dateline>
+                <salute>Dear Walt</salute>
+            </opener>
+            
+            <p>i<ptr target="duk.00425_n3"/>
+                have just
+                got your letter with 2 <choice><orig>dol</orig> <reg>dollars</reg></choice>
+                and the paper<ptr target="duk.00520_n1"/>
+                i have not
+                read it yet but shall this
+                afternoon i had to write
+                to tell you what i had
+                done i <choice><orig>couldent</orig> <reg>couldn't</reg></choice> feel
+                contented till i did well
+                i <choice><orig>havent</orig> <reg>haven't</reg></choice> committed any
+                crime but i have spent
+                the money order you sent
+                me for something i have
+                always wanted but never
+                was able to get well i have
+                got a lounge it was quite
+                cheap and good hair cloth
+                but after i got it i though<unclear cert="medium" resp="#wr" reason="illegible">t</unclear>
+                i <choice><orig>hadent</orig> <reg>hadn't</reg></choice> ought to spent
+                the money but now i have
+                told you i shall feel better
+                but i have
+                <pb xml:id="leaf001v" facs="duk.00520.002.jpg" type="verso"/> 
+                got a little money left
+                besides the 2 <choice><orig>dolrs</orig> <reg>dollars</reg></choice> you sent
+                me to day i thought i would
+                be saving and george<ptr target="duk.00425_n2"/>
+                was
+                gone so i would <unclear cert="medium" resp="#wr" reason="illegible">g</unclear>et it
+                so walt i can get along
+                if you send me about
+                2 dollars next week<ptr target="duk.00520_n2"/></p>
+            
+            <p>i am glad you are going
+                to have new <choice><orig>cloths</orig> <reg>clothes</reg></choice> i dont
+                see how you <choice><orig>doo</orig> <reg>do</reg></choice> to make
+                your <choice><orig>cloths</orig> <reg>clothes</reg></choice> last so long georg
+                is getting somethin<unclear cert="medium" resp="#wr" reason="illegible">gs</unclear> every
+                month) i <choice><orig>gess</orig> <reg>guess</reg></choice> this is the last
+                peice of furniture i shall
+                get i always wanted a
+                lounge now i have got one
+                i had a letter from Jeff<ptr target="duk.00422_n2"/>
+                i <choice><orig>beleeve</orig> <reg>believe</reg></choice> i told you Davis was here
+                <choice><orig>tuesday</orig> <reg>Tuesday</reg></choice> evening and he and
+                <unclear cert="medium" resp="#wr" reason="illegible">Baynton</unclear> his partner in Jersey
+                is to come here this afternoon<ptr target="duk.00479_n9"/>
+                that is the cause of my not
+                reading the paper</p>
+            
+            <pb xml:id="leaf002r" facs="duk.00520.003.jpg" type="recto"/>
+            
+            <p>i have been baking some
+                bread and cake as davis goes
+                away to night so i thought
+                he would probably stay
+                to tea i seem to have quite
+                a number call to see me
+                among the number was 
+                <choice><orig>Ellen vanwyck</orig><reg>Ellen Van Wycke</reg></choice> she says
+                she liked you and would
+                like to see you
+                she is quite
+                out of health she stayed and
+                had a cup of tea) <choice><orig>ann vanwyk</orig> <reg>Ann Van Wycke</reg></choice>
+                sister Ester i <choice><orig>dont</orig> <reg>don't</reg></choice> think you
+                ever saw her she married
+                a man by the name of J baylis<ptr target="duk.00520_n4"/> 
+                he had a farm when they were
+                married but drinked and
+                sported it all away and 
+                they now live here in great
+                poverty he has been in the
+                <choice><orig>hospitall</orig><reg>hospital</reg></choice> he got drunk and
+                was took to the station house
+                and he <choice><orig>tryed</orig> <reg>tried</reg></choice> to cut his throat
+                but <choice><orig>dident</orig> <reg>didn't</reg></choice> succeed</p>
+            
+            <pb xml:id="leaf002v" facs="duk.00520.004.jpg" type="verso"/>
+            
+            <p>John <choice><orig>vanwy</orig> <reg>Van Wyck</reg></choice> helps her<ptr target="duk.00520_n5"/> i <choice><orig>beleeve</orig> <reg>believe</reg></choice>
+                but so it is every one has their
+                troubles) you go i see walt
+                to mrs Borroughs<ptr target="duk.00520_n6"/> yet how
+                does mrs <choice><orig>Oconor</orig><reg>O'Connor</reg></choice><ptr target="duk.00470_n8"/>
+                and she get
+                along mrs <choice><orig>Oconor</orig> <reg>O'Connor</reg></choice> thought they
+                would not perhaps i told her
+                she must doo like mrs <choice><orig>black</orig><reg>Black</reg></choice><ptr target="duk.00520_n15"/>
+                when the woman up stairs said
+                she <choice><orig>woulden</orig> <reg>wouldn't</reg></choice> live with children
+                mrs black told her they would
+                get along nicely)</p>
+            
+            <p>george and i was talking
+                about if the impeachment<ptr target="duk.00520_n14"/>
+                was
+                carried if it would make
+                any change with you we
+                thought <choice><orig>speed</orig> <reg>Speed</reg></choice> would be
+                the one that would take the
+                place of <choice><orig>stansbury</orig><reg>Stanbery</reg></choice>)<ptr target="duk.00520_n8"/>
+                <choice><orig>doo</orig> <reg>do</reg></choice> you
+                know walt i have always
+                felt a kind of sadness whe<unclear cert="medium" resp="#wr" reason="illegible">n</unclear>
+                i read the articles of <choice><orig>impe<unclear cert="medium" resp="#wr" reason="illegible">ac</unclear></orig> <reg>impeachment</reg></choice>
+                not but<ptr target="duk.00520_n17"/>
+                what i always thought he was
+                bad but there is so many things to
+                be considered) i sent and got the <choice><orig>sun</orig> <reg>Sun</reg></choice>
+                to see how the election went<ptr target="duk.00520_n9"/></p>
+          
+            <pb sameAs="#leaf001r"/>
+            
+            <postscript><p> my love to mrs and mr <choice><orig>Oconor</orig> <reg>O'Connor</reg></choice>
+                and mrs and mr Borroughs</p>
+            </postscript>
+        </body>
+    </text>
+</TEI>

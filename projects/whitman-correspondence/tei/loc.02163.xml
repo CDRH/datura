@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.02163">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Herbert Gilchrist, [28 July 1877]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="ad">Anthony Dreesen</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>            
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2010</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.02163</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Herbert Gilchrist, [28 July 1877]</title>
+                    <date cert="low" when="1877-07-28" xml:id="dat1">July 28, 1877</date>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Gilchrist, Herbert">Herbert Gilchrist</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-01-24" who="#nhg">added images, updated transcription</change>
+            <change when="2013-11-15" who="#nhg">corrected</change>
+            <change when="2013-02-22" who="#km">checked</change>
+            <change when="2013-01-18" who="#ej">Checked and Corrected</change>
+            <change when="2012-12-06" who="#ab">checked</change>
+            <change when="2012-10-09" who="#ad">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.02163.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">1929 north 22d Street</name>
+                    <date when="1877-07-28">Saturday&#8212;6 p m<ptr target="loc.02163_n1"/></date>
+                </dateline>
+                <salute>Dear Herb</salute>
+            </opener>
+
+            <p>I will just write a line to put in your mother's letter&#8212;I am well as usual&#8212;we have had three awful hot days &#38; nights, (but I have stood 'em capitally) up to last evening, when it rained hard, &#38; though warm enough yet again, it is now quite tolerable&#8212;</p>
+            
+            <p>I have been here 24 hours&#8212;(go back to Camden this evening)&#8212;your mother, &#38; Bee &#38; Giddy are very well&#8212;I am writing this up in the 
+                
+                <pb xml:id="leaf001v" facs="loc.02163.002_large.jpg" type="verso"/>
+                
+                bow window room&#8212;it is jolly up here&#8212;I slept like a top last night&#8212;we all sat in the big room in the dark, till 10&#8212;(had to put down the windows it was so coolish &#38; windy)&#8212;</p>
+            
+            <p>Herb your creek picture looks steadily good&#8212;don't give out the more you are acquainted with it, &#38; examine it&#8212;seems to me indeed a <hi rend="underline">true bit of nature</hi>&#8212;I miss the creek &#38; spring&#8212;Miss my dear friends at the house&#8212;shall write to Mrs Stafford probably same mail with this&#8212;<choice><abbr>rec'd</abbr><expan>received</expan></choice> your letter&#8212; &#38; thank you for it&#8212;as I close it is 6 o'clock, &#38; a fine evening&#8212;</p>
+
+            <closer>
+                <signed rend="right">Love to you from your old Walt</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

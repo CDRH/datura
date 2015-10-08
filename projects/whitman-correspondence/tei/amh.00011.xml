@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="amh.00011">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to Peter Doyle, 17 March
+               [1874]</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Kenneth M. Price</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="ak">Alex Kinnaman</persName>
+               <persName xml:id="jyc">Jonathan Y. Cheng</persName>
+               <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="nhg">Nicole Gray</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of
+               Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2014</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>amh.00011</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in
+                  the Archive may be shared in accordance with the Fair Use provisions of U.S.
+                  copyright law. Redistribution or republication on other terms, in any medium,
+                  requires express written consent from the editors and advance notification of the
+                  publisher, Center for Digital Research in the Humanities. Permission to reproduce
+                  the graphic images in this archive has been granted by the owners of the originals
+                  for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to Peter Doyle, 17 March [1874]</title>
+               <date cert="medium" when="1874-03-17" xml:id="dat1">March 17, 1874</date>
+               <orgName xml:id="amh">Amherst College Archives and Special Collections</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Doyle, Peter" ref="n0752">Peter Doyle</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+         <change who="#ak" when="2015-04-20">added correspondent ref</change>
+         <change who="#nhg" when="2015-03-03">checked, corrected</change>
+         <change who="#jyc" when="2014-09-30">checked, revised</change>
+         <change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#nnk" when="2014-06-05">transcribed, encoded</change>
+
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         <pb xml:id="leaf001r" facs="amh.00011.001_large.jpg" type="recto"/>
+         <opener>
+            <dateline><name type="place">431 Stevens<ptr target="amh.00011_n1"/> Camden, <lb/>N. Jersey</name>
+               <date
+                  when="1874-03-17">March 17</date></dateline>
+         </opener>
+         <p>All going on about as usual</p>
+         <closer rend="right">
+            <signed>W.W.</signed> 
+         </closer>
+     
+         <pb xml:id="leaf001v" facs="amh.00011.002_large.jpg" type="verso"/>
+      </body>
+   </text>
+</TEI>

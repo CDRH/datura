@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05095">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">John Fitzgerald Lee to Walt Whitman, 28 November
+                    1881</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>John Fitzgerald Lee</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05095</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                
+                <biblStruct>
+                    <monogr>
+                        <editor>Horst Frenz</editor>
+                        <title xml:id="hf">Whitman and Rolleston: A
+                            Correspondence</title>
+                        <imprint>
+                            <pubPlace>Bloomington</pubPlace>
+                            <publisher>Indiana University Press</publisher>
+                            <date when="1951">1951</date>
+                            <biblScope type="page">48&#8211;50</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>John Fitzgerald Lee</author>
+                    <title>John Fitzgerald Lee to Walt Whitman, 28 November 1881</title>
+                    <date cert="high" when="1881-11-28" xml:id="dat1">November 28, 1881</date>
+                    <orgName xml:id="loc">Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Lee, John Fitzgerald">John Fitzgerald Lee</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-02-18" who="#nhg">checked, corrected</change>
+            <change when="2014-01-31" who="#ej">Checked and Corrected</change>
+            <change when="2014-01-29" who="#nnk">proofed</change>
+            <change when="2013-11-03" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                   
+                    <date when="1881-11-28"><choice><abbr>Nov.</abbr><expan>November</expan></choice> 28, 1881.</date>
+                    <name type="place">Bismarckplatz 10. I.</name>
+                    <name type="place">Dresden, Germany<ptr target="loc.05095_n1"
+                        /></name>
+                </dateline>
+                <salute>Dear Sir.</salute>
+            </opener>
+            <p>Through the kindness of one who I am proud to call a friend, and a Countryman of
+                mine, I have an opportunity of writing to you, whose sentiments I agree with and
+                whose works I admire. Mr. Rolleston and a Mr. Wilkins,<ptr target="loc.05095_n2"/> two students of Trinity
+                College, Dublin, were the first to draw my attention to your poetical works, of
+                which I wish to say a few words. I am an ardent student of the Russian Language, and
+                greatly interested in the huge country and its strange people and history. Your book
+                is the book for them. Will you allow me to translate the "Leaves of Grass" into
+                Russian.<ptr target="loc.05095_n3"/> It will do good, of that I am perfectly sure. I know the Russian character,
+                and say again that the "Leaves of Grass" is the book for them. Awaiting the favour
+                of a reply</p>
+            <closer>
+                <salute>I am, dear Sir,</salute>
+                <salute>Your sincerely,</salute>
+                <signed>J. Fitzgerald Lee</signed><ptr target="loc.05095_n4"/>
+            </closer>
+        </body>
+    </text>
+</TEI>

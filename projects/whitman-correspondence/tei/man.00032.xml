@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="man.00032">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Katie E. S. Macdonald to Walt Whitman, 9 June 1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Katie E. S. Macdonald</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>man.00032</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Katie E. S. Macdonald</author>
+                    <title>Katie E. S. Macdonald to Walt Whitman, 9 June 1880</title>
+                    <date cert="high" when="1880-06-09" xml:id="dat1">June 9, 1880</date>
+                    <orgName xml:id="man">Charles Sixsmith Collection at the John Rylands Library, University of Manchester</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Macdonald, Katie E. S.">Katie E. S. Macdonald</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-09" who="#nhg">checked, corrected</change>
+            <change when="2014-03-24" who="#nnk">proofed</change>
+            <change when="2014-03-12" who="#kc">checked, corrected</change>
+            <change when="2014-02-20" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001v" facs="man_ej.00064.jpg" type="verso"/>
+            <opener>
+                <dateline>
+                    <name type="place">Altnacraig</name>
+                    <name type="place">Oban</name>
+                    <date when="1880-06-09">June 9: 80</date>
+                </dateline>
+                <salute>Dear Sir</salute></opener>
+
+            <p>I have just heard from our general <choice>
+                    <abbr>P. O</abbr>
+                    <expan>Post Office</expan>
+                </choice> that the clerk here was mistaken in her directions
+                <pb xml:id="leaf002r" facs="man_ej.00193.jpg" type="recto"/> as to <hi
+                    rend="underline">how</hi> to send a <choice>
+                    <abbr>P.O.O</abbr>
+                    <expan>post office order</expan>
+                </choice> to you. I now enclose order for &#163;1. for "Leaves of Grass" which
+                please direct to "Miss
+                <pb xml:id="leaf002v" facs="man_ej.00194.jpg" type="verso"/> Macdonald, c/o Professor Blackie, Oban, Scotland"</p>
+
+            <closer>
+                <salute>&amp; oblige yours gratefully</salute>
+                <signed>Katie ES Macdonald.</signed>
+            </closer>
+            <pb xml:id="leaf003r" facs="man_ej.00066.jpg" type="recto"/>
+
+        </body>
+    </text>
+</TEI>

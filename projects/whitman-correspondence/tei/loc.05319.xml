@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05319">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Tr&#252;bner and Company to Walt Whitman, 31 May 1877</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Tr&#252;bner and Company</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05319</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>            
+            <sourceDesc>
+                <bibl>
+                    <author>Tr&#252;bner and Company</author>
+                    <title>Tr&#252;bner and Company to Walt Whitman, 31 May 1877</title>
+                    <date cert="high" when="1877-05-31" xml:id="dat1">May 31, 1877</date>
+                    <idno type="callno">MSS18630, Box 194</idno>
+                    <orgName xml:id="loc">Photocopy held at the Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="ww"><persName key="Whitman, Walt">Walt Whitman</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Tr&#252;bner and Company">Tr&#252;bner and Company</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-01-05" who="#nhg">corrected</change>
+            <change when="2014-12-08" who="#nhg">checked, corrected</change>
+            <change when="2014-12-05" who="#ak">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_jp.00197.jpg" type="recto"/>
+            <note type="editorial" resp="#ww" place="top"><hi rend="underline">acknowledged</hi></note>
+            <opener>
+                <dateline>
+                    <handShift rend="printed"/>
+                    <name type="place">TR&#220;BNER &amp; Co. <lb/> AMERICAN, <lb/>EUROPEAN AND <lb/>ORIENTAL <lb/>LITERARY AGENCY.</name>
+                    <name type="place">57. &amp; 59. Ludgate Hill.</name>
+                    <name type="place">London E.C.</name>
+                    <handShift rend="manuscript"/>
+                    <date when="1877-05-31">May 31 <handShift rend="printed"/>18<handShift rend="manuscript"/>77</date>
+                </dateline>
+                <salute>Mr. Walt Whitman</salute>
+                <address>
+                    <addrLine>431 Stevens Street</addrLine>
+                    <addrLine>Camden, New Jersey</addrLine>
+                </address>
+                <salute>Dear Sir,</salute>
+            </opener>
+            <p>Herewith we have the pleasure
+                to inform you that we have requested
+                our bankers Messr. Brown Shipley <gap reason="illegible" quantity="1" unit="word"/>
+                to pay you $7.<hi rend="superscript">57</hi> as per statement
+                at foot
+            </p>
+            <p>
+                Your acknowledgement will oblige
+            </p>
+            <closer>
+                <salute>Yours truly</salute>
+            </closer>
+            <postscript>
+                <p><table>
+                    <row><cell>By goods on hand last a/c</cell> <cell>$30.14</cell></row>
+                    <row><cell>On hand still</cell></row>
+                    <row><cell>61 Democratic Vistas</cell> <cell><hi rend="underline">22.57</hi></cell></row>
+                    <row><cell></cell><cell><hi rend="underline">$7.57</hi></cell></row>
+                </table></p>
+            </postscript>
+        </body>
+    </text>
+</TEI>

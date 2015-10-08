@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.02092">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Elizabeth Ford to Walt Whitman, 13 June 1883</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Elizabeth Ford</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.02092</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Elizabeth Ford</author>
+                    <title>Elizabeth Ford to Walt Whitman, 13 June 1883</title>
+                    <date cert="high" when="1883-06-13" xml:id="dat1">June 13, 1883</date>
+                    <orgName xml:id="loc">Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Ford, Elizabeth">Elizabeth Ford</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-07-14" who="#nhg">checked, corrected</change>
+            <change when="2014-02-26" who="#nnk">proofed</change>
+            <change when="2014-01-21" who="#ss">checked</change>
+            <change when="2013-12-02" who="#kc">Transcribed and Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.02092.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">Adel Grange<lb/> &#8212;<!-- there's a superscript here; unable to read-nnk -->Leeds&#8212;England</name>
+                    <date when="1883-06-13"> 13<hi rend="superscript"><hi rend="underline"
+                            >th</hi></hi> June 1883</date>
+                </dateline>
+                <salute>Dear Mr. Whitman</salute>
+            </opener>
+
+            <p>I am writing to ask you to send me the two volumes of your writings which you sent my
+                sister a few months ago. They are "Specimen Days &amp; Collect" &amp; "Leaves of
+                Grass". I enclose a post office order, if it is not the right sum please tell me. I
+                hope 
+                <pb xml:id="leaf001v" facs="loc.02092.004_large.jpg" type="verso"/>
+                <pb xml:id="leaf002r" facs="loc.02092.002_large.jpg" type="recto"/> it is not
+                troubling you to ask you to send them. Edward Carpenter told us it was the best way
+                to get them.</p>
+
+            <p>I have had the English Rossetti edition a long time, but this one I want is
+                beautiful, &amp; I feel as if I cannot do without it, for I can't say what your
+                words have been to me nor how glad &amp; thankful I am that I have known them. I
+                hope you are better than you were. I am very sorry that you should suffer.</p>
+
+            <p/>
+
+            <closer>
+                <salute>Believe me</salute>
+                <salute>Yours</salute>
+                <signed>Bessie Ford</signed>
+            </closer>
+            <postscript>
+                <p>The P.O. order is payable from Bessie Ford, the above address.</p>
+            </postscript>
+
+            <pb xml:id="leaf002v" facs="loc.02092.003_large.jpg" type="verso"/>
+            
+        </body>
+    </text>
+</TEI>

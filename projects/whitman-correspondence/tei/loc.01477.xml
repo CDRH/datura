@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.01477">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Blaine and Mary Donaldson, 25 December
+                    [1884]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.01477</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Blaine and Mary Donaldson, 25 December [1884]</title>
+                    <date cert="medium" when="1884-12-25" xml:id="dat1">December 25, 1884</date>
+                    <idno type="callno">Box 9, Reel 5-6</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+
+            <particDesc> 
+
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Donaldson, Blaine" ref="loc.01477_n2">Blaine Donaldson</persName>
+                    <persName key="Donaldson, Mary">Mary Donaldson</persName>
+
+                </person>
+            </particDesc>
+        </profileDesc>
+
+        <revisionDesc>
+            <change when="2015-07-24" who="#nhg">corrected</change>
+            <change when="2015-06-06" who="#kb">edited</change>
+            <change when="2015-06-04" who="#if">edited</change>
+            <change when="2014-09-21" who="#ss">transcribed, encoded and annotated from
+                Miller.</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            
+            <pb xml:id="leaf001r" facs="loc.01477.003_large.jpg" type="recto"/>
+
+            <opener>
+                <dateline>
+                    <date when="1884-05-14" rend="right">Christmas&#8212;1884&#8212;'5</date>
+                    <name type="place">328 Mickle Street Camden</name>
+                    <name type="place">N J<ptr target="loc.01477_n1"/></name>
+                    
+                </dateline>
+            </opener>
+            <p>Thanks my loving young friends for the magnificent chair&#8212;so
+                opportune&#8212;will be so useful to me daily, hourly&#8212;Will soon come up &#38;
+                see you &#38; your father &#38; mother</p>
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+        </body>
+        <pb xml:id="leaf001v" facs="loc.01477.004_large.jpg" type="verso"/>
+        <pb xml:id="leaf002r" facs="loc.01477.001_large.jpg" type="recto"/>
+        <pb xml:id="leaf002v" facs="loc.01477.002_large.jpg" type="verso"/>
+    </text>
+</TEI>  

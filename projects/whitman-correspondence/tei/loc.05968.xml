@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05968">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Titus M. Coan to Walt Whitman, 22 November 1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Titus M. Coan</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05968</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>            
+            <sourceDesc>
+                <bibl>
+                    <author>Titus M. Coan</author>
+                    <title>Titus M. Coan to Walt Whitman, 22 November 1880</title>
+                    <date cert="high" when="1880-11-22" xml:id="dat1">November 22, 1880</date>
+                    <idno type="callno">MSS18630, Box 194</idno>
+                    <orgName xml:id="loc">This photocopy is held in the Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="ww"><persName key="Whitman, Walt">Walt Whitman</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Coan, Titus M.">Titus M. Coan</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2014-01-05" who="#nhg">corrected</change>
+            <change when="2014-12-11" who="#nhg">checked, corrected</change>
+            <change when="2014-12-09" who="#ak">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_jp.00186_large.jpg" type="recto"/>
+            <note type="editorial" resp="#ww" place="top">Titus M Coan's letter</note>
+            <note type="editorial" resp="#ww" place="top">books sent $10 due from <hi rend="underline">Century Club</hi></note>
+            <opener>
+                <dateline>
+                    <handShift rend="printed"/>
+                    <name type="place">THE CENTURY</name>
+                    <name type="place">109 EAST 15TH STREET</name>
+                    <handShift rend="manuscript"/>
+                    <date when="1880-11-22">November 22<hi rend="superscript">d</hi> 1880</date>
+                </dateline>
+                <salute>My Dear Sir,</salute>
+            </opener>
+            <p>
+                Please send us
+                your "author's edition" of the Poems,
+                for the library of this club,
+                with bill for our Treasurer
+                to pay next month.
+            </p>
+            <p>
+                &#8212;I have been long
+                on the look-out for a copy
+                of the "Leaves of Grass," first 
+                edition, but have not yet succeeded
+                in finding one. In
+                <pb xml:id="leaf002r" facs="loc_jp.00187_large.jpg" type="recto"/>
+                any edition, first or last, I
+                believe they are to have
+                lasting remembrance. They
+                are the <hi rend="underline">American poetry</hi>
+                which the Old World has
+                been challenging us so long 
+                to produce; they "stir the
+                blood like the sound of a
+                trumpet."
+            </p>
+            <closer>
+                <salute>Faithfully yours,</salute>
+                <signed>Titus M. Coan.</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

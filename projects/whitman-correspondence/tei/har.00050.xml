@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="har.00050">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to Ralph Waldo Emerson, 29 December 1862</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="kk">Kathryn Kruger</persName>
+               <persName xml:id="ec">Eric Conrad</persName>
+
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+
+               <persName xml:id="ao">Alyssa Olson</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>har.00050</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to Ralph Waldo Emerson, 29 December 1862</title>
+               <date when="1862-12-29">December 29, 1862</date>
+               <orgName xml:id="har">Emerson Memorial Association, Harvard University</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Emerson, Ralph Waldo">Ralph Waldo Emerson</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#kk" when="2011-08-08">Seward footnote</change>
+         <change who="#ec" when="2009-08-24">style sheet proofreading</change>
+         <change who="#el" when="2009-07-27">added page breaks according to images</change>
+         <change who="#vs" when="2008-09-12">added main TEI markup</change>
+         <change who="#el" when="2008-07-30">added TEI header structure w/o IDs and titles; added minimal TEI markup</change>
+         <change who="#ao" when="2008-07-29">pulled transcription from Primary Source Media</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <pb facs="har.00050.001.jpg" type="recto"/>
+            <opener>
+               <dateline rend="right">
+                  <name type="place">Washington, D.C.<ptr target="har.00050_n100"/> 
+                  <lb/>
+                  </name>
+                  <date when="1862-12-29">Monday afternoon, Dec. 29, '62.</date>
+               </dateline>
+               <salute>Dear friend,</salute>
+            </opener>
+            <p>Breaking up a few weeks since, and for good, my New York stagnation&#8212;wandering since through camp and battle scenes&#8212;I fetch up here in harsh and superb plight&#8212;wretchedly poor, excellent well, (my only torment, family matters,)&#8212;realizing at last that it is necessary for me to fall for the time in the wise old way, to push my fortune, to be brazen, and get employment, and have an income&#8212;determined to do it, (at any rate until I get out of horrible sloughs) I write you, asking you as follows:</p>
+            <p>I design to apply personally direct at headquarters, for some place. I would apply on literary grounds, not political.</p>
+            <pb facs="har.00050.002.jpg" type="verso"/>
+            <p>I wish you would write for me something like the enclosed form of letter, that I can present, opening my interview with the great man. I wish you to write two copies&#8212;put the one in an envelope directed to Mr. Seward, Secretary of State&#8212;and the other in an envelope directed to Mr. Chase, Secretary of the Treasury&#8212;and enclose both envelopes in the one I send herewith so that I can use either one or the other. I wish you also to send me a note of introduction to Charles Sumner.<ptr target="har.00050_n2"/>
+            </p>
+            <p>It is pretty certain that, armed in that way, I shall conquer my object. Answer me by next mail, for I am waiting here like ship waiting for the welcome breath of the wind.</p>
+            <p>Indeed yours, &amp;c</p>
+            <closer rend="right">
+               <signed>Walt Whitman</signed>
+            </closer>
+            <pb facs="har.00050.003.jpg" type="recto"/>
+            <pb facs="har.00050.004.jpg" type="verso"/>
+         
+      </body>
+   </text>
+</TEI>

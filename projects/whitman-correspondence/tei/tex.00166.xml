@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="tex.00166">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Dr. Le Baron Russell to Walt Whitman, 21 September 1863</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Dr. Le Baron Russell</author>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="tj">Tim Jackson</persName>
+
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+               <persName xml:id="hb">Heidi Bean</persName>
+               <persName xml:id="ec">Elise Cook</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>tex.00166</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <author>Dr. Le Baron Russell</author>
+               <title>Dr. Le Baron Russell to Walt Whitman, 21 September 1863</title>
+               <date when="1863-09-21">September 21, 1863</date>
+               <orgName xml:id="tex">Walt Whitman Collection, Harry Ransom Humanities Research Center, The University of Texas at Austin</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Russell, Le Baron">Le Baron Russell</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#tj" when="2009-09-04">proofread and modified</change>
+         <change who="#el" when="2009-08-25">made changes to transcription based on manuscript images and revised metadata and file name to indicate that the manuscript is held in Texas HRC, not the LC, and that we have derived out transcription from the manuscript</change>
+         <change who="#vs" when="2009-07-31">added annotations</change>
+         <change who="#hb" when="2008-11-04">Encoded</change>
+         <change who="#ec" when="2008-10-25">Transcribed</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <dateline>
+                  <name type="place">Boston</name> 
+                  <date when="1863-09-21">Sept 21st 1863.</date>
+               </dateline>
+               <salute>My dear sir,</salute>
+            </opener>
+         <p>I<ptr target="tex.00166_n100"/> have been much interested in a letter from you to Mr. Redpath,<ptr target="tex.00166_n2"/> written some weeks ago, which I have lately seen, &amp; I am very glad to send you the inclosed check to be used for the benefit of our noble "boys" in the hospitals, at your discretion.  I have seen much of the hospitals myself, &amp; I know how much good your friendly sympathy must do them, &amp; also that even a slight pecuniary aid is sometimes very acceptable to them in their forlorn condition.</p>
+            <p>Of the enclosed check, ten dollars of the amount is contributed by my sister, Mrs. G.W. Briggs of Salem,<ptr target="tex.00166_n3"/> to whom I read your letter, &amp; ten dollars by my friend Edward Atkinson.<ptr target="tex.00166_n4"/>  The balance I give to the boys with great pleasure, &amp; I will very gladly give more hereafter, when I hear from you of the receipt of this &amp; find that more is needed.</p>
+            <p>As your letter is not of a very late date, I do not feel certain that your address may be the same as at the time you wrote.  Please inform me how this is, as I hope to be able to send you more from other friends.</p>
+            <p>I hope you will continue in your good work, as I am sure from your letter, &amp; from what my friend, Mr. Emerson, says of his own acquaintance with you, that your visits must give great comfort to our poor suffering men.</p>
+            <closer rend="right">
+               <salute>I am, with much regard,</salute>
+            <salute>Very Truly Yours,</salute>
+               <signed>L. B. Russell</signed>
+            </closer>
+         
+         <postscript>
+            <p>Walt Whitman Esq.<lb/>Washington.</p>
+            <p>Please address <lb/>Dr. L. B. Russell <lb/>34 Mt. Vernon St.<lb/>Boston.</p>
+         </postscript>
+      </body>
+   </text>
+</TEI>
