@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?><?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules_mss.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03434">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Mem. The Saturday</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author xml:id="ww">Walt Whitman</author>
+                <author xml:id="unk">Unknown</author>
+                <author xml:id="ht">Horace Traubel</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="lmg">Lauren Grewe</persName><persName xml:id="tra">Ty Alyea</persName><persName xml:id="nhg">Nicole Gray</persName><persName xml:id="mc">Matt Cohen</persName>
+                </respStmt>
+                <sponsor>University of Texas at Austin</sponsor>
+                <sponsor>University of Nebraska-Lincoln</sponsor>
+                <funder>The National Endowment for the Humanities</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03434</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                    <addrLine>kprice@unlnotes.unl.edu</addrLine>
+                    <addrLine>Ed-Folsom@uiowa.edu</addrLine>
+                    <addrLine>bbarney2@unlnotes.unl.edu</addrLine>
+                </address>
+                <availability><p>The text of the original document is in the public domain. Subject to certain exceptions, public domain works may be freely copied or used in the creation of derivative works without permission, or authorization, of the former copyright owners.</p><p>The text encoding was created and/or prepared by the Walt Whitman Archive and is governed by a <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref> (CC BY 4.0).</p><p>Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p></availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>The Only American Poet</title>
+                    <idno type="callno">Box 42, Folder 43</idno>
+                    <date notBefore="1867-09-21" notAfter="1891-12-31">After 1867</date>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                    <note type="project">Transcribed from digital images of the original item.</note>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="h1" scribeRef="#ww" medium="black-ink"/>
+                <handNote xml:id="h2" scribeRef="#unk" medium="typescript"/>
+                <handNote xml:id="h3" scribeRef="#ht" medium="black-ink"/>
+            </handNotes>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-03-08">completed date information, tweaked encoding</change>
+            <change who="#nhg" when="2015-01-26">added schematron declaration, updated schema declaration, changed text type to annotations</change><change who="#lmg" when="2013-06-27">Transcribed and encoded.</change>
+            <change who="#lmg" when="2013-10-15">Checked.</change>
+            <change who="#tra" when="2013-11-27">Updated bibliographical entry.</change>
+            <change who="#mc" when="2014-11-02">Proofed.</change>
+        </revisionDesc> 
+    </teiHeader>
+<text type="annotations">
+    <body>
+        <pb xml:id="leaf001r" facs="loc_nhg.00201.jpg" type="recto"/>
+        <note type="editorial" place="top" resp="#h3">see
+        notes
+        May 29, '88</note>
+        <ab><handShift new="#h2"/>Attorney General's Office
+        Washington 18</ab>
+        <ab><handShift new="#h1"/>Mem. The Saturday Review
+        (London) of Sept 21, 1867, (p 383)
+        distinctly endorses Walt Whitman
+        as the only <hi rend="underline">American</hi> poet&#8212;
+        complains of all the other
+        writers of verse in the United
+        States, are mere imitators, without
+        exception</ab>
+        <ab>Tinsley's Magazine, for Oct. '67</ab>
+        <pb xml:id="leaf001v" facs="loc_nhg.00202.jpg" type="verso"/>
+        <div1 type="verso">
+            <p> </p>
+        </div1>
+    </body>
+</text>
+</TEI>

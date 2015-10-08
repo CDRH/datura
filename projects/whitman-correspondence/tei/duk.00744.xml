@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00744">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to A. Williams and Company, 30 November 1877</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="ad">Anthony Dreesen</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00744</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>            
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">103&#8211;104</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to A. Williams and Company, 30 November 1877</title>
+                    <date cert="high" when="1877-11-30" xml:id="dat1">November 30, 1877</date>
+                    <orgName xml:id="duk">The Trent Collection of Walt Whitman Manuscripts, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>                
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="A. Williams &#38; Company">A. Williams &#38; Company</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2014-09-02">corrected formatting of recipient name</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-03-29" who="#km">checked</change>
+            <change when="2012-12-06" who="#ab">checked</change>
+            <change when="2012-10-24" who="#el">checked</change>
+            <change when="2012-09-27" who="#ad">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <div1 type="letter">
+            
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">431 Stevens Street</name>
+                    <name type="place" rend="right">Camden New Jersey</name>
+                    <date when="1877-11-30" rend="right"><choice><abbr>Nov</abbr><expan>November</expan></choice> 30 '77</date>
+                </dateline>
+                <salute>A. Williams &#38; Co<ptr target="duk.00744_n1"/></salute>
+                <salute>Dear Sirs</salute>
+            </opener>
+
+                <p>In compliance with your request of <choice><abbr>Nov</abbr><expan>November</expan></choice> 28 I send by Adams's Express three copies of the only edition of <hi rend="italic">Leaves of Grass</hi>,<ptr target="duk.00744_n2"/> of the few copies at my command to fulfil your order&#8212;(the retail price is $3)&#8212;below see bill, the <choice><abbr>am't</abbr><expan>amount</expan></choice> which please remit me here.</p>
+          
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+                
+            </div1>
+            
+            <div1 type="enclosure">
+                <note type="authorial"><hi rend="italic">Bill</hi></note>
+                <opener>
+                    <dateline>
+                        <name type="place" rend="right">Camden N J</name>
+                        <date when="1877-11-30" rend="right"><choice><abbr>Nov</abbr><expan>November</expan></choice> <lb/> 30 '77</date>                                                
+                    </dateline>
+                </opener>
+                
+                <p>A Williams &amp; Co</p>
+                <p>To W Whitman</p>
+                <p>To three copies Leaves of Grass @ $1.75&#8211;$5.25</p>
+                <p>&#8212;<choice><abbr>Rec'd</abbr><expan>Received</expan></choice> payment&#8212;</p>                                
+             
+            </div1>
+        </body>
+      </text>
+    
+</TEI>

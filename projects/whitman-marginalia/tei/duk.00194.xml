@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?><?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules_mss.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00194">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Even now Jasmund</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author xml:id="ww">Walt Whitman</author>
+                <author xml:id="unk">Unknown</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="lmg">Lauren Grewe</persName><persName xml:id="nhg">Nicole Gray</persName><persName xml:id="tra">Ty Alyea</persName><persName xml:id="mc">Matt Cohen</persName>
+                </respStmt>
+                <sponsor>University of Texas at Austin</sponsor>
+                <sponsor>University of Nebraska-Lincoln</sponsor>
+                <funder>The National Endowment for the Humanities</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2011</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00194</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                    <addrLine>kprice@unlnotes.unl.edu</addrLine>
+                    <addrLine>Ed-Folsom@uiowa.edu</addrLine>
+                    <addrLine>bbarney2@unlnotes.unl.edu</addrLine>
+                </address>
+                <availability><p>The text of the original document is in the public domain. Subject to certain exceptions, public domain works may be freely copied or used in the creation of derivative works without permission, or authorization, of the former copyright owners.</p><p>The text encoding was created and/or prepared by the Walt Whitman Archive and is governed by a <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref> (CC BY 4.0).</p><p>Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p></availability>
+            </publicationStmt>
+            <notesStmt>
+                <note type="project" target="#dat1">The paste-on attached to the back of this leaf is part of "Poems of Ossian," by James Macpherson, in <hi rend="italic">Fourth Reader: For Common Schools and Academies</hi>, ed. Henry Mandeville (D. Appleton &amp; Co., 1851), 255. Whitman also references September of 1856 and "early in '57" in his notes, suggesting that his annotations are from the mid to late 1850s.
+                    </note>
+            </notesStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Even now Jasmund, the people's poet</title>
+                    <idno type="callno">MS 4to 86</idno>
+                    <date notBefore="1850-05-31" notAfter="1892-03-26">1850s</date>
+                   
+                    <orgName xml:id="duk">Trent Collection of Whitmaniana, David M. Rubenstein Rare Book &amp; Manuscript Library, Duke University</orgName>
+                    <note type="project">Transcribed from digital images of the original item.</note>
+                </bibl>
+                <bibl type="pasteon" xml:id="r1">
+                    <author>Unknown author</author>
+                    <title level="a">Unknown article title,</title>
+                    <title level="j"><!-- Journal title, if known. --></title>
+                    <date>[possibly 1857]</date>
+                    <biblScope type="vol"/>
+                    <biblScope type="pp"/>
+                    <note type="project">Whitman notes "early in '57"</note>
+                </bibl>
+                <bibl type="pasteon" xml:id="r2">
+                    <author>James Macpherson</author>
+                    <editor>Mandeville, Henry, D.D.</editor>
+                    <title level="a">Poems of Ossian,</title>
+                    <title level="j">Fourth reader: for common schools and academies</title><!--From the Henry Mandeville series.-->
+                    <publisher>D. Appleton &amp; Co.</publisher>
+                    <date>1851</date>
+                    <biblScope type="pp">255</biblScope>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="h1" scribeRef="#ww" medium="pencil"/>
+                <handNote xml:id="h2" scribeRef="#ww" medium="black-ink"/>
+                <handNote xml:id="h3" scribeRef="#unk" medium="typescript"/>
+                <handNote xml:id="h4" scribeRef="#unk" medium="pencil"/>
+            </handNotes>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-03-10">added notesStmt and moved date note into it</change>
+            <change who="#nhg" when="2015-03-08">completed date information, tweaked encoding</change>
+            <change who="#nhg" when="2015-01-26">added schematron declaration, updated schema declaration, changed text type to annotations</change><change who="#lmg" when="2011-09-14">Transcribed and encoded.</change>
+            <change who="#nhg" when="2011-10-09">Checked, revised.</change>
+            <change who="#tra" when="2013-12-09">Checked and revised bibliographical and handnote encoding.</change>
+            <change who="#tra" when="2014-01-31">Checked and revised bibliographical and handnote encoding.</change>
+            <change who="#lmg" when="2014-03-09">Added dimensions to pasteons, checked cbs, footnotes.</change>
+            <change who="#mc" when="2014-08-24">Proofed.</change>
+        </revisionDesc> 
+    </teiHeader>
+    <text type="annotations"><!--Checked against Grier. p. 1432-33, 1886-87. -->
+        <body>
+            <pb xml:id="leaf001r" facs="duk.00194.001.jpg" type="recto"/><div1 type="section">
+            <note xml:id="n1" type="authorial" resp="#h1" place="top" target="#add2"><ref target="#add2">*&#9759;</ref>&#8212;"Even now Jasmund, the people's
+                poet, prefers to sing in Provençal." <note type="editorial" resp="#h4" rend="circled" place="right">5</note>
+                De Vere's Comparative Philology
+                1853.</note>
+            <p><handShift new="#h1"/><milestone unit="unknown" rend="horbar-full"/>
+            Pythagoras was very beautiful, and
+            lived to a great age.&#8212;He was
+            of ath<subst><del rend="overwrite" seq="1">e</del><add rend="overwrite" place="over" seq="2">l</add></subst>etic tastes, a boxer, a dancer,
+            wrestler, runner, &amp;c.&#8212;He delighted
+            in music and <subst><del rend="overstrike" seq="1">dancing</del> <add rend="unmarked" place="supralinear" seq="2">perfumes&#8212;</add></subst>&#8212;wore his
+            beard long,</p>
+            <span type="curlyBrace-right" from="#add1"/>
+            <add xml:id="add1" rend="pasteon">
+                <q who="unknown" type="written">
+                   <floatingText rend="flat">
+                       <body>
+                           <pb xml:id="leaf003r" facs="duk.00194.001.jpg" type="recto" rend="col-8"/>
+                           <note type="authorial" place="top" resp="#h1">Sept. '56</note>
+                           <ab>"Leaves of Grass" must be
+                               called <hi rend="underline">not</hi> objective, but
+                               altogether <hi rend="underline">subjective</hi>&#8212;<hi rend="underline">"I know"</hi>
+                               runs through them <del rend="overstrike">all, like</del> as
+                               a perpetual refrain</ab><note type="authorial" resp="#h1" target="#add1" place="right">Yet the great
+            Greek poems,
+            <del rend="overstrike">and</del> also the
+            Teutonic poems,
+            also <choice><sic>Skakespeare</sic><corr>Shakespeare</corr></choice><!--NHG: line connecting this to "and"-->
+            and all the great masters' have been
+            objective  <add rend="insertion" place="supralinear"><handShift new="#h2"/>epic</add><handShift new="#h1"/>&#8212;they have described characters,
+            events, wars, heroes &amp;c&#8212;</note>
+                       </body>
+                   </floatingText>
+                </q>
+            </add>
+            <milestone unit="unknown" rend="horbar-full"/>
+            <note resp="#h1" type="authorial" place="left"><ref target="#n1"/></note>
+            <add xml:id="add2" rend="pasteon" source="#r1"><handShift new="#h3"/>
+                <q who="unknown" type="written">
+                    <floatingText rend="flat">
+                        <body>
+                            <pb xml:id="leaf004r" facs="duk.00194.001.jpg" type="recto" rend="col-6"/>
+                            <p>*A grand fête has just been celebrated at
+                                Agen, France, on the occasion of the presentation
+                                of a crown of gold to the poet <hi rend="smallcaps">JASMIN</hi>, by
+                                his townsmen. The ceremony was attended by
+                                the bishop, the <choice><sic>perfect</sic><corr>prefect</corr></choice> of the department, and
+                                other civil and military dignitaries. <hi rend="smallcaps">JASMIN</hi>
+                                recited some new verses of his composition, and
+                                terminated an address of thanks by making an
+                                appeal to the company present on behalf of the
+                                poor, which produced a subscription of 500 francs.
+                                The golden crown thus given, will be placed
+                                beside the gold branch of Toulouse, the cup of
+                                Auch, and other valuable presents, which ornament
+                                the humble dwelling of the poet, who still
+                                continues to carry on the trade of a hairdresser.</p>
+                        </body>
+                    </floatingText>
+                </q>
+            </add>
+                <note type="authorial" resp="#h1" place="right" target="#add2">'
+                    early in
+                    '57</note>
+            </div1>
+            <pb xml:id="leaf001v" facs="duk.00194.002.jpg" type="verso"/>
+            <div1 type="section"><ab><handShift new="#h1"/>Jas Macpherson 1737&#8212;1796</ab><lb/>
+            <milestone unit="unknown" rend="horbar-short-left"/>
+            <ab>Ossian, <subst><del rend="overwrite" seq="1" hand="#h1">(put down at
+            300 or 400 B. C.</del><add rend="overwrite" place="over" seq="2"><span type="bracket-left" hand="#h2" xml:id="s1" from="#s1" to="#s2"/><handShift new="#h2"/>The real Ossian, if ever
+            there were one is
+            put down at
+            300 or 400 B C</add></subst><anchor xml:id="s2"/><handShift new="#h1"/>)</ab> <note type="authorial" resp="#h1">Ossian
+            bosky shield&#8212;<del rend="overstrike" hand="#h2">?</del><add rend="unmarked" place="supralinear"><handShift new="#h2"/>&#8212;</add><handShift new="#h1"/> <subst><del rend="overstrike" seq="1">wood</del> <add rend="unmarked" place="supralinear" seq="2">wooden</add></subst>
+            shield</note>
+            <ab>☞ very likely a myth altogether</ab>
+            <add rend="pasteon" source="#r2"><handShift new="#h3"/>
+                <q who="unknown" type="written">
+                    <floatingText rend="flat">
+                        <body>
+                            <pb xml:id="leaf005r" facs="duk.00194.002.jpg" type="recto" rend="col-10"/>
+                            <head type="main-authorial">SECT. CCLXXIV.&#8212;THE SUN.</head>
+                            <p>1 O <hi rend="smallcaps">THOU</hi> that rollest above, round as the shield of my fathers!
+                                whence are thy beams, O Sun! thy everlasting light?<lb/>
+                            2 Thou comest forth in thy awful beauty, and the stars hide
+                            themselves in the sky: the moon, cold and pale, sinks in the<lb/>
+                                3 western wave. But thou thyself movest alone: who can be<lb/>
+                            4 a companion of thy course? The oaks of the mountains
+                            fall´; the mountains themselves decay with years´; the ocean
+                            shrinks and grows again´; the moon herself is lost in heaven´;
+                            but <hi rend="italic">thou</hi> art forever the same, rejoicing in the brightness of
+                                thy course.</p>
+                            <p>5 When the world is dark with tempests´; when thunders
+                                roll and lightnings fly´; thou lookest in thy beauty from the<lb/>
+                            6 clouds, and laughest at the storm. But to Ossian, thou
+                            lookest in vain; for he beholds thy beams no more; whether
+                            thy yellow hair floats on the eastern clouds, or thou tremblest<lb/>
+                                7 at the gates of the west. But thou art, perhaps, like me,<lb/>
+                            8 for a season; and thy years will have an end. Thou shalt
+                            sleep in thy clouds, careless of the voice of the morning.</p>
+                            <p>9 Exult, then, O Sun, in the strength of thy youth! Age<lb/>
+                                10 is dark and unlovely: it is like the glimmering light of the
+                                moon, when it shines through broken clouds, and the <gap reason="illegible" quantity="1" unit="word"/>
+                                on the hills: the blast of the north is on the plain: the
+                                <choice><orig>traveller</orig><reg>traveler</reg></choice> shrinks in the midst of his journey.</p>
+                            <milestone unit="unknown" rend="horbar-short-center"/>
+                        </body>
+                    </floatingText>
+                </q>
+            </add><note type="authorial" resp="#h1">The Irish swear that
+                Ossian belongs to them&#8212;
+                that he was born, lived, and
+                wrote in Ireland</note>
+            </div1>
+            <pb xml:id="leaf002r" facs="duk.00194.003.jpg" type="recto"/><div1 type="section">
+            <note type="authorial" resp="#h2" place="top">Pythagoras was of beautiful large person, rich, dressed
+            elegantly, practised athletics, exercised, bathed, used
+            perfumes</note>
+            <ab><handShift new="#h1"/><list><item>Homer, about 907 years B.C.</item>
+                <item>Pythagoras " 600 " " "</item><!--NHG: "ditto" marks to repeat text from above. --> <span xml:id="s3" type="curlyBrace-right" from="#item1" to="#item2"/>
+                <item xml:id="item1">Trojan expedition 1136 years B.C.</item>
+                <item xml:id="item2">Troy taken 1127 " "</item><!--NHG: also ditto marks.--> <note type="authorial" resp="#h1" target="#s3">the I<subst><del rend="overwrite" seq="1">ll</del><add rend="overwrite" seq="2" place="over"><handShift new="h2"/>l</add></subst>iad</note>
+                <item>Phidias, the sculptor, born 488 B.C.</item>
+                <item>Socrates from 469 B.C. to 399 B.C.</item>
+                <item>Plato <add rend="unmarked" place="supralinear">(<hi rend="underline">"broad"</hi>)</add> 429 <subst><del rend="overstrike" seq="1"><add rend="unmarked" place="supralinear">(about)</add> 350</del><add rend="unmarked" place="inline" seq="2">347</add></subst></item></list></ab>
+            <ab>Sophocles, Eschuylus, Euripides, flourished
+            just before the maturity of Socrates.
+            Their best works have not come
+            down to moderns.&#8212;<del rend="overstrike">born 495 <add rend="unmarked" place="supralinear">B.C.</add>&#8212;died very old.</del></ab>
+            <ab>In <hi rend="underline">Eschuylus</hi>, <add rend="unmarked" place="infralinear">"the high‑wrought, trumpet tongued eloquence of Eschuylus")</add> the figures are shadowy
+            vast, majestic, dreamy&#8212;moving with
+            haughty grandeur, strength, and will.</ab>
+            <ab>In <hi rend="underline"><choice><orig>Sophokles,</orig><reg>Sophocles</reg></choice></hi> <add rend="unmarked" place="infralinear">("the harmonious gracefulness of Sophokles tuning his <hi rend="underline">love</hi>‑labored 
+                song like the sweetest warbling from a sacred grove"</add> the dialogue and feelings
+                are more like reality&#8212;the interest
+            comes home nearer.&#8212;Great poetical beauty
+            <add rend="unmarked" place="interlinear">born 495 B.C. died very old</add></ab>
+            <ab>In Euripides <add rend="unmarked" place="infralinear">("the subtle <del rend="overstrike" seq="1">pathos and</del> reasonings &amp; melting pathos of Euripides,")</add> love and compassion&#8212;scientific
+            refinement&#8212;something like skepticism.
+                This writer was a hearer of <choice><orig>Sokrates</orig><reg>Socrates</reg></choice>.
+            <add rend="unmarked" place="interlinear">born 480 B.C.&#8212;nineteen of his tragedies remain out
+            of eighty or ninety.&#8212;</add></ab>
+            <ab>Aristophanes, contemporary of <choice><orig>Sokrates</orig><reg>Socrates</reg></choice>, whom
+            he lampoons in "The Clouds."</ab>
+            <ab>Aristotle born 384 B.C. at Stagira in Macedonia
+                went early to Athens&#8212;studied under Plato&#8212;
+                &#8212;was afterwards tutor to Alexander the Great&#8212;
+                &#8212;returned to Athens, opened a gymnasium or
+                school&#8212;left to escape a charge of atheism
+                &#8212;poisoned himself.</ab>
+            <note type="authorial" resp="#h1" rend="circled" place="left"><hi rend="underline">Plutarch</hi>
+            born a.d.
+            50
+            lived to
+            old age</note>
+            <milestone unit="unknown" rend="horbar-full"/>
+            <ab>Zoroaster, two centuries after Moses. <add rend="unmarked" place="infralinear">1700 B.C.</add><!--See Grier p. 2025 --></ab>
+                <ab>Menu preceded both Zoroaster &amp; Moses.</ab>
+                <ab>Confucius, (China) 500 B.C.</ab>
+            <note type="authorial" resp="#h1" place="right" rend="circled"><list><item>Menu <hi rend="circled">first
+            then</hi></item>
+            <item>Moses</item>
+            <item>Zoroaster</item></list></note></div1>
+            <pb xml:id="leaf002v" facs="duk.00194.004.jpg" type="verso"/><div1 type="section">
+            <list><head type="main-derived">All together</head>
+            <item>Socrates</item>
+                <item>Eschylus</item>
+                <item>Sophocles</item>
+                <item>Aristophanes</item>
+                <item>Plato</item>
+            </list></div1>
+        </body>
+    </text>
+</TEI>

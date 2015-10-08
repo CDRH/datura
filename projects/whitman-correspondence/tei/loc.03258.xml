@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>  
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03258">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Craig McGinnis to Walt Whitman, 30 April 1883</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Craig McGinnis</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="no">Natalie O'Neal</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03258</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>129 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Craig McGinnis</author>
+                    <title>Craig McGinnis to Walt Whitman, 30 April 1883</title>
+                    <date cert="high" when="1883-04-30" xml:id="dat1">April 30, 1883</date>
+                    <idno type="callno">MSS18630, Box 13</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="McGinnis, Craig">Craig McGinnis</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-01-05" who="#nhg">corrected image names</change>
+            <change when="2015-01-05" who="#nhg">corrected annotation, removed unclear</change>
+            <change when="2014-11-24" who="#nhg">checked, corrected</change>
+            <change when="2014-11-21" who="#no">checked, changed dateline place from Atlanta to Ottawa, changed unclear in p2 from "advise" to "adverse", underlined signature</change>
+            <change when="2014-11-10" who="#ak">corrected transcription and encoding</change>
+            <change when="2014-07-30" who="#ss">transcribed, encoded and annotated</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.03258.001.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">88 Lyon St. Ottawa</name>
+                    <date when="1883-04-30">30 April 1883</date>
+                </dateline>
+                <salute>Sir,</salute>
+            </opener>
+
+
+            <p>I have just finished 
+                reading, with intense pleasure, 
+                your "Leaves of Grass." Would you forgive my 
+                suggesting, as a sufficient 
+                reply to your adverse critics, the
+ 
+                
+                <pb xml:id="leaf001v" facs="loc.03258.002.jpg" type="verso"/>
+                
+                <pb xml:id="leaf002v" facs="loc.03258.004.jpg" type="verso"/> 
+                
+                the insertion of the
+                following motto in  
+                your future editions. 
+                It is from the "Heauton Timorumenos" Act 1. <choice><abbr>Sc.</abbr><expan>Scene</expan></choice> 1. line 28.
+                "Homo sum: humani nil a me alienum puto."<ptr target="loc.03258_n1"/></p>
+
+            <closer>
+                <salute>Yours gratefully</salute>
+                <signed><hi rend="underline">Craig McGinnis</hi></signed>
+                
+            </closer>
+
+           <closer> <salute>Mr Walt Whitman,</salute><!--this appears at the bottom of the first page-->
+                <salute>&#38;c. &#38;c.</salute></closer>
+            <pb xml:id="leaf002r" facs="loc.03258.003.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.01634">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Peter Doyle, 2 January [1874]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="el">Elizabeth Lorang</persName><persName xml:id="kk">Kathryn Kruger</persName><persName xml:id="zk">Zachary King</persName><persName xml:id="ec">Eric Conrad</persName><persName xml:id="ak">Alex Kinnaman</persName><persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska–Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.01634</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska–Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2014 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Peter Doyle, 2 January [1874]</title>
+
+                    <date cert="medium" when="1874-01-02" xml:id="dat1">January 2, 1874</date>
+                    <idno type="callno">MSS18630, Box 9, Reel 5-6</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839–1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="unk"><persName key="Unknown">Unknown</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                     <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Doyle, Peter" ref="n0752">Peter Doyle</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-04-23">checked, corrected</change>
+            <change who="#ak" when="2014-10-31">added annotation</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+<change when="2014-08-12" who="#el">made basic checking changes to file</change>
+            <change when="2012-01-05" who="#kk">checked</change>
+            <change when="2011-02-26" who="#zk">encoded</change>
+            <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body><pb xml:id="leaf001r" facs="loc.01634.001.jpg" type="recto"/>
+            <note type="editorial" resp="#unk" place="top">1874</note>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">431 Stevens st. <lb/>cor West.</name>
+                    <name type="place" rend="left">Camden, N.J.</name>
+                    <date when="1874-01-02" rend="right"><choice><abbr>Jan</abbr><expan>January</expan></choice> 2–12 M.</date><ptr target="loc.01634_n1"/>
+                </dateline>
+                <note type="editorial" resp="#unk" place="top">'74?</note>
+                <salute>Dear boy,</salute>
+            </opener>
+
+            <p>I am about the same&#8212;consider myself improving, if any thing, though slowly enough&#8212;Pete I will get you the Dictionary, I will see about it soon. You spoke about the post 
+                of baggage master on the through New York train&#8212;&amp; the appointment being in Philadelphia. 
+                Who appoints them? Tell me more fully about it in your next. I got your last letter, &amp; several papers. 
+                To-day I have rec'd a letter from Charles Eldridge&#8212;We have had a long rainy &amp; dark time here, 
+                but mild&#8212;no snow on the ground now&#8212;I go out&#8212;as I write, the trains are going by 
+                about 400 feet off, ringing &amp; smoking&#8212;there are 20 a day in full view from here.
+            </p>
+            
+            <closer>
+                <signed rend="right">Walt.</signed>
+            </closer>
+            
+            <postscript>   
+                <p>I send you a picture for your New Years.
+                </p>
+            </postscript><pb xml:id="leaf001v" facs="loc.01634.002.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

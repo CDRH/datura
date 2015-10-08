@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00466">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, 25 November [1865]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ct">Cathy Tisch</persName>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00466</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, 25 November [1865]</title>
+                    <date cert="high" when="1865-11-25" xml:id="dat1">November 25, 1865</date>
+                    <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare
+                        Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice
+                        Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-12-09" who="#el">removed duplicate reg encoding within choice</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-07-29" who="#el">merged files</change>
+            <change when="2013-07-19" who="#wr">Replace internal notes with external notes</change>
+            <change when="2013-06-06" who="#wr">Duke Proofreading Corrections</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent changes as necessary</change>
+            <change when="2013-01-02" who="#el">updated TEI header to reflect new project practices;
+                moved editorial notes to external file and replaced with ptr; other editing changes
+                Proof</change>
+            <change when="2012-12-14" who="#wr">Proofreading Corrections of notes.</change>
+            <change when="2012-04-25" who="#wr">Proofreading Corrections</change>
+            <change when="2012-09-15" who="#wr">Proofreading correction of notes.</change>
+            <change when="2012-09-07" who="#wr">Review oral proofreading corrections; add RMBucke
+                Hand note and date note; revise paragraphing</change>
+            <change when="2012-08-22" who="#ct">Oral Proofreading Corrections</change>
+            <change when="2012-01-10" who="#fw">Correct date in title, annotations</change>
+            <change when="2011-04-13" who="#wr">Review proofread and correct</change>
+            <change when="2011-04-13" who="#fw">Annotate Tom Rome and O'Connor</change>
+            <change when="2011-04-05" who="#fw">Correct 2 Pages</change>
+            <change when="2011-03-30" who="#wr">Encode regularization of contractions, days of week,
+                and frequently misspelled words</change>
+            <change when="2011-03-28" who="#fw">Transcribe 2 Pages</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="duk.00466.001.jpg" type="recto"/>
+
+            <note type="editorial" resp="#rmb" place="top">1865</note>
+
+            <opener>
+                <dateline>
+                    <date when="1865-11-25"><choice>
+                            <orig>Novem</orig>
+                            <reg>November</reg>
+                        </choice> 25<ptr target="duk.00466_n14"/></date>
+                </dateline>
+                <salute>My dear Walt</salute>
+            </opener>
+
+            <p>i have been looking for a letter all day but none came so it is
+                        <choice><orig>saturday</orig>
+                    <reg>Saturday</reg>
+                    </choice> night and i am alone for A wonder so i thought i
+                would write you a few lines although my paper is <choice>
+                    <orig>somewha</orig>
+                    <reg>somewhat</reg>
+                    </choice> soiled and rather scanty it will let you see we are
+                all in the land of the living i have better paper than this but it is away up stairs
+                and i am too tired to go for it) we have had a terrible murder here as i suppose you
+                see by the papers all spaniards together)<ptr target="duk.00466_n1"/> well
+                georgee<ptr target="duk.00425_n2"/>
+                <choice>
+                    <orig>dident</orig>
+                    <reg>didn't</reg>
+                    </choice> get the job of the big house after spending so much
+                time he says he <choice><orig>aint</orig>
+                    <reg>ain't</reg></choice> much <choice><orig>dissappointed</orig>
+                    <reg>disappointed</reg></choice> as the architect was in favor of the new york
+                bosses perhaps <choice><orig>its</orig>
+                    <reg>it's</reg>
+                    </choice> all for the best it would have been a great care and
+                worriment of mind they will get the job done they are at about
+                        <choice><orig>chrismas</orig>
+                    <reg>Christmas</reg>
+                    </choice> George says) probably something will turn up by
+                that time i tell him to go and see his friends and take things
+                        <choice><orig>easey</orig>
+                    <reg>easy</reg>
+                    </choice> i have not had one word from hanna since i came
+                home<ptr target="duk.00466_n3"/> i want to hear from her very much i often wish i
+                could see her i got thinking about her and other things night before last and i
+                could not get to sleep till most morning <pb xml:id="leaf001v"
+                    facs="duk.00466.002.jpg" type="verso"/> then you know i get up very early most
+                generally a little before day light i <choice><orig>dont</orig>
+                    <reg>don't</reg></choice> mind so much after i get down stairs but its something
+                of job for me to get down some mornings i have been very lame more so than
+                        <choice><orig>usuall</orig><reg>usual</reg></choice>) i have got a union
+                with an article about your book<ptr target="duk.00466_n10"/> i
+                told Jeff<ptr target="duk.00422_n2"/> to take it and
+                send it to you would you like to have it or <choice><orig>dont</orig>
+                    <reg>don't</reg></choice> you care about it) it is not so severe as the one in
+                the nation of the 16th of
+                <choice><orig>november</orig><reg>November</reg></choice><ptr
+                    target="duk.00466_n11"/>
+                tom Rome<ptr target="duk.00466_n4"/> left it here for me to read he is quite put out about
+                it</p>
+            <p>i should like for mr <choice><orig>Oconner</orig><reg>O'Connor</reg></choice><ptr
+                target="duk.00466_n5"/> to see that in
+                the nation it is a long piece with flourishes) the one in the union made me
+                        <choice><orig>laughf</orig><reg>laugh</reg></choice> you got my letter
+                        <choice><orig>dident</orig>
+                    <reg>didn't</reg></choice> you Walt i wrote last <choice><orig>sunday</orig>
+                    <reg>Sunday</reg></choice> and finished <choice><orig>monday</orig>
+                    <reg>Monday</reg></choice> about <choice><orig>Cornelius s</orig>
+                        <reg>Cornelius's</reg></choice> death<ptr
+                            target="duk.00466_n6"/> Jeff and matty and the children<ptr
+                                target="duk.00465_n9"/> are very well indeed
+                martha has a woman to come every day and <choice><orig>doo</orig>
+                    <reg>do</reg></choice> up her work little jimmy<ptr target="duk.00424_n5"/> comes as usual
+                no more to night with my awful pen</p>
+            <closer>
+                <salute>your mother</salute>
+                <signed>L W<ptr target="duk.00425_n3"/></signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

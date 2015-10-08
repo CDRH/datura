@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="tex.00173">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, [6] February [1870]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="hk">Heather Kaley</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="nr">Natalie Raabe</persName> 
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>tex.00173</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, February [6], [1870]</title>
+                    <date cert="medium" when="1870-02-06" xml:id="dat1">February 6, 1870</date>
+                    <orgName xml:id="tex">The Walt Whitman Collection, Harry Ransom Humanities Research Center, The University of Texas at Austin</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-07-31" who="#el">moved remaining notes to external file and added ptrs; checked</change>
+            <change when="2013-07-29" who="#el">merged files</change>
+            <change when="2013-06-04" who="#wr">Silent Proofreading Corrections</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent Proof</change>
+            <change when="2012-12-14" who="#wr">Proofreading Corrections of notes.</change>
+            <change when="2012-11-26" who="#wr">Proofreading corrections.</change>
+            <change when="2012-11-21" who="#nr">Proofreading notes.</change>
+            <change when="2012-07-31" who="#wr">Moved RMBucke to HandNote; fixed editor, date, and title; reviewed paragraphing </change>
+            <change when="2012-07-16" who="#wr">Replaced smart quotes with straight; removed external URL links. </change>
+            <change when="2012-06-11" who="#wr">Changed straight quotes to chararacter reference smart quotes. </change>
+            <change when="2012-05-30" who="#wr">
+                Proofread based on Ransom copy and removed some cuts which are identifiable in original. 
+            </change>
+            <change when="2012-05-14" who="#wr">Dated letter to February 6 based on visit of Prince Arthur,
+                son of Queen Victoria, to Brooklyn 
+                and profile of visit in Daily Eagle. Annotated the poem deemed a "christmas present"
+                to Abby Hills Price. Corrected transcription based on oral proofreading.</change>
+            <change when="2012-03-07" who="#hk">Noted image cut-offs</change>
+            <change when="2012-01-28" who="#fw">Attributed date</change>
+            <change when="2012-01-20" who="#fw">Regularize spelling</change>
+            <change when="2012-01-17" who="#fw">Transcribe and correct 2 Pages</change>
+        </revisionDesc>
+    </teiHeader>
+    
+    <text type="letter">
+        <body>
+            
+            <pb xml:id="leaf001r" facs="tex.00173.001.jpg" type="recto"/>
+           
+            <note type="editorial" resp="#rmb" place="top">Feb 1</note>
+            
+            <opener>
+                <dateline>                    
+                    <date when="1870-02-06">February<ptr target="tex.00173_n9"/></date>
+                </dateline>
+                <salute>dear walt</salute>
+            </opener>
+            
+            
+            
+            <p>i<ptr target="tex.00173_n1"/> received your
+                letter yesterday and the order
+                and am very much obliged
+                to you indeed the paper came
+                <choice><orig>to</orig><reg>too</reg></choice> i was amused to read the
+                account of the ball and the
+                <choice><orig>prince s</orig> <reg>prince's</reg></choice>  <choice><orig>manovers</orig> <reg>maneuvers</reg></choice>
+                i should
+                think by the account he behaved
+                with great propriety and
+                very good taste in his dress
+                and his behavior)<ptr target="tex.00173_n8"/> well walt
+                Georgey<ptr target="duk.00425_n2"/>
+                <choice><orig>aint</orig> <reg>ain't</reg></choice> home yet i
+                <choice><orig>havent</orig> <reg>haven't</reg></choice> heard a word from
+                him since he went away
+                the 1 of the month i think he
+                might just write a line to
+                me i expected he would be
+                home last <choice><orig>saturday</orig> <reg>Saturday</reg></choice> but he
+                <choice><orig>dident</orig> <reg>didn't</reg></choice> come so i suppose
+                he will be here this <choice><orig>satur</orig><reg>Saturday</reg></choice><ptr target="tex.00173_n7"/></p>
+            
+            
+            <pb xml:id="leaf001v" facs="tex.00173.002.jpg" type="verso"/>
+            
+            <p>i <choice><orig>haveent</orig><reg>haven't</reg></choice><ptr target="tex.00173_n10"/>            
+                had no word from
+                Jeffie nor martha<ptr target="duk.00575_n9"/> since i
+                wrote to you last week i
+                sent a letter to Jeff yesterday
+                neither have i had any word
+                from han<ptr target="duk.00467_n1"/>
+                but that i <choice><orig>dont</orig> <reg>don't</reg></choice> think<ptr target="tex.00173_n16"/>
+                so strange of as she <choice><orig>dont</orig> <reg>don't</reg></choice> write
+                more than once or twice in the
+                year) helen price has been here and I gave her<ptr target="hyb.00002_n11"/>
+                the paper with your <choice><orig>peice</orig> <reg>piece</reg></choice> 
+                in she was much pleased
+                with it very much indeed
+                she wished me to say to you
+                she was obliged to you and
+                received it as a christmas
+                present<ptr target="tex.00173_n13"/> she is working in
+                that place i spoke about
+                mr stitson<ptr target="tex.00173_n11"/>
+                i <choice><orig>beleive</orig> <reg>believe</reg></choice> his name
+                is a lawyer of <choice><orig>pattens</orig> <reg>patents</reg></choice> she gets
+                from <choice><orig>to day</orig> <reg>today</reg></choice> 8 dollars a week she
+                has had 6
+                
+                
+                she is glad she can
+                earn something she has given
+                what she has earned to her <unclear reason="illegible" cert="medium" resp="#fw">mother</unclear>
+                but what she now gets she will
+                get a nice black silk) i <choice><orig>gess</orig> <reg>guess</reg></choice> mrs
+                price is like many others short of funds
+                sometime
+                walter my son this is the only envelope</p>
+            <p>i shall go down to the post office to
+                day if it <choice><orig>aint</orig> <reg>ain't</reg></choice> <choice><orig>slipery</orig> <reg>slippery</reg></choice></p>
+            
+            
+        </body>
+    </text>
+</TEI>

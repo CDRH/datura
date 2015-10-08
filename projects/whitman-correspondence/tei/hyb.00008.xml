@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="hyb.00008">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Anne Gilchrist, 19 May [1878]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>
+                    <persName xml:id="ad">Anthony Dreesen</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>hyb.00008</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+             
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date when="1964">1964</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">119</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+
+               <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Anne Gilchrist, 19 May [1878]</title>
+                    <date cert="medium" when="1878-05-19" xml:id="dat1">May 19, 1878</date>
+                   <orgName xml:id="pml">The Pierpont Morgan Library, New York</orgName>
+                   <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Gilchrist, Anne">Anne Gilchrist</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-04" who="#nhg">added orgName</change>
+            <change when="2014-04-03" who="#kc">added images</change>
+            <change when="2013-04-02" who="#km">checked</change>
+            <change when="2013-01-14" who="#ad">checked</change>
+            <change when="2012-12-04" who="#gt">checked</change>
+            <change when="2012-10-04" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">Camden<ptr target="pml.00046_n1"/> </name>
+                    <date when="1878-05-19" rend="right">Sunday afternoon</date>
+                    <date when="1878-05-19" rend="right">May 19</date>
+                </dateline>
+                <salute>My dear friend</salute>
+            </opener>
+
+            <p>I came up last night from a three days visit to White Horse<ptr target="pml.00046_n2"/>&#8212;went down thinking only to spend the day, but the spring beauty of the creek, skies, weather, trees, birds &#38;c. fascinated me&#8212;</p>
+            
+            <p>I am feeling excellent well <choice><orig>to-day</orig><reg>today</reg></choice>, for me&#8212;have been out to a gay breakfast party (lawyers &#38; ladies &#38; lots of talk, &#38; champagne)<ptr target="pml.00046_n3"/>&#8212;&#38; enjoyed it very well&#8212;but <hi rend="italic">once</hi> of such a thing will last me a long while&#8212;got home about one o'clock, (it has now just struck four)&#8212;consequence of my gay breakfast is, I have not eat any dinner&#8212;but shall go to Col. Johnston's to supper<ptr target="pml.00046_n4"/>&#8212;</p>
+           
+            <p>Thanks to Herbert for his good letters of the 7th from Brooklyn&#8212;&#38; the 16th from Northampton<ptr target="pml.00046_n5"/>&#8212;please give him the enclosed postal, I found at White Horse&#8212;May-be you will like to read Miss Hillard's letter&#8212;so I enclose it&#8212;The Staffords are mostly as usual&#8212;George S. not very well, but around at work&#8212;Debbie not married yet<ptr target="pml.00046_n6"/>&#8212;</p>
+            
+            <p>You must have fine surroundings indeed at Round Hill&#8212;As I close we have the prospect of a fine evening&#8212;A cannon has just boomed out on the river, probably an ocean-steam just come in, firing her signal gun&#8212;&#38; I am just off to Col. J's, &#38; to leave this at the P O&#8212;</p>
+
+            <closer>
+                <salute>Best love to all&#8212;</salute>
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+            <pb xml:id="leaf001r" facs="loc.02150.001_large.jpg" type="recto"/>
+            <pb xml:id="leaf001v" facs="loc.02150.002_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

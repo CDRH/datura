@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="upa.00046">
+    <teiHeader>
+        <fileDesc> 
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Anne Gilchrist, 28 September 1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>                   
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>upa.00046</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Anne Gilchrist, 28 September 1880</title>
+                    <date cert="high" when="1880-09-28" xml:id="dat1">September 28, 1880</date>
+                    <orgName xml:id="upa">Walt Whitman Collection, 1842&#8211;1957, Rare Book &amp; Manuscript Library, University of Pennsylvania</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Gilchrist, Anne">Anne Gilchrist</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-05-28" who="#nhg">added images, updated transcription</change>
+            <change when="2013-09-10" who="#nhg">checked, corrected</change>
+            <change when="2013-05-13" who="#km">checked</change>
+            <change when="2013-01-22" who="#ej">Checked and Corrected</change>
+            <change when="2013-01-08" who="#ab">checked</change>
+            <change when="2012-10-28" who="#gt">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="upa.00046.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">Niagara Falls, America</name>
+                    <date when="1880-09-28">September 28 '80</date>
+                </dateline>
+                <salute>My dear friend</salute>
+            </opener>
+
+            <p>I must write you a line or two&#8212;but it will be a short letter&#8212;I am on my way back to Camden, stopping here only temporarily. Have had a very successful summer trip&#8212;have jaunted over 3000 miles, no mishaps, and generally everything working in well&#8212;have met with many friends, &amp; kindness &amp; good will everywhere&#8212;I am as well as usual again the last two months, indeed I think I am better than usual&#8212;the climate 
+            
+            <pb xml:id="leaf001v" facs="upa.00046.002_large.jpg" type="verso"/>
+                
+                country &amp;c agree with me &amp; I almost hate to leave them. Dr and Mrs Bucke have been like brother &amp; sister, unvaryingly kind &amp; helpful &amp; affectionate&#8212;(Dr has several times spoken of you)</p>
+            
+            <p>&#8212;I <choice><abbr>rec'd</abbr><expan>received</expan></choice> your letter of a month since<ptr target="upa.00046_n1"/>&#8212;My brother &amp; sister are well, &amp; matters as usual with them&#8212;Dr B wishes to be remembered&#8212;he has come on to the Falls with me. Peter Doyle has also come on from Washington, to spend a short time here &amp; then return 
+          
+            <pb xml:id="leaf002r" facs="upa.00046.003_large.jpg" type="recto"/>
+                
+                with me to Philadelphia. Love to you dear friend, &amp; to Beatrice, Herbert &amp; Grace&#8212;</p>
+
+            <closer>
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+             
+            <pb xml:id="leaf002v" facs="upa.00046.004_large.jpg" type="verso"/>
+            
+        </body>
+    </text>
+</TEI>

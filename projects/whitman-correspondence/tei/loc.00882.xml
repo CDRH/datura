@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.00882">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Bethuel Smith to Walt Whitman, 22 October 1864</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Bethuel Smith</author>
+            <editor>Kenneth M. Price</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="kk">Kathryn Kruger</persName>
+               <persName xml:id="ec">Eric Conrad</persName>
+
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2009</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>loc.00882</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <author>Bethuel Smith</author>
+               <title>Bethuel Smith to Walt Whitman, 22 October 1864</title>
+               <date when="1864-10-22">October 22, 1864</date>
+               <orgName xml:id="loc">Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Smith, Bethuel">Bethuel Smith</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#kk" when="2010-04-07">Ken's proofreading changes</change>
+         <change who="#ec" when="2009-08-10">annotations</change>
+         <change who="#el" when="2009-08-05">added encoding for page breaks</change>
+         <change who="#vs" when="2009-07-24">Added encoding for annotations made by John from UVA.</change>
+         <change who="#vs" when="2009-07-09">Transcribed, Encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         <pb facs="loc.00882.001.jpg" type="recto"/>
+         
+            <opener rend="right">
+               <dateline>
+                  <name type="place">
+                     <gap reason="illegible"/>burg</name>
+                  <date when="1864-10-22">Oct. 22 1864</date>
+               </dateline>
+               <salute>Dear friend walt</salute> 
+            </opener>
+         <p>I<ptr target="loc.00882_n100"/> arrived home the 18 I had to <unclear reason="illegible" resp="#vys" cert="medium">stop</unclear> over my <gap reason="illegible"/> on account of Sheridan fighting in the valley mother told me that you wanted me to stop &amp; see you when I come home but it is to late now &amp; I did not hear of it in time there is <gap reason="illegible"/> considerable excitement here about the election.</p>
+            <p>my health is not verry good at present I have got diarrhea some I think that it is on account of the change <pb facs="loc.00882.002.jpg" type="verso"/>of climate &amp; of food that makes me so although I feel verry well</p>
+            <p>no more at present</p>
+            <closer rend="right">
+               <salute>good by From</salute>
+               <signed>B Smith</signed>
+            <signed>to Friend Walt</signed>
+            </closer>
+         
+         <postscript>
+            <p>Address <lb/>
+Bethuel Smith.<lb/>
+Glens Falls.<lb/>
+Warren. C.O.<lb/>       
+N.Y.<lb/>
+            </p>
+         </postscript>
+         <pb facs="loc.00882.003.jpg" type="recto"/>
+      </body>
+   </text>
+</TEI>

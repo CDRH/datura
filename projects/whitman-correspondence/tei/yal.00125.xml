@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="yal.00125">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Milton Kelly to Walt Whitman, 9
+                    August 1867</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Milton Kelly</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <name>The Walt Whitman Archive Staff</name>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2011</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>yal.00125</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2011 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note type="project">The following are responsible for particular readings or for
+                    changes to this file, as noted:
+<persName xml:id="kmp">Kenneth M. Price</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="al">Ashley Lawson</persName>
+                    <persName xml:id="br">Beverley Rilett</persName>
+                </note>
+            </notesStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Milton Kelly</author>
+                    <title>Milton Kelly to Walt Whitman, 9 August 1867</title>
+                    <date cert="high" when="1867-08-09" xml:id="dat1">August 9, 1867</date>
+                    <idno type="callno">YCAL MSS 202</idno>
+                    <orgName xml:id="loc">Yale Collection of American Literature, Beinecke Rare Book
+                        and Manuscript Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Kelly, Milton">Milton Kelly</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+<change when="2012-03" who="#kp">blessed</change>
+            <change when="2011-08-03" who="#el">checked</change>
+            <change when="2011-04-28" who="#al">checked</change>
+            <change when="2011-01-21" who="#br">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="yal.00125.001.jpg" type="recto"/>
+            <opener>                
+                <dateline rend="right">
+                    <name type="place">Oberlin Ohio</name>
+                    <date when="1867-08-09">Aug 9th 1867</date>
+                </dateline>
+                <salute>Mr <lb/>Whitman</salute>
+            </opener>
+
+            <p><choice><abbr>Dr</abbr><expan>Dear</expan></choice> sir I take this opportunity to inform you that I have made my trip to Wisconsin and returned here yesterday, and will soon be in Washington and hope my orders will be ready by the time I return as you anticipated when I left. Remember me to Mr Pleasants and Stiths—with kind regards</p>
+
+            <closer>
+                <salute>I remain yours truly</salute>
+                <signed>Milton Kelly</signed>
+            </closer>
+            
+            <pb xml:id="leaf001v" facs="yal.00125.002.jpg" type="verso"/>
+
+            <pb xml:id="leaf002r" facs="yal.00125.003.jpg" type="recto"/>
+
+            <pb xml:id="leaf002v" facs="yal.00125.004.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?><?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules_mss.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03442">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Anacreon's Midnight Visitor</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author xml:id="ww">Walt Whitman</author>
+                <author xml:id="ht">Horace Traubel</author>
+                <author xml:id="a">Anacreon</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="lmg">Lauren Grewe</persName><persName xml:id="tra">Ty Alyea</persName><persName xml:id="nhg">Nicole Gray</persName><persName xml:id="mc">Matt Cohen</persName>
+                </respStmt>
+                <sponsor>University of Texas at Austin</sponsor>
+                <sponsor>University of Nebraska-Lincoln</sponsor>
+                <funder>The National Endowment for the Humanities</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03442</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                    <addrLine>kprice@unlnotes.unl.edu</addrLine>
+                    <addrLine>Ed-Folsom@uiowa.edu</addrLine>
+                    <addrLine>bbarney2@unlnotes.unl.edu</addrLine>
+                </address>
+                <availability><p>The text of the original document is in the public domain. Subject to certain exceptions, public domain works may be freely copied or used in the creation of derivative works without permission, or authorization, of the former copyright owners.</p><p>The text encoding was created and/or prepared by the Walt Whitman Archive and is governed by a <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref> (CC BY 4.0).</p><p>Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p></availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Anacreon, "The Midnight Visitor"</title>
+                    <idno type="callno">Box 42, Folder 54</idno>
+                    <date notBefore="1847-01-01" notAfter="1891-12-31">Undated</date>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                    <note type="project">Transcribed from digital images of the original item.</note>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="h1" scribeRef="#ww" medium="black-ink"/>
+                <handNote xml:id="h2" scribeRef="#ht" medium="black-ink"/>
+            </handNotes>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-03-08">completed date information, tweaked encoding</change>
+            <change who="#nhg" when="2015-01-26">added schematron declaration, updated schema declaration, changed text type to annotations</change><change who="#lmg" when="2013-06-25">Transcribed and encoded.</change>
+            <change who="#lmg" when="2013-10-15">Checked.</change>
+            <change who="#tra" when="2013-11-27">Updated bibliographical information.</change>
+            <change who="#mc" when="2014-10-18">Proofed.</change>
+        </revisionDesc> 
+    </teiHeader>
+<text type="annotations">
+    <body>
+        <pb xml:id="leaf001r" facs="loc_nhg.00220.jpg" type="recto"/>
+        <ab><handShift new="#h1"/>Anacreon's
+        <hi rend="underline">Midnight Visitor</hi></ab>
+        <pb xml:id="leaf001v" facs="loc_nhg.00221.jpg" type="verso"/>
+        <lg type="linegroup"><l>Ah! aim'd at me&#8212;like flash of flame</l>
+        <l>Right to my very soul it came.</l></lg>
+        <lg type="linegroup"><l>"Thanks&#8212;and farewell," I hear him say,</l>
+        <l>As, with arch laugh, he soars away;</l>
+        <l>"The glow thou gav'st me, back I send,</l>
+        <l>Thy books, philosophy to end,</l>
+        <l>To warm thy life&#8212;to break the spell,</l>
+        <l>This, this thou need'st&#8212;Thanks, and farewell!"</l></lg>
+        <note type="editorial" resp="#h2" place="bottom">Given to me by Walt
+            Whitman &amp; given by me
+            to Mildred &amp; Frank Bain
+            in Montreal: 1910
+            Horace Traubel</note>
+        <pb xml:id="leaf002r" facs="loc_nhg.00222.jpg" type="recto"/>
+        <lg type="linegroup"><l><handShift new="#h1"/>Tis noon of night when round the pole</l>
+        <l>The sullen Bear is seen to roll,</l>
+        <l>And mortals wearied with the day,</l>
+        <l>Are slumbering all their cares away.</l></lg>
+        <lg type="linegroup"><l>An infant at that dreary hour,</l>
+        <l>Comes weeping to my silent bower,</l>
+        <l>And wakes me with a piteous prayer,</l>
+        <l>To shield him from the chill, wet air.</l></lg>
+        <lg type="linegroup"><l>"And who art thou?" I, starting, cry,</l>
+        <l>That mak'st my blissful dreams to fly?"</l></lg>
+        <lg type="linegroup"><l>"O gentle sir, a lonely child,"</l>
+        <l>The young one says, "I walk the wild,</l>
+        <l><add rend="insertion" place="supralinear">Soak'd</add> Numb with <del rend="overstrike">the</del> rain, <subst><del rend="overstrike" seq="1">while</del> <add rend="unmarked" place="supralinear" seq="2">and</add></subst> not a ray,</l>
+        <l> <add rend="unmarked" place="supralinear">T'</add>Illume<del rend="overstrike">s</del> the dark, the unknown way."</l></lg>
+        <lg type="linegroup"><l>I hear the baby's tale of <subst><del rend="overstrike" seq="1">way,</del> <add rend="unmarked" place="supralinear" seq="2">woe</add></subst></l>
+        <l>As sharp the bitter night‑winds blow,</l>
+        <l>And eager to relieve his fate,</l>
+        <l>Trimming my lamp, I ope the gate.</l></lg>
+        <lg type="linegroup"><l><gap reason="damage" extent="1" unit="word"/> is <hi rend="underline">Love,</hi> the <gap reason="damage" extent="2" unit="letter"/>ttl<gap reason="damage" extent="1" unit="letter"/> mystic sprite!</l>
+        <l>His pinions sparkle through the night.</l>
+        <l>I know him by his bow and dart;</l>
+        <l>(I know him by my fluttering heart:)</l>
+        <l>I take him in&#8212;I quickly raise</l>
+        <l>The smouldering embers' cheery blaze,</l>
+        <l>Press from his dank and clotted hair</l>
+        <l>The crystals of the freezing air,</l>
+        <l>And to my inner body, hold</l>
+        <l>his little fingers stiff and cold.</l></lg>
+        <lg type="linegroup"><l>Till but awhile rosy and warm,</l>
+        <l>Supple and soft, leaving my arm,</l>
+        <l>"I <del rend="overstrike">pr</del> pray thee," says the cunning child</l>
+        <l>(My bosom trembled as he smiled,)</l>
+        <l>I pray thee let me try my bow,</l>
+        <l>For through the rain I've wandered so,</l>
+        <l>That much I fear the pouring shower,</l>
+        <l>Has injured its elastic power."</l></lg>
+        <lg type="linegroup"><l>I gave assent&#8212;the bow he drew,</l>
+        <l>Swift from the <gap reason="damage" extent="2" unit="word"/> the arrow flew.</l></lg>
+        <pb xml:id="leaf002v" facs="loc_nhg.00223.jpg" type="verso"/>
+        <div1 type="verso"><ab> </ab></div1>
+    </body>
+</text>
+</TEI>

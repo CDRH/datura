@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="upa.00135">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Rees Welsh &amp; Company to Walt Whitman, 16 June
+                    1882</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Rees Welsh &amp; Company</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>upa.00135</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Rees Welsh &amp; Company</author>
+                    <title>Rees Welsh &amp; Company to Walt Whitman, 16 June 1882</title>
+                    <date cert="high" when="1882-06-16" xml:id="dat1">June 16, 1882</date>
+                    <orgName xml:id="upa">Walt Whitman Collection, 1842&#8211;1957, Rare Book &#38;
+                        Manuscript Library, University of Pennsylvania</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Rees Welsh &amp; Company">Rees Welsh &amp; Company</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-28" who="#nhg">checked, corrected</change>
+            <change when="2014-02-19" who="#ej">Checked and Corrected</change>
+            <change when="2014-02-12" who="#nnk">proofed</change>
+            <change when="2013-11-15" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="upa.00135.001_large.jpg" type="recto"/>
+            <head type="print">OLD BOOKS BOUGHT.</head>
+            <opener>
+                <dateline>
+            <name type="place" rend="right"><handShift rend="printed"/>REES WELSH &amp; CO., <lb/>BOOKSELLERS
+                    AND PUBLISHERS, <lb/>23 South Ninth Street,</name>
+                    <name type="place" rend="right">Philadelphia,</name>
+                    <date when="1882-06-16" rend="right"><handShift rend="manuscript"/>6. 16 <handShift rend="printed"/>188<handShift rend="manuscript"/>2</date>
+                </dateline>
+                <salute><handShift rend="manuscript"/>Walt Whitman Esq</salute>
+                <salute>Camden N.J.</salute>
+                <salute>Dear Sir</salute>
+            </opener>
+            <p>As directed we procured a copy of "Leaves of Grass" from the binders, and have been
+                waiting to hear from you. It would be our aim (if having control of the book) to put
+                it before the trade <hi rend="underline">at once</hi>, so that every bookseller
+                might know, before the fall trade opens, that the book can be had regularly, this
+                would of course be to your as well as our advantage Hoping to be favored at an early
+                day</p>
+            <closer>
+                <salute>We are Sir</salute>
+                <salute>Very Truly Yours</salute>
+                <signed rend="right">Rees Welsh &amp; Co</signed>
+                <signed><hi rend="underline">McK</hi></signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="upa.00135.002_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

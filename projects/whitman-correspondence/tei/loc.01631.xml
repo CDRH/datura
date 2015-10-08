@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.01631">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Peter Doyle, 1 May [1874]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="el">Elizabeth Lorang</persName><persName xml:id="kk">Kathryn Kruger</persName><persName xml:id="zk">Zachary King</persName><persName xml:id="ec">Eric Conrad</persName><persName xml:id="ak">Alex Kinnaman</persName><persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska–Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.01631</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska–Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2014 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Peter Doyle, 1 May [1874]</title>
+
+                    <date cert="medium" when="1874-05-01" xml:id="dat1">May 1, 1874</date>
+                    <idno type="callno">Box 9, Reel 5-6</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839–1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="unk"><persName key="Unknown">Unknown</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                     <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Doyle, Peter" ref="n0752">Peter Doyle</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-04-20">checked, corrected</change>
+            <change who="#ak" when="2014-10-31">added annotations</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+<change when="2014-08-12" who="#el">made basic checking changes to file</change>
+            <change when="2012-01-05" who="#kk">checked</change>
+            <change when="2011-03-22" who="#zk">encoded</change>
+            <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body><pb xml:id="leaf001r" facs="loc.01631.001.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">431 Stevens st. Camden, <lb/>N. Jersey,</name>
+                    <date when="1874-05-01" rend="right">May 1–2 p.m.</date><ptr target="loc.01631_n1"/>
+                </dateline>
+                <note type="editorial" resp="#unk" place="top">1874</note>
+                <salute>Dear Pete,</salute>
+            </opener>
+ 
+            <p>I have been out halting around for a walk, as it is quite pleasant today&#8212;But I believe 
+                I have overdone the matter, as I have a pretty bad feeling the last hour or two both 
+                in the head &amp; left side,&#8212;&amp; as I sit here writing,&#8212;So your <hi rend="underline">limited express</hi> seems to be 
+                a real success&#8212;if it keeps up as well as it has begun I have no doubt it will increase, 
+                &amp; be patronised, &amp; become a permanent institution&#8212;(I had got the idea, somehow, at first, 
+                that the same crew went <hi rend="underline">through</hi> from <choice><abbr>Wash.</abbr><expan>Washington</expan></choice> to New York, &amp; so was <pb xml:id="leaf001v" facs="loc.01631.002.jpg" type="verso"/>some 
+                in hopes of seeing you in Philadelphia)&#8212;</p>
+            
+            <p>No change in my condition or prospects&#8212;the young man, Walter Godey, still works as my substitute 
+                in the Solicitor's office&#8212;I <choice><orig>havn't</orig><reg>haven't</reg></choice> had any word from Eldridge in two months, nor from Mrs. O'Connor 
+                in some time&#8212;(have you been up there?) Do you see Hinton or Tasistro?&#8212;My sister has just called me to my dinner&#8212;so I will close for this time.
+            </p>
+            
+            <closer><salute>Your old</salute>
+                <signed>Walt</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

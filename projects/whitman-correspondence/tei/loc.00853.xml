@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.00853">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Peter Eckler to Walt Whitman, 22 April 1865</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Peter Eckler</author>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="ec">Eric Conrad</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+               <persName xml:id="hb">Heidi Bean</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>loc.00853</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <author>Peter Eckler</author>
+               <title>Peter Eckler to Walt Whitman, 22 April 1865</title>
+               <date when="1865-04-22">April 22, 1865</date>
+               <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Eckler, Peter">Peter Eckler</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#el" when="20010-04-06">proofread and edited</change>
+         <change who="#el" when="2009-09-10">revised based on Ted's proofreading</change>
+         <change who="#vs" when="2009-08-31">proofread and edited annotations</change>
+         <change who="#el" when="2009-08-18">added encoding for page breaks</change>
+         <change who="#ec" when="2009-08-14">annotations</change>
+         <change who="#vs" when="2009-04-08">Compared Transcription to Manuscript Image and Made Corrections</change>
+         <change who="#hb" when="2008-10-15">Transcribed, Encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         <pb facs="loc.00853.001.jpg" type="recto"/>
+         
+           <div1 type="section" org="uniform" sample="complete" part="N">
+              <opener rend="right">
+               <dateline>
+                  <name type="place">New York</name>
+                  <date when="1865-04-22">April 22, 1865<ptr target="loc.00853_n100"/>
+                  </date>
+               </dateline>
+               <salute>W. Whitman</salute> 
+            </opener>
+            <p>
+               <gap reason="illegible"/> sir</p>
+            <p>On page 31 verse 2 line 3 of Drum Taps the word "recalls" is spelled "recals."  According to Webster &amp; Worcester it is wrong but before taking the responsibility of altering it, I wait for your decision.  Please let me know as soon as possible.  The other corrections and alterations <gap reason="deletion, illegible"/> 
+               <del type="overstrike" status="unremarkable">I enclose a proof of 'O Pioneers!'" <unclear reason="illegible" resp="#hrb" cert="medium">&amp;</unclear> I think is improved</del>
+            </p>
+            <p>I enclose a bill showing the balance<gap reason="illegible"/>ount.  If I receive <gap reason="illegible"/> printing done by Saturday,<gap reason="illegible"/> you can transmit me the cost and I will deliver the <unclear reason="illegible" resp="#hrb" cert="low">texts</unclear> to your binder.</p>
+            <closer rend="right">
+               <salute>Your Respectfully,</salute>
+               <signed>P. Eckler</signed>
+            </closer>
+         </div1>
+         
+         <div1 type="enclosure" org="uniform" sample="complete" part="N">
+            <pb facs="loc.00853.002.jpg" type="recto"/>                               
+            <p>
+               <table>
+                  <row>
+                     <cell>
+                        <unclear reason="illegible" resp="#vys" cert="low">To cover stereotyping &amp;</unclear>
+                        <gap reason="illegible"/>
+                     </cell>
+                     <cell>$114.60</cell>
+                  </row>
+                  <row>
+                     <cell>Two taking extra paperwork</cell>
+                     <cell>2.00</cell>
+                  </row>
+                  <row>
+                     <cell>Cover &amp; stereotyping &amp; pages</cell>
+                     <cell>3.00</cell>
+                  </row>
+                  <row>
+                     <cell>Alteration of plates</cell>
+                     <cell>1.00</cell>
+                  </row>
+                  <row>
+                     <cell>One box for plates</cell>
+                     <cell>1.00</cell>
+                  </row>
+                  <row>
+                     <cell>3 Reams paper</cell>
+                     <cell>63.00</cell>
+                  </row>
+                  <row>
+                     <cell>
+                        <unclear reason="illegible" resp="#vys" cert="low">7 " </unclear>
+                     </cell>
+                     <cell>8.25</cell>
+                  </row>
+                  <row>
+                     <cell>&#160;</cell>
+                     <cell>$192.85</cell>
+                  </row>
+                  <row>
+                     <cell>Cr[edit] by cash</cell>
+                     <cell>138.00</cell>
+                  </row>
+                  <row>
+                     <cell>&#160;</cell>
+                        <cell>54.85</cell>
+                  </row>
+                  <row>
+                     <cell>Sent $20 April 26</cell>
+                     <cell>&#160;</cell>
+                  </row>
+                  <row>
+                     <cell>$20 May 2</cell>
+                     <cell>&#160;</cell>
+                  </row>
+                  <row>
+                     <cell>leaving (May 2 '65.) $14.85 due</cell>
+                     <cell>&#160;</cell>
+                  </row>
+               </table>
+            </p>
+            
+            <pb facs="loc.00853.003.jpg" type="verso"/>
+         </div1>
+         
+      </body>
+   </text>
+</TEI>

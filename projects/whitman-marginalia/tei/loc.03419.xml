@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?><?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules_mss.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03419">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">earliest spring wild flowers</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author xml:id="ww">Walt Whitman</author>
+                <author xml:id="unk">Unknown</author>
+                <author xml:id="rel">Richard E. Labar</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="lmg">Lauren Grewe</persName><persName xml:id="tra">Ty Alyea</persName><persName xml:id="nhg">Nicole Gray</persName><persName xml:id="mc">Matt Cohen</persName>
+                </respStmt>
+                <sponsor>University of Texas at Austin</sponsor>
+                <sponsor>University of Nebraska-Lincoln</sponsor>
+                <funder>The National Endowment for the Humanities</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03419</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                    <addrLine>kprice@unlnotes.unl.edu</addrLine>
+                    <addrLine>Ed-Folsom@uiowa.edu</addrLine>
+                    <addrLine>bbarney2@unlnotes.unl.edu</addrLine>
+                </address>
+                <availability><p>The text of the original document is in the public domain. Subject to certain exceptions, public domain works may be freely copied or used in the creation of derivative works without permission, or authorization, of the former copyright owners.</p><p>The text encoding was created and/or prepared by the Walt Whitman Archive and is governed by a <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref> (CC BY 4.0).</p><p>Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p></availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Spring Flowers&#8212;marginalia</title>
+                    <idno type="callno">Box 40, Folder 66</idno>
+                    <date notBefore="1881-01-01" notAfter="1892-03-26">Around 1881</date>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                    <note type="project">Transcribed from digital images of the original item.</note>
+                </bibl>
+                <bibl type="pasteon" xml:id="r1">
+                    <author>unknown author</author>
+                    <title level="a">unknown title</title>
+                    <title level="j">unknown journal</title>
+                    <date>1881</date>
+                    <biblScope type="vol"/>
+                    <biblScope type="pp"/>
+                    
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="h1" scribeRef="#ww" medium="black-ink"/>
+                <handNote xml:id="h2" scribeRef="#unk" medium="typescript"/>
+                <handNote xml:id="h3" scribeRef="#ww" medium="blue-pencil"/>
+                <handNote xml:id="h4" scribeRef="#rel" medium="black-ink"/>
+            </handNotes>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-07-06">corrected R.E. Labar's name</change>
+            <change who="#nhg" when="2015-03-10">completed date information, tweaked encoding</change>
+            <change who="#nhg" when="2015-01-26">added schematron declaration, updated schema declaration, changed text type to annotations</change><change who="#lmg" when="2013-05-30">Transcribed and encoded.</change>
+            <change who="#lmg" when="2013-10-07">Checked.</change>
+            <change who="#tra" when="2013-11-20">Checked bibliographical information.</change>
+            <change who="#lmg" when="2014-03-09">Added dimensions to pasteons, checked cbs, footnotes.</change>
+            <change who="#mc" when="2014-11-02">Proofed.</change>
+        </revisionDesc> 
+    </teiHeader>
+<text type="annotations">
+    <body>
+        <div1>
+            <pb xml:id="leaf001r" facs="loc_nhg.00006.jpg" type="recto"/>
+            <head type="main-authorial"><handShift new="#h1"/><hi rend="underline">earliest spring wild flowers</hi></head>
+        <ab>bloodroot, arbutus,
+        pepaticas, violets,&#8212;<del rend="overstrike">the g</del>
+        &#8212; <del rend="overstrike">h</del> cultivated
+            hyacinths, callas, azaleas,
+            roses.</ab></div1>
+        <add rend="pasteon" source="#r1"><handShift new="#h2"/>
+            <q who="unknown" type="written">
+                <floatingText rend="flippy">
+                    <body>
+                        <pb xml:id="leaf002r" facs="loc_nhg.00006.jpg" type="recto" rend="col-8"/>
+                        <ab><milestone unit="undeclared" rend="horbar-short-center"/></ab>
+                        <p>F<hi rend="smallcaps">OR</hi> the benefit of those who are studying
+                        Botany, we publish through the kindness
+                        of Prof. Groff, the following list of
+                        spring flowers with their scientific names:</p>
+                        <list><item>1. Swamp Cabbage, Symplocarpus fœtidus.</item>
+                            <item>2. Water Carpet, Chrysoplenium Americanum.</item>
+                            <item>3. Candle Alder, Alnus serrulata.</item>
+                            <item>4. Wild Hazelnut, Corylus Americana.</item>
+                            <item>5. Filbert, Corylus Avellana.</item>
+                            <item>6. Yellow Jasmine, Jasminum fruticans.</item>
+                            <item>7. Dandelion, Taraxacum dens leonis.</item>
+                            <item>8. Chickweed, Stellaria Media.</item>
+                            <item>9. Red Maple, Acer rubrum.</item>
+                            <item>10. False Sycamore, Acer Pseudo-platanus.</item>
+                                <item>11. Liver-Leaf, Hepatica triloba.</item>
+                                    <item>12. Rue Anemone, Thalictrum Anemenoides.</item>
+                                        <item>13. Marsh Marigold, Caltha palustris.</item>
+                                            <item>14. Bloodroot, Sanguinaria Canadenses.</item>
+                                                <item>15. Whitlow Gross, Draba verna.</item>
+                                                    <item>16. Norway Maple, Acer platanoides.</item>
+                                                        <item>17. Sugar Maple, Acer Saccharinum.</item></list>
+                        <p>All in the above list can be found within
+                            a few days. For localities, consult the
+                            Botanies.</p>
+                        <note type="authorial" place="left" resp="#h3">Spring flowers
+                        '81</note>
+                        <pb xml:id="leaf002v" facs="loc_nhg.00007.jpg" type="verso" rend="col-8"/>
+                        <!--<p>which please us most were written
+                            remembrance of something to which
+                            e author refers only as the penniless
+                            an refers to the millions he once pos-
+                            ssed, or the broken-hearted to scenes of
+                            ppier days.</p>
+                        <p>The one chief cause of this may be
+                        t the ideals of a poet's mind are so far
+                        yond what he can ever realize that he
+                        bound to meet with disappointment.
+                        nd the nearer perfect his ideals the
+                        er the disappointment.</p>-->
+                    </body>
+                </floatingText>
+            </q>
+        </add>
+        <pb xml:id="leaf001v" facs="loc_nhg.00007.jpg" type="verso"/>
+        <!--<div1><delSpan rend="hashmark" spanTo="#a01"/><ab><handShift new="#h4"/>not conflict, or must
+        not deter you, from
+        bringing other friends.
+        Truly,
+        R.E. Labson.</ab><anchor xml:id="a01"/></div1>-->
+    </body>
+</text>
+</TEI>

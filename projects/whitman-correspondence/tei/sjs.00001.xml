@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="sjs.00001">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to Byron Sutherland, 26 August 1865</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+
+               <persName xml:id="ao">Alyssa Olson</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>sjs.00001</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Walt Whitman</author>
+                  <editor>Edwin Haviland Miller</editor>
+                  <title xml:id="ehm">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>New York</pubPlace>
+                     <publisher>New York University Press</publisher>
+                     <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                     <biblScope type="volume">1</biblScope>
+                     <biblScope type="page">266-267</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to Byron Sutherland, 26 August 1865</title>
+               <date when="1865-08-26">August 26, 1865</date>
+               <orgName xml:id="sjs">Estelle Doheny Collection of the Edward Laurence Doheny Memorial Library, St. John's Seminary</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Sutherland, Byron">Byron Sutherland</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#vs" when="2009-08-27">proofread and edited annotations</change>
+         <change who="#vs" when="2008-10-14">added main TEI markup</change>
+         <change who="#el" when="2008-07-30">added TEI header structure w/o IDs and titles; added minimal TEI markup</change>
+         <change who="#ao" when="2008-07-29">pulled transcription from Primary Source Media</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <dateline rend="right">
+                  <name type="place">
+                     <hi rend="smallcaps">ATTORNEY GENERAL'S OFFICE</hi>, <hi rend="italic">Washington</hi>,</name>
+                  <date when="1865-08-26">Aug 26, 1865.</date>
+               </dateline>
+               <salute>Dear friend,</salute>
+            </opener>
+            <p>Your letter from Dewittville came safe, about nine days ago&#8212;&amp; I have been expecting to hear from you since. Byron, I am still here, and as far as appears at present am likely to remain employed here, through the fall&#8212;but may ask for leave of absence for two or three weeks before long. There is a great stream of Southerners comes in here day after day, to get <hi rend="italic">pardoned</hi>
+               <ptr target="sjs.00001_n1"/>&#8212;All the rich, and all high officers of the rebel army cannot do any thing, cannot buy or sell, &amp;c. until they have special pardons&#8212;(that is hitting them where they <hi rend="italic">live</hi>)&#8212;so they all send or come up here in squads, old &amp; young, men &amp; women&#8212;</p>
+            <p>They come to this office to get them&#8212;sometimes the rooms are filled with a curious gathering&#8212;I talk with them frequently, listen to their stories, descriptions, opinions &amp;c. &amp;c&#8212;As you know, almost every thing of that sort (&amp; especially all odd characters) are interesting to me&#8212;Some 4 or 5000 pardons have been passed through here&#8212;but the President hasn't signed more than 200&#8212;The rest are all blank yet&#8212;Andy Johnson seems disposed to be in no hurry about it&#8212;What I learn &amp; know about him (the President), I think he is a <hi rend="italic">good man</hi>.<ptr target="sjs.00001_n2"/>
+            </p>
+            <p>Byron, there is nothing new or special with me. I have changed my back room to the front room, &amp; have my meals sent up by the landlady&#8212;She gives me very good grub, &amp; I like it, both room &amp; board, ($32.50 a month)&#8212;The last ten or twelve days here have been very pleasant &amp; sufficiently cool&#8212;after the melting hot summer&#8212;I am writing this in the office, by my big window, looking out on a splendid view across &amp; down the Potomac for several miles, &amp; over into Virginia, along Arlington heights&#8212;The trees, grass, river, &amp; sky are splendid.</p>
+            <p>Well, my dear comrade, how are you, &amp; how does it go? You must write &amp; let me hear about you&#8212;&amp; I shall want to know also if you get this. I wish it was so we could see each other, &amp; be together once in a while. Well, Byron, I must close. I send you my love, &amp; God bless you, dearest comrade&#8212;Write soon, dear son, &amp; give me all particulars.<ptr target="sjs.00001_n3"/>
+            </p>
+            <p>Direct | Walt Whitman | Attorney Generals Office | Washington, D. C.</p>
+         
+      </body>
+   </text>
+</TEI>

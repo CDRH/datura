@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="sal.00001">
+    <teiHeader>
+        <fileDesc> 
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to John H. Johnston, 18 November
+                    1884</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>sal.00001</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">382&#8211;383</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to John H. Johnston, 18 November 1884</title>
+                    <date cert="high" when="1884-11-18" xml:id="dat1">November 18, 1884</date>
+                    <orgName xml:id="sal">Salisbury House.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Johnston, John H." ref="n0336">John H. Johnston</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+
+        <revisionDesc>
+            <change when="2014-09-21" who="#ss">transcribed, encoded and annotated from
+            Miller.</change>
+            <change when="2015-01-18" who="#kb">edited</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="sal.00001.001_large.jpg.jpg" type="recto"/>
+            <pb xml:id="leaf001v" facs="sal.00001.002_large.jpg.jpg" type="verso"/>
+
+            <opener>  
+                <dateline>
+                    <name type="place">328 Mickle Street<ptr target="sal.00001_n5"/></name>
+                    <name type="place">Camden</name>
+                    <date when="1884-11-18" rend="right">Nov. 18 '84<!--<ptr target="sal.00001_n1"
+                        />--></date>
+                </dateline>
+                <salute>Dear friend</salute>
+            </opener>
+
+            <p>Yours of yesterday just rec'd&#8212;with the $25&#8212;(making 150 in all)<ptr
+                    target="sal.00001_n2"/>&#8212;best thanks&#8212;So you like the Brignoli bit<ptr
+                    target="sal.00001_n3"/>&#8212;I was not sure it amounted to much, but it came
+                from the heart&#8212;(it was first sent to the <hi rend="italic">Tribune</hi> to be
+                published the morning of B's funeral, but the T sent it back)&#8212;</p>
+            <p>How are you all? How is Al, under the new dispensation? I send my love specially to
+                Alma and the girls &#38; the new Mrs J&#8212;</p>
+            <p>Nothing very new with me&#8212;I am ab't as well as usual except an increasing
+                lameness&#8212;Anticipate a time not remote when I shall be unable to walk at
+                all&#8212;Have not forgotten the <hi rend="italic">Memorandum History of the
+                    Portrait</hi>&#8212;have already outlined &#38; partly prepared it&#8212;you
+                shall have it soon<ptr target="sal.00001_n4"/>&#8212;</p>
+            <p>I am writing this up in my big den&#8212;the floor all around horribly <hi
+                    rend="italic">litter</hi>-rary, but a cheery wood fire in the little
+                stove&#8212;&#38; I comfortable in my great capacious rattan arm-chair&#8212;(which
+                I may will to Al, if he cares for it)&#8212;</p>
+
+            <closer>
+                <signed>W W</signed>
+            </closer>
+
+        </body>
+    </text> 
+</TEI>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="prc.00075">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to John Burroughs, 24 September
+                    1881</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>prc.00075</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">245&#8211;246</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to John Burroughs, 24 September 1881</title>
+                    <date cert="high" when="1881-09-24" xml:id="dat1">September 24, 1881</date>
+                    <orgName xml:id="prc">The current location of this letter is unknown.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Burroughs, John">John Burroughs</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-02-11" who="#nhg">checked, corrected</change>
+            <change when="2014-01-23" who="#ss">checked</change>
+            <change when="2013-10-17" who="#nnk">proofed</change>
+            <change when="2013-10-01" who="#kc">Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <opener>
+                <dateline>
+                    <name type="place"><hi rend="italic">Rand, Avery &amp; <choice>
+                                <abbr>Co.</abbr><expan>Company</expan></choice>, Printers.</hi></name>
+                    <name type="place"><hi rend="italic">Boston,</hi></name>
+                    <date when="1881-09-24"><choice>
+                            <abbr>Sept:</abbr>
+                            <expan>September</expan>
+                        </choice> 24 1881</date>
+                </dateline>
+                <salute>Dear friend</salute>
+            </opener>
+
+            <p>Yours <choice>
+                    <abbr>rec'd</abbr><expan>received</expan></choice>&#8212;I am now back here finishing up&#8212;only <choice>
+                    <orig>stayed</orig>
+                    <reg>staid</reg>
+                </choice> a few days in Concord, but they were <choice>
+                    <abbr>mark'd</abbr>
+                    <expan>marked</expan>
+                </choice> days. Sunday, Emerson &amp; his wife, son Edward &amp; wife &amp;c. gave
+                me a dinner&#8212;two hours&#8212;every thing just right every way&#8212;a dozen
+                people there, (the family &amp; relatives)&#8212;for my part I thought the old man
+                in his smiling and alert quietude &amp; <choice>
+                    <sic>withdrawness</sic><corr>withdrawnness</corr></choice>&#8212;he has a good color in
+                the face &amp; ate just as much dinner as any body&#8212;more eloquent, grand,
+                appropriate &amp; impressive than ever&#8212;more indeed than could be
+                described&#8212;Wasn't it comforting that I have had&#8212;in the sunset as it
+                were&#8212;so many significant affectionate hours with him under such quiet,
+                beautiful, appropriate circumstances?</p>
+
+            <p>The book is done &amp; will be in the market in a month or so&#8212;all about it has
+                proceeded satisfactorily&#8212;&amp; I have had my own way in every thing&#8212;the
+                old name "Leaves of Grass" is retained&#8212;it will be a $2 book&#8212;</p>
+
+            <p>I shall probably go on to New York in about a week&#8212;shall stay at Johnston's,
+                (address me there Mott avenue &amp; 149th street N Y city) about a week or ten
+                days&#8212;</p>
+
+            <p>Besides this general death-gloom of the nations<ptr target="prc.00075_n1"
+                />&#8212;have you heard of the sudden &amp; dreadful death of our young friend
+                Beatrice Gilchrist in performing some chemical experiment with ether?</p>
+
+            <p>Joaquin Miller is here&#8212;is with me every day&#8212;Longfellow has been to see
+                    me<ptr target="prc.00075_n2"/>&#8212;I have met O W Holmes &amp; old Mr James.<ptr target="prc.00075_n3"/></p>
+
+            <closer>
+                <salute>With love&#8212;</salute>
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

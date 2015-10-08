@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.04630">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">James Wilkie to Walt Whitman, 13 November 1886</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>James Wilkie</author>
+                <editor>Kenneth M. Price</editor>   
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2015</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.04630</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>James Wilkie</author>
+                    <title>James Wilkie to Walt Whitman, 13 November 1886</title>
+                    <date cert="high" when="1886-11-13" xml:id="dat1">November 13, 1886</date>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="ww"><persName key="Whitman, Walt">Walt
+                Whitman</persName></handNote>
+                <handNote xml:id="unk"><persName key="Unknown">Unknown</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Wilkie, James" ref="loc.04630_n1">James Wilkie</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-08-12" who="#nhg">checked, corrected</change>
+            <change when="2015-07-27" who="#kb">edited</change>
+            <change when="2015-06-29" who="#if">edited</change>
+            <change when="2015-05-16" who="#ss">added annotations</change>
+            <change when="2015-01-30" who="#ss">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_vm.02452_large.jpg" type="recto"/>
+            <opener>
+                <note type="editorial" resp="#ww" place="top"><hi rend="underline">ans'd</hi></note>
+                <note type="editorial" resp="#ww" place="top">little
+                    pamphlet enclosed 'The Democratic Movement in Literature'</note>
+                <dateline>
+                    <name type="place"><handShift rend="printed"/>123 High Street.</name>
+                    <name type="place">Musselburgh</name>
+                    <date when="1886-11-13"><handShift rend="manuscript"/>13th November 1886</date>
+                </dateline>
+                <salute>Dear Sir,</salute>
+            </opener>
+            <p>Will you accept the enclosed from one who is an admirer of your work? It is sent with
+                the hope that it please you to know how highly in Scotland that work is
+                appreciated.</p>
+            <closer>
+                <salute>Yours faithfully</salute>
+                <signed><hi rend="underline">James Wilkie</hi></signed>
+                <salute/>
+                <salute>Walt Whitman</salute>
+                <salute>Camden</salute>
+                <salute>New Jersey</salute>
+            </closer>
+            
+            <pb xml:id="leaf001v" facs="loc_vm.02453_large.jpg" type="verso"/>
+            <pb xml:id="leaf002r" facs="loc_vm.02454_large.jpg" type="recto"/>
+            <pb xml:id="leaf002v" facs="loc_vm.02455_large.jpg" type="verso"/>
+            <note type="editorial" resp="#unk" place="top">Wilkie Jas</note>
+        </body>
+    </text>
+</TEI> 

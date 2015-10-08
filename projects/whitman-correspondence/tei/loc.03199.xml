@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03199">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">James Knowles to Walt Whitman, [18 August 1885]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>James Knowles</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>  
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03199</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>James Knowles</author>
+                    <title>James Knowles to Walt Whitman, [18 August 1885]</title>
+                    <date cert="medium" when="1885-08-18" xml:id="dat1">August 18, 1885</date>
+                    <idno type="callno">MSS18630 Box 12</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="ww"><persName key="Whitman, Walt">Walt
+                    Whitman</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Knowles, James" ref="n6110">James Knowles</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-08-04" who="#nhg">checked, corrected</change>
+            <change when="2015-07-05" who="#kb">edited</change>
+            <change when="2015-06-04" who="#if">edited</change>
+            <change when="2015-05-22" who="#nhg">checked, corrected</change>
+            <change when="2015-04-12" who="#ss">added annotations, corrected date</change>
+            <change when="2014-12-04" who="#ss">checked and corrected</change>
+            <change when="2014-11-20" who="#ak">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            
+            <pb xml:id="leaf001r" facs="loc.03199.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <handShift rend="printed"/>
+                    <name type="place">"The Nineteenth Century,"<ptr target="loc.03199_n3"/></name>
+                    <name type="place"><hi rend="italic">1 PATERNOSTER SQUARE,</hi></name>
+                    <name type="place"><hi rend="italic">LONDON, E.C.</hi></name>
+                </dateline>
+            </opener>
+
+            <p> With Mr James Knowles's compliments &amp; best thanks </p>
+            <milestone unit="undeclared" rend="horbar-short-center"/>
+            <note type="editorial" resp="#ww" place="bottom">Rec'd Aug 29 1885 enclosing draft for &#65505;30 for "Fancies at Navesink" pub. in Aug. Number of <hi rend="underline">Nineteenth Century</hi></note>
+            <pb xml:id="leaf001v" facs="loc.03199.002_large.jpg" type="verso"/>
+            <pb xml:id="leaf002r" facs="loc.03199.003_large.jpg" type="recto"/>
+            <pb xml:id="leaf002v" facs="loc.03199.004_large.jpg" type="verso"/>
+            <pb xml:id="leaf003r" facs="loc.03200.001_large.jpg" type="recto"/>
+            <note type="editorial" resp="#ww" place="top">from James Knowles enclosing pay for poem</note>
+            <pb xml:id="leaf003v" facs="loc.03200.002_large.jpg" type="recto"/>
+        </body>
+    </text>
+</TEI>  

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.02089">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to A. C. Floyd, 7 January [1875?]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName><persName xml:id="el">Elizabeth Lorang</persName><persName xml:id="kk">Kathryn Kruger</persName><persName xml:id="zk">Zachary King</persName><persName xml:id="ec">Eric Conrad</persName><persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.02089</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2014 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to A. C. Floyd, 7 January [1875?]</title>
+
+                    <date cert="low" when="1875-01-07" xml:id="dat1">January 7, 1875</date>
+                    <idno type="callno">Box 9, Reel 5-6</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839–1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                     <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Floyd, A. C." ref="n5000">A. C. Floyd</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-07-07">checked, corrected</change>
+            <change who="#ak" when="2015-05-12">added correspondent ref</change>
+            <change who="#ak" when="2014-10-30">added annotations</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+<change when="2014-08-12" who="#el">made basic checking changes to file</change><change when="2011-01-16" who="#kk">checked</change>
+            <change when="2011-03-30" who="#zk">encoded</change>
+            <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter"><pb xml:id="leaf001r" facs="loc.02089.001_large.jpg" type="recto"/>
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place" rend="left">431 Stevens st <lb/>cor West.</name>
+                    <name type="place" rend="right">Camden, <lb/>N. Jersey</name>.
+                    <date when="1875-01-07" rend="right"><choice><abbr>Jan</abbr><expan>January</expan></choice> 7</date>.<ptr target="loc.02089_n1"/>
+                </dateline>
+                <salute>A. C. Floyd,</salute>
+                <salute>Dear Sir,</salute>
+            </opener>
+
+            <p>As far as I can tell by my impression&#8212;which is a very vague one, for I have never seen the book&#8212;"the White Rose &amp; Red," was reprinted from the foreign copy by the publishers, Roberts Bros. of Boston, 
+                a year or two ago&#8212;(perhaps more.) Seems to me it was attributed to Robert Buchanan the English poet.<ptr target="loc.02089_n2"/>
+            </p>
+            
+            <p>I am still unwell from my cerebral trouble&#8212;but still looking for better times, &amp; counting on them.
+            </p>
+
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+        </body><pb xml:id="leaf001v" facs="loc.02089.002_large.jpg" type="verso"/>
+    </text>
+</TEI>

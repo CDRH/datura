@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00631">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, [6 or 7 May 1873]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="ct">Cathy Tisch</persName>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="nr">Natalie Raabe</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00631</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note type="project">An image of the verso of the leaf is not currently available. The verso is blank.</note>              
+            </notesStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, [6 or 7 May 1873]</title>
+                    <date cert="medium" notBefore="1873-05-06" notAfter="1873-05-07" xml:id="dat1">May 6 or 7, 1873</date>
+                    <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-11-07" who="#el">added note about not having image of verso</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-09-17" who="#el">checked</change>
+            <change when="2013-06-04" who="#wr">Duke Proofreading Corrections</change>
+                <change when="2013-05-06" who="#wr">Silent Proofreading Corrections</change>
+           <change when="2013-04-28" who="#nr">Silent Proofreading</change>
+            <change when="2013-03-16" who="#wr">Note Proofreading Corrections</change>
+            <change when="2012-08-20" who="#ct">Oral Proofreading Corrections</change>
+            <change when="2012-08-14" who="#wr">Clean encoding (editor, date, remove "_large") and add standard annotations on unannotated files (Jeff W, Lou Haslam)</change>
+            <change when="2011-03-02" who="#fw">Transcribe and correct 1 Page</change>
+            <change when="2011-03-30" who="#wr">Encode regularization of contractions, days of week, and frequently misspelled words</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="duk.00631.001.jpg" type="recto"/>
+            <opener>
+                <salute>My dear darling <choice><orig>walter</orig><reg>Walter</reg></choice><ptr target="duk.00631_n1"/></salute>
+            </opener>
+            <p>i<ptr target="duk.00425_n3"/> got your letter
+                yesterday and <choice><orig>saturday</orig><reg>Saturday</reg></choice><ptr target="duk.00631_n3"/>
+                i am <choice><orig>midling</orig> <reg>middling</reg></choice> to day
+            have been not very well my head has been
+            quite bad but i hope to get better <choice><orig>walter</orig><reg>Walter</reg></choice> dear
+            i am glad you are better <choice><orig>walter</orig><reg>Walter</reg></choice> <choice><orig>dont</orig> <reg>don't</reg></choice> send
+                any more papers as i <choice><orig>cant</orig> <reg>can't</reg></choice> read my head
+                gets confused)<ptr target="duk.00631_n4"/>
+    
+                i know <choice><orig>its</orig> <reg>it's</reg></choice> my nerves has
+            got bad but i hope to get better of it in
+            time</p>
+                <closer>
+                    <salute>good bie my dear blessed son</salute>
+                </closer>
+            
+            <pb xml:id="leaf001v" type="verso"/>
+        </body>
+    </text>
+</TEI>

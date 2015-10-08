@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="med.00670">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to John Burroughs, 11 March [1878]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>med.00670</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <biblStruct>
+                    <monogr>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">110&#8211;111</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to John Burroughs, 11 March [1878]</title>
+                    <date cert="medium" when="1878-03-11" xml:id="dat1">March 11, 1878</date>
+                    <orgName xml:id="med">The location of the original manuscript is unknown. Miller's text is based on a transcript that appears in Clara Barrus, <hi rend="italic">Whitman and Burroughs&#8212;Comrades</hi> (Boston: Houghton Mifflin Co., 1931), 172&#8211;173.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Burroughs, John">John Burroughs</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2014-08-28" who="#nhg">corrected</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-11-26" who="#nhg">checked, corrected</change>
+            <change when="2013-11-26" who="#nnk">proofed</change>
+            <change when="2013-04-01" who="#km">added Grace's name to respStmt</change>
+            <change when="2012-11-29" who="#gt">checked</change>
+            <change when="2012-10-01" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <date when="1878-03-11" rend="right">March 11</date>
+                </dateline>
+                <salute/>
+            </opener>
+
+            <p>Yours of 7th from N.Y. <choice>
+                <orig>rec'd</orig>
+                <reg>received</reg>
+            </choice> last night. I will scratch off some suggestions:</p>
+
+            <p>In composing the letter, let it be brief, and don't mention the subject&#8212;or, if
+                you do, <hi rend="italic">just say indefinitely that it is about Abraham
+                    Lincoln</hi> (which you may do, if you think proper)&#8212;</p>
+
+            <p>I would like Gilder's<ptr target="sjs.00005_n1"/> name on the letter&#8212;</p>
+
+            <p>The suggestion (Gilder's) <hi rend="italic">about 8 or 10 names only</hi>&#8212;<hi
+                    rend="italic">good ones only</hi>&#8212;should be carried out. About the Hall I
+                leave to your selection (not the very biggest ones, however, would seem to me
+                best)&#8212;</p>
+
+            <p>I would like Whitelaw Reid's<ptr target="sjs.00005_n2"/> name to cap the
+                list&#8212;Couldn't the <hi rend="italic">World</hi> man, Schuyler<ptr
+                    target="sjs.00005_n3"/> (if he is there yet?) come next?</p>
+
+            <p>Elliott F. Shepard the lawyer,<ptr target="sjs.00005_n4"/> might be a good name.</p>
+
+            <p>Take [J. H.] Johnston into your councils, in any business and pecuniary
+                arrangements&#8212;he is very 'cute and I consider him a true friend of mine.</p>
+
+            <p>I am particular about the names. Let [Joel] Benton<ptr target="sjs.00005_n5"/> have
+                my letters, take as much as possible my point of view, and he might write to me
+                here.</p>
+
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+
+            <postscript>
+                <p>Private</p>
+                <p>I care little&#8212;or rather nothing at all&#8212;about Bayard Taylor's<ptr
+                        target="sjs.00005_n6"/> or G. W. Curtis's<ptr target="sjs.00005_n7"/> names
+                    on the letter. Don't want them. If they get on, let them be, of course&#8212;but
+                    don't you make any point about getting them. I suppose you understand me.</p>
+                <p>Of course the letters I write you are for perusal by all my friends&#8212;Gilder,
+                    Swinton, Benton, &#38;c.&#8212;but if I write <hi rend="italic">private</hi>, it
+                    is for you alone.</p>
+            </postscript>
+        </body>
+    </text>
+</TEI>

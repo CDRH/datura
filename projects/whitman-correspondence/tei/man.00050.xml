@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="man.00050">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Josiah Child to Walt Whitman, 10 July 1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Josiah Child</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="crl">Courtney Rebecca Lawton</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>man.00050</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Josiah Child</author>
+                    <title>Josiah Child to Walt Whitman, 10 July 1880</title>
+                    <date cert="high" when="1880-07-10" xml:id="dat1">July 10, 1880</date>
+                    <idno type="callno">GB 133 Eng 1170/1/1/22</idno>
+                    <orgName xml:id="man">Charles Sixsmith Collection at the John Rylands Library, University of Manchester</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+
+                <person role="sender">
+                    <persName key="Child, Josiah">Josiah Child</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-03-30" who="#ss">annotations added</change>
+            <change when="2013-11-01" who="#nhg">checked, corrected</change>
+            <change when="2013-10-23" who="#ej">Checked and Corrected</change>
+            <change when="2013-09-05" who="#nnk">proofed</change>
+            <change when="2013-07-29" who="#crl">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="man_ej.00217_large.jpg" type="recto"/>
+            <opener><dateline>
+                <handShift rend="printed"/>
+                <name type="place" rend="left">TR&#220;BNER &amp; CO</name>
+                <name type="place" rend="left">AMERICAN, EUROPEAN AND ORIENTAL LITERARY AGENCY.</name>
+                <name type="place" rend="right">57, &amp; 59, Ludgate Hill,</name>
+                    <name type="place" rend="right">London E.C.</name>
+                    <handShift rend="manuscript"/>
+                    <date when="1880-07-10">July 10<hi rend="superscript">th</hi> 1880</date>
+                </dateline>
+                <salute>My dear Walt Whitman.</salute>
+            </opener>
+
+            <p>Enclosed I send you statement of <choice>
+                    <abbr>a/c</abbr>
+                    <expan>account</expan>
+            </choice> up to date from Tr&#252;bner &amp; Co, and draft on New York for eighty
+                dollars fifty cents, the amount of sales up to date.<ptr target="duk.00749_n1"/> When you get home will you
+                kindly send T &amp; Co as before per JB. Lippincott &amp; Co. Philadelphia <list>
+                    <item>10 "Leaves of Grass"</item>
+                    <item>&amp;</item>
+                    <item>5 "Two Rivulets"</item>
+                </list>
+                <pb xml:id="leaf001v" facs="man_ej.00220_large.jpg" type="verso"/>
+                <pb xml:id="leaf002r" facs="man_ej.00218_large.jpg" type="recto"/>T &amp; Co as you
+                will see have sold right out of "Leaves of Grass."</p>
+            <p>Please tell Dr. Bucke<ptr target="n0119"/> I have received his letter <choice>
+                    <sic>an</sic>
+                    <corr>and</corr>
+                </choice> papers for which I am obliged I shall take the earliest opportunity of
+                answering his letter, as soon as I can snatch a few leisure moments.</p>
+            <p>I hope you are in good health and enjoying your visit to the "Dominion".<ptr target="man.00050_n1"/> Is it, think
+                you, likely
+                <pb xml:id="leaf002v" facs="man_ej.00219_large.jpg" type="verso"/>to
+                become a great country in spite of its severe climate?</p>
+            <p>I have from time to time sent you various papers to Camden, those that may have
+                reached after you left, you will probably get when you return.</p>
+
+            <closer>
+                <salute>I remain My dear</salute>
+                <salute>Walt Whitman</salute>
+                <salute>Yours Faithfully</salute>
+                <signed>Josiah Child</signed>
+            </closer>
+            <pb xml:id="leaf003r" facs="man_ej.00136_large.jpg" type="recto"/>
+            <pb xml:id="leaf003v" facs="man_ej.00137_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

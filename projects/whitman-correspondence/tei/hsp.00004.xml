@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="hsp.00004">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Frederick Locker-Lampson to Walt Whitman, 31 January 1881</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Frederick Locker-Lampson</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="vm">Vince Moran</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>hsp.00004</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Frederick Locker-Lampson</author>
+                    <title>Frederick Locker-Lampson to Walt Whitman, 31 January 1881</title>
+                    <date cert="high" when="1881-01-31" xml:id="dat1">January 31, 1881</date>
+                    <orgName xml:id="hsp">Historical Society of Pennsylvania</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Locker-Lampson, Frederick">Frederick Locker-Lampson</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-16" who="#ss">annotations added</change>
+            <change when="2014-01-30" who="#nhg">checked, corrected</change>
+            <change when="2013-12-19" who="#ss">checked</change>
+            <change when="2013-02-12" who="#ej">Checked and Corrected</change>
+            <change when="2013-01-09" who="#vm">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="hsp.00004.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">25 Chesham Street S.W</name>
+                    <date when="1881-01-31">31 January 1881</date>
+                </dateline>
+                <salute>My good friend,</salute>       
+            </opener>
+            
+            <p>It was a kind thought of yours sending me your article from the North American Review.<!--<ptr target="hsp.00004_n1"/>--> I forwarded Alfred<!--<ptr target="n0625"/>--> his Copy to the Isle of Wight where he is living at present. he will be in London before Easter. You <hi rend="underline">may</hi> know about when that will be <choice><orig>tho'</orig><reg>though</reg></choice> you may not take great keep of the Ancient festival!</p>
+            <p>Alfred will be much pleased with what you say about him in
+
+            <pb xml:id="leaf001v" facs="hsp.00004.002_large.jpg" type="verso"/>
+            
+            in your article, yet perhaps he may not be quite so pleased&#8212;it is very difficult to discourse on a poet, &amp; to entirely please him.</p>
+            <p>I am sure he will be interested, as I am, in your article</p>
+            <p>Poets of Eminence, and critics of discernment tell me that the real representative poet of America came into view when you first put pen to paper.</p>
+            <p>Certainly nearly all your Poets, delightful as they are,
+            
+            <pb xml:id="leaf002r" facs="hsp.00004.003_large.jpg" type="recto"/>
+            are founded on European models, in subject &amp; form, but, I presume, what you mean strikes deeper than that.</p>
+            <p>I will not trouble you with more of my views of this subject!</p>
+            <p>I hope you are as well and happy as you can hope to be on this best of all possible <unclear reason="illegible" cert="medium" resp="#ss">worlds</unclear>.</p>
+            <p>We are losing Carlyle<!--<ptr target="n0139"/>-->&#8212;as I write he is either moribund or dead.</p>
+            
+            <closer>
+                <salute>Farewell</salute>
+                <signed><hi rend="underline">F. Locker</hi></signed>
+            </closer>
+            
+            <pb xml:id="leaf002v" facs="hsp.00004.004_large.jpg" type="verso"/>
+            
+        </body>
+    </text>
+</TEI>

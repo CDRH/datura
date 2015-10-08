@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.00879">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">W. E. Worthen to Walt Whitman, 23 May 1864</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>W. E. Worthen</author>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+               <persName xml:id="lh">Luke Hollis</persName>
+               <persName xml:id="hb">Heidi Bean</persName>
+               <persName xml:id="nhg">Nicole Gray</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>loc.00879</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <author>W. E. Worthen</author>
+               <title>W. E. Worthen to Walt Whitman, 23 May 1864</title>
+               <date when="1864-05-23">May 23, 1864</date>
+               <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Worthen, W. E.">W. E. Worthen</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+         <change who="#nhg" when="2014-08-24">corrected</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#vs" when="2010-04-15">proofreading changes</change>
+         <change who="#lh" when="2009-08-28">proofread and edited</change>
+         <change who="#vs" when="2009-07-24">Added encoding for annotations made by John from UVA.</change>
+         <change who="#vs" when="2009-04-05">Compared Transcription to Manuscript Image and Made Corrections</change>
+         <change who="#hb" when="2008-10-18">Transcribed, Encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         <pb facs="loc.00879.001.jpg" type="recto"/>
+         
+            <opener rend="right">
+               <dateline>
+                  <name type="place">New York</name>
+                  <date when="1864-05-23">May 23</date>
+               </dateline>
+               <salute>Dear Sir</salute> 
+            </opener>
+            <p>Enclosed find $20 which I have collected for yr Sanitary distribution.  I hope I shall be able to send more from time to time.</p>
+            <closer rend="right">
+               <salute>I am yrs try</salute>
+               <signed>W. E. Worthen<ptr target="loc.00879_n1"/>
+               </signed>
+               <address>
+               <addrLine>Address care of <lb/>
+D. Appleton Ho.</addrLine>
+            </address>
+            </closer>
+         
+      </body>
+   </text>
+</TEI>

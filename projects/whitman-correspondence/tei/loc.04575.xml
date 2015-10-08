@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.04575">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Richard Maurice Bucke to Walt Whitman, 9 November 1879</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Richard Maurice Bucke</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="am">Alicia Meyer</persName>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.04575</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <editor>Artem Lozynsky</editor>
+                        <title xml:id="al">The Letters of Dr. Richard Maurice Bucke to Walt Whitman</title>
+                        <imprint>
+                            <pubPlace>Detroit</pubPlace>
+                            <publisher>Wayne State University Press</publisher>
+                            <date when="1977">1977</date>
+                            <biblScope type="page">3</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+
+                <bibl>
+                    <author>Richard Maurice Bucke</author>
+                    <title>Richard Maurice Bucke to Walt Whitman, 9 November 1879</title>
+                    <date cert="high" when="1879-11-09" xml:id="dat1">November 9, 1879</date>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName>
+                </person>
+                <person role="recipient" xml:id="ww">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-01-05">corrected annotation</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-03-13" who="#ss">annotations added</change>
+            <change when="2013-11-26" who="#nhg">checked, corrected</change>
+            <change when="2013-11-20" who="#am">proofed</change>
+            <change when="2013-04-15" who="#gt">checked and corrected</change>
+            <change when="2013-02-28" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">[London,]</name>
+                    <date when="1879-11-09" rend="right">Nov. 9<hi rend="superscript">th</hi> 79</date>
+                </dateline>
+                <salute>My dear Walt Whitman</salute>
+            </opener>
+
+            <p>For the last two weeks I have been expecting to hear from you every day, and I did hope to have seen you before this time.<ptr target="loc.04575_n2"/> A week ago I supposed that you had gone East but as I have not received a copy of "Leaves of Grass" from you I now begin to think that perhaps you have not got on as well as you expected and that you are still ill in St Louis.</p>
+            
+            <p>If this is the case it may be that you are short of money&#8212;if you are and will let me I will gladly send you a hundred dollars.<ptr target="loc.04575_n1"/> This you may look upon as a loan (to be paid by ten copies of "Leaves of Grass"), or a gift, or (more justly) as a small <choice><orig>instalment</orig><reg>installment</reg></choice> of the infinitely greater debt than that which I owe you. In any case, look at it as you please, I hope you will not refuse to take the money if you have any <gap reason="damage" extent="1 word" quantity="12" unit="chars"/> need of it at all.</p>
+            
+            <p>Could I be of any use to you there I will ask at once for a weeks leave of absence (which I know I can get) and go at once to St Louis</p>
+
+            <closer>
+                <salute>I am affectionately yours</salute>
+                <signed>R M Bucke</signed>
+            </closer>
+            <note type="editorial" resp="#ww" place="bottom">Kind letter from Dr Bucke | offering money | (declined with thanks)</note>
+        </body>
+    </text>
+</TEI>

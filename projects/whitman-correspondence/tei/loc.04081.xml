@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.04081">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Richard Maurice Bucke to Walt Whitman, 4 November 1877</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author></author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.04081</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <editor>Artem Lozynsky</editor>
+                        <title xml:id="al">The Letters of Dr. Richard Maurice Bucke to Walt Whitman</title>
+                        <imprint>
+                            <pubPlace>Detroit</pubPlace>
+                            <publisher>Wayne State University Press</publisher>
+                            <date when="1977">1977</date>
+                            <biblScope type="page">2</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+
+                <bibl>
+                    <author>Richard Maurice Bucke</author>
+                    <title>Richard Maurice Bucke to Walt Whitman, 4 November 1877</title>
+                    <date cert="high" when="1877-11-04" xml:id="dat1">November 4, 1877</date>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-10-03" who="#nhg">checked, corrected</change>
+            <change when="2013-04-08" who="#gt">Checked and Corrected</change>
+            <change when="2013-02-19" who="#ej">Checked and Corrected</change>
+            <change when="2013-02-05" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <date when="1877-11-04"><choice><abbr>Nov.</abbr><expan>November</expan></choice> 4. 1877<ptr target="loc.04081_n5"/></date>
+                </dateline>
+                <salute>My dear Walt Whitman</salute>
+            </opener>
+
+            <p>I send you by this mail a copy of one essay of mine which is just published<ptr target="loc.04081_n1"/>&#8212;I do not know whether it will be of any interest to you&#8212;it ought to be for it was inspired directly by yourself&#8212;it is part of a book which I have been engaged upon for about six years&#8212;the book is on "Man's Moral Nature." this book as I say was inspired by yourself about six years ago in the city of London England.</p>
+            
+            <p>This is a payment of that truth which is said to be stranger than fiction.</p>
+            
+            <p>I hope to publish the book in a year or at most two from this time and I intend if you do not object to dedicate it to you.<ptr target="loc.04081_n4"/> This letter has rather a mysterious air about it especially as being written by a "materialist" to a "materialist"<ptr target="loc.04081_n3"/> Some day if ever we meet again as I trust we shall I will explain it.</p>
+
+            <closer>
+                <salute>I am always</salute>
+                <salute rend="right">Affectionately yours</salute>
+                <signed rend="right">R M Bucke</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

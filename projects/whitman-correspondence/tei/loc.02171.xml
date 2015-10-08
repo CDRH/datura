@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.02171">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Herbert Gilchrist to Walt Whitman, 13 December 1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Herbert Gilchrist</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="vm">Vince Moran</persName>
+                    <persName xml:id="ad">Anthony Dreesen</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.02171</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Herbert Gilchrist</author>
+                    <title>Herbert Gilchrist to Walt Whitman, 13 December 1880</title>
+                    <date cert="high" when="1880-12-13" xml:id="dat1">December 13, 1880</date>
+                    <idno type="callno">MSS18630</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Gilchrist, Herbert">Herbert Gilchrist</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-11" who="#ss">annotations added</change>
+            <change when="2013-09-10" who="#nhg">checked, corrected</change>
+            <change when="2013-01-25" who="#ad">blessed</change>
+            <change when="2013-01-25" who="#ad">checked, corrected</change>
+            <change when="2013-01-09" who="#vm">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.02171.001.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place" rend="center">Kents Corner<ptr target="n0262"/></name>
+                    <name type="place" rend="center">Well Road</name>
+                    <name type="place" rend="center">Hampstead</name>
+                    <date when="1880-12-13" rend="right">Dec 13th</date>
+                    <date when="1880-12-13" rend="right">1880.</date>
+                </dateline>
+                <salute>My dear Walt</salute>       
+            </opener>
+            
+            <p>Mother has been very ill;<ptr target="n0259"/> but is a little better now: &amp; with <choice><abbr>grt</abbr><expan>great</expan></choice> care will I hope be very much better. You will do me a kind service if you will receive this money order for payment of duty I <choice><orig>havent</orig><reg>haven't</reg></choice> the remotest idea how much it is &amp; if you will let me know the difference I will remit it. I should be glad if Mr<hi rend="underline">s</hi> Stafford<ptr target="n0817"/> could have the book by Xmas day.</p>
+            
+            <closer>
+                <signed rend="right">Herbert H Gilchrist</signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="loc.02171.002.jpg" type="verso"/>
+            <pb xml:id="leaf002r" facs="loc.02171.003.jpg" type="recto"/>
+            <pb xml:id="leaf002v" facs="loc.02171.004.jpg" type="verso"/>
+            
+            <!-- Note by Horace Traubel on this surface: An old Herbert Gilchrist letter, transc &#38; <gap reason="illegible" extent="one word" quantity="6" unit="chars"/>, to go <gap reason="illegible" extent="one word" quantity="3" unit="chars"/> your W.W. papers. Given to me by Walt. 
+                Horace Traubel
+                April 21st '11
+                Phila -->
+            <!-- Note in different hand: <hi rend="underline">HH Gilchrist</hi> -->
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.01521">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Peter Doyle, 22 August 1870</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+<persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="zk">Zachary King</persName><persName xml:id="ec">Eric Conrad</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.01521</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2014 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Peter Doyle, 22 August 1870</title>
+
+                    <date cert="high" when="1870-08-22" xml:id="dat1">August 22, 1870</date>
+                    <idno type="callno">MSS18630, Box 9, Reel 5-6</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Doyle, Peter" ref="n0752">Peter Doyle</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-04-17" who="#nhg">checked, corrected</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+<change when="2014-08-12" who="#el">made basic checking changes to file</change>
+            <change when="2010-11-05" who="#zk">encoded</change>
+            <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.01521.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">Brooklyn,</name>
+                    <date when="1870-08-22" rend="right">August 22, 1870.</date>
+                </dateline>
+                <salute>Dear Pete,</salute>
+            </opener>
+
+            <p>I have not heard from you now for nine days. Your letter of 13th<ptr target="loc.01521_n1"/> (last Saturday week,) in which you said 
+                the orders were for you to go to work next day, was the last I have received. I took it for granted 
+                that you went to work, &amp; have been at it since&#8212;&amp; I hope all is right with you&#8212;but why have you not written?&#8212;Dear son, if not to work I wish to send you a little money.
+            </p>
+            <pb xml:id="leaf001v" facs="loc.01521.002_large.jpg" type="verso"/>
+            <p>Every thing goes well with me&#8212;that is, every thing goes as well as can be expected&#8212;I am feeling first-rate&#8212;I am down the bay often, &amp; sometimes spend nearly all day on the sea-shore a few miles down&#8212;I am all sunburnt &amp; red, &amp; weigh <hi rend="italic"><choice><orig>severeal</orig><reg>several</reg></choice></hi> pounds more than when I left Washington&#8212;</p>
+            <p>A friend who hasn't seen me 
+                for a good while said this morning&#8212;"Why Walt you are fatter &amp; saucier than ever"&#8212;<pb xml:id="leaf002r" facs="loc.01521.003_large.jpg" type="recto"/>but I will close by sending 
+                my love, to my darling son&#8212;&amp; to him I shall always be the same old
+            </p>
+
+            <closer>
+                <signed rend="right">Walt.</signed>
+            </closer>
+            <pb xml:id="leaf002v" facs="loc.01521.004_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

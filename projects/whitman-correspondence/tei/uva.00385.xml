@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="uva.00385">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to John Burroughs, 7 December 1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>                   
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2010</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>uva.00385</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">199&#8211;200</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to John Burroughs, 7 December 1880</title>
+                    <date cert="high" when="1880-12-07" xml:id="dat1">December 7, 1880</date>
+                    <idno type="callno">Box-folder: 3:47</idno>
+                    <orgName xml:id="uva">Papers of Walt Whitman (MSS 3829), Clifton Waller Barrett Library of American Literature, Albert H. Small Special Collections Library, University of Virginia </orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Burroughs, John">John Burroughs</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-05-16" who="#km">checked</change>
+            <change when="2013-01-22" who="#ej">Checked and Corrected</change>
+            <change when="2013-01-08" who="#ab">checked</change>
+            <change when="2012-10-19" who="#gt">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <date when="1880-12-07"><choice><abbr>Dec:</abbr><expan>December</expan></choice> 7 '80</date>
+                </dateline>
+            </opener>
+
+            <p>In the letter I sent you yesterday <choice><abbr>ab't</abbr><expan>about</expan></choice> the Worthington matter, I spoke of W probably buying with the plates a lot of the old Boston edition in sheets&#8212;Dr Bucke<ptr target="uva.00385_n1"/> yesterday stopt at Leavitt's (the auctioneer's) in <choice><abbr>N Y.</abbr><expan>New York</expan></choice> &amp; to-day I receive from B the following postal:</p>
+   
+            <p>"Leavitt sold the plates to a Mr Williams (for Wentworth of Boston) in <choice><abbr>Sept:</abbr><expan>September</expan></choice> 79 for &#36;200&#8212;Leavitt never saw or heard of any <hi rend="italic">sheets</hi>&#8212;Worthington must have <choice><abbr>bo't</abbr><expan>bought</expan></choice> the plates from Williams&#8212;He must have printed from them</p>
+
+            <p rend="center">R M B"</p>
+            
+            <p>I thought I might as well let you know every new discovery &amp;c&#8212;and shall continue to do so&#8212;</p>
+                
+            <p>Bitter cold here, but clear&#8212;</p>
+
+            <closer>
+                <signed rend="right">W W</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="yal.00410">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title level="m" type="main">Walt Whitman to Louisa Van Velsor Whitman and Louisa Orr
+          Whitman, 10 February [1873]</title>
+        <title level="m" type="sub">a machine readable transcription</title>
+        <author>Walt Whitman</author>
+        <editor>Kenneth M. Price</editor>
+        <editor>Ed Folsom</editor>
+        <respStmt>
+          <resp>Transcription and encoding</resp>
+          <name>The Walt Whitman Archive Staff</name>
+        </respStmt>
+        <sponsor>Center for Digital Research in the Humanities, University of
+          Nebraska-Lincoln</sponsor>
+        <sponsor>University of Iowa</sponsor>
+        <funder>National Historical Publications and Records Commission</funder>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <date>2012</date>
+        </edition>
+      </editionStmt>
+      <publicationStmt>
+        <idno>yal.00410</idno>
+        <distributor>The Walt Whitman Archive</distributor>
+        <address>
+          <addrLine>Center for Digital Research in the Humanities</addrLine>
+          <addrLine>319 Love Library</addrLine>
+          <addrLine>University of Nebraska-Lincoln</addrLine>
+          <addrLine>P.O. Box 884100</addrLine>
+          <addrLine>Lincoln, NE 68588-4100</addrLine>
+        </address>
+        <availability>
+          <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the
+            Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law.
+            Redistribution or republication on other terms, in any medium, requires express written
+            consent from the editors and advance notification of the publisher, Center for Digital
+            Research in the Humanities. Permission to reproduce the graphic images in this archive
+            has been granted by the owners of the originals for this publication only.</p>
+        </availability>
+      </publicationStmt>
+      <notesStmt>
+        <note type="project">The following are responsible for particular readings or for changes to
+          this file, as noted: <persName xml:id="el">Elizabeth Lorang</persName>
+          <persName xml:id="zk">Zachary King</persName>
+          <persName xml:id="ec">Eric Conrad</persName>
+        </note>
+      </notesStmt>
+      <sourceDesc>
+
+        <biblStruct>
+          <monogr>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <title xml:id="ehm">The Correspondence</title>
+            <imprint>
+              <pubPlace>New York</pubPlace>
+              <publisher>New York University Press</publisher>
+              <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+              <biblScope type="volume">2</biblScope>
+              <biblScope type="page">197</biblScope>
+            </imprint>
+          </monogr>
+        </biblStruct>
+
+        <bibl>
+          <author>Walt Whitman</author>
+          <title>Walt Whitman to Louisa Van Velsor Whitman, 10 February [1873]</title>
+          <date cert="medium" when="1873-02-10" xml:id="dat1">February 10, 1873</date>
+          <orgName xml:id="yal">Yale Collection of American Literature, Beinecke Rare Book and
+            Manuscript Library</orgName>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <particDesc>
+        <person role="sender">
+          <persName key="Whitman, Walt">Walt Whitman</persName>
+        </person>
+        <person role="recipient">
+          <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+        </person>
+      </particDesc>
+    </profileDesc>
+    <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+      <change when="2012-11-29" who="#el">checked</change>
+      <change when="2012-06-20" who="#el">checked</change>
+      <change when="2011-01-26" who="#zk">encoded</change>
+      <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+    </revisionDesc>
+  </teiHeader>
+
+  <text type="letter">
+    <body>
+      <opener>
+        <dateline>
+          <date when="1873-02-10" rend="right">Monday afternoon <lb/>Feb 10&#8212;3 o'clock</date>
+        </dateline>
+        <salute>Dearest mother<ptr target="n0705"/>,</salute>
+      </opener>
+
+      <p>I send you Jeff's<ptr target="n0710"/> letter,<ptr target="yal.00410_n1"/> rec'd this morning, as it may
+        possibly be later than any you have&#8212;I had a very good day yesterday, &amp; the best
+        night last night I have had for a week&#8212;Doctor Drinkard has just been in&#8212;he says
+        I am progressing the very best&#8212;In a day or two more I think I shall get out&#8212;or
+        to the front door, at any rate&#8212;</p>
+
+      <p>Dear sister Lou,</p>
+
+      <p>I rec'd your letter this morning&#8212;I will see how I feel, when I get better&#8212;about
+        coming on&#8212;Don't think of such a thing as George's coming on here for me&#8212;You may
+        be sure I shall be with you all, in as good health as every, yet&#8212;&amp; before very
+        long&#8212;to-day I have been sadly pestered with visitors&#8212;every thing goes well with
+        me, except the <hi rend="italic">slowness</hi> of my improvement&#8212;</p>
+
+      <closer>
+        <signed rend="right">Walt</signed>
+      </closer>
+    </body>
+  </text>
+</TEI>

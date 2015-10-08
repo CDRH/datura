@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="hyb.00006">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Beatrice Gilchrist, 21 September [1877]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="ad">Anthony Dreesen</persName>                                   
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2010</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>hyb.00006</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Beatrice Gilchrist, 21 September [1877]</title>
+                    <date cert="medium" when="1877-09-21" xml:id="dat1">September 21, 1877</date>
+                    <orgName xml:id="upa">Walt Whitman Collection, 1842&#8211;1957, Rare Book &amp; Manuscript Library, University of Pennsylvania</orgName>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Gilchrist, Beatrice">Beatrice Gilchrist</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-01" who="#kc">hybrid ID update</change>
+            <change when="2014-01-27" who="#nhg">added image references, updated transcription</change>
+            <change when="2013-03-13" who="#km">checked</change>
+            <change when="2013-01-22" who="#ej">Checked and Corrected</change>
+            <change when="2012-12-26" who="#ab">checked</change>
+            <change when="2012-10-02" who="#ad">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="upa.00058.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">Camden</name>
+                    <date when="1877-09-21" rend="right">Friday</date>
+                    <date when="1877-09-21" rend="right">afternoon Sept 21<ptr target="upa.00058_n1"/></date>
+                </dateline>
+                <salute>Dear Bee</salute>
+            </opener>
+
+            <p>Your letter came an hour ago, &amp; we have all read it with deepest interest&#8212;praying that all will go well with your dearest mother&#8212;&amp; having no doubt it will&#8212;Hattie has been quite unwell for two nights, &amp; yesterday&#8212;a sort of <hi rend="underline">Cholera</hi> <hi rend="underline">morbus</hi> &amp; fever&#8212;but is pretty well <choice><orig>to-day</orig><reg>today</reg></choice>,&#8212;is <choice><abbr>dress'd</abbr><expan>dressed</expan></choice> &amp; down stairs again&#8212;the rest all well&#8212;</p>
+            
+            <p>&#8212;I <choice><abbr>rec'd</abbr><expan>received</expan></choice> a letter from Herby&#8212;he said he had written to you all, at the same time with mine&#8212;He had arrived at Esopus, &amp; was having good times&#8212;</p>
+            
+            <pb xml:id="leaf001v" facs="upa.00058.002_large.jpg" type="verso"/>
+             
+            <p>&#8212;As I was down by the market here three hours ago I met Mr Stafford, &amp; have had a talk &amp; a short ride with him&#8212;he came up with a load of cabbages, which he sold, &amp; has just started for home&#8212;All are well, (although Mrs S is hardly so, either, I think overworked &amp; too much tasked &amp; nervous)<ptr target="upa.00058_n2"/></p>
+                
+            <p>&#8212;I have <choice><abbr>rec'd</abbr><expan>received</expan></choice> I think from <choice><abbr>Edw'd</abbr><expan>Edward</expan></choice> Carpenter the <hi rend="underline">Daily News</hi> (London) with a long very fine <hi rend="underline">resum&#233;</hi>-article on <hi rend="underline">Thiers</hi>&#8212;which I will bring or send you, for yourself &amp; (by &amp; by) your mother's reading&#8212;</p>
+                    
+            <p>&#8212;I am feeling comfortable&#8212;go out some hours every day, enjoying the fine <choice><abbr>Sept:</abbr><expan>September</expan></choice> weather&#8212;</p>
+            
+            <closer>
+                <salute>Affectionately</salute>
+                <signed rend="right">W.W.</signed>
+            </closer>
+            <pb xml:id="leaf002r" facs="loc.02160.001_large.jpg" type="recto"/>
+            <pb xml:id="leaf002v" facs="loc.02160.002_large.jpg" type="verso"/>
+            
+        </body>
+    </text>
+</TEI>

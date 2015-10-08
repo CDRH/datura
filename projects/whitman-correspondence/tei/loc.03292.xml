@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03292">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">James Redpath to Walt Whitman, 5 October 1886</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>James Redpath</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03292</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>James Redpath</author>
+                    <title>James Redpath to Walt Whitman, 5 October 1886</title>
+                    <date cert="high" when="1886-10-05" xml:id="dat1">October 5, 1886</date>
+                    <idno type="callno">Box 14, Reel 8-9</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="ht"><persName key="Traubel, Horace">Horace
+                    Traubel</persName></handNote>
+                <handNote xml:id="unk"><persName key="Unknown">Unknown</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Redpath, James" ref="n4981">James Redpath</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-08-19" who="#nhg">corrected</change>
+            <change when="2015-08-12" who="#nhg">checked, corrected</change>
+            <change when="2015-07-27" who="#kb">edited</change>
+            <change when="2015-06-28" who="#if">edited</change>
+            <change when="2014-10-14" who="#ss">checked and corrected</change>
+            <change when="2014-10-10" who="#ak">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.03292.001_large.jpg" type="recto"/>
+            <note type="editorial" place="top" resp="#ht">see notes Aug 26 &#38; 30, '88</note>
+            <opener>
+                <dateline>
+                    <handShift rend="printed"/>
+                    <name type="place">ALL LETTERS AND TELEGRAMS RELATING TO EDITORIAL BUSINESS SHOULD BE ADDRESSED <lb/>"EDITOR NORTH AMERICAN REVIEW, <lb/>NEW YORK CITY." <lb/><milestone rend="horbar-full" unit="undeclared"/></name>
+                    
+                    <name type="place">THE NORTH AMERICAN REVIEW,</name>
+                    <name type="place">30 LAFAYETTE PLACE.</name>
+                    <name>ALLEN THORNDIKE RICE, EDITOR AND PROPRIETOR.</name>
+                    <name type="place"><hi rend="underline">EDITORIAL DEPARTMENT.</hi></name>
+                    <name type="place">[DICTATED.]</name>
+                    <date when="1886-10-05"><hi rend="smallcaps">NEW YORK CITY,</hi>
+                        <handShift rend="manuscript"/>Oct. 5th <handShift rend="printed"
+                        />1886.</date>
+                </dateline>
+              <handShift rend="manuscript"/> 
+                <salute>Walt Whitman, Esq.,</salute>
+                    <salute>Camden, N.J.</salute>
+               
+                <salute>My Dear Friend:</salute>
+            </opener>
+            <p>The syndicate is dissolved. Mr. Rice<ptr target="n6004"/> furnishes articles for the <hi rend="underline"
+                    >Star</hi> only. The price of your article<ptr target="loc.03292_n1"/> puts it outside of any possible use
+                for it in that paper, as the highest price is $10 per thousand. Just wait a few
+                days, however, and I will read it and see if it will not do for the North American.
+                Your Burns article will be, I expect, in the November number.<ptr target="loc.03292_n2"/></p>
+            <closer>
+                <salute>Very truly yours,</salute>
+                <signed><choice><abbr>Jas</abbr><expan>James</expan></choice> Redpath</signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="loc.03292.002_large.jpg" type="verso"/>
+            <note type="editorial" place="top" resp="#unk">Redpath</note>
+        </body>
+    </text>
+</TEI>

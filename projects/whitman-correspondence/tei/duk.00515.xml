@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00515">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, [23 February 1869]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00515</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, [23 February 1869]</title>
+                    <date cert="medium" notBefore="1869-02-23" notAfter="1869-03-02" xml:id="dat1">February 23, 1869</date>
+                    <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-08-06" who="#el">checked</change>
+            <change when="2013-08-06" who="#el">moved notes to external notes file and added pts</change>
+            <change when="2013-08-06" who="#el">merged files; began checking process</change>
+            <change when="2013-05-21" who="#wr">Duke proofreading corrections; date note update</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent Proof</change>
+            <change when="2012-12-14" who="#wr">Proofreading correction of notes.</change>
+            <change when="2012-08-14" who="#wr">Notes correction</change>
+            <change when="2012-08-03" who="#wr">Added date annotation and proofreading corrections, updated notes. Re-dated letter to February 23, 1869; revise Steers, Pierepont and Devlin annotation to match new date.</change>
+            <change when="2012-01-10" who="#fw">Correct date in title, update annotations</change>
+            <change when="2011-04-26" who="#fw">Annotate Devlin, Davis</change>
+            <change when="2011-04-20" who="#fw">Annotate O'Connor, Pierrepont</change>
+            <change when="2011-04-13" who="#fw">Annotate Steers family, Mrs. Black</change>
+            <change when="2011-03-30" who="#wr">Encode regularization of contractions, days of week, and frequently misspelled words</change>
+            <change when="2011-03-29" who="#fw">Transcribe 2 Pages</change>
+        </revisionDesc>
+    </teiHeader>
+    
+    <text type="letter">
+        
+        <body>
+        
+            <pb xml:id="leaf001r" facs="duk.00515.001.jpg" type="recto"/>
+            
+             <note type="editorial" resp="#rmb" place="top">Brooklyn&#8211;25 Feb <hi rend="underline">1868</hi> to attorney general's office <hi rend="underline">wash.</hi></note>
+            
+            <opener>
+                <salute>my dear Walter<ptr target="duk.00515_n11"/></salute>
+            </opener>
+            
+            <p>i got
+                your letter all safe
+                to day <choice><orig>wensday</orig> <reg>Wednesday</reg></choice> it was
+                rather late but it come
+                yesterday was a tremendous
+                rain the water has
+                been a foot deep in the
+                cellar they say the rats
+                has undermined it
+                but it has dried away
+                some <choice><orig>its</orig> <reg>it's</reg></choice> a low place
+                the water settles in the
+                yard it is better george<ptr target="duk.00425_n2"/>
+                sold it they are much
+                pleased with it say they
+                <choice><orig>wouldent</orig> <reg>wouldn't</reg></choice> take 1000 <choice><orig>dols</orig> <reg>dollars</reg></choice>
+                for their bargain</p>
+            <p>mrs Steers<ptr target="duk.00515_n4"/> gets along
+                very well with her
+                bakery)
+                we have had
+                mrs Black<ptr target="duk.00512_n11"/> here she has
+                just gone and quite
+                a <choice><orig>releif</orig> <reg>relief</reg></choice> it is too
+                
+                <pb xml:id="leaf001v" facs="duk.00515.002.jpg" type="verso"/>
+                
+                she come she said
+                to tell me of a sure
+                cure for the rheumatis<ptr target="duk.00515_n14"/>
+                i asked her what it
+                was she said put a
+                potato in each pocket
+                and wear them in
+                your pocket till they
+                are hard and the
+                rheumatis will i <choice><orig>supos</orig> <reg>suppose</reg></choice>
+                go in the potato</p>
+            <p>she asked me when
+                she went away if i
+                would <choice><orig>doo</orig><reg>do</reg></choice> it i told
+                her i would carry
+                half a dozen if they
+                would do me any
+                good</p>
+            <p>well walt i am
+                glad you are <choice><orig>bettr</orig> <reg>better</reg></choice>
+                of your distress
+                in your head very
+                many people is
+                
+                <pb xml:id="leaf002r" facs="duk.00515.003.jpg" type="recto"/>
+                
+                complaining of colds
+                well the president
+                <choice><orig>cant</orig> <reg>can't</reg></choice> pardon very
+                many more <choice><orig>rouges</orig> <reg>rogues</reg></choice>
+                you know i suppose
+                Devlin is pardoned<ptr target="duk.00515_n3"/> 
+                the papers say <choice><orig>peirpont</orig> <reg>Pierrepont</reg></choice>
+                is to be the attorney
+                <choice><orig>genrall</orig><reg>general</reg></choice><ptr target="duk.00515_n7"/>
+                but i suppose
+                you will know soon
+            </p>
+            
+            <p>i hear from Jeff and
+                mat<ptr target="duk.00422_n2"/> once in a while
+                Jeff has or has had
+                great anxiety about
+                the works the river
+                rises so much higher
+                than usual that
+                there is fear of the
+                overflowing of
+                their works <choice><orig>poo</orig> <reg>poor</reg></choice> Jeff
+                i expect he is in
+                
+                <pb xml:id="leaf002v" facs="duk.00515.004.jpg" type="verso"/>
+                
+                lots of trouble
+                but as we understood
+                Davis<ptr target="duk.00479_n9"/> it <choice><orig>wouldent</orig> <reg>wouldn't</reg></choice>
+                <choice><orig>doo</orig><reg>do</reg></choice>  such an amount
+                of damage if it did
+                overflow but Jeff is
+                so nervous)</p>
+            
+            <p>walter dear if you
+                can as well as not
+                i wish you would
+                send me the draft
+                next week) George
+                had to make a paym<unclear cert="medium" resp="#wr" reason="illegible">ent</unclear>
+                the other day and
+                had to take all he
+                had to make it out)<ptr target="duk.00515_n13"/>
+                
+            </p>
+            <p>give my love to
+                the <choice><orig>oconors</orig> <reg>O'Connors</reg></choice> and love
+                to yourself)<ptr target="duk.00470_n8"/></p>
+            <closer>
+                <signed>Louisa Whitman<ptr target="duk.00425_n3"/></signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

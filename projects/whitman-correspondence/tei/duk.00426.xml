@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00426">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">
+                    <title level="a">Louisa Van Velsor Whitman to Walt Whitman, 19 March [1863]</title>
+                </title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00426</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>               
+                <bibl xml:id="lvvw">
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, 19 March [1863]</title>
+                    <date cert="high" when="1863-03-19" xml:id="dat1">March 19, 1863</date>
+                    <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                    <relatedItem>
+                        <ptr target="duk.00310"/>
+                    </relatedItem>
+                    <note type="project">Thomas Jefferson Whitman wrote a short note to Walt Whitman at the top of this letter from Louisa Van Velsor Whitman to Walt.</note>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-11-05" who="#el">final check; removed TJW letter and updated soureDesc, etc.</change>
+            <change when="2013-10-31" who="#el">updated target value for Harrison note ptr</change>
+            <change when="2013-08-05" who="#el">merged files; checked</change>
+            <change when="2013-06-05" who="#wr">Duke Proofreading Corrections</change>
+            <change when="2013-05-14" who="#el">added TJW postscript and relevant annotations</change>
+            <change when="2013-05-13" who="#el">checked; moved notes to external file and added ptrs</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent Proof</change>
+            <change when="2013-02-06" who="#wr">Date note; review proofreading corrections; Jeff Whitman postscript; Probasco; 
+                Jeff's packet of engravings and copies of Eagle; Edward Whitman; shall and should</change>
+            <change when="2013-01-14" who="#ct">Oral Proofreading Corrections</change>
+            <change when="2012-11-02" who="#wr">Add Bucke, correct margintop value.</change>  
+            <change when="2012-04-06" who="#fw">correct and add annotations</change>
+            <change when="2012-03-30" who="#fw">Transcribe 6 Pages</change>
+        </revisionDesc>
+    </teiHeader>
+    
+    <text type="letter">
+        <body>
+                
+                <note type="editorial" resp="#rmb" place="top">&#8212;63</note>
+                
+                <pb xml:id="leaf001r" facs="duk.00426.001.jpg" type="recto"/>
+                
+                <opener>
+                    <dateline>
+                        <date when="1863-03-19">March <unclear reason="illegible" resp="#wr" cert="low">th</unclear> 19<ptr target="duk.00426_n14"/></date>
+                    </dateline>
+                    <salute>Well Walt</salute>
+                </opener>
+                
+                <p>george has
+                    come and gone<ptr target="duk.00426_n1"/> he 
+                    <choice><orig>dident</orig> <reg>didn't</reg></choice>
+                    want to go much i<ptr target="duk.00425_n3"/> think
+                    he went 
+                    <choice><orig>tuesday</orig> <reg>Tuesday</reg></choice> night
+                    started from here about
+                    9 <unclear reason="illegible" resp="#wr" cert="medium">Ockoch</unclear> jeff<ptr target="duk.00422_n2"/> was going
+                    over with him but there
+                    was so many going with
+                    him i told jeff he better
+                    not go as he was very <choice><orig>tyred</orig> <reg>tired</reg></choice>
+                    george said it would be
+                    12 or 1 <choice><orig>Oclock</orig> <reg>o'clock</reg></choice> before he would
+                    get back we felt bad whe<unclear reason="illegible" resp="#wr" cert="high">n</unclear>
+                    he started and he did
+                    too <choice><orig>appeard</orig> <reg>appeared</reg></choice> to feel very
+                    bad he says he thinks
+                    it altogether likely he
+                    will be back in a month
+                    <unclear reason="illegible" resp="#wr" cert="high">he</unclear> thinks the regiment
+                    will be consolidated
+                    
+                    <pb xml:id="leaf001v" facs="duk.00426.002.jpg" type="verso"/>
+                    
+                    and there will be
+                    more officers than will
+                    be needed but i <choice><orig>dont</orig> <reg>don't</reg></choice>
+                    think he will be <choice><orig>dischargd</orig> <reg>discharged</reg></choice>
+                    we all eat supper up
+                    stairs the night he went
+                    away not so very solem
+                    as you would suppose
+                    but when he came to
+                    go i felt bad <choice><orig>enoughf</orig> <reg>enough</reg></choice>
+                    he went down to Andrews
+                    before he went away Andre<unclear reason="illegible" resp="#wr" cert="medium">w</unclear><ptr target="duk.00423_n3"/>
+                    i believe has got in the
+                    yard again nancy<ptr target="duk.00423_n4"/> was
+                    here to day another of her
+                    brothers is buried to day
+                    she was going to the
+                    funeral) those things
+                    you sent george all
+                    came safe he thinks <unclear reason="damage" resp="#wr" cert="medium">he</unclear>
+                    <choice><orig>wont</orig> <reg>won't</reg></choice> want any more
+                    <pb xml:id="leaf002r" facs="duk.00426.003.jpg" type="recto"/>
+                    
+                    <choice><orig>cloths</orig> <reg>clothes</reg></choice> in some time he
+                    had just gone when the
+                    express came<ptr target="duk.00426_n11"/>
+                    he said
+                    he <choice><orig>gesst</orig> <reg>guessed</reg></choice> they would not
+                    come that he must get
+                    some shirts he was going
+                    down to Harrisons<ptr target="duk.00426_19"/>
+                    to have
+                    his likeness taken so marthe<ptr target="duk.00465_n9"/>
+                    got ready quick and stopp<unclear reason="cut away" resp="#wr" cert="high">ed</unclear>
+                    and told him they had
+                    come so he went down
+                    to the bank and took out
+                    the <choice><orig>remander</orig><reg>remainder</reg></choice> of his money
+                    his things cost so much
+                    more than he <choice><orig>antisapated</orig> <reg>anticipate</reg></choice>
+                    he gave me 7 dollars
+                    i told him i could <choice><orig>doo</orig> <reg>do</reg></choice>
+                    with <choice><orig>enoughf</orig> <reg>enough</reg></choice> to get
+                    half ton of coal that
+                    you sent me some
+                    every little while but
+                    <pb xml:id="leaf002v" facs="duk.00426.004.jpg" type="verso"/>
+                    he said he had <choice><orig>enoughf</orig> <reg>enough</reg></choice>
+                    i got your letter<ptr target="duk.00426_n16"/> Walt
+                    with the dollar in and
+                    have just got Jeffs with
+                    the 20 cents Jeff will sen<unclear reason="cut away" resp="#wr" cert="high">d</unclear>
+                    your engravings <choice><orig>fryday</orig> <reg>Friday's</reg></choice>
+                    or <choice><orig>saturday</orig> <reg>Saturday</reg></choice> with one of
+                    george<ptr target="duk.00426_n18"/>
+                    they <choice><orig>wont</orig> <reg>won't</reg></choice> be done
+                    till thin he wanted one
+                    sent to you and one to han<ptr target="duk.00467_n1"/>
+                    and one to mary<ptr target="duk.00425_n6"/>
+                    and one to
+                    Andrew mary did not co<unclear reason="cut away" resp="#wr" cert="high">me</unclear><ptr target="duk.00426_n25"/>
+                    we have not heard any
+                    thing from her i had a
+                    letter from heyde<ptr target="duk.00426_n8"/> yesterday
+                    he says hanna
+                    is about
+                    the same he says he
+                    wishes you would write 
+                    to her that she would write
+                    to you but it seems to hurt
+                    her to bend over i think
+                    she is quite poorly at times
+                    but <choice><orig>maybee</orig> <reg>maybe</reg></choice> when the
+                    weather gets warm she
+                    will improve
+                    <pb xml:id="leaf003r" facs="duk.00426.005.jpg" type="recto"/>
+                    at any rate i do so
+                    hope she may i did
+                    think i would go on
+                    there as soon as the weather
+                    got warmer but jeff
+                    and george <choice><orig>dont</orig> <reg>don't</reg></choice> seem
+                    to think i am capable
+                    of taking care of myself
+                    but i think i could go
+                    i wish Walt you could
+                    go down and see george
+                    he thinks they are going
+                    on an expedition before
+                    long he has got a good
+                    tent only one besides
+                    himself tom<ptr target="duk.00426_n24"/>
+                    is discharged
+                    and gone home
+                    this 12 sheets of writing paper
+                    for 4 cents is awful
+                    <choice><orig>stuf</orig> <reg>stuff</reg></choice> to write on it <unclear reason="damage" resp="#wr" cert="medium">want</unclear>
+                    better write<unclear reason="damage" resp="#wr" cert="medium">r than</unclear>
+                    
+                    <pb xml:id="leaf003v" facs="duk.00426.006.jpg" type="verso"/>
+                    
+                    mammy i <choice><orig>dont</orig> <reg>don't</reg></choice> think 
+                    i <unclear reason="illegible" resp="#wr" cert="high">shall</unclear><ptr target="duk.00426_n21"/>
+                    invest in it
+                    again george made
+                    sis<ptr target="duk.00426_n13"/>
+                    a present of a gold
+                    locket cost six <choice><orig>dollar</orig> <reg>dollars</reg></choice>
+                    and a half she <choice><orig>cals</orig> <reg>calls</reg></choice> it
+                    her gold <choice><orig>wacth</orig> <reg>watch</reg></choice> told her
+                    father he must get her
+                    a key to wind up her
+                    wa<unclear reason="illegible" resp="#wr" cert="high">tch</unclear> i was glad he
+                    did get it jeff is very
+                    good we gave george
+                    a lot of fruit cake and
+                    crullers<ptr target="duk.00426_n12"/> mat marked
+                    his things so we fixed
+                    him off very good
+                    we are all well but
+                    eddy<ptr target="duk.00425_n13"/> he is quite under
+                    the weather has got of his
+                    <unclear reason="illegible" resp="#wr" cert="low">bed</unclear> <unclear reason="illegible" resp="#wr" cert="high">so</unclear> you may think
+                    he is not very well i am sorry
+                    walt your head is no
+                    better <unclear reason="damage" resp="#wr" cert="medium">how bad</unclear> it must b<unclear reason="cut away" resp="#wr" cert="low">e</unclear></p>
+                
+                <pb sameAs="#leaf003r"/>
+                <closer>
+                    <salute>good by my dear walt</salute>
+                </closer>
+     
+        </body>
+    </text>
+</TEI>

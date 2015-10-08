@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nar.03605">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Amos Tappan Akerman, 9
+                    January 1871</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <name>The Walt Whitman Archive Staff</name>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2010</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>nar.03605</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note type="project">The following are responsible for particular readings or for
+                    changes to this file, as noted:
+<persName xml:id="kmp">Kenneth M. Price</persName> <persName xml:id="el">Elizabeth
+                        Lorang</persName>
+                    <persName xml:id="zk">Zachary King</persName>
+                    <persName xml:id="ec">Eric Conrad</persName>
+                </note>
+            </notesStmt>
+            <sourceDesc>
+
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author><editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date><biblScope type="volume">2</biblScope>
+                            <biblScope type="page">117</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Amos Tappan Akerman, 9 January 1871</title>
+                    <date cert="high" when="1871-01-09" xml:id="dat1">January 9, 1871</date>
+                    <orgName xml:id="nar">National Archives &#38; Records Administration</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Akerman, Amos Tappan">Amos Tappan Akerman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-04-19" who="#el">replaced notes with ptrs</change>
+            <change when="2012-07-09" who="#el">changed idno and file name</change>
+<change when="2012-03" who="#kp">blessed</change>
+            <change when="2011-03-29" who="#el">checked</change>
+            <change when="2010-11-08" who="#zk">encoded</change>
+            <change when="2010-08-20" who="#ec">extracted transcription from Major Authors
+                cd</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place" rend="center">Department of Justice</name>
+                    <name type="place" rend="right"><hi rend="italic">Washington</hi></name>. <date
+                        when="1871-01-09" rend="right">Jan. 9, <hi rend="italic">18</hi>71</date>. </dateline>
+                <salute>Hon. A. T. Akerman,</salute><ptr target="nar.03605_n1"/>
+                <salute>Attorney General.</salute>
+                <salute>Sir:</salute>
+            </opener>
+
+            <p>I hereby respectfully make application for the office of Pardon Clerk, now vacant in
+                the Department of Justice.</p>
+
+            <p>I have served in the Department under Attorney Generals Speed,<ptr target="nar.03605_n2"/> Stanbery,<ptr target="nar.03605_n3"/> Browning,<ptr target="nar.03605_n4"/> Evarts,<ptr target="nar.03605_n5"/> Hoar,<ptr target="nar.03605_n6"/> &#38; yourself&#8212;am familiar
+                with the general routine of the office (am the oldest in continuous service of any
+                of the present clerks)&#8212;think I could soon learn the special duties of the
+                pardon desk&#8212;and hope I should conscientiously seek to perform them, both with
+                regard to their great official, and still greater moral obligations.</p>
+
+            <p>I would refer to Mr. Speed and Mr. Stanbery, Attorneys General, &#38; Mr.
+                Ashton,<ptr target="nar.03605_n7"/> Assistant Attorney General, under whom I have acted as clerk,
+                some of them for several years&#8212;and to Mr. Pleasants,<ptr target="nar.03605_n8"/> late Chief Clerk&#8212;and if
+                agreeable to you, or desirable, would bring written testimonials from them.</p>
+
+            <closer>
+                <salute>Very respectfully,</salute>
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+
+            <postscript>
+
+                <p>Should it not be convenient to grant the foregoing application I respectfully ask
+                    to be promoted to a fourth-class clerkship, to date from 1st. of February,
+                    1871.<ptr target="nar.03605_n9"/>
+                </p>
+
+                <p rend="right">Walt Whitman </p>
+
+            </postscript>
+
+        </body>
+    </text>
+</TEI>

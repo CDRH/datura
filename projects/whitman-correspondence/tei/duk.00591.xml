@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00591">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, 5 April [1870]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp><persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="ct">Cathy Tisch</persName><persName xml:id="fw">Felicia Wetzig</persName><persName xml:id="wr">Wesley Raabe</persName><persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00591</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, 5 April [1870]</title>
+                        <date cert="high" when="1870-04-05" xml:id="dat1">April 5, 1870</date>
+                    
+                        <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="unk">Unknown</handNote> 
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote> 
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2014-09-19">corrected date information</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>  
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-11-04" who="#el">removed extraneous ptr from opener</change>
+            <change when="2013-09-17" who="#el">checked</change>
+            <change when="2013-05-28" who="#wr">Duke Proofreading Corrections</change>
+            <change when="2013-04-23" who="#wr">Proofreading corrections and Miller date</change>
+            <change when="2013-01-10" who="#wr">Review proofreading corrections, add date note, letter from Mattie Whitman,
+                and LVVW request about more on Jesse Whitman death.</change>
+            <change when="2012-08-16" who="#ct">Oral Proofreading Corrections</change>
+            <change when="2012-08-14" who="#wr">Clean encoding (editor, date, remove "_large") and add standard annotations on unannotated files (Jeff W, Martha [Mattie], George W, Lou Haslam)</change>
+            <change when="2011-02-17" who="#fw">Transcribe and correct 2 Pages</change>
+            <change when="2011-03-17" who="#fw">Annotate Helen Price</change>
+            <change when="2011-03-30" who="#wr">Encode regularization of contractions, days of week, and frequently misspelled words</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+           
+            <pb xml:id="leaf001r" facs="duk.00591.001.jpg" type="recto"/>
+            
+            <note type="editorial" resp="#rmb" place="top"><unclear cert="medium" resp="#wr" reason="damage">5 April 1870</unclear></note>
+            <note resp="#unk" type="editorial">Brooklyn</note>
+            
+            <opener>
+                <dateline>
+                    <date when="1870-04-05"><choice><orig>Apri<unclear resp="#wr" reason="damage">l</unclear></orig><reg>April</reg></choice> 5<ptr target="duk.00591_n1"/>
+                    </date>
+                </dateline>
+                <salute>My dear Walt</salute>
+            </opener>
+            
+            <p>i<ptr target="duk.00425_n3"/> have just
+            received your letter and
+            the order all safe<ptr target="duk.00591_n9"/>
+            am
+            glad to hear you are better
+            of your cold am glad
+            <choice><orig>walter</orig><reg>Walter</reg></choice> dear <choice><orig>its</orig> <reg>it's</reg></choice> in your
+            power to deal so generously
+            to your mother)</p>
+            <p>i am rather better of my
+            lameness now i was very
+            lame for a week or so
+            we have so much easterly
+            winds that makes me worse
+            helen price<ptr target="hyb.00002_n11"/> has been here
+            to day she comes from the
+            office has just gone)</p>
+            <p>George<ptr target="duk.00425_n2"/>
+            has been home he
+            went away yesterday
+            <choice><orig>monday</orig> <reg>Monday</reg></choice> he <choice><orig>wont</orig> <reg>won't</reg></choice> come
+            <pb xml:id="leaf001v" facs="duk.00591.002.jpg" type="verso"/>
+            come again if nothing
+            happens till the 1 of <choice><orig>may</orig> <reg>May</reg></choice>
+            i had a letter from <choice><orig>matty</orig><reg>Matty</reg></choice><ptr target="duk.00591_n7"/>
+                too she says Jeffy<ptr target="duk.00422_n2"/> is coming
+            to <choice><orig>pittsburgh</orig> <reg>Pittsburgh</reg></choice> this week
+            she <choice><orig>dident</orig> <reg>didn't</reg></choice> know but he 
+                would come to <choice><orig>brooklyn</orig><reg>Brooklyn</reg></choice><ptr target="duk.00591_n14"/>
+            </p>
+            <p>i thought probably he would
+            after hearing of poor <choice><orig>jesse</orig><reg>Jesse</reg></choice>
+            death<ptr target="duk.00591_n6"/>
+                i <choice><orig>doo</orig> <reg>do</reg></choice> wish the doctor
+            would write something
+            about the poor unfortunates
+            death<ptr target="duk.00591_n8"/> it would be some
+            consolation to hear</p>
+
+            <closer>
+                <salute>good bie <choice><orig>walter</orig><reg>Walter</reg></choice> dear</salute>
+            </closer>
+            <postscript><p>i have also written to <choice><orig>hanna</orig><reg>Hannah</reg></choice><ptr target="duk.00467_n1"/>
+            i found some envelopes
+            directed to you <choice><orig>walter</orig><reg>Walter</reg></choice><ptr target="duk.00591_n13"/>
+            </p></postscript>
+        </body>
+    </text>
+</TEI>

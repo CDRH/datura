@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="tex.00174">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, 23 February [1870]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="hk">Heather Kaley</persName>
+                    <persName xml:id="nr">Natalie Raabe</persName>   
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>tex.00174</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, 23 February [1870]</title>
+                    <date cert="high" when="1870-02-23" xml:id="dat1">February 23, 1870</date>
+                    <orgName xml:id="tex">The Walt Whitman Collection, Harry Ransom Humanities Research Center, The University of Texas at Austin</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-07-31" who="#el">moved notes to external notes file and added ptrs; checked</change>
+            <change when="2013-07-29" who="#el">merged files</change>
+            <change when="2013-06-04" who="#wr">Silent Proofreading Corrections</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent Proof</change>
+            <change when="2012-12-14" who="#wr">Proofreading Corrections of notes.</change>
+            <change when="2012-11-26" who="#wr">Proofreading corrections.</change>
+            <change when="2012-11-21" who="#nr">Proofreading notes.</change>
+            <change when="2012-07-31" who="#wr">Moved RMBucke to HandNote; fixed editor, date, and title; reviewed paragraphing </change>
+            <change when="2012-07-16" who="#wr">Replaced smart quotes with straight; removed external URL links. </change>
+            <change when="2012-06-11" who="#wr">Changed straight quotes to chararacter reference smart quotes. </change>
+            <change when="2012-05-14" who="#wr">Corrected based on proofreading. Established year of letter based on Martha Mitchell Whitman's visit
+                and Davis's plans to travel to Lowell, MA, corroborated in Martha Whitman letter of 27 February 1870 to Walt.</change>   
+            <change when="2012-03-07" who="#hk">Noted image cut-offs. Changed "you" to "your" in line 8 on page 2 to reflect MS spelling.</change>
+            <change when="2012-01-31" who="#fw">Add annotations</change>
+            <change when="2012-01-20" who="#fw">Regularize spelling</change>
+            <change when="2012-01-17" who="#fw">Transcribe and correct 2 Pages</change>
+        </revisionDesc>
+    </teiHeader>
+    
+    <text type="letter">
+        
+        <body>
+            
+            <pb xml:id="leaf001r" facs="tex.00174.001.jpg" type="recto"/>
+            
+            <opener>
+                <dateline>
+                    <date when="1870-02-23"><choice><orig>febuary</orig> <reg>February</reg></choice> 23<ptr target="tex.00174_n10"/></date>
+                </dateline>
+                <salute>My dear walt</salute>
+            </opener>
+            
+            <p>i<ptr target="duk.00425_n3"/>
+                have
+                just got your letter and
+                was glad to hear from you
+                and received the papers
+                on <choice><orig>saturday)</orig> <reg>Saturday)</reg></choice> <choice><orig>dont</orig> <reg>don't</reg></choice> be <choice><orig>frightend</orig> <reg>frightened</reg></choice>
+                but Jeff and matty<ptr target="duk.00575_n9"/>
+                is
+                both here matty has been
+                here a week <choice><orig>to day</orig> <reg>today</reg></choice> Jeff
+                had to come to <choice><orig>pittsburgh</orig> <reg>Pittsburgh</reg></choice>
+                and stay a day or two and
+                matt came on from there
+                alone she is better than
+                i expected to see her
+                they left the children at
+                home with her girl and
+                davis<ptr target="duk.00479_n9"/>
+                Jeffy is going back
+                next week as davis has
+                got an appointment at
+                <choice><orig>lowel</orig> <reg>Lowell</reg></choice> and Jeff has come
+                on but has to return before
+                davis leaves)<ptr target="tex.00174_n5"/>
+                but matty
+                will return by the way
+                <choice><orig>off</orig> <reg>of</reg></choice> <choice><orig>washington</orig> <reg>Washington</reg></choice> sure about
+                the 9th or 10th of <choice><orig>march</orig> <reg>March</reg></choice>
+                
+                
+                <pb xml:id="leaf001v" facs="tex.00174.002.jpg" type="verso"/>
+                
+                i will write particular<ptr target="tex.00174_n18"/>
+                the day before she comes
+                george<ptr target="duk.00425_n2"/>
+                will be home on
+                <choice><orig>saturday</orig> <reg>Saturday</reg></choice> the weather
+                has been extremely col<unclear reason="cut away" cert="high" 
+                    resp="#wr">d</unclear> 
+                i am pretty well only lame as usual) walt get
+                your new <choice><orig>cloths</orig> <reg>clothes</reg></choice> done if you 
+                can before matt comes
+                she will come week
+                after next certain) has
+                mrs benedict<ptr target="tex.00174_n7"/>
+                a room
+                she could <choice><orig>accomadate</orig> <reg>accommodate</reg></choice>
+                her with for a few days
+                she will visit the masons<ptr target="tex.00174_n6"/>
+                and mrs Oconor)<ptr target="duk.00466_n5"/>
+            </p>
+            
+            <closer>
+                <salute>good bie dear walt</salute>
+            </closer>
+            <postscript><p>matty says she feels better
+                than she did before sh<unclear reason="cut away" cert="high" resp="#wr">e</unclear> 
+                came from home Jeff
+                is <choice><orig>floureshing</orig> <reg>flourishing</reg></choice></p></postscript>
+        </body>
+    </text>
+</TEI>

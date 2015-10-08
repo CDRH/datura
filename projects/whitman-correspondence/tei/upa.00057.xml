@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="upa.00057">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Anne Gilchrist, 8 December 1885</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>upa.00057</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Anne Gilchrist, 8 December 1885</title>
+                    <date cert="high" when="1885-12-08" xml:id="dat1">December 8, 1885</date>
+                    <orgName xml:id="upa">Walt Whitman Collection, 1842&#8211;1957, Rare Book &#38;
+                        Manuscript Library, University of Pennsylvania</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="hg"><persName key="Gilchrist, Herbert">Herbert
+                Gilchrist</persName></handNote>
+                <handNote xml:id="unk"><persName key="Unknown">Unknown</persName></handNote>
+            </handNotes>
+            <particDesc> 
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Gilchrist, Anne" ref="n0259">Anne Gilchrist</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-03-02" who="#kb">edited</change>
+            <change when="2014-10-04" who="#ss">encoded and annotated from Miller.</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+
+            
+            <pb xml:id="leaf001r" facs="upa.00057.001_large.jpg" type="recto"/>
+            <opener>
+                <note type="editorial" resp="#hg" place="top">Received Dec: 18th | H H G.</note>
+                <note type="editorial" resp="#unk" place="top">Sprague Collection No 28</note>
+                <dateline>
+                    <name type="place">Camden<ptr target="upa.00057_n1"/></name>
+                    <date when="1885-12-08" rend="right">Tuesday noon</date>
+                    <date when="1885-12-08" rend="right">Dec: 8 '85</date>
+                </dateline>
+                <salute>Dear friend<ptr target="upa.00057_n2"/></salute>
+            </opener>
+            <p>I think of you very often, &#38; cannot but trust your illness is less gloomy than
+                Herbert states it&#8212;I know I have myself felt convinced several times during the
+                last twelve or thirteen years of serious conditions &#38; fin&#225;l&#233;s that
+                endurance has tided over&#8212;&#38; O I so hope that you will surmount
+                all&#8212;&#38; that we may yet meet each other face to face.</p>
+            <p>&#8212;I am middling well&#8212;the trouble in my eyesight (&#38; very annoying it was to my
+                    <hi rend="underline">anchor'd</hi> condition) seems to have pass'd over&#8212;We
+                are having extremely cold weather here, &#38; I do not get out of the
+                house&#8212;but it is bright &#38; sunny as I look out&#8212;I wrote a card to
+                Herbert three days ago, which I suppose he has rec'd&#8212;God's peace &#38; blessing
+                to you, beloved friend&#8212;</p>
+            <closer>
+                <signed>Walt Whitman</signed>
+                <salute>with best love</salute>
+            </closer>
+            <pb xml:id="leaf001v" facs="upa.00057.002_large.jpg" type="verso"/>
+            <pb xml:id="leaf002r" facs="loc.02157.001_large.jpg" type="recto"/>
+            <pb xml:id="leaf002v" facs="loc.02157.002_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>   

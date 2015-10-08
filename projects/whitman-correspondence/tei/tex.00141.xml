@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="tex.00141">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Andrew J. Liebenau to Walt Whitman, 20 February 1864</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Andrew J. Liebenau</author>
+            <editor>Dennis Berthold</editor>
+            <editor>Kenneth M. Price</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+               <persName xml:id="ss">Sarah Synovec</persName>
+               <persName xml:id="ec">Eric Conrad</persName>
+
+               <persName xml:id="kk">Kathryn Kruger</persName>
+               <persName xml:id="nk">Nick Krauter</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>tex.00141</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <editor>Charley Shively</editor>
+                  <title xml:id="db">Drum Beats:  Walt Whitman's Civil War Boy Lovers</title>
+                  <imprint>
+                     <pubPlace>San Francisco, California</pubPlace>
+                     <publisher>Gay Sunshine Press</publisher>
+                     <date>1989</date>
+                     <biblScope type="page">156</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Andrew J. Liebenau</author>
+               <title>Andrew J. Liebenau to Walt Whitman, 20 February 1864</title>
+               <date when="1864-02-20">February 20, 1864</date>
+               <orgName xml:id="tex">Walt Whitman Collection, Harry Ransom Humanities Research Center, The University of Texas at Austin</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Liebenan, Andrew J.">Andrew J. Liebenan</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#vs" when="2010-04-15">proofreading changes</change>
+         <change who="#ss" when="2009-08-31">annotations</change>
+         <change who="#ec" when="2009-08-06">annotations</change>
+         <change who="#el" when="2008-07-21">updated TEI header</change>
+         <change who="#kk" when="2008-04-01">checked and proofed</change>
+         <change who="#nk" when="2007-06-14">Transcribed, Encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <dateline rend="right"/>
+               <salute>Friend Walt,</salute>
+            </opener>
+         <p>I<ptr target="tex.00141_n100"/> have been setting at the foot of what I call my bed idoly speculating,  on the past, and thinking of many men I have met and called them Friends how often the word Friend, is missplace, but you have told me you were my Friend and called me your young Friend, I thank you for that priveledge from the inmost recess of my heart as I know you can appreciate a sincere Friend, and I will try to be that to you. I gave Father one of your ambrotypes when I was at home, he was very much pleased with it, and reconised it at once. My little Wife exclaimes, he looks like a very inteligent and kind hearted Old Gentleman,
+ when I gave her the presents you sent her, she said tell him Andy when you see him that although his gifts are small and he is an entire stranger to me I appreciate them very much, as you say he is a warm and good Friend of yours I respect all of your sincere and good Friends, Walt, I stopped at your residence when passing through Washington enroute to join my Regiment, and was told that you had gone on a visit to the Army, thinking that you had thought, that I had neglected to call upon you as I promised, I thought you might have gone out to visit me at my camp, expecting to meet you there I was sorrowfully disapointed on my arrival there to find that my conjectures were without foundation. Walt, I would invite you to visite me here at Camp but I am told that I will be sent home in a few days with the reenlisted men, to remain there for the term of Thirtyfive days, if it proves to be the truth I will stop and try to persuade you to go on to New York with me, and visit my little Wife and my home, to enjoy a few of your leisure hours cheerfully. I will now conclude Walt, as it is quite late, asking you to please excuse this scratch, as I have a very sharp pointed pen and my ink is frozen. I will now bid adieu,</p>
+            <closer rend="right">
+               <salute>Remaining Your Affectionate Friend,</salute>
+               <signed>Lieut. Commanding Co 1, 1st Regt Excelsior Brigade, 2nd Division, 3rd Corps, Army of the Potomac</signed>
+            </closer>
+         
+      </body>
+   </text>
+</TEI>

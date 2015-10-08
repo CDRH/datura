@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00467">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, [26? March 1866]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="zk">Zachary King</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00467</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, [26? March 1866]</title>
+                    <date cert="medium" notBefore="1866-03-25" notAfter="1866-03-27" xml:id="dat1">March 26?, 1866</date>
+                    <idno type="callno">III-5D</idno>
+                    <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library </orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+           <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-12-09" who="#el">changed 'rent' to 'rents'</change>
+            <change when="2013-07-29" who="#el">merged files</change>
+            <change when="2013-07-19" who="#wr">Replace internal notes with external notes</change>
+            <change when="2013-06-06" who="#wr">Duke Proofreading Corrections</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent
+                Proof</change>
+            <change when="2013-01-10" who="#el">updated TEI header to follow new encoding of respStmt within titlStmt; moved notes to external notes file and replaced with ptr encoding; removed empty opener elements</change>
+            <change when="2012-04-25" who="#wr">Proofreading Corrections</change>
+            <change when="2012-12-14" who="#wr">Proofreading corrections.</change> 
+            <change when="2012-07-31" who="#wr">Moved RMBucke to HandNote; fixed editor, date, and title; reviewed paragraphing </change>
+            <change when="2012-07-16" who="#wr">Replaced smart quotes with straight; removed external URL links. </change>
+            <change when="2012-06-16" who="#wr">Complete proofreading corrections and date letter more tightly given
+                Hannah's letter and Walt's reply.</change>
+            <change when="2012-06-14" who="#wr">Replace straight quotes with smart quotes</change>
+            <change when="2011-12-21" who="#fw">annotate letter reference</change>
+            <change when="2011-12-21" who="#fw">regularized spelling</change>
+            <change when="2011-07-29" who="#zk">added call no.</change>
+            <change when="2011-07-28" who="#zk">added annotations</change>
+            <change when="2010-12-14" who="#wr">Transcribe two surfaces</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="duk.00467.001.jpg" type="recto"/>
+            
+            <note type="editorial" resp="#rmb" place="top">about end March 1866</note>
+            
+            <opener>
+                <salute>My dear Walt<ptr target="duk.00467_n8"/></salute>
+            </opener>
+            
+            
+            <p>i<ptr target="duk.00425_n3"/> thought i would write a line
+                as i wanted
+                to send hans letter i was very
+            glad indeed to hear from
+            han<ptr target="duk.00467_n1"/> i was afraid she was ill
+                or something the matter well Walt i <choice><orig>succeded</orig>
+                    <reg>succeeded</reg></choice> in getting the 5 dollars without any trouble
+                whatever but i <choice><orig>dident</orig> <reg>didn't</reg></choice> know nor Jeff<ptr target="duk.00422_n2"/>
+                but george<ptr target="duk.00425_n2"/> said that it
+            was all right well Walt
+            here we all are without
+            so much as a shanty to cover
+            us and all the houses or the most
+            of them for sale the most of people
+            say that rents will come down
+            but i <choice><orig>gess</orig> <reg>guess</reg></choice> they will be high
+                <choice><orig>enoughf</orig> <reg>enough</reg></choice> for the most of us
+            george is building his shop
+            and he gets very tired he
+            had never ought to have
+            commenced to work at his
+            
+            <pb xml:id="leaf001v" facs="duk.00467.002.jpg" type="verso"/>
+            
+            trade he says he had
+                <choice><orig>aught</orig> <reg>ought</reg></choice> to have <choice><orig>staid</orig> <reg>stayed</reg></choice> in the
+            army) and if his money was
+            not invested he would go
+            south Jeff says he ought to
+            have patience and wait there
+            will be work bye and bye
+            george says i wanted him
+            so much to buy that lot in
+            putman <choice><orig>aven</orig><reg>avenue</reg></choice><ptr target="duk.00467_n14"/> so i did for i
+            thought all his money would
+            be gone and he would have
+            nothing to show for it
+            i sometimes wish i was to
+            birmingham<ptr target="duk.00467_n7"/> 
+                or some other
+            out of the way place but
+            here i must stay on the
+            account of edd<ptr target="duk.00425_n13"/> as he
+            must live i suppose for
+            somebody to support
+            mrs brown<ptr target="duk.00467_n6"/>
+                goes out
+            house hunting but i <choice><orig>dont</orig> <reg>don't</reg></choice>
+                nor <choice><orig>cant</orig> <reg>can't</reg></choice> if i never get one
+                i have as much as i can <choice><orig>doo</orig> <reg>do</reg></choice>
+            to go up and down stairs
+            no more
+            </p>
+            <postscript>
+                <p>i got all the letters you have sent<ptr target="duk.00467_n9"/></p>
+            </postscript>
+        </body>
+    </text>
+</TEI>

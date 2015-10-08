@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="med.00710">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Richard Maurice Bucke to Walt Whitman, 2 June
+                    1883</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Richard Maurice Bucke</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="no">Natalie O'Neal</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>med.00710</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <editor>Artem Lozynsky</editor>
+                        <title xml:id="al">The Letters of Dr. Richard Maurice Bucke to Walt
+                            Whitman</title>
+                        <imprint>
+                            <pubPlace>Detroit</pubPlace>
+                            <publisher>Wayne State University Press</publisher>
+                            <date when="1977">1977</date>
+                            <biblScope type="page">22</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Richard Maurice Bucke</author>
+                    <title>Richard Maurice Bucke to Walt Whitman, 2 June 1883</title>
+                    <date cert="high" when="1883-06-02" xml:id="dat1">June 2, 1883</date>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+
+                <person role="sender">
+                    <persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2014-11-25" who="#nhg">checked, corrected</change>
+            <change when="2014-08-22" who="#ss">transcribed, encoded, annotated</change>
+            <change when="2014-11-24" who="#no">checked, added place in dateline, corrected transcription against Lozynsky</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place">[London,]</name>
+                    <date when="1883-06-02">2d June [188]3</date><ptr target="n0119"/>
+                </dateline>
+                <salute>Dear Walt</salute>
+            </opener>
+            <p>I have yours of 31st ult.<ptr target="med.00710_n1"/> Have written Forman<!--<ptr
+                    target="n0240"/>--> as you suggest and have also written McKay<!--<ptr
+                    target="syr.00031_n3"/>--> (send you enclosed a copy of the letter that you may see
+                plainly on what footing you are with him). If the book
+                is published in London <hi rend="underline">before</hi> it is <choice><abbr>pubd</abbr><expan>published</expan></choice> in America I
+                believe the copyright <gap reason="cut away"/> will be as safe as the bank of
+                England. Archie Bremner<ptr target="med.00710_n2"/> is
+                still here on the staff of "Advertiser"&#8212;The notice in the "Press"<ptr
+                    target="med.00710_n3"/> was very gratifying, hope you will send me any you can
+                    <hi rend="underline">particularly the adverse ones</hi>&#8212;You do not say anything about sending copies as I asked you in
+                my last, I take it for granted meantime that you will attend to this&#8212;and also
+                that you will have balance of my ten copies sent me here soon as
+                convenient&#8212;The weather here now is perfect and the grounds look better than I
+                have ever seen them We are all well and send you love</p>
+            <closer>
+                <signed>R M Bucke</signed>
+            </closer> 
+
+        </body>
+    </text>
+</TEI>

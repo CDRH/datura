@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="prc.00043">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title level="m" type="main">Walt Whitman to Damon Y. Kilgore, 24 September [1876]</title>
+        <title level="m" type="sub">a machine readable transcription</title>
+        <author>Walt Whitman</author>
+        <editor>Kenneth M. Price</editor>
+        <editor>Ed Folsom</editor>
+        <respStmt>
+          <resp>Transcription and encoding</resp>
+          <name>The Walt Whitman Archive Staff</name>
+        </respStmt>
+        <sponsor>Center for Digital Research in the Humanities, University of
+          Nebraska-Lincoln</sponsor>
+        <sponsor>University of Iowa</sponsor>
+        <funder>National Historical Publications and Records Commission</funder>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <date>2012</date>
+        </edition>
+      </editionStmt>
+      <publicationStmt>
+        <idno>prc.00043</idno>
+        <distributor>The Walt Whitman Archive</distributor>
+        <address>
+          <addrLine>Center for Digital Research in the Humanities</addrLine>
+          <addrLine>319 Love Library</addrLine>
+          <addrLine>University of Nebraska-Lincoln</addrLine>
+          <addrLine>P.O. Box 884100</addrLine>
+          <addrLine>Lincoln, NE 68588-4100</addrLine>
+        </address>
+        <availability>
+          <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights
+            reserved. Items in the Archive may be shared in accordance with the Fair Use
+            provisions of U.S. copyright law. Redistribution or republication on other
+            terms, in any medium, requires express written consent from the editors and
+            advance notification of the publisher, Center for Digital Research in the
+            Humanities. Permission to reproduce the graphic images in this archive has
+            been granted by the owners of the originals for this publication only.</p>
+        </availability>
+      </publicationStmt>
+      <notesStmt>
+        <note type="project" anchored="true">The following are responsible for particular readings or for
+          changes to this file, as noted: 
+<persName xml:id="kmp">Kenneth M. Price</persName>
+<persName xml:id="el">Elizabeth Lorang</persName>
+<persName xml:id="kk">Kathryn Kruger</persName>
+          <persName xml:id="zk">Zachary King</persName>
+          <persName xml:id="ec">Eric Conrad</persName>
+        </note>
+      </notesStmt>
+      <sourceDesc>
+
+        <biblStruct>
+          <monogr>
+            <editor>Edwin Haviland Miller</editor>
+            <author>Walt Whitman</author>
+<title xml:id="ehm">The Correspondence</title>
+            <imprint>
+              <pubPlace>New York</pubPlace>
+              <publisher>New York University Press</publisher>
+              <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+              <biblScope type="page">61</biblScope>
+                <biblScope type="volume">3</biblScope>
+            </imprint>
+          </monogr>
+        </biblStruct>
+
+        <bibl>
+          <author>Walt Whitman</author>
+          <title>Walt Whitman to Damon Y. Kilgore, 24 September [1876]</title>
+
+          <date cert="medium" when="1876-09-24" xml:id="dat1">September 24, 1876</date>
+          <orgName xml:id="prc">Private collection of Florence A. Hoadley</orgName>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <particDesc>
+        <person role="sender">
+           <persName key="Whitman, Walt">Walt Whitman</persName>
+        </person>
+        <person role="recipient">
+          <persName key="Kilgore, Damon Y.">Damon Y. Kilgore</persName>
+        </person>
+      </particDesc>
+    </profileDesc>
+    <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+<change when="2012-05-18" who="#kmp">blessed</change><change when="2012-02-10" who="#kk">checked</change>
+      <change when="2011-05-22" who="#zk">encoded</change>
+      <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+    </revisionDesc>
+  </teiHeader>
+
+  <text type="letter">
+    <body>
+      <opener>
+        <dateline>
+          <name type="place" rend="right">431 Stevens street <lb/>Camden New Jersey </name>
+          <date when="1876-09-24" rend="right"><choice><abbr>Sept</abbr><expan>September</expan></choice> 24</date>
+        </dateline>
+          <salute>D Y Kilgore</salute><ptr target="prc.00043_n1"/>
+          <salute>Dear Sir</salute>
+      </opener>
+
+      <p>Send me word immediately <hi rend="italic">when</hi> (day &amp; hour) &amp; <hi rend="italic">where</hi> 
+        the Paine bust affair is to come off. I see an announcement 
+        in the paper that I am to read a poem on the occasion. I do not propose to read a poem&#8212;but I will promise 
+        to be there, &amp; speak just a little (say 10 minutes)&#8212;if I can be put on the early part of the program 
+        (as waiting fags me out entirely)&#8212;&amp; perhaps it would be necessary that I should be sent for in a carriage. 
+        I would advise that you have some good music, &amp; no long-winded address at all. (Couldn't you get some 
+        good baritone singer to sing Paine's fine lively old song of "the Liberty Tree"?)
+      </p>
+      
+      <closer>
+        <signed rend="right">Walt Whitman</signed>
+      </closer>
+      
+      <postscript>
+        <p>best respects to Mrs Kilgore&#8212;love to Charley&#8212;</p>
+      </postscript>
+    </body>
+  </text>
+</TEI>

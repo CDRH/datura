@@ -1,0 +1,180 @@
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nyp.00444">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to William D. O'Connor, 30 May
+                    [1882]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>nyp.00444</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">286&#8211;288</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to William D. O'Connor, 30 May [1882]</title>
+                    <date cert="medium" when="1882-05-30" xml:id="dat1">May 30, 1882</date>
+                    <idno type="callno">Series III</idno>
+                    <orgName xml:id="nyp">The Henry W. and Albert A. Berg Collection of English and
+                        American Literature, New York Public Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="O'Connor, William D.">William D. O'Connor</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-25" who="#nhg">checked, corrected</change>
+            <change when="2014-02-14" who="#ej">Checked and Corrected</change>
+            <change when="2013-10-24" who="#nnk">proofed</change>
+            <change when="2013-10-03" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place">Camden<ptr target="nyp.00444_n1"/></name>
+                    <date when="1882-05-30">Tuesday Evening</date>
+                    <date when="1882-05-30">May 30&#8212;</date>
+                </dateline>
+            </opener>
+            <p>The whole hinge of the Chadwick letter<ptr target="nyp.00444_n2"/>&#8212;involving
+                you and yours, with me, &#38; including the question of veracity&#8212;seems to me
+                to be essentially <hi rend="italic">What are the relations of Emerson to W W</hi>?
+                As permanently left by <hi rend="italic">the sum</hi> of the transactions and
+                judgments of twenty-five years&#8212;(yours of 29th <choice><orig>recd</orig><reg>received</reg></choice>)&#8212;(just the same as
+                the Bible means its whole &#38; final spirit, not one or two picked out verses or
+                texts)&#8212;confirmed by a most deliberate and emphatic act of the last year of his
+                <choice>
+                    <orig>E's</orig>
+                    <reg>Emerson's</reg>
+                </choice> life&#8212;seems to me the mood of your reply to the Chadwick letter may well be
+                    <hi rend="italic">different</hi> from the other (which the more I read it, the
+                more it unfolds&#8212;it is such a piece of <hi rend="italic">literary
+                    work</hi>)<ptr target="nyp.00444_n3"/>&#8212;I see clearly that the question
+                above is more involved than that of veracity you speak of&#8212;see the other page I
+                send&#8212;</p>
+            <p>Personal information&#8212;perhaps nothing but what you knew already&#8212;</p>
+            <p>&#9758; I suppose you know that the <hi rend="italic">Life of
+                Emerson</hi>&#8212;(&#38; a very good one I guess)&#8212;published nearly a year ago
+                by Osgood&#8212;<hi rend="italic">all with the sanction &#38; revision of the family
+                    &#38; of <choice>
+                        <orig>E.</orig>
+                        <reg>Emerson</reg>
+                    </choice> himself</hi><ptr target="nyp.00444_n4"/>&#8212;gives <hi rend="italic">in full the letter
+                    of 1856 you quote</hi>&#8212;thus confirming &#38; sanctioning it&#8212;See said
+                    <hi rend="italic">Life</hi>.<ptr target="nyp.00444_n5"/></p>
+            <p>Seems to me would be good to bring in quite verbatim&#8212;it is certainly
+                <hi rend="italic">true</hi>&#8212;</p>
+            <p>Emerson had much more of a personal friendship for W W than has been generally known;
+                making a determined visit to Brooklyn soon after the appearance of Leaves of Grass,
+                twenty five years ago, walking out to the little cottage in the suburbs, several
+                miles from the ferry where Mr W then lived. From that time regularly for years
+                afterwards whenever he came to New York he appointed a meeting, and they two
+                generally dined together and spent some hours.<ptr target="nyp.00444_n6"/> When Mr
+                Whitman was in Boston in 1860 Emerson was his frequent &#38; cordial visitor. As
+                time elapsed, though officious persons intervened, and there was a lull of some
+                years, I doubt if it could be said that Ralph Waldo Emerson's affections (and few
+                know how deeply he could love!) ever went out more warmly to any one, and remained
+                more fixed, under the circumstances, than toward Walt Whitman.</p>
+            <p>Mr Chadwick evidently thinks that if the author of Leaves of Grass had any case to
+                state, that walk on the common in 1860 was his time. But it is well known to his
+                intimate friends that Walt Whitman, who has the most simplicity and good nature of
+                any man alive, is also the haughtiest, the most disdainful at those periods when
+                expected to talk loudest and best, and when he probably could do so, is apt to
+                remain perfectly silent. The main reason certainly was, curious as it may seem, that
+                Emerson's objections, on that famous walk, did not at all touch Whitman's principle
+                of treatment which was a moral one, or rather it involved the verteber of all
+                morals. I have heard the author of Leaves of Grass say that what he sought to do in
+                "Children of Adam" seemed all the more necessary after that [conversation?]. Though
+                Emerson's points were of the highest and keenest order, they sprang exclusively from
+                conventional and what may be called the usual technical literary considerations. I
+                know from what he has told me that Whitman himself had long dwelt on these very
+                points in his own mind&#8212;that he was anxious to hear the utmost that could be
+                brought forward in their behalf. And now when he heard what the best critic of the
+                age so brought forward, and his inmost soul and brain remained altogether untouched,
+                his final resolution was taken, and he has never changed from that hour.</p>
+            <p>Then to clench the whole matter of the relations between these two men, I doubt
+                whether there is any thing more affecting or emphatic in <choice>
+                    <sic>Emersons</sic>
+                    <corr>Emerson's</corr>
+                </choice> whole
+                career&#8212;a sort of last coruscation in the evening twilight of it&#8212;than his
+                driving over to Frank Sanborn's in Concord, Sept 1881, to deliberately pay
+                "respects" for which he had obligated himself twenty five years before.<ptr
+                    target="nyp.00444_n7"/> Nor was the unusual compliment of the hospitable but
+                formal dinner made the next day for Walt Whitman, by Mr and Mrs Emerson, without
+                marked significance. It was a beautiful autumn Sunday. And if that afternoon, with
+                its occurrences there in his own mansion, surrounded by all his family, wife, son,
+                daughters, son-in-law, nearest relatives, and two or three very near
+                friends&#8212;some fourteen or fifteen in all&#8212;if that does not mean how
+                Emerson, by this simple yet almost solemn rite, wished, before he departed, to
+                reiterate and finally seal his verdict of 1856, then there is no significance in
+                human life or its emotions or<ptr target="nyp.00444_n8"/>&#8212;</p>
+           
+        </body>
+    </text>
+</TEI>

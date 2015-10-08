@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.02223">
+    <teiHeader> 
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Richard Watson Gilder to Walt Whitman, 9 August 1884</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Richard Watson Gilder</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="ef">Ed Folsom</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.02223</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Richard Watson Gilder</author>
+                    <title>Richard Watson Gilder to Walt Whitman, 9 August 1884</title>
+                    <date cert="high" when="1884-08-09" xml:id="dat1">August 9, 1884</date>
+                    <idno type="callno">Box 10, Reel 6</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="ht"><persName key="Traubel, Horace">Horace
+                    Traubel</persName></handNote>
+            </handNotes>  
+            <particDesc> 
+                <person role="sender">
+                    <persName key="Gilder, Richard Watson" ref="n0871">Richard Watson Gilder</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>   
+        <revisionDesc>
+            <change when="2015-07-07" who="#ef">blessed</change>
+            <change when="2015-07-07" who="#nhg">corrected</change>
+            <change when="2015-03-27" who="#nhg">checked, corrected</change>
+            <change when="2015-02-14" who="#ss">added annotations</change>
+            <change when="2014-12-20" who="#ss">checked and corrected</change>
+            <change when="2014-12-19" who="#ak">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.02223.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <note type="editorial" resp="#ht" place="top">see notes 26 &amp; 28 Aug
+                        '88</note>
+                    <date when="1884-08-09">Aug 9. 84.</date>
+                    <handShift rend="printed"/>
+                    <name type="place">EDITORIAL DEPARTMENT</name>
+                    <name type="place">THE CENTURY MAGAZINE</name>
+                    <name type="place">UNION SQUARE NEW YORK</name>
+                    <handShift rend="manuscript"/>
+                    <name type="place">Marion, Mass</name>
+                </dateline>
+                <salute>My dear Mr. Whitman,</salute>
+            </opener>
+            <p> I am glad you can do the <hi rend="underline">nursing</hi> article.<ptr target="loc.02223_n1"/> Thanks for the
+                Father Taylor<ptr target="loc.02223_n2"/>&#8212;should you not include Emerson in the list of his praisers which you
+                give? </p>
+            <closer>
+                <salute>Sincerely</salute>
+                <signed>R.W. Gilder</signed>
+            </closer>
+            <postscript>
+                <p> We will try to find a photograph from life. </p>
+            </postscript>
+            <pb xml:id="leaf001v" facs="loc.02223.002_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

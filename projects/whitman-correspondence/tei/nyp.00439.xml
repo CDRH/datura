@@ -1,0 +1,155 @@
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nyp.00439">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to William D. O'Connor, 7 May
+                    1882</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>nyp.00439</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">276&#8211;277</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to William D. O'Connor, 7 May 1882</title>
+                    <date cert="high" when="1882-05-07" xml:id="dat1">May 7, 1882</date>
+                    <idno type="callno">Series III</idno>
+                    <orgName xml:id="nyp">The Henry W. and Albert A. Berg Collection of English and
+                        American Literature, New York Public Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="O'Connor, William D.">William D. O'Connor</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-03-18" who="#nhg">checked, corrected</change>
+            <change when="2014-02-07" who="#ej">Checked and Corrected</change>
+            <change when="2013-10-23" who="#nnk">proofed</change>
+            <change when="2013-10-03" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place">431 Stevens Street<ptr target="nyp.00439_n1"/></name>
+                    <name type="place">Camden N J</name>
+                    <date when="1882-05-07" rend="right">noon May 7 '82</date>
+                </dateline>
+                <salute>Dear William O'Connor</salute>
+            </opener>
+            <p>Yours of 5th <choice>
+                <orig>rec'd</orig>
+                <reg>received</reg>
+            </choice> &#38; welcomed.<ptr target="nyp.00439_n2"/> To keep you posted I
+                make notes at random of this Osgood affair, &#38; send herewith.<ptr
+                    target="nyp.00439_n3"/> I have an article <hi rend="italic">A Memorandum at a
+                    Venture</hi> 5 or 6 pages signed by my name in the forthcoming June number <hi
+                    rend="italic">North American Review</hi>, which, although hastily written &#38;
+                eligible to great additions, I consider a sort of rallying point or key note to my
+                position in the <hi rend="italic">Children of Adam</hi> business&#8212;will be out
+                probably 12th to 15th of May&#8212;I shall have some proof copies, &#38; will send
+                you two or three soon as I get them&#8212;(It is a paid for contribution, my own
+                price given)<ptr target="nyp.00439_n4"/>&#8212;the newspapers specially like to have
+                something <hi rend="italic">up at the moment</hi>&#8212;this <hi rend="italic"><choice>
+                    <orig>N A</orig>
+                    <reg>North American</reg>
+                </choice>
+                    <choice>
+                        <orig>Rev.</orig>
+                        <reg>Review</reg>
+                    </choice></hi> piece might give a current reason-why for your
+                article&#8212;commencing by alluding to it<ptr target="nyp.00439_n5"/>&#8212;</p>
+            <p>The skeleton-facts of the Osgood publication are these. Osgood &#38; Co. wrote to me
+                last May ('81) asking about a new &#38; complete edition &#38; suggesting that they
+                were open to proposals. I wrote back that a new &#38; complete edition was
+                contemplated but I wanted it distinctly understood that not a line was intended to
+                be left out or expurgated&#8212;that the book must be printed in its entirety &#38;
+                that those were prerequisites opening to any negotiation.<ptr target="nyp.00439_n6"
+                /> They wrote back asking me to send the copy. I sent it. In a few days they wrote
+                me that they would publish it. The bargain was closed. I was to have 12&#189; per cent on
+                the sales, and the contract was to run ten years. I went on to Boston (Sept.
+                    '81)<ptr target="nyp.00439_n7"/> and saw the book through the press&#8212;pub
+                last of Nov. '81&#8212;(I think [some?] 3000 must have been published by them since
+                    then.)<ptr target="nyp.00439_n8"/></p>
+            <p>In their penultimate letter (a month or so ago) Osgood &#38; Co: wrote me that the
+                pieces the District Attorney specially &#38; absolutely required to be entirely
+                expurgated were <hi rend="italic">To a Common Prostitute</hi> and <hi rend="italic"
+                    >A Woman Waits for Me</hi>&#8212;those left out the rest could be arranged
+                without trouble, &#38; he would allow the publication to continue&#8212;<hi
+                    rend="italic">but the leaving out of those two pieces was
+                indispensable</hi>.</p>
+            <p>I shall write you again, dear friend, as any thing occurs or suggests itself that I
+                think you ought to know bearing on this matter&#8212;I am well as usual
+                now&#8212;after a pretty bad month of illness&#8212;but mainly getting along pretty
+                well &#38; in good spirits considering&#8212;</p>
+            <closer>
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

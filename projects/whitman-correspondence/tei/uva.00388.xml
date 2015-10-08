@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="uva.00388">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Robert Underwood Johnson, 29 October
+                    1879</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>uva.00388</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Robert Underwood Johnson, 29 October 1879</title>
+                    <date cert="high" when="1879-10-29" xml:id="dat1">October 29, 1879</date>
+                    <orgName xml:id="uva">Papers of Walt Whitman (MSS 3829), Clifton Waller Barrett
+                        Library of American Literature, Albert H. Small Special Collections Library,
+                        University of Virginia</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="unk"><persName key="Unknown">Unknown</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Johnson, Robert Underwood">Robert Underwood Johnson</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-08" who="#nhg">updated transcription based on images</change>
+            <change when="2013-05-02" who="#km">checked</change>
+            <change when="2013-01-14" who="#ej">Checked and Corrected</change>
+            <change when="2013-01-02" who="#gt">checked</change>
+            <change when="2012-10-30" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="uva_jc.00478_large.jpg" type="recto"/>
+            <note type="editorial" resp="#unk" place="left">To | R U Johnson</note>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">2316 Pine street</name>
+                    <name type="place">St Louis</name>
+                    <date when="1879-10-29" rend="right">Oct 29 '79</date>
+                </dateline>
+                <salute>Dear Sir<ptr target="uva.00388_n1"/></salute>
+            </opener>
+
+            <p>Your note has just reached me here, where I am temporarily stopping&#8212;I could not
+                well tell you the names of "the young men referred to," because I spoke mainly of a
+                class, or rather of a leaven &#38; spirit&#8212;</p>
+
+            <p>&#8212;My talk to the newspaper here the other day has been extracted from in so dislocated
+                &#38; awry a manner&#8212;was printed here indeed so badly&#8212;that I enclose you
+                herewith a hastily corrected slip&#8212;If you know some N Y paper or literary
+                publication in whose line it might come, &#38; that would like to print it, use it
+                for that purpose, at your discretion&#8212;&#38; send me a couple of copies, (to
+                Camden)&#8212;If not available that way, let it go&#8212;</p>
+
+            <p>&#8212;I am laid up here disabled. My permanent address is 431 Stevens street Camden, New
+                Jersey&#8212;shall return there about Nov 15&#8212;</p>
+
+            <closer>
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="uva_jc.00479_large.jpg" type="verso"/>
+            <pb xml:id="leaf002r" facs="uva_jc.00480_large.jpg" type="recto"/>
+            <pb xml:id="leaf002v" facs="uva_jc.00481_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

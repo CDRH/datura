@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05603">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">James R. Osgood &#38; Company to Walt Whitman, 10 April
+                    1882</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>James R. Osgood &#38; Company</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05603</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>James R. Osgood &#38; Company</author>
+                    <title>James R. Osgood &#38; Company to Walt Whitman, 10 April 1882</title>
+                    <date cert="high" when="1882-04-10" xml:id="dat1">April 10, 1882</date>
+                    <orgName xml:id="loc">The Thomas Biggs Harned Collection of the Papers of Walt Whitman, 1842&#8211;1937, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Osgood, James R.">James R. Osgood &#38; Company</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-07-10" who="#nhg">added image references, updated transcription</change>
+            <change when="2014-04-24" who="#ss">annotations added</change>
+            <change when="2014-03-17" who="#nhg">checked, corrected</change>
+            <change when="2014-02-07" who="#ej">Checked and Corrected</change>
+            <change when="2014-02-05" who="#nnk">proofed</change>
+            <change when="2013-11-08" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <pb xml:id="leaf001r" facs="loc_nk.00410_large.jpg" type="recto"/>
+                <note type="authorial" place="top">H<ptr target="loc.05603_n1"/></note>
+                <dateline>
+                    <name type="place"><handShift rend="printed"/>JAMES R. OSGOOD &amp; CO., Publishers.</name>
+                    <name type="place">211 Tremont Street. <lb/>
+                        Boston,</name>
+                    <date when="1882-04-10" rend="right"><handShift rend="manuscript"/>April 10 <handShift rend="printed"/>188<handShift rend="manuscript"/>2</date>
+                </dateline>
+                <salute>Walt Whitman Esq</salute>
+                <salute>Dear Sir:<!--<ptr target="hun.00047_n1"/>--></salute>
+            </opener>
+            <p>We have laid before the District Attorney the alterations proposed by you.<!--<ptr target="loc.03475_n1"/>--> They are
+                not satisfactory.</p>
+            <p>The argument is as follows; if there is a case against the book in its existing form
+                it is not removed or weakened by the changes you propose. If there is <hi rend="underline">no</hi> case there
+                is no need of making these changes.</p>
+            
+            <p>We do not attempt 
+                <pb xml:id="leaf001v" facs="loc_nk.00411_large.jpg" type="verso"/>
+                to express an opinion on the point of whether there <hi
+                    rend="underline">is</hi> a case against the original book. But we certainly do
+                think that if there <hi rend="underline">is</hi> such a case it would lie with
+                almost equal force
+                against the book after the modifications proposed by you have been made.</p>
+           
+            <p>As we said at the outset we do not wish to go into court in connection with this case.
+                Therefore as your views seem to be irreconcilable 
+                <pb xml:id="leaf002r" facs="loc_nk.00412_large.jpg" type="recto"/>
+                with those of the official
+                authorities there seems no alternative for us but to decline to further circulate
+                the book. We should be open to any reasonable arrangement for turning the plates over to
+                you.</p>
+            <closer>
+                <salute>Awaiting your reply we are</salute>
+                <salute>Yours truly</salute>
+                <signed rend="right">James R. Osgood &#38; Co.</signed>
+            </closer> 
+           <pb xml:id="leaf002v" facs="loc_nk.00413_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="yal.00103">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">James Redpath to Walt Whitman, 14 October 1863</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>James Redpath</author>
+            <editor>Kenneth M. Price</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="kk">Kathryn Kruger</persName>
+
+               <persName xml:id="tj">Tim Jackson</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2009</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>yal.00103</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <author>James Redpath</author>
+               <title>James Redpath to Walt Whitman, 14 October 1863</title>
+               <date when="1863-10-14">October 14, 1863</date>
+               <orgName xml:id="yal">Yale American Literature Collection, Beinecke Rare Book and Manuscript Library</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Redpath, James">James Redpath</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#kk" when="2010-04-07">Ken's proofreading changes</change>
+         <change who="#el" when="2009-09-09">updated transcription based on Yale manuscript</change>
+         <change who="#tj" when="2009-09-01">proofread and modified</change>
+         <change who="#vs" when="2009-08-06">added annotations</change>
+         <change who="#vs" when="2009-07-17">Transcribed, Encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         <pb facs="yal.00103.001.jpg" type="recto"/>
+         
+            <opener>
+               <dateline>
+                  <name type="place">Boston,</name> 
+                  <date when="1863-10-14">Oct 14, 1863</date>
+               </dateline>
+               <salute>Walt Whitman</salute>
+           
+                  <salute>Dear Friend&#8212;</salute>
+               
+            </opener>
+         <p>About the Book&#8212;yes, if I<ptr target="yal.00103_n100"/> can. I wd like to have it sent on &amp; I will see what I can do about it. Dependent on others for capital, I can't answer any questions of will you publish? right off either yes or no.</p>
+            <p>Glad to know you are now in good running trim; I will do all I can here, in one direction, to keep you supplied with funds.</p>
+            <closer>
+               <salute>You<gap reason="illegible" extent="1-2 letters"/> 
+                  <gap reason="illegible"/>
+               </salute>
+               <signed>James Redpath</signed>
+            </closer>
+         
+         <pb facs="yal.00103.002.jpg" type="verso"/>
+      </body>
+   </text>
+</TEI>

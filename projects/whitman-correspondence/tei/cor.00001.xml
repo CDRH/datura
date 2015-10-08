@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="cor.00001">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Hiram Corson, 13 April 1886</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2015</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>cor.00001</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Hiram Corson, 13 April 1886</title>
+                    <date cert="high" when="1886-04-13" xml:id="dat1">April 13, 1886</date>
+                    <orgName xml:id="cor">Cornell University</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Corson, Hiram" ref="n3108">Hiram Corson</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-07-12" who="#kb">edited</change>
+            <change when="2015-06-25" who="#if">edited</change>
+            <change when="2015-05-03" who="#ss">Corrected and annotated</change>
+            <change when="2015-01-30" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="cor.00001.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">328 Mickle street</name>
+                    <name type="place">Camden New Jersey</name>
+                    <date when="1886-04-13">April 13 '86</date>
+                </dateline>
+                <salute>My Dear Prof: Carson</salute>
+            </opener>
+            <p>Yours <choice><orig>rec'd</orig><reg>recieved</reg></choice><ptr target="cor.00001_n1"/>&#8212;The copy of John Burroughs's <hi rend="underline">Notes</hi><ptr target="cor.00001_n2"/> I send
+                to you by same mail with this.&#8212;The price is $1 which you may just enclose in
+                envelope &#38; mail to me here&#8212;I too <choice>
+                    <orig>enjoy'd</orig>
+                    <reg>enjoyed</reg>
+                </choice> the young man's Woodruff's visit to me &#38; talk<ptr target="loc.01336_n1"/>&#8212;&#38; hoped to have
+                seen you&#8212;I am <choice>
+                    <orig>ab't</orig>
+                    <reg>about</reg>
+                </choice> the same in health &#38;c&#8212;(nothing at all to brag of)&#8212;I read
+                publicly my <hi rend="underline">Death of Abraham Lincoln</hi> next Thursday in <choice><orig>Phila</orig><reg>Philadelphia</reg></choice>:</p>
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="cor.00001.002_large.jpg" type="verso"/>
+        </body>
+    </text> 
+</TEI>

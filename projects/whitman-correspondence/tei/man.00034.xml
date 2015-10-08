@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="man.00034">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Charles Warren Stoddard to Walt Whitman, 7 July
+                    1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Charles Warren Stoddard</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="am">Alicia Meyer</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>man.00034</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Charles Warren Stoddard</author>
+                    <title>Charles Warren Stoddard to Walt Whitman, 7 July 1880</title>
+                    <date cert="high" when="1880-07-07" xml:id="dat1">July 7, 1880</date>
+                    <orgName xml:id="man">Charles Sixsmith Collection at the John Rylands Library, University of Manchester</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Stoddard, Charles Warren">Charles Warren Stoddard</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-05-26" who="#nhg">revised for final check</change>
+            <change when="2014-03-30" who="#ss">annotations added</change>
+            <change when="2013-12-03" who="#nhg">checked, corrected</change>
+            <change when="2013-11-19" who="#am">proofed</change>
+            <change when="2013-09-26" who="#nnk">proofed</change>
+            <change when="2013-09-16" who="#ej">Transcribed and Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <pb xml:id="leaf001r" facs="man_ej.00075_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">616. Harrison <choice>
+                            <abbr>St</abbr>
+                            <expan>Street</expan>
+                        </choice></name>
+                        <name type="place"><choice>
+                            <abbr>S.</abbr>
+                            <expan>San</expan>
+                        </choice> Francisco</name>
+                    <date when="1880-07-07">7-July-'80</date>
+                </dateline>
+                <salute>Dear Walt Whitman,</salute></opener>
+
+            <p>Many, many thanks for the beautiful <choice>
+                    <abbr>Vols</abbr>
+                    <expan>Volumes</expan>
+                </choice> and the autographs and postal card and the letters in the London
+                Journal and the promise of a bit of your writing for me to frame
+                with the picture of my <unclear reason="illegible" resp="#nhg" cert="low">choice</unclear>.<ptr target="n0600"/></p>
+
+            <p>Enclosed I send the postal order and hope it will reach you safely.</p>
+            <p>The very day the 
+                <pb xml:id="leaf001v" facs="man_ej.00197_large.jpg" type="verso"/>
+                <pb xml:id="leaf002r" facs="man_ej.00198_large.jpg" type="recto"
+                /><hi rend="underline">Journal</hi>&#8212;containing your letters&#8212;arrived, part of the letter was quoted
+                in the <choice>
+                    <abbr>S.F.</abbr>
+                    <expan>San Francisco</expan>
+                </choice>
+                <hi rend="underline">Chronicle</hi>.</p>
+
+            <p>I need pay you no compliments; but I must again thank you for all the hours you have
+                made precious to me, and once again assure you of the love of Your friend</p>
+
+            <closer>
+                <signed><choice>
+                        <abbr>Chrs</abbr>
+                        <expan>Charles</expan>
+                    </choice> Warren Stoddard.</signed>
+                <address><addrLine>To Walt Whitman&#8212;</addrLine>
+<addrLine>London, Ontario Co.</addrLine>
+<addrLine>Canada.</addrLine></address>
+            </closer>
+            <pb xml:id="leaf002v" facs="man_ej.00077_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

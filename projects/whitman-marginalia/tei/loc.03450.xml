@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?><?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules_mss.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03450">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">The Tragedies of Euripedes</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author xml:id="ww">Walt Whitman</author>
+                <author>Euripedes</author>
+                <author xml:id="tab">Theodore Alois Buckley</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="lmg">Lauren Grewe</persName><persName xml:id="tra">Ty Alyea</persName><persName xml:id="mc">Matt Cohen</persName>
+                </respStmt>
+                <sponsor>University of Texas at Austin</sponsor>
+                <sponsor>University of Nebraska-Lincoln</sponsor>
+                <funder>The National Endowment for the Humanities</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03450</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                    <addrLine>kprice@unlnotes.unl.edu</addrLine>
+                    <addrLine>Ed-Folsom@uiowa.edu</addrLine>
+                    <addrLine>bbarney2@unlnotes.unl.edu</addrLine>
+                </address>
+                <availability ><p>The text of the original document is in the public domain. Subject to certain exceptions,
+            public domain works may be freely copied or used in the creation of derivative works
+            without permission, or authorization, of the former copyright owners.</p><p>The text encoding was created and/or prepared by the Walt Whitman Archive and is governed
+            by a <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons
+                Attribution 4.0 International License</ref> (CC BY 4.0).</p><p>Permission to reproduce the graphic images in this archive has been granted by the owners
+            of the originals for this publication only.</p></availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>The tragedies of Euripides</title>
+                    <idno type="callno">PA3975.A1 1857 Copy 2 vol. 2</idno>
+                    <date when="1889-11-14">November 14, 1889</date>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                    <note type="project">Transcribed from digital images of the original item.</note>
+                </bibl>
+                <bibl type="base">
+                    <author>Euripedes</author>
+                    <editor>Theodore Alois Buckley</editor>
+                    <title level="m">The Tragedies of Euripedes. Literally Translated or Revised, with Critical and Explanatory Notes</title>
+                    <pubPlace>New York</pubPlace>
+                    <publisher>Harper &amp; Brothers</publisher>
+                    <date when="1857-01-01">1857</date>
+                    <biblScope type="vol">2</biblScope>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="h1" scribeRef="#ww" medium="pencil"/>
+                <handNote xml:id="h2" scribeRef="#tab" medium="typescript"/>
+                <handNote xml:id="h3" scribeRef="#ww" medium="black-ink"/>
+            </handNotes>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#lmg" when="2013-06-11">Transcribed and encoded.</change>
+            <change who="#lmg" when="2013-10-16">Checked.</change>
+            <change who="#tra" when="2013-11-27">Updated bibliographical information and handnote.</change>
+            <change who="#mc" when="2014-11-02">Proofed.</change>
+        </revisionDesc>
+    </teiHeader>
+<text type="marginalia">
+    <front>
+        <pb xml:id="leaf002r" facs="loc_nhg.00276.jpg" type="recto"/>
+        <titlePage>
+            <note type="authorial" place="top" resp="#h3" rend="underline">Walt Whitman</note>
+            <docTitle><titlePart type="main"><handShift new="#h2"/>THE
+            TRAGEDIES
+            OF
+            EURIPIDES.</titlePart></docTitle>
+            <byline>LITERALLY TRANSLATED OR REVISED,
+            WITH CRITICAL AND EXPLANATORY NOTES,
+            BY
+            <docAuthor>THEODORE ALOIS BUCKLEY,
+            OF CHRIST CHURCH.</docAuthor></byline>
+            <docTitle><titlePart>VOL. II.
+            HERCULES FURENS, TROADES, ION, ANDROMACHE, SUPPLIANTS,
+            HELEN, ELECTRA, CYCLOPS, RHESUS.</titlePart></docTitle>
+            <docImprint><pubPlace>NEW YORK:</pubPlace>
+                <name>HARPER &amp; BROTHERS, PUBLISHERS,</name>
+                RANKLIN SQUARE.
+                <docDate>1857.</docDate>
+            </docImprint>
+        </titlePage>
+    </front>
+    <body>
+        <pb xml:id="leaf001r" facs="loc_nhg.00275.jpg" type="recto"/>
+        <ab><handShift new="#h1"/>Had this vol. at Wash'n <lb/>
+            &amp; thro' the war— <lb/>
+            —also in Camden— <lb/>
+            altogether all of 20 y'rs. <lb/>
+            —read it from time to time <lb/>
+            write this Nov. 1889 <lb/>
+            in Mickle St. <lb/>
+            —have been out in my <lb/>
+            wheel chair for a 40 minute <lb/>
+            open air jaunt (propell'd by <lb/>
+            WF. my sailor boy nurse) <lb/>
+            —&amp; now 4pm Nov. 14 '89 <lb/>
+            waiting for my supper to be <lb/>
+        bro't—</ab>
+    </body>
+</text>
+</TEI>

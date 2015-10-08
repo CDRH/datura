@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nyp.00143">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Mary A. Babbitt (for Caleb H. Babbitt) to Walt Whitman, 18 August 1863</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Mary A. Babbitt</author>
+            <editor>Dennis Berthold</editor>
+            <editor>Kenneth M. Price</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="tj">Tim Jackson</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+
+               <persName xml:id="kk">Kathryn Kruger</persName>
+               <persName xml:id="nk">Nick Krauter</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>nyp.00143</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <editor>Charley Shively</editor>
+                  <title xml:id="db">Drum Beats:  Walt Whitman's Civil War Boy Lovers</title>
+                  <imprint>
+                     <pubPlace>San Francisco, California</pubPlace>
+                     <publisher>Gay Sunshine Press</publisher>
+                     <date>1989</date>
+                     <biblScope type="page">103</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Mary A. Babbitt</author>
+               <title>Mary A. Babbitt (for Caleb H. Babbitt) to Walt Whitman, 18 August 1863</title>
+               <date when="1863-08-18">August 18, 1863</date>
+               <orgName xml:id="nyp">Henry W. and Albert A. Berg Collection of English and American Literature at the New York Public Library</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Babbitt, Mary A.">Mary A. Babbitt</persName>
+            </person>
+            <person role="sender">
+               <persName key="Babbitt, Caleb H.">Caleb H. Babbitt</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#tj" when="2009-08-25">proofread and modified</change>
+         <change who="#vs" when="2009-07-31">added annotations</change>
+         <change who="#el" when="2008-07-21">updated TEI header</change>
+         <change who="#kk" when="2008-04-01">checked and proofed</change>
+         <change who="#nk" when="2007-06-12">Transcribed, Encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener> 
+               <salute>Dear Sir,</salute>
+            </opener>
+         <p>My brother wishes me to inform you of the state of his health, also of his journey home he arrived home last week Wednesday very much exhausted &amp; he was obliged to take to his bed from which he has not yet got up. he has put off writing every day thinking the next day he would be able to write himself. He often speaks of you telling of your kindness during his sickness there, and wishes he could see you and tried to gratify himself by looking at your portraits which he has out 5 or 6 times during the day. the sister whom you have heard him speak of as being sick so long was carried to the Insane Hospital the day before his arrival. he is very anxious to hear from you &amp; wants you should write him a good long letter to cheer him up for he has had the blues once since he came home.<ptr target="nyp.00143_n100"/>
+         </p>
+            <closer rend="right">
+               <salute>Hoping to hear from you soon I am Yours respectfully,</salute>
+               <signed>Mary Babbitt [sister] for Caleb Babbitt</signed>
+            </closer>
+         
+      </body>
+   </text>
+</TEI>

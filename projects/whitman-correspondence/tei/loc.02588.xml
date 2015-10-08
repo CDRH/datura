@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.02588">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Albert G. Knapp to Walt Whitman, 25 March 1883</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Albert G. Knapp</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="no">Natalie O'Neal</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.02588</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Albert G. Knapp</author>
+                    <title>Albert G. Knapp to Walt Whitman, 25 March 1883</title>
+                    <date cert="high" when="1883-03-25" xml:id="dat1">March 25, 1883</date>
+                    <idno type="callno">MSS18630</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Knapp, Albert G.">Albert G. Knapp</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2014-10-30" who="#nhg">checked, corrected</change>
+            <change when="2014-08-22" who="#ss">transcribed, encoded and annotated</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            
+            <pb xml:id="leaf001r" facs="loc.02588.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place"><handShift rend="printed"/>PUBLIC SCHOOL No. 13, <lb/>A. G. KNAPP, P<hi rend="smallcaps">RINCIPAL</hi>.</name>
+                    <name type="place">Rochester, N. Y.</name>
+                    <date when="1883-03-25"><handShift rend="manuscript"/>March 25, <handShift rend="printed"/>188<handShift
+                            rend="manuscript"/>3</date>
+                </dateline>
+                <salute>Walt Whitman</salute>
+                <salute>My old time friend</salute>
+            </opener>
+            <p>Do you ever think of the boy that you found sick in the winter of '62 in Ward A of
+                Judiciary <choice><abbr>Sqr.</abbr><expan>Square</expan></choice> Hospital in Washington?<!--<ptr target="loc.02588_n1"/>--> If so, in memory
+                of old <hi rend="underline">Washington experiences together</hi> will you send me a volume of your "Leaves of
+                Grass" with your name written in it?</p>
+            <p>I shall be very glad to hear from you</p>
+
+            <closer>
+                <salute>Cordially</salute>
+                <signed>Albert G. Knapp</signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="loc.02588.002_large.jpg" type="verso"/>
+            <pb xml:id="leaf002r" facs="loc.02588.003_large.jpg" type="recto"/>
+            <pb xml:id="leaf002v" facs="loc.02588.004_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

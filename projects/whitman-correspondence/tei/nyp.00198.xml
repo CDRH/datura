@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nyp.00198">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to William D. and Ellen M. O'Connor, 26 March 1865</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+
+               <persName xml:id="ao">Alyssa Olson</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>nyp.00198</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Walt Whitman</author>
+                  <editor>Edwin Haviland Miller</editor>
+                  <title xml:id="ehm">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>New York</pubPlace>
+                     <publisher>New York University Press</publisher>
+                     <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                     <biblScope type="volume">1</biblScope>
+                     <biblScope type="page">256-257</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to William D. and Ellen M. O'Connor, 26 March 1865</title>
+               <date when="1865-03-26">March 26, 1865</date>
+               <orgName xml:id="nyp">Henry W. and Albert A. Berg Collection, New York Public Library</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="O'Connor, William D.">William D. O'Connor</persName>
+               
+            </person>
+            <person role="recipient">
+               <persName key="O'Connor, Ellen M.">Ellen M. O'Connor</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#el" when="20010-04-06">proofread and edited</change>
+         <change who="#vs" when="2009-08-31">proofread and edited annotations</change>
+         <change who="#vs" when="2008-10-14">added main TEI markup</change>
+         <change who="#el" when="2008-07-30">added TEI header structure w/o IDs and titles; added minimal TEI markup</change>
+         <change who="#ao" when="2008-07-29">pulled transcription from Primary Source Media</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <dateline rend="right">
+                  <name type="place">
+                     <hi rend="smallcaps">ENGINEER'S OFFICE, NASSAU WATER DEPT.</hi> 355 <hi rend="italic">Fulton Street</hi>, | <hi rend="italic">Brooklyn</hi>, <hi rend="italic">N. Y.</hi>, March 26 1865.<ptr target="nyp.00198_n100"/>
+               </name>
+               </dateline>
+               <salute>My dear William &amp; Nelly O'Connor,</salute>
+            </opener>
+            <p>I write a few lines to tell you how I find the folks at home&#8212;Both my mother &amp; brother George looked much better than I expected&#8212;Mother is quite well, considering&#8212;she goes about her household affairs pretty much the same as ever, &amp; is cheerful.</p>
+            <p>My brother would be in what I would almost call fair condition, if it were not that his legs are affected&#8212;it seems to me it is rheumatism, following the fever he had<ptr target="nyp.00198_n2"/>&#8212;but I don't know&#8212;He goes to bed quite sleepy &amp; falls to sleep&#8212;but then soon wakes, &amp; frequently little or no more sleep that night&#8212;he most always leaves the bed, &amp; comes downstairs, &amp; passes the night on the sofa. He goes out most every day though&#8212;some days has to lay by&#8212;He is going to report to Annapolis promptly when his furlough is up&#8212;I told him I had no doubt I could get it extended, but he does not wish it&#8212;He says little, but is in first rate spirits.</p>
+            <p>I am feeling finely&#8212;&amp; never enjoyed a visit home more than I am doing this.</p>
+            <p>I find myself perplexed about printing my book. All the printers tell me I could not pick a more inopportune time&#8212;that in ten days prices of paper, composition &amp;c will all be very much lower &amp;c. I shall decide tomorrow.</p>
+            <p>My brother Jeff wishes me to give you his sincerest thanks for your good will &amp;c in the matter of the engineer's situation&#8212;Mother says he has talked much about it, &amp; feels your kindness in it thoroughly.<ptr target="nyp.00198_n3"/>
+            </p>
+            <p>Martha &amp; the little girls are well. My sister at Burlington Vt. is not well, &amp; mother will probably pay a long visit there this summer.</p>
+            <closer rend="right">
+               <signed>Walt.</signed>
+            </closer>
+         
+      </body>
+   </text>
+</TEI>

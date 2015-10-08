@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.04011">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Harry Stafford, 28 May [1884]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.04011</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Harry Stafford, 28 May [1884]</title>
+                    <date cert="medium" when="1884-05-28" xml:id="dat1">May 28, 1884</date>
+                    <idno type="callno">Box 16, Reel 10</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="unk"><persName key="Unknown">Unknown</persName></handNote>
+            </handNotes>
+              <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Stafford, Harry" ref="n0590">Harry Stafford</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+
+        <revisionDesc>
+            <change when="2015-08-11" who="#nhg">checked, corrected</change>
+            <change when="2015-07-22" who="#kb">edited</change>
+            <change when="2014-09-14" who="#ss">transcribed, encoded and partially
+                annotated.</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_vm.00239_large.jpg" type="recto"/>
+
+            <opener>
+                <dateline>
+                    <name type="place">328 Mickle St Camden</name>
+                    <date when="1884-02-14" rend="right">Wednesday night May 28</date>
+                    <note type="editorial" place="top" resp="#unk">[1884]</note>
+                </dateline>
+                <salute>Dear Harry</salute>
+            </opener>
+            <p>I <choice><abbr>recd</abbr><expan>received</expan></choice> your letter over two weeks ago&#8212;Am glad you have a good place at
+                Marlton&#8212;such a spot is so much pleasanter than <choice><abbr>Phila.</abbr><expan>Philadelphia</expan></choice> or Camden or any close
+                city&#8212;Hank I am sorry you have that trouble with your throat but I have no
+                doubt it will go over in time&#8212;your mother was up here yesterday&#8212;<choice><abbr>bro't</abbr><expan>brought</expan></choice> me
+                a nice chicken&#8212;said every thing was all right with your folks home&#8212;I am
+                pretty much as usual again after quite a long siege&#8212;I am here in a little old
+                house I have bought&#8212;my room is a big <pb xml:id="leaf001v"
+                    facs="loc_vm.00240_large.jpg" type="verso"/> one in the 2d story&#8212;get along
+                well enough (nothing to brag of)&#8212;there is a couple of elderly folks,
+                acquaintances of mine, Mr and Mrs Lay, they live in the house, &#38; I take my meals
+                with them. Any how I like it all ever so much better than the Stevens Street
+                business&#8212;Am not doing any thing lately, &#38; the sale of my books has been very slim for some
+                    time<ptr target="loc.04011_n1"/>&#8212;Met a lady on the ferry last week, she
+                came up to very pleasant &#38; said, "Your friend Jo Allen is in Laredo, Texas,
+                keeping store doing well, &#38; has a family"&#8212;</p>
+            <p>&#8212;<hi rend="underline">So long</hi>, Harry dear boy&#8212;write soon, &#38; I will the
+                same&#8212;I send you some papers<ptr target="loc.04011_n2"/>&#8212;</p>
+
+            <closer>
+                <signed>W W</signed>
+            </closer>
+            
+        </body>
+    </text>
+</TEI>  

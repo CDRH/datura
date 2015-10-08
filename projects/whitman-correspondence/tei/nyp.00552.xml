@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nyp.00552">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to William D. O'Connor, 19 November
+                    1886</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>nyp.00552</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive November be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">4</biblScope>
+                            <biblScope type="page">54&#8211;55</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to William D. O'Connor, 19 November 1886</title>
+                    <date cert="high" when="1886-11-19" xml:id="dat1">November 19, 1886</date>
+                    <orgName xml:id="nyp">The Henry W. and Albert A. Berg Collection of English and
+                        American Literature, New York Public Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+    
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="O'Connor, William D." ref="n2002">William D. O'Connor</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-04-16" who="#kb">edited</change>
+            <change when="2014-10-30" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+
+            <opener>
+                <dateline>
+                    <name type="place">328 Mickle Street</name>
+                    <name type="place">Camden New Jersey<ptr target="nyp.00552_n1"/></name>
+                    <date when="1886-11-19" rend="right">Nov. 19 '86</date>
+                </dateline>
+                <salute>Dear friend</salute>
+            </opener>
+            <p>If you feel like it write me soon as convenient after rec'ing this, as it is quite a
+                while since I have heard from you, &#38; I am getting anxious.<ptr
+                    target="nyp.00552_n2"/> Nothing very different with me&#8212;I go out by my own
+                volition not at all, as my power of walking &#38;c. is quite gone. I only get from
+                one room to another in the house, with effort &#38; very slowly&#8212;I drive out
+                fair mid-days&#8212;Sleep tolerably&#8212;appetite good&#8212;digestion
+                so-so&#8212;</p>
+            <p>I write (prose pieces) from time to time yet&#8212;have one ab't "Burns" in <hi
+                    rend="italic">N. A. Review</hi> for November&#8212;(they pay quite well, &#38;
+                Redpath is very good to me)<ptr target="nyp.00552_n3"/>&#8212;Have a paper "My Book
+                &#38; I" in <hi rend="italic">Lippincott's</hi> for Jan. next<ptr
+                    target="nyp.00552_n4"/>&#8212;will send it you in printed slip&#8212;Shall
+                probably get ready my little concluding book "November Boughs" this winter or next
+                spring&#8212;I enclose Dr Bucke's last, just rec'd&#8212;the <hi rend="italic"
+                    >Heine</hi> extract it is possible I rec'd from you, but think not<ptr
+                        target="nyp.00552_n5"/>&#8212;I found it very interesting. Best Love as always&#8212;</p>
+            <closer>
+                
+                <signed>Walt Whitman</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>   

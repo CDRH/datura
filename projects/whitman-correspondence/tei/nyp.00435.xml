@@ -1,0 +1,158 @@
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nyp.00435">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Harry Stafford, 31 January
+                    [1882]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>nyp.00435</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">265&#8211;266</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Harry Stafford, 31 January [1882]</title>
+                    <date cert="medium" when="1882-01-31" xml:id="dat1">January 31, 1882</date>
+                    <idno type="callno">Series III</idno>
+                    <orgName xml:id="nyp">The Henry W. and Albert A. Berg Collection of English and
+                        American Literature, New York Public Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Stafford, Harry">Harry Stafford</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-03-04" who="#nhg">checked, corrected</change>
+            <change when="2014-02-05" who="#ej">Checked and Corrected</change>
+            <change when="2013-10-22" who="#nnk">proofed</change>
+            <change when="2013-09-29" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <date when="1882-01-31">Tuesday <choice>
+                        <orig>Evn'g</orig>
+                        <reg>Evening</reg>
+                    </choice></date>
+                    <date when="1882-01-31">Jan 31<ptr
+                            target="nyp.00435_n1"/></date>
+                </dateline>
+            </opener>
+            <p><choice>
+                <orig>Rec'd</orig>
+                <reg>Received</reg>
+            </choice> yours to-day&#8212;Sorry you <choice>
+                <sic>didnt</sic>
+                <corr>didn't</corr>
+            </choice> get the letter sent that day I met you, as I
+                wanted you to have it particular<ptr target="nyp.00435_n2"/>&#8212;but perhaps it
+                has come to hand&#8212;that it went to Berlin p. o. I have no doubt, as I mailed it
+                myself, addressed it to you "care of Sheriff Gibbs"<ptr target="nyp.00435_n3"/> same
+                as this envelope&#8212;</p>
+            <p>I hear Ed has sold the nag, &#38; gone off to seek his fortune, newspaper canvassing
+                    &#38;c.<ptr target="nyp.00435_n4"/>&#8212;Whether he will make much money or
+                not, I <choice>
+                    <sic>dont</sic>
+                    <corr>don't</corr>
+                </choice> know, but I feel sure he will learn a good deal &#38; get experience of
+                the world &#38; people, &#38; <hi rend="italic">of himself</hi> too&#8212;all of
+                which is the <hi rend="italic">wisdom</hi> described in scripture as better than
+                riches&#8212;<choice><orig>rec'd</orig>
+                <reg>received</reg>
+                </choice> a long letter from Herbert Gilchrist, to-day<ptr
+                    target="nyp.00435_n5"/>&#8212;he seems to be well, &#38; working away hard at
+                his painting&#8212;he describes to me some of his new pictures&#8212;says his mother
+                was temporarily quite unwell, when he wrote&#8212;Edward Carpenter was visiting
+                them&#8212;has a big beard&#8212;</p>
+            <p>Nothing new with me&#8212;I keep well as usual&#8212;you say when I have a <hi
+                    rend="italic">blue spell</hi> I must write to you&#8212;I don't have any such
+                spells&#8212;&#38; seems to me it is time you grew out of them&#8212;my theory is
+                that it is <hi rend="italic">in <choice>
+                    <sic>onesself</sic>
+                    <corr>one's self</corr>
+                </choice></hi> and not from outside circumstances one
+                suffers such unhappy hours&#8212;the more one yields to them the frequenter &#38;
+                stronger they get until at last they take complete possession of a
+                fellow&#8212;Harry dear, you are a good wrestler&#8212;see if you <choice>
+                    <sic>cant</sic>
+                    <corr>can't</corr>
+                </choice> <hi
+                    rend="italic">throw them</hi> &#38; keep 'em thrown&#8212;</p>
+            <p>But I ought to write you something cheerful&#8212;I have been in all day&#8212;quite
+                a deep snow &#38; the wind blowing&#8212;I here in my big rocking chair at a job
+                writing&#8212;Oscar Wilde sent me his picture yesterday, a photo a foot &#38; a half
+                long, nearly full length, very good&#8212;</p>
+            <p>As this letter has little or nothing in it I suppose it will be sure to reach you
+                &#38; not miss&#8212;like the other I wanted you to get&#8212;</p>
+            <closer>
+                <signed rend="right">Your old W W</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

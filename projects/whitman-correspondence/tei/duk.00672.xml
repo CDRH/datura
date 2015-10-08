@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00672">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title level="m" type="main">Walt Whitman to Peter Doyle, 20 December [1876?]</title>
+        <title level="m" type="sub">a machine readable transcription</title>
+        <author>Walt Whitman</author>
+        <editor>Kenneth M. Price</editor>
+        <editor>Ed Folsom</editor>
+        <respStmt>
+          <resp>Transcription and encoding</resp>
+          <name>The Walt Whitman Archive Staff</name>
+        </respStmt>
+        <sponsor>Center for Digital Research in the Humanities, University of
+          Nebraska&#8211;Lincoln</sponsor>
+        <sponsor>University of Iowa</sponsor>
+        <funder>National Historical Publications and Records Commission</funder>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <date>2012</date>
+        </edition>
+      </editionStmt>
+      <publicationStmt>
+        <idno>duk.00672</idno>
+        <distributor>The Walt Whitman Archive</distributor>
+        <address>
+          <addrLine>Center for Digital Research in the Humanities</addrLine>
+          <addrLine>319 Love Library</addrLine>
+          <addrLine>University of Nebraska&#8211;Lincoln</addrLine>
+          <addrLine>P.O. Box 884100</addrLine>
+          <addrLine>Lincoln, NE 68588-4100</addrLine>
+        </address>
+        <availability>
+          <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights
+            reserved. Items in the Archive may be shared in accordance with the Fair Use
+            provisions of U.S. copyright law. Redistribution or republication on other
+            terms, in any medium, requires express written consent from the editors and
+            advance notification of the publisher, Center for Digital Research in the
+            Humanities. Permission to reproduce the graphic images in this archive has
+            been granted by the owners of the originals for this publication only.</p>
+        </availability>
+      </publicationStmt>
+      <notesStmt>
+        <note type="project" anchored="true">The following are responsible for particular readings or for
+          changes to this file, as noted: 
+<persName xml:id="kmp">Kenneth M. Price</persName>
+          <persName xml:id="al">Ashley Lawson</persName>
+<persName xml:id="el">Elizabeth Lorang</persName>
+
+          <persName xml:id="kk">Kathryn Kruger</persName>
+          <persName xml:id="zk">Zachary King</persName>
+          <persName xml:id="ec">Eric Conrad</persName>
+        </note>
+      </notesStmt>
+      <sourceDesc>
+
+        <biblStruct>
+          <monogr>
+            <author>Walt Whitman</author><editor>Edwin Haviland Miller</editor>
+            <title xml:id="ehm">The Correspondence</title>
+            <imprint>
+              <pubPlace>New York</pubPlace>
+              <publisher>New York University Press</publisher>
+              <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+              <biblScope type="volume">3</biblScope>
+              <biblScope type="page">70</biblScope>
+            </imprint>
+          </monogr>
+        </biblStruct>
+
+        <bibl>
+          <author>Walt Whitman</author>
+          <title>Walt Whitman to Peter Doyle, 20 December [1876]</title>
+
+          <date cert="medium" when="1876-12-20" xml:id="dat1">December 20, [1876]</date>
+          <idno type="callno">II-9A</idno>
+          <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <particDesc>
+        <person role="sender">
+           <persName key="Whitman, Walt">Walt Whitman</persName>
+        </person>
+        <person role="recipient">
+          <persName key="Doyle, Peter">Peter Doyle</persName>
+        </person>
+      </particDesc>
+    </profileDesc>
+    <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+<change when="2012-05-18" who="#kmp">blessed</change>
+      <change when="2012-03-26" who="#al">checked</change>
+      <change when="2011-12-07" who="#kk">checked</change>
+      <change when="2011-05-24" who="#zk">encoded</change>
+      <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+    </revisionDesc>
+  </teiHeader>
+
+  <text type="letter">
+    <body>
+      <opener>
+        <dateline>
+          <name type="place" rend="right">Camden N J</name> <lb/><date when="1876-12-20" rend="right">Dec 20</date><ptr target="duk.00672_n1"/>
+        </dateline>
+      </opener>
+
+      <p>Letter rec'd&#8212;(&amp; very glad every way&#8212;&amp; thanks)&#8212;I think I am really better this winter&#8212;The cold &amp; snow &amp; ice 
+        keep me in the house&#8212;else I should have been over to the W Phil[adelphia] depot&#8212;it would have done me good, 
+        even to have a minute, &amp; a good hold of you once more&#8212;Nothing new in my affairs&#8212;I am doing well enough&#8212;Tell 
+        Mr &amp; Mrs <choice><abbr>N</abbr><expan>Nash</expan></choice><ptr target="duk.00672_n2"/> I want to come to <choice><abbr>Wash</abbr><expan>Washington</expan></choice> once more, &amp; I have not forgot the pictures&#8212;</p>
+      
+      <closer>
+        <signed rend="right">W W</signed>
+      </closer>
+    </body>
+  </text>
+</TEI>

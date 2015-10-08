@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?><?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules_mss.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00170">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Dryden 1631 to 1701</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author xml:id="ww">Walt Whitman</author>
+                <author xml:id="ck">Charles Knight</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="nhg">Nicole Gray</persName><persName xml:id="tra">Ty Alyea</persName><persName xml:id="mc">Matt Cohen</persName><persName xml:id="lmg">Lauren Grewe</persName>
+                </respStmt>
+                <sponsor>University of Texas at Austin</sponsor>
+                <sponsor>University of Nebraska-Lincoln</sponsor>
+                <funder>The National Endowment for the Humanities</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2011</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00170</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                    <addrLine>kprice@unlnotes.unl.edu</addrLine>
+                    <addrLine>Ed-Folsom@uiowa.edu</addrLine>
+                    <addrLine>bbarney2@unlnotes.unl.edu</addrLine>
+                </address>
+                <availability><p>The text of the original document is in the public domain. Subject to certain exceptions, public domain works may be freely copied or used in the creation of derivative works without permission, or authorization, of the former copyright owners.</p><p>The text encoding was created and/or prepared by the Walt Whitman Archive and is governed by a <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref> (CC BY 4.0).</p><p>Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p></availability>
+            </publicationStmt>                 
+            <notesStmt>                 
+                <note type="project" target="#dat1">Grier speculates that the date of composition is "probably 1856 or 1857" (<hi rend="italic">Walt Whitman: Notebooks and Unpublished Manuscripts</hi>, [New York: New York University Press, 1984], 5:1782).</note>
+            </notesStmt> 
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Dryden 1631 to 1701</title>
+                    <idno type="callno">MS 4to 72</idno>
+                    <date notBefore="1853-01-01" notAfter="1892-03-26">Undated</date>
+                    <orgName xml:id="duk">Trent Collection of Whitmaniana, David M. Rubenstein Rare Book &amp; Manuscript Library, Duke University</orgName>
+                    <note type="project">Transcribed from digital images of the original item.</note>
+                </bibl>
+                <bibl type="pasteon" xml:id="r1">
+                    <author>Charles Knight, ed.</author>
+                    <editor>Charles Knight</editor>
+                        <title level="m">Half-Hours with the Best Authors</title>
+                    <date>1853</date>
+                    <publisher>John Wiley</publisher>
+                    <pubPlace>New York</pubPlace>
+                    <biblScope type="vol">1</biblScope>
+                    <biblScope type="pp">90, 324, 350-51, 391</biblScope>
+                    
+                </bibl>  
+                 </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="h1" scribeRef="#ww" medium="pencil"/>
+                <handNote xml:id="h2" scribeRef="#ck" medium="typescript"/>
+            </handNotes>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-03-08">completed date information, tweaked encoding</change>
+            <change who="#nhg" when="2015-01-26">added schematron declaration, updated schema declaration, changed text type to annotations</change><change who="#nhg" when="2011-09-09">Transcribed and encoded.</change>
+            <change who="#tra" when="2013-12-08">Checked and Revised Bibliographical Encoding.</change>
+            <change who="#lmg" when="2014-03-09">Added dimensions to pasteons, checked cbs, footnotes.</change>
+            <change who="#mc" when="2014-11-01">Proofed.</change>
+        </revisionDesc> 
+    </teiHeader>
+    
+        <text type="annotations"><!-- Checked against Grier p. 1782. -->
+        <body>
+            <pb xml:id="leaf001r" facs="duk.00170.001.jpg" type="recto"/>
+          <head type="main-authorial"><handShift new="#h1"/>Dryden 1631 to 1701</head>
+          <p>Dryden seems to have been of 
+          vigorous make, sharp‑tempered&#8212;used his 
+          poetical talent to make money, show 
+          up his enemies,&#8212;those of the opposite 
+          party, noblemen, politicians, &amp;c.&#8212;He 
+          sings a good deal in the inflated, 
+          distressingly classical style of those times</p>
+            <add source="#r1" rend="plain" place="inline">  <handShift new="#h2"/> 
+            <q who="unknown" type="written">
+                     
+            <floatingText rend="flippy"> 
+                <body>
+                <pb xml:id="leaf002r" facs="duk.00170.002.jpg" type="recto" rend="col-12"/>
+                    <head type="main-authorial">J<hi rend="smallcaps">EREMY</hi> T<hi rend="smallcaps">AYLOR</hi>.</head>
+            <p>[J<hi rend="smallcaps">EREMY</hi> T<hi rend="smallcaps">AYLOR</hi>, Bishop of Down, Connor, and Dromore,&#8212;one of the 
+            greatest of the great Divines of the Church of England,&#8212;was the son of a 
+            barber at Cambridge. He was born in 1613. He says himself that he was 
+            <q who="Jeremy Taylor">solely grounded in grammar and mathematics by his father."</q> In his thirteenth 
+            year he was admitted a sizar of Caius College, Cambridge. By a sizar 
+            was then understood a poor student, who performed humble offices in the 
+            college. Out of this rank have come some of the most eminent of our scholars. 
+            Very early he obtained the patronage of Laud, Archbishop of Canterbury; 
+            who placed him at All Souls' College, Oxford, and nominated him, by a stretch 
+            of authority, Fellow of that College. In 1637 he was appointed to the Rectory 
+            of Uppingham; but his living was sequestrated in the Civil Wars. For 
+            some years he suffered poverty and imprisonment; he kept a school; he was 
+            a dependent upon private bounty. But he labored unremittingly; he preached 
+            and he published. Upon the Restoration, in 1660, he was nominated by the 
+            king to his Irish Bishopric. Here he resided for seven years, discharging his 
+            duties with the most exemplary industry, and endeavoring to win all men to 
+            his fold by unremitting love. His period of prosperity was not of long duration. 
+            He died of a fever in 1667, in his fifty-fifth year. The character of 
+            Taylor's writings which was given by his successor, Dr. Rust, in his funeral 
+            sermon, is not an exaggeration:&#8212;They <q who="Dr. Rust">"will be famous to all succeeding 
+            generations for their greatness of wit, and profoundness of judgment, and 
+            richness of fancy, and clearness of expression, and copiousness of invention, 
+            and general usefulness to all the purposes of a Christian."</q> Reginald Heber, 
+            the admirable Bishop of Calcutta, has prefixed an excellent biography of 
+            Jeremy Taylor to the valuable edition of his works in 15 vols. There is also 
+            a complete edition, sold at a moderate price, in three large volumes, printed by 
+            Mr. Childs, of Bungay.]</p>
+            <milestone unit="undeclared" rend="horbar-short-center"/>
+                    <div1 type="verso">
+                    <pb xml:id="leaf002v" facs="duk.00170.003.jpg" type="verso" rend="col-12"/>
+                    <!--<p><gap reason="cut-away"/>native commodities, flourish only by then being the brokers and 
+                    factors, and carriers of others. Such a people may naturally apprehend, 
+                    that as soon as the neighboring states come to know 
+                    and pursue their interest, they will take into their own hands the 
+                    management of their affairs, and deprive their brokers of that 
+                    profit which they formerly reaped from it. But though this consequence 
+                    may naturally be dreaded, it is very long before it takes 
+                    place; and by art and industry it may be warded off for many 
+                    generations, if not wholly eluded. The advantage of superior 
+                    stocks and correspondence is so great, that it is not easily overcome; 
+                    and as all the transactions increase by the increase of 
+                    industry in the neighboring states, even a people whose commerce 
+                    stands on this precarious basis, may at first reap a considerable 
+                    profit from the flourishing condition of their neighbors. The 
+                    Dutch, having mortgaged all their revenues, make not such a 
+                    figure in political transactions as formerly; but their commerce 
+                    is surely equal to what it was in the middle of the last century, 
+                    when they were reckoned among the great powers of Europe.</p>
+                    <p>Were our narrow and malignant politics to meet with success, 
+                    we should reduce all our neighboring nations to the same state of 
+                    sloth and ignorance that prevails in Morocco and the coast of 
+                    Barbary. But what would be the consequence? They could 
+                    send us no commodities: they could take none from us: our domestic 
+                    commerce itself would languish for want of emulation, 
+                    <gap reason="cut-away"/>and we ourselves should soon fall into
+                    <gap reason="cut-away"/></p>-->
+                        </div1>
+                </body>
+            </floatingText>
+            </q>
+          </add>
+            
+            <add source="#r1" rend="plain" place="inline">  <handShift new="#h2"/> 
+            <q who="unknown" type="written">        
+            <floatingText rend="flippy"> 
+                <body>
+                <pb xml:id="leaf003r" facs="duk.00170.004.jpg" type="recto" rend="col-12"/>
+                    <head type="main-authorial">S<hi rend="smallcaps">MOLLETT</hi>.</head>
+                    <p>[T<hi rend="smallcaps">OBIAS</hi> S<hi rend="smallcaps">MOLLETT</hi>, whose novels will continue to be read in spite of their 
+                    defects as works of art and their habitual coarseness, was the descendant of 
+                    an old Scottish family, and was born at Cardross, in 1721. He was apprenticed 
+                    to a surgeon at Glasgow, and served as a surgeon's mate in a ship of 
+                    the line. Many of his early adventures are supposed to be told in his "Roderick 
+                    Random." He came to London in 1746, and entered upon a career of 
+                    authorship, which he pursued till his death in 1771. Inferior to Fielding in 
+                    knowledge of character, he is equal to him in describing scenes of real life; 
+                    but the poetical power, without which no work of fiction can be perfect, is 
+                    wholly wanting in his writings. He had amongst his literary brethren a turmoil 
+                    of controversy; and his position, as the Editor of the "Critical Review," 
+                    gave him the opportunity, which some anonymous critics know how to exercise, 
+                    of gratifying his vanity and love of power, with slight regard to truth 
+                    and justice. He is, however, represented as a generous man, and exhibited 
+                    much kindness to the needy writers by whom he was surrounded. The state 
+                    of letters at that period is admirably described in a paper on Johnson, by the 
+                    Right Hon. T. B. Macaulay, from which we shall take the liberty of quoting 
+                    in this volume. Smollett has painted a literary scene at his own hosue, in 
+                    his "Humphrey Clinker," which is, perhaps, not a greatly exaggerated picture 
+                    of the class of men who lived by the pen, when <q who="unknown">"the age of patronage 
+                    had passed away, and the age of general curiosity and intelligence had not 
+                    arrived."</q>]</p>
+                    <milestone unit="undeclared" rend="horbar-short-center"/>
+                    <div1 type="verso">
+                    <pb xml:id="leaf003v" facs="duk.00170.005.jpg" type="verso" rend="col-12"/> 
+                    <!--<p><gap reason="cut-away"/>action; levers are multiplied upon levers; wheels revolve on the 
+                    peripheries of other wheels. The saw and the plane are tortured 
+                    into an accommodation to new uses; and, last of all, with inimitable 
+                    power, and <quote who="unknown">"with whirlwind sound,"</quote> comes the potent 
+                    agency of steam. In comparison with the past, what centuries 
+                    of improvement has this single agent comprised in the short compass 
+                    of fifty years! Everywhere practicable, everywhere efficient, 
+                    it has an arm a thousand times stronger than that of 
+                    Hercules, and to which human ingenuity is capable of fitting a 
+                    thousand times as many heads as belonged to Briareus. Steam is 
+                    found in triumphant operation on the seas; and under the influence 
+                    of its strong propulsion, the gallant ship, 
+                    <quote who="unknown"><lg><l>"Against the wind, against the tide, </l>
+                    <l>Still <hi rend="italic">steadies</hi> with an upright keel."</l></lg></quote></p>
+                    <p>It is on the rivers, and the boatman may repose on his oars; it 
+                    is in highways, and exerts itself along the courses of land conveyance; 
+                    it is at the bottom of mines a thousand feet below the 
+                    earth's surface; it is in the mill, and in the workshops of the 
+                    trades. It rows, it pumps, it excavates, it carries, it draws, it <gap reason="cut-away"/></p>-->
+                </div1>
+                </body>
+            </floatingText>
+            </q>
+                </add>
+                    
+            <add source="#r1" rend="plain" place="inline">  <handShift new="#h2"/> 
+            <q who="unknown" type="written">        
+            <floatingText xml:id="f3" rend="flippy"> 
+                <body>
+                <pb xml:id="leaf004r" facs="duk.00170.006.jpg" type="recto" rend="col-12"/> 
+                <head type="main-authorial">P<hi rend="smallcaps">ASCAL</hi>.</head>
+              <p>[B<hi rend="smallcaps">LAISE</hi> P<hi rend="smallcaps">ASCAL</hi> was characterized by Bayle as <q who="Bayle">"one of the sublimest spirits 
+              in the world."</q> He was born in 1623; he died in 1662. His genius led him 
+              to the strictest inquiries of human reason; his piety compelled him to the 
+              most complete submission of his reasoning faculty to the truths of revelation. 
+              Up to his twenty-fifth year he devoted himself to the pursuits of science; 
+              thenceforward, to the time of his early death, his mind was dedicated to religious 
+              contemplation. His "Pensées" furnish a monument of the elevation 
+              and purity of his devotional feeling; his "Lettres Provençales," in which he 
+              assailed the morality of the Jesuits, with a power of logic and of wit which 
+              have never been surpassed, show how completely his religion could be separated 
+              from the enthusiasm of his temperament, and the ascetic practices of his 
+              life. It has been said of him that he knew exactly how to distinguish between 
+              the rights of faith and of reason. The passage which we select from his 
+              "Pensées" is thus noticed by Dr. Arnold:&#8212;<q who="Dr. Arnold">"The necessity of faith, arising 
+              from the absurdity of scepticism on the one <choice><sic>band</sic><corr>hand</corr></choice>, and of dogmatism on the 
+              other, is shown with great power and eloquence in the first article of the 
+              second part of Pascal's 'Pensées,' a book of which there is an English translation 
+              by no means difficult to meet with."</q>]</p>
+                      <milestone unit="undeclared" rend="horbar-short-center"/>
+                    <div1 type="verso">
+                      <pb xml:id="leaf004v" facs="duk.00170.007.jpg" type="verso" rend="col-12"/>
+                    <!--<p><gap reason="cut-away"/>decreed that Cæsar <gap reason="cut-away"/> the
+                    smallest thing should be disturbed which he had settled while he 
+                    was in power; and they distributed among the partisans of Brutus <gap reason="cut-away"/></p> 
+                    <p><gap reason="covered"/>
+                    mere illusion, who can tell but that the other moiety of our life, 
+                    in which we fancy ourselves to be awake, is no more than a second 
+                    sleep, little differing from the former; and that we only rouse 
+                    ourselves from our sleep by day when we enter into that at night; 
+                    as it is usual with us to dream that we dream, by heaping one 
+                    fantastic image upon another.</p>
+                    <p>I waive the whole declamations of the sceptics against the impressions 
+                    of custom<unclear reason="cut-away" resp="#nhg">, education, manners, and</unclear><gap reason="cut-away"/></p>-->
+                </div1>
+                </body>
+            </floatingText>
+                </q>
+                </add>    
+            <add source="#r1" rend="plain" place="inline">  <handShift new="#h2"/> 
+            <q who="unknown" type="written">        
+            <floatingText xml:id="f4" rend="flippy"> 
+                <body>
+                <pb xml:id="leaf005r" facs="duk.00170.008.jpg" type="recto" rend="col-12"/>  
+                    <head type="main-authorial">D<hi rend="smallcaps">R</hi>. F<hi rend="smallcaps">RANKLIN</hi>.</head>
+                  <p>[We give a paper by the celebrated Dr. Franklin, which has been perhaps 
+                      as much read as anything ever written, but which may be new to many of 
+                      our younger readers. It has been often printed under the name of "The 
+                      Way to Wealth;" but we scarcely know at the present time where to find it, 
+                      except in the large collection of the author's works. "Poor Richard" was 
+                      the title of an Almanac which Franklin published for twenty-five years, when 
+                      he was a printer in America, and the sayings in the following paper are extracted 
+                      from those Almanacs. His subsequent career as a man of science and 
+                      a statesman exhibits what a man may accomplish by unwearied industry and 
+                      a vigilant exercise of his reasoning powers. The great characteristics of 
+                      Franklin were perseverance, temperance, and common sense. There have 
+                      been many higher minds, but few more formed for practical utility. Benjamin 
+                      Franklin was born at Boston, in 1706; he died in 1790.]</p>
+                    <div1 type="verso">  
+                    <pb xml:id="leaf005v" facs="duk.00170.009.jpg" type="verso" rend="col-12"/>
+                      <!--<p>"I. It would be thought a hard government that should tax its 
+                      people one-tenth part of their time to be employed in its service; 
+                      but idleness taxes many of us much more: sloth, by bringing on 
+                      diseases, absolutely shortens life. <quote who="Poor Richard">'Sloth, like rust, consumes 
+                      faster than labor wears, while the used key is always bright,'</quote> as 
+                      Poor Richard says. <quote who="Poor Richard">'But dost thou love life, then do not squander 
+                      time, for that is the stuff life is made of,'</quote> as Poor Richard 
+                      says. How much more than is necessary do we spend in sleep! 
+                      forgetting that <quote who="Poor Richard">'The sleeping fox catches no poultry, and that 
+                      there will be sleeping enough in the grave,'</quote> as Poor Richard says.</p>
+                      <p>"<quote who="Poor Richard">'If time be of all things the most precious, wasting time 
+                      must be,' as Poor Richard says, 'the greatest prodigality;'</quote> since, 
+                      <gap reason="cut-away"/></p>--></div1>
+                </body>
+            </floatingText>
+          </q>      
+          </add>
+            
+        </body>
+            </text>
+ </TEI>

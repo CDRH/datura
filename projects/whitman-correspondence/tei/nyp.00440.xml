@@ -1,0 +1,206 @@
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nyp.00440">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to William D. O'Connor, 25 May
+                    [1882]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>nyp.00440</idno> 
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">282&#8211;284</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to William D. O'Connor, 25 May [1882]</title>
+                    <date cert="medium" when="1882-05-25" xml:id="dat1">May 25, 1882</date>
+                    <idno type="callno">Series III</idno>
+                    <orgName xml:id="nyp">The Henry W. and Albert A. Berg Collection of English and
+                        American Literature, New York Public Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="O'Connor, William D.">William D. O'Connor</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-24" who="#nhg">checked, corrected</change>
+            <change when="2014-02-12" who="#ej">Checked and Corrected</change>
+            <change when="2013-10-24" who="#nnk">proofed</change>
+            <change when="2013-10-03" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+ 
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place">Camden<ptr target="nyp.00440_n1"/></name>
+                    <date when="1882-05-25">May 25</date>
+                </dateline>
+                <salute>My dear friend</salute>
+            </opener>
+            <p>Yours of 20th <choice>
+                <orig>recd</orig><reg>received</reg></choice>&#8212;At this present writing I don't think the <hi rend="italic">Tribune</hi> will print
+                your letter at all<ptr target="nyp.00440_n2"/>&#8212;if it <choice>
+                    <sic>dont</sic>
+                    <corr>don't</corr>
+                </choice> appear next Sunday,
+                I doubt if it appears at all&#8212;the course of the T[ribune] towards me I think
+                has been left to Wm Winter, who I have no doubt writes the squib in <choice>
+                    <orig>T.</orig>
+                    <reg>Tribune</reg>
+                </choice> of 24th May&#8212;&#38; also wrote (may be in conjunction with R H Stoddard,)<ptr
+                    target="nyp.00440_n3"/> the notice of L of G in <choice>
+                        <orig>T.</orig>
+                        <reg>Tribune</reg>
+                    </choice> four or five months
+                ago&#8212;After Stedman's <hi rend="italic">Scribner</hi> article a year or two ago
+                the <choice>
+                    <orig>T.</orig>
+                    <reg>Tribune</reg>
+                </choice> extracted half a column of his condemnatory views &#38; opinions on my
+                treatment of amativeness in L of G.<ptr target="nyp.00440_n4"/>&#8212;a few days
+                afterward, an extract, offering third of a column from Mrs Gilchrists <hi
+                    rend="italic">Woman's Estimate</hi> was sent Reid, but he refused to print
+                    it<ptr target="nyp.00440_n5"/>&#8212;I think, at present at any rate, that
+                indicates their stand&#8212;(expediency, popular current &#38;c)&#8212;carrying
+                out the old enmity of Bayard Taylor,<ptr target="nyp.00440_n6"/> &#38;c
+                &#38;c&#8212;</p>
+            <p>Have you seen Dr Bucke's letter in <hi rend="italic">Springfield Republican</hi> of
+                May 23&#8212;and the vigorous editorial same number?<ptr target="nyp.00440_n7"/> The
+                Boston <hi rend="italic">Herald</hi> May 24 (Supplement) takes the same ground<ptr
+                    target="nyp.00440_n8"/>&#8212;both editorials would satisfy you
+                perfectly&#8212;<choice><orig>Shouldnt</orig>
+                    <reg>Shouldn't</reg>
+                </choice> at all wonder if your guess about Rev T W Higginson<ptr
+                    target="nyp.00440_n9"/> hits the nail&#8212;one nail&#8212;exactly on the
+                head.</p>
+            <p>Your line about the Emerson talk on the Common<ptr target="nyp.00440_n10"/> &#38;c is
+                very opportune&#8212;it was as you say&#8212;the <hi rend="italic">essential</hi>
+                matter, at the spine or abysm of all, such as the Bible often presents &#38; in all
+                primal poetry &#38; attempt at returning to Creation's birth-innocence&#8212;let
+                alone my attempt at the same result, based on modern science, biology &#38;
+                physiology&#8212;was not touched upon at all by Emerson&#8212;but it was a splendid
+                &#38; most sincere unfolding of the technical esthetic &#38; conventional &#38;
+                technical literary points applicable&#8212;But you know, dear friend, my plan
+                (hobby) is never to shirk the <choice>
+                    <sic>enemys</sic>
+                    <corr>enemy's</corr>
+                </choice> fullest tactics but to state them over again if
+                possible better than ever&#8212;<hi rend="italic">I shall mind your admonition
+                    though</hi>&#8212;</p>
+            <p>As things are, I don't feel any resentment at all toward Osgood &#38; Co. A sharp
+                friend here suggests that they themselves (O &#38; Co) had some hand in the
+                Marston-Stevens proceeding &#38; rather egged it on&#8212;that they were losing,
+                paying me 25 cts royalty, &#38;c &#38;c&#8212;<hi rend="italic">But I <choice>
+                        <orig>havn't</orig>
+                        <reg>haven't</reg>
+                    </choice> the least idea of any such thing</hi>&#8212;I only mention it because
+                I shouldn't wonder if it came up that way &#38; you will hear it broached&#8212;</p>
+            <p>Dr Bucke is absent in Ottawa, Canada&#8212;from there he goes to
+                Cincinnati&#8212;John Burroughs I suppose is in England&#8212;(he went off in a <choice>
+                    <sic>depress'd</sic>
+                    <corr>depressed</corr>
+                </choice> humor&#8212;blue as indigo)&#8212;</p>
+            <p>As I write&#8212;Thursday forenoon&#8212;it is raining again, with east wind &#38;
+                the heavens all lead-colored&#8212;but I am feeling well as usual &#38; in good
+                spirits&#8212;Sometimes I feel to welcome any <hi rend="italic">whack</hi> that
+                breaks the stupid monotony even of life's prosperous evenness&#8212;&#38; as to this
+                last &#38; in some sense most marked buffeting in the fortunes of <hi rend="italic"
+                    >Leaves of Grass</hi>&#8212;why&#8212;if it <choice>
+                        <sic>cant</sic>
+                        <corr>can't</corr>
+                    </choice> stand it &#38; throw it off
+                &#38; go on better than ever, why let it go under&#8212;of which I <choice>
+                    <sic>havn't</sic>
+                    <corr>haven't</corr>
+                </choice> the
+                slightest idea though&#8212;but I feel sure the book will gather added, perhaps a
+                main part, interest, from what it has gone through, from association&#8212;&#38; I
+                shall too&#8212;I tickle myself with the thought how it may be said years hence that
+                at any rate <hi rend="italic">no book on earth ever had such a
+                history</hi>&#8212;</p>
+            <p>I shall keep you advised if I hear any thing&#8212;</p>
+            <closer>
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+            <postscript>
+                <opener>
+                <dateline>
+                    <date when="1882-05-25">later</date>
+                    <date when="1882-05-25">Thursday&#8212;afternoon</date>
+                    <date when="1882-05-25">May 25</date></dateline></opener>
+                <p>I have just had the Tribune of to-day, in which I find <hi rend="italic">the
+                        letter</hi>&#8212;I don't know but Charles Eldridge was right<ptr
+                        target="nyp.00440_n12"/>&#8212;Being so much interested perhaps I am not a
+                    fair judge&#8212;but if ever Jupiter went into the press hurling the lightnings
+                    (&#38; yet a sort of Jovian continence) <hi rend="italic">this letter</hi> has
+                    got him in&#8212;It is apparently printed with wonderful correctness&#8212;don't
+                    need a single alteration&#8212;it will live in literature at least as long as
+                    Junius&#8212;God bless you<ptr target="nyp.00440_n13"/>&#8212;</p>
+            </postscript>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="rut.00005">
+    <teiHeader>
+        <fileDesc> 
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to William Sloane Kennedy, 24 May
+                    1885</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>rut.00005</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to William Sloane Kennedy, 24 May 1885</title>
+                    <date cert="high" when="1885-05-24" xml:id="dat1">May 24, 1885</date>
+                    <orgName xml:id="rut">Special Collections and University Archives, Rutgers
+                        University Libraries, Rutgers, The State University of New Jersey</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="unk"><persName key="Unknown">Unknown</persName></handNote>
+            </handNotes>
+
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Kennedy, William Sloane" ref="n3039">William Sloane Kennedy</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-02-03" who="#kb">edited</change>
+            <change when="2014-09-25" who="#ss">transcribed, encoded and annotated from
+                Miller.</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <note type="editorial" resp="#unk" place="top">[Poet as a Craftsman]</note>
+            <pb xml:id="leaf001r" facs="rut.00005.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place" rend="center">328 Mickle St.</name>
+                    <name type="place">Camden NJ</name>
+                    <date when="1885-05-24" rend="right">May 24 '85</date>
+                </dateline>
+                <salute>Dear friend</salute>
+            </opener>
+            <p>The long MS you sent me some months since is all right &#38; I will return it to you
+                forthwith&#8212;The whole drift of it is lofty, subtle &#38; true&#8212;I would not
+                put it <hi rend="underline">out by itself</hi>&#8212;Such things never strike in so well in the
+                abstract as in illustration, of <hi rend="underline">some definite
+                personal, critical concrete thing.</hi>&#8212;I suggest to you a criticism on <hi
+                    rend="underline">Tennyson and Walt Whitman</hi> (or if you prefer on <hi
+                    rend="underline">Victor Hugo, T and WW</hi>) where
+                they should be work'd in&#8212;What think you?<ptr target="rut.00005_n1"/></p>
+            <closer>
+                <signed>W W</signed>
+            </closer> 
+            <pb xml:id="leaf001v" facs="rut.00005.002_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI> 

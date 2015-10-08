@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00473">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, [27 January 1867]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="zk">Zachary King</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00473</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, [27 January 1867]</title>
+                    <date cert="medium" when="1867-01-27" xml:id="dat1">January 27, 1867</date>
+                    <idno type="callno">III-5D</idno>
+                    <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-07-30" who="#el">merged files</change>
+            <change when="2013-06-08" who="#wr">Duke Proofreading</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent Proof</change>
+            <change when="2013-01-10" who="#el">updated TEI header to follow new encoding of respStmt within titlStmt; moved notes to external notes file and replaced with ptr encoding; removed empty opener elements</change>
+            <change when="2012-04-25" who="#wr">Proofreading Corrections</change>
+            <change when="2012-12-14" who="#wr">Proofreading Corrections of notes.</change>
+            <change when="2012-07-31" who="#wr">Moved RMBucke to HandNote; fixed editor, date, and title; reviewed paragraphing </change>
+            <change when="2012-07-16" who="#wr">Replaced smart quotes with straight; removed external URL links. </change>
+            <change when="2012-07-03" who="#wr">Proofreading corrections and correct notes.</change>            
+            <change when="2012-06-14" who="#wr">Replace straight quotes with smart quotes</change>
+            <change when="2011-12-19" who="#fw">regularized Sunday, corrected spacing, corrected annotation xml:id numbers</change>
+            <change when="2011-07-29" who="#zk">added call no., annotations</change>
+            <change when="2010-01-20" who="#wr">Transcribed 2 surfaces</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="duk.00473.001.jpg" type="recto"/>
+            
+            <note type="editorial" resp="#rmb" place="top">20 Jan. 1867</note>
+                        
+            <opener>
+                <dateline>
+                    <date when="1867-01-27"><choice><orig>sunday</orig> <reg>Sunday</reg></choice> afternoon<ptr target="duk.00473_n11"/></date>
+                </dateline>
+                <salute>my dear Walt</salute>
+            </opener>
+            
+            <p>i must write you a few
+            lines and only a few to let you know how
+            we are i can hardly write on account
+            of lameness in my right arm down toward
+            my wrist it has been over a week at first
+            i thought it was going to gather but it has not
+            yet but is <choice><orig>swolen</orig> <reg>swollen</reg></choice> and at times pains me
+            quite bad but i make out to <choice><orig>doo</orig> <reg>do</reg></choice> around
+            but i <choice><orig>cant</orig> <reg>can't</reg></choice> lift much with it i have rubbed
+                it with one a but<ptr target="duk.00473_n10"/>
+            it <choice><orig>dont</orig> <reg>don't</reg></choice> seem to <choice><orig>doo</orig> <reg>do</reg></choice> much
+                good george<ptr target="duk.00425_n2"/> says i must put slippery elm
+                poultice<ptr target="duk.00473_n2"/> but perhaps it will get better
+            in time but it is so bad when i make bread
+            and crullers<ptr target="duk.00473_n12"/>
+            george wants them to take down
+            he was up yesterday and the day before
+            he <choice><orig>wasent</orig> <reg>wasn't</reg></choice> up from last <choice><orig>saturday</orig> <reg>Saturday</reg></choice> night
+            till <choice><orig>wensday</orig> <reg>Wednesday</reg></choice> not last night but <choice><orig>saturday</orig> <reg>Saturday</reg></choice> week
+            it was so bad and such snow banks
+            last week one day a <choice><orig>waggon</orig> <reg>wagon</reg></choice> and six horses
+            got stuck on the <choice><orig>avenu</orig> <reg>avenue</reg></choice> the cars <choice><orig>dident</orig> <reg>didn't</reg></choice> run
+                those was <choice><orig>pasengers</orig> <reg>passengers</reg></choice> from flatbush i suppose
+                but they had to walk down Jeffy<ptr target="duk.00422_n2"/> said they
+            were two hours getting out O walt it is 
+            terrible here in the winter matt<ptr target="duk.00465_n9"/> is
+            getting as tired of it as i am it will
+            not look like any thing again even in
+            the summer its all dug and redug between
+            this and the <choice><orig>avenu</orig> <reg>avenue</reg></choice> great trenches it looks
+            like destruction ) we are all pretty well except
+            my arm and sis<ptr target="duk.00473_n5"/> she <choice><orig>aint</orig> <reg>ain't</reg></choice> very well she is
+            by my side asleep in the rocking chair
+            
+            <pb xml:id="leaf001v" facs="duk.00473.002.jpg" type="verso"/>
+            
+            its very rare for me to be without
+            them i get very tired of them i often feel
+            as if i wished to be quiet if only for one
+            hour matty has no help so the young ones
+            live up here
+                <choice><orig>perbasco</orig><reg>Probasco</reg></choice><ptr target="duk.00473_n6"/>      
+            has put up here since
+            yesterday so they have it) georges horse
+            ran away the other day from the lumber
+            yard run till she got fast in a snow
+            drift he thinks it <choice><orig>wont</orig> <reg>won't</reg></choice> hurt her that she <choice><orig>wont</orig> <reg>won't</reg></choice>
+            run again she is a nice horse only 5 years old
+            well walt Jeff talks of coming to <choice><orig>washington</orig> <reg>Washington</reg></choice>
+            he is going somewhere else and talks of coming
+            there to stay one night talks of coming next
+            tuesday matt says he has talked of coming
+            so many times and not come) for me
+            to not say any thing about it but i think
+            he will come this time <choice><orig>maybee</orig> <reg>maybe</reg></choice> not tuesday
+                but some times during the week)<ptr target="duk.00473_n14"/></p>
+            
+            <p>
+            i receive your letter and money and
+            envelopes as usual walt last <choice><orig>wensday</orig> <reg>Wednesday</reg></choice>
+                <choice><orig>davis s</orig><reg>Davis's</reg></choice> man<ptr target="duk.00479_n9"/> always brings them to me
+            i feel so glad walt you can go to see the
+            poor fellows in the hospital and carry them
+            a cake i suppose its quite a treat to them
+            good bie walt write mrs <choice><orig>mix s</orig><reg>Mix's</reg></choice><ptr target="duk.00473_n8"/>
+            address if i ever get out of the snow
+            <choice><orig>maybee</orig> <reg>maybe</reg></choice> i can call and see her
+            </p>
+            <closer>
+                <salute>good bie again Walter with many
+            thanks for your remembrance of</salute>
+                <signed>your mother<ptr target="duk.00425_n3"/>
+                </signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

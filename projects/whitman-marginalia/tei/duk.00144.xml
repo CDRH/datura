@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?><?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules_mss.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00144">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Our own account of this poem, "the German Iliad"</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author xml:id="ww">Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="lmg">Lauren Grewe</persName><persName xml:id="nhg">Nicole Gray</persName><persName xml:id="tra">Ty Alyea</persName><persName xml:id="mc">Matt Cohen</persName>
+                </respStmt>
+                <sponsor>University of Texas at Austin</sponsor>
+                <sponsor>University of Nebraska-Lincoln</sponsor>
+                <funder>The National Endowment for the Humanities</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2011</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00144</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                    <addrLine>kprice@unlnotes.unl.edu</addrLine>
+                    <addrLine>Ed-Folsom@uiowa.edu</addrLine>
+                    <addrLine>bbarney2@unlnotes.unl.edu</addrLine>
+                </address>
+                <availability><p>The text of the original document is in the public domain. Subject to certain exceptions, public domain works may be freely copied or used in the creation of derivative works without permission, or authorization, of the former copyright owners.</p><p>The text encoding was created and/or prepared by the Walt Whitman Archive and is governed by a <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref> (CC BY 4.0).</p><p>Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p></availability>
+            </publicationStmt>
+            <notesStmt>
+                <note type="project" target="#dat1">Grier claims that Whitman paraphrased Joseph Gostwick's literal translation of the Nibelungenlied in <hi rend="italic">German Literature</hi> (Philadelphia, 1854) probably "in 1858 or slightly later" (<hi rend="italic">Walt Whitman: Notebooks and Unpublished Manuscripts</hi>, ed. Edward F. Grier [New York: New York University Press, 1984], 5:1818).</note>
+            </notesStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>"Our own account of this poem, 'the German Iliad'"</title>
+                    <idno type="callno">II-5 41</idno>
+                    <date notBefore="1854-01-01" notAfter="1892-03-26">1854 or later</date>
+                    <orgName xml:id="duk">Trent Collection of Whitmaniana, David M. Rubenstein Rare Book &amp; Manuscript Library, Duke University</orgName>
+                    <note type="project">Transcribed from digital images of the original item.</note>
+                    
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="h1" scribeRef="#ww" medium="black-ink"/>
+                <handNote xml:id="h2" scribeRef="#ww" medium="pencil"/>
+                <handNote xml:id="h3" scribeRef="#unk" medium="pencil"/>
+            </handNotes>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-03-10">added notesStmt and moved date note into it</change>
+            <change who="#nhg" when="2015-03-08">completed date information, tweaked encoding</change>
+            <change who="#nhg" when="2015-01-26">added schematron declaration, updated schema declaration, changed text type to annotations</change><change who="#lmg" when="2011-09-22">Transcribed and encoded.</change>
+            <change who="#nhg" when="2011-10-02">Checked, revised.</change>
+            <change who="#tra" when="2013-10-08">Checked and revised bibliographical information and encoding.</change>
+            <change who="#tra" when="2014-03-16">Corrected @rend italic.</change>
+            <change who="#mc" when="2014-09-20">Proofed.</change>
+        </revisionDesc> 
+    </teiHeader>
+    <text type="annotations"><!--Checked against Grier, p. 1818.-->
+        <body>
+            <pb xml:id="leaf001r" facs="duk.00144.001.jpg" type="recto"/>
+            <note type="editorial" resp="#h3" place="top">1</note>
+            <p><handShift new="#h1"/>Our own account of this poem, "the
+            German Iliad," being but a fragment, and more
+            intended to <subst><del rend="overstrike" seq="1">give</del> <add rend="unmarked" place="supralinear" seq="2">furnish</add></subst> the reader, in one or two <choice><orig>speci‑<lb/>
+                mens</orig><reg>specimens</reg></choice>, a glimpse of the old verses, by a free
+            translation of them, we refer those who <del rend="overstrike">a</del> desire
+                a <del rend="overstrike">fuller</del> complete resumé of the Nibelungen, to
+            Carlyle's <subst><del rend="overstrike" seq="1">article</del> <add rend="unmarked" place="supralinear" seq="2">essay</add></subst> of that name&#8212;to which, however, we
+            are <hi rend="underline">not</hi> indebted for our own article in any particular.&#8212;
+            The translations we give are original in this article.&#8212;</p>
+            <pb xml:id="leaf002r" facs="duk.00144.001.jpg" type="recto"/><!-- Grier says these are two scraps, formerly pinned together. -->
+            <p>Like all the <subst><del rend="overstrike" seq="1">poems</del> <add rend="unmarked" place="supralinear" seq="2">productions</add></subst> of the <subst><del rend="overwrite" seq="1">n</del><add rend="overwrite" place="over" seq="2">earlier</add></subst> northern
+            bards, German or Scandinavian, the
+            poem is not subjective but eminently
+            objective.&#8212;<subst><del rend="overwrite" seq="1">T</del><add rend="overwrite" place="over" seq="2">It</add></subst> gives <add rend="insertion" place="supralinear">definite</add> characters, <subst><del rend="overwrite" seq="1">&#8212;</del><add rend="insertion" place="supralinear" seq="2">good or bad,&#8212;</add></subst> it relate<unclear reason="illegible" resp="#lmg" cert="medium">s</unclear>
+                what is done or said.&#8212;All is narrative;
+            no sentiment, or reflection, or corollary.&#8212;
+                <metamark function="paragraph" place="left">¶</metamark> We have said that the spinal <del rend="overstrike">chara strength
+                of the</del> connection of the piece is Pagan;
+            yet, <del rend="overstrike">in</del> as we have it, <del rend="overstrike">many of</del> a clumsy
+            attempt is made to Christianize <del rend="overstrike">the</del>
+            many of the characters.&#8212; <del rend="overstrike">Some of</del> The
+            knights go to mass; and there is, in
+            general, the same change as <subst><del rend="overstrike" seq="1">has been</del> <add rend="unmarked" place="supralinear" seq="2">that</add></subst>
+                attempted with some of the old <choice><orig>archi‑<lb/>
+                tecture</orig><reg>architecture</reg></choice> and sculptures in Rome, by
+            chopping off a little here and there,
+            and <subst><del rend="overstrike" seq="1">changing</del> <add rend="unmarked" place="supralinear" seq="2">altering</add></subst> the names from Jupiter
+                <subst><del rend="overstrike" hand="#h2" seq="1">and</del> <add rend="unmarked" place="supralinear" seq="2"><handShift new="#h2"/>or</add></subst> <handShift new="#h1"/>Mars <add rend="insertion" place="supralinear"><subst><add rend="unmarked" place="supralinear" seq="2"><handShift new="#h2"/>or</add> <del rend="overstrike" seq="1" hand="#h2"><handShift new="#h1"/>and</del></subst> Minerva</add> to St. Peter and <del rend="overstrike">St.</del> Michael<!--There may be a comma or a period here; Grier doesn't note it.-->
+                and the Virgin Mary.&#8212;</p>
+            <pb xml:id="leaf002v" facs="duk_ap_00001.jpg" type="verso"/>
+            <pb xml:id="leaf003r" facs="duk.00144.002.jpg" type="recto"/>
+            <note type="editorial" resp="#h3" place="top">2</note>
+            <l>Before the vesper hour, lo! a great movement
+            of knights in the court‑yard,</l>
+            <l>To engage in a tournament, for the
+            royal pastime.&#8212;</l>
+            <l>Looking on, among the rest, there sat the
+            two wealthy queens,</l>
+            <l>And talked of the heroes <del rend="overstrike">most</del> worthy
+            of praise.</l>
+            <l>Then said the beautiful Queen Kriemhilde,</l>
+            <l>"My husband i<subst><del rend="overwrite" seq="1">n</del><add rend="overwrite" place="over" seq="2">s</add></subst> the most noble, and by
+            right this kingdom, and the rule
+            of it, is his."</l>
+            <l>Then said the lady Brunhilde, "Nay,</l>
+            <l>The King, <add rend="insertion" place="supralinear">your brother,</add> is most noble&#8212;If none were
+            living but you and your man,</l>
+            <l>Then <subst><del rend="overstrike" seq="1">it</del> <add rend="insertion" place="supralinear" seq="2">what you say</add></subst> might be&#8212;but not while
+            Gunther lives."</l>
+            <pb xml:id="leaf003v" facs="duk_ap_00002.jpg" type="verso"/>
+            <pb xml:id="leaf004r" facs="duk.00144.003.jpg" type="recto"/>
+            <note type="editorial" place="top" resp="#h3">3</note>
+            <l>First went the queen to Hagen, and, looking upon
+            him with hatred,</l>
+            <l>"Restore," said she, "before it is too late, my
+            Nibelungen treasure,</l>
+            <l>Then Gunther and yourself may <del rend="erasure"><add rend="insertion" place="supralinear">freely</add></del> return to your
+            own country."</l>
+            <l>Then out spoke Hagen, perfectly fearless,</l>
+            <l>"It is in vain, for I have sworn <subst><del rend="overstrike" seq="1">that</del> <add rend="unmarked" place="supralinear" seq="2">the</add></subst>
+            treasure shall remain buried,</l>
+            <l>As long as <subst><del rend="overstrike" seq="1">any</del> <add rend="unmarked" place="supralinear" seq="2">one</add></subst> of Gunther's royal family
+            is alive;</l>
+            <l>Therefore ask me no more&#8212;but do with
+            me what you will."</l>
+            <l>Then turning to a follower, Kriemhilde
+            commanded him</l>
+            <l>To go to the cell where Gunther was
+            imprisoned, and d<subst><del rend="overwrite" seq="1">e</del><add rend="overwrite" place="over" seq="2">i</add></subst>spatch him, and
+            bring the head thither.</l>
+            <l>Soon Hagen, with horror, with distress in
+            his heart,</l>
+            <l>Saw the servant appear, with the bloody
+            head of Kriemhilde's brother.</l>
+            <l>He looked at it a moment, and then with
+            stern resolution, to the queen</l>
+            <l>"Gunther," said he, "is dead&#8212;and Gernot
+            and Giselher, thy brothers all, are dead,</l>
+            <l>And I shall soon follow them&#8212;yet,
+            she‑wolf,</l>
+            <l>I tell you not the hiding‑place of
+            the gold and gems."</l>
+            <pb xml:id="leaf004v" facs="duk_ap_00003.jpg" type="verso"/>
+            <pb xml:id="leaf005r" facs="duk.00144.004.jpg" type="recto"/>
+            <note type="editorial" resp="#h3" place="top">4</note>
+            <l>"So be it, then," said Kriemhilde, "one useful
+            thing, at any rate, you have restored
+            to me,</l>
+            <l>The sword, the weapon of my noble Seigfried."</l>
+            <l>With that, she drew Seigfried's sword from
+            the scabbard,</l>
+            <l>And struck off the hero's head with her
+            own hands,</l>
+            <l>And Etzel cried aloud in horror, to
+            see what was done.</l>
+            <l>And at the same time, ancient Hildebrand,
+            <subst><del rend="overstrike" seq="1">risin</del> <add rend="unmarked" place="inline" seq="2">springing</add></subst> to his feet, <del rend="erasure">cried</del></l>
+            <l><subst><del rend="overstrike" seq="1">Cried,</del> <add rend="unmarked" place="supralinear" seq="2">Exclaimed,</add></subst> in frenzy, "Shall such a wa<add rend="unmarked" place="inline">r</add>rior
+            fall by the hand of a woman?</l>
+            <l>Then thus I revenge him!"</l>
+            <l>And swiftly drawing a dagger, he smote
+            the queen in the side,</l>
+            <l>And Kriemhilde fell, dying, and her
+            kinspeople gathered round her.</l>
+            <milestone unit="undeclared" rend="horbar-short-center"/>
+            <l><del rend="overstrike">Thus,</del> <subst><del rend="overwrite" seq="1">w</del><add rend="overwrite" seq="2" place="over">W</add></subst>ithout avail, <add rend="insertion" place="supralinear"><hi rend="circled">therefore,</hi></add> <subst><del rend="overstrike" seq="1"> ran</del> <add rend="unmarked" place="supralinear" seq="2">was shed</add></subst> the blood of
+            many vali<subst><del rend="overwrite" seq="1"><gap reason="illegible" quantity="1" unit="char"/></del><add rend="overwrite" place="over" seq="2">a</add></subst>nt princes, and their
+            followers</l>
+            <l>And over the <subst><del rend="overstrike" seq="1">dying and</del> <add rend="insertion, circled" place="supralinear" seq="2">lost and the</add></subst> dead, Dietrich
+            and Etzel, left alone, lamented.</l>
+            <l>Thus love doth evermore bring dole
+            and sorrow,</l>
+            <l>And thus ends the Song of the
+            Nibelungen.&#8212;</l>
+            <pb xml:id="leaf005v" facs="duk_ap_00004.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

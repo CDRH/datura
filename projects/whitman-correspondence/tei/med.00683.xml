@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="med.00683">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to John Burroughs, 2&#8211;[3] January 1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>med.00683</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date when="1964">1964</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">172</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to John Burroughs, 2&#8211;[3] January 1880</title>
+                    <date cert="medium" notBefore="1880-01-02" notAfter="1880-01-03" xml:id="dat1">January 2&#8211;3, 1880</date>
+                    <orgName xml:id="med">The location of this manuscript is unknown.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Burroughs, John">John Burroughs</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2014-08-28">corrected</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-09" who="#kc">updated ID</change>
+            <change when="2013-12-09" who="#nhg">checked, corrected</change>
+            <change when="2013-04-03" who="#ej">Checked and Corrected</change>
+            <change when="2013-01-04" who="#gt">checked</change>
+            <change when="2012-11-02" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right"><hi rend="italic">St. Louis</hi></name>
+                    <date when="1880-01-02" rend="right">Jan 2 '80&#8212;4&#189; P M</date>
+                </dateline>
+                <salute>Dear friend</salute>
+            </opener>
+
+            <p>Yours of 29th Dec. with <hi rend="italic">the present</hi> came safe to-day&#8212;Believe me I feel the gift, &#38; it comes just right too&#8212;John, please forward the enclosed slip to unknown friend<ptr target="sjs.00010_n1"/>&#8212;</p>
+ 
+            <p>The above is a fair picture of the great Mississippi Bridge, East St Louis, where I have loafed many hours&#8212;only it sets up <hi rend="italic">much higher</hi> than the print gives&#8212;I dont believe there can be a grander thing of the kind on earth<ptr target="sjs.00010_n2"/>&#8212;</p>
+            
+            <p><date notBefore="1880-01-03" notAfter="1880-01-04">Jan 4<ptr target="sjs.00010_n3"/></date></p>
+                
+            <p>I leave here Sunday morning at 8, on my return east, &#38; shall be due in Philadelphia Monday evening, before 8&#8212;The last two or three weeks I have been well, for me, &#38; am so now&#8212;</p>
+            
+            <p>Your letter was deeply interesting to me, made me see Emerson no doubt just as he is, the good pure soul&#8212;</p>
+                
+            <p>John, I sympathize with you in the arm, &#38; the treatment too&#8212;</p>
+                    
+            <p>A great thaw &#38; dense fog here as I write&#8212;</p>
+
+            <closer>
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

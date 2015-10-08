@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00394">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Charles L. Heyde to Walt Whitman, 18 October 1883</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Charles L. Heyde</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="am">Alicia Meyer</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00394</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Charles L. Heyde</author>
+                    <title>Charles L. Heyde to Walt Whitman, 18 October 1883</title>
+                    <date cert="high" when="1883-10-18" xml:id="dat1">October 18, 1883</date>
+                    <idno type="callno">III-5A</idno>
+                    <orgName xml:id="duk"> The Trent Collection of Walt Whitman Manuscripts, Duke
+                        University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+
+                <person role="sender">
+                    <persName key="Heyde, Charles L.">Charles L. Heyde</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-07-31" who="#nhg">checked, corrected</change>
+            <change when="2014-03-06" who="#nnk">proofed</change>
+            <change when="2014-02-06" who="#ss">checked</change>
+            <change when="2013-11-22" who="#am">Transcribed and Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="duk.00394.001_large.jpg" type="recto"/>
+
+            <opener>
+                <dateline>
+                    <name type="place">Burlington</name>
+                    <date when="1883-10-18"><choice>
+                            <abbr>Octo.</abbr>
+                            <expan>October</expan>
+                        </choice> 18, 1883.</date>
+                </dateline>
+                <salute>Walt.</salute>
+            </opener>
+
+            <p>Your letter <choice>
+                    <abbr>rec<hi rend="superscript">d</hi></abbr><expan>received</expan></choice>. 
+                The girls are with us yet and propose to return tomorrow/Friday. They
+                visited Ausable
+                    Chasm, yesterday, weather not permitting sooner, and had a splendid perfect time, and were enchanted 
+                    more of which satisfaction, they will
+                relate to you themselves.</p>
+            <p>You mention Jessie's
+                picture, why not Manahatta's, nothing short of the twain, will satisfy me. I am delighted with
+                    both, and have been
+                cheered immensely by their visit: lovely good <pb xml:id="leaf001v"
+                    facs="duk.00394.002_large.jpg" type="verso"/> girls, contrasts in complexion yet harmoniously uniting. Han is pretty well, and much
+                gratified with your letter.</p>
+            <closer>
+                <signed>CL Heyde.</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

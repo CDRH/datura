@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="man.00005">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Richard Maurice Bucke to Walt Whitman, 18 March 1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Richard Maurice Bucke</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>man.00005</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                
+                <bibl>
+                    <author>Richard Maurice Bucke</author>
+                    <title>Richard Maurice Bucke to Walt Whitman, 18 March 1880</title>
+                    <date cert="high" when="1880-03-18" xml:id="dat1">March 18, 1880</date>
+                    <orgName xml:id="man">Charles Sixsmith Collection at the John Rylands Library, University of Manchester</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-03-30" who="#ss">annotations added</change>
+            <change when="2013-10-31" who="#nhg">checked, corrected</change>
+            <change when="2013-10-24" who="#ej">Checked and Corrected</change>
+            <change when="2013-04-15" who="#gt">checked and corrected</change>
+            <change when="2013-02-28" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="man_ej.00027_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place" rend="center"><handShift rend="printed"/>Asylum for the Insane,<ptr target="n0119"/></name>
+                    <name type="place" rend="right">London,</name>
+                    <date when="1880-03-18" rend="right"><handShift rend="manuscript"/>March 18 <handShift rend="printed"/>18<handShift rend="manuscript"/>80</date>
+                </dateline>
+                <salute>My dear Walt</salute>
+            </opener>
+
+            <p>I send you today a London paper with a sample of the controversy that has been going on here for some time about "Leaves of Grass,"<ptr target="man.00005_n1"/> I think it is quite likely that a few copies could now be sold in this neighbourhood. I have seen <unclear reason="damage" resp="#al">a</unclear> bookseller about it and I am going to propose a plan to you. It is this: I.I. Anderson &#38; Co. <unclear reason="damage" resp="#al">will</unclear> keep "Leaves of Grass" and advertise it with their ordinary book-list and they will have 10 p.c. i.e. 50&#162; a <choice><abbr>vol.</abbr><expan>volume</expan></choice> for selling it&#8212;I will hand over to them the <choice><abbr>vols.</abbr><expan>volumes</expan></choice> that are on the way now and they will get others from you as they need them&#8212;You will always notify me when you send them books &#38; the number of <choice><abbr>vols.</abbr><expan>volumes</expan></choice> sent&#8212;I will be responsible to you for the books sent them and will collect the money derived from
+                
+          <pb xml:id="leaf001v" facs="man_ej.00028_large.jpg" type="verso"/>sales from them from time to time and remit it to you.</p>
+            
+            <p>There is another matter: the tariff on books has lately been altered it is now 15 p.c. this would be 75&#162; a <choice><abbr>vol.</abbr><expan>volume</expan></choice> on your books&#8212;in making out your invoices your proper plan is to put the books in at &#36;5.00 per <choice><abbr>vol.</abbr><expan>volume</expan></choice> and allow 40 p.c. discount off&#8212;this is about the usual discount to the trade&#8212;this will make the duty 45 cents a <choice><abbr>vol.</abbr><expan>volume</expan></choice> So that I should be able to send you &#36;4.05 for each <choice><abbr>vol.</abbr><expan>volume</expan></choice> sold.&#8212;Please let me know at once if this plan meets your approval</p>
+            
+            <p>Many of my friends have an extraordinary curiosity to see you and I hope that you will gratify it by paying us your promised visit this summer&#8212;Mrs Bucke and the children are almost as anxious as I am that you should come&#8212;</p>
+
+            <closer>
+                <salute>Your friend</salute>
+                <signed>R M Bucke</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

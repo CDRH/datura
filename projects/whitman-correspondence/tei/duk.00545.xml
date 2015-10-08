@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00545">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, 25 June [1868]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="ct">Cathy Tisch</persName>
+                    <persName xml:id="zk">Zachary King</persName>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00545</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, 25 June [1868]</title>
+                    <date cert="high" when="1868-06-25" xml:id="dat1">June 25, 1868</date>
+                    <idno type="callno">III-5D</idno>
+                    <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-09-17" who="#el">checked</change>
+            <change when="2013-05-22" who="#wr">Duke proofreading corrections</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent Proof</change>
+            <change when="2012-12-12" who="#wr">Proofreading Corrections</change>
+            <change when="2012-08-30" who="#wr">Corrected notes from proofreading and capitalized Walt, replaced place
+                attribute "margintop" with "top."</change>
+            <change when="2012-08-27" who="#wr">Regularize the/they and think/thing</change>
+            <change when="2012-08-22" who="#wr">Atlantic Avenue house, year note, Burroughs's visit, RMBucke's hand, proper encoding of unclear because cut away, proper encoding of postscript.</change>
+            <change when="2012-08-15" who="#ct">Oral Proofreading Corrections.</change>
+            <change when="2011-12-21" who="#fw">annotations</change>
+            <change when="2011-12-20" who="#fw">corrected spacing</change>
+            <change when="2011-08-03" who="#zk">corrected date format in title; added call no., annotations</change>
+            <change when="2011-03-15" who="#fw">Annotate Burroughs</change>
+            <change when="2011-03-07" who="#fw">Annotate reference to earlier letter</change>
+            <change when="2011-02-22" who="#fw">Correct 2 surfaces</change>
+            <change when="2011-02-09" who="#fw">Correct 2 surfaces</change>
+            <change when="2011-01-24" who="#fw">Transcribe 2 surfaces</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            
+            <note type="editorial" resp="#rmb" place="top">&#8212;1868 Brooklyn</note>
+            
+            <pb xml:id="leaf001r" facs="duk.00545.001.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <date when="1868-06-25">June 25<ptr target="duk.00545_n13"/></date>
+                </dateline>
+                <salute>dear Walt</salute>
+            </opener>
+            
+
+            <p>i received your letter
+            to day <choice><orig>thursday</orig> <reg>Thursday</reg></choice> with the money all right
+            i thought it was a goner as i <choice><orig>dident</orig> <reg>didn't</reg></choice> get
+                it yesterday i <choice><orig>couldent</orig> <reg>couldn't</reg></choice> <choice><orig>hardley</orig> <reg>hardly</reg></choice> give
+            it up yesterday as you wrote in your
+            <choice><orig>fridays</orig> <reg>Friday's</reg></choice> letter i would get your letter
+                on <choice><orig>wensday</orig> <reg>Wednesday</reg></choice> but it come to day very welcom<unclear reason="cut away" cert="high" resp="#wr">e</unclear></p>
+            <p><choice><orig>mr</orig><reg>Mr.</reg></choice> <choice><orig>Burrous</orig> <reg>Burroughs</reg></choice>
+                has not been to see me i
+                was <choice><orig>exspecting</orig> <reg>expecting</reg></choice> him every day after you
+            wrote<ptr target="duk.00545_n1"/>
+            
+            but he <choice><orig>dident</orig> <reg>didn't</reg></choice> come) i have not heard
+                from <choice><orig>jeff</orig><reg>Jeff</reg></choice><ptr target="duk.00422_n2"/>
+                nor <choice><orig>matty</orig><reg>Matty</reg></choice><ptr target="duk.00465_n9"/>
+                since i wrote last to
+                you)<ptr target="duk.00545_n2"/>
+                <choice><orig>edd</orig><reg>Edd</reg></choice><ptr target="duk.00425_n13"/>
+                said the letter man asked
+            him to day why his mother <choice><orig>dident</orig> <reg>didn't</reg></choice> get
+            any more letters i used to get so many
+            <choice><orig>matty</orig><reg>Matty</reg></choice> used to write quite often and
+            Jeffy once in a while but they have all
+            seemed to fall off)
+            but the good old
+            standby if he should fail me i should
+            have nothing to look for but i <choice><orig>gess</orig> <reg>guess</reg></choice> there
+            is no danger is there <choice><orig>walter</orig><reg>Walter</reg></choice> dear as long
+            as you have your old mamma i
+            often think how loth many is to have children
+            and what would become of me if i had none
+            
+            <pb xml:id="leaf001v" facs="duk.00545.002.jpg" type="verso"/>
+            
+            Janey <choice><orig>mc clure</orig><reg>McClure</reg></choice><ptr target="duk.00545_n10"/> that is <choice><orig>nanc s</orig> <reg>Nancy's</reg></choice> <choice><orig>brothers</orig>
+                <reg>brother's</reg></choice>
+            wife<ptr target="duk.00545_n11"/> was here the other day she came
+            to see if <choice><orig>cornell</orig><reg>Cornell</reg></choice><ptr target="duk.00545_n12"/> had been to see me
+            about the children she sends them the
+            most saucy letters they think if they should
+                <choice><orig>doo</orig> <reg>do</reg></choice> any <choice><orig>think</orig><reg>thing</reg></choice>
+            she would not be any too
+            good to kill her brother Edd <choice><orig>thats</orig> <reg>that's</reg></choice> the
+            one in the new court house)<ptr target="duk.00545_n4"/>
+            i have come
+            to the conclusion there is but one way
+            to <choice><orig>doo</orig> <reg>do</reg></choice> and that is to send them to the
+                nursery to <choice><orig>flatbush</orig><reg>Flatbush</reg></choice><ptr target="duk.00545_n17"/>
+            there is no instituti<unclear reason="cut away" cert="high" resp="#wr">on</unclear>
+            in the city that they would be taken as
+            they are <choice><orig>janey</orig><reg>Janey</reg></choice> thinks that is the only
+            place that she <choice><orig>couldent</orig> <reg>couldn't</reg></choice> get them out
+            i <choice><orig>cant</orig> <reg>can't</reg></choice> begin to tell and i <choice><orig>dont</orig> <reg>don't</reg></choice> want too
+                half the worse that <choice><orig>wreched</orig> <reg>wretched</reg></choice> woman
+            does i <choice><orig>dont</orig> <reg>don't</reg></choice> know <choice><orig>walter</orig><reg>Walter</reg></choice> how you
+            feel about their being taken there
+            but i know that i should feel much
+            better than to have them sent out begging
+            it would be no disgrace as there
+            is many there that is of good parentage
+            there they would be clothed and fed
+            if they ever can be cleaned <choice><orig>janey</orig><reg>Janey</reg></choice> says <choice><orig>the</orig> <reg>they</reg></choice> are
+            so dirty that you would not know they
+            were ever <unclear reason="stricken" cert="high" resp="#wr">clean</unclear><ptr target="duk.00545_n14"/></p>
+
+            <closer>
+                <salute>good bie <choice><orig>walter</orig><reg>Walter</reg></choice> dear</salute>
+                <signed>your mother<ptr target="duk.00425_n3"/></signed>
+            </closer>
+            <postscript><p>i<ptr target="duk.00545_n16"/> am about the same as usual feel quite smart at <unclear reason="cut away" cert="high" resp="#wr">times</unclear></p>
+                
+                <pb sameAs="#leaf001r"/>
+                
+                <p>they are digging the cellar at <choice><orig>georges</orig> <reg>George's</reg></choice>
+                    lot he had it <choice><orig>survayed</orig> <reg>surveyed</reg></choice> yesterday<ptr target="duk.00545_n6"/></p>
+            </postscript>
+        </body>
+    </text>
+</TEI>

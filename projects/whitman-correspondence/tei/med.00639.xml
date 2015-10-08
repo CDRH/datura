@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="med.00639">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Alfred Janson Bloor, 24 May
+                    [1879]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>med.00639</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Ted Genoways</editor>
+                        <title xml:id="tg">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>Iowa City</pubPlace>
+                            <publisher>University of Iowa Press</publisher>
+                            <date when="2004">2004</date>
+                            <biblScope type="volume">7</biblScope>
+                            <biblScope type="page">55&#8211;56</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Alfred Janson Bloor, 24 May [1879]</title>
+                    <date cert="medium" when="1879-05-24" xml:id="dat1">May 24, 1879</date>
+                    <orgName xml:id="med">The location of the original manuscript is unknown. The
+                        text is derived from a facsimile in the auction catalogs of Joseph Rubinfine
+                        American Historical Autographs, West Palm Beach, Florida (Item 44, List
+                        137).</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Bloor, Alfred Janson">Alfred Janson Bloor</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-02-13" who="#nhg">corrected biblStruct info</change>
+            <change when="2014-01-14" who="#nhg">checked, corrected</change>
+            <change when="2013-12-19" who="#ss">checked</change>
+            <change when="2013-12-05" who="#ab">encoded</change>
+            <change when="2013-01-25" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place">1309 Fifth av: near 86th st: New York<ptr
+                            target="med.00639_n1"/></name>
+                    <date when="1879-05-24" rend="right">May 24 noon</date>
+                </dateline>
+                <salute>My dear Mr Bloor<ptr target="med.00639_n2"/></salute>
+            </opener>
+
+            <p>I have returned the two pamphlets&#8212;which I suppose you have <choice>
+                <orig>rec'd</orig><reg>received</reg></choice>.<ptr
+                    target="med.00639_n3"/> In a letter in the <hi rend="italic">Tribune</hi> of
+                to-day I have printed (as I some time since notified you)<ptr target="med.00639_n4"
+                /> what you said&#8212;(well said)&#8212;about actors&#8212;I remain here till
+                latter part of next week&#8212;then to Camden, New Jersey, which is my permanent p o
+                address&#8212;Shall count on getting the extracts from your Journal about Mr
+                <choice>
+                    <orig>Lincon's</orig>
+                    <reg>Lincoln's</reg>
+                </choice> murder &#38; funeral soon as you can conveniently send
+                    them.<ptr target="med.00639_n5"/></p>
+
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

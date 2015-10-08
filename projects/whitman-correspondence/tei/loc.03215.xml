@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03215">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Robert Lutz to Walt Whitman, 9 June 1885</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Robert Lutz</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="aa">Alex Ashland</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03215</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive June be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Robert Lutz</author>
+                    <title>Robert Lutz to Walt Whitman, 9 June 1885</title>
+                    <date cert="high" when="1885-06-09" xml:id="dat1">June 9, 1885</date>
+                    <idno type="callno">Box 13, Folder L</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Lutz, Robert" ref="loc.03215_n1">Robert Lutz</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-08-04" who="#nhg">checked, corrected</change>
+            <change when="2015-06-29" who="#kb">edited</change>
+            <change when="2015-05-26" who="#if">edited</change>
+            <change when="2015-03-26" who="#ss">checked, corrected, encoded, and annotated</change>
+            <change when="2015-03-14" who="#aa">transcribed</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.03215.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline><name type="place"><hi rend="underline">Stuttgart H&#246;lderlinst,</hi> 17
+                </name>
+                
+                <date when="1885-06-09"><hi rend="underline">6&#8211;9&#8211;85</hi></date></dateline>
+                <salute><handShift rend="typescript"/>Dear Sir</salute>
+            </opener>
+            <p><handShift rend="typescript"/>I am sorry, that your prose &#38; poetry is so very
+                little known in Germany &#38; I would be glad, to edit a volume with a fine choice
+                from your works. After Freiligraths death<ptr target="n0248"/> I know of no
+                countryman of mine, who would be able to give a good translation of your poetry.
+                Perhaps you know of a german friend, who would like &#38; be able, do do the
+                translation? You would very much oblige me, by letting me know, the <choice><sic>adress</sic><corr>address</corr></choice> of such a
+                man,&#8212;he may be in the U. S or in Germany. </p>
+            <closer><salute><handShift rend="typescript"/>With the sincerest wishes for you I remain </salute>
+                <salute><handShift rend="typescript"/>yours truly</salute>
+                <signed><handShift rend="typescript"/>R. LUTZ, <handShift rend="typescript"/>Redakteur</signed>
+                <signed><hi rend="underline">Rob. Lutz</hi></signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="loc.03215.002_large.jpg" type="verso"/>
+            <pb xml:id="leaf002r" facs="loc.03215.003_large.jpg" type="recto"/>
+            <pb xml:id="leaf002v" facs="loc.03215.004_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

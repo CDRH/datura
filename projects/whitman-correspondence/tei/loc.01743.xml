@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.01743">
+    <teiHeader type="text">
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Peter Doyle, 7 [July
+                    1873]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName><persName xml:id="kk">Kathryn Kruger</persName><persName xml:id="zk">Zachary King</persName><persName xml:id="ec">Eric Conrad</persName><persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.01743</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2014 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Peter Doyle, 7 [July 1873]</title>
+                    <date cert="medium" when="1873-07-07" xml:id="dat1">July 7, 1873</date>
+                    <idno type="callno">MSS18630, Box 9, Reel 5-6</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839–1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="unk"><persName key="Unknown">Unknown</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                     <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Doyle, Peter" ref="n0752">Peter Doyle</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-07-02">checked, corrected</change>
+            <change who="#ak" when="2015-05-12">added correspondent ref</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+<change when="2014-08-12" who="#el">made basic checking changes to file</change>
+            <change when="2011-01-12" who="#kk">checked</change>
+            <change when="2011-02-09" who="#zk">encoded</change>
+            <change when="2010-08-20" who="#ec">extracted transcription from Major Authors
+                cd</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.01743.001.jpg" type="recto"/>
+            <note type="editorial" resp="#unk" place="top">Monday was 9<hi rend="superscript">th</hi> June in '73</note>
+            <note type="editorial" resp="#unk" place="left">July</note>
+            <note type="editorial" resp="#unk" place="right">9</note>
+            
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">322 Stevens st. <lb/>Camden, N.J.</name>
+                    <date when="1873-07-07" rend="right">Monday June 7</date>.<ptr target="loc.01743_n1"/>
+                    <note type="editorial" resp="#unk" place="right">1873</note>
+                </dateline>
+                <salute>Dear son,</salute>
+            </opener>
+
+            <p>I am only able to write the same old story&#8212;since I last wrote, I have had some
+                pretty bad spells&#8212;suffered at intervals all last week, &amp; yesterday, with
+                the strange &amp; painful distress in the head, I have had so much of&#8212;But I
+                feel better to-day&#8212;Every time I feel better, I find myself much
+                encouraged&#8212;I still stick here, as I <choice><orig>dont</orig><reg>don't</reg></choice> dare to trust myself in a strange place, if I can help it. </p>
+
+            <pb xml:id="leaf001v" facs="loc.01743.002.jpg" type="verso"/>
+
+            <p>I rec'd your letter telling me you was too late to get any chance for the letter
+                carrier's position&#8212;&amp; about Mr. Noyes' friendliness&#8212;Are things just the same, as far as
+                you and your crew, are concerned?&#8212;I think about you every night&#8212;I reproach
+                myself, that I did not fly around when I was well, &amp; in Washington, to find some
+                better employment for you&#8212;now I am here, crippled, laid up for God knows how
+                long, unable to help myself, or my dear boy&#8212;I do not miss any thing of
+                Washington here, but <hi rend="underline">your visits</hi>&#8212;if I could only have a
+                daily visit here, such as I had there&#8212;</p>
+            
+            
+            
+            <pb xml:id="leaf002r" facs="loc.01743.003.jpg" type="recto"/>
+
+            <p>I go out very little here&#8212;there is not much convenience here, for me to go
+                out&#8212;one car line, passing about two squares off, consists of 4 cars, running
+                semi-occasionally&#8212;and another line, about 3½ squares the other way, has
+                I believe 6 or 7 cars&#8212;I get out &amp; take a ride in them sometimes&#8212;my
+                best jaunt is going in them to the ferry, &amp; crossing on the boat to
+                Philadelphia, to &amp; fro, several times&#8212;But a great portion of the time I do
+                not feel able to go out alone&#8212;fortunately I do not have any dizzy spells, nor
+                any symptoms of them, so far,&#8212;so I am not worried about that, when I <hi rend="underline">am</hi> out&#8212;As I write this, it is a very pleasant cool
+                    afternoon, &amp; I am sitting here by the window in a big easy chair</p>
+            
+            
+            <pb xml:id="leaf002v" facs="loc.01743.004.jpg" type="verso"/>
+
+            <p>Pete I hope this will find you feeling well, &amp; in good spirits&#8212;Write me a
+                good long letter, &amp; tell me every thing&#8212;it will do you good&#8212;&#8212;how does
+                the new time go on the road, since Baltimore tunnel connection?&#8212;how about
+                Washington&#8212;Tasistro&#8212;everybody?&#8212;get a good sheet of paper, &amp;
+                sit down in the park, with your lead pencil&#8212;I send you an envelope&#8212;also
+                some one cent stamps&#8212;</p>
+
+            <p>&#8212;Love to you dear boy&#8212;Keep up a good heart&#8212;I do yet&#8212;though it is a
+                long &amp; hard pull sometimes with me lately. </p>
+
+            <closer>
+                <signed>Walt.</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

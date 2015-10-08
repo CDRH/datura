@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.01881">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+<title level="m" type="main">Peter Doyle to Walt Whitman, [7] November
+    [1875]</title>
+<title level="m" type="sub">a machine readable transcription</title>
+<author>Peter Doyle</author>
+<editor>Kenneth M. Price</editor>
+<editor>Ed Folsom</editor>
+<respStmt>
+    <resp>Transcription and encoding</resp>
+    <persName xml:id="ak">Alex Kinnaman</persName>
+<persName xml:id="el">Elizabeth Lorang</persName>
+    <persName xml:id="jc">Janel Cayer</persName>
+<persName xml:id="al">Ashley Lawson</persName>
+<persName xml:id="km">Kevin McMullen</persName>
+<persName xml:id="js">John Schwaninger</persName>
+    <persName xml:id="nhg">Nicole Gray</persName>
+</respStmt>
+<sponsor>Center for Digital Research in the Humanities, University of
+    Nebraska-Lincoln</sponsor>
+<sponsor>University of Iowa</sponsor>
+<funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+<edition>
+    <date>2014</date>
+</edition>
+            </editionStmt>
+            <publicationStmt>
+<idno>loc.01881</idno>
+<distributor>The Walt Whitman Archive</distributor>
+<address>
+    <addrLine>Center for Digital Research in the Humanities</addrLine>
+    <addrLine>319 Love Library</addrLine>
+    <addrLine>University of Nebraska-Lincoln</addrLine>
+    <addrLine>P.O. Box 884100</addrLine>
+    <addrLine>Lincoln, NE 68588-4100</addrLine>
+</address>
+<availability>
+    <p>Copyright © 2014 by Ed Folsom and Kenneth M. Price, all rights reserved.
+        Items in the Archive may be shared in accordance with the Fair Use
+        provisions of U.S. copyright law. Redistribution or republication on other
+        terms, in any medium, requires express written consent from the editors and
+        advance notification of the publisher, Center for Digital Research in the
+        Humanities. Permission to reproduce the graphic images in this archive has
+        been granted by the owners of the originals for this publication only.</p>
+</availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+
+<bibl>
+    <author>Peter Doyle</author>
+    <title>Peter Doyle to Walt Whitman, [7] November [1875]</title>
+    <date cert="medium" when="1875-11-07" xml:id="dat1">November 7, 1875</date>
+    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+</bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+<person role="sender">
+    <persName key="Doyle, Peter" ref="n0752">Peter Doyle</persName>
+</person>
+<person role="recipient">
+    <persName key="Whitman, Walt">Walt Whitman</persName>
+</person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-07-08">added image names, checked, corrected</change>
+            <change who="#ak" when="2015-04-30">added correspondent ref</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+<change when="2014-08-12" who="#el">made basic checking changes to file</change>
+            <change when="2012-06-18" who="#js">proofed</change>
+            <change when="2012-05-11" who="#km">checked</change>
+            <change when="2012-04-30" who="#al">checked</change>
+            <change when="2010-01-20" who="#jc">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body><pb xml:id="leaf001r" facs="loc_vm.02566_large.jpg" type="recto"/>
+            <opener>
+                <dateline><name type="place"><handShift rend="printed"/>Baltimore and Potomac Rail Road Co.<ptr target="loc.01881_n1"/></name>
+                <name type="place"><handShift rend="manuscript"/>Washington <handShift rend="printed"/>Station,</name>
+                <date when="1875-11-07"><handShift rend="manuscript"/>Nov,</date></dateline>
+                <salute><unclear reason="illegible" resp="#nhg" cert="medium">Dear</unclear> Walt</salute>
+            </opener>
+
+            <p>Your Welcome Letter rec<gap reason="cut away" unit="char" quantity="5"/>. i have just come from Mr Nashs<ptr target="n0433"/> and had a good
+                Square dinner Wish you was <gap reason="illegible" unit="line" quantity="1"/> to tell you
+                to come on and they would do the best they could to make your visit pleasant. i will
+                meet you at the Depot  the train gets to Wash 4:10 PM</p>
+
+            <p>i will Say no more until i see you</p>
+
+            <closer>
+                <salute>So Long</salute>
+                <signed>Pete</signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="loc_vm.02564_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

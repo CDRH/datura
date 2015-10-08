@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="yal.00293">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Charles W. Eldridge to Walt Whitman, 22 September
+                    1883</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Charles W. Eldridge</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>yal.00293</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Charles W. Eldridge</author>
+                    <title>Charles W. Eldridge to Walt Whitman, 22 September 1883</title>
+                    <date cert="high" when="1883-09-22" xml:id="dat1">September 22, 1883</date>
+                    <orgName xml:id="yal">Yale Collection of American Literature, Beinecke Rare Book
+                        and Manuscript Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Eldridge, Charles W.">Charles W. Eldridge</persName>
+                </person>
+                <person role="recipient" xml:id="ww">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-07-31" who="#nhg">checked, corrected</change>
+            <change when="2014-03-26" who="#ej">Checked and Corrected</change>
+            <change when="2014-03-05" who="#nnk">proofed</change>
+            <change when="2013-12-13" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <div1 type="letter">
+                <pb xml:id="leaf001r" facs="yal.00293.001_large.jpg" type="recto"/>
+                <opener>
+                    <dateline>
+                        <name type="place">Boston,</name>
+                        <date when="1883-09-22" rend="right">Sept 22, 1883</date>
+                    </dateline>
+                    <salute>Dear Walt:</salute>
+                </opener>
+                <p>In New York on Thursday I saw Marvin and was glad to hear from you through him.&#8212;He said
+                    you had not seen the Nation review of Dr <choice>
+                        <orig>Buckes</orig>
+                        <reg>Bucke's</reg>
+                    </choice> book and had expressed a desire to do so. So having a copy I cut it out and
+                    enclose it. You will see it makes some outrageously false statements about you
+                    at which your friends were naturally indignant, but I am surprised that William
+                    was green enough to suppose that he could get any reply printed in that organ of
+                    the Philistines; and he probably made it so severe as to preclude its
+                    publication <pb xml:id="leaf001v" facs="yal.00293.002_large.jpg" type="verso"/>
+                    any way even supposing them to
+                    have been suddenly smitten with a conscience. A very improbable
+                    supposition.&#8212;</p>
+                <p>You have heard that I have finally received the "grand bounce" from an ungrateful
+                    government. The fact is I have been rather badly treated by an uncircumsized dog
+                    from Kentucky, but such a thing was bound to happen sooner or later, and better
+                    now than later.</p>
+                <p>I am still in the prime of life, have health, some means and many friends, and if
+                    under these circumstances I did not cheerfully accept the situation I should be
+                    unworthy ever to have read Leaves of Grass, with its philosophy of hope and the
+                    morning.&#8212;</p>
+                <p>I enclose you my professional card. If
+                    after a fair trial I do not succeed in earning a living <pb xml:id="leaf002r"
+                        facs="yal.00293.003_large.jpg" type="recto"/> in this way I shall probably
+                    drift back into my old trade of Publishing.</p>
+                <p>I hope you are as comfortable as usual, and enjoying as much of life as you
+                    describe in some of the later notes in Specimen Days.&#8212;</p>
+                <p>I should be delighted to hear from you, and believe me ever</p>
+                <closer>
+                    <salute>Faithfully Yours</salute>
+                    <signed rend="right">Charley.</signed>
+                </closer>
+                <pb xml:id="leaf002v" facs="yal.00293.004_large.jpg" type="verso"/>
+                <note type="editorial" resp="#ww" place="right">from C W Eldridge | Boston Sept '83</note>
+            </div1>
+        </body>
+    </text>
+</TEI>

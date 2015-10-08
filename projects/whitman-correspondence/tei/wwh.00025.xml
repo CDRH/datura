@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="wwh.00025"> 
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Whitelaw Reid to Walt Whitman, 17 July [1878]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Whitelaw Reid</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="kp">Kenneth M. Price</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2015</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>wwh.00025</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Whitelaw Reid</author>
+                    <title>Whitelaw Reid to Walt Whitman, 17 July [1878]</title>
+                    <date cert="medium" when="1878-07-17" xml:id="dat1">July 17, 1878</date>
+                    <orgName xml:id="wwh">Walt Whitman House, Camden, N.J.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Reid, Whitelaw" ref="n0500">Whitelaw Reid</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-08-12">corrected</change>
+            <change who="#kp" when="2015-03-23">blessed</change>
+            <change who="#nhg" when="2015-03-16">checked, corrected</change>
+            <change who="#ak" when="2015-03-13">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="wwh.00001.002.jpg" type="recto"/>
+            <!-- This page consists of four different documents pasted together, none relating to the other -->
+            <opener>
+                <name type="place"><gap reason="cut away"/> <handShift rend="printed"/>Tribune</name><ptr target="wwh.00025_n1"/>
+                <dateline>
+                    <name type="place">New York,</name>
+                    <date when="1878-06-17"><handShift rend="manuscript"/>July 17, 1<gap reason="cut away"/></date>
+                </dateline>
+                <salute><gap reason="cut away"/> [Whit]man:</salute>
+            </opener>
+            <p>
+                I thought we ha <gap reason="cut away"/> <unclear reason="illegible" resp="#nhg" cert="high">cheque</unclear> on last Sa <gap reason="cut away"/> inquiry that it <gap reason="cut away"/> I hasten to <unclear reason="illegible" resp="#nhg" cert="high">end</unclear> <gap reason="cut away"/>
+            </p>
+            <p>
+                <gap reason="cut away"/> nks for remembering <gap reason="cut away"/>
+                to see the poem <gap reason="cut away"/>
+                ln, and for sen <gap reason="cut away"/>
+                little volume <gap reason="cut away"/>
+                ully to day. <gap reason="cut away"/>
+                ing the poem <gap reason="cut away"/>
+                and still th <gap reason="cut away"/>
+                very best thoug <gap reason="cut away"/>
+                oid.
+            </p>
+            <closer>
+                <salute><gap reason="cut away"/> best wishes</salute>
+                <salute>Very truly yours</salute>
+                <signed><hi rend="underline">Whitelaw Reid</hi></signed>
+                <salute/>
+                <salute><gap reason="cut away"/> [Whitm]an, Esq</salute>
+                <address>
+           
+                    <addrLine>[Ste]vens St.</addrLine>
+                    <addrLine>[C]amden, N. J.</addrLine>
+                </address>
+            </closer>
+        <pb xml:id="leaf001v" facs="wwh.00001.001.jpg" type="verso"/>
+            <!-- Whitman wrote poetry on this page, unrelated to letters -->
+        </body>
+    </text>
+</TEI>
+            
+            

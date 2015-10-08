@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="prc.00092">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to Charles Hine, 14 July
+               [1871]</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Kenneth M. Price</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="jyc">Jonathan Y. Cheng</persName>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+               <persName xml:id="ak">Alex Kinnaman</persName>
+               <persName xml:id="nhg">Nicole Gray</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of
+               Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2014</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>prc.00092</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in
+                  the Archive may be shared in accordance with the Fair Use provisions of U.S.
+                  copyright law. Redistribution or republication on other terms, in any medium,
+                  requires express written consent from the editors and advance notification of the
+                  publisher, Center for Digital Research in the Humanities. Permission to reproduce
+                  the graphic images in this archive has been granted by the owners of the originals
+                  for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <editor>Ted Genoways</editor>
+                  <author>Walt Whitman</author>
+                  <title xml:id="tg">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>Iowa City</pubPlace>
+                     <publisher>University of Iowa Press</publisher>
+                     <date>2004</date>
+                     <biblScope type="volume">7</biblScope>
+                     <biblScope type="page">31</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to Charles Hine, 14 July [1871]</title>
+               <date cert="medium" when="1871-07-14" xml:id="dat1">July 14, 1871</date>
+               <orgName xml:id="prc">The location of this manuscript is unknown.</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Hine, Charles" ref="prc.00092_n1">Charles Hine</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+         <change who="#ak" when="2015-04-20">added correspondent ref</change>
+         <change who="#nhg" when="2015-02-24">checked, corrected</change>
+         <change who="#ak" when="2014-11-06">added annotations</change>
+         <change who="#jyc" when="2014-09-26">checked, revised</change>
+         <change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#nnk" when="2014-06-03">transcribed, encoded</change>
+
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+
+         <opener>
+            <dateline><name type="place" rend="right">Brooklyn</name><date when="1871-07-14"
+                  rend="right">Friday afternoon, July 14.</date></dateline>
+            <salute>Charles Hine,</salute>
+            <salute>Dear, dear friend,</salute>
+         </opener>
+         <p>I shall try and come to New Haven, very soon&#8212;though but for perhaps two or three
+            hours. For some days past my mother has been ill&#8212;some of the time very
+            ill&#8212;and I have been nurse &amp; doctor too, as none of my sisters are home at
+            present&#8212;But to-day she seems over it, if the favorable symptoms continue.<ptr
+               target="prc.00092_n2"/></p>
+         <p>I have procured the portrait &amp; frame without any trouble,<ptr target="prc.00092_n3"
+            /> &amp; they are now hanging up in mother's front room&#8212;&amp; are the delight
+            &amp; ever-increasing gratification of my folks &amp; friends, young &amp;
+            old&#8212;some of whom sit by the half hour &amp; just look steadily at it in
+            silence&#8212;It is indeed a noble piece of <choice>
+               <orig>work-manship</orig><reg>workmanship</reg></choice>&#8212;age has already improved it, &amp; will still more&#8212;both painting
+            &amp; frame were unharmed&#8212;Mr. Blondell, 806 Broadway, had the painting, &amp; has
+            others of yours.<ptr target="prc.00092_n4"/>
+         </p>
+         <p>Dear Charley, I cannot fix the day, but I will indeed try to come forthwith. I too wish
+            to be with you once more&#8212;though it will be but so briefly<ptr
+               target="prc.00092_n5"/>&#8212;</p>
+         <p>Much love to you, my dear friend,&#8212;not forgetting your wife &amp; children.</p>
+         <closer rend="right">   
+            <signed>Walt Whitman</signed>
+         </closer>
+
+      </body>
+   </text>
+</TEI>
