@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -79,14 +80,15 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Dells, John</term> <!--alternate spelling Dales-->
-<term>Duvall, William</term>
-<term>Getzendanner, Christian</term>
-<term>Getzendanner, Mary</term>
-<term>Kennedy, Matthew</term>
-<term>Steiner, David</term>
-<term>Sekley, John</term>
-<term>Thompson</term> <!-- mrs -->
+<term xml:id="per.001394">Dells, John</term>
+<term xml:id="per.001404">Duvall, William</term>
+<term xml:id="per.001406">Getzendanner, Christian</term>
+<term xml:id="per.001411">Getzendanner, Mary</term>
+<term xml:id="per.001402">Kennedy, Matthew</term>
+<term xml:id="per.001412">Steiner, David</term>
+<term xml:id="per.001413">Sekley, John</term>
+<term xml:id="per.001407">Thompson</term> <!-- mrs -->
+
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -100,32 +102,35 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001385">
 <persName>Butler, Airy</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001386">
 <persName>Butler, Eliza</persName> 
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001387">
 <persName>Butler, Liddy</persName> 
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001388">
 <persName>Butler, Matilda</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001389">
 <persName>Butler, Reason</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001390">
 <persName>Butler, Sally</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001391">
 <persName>Butler, Sarah</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001392">
 <persName>Butler, Thomas</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001393">
 <persName>Duvall, Gabriel, 1752-1844</persName>
+</person>
+<person role="attorney_petitioner" xml:id="per.000572">
+<persName>Beale, Robert</persName>
 </person>
 <person role="attorney_petitioner">
 <persName/>
@@ -145,6 +150,7 @@
 </profileDesc>
         
 <revisionDesc> 
+<change when="2015-10-12" who="#lkw">added xml:ids</change>
 <change when="2014-12-01" who="#kln">reviewed, edited</change>             
 <change when="2014-11" who="#snc">encoded</change>
 </revisionDesc>
@@ -179,7 +185,7 @@ Gabriel Duvall</p>
 
 <p>To 2d Interrogatory on the part of the defendant.</p>
 
-<p>My answer is, that I first became acquainted with John Dales in the year 1803, when he lived with my husband in the capacity of Bar-keeper, for about one year. I did not know John Dales when he resided in Montgomery County: John Dales lived about one year in the year 1803, with my husband in George Town in the capacity of Bar-keeper. The said John Dales during the time he lived with my husband in George Town, during the year1803, had and owned the said Thomas Butler and Sarah his wife as his slaves and hired them to my husband as his slaves. I understood that John Dales had lived in George Town for a considerable time before I am my husband went there to live. This I understood when we first went there to live.</p>
+<p>My answer is, that I first became acquainted with John Dales in the year 1803, when he lived with my husband in the capacity of Bar-keeper, for about one year. I did not know John Dales when he resided in Montgomery County: John Dales lived about one year in the year 1803, with my husband in George Town in the capacity of Bar-keeper. The said John Dales during the time he lived with my husband in George Town, during the year 1803, had and owned the said Thomas Butler and Sarah his wife as his slaves and hired them to my husband as his slaves. I understood that John Dales had lived in George Town for a considerable time before I am my husband went there to live. This I understood when we first went there to live.</p>
 
 <pb xml:id="p002" facs="oscys.case.0212.010.002.jpg"/>
 

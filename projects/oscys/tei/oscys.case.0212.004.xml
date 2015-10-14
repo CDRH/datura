@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -79,13 +80,13 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>David, John</term>
-<term>Gossum, John</term><!-- also spelled Gossam -->
-<term>Gossum, Sandey</term><!-- also spelled Gossam -->
-<term>Gossum, Thomas</term><!-- also spelled Gossam -->
-<term>Gussum, Thomson</term><!-- also spelled Gossam -->
-<term>Jacobs, William</term>
-<term>Kennedy, Matthew</term>
+<term xml:id="per.001396">Davis, John</term>
+<term xml:id="per.001397">Gossum, John</term><!-- also spelled Gossam -->
+<term xml:id="per.001398">Gossum, Sandey</term><!-- also spelled Gossam -->
+<term xml:id="per.001399">Gossum, Thomas</term><!-- also spelled Gossam -->
+<term xml:id="per.001400">Gossum, Thomson</term><!-- also spelled Gossam -->
+<term xml:id="per.001401">Jacobs, William</term>
+<term xml:id="per.001402">Kennedy, Matthew</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -97,37 +98,37 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001385">
 <persName>Butler, Airy</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001386">
 <persName>Butler, Eliza</persName> 
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001387">
 <persName>Butler, Liddy</persName> 
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001388">
 <persName>Butler, Matilda</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001389">
 <persName>Butler, Reason</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001390">
 <persName>Butler, Sally</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001391">
 <persName>Butler, Sarah</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001392">
 <persName>Butler, Thomas</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001393">
 <persName>Duvall, Gabriel, 1752-1844</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.000572">
 <persName>Beale, Robert</persName>
 </person>
-<person role="attorney_defendant">
+<person role="attorney_defendant" corresp="per.001393">
 <persName>Duvall, Gabriel, 1752-1844</persName>
 </person>
 </listPerson>
@@ -142,6 +143,7 @@
 </profileDesc>
         
 <revisionDesc>  
+<change when="2015-10-12" who="#lkw">added xml:ids</change>
 <change when="2014-12-01" who="#kln">reviewed, edited</change>           
 <change when="2014-11" who="#snc">encoded</change>
 </revisionDesc>
