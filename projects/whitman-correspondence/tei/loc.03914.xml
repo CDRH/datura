@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03914">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to George and Susan Stafford, 1 December
+                    [1883]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03914</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to George and Susan Stafford, 1 December [1883]</title>
+                    <date cert="medium" when="1883-12-01" xml:id="dat1">December 1, 1883</date>
+                    <idno type="callno">MSS18630, Box 16, Reel 10</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Stafford, George">George Stafford</persName>
+                    
+                </person>
+                <person role="recipient">
+                    
+                    <persName key="Stafford, Susan">Susan Stafford</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-08-01" who="#nhg">checked, corrected</change>
+            <change when="2014-03-12" who="#nnk">proofed</change>
+            <change when="2014-02-24" who="#kc">checked, corrected</change>
+            <change when="2013-10-27" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <div1 type="letter">
+            <pb xml:id="leaf001r" facs="loc_jc.00532_large.jpg" type="recto"/>
+            <opener>    
+                <dateline>
+                    <name type="place">Camden<ptr target="loc.03914_n1"/></name>
+                    <date when="1883-12-01" rend="right">Dec: 1st noon</date>
+                </dateline>
+            </opener>   
+            <p>I suppose Harry has written to you<ptr target="loc.03914_n2"/>&#8212;still I will
+                send you this, for good measure&#8212;What H speaks of the "unearthly noises"
+                &#38;c. he will get used to in two or three days&#8212;it is like living near a
+                railroad&#8212;</p>
+                <p>&#8212;I am well as usual&#8212;</p>
+            <closer>
+                <signed rend="right">WW</signed>
+            </closer></div1>
+            <div1 type="enclosure">
+            <pb xml:id="leaf001v" facs="loc_jc.00529_large.jpg" type="verso"/>
+            <opener>
+                <dateline>
+                    <name type="place">London <choice><abbr>Ont</abbr><expan>Ontario</expan></choice> Canada,</name>
+                    <date when="1883-11-28"><choice>
+                        <abbr>Nov</abbr>
+                        <expan>November</expan>
+                    </choice> 28&#8211;<choice><abbr>83</abbr>
+                        <expan>1883</expan>
+                    </choice></date>
+                </dateline>
+                <salute>My Dear Old Friend:</salute>
+            </opener>
+            
+            <p>I arrived here safely Saturday evening 6<hi rend="superscript">th</hi>. Have had
+                quite a good time so far. Came direct to the asylum. Went on duty as turnkey Monday
+                morning but will not remain here over six weeks or two months as the occupation is
+                not pleasant. Cannot sleep at night there are so many unearthly noises and besides I
+                want to get a position where I can make better wages. And as you know I am of a
+                nervous temperament and the least scene shocks me.</p>
+            
+            <pb xml:id="leaf002r" facs="loc_jc.00530_large.jpg" type="recto"/>
+            
+            <p>I want to go to Detroit <choice>
+                <abbr>Mic</abbr><expan>Michigan</expan></choice>, after I leave here; from there to Chicago, and want you to give me a
+                letter to any business man you know there. Your recommendation has been the means of
+                making me some good friends and I am <choice><sic>shure</sic><corr>sure</corr></choice> with your letter, I can get something good
+                in either of the cities. If you are not personally acquainted there give me letter to some
+                of the newspaper men. It will carry lots of weight. You know how I have started. I
+                want to make a lot somewhere. If I could only get in a telegraph office I would be
+                one of the happiest fellows you ever saw.</p>
+            
+            <p>Don't have any privilege here, not even time to write. I am up in my little room
+                writing this while my patients are <unclear reason="illegible" resp="#nhg" cert="medium">sadly</unclear> pacing up and down the hall. Have 42 men in my charge. Will
+                
+                <pb xml:id="leaf002v" facs="loc_jc.00531_large.jpg" type="verso"/>
+                
+                have to close for the present so good-bye. Please don't forget that
+                your boy is away among strangers and a good long letter from his dear friend will do
+                him good.</p>
+            
+            <closer>
+                <salute>Ever your</salute>
+                <signed>Harry</signed>
+            </closer>
+            <postscript>
+                <p>P.S. Don't forget to write soon and send the letters</p>
+            </postscript>
+            </div1>
+            <pb xml:id="leaf003r" facs="loc_jc.00527_large.jpg" type="recto"/>
+            <pb xml:id="leaf003v" facs="loc_jc.00528_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

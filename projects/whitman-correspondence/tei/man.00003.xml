@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="man.00003">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Richard Maurice Bucke to Walt Whitman, 3 February 1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Richard Maurice Bucke</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>man.00003</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Richard Maurice Bucke</author>
+                    <title>Richard Maurice Bucke to Walt Whitman, 3 February 1880</title>
+                    <date cert="high" when="1880-02-03" xml:id="dat1">February 3, 1880</date>
+                    <orgName xml:id="man">Charles Sixsmith Collection at the John Rylands Library, University of Manchester</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-17" who="#nhg">removed biblStruct, updated annotations</change>
+            <change when="2013-09-18" who="#nhg">checked, corrected</change>
+            <change when="2013-02-19" who="#ej">Checked and Corrected</change>
+            <change when="2013-02-05" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="man_ej.00023.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place" rend="center"><handShift rend="printed"/>Asylum for the Insane,</name>
+                    <name type="place" rend="right">London,</name>
+                    <date when="1880-02-03" rend="right"><handShift rend="manuscript"/><choice><abbr>Feb</abbr><expan>February</expan></choice> 3<hi rend="superscript">d</hi> <handShift rend="printed"/>18<handShift rend="manuscript"/>80</date>
+                </dateline>
+                <salute>My dear Walt</salute>
+            </opener>
+
+            <p>I have Burrough's book and also his last article in "Birds &#38; Poets". I have O'Connor's "Good Gray Poet" parts of which are <choice><sic>beautifull</sic><corr>beautiful</corr></choice>&#8212;I have Mrs. <choice><sic>Gilchrists</sic><corr>Gilchrist's</corr></choice> letter in the "Radical."<ptr target="man.00003_n1"/> All these and <hi rend="underline">anything</hi> else I can get on this subject are interesting, and will be more or less <choice><sic>usefull</sic><corr>useful</corr></choice>, to me&#8212;but what I <hi rend="underline">specially</hi> want just now is new facts about the <hi rend="underline">man</hi>&#8212;both bearing upon his inward and outward life&#8212;I hope you will give me any help in <unclear reason="illegible" cert="low" resp="lozynsky">reason</unclear> that you 
+                
+            <pb xml:id="leaf001v" facs="man_ej.00024.jpg" type="verso"/>
+            
+                can in this direction.</p>
+            
+            <p>I hope that your brothers will do something for me and I hope that if you have any thing to say about it you will encourage them to do something<ptr target="man.00003_n2"/>&#8212;I will return the little pamphlet<ptr target="man.00003_n3"/> after awhile meantime I will take good care of it &#38; be sure not to lose it.</p>
+           
+            <closer>
+                <salute>Yours always</salute>
+                <signed rend="right">R M Bucke</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

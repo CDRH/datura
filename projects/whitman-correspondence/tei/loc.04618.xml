@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+   <TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.04618">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">W. Hale White to Walt Whitman, 23 October 1882</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>W. Hale White</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.04618</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>            
+            <sourceDesc>
+                <bibl>
+                    <author>W. Hale White</author>
+                    <title>W. Hale White to Walt Whitman, 23 October 1882</title>
+                    <date cert="high" when="1882-10-23" xml:id="dat1">October 23, 1882</date>
+                    <idno type="callno">MSS18630, Box 19, Reel 11-12</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="White, W. Hale">W. Hale White</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-05-12" who="#nhg">checked, corrected</change>
+            <change when="2014-03-12" who="#ej">Checked and Corrected</change>
+            <change when="2014-01-28" who="#kc">checked, corrected</change>
+            <change when="2013-12-08" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_vm.02415_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right"><handShift rend="printed"/>Park Hill, <lb/>Carshalton, Surrey.</name>
+                    <name type="place" rend="right"><handShift rend="manuscript"/>England<ptr target="loc.04618_n1"/></name> 
+                    <date when="1882-10-23" rend="right">23 Oct: 1882</date>                    
+                </dateline>
+                <salute>Dear Sir,</salute>
+            </opener>
+            <p>Mrs. Gilchrist of Hampstead showed me yesterday a new book of yours which I have not got. You had just sent it to her. I must have a copy. Will you kindly send me one and tell me what the price is, or if you prefer it, tell me what the price is first and let me have the book when you get the order for the money. I obtained the Two Rivulets from you direct, and therefore apply to you directly now.</p>
+                <p>I have one additional favour to ask of you. It is twenty two
+                <pb xml:id="leaf001v" facs="loc_vm.02416_large.jpg" type="verso"/>
+                    years ago since I first bought the "Leaves of Grass" and before that time I had most earnestly proclaimed to all my friends, on the strength of what I had read of yours that here was a new fact and that America through you had found an interpreter to its hitherto unrecognised meaning. Everybody was sceptical and many sneered. Some however have been since converted.</p>
+            <p>Therefore, may I beg of you to let me have in the copy which you are going to send to me <hi rend= "underline">all</hi> the portraits which are in the one Mrs. Gilchrist has and to write my name also in my copy. I make this request because
+                <pb xml:id="leaf002r" facs="loc_vm.02417_large.jpg" type="recto"/>
+                Mrs. Gilchrist told me that the edition for the public is not quite like hers.</p>
+            <p>I learn from her that your health is better and she showed me a card from you which to my great delight revealed the old satisfaction with the world and the old joy in the sunshine. I too have a long way turned the corner and hope that your peace and steadfast content may be mine to the end&#8212;</p>
+                <closer>
+                    <salute>Ever yours</salute>
+                <signed rend="right">W. Hale White</signed>
+                    <salute>Walt Whitman Esq:</salute>
+                </closer>
+                <pb xml:id="leaf002v" facs="loc_vm.02418_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

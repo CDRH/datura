@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="med.00690">
+    <teiHeader>
+        <fileDesc> 
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to John Burroughs, [16 March 1881]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>med.00690</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">217&#8211;218</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to John Burroughs, [16 March 1881]</title>
+                    <date cert="medium" when="1881-03-16" xml:id="dat1">March 16, 1881</date>
+                    <orgName xml:id="med">The location of this manuscript is unknown.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Burroughs, John">John Burroughs</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-06-23" who="#nhg">checked, corrected, updated orgName</change>
+            <change when="2014-04-10" who="#kc">updated ID</change>
+            <change when="2014-01-29" who="#ej">Checked and Corrected</change>
+            <change when="2013-10-08" who="#nnk">proofed</change>
+            <change when="2013-09-14" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">Camden</name>
+                    <date when="1881-03-16" rend="right">Wednesday Evn'g<ptr target="sjs.00016_n1"
+                        /></date>
+                </dateline>
+                <salute>Dear friend</salute>
+            </opener>
+            <p>Yours <choice>
+                    <orig>rec'd</orig>
+                    <reg>received</reg>
+                </choice> with the good 10&#8212;God bless you&#8212;I half-moped along all through
+                February, but am coming round, same as before&#8212;I go down three or four days at
+                a time to my friends the Staffords, &#38; get out in the woods a great deal&#8212;It
+                is only half an hour's journey&#8212;go again Friday if it <choice>
+                    <orig>dont</orig>
+                    <reg>don't</reg>
+                </choice> storm<ptr target="sjs.00016_n2"/>&#8212;Should have come up there with you
+                a month ago, but was hardly able&#8212;I got a bad chill six weeks ago, struck
+                in&#8212;(was quite well up to that time)&#8212;</p>
+            <p>Your letter <hi rend="italic">don't contain</hi> the slip about the Emerson business
+                you allude to<ptr target="sjs.00016_n3"/>&#8212;The just published Carlyle <hi
+                    rend="italic">Reminiscences</hi> so well &#38; strongly praised in the <hi
+                    rend="italic">Herald</hi>, the <hi rend="italic">Critic</hi> &#38; every where,
+                don't confirm or add to my estimation of C&#8212;<hi rend="italic">Much the
+                        contrary<ptr target="sjs.00016_n4"/></hi>&#8212;</p>
+            <p>Kennedey<!-- probably miswritten by Miller-nnk --> comes here quite often &#38; is
+                disposed to be friendly&#8212;I guess he is a pretty good man, but has <hi
+                    rend="italic">the fever called literature</hi> &#38; I shouldn't wonder if he
+                was in for it, for life<ptr target="sjs.00016_n5"/>&#8212;Lathrop<ptr
+                    target="sjs.00016_n6"/> has visited me&#8212;very pleasant&#8212;Shall be glad
+                to supply you with a set of books of course&#8212;I have plenty yet<ptr
+                    target="sjs.00016_n7"/>&#8212;</p>
+            <closer>
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

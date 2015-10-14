@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nyp.00424">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">John Burroughs to Walt Whitman, 3 February 1878</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>    
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>nyp.00424</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <biblStruct>
+                    <monogr>
+                        <author>Horace Traubel</author>
+                        <title xml:id="ht">With Walt Whitman in Camden</title>
+                        <imprint>
+                            <pubPlace>Philadelphia</pubPlace>
+                            <publisher>Univ. of Pennsylvania Press</publisher>
+                            <date when="1953">1953</date>
+                            <biblScope type="volume">4</biblScope>
+                            <biblScope type="page">463&#8211;464</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+
+                <bibl>
+                    <author>John Burroughs</author>
+                    <title>John Burroughs to Walt Whitman, 3 February 1878</title>
+                    <date cert="high" when="1878-02-03" xml:id="dat1">February 3, 1878</date>
+                    <orgName xml:id="nyp">The Oscar Lion Papers, 1914&#8211;1955, New York Public Library, New York, N.Y.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Burroughs, John">John Burroughs,</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-03-17" who="#nhg">updated annotations</change>
+            <change when="2014-03-06" who="#ss">annotations added</change>
+            <change when="2013-11-27" who="#nhg">checked, corrected</change>
+            <change when="2013-11-26" who="#nnk">proofed</change>
+            <change when="2013-04-14" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">Esopus, N.Y.,<ptr target="nyp.00424_n1"/></name>
+                    <date when="1878-02-03" rend="right"><choice>
+                        <orig>Feb.</orig>
+                        <reg>February</reg>
+                    </choice> 3d, 1878.<ptr target="n0129"/></date>
+                </dateline>
+                <salute>Dear Walt:</salute>
+            </opener>
+
+            <p>Gilder<ptr target="n0871"/> suggests that a benefit be got up for you in N.Y., and that you be asked to
+                lecture on Lincoln. He thinks it would go with a rush under proper management, and
+                that lots of money might be made. The suggestion to me seems timely and just the
+                thing, and we will set the ball agoing if you are willing, and have, or can have,
+                the lecture ready. I saw Stedman<ptr target="n1043"/> when I passed through N.Y. and liked him. I think
+                he would take hold and give the project a lift. Of course Swinton<ptr target="n0611"/> and many others
+                would too. I think in fact we might have a big time and make it pay. Write me how
+                you feel about it and if you favor it, how soon you could be on hand.</p>
+
+            <closer>
+                <salute>As ever</salute>
+                <signed>John Burroughs.</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

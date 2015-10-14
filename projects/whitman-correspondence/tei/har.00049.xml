@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="har.00049">
+    <teiHeader>
+        <fileDesc> 
+            <titleStmt> 
+                <title level="m" type="main">Walt Whitman to Truman Howe Bartlett, 14 October
+                    1883</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>har.00049</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Truman Howe Bartlett, 14 October 1883</title>
+                    <date cert="high" when="1883-10-14" xml:id="dat1">October 14, 1883</date>
+                    <idno type="callno">Series III</idno>
+                    <orgName xml:id="har">Amy Lowell Collection, Houghton Library, Harvard
+                        University</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Bartlett, Truman Howe">Truman Howe Bartlett</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-05-11" who="#nhg">corrected annotations</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-07-31" who="#nhg">checked, corrected</change>
+            <change when="2014-03-06" who="#nnk">proofed</change>
+            <change when="2014-02-18" who="#kc">checked, corrected</change>
+            <change when="2013-10-27" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="har.00049.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place"><hi rend="underline">Camden NJ</hi><ptr target="har.00049_n1"
+                        /></name>
+                    <date when="1883-10-14" rend="right"><hi rend="underline">Oct: 14
+                        '83</hi></date>
+                </dateline>
+            </opener>
+            
+            <p><choice>
+                    <abbr>Rec'd</abbr>
+                    <expan>Received</expan>
+                </choice> your letter<ptr target="har.00049_n2"/>&#8212;I send three photo's by same
+                mail with this&#8212;is the profile one something like what you want?&#8212;I don't
+                know but I have already sent you the front face with hand up, as I designed one for
+                you&#8212;but as I am not certain I send this&#8212;I have just returned from two
+                weeks down along the Jersey sea beach, &#38; am well as usual&#8212;always glad to
+                hear from you&#8212;hope we shall be together again one of these days&#8212;give my
+                best love to Mrs. <choice> 
+                        <abbr>F</abbr>
+                        <expan>Fairchild</expan>
+                    </choice><!-- Miller has an F in his transcription & has an annotation on who "Mrs. Fairchild" is, but in the actual letter it looks like an "L".  -->
+                and to <choice>
+                    <abbr>B.O'R</abbr><expan>Boyle O'Reilly</expan></choice><ptr target="har.00049_n3"/>&#8212;</p>
+            <closer>
+                <signed rend="right">W W</signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="har.00049.002_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,1251 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?><?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules_mss.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="mid.00007">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Robert Southey</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author xml:id="ww">Walt Whitman</author>
+                <author xml:id="unk">Anonymous</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="lmg">Lauren Grewe</persName>
+                    <persName xml:id="mc">Matt Cohen</persName>
+                </respStmt>
+                <sponsor>University of Texas at Austin</sponsor>
+                <sponsor>University of Nebraska-Lincoln</sponsor>
+                <funder>The National Endowment for the Humanities</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>mid.00007</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                    <addrLine>kprice@unlnotes.unl.edu</addrLine>
+                    <addrLine>Ed-Folsom@uiowa.edu</addrLine>
+                    <addrLine>bbarney2@unlnotes.unl.edu</addrLine>
+                </address>
+                <availability><p>The text of the original document is in the public domain. Subject to certain exceptions, public domain works may be freely copied or used in the creation of derivative works without permission, or authorization, of the former copyright owners.</p><p>The text encoding was created and/or prepared by the Walt Whitman Archive and is governed by a <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref> (CC BY 4.0).</p><p>Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p></availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman's Manuscript Notes on Southey, Browning and Others</title>
+                    <idno type="callno"/>
+                    <date notBefore="1847-09-25" notAfter="1892-05-26">After 1847</date>
+                    <orgName xml:id="mid">Middlebury College Library, Special Collections</orgName>
+                    <note type="project">Clipping on final page appeared in <hi rend="italic">Scientific American</hi>, 25 September 1847; here it is pasted on a February 1851 essay on Robert Southey from the <hi rend="italic">American Whig Review</hi>. Transcribed from our digital images of the original item.</note>
+                </bibl>
+                <bibl type="base" xml:id="r1">
+                    <author>Anonymous</author>
+                    <title level="a">Robert Southey</title>
+                    <title level="j">American Whig Review</title>
+                    <date>February 1851</date>
+                    <pubPlace/>
+                </bibl>
+                <bibl type="pasteon" xml:id="r2">
+                    <author>Anonymous</author>
+                    <title>"Robert Burns"</title>
+                    <date when="1847-09-25">September 25, 1847</date>
+                    <publisher>Scientific American</publisher>
+                    <pubPlace/>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="h1" scribeRef="#unk" medium="typescript"/>
+                <handNote xml:id="h2" scribeRef="#ww" medium="pencil"/>
+                <handNote xml:id="h3" scribeRef="#ww" medium="black-ink"/>
+            </handNotes>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#lmg" when="2013-05-14">Transcribed and encoded.</change>
+            <change who="#lmg" when="2014-02-07">Checked.</change>
+            <change who="#mc" when="2015-05-22">Proofed.</change>
+            <change who="#mc" when="2015-07-20">Edits per K. Price.</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="marginalia">
+        <body>
+            <pb xml:id="leaf001r" facs="mid.00007.001.jpg" type="recto"/>
+            <fw type="date" place="top left"><handShift new="#h1"/>1851.</fw>
+            <fw type="header" place="top" rend="italic">Robert Southey.</fw>
+            <fw type="pageNum" place="top right">157</fw>
+            <note type="authorial" place="top" resp="#h2">(☟<hi rend="underline" hand="#h2">This is a very finely done criticism.</hi>)</note>
+            <note type="authorial" place="inline" resp="#h2" rend="centered">Southey born 1774</note>
+            <head type="main-authorial" rend="centered"><handShift new="#h1"/>ROBERT SOUTHEY.<ref target="#note1">*</ref></head>
+            <cb/><p><hi rend="underline" hand="#h2">T<hi rend="smallcaps">HERE</hi> is a species of even-handed justice
+                attending literary men, which generally
+                makes all straight in the end;</hi> the old
+                axiom of "Extremes meet" seems to govern
+                this rule, and <hi rend="underline" hand="#h2">in proportion as an author is
+                    abased by some, he is lauded by others,
+                    not only personally but poetically.</hi> There are,
+                of course, the usual exceptions,&#8212;some one
+                way, as Walter Scott,&#8212;some the other, as in
+                the case of Southey; but action and reaction
+                is a principle of nature.</p>
+            <p>We doubt if there ever were a writer so
+                fiercely vilified as the author of "Wat
+                Tyler," who had so little of the pleasanter
+                side of praise administered to him in his
+                lifetime, notwithstanding his influence and
+                position. There has not even been the
+                usual re-action when the grave has consecrated
+                his virtues, and obliterated his failings;
+                indeed, so far as we may be allowed
+                to judge from present appearances, he seems
+                already shrinking into the very narrow compass
+                of his "Life of Nelson," and the poem
+                he repudiated, "Wat Tyler!" That posterity
+                may reverse this decision is possible, although,
+                taking the past as a guide, not probable.
+                The two causes which deprived him
+                of enthusiastic eulogizers during his life, will
+                operate, we think, even more conclusively as
+                the circle expands, and deposit him on the
+                bleak shore of respectability, leaving him
+                farther removed from human sympathy as
+                the tide of time recedes.</p>
+            <p>The causes we allude to are, his want of
+                <hi rend="underline" hand="#h2">high or distinctive genius, and moral geniality.
+                    In the greatest imaginations these are
+                    generally found together, as in Homer, Ariosto,
+                    <choice><orig>Shakspeare</orig><reg>Shakespeare</reg></choice>, and Cervantes.</hi> Some cases,
+                <span rend="singleLine-left" hand="#h2" xml:id="s1" from="#s1" to="#s2"/>however, exist in which they are separated,
+                as in Dante and Milton; but possibly in
+                both these latter instances political and domestic
+                sorrows, as well as the severe temper
+                of the times, <hi rend="underline" hand="#h2" xml:id="u1">may have had a modifying, if
+                    not an altogether deviating influence upon
+                    them, which if not exercised would have left
+                    them as jovial fellows as Anacreon himself.</hi></p><anchor xml:id="s2"/>
+            <note type="authorial" resp="#h2" place="bottom" target="#u1">☝</note>
+            <cb/>
+            <p>That Southey was altogether deficient in
+                that logical and creative phrenzy (if we may
+                like Willis or Emerson coin on our own account)
+                which <hi rend="italic">our</hi> great Anglo-Saxon poet
+                calls "a fine phrenzy"&#8212;(we advisedly say <hi rend="italic">our</hi>,
+                for <choice><orig>Shakspeare</orig><reg>Shakespeare</reg></choice> as much belongs to the American
+                people as he does to the English, seeing
+                that <hi rend="italic">our</hi> ancestors claimed him as a fellow-citizen)
+                &#8212;that Southey was deficient in this
+                godlike faculty is evident to any who has
+                read all or even any of his voluminous
+                poems; that he was destitute of <hi rend="italic">bonhomie</hi>
+                was as equally apparent to a casual acquaintance,
+                or an old friend.</p>
+            <span rend="singleLine-right" hand="#h2" xml:id="s3" from="#s3" to="#s4"/><p>He had no impulse. In a word, we may
+                define him as the Genius of Routine; that
+                was the only <hi rend="italic">genius</hi> he possessed. In saying
+                this let our readers clearly understand
+                that we neither undervalue nor disparage
+                Southey, or the regularity of which he was
+                so striking an example; <hi rend="underline" hand="#h2">we merely define
+                    what he <hi rend="italic">really was</hi>, just as a mathematician
+                    means no insult to a triangle when he says
+                    it is not a circle.</hi> Indeed, to borrow a geometrical
+                term, Southey was eminently an
+                angular mind: he did not incorporate in his
+                own nature the knowledge he was constantly
+                acquiring; he merely added it to what he
+                already had. <hi rend="underline" hand="#h2">Knowledge made Southey
+                    learned, it made <choice><orig>Shakspeare</orig><reg>Shakespeare</reg></choice> wise; it enabled
+                    the one to alter and illustrate, the other to
+                    create and beautify; it enriched the <hi rend="italic">nature</hi>
+                    of the one, but only the recollection of the
+                    other. Knowledge made the author of Hamlet
+                    philosophical and imaginative; it rendered
+                    the writer of Thalaba prolix and
+                    fanciful; it was a telescope and a microscope
+                    to <choice><orig>Shakspeare</orig><reg>Shakespeare</reg></choice>, a mere pair of colored spectacles
+                    to Southey.</hi><anchor xml:id="s4"/> We repeat, that in selecting
+                    the greatest of poets for this parallel,
+                    we have no wish to depreciate, but simply
+                    to take the highest of each class, in order
+                    to render the contrast more striking.</p>
+            <p><hi rend="underline" hand="#h2" xml:id="u3">Robert Southey, working out his own
+            original nature honestly, is entitled to as
+            much respect as William <choice><orig>Shakspeare</orig><reg>Shakespeare</reg></choice></hi>: for</p>
+            <note type="authorial" resp="#h2" place="bottom" target="#u3">☝</note>
+            <note type="footnote" xml:id="note1" place="bottom">*The Life and Correspondence of Robert Southey, LL.D. Edited by his son, Rev. Charles
+                Cuthbert Southey. New-York: Harper &amp; Brothers.</note>
+            <pb xml:id="leaf001v" facs="mid.00007.002.jpg" type="verso"/>
+            <fw type="pageNum" place="top left">158</fw>
+            <fw type="header" rend="italic" place="top">Robert Southey.</fw>
+            <fw type="date" place="top right">Feb.</fw>
+            <cb/><p>this we have the incontrovertible evidence
+            of Holy Writ, as illustrated by the parable of
+            the talents. We shall not even condemn
+            him for his remarkable change of opinion
+            in religion and politics: for this also he
+            had the precedence of a sacred example
+            in St. Paul so far as the right of search
+            and change is concerned; but he had no
+            authority for his malignant persecution of
+            those who continued to hold the same
+            opinions as he had once entertained. Surely,
+            this ought to have counselled charity; but
+            <hi rend="underline" hand="#h2">it is a singular proof of human blindness,
+            that men never hate themselves for their
+            former heresies!</hi> Let us, therefore, set an
+            example of charity ourselves, and suggest
+            that it is merely the opinions they hate,
+            after all, and not the men.</p>
+            <p>We remember Sergeant Talfourd used this
+            <hi rend="italic">argumentum ad hominem</hi> with great effect
+            on a trial for rioting at Gloucester. Baron
+            Gurney, a very able but severe judge, who
+            presided, had been, during the French Revolution,
+            one of the Jacobin Club in London
+            notorious for its anarchical principles.
+            This was well known to Talfourd, who defended
+            the rebels, and who was so irritated at
+            the judge's undue leaning against the prisoners,
+            that in the defence he begged "his
+            lordship would reflect if in his own experience
+            he did not remember any one who
+            had formerly been an ardent admirer and
+            correspondent of Robespierre and Marat;
+            one who was also a member of a club, whose
+            toasts were such as, 'The heart of a king
+            grilled on the ribs of his minister;' and
+            whether he was not now one of the most
+            distinguished ornaments of the bench; and
+            what would have been his fate had no time
+            been given to him to repent, and repay the
+            society he had outraged," &amp;c. This had so
+            great an effect, that in his charge the conscience-struck 
+            Gurney directed the jury to
+            acquit them, with only a severe reprimand.</p>
+            <span rend="bracket-left" hand="#h2" xml:id="s5" from="#s5" to="#s6"/><p>Men should bear in mind that uniformity
+                of opinion would soon become a dead level of
+                intellect. Indeed, what diversity of scenery
+                is to the picturesque, variety of mind is to
+                the intellectual world.<anchor xml:id="s6"/> If all men thought
+                alike, human nature would soon become a
+                putrefaction of bigotry&#8212;a dead sea of idiocy.
+                <hi rend="underline" hand="#h2">Heresy seems to be the gastric juice of the
+                    human race. The first utterance of a new
+                    doctrine is considered an offense; but in
+                    time it becomes the standard of faith, and,
+                    forgetful of its own youthful struggles and</hi>
+            <cb/>
+                <span rend="singleLine-left" hand="#h2" xml:id="s7" from="#s7" to="#s8"/><hi rend="underline" hand="#h2">sufferings, assumes in its old age the persecutor.
+                    Thus, strangely as it may sound, the
+                    blasphemy of one age becomes the religion
+                    of the next;</hi><anchor xml:id="s8"/> <hi rend="underline" hand="#h2">opinions like billows roll on,
+                        one after the other, swallowing each other,
+                        or harmoniously subsiding into the vast
+                        ocean of Truth.</hi></p>
+            <p>We have thought it necessary to make
+                these preliminary remarks in order that our
+                readers may the better comprehend our
+                view of Southey, and his aspect of society.
+                It will however be advisable to glance
+                hastily at his intimates and contemporaries
+                before we fairly enter upon his own particular
+                life and correspondence. These were
+                undoubtedly some of the most remarkable
+                men the world of genius has produced; we
+                shall however confine ourselves to those
+                most immediately acting upon his conduct
+                and opinions.</p>
+            <p>Coleridge, Lloyd, and Lovell were those
+                who were his first intellectual associates;
+                after a time, Wordsworth, Lamb, and Cottle
+                were added. All these were men of a peculiar
+                stamp, some of the highest powers. The
+                greatest was undoubtedly Coleridge, not
+                only for his attainments, imagination, and
+                enthusiasm, but also on account of the eloquence
+                with which he advocated any system
+                he adopted; <hi rend="underline" hand="#h2">even his inconsistency gave
+                    a poetical charm to his conduct!</hi> Ever
+                the slave of impulse, but preserved from
+                vice by one of the most gorgeous, and, at
+                the same time, subtle imaginations vouchsafed
+                to a human being, the author of
+                Christabel was at once a giant and a child.
+                While his comprehensive and logical mind
+                detected at a glance the most plausible
+                sophism of another, he was constantly bewildered
+                in those of his own creation; his
+                silken clue inevitably failed him in the
+                labyrinth of his own planning; he was
+                no Daniel in the den of his own lions!
+                Coleridge was to himself throughout his life,
+                what the Spectre was to the hero of one of
+                Calderon's plays, the name of which we forget:
+                he always found <hi rend="italic">himself</hi> opposed and
+                overthrown by <hi rend="italic">himself</hi>. Like a silk-worm he
+                lived in a world of his own spinning, and
+                which was destined eventually to be his
+                shroud. <span rend="bracket-left" hand="#h2" xml:id="s9" from="#s9" to="#s10"/>We have little hesitation in stating
+                that we do not believe there has ever been
+                an instance of a man of equal genius so entirely
+                giving himself up to such flimsy delusions
+                and sophisms as Coleridge did from
+                his very boyhood. Lamb defined him exactly<anchor xml:id="s10"/><anchor xml:id="s12"/></p>
+                <pb xml:id="leaf002r" facs="mid.00007.003.jpg" type="recto"/>
+                <fw type="date" place="top left">1851.</fw>
+                <fw type="header" rend="italic" place="top">Robert Southey.</fw>
+                <fw type="pageNum" place="top right">159</fw>
+                <cb/><p>when he called him "the <hi rend="italic">Inspired</hi>
+                    Christ School Boy." He never outgrew his
+                    gigantic boyhood. Fresh from the trammels
+                    of school, he longed to plant idylls and
+                    eclogues on the banks of the Susquehanna,
+                    of which he was to be one of the piping
+                    Corydons, with some young Phillis fond of
+                    throwing love-apples at him, and listening to
+                    his strains, and always giving the award in
+                    his favor. A variety of causes combined
+                    gave a similar tendency to the more practical
+                    mind of Southey. But a <hi rend="italic">fortunate</hi> want
+                    of money saved them from this egregious
+                    folly; for there never were two men less
+                    fitted for emigration to a new world than
+                    they were.</p>
+                <p>Love, poverty, a vague aspiration for
+                    liberty, and a restlessness, which Southey
+                    finally conquered, were the motives which
+                    led him to entertain the Pantisocratic scheme.
+                    It is a mistake to suppose Wordsworth
+                    ever for an instant was mixed up in this
+                    Utopian dream; indeed, the bare suspicion
+                    annoyed him so much, that on the publication
+                    of Chorley's "Authors of England" in
+                    1842, the old poet requested the writer of
+                    this article to beg Mr. Chorley would correct
+                    the mistake he had made in his life of
+                    Coleridge, where Wordsworth figures as
+                    one of the emigrant party.</p>
+                <p>The head and front of this "Empire Plan"
+                    was really Lovell; but a practical view of the
+                    whole question dissipated the chimera.</p>
+                <p>Both Lloyd and Lovell were singular
+                    beings. The former was evidently tinged
+                    with insanity even at that early period;
+                    towards his middle age it showed itself so
+                    unmistakably that he was placed in a Lunatic
+                    Asylum, where he spent most of his remaining
+                    years; he was eventually killed in endeavoring
+                    to escape from one in France, no
+                    many years ago. <span rend="bracket-left" hand="#h2" xml:id="s13" from="#s13" to="#s14"/><span rend="bracket-right" hand="#h2" xml:id="s15" from="#s15" to="#s16"/>In addition to being a
+                    lunatic, he was also a poet, and he had the<anchor xml:id="s16"/>
+                    honor of helping Coleridge and Southey to<anchor xml:id="s14"/>
+                    fill up their first volume of poems published
+                    at Bristol by their friend Cottle. <span rend="bracket-left" hand="#h2" xml:id="s17" from="#s17" to="#s18"/>Insanity
+                    and poetry are hereditary in Lloyd's family,
+                    for his eldest son, who is a scholar, a Christian,
+                    a man of fortune, and an elegant poet,<anchor xml:id="s18"/>
+                    has been for some years under partial
+                    restraint. We know him well, and have
+                    heard from him the statements we have just
+                    made, and confirmed by others.</p>
+            <p>Lovell was Coleridge and Southey's brother-
+                in-law, the <hi rend="italic">three</hi> having married the
+            <hi rend="italic">three</hi> Misses Fricker. Strange enough that<cb/>
+            insanity should also develop itself in these
+            ladies. Edith, Mrs. Southey, died insane
+            after lingering in that state some years, and
+            Mrs. Coleridge has acted so strangely through
+            all her life as to cause considerable apprehension
+            in her friends' minds for the ultimate
+            result.</p>
+            <p>Wordsworth's influence on Southey was
+            small, notwithstanding the respect which he
+            entertained for the great philosophical poet.
+            This partly arose from their not coming
+            together at Southey's plastic age; for like
+            hot lava, Southey hardened very soon. This
+            is curiously developed in the correspondence
+            now before us; he seems at once to spring
+            from Pantisocracy to common sense, in the
+            commonest acceptation of the term. By-the-
+            bye, while we think of it, we may ask the
+            accomplished and conscientious editor why
+            he has omitted a letter from his father to Coleridge
+            respecting the latter's disinclination to
+            marry Miss Sarah Fricker? It was written in
+            reply to one from Coleridge, "in which he
+            stated very weighty reasons why he should not
+            marry just then, but leaving it to Southey to
+            decide whether he thought he was bound in
+            honor to fulfil his engagement <hi rend="italic">immediately</hi>."
+            Southey's answer was lengthy and decisive,
+            and determined Coleridge at once to marry,
+            among difficulties amply illustrated in Cottle's
+            "Recollections," and from which we
+            question if he ever thoroughly emerged. The
+            Gillmans, of Highgate, have a copy of this
+            interesting epistle. It would throw a little
+            light upon the state of Coleridge's heart,
+            which might perhaps clear up the darkness
+            which now apparently hangs over his long
+            separation from his "besonneted Sara!"</p>
+            <p>It is only due to the departed poet's
+                memory to remember that his children,
+            Hartley, Derwent, and Sara, were to the last
+            most affectionately attached to their father,
+            at the same time not forgetting their duty to
+            their mother. This is a volume in Coleridge's
+            favor more conclusive than any he has written
+            himself; for no such three children,
+            perhaps, ever came together, either for intellect,
+            conscientiousness, or rectitude.</p>
+            <p>After this little sketching, let us introduce
+            the hero of the present drama.</p>
+            <p>Southey thus records his own birth:&#8212;
+            "My birthday was Friday, 12th August,
+            1774; the time, half-past eight in the
+            morning, according to the family Bible.
+            According to my astrological friend Gilbert,
+            it was a few minutes before the half hour,</p>
+            <!--<pb xml:id="leaf002v" facs="mid.00007.004.jpg" type="verso"/>
+            <fw type="pageNum" place="top left">160</fw>
+            <fw type="header" rend="italic" place="top">Robert Southey.</fw>
+            <fw type="date" place="top right">Feb.</fw>
+            <p>in consequence of which I am to have a
+                pain in the bowels when I am about thirty,
+                and Jupiter is my deadly enemy, but I may
+                thank the stars 'for a gloomy capability of
+                walking through desolation.'" On his arrival
+                the nurse declared "<hi rend="italic">he was a great ugly
+                    boy</hi>." So even from the very first Southey
+                had to endure unpalatable criticism.</p>
+            <p>In his fourth year he was sent to a little
+                daily school, where he first learned to distinguish
+                the difference between "a B and a
+                bull's foot," and other agreeable distinctions.
+                Here he remained two years, passing most
+                of his time at his aunt's, Miss Tyler, who
+                seems to have been a sincere, though occasionally
+                unreasonable friend, till his marriage,
+                when their rupture was final. Southey
+                always had a high opinion of this lady's intellect,
+                and there is no telling how much he
+                might owe unconsciously to her pervading
+                influence, and constant association: indirectly
+                she gave the bias to poetry, owing to
+                her intimacy with the family of the manager
+                of the Bath and Bristol theatres. We refer
+                to this part of his memoirs for a very tragic
+                event connected with this family. Even so
+                early as his fourth year he was in the habit
+                of being taken to the theatre, which fact was
+                also impressed upon his mind by a reprimand
+                he received for confounding the
+                theatrical with the ecclesiastical terms, and
+                saying after church one Sunday, "that there
+                was a very full <hi rend="italic">house</hi>." The first play he
+                saw was a comedy by Fielding, called <hi rend="italic">The
+                    Fathers</hi>, a curious foreshadowing of the
+                Fathers which in his old age occupied so
+                much of his studies. At six years old he
+                obtained without effort what our fair friend
+                Lucretia Mott. is now desperately struggling
+                for&#8212;he was breeched: his recollection must
+                have been singularly vivid, for in after years
+                he remembered the dress, which was <hi rend="italic">nankeen
+                    trimmed with green fringe</hi>.</p>
+            <p>He was now sent to Mr. Foot's, a dissenting
+                minister, where he remained a year. His
+                recollections of this school were very unpleasant.
+                The death of the master released
+                him from this bondage. He was then placed
+                at Corston, a village about nine miles from
+                Bristol: in a poem called The Retrospect,
+                Southey in after years alludes to it with
+                much pathos. After a year's domicile here
+                he was taken away, and spent the time
+                with his aunt, who had broken up her
+                establishment at Bath, and settled at Bedminster.</p><cb/>
+            <p>After a short holiday, he was placed as a
+                day boarder at a school in Bristol, kept
+                by a Welshman, who rejoiced in the echoing
+                name of William Williams. It was at this
+                time that Robert made his first attempts on
+                the muse, which, he says, gave him immense
+                pleasure. The first book he read
+                thoroughly was <choice><orig>Shakspeare</orig><reg>Shakespeare</reg></choice>, and Titus Adronicus
+                was his favorite drama. Before he
+                was eight he had read Beaumont and
+                Fletcher through.</p>
+            <p>It was about this time that he announced
+                to his aunt the wonderful discovery he had
+                made, and one which most American authors
+                think they can do, viz., write a play! Little
+                Robert said, "It is the easiest thing in the
+                world, aunt, to write a play!" "Is it, my
+                dear?" replied the lady. "Yes," rejoined
+                our little poetling; "you have only to think
+                what you would say if you were in that person'
+                place, and say it for them!"</p>
+            <p>We are afraid upon this plan too many
+                dramatists write, which will account for the
+                egotistical monologues published now-a-
+                days.</p>
+                <p>For the gratification of those who are fond
+                    of linking names together, we may as well
+                    mention that Henderson, the great tragedian,
+                    was an intimate friend of Miss Tyler,
+                    although Southey could not remember that
+                    he had ever seen him: he however cherished
+                    a perfect recollection of the celebrated
+                    actor Edwin, who presented him with a
+                    toy.</p>
+                <p>At this time a lady gave him "Hoole's
+                    Tasso," which afforded him intense delight.
+                    Shortly afterwards his young fancy was
+                    fired by the same author's translation of
+                    Ariosto. Seeing the name of Spenser in
+                    the notes, he obtained a copy, and despite
+                    the Old English character in which it
+                    was printed, soon mastered the treasures of that
+                    most poetical of poets.</p>
+                <p>Southey truly says in one of his autobiographical
+                    chapters, "My memory strengthens
+                    as I proceed in this task of retrospection;
+                    and yet, while some circumstances&#8212;a look&#8212;
+                    a sound&#8212;a gesture, though utterly unimportant,
+                    recur to me more vividly than the
+                    transactions of yesterday, others, which I
+                    would fain call to mind, are irrevocably
+                    gone."</p>
+                <p>To a man of perfect leisure and happy
+                    circumstances, few pleasures can be comparable
+                    to thus living again in the past&#8212;sorrow
+                    taken from misfortune, and guilt from</p>-->
+            <pb xml:id="leaf003r" facs="mid.00007.004.jpg" type="recto"/>
+            <fw type="date" place="top left">1851.</fw>
+            <fw type="header" place="top" rend="italic">Robert Southey.</fw>
+            <fw type="pageNum" place="top right">161</fw>
+            <p>pleasure. Moore has very happily expressed
+                this retrospection:</p>
+                <lg type="linegroup"><l>"Sighing, as o'er the shadowy past,</l>
+                <l>Like a tomb-searcher, Memory ran</l>
+                <l>Lifting the shroud that Time had cast</l>
+                <l>O'er buried hopes."</l></lg>
+            <p>We now and then come upon pithy
+                axioms, such as&#8212;(Southey is talking of his
+                schoolmaster): "When his ill circumstances
+                pressed upon him, he gave way perhaps
+                more readily to impulses of anger; because
+                anger, like drunkenness, suspends the sense
+                of care, and an irascible emotion is felt as a
+                relief from painful thoughts." This is however
+                only half the case: anger is an excitement,
+                and consequently suspends the duller sense
+                of care, or any other equable state of mind;
+                but Southey forgets, or perhaps never knew,
+                that the real cause of the phenomenon is the
+                weakness of mind, resulting from the irritation
+                of the mosquito bites of buzzing animals,
+                who very properly sting sleeping debtors till
+                they wake and pay.</p>
+                <p>We have however, a few passages further
+                    on, a proof of how little a learned man is a
+                    wise-one. "He would strike with a ruler
+                    sometimes when his patience was greatly
+                    provoked by that <hi rend="italic">incorrigible stupidity</hi>
+                    which of all things, perhaps, puts patience
+                    to the severest trial."</p>
+                <p>Let us tell our readers that of the three,
+                    the blockhead, the master, and the apologist,
+                    the most incorrigible fools are the
+                    schoolmaster for striking, and the Laureate
+                    for defending the blow. Mr. Southey's joke,
+                    too, about punishing a creole, is a proof of
+                    his want of humor. We will not quote
+                    the joke, having no wish "to throw a damp
+                    upon a funeral."</p>
+                <p>We have, however, a most serious charge
+                    against the author of Kehama, and one of
+                    his own convicting: we quote verbatim his
+                    very words:&#8212;</p>
+            <p>"One of them (evidently by his name of French
+                extraction) was, however, the most thoroughly
+                fiendish human being that I have ever known.
+                There is an image in Kehama, drawn from my
+                recollection of the devilish malignity which used
+                sometimes to glow in his dark eyes, though I
+                could not there give the likeness in its whole force,
+                for his countenance used to darken with the blackness
+                of his passion. Happily for the slaves on the
+                family estate, he, though a second brother, was
+                wealthy enough to settle in England; and an anecdote
+                which I heard of him when he was about
+                thirty years of age, will show that I have not
+                <cb/>
+                spoken of his character too strongly. When he
+                was shooting one day, his dog committed some
+                fault. He would have shot him for this upon the
+                spot, if his companion had not turned his gun aside,
+                and, as he supposed, succeeded in appeasing him;
+                but, when the sport was over, to the horror of
+                that companion, (who related the story to me,) he
+                took up a large stone and knocked out tbu dog's
+                brains. I have mentioned this wretch, who might
+                otherwise have better been forgotten, for a charitable
+                reason; because I verily believe that his
+                wickedness was truly an original, innate, constitutional
+                sin, and just as much a family disease as
+                gout or scrofula. I think so, because be had a
+                nephew who was placed as a pupil with King, the
+                surgeon at Clifton, and in whom at first sight, I
+                recognized a physiognomy which I hope can be
+                long to no other breed. His nephew answered in
+                all respects to the relationship, and to the character
+                which nature had written in every lineament of
+                his face. He ran a short career of knavery, profligacy,
+                and crimes, which led him into a prison,
+                and there he died by his own hand."</p>
+                <p>The commonest observer must remark the
+                    tender difference with which he treats the
+                    reputation of a <hi rend="italic">living</hi> rich man, to the dead
+                    memory of the poor dependent. Farther on
+                    we have another phase of character: our
+                    space, however, will not allow us to quote;
+                    we must therefore content ourselves by requesting
+                    our reader's attention to Southey's
+                    account of his interview with an old schoolfellow,
+                    whom he designates under the initials
+                    H. O. They will find it at the close
+                    of chapter xii. We question if a more singular
+                    confession of feeling was ever before
+                    so ingenuously given to the world.</p>
+                <p>There are many <hi rend="italic">naÏve</hi> admissions in his
+                    autobiography, which, for a man of the
+                    Laureate's caution, strike us as remarkable.
+                    <span rend="singleLine-right" hand="#h2" xml:id="s19" from="#s19" to="#s20"/>In some very pertinent remarks on poetry he
+                    observes: "In the earliest ages, certain it is
+                    that they who possessed that gift of speech
+                    which enabled them to clothe ready thoughts
+                    in measured or elevated language, were
+                    held to be inspired.<anchor xml:id="s20"/> False oracles were delivered
+                    in <hi rend="italic">verse</hi>, and true prophecies delivered
+                    in <hi rend="italic">poetry</hi>.* * * Sleight of hand
+                    passed for magic in the dark ages, sleight
+                    of tongue for inspiration." We can well
+                    imagine how such a heretical or dangerous
+                    opinion in the writings of another would
+                    have drawn down his anathema as a "Quarterly
+                    Reviewer."</p>
+                <p>From the Welshman Southey was removed
+                    to a day school at Bristol, kept by a
+                    clergyman, who was a good classical scholar;
+                    under his direction our poet commenced
+                    "Greek and nonsense verses." This was in</p>
+            <fw type="sig" place="bottom">VOL. VII. NO. II. NEW SERIES. 11</fw><!--These pages unmarked by WW.
+            <pb xml:id="leaf004v" facs="mid.00007.006.jpg" type="verso"/>
+            <fw type="pageNum" place="top left">164</fw>
+            <fw type="header" place="top" rend="italic">Robert Southey.</fw>
+            <fw type="date" place="top right">Feb.</fw>
+            <p>to expect a savage to practise a Christianity
+                he had never been taught. Had the French
+                nation been capable of behaving differently
+                to what they did, there would have been no
+                revolution, because the motive would not
+                have existed." This is of course the philosophical
+                explanation, and had Southey argued
+                correctly he would have recognized in
+                the revolutionary harvest the frightful seed
+                from whence it sprang. It is as true of a
+                nation as a corn-field, that whatsoever the
+                rulers sow they shall in time reap. But
+                Southey had not a philosophical, nor yet a
+                comprehensive mind. We doubt if he was
+                even a logician in its highest signification.
+                There is as much difference between the
+                man of a logical and the man of a syllogistical
+                mind, as there is between eloquence and
+                rhetoric, poetry and verse. Indeed, one is
+                founded on art, and the other on nature.
+                One is a spirit and the other only a form.
+                But after all the author of "Joan of Arc" was
+                only a school-boy republican; he had by
+                head and not by heart. It was the vague,
+                idle dream of poetical imitation, and not a
+                noble, glorious principle as in the breast of a
+                Milton or a Washington. Listen to one of
+                these absurd "day-dreams." It is in a letter
+                to Horace Walpole Bedford:&#8212;</p>
+                <p>"If this world did but contain ten thousand
+                    people of <hi rend="italic">both sexes visionary</hi> as myself,
+                    how delightfully would we repeople
+                    Greece and turn out the <choice><orig>Moslem</orig><reg>Muslim</reg></choice>. I would
+                    turn crusader, and make a pilgrimage to
+                    Parnassus at the head of my republicans, and
+                    there reinstate the Muses in their original
+                    splendor."</p>
+                <p>Our readers will, we think, agree with us
+                    that if this be republicanism, every young
+                    aristocrat fresh from Virgil or Livy is quite
+                    as "good a one" as the author of " Wat Tyler."</p>
+                <p>There is also at this epoch of his life a
+                    discontent which developed itself in a disposition
+                    to attack his fellow-creatures à la
+                    Juvenal.</p>
+                <p>In a letter to Bedford he thus writes:
+                    "Your plan of a general satire I am ready
+                    to partake when you please." Who is there
+                    that has not in the outset of a classical
+                    or literary life had similar vague intentions
+                    of reforming or smashing human
+                    nature?</p>
+                <p>Even before his acquaintance with Coleridge,
+                    our poet seems to have entertained
+                    thoughts of an emigration to the United<cb/>
+                States; for in another letter dated Dec. 14,
+                1793, he writes:&#8212;</p>
+                <p>"What is to become of me at ordination?
+                    Heaven only knows! After keeping the strait
+                    path so long, the Test Act will be a stumblingblock
+                    to honesty. So chance and Providence
+                    must take care of that, and I will fortify myself
+                    against chance. The wants of man are so very
+                    few, that they must be attainable somewhere, and
+                    whether here or in America matters little. <hi rend="italic">I
+                        have long learned to look upon the world as my
+                        country.</hi></p>
+            <p>"Now, if you are in the mood for a reverie,
+                fancy only me in America; imagine my ground
+                uncultivated since the creation, and see me wielding
+                the axe, now to cut down the tree, and now the
+                snakes that nestled in it. Then see me grubbing
+                up the roots, and building a nice, snug little
+                dairy with them: three rooms in my cottage, and
+                my only companion some poor negro whom I have
+                bought on purpose to emancipate. After a hard
+                day's toil, see me sleep upon rushes, and, in very
+                bad weather, take out my casette and write to
+                you, for you shall positively write to me in America.
+                Do not imagine I shall leave rhyming or
+                philosophizing; so thus your friend will realize
+                the romance of Cowley, and even outdo the seclusion
+                of Rousseau; till at last comes an ill-looking
+                Indian with a tomahawk, and scalps me&#8212;a most
+                melancholy proof that society is very bad, and
+                that I shall have done very little to improve it!
+                So vanity, vanity will come from my lips, and
+                poor Southey will either be cooked for a Cherokee,
+                or oysterized by a tiger."</p>
+                <p>How little Southey knew his own nature,
+                    even if he were sincere in the sentiment we
+                    have italicized, is evident to all who know
+                    his after life. A man may recant his <hi rend="italic">opinions</hi>,
+                    but not his <hi rend="italic">nature</hi>.</p>
+                <p>Of his literary industry we have a proof
+                    in a letter to Bedford of 1793: "I have
+                    accomplished a most arduous task, transcribing
+                    all my verses that appear worth the
+                    trouble, except letters, [poetical epistles,
+                    doubtless.] Of these I took one list, another
+                    of my pile of stuff and nonsense, and a third
+                    of what I have burned and lost. Upon an
+                    average, ten thousand verses are burned and
+                    lost, the same number preserved, and fifteen
+                    thousand worthless. * * * I can bear
+                    a retrospect, but when I look forward to taking
+                    orders, a thousand dreadful ideas crowd at
+                    once upon my mind. * * * The more
+                    I see of this strange world, the more I am
+                    <hi rend="italic">convinced that society requires desperate
+                        remedies!</hi> The friends I have (and you
+                    know me to be cautious in choosing them)
+                    are many of them struggling with obstacles
+                    which never could happen were man what
+                    nature intended him. A torrent of ideas</p>
+            <pb xml:id="leaf005r" facs="mid.00007.007.jpg" type="recto"/>
+            <fw type="date" place="top left">1851.</fw>
+            <fw type="header" place="top" rend="italic">Robert Southey.</fw>
+            <fw type="pageNum" place="top right">165</fw>
+                <p>bursts into my mind when I reflect upon
+                    this subject. In the hours of sanguine expectation
+                    these reveries are agreeable, but
+                    more frequently the visions of futurity are
+                    dark and gloomy, and the only ray that enlivens
+                    the scene beams on America."</p>
+                <p>So closed 1793. At the latter end of the
+                    following January, he returned to Baliol
+                    College, where his expenses were defrayed
+                    by his uncle, the Reverend Herbert Hill,
+                    chaplain to the British Factory at Lisbon,
+                    who looked forward with considerable anxiety
+                    to his nephew taking holy orders. To
+                    this life, though Southey made no open objection,
+                    he seemed to have cherished a private
+                    dislike quite insuperable, which his son (himself
+                    a clergyman) endeavors to apologize
+                    away, by alluding to the state of the Established
+                    Church at that period, hinting at
+                    fox-hunting, Port-wine drinking, and a few
+                    other foibles not much in the style of "Him
+                    of Galilee," leaving the silent inference to be
+                    drawn that had his father been a young
+                    man now he would not have had his old
+                    scruples.</p>
+                <p>Southey's religion at this precise point of
+                    his life, was, we have heard Coleridge affirm,
+                    "<hi rend="italic">an empty vacuum full of mythology, and
+                        craving a plenum of a comfortable income,
+                        a handsome wife, and a large epic fame</hi>."
+                    In a short time afterwards he grew Unitarian;
+                    there was an intellectuality about it
+                    which pleased him. We may as well in
+                    this place relate a little anecdote of Coleridge,
+                    which showed how greatly his imagination
+                    entered into his "Thirty-nine Articles,"
+                    even to the very last. About a fortnight
+                    before the great poet died, the writer of this
+                    had received a letter from Mr. Wordsworth,
+                    containing a message to Coleridge, who was
+                    not suspected to be so near his death as
+                    eventually proved. We merely name this
+                    to account for the apparent discrepancy of
+                    the conversation. The "old man eloquent"
+                    was in his bed-room, a chamber which commanded
+                    one of the sweetest and greenest
+                    views in England&#8212;being from the brow of
+                    Highgate Hill, and looking over Finchley
+                    towards St. Albans. As we write all seems
+                    as fresh as yesterday&#8212;the broken-down
+                    frame of the old poet&#8212;his large, gray,
+                    fiery, yet pain-stricken eye&#8212;his flabby, pale,
+                    yet heavy face&#8212;his noble brow, not bald,
+                    being covered with silvery hair&#8212;his intermittent,
+                    yet full, deep voice&#8212;the very
+                    roll of his eye, the compressed lip, the<cb/>
+                slippered feet, the snuffed old black coat,
+                gorged with the titillating dust down his
+                waistcoat and cuff&#8212;all stand so palpably
+                now before me, that the Atlantic seems a
+                rivulet, and the sixteen years that have
+                nearly rolled since "the noticeable man"
+                was laid in the immortality of his grave in
+                the old church-yard at Highgate, a mere
+                watch of the night. But we must shake off
+                the reverie, or we shall bury our readers in
+                sleep.</p>
+                <p>Coleridge burst out as we were saying
+                    "Good bye," with&#8212;"Lord Brougham has
+                    been here to-day. We talked about religion.
+                    Brougham said, 'Mr. Coleridge, you were a
+                    Unitarian preacher once: define the difference
+                    between your faith as <hi rend="italic">then</hi> and <hi rend="italic">now</hi>. I
+                    shall remember it, and it may bring forth
+                    seed long after you dream of.' Brougham's
+                    a good man,&#8212;a kind man; his heart is
+                    right&#8212;it is his over-worked brain that has
+                    made him go wrong. Heaven help him&#8212;
+                    he is as simple as a child!"</p>
+                <p>"Well, but my dear friend," said Mrs.
+                    Gillman, who had only just recovered from a
+                    severe accident, "your definition?" Coleridge
+                    smiled: "Dear friend, cherish that cowry
+                    shell on the mantel-piece, for it has, I feel
+                    assured, converted an unbelieving Chancellor,
+                    the living Bacon of our Woolsack.
+                    I took up the shell, my dear friends, and
+                    said, 'Heaven has sent this to give me an
+                    illustration. You see how exquisitely this is
+                    worked, how wonderfully symmetrical; the
+                    tints of the coloring are miraculously artistic:
+                    on one side you have the golden flush
+                    of sunset, mingling with the purple dawn;
+                    and if you place it to your ear, imagination
+                    supplies a voice which seems to whisper an
+                    audible something, but it is only a <hi rend="italic">dead
+                        shell</hi>&#8212;where is the living animal, for which
+                    it was created? It is only a sarcophagus.
+                    So with Unitarianism. I admire its external
+                    form, the beauty of its morality, the coloring
+                    of its logic. But where is the living
+                    spirit of Faith? Where is Christ? You
+                    have taken away the Lord, and you know
+                    not where you have laid him."</p>
+                <p>We shall not go into the theology of this
+                    simile; we merely give it for its poetry.</p>
+                <p>When Southey turned Unitarian, he became
+                    more decided in all his opinions, as we
+                    shall see.</p>
+                <p>We must, however, devote a few lines
+                    to allow the son to explain the processes
+                    through which his father passed ere he be-</p>
+            <pb xml:id="leaf005v" facs="mid.00007.008.jpg" type="verso"/>
+            <fw type="pageNum" place="top left">166</fw>
+            <fw type="header" place="top" rend="italic">Robert Southey.</fw>
+            <fw type="date" place="top right">Feb.</fw>
+               <p>came a good Quarterly Reviewer of the
+                   Tory school:&#8212;</p>
+                <p>"His opinions at this time were somewhat
+                    unsettled, although they soon took the form
+                    of Unitarianism, from which point they seem
+                    gradually to have ascended without any abrupt
+                    transition, as the troubles of life increased
+                    his devotional feelings, and the study
+                    of religious authors informed his better judgment,
+                    until they finally settled down into a
+                    strong attachment for the doctrines of the
+                    Church of England."</p>
+                <p>Southey seems to have given the Church
+                    up, that he might devote himself to Æsculapius,
+                    for he announces in a letter to his
+                    <hi rend="italic">fidus Achates</hi>: "Very soon shall I commence
+                    my anatomical and chemical studies. When
+                    well grounded in those, I hope to study
+                    under Cruikshank to perfect myself in anatomy,
+                    attend the clincial lectures, and then
+                    commence&#8212;Doctor Southey!"</p>
+                    <p>He accordingly attended for some time
+                        the Anatomy School, and the Lectures of
+                        the medical professors, but he soon abandoned
+                        the idea as hastily as he had adopted
+                        it, partly from being unable to overcome his
+                        disgust tor a dissecting room, but chiefly because
+                        his love for literature was too strong
+                        within him.</p>
+                    <p>He now turned his hopes of obtaining a
+                        living towards a situation under Government,
+                        as his friend Bedford had done, but
+                        it was hinted that his well-known violent
+                        republican sentiments, so freely and loudly
+                        and unnecessarily expressed, had closed that
+                        door for ever. This was a pretty situation
+                        for the future Poet Laureate. We may
+                        here however mention an anecdote which
+                        seems to fasten upon Poet Laureates a sort
+                        of political discontent. Some two years
+                        before Wordsworth was appointed as Southey's
+                        successor, a young English poet, a
+                        friend of the Bard of Rydal sent to him a
+                        sonnet written to Queen Victoria. The old
+                        poet in his reply acknowledged the sonnet,
+                        but rebuked him for desecrating the majesty
+                        of Apollo, by bowing to crowned heads.
+                        Victoria was a Whig.</p>
+                    <p>Southey's reply to his friend is bold, for
+                        he is evidently annoyed:&#8212;"My opinions
+                        are very well known. I would have them so.
+                        Nature never meant me for a negative character.
+                        I can neither be good nor bad,
+                        happy nor miserable, by halves. A prudential
+                        silence would have sullied my integrity!"</p>
+                    <p>At this precise minute he became intimate<cb/>
+                        with Samuel Taylor Coleridge, who was
+                        an undergraduate of Jesus College, Cambridge,
+                        where he had entered in February,
+                        1791. He had already given the world
+                        assurance of his genius by his writings and
+                        his eccentricities, having gained the golden
+                        medal for his Greek Ode, and by his singular
+                        lecturings. In 1793, in a fit of collegiate
+                        disappointment, he enlisted in the 15th Light
+                        Dragoons, under the name of Cumberback,
+                        from which "warlike position" he was extricated
+                        by his friends on the 10th April,
+                        1794. In the June of this year, on a
+                        visit to a college friend at Oxford, he was
+                        introduced to Southey. They each seem,
+                        like the German students of Canning's burlesque,
+                        to have sworn at that instant eternal
+                        friendship: they agreed in religion, politics,
+                        and every thing! Southey thus writes of
+                        Coleridge in the first glow of young acquaintanceship:
+                        "Allen is with us daily, and his
+                        friend from Cambridge, Coleridge, whose
+                        poems you will oblige me by subscribing
+                        to, either at Hookham's or Edwards's. He
+                        is of most uncommon merit, of the strongest
+                        genius, the clearest judgment, the best
+                        heart. My friend he already is, and must
+                        hereafter be yours!"</p>
+                    <p>"Alas, for the rosy dreams of youthful hearts!"</p>
+                    <p>From this meeting sprang Pantisocracy.
+                        It was agreed between Lovell, Coleridge, and
+                        Southey, to collect as many adventurous
+                        spirits as possible, buy laud on the banks
+                        of the Susquehanna, and taking out wives,
+                        produce children at their leisure, to inherit
+                        their estates. Stripped of all verbiage, we
+                        really believe this is as nearly as possible the
+                        bare idea of this loudly trumpeted Utopia.</p>
+                    <p>The instigators or chief conspirators of
+                        this plan to inundate the United States
+                        with poets, were Robert Lovell, who had
+                        lately married one of the Misses Fricker,
+                        George Barrett, a fellow collegian, Robert
+                        Allen, of Christ Church, Oxford, and Edmund
+                        Seward: to these were soon added Southey
+                        and Coleridge.</p>
+                    <p>It broke up as rapidly as it had formed.
+                        Seward deserted into the Established Church,
+                        (an ominous beginning of the campaign,)
+                        Coleridge made a pedestrian tour in Wales,
+                        and Southey went to his aunt at Bath. That
+                        however the two latter had not altogether
+                        waked from their dream, is evident from
+                        our poet's letter dated July, 1794.</p>
+                    <p>"'Tis my intention to join Coleridge in</p>
+            <pb xml:id="leaf006r" facs="mid.00007.009.jpg" type="recto"/>
+            <fw type="date" place="top left">1851.</fw>
+            <fw type="header" place="top" rend="italic">Robert Southey.</fw>
+            <fw type="pageNum" place="top right">167</fw>
+            <p>Wales, then proceed to Edmund Seward,
+                seriously to arrange with him the best mode
+                of settling in America. Yesterday I took
+                my proposals for publishing 'Joan of Arc,'
+                to the printer: should the publication be in
+                any way successful, it will carry me over,
+                and get me some few acres, a spade and a
+                plough. My brother Thomas will gladly go
+                with us. In this country I must sacrifice
+                either happiness or integrity."</p>
+                <p>Like all young authors, Southey had the
+                    most sanguine expectation of "Joan of Arc's"
+                    success; he talked of leaving it as a legacy to
+                    his countiy, of its preserving his name, &amp;c.</p>
+                <p>In August Coleridge returned to Bristol,
+                    and, unfortunately for him, became acquainted
+                    with his future wife. The tragedy called
+                    the "Fall of Robespierre" was written at
+                    this time.</p>
+                <p>Again, too, Pantisocracy reared its head;
+                    Southey thus writes to his brother who was
+                    to join them:&#8212;</p>
+                <p>"The Pantisocratic scheme has given me
+                    new life, new hope, new energy; all the
+                    faculties of my mind are dilated. I am
+                    weeding out the few lurking prejudices of
+                    habit, und looking forward to happiness."</p>
+                <p>In October the scheme was communicated
+                    to his aunt, whose anger knew no bounds.
+                    It ended in her turning him from her house
+                    late at night, so that he had to walk to Bath,
+                    nine miles, in rain and darkness. So much
+                    for the affection of a narrow-minded old woman.
+                    Southey says in a letter to his brother,
+                    that it was the announcement of his intended
+                    marriage that most thoroughly annoyed her.
+                    The aunt and nephew never met again.</p>
+                <p>Two months after Lovell and Southey
+                    published a small volume of poems: this
+                    closed 1794.</p>
+                <p>The difficulty of raising funds for emigration
+                    now induced them to alter their scheme
+                    from America to Wales; but after a few
+                    dying reflections, even this was abandoned,
+                    and poor Pantisocracy died and was buried.</p>
+                <p>He now amused himself with planning
+                    a magazine to be edited by him and Coleridge;
+                    he also offered his services to a country
+                    newspaper, which however were declined.
+                    He then, in conjunction with the
+                    latter, gave a course of lectures at Bristol,
+                    which were well attended and much praised.</p>
+                <p>Mr. Cottle now offered to publish "Joan
+                    of Arc," to which Southey gladly consented.
+                    He had already commenced " Madoc," which
+                    he laid aside to correct his first-born epic.</p><cb/>
+                <p>His uncle, Mr. Herbert Hill, being about
+                    to return to Portugal, persuaded Southey to
+                    accompany him. Much as he disliked the
+                    idea of being separated from his fair Edith,
+                    to whom he had been for some time engaged,
+                    yet the idea of making the visit
+                    father to a volume of travels gilded the pill
+                    of separation. He however resolved to make
+                    the lady his, beyond the chance of any accident
+                    save death, and on the 14th November,
+                    1795, they were married at Redcliffe Church,
+                    Bristol, separating immediately after the ceremony.
+                    A few days afterwards the virgin
+                    bridegroom was on his way to Lisbon, which
+                    he reached after a tedious passage, laying some
+                    time wind bound at Falmouth. After an absence
+                    of six months he returned, and took possession
+                    of his wife and some ready-furnished
+                    lodgings, and busied himself in preparing his
+                    "Letters from Spain and Portugal." During
+                    his absence his brother-in-law and brother
+                    poet, Robert Lovell, had died, and his widow
+                    soon after Southey's return went to reside
+                    with them, and remained a guest during the
+                    rest of her life.</p>
+                <p>"Joan of Arc" had been published during
+                    the author's residence in Lisbon, and had
+                    fallen still-born from the press. Southey
+                    says in August, 1796, "The sale of 'Joan
+                    of Arc' in London has been very slow indeed;
+                    six weeks ago Cadell had only sold
+                    <hi rend="italic">three</hi> copies!"</p>
+                <p>Mr. Wynn, his old school-fellow, had,
+                    immediately on Southey's marriage, with a
+                    generosity worthy of his name, settled an
+                    annuity of £160 per annum on him. This
+                    enabled him to work at labor he had the
+                    most genius for&#8212;a great advantage; it also
+                    enabled him to put some finishing touches to
+                    his writings, which otherwise the daily necessities
+                    of his household would have prevented.</p>
+                <p>In February he came to London for a few
+                    months in order to enter himself of Gray's
+                    Inn. In April he returned to Bath, where
+                    he remained working hard at a second
+                    volume of poems, finishing "Madoc," and
+                    writing for the "Morning Post," and some
+                    magazines.</p>
+                <p>In 1800 he commenced at Bristol his
+                    "Thalaba," undoubtedly the best of his
+                    longer poems; his health however had been
+                    for some time failing, and in April he, accompanied
+                    by his wife, set sail once more for
+                    the Tagus.</p>
+                <p>In June, 1801, they returned, restored</p>-->
+            <pb xml:id="leaf006v" facs="mid.00007.005.jpg" type="verso"/>
+            <fw type="pageNum" place="top left">168</fw>
+            <fw type="header" place="top" rend="italic">Robert Southey.</fw>
+            <fw type="date" place="top right">Feb.</fw>
+            <cb/><p>in health, and full of renewed plans, taking
+                up their residence at Bristol.</p>
+                <p>Towards the close of this year he obtained,
+                    through Mr. Wynn's untiring friendship,
+                    the appointment of private secretary to Mr.
+                    Corry, Chancellor of the Exchequer for Ireland,
+                    at a salary of £400 per annum. He
+                    was however only required a short time in
+                    Dublin; on his return he was steadily settled
+                    at London as Mr. Corry's secretary. In
+                    the meantime he had published "Thalaba,"
+                    the copyright of which he sold for £115.
+                    In January, 1802, his mother died: this
+                    was a heavy blow, as Robert Southey was a
+                    man full of domestic feelings.</p>
+                <p>Finding his office to be a sinecure, he,
+                    with an honesty which ought to be more
+                    generally followed, resigned his secretaryship,
+                    and resolved to settle in the country.
+                    After casting "his eyes" about him, he fixed
+                    upon the Lakes of Westmoreland, to which
+                    his friend Coleridge had already retired. In
+                    September, 1803, immediately after the death
+                    of his only child, a little girl of scarcely a
+                    year old, they settled at Greta Hall. He had
+                    already made the acquaintance of the Longmans,
+                    and received several commissions from
+                    them, which afterwards led to a connection,
+                    closed only by the Laureate's death. Southey
+                    had now reached his thirtieth year, and had
+                    settled down in a spot from which he never
+                    after removed, to devote his energies to a
+                    purely literary life: perhaps we have no
+                    other instance of a man so completely following
+                    up that one idea without reference to
+                    anything else, as the distinguished man
+                    whose life we are reviewing.</p>
+                <p>His industry was the most untiring of
+                    any author's of modern times. In March,
+                    1804, he thus wrote to his friend John
+                    Rickman:&#8212;"I have more in hand than
+                    Bonaparte, or Marquis Wellesley&#8212;digesting
+                    Gothic Law; gleaning moral history from<cb/>
+                    monkish Legends; conquering India, or
+                    rather Asia, with Albuquerque; filling up
+                    the chinks of the day by hunting in Jesuit
+                    Chronicles, and compiling Collectanea Hispanica
+                    et Gothica. Meantime Madoc sleeps,
+                    and my lucre of-gain-compilation (specimens
+                    of English Poets) goes on at night, when
+                    I am fairly obliged to lay history aside, because
+                    it perplexes me in my dreams. 'Tis a
+                    vile thing to be pestered in sleep with all
+                    the books in the day I have been reading
+                    jostled together!"</p>
+                <p>In the May of 1804 he visited London, and
+                    met some new society. He however was
+                    not a very "clubbable fellow," as Johnson
+                    would phrase it. He was soon at his home
+                    at Keswick again, in the midst of his books,
+                    &amp;c.</p>
+                <p>He had now made considerable headway
+                    in his History of Brazil, and looked forward
+                    to another sojourn in Portugal to finish it.
+                    Coleridge had been now for some time at
+                    Malta, as secretary to Sir Alexander Ball,
+                    and Southey's letters to him are full of
+                    hints, which afterwards ripened into works&#8212;
+                    Coleridge had always great theories to propound,
+                    and was a most suggestive companion
+                    and correspondent, as Southey and
+                    Wordsworth often acknowledged.</p>
+                <p>We pause at this point of the Laureate's
+                    life to call the reader's attention, not alone to
+                    the singular change in his political and religious
+                    opinions, but also in his habits of
+                    daily life. From the wild enthusiast he becomes
+                    tamed town to the orthodox disciplinarian;
+                    from the dreamer of Pantisocracy he
+                    suddenly awakes to the realities of <hi rend="italic">L.s.d.</hi>-ism;
+                    from the Lesbian heights of Pindarics' epics,
+                    and Sapphics, he leaps into the level sea of
+                    Routine!</p>
+                <p>But we must reserve the moral we have
+                    to deduce from this singular harlequinade 
+                    to our next number.</p>
+            <span rend="singleLine" hand="#h2" from="leaf007r"/>
+            <note type="authorial" place="left" resp="#h2"><hi rend="underline" hand="#h2">Burns</hi><lb/>
+                1759<lb/>
+                to<lb/>
+            1796</note>
+            <add rend="pasteon" source="#r2">
+                <q who="unknown" type="written">
+            <floatingText rend="flat">
+                <body>
+                    <pb xml:id="leaf007r" facs="mid.00007.005.jpg" type="recto"/>
+                    <p>This Scotch Poet was born in 175<subst><del rend="overstrike" hand="#h2" seq="1"><gap reason="illegible" extent="1" unit="number"/></del><add rend="unmarked" place="supralinear" seq="2"><handShift new="#h2"/>9</add></subst><handShift new="#h1"/>.&#8212;Though
+                    a ploughman originally, he rose to high poetical
+                    fame. He has been called the greatest
+                    untaught genius since <choice><orig>Shakspeare</orig><reg>Shakespeare</reg></choice>. His poems
+                    glow with the real fire of feeling and passion.
+                    As soon as he appeared in print he was
+                    noticed and drawn from the plough to associate
+                    with men of letters and opulence. But
+                    the change ruined him. He indulged in licentious
+                    pleasures, till his constitution gave
+                    way, and the tomb received him. He died at
+                    the age of 39.</p>
+                </body>
+            </floatingText>
+                </q>
+            </add>
+            <note type="authorial" resp="#h3" place="right">In his poems,
+            Burns was faithful to
+            lowly things, customs, idioms,
+            Scotland, the lasses, the peasan<gap reason="cut off" extent="2" unit="letter"/>
+                and to his own robust natu<gap reason="cut off" extent="2" unit="letter"/>
+            He was <add rend="insertion" place="supralinear"><handShift new="#h2"/>often</add><handShift new="#h3"/> hard up, an
+            improvident, free handed
+            man&#8212;his poems succeeded&#8212;
+            he made £500, an immense
+            sum.&#8212; He took a farm,
+            was appointed exciseman&#8212;
+            (£75 a year)&#8212;lived two or
+            three years in that way,
+            drank, sickened, died.&#8212;</note>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?><?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules_mss.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00179">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louis 14th, born 1638</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author xml:id="ww">Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="lmg">Lauren Grewe</persName><persName xml:id="nhg">Nicole Gray</persName><persName xml:id="tra">Ty Alyea</persName><persName xml:id="mc">Matt Cohen</persName>
+                </respStmt>
+                <sponsor>University of Texas at Austin</sponsor>
+                <sponsor>University of Nebraska-Lincoln</sponsor>
+                <funder>The National Endowment for the Humanities</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2011</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00179</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                    <addrLine>kprice@unlnotes.unl.edu</addrLine>
+                    <addrLine>Ed-Folsom@uiowa.edu</addrLine>
+                    <addrLine>bbarney2@unlnotes.unl.edu</addrLine>
+                </address>
+                <availability><p>The text of the original document is in the public domain. Subject to certain exceptions, public domain works may be freely copied or used in the creation of derivative works without permission, or authorization, of the former copyright owners.</p><p>The text encoding was created and/or prepared by the Walt Whitman Archive and is governed by a <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref> (CC BY 4.0).</p><p>Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p></availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title/>
+                    <idno type="callno">MS q 77</idno>
+                    <date notBefore="1855-11-01" notAfter="1892-03-26">Undated</date>
+                    <orgName xml:id="duk">Trent Collection of Whitmaniana, David M. Rubenstein Rare Book &amp; Manuscript Library, Duke University</orgName>
+                    <note type="project">Transcribed from digital images of the original item.</note>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="h1" scribeRef="#ww" medium="pencil"/>
+            </handNotes>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-03-08">completed date information, tweaked encoding</change>
+            <change who="#nhg" when="2015-01-26">added schematron declaration, updated schema declaration, changed text type to annotations</change><change who="#lmg" when="2011-10-01">Transcribed and encoded.</change>
+            <change who="#nhg" when="2011-10-03">Checked, revised.</change>
+            <change who="#tra" when="2013-11-05">Checked and revised bibliographical encoding.</change>
+            <change who="#mc" when="2014-11-01">Proofed.</change>
+        </revisionDesc> 
+    </teiHeader>
+    <text type="annotations"><!--Checked against Grier, p. 1840.-->
+        <body>
+            <pb xml:id="leaf001r" facs="duk.00179.001.jpg" type="recto"/>
+            <head type="main-derived" rend="center"><handShift new="#h1"/>Louis 14th, born 1638&#8212;died 1715</head>
+            <ab>Corneille <space dim="horizontal"/> Louis 13th</ab>
+            <ab>Racine <add rend="unmarked" place="inline">toward the last of</add> <space dim="horizontal"/> Louis 14th</ab> 
+            <p>&#8212;Tragedies rigidly after the
+            antique models&#8212;characters Greek or
+            Roman&#8212;every thing on stilts&#8212;
+            all the talk in heroics.&#8212;</p>
+            <milestone unit="horbar-short-left"/>
+            <p>I fancy the classical tragedies
+            of Corneille, Racine, Voltaire, &amp;c.
+            must illustrate the vital difference
+            between a native and normal growth
+            (as the Greek tragedies themselves,) and
+            all that comes from the mere
+            <!--There are remains of a pasteon here.-->study of that growth.&#8212;</p>
+            <milestone unit="horbar-short-left"/>
+            <ab><subst><del rend="overwrite" seq="1">Dec</del><add rend="overwrite" place="over" seq="2">November</add></subst> 1855. I saw Rachel in
+            "Athalie," at the Academy of Music</ab>
+            <milestone unit="horbar-short-left"/>
+            <p>Myrrha, by Alfieri, the Italian&#8212;lurid passions<lb/>
+            &#8212;with long‑winded dialogues between Myrrha and daughter <add rend="unmarked" place="supralinear">mother</add>
+            about nothing.&#8212;</p>
+            <pb xml:id="leaf001v" facs="duk_ap_00132.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

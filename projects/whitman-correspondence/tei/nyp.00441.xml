@@ -1,0 +1,123 @@
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nyp.00441">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to William D. O'Connor, 17 May
+                    [1882]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>nyp.00441</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">279</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to William D. O'Connor, 17 May [1882]</title>
+                    <date cert="medium" when="1882-05-17" xml:id="dat1">May 17, 1882</date>
+                    <idno type="callno">Series III</idno>
+                    <orgName xml:id="nyp">The Henry W. and Albert A. Berg Collection of English and
+                        American Literature, New York Public Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="O'Connor, William D.">William D. O'Connor</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-03-18" who="#nhg">checked, corrected</change>
+            <change when="2014-03-06" who="#kc">checked, corrected</change>
+            <change when="2013-10-23" who="#nnk">proofed</change>
+            <change when="2013-10-03" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place">Camden<ptr target="nyp.00441_n1"/></name>
+                    <date when="1882-05-17">May 17 noon</date>
+                </dateline>
+            </opener>
+            <p>Ben Ticknor has just been here, to make a settlement of the L of G publication business between me and Osgood &#38; Co.&#8212;which settlement has been amicably effected&#8212;and O &#38; Co. have withdrawn &#38; given it up for good, &#38; made the plates &#38;c over to me<ptr target="nyp.00441_n2"/>&#8212;</p>
+            <p>What I write for is this:&#8212;Ben. tells me that the whole business originated from the State Attorney General Mr Marston, who (at the instance of certain parties) peremptorily instructed the Boston <choice><abbr>Dist.</abbr><expan>District</expan></choice> Attorney Stevens to proceed against L of G. As I wrote you before, the <hi rend="italic">betes noir</hi> were <hi rend="italic">To a common prostitute</hi> and <hi rend="italic">A woman waits for me</hi>. Unless those were left out he was instructed to indict and arrest to the law's extremity. (I believe I told you that Osgood &#38; Co. formally notified me that they would continue the publication if those were expurgated.)</p>
+            <p>I do not myself feel any resentment toward O &#38; Co. for any thing done me or the book&#8212;They have acted with reference to conventional business &#38; other circumstances.<ptr target="nyp.00441_n3"/>
+                <hi rend="italic">Marston</hi> is the target for you<ptr target="nyp.00441_n4"/>&#8212;If I learn more I will notify you&#8212;</p>
+            <closer>
+                <signed rend="right">WW</signed>
+            </closer>
+            <postscript>
+                <p>Have you seen my <choice>
+                    <orig>N A</orig>
+                    <reg>North American</reg>
+                </choice> <choice>
+                    <orig>Rev.</orig>
+                    <reg>Review</reg>
+                </choice> article?<ptr target="nyp.00441_n5"/> I expect some
+                    proof-impressions &#38; will immediately send you two or three&#8212;</p>
+            </postscript>
+        </body>
+
+    </text>
+</TEI>

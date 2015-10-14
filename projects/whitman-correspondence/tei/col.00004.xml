@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="col.00004">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to Alfred, Lord Tennyson, 24 May
+               1874</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Kenneth M. Price</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="jyc">Jonathan Y. Cheng</persName>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+               <persName xml:id="ak">Alex Kinnaman</persName>
+               <persName xml:id="nhg">Nicole Gray</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of
+               Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2014</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>col.00004</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in
+                  the Archive may be shared in accordance with the Fair Use provisions of U.S.
+                  copyright law. Redistribution or republication on other terms, in any medium,
+                  requires express written consent from the editors and advance notification of the
+                  publisher, Center for Digital Research in the Humanities. Permission to reproduce
+                  the graphic images in this archive has been granted by the owners of the originals
+                  for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to Alfred, Lord Tennyson, 24 May 1874</title>
+               <date cert="high" when="1874-05-24" xml:id="dat1">May 24, 1874</date>
+               <orgName xml:id="col">Walt Whitman Papers ca. 1842&#8211;1969, Rare Book and Manuscript Library, Columbia University in the City of New York</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Tennyson, Alfred, Lord" ref="n0625">Alfred, Lord Tennyson</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+         <change who="#nhg" when="2015-04-17">checked, corrected</change>
+         <change who="#ak" when="2014-11-03">added annotations</change>
+         <change who="#jyc" when="2014-10-03">checked, revised</change>
+         <change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#nnk" when="2014-06-08">transcribed, encoded</change>
+
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         <pb xml:id="leaf001r" facs="col.00004.001_large.jpg" type="recto"/>
+         <opener>
+            <dateline> 
+               <date when="1874-05-24">May 24
+                  '74</date> 
+            <name type="place">Camden</name>
+            </dateline>
+            <salute>Dear Mr. Tennyson,</salute>
+         </opener>
+         <p>It is a long time since my last to you.<ptr target="col.00004_n1"/> I have however mailed you once or twice pieces of mine in print which I
+            suppose you rec'd. Jan. '73 I was taken down with illness&#8212;some three months,
+            afterward was recovering at Washington, when called here by the death of my
+            mother&#8212;&amp; from that time becoming worse, I have given up work &amp; remained
+            here since.<ptr target="col.00004_n3"/></p>
+         <p>I had paralysis from cerebral anemia.<ptr target="col.00004_n2"/> </p>
+         <p>I rec'd your last letter, &amp; the good, good photograph&#8212;which I have looked at
+            many times, &amp; sometimes almost fancied it <hi rend="underline">you</hi> in person
+            silently sitting nigh. To-day, a cloudy &amp; drizzly Sunday, I have taken it in my
+            head, sitting here alone &amp; write&#8212;follow the inner mood&#8212;(a tinge of
+            Quaker blood &amp; breed in me)&#8212;though really without any thing to say, only just
+            to write to you.</p> 
+         <p>It is pleasant here, right on the banks of the noble Delaware, opposite Philadelphia. The doctors say I shall yet come round, &amp; I think so too. I do not fail in flesh, color, spirits&#8212;appetite &amp; sleep pretty
+            good&#8212;am up &amp; dressed every day, &amp; go out a little&#8212;but very lame
+            yet.</p>
+         <closer>
+         <salute>Truly your friend&#8212;</salute>
+         <signed>WW</signed>
+         </closer>
+         <pb xml:id="leaf001v" facs="col.00004.002_large.jpg" type="verso"/>
+         <note>To Tennyson, <lb/>May 24 '74.</note>
+            
+      </body>
+   </text>
+</TEI>

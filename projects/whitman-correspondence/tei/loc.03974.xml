@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03974">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Harry Stafford to Walt Whitman, 21 November 1877</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Harry Stafford</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="vm">Vince Moran</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03974</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Harry Stafford</author>
+                    <title>Harry Stafford to Walt Whitman, 21 November 1877</title>
+                    <date cert="high" when="1877-11-21" xml:id="dat1">November 21, 1877</date>
+                    <idno type="callno">MSS18630</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Stafford, Harry" ref="n0590">Harry Stafford</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-04-24" who="#nhg">corrected</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-03-06" who="#ss">annotations added</change>
+            <change when="2013-10-03" who="#nhg">checked, corrected</change>
+            <change when="2013-02-15" who="#ab">checked</change>
+            <change when="2013-02-05" who="#ej">checked, corrected</change>
+            <change when="2012-11-16" who="#vm">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_vm.00131.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">Kirkwood <choice><abbr>N.J.</abbr><expan>New Jersey</expan></choice></name>
+                    <date when="1877-11-21" rend="right"><choice><abbr>Nov</abbr><expan>November</expan></choice> 21&#8211;77</date>
+                </dateline>
+                <salute>Friend Walt</salute>
+            </opener>
+
+            <p>I received your letter this a.m. was glad to hear from you. Father<ptr target="n0852"/> is a <choice><sic>gereat</sic><corr>great</corr></choice> <choice><sic>deel</sic><corr>deal</corr></choice> better <choice><orig>to day</orig><reg>today</reg></choice>, he is going out a little he came out yesterday to see me and Homer kill the pig, but he felt so bad he had to go right back to bed again when he got in. I am not feeling very well nor haven't for a week nearly. I
+                       
+            <pb xml:id="leaf001v" facs="loc_vm.00132.jpg" type="verso"/>
+            
+            have the <choice><sic>hed ache</sic><corr>headache</corr></choice> all the time, and have had it for a week, I caught cold somehow, I don't know how though. I wish you would bring me down a <choice><sic>coppy</sic><corr>copy</corr></choice> book, Spencerian if you can find it, No 8, and about 6 pens of the same kind. I will be much <choice><sic>oblidged</sic><corr>obliged</corr></choice> to you if you will. You write and let me know how you are. Received the box all right Monday eve.</p>
+
+            <closer>
+                <salute>Yours Truly,</salute>
+                <signed>Harry Stafford</signed>
+            </closer>
+            
+            <pb xml:id="leaf002r" facs="loc_gt.00043.jpg" type="recto"/>
+            <pb xml:id="leaf002v" facs="loc_vm.00044.jpg" type="verso"/>
+            
+        </body>
+    </text>
+</TEI>

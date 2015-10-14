@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?><?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules_mss.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03430">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Old Fellows</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author xml:id="ww">Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="lmg">Lauren Grewe</persName><persName xml:id="tra">Ty Alyea</persName><persName xml:id="nhg">Nicole Gray</persName><persName xml:id="mc">Matt Cohen</persName>
+                </respStmt>
+                <sponsor>University of Texas at Austin</sponsor>
+                <sponsor>University of Nebraska-Lincoln</sponsor>
+                <funder>The National Endowment for the Humanities</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03430</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                    <addrLine>kprice@unlnotes.unl.edu</addrLine>
+                    <addrLine>Ed-Folsom@uiowa.edu</addrLine>
+                    <addrLine>bbarney2@unlnotes.unl.edu</addrLine>
+                </address>
+                <availability><p>The text of the original document is in the public domain. Subject to certain exceptions, public domain works may be freely copied or used in the creation of derivative works without permission, or authorization, of the former copyright owners.</p><p>The text encoding was created and/or prepared by the Walt Whitman Archive and is governed by a <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref> (CC BY 4.0).</p><p>Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p></availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Old Fellows / My 71st Year Arrives</title>
+                    <idno type="callno">Box 41, Folder 74</idno>
+                    <date notBefore="1889-05-31" notAfter="1891-12-31">Around 1889</date>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                    <note type="project">Transcribed from digital images of the original item.</note>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="h1" scribeRef="#ww" medium="blue-pencil"/>
+                <handNote xml:id="h2" scribeRef="#ww" medium="pencil"/>
+            </handNotes>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-03-10">completed date information, tweaked encoding</change>
+            <change who="#nhg" when="2015-01-26">added schematron declaration, updated schema declaration, changed text type to annotations</change><change who="#lmg" when="2013-06-27">Transcribed and encoded.</change>
+            <change who="#lmg" when="2013-10-15">Checked.</change>
+            <change who="#tra" when="2013-11-27">Checked bibliographical information.</change>
+            <change who="#mc" when="2014-11-02">Proofed.</change>
+        </revisionDesc> 
+    </teiHeader>
+<text type="annotations">
+    <body>
+        <pb xml:id="leaf001r" facs="loc_nhg.00191.jpg" type="recto"/>
+        <list><head type="main-authorial" rend="underline"><handShift new="#h1"/>Old Fellows</head>
+        <item>Tennyson</item>
+        <item>Carlyle</item>
+        <item>Brougham</item>
+        <item>Elias Hicks</item>
+        <item>Jefferson</item>
+        <item>Victor Hugo</item>
+        <item>Aaron Burr</item>
+        <item>De Lesseps</item>
+        <item>Voltaire</item>
+        <item>Franklin</item>
+        <item>Whittier</item><cb/>
+        <item><handShift new="#h2"/>Palmerston</item>
+        <item>Marshal de Mac Mahon, the
+        16th of 17 children</item>
+        <item>Washin Irving</item>
+        <item>Geo. Ticknor</item>
+        <item>Bryant</item>
+        <item>Geo. Catlin</item>
+        <item>Bancroft</item>
+        <item>Albert Pike</item>
+        <item>Cassius Clay</item>
+        <item><handShift new="#h1"/>Henry Shaw of St Louis</item></list>
+        <p><del rend="overstrike" hand="#h2">Y<unclear reason="illegible" resp="#lmg">et</unclear></del> <subst><del rend="overwrite" seq="1">m</del><add rend="overwrite" place="over" seq="2"><handShift new="#h2"/>M</add></subst><handShift new="#h1"/>y 71st year <subst><del rend="overstrike" hand="#h2" seq="1">has arrived and this</del> <add rend="unmarked" place="supralinear" seq="2"><handShift new="#h2"/>arrives: the fifteen</add></subst>
+            <del rend="overstrike" hand="#h2"><handShift new="#h1"/>is my picture in it.</del> <add rend="unmarked" place="supralinear"><handShift new="#h2"/><del rend="overstrike" hand="#h2">the immediate</del> past</add> <del rend="overstrike" hand="#h2">Fifteen</del> months nearly
+        all <del rend="overstrike" hand="#h2">of</del> illness or half-illness&#8212;until a tolerable
+        <del rend="overstrike" hand="#h2">good</del> day (Aug: 6 1889) and, <add rend="insertion" place="supralinear">convey'd by</add> I <del rend="overstrike"><add rend="insertion" place="supralinear">was</add></del> <add rend="insertion" place="supralinear">have been carriaged across</add> <del rend="overstrike" hand="#h2">went over</del> to
+        Philadelphia, <del rend="overstrike" hand="#h2">convey'd by Dr B. and Ed W.</del>
+        (how sunny and <subst><del rend="overstrike" hand="#h2" seq="1">florid</del> <add rend="insertion" place="supralinear" seq="2">fresh and good look'd</add></subst> the river, the people, the
+            vehicles, and Market <add rend="insertion" place="supralinear">and Arch</add> streets!) and <subst><del rend="overstrike" seq="1" hand="#h2">had</del> <add rend="unmarked" place="supralinear" seq="2">have sat for</add></subst> this photo,
+        wh' satisfies me</p>
+    </body>
+</text>
+</TEI>

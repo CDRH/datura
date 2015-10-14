@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="wwh.00011">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title level="m" type="main">Walt Whitman to Mannahatta Whitman, 1 March 1873</title>
+        <title level="m" type="sub">a machine readable transcription</title>
+        <author>Walt Whitman</author>
+        <editor>Kenneth M. Price</editor>
+        <editor>Ed Folsom</editor>
+        <respStmt>
+          <resp>Transcription and encoding</resp>
+          <name>The Walt Whitman Archive Staff</name>
+        </respStmt>
+        <sponsor>Center for Digital Research in the Humanities, University of
+          Nebraska-Lincoln</sponsor>
+        <sponsor>University of Iowa</sponsor>
+        <funder>National Historical Publications and Records Commission</funder>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <date>2012</date>
+        </edition>
+      </editionStmt>
+      <publicationStmt>
+        <idno>wwh.00011</idno>
+        <distributor>The Walt Whitman Archive</distributor>
+        <address>
+          <addrLine>Center for Digital Research in the Humanities</addrLine>
+          <addrLine>319 Love Library</addrLine>
+          <addrLine>University of Nebraska-Lincoln</addrLine>
+          <addrLine>P.O. Box 884100</addrLine>
+          <addrLine>Lincoln, NE 68588-4100</addrLine>
+        </address>
+        <availability>
+          <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the
+            Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law.
+            Redistribution or republication on other terms, in any medium, requires express written
+            consent from the editors and advance notification of the publisher, Center for Digital
+            Research in the Humanities. Permission to reproduce the graphic images in this archive
+            has been granted by the owners of the originals for this publication only.</p>
+        </availability>
+      </publicationStmt>
+      <notesStmt>
+        <note type="project">The following are responsible for particular readings or for changes to
+          this file, as noted: <persName xml:id="el">Elizabeth Lorang</persName>
+          <persName xml:id="al">Ashley Lawson</persName>
+          <persName xml:id="zk">Zachary King</persName>
+          <persName xml:id="ec">Eric Conrad</persName>
+        </note>
+      </notesStmt>
+      <sourceDesc>
+
+        <biblStruct>
+          <monogr>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <title xml:id="ehm">The Correspondence</title>
+            <imprint>
+              <pubPlace>New York</pubPlace>
+              <publisher>New York University Press</publisher>
+              <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+              <biblScope type="volume">2</biblScope>
+              <biblScope type="page">202&#8211;203</biblScope>
+            </imprint>
+          </monogr>
+        </biblStruct>
+
+        <bibl>
+          <author>Walt Whitman</author>
+          <title>Walt Whitman to Mannahatta Whitman, 1 March 1873</title>
+          <date cert="high" when="1873-03-01" xml:id="dat1">March 1, 1873</date>
+          <orgName xml:id="wwh">Walt Whitman House, Camden, New Jersey</orgName>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <particDesc>
+        <person role="sender">
+          <persName key="Whitman, Walt">Walt Whitman</persName>
+        </person>
+        <person role="recipient">
+          <persName key="Whitman, Mannahatta">Mannahatta Whitman</persName>
+        </person>
+      </particDesc>
+    </profileDesc>
+    <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+      <change when="2012-11-29" who="#el">checked</change>
+      <change when="2012-06-20" who="#el">checked</change>
+      <change when="2012-05-07" who="#al">checked</change>
+      <change when="2011-01-28" who="#zk">encoded</change>
+      <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+    </revisionDesc>
+  </teiHeader>
+
+  <text type="letter">
+    <body>
+      <opener>
+        <dateline>
+          <name type="place" rend="right">Washington</name>
+          <date when="1873-03-01" rend="right">Saturday afternoon <lb/>March 1, '73</date>
+        </dateline>
+        <salute>Dear Hattie<ptr target="n0706"/>,</salute>
+      </opener>
+
+      <p>I have received your letter, &amp; read it over &amp; over again<ptr target="wwh.00011_n1"
+        />&#8212;it is very, very good&#8212;so much about your dear mother<ptr target="n0705"/>, it
+        brought the tears to my eyes, &amp; I had to stop many times&#8212;my dear, dear Sister
+        Martha<ptr target="n0707"/>, she must have suffered so much, &amp; to keep up such fortitude &amp; patience &amp;
+        even cheerfulness, while life lasted&#8212;</p>
+
+      <p>Hattie, I have just got a letter from your grandmother written Thursday afternoon, Feb.
+          27,<ptr target="wwh.00011_n2"/> &amp; she had not got your letter then&#8212;did you send
+        her one a week ago, as you spoke of having written to her? She was very uneasy at not
+        hearing from Jeff<ptr target="n0710"/> or any of you, since your mother's death. I wish you to write <hi
+          rend="italic">immediately</hi> to your grandmother, direct to her
+        <address><addrLine>care of Geo. Whitman</addrLine>
+              <addrLine>at Starr's foundry</addrLine>
+              <addrLine>Camden, N. Jersey</addrLine></address>
+      </p>
+
+      <p>I have got just well enough to go out, in a carriage, but, dear Hattie, I am in a miserable
+        condition, as to my power of moving&#8212;The doctor says I shall get well, but it is very,
+        very slow and irksome&#8212;my mind is clear, but I have to sit in my room alone, by the
+        fire, most of the time&#8212;visitors generally have been prohibited&#8212;but only a few
+        come in&#8212;but now I have ventured out for a few minutes every fair day&#8212;It is now
+        afternoon, very pleasant, &amp; I shall just get out on the sidewalk &amp; then
+        back&#8212;</p>
+
+      <p>O how often I have thought of my dear sister Martha, as I have been alone here, both night
+        &amp; day&#8212;I think of your father too, &amp; of you &amp; California<ptr
+          target="wwh.00011_n3"/>&#8212;but here I am, unable to move&#8212;I hope Jeff will feel
+        like writing to mother, &amp; she will send it to me&#8212;As soon as I can travel I think
+        of going on to Camden&#8212;</p>
+
+      <p>Dearest Hattie, if we had a house to invite you and California to, how much comfort it
+        would be to your grandmother &amp; me&#8212;But I have great thoughts&#8212;at any rate a
+        great desire&#8212;to get one,<ptr target="wwh.00011_n4"/> here, when I get well, &amp; have
+        grandmother &amp; Eddy<ptr target="n0699"/> here&#8212;&amp; then you &amp; California shall
+        surely come&#8212;</p>
+
+      <p>Love to you, dearest Hattie&#8212;&amp; love to your dear father, &amp; to
+        California&#8212;If you can, dear niece, write me again, &amp; <choice>
+          <orig>dont</orig>
+          <reg>don't</reg>
+        </choice> wait very long, dear Hattie&#8212;Hattie dear, you must mind the address&#8212;(My
+        letters from St. Louis are addressed wrong)&#8212;My right address is </p>
+
+      <closer>
+        <signed rend="right">Walt Whitman</signed>
+        <signed rend="right">Solicitor's office Treasury,</signed>
+        <signed rend="right">Washington, D. C.</signed>
+      </closer>
+    </body>
+  </text>
+</TEI>

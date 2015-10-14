@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05156">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">James R. Osgood to Walt Whitman, 12 May
+                    1881</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>James R. Osgood</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="bbb">Blake Bronson-Bartlett</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05156</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>129 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>James R. Osgood</author>
+                    <title>James R. Osgood to Walt Whitman, 12 May 1881</title>
+                    <date cert="high" when="1881-05-12" xml:id="dat1">May 12, 1881</date>
+                    <idno type="callno">Box 3-4 Reel 2-3</idno>
+                    <orgName xml:id="loc">The Thomas Biggs Harned Collection of the Papers of Walt
+                        Whitman, 1842&#8211;1937, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Osgood, James R.">James R. Osgood</persName>
+                </person>
+                <person role="recipient" xml:id="ww">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2014-11-24">corrected order of images</change>
+            <change who="#nhg" when="2014-09-29">checked, corrected</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-08-06" who="#bbb">checked</change>
+            <change when="2014-07-29" who="#ss">transcribed, encoded and annotated</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_nk.00264_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place" rend="center"><handShift rend="printed"/>JAMES R. OSGOOD &#38; CO., Publishers.<lb/>
+                        211 T<hi rend="smallcaps">REMONT</hi> S<hi rend="smallcaps">TREET</hi>.</name>
+                    <name type="place" rend="right">Boston,</name>
+                    <date when="1881-05-12"><handShift rend="manuscript"/>May 12 <handShift rend="printed"/>188<handShift rend="manuscript"/>1.</date>
+                </dateline>
+                <salute>Dear W Whitman<!--<ptr target="hun.00047_n1"/>--></salute>
+            </opener>
+
+
+            <p>Your letter of May 8 reached here during my absence.<!--<ptr target="loc.05156_n1"/>--></p>
+
+            <p>Please send on the copy as soon as you can and we will make careful estimate as to
+                its size, style etc. and give you our views. So far as I understand it, this
+                proposed new edition will supersede all other previously published volumes&#8212;am
+                I correct? And please tell me if the plates of the 
+                <pb xml:id="leaf002r" facs="loc_nk.00266_large.jpg" type="verso"/>
+                <pb xml:id="leaf001v"
+                    facs="loc_nk.00265_large.jpg" type="verso"/>original "Leaves of Grass" as
+                published by Thayer and <choice>
+                    <sic>Eldredge</sic>
+                    <corr>Eldridge</corr>
+                </choice> so many years ago are still in existence.<!--<ptr target="n1005"/>--></p>
+
+            <p>I am sorry I was absent from Boston during your visit: I should have been glad to
+                renew the acquaintance I had with you in the old Pfaff days.<!--<ptr
+                    target="loc.00779_n5"/>--></p>
+
+            <closer>
+                <salute>Yours truly</salute>
+                <signed>James R. Osgood</signed>
+                <salute>Walt Whitman Esq</salute>
+            </closer>
+            
+            <pb xml:id="leaf002v" facs="loc_nk.00267_large.jpg" type="verso"/>
+            <pb xml:id="leaf003r" facs="loc_nk.00244_large.jpg" type="recto"/>
+            <note type="editorial" resp="#ww" place="left">May 12 '81</note>
+            <pb xml:id="leaf003v" facs="loc_nk.00245_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

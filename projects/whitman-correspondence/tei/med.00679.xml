@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="med.00679">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to John and Ursula Burroughs, 11 July [1878]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>
+                    <persName xml:id="ad">Anthony Dreesen</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>med.00679</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date when="1964">1964</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">127&#8211;128</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to John and Ursula Burroughs, 11 July [1878]</title>
+                    <date cert="medium" when="1878-07-11" xml:id="dat1">July 11, 1878</date>
+                    <orgName xml:id="med">The current location of this manuscript is unknown.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Burroughs, John and Ursula">John and Ursula Burroughs</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-08" who="#kc">updated ID</change>
+            <change when="2013-04-02" who="#km">checked</change>
+            <change when="2013-01-14" who="#ad">checked</change>
+            <change when="2012-12-04" who="#gt">checked</change>
+            <change when="2012-10-15" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">431 Stevens st Camden N J</name>
+                    <date when="1878-07-11">July 11 p m</date>
+                </dateline>
+                <salute>Dear John &#38; 'Sula Burroughs,</salute>
+            </opener>
+
+            <p>I kept staying &#38; staying in <choice><abbr>N Y</abbr><expan>New York</expan></choice>&#8212;but left yesterday in the 4 p m train, had a fine run to <choice><abbr>Phila:</abbr><expan>Philadelphia</expan></choice> &#38; here I am <choice><orig>to-day</orig><reg>today</reg></choice> in my regular den&#8212;all the better for my month's trip&#8212;</p>
+            
+            <p>Nothing very new&#8212;brother &#38; sister well as usual&#8212;my two nieces, Jeff's daughters, are here &#38; are a great comfort to me. Hot weather, awful&#8212;yet I am standing it well so far. I suppose you got the <hi rend="italic">Tribune</hi> of July 4 with my letter in.<ptr target="sjs.00007_n1"/> And the box of Graham biscuits by Express&#8212;(Of course you know they must be soak'd half an hour or more in milk or water&#8212;I sweeten mine with sugar, but some dont like it)&#8212;</p>
+            
+            <p>How are you getting along this hot weather? &#38; how is that baby?<ptr target="sjs.00007_n2"/></p>
+
+            <closer>
+             
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+            <postscript>
+                <p>I eat my biscuits <hi rend="italic">for supper</hi> only&#8212;have two or three of them in a bowl soak'd for an hour, &#38; the water pour'd off, &#38; then a little milk, &#38; plenty of sugar&#8212;they must be fixed <hi rend="italic">just right</hi>, or they ain't good&#8212;</p>
+            </postscript>  
+        </body>
+    </text>
+</TEI>

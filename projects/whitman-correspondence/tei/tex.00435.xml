@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+ 
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="tex.00435">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Peter Doyle, June 1883</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                    <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>tex.00435</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <biblStruct>
+                    <monogr>
+                        <editor>Ted Genoways</editor>
+                        <author>Walt Whitman</author>
+                        <title xml:id="tg">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>Iowa City, IA</pubPlace>
+                            <publisher>University of Iowa Press</publisher>
+                            <date when="2004">2004</date>
+                            <biblScope type="volume">7</biblScope>
+                            <biblScope type="page">68&#8211;69</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Peter Doyle, June 1883</title>              
+                    <date cert="medium" when="1883-06" xml:id="dat1">June 1883</date>
+                    <orgName xml:id="tex">T. E. Hanley Collection, Harry Ransom Humanities Research Center, The University of Texas at Austin</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Doyle, Peter">Peter Doyle</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-08-06" who="#nhg">checked, corrected</change>
+            <change when="2014-01-17" who="#kc">Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+         <body> 
+
+            <p>Pete, do you remember<ptr target="tex.00435_n1"/>&#8212;(of course you do&#8212;I do well)&#8212;those great long jovial walks we had at times for years, (1866&#8211;<choice><abbr>'72</abbr><expan>1872</expan></choice>) out of Washington City&#8212;often moonlight nights&#8212;'way to "Good Hope";&#8212;or, Sundays, up and down the Potomac shores, one side or the other, sometimes ten miles at a stretch? Or when you <choice><abbr>work'd</abbr><expan>worked</expan></choice> on the horse-cars, and I waited for you, coming home late together&#8212;or resting and chatting at the Market, corner 7th Street and the Avenue, and eating those nice musk or watermelons? Or during my tedious sickness and first paralysis (<choice><abbr>'73</abbr><expan>1873</expan></choice>) how you used to come to my solitary garret-room and make up my bed, and enliven me, and chat for an hour or so&#8212;or perhaps go out and get the medicines Dr. Drinkard had <choice><abbr>order'd</abbr><expan>ordered</expan></choice> for me&#8212;before you went on duty?</p>
+            
+            <p>Pete, give my love to dear Mrs. and Mr. Nash,<ptr target="tex.00435_n2"/> and tell them I have not forgotten them, and never will.</p>
+
+            <closer>
+                <signed rend="right">W.W.</signed>
+            </closer>
+        </body>
+        </text>
+</TEI>

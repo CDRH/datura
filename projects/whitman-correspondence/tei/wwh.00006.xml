@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="wwh.00006">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to Louisa Van Velsor Whitman, 8 March 1863</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="kk">Kathryn Kruger</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+
+               <persName xml:id="ao">Alyssa Olson</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>wwh.00006</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Walt Whitman</author>
+                  <editor>Edwin Haviland Miller</editor>
+                  <title xml:id="ehm">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>New York</pubPlace>
+                     <publisher>New York University Press</publisher>
+                     <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                     <biblScope type="volume">1</biblScope>
+                     <biblScope type="page">77&#8211;78</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to Louisa Van Velsor Whitman, 8 March 1863</title>
+               <date when="1863-03-08">March 8, 1863</date>
+               <orgName xml:id="wwh">Whitman House in Camden, New Jersey</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#kk" when="2011-08-08">Seward footnote</change>
+         <change who="#kk" when="2009-08-17">proofread and edited</change>
+         <change who="#vs" when="2008-09-16">added main TEI markup</change>
+         <change who="#el" when="2008-07-30">added TEI header structure w/o IDs and titles; added minimal TEI markup</change>
+         <change who="#ao" when="2008-07-29">pulled transcription from Primary Source Media</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <dateline rend="right">
+                  <name type="place">Washington,</name>
+                  <date when="1863-03-08">Sunday | March 8th 1863.</date>
+               </dateline>
+               <salute>Dearest Mother,</salute>
+            </opener>
+            <p>Jeff must have got quite a long letter, (three sheets,) I wrote Thursday or Friday last<ptr target="wwh.00006_n1"/>&#8212;nothing particular. This is the fifth letter I have sent with shinplasters in&#8212;(Since George's $3 got lost I am more on the alert and mention them)&#8212;</p>    
+            <p>The poor Frenchman d'Almeida<ptr target="wwh.00006_n2"/>I told you about in my last, got out of the Old Capitol prison this morning&#8212;has been in a week&#8212;it was a most ridiculous thing putting him in&#8212;he was as square a man as I am&#8212;while he was in, the chief officer of the prison laughed sarcastically one day at his broken English, and d'Almeida said, "Sir you ought not to laugh&#8212;you ought much more to weep, to see a poor traveler like me in such a misfortune"&#8212;and Mr. Chief Officer immediately called the guard and sent d'Almeida to the guard-house for that <hi rend="italic">awful offence</hi> of making such an answer. The guard-house is a nasty, lousy dungeon without light&#8212;in it was a nigger with his wrists in manacles, and four white deserters&#8212;there is among the Old Capitol prisoners a little boy of seven years old&#8212;he and his father were taken as secesh guerillas in Virginia, and the government is holding on to the child, to exchange him for some Union prisoner south, in an exchange. Mother, my heart bleeds at all sorts of such damnable things of one kind or another I meet with every day&#8212;it is not the fault of the President&#8212;he would not harm any human being&#8212;nor of Seward<ptr target="wwh.00006_n3"/> or Stanton<ptr target="wwh.00006_n4"/>&#8212;but the heartless mean-souled brutes that get in positions subordinate but where they can show themselves, and their damned airs and pomposity&#8212;they think nothing of treating a man like the worst slave-owner is supposed to treat his niggers&#8212;</p>
+            <p>Meanwhile the great officers of the government have every minute occupied with pressing business, and these wretches have full swing. It seems impossible that there could be in the Free States such tyrants, as many you see hereabout&#8212;This d'Almeida is a very modest man, a real French gentleman, poor, and quite distinguished as a traveler and man of science&#8212;and is a Professor in the Academy of France. He takes or appears to take his misfortunes very goodnaturedly&#8212;yet it must have cut pretty deep on some accounts, he suffered every humiliation.</p>
+            <p>Well, dearest mother, how does it go at home? I hope you are none of you going to move&#8212;I hope it is arranged that you shall stay&#8212;there would be something dissatisfactory wherever you should go. I was real glad to hear Jeff had abandoned the idea of building, this spring&#8212;to attempt it without money is winding onesself round and round in the devil's own net.<ptr target="wwh.00006_n5"/>
+            </p>
+            <p>I saw Frederick Ellison here yesterday&#8212;he is a young man that used to be in Hughes's store there above Cumberland street<ptr target="wwh.00006_n6"/>&#8212;he is in the 9th N. Y. Militia&#8212;has just come from Brooklyn, where he has been on a furlough&#8212;</p>
+            <p>I would be glad to hear about Han&#8212;I must write to her very soon. I have not heard from George since. Yesterday I spent the day at Emory Hospital&#8212;a very needy place&#8212;I gave out a great many things, and about $4 in money&#8212;it was a good day. I was covered with mud, getting there. (I dont mean good <hi rend="italic">weather</hi>, it rained hard)&#8212;</p>
+            <closer rend="right">
+               <signed>Walt</signed>
+            </closer>
+         
+            <postscript>
+            <p>Jeff, I shall write a few lines soon to Mr. Rae&#8212;also to the firm that contributed the $10.<ptr target="wwh.00006_n7"/> I have not yet rec'd the engravings.</p>
+         </postscript>
+         
+      </body>
+   </text>
+</TEI>

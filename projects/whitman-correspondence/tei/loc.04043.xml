@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.04043">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Whitelaw Reid, 17 June 1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>                   
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.04043</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date when="1964">1964</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">181</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Whitelaw Reid, 17 June 1880</title>
+                    <date cert="high" when="1880-06-17" xml:id="dat1">June 17, 1880</date>
+                    <orgName xml:id="loc">The Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Reid, Whitelaw">Whitelaw Reid</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-05-09" who="#km">checked</change>
+            <change when="2013-01-11" who="#ej">Checked and Corrected</change>
+            <change when="2013-01-03" who="#gt">checked</change>
+            <change when="2012-11-04" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">London Ontario Canada</name>
+                    <date when="1880-06-17" rend="right">June 17 '80</date>
+                </dateline>
+                <salute>My dear Reid</salute>
+            </opener>
+
+            <p>Herewith find a letter for the paper. The price is &#36;12&#8212;If used <hi rend="italic">it must be printed in the paper of Tuesday</hi>, <hi rend="italic">June 22</hi><ptr target="loc.04043_n1"/> (or afterward)&#8212;The letter is sent in the same manner as this <hi rend="italic">to several other papers</hi> in Canada &#38; The States&#8212;(no <hi rend="italic">two</hi> papers in same city)&#8212;one each in Boston, <choice><abbr>Phila:</abbr><expan>Philadelphia</expan></choice>, Cincinnati, Denver, &#38;c&#8212;on the same condition&#8212;<hi rend="italic">this condition being a point of honor</hi>&#8212;It is sent to <hi rend="italic">no other but you</hi> in New York&#8212;</p>
+           
+            <closer>
+               <signed rend="right">Walt Whitman</signed>
+            </closer>
+            
+            <postscript>
+               <p>I am well for me&#8212;&#38; having a good time&#8212;fine country, many fine people here&#8212;I go all about leisurely but <hi rend="italic">this</hi> will be my headquarters &#38; p.o. address all summer&#8212;</p>
+            </postscript> 
+        </body>
+    </text>
+</TEI>

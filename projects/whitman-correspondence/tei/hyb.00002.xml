@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="hyb.00002">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, [16 March 1870]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>hyb.00002</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, [16 March 1870]</title>
+                    <date cert="medium" when="1870-03-16" xml:id="dat1">March 16, 1870</date>
+                    <orgName xml:id="yal">Yale Collection of American Literature, Beinecke Rare Book and Manuscript Library</orgName>
+                </bibl>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, [16 March 1870]</title>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, DC. </orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-10-30" who="#el">removed two ptrs to notes no longer necessary with merged files</change>
+            <change when="2013-10-21" who="#el">merged with loc.04728 and renamed hyb.00002; formerly yal.00309</change>
+            <change when="2013-09-12" who="#el">checked</change>
+            <change when="2013-06-17" who="#wr">Note proofreading corrections</change>
+            <change when="2013-06-15" who="#wr">Proofreading corrections</change>
+            <change when="2013-06-13" who="#wr">Date note and annotation</change>
+            <change when="2013-06-02" who="#wr">Transcribe 2 surfaces</change>
+            <change when="2013-09-12" who="#el">checked</change>
+            <change when="2013-06-16" who="#wr">Proofreading corrections</change>
+            <change when="2013-06-13" who="#wr">Date note and annotation</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent Proof</change>
+            <change when="2012-08-14" who="#wr">Clean encoding (editor, date, remove "_large") and add standard annotations on unannotated files (Jeff W, Martha [Mattie], George W, Lou Haslam)</change>
+            <change when="2011-04-19" who="#fw">Transcribe 2 Pages, regularize spelling, annotate Mrs. Black, O'Connor, Lane, Kirkwood</change>
+            <change when="2011-04-26" who="#fw">Annotate Davis</change>      
+        </revisionDesc>
+    </teiHeader>    
+
+    <text type="letter">
+        <body>
+
+            <pb xml:id="leaf001r" facs="yal.00309.001.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <date when="1870-03-16">16<unclear reason="illegible" resp="#wr" cert="medium">th</unclear><ptr target="hyb.00002_n12"/></date>
+                </dateline>
+                <salute>dear Walt</salute>
+            </opener>
+            <p>i<ptr target="duk.00425_n3"/> will resume
+                my <choice><orig>corresspondence</orig> <reg>correspondence</reg></choice> again
+            haint you missed my
+            letters very much i am
+            quite glad to resume again<ptr target="hyb.00002_n13"/>
+                well maty<ptr target="duk.00465_n9"/> is gone she
+            started <choice><orig>monday</orig> <reg>Monday</reg></choice> at 5 <choice><orig>oclock</orig> <reg>o'clock</reg></choice>
+            i suppose if she has met
+            with no delays she is home
+            to night we miss her very
+            much although we have had
+            company every day this
+            week helen price<ptr target="hyb.00002_n11"/> was here
+             on monday and mrs Black
+             yesterday<ptr target="hyb.00002_n2"/> and a lady to day
+            has just gone after staying
+            to tea and i got it with such
+            pain that i could <choice><orig>hardly</orig> <reg>hardly</reg></choice>
+            keep from groaning the
+            matter is i have been on my
+            feet so much lately that
+            i have suffered very muc<unclear reason="cut away" cert="high" resp="#wr">h</unclear>
+            and to day i thought i would
+            keep still and try to get
+            rested but i shall go to
+            bed soon and try to rest
+            we have had quite a number
+            of people to see matt but
+            <pb xml:id="leaf001v" facs="yal.00309.002.jpg" type="verso"/>
+            only called mrs Lane
+            and mrs kirkwood they only 
+            called)<ptr target="hyb.00002_n3"/>
+                but we had anna vanwyk<ptr target="hyb.00002_n14"/>
+            2 days last week and altogether
+            i got kind of worked down
+            but i shall get rested now
+            i think it was much better for
+            matt to not go to <choice><orig>washington</orig><reg>Washington</reg></choice><ptr target="hyb.00002_n16"/>
+            this winter but she made such
+                <choice><orig>preperations</orig> <reg>preparations</reg></choice> for it that she  
+            could hardly give it up
+            say to mrs <choice><orig>Oconor</orig> <reg>O'Connor</reg></choice> that
+            marthe thanked her for her
+            kind letter and will write
+            to her as soon as she gets
+            a little rested from he <choice><orig>journy</orig> <reg>Journey</reg></choice>
+            remember me also to mr and
+            mrs <choice><orig>Oconor</orig> <reg>O'Connor</reg></choice> and Jennie also<ptr target="duk.00466_n5"/>
+            martha was very much better
+            when she left than when she cam<unclear reason="cut away" resp="#wr" cert="medium">e</unclear>
+                you <choice><orig>cant</orig> <reg>cant</reg></choice> think how she improve<unclear reason="cut away" resp="#wr" cert="medium">e</unclear>
+            before she went away she had
+            a good appetite when she came
+            she could not eat but very
+            <choice><orig>litle</orig> <reg>little</reg></choice> the doctor sounded her lung<unclear reason="cut away" resp="#wr" cert="medium">s</unclear>
+            with rather favorable result
+            her left lung is good and three
+            fourths of the right one) it had 
+            not made such progress as he
+            anticipated) she slept up stairs
+            but had no fire except the
+            very cold nights as it made her
+            <choice><orig>coughf</orig><reg>cough</reg></choice>) she wants to come
+            out there without fail) davis has been
+            here<ptr target="hyb.00002_n15"/>
+            on his way to lowel 
+            he said
+            he never was in a place he liked
+            so well as <choice><orig>st louis</orig><reg>St. Louis</reg></choice><ptr target="hyb.00002_n5"/></p>
+        
+        <pb xml:id="leaf002r" facs="loc_ad.00105.jpg" type="recto"/>
+        
+        <p>matt
+            has a <choice><orig>beautifull</orig><reg>beautiful</reg></choice> gold watch
+            Jeff got that before he left<ptr target="loc.04728_n3"/>
+            and a large
+            plated ice picker and lots of things and
+            left her 40 dollars well matt like she see
+            so many things she wanted that she got
+            through with all the money george<ptr target="duk.00425_n2"/>
+            was to let her have what money she wanted
+            by Jeffs wish and George went away before
+            the 1 of the month and <choice><orig>dident</orig><reg>didn't</reg></choice> get his salary
+            he told me to give matty the rent but as
+            we have a new comer down stairs a girl baby
+            they were a little behin<unclear reason="illegible" resp="#wr" cert="medium">d</unclear> in paying the rent
+            
+            <pb xml:id="leaf002v" facs="loc_ad.00106.jpg" type="verso"/>
+            
+            so she wrote to Jeff and he sent
+            her a draft for 50 dollars and i let her
+            have 5 dol she had none too much to go such
+            a journey i hope she is safe home<ptr target="loc.04728_n10"/>
+        </p>
+        <p>matt is as kind to me as she can be
+            she said she would she would send the 5 back when
+            she got home i wished her to take it s
+            now walter dear i must close as i want
+            eddy<ptr target="duk.00425_n13"/> to put it in the box to night
+            we had a terrible storm<ptr target="loc.04728_n5"/> here this <choice><orig>morng</orig><reg>morning</reg></choice><ptr target="loc.04728_n9"/>
+            but cleared off the <choice><orig>afterno</orig><reg>afternoon</reg></choice>) your letter 
+            and contents<ptr target="loc.04728_n6"/> came all safe <choice><orig>walte</orig><reg>walter</reg></choice> dear 
+        </p>    
+        <closer>
+            <salute>good <choice><orig>be</orig><reg>bie</reg></choice> this <choice><orig>tim</orig><reg>time</reg></choice></salute>  
+        </closer>
+       
+        </body>
+    </text>
+</TEI>

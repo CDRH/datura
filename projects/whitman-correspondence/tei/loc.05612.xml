@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05612">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Benjamin Ticknor to Walt Whitman, 24 May 1882</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Benjamin Ticknor</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="bbb">Blake Bronson-Bartlett</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05612</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Benjamin Ticknor</author>
+                    <title>Benjamin Ticknor to Walt Whitman, 24 May 1882</title>
+                    <date cert="high" when="1882-05-24" xml:id="dat1">May 24, 1882</date>
+                    <idno type="callno">MSS45443, Box 3-4, Reel 2-3</idno>
+                    <orgName xml:id="loc">The Thomas Biggs Harned Collection of the Papers of Walt
+                    Whitman, 1842&#8211;1937, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Ticknor, Benjamin">Benjamin Ticknor</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2014-10-09" who="#nhg">checked, corrected</change>
+            <change when="2014-08-25" who="#bbb">checked</change>
+            <change when="2014-07-24" who="#ss">transcribed, encoded and annotated</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_nk.00442_large.jpg" type="recto"/>
+            <opener>
+                <dateline rend="right">                    
+                    <date when="1882-05-24">Thursday <lb/>
+                        May 24 82</date>
+                </dateline>
+                <salute>Dear Mr. Whitman<!--<ptr target="n3056"/>--></salute>
+            </opener> 
+
+            <p>Your receipt is safely received and I have mailed you the
+                    paper copy of the <hi rend="underline">"Leaves."</hi>.<ptr target="loc.05612_n1"
+                    /> I am extremely sorry for the <hi rend="underline">contretemps</hi><!--<ptr
+                    target="upa.00201_n2"/>--> which has caused the change, but I am very glad of
+                opportunity I have had of personal acquaintance with you. I hope to retain your good
+                will in spite of our compulsory business separation.</p>
+            <closer>
+                <salute>Very Truly Yours:</salute>
+                <signed>B. H. Ticknor<ptr target="loc.05612_n2"/></signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="loc_nk.00443_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05550">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Claxton, Remsen, &#38; Haffelfinger to Walt Whitman, 3
+                    October 1877</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Claxton, Remsen, &#38; Haffelfinger</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="bbb">Blake Bronson-Bartlett</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05550</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2014 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Claxton, Remsen, &#38; Haffelfinger</author>
+                    <title>Claxton, Remsen, &#38; Haffelfinger to Walt Whitman, 3 October
+                        1877</title>
+                    <date cert="high" when="1877-10-03" xml:id="dat1">October 3, 1877</date>
+                    <idno type="callno">Box 3-4 Reel 2-3</idno>
+                    <orgName xml:id="loc">The Thomas Biggs Harned Collection of the Papers of Walt
+                        Whitman, 1842&#8211;1937, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Claxton, Remsen, &#38; Haffelfinger">Claxton, Remsen, &#38; Haffelfinger</persName>
+                    
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2014-09-02">corrected formatting of sender name</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-08-13" who="#nhg">checked, corrected</change>
+            <change when="2014-08-04" who="#ss">checked, corrected, annotated</change>
+            <change when="2014-07-07" who="#bbb">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <pb xml:id="leaf001v" facs="loc.02823.002_large.jpg" type="verso"/>
+
+            <opener>
+                <dateline>
+                    <name type="place" rend="center"><handShift rend="printed"/>Claxton, Remsen
+                        &#38; Haffelfinger,<lb/> PUBLISHERS<lb/> BOOKSELLERS, IMPORTERS &#38;
+                        STATIONERS,<lb/> Nos. 624, 626 and 628 Market Street.</name>
+                    <name type="place" rend="right">Philadelphia,</name>
+                    <date when="1877-10-03" rend="right"><handShift rend="manuscript"/>Oct 3d
+                            <handShift rend="printed"/>1877.</date>
+                </dateline>
+                <salute><handShift rend="manuscript"/>Walt Whitman Esq</salute>
+                <salute>My dear Sir</salute>
+            </opener>
+            <p>Many thanks for the Copy of the Two Rivulets."<!--<ptr target="n3099"/>--> It shall have a
+                place in the library,<ptr target="loc.05550_n1"/>
+                </p>  
+
+            <pb xml:id="leaf001r" facs="loc.02823.001_large.jpg" type="recto"/>
+
+
+        </body>
+    </text>
+</TEI>

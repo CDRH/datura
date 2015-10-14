@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00605">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, [7 October 1871]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp><persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="ct">Cathy Tisch</persName><persName xml:id="fw">Felicia Wetzig</persName><persName xml:id="wr">Wesley Raabe</persName><persName xml:id="nr">Natalie Raabe</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00605</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, [7 October 1871]</title>
+                    <date cert="medium" when="1871-10-07" xml:id="dat1">October 7, 1871</date>
+                    
+                        <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-12-10" who="#el">corrected choice encoding of 'st louis'</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-09-17" who="#el">checked</change>
+            <change when="2013-05-30" who="#wr">Duke Proofreading Corrections</change>
+            <change when="2013-05-08" who="#wr">Proofreading corrections</change>
+            <change when="2013-05-06" who="#nr">Silent Proofreading</change>
+          <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent Proof</change>
+            <change when="2013-01-30" who="#wr">Proofreading correction of notes and annotation of George Sand.</change>
+            <change when="2013-01-25" who="#wr">Re-date letter to 7 October. Annotate and review of proofreading corrections.</change>
+            <change when="2012-08-17" who="#ct">Oral Proofreading Corrections</change>
+            <change when="2012-08-14" who="#wr">Clean encoding (editor, date, remove "_large") and add standard annotations on unannotated files (Jeff W, Martha [Mattie], George W, Lou Haslam), marriage of Isadore Minnie</change>
+            <change when="2011-02-28" who="#fw">Transcribe and correct 2 Pages</change>
+            <change when="2011-03-16" who="#fw">Annotate Tom Rome</change>
+            <change when="2011-03-30" who="#wr">Encode regularization of contractions, days of week, and frequently misspelled words</change>
+            <change when="2011-04-04" who="#fw">Annotate Mrs. Hinds, code punctuation</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+           
+            <pb xml:id="leaf001r" facs="duk.00605.001.jpg" type="recto"/>
+            
+            <note type="editorial" resp="#rmb" place="top">30 Sept 1871</note>
+            
+            
+            <opener>
+                <dateline>
+                    
+                    <date when="1871-10-07"><choice><orig>Saturday</orig> <reg>Saturday</reg></choice> morning<ptr target="duk.00605_n5"/>
+                    </date>
+                </dateline>
+                <salute>My dear <choice><orig>walt</orig><reg>Walt</reg></choice></salute>
+            </opener>
+            <p>i<ptr target="duk.00425_n3"/> thought i must
+            send you a line to tell you i
+            have got all the letters and the
+            order came very good and the book
+            by  <choice><orig>georg sand</orig><reg>George Sand</reg></choice><ptr target="duk.00605_n16"/>
+                and all the papers
+                and best of all the green porters<ptr target="duk.00605_n4"/>
+            has left early this morning
+            for home
+                <choice><orig>george</orig><reg>George</reg></choice> and loo<ptr target="duk.00556_n3"/>
+                came last night
+            <choice><orig>friday</orig> <reg>Friday</reg></choice> night quite late and have
+                gone over to the institute<ptr target="duk.00605_n11"/>
+            to day
+            Jeff<ptr target="duk.00422_n2"/> has gone to <choice><orig>boston</orig> <reg>Boston</reg></choice> look for
+                him home to <choice><orig>knight</orig> <reg>night</reg></choice> or to morrow
+            <pb xml:id="leaf001v" facs="duk.00605.002.jpg" type="verso"/>
+            he went fishing <choice><orig>wensday</orig> <reg>Wednesday</reg></choice> and
+            caught lots of very large blue
+            fish he brought home 2 it was
+            first rate one of the men<ptr target="duk.00605_n12"/> from
+                <choice><orig>st louis</orig><reg>St. Louis</reg></choice>
+                was here with Jeff
+            matt<ptr target="duk.00465_n9"/> must be home by this time
+            O <choice><orig>walt</orig><reg>Walt</reg></choice> i am so thankful to you
+            for your kindness to me in sending
+            me money at all times
+            good bie <choice><orig>walter</orig><reg>Walter</reg></choice> dear)</p>
+            <postscript><p>i have had a letter
+                from <choice><orig>mrs</orig><reg>Mrs.</reg></choice> hind<ptr target="duk.00605_n1"/> she thank you
+            for your donation and has got
+            the poem and wants you to sen<unclear reason="cut away" cert="medium" resp="#wr">d</unclear>
+                one to <choice><orig>townsend</orig><reg>Townsend</reg></choice>)<ptr target="duk.00605_n13"/>
+                <choice><orig>tom</orig><reg>Tom</reg></choice> <choice><orig>rome</orig><reg>Rome</reg></choice><ptr target="duk.00466_n4"/>
+                is marri<unclear reason="illegible" cert="medium" resp="#wr">ed</unclear> to a scotch girl<ptr target="duk.00605_n8"/></p></postscript>
+        </body>
+    </text>
+</TEI>

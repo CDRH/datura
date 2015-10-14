@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.01012">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">James Redpath to Walt Whitman, 25 June 1860</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>James Redpath</author>
+            <editor>Kenneth M. Price</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+               <persName xml:id="nhg">Nicole Gray</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2009</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>loc.01012</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Horace Traubel</author>
+                  <title xml:id="wwwc">With Walt Whitman in Camden</title>
+                  <imprint>
+                     <pubPlace>New York</pubPlace>
+                     <publisher>Mitchell Kennerley</publisher>
+                     <date when="1914">1914</date>
+                     <biblScope type="volume">3</biblScope>
+                     <biblScope type="page">460</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>James Redpath</author>
+               <title>James Redpath to Walt Whitman, 25 June 1860</title>
+               <date when="1860-06-25">June 25, 1860</date>
+               <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Redpath, James">James Redpath</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+         <change who="#nhg" when="2014-11-06">added date to biblStruct, corrected orgName formatting</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#vs" when="2009-07-30">added annotations</change>
+         <change who="#vs" when="2009-07-16">Transcribed, Encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener rend="right">
+               <dateline>
+                  <name type="place">Malden,</name>
+                  <date when="1860-05-25">June 25th, 1860.</date>
+               </dateline>
+            </opener>
+            <p>
+               <hi rend="italic">O rare Walt Whitman!</hi> I<ptr target="loc.01012_n100"/> said I would write to you about your Book when I found time to read it as it was written to be read. But I take back my promise. For if you are not sane what will writing avail? and if you are sane your writings are alive with richest sanity. Now, if I do not understand them, or any parts of them, what good will it do to say so&#8212;silence, it seems to me, is a duty till I do understand them; and then again, if I do understand them, or <hi rend="italic">when</hi> I shall do so, what good will it do to tell you of the fact? It is a waste of breath for my friend to tell me I am healthy when my pulse records the circumstance so often every minute.</p>  
+            <p>I love you, Walt! A Conquering Brigade will ere long march to the music of your barbaric jawp. Ever and truly</p>
+            <closer rend="right">
+               <signed>James Redpath.</signed>
+            </closer>
+         
+      </body>
+   </text>
+</TEI>

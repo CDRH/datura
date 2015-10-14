@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="man.00044">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Norman McKenzie to Walt Whitman, 29 June 1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Norman McKenzie</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="am">Alicia Meyer</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>man.00044</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Norman McKenzie</author>
+                    <title>Norman McKenzie to Walt Whitman, 29 June 1880</title>
+                    <date cert="high" when="1880-06-29" xml:id="dat1">June 29, 1880</date>
+                    <orgName xml:id="man">Charles Sixsmith Collection at the John Rylands Library, University of Manchester</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="McKenzie, Norman">Norman McKenzie</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-03-30" who="#ss">annotations added</change>
+            <change when="2013-12-02" who="#nhg">checked, corrected</change>
+            <change when="2013-11-19" who="#am">proofed</change>
+            <change when="2013-09-24" who="#nnk">proofed</change>
+            <change when="2013-08-22" who="#ej">Transcribed and Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="man_ej.00113_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">Sarnia <choice>
+                            <abbr>Ont.</abbr>
+                            <expan>Ontario</expan>
+                        </choice></name>
+                    <date when="1880-06-29">June 29<hi rend="superscript"><hi rend="underline"
+                                >th</hi></hi> 1880</date>
+                </dateline>
+                <salute>My dearest Friend,</salute></opener>
+
+            <p>Perhaps you thought I had forgotten you, but I have not much time to myself on
+                school-days.<ptr target="n3020"/> Do you remember the nice sail we had that night on the lake and river,
+                I will never forget it, you, and I had such a pleasant time up in the bow of the
+                boat when I sat on your lap and asked you questions about the which you wrote about
+                in your book named Two Rivulets.<pb xml:id="leaf001v" facs="man_ej.00211_large.jpg"
+                    type="verso"/> Our mid-summer-holidays begin on the thirteenth of July and
+                I think that I am going down to London then if all is well and M<hi
+                    rend="superscript">r</hi> Bucke<ptr target="n0119"/> has asked me to stay at his place first so that
+                I will be able to see you again for I do miss you so much since you have gone. I
+                suppose you will have plenty of fun on Dominion Day, I expect to as we always did
+                before. I am going to by some fire-cracker and go up to the lake to shoot them
+                off as it is against the law to fire them off <pb xml:id="leaf002r"
+                    facs="man_ej.00212_large.jpg" type="recto"/>within the limits of the town. When
+                you write to me please tell me how you enjoyed Dominion Day for I would like to
+                know. Please give my love to all and as I have told you all I know I will close
+                here.</p>
+
+            <closer>
+                <salute>I remain</salute>
+                <salute>Your loving Friend</salute>
+                <signed>Norman McKenzie</signed>.
+            </closer>
+        </body>
+        <pb xml:id="leaf002v" facs="man_ej.00115_large.jpg" type="verso"/>
+        <pb xml:id="leaf003r" facs="man_ej.00116_large.jpg" type="recto"/>
+        <pb xml:id="leaf003v" facs="man_ej.00117_large.jpg" type="verso"/>
+    </text>
+</TEI>

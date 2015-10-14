@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="upa.00189">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Anne Gilchrist, 18 August [1879]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>                   
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>upa.00189</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date when="1964">1964</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">161&#8211;162</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Anne Gilchrist, 18 August [1879]</title>
+                    <date cert="medium" when="1879-08-18" xml:id="dat1">August 18, 1879</date>
+                    <orgName xml:id="upa">Walt Whitman Collection, 1842&#8211;1957, Rare Book &#38; Manuscript Library, University of Pennsylvania</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Gilchrist, Anne">Anne Gilchrist</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-05-01" who="#km">checked</change>
+            <change when="2013-01-14" who="#ej">Checked and Corrected</change>
+            <change when="2013-01-03" who="#gt">checked</change>
+            <change when="2012-10-27" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">431 Stevens Street</name>
+                    <name type="place" rend="right">Camden<ptr target="upa.00189_n1"/></name>
+                    <date when="1879-08-18" rend="right">August 18</date>
+                </dateline>
+                <salute>Dear friend</salute>
+            </opener>
+
+            <p>Yours of 2d just <choice><abbr>rec'd</abbr><expan>received</expan></choice> (the one from Scotland came also)<ptr target="upa.00189_n2"/>&#8212;I am pretty well&#8212;full as well as when I last saw you in New York&#8212;(if any thing perhaps a little plus)&#8212;</p>
+            
+            <p>I went down last month to spend a while with the Staffords at their new farm, but I miss'd my main attraction &#38; comfort, <hi rend="italic">the Creek</hi>, &#38; did not make a long visit<ptr target="upa.00189_n3"/>&#8212;Mrs S and the rest are as usual, except Debbie, who was not at all hearty&#8212;</p>
+            
+            <p>Brother &#38; sister here well&#8212;sister seems to be engaged this morning with her new girl, (who seems to be doing marvellous!) in early fall house cleaning&#8212;at any rate I noticed every thing tumbled &#38; heaped just now, as I have been down stairs to see what the post man left me&#8212;</p>
+            
+            <p>I am sitting up in my room Stevens Street writing this&#8212;copious rains all the morning, and last night&#8212;(&#38; indeed this is the third day of them)&#8212;Hattie and Jessie left for St Louis last Thursday night&#8212;Lou and I went over to the West <choice><abbr>Phil:</abbr><expan>Philadelphia</expan></choice> depot and saw them off&#8212;(dear girls, how we miss them)&#8212;</p>
+            
+            <p>I am busy a little leisurely writing&#8212;think of printing soon a smallish 100 page book of my accumulated memoranda down at the Creek, &#38; across the Ferry, days &#38; nights, under the title of</p>
+            
+            <p rend="right"><hi rend="italic">Idle Days &#38; Nights of a half-Paralytic</hi></p>
+            
+            <p>prose, free gossip mostly, (you saw some specimens in that Jersey letter, last winter in the <choice><abbr>Phila:</abbr><expan>Philadelphia</expan></choice> <hi rend="italic">Times</hi>)<ptr target="upa.00189_n4"/>&#8212;</p>
+            
+            <p>Isn't that sad about the sudden death of our young Mr Sartoris in your country? Something strange too (I hope nothing uncanny will turn out)&#8212;</p>
+            
+            <p>Thank you, dear friend, for your letter&#8212;(came in just right)&#8212;how I should indeed like to see that <hi rend="italic">Cathedral</hi>&#8212;I dont know which I should go for first, the Cathedral, or <hi rend="italic">that baby</hi><ptr target="upa.00189_n5"/>&#8212;</p>
+            
+            <p>Best love to you&#8212;to Bee, Herb, Giddy and all&#8212;I write in haste but I am determined you shall have a word at least promptly in response&#8212;</p>
+
+          
+        </body>
+    </text>
+</TEI>

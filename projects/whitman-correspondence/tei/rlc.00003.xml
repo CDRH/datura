@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="rlc.00003">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title level="m" type="main">Walt Whitman to Rudolf Schmidt, 19 March 1874</title>
+        <title level="m" type="sub">a machine readable transcription</title>
+        <author>Walt Whitman</author>
+        <editor>Kenneth M. Price</editor>
+        <editor>Ed Folsom</editor>
+        <respStmt>
+          <resp>Transcription and encoding</resp>
+          <name>The Walt Whitman Archive Staff</name>
+        </respStmt>
+        <sponsor>Center for Digital Research in the Humanities, University of
+          Nebraska-Lincoln</sponsor>
+        <sponsor>University of Iowa</sponsor>
+        <funder>National Historical Publications and Records Commission</funder>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <date>2012</date>
+        </edition>
+      </editionStmt>
+      <publicationStmt>
+        <idno>rlc.00003</idno>
+        <distributor>The Walt Whitman Archive</distributor>
+        <address>
+          <addrLine>Center for Digital Research in the Humanities</addrLine>
+          <addrLine>319 Love Library</addrLine>
+          <addrLine>University of Nebraska-Lincoln</addrLine>
+          <addrLine>P.O. Box 884100</addrLine>
+          <addrLine>Lincoln, NE 68588-4100</addrLine>
+        </address>
+        <availability>
+          <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the
+            Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law.
+            Redistribution or republication on other terms, in any medium, requires express written
+            consent from the editors and advance notification of the publisher, Center for Digital
+            Research in the Humanities. Permission to reproduce the graphic images in this archive
+            has been granted by the owners of the originals for this publication only.</p>
+        </availability>
+      </publicationStmt>
+      <notesStmt>
+        <note type="project">The following are responsible for particular readings or for changes to
+          this file, as noted: <persName xml:id="el">Elizabeth Lorang</persName>
+          <persName xml:id="al">Ashley Lawson</persName>
+          <persName xml:id="zk">Zachary King</persName>
+          <persName xml:id="ec">Eric Conrad</persName>
+        </note>
+      </notesStmt>
+      <sourceDesc>
+
+        <biblStruct>
+          <monogr>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <title xml:id="ehm">The Correspondence</title>
+            <imprint>
+              <pubPlace>New York</pubPlace>
+              <publisher>New York University Press</publisher>
+              <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+              <biblScope type="volume">2</biblScope>
+              <biblScope type="page">286&#8211;288</biblScope>
+            </imprint>
+          </monogr>
+        </biblStruct>
+
+
+        <bibl>
+          <author>Walt Whitman</author>
+          <title>Walt Whitman to Rudolf Schmidt, 19 March 1874</title>
+          <date cert="high" when="1874-03-19" xml:id="dat1">March 19, 1874</date>
+          <orgName xml:id="rlc">The Royal Library of Copenhagen</orgName>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <particDesc>
+        <person role="sender">
+          <persName key="Whitman, Walt">Walt Whitman</persName>
+        </person>
+        <person role="recipient">
+          <persName key="Schmidt, Rudolf">Rudolf Schmidt</persName>
+        </person>
+      </particDesc>
+    </profileDesc>
+    <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+      <change when="2014-05-06" who="#el">removed hard returns within choice tags</change>
+      <change when="2012-11-29" who="#el">checked</change>
+      <change when="2012-06-20" who="#el">checked</change>
+      <change when="2012-05-02" who="#al">checked</change>
+      <change when="2011-03-09" who="#zk">encoded</change>
+      <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+    </revisionDesc>
+  </teiHeader>
+
+  <text type="letter">
+    <body>
+      <opener>
+        <dateline>
+          <name type="place" rend="right">431 Stevens st. Camden, N. Jersey, <lb/>U. S.
+            America</name>
+          <date when="1874-03-19" rend="right">March 19, 1874</date>. </dateline>
+        <salute>My dear Rudolf Schmidt<ptr target="n0793"/>,</salute>
+      </opener>
+
+      <p>My lonesomeness &amp; sickness here, (for I am still sick, &amp; here,) have been much
+        rejoiced <choice>
+          <orig>to&#8211;day</orig>
+          <reg>today</reg>
+        </choice> by my getting your good &amp; copious letter of 28th February, on your return to <choice><orig>Kopenhagen</orig><reg>Copenhagen</reg></choice>. I rec'd with it the <hi rend="italic">Fatherland</hi> with Mr. Rosenberg's<ptr target="n0519"/> criticism<ptr target="rlc.00003_n1"/>&#8212;which (perhaps luckily for
+        me) I cannot now read&#8212;but will one of these days have translated &amp; read to me. I
+        keep it very carefully&#8212;as I do all you send me&#8212;&amp; shall yet read and commune
+        with, &amp; dwell upon &amp; absorb <hi rend="italic">all</hi> thoroughly &amp; at
+        leisure&#8212;(especially your own review in the <hi rend="italic">Ide</hi>.) I think
+        probably <hi rend="italic">all</hi>&#8212;certainly <hi rend="italic"
+        >most</hi>&#8212;papers, sheets, &amp;c. you have sent me to Washington, have reached me
+        here&#8212;the post office forwards them here&#8212;I <choice><orig>rec'd</orig><reg>received</reg></choice> two complete copies <hi rend="italic">Demokratiske Fremblik</hi><ptr
+          target="n0189"/>, &amp; one copy in sheets&#8212;also three copies picture paper <hi
+          rend="italic">Folkeblad</hi>, with my portrait,<ptr target="rlc.00003_n2"/> which is most
+        excellent&#8212;(and the notice I will have read to me)&#8212;I rec'd at the time, a year
+        ago, the translation of Swedish and Norwegian poems, you sent me, acknowledged it, but the
+        letter seems to have missed you, &amp; have read it &amp; had much pleasure, &amp; am to
+        read it more&#8212;I also rec'd from Clausen your picture, which I have with me&#8212;&amp;
+        prize. A friend lately looking at it said, "Why, he looks like a born Yankee&#8212;&amp; of
+        the best." </p>
+
+      <p>I wrote you March 4th, acknowledging <hi rend="italic">Demokratiske Fremblik</hi>, &amp;
+        sent you (one in <hi rend="italic">Harper's Magazine</hi>, &amp; one extracted in the N. Y.
+          <hi rend="italic">Tribune</hi>) my two latest pieces <hi rend="italic">Song of the Redwood
+          Tree</hi>, (California,) and <hi rend="italic">Prayer of Columbus</hi>, which I suppose
+        you have rec'd all&#8212;For the last ten weeks I have not felt inclined to write&#8212;have
+        suffered in the head&#8212;walk hardly any, (from the paralysis,) but maintain good spirits,
+        keep up in body &amp; face, (my brother &amp; sister said at dinner yesterday that portrait
+        in the <hi rend="italic">Folkeblad</hi> looks greatly like me now, &amp; has caught the true
+          <hi rend="italic">expression</hi> better than any of them.) In body I have always been,
+        &amp; still remain, <hi rend="italic">stout</hi>, in the American sense, (i.e. <hi
+          rend="italic">not</hi> corpulent)&#8212;</p>
+
+      <p>In my letter of March 4 I wrote a few lines about Clemens Petersen<ptr
+          target="rlc.00003_n3"/>&#8212;my only interview with him was about 40 minutes, one very
+        rainy Sunday, nearly two years since in New York&#8212;he was just recovering from an attack
+        of erysipelas which had left large red blotches on his face&#8212;two other visitors were
+        just leaving&#8212;C. P. received me very kindly &amp; talked well&#8212;all was agreeable,
+        but under the circumstances I could not say much nor stay long&#8212;received a pleasing but
+        passing, &amp; not very pronounced impression&#8212;which is the reason, my dear friend,
+        that I have not written more fully&#8212;Partly too I have been waiting expecting that
+        perhaps somehow C. P. and I would meet again, &amp; talk more &amp; get better acquainted,
+        &amp; I could write you further&#8212;but I have not seen any thing of him since&#8212;&amp;
+        only seen some of his pieces casually in the magazines. I have not heard him or them
+        mentioned here in America&#8212;certainly no essay in the <hi rend="italic">Atlantic</hi>
+        magazine nor any thing of his elsewhere in English that I have seen has attracted any
+        special attention nor deserves it&#8212;shows nothing of the <hi rend="italic">forte</hi> or
+        heartiness of which I have no doubt he is capable&#8212;(I think your letter &amp; opinion
+        of C. P.'s essay, of last summer, have missed me.)&#8212;I cannot understand your allusions
+        to Bjornson<ptr target="rlc.00003_n4"/>&#8212;as you will be doubtless aware yourself. </p>
+
+      <p>The same <hi rend="italic">hardness</hi>, crudeness, worldliness&#8212;absence of the
+        spiritual, the purely moral, <choice><orig>esthetik</orig><reg>aesthetic</reg></choice>, &amp;c&#8212;are in Democracy here too&#8212;(though there are signs &amp;
+        awakenings here very plain to me)&#8212;probably in Great Britain, &amp; in Europe &amp;
+          everywhere&#8212;<hi rend="italic">Here</hi>, it is much counterbalanced &amp; made up by
+        an immense &amp; general basis of the eligibility to manly &amp; loving comradeship, very
+        marked in American young men&#8212;but generally, I am the more disposed to be satisfied
+        with the case as it is because I see that the only foundations &amp; <hi rend="italic">sine
+          qua non</hi> of popular improvement &amp; Democracy are <hi rend="italic">worldly &amp;
+          material success established first</hi>, spreading &amp; intertwining everywhere&#8212;<hi
+          rend="italic">then</hi> only, but then surely for the masses, will come spiritual
+        cultivation &amp; art&#8212;they will then firmly assert themselves&#8212;</p>
+
+      <p>Thank you for the graphic line&#8211;sketch you write of Bismark, in your letter. My own
+        opinion is, that we can well afford&#8212;I will say, <hi rend="italic">such as you &amp;
+          I</hi>, can well afford, to let those little &amp; great <hi rend="italic">chunks of
+          brawn</hi>&#8212;Attilas, Napoleons, Bismarks&#8212;prepare the way, &amp; cut the roads
+        through, for <hi rend="italic">us</hi>.<ptr target="rlc.00003_n5"/>
+      </p>
+
+      <p>Write me <hi rend="italic">here</hi>, till further notice&#8212;let me hear what is said
+        about <hi rend="italic">Vistas</hi> or my poems&#8212;let me hear always of yourself fully. </p>
+
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nyp.00473">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Harry Stafford, 30 January 1883</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>nyp.00473</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">322&#8211;323</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Harry Stafford, 30 January 1883</title>
+                    <date cert="high" when="1883-01-30" xml:id="dat1">January 30, 1883</date>
+                    <orgName xml:id="nyp">The Henry W. and Albert A. Berg Collection of English and
+                        American Literature, New York Public Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Stafford, Harry">Harry Stafford</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-06-04" who="#nhg">checked, corrected</change>
+            <change when="2014-01-09" who="#ej">Checked and Corrected</change>
+            <change when="2013-11-05" who="#nnk">proofed</change>
+            <change when="2013-10-17" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">Camden</name>
+                    <date when="1883-01-30" rend="right"><choice>
+                        <orig>Jan:</orig>
+                        <reg>January</reg>
+                    </choice> 30 <lb/>'83</date>
+                </dateline>
+                <salute>Dear Harry</salute>
+            </opener>
+            <p>Your letter came all right, &#38; glad to hear from you, as always. There is nothing
+                very new with me&#8212;I keep on about the same in most every respect&#8212;To-day,
+                (Tuesday) as I write it is warm &#38; bright, &#38; I am going out to enjoy
+                it&#8212;pretty much the same old round&#8212;over the ferry &#38; up Market street,
+                <choice>
+                    <abbr>Phila</abbr><expan>Philadelphia</expan></choice>, &#38; stop occasionally at 23 south 9th st. where my books are <choice>
+                    <abbr>pub'd</abbr><expan>published</expan></choice>. Now
+                that my two books, prose and the poems, are out, I hardly know what to strike
+                for&#8212;what to look forward to, as I used to&#8212;The <choice>
+                    <orig>Vols.</orig>
+                    <reg>Volumes</reg>
+                </choice> are selling middling
+                    well&#8212;"Specimen Days" has been republished in
+                    Scotland<ptr target="nyp.00473_n1"/> &#38; L. of G. is being translated in
+                    Germany<ptr target="nyp.00473_n2"/>&#8212;</p>
+            <p><hi rend="italic">Tuesday night 10&#189;&#8212;</hi>I am finishing my letter, as I
+                have been out &#38; only got back late&#8212;This will be a dry letter&#8212;but you
+                must take the will for the deed&#8212;I send you a package of papers &#38;c. once in
+                a while, which I suppose you get&#8212;I came over to-night through the thick ice,
+                filling the river&#8212;one big cake, half an acre, or more, hard &#38; thick, I
+                thought would conquer us, but it didnt, we <hi rend="italic"><choice>
+                    <abbr>crunch'd</abbr>
+                    <expan>crunched</expan>
+                </choice></hi> our way
+                <choice>
+                    <abbr>thro'</abbr><expan>through</expan></choice>&#8212;but it was a high old <hi rend="italic">crunch</hi> &#38; fight for ten
+                minutes&#8212;&#38; I <choice>
+                    <abbr>enjoy'd</abbr>
+                    <expan>enjoyed</expan>
+                </choice> it I tell you&#8212;</p>
+            <p>I have just been looking for your last letter to see if there is any special thing I
+                ought to answer&#8212;but I cant find the letter&#8212;Never mind, Harry,
+                dear&#8212;we'll make it all right when we meet&#8212;I have just written to your
+                mother&#8212;Well my space is out, &#38; there goes the clock striking 11&#8212;Good
+                night, dear son&#8212;&#38; here's a buss for you&#8212;</p>
+            <closer>
+                <signed rend="right">W W</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

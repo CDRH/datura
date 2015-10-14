@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00504">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, 17 October [1867]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="zk">Zachary King</persName>
+                    <persName xml:id="nr">Natalie Raabe</persName>  
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00504</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, 17 October [1867]</title>
+                    <date cert="high" when="1867-10-17" xml:id="dat1">October 17, 1867</date>
+                    <idno type="callno">III-5D</idno>
+                    <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-05-16" who="#el">checked; moved notes to external file and added ptrs</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent Proof</change>
+            <change when="2012-12-14" who="#wr">Proofreading Corrections of notes.</change>
+            <change when="2012-11-26" who="#wr">Proofreading corrections and updated date</change>
+            <change when="2012-11-23" who="#nr">Proofreading notes.</change>
+            <change when="2012-07-31" who="#wr">Moved RMBucke to HandNote; fixed editor, date, and title; reviewed paragraphing </change>
+            <change when="2012-07-18" who="#wr">Replaced smart quotes with straight; removed external URL links; added Bucke</change>
+            <change when="2012-07-11" who="#wr">Proofreading corrections and move postscript to postscript position with
+                accompanying notes.</change>
+            <change when="2011-12-20" who="#fw">correct spacing, regularize spelling of bye</change>
+            <change when="2011-07-30" who="#zk">added call no., annotations</change>
+            <change when="2011-02-06" who="#wr">Correct 2 surfaces</change>
+            <change when="2011-01-10" who="#fw">Transcribe 2 surfaces</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <pb xml:id="leaf001r" facs="duk.00504.001.jpg" type="recto"/>
+            <opener>
+                <dateline>                    
+                    <date when="1867-10-17">Oct 17th<ptr target="duk.00504_n4"/>
+                    </date>
+                </dateline>
+                <salute>My dear Walt</salute>
+            </opener>
+            <note type="editorial" resp="#rmb" place="top">1867</note>
+            
+            <p>the post
+            man has gone <choice><orig>bye</orig> <reg>by</reg></choice> and
+            no letters, and its being 
+            <choice><orig>thursday</orig> <reg>Thursday</reg></choice> i feel worried
+            very much for fear it
+            is gone as i <choice><orig>dident</orig> <reg>didn't</reg></choice> get
+            it yesterday my <choice><orig>usuall</orig> <reg>usual</reg></choice>
+            day i thought i would
+            get it <choice><orig>to day</orig> <reg>today</reg></choice> i wanted
+            very much to hear from
+            you and likewise i was
+            very short of money but
+            if you have sent it it
+            is taken sure i think of
+            every thing that is unlikely
+            to happen O walt if you
+            are sick or any thing
+           
+            <pb xml:id="leaf001v" facs="duk.00504.002.jpg" type="verso"/>
+                
+            the matter i hope you will
+            let me know <choice><orig>immedtely</orig> <reg>immediately</reg></choice>
+            as i shall be very uneasy
+            till i hear i wrote A letter
+            last week to you walter
+            i suppose you got it
+            it is too bad if the letter
+            is gone i have been <choice><orig>waching</orig> <reg>waching</reg></choice>
+            the letter man and <choice><orig>he s</orig> <reg>he's</reg></choice> past
+            and no letter i feel real
+            bad my lameness is not
+            much better yet i am
+            taking medicine from
+            a doctor a very good one
+            i think the one matty<ptr target="duk.00465_n9"/> had for
+                sis<ptr target="duk.00502_n3"/> he has great practice
+            and has a very good name
+            he said if this <choice><orig>dident</orig> <reg>didn't</reg></choice> help
+            me he <choice><orig>dident</orig> <reg>didn't</reg></choice> know as any
+            thing would but he thought
+            this would</p>
+            <closer>
+                <salute>good bie Walter dear</salute>
+            </closer>
+                <postscript><p>matt
+                    <choice><orig>dont</orig> <reg>don't</reg></choice> hear from Jeff<ptr target="duk.00422_n2"/>
+                    very often they are here yet<ptr target="duk.00504_n5"/></p></postscript>
+        </body>
+    </text>
+</TEI>

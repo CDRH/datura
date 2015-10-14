@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.02603">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">William Sloane Kennedy to Walt Whitman, 2 June
+                    1885</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>William Sloane Kennedy</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName> 
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.02603</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>William Sloane Kennedy</author>
+                    <title>William Sloane Kennedy to Walt Whitman, 2 June 1885</title>
+                    <date cert="medium" when="1885-06-02" xml:id="dat1">June 2, 1885</date>
+                    <idno type="callno">Box 12, Reel 7-8</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Kennedy, William Sloane" ref="n3039">William Sloane Kennedy</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-08-04" who="#nhg">checked, corrected</change>
+            <change when="2015-06-29" who="#kb">edited</change>
+            <change when="2015-05-23" who="#if">edited</change>
+            <change when="2015-04-01" who="#ss">added annotations</change>
+            <change when="2014-12-22" who="#ss">transcribed, encoded and checked</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.02603.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">Belmont Mass<ptr target="loc.02603_n1"/></name>
+                </dateline>
+                <salute>Dear Mr Whitman:</salute>
+            </opener>
+            <p><choice><abbr>Yr</abbr><expan>Your</expan></choice> suggestion is excellent. I hd <choice><abbr>tho't</abbr><expan>thought</expan></choice> of it, vaguely. I send a few stamps
+                for the MS,&#8212;all I have by me.</p>
+            <p>Thanks for <choice><abbr>yr</abbr><expan>your</expan></choice> kindness &#38; interest in the MS.<ptr target="loc.02599_n1"/></p>
+            <p>A good holiday to you!</p>
+            <closer>
+                <salute><choice>
+                        <orig>Yrs</orig>
+                        <reg>yours</reg>
+                    </choice></salute>
+                <signed>WS Kennedy</signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="loc.02603.002_large.jpg" type="verso"/>
+            <pb xml:id="leaf002r" facs="loc.02603.003_large.jpg" type="recto"/>
+            <pb xml:id="leaf002v" facs="loc.02603.004_large.jpg" type="verso"/>
+        </body>
+    </text>  
+</TEI>

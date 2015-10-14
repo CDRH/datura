@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05552">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">William Taylor to Walt Whitman, 18 December
+                    1877</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>William Taylor</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="bbb">Blake Bronson-Bartlett</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05552</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2014 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>William Taylor</author>
+                    <title>William Taylor to Walt Whitman, 18 December 1877</title>
+                    <date cert="high" when="1877-12-18" xml:id="dat1">December 18, 1877</date>
+                    <idno type="callno">Box 3-4 Reel 2-3</idno>
+                    <orgName xml:id="loc">The Thomas Biggs Harned Collection of the Papers of Walt
+                        Whitman, 1842&#8211;1937, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Taylor, William">William Taylor</persName>
+                </person>
+                <person role="recipient" xml:id="ww">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-08-13" who="#nhg">checked, corrected</change>
+            <change when="2014-08-04" who="#ss">checked, corrected, annotated</change>
+            <change when="2014-07-14" who="#bbb">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_nk.00209_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">Woodstown, N.J.,</name>
+                    <date when="1877-12-18" rend="right">12/18, 1877.</date>
+                </dateline>
+                <salute><choice>
+                    <sic>Honered</sic>
+                    <corr>Honored</corr>
+                </choice> Friend&#8212;</salute>
+            </opener>
+
+            <p>Was beginning to fear you were ill.<!--<ptr target="n3101"/>--> Am glad you have usual
+                health, and that we may soon welcome you to our good
+                quiet <hi rend="underline">Woods</hi>town (we have shady streets). We can see the
+                country hereabouts in a general way; but when summer comes, and if it is your
+                pleasure, hope to have you repeat the visit to see our country place in all its
+                glory.</p>
+
+            <p>My wife has arranged to go among her folks on Tuesday, so that day we will probably
+                be out of town. As Monday is my <hi rend="underline">press day</hi> (getting the Register printed &amp; mailed) could not
+                get to meet you that day very well, anyhow:</p>
+
+            <p>But please drop a card to say I may meet you any day after Tuesday, and we will of
+                course expect you then to be with us over Sunday. Have you been thinking about going
+                to Cape May this winter? We will have your R.R. tickets renewed, as after January
+                1, time is out on your pass to the "Cape."</p>
+
+            <closer>
+                <salute>Good Night, in hopes of seeing you soon</salute>
+                <signed>W.T.</signed>
+            </closer>
+
+            <postscript>
+                <p>Have you the block upon which those Boston Engravers cut a fairly good picture of yourself? If
+                        so, would like to borrow it, so as to give our readers an illustrated sketch
+                        of "Walt Whitman."</p>
+                <signed>Your Friend</signed>
+                <signed>Wm Taylor</signed>
+            </postscript>
+
+            <pb xml:id="leaf001v" facs="loc_nk.00210_large.jpg" type="verso"/>
+            <note type="editorial" resp="#ww" place="bottom">Wm Taylor's letter Woodstown NJ Dec 18
+                '77</note>
+
+        </body>
+    </text>
+</TEI>

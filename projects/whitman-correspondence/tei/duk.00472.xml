@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00472">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, [16 or 23 October 1867?]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="zk">Zachary King</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00472</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>           
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, [16 or 23 October 1867?]</title>
+                    <date cert="low" notBefore="1867-10-16" notAfter="1867-10-23" xml:id="dat1">October 16 or 23, 1867?</date>
+                    <idno type="callno">III-5D</idno>
+                    <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-07-29" who="#el">merged files</change>
+            <change when="2013-01-10" who="#el">updated TEI header to follow new encoding of respStmt within titlStmt; moved notes to external notes file and replaced with ptr encoding; removed empty opener elements</change>
+            <change when="2013-06-09" who="#wr">Duke Proofreading Corrections</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent Proof</change>
+            <change when="2012-04-25" who="#wr">Proofreading Corrections</change>
+            <change when="2012-12-14" who="#wr">Re-dated to October 1867 and proofreading notes. </change>
+            <change when="2012-07-31" who="#wr">Moved RMBucke to HandNote; fixed editor, date, and title; reviewed paragraphing </change>
+            <change when="2012-07-16" who="#wr">Replaced smart quotes with straight; removed external URL links. </change>
+            <change when="2012-07-02" who="#wr">Completed date note and oral proof corrections.</change>
+            <change when="2012-06-14" who="#wr">Replace straight quotes with smart quotes</change>
+            <change when="2011-12-19" who="#fw">correct spacing</change>
+            <change when="2011-07-29" who="#zk">added call no.</change>
+            <change when="2011-07-28" who="#zk">added annotations</change>
+            <change when="2010-12-25" who="#wr">Transcribed 4 surfaces</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="duk.00472.001.jpg" type="recto"/>
+            
+            <note type="editorial" resp="#rmb" place="top">Brooklyn 10 Oct 1866</note>
+            
+            <opener>
+                <salute>My dear Walter<ptr target="duk.00472_n8"/></salute>
+            </opener>
+          
+            <p>i got you
+                letter to day <choice><orig>wensday</orig><reg>Wednesday</reg></choice><ptr
+                    target="duk.00472_n13"/>
+                with
+            the money all safe and was
+            glad to hear from yo<unclear reason="illegible" resp="#wr" cert="medium">u</unclear>
+            it seemed like an
+            age since i had seen
+            you i am glad you
+            are better situated
+            than you was<ptr target="duk.00472_n7"/>
+            i am
+            about the same of my
+            lameness but yesterday
+            and <choice><orig>to day</orig> <reg>today</reg></choice> i feel
+            better and not so
+            weak and <choice><orig>exausted</orig> <reg>exhausted</reg></choice>
+            like i did feel i
+            have my bed out in
+            the room and sleep
+            better and my appetite
+            is better sis<ptr target="duk.00472_n2"/> has been
+                quite sick so marthe<ptr target="duk.00472_n3"/> had A doctor
+            
+            <pb xml:id="leaf001v" facs="duk.00472.002.jpg" type="verso"/>
+
+            she was quite bad
+            for two or three days
+            she was as yellow
+            as gold the white of
+            her eyes was very
+            yellow she was in
+            here the most of the
+            time the doctor said
+            it was her liver
+            he gave her something
+            that has helped her
+            very much O walt
+            <choice><orig>dont</orig> <reg>don't</reg></choice> you think you
+            left two shirts and
+            <choice><orig>hankercheif</orig><reg>handkerchief</reg></choice><ptr target="duk.00472_n11"/>
+                
+                i went
+            to the bureau to get
+            something and there
+            lay the shirts and
+            handkercheif i did
+            
+            
+            <pb xml:id="leaf002r" facs="duk.00472.003.jpg" type="verso"/>
+            
+            feel real bad your
+            new ones too how shall i
+            get them to you i <choice><orig>dont</orig> <reg>don't</reg></choice>
+            know if you will come
+            <choice><orig>christmas</orig> <reg>Christmas</reg></choice> i will keep
+            them then you <choice><orig>needent</orig> <reg>needn't</reg></choice>
+            bring any well walt
+            here we are yet
+            the old folks is moving
+            out and the son and wife
+            is going to live in one
+            room and bedroom
+            and the other to be
+            rented to another set
+            rather too much of
+            the good thing rather
+            too many over head
+            but winter <choice><orig>aint</orig> <reg>ain't</reg></choice>
+            so bad as summer
+            george<ptr target="duk.00425_n2"/> says if
+            you will buy
+            
+            <pb xml:id="leaf002v" facs="duk.00472.004.jpg" type="verso"/>
+            
+            <choice><orig>smiths</orig><reg>Smith's</reg></choice><ptr target="duk.00472_n5"/>
+                half of
+            that lot he will fix
+            the shop for me he
+            says he can put
+            a cellar under it
+            and turn it around
+            for about 1200d twelve
+            hundred dollars
+            i would not mind
+            its setting back from
+            the street he says
+            there is about 70 dollar
+            worth of lumber there
+            he <choice><orig>wont</orig> <reg>won't</reg></choice> take less than
+                900 <choice><orig>doller</orig> <reg>dollars</reg></choice> georg says
+            property is high this
+            fall write walt if
+            you think well of it
+            take care of yourself
+            the <choice><orig>carpenters</orig> <reg>carpenter's</reg></choice> shop <choice><orig>acrost</orig> <reg>across</reg></choice> the street
+            burned down last night
+</p>
+
+        </body>
+    </text>
+</TEI>

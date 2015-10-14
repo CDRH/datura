@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="tex.00436">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Benjamin Gurney to Walt Whitman, 3 August 1878</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>tex.00436</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Benjamin Gurney</author>
+                    <title>Benjamin Gurney to Walt Whitman, 3 August 1878</title>
+                    <date cert="high" when="1878-08-03" xml:id="dat1">August 3, 1878</date>
+                    <orgName xml:id="tex">T. E. Hanley Collection, Harry Ransom Humanities
+                        Research Center, The University of Texas at Austin</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Gurney, Benjamin">Benjamin Gurney</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-01" who="#nhg">checked, corrected</change>
+            <change when="2014-03-20" who="#nnk">proofed</change>
+            <change when="2014-03-17" who="#kc">checked, corrected</change>
+            <change when="2014-03-13" who="#ss">Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="tex_ej.00275_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place"><handShift rend="printed"/>Sarony Portraits<lb/> 37 Union Square,<lb/> New
+                        York<ptr target="tex.00436_n1"/></name>
+                    <date when="1878-08-03"><handShift rend="manuscript"/>Aug 3 <handShift rend="printed"/>187<handShift rend="manuscript"/>8<ptr target="n3004"/></date>
+                </dateline>
+                <salute>Walt Whitman Esq</salute>
+                <salute>Dear Sir&#8212;</salute>
+            </opener>
+            <p>Mr Sarony<ptr target="n3003"/> desires me to acknowledge the receipt of the
+                books, with thanks&#8212;and if I may impose on your generosity I should be <choice>
+                    <orig>please</orig>
+                    <reg>pleased</reg>
+                </choice> to have a <choice>
+                    <orig>lett</orig>
+                    <reg>letter</reg>
+                </choice> for my wife&#8212;</p>
+            <closer>
+                <salute rend="right">Very truly yours</salute>
+                <signed rend="right">Benj Gurney</signed>
+            </closer>       
+            <pb xml:id="leaf001v" facs="tex_ej.00274_large.jpg" type="verso"/>
+
+        </body>
+    </text>
+</TEI>

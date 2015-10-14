@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?><?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules_mss.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00197">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Egypt</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author xml:id="ww">Walt Whitman</author>
+                <author xml:id="unk">Unknown</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="lmg">Lauren Grewe</persName><persName xml:id="nhg">Nicole Gray</persName><persName xml:id="tra">Ty Alyea</persName><persName xml:id="mc">Matt Cohen</persName>
+                </respStmt>
+                <sponsor>University of Texas at Austin</sponsor>
+                <sponsor>University of Nebraska-Lincoln</sponsor>
+                <funder>The National Endowment for the Humanities</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2011</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00197</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                    <addrLine>kprice@unlnotes.unl.edu</addrLine>
+                    <addrLine>Ed-Folsom@uiowa.edu</addrLine>
+                    <addrLine>bbarney2@unlnotes.unl.edu</addrLine>
+                </address>
+                <availability><p>The text of the original document is in the public domain. Subject to certain exceptions, public domain works may be freely copied or used in the creation of derivative works without permission, or authorization, of the former copyright owners.</p><p>The text encoding was created and/or prepared by the Walt Whitman Archive and is governed by a <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref> (CC BY 4.0).</p><p>Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p></availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Egypt...</title>
+                    <idno type="callno">MS 96</idno>
+                    <date notBefore="1838-05-31" notAfter="1892-03-26">Undated</date>
+                    <orgName xml:id="duk">Trent Collection of Whitmaniana, David M. Rubenstein Rare Book &amp; Manuscript Library, Duke University</orgName>
+                    <note type="project">Transcribed from digital images of the original item.</note>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="h1" scribeRef="#ww" medium="pencil"/>
+                <handNote xml:id="h2" scribeRef="#unk" medium="pencil"/>
+            </handNotes>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-02-24">completed date information, tweaked encoding</change>
+            <change who="#nhg" when="2015-01-26">added schematron declaration, updated schema declaration, changed text type to annotations</change><change who="#lmg" when="2011-07-06">Transcribed and encoded.</change>
+            <change who="#nhg" when="2011-08-23">Checked, revised.</change>
+            <change who="#tra" when="2013-11-05">Checked and revised bibliographical encoding.</change>
+            <change who="#mc" when="2014-08-31">Proofed.</change>
+        </revisionDesc> 
+    </teiHeader>
+    
+    <text type="annotations">
+        <body>
+            <pb xml:id="leaf001r" facs="duk.00197.001.jpg" type="recto"/>
+            <note type="editorial" resp="#h2" rend="circled" place="top">10</note>
+                <div1 type="section"><ab><handShift new="#h1"/><hi rend="underline">Egypt</hi>, (and probably much of 
+                the <del rend="overstrike">Ass</del> sentiment of 
+                the Assyrian empire) 
+                represents that phase 
+                of <choice><orig>developement</orig><reg>development</reg></choice>, advanced 
+                childhood, full of belief, 
+                rich and divine enough, 
+                standing amazed and 
+                awed before the mystery 
+                of life<del rend="overstrike">.</del>&#8212;nothing more 
+                wonderful than life, 
+                even in <subst><del rend="overstrike" seq="1">an</del> <add rend="unmarked" place="inline" seq="2">a</add></subst> hawk 
+                a bull or a cat&#8212; 
+                <add rend="insertion" place="supralinear">&#8212;the masses of the people</add> 
+                 reverent of priestly 
+                and kingly authority. 
+                <del rend="overstrike"><del rend="overstrike"><add rend="unmarked" place="supralinear">We cannot go</add></del> All the <subst><add rend="unmarked" place="supralinear" seq="2">hitherto</add> <del rend="overstrike" seq="1">modern</del></subst> <choice><orig>cen-<lb/></orig><reg>centuries</reg></choice> 
+                turies</del> 
+                <add rend="unmarked" place="supralinear">The <add rend="insertion" place="supralinear">definite</add><!--Grier counts it as deleted.-->  history <subst><del rend="overstrike" seq="1">and</del> <add rend="unmarked" place="inline" seq="2">of</add></subst> the world</add> 
+                <del rend="overstrike">We</del> cannot go back 
+                farther than Egypt&#8212; 
+                and, <del rend="overstrike"><unclear reason="illegible, deletion" resp="#lmg" cert="medium">in</unclear> with <unclear reason="illegible" resp="#lmg" cert="medium">u</unclear></del> <delSpan rend="hashmark" spanTo="#a01"/>and
+                <milestone unit="undeclared" rend="horbar-full"/>
+                have we indeed gone 
+                on much farther than 
+                what Egypt has left&#8212; 
+                &#8212;even the last two 
+                thousand<anchor xml:id="a01"/>
+            <pb xml:id="leaf002r" facs="duk.00197.002.jpg" type="recto"/>
+                in <subst><del rend="overstrike" seq="1">many</del> <add rend="unmarked" place="supralinear" seq="2">the most</add></subst> important 
+                particulars the average 
+                spirit of man <add rend="insertion" place="supralinear">except in These States</add> has 
+                not gone <subst><del rend="overstrike" seq="1">a single</del> <add rend="unmarked" place="supralinear" seq="2">one</add></subst> 
+                <del rend="overstrike">step</del> forward of 
+                the spirit of ancient 
+                Egypt.&#8212;</ab></div1>
+                <div1 type="section"><ab>India, represents 
+                meditation, oriental 
+                rhapsody, <add rend="insertion" place="supralinear">passiveness,</add> a<del rend="overstrike" seq="1">s</del> curious<!--Grier says s is not struck out in 'as' here.--> 
+                antique schoolmasters 
+                teaching, <add rend="insertion" place="supralinear">of wise precepts&#8212;</add>  &#8212;and is the 
+                beginning of feudality, 
+                or the institution of 
+                the lord and the 
+                serf&#8212;much of the 
+                <subst><del rend="overstrike" seq="1">modern</del> <add rend="unmarked" place="supralinear" seq="2">late‑age</add></subst> lord, or fine 
+                gentleman, <del rend="overstrike">dates ba</del>
+                so nice and delicate, 
+                dates <del rend="overstrike"><add rend="unmarked" place="supralinear">af</add></del> back to <del rend="overstrike">the</del> 
+                <subst><del rend="overstrike" seq="1">oldest Indies.</del> <add rend="unmarked" place="inline" seq="2">Hindustan</add></subst></ab></div1>
+        </body>
+    </text>
+</TEI>

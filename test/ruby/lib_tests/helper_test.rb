@@ -27,25 +27,6 @@ RSpec.describe "Helper Test:" do
     end
   end  # ends get_directory_files
 
-
-  describe "read_configs" do
-    context "given path and project" do
-      it "should return config files with :main and :proj"
-    end
-    context "missing information" do
-      it "should ...exit???"  do # TODO 
-        begin
-          read_configs("jfkd", "fake")
-        rescue SystemExit => e
-          expect(e.status).to be(0)
-        else
-          # should not have gotten to this step
-          expect(true).eq false 
-        end
-      end
-    end
-  end  # ends read_configs
-
   describe "regex_files" do
     test_files = ["/path/to/cody.book.001.xml", 
                   "/path/to/cody.book.002.xml", 

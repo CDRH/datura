@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.02568">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">John H. Johnston to Walt Whitman, 9 September 1885</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>John H. Johnston</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.02568</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>John H. Johnston</author>
+                    <title>John H. Johnston to Walt Whitman, 9 September 1885</title>
+                    <date cert="high" when="1885-09-09" xml:id="dat1">September 9, 1885</date>
+                    <idno type="callno">Box 12, Reel 7-8</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="ht"><persName key="Traubel, Horace"/></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Johnston, John H." ref="n0336">John H. Johnston</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-08-13" who="#ss">corrected</change>
+            <change when="2015-08-06" who="#nhg">checked, corrected</change>
+            <change when="2015-07-07" who="#kb">edited</change>
+            <change when="2015-06-06" who="#if">edited</change>
+            <change when="2015-04-12" who="#ss">added annotations</change>
+            <change when="2014-11-20" who="#ss">checked and corrected</change>
+            <change when="2014-11-19" who="#ak">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.02568.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <handShift rend="printed"/>
+                    <name type="place">J. H. JOHNSTON, <lb/> JEWELER</name>
+                    <name type="place">SPECIALTIES: DUPLICATE WEDDING PRESENTS. DIAMONDS, WATCHES, FINGER RINGS.</name>
+                    <name type="place">THE REPAIRING OF FINE WATCHES AND JEWELRY A SPECIALTY.</name>
+                    <name type="place">150 BROWERY, COR. BROOME ST. <lb/>New York,</name>
+                    <date when="1885-09-09"><handShift rend="manuscript"/>Sept 9
+                            <handShift rend="printed"/>188<handShift rend="manuscript"/>5</date>
+                </dateline>
+                <salute>Dear Walt:</salute>
+            </opener>
+            <p> Glad to hear from you once more.</p>
+            <p> Many thanks for the books you sent. I inclose $2.<hi rend="superscript">00</hi> for
+                the two and for the balance all the thanks you desire. </p>
+            <p> Do you mind telling me how much of a Mortgage there is on your house? </p>
+            <p> Alma<ptr target="n4982"/> is well. She goes with me tonight to see Robson &#38;
+                Crane in the Comedy of Errors.<ptr target="loc.02568_n1"/></p>
+            <closer> 
+                <salute>Sincerely yours</salute>
+                <signed><hi rend="underline">J H Johnston</hi></signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="loc.02568.002_large.jpg" type="verso"/>
+
+            <note type="editorial" resp="#ht" place="top">see notes July 5 1891</note>
+          
+        </body>
+    </text>
+</TEI>

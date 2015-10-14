@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nwu.00002">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Louisa Orr Whitman, 18 September
+                    1881</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>nwu.00002</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">244</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Louisa Orr Whitman, 18 September 1881</title>
+                    <date cert="high" when="1881-09-18" xml:id="dat1">September 18, 1881</date>
+                    <orgName xml:id="nwu">Northwestern University</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Louisa Orr">Louisa Orr Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-02-11" who="#nhg">checked, corrected</change>
+            <change when="2014-01-23" who="#ss">checked</change>
+            <change when="2013-10-17" who="#nnk">proofed</change>
+            <change when="2013-09-26" who="#kc">Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <opener>
+                <dateline>
+                    <name type="place">Concord <choice>
+                            <abbr>Mass:</abbr>
+                            <expan>Massachusetts</expan>
+                        </choice></name>
+                    <date when="1881-09-18"><choice>
+                            <abbr>Sept:</abbr>
+                            <expan>September</expan>
+                    </choice> 18</date>
+                    <date when="1881-09-18">'81</date>
+                </dateline>
+                <salute>Dear Sister Lou</salute>
+            </opener>
+
+            <p>I still remain well&#8212;Am out here in Concord on a visit<ptr target="nwu.00002_n6"
+                />&#8212;spent last evening with <choice>
+                    <orig>Mr</orig>
+                    <reg>Mr.</reg>
+                </choice> Emerson very pleasantly indeed&#8212;am to take dinner with him
+                to-day&#8212;Every thing very agreeable here&#8212;I am at F B
+                Sanborn's&#8212;(the little picture at the top is the house)<ptr
+                    target="nwu.00002_n1"/>&#8212;as I write (Sunday forenoon 11 o'clock) I look out
+                on the Concord river&#8212;something like the Schuylkill&#8212;</p>
+
+            <p>The book is almost finished&#8212;I am on the last pages of the proof&#8212;will be
+                ready in the stores <choice>
+                    <abbr>ab't</abbr>
+                    <expan>about</expan>
+                </choice> last of October&#8212;will be issued first in England, to secure the
+                copyright there&#8212;as that is required, &amp; I consider it important&#8212;Shall
+                leave here (Boston) in about ten days&#8212;(perhaps less)<ptr target="nwu.00002_n2"
+                />&#8212;expect to stop in New York probably a week or so, &amp; then on
+                home&#8212;I sent your letter to Mrs. Gilchrist&#8212;I have not written
+                yet&#8212;it is so sudden &amp; dreadful<ptr target="nwu.00002_n3"/>&#8212;I thought
+                I would wait a while&#8212;<choice><abbr>rec'd</abbr><expan>received</expan>
+                </choice> your letter &amp; as always was glad to get it&#8212;it is a sunny, Indian
+                summery spell of weather here now, cool enough, but just suits me&#8212;I go back to
+                Boston probably to-morrow&#8212;</p>
+
+            <p>Yes I <choice>
+                    <abbr>rec'd</abbr>
+                    <expan>received</expan>
+                </choice> the wedding invitation cards from Mr [&amp;] Mrs Elverson for Alice<ptr target="nwu.00002_n4"/> &amp; the happy (proposed)
+                bride groom&#8212;I think him a lucky man&#8212;</p>
+
+            <p>Well I must close at once, for here comes a fine lively team of white horses to take
+                me out to ride, to be driven by the owner, Miss Mann,<ptr target="nwu.00002_n5"/>
+                herself&#8212;With love as always&#8212;</p>
+
+            <closer>
+                <signed rend="right">Brother Walt</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

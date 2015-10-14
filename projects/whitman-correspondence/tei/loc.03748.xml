@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03748">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Rudolf Schmidt to Walt Whitman, 3 November 1882</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Rudolf Schmidt</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03748</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Rudolf Schmidt</author>
+                    <title>Rudolf Schmidt to Walt Whitman, 3 November 1882</title>
+                    <date cert="high" when="1882-11-03" xml:id="dat1">November 3, 1882</date>
+                    <idno type="callno">MSS18630, Box 15, Reel 9</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="unk"><persName key="Unknown">Unknown</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Schmidt, Rudolf">Rudolf Schmidt</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-05-30" who="#nhg">checked, corrected</change>
+            <change when="2014-03-13" who="#nnk">proofed</change>
+            <change when="2014-01-29" who="#kc">checked, corrected</change>
+            <change when="2013-12-09" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                
+                <pb xml:id="leaf001v" facs="loc.03748.002_large.jpg" type="verso"/>
+                <dateline>
+                    <name type="place" rend="right">Copenhagen,</name>
+                    <date when="1882-11-03" rend="right">3<hi rend="superscript"><choice><orig>th</orig>
+                            <reg>rd</reg>
+                        </choice></hi> Nov 1882.</date>
+                </dateline>
+                <salute>Dear W:W.</salute>
+            </opener>
+            <p>Received today "the Literary world" I am extremely glad for such papers. Ibsen is
+                indeed a great poet&#8212;the rival and deadly foe of Bj&#248;rnson. I read with
+                great pleasure in "Specimen days." I shall translate "The death of <choice>
+                    <orig>Abr</orig>
+                    <reg>Abraham</reg>
+                </choice> Lincoln. But at present I have no leisure, I <choice>
+                    <orig>a</orig>
+                    <reg>am</reg>
+                </choice> writing tale after tale. In "Buster og masker" you will find yourself
+                named in the essay on Elster, page 38 and in that on Paul de Saint-Victor page
+                195&#8211;96. Let someone translate these two pages (a comparison) to you. Can you
+                not get "Buster og masker" mentioned in America?</p>
+            <closer>
+                <signed rend="right">Rudolf Schmidt</signed>
+            </closer>
+            <pb xml:id="leaf001r" facs="loc.03748.001_large.jpg" type="recto"/>
+            <note resp="#unk" type="editorial" place="top left">Keep this <gap reason="illegible" quantity="2" unit="words"/> if you <hi rend="underline">want it</hi>.</note>
+        </body>
+    </text>
+</TEI>

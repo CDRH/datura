@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+   <TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.04758">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">John Swinton to Walt Whitman, 12 August 1882</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>John Swinton</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.04758</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>            
+            <sourceDesc>
+                <bibl>
+                    <author>John Swinton</author>
+                    <title>John Swinton to Walt Whitman, 12 August 1882</title>
+                    <date cert="high" when="1882-08-12" xml:id="dat1">August 12, 1882</date>
+                    <idno type="callno">MSS18630, Box 17, Reel 10-11</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Swinton, John">John Swinton</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-05-08" who="#nhg">checked, corrected</change>
+            <change when="2014-01-22" who="#kc">checked, corrected</change>
+            <change when="2013-11-18" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_gt.00287.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place"><handShift rend="printed"/>THE LARGEST MOUNTAIN HOTEL IN THE WORLD. <lb/>HOTEL KAATERSKILL. <lb/>EDWARD A. GILLET, LESSEE.</name>
+                    <name type="place" rend="right">Kaaterskill (P.O.) N.Y.</name> 
+                    <date when="1882-08-12" rend="right"><handShift rend="manuscript"/>Aug 12 <handShift rend="printed"/>188<handShift rend="manuscript"/>2</date>                    
+                </dateline>
+                <salute>My dear Walt&#8212;</salute>
+            </opener>
+            <p>Nine years ago, I delivered before a German Society of New York City a lecture on American literature, in which a great deal was said about you. Last winter, after the M.S. had lain all these years in a trunk, I spoke it twice again,&#8212;before the Philosophical Society of Brooklyn and that of Williamsburgh. But 
+                <pb xml:id="leaf001v" facs="loc_gt.00288_large.jpg" type="verso"/>
+                now comes the fun for you. Some months ago, I sent the lecture, by invitation, as an essay to the great literary magazine of Russia, the Sagranitschuy Viestuik of St. Petersburgh&#8212;There it was put into the Russian language and into the Olympian Magazine. Now I have the magazine, and you have a very heavy puff in the organ which is studied by all the powerful and intellectual classes of Russia&#8212;about a quarter or a fifth of the whole article. I guess this is your first introduction
+                <pb xml:id="leaf002r" facs="loc_gt.00289_large.jpg" type="recto"/>
+                to Rooshia, to the Czar and his subjects&#8212;and I am sure it would be satisfactory to you&#8212;You will never read it in the beautiful Russian&#8212;for it is a dreadful language; but it is enough for you to know it partly.</p>
+            <p>I have been 
+                <pb xml:id="leaf002v" facs="loc_gt.00290_large.jpg" type="verso"/>
+                staying here for a week, and shall leave in two or three days: but back in the city about the end of the month.</p>
+            <closer>
+                <salute>Yours truly</salute>
+                <signed rend="right">John Swinton</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

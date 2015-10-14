@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05964">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Mrs. Walter Bownes to Walt Whitman, 7 June [1876?]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Mrs. Walter Bownes</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="kmp">Kenneth M. Price</persName>
+                </respStmt> 
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05964</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>            
+            <sourceDesc>
+                <bibl>
+                    <author>Mrs. Walter Bownes</author>
+                    <title>Mrs. Walter Bownes to Walt Whitman, 7 June [1876?]</title>
+                    <date cert="low" when="1876-06-07" xml:id="dat1">June 7, 1876</date>
+                    <idno type="callno">MSS18630, Box 194</idno>
+                    <orgName xml:id="loc">Photocopy held in the Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Bownes, Mrs. Walter">Mrs. Walter Bownes</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-01-05" who="#kmp">corrected</change>
+            <change when="2014-12-08" who="#nhg">checked, corrected</change>
+            <change when="2014-12-05" who="#ak">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    
+    <text type="letter">
+        <body> 
+            <pb xml:id="leaf001r" facs="loc_jp.00176.jpg" type="recto"/>
+            <opener>
+                <dateline> 
+                    <name type="place">Woodside</name>
+                    <date when="1876-06-07">June 7</date><ptr target="loc.05964_n1"/>
+                </dateline>
+                <salute>Mr Walter Whitman</salute>
+            </opener>
+            <p>Dear Friend no
+                doubt you will be surprised to get a 
+                letter from here but as I am a relative
+                of yours and daughter of Elizabeth
+                Burroughs nee Wheeler, I guess you will
+                pardon the liberty my mother being nearly
+                through her journey and feeling as if
+                she would like to hear from you <unclear reason="illegible" resp="#ak" cert="medium">dearest</unclear>
+                asked me to write you and trying to please
+                her on everything while with us for a little
+                longer. she would like to know about
+                your sisters&#8212;and brothers if alive and
+                where they are. also about anything
+                in the family and hoping you will
+                be spared many long years <gap reason="damaged"/>fullnes
+                and it would afford us the greatest
+                pleasure if you would come and make
+                us a visit you when in Woodside some.
+            
+            <pb xml:id="leaf002r" facs="loc_jp.00177.jpg" type="recto"/>
+                            <gap reason="cut away"/>
+                by sending love of the united family
+                My Brother John Burroughs called to see
+                you some time ago in in Camden
+            </p>
+            <closer>
+                <salute>Yours in <unclear reason="illegible" resp="#kmp" cert="medium">respect</unclear></salute>
+                <signed>Mrs Walter Bownes</signed>
+                <address>
+                    <addrLine>Woodside LI</addrLine>
+                    <addrLine><gap reason="illegible" unit="words" quantity="2"/></addrLine>
+                </address>
+            </closer>
+        </body>
+    </text>
+</TEI>

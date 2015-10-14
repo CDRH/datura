@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.00874">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">John T. Trowbridge to Walt Whitman, 6 January 1865</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>John T. Trowbridge</author>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+               <persName xml:id="ec">Eric Conrad</persName>
+               <persName xml:id="hb">Heidi Bean</persName>
+               <persName xml:id="elc">Elise Cook</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>loc.00874</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <author>John T. Trowbridge</author>
+               <title>John T. Trowbridge to Walt Whitman, 6 January 1865</title>
+               <date when="1865-01-06">January 6, 1865</date>
+               <orgName xml:id="loc">Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Trowbridge, John T.">John T. Trowbridge</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">checked against letter images and added page break encoding, since Traubel info could not be verified</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#vs" when="2009-08-31">proofread and edited annotations</change>
+         <change who="#ec" when="2009-08-12">annotations</change>
+         <change who="#hb" when="2008-11-06">Encoded</change>
+         <change who="#elc" when="2008-10-25">Transcribed</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         <pb facs="loc_vm.00657.jpg" type="recto"/>
+            <opener rend="right">
+               <dateline rend="right">
+                  <name type="place">Somerville Mass</name>
+                  <date when="1865-01-06">Jan 6th, 1865</date>
+               </dateline>
+               <salute>My Dear Friend,</salute>
+            </opener>
+         <p>I<ptr target="loc.00874_n100"/> have been thinking much of you lately &amp; wondering where you were (for I heard some time since that you had left Washington), when the N.Y. Times came, with your long &amp; interesting communication.  I do not yet, from reading that, understand very well where you are, &amp; I send this at a venture.  If this reaches you, please let me 
+               
+               <pb facs="loc_vm.00658.jpg" type="verso"/>
+               
+               know your address, &amp; I will try to send you something to help along your good work.  I sent you, some time last summer, by private hands, a copy of "Great Expectations" &amp; two dollars in money, but could never learn that they reached you:  did they?  How are you now?</p>
+            <p>A great change has taken place in my life since I saw you.  My dearest friend has left me, leaving in her place a little boy, now 
+               
+               <pb facs="loc_vm.00659.jpg" type="recto"/>
+               
+               eleven months old.&#8212;A superb little fellow (although I say it); &amp; in him I have great comfort.</p>
+            <p>I went three times to find Dr. <choice>
+               <sic>LeBarren</sic>
+               <corr>LeBaron</corr>
+            </choice> Russell, with your note in my hand, but failing each time, I gave him up<ptr target="loc.00874_n2"/>.</p>
+            <p>I am not trying to withdraw from the arena of popular literature; only the necessity of coining a livelihood has kept me in it so long.  I feel that, if I live frugally ' sincerely, and do not use up my 
+               
+               <pb facs="loc_vm.00660.jpg" type="verso"/>
+               
+               mental energies in rapid writing I may be able to do something excellent.  I am about getting out a volume of poems,&#8212;or, as you would say, prettinesses.</p>
+            <closer rend="right">
+               <salute>Sincerely your friend</salute>
+               <signed>J. T. Trowbridge</signed>
+               <address>
+                  <addrLine>Walt Whitman</addrLine>
+               </address>
+            </closer>
+         
+      </body>
+   </text>
+</TEI>

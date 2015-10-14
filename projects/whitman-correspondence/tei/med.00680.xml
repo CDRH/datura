@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="med.00680">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to John Burroughs, 12 December [1878]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>
+                    <persName xml:id="ad">Anthony Dreesen</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>med.00680</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date when="1964">1964</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">141&#8211;142</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to John Burroughs, 12 December [1878]</title>
+                    <date cert="medium" when="1878-12-12" xml:id="dat1">December 12, 1878</date>
+                    <orgName xml:id="sjs">Estelle Doheny Collection of the Edward Laurence Doheny Memorial Library, St. John's Seminary</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Burroughs, John">John Burroughs</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-08" who="#kc">updated ID</change>
+            <change when="2013-04-26" who="#km">checked</change>
+            <change when="2013-01-16" who="#ad">checked</change>
+            <change when="2012-12-07" who="#gt">checked</change>
+            <change when="2012-11-09" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">Camden</name>
+                    <date when="1878-12-12" rend="right">Dec 12 Evening</date>
+                </dateline>
+                <salute>Dear friend</salute>
+            </opener>
+
+            <p>Nothing new or particular to write about&#8212;I thought I would send you Tennyson's last letter&#8212;(written some time since but by misdirection had to be <choice><abbr>ret'd</abbr><expan>returned</expan></choice> &#38; only reached me lately)<ptr target="sjs.00013_n1"/>&#8212;Send it back to me when through&#8212;I send you a muddled sort of criticism in a late English magazine, of no particular interest<ptr target="sjs.00013_n2"/>&#8212;Send it back also&#8212;</p>
+            
+            <p>How are you getting along? How is 'Sula? how the baby? Tell me, when you write, about Smith<ptr target="sjs.00013_n3"/>&#8212;give him my love&#8212;I still keep well &#38; bustling for me&#8212;have been down in the country much of the fall, but am now here probably for the winter&#8212;Wish I was with you &#38; 'Sula for a few weeks&#8212;often think about you all&#8212;</p>
+            
+            <p>Got a letter from London from Tr&#252;bner day before yesterday for six sets of my books, remitting the (wholesale) price&#8212;I sell a set now &#38; then&#8212;</p>
+            
+            <p>The Gilchrists (Mrs G. and Herbert &#38; Grace) are at 177 Remsen street Brooklyn&#8212;Jeannette Gilder<ptr target="sjs.00013_n4"/> has written to me that she is going to write my life &#38; asking for items &#38;c&#8212;</p>
+           
+            <p>I <choice><abbr>rec'd</abbr><expan>received</expan></choice> the Scribner for Nov:<ptr target="sjs.00013_n5"/> I suppose from you&#8212;Three days storm &#38; gale here, but beautiful &#38; clear to-night&#8212;I am going out for an hour&#8212;</p>
+
+            <closer>
+                <signed rend="right">Walt</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="pml.00048">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Anne Gilchrist, 1 January 1881</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="gt">Grace Thomas</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>pml.00048</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">203</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Anne Gilchrist, 1 January 1881</title>
+                    <date cert="high" when="1881-01-01" xml:id="dat1">January 1, 1881</date>
+                    <idno type="callno">Record ID: 120187</idno>
+                    <orgName xml:id="pml">The Pierpont Morgan Library, New York</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Gilchrist, Anne">Anne Gilchrist</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-01-28" who="#nhg">checked, corrected</change>
+            <change when="2013-12-19" who="#ss">checked</change>
+            <change when="2012-10-01" who="#nnk">proofed</change>
+            <change when="2012-11-08" who="#gt">Corrected</change>
+            <change when="2012-10-18" who="#gt">Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">431 Stevens Street<ptr target="pml.00048_n1"/></name>
+                    <name type="place" rend="right">Camden New Jersey</name>
+                    <name type="place" rend="right">U S A</name>&#8212;
+                    <date when="1881-01-01">Jan: 1 '81</date>
+                </dateline>
+            </opener>
+
+            <p>Was sorry&#8212;extremely sorry&#8212;to hear of your illness&#8212;trust you are
+                well again by this time, (as fore-indicated by H[erbert]'s last)<ptr
+                    target="pml.00048_n2"/>&#8212;all H's books for Mrs S[tafford] came safely<ptr
+                        target="pml.00048_n3"/>&#8212;also letters &amp; p.o. order&#8212;<choice><orig>rec'd</orig><reg>received</reg></choice> the
+                good, long, fine letter from B[eatrice]<ptr target="pml.00048_n4"/>&#8212;The S's
+                are all well as usual&#8212;I am getting along capitally for me this winter so
+                far&#8212;have been &amp; am writing quite a deal <hi rend="italic">to order</hi>
+                (astonishing, isn't it?)<ptr target="pml.00048_n5"/>&#8212;will surely send you when
+                in print&#8212;I wish you would send the <hi rend="italic">Cedar-Plums like</hi><ptr
+                    target="pml.00048_n6"/> to Rossetti&#8212;(I suppose you rec'd it)&#8212;what
+                silly fictitious items appear about me in some of the English papers&#8212;(about as
+                bad as <hi rend="italic">here</hi>)&#8212;trust you all had merry Christmas &amp;
+                New Year's&#8212;Cold &amp; deep snow here&#8212;</p>
+
+            <closer>
+                <signed rend="right">WW</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

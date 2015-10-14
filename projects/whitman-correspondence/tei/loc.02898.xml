@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.02898">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to William Sloane Kennedy, 8 July
+                    1886</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.02898</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive July be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to William Sloane Kennedy, 8 July 1886</title>
+                    <date cert="medium" when="1886-07-08" xml:id="dat1">July 8, 1886</date>
+                    <idno type="callno">Box 12, Reel 7-8</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="unk"><persName key="Unknown">Unknown</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Kennedy, William Sloane" ref="n3039">William Sloane Kennedy</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-03-23" who="#kb">edited</change>
+            <change when="2014-10-12" who="#ss">encoded and annotated from Miller.</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <note type="editorial" resp="#unk" place="top">WSK</note>
+            <opener>
+                <pb xml:id="leaf001r" facs="loc.02898.001_large.jpg" type="recto"/>
+                <dateline>
+                    <name type="place">328 Mickle Street</name>
+                    <name type="place">Camden New Jersey</name>
+                    <date when="1886-07-08" rend="right">July 8 '86</date>
+                </dateline>
+                <salute>Dear W S K</salute>
+            </opener>
+            <p>I have returned from my jaunt to the Jersey sea shore<ptr target="loc.02898_n1"
+                />&#8212;&#38; have rec'd yours of the 1st&#8212;Don't exactly know the scope,
+                draft, <hi rend="underline">spine</hi> of your proposed book ab't me, but entertain full faith that it has a
+                reason-for-being, &#38; that it will fulfil that reason&#8212;</p>
+            <p>I see in your letter, you have crossed out the "Walt" in the name&#8212;I like best
+                to have the <hi rend="underline">full</hi>
+                <hi rend="underline">name</hi> always if possible instead of merely "Whitman"<ptr
+                    target="loc.02898_n2"/>&#8212;Give both words, &#38; don't be afraid of the
+                tautology. I will help you &#38; suggest or criticise freely &#38; candidly, leaving
+                the decision to you of course&#8212;hope you understand this, as it is.</p>
+            <p>Very hot weather here&#8212;I am quite comfortable, though&#8212;Have you rec'd Dr
+                Knortz's German lecture?<ptr target="loc.02898_n3"/>&#8212;Burroughs is home from
+                his Kentucky trip<ptr target="loc.02898_n4"/>&#8212;Dr Bucke will be back from
+                England next week<ptr target="loc.02898_n5"/>&#8212;</p>
+            <closer>
+                <salute>Love to you</salute>
+                <signed>Walt Whitman</signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="loc.02898.002_large.jpg" type="verso"/>
+            
+        </body>
+    </text>
+</TEI>      

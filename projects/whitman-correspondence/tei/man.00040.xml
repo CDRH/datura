@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="man.00040">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Harry Scovel to Walt Whitman, 22 June 1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Harry Scovel</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="am">Alicia Meyer</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>man.00040</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Harry Scovel</author>
+                    <title>Harry Scovel to Walt Whitman, 22 June 1880</title>
+                    <date cert="high" when="1880-06-22" xml:id="dat1">June 22, 1880</date>
+                    <orgName xml:id="man">Charles Sixsmith Collection at the John Rylands Library, University of Manchester</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Scovel, Harry">Harry Scovel</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-03-30" who="#ss">annotations added</change>
+            <change when="2013-12-02" who="#nhg">checked, corrected</change>
+            <change when="2013-11-19" who="#am">proofed</change>
+            <change when="2013-09-19" who="#nnk">proofed</change>
+            <change when="2013-08-22" who="#ej">Transcribed and Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="man_ej.00099_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">Camden <choice>
+                            <abbr>N.J.</abbr>
+                            <expan>New Jersey</expan>
+                        </choice></name>
+                    <date when="1880-06-22"><hi rend="underline">June 22<hi rend="superscript"
+                                >d</hi> 1880</hi>.</date>
+                </dateline>
+                <salute>Dear Mr Whitman:</salute></opener>
+
+            <p>I was very much pleased with your Postal Cards because I knew you had remembered me
+                in the midst of your travels and pleasures.</p>
+
+            <p>Your letter to the "Camden Daily Post" was a grand one and every body is delighted
+                with it. Mother said it was the best letter <pb xml:id="leaf001v"
+                    facs="man_ej.00208_large.jpg" type="verso"/>she ever read&#8212;</p>
+            <p>How I wish I was with you&#8212;I dearly love to Travel&#8212;</p>
+            <p>Camden is dull, very dull, and painfully hot&#8212;</p>
+            <p>I hear from <unclear reason="illegible" cert="medium" resp="#ss">Loui</unclear>
+                Odenheimer<ptr target="man.00040_n1"/>&#8212;not directly, but through some of her relations, that she is no
+                better&#8212;what a sad thing to happen
+            <pb xml:id="leaf002r" facs="man_ej.00207_large.jpg" type="recto"/>
+            to a Girl of her age and prospects&#8212;</p>
+
+            <p>The Boys around the Ferry miss you greatly&#8212;I hear them talking about you
+                often&#8212;I know <unclear reason="illegible" cert="high" resp="#ss">Trim</unclear>
+                Hand<ptr target="man.00040_n2"/> one of the Pilots&#8212;He and Hiskey<ptr target="n1057"/> are very fond of you&#8212;</p>
+
+            <p>I suppose you will be away <pb xml:id="leaf002v" facs="man_ej.00101_large.jpg"
+                type="verso"/>for some <choice>
+                    <sic>lenghth</sic>
+                    <corr>length</corr>
+                </choice> of time yet&#8212;Do write occasionally, and send
+                some papers too, for we all like to hear from you, when you are so far away from
+                us&#8212;All the family send love and hope for your safe return to us <choice>
+                    <sic>benefitted</sic>
+                    <corr>benefited</corr>
+                </choice> by
+                your trip&#8212;</p>
+
+            <closer>
+                <salute>With love</salute>
+                <signed><hi rend="underline">Harry Scovel</hi></signed>
+            </closer>
+            <pb xml:id="leaf003r" facs="man_ej.00102_large.jpg" type="recto"/>
+            <note type="editorial" resp="#ww" place="left">from Harry Scovel June 26 '80</note>
+            <pb xml:id="leaf003v" facs="man_ej.00103_large.jpg" type="recto"/>
+        </body>
+    </text>
+</TEI>

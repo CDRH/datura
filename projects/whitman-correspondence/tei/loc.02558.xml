@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.02558">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to John H. Johnston, 26 January 1882</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.02558</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to John H. Johnston, 26 January 1882</title>
+                    <date cert="high" when="1882-01-26" xml:id="dat1">January 26, 1882</date>
+                    <idno type="callno">MSS18630, Box 11, Reel 7</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Johnston, John H.">John H. Johnston</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-24" who="#ss">annotations added</change>
+            <change when="2014-04-18" who="#nhg">checked, corrected</change>
+            <change when="2014-03-13" who="#nnk">proofed</change>
+            <change when="2014-03-06" who="#ss">checked</change>
+            <change when="2014-03-04" who="#kc">Transcribed and Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.02558.001.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">Camden</name>
+                    <date when="1882-01-26" rend="right">Jan: 26 '82</date>
+                </dateline>
+                <salute>My dear friend</salute>
+            </opener>
+
+            <p>Yours just <choice>
+                    <abbr>rec'd</abbr>
+                    <expan>received</expan>
+            </choice> &amp; indeed welcomed<!--<ptr target="n0336"/>-->&#8212;A wretchedly dull forenoon, cold &amp; dark,
+                &amp; so slippery, drizzling outside I am prisoned in with glum
+                surroundings&#8212;to which your cheery note comes like a shaft of sunshine&#8212;I
+                had not heard from Osgood,<!--<ptr target="hun.00047_n1"/>--> &amp; so far the news, as you say, is very
+                satisfactory&#8212;(Besides I sort <choice>
+                    <abbr>o'</abbr>
+                    <expan>of</expan>
+                </choice> think this is all yet only the beginning&#8212;the preparatory
+                stage)&#8212;</p>
+                <p>&#8212;No&#8212;I had not heard of last Sunday's NY <hi rend="underline"
+                    >Times</hi>&#8212;have not seen it&#8212;wish you would immediately send me
+                    one&#8212;</p>
+            <p>&#8212;I keep well as of late&#8212;nothing very new&#8212;Love to Alma<!--<ptr target="n3029"/>--> and Ally
+                &amp; all&#8212;I hurry to catch the noon mail&#8212;</p>
+
+            <closer>
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="loc.02558.002.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

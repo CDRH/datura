@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00469">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman,  17 January [1867]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ct">Cathy Tisch</persName>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00469</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman,  17 January [1867]</title>
+                        <date cert="high" when="1867-01-17" xml:id="dat1">January 17, 1867</date>
+                        <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>         
+            <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-12-09" who="#el">removed 'y' from 'january' in orig</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-07-29" who="#el">merged files</change>
+            <change when="2013-07-19" who="#wr">Replace internal notes with external notes</change>
+            <change when="2013-01-10" who="#el">updated TEI header to follow new encoding of respStmt within titlStmt; moved notes to external notes file and replaced with ptr encoding; removed empty opener elements</change>
+            <change when="2013-06-09" who="#wr">Duke Proofreading Corrections</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent
+                Proof</change>
+            <change when="2012-04-25" who="#wr">Proofreading Corrections</change>
+            <change when="2012-12-14" who="#wr">Proofreading Corrections of notes.</change>
+            <change when="2012-09-15" who="#wr">Proofreading correction of notes.</change>
+            <change when="2012-09-06" who="#wr">Correct notes, add date note. Remove smart quotes and smart apostrophes.</change>
+            <change when="2012-08-14" who="#wr">Clean encoding (editor, date, remove "_large") and add standard annotations on unannotated files (Jeff W, Martha [Mattie], George W, Lou Haslam)</change>
+            <change when="2012-08-15" who="#ct">Oral Proofreading Corrections</change>
+            <change when="2011-04-05" who="#fw">Transcribe 2 Pages</change>
+            <change when="2011-04-06" who="#fw">Correct 2 Pages</change>
+            <change when="2011-04-13" who="#fw">Annotate Price</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        
+        <body>           
+        
+            <pb xml:id="leaf001r" facs="duk.00469.001.jpg" type="recto"/>
+            
+            <note type="editorial" resp="#rmb" place="top">18 Jan 66</note>
+            
+            <opener>
+                <dateline>
+                    <date when="1867-01-17"><choice><orig>thursday</orig> <reg>Thursday</reg></choice> <choice><orig>januar</orig><reg>January</reg></choice> 17th<ptr target="duk.00469_n14"/>
+                    </date>
+                </dateline>
+                <salute>My dear walt</salute>
+            </opener>
+            
+            <p>we are all as
+            well as usual and have got one
+            of the old fashion snow storms such
+            as we used to have when i<ptr target="duk.00425_n3"/> was young
+                it is <choice><orig>awfull</orig> <reg>awful</reg></choice> and looks as if we <choice><orig>sho<unclear reason="illegible" cert="low" resp="#wr">uld</unclear></orig> <reg>should</reg></choice>
+                remain a while on prospect park<ptr target="duk.00469_n16"/>
+            but i think we have got <choice><orig>enoughf</orig> <reg>enough</reg></choice>
+            to eat to stand through it if it
+            <choice><orig>dont</orig> <reg>don't</reg></choice> last too long thank god and
+            good sons) poor mrs grayson i
+            felt real sad to hear of her death<ptr target="duk.00469_n2"/> poor woman
+                she must have been tortured to death probably a happy exchange)<ptr target="duk.00469_n17"/>
+            i have had a long letter
+            from mr heyde<ptr target="duk.00469_n13"/> the principle part
+            and the most interesting was about
+            a rabbit that had made up his
+            winter quarters in his woodhouse
+            he spoke of your sending han<ptr target="duk.00469_n12"/> some
+            gloves and 5 <choice><orig>do</orig> <reg>dollars</reg></choice> and walt was a good
+            fellow i suppose you will take it as
+            a great compliment) and han was
+            very ill natured and he had his place
+            <pb xml:id="leaf001v" facs="duk.00469.002.jpg" type="verso"/>
+            nearly paid for but he sighed for
+            other lands so much for mr heyde</p>
+            <p>i <choice><orig>dont</orig> <reg>don't</reg></choice> think george<ptr target="duk.00425_n2"/> can come up
+            to day he was up yesterday i roasted
+            him a nice <choice><orig>peice</orig> <reg>piece</reg></choice> of mutton so if it stormed and he had it in a little
+                tub he brings up and he left it on the back stoop a few minutes when he went down
+                and some dog got it and went off with it all <unclear reason="illegible"
+                    cert="medium" resp="#wr">he</unclear><ptr target="duk.00469_n21"/>
+                <choice><orig>wouldent</orig> <reg>wouldn't</reg></choice>
+            take any more so he will have
+            to go out and get his dinner there
+            <choice><orig>dont</orig> <reg>don't</reg></choice> seem to be any place without
+            going down town to get any thing
+            well walt i received your letter
+            yesterday with the 5 dollar and paper
+            and envelopes) emma price<ptr target="duk.00469_n5"/>
+                 was here
+                 last week she had been to mrs wells<ptr target="duk.00469_n6"/>
+            the night before to a party and she
+            had the <choice><orig>headach</orig> <reg>headache</reg></choice> and felt bad i told
+            her if <choice><orig>she d</orig> <reg>she'd</reg></choice> wait till the <choice><orig>teakettle</orig> <reg>tea kettle</reg></choice>
+            boiled i would make her some tea
+            so she took off her hat and i fried her
+            a fresh egg and bread and butter before
+            she was half done she said she felt better
+            helen<ptr target="tex.00171_n16"/> is learning drawing goes every day
+            her mother inhales something paper dipped
+            in some kind of liquid and burned and
+            she inhales the smoke that helps her very <choice><orig>quik</orig><reg>quick</reg></choice>
+                off those bad <choice><orig>spels</orig><reg>spells</reg></choice><ptr target="duk.00469_n7"/></p>
+            <closer>
+                <salute>good bie walter dear</salute>
+            </closer>
+            
+            <pb sameAs="#leaf001r"/>
+            
+            <postscript>
+                <p>Jeffy makes my fire when it is very cold he has
+            nervous spells sometimes and is quite moody write
+            to him walt
+            when you can<ptr target="duk.00469_n8"/></p></postscript>
+        </body>
+    </text>
+</TEI>

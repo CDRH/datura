@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00572">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, [19&#8211;24? December 1863]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00572</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, [19&#8211;24? December 1863]</title>
+                    <date cert="medium" notBefore="1863-12-19" notAfter="1863-12-24" xml:id="dat1">December 19&#8211;24?, 1863</date>
+                    <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-12-11" who="#el">updated value of idno element in TEI header</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-09-12" who="#el">checked</change>
+            <change when="2013-06-03" who="#wr">Proofread Letter</change>
+            <change when="2013-06-02" who="#wr">Annotate letter date, Eagle sketch, Ruggles, Jeff, and George</change>
+            <change when="2013-06-02" who="#wr">Transcribe 2 surfaces</change>
+        </revisionDesc>
+    </teiHeader>
+    
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="duk.00572.001.jpg" type="recto"/>
+            <opener>
+                <salute>walt<ptr target="duk.00572_n1"/></salute>
+            </opener>
+            
+            <p>i did try to get some eagles that had that little
+                <choice><orig>peece</orig><reg>piece</reg></choice><ptr target="duk.00572_n2"/>
+            in but i could not i suppose they might be got at the
+            office it was the day Andrew died<ptr target="duk.00572_n3"/>
+            that it was in we thought
+            it was Ruggles<ptr target="duk.00572_n4"/>
+            it began with who in brooklyn but knows
+            walt whitman even at the couch of the dying and sick
+            soldier to comfort and relieve them
+            
+            
+            </p>
+            
+            <pb xml:id="leaf001v" facs="duk.00572.002.jpg" type="verso"/>
+            
+            <p>that is the content the last is walt is now
+                in washington<ptr target="duk.00572_n5"/>
+            it was A short <choice><orig>peece</orig><reg>piece</reg></choice> but very
+            good Jeffy<ptr target="duk.00575_n9"/> had one paper he said he wanted
+            it to send to some one <choice><orig>maybee</orig><reg>maybe</reg></choice> he can get some</p>
+        </body>
+    </text>
+</TEI>
+

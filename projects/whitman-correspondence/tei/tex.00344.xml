@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="tex.00344">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title level="m" type="main">Walt Whitman to William Michael Rossetti, 23 March
+          [1876]</title>
+        <title level="m" type="sub">a machine readable transcription</title>
+        <author>Walt Whitman</author>
+        <editor>Kenneth M. Price</editor>
+        <editor>Ed Folsom</editor>
+        <respStmt>
+          <resp>Transcription and encoding</resp>
+          <name>The Walt Whitman Archive Staff</name>
+        </respStmt>
+        <sponsor>Center for Digital Research in the Humanities, University of
+          Nebraska-Lincoln</sponsor>
+        <sponsor>University of Iowa</sponsor>
+        <funder>National Historical Publications and Records Commission</funder>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <date>2012</date>
+        </edition>
+      </editionStmt>
+      <publicationStmt>
+        <idno>tex.00344</idno>
+        <distributor>The Walt Whitman Archive</distributor>
+        <address>
+          <addrLine>Center for Digital Research in the Humanities</addrLine>
+          <addrLine>319 Love Library</addrLine>
+          <addrLine>University of Nebraska-Lincoln</addrLine>
+          <addrLine>P.O. Box 884100</addrLine>
+          <addrLine>Lincoln, NE 68588-4100</addrLine>
+        </address>
+        <availability>
+          <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the
+            Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law.
+            Redistribution or republication on other terms, in any medium, requires express written
+            consent from the editors and advance notification of the publisher, Center for Digital
+            Research in the Humanities. Permission to reproduce the graphic images in this archive
+            has been granted by the owners of the originals for this publication only.</p>
+        </availability>
+      </publicationStmt>
+      <notesStmt>
+        <note type="project">The following are responsible for particular readings or for changes to
+          this file, as noted: <persName xml:id="el">Elizabeth Lorang</persName>
+          <persName xml:id="al">Ashley Lawson</persName>
+          <persName xml:id="zk">Zachary King</persName>
+          <persName xml:id="ec">Eric Conrad</persName>
+        </note>
+      </notesStmt>
+      <sourceDesc>
+
+        <biblStruct>
+          <monogr>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <title xml:id="ehm">The Correspondence</title>
+            <imprint>
+              <pubPlace>New York</pubPlace>
+              <publisher>New York University Press</publisher>
+              <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+              <biblScope type="volume">3</biblScope>
+              <biblScope type="page">33</biblScope>
+            </imprint>
+          </monogr>
+        </biblStruct>
+
+        <bibl>
+          <author>Walt Whitman</author>
+          <title>Walt Whitman to William Michael Rossetti, 23 March [1876]</title>
+          <date cert="medium" when="1876-03-23" xml:id="dat1">March 23, 1876</date>
+          <idno type="callno">Container 3.2</idno>
+          <orgName xml:id="tex">The Walt Whitman Collection, Harry Ransom Humanities Research
+            Center, The University of Texas at Austin</orgName>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <particDesc>
+        <person role="sender">
+          <persName key="Whitman, Walt">Walt Whitman</persName>
+        </person>
+        <person role="recipient">
+          <persName key="Rossetti, William Michael">William Michael Rossetti</persName>
+        </person>
+      </particDesc>
+    </profileDesc>
+    <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+      <change when="2014-05-06" who="#el">removed hard returns within choice tags</change>
+      <change when="2012-11-29" who="#el">checked</change>
+      <change when="2012-06-20" who="#el">checked</change>
+      <change when="2012-05-04" who="#al">checked</change>
+      <change when="2011-04-28" who="#zk">encoded</change>
+      <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+    </revisionDesc>
+  </teiHeader>
+
+  <text type="letter">
+    <body>
+      <opener>
+        <dateline>
+          <name type="place" rend="right">Camden, N. Jersey&#8212;U. S. America&#8212;</name>
+          <date when="1876-03-23" rend="right">March 23</date><ptr target="tex.00344_n1"/>
+        </dateline>
+      </opener>
+
+      <p>Yours<ptr target="n0522"/> of March 5<ptr target="tex.00344_n2"/>
+        <choice><orig>recd.</orig><reg>received</reg></choice> with <choice><orig>enc.</orig><reg>enclosed</reg>
+        </choice>&#8212;Books will be sent hence by Baldwin's Express (office in London, H. Starr
+        &amp; Co. 22 Moorgate st)&#8212;will probably arrive there somewhere <choice><orig>ab't</orig><reg>about</reg></choice> 10th or 12th April. </p>
+
+      <p>I sent a set (<choice> <orig>L of G</orig><reg>Leaves of Grass</reg></choice> and Two <choice><orig>Riv.</orig><reg>Rivulets</reg></choice> <hi rend="italic">Two <choice><orig>Vols.</orig><reg>Volumes</reg></choice></hi> in one package) to you by mail March 15&#8212;&amp; another set <hi rend="italic">two <choice><orig>Vols.</orig><reg>Volumes</reg></choice></hi> same date, to Mrs. G[ilchrist]<ptr target="tex.00344_n3"/>&#8212;but have since <choice><orig>learn'd</orig><reg>learned</reg></choice> that such packages are <hi rend="italic">overweight</hi>, &amp; fear they may not have been forwarded from N. Y. </p>
+
+      <p>I wrote you letter March 17&#8212;I sent a single <choice><orig>Vol.</orig><reg>Volume</reg></choice> (Two <choice><orig>Riv</orig><reg>Rivulets</reg></choice>) by mail, March 20&#8212;I continue about the same.</p>
+
+      <closer>
+        <signed rend="right">W.W.</signed>
+      </closer>
+    </body>
+  </text>
+</TEI>

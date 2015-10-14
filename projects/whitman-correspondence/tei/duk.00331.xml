@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00331">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">George Washington Whitman  to Louisa Van Velsor Whitman, 10 November 1862</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>George Washington Whitman</author>
+            <editor>Jerome M. Loving</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="ec">Eric Conrad</persName>
+
+               <persName xml:id="kk">Kathryn Kruger</persName>
+               <persName xml:id="gp">Gillian Price</persName>
+               <persName xml:id="al">April Lambert</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>duk.00331</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>George Washington Whitman</author>
+                  <editor>Jerome M. Loving</editor>
+                  <title xml:id="cwl">Civil War Letters of George Washington Whitman</title>
+                  <imprint>
+                     <pubPlace>Durham, North Carolina</pubPlace>
+                     <publisher>Duke University Press</publisher>
+                     <date>1975</date>
+                     <biblScope type="page">73</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>George Washington Whitman</author>
+               <title>George Washington Whitman  to Louisa Van Velsor Whitman, 10 November 1862</title>
+               <date when="1862-11-10">November 10, 1862</date>
+               <orgName xml:id="duk">Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, George Washington">George Washington Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#ec" when="2009-08-24">style sheet proofreading</change>
+         <change who="#el" when="2008-07-21">updated TEI header</change>
+         <change who="#kk" when="2008-04-01">checked and proofed</change>
+         <change who="#gp" when="2006-12-18">copy-edited transcription against source text and made necessary
+corrections</change>
+         <change who="#al" when="2006-12-15">Transcribed, Encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <dateline rend="right">
+                  <name type="place">Jefferson Va</name>
+                  <date when="1862-11-10">Monday Evening  Nov. 10th/62</date>
+               </dateline>
+               <salute>Dear Mother</salute>
+            </opener>
+            <p>I have not had a chance to send you a letter for some days, but I suppose you have seen by the papers that we have crossed into Va again. We are now about 50 miles from Harpers Ferry and about 15 miles from Cullpepper court House, where the rebels are said to be in considerable force. We have found nothing but small squads so far doing picket duty, who fall back as fast as we advance. I am well and hearty but we get pretty hard fare, most of the time, but we are getting pretty well used to that. We crossed into Va on the 27th of Oct and have been traveling about from one place to another ever since, The Villiages we have passed through are the most God forsaken places I ever saw,<ptr target="duk.00331_n1"/>  the people seem to have next to nothing to eat as the men have all gone in the Secesh army, and how they are going to get through the winter I dont know. We have not seen a paper since we came into Va and we cant find out what the rest of the army is doing, or how the New York election went, so you see we are a long way behind the age  Captain Francis<ptr target="duk.00331_n2"/> has not come back yet. and I am getting almost tired of haveing the whole trouble and responsibility of the Company and someone else getting the pay for it.  We have not been paid yet and I have something over 400$ comeing to me besides the $100 bounty which I believe I am entitled to as I was mustered into the Service as a private.</p>
+            <p>I recd your letter of Oct 26th.</p>
+            <p>Mother, I must stop writing as my candle is going out, and I hope in a few days we will get where we can send letters regular</p>
+            <closer rend="right">
+               <salute>Good Night Mother</salute>
+               <salute>and much love to all</salute>
+               <signed>G W Whitman</signed>
+            </closer>
+         
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.00854">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Peter Eckler to Walt Whitman, 1 May 1865</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Peter Eckler</author>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+
+               <persName xml:id="ec">Eric Conrad</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+               <persName xml:id="hb">Heidi Bean</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>loc.00854</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <author>Peter Eckler</author>
+               <title>Peter Eckler to Walt Whitman, 1 May 1865</title>
+               <date when="1865-05-01">May 1, 1865</date>
+               <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Eckler, Peter">Peter Eckler</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#el" when="2009-08-18">added encoding for page breaks</change>
+         <change who="#ec" when="2009-08-14">annotations, inserted suggested revision</change>
+         <change who="#vs" when="2009-04-03">Compared Transcription to Manuscript Image and Made Corrections</change>
+         <change who="#hb" when="2008-10-15">Transcribed, Encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         <pb facs="loc.00854.001.jpg" type="recto"/>
+         
+            <opener rend="right">
+               <dateline>
+                  <name type="place">New York</name>
+                  <date when="1865-05-01">May 1st, 1865<ptr target="loc.00854_n100"/>
+               </date>
+               </dateline><salute>Mr. Walt Whitman</salute>  
+            </opener>
+            
+            <p>I have just been to Mr Alvord's and find your Drum taps printed very nicely indeed<!--The previous sentence has been inserted to replace "just <gap reason="illegible"/>Ahrend's and find <gap reason="illegible"/> Taps pri<gap reason="illegible"/>nicely indeed." The Miller annotation and Ted's article list the printer's name as 'Alvord' not  Ahrend; also, Ted provides a reading of the entire sentence which I transcribe above. I have also changed 'Ahrend' to 'Alvord' below.-->.  Please send me <unclear reason="illegible" resp="#vys" cert="low">balance</unclear> of bill ($94.25) as per agreement and I will deliver them to your binder.  The copy of "Leaves of Grass" is at my office subject to your order.  The plates of "Drum Taps" are in Mr. Alvord's vault.</p>
+            <closer rend="right">
+               <salute>Respectfully,</salute>
+               <signed>P. Eckler</signed>
+               <dateline>40 Fulton St.</dateline>
+            </closer>
+         
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03212">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Eleanor Lawney to Walt Whitman, 11 May 1884</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Eleanor Lawney</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03212</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Eleanor Lawney</author>
+                    <title>Eleanor Lawney to Walt Whitman, 11 May 1884</title>
+                    <date cert="high" when="1884-05-11" xml:id="dat1">May 11, 1884</date>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="ww"><persName key="Whitman, Walt">Walt
+                    Whitman</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Lawney, Eleanor" ref="loc.03212_n1">Eleanor Lawney</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        
+        <revisionDesc>
+            <change when="2015-04-07" who="#nhg">corrected</change>
+            <change when="2015-02-27" who="#nhg">checked, corrected, added correspondent ref</change>
+            <change when="2015-02-07" who="#ss">added annotations</change>
+            <change when="2014-12-19" who="#ss">transcripbed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.03212.001_large.jpg" type="recto"/>
+            <note type="editorial" resp="#ww" place="top">(from Eleanor Lawney | young woman)</note>
+            <opener>
+                <dateline>
+                    <name type="place">201 East Broadway, Louisville, Ky.</name>
+                    <date when="1884-05-11">May 11, 1884</date>
+                </dateline>
+                <salute>Dear Mr. Whitman:</salute>
+            </opener>
+            <p>Do your remember how I visited you in Camden one day last June? Perhaps you will remember me by the bouquet of ferns and
+                larkspurs. Now I am out here, and circumstances contrary to my wishes, will keep me
+                here indefinitely.</p>
+            <p>This is one of my homesick days, and I have been thinking over what there is in the
+                north that I would so much like to see, and hear, <pb xml:id="leaf001v"
+                    facs="loc.03212.002_large.jpg" type="verso"/> and among other things I think how
+                much I would like to see you again, and hear you say, as you did before, "I'm glad
+                you came!" I often think about you, and you have written so many lines for me that I
+                wish to say a word back.</p>
+            <p>When I read I say "Yes, I am she, O you wise poet," and sometimes I think I must
+                put out my hand for you; and I am sure that we have gone together down that brown
+                road a great many times; and perhaps it was my pulse that you heard, like "little
+                tinkling bells."<ptr target="loc.03212_n2"/> </p>
+            <pb xml:id="leaf002r" facs="loc.03212.003_large.jpg" type="recto"/>
+            <p>I am very glad my eyes found the message you hid away for me&#8212;hid so deeply,
+                though, that I barely found it, and at first doubted if there was a message there,
+                or if it was for me.</p>
+            <p>I love you very much, and feel toward you, as toward all strong and true people, a
+                sense of obligation.</p> 
+            <p>In glad acknowledgement of your companionship, and hoping for you all good things,</p>
+            <closer>
+                <salute>Your friend,</salute>
+                <signed>Eleanor M. Lawney.</signed>
+            </closer>
+            <pb xml:id="leaf002v" facs="loc.03212.004_large.jpg" type="recto"/>
+        </body>
+    </text>
+</TEI>

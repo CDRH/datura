@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?><?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules_mss.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00201">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Of Insanity</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author xml:id="ww">Walt Whitman</author>
+                <author xml:id="unk">Anonymous</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="lmg">Lauren Grewe</persName><persName xml:id="nhg">Nicole Gray</persName><persName xml:id="tra">Ty Alyea</persName><persName xml:id="mc">Matt Cohen</persName>
+                </respStmt>
+                <sponsor>University of Texas at Austin</sponsor>
+                <sponsor>University of Nebraska-Lincoln</sponsor>
+                <funder>The National Endowment for the Humanities</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2011</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00201</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                    <addrLine>kprice@unlnotes.unl.edu</addrLine>
+                    <addrLine>Ed-Folsom@uiowa.edu</addrLine>
+                    <addrLine>bbarney2@unlnotes.unl.edu</addrLine>
+                </address>
+                <availability><p>The text of the original document is in the public domain. Subject to certain exceptions, public domain works may be freely copied or used in the creation of derivative works without permission, or authorization, of the former copyright owners.</p><p>The text encoding was created and/or prepared by the Walt Whitman Archive and is governed by a <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref> (CC BY 4.0).</p><p>Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p></availability>
+            </publicationStmt>                 <notesStmt>                 <note type="project" target="#dat1">Grier estimates that this was written around 1856 (<hi rend="italic">Walt Whitman: Notebooks and Unpublished Manuscripts</hi>, ed. Edward F. Grier [New York: New York University Press, 1984], 6:2246).</note>             </notesStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Of Insanity</title>
+                    <idno type="callno">MS 4to 87</idno>
+                    <date notBefore="1840-05-31" notAfter="1892-03-26">1856 or later</date>
+                    <orgName xml:id="duk">Trent Collection of Whitmaniana, David M. Rubenstein Rare Book &amp; Manuscript Library, Duke University</orgName>
+                    <note type="project">Transcribed from digital images of the original item.</note>
+                </bibl>
+                <bibl type="pasteon" xml:id="r1">
+                    <author>Anonymous</author>
+                    <title level="a">Life-Force, Its Philosophy</title>
+                    <title level="j">Life Illustrated</title>
+                    <pubPlace>New York</pubPlace>
+                    <date>May 31, 1856</date>
+                    <biblScope type="vol">2</biblScope>
+                    <biblScope type="pp">33</biblScope>
+                    <note type="project"/>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="h1" scribeRef="#ww" medium="black-ink"/>
+                <handNote xml:id="h2" scribeRef="#unk" medium="typescript"/>
+                <handNote xml:id="h3" scribeRef="#ww" medium="pencil"/>
+            </handNotes>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-02-27">completed date information, tweaked encoding</change>
+            <change who="#nhg" when="2015-01-26">added schematron declaration, updated schema declaration, changed text type to annotations</change><change who="#lmg" when="2011-09-10">Transcribed and encoded.</change>
+            <change who="#nhg" when="2011-11-01">Checked, revised.</change>
+            <change who="#tra" when="2013-12-09">Checked and revised bibliographical encoding and handnote xml:id information.</change>
+            <change who="#lmg" when="2014-04-02">Revised floatingTexts.</change>
+            <change who="#mc" when="2014-09-06">Proofed.</change>
+        </revisionDesc> 
+    </teiHeader>
+    <text type="annotations"><!-- Checked against Grier, p. 2246-7. -->
+        <body>
+            <pb xml:id="leaf001r" facs="duk.00201.001.jpg" type="recto"/>
+            <p><handShift new="#h1"/><hi rend="underline">Of Insanity</hi>&#8212;some are affected with <choice><orig>melan‑<lb/>
+            cholia</orig><reg>melancholia</reg></choice>&#8212;in these, the organ of cautiousness will
+                be found large: Some fancy themselves the Deity&#8212;
+                in these Self‑Esteem predominates:&#8212;Some are
+                furious&#8212;in these Destructiveness, or (more likely)
+                Combativeness.&#8212;But a small organ may become
+                diseased, and often does so.</p>
+            <p><hi rend="underline">The</hi> <hi rend="underline">Temperaments</hi>&#8212;four&#8212;lymphatic, sanguine,
+                bilious, and nervous.&#8212;Depend on the condition of particular
+                systems of the body.&#8212;Brain and nerves predominantly<!--Grier notes an illegible erasure above this line. Might be an impression from the verso underlining--> active
+                seem to produce the nervous temperament.&#8212;The lungs
+                and blood vessels being constitutionally predominant give
+                rise to the sanguine.&#8212;The muscular and fibrous systems
+                being predominant give rise to the bilious, (which
+                should more properly be called the fibrous,) temperament.
+                The predominance of the glands and assimilating organs
+                give rise to the lymphatic.&#8212;</p>
+            <p><hi rend="underline">Lymphatic</hi>.&#8212;round form, soft muscle, fair hair, pale skin,
+                sleepy eyes, inexpressive face.&#8212;Brain languid&#8212;other organs ditto.
+                The system&#8212;a great manufactory of fat.</p>
+            <p><hi rend="underline">Sanguine</hi>&#8212;well‑defined form&#8212;moderate plumpness&#8212;firm
+                flesh&#8212;chestnut hair&#8212;blue eyes&#8212;fair complexion&#8212;great fondness
+                for exercise and air&#8212;Brain active.&#8212;</p>
+            <p><hi rend="underline">Bilious</hi>, (Judas in Lord's supper,) black hair, dark skin, moderate
+                stoutness, firm flesh, harsh features&#8212;great endurance and
+                <hi rend="underline">bottom</hi>&#8212;</p>
+            <p><hi rend="underline">Nervous</hi>&#8212;fine thin hair&#8212;small muscles&#8212;thin skin&#8212;pale
+            countenance&#8212;bright eyes&#8212;great mental vivacity</p>
+            <p>These temperaments are seldom found pure, almost always
+                <hi rend="underline">mixed</hi>&#8212;as nervous &amp; bilious, in Lord Brougham.&#8212;This nobleman
+                was engaged in a Court of Law all day&#8212;went to House of Commons at
+                evening, remained there till 2 in the morning&#8212;went home, wrote an article for
+                Edinburgh Review&#8212;then went again to Court&#8212;then again to House of
+                Commons&#8212;and only toward the next <unclear reason="illegible" resp="#lmg" cert="medium">morning</unclear> to bed&#8212;his vigor having <unclear reason="illegible" resp="#lmg" cert="medium">been</unclear>
+                <unclear reason="illegible" resp="#lmg" cert="medium">unabated</unclear><gap reason="illegible, cut away" quantity="8" unit="word"/></p>
+            <pb xml:id="leaf001v" facs="duk.00201.002.jpg" type="verso"/>
+            <add rend="pasteon" source="#r1"><handShift new="#h2"/>
+                <q who="unknown" type="written">
+                    <floatingText rend="flat">
+                        <body>
+                            <pb xml:id="leaf002r" facs="duk.00201.002a.jpg" type="recto" rend="col-6"/>
+                            <p><hi rend="underline" hand="#h3">consequences of that exaltation of life producible
+                            by physiological living</hi>; and if so, the objective or
+                            exterior results are indirect and secondary.</p>
+                            <p xml:id="p1a" next="#p1b">How? In this way: When, reader, you or I
+                                meet with a person in whom the life-power is at
+                                "flood tide," and we will suppose at the moment
+                                more voluminous than in ourselves, our perception
+                                and consciousness immediately certify to us the
+                                fact. We say, or feel within ourselves, "<hi rend="italic">There</hi> is
+                                <hi rend="underline" hand="#h3">more force, more capability, <hi rend="smallcaps">MORE MAN</hi>, or <hi rend="smallcaps">MORE
+                                WOMAN</hi></hi> than I now represent." And it is simply
+                                in accordance with a law of our mind that we feel
+                                <hi rend="underline" hand="#h3">a sense of <hi rend="italic">awe</hi> toward this superior energy</hi>; as we
+                                do while looking on <hi rend="underline" hand="#h3">a hissing locomotive, a steamship
+                                plowing the waves,</hi> a <hi rend="underline" hand="#h3">bellowing thunder-cloud,
+                                a tornado, or a cataract.</hi> To the possessor of such
+                                energy, therefore, <hi rend="underline" hand="#h3">we defer, bow, submit&#8212;perhaps
+                                even shrink from him, or catch ourselves in being
+                                involuntarily <gap reason="illegible" quantity="3" unit="char"/>vile to him.</hi> When, however, we
+                                are ourselves <gap reason="illegible" quantity="1" unit="word"/> superior energy, perception and
+                                consciousness <gap reason="illegible" quantity="1" unit="word"/> none the less expeditious in informing
+                                us of <hi rend="italic">that</hi> fact. <hi rend="underline" hand="#h3">We at once feel that we
+                                rise above our fellow,</hi> that we outweigh and outvalue
+                                him (in power, that is); <hi rend="underline" hand="#h3">that we are now
+                                <hi rend="smallcaps">MORE</hi> than he</hi>: and because we know ourselves
+                                thus far we know him, and feel that he must now,
+                                by <hi rend="italic">his</hi> nature, defer and succumb to us. To say
+                                truth, <hi rend="underline" hand="#h3">there is a pleasure in this consciousness of
+                                innate superiority,</hi> <hi rend="underline" hand="#h3">that, however innocent in intention,
+                                however generous in feeling, or however unconscious
+                                or ignorant its possessor may be, <hi rend="italic">will</hi>
+                                cause him to show in his bearing, tone, or some
+                                other indescribable effluence of himself, the <choice><sic>exis</sic><corr>existence</corr></choice></hi></p></body></floatingText></q></add>
+            <add rend="pasteon" source="#r1"><handShift new="#h2"/>
+                <q who="unknown" type="written">
+                    <floatingText rend="flat">
+                        <body>
+                            <pb xml:id="leaf003r" facs="duk.00201.002b.jpg" type="recto" rend="col-6"/>
+                            <p xml:id="p1b" prev="#p1a"><hi rend="underline" hand="#h3">ence of the fact, and to <hi rend="italic">be</hi>, in some way, in spite
+                            of himself, an <hi rend="italic">embodied hint</hi> of the relative positions
+                            <hi rend="italic">growing out</hi> of the fact.</hi> Thus the whole explanation
+                                may be interior. <hi rend="italic">A</hi> is within himself
+                                <hi rend="underline" hand="#h3">exalted by the accumulation of his life and soul</hi>:
+                                he feels this, and can not, if he would, avoid showing
+                                it. <hi rend="italic">B</hi> perceives the superior power of his fellow;
+                                he feels his own relative weakness, and can
+                                not, if he would, avoid being humbled by it.</p>
+                            <p xml:id="p2a" next="#p2b"><hi rend="underline" hand="#h3">He in whom life culminates, receives the exaltation
+                            in every part of his structure, and in every
+                            faculty of his being.</hi> Every person who has
+                                reached years of reflection, and has had his thoughts
+                                called to the subject, knows that the course we
+                                have already pointed out is capable of accomplishing
+                                all this; every such person has seen and has
+                                reflected on one or more of these results. We need
+                                only say that <hi rend="underline" hand="#h3">the effects referred to are seen in the
+                                muscular system</hi>; so that the individual can lift a
+                                greater load, and work longer and more effectively;
+                                that they are seen in the action of all the organs,
+                                the secretions being more plentiful, or at least more
+                                normal, and all the functions more vigorously performed;
+                                that <hi rend="underline" hand="#h3">they are seen in acuter, more delicate,
+                                and perfect sensations;</hi> <hi rend="underline" hand="#h3">in keener, more complete,
+                                and truthful perceptions;</hi> <hi rend="underline" hand="#h3">in a more healthful consciousness;</hi>
+                                <hi rend="underline" hand="#h3">a more varied and retentive memory;
+                                more deep, and yet more correct and natural feelings;</hi>
+                                <hi rend="underline" hand="#h3">more clear conception of rights, principles,
+                                and duties,</hi> <hi rend="underline" hand="#h3">and a more prompt, comprehensive,
+                                direct, profound, and pertinent action of the reasoning
+                                faculties.</hi> We do not mean that ever so much
+                                augmentation of life-power can <hi rend="italic">create</hi> a single
+                                faculty not possessed, or <hi rend="italic">at once</hi> strengthen any
+                                when feeble. We do mean to say <hi rend="underline" hand="#h3">it will bring
+                                each faculty <hi rend="italic">up</hi> to the highest perfection of which</hi></p></body></floatingText></q></add><cb/>
+            <add rend="pasteon" source="#r1"><handShift new="#h2"/>
+                <q who="unknown" type="written">
+                    <floatingText rend="flat">
+                        <pb xml:id="leaf004r" facs="duk.00201.002c.jpg" type="recto" rend="col-6 new"/>
+                        <body><p xml:id="p2b" prev="#p2a"><hi rend="underline" hand="#h3">its inherited stength and healthfulness allow</hi>; and
+                            that, in many cases, is doing very much. <hi rend="underline" hand="#h3">There is
+                            intellectual, moral, and physical force-possibility in
+                            the world enough to amaze us if it were all brought
+                            out;</hi> to say nothing of the vast deal that is brought
+                            out and apparent, but not usefully applied. Well
+                            has one said, "It is more wonderful what mankind
+                            <hi rend="italic">have not</hi>, than what they <hi rend="italic">have</hi>, accomplished!"</p>
+                            <p>But there are also moral causes that greatly influence
+                                the effective power of individuals. All
+                                know how fear takes away strength of muscle and
+                                force of thought. <note type="authorial" resp="#h3" rend="circled" target="#lg1">all about a Locomotive</note>
+                                <note type="authorial" resp="#h3" place="right">☝</note>
+                                <q who="Shakespeare"><floatingText type="extract"><body><lg xml:id="lg1" type="poem"><l>"Our doubts are traitors,</l>
+                                    <l>And make us lose the good we oft might win,</l>
+                                    <l>By fearing to attempt."</l></lg></body></floatingText></q>
+                                And still more strikingly Othello says: "Every
+                                puny whipster gets my sword: for why should
+                                <hi rend="italic">honor</hi> outlive <hi rend="italic">honesty</hi>?" That is to say, <hi rend="underline" hand="#h3">the consciousness
+                                of guilt or dishonor robs the arm of its
+                                energy and the soul of its forcefulness.</hi> Even artificial
+                                distinctions are known to have the same effect
+                                to an extent that is suprising; we may go
+                                farther and say, that is needless, and that will,
+                                when mankind have at length learned to esteem
+                                the man above his accidents, be very greatly restricted.
+                                <span rend="bracket-right" hand="#h3" xml:id="s1" from="#s1" to="#s2"/>As it now is, we behold too often the
+                                astonishing sight of a man or woman full of soul
+                                and sense, and who is really the superior, cowering
+                                before a fellow-human whose <hi rend="italic">force</hi> consists in
+                                fashionable or costly apparel&#8212;the very covering of
+                                the body's shame being thus made a foundation for
+                                pride; and the gaudy stuffs upon the back being
+                                confessed to be more than moral or social virtues,<anchor xml:id="s2"/>
+                                intellectual power or manliness! A larger knowledge
+                                and a true independence will change all this.
+                                Similar remarks might be made respecting the
+                                tyranny of wealth, hereditary privilege, and official
+                                position over the true inner manhood.</p>
+                            <p>But <hi rend="underline" hand="#h3">all these are factitious forces, resting only on
+                            the ignorance and servility of those who suffer
+                            their influence,</hi> and not springing as positive, self-existent,
+                                and controlling energies within the mind
+                                of their possessor. Hence they can only survive
+                                until the million have learned <hi rend="underline" hand="#h3">the true source and
+                                quality of all real forcefulness&#8212;namely, the mind
+                                or soul.</hi> Wealth and station may possibly subsist
+                                forever as now, in <hi rend="italic">iniquitous</hi> (the word means <hi rend="italic">unequal</hi>)
+                                distribution; but if they do, they will one
+                                day have lost their chief social value, from the fact
+                                that men will have learned to direct their gaze in
+                                all cases <hi rend="italic">beneath</hi>, not <hi rend="italic">upon</hi>, the surface; and outside
+                                trappings will be disregarded.</p>
+                            <p xml:id="p3a" next="#p3b">The practical deductions to be drawn from this
+                                view of our subject are too obvious to require more
+                                than mentioning. They are, first, that <hi rend="underline" hand="#h3">the benefits
+                                to be thus attained must amply repay to any person
+                                the time and labor spent upon the study and practice</hi></p></body></floatingText></q></add>
+            <add rend="pasteon" source="#r1"><handShift new="#h2"/>
+                <q who="unknown" type="written">
+                    <floatingText rend="flat">
+                        <body>
+                            <pb xml:id="leaf005r" facs="duk.00201.002d.jpg" type="recto" rend="col-6"/>
+                            <p xml:id="p3b" prev="#p3a"><hi rend="underline" hand="#h3">of self-control, and of habits of physiological
+                            living, including exercise that is actual, active, and</hi>
+                                blood-stirring; and secondly, that <hi rend="underline" hand="#h3">he who from
+                                these sources would secure <add rend="unmarked" place="inline"><handShift new="#h3"/>(</add><handShift new="#h2"/>the highest effective
+                                personality,</hi> <hi rend="underline" hand="#h3">must guard against unfavorable moral
+                                and factitious influences&#8212;as fear, anxiety, impatience,
+                                dishonor, and dishonesty</hi>; and against th<gap reason="illegible, cut away" quantity="1" unit="char"/>
+                                assumptions of wealth, rank, and authority. <hi rend="underline" hand="#h3">He
+                                must be <hi rend="italic">plus</hi>,</hi> so far as possible, to all with whom
+                                he comes in contact.</p>
+                        </body>
+                    </floatingText>
+                </q>
+            </add>
+        </body>
+    </text>
+</TEI>

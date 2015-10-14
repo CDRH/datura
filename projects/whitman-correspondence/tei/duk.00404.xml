@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00404">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Charles L. Heyde to Walt Whitman, 23 June 1885</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Charles L. Heyde</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="aa">Alex Ashland</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00404</idno>
+                <distributor>Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Charles L. Heyde</author>
+                    <title>Charles L. Heyde to Walt Whitman, 23 June 1885</title>
+                    <date cert="high" when="1885-06-23" xml:id="dat1">June 23, 1885</date>
+                    <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare
+                        Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Heyde, Charles L." ref="n0299">Charles L. Heyde</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-08-13" who="#ss">added duk.00404_n1</change>
+            <change when="2015-08-04" who="#nhg">checked, corrected</change>
+            <change when="2015-06-29" who="#kb">edited</change>
+            <change when="2015-06-02" who="#if">edited</change>
+            <change when="2014-12-19" who="#ss">encoded and checked</change>
+            <change when="2014-12-05" who="#aa">transcribed</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="duk.00404.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">Burlington Vermont </name>
+                    <date when="1885-06-23">June 23, 1885.</date>
+                </dateline>
+                <salute>Bro Walt,</salute>
+            </opener>
+            <p>Just recieved Springfield paper, with extended notices of Walt Whitman. Came
+                opportunely, for Han was growing nervous not recieveing any letter or card from you. She
+                sprang right up, renewed, although she is not very strong as yet. And I was glad too,
+                I assure you. Han is steadily improving; rather weakly and gray, but ambitious and
+                systematic.</p> 
+            <p>I have been dreadfull sick too, but can now breathe nearly as well as usual. Every
+                body congratulates me.</p>
+            <p>We was as glad to learn that you are so comfortable with widow Davis:<ptr target="duk.00404_n1"/> Han says
+                    she would so like
+                to see her and talk with her: and so <pb xml:id="leaf001v"
+                    facs="duk.00404.002_large.jpg" type="verso"/> would I tell her so. My father was
+                a sea captain; sailed from Philadelphia to France was wrecked, lost at sea: <choice>
+                    <sic>rember</sic>
+                    <corr>remember</corr>
+                </choice> both of us to her: But what is the matter with Geo and Lou.<ptr target="n1046"/> I sent a small
+                painting to them some months ago, framed, at 15 dollars with request to return it if
+                not agreeable: have written twice, but recieved no reply.</p>
+            <p>Perhaps Geo is short of cash; still they keep the picture view from our house, with
+                the Lake (Battery view) where you used to stroll. <unclear reason="margins cut off"
+                    cert="low" resp="#aa">Warm</unclear> Han has large room up stairs to herself.
+                I have small room adjoining: that I can hear, if she needs any thing: she is down
+                stairs every day&#8212;cooks, I make fire etc&#8212;Han sends
+                love&#8212;talks of you.</p>
+            <closer>
+                <signed>Charles</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

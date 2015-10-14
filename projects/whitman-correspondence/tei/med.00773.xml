@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="med.00773">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to the Editor of the <hi rend="italic">Century</hi>, 3 April 1886</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="mc">Matt Cohen</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>med.00773</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>John McIntosh Kell</author>
+                        <title xml:id="jmk">Recollections of a Naval Life</title>
+                        <imprint>
+                            <pubPlace>Washington</pubPlace>
+                            <publisher>The Neale Company</publisher>
+                            <date when="1900">1900</date>
+                            <biblScope type="page">293&#8211;294</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to the Editor of the <hi rend="italic">Century</hi>, 3 April 1886</title>
+                    <date cert="high" when="1886-04-03" xml:id="dat1">April 3, 1886</date>
+                    <orgName xml:id="med">The location of this manuscript is unknown.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Editor of the Century" ref="med.00773_n2">Editor of the <hi rend="italic">Century</hi></persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>  
+            <change when="2015-07-15" who="#kb">edited</change>
+            <change when="2015-06-24" who="#if">edited</change>
+            <change when="2015-02-23" who="#nhg">encoded, checked</change>
+            <change when="2015-02-22" who="#mc">located, transcribed</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place">Camden, New Jersey,</name> 
+                    <date when="1886-04-03"><hi rend="italic">April 3d 1886.</hi></date>
+                </dateline>
+            </opener>
+            <p>My reading for the last two or three days (limited) of the articles in Century about <hi rend="italic">Kearsarge</hi> and <hi rend="italic">Alabama</hi>, which I have just finished. They form by far the best contribution I know to the literature of the Secession era, and are full of realism and thrill. The pictures are masterly. I only wish we could have accounts of all the swell episodes of the war in the same way, or approximately to it. I want personally to thank you all, writers and picture-makers.</p>
+            <closer>
+                <signed>Walt Whitman.</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

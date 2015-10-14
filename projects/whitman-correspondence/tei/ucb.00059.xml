@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="ucb.00059">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to an Unidentified Editor, November (?) 1879</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>ucb.00059</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to an Unidentified Editor, November (?) 1879</title>
+                    <date cert="low" notBefore="1879-11-01" notAfter="1879-11-30" xml:id="dat1">November (?) 1879</date>
+                    <orgName xml:id="ucb">Walt Whitman Collection, The Bancroft Library, University
+                        of California, Berkeley</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Unidentified Editor">Unidentified Editor</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-08-05" who="#nhg">checked, corrected</change>
+            <change when="2014-03-20" who="#nnk">proofed</change>
+            <change when="2014-02-20" who="#ss">checked</change>
+            <change when="2013-12-13" who="#kc">Transcribed and Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="ucb_gk.00105_large.jpg" type="recto"/>   
+            <opener>
+                <dateline>
+                    <name type="place">St. Louis<ptr target="ucb.00059_n1"/></name>
+                </dateline> 
+                <salute>To the Editor<ptr target="ucb.00059_n3"/></salute>
+            </opener>
+
+            <p>Let me give you some flying impromptu notes<ptr target="ucb.00059_n2"/> confessedly
+                all too meager (a <hi rend="underline">hiatus</hi> every where) of my journey starting three months
+                since from the Atlantic Coast and so railroading through New Jersey, Penn, West
+                Virginia, Ohio, Indiana, Illinois, Wisconsin over Kansas and the Great Plains into
+                the very height &amp; heart Rocky Mountains with
+                the canons, parks and peaks. Them I reserve for a special letter. Returning to Denver for a few days, then by the
+                southern road to Pueblo, over the Plains, to Kansas City, stopping there a
+                while. &#42;Then through Missouri again to <choice>
+                    <orig>St</orig>
+                    <reg>St.</reg>
+                </choice> Louis, where I have been spending a month.</p>
+            <pb xml:id="leaf001v" facs="ucb_gk.00106_large.jpg" type="verso"/> 
+        </body>
+     
+    </text>
+</TEI>

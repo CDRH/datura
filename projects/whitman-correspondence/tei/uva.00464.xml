@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="uva.00464">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Charles Eldridge to Walt Whitman, 15 October
+               1873</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Charles Eldridge</author>
+            <editor>Kenneth M. Price</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="ak">Alex Kinnaman</persName>
+               <persName xml:id="jyc">Jonathan Y. Cheng</persName>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+               <persName xml:id="nhg">Nicole Gray</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of
+               Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2014</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>uva.00464</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in
+                  the Archive may be shared in accordance with the Fair Use provisions of U.S.
+                  copyright law. Redistribution or republication on other terms, in any medium,
+                  requires express written consent from the editors and advance notification of the
+                  publisher, Center for Digital Research in the Humanities. Permission to reproduce
+                  the graphic images in this archive has been granted by the owners of the originals
+                  for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+
+            <bibl>
+               <author>Charles Eldridge</author>
+               <title>Charles Eldridge to Walt Whitman, 15 October 1873</title>
+               <date cert="high" when="1873-10-15" xml:id="dat1">October 15, 1873</date>
+               <orgName xml:id="uva">Papers of Walt Whitman (MSS 3829), Clifton Waller Barrett
+                  Library of American Literature, Albert H. Small Special Collections Library,
+                  University of Virginia</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Eldridge, Charles" ref="n0210">Charles Eldridge</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+         <change who="#ak" when="2015-04-21">added correspondent info</change>
+         <change who="#nhg" when="2015-03-03">checked, corrected</change>
+         <change who="#jyc" when="2014-10-01">checked, revised</change>
+         <change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#nnk" when="2014-06-07">transcribed, encoded</change>
+
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         <pb xml:id="leaf001r" facs="uva.00064.020.jpg" type="recto"/>
+         <opener>
+            <dateline rend="right"><name type="place">Washington</name>
+               <date when="1873-10-15" rend="right">Oct
+                  15, 1873</date></dateline>
+            <salute>Dear Walt:</salute>
+         </opener>
+         <p>Your letter came to hand yesterday with the key of the trunk enclosed. In accordance
+            with your request I met Peter Doyle at Milburn's after office and we proceeded to your room and made up
+            the package as you directed, and Peter took it to the Adams Express office.</p>
+         <p>The contents are, <hi rend="underline">Gray suit</hi>, coat, vest &amp; <hi
+               rend="underline">one</hi> pair of pants. <hi rend="underline">Black overcoat</hi>.
+               <hi rend="underline">Black felt hat</hi>. <hi rend="underline">Pair of Buckskin
+               gloves</hi>.</p>
+         <p>You should receive them in good order to-day, as they were strongly enveloped &amp;
+            plainly directed.</p>
+         <p>Let me know if you get them all right. I return the key enclosed herewith. Let me know
+            how you are as often as you can. You had but one pair of gray pants, at least that was
+            all there was in that trunk.</p>
+         <closer>
+            <salute>Affectionately Yours,</salute>
+            <signed>Charley</signed><ptr target="uva.00464_n1"/>
+         </closer>  
+         <pb xml:id="leaf001v" facs="uva.00064.019.jpg" type="verso"/>
+
+      </body>
+   </text>
+</TEI>

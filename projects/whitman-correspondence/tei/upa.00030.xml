@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="upa.00030">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Anne Gilchrist, [4 September 1877]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>                   
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2010</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>upa.00030</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Anne Gilchrist, [4 September 1877]</title>
+                    <date cert="medium" when="1877-09-04" xml:id="dat1">September 4, 1877</date>
+                    <orgName xml:id="upa">Walt Whitman Collection, 1842&#8211;1957, Rare Book &amp; Manuscript Library, University of Pennsylvania</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>            
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Gilchrist, Anne">Anne Gilchrist</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-01-27" who="#nhg">checked, corrected</change>
+            <change when="2013-01-18" who="#ej">Checked and Corrected</change>
+            <change when="2012-12-26" who="#ab">checked</change>
+            <change when="2012-09-28" who="#gt">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="upa.00030.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">By the Pond<ptr target="upa.00030_n1"/></name>
+                    <date when="1877-09-04">Tuesday&#8212;4&#189; p m</date>
+                </dateline>
+            </opener>
+
+            <p>I have just been reading your Monday's note for the second time&#8212;&amp; will write a line in rejoinder, with my French water pen, moistened out of the gurgling brook, just as I sit here, half shade, half in the warm sun, as I sit here after my lavations.</p>
+ 
+            <p>I am still pretty well,&#8212;Still enjoy my natural days here, by the creek&#8212;(but they are now drawing to a close)&#8212;Nothing new.</p>
+            
+            <p>&#8212;The papers have all arrived I think&#8212;the <hi rend="underline">News</hi>, with the Plevna battle letter, &amp;c. I have here to day, &amp; am reading with interest. Herby is well &amp; brown&#8212;Shall be up in 
+                
+                <pb xml:id="leaf001v" facs="upa.00030.002_large.jpg" type="verso"/>
+                
+                good time to be with with my dear <choice><sic>neices</sic><corr>nieces</corr></choice> &amp; all of you&#8212;I wonder if you have the same splendor of days &amp; nights as we here the week past.</p>
+            
+            <p>I suppose you will have Edward Carpenter's letter to Herby by this time &amp; will find it indeed cheery &amp; interesting.<ptr target="upa.00030_n2"/></p>
+
+            <closer>
+                <salute>Love to all</salute>
+                <signed rend="right">W. W.</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

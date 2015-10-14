@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="hun.00047">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to James R. Osgood, 8 May 1881</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>hun.00047</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+             
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to James R. Osgood, 8 May 1881</title>
+                    <date cert="high" when="1881-05-08" xml:id="dat1">May 8, 1881</date>
+                    <orgName xml:id="hun">The Huntington Library, Art Collections, and Botanical
+                        Gardens</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Osgood, James R.">James R. Osgood</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-02-04" who="#nhg">checked, corrected</change>
+            <change when="2014-01-24" who="#ej">Checked and Corrected</change>
+            <change when="2013-10-14" who="#nnk">proofed</change>
+            <change when="2013-09-20" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <div1 type="letter">
+            <pb xml:id="leaf001r" facs="hun.00047.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">431 Stevens Street</name>
+                    <name type="place">Camden New Jersey</name>
+                    <date when="1881-05-08">May 8 '81</date>
+                </dateline>
+                <salute>My dear Mr Osgood<ptr target="hun.00047_n1"/></salute>
+            </opener>
+            <p>I write in answer to the note on the other side from my dear friend O'Reilly<ptr
+                    target="hun.00047_n2"/>&#8212;My plan is to have all my poems, down to date,
+                comprised in one 12 mo: Volume, under the name "Leaves of Grass"&#8212;I think it
+                will have to be in brevier (or bourgeois) solid&#8212;and I want as fine a (plain)
+                specimen in type, paper, ink, binding, &#38;c. as bookmaking can produce,&#8212;not
+                for luxury however, but solid wear, use, reading, (to carry in the pocket, valise
+                &#38;c)&#8212;a book of about 400 pages to sell at &#36;3&#8212;The text will be about
+                the same as hitherto, occasional slight revisions, simplifications in punctuation
+                &#38;c&#8212;the main thing a more satisfactory consecutive order&#8212;a better <hi
+                    rend="underline">ensemble</hi>, to suit me&#8212;some new pieces, perhaps 30
+                pages&#8212;</p>
+            <p>Fair warning on one point&#8212;the old pieces, the <hi rend="underline"
+                    >sexuality</hi> ones, about which the original row was started &#38; kept up so
+                long, are all retained, &#38; must go in the same as ever<ptr target="hun.00047_n3"
+                />&#8212;Should you, upon this outline, wish to see the copy, I will place it in
+                your hands with pleasure&#8212;</p>
+            <!-- "292" at bottom of page -->
+            <closer>
+                <signed rend="right">Walt Whitman</signed>
+            </closer></div1>
+            <div1 type="letter">
+            <pb xml:id="leaf002r" facs="hun.00047.002_large.jpg" type="recto"/>
+            <!-- Does this letter need to be transcribed separately? [ej] -->
+
+            <opener><dateline>
+                <name type="place" rend="center"><handShift rend="printed"/>The Pilot Editorial
+                    Rooms.</name>
+                <date when="1881-04-26" rend="right"><handShift rend="manuscript"/>April 26.</date>
+            </dateline>
+            <salute>Dear W. Whitman</salute></opener>
+                <p> Hope you got safe home. James R. Osgood want to see the material for your
+                    complete book. Can you let him have a look at it, or write him &amp; tell him
+                    about it? </p>
+                <closer><salute>Always faithfully yours</salute>
+                    <signed>John Boyle O'Reilly</signed>
+                </closer>
+            </div1>
+        </body>
+    </text>
+</TEI>

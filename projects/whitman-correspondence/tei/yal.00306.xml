@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>  
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="yal.00306">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Mary Van Nostrand to Walt Whitman, 23 December [1883?]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Mary Van Nostrand</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="no">Natalie O'Neal</persName>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>yal.00306</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>           
+            <sourceDesc>
+                <bibl>
+                    <author>Mary Van Nostrand</author>
+                    <title>Mary Van Nostrand to Walt Whitman, 23 December [1883?]</title>
+                    <date cert="low" when="1883-12-23" xml:id="dat1">December 23, 1883</date>
+                    <orgName xml:id="yal">Yale Collection of American Literature, Beinecke Rare Book and Manuscript Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="unk"><persName key="Unknown">Unknown</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Van Nostrand, Mary">Mary Van Nostrand</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2014-11-18" who="#nhg">checked, corrected</change>
+            <change when="2014-11-10" who="#ak">corrected transcription and encoding</change>
+            <change when="2014-11-07" who="#no">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <pb xml:id="leaf001r" facs="yal.00306.001_large.jpg" type="recto"/>
+
+            <note type="editorial" place="top" resp="#unk">1883.</note>
+            
+            <opener>
+                <dateline>
+                    <name type="place">Greenport</name>
+                    <date when="1883-12-23">Dec 23</date>
+                </dateline>
+                <salute>Dear Brother Walter</salute>
+            </opener>
+            
+            <p>I received a letter from you last night and an order for my annual christmas present and I do think you are a dear good brother to remember me so often I thank you ever and ever so much and hope you are feeling better this winter but am afraid you are not as you did not say any thing about it in your letter</p>
+            
+            <p>I am not feeling well at all this winter not sick abed but a pain in my side all the time but I suppose we must expect
+            
+                <pb xml:id="leaf001v" facs="yal.00306.002_large.jpg" type="verso"/>
+            
+            pains and aches as we are growing old but I am thankful I am no worse can get around and do my work Ansel is well has been out of work for two months but we get along very well I would like to see you very much and still think you will come this way some day. I am ashamed of myself for not writing to you oftener but I have got so out of the way of writing it seems a job to get at it. I receive papers and books quite often from you and am glad to get them I got a picture from you a while ago and as you did not say whose it was 
+            <pb xml:id="leaf002r" facs="yal.00306.003_large.jpg" type="recto"/>
+                
+            I did not know but suppose it was one of Jeffs daughters I also received hannah's but I should not have known her either if her name had not been on it</p>
+            
+            <p>I do not suppose I should ever know any thing about the family if it was not for you as I never get a letter from any of them but I often think of them all and dear mother every day</p>
+            
+            <p>Again I say thank you and hope we shall both live to see each other once more</p>
+
+            <closer>
+                <salute>From your loving Sister</salute>
+                <signed>Mary</signed>
+            </closer>
+            
+            <pb xml:id="leaf002v" facs="yal.00306.004_large.jpg" type="verso"/>
+            
+            <pb xml:id="leaf003r" facs="yal.00306.005_large.jpg" type="recto"/>
+            <pb xml:id="leaf003v" facs="yal.00306.006_large.jpg" type="recto"/>
+
+        </body>
+    </text>
+</TEI>

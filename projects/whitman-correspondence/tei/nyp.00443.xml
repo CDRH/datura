@@ -1,0 +1,153 @@
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nyp.00443">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to William D. O'Connor, 28 May
+                    1882</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>nyp.00443</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">285&#8211;286</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to William D. O'Connor, 28 May 1882</title>
+                    <date cert="high" when="1882-05-28" xml:id="dat1">May 28, 1882</date>
+                    <idno type="callno">Series III</idno>
+                    <orgName xml:id="nyp">The Henry W. and Albert A. Berg Collection of English and
+                        American Literature, New York Public Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="O'Connor, William D.">William D. O'Connor</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-25" who="#nhg">checked, corrected</change>
+            <change when="2014-02-14" who="#ej">Checked and Corrected</change>
+            <change when="2013-10-23" who="#nnk">proofed</change>
+            <change when="2013-10-03" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place">Camden<ptr target="nyp.00443_n1"/></name>
+                    <date when="1882-05-28">Sunday May 28 '82</date>
+                </dateline>
+                <salute>Dear William O'Connor</salute>
+            </opener>
+            <p>I like the big letter of May 25 the more I have read it&#8212;I think it will never
+                die&#8212;I am glad the Rev Mr Chadwick<ptr target="nyp.00443_n2"/> appears with his
+                    <hi rend="italic">Tribune</hi> letter to you to-day (as enclosed) for the fine
+                chance it affords to ventilate the real account &#38; true inwardness of that
+                Emerson talk on the Common in 1860&#8212;&#38; I at once send you the best synopsis
+                of it I can recall&#8212;quite certainly the same in amount as I told you while it
+                was fresh in my memory&#8212;the which with hasty scribblings on my relations with
+                Emerson&#8212;I hope (working in as from yourself) you will incorporate in your
+                answer to Tribune&#8212;</p>
+            <closer>
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+            <postscript>
+                <p>for head</p>
+                <p>? <hi rend="italic">What were <choice>
+                        <sic>Emersons</sic>
+                        <corr>Emerson's</corr>
+                    </choice> relations to Walt Whitman?</hi></p>
+                <p>(for quoting entire in your letter if you think proper)</p>
+                <p>"What made, and ever makes the argument of Emerson, in that walk on the Common,
+                    so dear and <hi rend="italic">holy to me, was the personal affectionateness</hi>
+                    of it, as of an elderly brother to a younger. It was a vehement, even passionate
+                    well-wishing, which I felt then and feel to this hour the gratitude and
+                    reverence of my life could never repay. Although perfect from an intellectual
+                    and conventional point of view, it did not advance any thing I had not already
+                    considered. And my arriere and citadel positions&#8212;such as I have indicated
+                    in my June <hi rend="italic">North American Review</hi> memorandum<ptr
+                        target="nyp.00443_n3"/>&#8212;were not only not attacked, they were not even
+                    alluded to.</p>
+                <p>While I am on the subject, let me tell you I am sure the same process went on
+                    with Emerson, in this particular (it was not needed any where else) that goes on
+                    with many other of my readers. Certain am I that he too finally came to clearly
+                    feel that the "Children of Adam" pieces were inevitable and consistent&#8212;and
+                    in that sense, at least, proper&#8212;parts of the book. He was not the man to
+                    retract any utterance: whatever it had been, it had expressed the truth of the
+                    period.</p>
+                <p>That he said some transient things, from 1863 to 1873, which are in the critical
+                    direction and are acrid, (very likely your discussion will bring them out) there
+                    is no doubt. But he permanently loved me, and believed in my poems, of which the
+                    "Children of Adam" section, though difficult to unfold, is vertebral."</p>
+                <p>William, I submit to you whether it <choice>
+                    <sic>wouldnt</sic>
+                    <corr>wouldn't</corr>
+                </choice> be well, in your reply to <hi
+                        rend="italic">quote all this</hi>, as extracted from a late letter to you
+                    from me<ptr target="nyp.00443_n4"/>&#8212;</p>
+            </postscript>
+        </body>
+    </text>
+</TEI>

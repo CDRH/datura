@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.01285">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Francis P. Church, 19 October
+                    1867</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="jyc">Jonathan Y. Cheng</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="zk">Zachary King</persName>
+                    <persName xml:id="ec">Eric Conrad</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2010</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.01285</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+    <addrLine>Center for Digital Research in the Humanities</addrLine>
+    <addrLine>319 Love Library</addrLine>
+    <addrLine>University of Nebraska-Lincoln</addrLine>
+    <addrLine>P.O. Box 884100</addrLine>
+    <addrLine>Lincoln, NE 68588-4100</addrLine>
+</address>
+                <availability>
+                    <p>Copyright © 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">1</biblScope>
+                            <biblScope type="page">344&#8211;345</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Francis P. Church, 19 October 1867</title>
+                    <date cert="high" when="1867-10-19" xml:id="dat1">October 19, 1867</date>
+                    <orgName xml:id="prc">The location of this manuscript is unknown.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Church, Francis P.">Francis P. Church</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2014-11-06" who="#nhg">checked, corrected</change>
+            <change when="2014-09-23" who="#jyc">checked,revised</change>
+            <change when="2014-08-15" who="#el">added schematron declaration</change>
+            <change when="2014-05-01" who="#el">changed to wwa id loc.01285; updated metadata in TEI
+                header</change>
+            <change when="2010-10-04" who="#zk">encoded</change>
+            <change when="2010-08-20" who="#ec">extracted transcription from Major Authors
+                cd</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <opener>
+                <dateline>
+                    <name type="place">Washington,</name>
+                    <date when="1867-10-19">October 19, 1867.</date></dateline>
+                <salute>F. P. Church.<!--<ptr target="n0156"/>--></salute>
+                <salute>My dear Sir:</salute>
+            </opener>
+
+            <p>I send the article on Democracy. If satisfactory I should like $100 for it. You are
+                to issue it in <hi rend="italic">Galaxy</hi> with exclusive possession of the field,
+                say for three months&#8212;after which I reserve to myself the right of any further use of
+                it&#8212;as, for instance, issuing it with added Notes, Appendices, &amp;c. in a pamphlet
+                or small book&#8212;published by you, of course, if you are willing&#8212;I to receive copyright
+                fee on sales, &amp;c. &amp;c.</p>
+
+            <p>But we can see better how the cat jumps after the article is before the public&#8212;&amp;
+                will leave that question open until then.</p>
+
+            <p>Please have it set up forthwith, read carefully by copy, &amp; then, after
+                correction, send me <hi rend="italic">two good proofs</hi>. I want it to go forth in
+                a perfect verbal &amp;c. condition.</p>
+
+            <closer>
+                <signed rend="right">Walt Whitman.</signed>
+            </closer>
+
+            <postscript>
+
+                <p>Please acknowledge this, immediately on reception.</p>
+
+                <p>If any thing could be made by disposing of advance sheets in London, to any
+                    magazine or publisher, I would suggest that it be done&#8212;the price procured to be
+                    divided equally between you &amp; me.</p>
+
+                <signed>W.</signed>
+            </postscript>
+        </body>
+    </text>
+</TEI>

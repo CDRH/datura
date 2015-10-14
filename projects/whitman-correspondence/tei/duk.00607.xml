@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00607">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, [13 June 1871]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp><persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="ct">Cathy Tisch</persName><persName xml:id="fw">Felicia Wetzig</persName><persName xml:id="wr">Wesley Raabe</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00607</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, [13 June 1871]</title>
+                    <date cert="medium" when="1871-06-13" xml:id="dat1">June 13, 1871</date>
+                    
+                        <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-12-10" who="#el">corrected choice encoding of 'st louis' and 'georgy'</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-09-17" who="#el">checked</change>
+            <change when="2013-05-30" who="#wr">Duke Proofreading Corrections</change>
+          <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent Proof</change>
+            <change when="2013-01-30" who="#wr">Proofreading correction of notes.</change>
+            <change when="2013-01-27" who="#wr">Annotate date and add notes on Lowell and cleaning of George's house.</change>
+            <change when="2012-08-17" who="#ct">Oral Proofreading Corrections</change>
+            <change when="2012-08-14" who="#wr">Clean encoding (editor, date, remove "_large") and add standard annotations on unannotated files (Jeff W, Martha [Mattie], George W, Lou Haslam)</change>
+            <change when="2011-02-23" who="#fw">Transcribe and correct 2 Pages</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="duk.00607.001.jpg" type="recto"/>
+            
+            <note type="editorial" resp="#rmb" place="top">13 June 1871</note>
+            
+            <opener>
+                <dateline>
+                    
+                    <date when="1871-06-13"><choice><orig>tuesday</orig><reg>Tuesday</reg></choice> afternoon<ptr target="duk.00607_n5"/></date>
+                </dateline>
+                <salute>well <choice><orig>walt</orig><reg>Walt</reg></choice></salute>
+            </opener>
+            
+            <p>i<ptr target="duk.00425_n3"/> will write a few
+            lines once more before you come
+            i got your letter on <choice><orig>saturday</orig> <reg>Saturday</reg></choice> i
+                <choice><orig>havent</orig> <reg>haven't</reg></choice> heard from <choice><orig>st louis</orig> <reg>St. Louis</reg></choice> since
+            i wrote to you so i suppose they
+            are about the same or perhaps better
+            than when i last heard) neither
+            have i heard from <choice><orig>georgey</orig><reg>Georgey</reg></choice><ptr target="duk.00556_n3"/>
+            he left some money for me to
+            put in the bank as the bank was
+            shut when he came from <choice><orig>new york</orig> <reg>New York</reg></choice>
+            after i put it in he wanted me to
+            send him a line of the amount invested
+            as the bank book was at the bank to
+            have the interest cast up so i got the
+            man to put it on a paper the whole
+            amount and i sent it to him</p>
+            
+            <p>there <choice><orig>aint</orig> <reg>ain't</reg></choice> much new <choice><orig>walter</orig><reg>Walter</reg></choice> dear with
+            me i am limping around as usual
+            <pb xml:id="leaf001v" facs="duk.00607.002.jpg" type="verso"/>
+            the paper man is fixing the hall
+            has been a week at it but is nearly
+            finished i have had a real job had
+            to take up all the stair <choice><orig>carpit</orig> <reg>carpet</reg></choice> have had
+            a woman to scrub and i hope to get
+            it down this week <choice><orig>georgeys</orig> <reg>George's</reg></choice> house is
+                kept in good condition it <choice><orig>wouldent</orig> <reg>wouldn't</reg></choice>
+                be if i <choice><orig>wasent</orig> <reg>wasn't</reg></choice> here it would soon
+            look like a tenant house i have kept
+            the two last months rent but have paid
+            every cent of it on the house)<ptr target="duk.00607_n6"/>
+            and he
+            <choice><orig>dident</orig> <reg>didn't</reg></choice> give me a cent the two last
+            times he was home he asked me if
+            i wanted any of course i said no
+            as he took out 30 dollars and said to
+            his wife that had to last or asked her
+            if it would last them a month she said
+            they would get some from <choice><orig>lowel</orig><reg>Lowell</reg></choice><ptr target="duk.00607_n7"/>
+            i said i had an order from <choice><orig>walt</orig><reg>Walt</reg></choice>
+            that would last me) but <choice><orig>walt</orig><reg>Walt</reg></choice> for
+            all that George would never <choice><orig>se</orig><reg>se</reg></choice> me
+            want i have too high an opinion of
+            him to think he would ever shirk in any
+            way if i was needy) but they want very
+            much to get this house clea<unclear reason="cut away" cert="medium" resp="#wr">r</unclear><ptr target="duk.00607_n8"/>
+            and i want
+            him <choice><orig>too</orig> <reg>to</reg></choice> as its a nice place</p>
+            <p>write in your this weeks
+            letter what day you will come <choice><orig>walter</orig><reg>Walter</reg></choice></p>
+            <p>burn this letter <choice><orig>walt</orig><reg>Walt</reg></choice></p>
+        </body>
+    </text>
+</TEI>

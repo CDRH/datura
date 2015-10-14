@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00503">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, 1 August [1867]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="zk">Zachary King</persName>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2011</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00503</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, 1 August [1867]</title>
+                    <date cert="high" when="1867-08-01" xml:id="dat1">August 1, 1867</date>
+                    <idno type="callno">III-5D</idno>
+                    <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-12-09" who="#el">changed 'Oconors' to 'Oconers'</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-08-05" who="#el">merged files; checked</change>
+            <change when="2013-05-16" who="#el">checked; moved notes to external file and added ptrs</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent Proof</change>          
+            <change when="2012-12-14" who="#wr">Proofreading corrections and date note</change>
+            <change when="2012-08-20" who="#wr">Fix note 8 ref target to duk.00502</change>
+            <change when="2012-07-31" who="#wr">Moved RMBucke to HandNote; fixed editor, date, and title; reviewed paragraphing </change>
+            <change when="2012-07-16" who="#wr">Replaced smart quotes with straight; removed external URL links. </change>
+            <change when="2012-02-23" who="#fw">annotated Mr. Hambler</change>
+            <change when="2012-01-12" who="#fw">encode questionable word</change>
+            <change when="2011-12-20" who="#fw">regularize spelling of bye, correct spacing</change>
+            <change when="2011-07-30" who="#zk">added call no., annotations</change>
+            <change when="2011-02-05" who="#wr">Corrected transcription</change>
+            <change when="2011-01-01" who="#wr">Transcribed 2 surfaces</change>
+        </revisionDesc>
+    </teiHeader>
+    
+    <text type="letter">
+        
+        <body>
+            
+            <pb xml:id="leaf001r" facs="duk.00503.001.jpg" type="recto"/>
+            
+            <note type="editorial" resp="#rmb" place="top">1867</note>
+            
+            <opener>                
+                <dateline>                    
+                    <date when="1867-08-01">August 1<ptr target="duk.00503_n17"/></date>
+                </dateline>
+                <salute>my dear Walt</salute>
+            </opener>
+            
+            <p>i<ptr target="duk.00425_n3"/>
+                will try once more to write
+                A line to say we are all about the same
+                only the
+                hot weather is <choice><orig>disappeard</orig> <reg>disappeared</reg></choice> in some measure
+                it was bad <choice><orig>enoughf</orig> <reg>enough</reg></choice> here we had <choice><orig>awfull</orig> <reg>awful</reg></choice>
+                bad smells mr hambler<ptr target="duk.00503_n7"/>
+                said it came from
+                the <choice><orig>privy s</orig> <reg>privies</reg></choice> in <choice><orig>pacific st</orig>
+                    <reg>Pacific St.</reg></choice> the yards in that
+                street backs up to ours<ptr target="duk.00503_n8"/>
+                but they are very
+                or quite respectable houses he said he had
+                complained to the board of health but
+                <choice><orig>whither</orig> <reg>whether</reg></choice> they have done any
+                thing or not we <choice><orig>dont</orig> <reg>don't</reg></choice>
+                smell it to day) the sewer i believe is not in
+                that street there is a water closet in this yard
+                when we came here it was all out of order
+                <choice><orig>dident</orig> <reg>didn't</reg></choice> work at all I told the man I wished
+                he would have it fixed but he <choice><orig>dident</orig> <reg>didn't</reg></choice> <choice><orig>doo</orig> <reg>do</reg></choice>
+                it then i told the landlady it made me sick
+                every time i went in so after a while he
+                went to work and fixed it they are so <choice><orig>fraid</orig> <reg>afraid</reg></choice>
+                of laying out one cent and want such A
+                high rent I paid him the rent last night
+                that makes fifty <choice><orig>doll</orig> <reg>dollars</reg></choice> since we have been) here
+                we pay in advance i told george<ptr target="duk.00425_n2"/>
+                300 <choice><orig>dolrs</orig> <reg>dollars</reg></choice>
+                A year would help on a house <choice><orig>its</orig> <reg>it's</reg></choice> too much
+                rent but we <choice><orig>couldent</orig> <reg>couldn't</reg></choice> <choice><orig>doo</orig> <reg>do</reg></choice> no better then
+                if we only had one more room or the
+                bedrooms were any size but they are
+                so small the rooms is very deep but
+                not very wide they are 40 feet deep
+                i got so many envelopes i shall have
+                to write whether <choice><orig>im</orig> <reg>i'm</reg></choice> lame or not they
+                all come safe Walt and i was glad
+                
+                
+                <pb xml:id="leaf001v" facs="duk.00503.002.jpg" type="verso"/>
+                
+                to have them it is so handy to have in the <unclear reason="cut away" cert="medium" resp="#wr">hand</unclear>
+                the money and the package all come yesterday
+                i think this letter carrier is very correct i
+                <choice><orig>dont</orig> <reg>don't</reg></choice> know <choice><orig>whats</orig> <reg>what's</reg></choice> the matter with matt<ptr target="duk.00465_n9"/>
+                i <choice><orig>havent</orig> <reg>haven't</reg></choice> had a letter from her in quite
+                a long time i expected one yesterday to be
+                <choice><orig>shure</orig> <reg>sure</reg></choice> i got one from mary<ptr target="duk.00425_n6"/> it was for
+                matty but it was directed mrs Whitman
+                city hall care of mr lane<ptr target="duk.00503_n4"/>
+                so they sent it here
+                she was to <choice><orig>portsmouth</orig><reg>Portsmouth</reg></choice><ptr target="duk.00503_n13"/>
+                when she wrote
+                but was coming home and wrote for matt
+                to come to <choice><orig>greenport</orig><reg>Greenport</reg></choice><ptr target="duk.00427_n26"/>
+                but i <choice><orig>gess</orig> <reg>guess</reg></choice> mat <choice><orig>wont</orig> <reg>won't</reg></choice>
+                go this summer) Edd<ptr target="duk.00425_n13"/>
+                went down and
+                found where nancy<ptr target="duk.00432_n21"/>
+                lived yesterday
+                she moved in the same st they are all
+                fat edd says and dirty but grow any
+                how he said the house looked better than
+                formerly i was glad to hear from them i ha<unclear reason="cut away" cert="medium" resp="#wr">ve</unclear>
+                thought about them often this hot weather
+                i feel to <choice><orig>sympathise</orig> <reg>sympathize</reg></choice> with <choice><orig>mr Oconor</orig><reg>Mr. O'Connor</reg></choice><ptr target="duk.00470_n8"/>
+                in his
+                getting a house i think <choice><orig>its</orig> <reg>it's</reg></choice> about the worst
+                and most <choice><orig>disagreable</orig> <reg>disagreeable</reg></choice> fix any one can be
+                in Walt <choice><orig>doo</orig> <reg>do</reg></choice> you know i like his writings
+                the good gray poet better than i doo borroug<unclear reason="cut away" cert="medium" resp="#wr">hs</unclear> book<ptr target="duk.00503_n10"/>
+                <choice><orig>Oconers</orig> <reg>O'Connor's</reg></choice> shows the spirit its wrote
+                in i should form an idea of the man if i
+                had never seen him by reading his writing
+                i suppose you see that <choice><orig>peice</orig> <reg>piece</reg></choice> in the <choice><orig>sunday</orig> <reg>Sunday</reg></choice>
+                <choice><orig>times</orig> <reg>Times</reg></choice> as you <choice><orig>dident</orig> <reg>didn't</reg></choice> say any thing about it<ptr target="duk.00503_n15"/> 
+                i will send it i wish <choice><orig>september</orig> <reg>September</reg></choice> would
+                hurry up so you could come we will
+                make out for room so come as soon
+                as you can) george is pretty well now
+            </p>
+            <closer>
+                <salute>good bie walter</salute>
+            </closer>
+        </body>
+    </text>
+</TEI>

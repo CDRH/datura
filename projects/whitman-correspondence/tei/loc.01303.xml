@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.01303">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Richard W. Colles, 18 November
+                    1886</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.01303</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive November be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Richard W. Colles, 18 November 1886</title>
+                    <date cert="high" when="1886-11-18" xml:id="dat1">November 18, 1886</date>
+                    <idno type="callno">Box 8, Reel 5</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="ww"><persName key="Whitman, Walt">Walt
+                    Whitman</persName></handNote>
+            </handNotes>
+            <particDesc> 
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Colles, Richard W." ref="loc.01302_n3">Richard W. Colles</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-04-16" who="#kb">edited</change>
+            <change when="2014-10-30" who="#ss">encoded and annotated from Miller.</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter"> 
+        <body>
+            <pb xml:id="leaf001r" facs="loc.01303.001_large.jpg" type="recto"/> 
+            <note type="editorial" resp="#ww" place="top">letter sent to R W Colles, Dublin | Nov:
+                18 '1886</note>
+            <p>Yours of 31st and 1st rec'd.<ptr target="loc.01303_n6"/> I send the two Vols: of '76 Ed'n. I should accept with
+                thanks from your hands any contribution from my Irish friends (Prof. Edw'd Dowden
+                has already contributed liberally, &#38; should not be solicited any
+                further) Take leisure and ease ab't it &#38; let it amount to what it
+                    may&#8212;<hi rend="underline">or naught at all, if Destiny so
+                        disposes</hi>.<ptr target="loc.01303_n1"/></p>
+            <p>(tr to last<ptr target="loc.01303_n4"/> Send me word if the two Vols. reach you safely. The price is &#163;2,<ptr
+                    target="loc.01303_n3"/> which please remit me by p. o. order.)
+                </p>
+            <p>Yes, I should like to see the article in the <hi rend="underline">Quarterly</hi>.<ptr
+                    target="loc.01303_n2"/> My late bad spell of sickness seems to have passed
+                over&#8212;I was out driving yesterday the three sunny midday hours, &#38; enjoyed
+                them much.<ptr target="loc.01303_n5"/></p>
+            <pb xml:id="leaf001v" facs="loc.01303.002_large.jpg" type="verso"/>
+
+        </body>
+    </text>
+</TEI> 

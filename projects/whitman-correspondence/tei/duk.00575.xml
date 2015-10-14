@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00575">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, 4 March [1869]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp><persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="ct">Cathy Tisch</persName><persName xml:id="fw">Felicia Wetzig</persName><persName xml:id="wr">Wesley Raabe</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00575</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, 4 March [1869]</title>
+                    <date cert="medium" when="1869-03-04" xml:id="dat1">March 4, 1869</date>
+                    
+                    <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-12-10" who="#el">corrected choice encoding of 'georgey'</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-09-17" who="#el">checked</change>
+            <change when="2013-05-27" who="#wr">Duke Proofreading Corrections</change>
+          <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent Proof</change>
+            <change when="2012-12-14" who="#wr">Proofreading Corrections of notes.</change>
+            <change when="2012-11-02" who="#wr">Proofreading notes corrections </change>
+            <change when="2012-10-28" who="#wr">Review proofreading changes; add notes; </change>
+            <change when="2012-08-15" who="#ct">Oral Proofreading Changes</change>
+            <change when="2012-08-14" who="#wr">Clean encoding (editor, date, remove "_large") and add standard annotations on unannotated files (Jeff W, Martha [Mattie], George W, Lou Haslam)</change> 
+            <change when="2011-01-26" who="#fw">Transcribe 4 surfaces</change>
+            <change when="2011-02-15" who="#fw">Correct 4 surfaces</change>
+            <change when="2011-03-16" who="#fw">Annotate Mr. Lane, Smith and O'Connor</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <pb xml:id="leaf001r" facs="duk.00575.001.jpg" type="recto"/>
+            
+            <note type="editorial" resp="#rmb" place="top">1869</note>
+            
+            <opener>
+                <dateline>
+                    <date when="1869-03-04"><choice><orig>march</orig> <reg>March</reg></choice>
+                        4th<ptr target="duk.00575_n13"/> 
+                    </date>
+                </dateline>
+                <salute>Dear <choice><orig>walter</orig><reg>Walter</reg></choice></salute>
+            </opener>
+            
+            <p>i waited thinking
+            i should have some word
+            from <choice><orig>jeff</orig><reg>Jeff</reg></choice> or mat<ptr target="duk.00575_n9"/>
+ but we
+            have not so i thought if
+            you <choice><orig>dident</orig> <reg>didn't</reg></choice> hear from me
+            you would think perhaps
+            i <choice><orig>hadent</orig> <reg>hadn't</reg></choice> got the money
+            order but i have i got
+            it on <choice><orig>tuesday</orig> <reg>Tuesday</reg></choice> all safe and
+            very acceptable) we are
+            having a snow storm here
+            for the <choice><orig>inaugeration</orig> <reg>inauguration</reg></choice> day
+                <choice><orig>maybee</orig> <reg>maybee</reg></choice> it <choice><orig>dont</orig> <reg>don't</reg></choice> storm in
+                <choice><orig>washington</orig> <reg>Washington</reg></choice> though) i am
+            pretty well except a pain
+            in my side i am subject 
+            to it when i get the least
+            cold i sent <choice><orig>edd</orig><reg>Edd</reg></choice> to the drug
+            store and got some good
+            strong mustard and have
+            put a <choice><orig>plaister</orig><reg>plaster</reg></choice> on)<ptr target="duk.00475_n11"/>
+            <pb xml:id="leaf001v" facs="duk.00575.002.jpg" type="verso"/>
+            <choice><orig>george</orig><reg>George</reg></choice><ptr target="duk.00425_n2"/> asked me the other
+            day why Walt never said
+            any thing about the house
+            if he was offended at any
+            thing i said<ptr target="duk.00575_n8"/>
+            no i <choice><orig>dident</orig> <reg>didn't</reg></choice>
+            suppose he was that you
+            was probably in a hurry when
+            you wrote and <choice><orig>dident</orig> <reg>didn't</reg></choice> think
+            the houses is pretty well
+            along but <choice><orig>george</orig><reg>George</reg></choice> <choice><orig>hasent</orig> <reg>hasn't</reg></choice>
+                got any loan on <choice><orig>smiths</orig> <reg>Smith's</reg></choice>
+                house<ptr target="duk.00575_n2"/> yet he expected
+            to get three thousand dollars
+            on it but <choice><orig>hasent</orig> <reg>hasn't</reg></choice> got any yet
+            the agents for loaning money
+            say they never knew such
+            a time every one that has <choice><orig>mony</orig> <reg>money</reg></choice>
+            to loan gets <choice><orig>govermt</orig><reg>government</reg></choice> bonds
+            <choice><orig>georgey</orig><reg>Georgey</reg></choice> has been in lots
+            of trouble about his paymen<ptr target="duk.00575_n15"/>
+            he has had i <choice><orig>beleive</orig> <reg>believe</reg></choice> about
+            2000 <choice><orig>doller</orig><reg>dollars</reg></choice> of Jeff but he is
+            in hopes of getting a loan
+            on smiths house if he <choice><orig>dont</orig> <reg>don't</reg></choice>
+            get disappointed again
+            you see he has paid all
+            along for both as they went
+            on <choice><orig>dident</orig> <reg>didn't</reg></choice> think he would
+            <pb xml:id="leaf002r" facs="duk.00575.003.jpg" type="recto"/>
+            have any difficulty in
+            getting the loan on such good
+            security) i told him i <choice><orig>wouldent</orig> <reg>wouldn't</reg></choice> 
+            worry so much about
+            it but you know <choice><orig>george</orig><reg>George</reg></choice>
+            is so prompt about paying
+            the bills as they come due
+            i have looked some for
+             <choice><orig>mary</orig><reg>Mary</reg></choice><ptr target="duk.00425_n6"/> but i hope she <choice><orig>wont</orig> <reg>won't</reg></choice> come now till we move
+                we will have a <choice><orig>roome</orig> <reg>room</reg></choice>
+                for you <choice><orig>walt</orig><reg>Walt</reg></choice> <choice><orig>maybee</orig> <reg>maybe</reg></choice>
+            you can come if nothing 
+            happens about the 4th of July
+            and stay a week and then come
+            again when your vacation
+            is) i suppose there is stirring
+            times to day at <choice><orig>washington</orig> <reg>Washington</reg></choice>
+            it seems that the old codger
+            has done all the good or
+            harm he could in the way
+            of pardons some is good
+            perhaps)<ptr target="duk.00575_n7"/>
+            but many i should
+            think ought not to have been
+            well <choice><orig>walter</orig><reg>Walter</reg></choice> dear i hope
+            this will find you well
+            and love to the <choice><orig>Oconors</orig><reg>O'Connors</reg></choice><ptr target="duk.00470_n8"/> it is
+            so nice you can go there to tea
+            <pb xml:id="leaf002v" facs="duk.00575.004.jpg" type="verso"/>
+            not a word from han)<ptr target="duk.00575_n12"/>
+                <choice><orig>mr</orig><reg>Mr.</reg></choice> Lane<ptr target="duk.00575_n5"/> has had a letter
+            from Jeff it seems their
+            concern has overflowed
+            once on account of
+            the great rise of the
+            river but it was so
+            far advanced that it
+            <choice><orig>dident</orig> <reg>didn't</reg></choice> <choice><orig>doo</orig> <reg>do</reg></choice> much harm
+            only stopped the progress
+            of the work for awhile
+            </p>
+            <p>no more at present</p>
+            <closer>
+                <signed>L Whitman<ptr target="duk.00425_n3"/></signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

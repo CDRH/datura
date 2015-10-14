@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03981">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Harry Stafford to Walt Whitman, 9 July 1877</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Harry Stafford</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="vm">Vince Moran</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03981</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+              
+                <bibl>
+                    <author>Harry Stafford</author>
+                    <title>Harry Stafford to Walt Whitman, 9 July 1877</title>                    
+                    <date cert="high" when="1877-07-09" xml:id="dat1">July 9, 1877</date>
+                    <idno type="callno">MSS18630</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Stafford, Harry">Harry Stafford</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt" xml:id="ww">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-04-24" who="#nhg">corrected</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-11-15" who="#nhg">added annotation pointers</change>
+            <change when="2013-09-27" who="#nhg">checked, corrected</change>
+            <!-- Date missing for #ab (Alicia Bones) check. -->
+            <change when="2013-02-01" who="#ej">Checked and Corrected</change>
+            <change when="2012-11-02" who="#vm">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+           
+            <pb xml:id="leaf001r" facs="loc_vm.00157.jpg" type="recto"/><note type="authorial" place="top">this is a piece of paper I found in the desk excuse the <choice><sic>appearenc</sic><corr>appearance</corr></choice></note>
+            <opener>
+                <salute>Dear Walt.</salute>
+            </opener>
+
+            <p>I thought I would write a line or so to you and let you know that we are all well.<ptr target="n0590"/> Mother got a letter from you stating that you would not be down tomorrow. We <choice><sic>ar</sic><corr>are</corr></choice> <choice><sic>all most</sic><corr>almost</corr></choice> <choice><sic>rosted</sic><corr>roasted</corr></choice> in this place, the sun is so warm and yet we cannot have the window up for if we do the wind blows all of our papers out doors. Walt there is a couple of letters down at our house for you                        
+            <pb xml:id="leaf001v" facs="loc_vm.00158.jpg" type="verso"/>one from England and one from New York, the one from <choice><abbr>N.Y.</abbr><expan>New York</expan></choice> is from a bank I forget the name of the bank it is on the outside of the <hi rend="underlined">envelope</hi>. I wish that I <choice><sic>coul</sic><corr>could</corr></choice> get a situation in a good printing office. <unclear reason="illegible" cert="medium" resp="#nhg">Try</unclear> the Democrat of Camden for me, will you?</p>
+            <p>I should like to see you but I suppose I cannot until you come down as the the paper is running out I will have to stop.</p>
+
+            <closer>
+                <salute>Ever your loving,</salute>
+                <signed>Harry Stafford</signed>
+            </closer>
+            <postscript>
+                <p>write soon and come down<ptr target="loc.03981_n1"/></p>
+            </postscript>
+            <pb xml:id="leaf002r" facs="loc_vm.00247_large.jpg" type="recto"/>
+            <pb xml:id="leaf002v" facs="loc_vm.00248_large.jpg" type="verso"/>
+            <!--List on this surface described in annotations.-->
+        </body>
+    </text>
+</TEI>

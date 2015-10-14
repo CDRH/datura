@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00431">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, [4&#8211;5 December 1863]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00431</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note type="project">An image of the verso of the final leaf is not currently available. The verso is blank.</note>
+            </notesStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, [4&#8211;5 December 1863]</title>
+                    <date cert="medium" notBefore="1863-12-04" notAfter="1863-12-05" xml:id="dat1">December 4&#8211;5, 1863</date>
+                    <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="lvvw"><persName key="Whitman, Louisa Van Velsor">Whitman Louisa Van Velsor Whitman</persName></handNote>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-12-09" who="#el">changed "or" to "on" and removed choice encoding in the phrase "from the time on the morning you"</change>
+            <change when="2013-11-07" who="#el">added encoding for final page break and added note about image not available and verso being blank</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-08-05" who="#el">merged files; checked</change>
+            <change when="2013-06-05" who="#wr">Duke Proofreading Corrections</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent Proof</change>
+            <change when="2013-02-18" who="#wr">Minor Proofreading corrections in notes.</change>
+            <change when="2013-02-17" who="#wr">Proofreading corrections.</change>
+            <change when="2013-02-15" who="#wr">Proofreading corrections</change>  
+            <change when="2012-11-02" who="#wr">Add Bucke, correct margintop value.</change>  
+            <change when="2012-04-19" who="#fw">Added annotations</change>
+            <change when="2012-04-03" who="#fw">Transcribe 7 Pages</change>
+        </revisionDesc>
+    </teiHeader>
+    
+    <text type="letter">
+        <body>
+            
+            <pb xml:id="leaf001r" facs="duk.00431.001.jpg" type="recto"/>
+           
+            <note type="editorial" resp="#rmb" place="top">5 Dec. 18 '63</note>
+            
+            <div1 type="section">
+               
+                <head type="authorial">1</head>  
+                
+                <opener>
+                    <dateline>
+                        <date notBefore="1863-12-04" notAfter="1863-12-05"><choice><orig>friday</orig> <reg>Friday</reg></choice> night<ptr target="duk.00431_n13"/></date>
+                    </dateline>    
+                    <salute>My dear Walt</salute>
+                </opener>
+
+                
+                <p>i write
+                    to night some of the particulars
+                    of Andrews<ptr target="duk.00423_n3"/> death he failed
+                    from the time on the morning you
+                    left had very bad <choice><orig>turnes</orig> <reg>turns</reg></choice> and
+                    would then revive and be
+                    better that night you left
+                    i was there and likewise mary<ptr target="duk.00425_n6"/>
+                    he was very restless and did
+                    not want mary to leave him
+                    i stayed late the 2 young men
+                    that came to watch he told
+                    mary he was dying and he
+                    could not <choice><orig>dye</orig> <reg>die</reg></choice> with them
+                    there they insisted on my coming
+                    home i came and mary stayed
+                    <choice><orig>untill</orig> <reg>until</reg></choice> late and she came
+                    and left nancy<ptr target="duk.00432_n21"/> and them to
+                    take care of him <choice><orig>wendsday</orig> <reg>Wednesday</reg></choice>
+                    morning she went round
+                    
+                    <pb xml:id="leaf001v" facs="duk.00431.002.jpg" type="verso"/>
+                    
+                    he was very bad and sent
+                    the children here i went again
+                    and marthe<ptr target="duk.00465_n9"/> went he wanted her
+                    to come she was there nearly all
+                    day only came home to nurse the
+                    baby<ptr target="duk.00431_n20"/>
+                    when she or mary went to
+                    come away he would <choice><orig>becon</orig> <reg>beckon</reg></choice> for
+                    them too him that they would come
+                    back he wanted to be <choice><orig>mooved</orig> <reg>moved</reg></choice>
+                    from the lounge to the chair
+                    he wanted <choice><orig>mothers</orig> <reg>mother's</reg></choice> rocking
+                    chair poor soul he died in it
+                    <choice><orig>wendsday</orig> <reg>Wednesday</reg></choice> night martha was
+                    there till late then she came
+                    home and mary and Jeffy<ptr target="duk.00422_n2"/>
+                    <choice><orig>staid</orig> <reg>stayed</reg></choice> all night <choice><orig>wensday</orig> <reg>Wednesday</reg></choice>
+                    he wanted to see Jeffy marthe
+                    went to the office for him he
+                    came and stayed till toward
+                    night and came home and
+                    had some tea i went again in
+                    the evening and came back for
+                    to see to the children as i said
+                    before and martha and jeffy
+                    went this was <choice><orig>wendsday</orig> <reg>Wednesday</reg></choice> night
+                    they had to fan him all night
+                    and bathe him in brandy nance
+                    went to bed when she came out
+                    in the morning she brought such
+                    a smell that Jeffy got sick
+                    
+                    <pb xml:id="leaf002r" facs="duk.00431.003.jpg" type="recto"/>
+                    
+                    and had to come home being
+                    up all night and shortly after
+                    mary came bringing georgey<ptr target="duk.00427_n17"/>
+                    <unclear reason="illegible" cert="medium" resp="#wr">besmeard</unclear> from head to foot
+                    mary said she could not
+                    go again the smell and
+                    her throat being so bad so i
+                    sent jess<ptr target="duk.00433_n6"/> around till they
+                    had their breakfast Jeffy
+                    and mary thought he could
+                    be moved round here we
+                    sent for the doctor he went
+                    around to see and came back
+                    and said he thought we might
+                    but we must <choice><orig>doo</orig> <reg>do</reg></choice> it very soon
+                    mat went round behind the
+                    doctor and <choice><orig>staid</orig> <reg>stayed</reg></choice> till he came
+                    and told us we could he said
+                    he would probably live <choice><orig>untill</orig> <reg>until</reg></choice>
+                    10 <choice><orig>oclock</orig> <reg>o'clock</reg></choice> that night this was <choice><orig>thursday</orig> <reg>Thursday</reg></choice>
+                    morning mary went back and Jeff
+                    and mrs brown<ptr target="duk.00430_n5"/>
+                    when the doctor
+                    spoke of it nancy made a
+                    great <choice><orig>adue</orig><reg>ado</reg></choice> said you shant
+                    have him he belongs to me
+                    he said he wished he could
+                    <choice><orig>dye</orig> <reg>die</reg></choice> now i suppose it hurt him
+                    mrs brown came for me i went
+                    before i got there mary said he
+                    would look around she asked
+                    him if it was mother he wanted
+                    he <choice><orig>mooved</orig> <reg>moved</reg></choice> his head i am very 
+                    glad we <choice><orig>dident</orig> <reg>didn't</reg></choice> <choice><orig>doo</orig> <reg>do</reg></choice> any thing
+                    about <choice><orig>mooving</orig> <reg>moving</reg></choice> him i am thankfu<unclear reason="cut away" cert="medium" resp="#wr">l</unclear>
+                    
+                    <pb xml:id="leaf002v" facs="duk.00431.004.jpg" type="verso"/>
+                    
+                    we was all there he died like
+                    any one going to sleep without
+                    a struggle sensible to the last
+                    just before he died he turned
+                    his head and looked at your
+                    and georges<ptr target="duk.00425_n2"/> pictures for some
+                    time and then shut his eyes
+                    god grant i may never
+                    witness another) he seemed
+                    as if he was satisfied that
+                    we were all around him he
+                    drank without <choice><orig>choaking</orig> <reg>choking</reg></choice> before
+                    he died he was laid out there and
+                    brought here last night and lays
+                    in mrs browns room without
+                    <choice><orig>waches</orig> <reg>watches</reg></choice> is to be buried to morrow
+                    at 2 <choice><orig>oclock</orig> <reg>o'clock</reg></choice> mary has gone away
+                    this afternoon he looks very natural
+                    his friends is all <choice><orig>dooing</orig><reg>doing</reg></choice> very good
+                    Cornell<ptr target="duk.00423_n8"/> in particular i order<unclear reason="cut away" cert="medium" resp="#wr">ed</unclear>
+                    
+                    three carriages and cornell will
+                    send one for her and the childr<unclear reason="illegible" cert="medium" resp="#wr">en</unclear>
+                    he is laid in a frock coat of
+                    Georges and vest and every
+                    thing very respectful plate
+                    on his coffin with his age and
+                    name Jeffy will write the
+                    rest i am composed and ca<unclear reason="smudge" cert="medium" resp="#wr">lm</unclear>
+                    would not wish him
+                    back to suffer poor soul i hope
+                    he is at rest</p></div1>
+            
+            
+            <pb xml:id="leaf003r" facs="duk.00431.005.jpg" type="recto"/>
+            
+            <div1 type="section"> 
+                <head type="authorial">2</head>   
+                
+                <p>i have not heard from
+                    George since you left i wish
+                    i could) write to hannah<ptr target="duk.00431_n11"/>
+                    walter tell her if she could
+                    have seen the sufferings of her
+                    poor brother she would be
+                    <choice><orig>thankfull</orig> <reg>thankful</reg></choice> he was out of his
+                    agony) write to me walter
+                    as soon as you can if i
+                    best take money from the
+                    bank to pay the <choice><orig>expences</orig><reg>expenses</reg></choice>
+                    i told the undertaker
+                    i would
+                    settle it in the course of 2
+                    weeks)<ptr target="duk.00431_n17"/> one thing more i must
+                    say mrs brown could not
+                    be kinder than she is i shall
+                    always respect her for her
+                    great kindness in our affliction
+                </p>
+                
+            </div1>
+           
+            <pb xml:id="leaf003v" facs="duk.00431.006.jpg" type="verso"/>
+            
+            <div1 type="section"> 
+                
+                <head type="authorial">3</head>   
+                
+                <p>what i am going to write
+                    i would say nothing only i think
+                    Jeffy will<ptr target="duk.00431_n14"/> last night marthe
+                    sent Jess around with nancy
+                    tea and seeing his brothers
+                    <choice><orig>corps</orig> <reg>corpse</reg></choice> seemed to effect him
+                    very much he had not ought to
+                    been sent he took on very much
+                    and looked a little strange
+                    when he came back but nothi<unclear reason="cut away" cert="high" resp="#wr">ng</unclear>
+                    more seemed to be very sad
+                    but this afternoon martha and
+                    hattie and sis were down here hattie done
+                    something he <choice><orig>dident</orig> <reg>didn't </reg></choice> like he got
+                    up and with a vengeance to wh<unclear reason="illegible" cert="high" resp="#wr">ip</unclear>
+                    her and marthe <choice><orig>forbad</orig> <reg>forbade</reg></choice> him
+                    to touch her child there was
+                    a scene he called her very
+                    bad names and looked very
+                    wild for a while i told marthe
+                    to go up stairs or not say any
+                    thing but she would
+                    she began
+                    to cry and her back pained
+                    her she went up stairs<ptr target="duk.00431_n16"/>
+                    of course jeff had to
+                    
+                    <pb sameAs="#leaf003r"/>
+                    
+                    hear it all in the strongest
+                    light i should said nothing
+                    about it but jeff said he should
+                    write to you to morrow
+                    i said Jesse you<unclear reason="illegible" cert="medium" resp="#wr">r</unclear> brother lies up stairs
+                    dead he calmed down 
+                    
+                    <pb xml:id="leaf004r" facs="duk.00431.007.jpg" type="verso"/>            
+                    immediately and is very
+                    good natured i think it was
+                    going there last night that affected
+                    him) write how you are walt and all good night
+                    there was a very good little
+                    <choice><orig>peice</orig> <reg>piece</reg></choice> in the eagle last 
+                    night<ptr target="duk.00431_n22"/>
+                    
+                    about you Jeffy will <unclear reason="illegible" cert="medium" resp="#wr">i</unclear> think
+                    send it to you this is a packe<unclear reason="illegible" cert="low" resp="#wr">d</unclear><ptr target="duk.00431_n23"/> lette<unclear reason="illegible" cert="medium" resp="#wr">r</unclear></p> 
+            </div1>
+            
+            <closer>
+                <salute>good bye again</salute>
+                <signed>your mothe<unclear reason="illegible" cert="medium" resp="#wr">r</unclear> LW<ptr target="duk.00425_n3"/></signed>
+            </closer>
+            
+            <pb xml:id="leaf004v" type="verso"/>
+        </body>
+    </text>
+</TEI>

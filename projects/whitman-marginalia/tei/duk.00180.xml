@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?><?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules_mss.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00180">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Frances Wright</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author xml:id="ww">Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="lmg">Lauren Grewe</persName><persName xml:id="nhg">Nicole Gray</persName><persName xml:id="tra">Ty Alyea</persName><persName xml:id="mc">Matt Cohen</persName>
+                </respStmt>
+                <sponsor>University of Texas at Austin</sponsor>
+                <sponsor>University of Nebraska-Lincoln</sponsor>
+                <funder>The National Endowment for the Humanities</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2011</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00180</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                    <addrLine>kprice@unlnotes.unl.edu</addrLine>
+                    <addrLine>Ed-Folsom@uiowa.edu</addrLine>
+                    <addrLine>bbarney2@unlnotes.unl.edu</addrLine>
+                </address>
+                <availability><p>The text of the original document is in the public domain. Subject to certain exceptions, public domain works may be freely copied or used in the creation of derivative works without permission, or authorization, of the former copyright owners.</p><p>The text encoding was created and/or prepared by the Walt Whitman Archive and is governed by a <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref> (CC BY 4.0).</p><p>Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p></availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>"Frances Wright"</title>
+                    <idno type="callno">MS q 76</idno>
+                    <date notBefore="1857-02-09" notAfter="1892-03-26">Around 1857</date>
+                    <orgName xml:id="duk">Trent Collection of Whitmaniana, David M. Rubenstein Rare Book &amp; Manuscript Library, Duke University</orgName>
+                    <note type="project">Transcribed from digital images of the original item.</note>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="h1" scribeRef="#ww" medium="pencil"/>
+            </handNotes>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-03-08">completed date information, tweaked encoding</change>
+            <change who="#nhg" when="2015-01-26">added schematron declaration, updated schema declaration, changed text type to annotations</change><change who="#lmg" when="2011-10-01">Transcribed and encoded.</change>
+            <change who="#nhg" when="2011-10-03">Checked, revised.</change>
+            <change who="#tra" when="2013-11-05">Checked and revised Bibliographical Encoding.</change>
+            <change who="#mc" when="2014-11-02">Proofed.</change>
+        </revisionDesc> 
+    </teiHeader>
+    <text type="annotations"><!-- Checked against Grier, p. 344. -->
+        <body>
+            <pb xml:id="leaf001r" facs="duk.00180.001.jpg" type="recto"/>
+            <head type="main-authorial" rend="center"><handShift new="#h1"/><hi rend="underline">Frances</hi> <hi rend="underline">Wright</hi></head>
+            <head type="sub" rend="right">Madame D'Arus<subst><del rend="overwrite" seq="1"><gap reason="illegible" quantity="2" unit="char"/></del><add rend="overwrite" place="over" seq="2">mo</add></subst>nt</head>
+            <note type="authorial" resp="#h1" place="right">(talk with Mrs. Rose Feb. 9th, '57</note>
+            <ab>Frances Wright was born in Scotland, of
+            gentle lineage&#8212;parents died early&#8212;educated by
+            uncles,&#8212;noblemen; was talented early&#8212;of free
+            enquiring disposition&#8212;republican&#8212;wrote
+            "A few Days in Athens" when 20 years old&#8212;<lb/>
+            &#8212;Came to America&#8212;lectured&#8212;had to do with
+            the "Free Enquirer," an atheistical weekly&#8212;<lb/>
+            &#8212;was a noble, (but much scorned) woman<lb/>
+            &#8212;married D'Arusmont&#8212;the great error
+            of her life&#8212;he coveted her property&#8212;
+            thwarted her&#8212;kept exclusive possession
+            of her child, a daughter; Frances
+            had great wealth (Mrs. Rose says $150,000)<lb/>
+            &#8212;D'A. obtained all&#8212;even a second
+            bequest left to Frances by a Scotch
+            aunt&#8212;Frances had even to sue
+            for a maintenance out of her own
+            property.&#8212; Judge allowed her $1000 a year<lb/>
+            &#8212;Frances died somewhere about 1853&#8212;
+            a heart‑broken, harassed woman&#8212;
+            all her philanthropic schemes and
+            ideas, coming to nought&#8212;(I like much
+            her portrait-engraving&#8212;where she is
+            represented seated&#8212;)</ab>
+            <pb xml:id="leaf001v" facs="duk_ap_00131.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

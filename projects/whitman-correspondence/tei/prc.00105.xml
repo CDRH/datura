@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="prc.00105">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Frank H. Ransom, 2 February 1881</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="no">Natalie O'Neal</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>prc.00105</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>           
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Frank H. Ransom, 2 February 1881</title>
+                    <date cert="high" when="1881-02-02" xml:id="dat1">February 2, 1881</date>
+                    <orgName xml:id="prc">Private collection of Dr. Judith K. Marquis and Keith F. Nelson</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="unk"><persName key="Unknown">Unknown</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient" xml:id="fhr">
+                    <persName key="Ransom, Frank H.">Frank Ransom</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2014-11-03" who="#nhg">checked, corrected</change>
+            <change when="2014-11-03" who="#no">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <pb xml:id="leaf001r" facs="prc_nhg.00003.jpg" type="recto"/>
+
+            <opener>
+                <dateline rend="right">
+                   <name type="place">431 Stevens Street <lb/>Camden New Jersey</name> 
+                   <date when="1881-02-02">Feb: 2 '81</date> 
+                </dateline>
+                <salute>Dear Sir</salute>
+                
+             </opener>
+           
+                
+            <p>Yours of Jan: 31 just <choice><abbr>rec'd</abbr><expan>received</expan></choice>.<ptr target="prc.00105_n1"/> No such letter of 22d, nor P.O. order has reached me&#8212;&#38; of course none has been paid by P.O. here.<ptr target="prc.00105_n2"/> I see that Jan: 6 I sent you my circular in answer to previous letter from you&#8212;that is the only correspondence&#8212;I have sent nothing, heard nothing, rec'd nothing since. But as in all such cases, I consider it my obligation &#38; loss. I send the Two Volumes, to you, same mail with this&#8212;The Two
+                <pb xml:id="leaf001v" facs="prc_nhg.00004.jpg" type="verso"/>
+                embody <hi rend="underline">all</hi> my works&#8212;the little Vol's being only selections from them in duplicate.
+            </p>
+                
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>  
+                
+                <note type="editorial" place="bottom" resp="#unk">Walt Whitman | Feb. 2/81</note>
+                <note type="editorial" place="bottom" resp="#fhr">settled o.k. | F.H.R.</note> 
+                
+                
+        </body>
+    </text>
+</TEI>

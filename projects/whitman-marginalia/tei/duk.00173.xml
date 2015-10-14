@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?><?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules_mss.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00173">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">His earliest printed plays</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author xml:id="ww">Walt Whitman</author>
+                <author xml:id="gwt">George Walter Thornbury</author>
+                <author xml:id="unk">unknown author</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="lmg">Lauren Grewe</persName><persName xml:id="nhg">Nicole Gray</persName><persName xml:id="tra">Ty Alyea</persName><persName xml:id="mc">Matt Cohen</persName>
+                </respStmt>
+                <sponsor>University of Texas at Austin</sponsor>
+                <sponsor>University of Nebraska-Lincoln</sponsor>
+                <funder>The National Endowment for the Humanities</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2011</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00173</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                    <addrLine>kprice@unlnotes.unl.edu</addrLine>
+                    <addrLine>Ed-Folsom@uiowa.edu</addrLine>
+                    <addrLine>bbarney2@unlnotes.unl.edu</addrLine>
+                </address>
+                <availability><p>The text of the original document is in the public domain. Subject to certain exceptions, public domain works may be freely copied or used in the creation of derivative works without permission, or authorization, of the former copyright owners.</p><p>The text encoding was created and/or prepared by the Walt Whitman Archive and is governed by a <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref> (CC BY 4.0).</p><p>Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p></availability>
+            </publicationStmt>                 
+            <notesStmt>                 
+                <note type="project" target="#dat1">These notes drew from Collier's <hi rend="italic">Works of William Shakespeare</hi>, first published in 1844. The references to the <hi rend="italic">Illustrated London News</hi> indicate that Whitman worked on portions of this document in late 1856 (see <hi rend="italic">Walt Whitman: Notebooks and Unpublished Manuscripts</hi>, ed. Edward F. Grier [New York: New York University Press, 1984], 5:1743.</note>             </notesStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>His earliest printed plays 1597 Romeo and Juliet</title>
+                    <idno type="callno">MS 90</idno>
+                    <date notBefore="1850-01-01" notAfter="1893-03-26">1844 or later</date>
+                    <orgName xml:id="duk">Trent Collection of Whitmaniana, David M. Rubenstein Rare Book &amp; Manuscript Library, Duke University</orgName>
+                    <note type="project">Transcribed from digital images of the original item.</note>
+                </bibl>
+                <bibl type="pasteon" xml:id="r1">
+                    <author>Unknown author</author>
+                    <title level="a">unknown title</title>
+                    <title level="j"/>
+                    <date>date unknown</date>
+                    <biblScope type="vol"/>
+                    <biblScope type="pp"/>
+                    <note type="project"/>
+                </bibl>
+                <bibl type="pasteon" xml:id="r2">
+                    <author>unknown author</author>
+                    <title level="a">Shakspere as a Man.</title>
+                    <title level="j"/>
+                    <date>date unknown</date>
+                    <biblScope type="vol"/>
+                    <biblScope type="pp"/>
+                    <note type="project"/>
+                </bibl>
+                <bibl type="pasteon" xml:id="r3">
+                    <author>George Walter Thornbury</author>
+                    <title level="a">Shakspeare's Stage</title>
+                    <title level="j"></title>
+                    <date>after 1856</date>
+                    <biblScope type="vol"/>
+                    <biblScope type="pp"/>
+                    <note type="project">Reprinted from G.W. Thornbury's <hi rend="italic">Shakspere's England; or Sketches of our Social History in the Reign of Elizabeth</hi> (London, 1856).</note>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="h1" scribeRef="#ww" medium="black-ink"/>
+                <handNote xml:id="h2" scribeRef="#ww" medium="pencil"/>
+                <handNote xml:id="h3" scribeRef="#unk" medium="pencil"/>
+                <handNote xml:id="h4" scribeRef="#ww" medium="red-pencil"/>
+                <handNote xml:id="h5" scribeRef="#unk" medium="typescript"/>
+                <handNote xml:id="h6" scribeRef="#gwt" medium="typescript"/>
+            </handNotes>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-03-08">completed date information, tweaked encoding</change>
+            <change who="#nhg" when="2015-01-26">added schematron declaration, updated schema declaration, changed text type to annotations</change><change who="#lmg" when="2011-09-18">Transcribed and encoded.</change>
+            <change who="#nhg" when="2011-10-03">Checked, revised.</change>
+            <change who="#tra" when="2013-12-09">Revised bibliographical information and updated author/handnote encoding.</change>
+            <change who="#lmg" when="2014-03-08">Added dimensions to pasteons, checked cbs, footnotes.</change>
+            <change who="#mc" when="2014-10-19">Proofed.</change>
+        </revisionDesc> 
+    </teiHeader>
+    <text type="annotations"><!--Checked against Grier, p. 1743-49.-->
+        <body>
+            <pb xml:id="leaf001r" facs="duk.00173.001.jpg" type="recto"/><div1 type="section">
+            <note type="editorial" resp="#h3" place="top right" rend="circled">1</note>
+            <ab><handShift new="#h1"/>His earl<subst><del rend="overwrite" seq="1"><gap reason="illegible" quantity="3" unit="char"/></del><add rend="overwrite" seq="2" place="over">ies</add></subst>t printed plays 1597</ab> <note type="authorial" resp="#h1" place="right" rend="circled"><list><item>Romeo &amp;
+                Juliet</item>
+                <item>Richard 3d</item>
+                <item>&amp; Richard 2d</item></list></note>
+            <note type="authorial" resp="#h2" rend="circled">Chapman's trans. of Homer,
+            printed 1600.</note>
+            <milestone unit="unknown" rend="horbar-full"/>
+            <ab xml:id="ab1">The gift of the £1000, was without
+            much doubt, made about 159<subst><del rend="overwrite" seq="1">4</del><add rend="overwrite" place="over" seq="2">3</add></subst>,
+            when Southampton was 20 years
+            old, and Shakespeare 29&#8212;</ab>
+            <note type="authorial" resp="#h1" corresp="#ab2">? I suspect earlier than
+            that?</note>
+            <milestone unit="unknown" rend="horbar-full"/>
+            <ab>1596&#8212;his <choice><sic>sone</sic><corr>son</corr></choice> Hamnet died, in
+            the 12th year of his age.</ab>
+            <milestone unit="unknown" rend="horbar-full"/>
+            <ab>1598 To this year, only five of
+            his plays had been printed&#8212;although
+            he had been a public writer for
+            twelve years.&#8212;</ab>
+            <ab>(<hi rend="underline">Positively</hi>, he was by certain parties,
+            more or less numerous, adjudged
+            already to deserve a place
+            among the great masters, as
+            early as this date&#8212;1<subst><del rend="overwrite" seq="1">6</del><add rend="overwrite" place="over" seq="2">5</add></subst>98</ab> <note type="authorial" resp="#h1" rend="circled">in the <subst><del rend="overwrite" seq="1"><gap reason="illegible" quantity="2" unit="char"/></del> <add rend="overwrite" seq="2" place="over">35</add></subst>th
+            year of his age</note>
+            <milestone unit="unknown" rend="horbar-full"/>
+            <ab>The printing of <choice><orig>Shakspeares</orig><reg>Shakespeares</reg></choice> dramas
+            was <hi rend="underline">without</hi> his instigation
+            or assistance&#8212;It is thought <add rend="unmarked" place="supralinear">quite certain</add> <hi rend="underline">he
+            was indifferent to their appearance
+            in print</hi>&#8212;and did not mind
+                even the blunders and <choice><sic>omississions</sic><corr>omissions</corr></choice><span rend="bracket-right" xml:id="s1" hand="#h2" from="#s1" to="#s2"/>
+                that marred them</ab><anchor xml:id="s2"/><note type="authorial" resp="#h2" target="#s1">probably for the same reason
+                that Forrest would not like to
+                have his plays in print now</note>
+            <milestone unit="unknown" rend="horbar-short-left"/>
+            <ab>1598&#8212;Now, (12 years after going to London,)
+            he returns to Stra<subst><del rend="overwrite" seq="1">f</del><add rend="overwrite" place="over" seq="2">t</add></subst>ford, purchases
+            and lives in one of the best
+            houses of the place&#8212;"New Place"</ab>
+            <ab>1601 his father died, aged 71&#8212;his last years
+            were probably comfortable.</ab>
+                <pb xml:id="leaf001v" facs="duk_ap_00046.jpg" type="verso"/>
+            <pb xml:id="leaf002r" facs="duk.00173.002.jpg" type="recto"/>
+            <note type="authorial" resp="#h2" place="top left" target="#note1">? ?
+            1600</note><del rend="overstrike" hand="#h2"><note xml:id="note1" type="authorial" resp="#h1" place="top">As the first translations (worth‑mentioning) of the Iliad
+            and Odyssey were published in 1675, Shakespeare
+            was probably not intimate with those poems.&#8212;</note></del>
+            <milestone unit="unknown" rend="horbar-short-left"/>
+            <ab>Queen Elizabeth no doubt often saw
+            Shakespeare as an actor, and
+            applauded him.</ab>
+            <note type="editorial" resp="#h3" place="right">2</note>
+            <ab>1603&#8212;James 1st of England &amp; VI of Scotland
+            <note type="authorial" resp="#h1" place="left" rend="circled">James 1st must
+            also have seen
+            him</note>commenced&#8212;previously
+            of course Queen Elizabeth
+            reigned.&#8212;</ab>
+            <ab>1607 Susanna, his eldest daughter,
+            aged 24, was married to
+            John Hall, "gentleman"
+            &#8212;a physician.&#8212;</ab>
+            <ab>1608 his mother died&#8212;a
+            little previous, his brother died.
+            &#8212;the mother was probably
+            over <del rend="overstrike">y</del> 70 years of age.</ab>
+            <ab>Shakespeare, at this time, <subst><del rend="overwrite" seq="1"><gap reason="illegible" quantity="4" unit="char"/></del><add rend="overwrite" seq="2" place="over">1608</add></subst>
+            <subst><del rend="overwrite" seq="1">was</del><add rend="overwrite" place="over" seq="2">seems</add></subst> to have had his reputation
+            at its height.&#8212;</ab>
+            <ab>£400 a year is supposed to have
+            now been his income. 1608<handShift new="#h2"/></ab>
+            <milestone unit="unknown" rend="horbar-full"/>
+            <ab><handShift new="#h1"/>Burbage died worth £300 a year.&#8212;<handShift new="#h2"/></ab>
+            <milestone unit="unknown" rend="horbar-full"/>
+            <ab><handShift new="#h1"/>about 160<subst><del rend="overwrite" seq="1">3</del><add rend="overwrite" place="over" seq="2">7</add></subst>&#8212;(15 years after the "Venus
+            and Adonis,)
+            Lord Southampton still
+            befriends Shakespeare&#8212;writing
+            a letter to the Lord Chamberlain
+            in behalf of him and Burbage</ab>
+                <pb xml:id="leaf002v" facs="duk_ap_00047.jpg" type="verso"/>
+            <pb xml:id="leaf003r" facs="duk.00173.003.jpg" type="recto"/>
+            <note type="editorial" resp="#h3" place="top right">3</note>
+            <span rend="singleline-left" xml:id="s3" from="#s3" to="#s4"/><ab>1600 and for some time before and
+            after, <hi rend="underline">juvenile</hi> <hi rend="underline">companies</hi> were
+            much patronised&#8212;They must
+            have been very good companies
+            too.&#8212;</ab>
+            <ab>Shakespeare ow<subst><del rend="overwrite" seq="1">e</del><add rend="overwrite" place="over" seq="2">n</add></subst>ed in both the
+            Globe and Blackfriars <choice><orig>theatre</orig><reg>theater</reg></choice>.</ab>
+            <ab>&#8212;Bought and sold, bargained, was
+            thrifty, borrowed money, loaned
+            money <add rend="unmarked" place="supralinear"><handShift new="#h4"/>had lawsuits</add><handShift new="#h1"/>&#8212;</ab>
+            <ab>Richard, his youngest brother,
+            died in 1612&#8212;aged 40</ab>
+            <ab>His brother Gilbert two years
+                his elder, probably resided
+                in Stratford in 1612&#8212;and
+                before &amp; afterward</ab>
+            <ab>His sister Joan, (5 years younger
+            than he) married William
+            Hart, hatter,&#8212;they called their
+            first child "William."</ab>
+            <ab>His daughter Susannah made
+            him a grandfather when he
+            was 45 years old.</ab>
+            <milestone unit="unknown" rend="horbar-short-left"/>
+            <ab>1605 Had a chancery suit</ab><anchor xml:id="s4"/></div1>
+            <pb xml:id="leaf003v" facs="duk.00173.004.jpg" type="verso"/><div1 type="section">
+            <add rend="pasteon" source="#r1"><handShift new="#h5"/>
+                <q who="unknown" type="written">
+                    <floatingText rend="flat">
+                        <body>
+                            <pb xml:id="leaf004r" facs="duk.00173.004a.jpg" type="recto" rend="col-6"/>
+                            <ab><gap reason="illegible cut-away" quantity="2" unit="word"/>uld write an epic poem in
+                                <gap reason="illegible cut-away" quantity="2" unit="word"/>'s history that he lived in
+                                <gap reason="illegible cut-away" quantity="2" unit="word"/>t us ama<gap reason="illegible cut-away" quantity="2" unit="word"/>
+                                <gap reason="illegible cut-away" quantity="2" unit="word"/>S<hi rend="smallcaps">HAKESP</hi><gap reason="illegible cut-away" quantity="2" unit="word"/>
+                                <gap reason="illegible cut-away" quantity="2" unit="word"/>t of ev<gap reason="illegible cut-away" quantity="2" unit="word"/></ab>
+                        </body>
+                    </floatingText>
+                </q>
+            </add></div1>
+            <pb xml:id="leaf005r" facs="duk.00173.005.jpg" type="recto"/><div1 type="section">
+            <note type="editorial" resp="#h3" place="top right">4</note>
+                <note type="authorial" resp="#h1" place="top"><unclear reason="illegible" resp="#lmg" cert="medium">S.</unclear><!--Grier guesses a pound sign.--></note>
+            <ab><handShift new="#h1"/>Did right and wrong&#8212;was entrusted
+            with commissions&#8212;lost by fires,
+            thieves, cheats&#8212;committed follies,
+            debaucheries, crimes&#8212;</ab>
+            <ab>1616&#8212;Feb.; his daughter Judith
+            married to Thos. Quiney a
+            vintner.&#8212;
+            Judith had 3 children
+            She died 1661&#8212;2</ab>
+            <milestone unit="unknown" rend="horbar-full"/>
+            <ab>Made his will&#8212;signed it twice
+            with unsteady hand</ab><!-- Line connecting to #ab2. -->
+            <milestone unit="unknown" rend="horbar-full"/>
+            <ab><hi rend="circled">Death&#8212;at the age of 52</hi></ab>
+                <ab><hi rend="circled">Death. "Shakespeare, Drayton &amp; Ben
+            Jonson had a <choice><orig>merrie</orig><reg>merry</reg></choice> meeting,
+            and, it seems, drank too hard,
+            &#8212;for Shakespeare died of a fever
+            there contracted."</hi></ab>
+                <ab><hi rend="circled">Rev. John Ward's Diary.</hi></ab>
+            <ab xml:id="ab2"><hi rend="circled">made a<subst><add rend="unmarked" place="inline" seq="2">n</add> <del rend="overstrike" seq="1">final</del></subst> effort with
+            firmness on the final
+            si<subst><del rend="overwrite" seq="1">n</del><add rend="overwrite" place="over" seq="2">g</add></subst>nature "By me William
+            Shakespeare"</hi></ab>
+            <ab>His wife Anne outlived him
+            she died 1623</ab>
+            <milestone unit="unknown" rend="horbar-short-left"/>
+            <ab>His last lineal descendant
+            died 1670</ab>
+                <pb xml:id="leaf005v" facs="duk_ap_00048.jpg" type="verso"/>
+            <pb xml:id="leaf006r" facs="duk.00173.006.jpg" type="recto"/>
+            <note type="authorial" resp="#h2" place="top">☞ See <choice><orig>Shakspere</orig><reg>Shakespeare</reg></choice> vs. Sand&#8212;printed following
+                <milestone unit="unknown" rend="horbar-full"/></note>
+            <ab>The half‑length upon his monument
+            (erected anterior to 1623,) "conveys<note type="editorial" resp="#h3" place="supralinear">5</note> the
+            impression of a cheerful, good‑
+                <subst><del rend="overstrike" seq="1">natured</del> <add rend="unmarked" place="inline" seq="2">tempered</add></subst>, somewhat jovial
+                man."</ab>
+            <ab>(<hi rend="underline">It is evident to me,</hi> <hi rend="underline">beyond cavil,
+            that Shakespeare, in his own day,</hi>
+            <note type="authorial" resp="#h1" place="left">?</note><hi rend="underline">and at death, was<!-- this last word written over an erased word.--> by many placed
+            among the great masters, and
+            acknowledged.</hi>)</ab><note type="authorial" resp="#h1" place="inline" rend="circled">and yet the florid style
+            of praise was applied to
+            everybody and almost everything
+            in those times.</note>
+            <ab>"He was a handsome, well‑shaped man,
+            very good company, and of a very
+            ready, and pleasant, and smooth
+            wit." Aubrey.</ab>
+            <ab>Some think Shakespeare was lame,<lb/>
+            <del rend="erasure">&#8212;</del>and, for that reason, retired
+            from the stage&#8212;lame
+            perhaps, from some accident.&#8212;</ab>
+            <ab>"gentle" is the epithet often
+            applied to him.</ab>
+            <note type="authorial" resp="#h1">? at that <subst><del rend="overstrike" seq="1">was</del> <add rend="insertion" place="supralinear" seq="2">time was not</add></subst> its signification "like a gentleman"
+            "of highblooded
+            bearing"?</note>
+            <ab>Fuller speaks of the "wit combats
+            between Shakespeare &amp; Ben Jonson
+            at the Mermaid club.</ab>
+            <ab>"Myriad minded Shakespeare."</ab>
+                <pb xml:id="leaf006v" facs="duk_ap_00049.jpg" type="verso"/>
+            <pb xml:id="leaf007r" facs="duk.00173.007.jpg" type="recto"/>
+            <note type="authorial" resp="#h2" place="top">Evidently he was familiar with the Iliad.&#8212;
+            <milestone unit="unknown" rend="horbar-full"/></note>
+            <note type="editorial" resp="#h3" place="top">6</note>
+            <ab>His autograph is in a translation
+            of <hi rend="underline">"Montaigne's essays"</hi>&#8212;he then
+            must have been familiar with Montaigne.&#8212;</ab>
+            <milestone unit="unknown" rend="horbar-short-left"/>
+            <ab>"Venus &amp; Adonis" passed through six editions,
+            in Shakespeare's lifetime, and a
+            number more afterwards.</ab>
+            <ab>Sonnets&#8212;first printed 1609.</ab>
+            <ab>Milton admired and loved Shakespeare
+            &#8212;writes praises of him.&#8212;</ab>
+            <!--Grier says that there used to be a pointing hand here. It seemingly got cut away, although you can still see the point of the finger. --><note type="authorial" resp="#h2"><milestone unit="unknown" rend="horbar-short-left"/>
+                But yet he charges harshly against Charles 1st that the monarch
+            had a copy of Shakespeare in his cabinet for his constant
+            use.<milestone unit="unknown" rend="horbar-full"/></note>
+            <milestone unit="unknown" rend="horbar-short-left"/>
+            <ab>The character of the bastard Falconbridge,
+            &#8212;his <subst><del rend="overstrike" seq="1">animal</del> <add rend="unmarked" place="supralinear" seq="2">gloating</add></subst> pleasure over the
+                fact that h<subst><del rend="overwrite" seq="1"><unclear reason="illegible" resp="#nhg" cert="medium">es</unclear></del><add rend="overwrite" place="over" seq="2">e</add></subst> is the <hi rend="underline">bastard
+            of a kin<subst><del rend="overwrite" seq="1">d</del><add rend="overwrite" place="over" seq="2">g</add></subst></hi> rather than the
+            legitimate son of a knight&#8212;
+            what was this but <add rend="insertion" place="supralinear"><hi rend="circled" hand="#h2"><handShift new="#h2"/>either from a sentiment now repudiated or</hi></add><handShift new="#h1"/> to please
+            the aristocracy?&#8212;Yet, what was it
+            also but a true depicting of those
+            days?&#8212;a true depicting also <subst><del rend="overwrite" seq="1"><gap reason="illegible" quantity="1" unit="word"/></del><add rend="overwrite" seq="2" place="over">of</add></subst>
+            thousands of men's minds these days?</ab>
+            <milestone unit="unknown" rend="horbar-full"/>
+            <ab>Shakespeare is much indebted to the
+                <span rend="bracket-right" xml:id="s5" from="#s5" to="#s6" hand="#h2"/>ancients&#8212;Hamlet's soliloquy, <note type="authorial" resp="#h2" place="right" target="#s5">)<subst><del rend="erasure" seq="1"><gap reason="illegible erasure" quantity="3" unit="word"/></del><add rend="overwrite" place="over" seq="2">? is this so?</add></subst></note>
+            "To be or not to be"<anchor xml:id="s6"/>
+            is taken almost verbatim from Plato&#8212;
+            &#8212;To the Iliad, every one of his <add rend="insertion" place="supralinear">best</add> plays is
+            largely indebted.&#8212;</ab></div1>
+            <pb xml:id="leaf007v" facs="duk.00173.008.jpg" type="verso"/><div1 type="section">
+            <note type="authorial" resp="#h2" place="top">☞ See Emerson's "Shakespeare."</note>
+            <add rend="pasteon" source="#r2"><handShift new="#h5"/>
+                <q who="unknown" type="written">
+                    <floatingText rend="flat">
+                        <body>
+                            <pb xml:id="leaf008r" facs="duk.00173.008a.jpg" type="recto"/>
+                            <milestone unit="unknown" rend="horbar-short-center"/>
+                            <head type="main-authorial" rend="italic"><choice><orig>Shakspere</orig><reg>Shakespeare</reg></choice> as a Man.</head><p xml:id="p1a" next="#p1b">&#8212;It is a nobler thing
+                                to know that such a man as <choice><orig>Shakspere</orig><reg>Shakespeare</reg></choice> was created than to
+                                be familiar with the shelves of whole libraries of dusty
+                                tomes. The advent of a soul so richly gifted, of a nature so
+                                intensely ideal and so richly passionate, is an era in the
+                                history of man. No poet ever reached a <choice><sic>hight</sic><corr>height</corr></choice> so lofty,
+                                described so  grandly, speculated so daringly, or felt so
+                                deeply; and none ever seemed so little conscious of an
+                                effect. His grandest thoughts flow so naturally, that it is
+                                easy to see that they are familiar and accustomed to his
+                                mind; and his <choice><orig>gayety</orig><reg>gaiety</reg></choice> and mirth are equally characteristic
+                                of himself. Hamlet and Mercutio, Macbeth and Romeo,
+                                Prospero and Benedick, are all <choice><orig>Shakspere</orig><reg>Shakespeare</reg></choice> in his different
+                                moods; the <gap reason="illegible" quantity="1" unit="char"/>ver, the wit, the idealist, soldier and sage,
+                                each and all bear the impress of having originated from
+                                the same mind. There is probably less known of <choice><orig>Shakspere</orig><reg>Shakespeare</reg></choice>
+                                personally than of any man of mark in English history.
+                                He lived in an age of heroes, and he was a foremost man
+                                among them. His contemporaries bowed before his
+                                master spirit, and the most colossal minds of all Europe
+                                have acknowledged his sovereignty. And yet we have a
+                                better knowledge of men who died a thousand years ago,
+                                before printing perpetuated tradition, when chroniclers
+                                were few, than of this wondrous man. There is not, we
+                                have reason to think, a single letter of his writing preserved,
+                                and scarcely a contemporary anecdote. There
+                                are portraits not one of which can be proved to be authentic;
+                                a bust which seems genuine, but cannot be warranted.
+                                This man, the real spiritual king of England, is in his individuality
+                                as much a myth as Homer. But this we do
+                                know, a man there lived whose intellectual and moral
+                                nature was a microcosm which embraced the ideal of humanity,
+                                and that he left behind a hundred representatives
+                                of his own mind, none like each other, but all like himself,</p>
+                        </body>
+                    </floatingText>
+                </q>
+            </add>
+                <add rend="pasteon" source="#r2"><handShift new="#h5"/>
+                <q who="unknown" type="written">
+                    <floatingText rend="flat">
+                        <body>
+                            <pb xml:id="leaf009r" facs="duk.00173.008b.jpg" type="recto"/>
+                            <p xml:id="p1b" prev="#p1a">by whom every passing speculation or reasoning is best
+                                illustrated, and in whom every emotion finds its noblest
+                                and most genuine utterance.</p>
+                            <milestone unit="unknown" rend="horbar-short-center"/>
+                        </body>
+                    </floatingText>
+                </q>
+            </add>
+                <add rend="pasteon" source="#r3"><handShift new="#h5"/>
+                <q who="#gwt" type="written">
+                    <floatingText rend="flat">
+                        <body>
+                            <pb xml:id="leaf010r" facs="duk.00173.008c.jpg" type="recto"/>
+                            <milestone unit="unknown" rend="horbar-short-center"/>
+                            <head type="main-authorial" rend="center"><hi rend="smallcaps"><choice><orig>SHAKSPEARE</orig><reg>SHAKESPEARE</reg></choice>'S STAGE.</hi></head>
+                            <p><handShift new="#h6"/>The <choice><sic>Elizebethan</sic><corr>Elizabethan</corr></choice> <choice><orig>theatre</orig><reg>theater</reg></choice> must be viewed as little
+                                better than Richardson's shows, as far as appliances
+                                go. The curtains pull apart, and there is a tapestry
+                                representing a town&#8212;that in Troy. To make sure of
+                                it, there's a board overhead with the name written upon
+                                it, like a finger-post. At the back of the stage is
+                                a platform and balcony&#8212;that is the city-wall, where
+                                Helen will see the armies, of eight men each, pass in
+                                awful procession&#8212;the Greeks a little knock-kneed, the
+                                Trojans two of them squinting. The musicians are in a
+                                high stage-box. The actors enter&#8212;Troilus in hose and
+                                doublet, and Cressida, a plump boy of fourteen, in fardingale
+                                and scarf. A man in a black velvet cloak,
+                                heralded by a trumpet, has before this entered as Prologue.
+                                Such is <choice><orig>Shakspeare</orig><reg>Shakespeare</reg></choice>'s stage. On the boards at
+                                each side are gallant's smoking and laughing. The pit
+                                is standing, and the second gallery cracking nuts and
+                                pelting Hector with rotten apples. But in the best
+                                boxes we see some rather eminent men&#8212;Burleigh, for
+                                instance, and Sidney and Raleigh, while <choice><orig>Shakspeare</orig><reg>Shakespeare</reg></choice> acts
+                                <choice><sic>Archilles</sic><corr>Achilles</corr></choice>.&#8212;<hi rend="italic">Thornbury's <choice><orig>Shakspeare</orig><reg>Shakespeare</reg></choice>'s England</hi>.</p>
+                        </body>
+                    </floatingText>
+                </q>
+            </add></div1>
+            <pb xml:id="leaf011r" facs="duk.00173.009.jpg" type="recto"/><div1 type="section">
+            <note type="editorial" resp="#h3" place="top right">7</note>
+            <ab><handShift new="#h1"/>Shakespeare put such things into
+            his plays as would please the
+            family pride of kings and queens <add rend="insertion" place="supralinear">and of his patrons among the nobility</add>.&#8212;
+            He did this for <del rend="overstrike">the</del> Queen Elizabeth,
+            and for James the 1st.&#8212; <add rend="insertion" place="supralinear">His renderings of many phases of character&#8212;</add>The rabble,
+            Jack Cade, the French Joan, the
+            greasy and stupid canaille that
+            Coriolanus cannot stomach, all these
+                <del rend="overstrike"><subst><add rend="unmarked" place="supralinear" seq="2">are</add> <del rend="overstrike" seq="1">marked,</del></subst></del> <del rend="overstrike">in his renderings of them, with
+                the as he renders them, take mean
+                and please</del> <subst><del rend="overstrike" seq="2"><add rend="insertion" place="supralinear" seq="1">feed</add></del> <add rend="insertion" place="supralinear" seq="3">fed</add></subst> the arist<subst><del rend="overwrite" seq="1"><gap reason="illegible" quantity="1" unit="char"/></del><add rend="overwrite" place="over" seq="2">o</add></subst>cratic vanity <del rend="overstrike">&#8212;</del>
+            of the young<!--Grier suggests this last word is possibly "gay" --> noblemen and gentlemen <add rend="insertion" place="supralinear">and feed them in England yet.</add>&#8212;
+            &#8212;<subst><del rend="overstrike" seq="1">Family</del> <add rend="unmarked" place="supralinear" seq="2">Common</add></subst> blood is but wash&#8212;the
+            hero is always of high lineage.&#8212;</ab>
+            <milestone unit="unknown" rend="horbar-short-left"/>
+            <ab>Doubtless in so rendering humanity,
+            Shakespeare strictly rendered <add rend="insertion" place="supralinear"><handShift new="#h2"/>what was to him</add><handShift new="#h1"/> the truth.
+            <add rend="insertion" place="supralinear"><handShift new="#h2"/>&#8212;and what was the truth.&#8212;</add> <handShift new="#h1"/>The class of mechanics, tailors,
+            sales<subst><del rend="overwrite" seq="1"><gap reason="illegible" quantity="3" unit="char"/></del><add rend="overwrite" place="over" seq="2">men</add></subst>, attendants, &amp;c, in Europe
+            then, perhaps even now, are <add rend="unmarked" place="inline"><handShift new="#h2"/>they</add>
+             <add rend="insertion" place="supralinear">or are they not</add> <handShift new="#h1"/>properly reflected by such reflections
+            as Shakespeare gives of them?&#8212;</ab><!-- Below this, signs of a pasteon --></div1>
+            <pb xml:id="leaf011v" facs="duk.00173.010.jpg" type="verso"/><div1 type="section">
+            <head type="main-authorial" rend="center"><handShift new="#h2"/>Illustrated London News.</head>
+            <ab>Oct. 25, 1856</ab>
+            <p>a paper read by William Henry
+            Smith, author of "Was Lord Bacon
+            the author of Shakespeare's Plays?"
+            &#8212;"What Pope says of some of the Plays
+            of Shakespeare is probably <del rend="overstrike">of</del> true of
+            all&#8212;that they were pieces of unknown
+            authors, or fitted up for the <choice><orig>theatre</orig><reg>theater</reg></choice>
+            while under his administration,&#8212;revised
+            and added to by him."</p>
+            <p>It seems according to Malone
+            that "the London Prodigal" was
+            acted at his <choice><orig>theatre</orig><reg>theater</reg></choice> and afterwards
+            printed with his <add rend="insertion, underline" place="supralinear">Shakespeare's</add> name on the
+            title page&#8212;and, though he had
+            never written a line of it he
+            was indifferent to the cheat
+            and to the printer's impudence.
+            &#8212;Bacon, according to W.H. Smith,
+            was most probably the <add rend="insertion" place="supralinear">real</add> author
+            &#8212;he goes on with his reasons
+            <choice><sic>therefor</sic><corr>therefore</corr></choice>, some of them very curious
+            and plausible, especially a <add rend="unmarked" place="supralinear">contemporary</add>
+            letter <add rend="insertion" place="supralinear">to Viscount St Albans</add> <subst><del rend="overstrike" seq="1">calling Bacon</del> <add rend="unmarked" place="inline" seq="2">saying</add></subst> "the most
+            prodigious wit that ever I knew of
+                <subst><del rend="overstrike" seq="1"><unclear reason="illegible" resp="#lmg" cert="medium">any</unclear></del> <add rend="unmarked" place="supralinear" seq="2">my</add></subst> nation, or <del rend="overstrike">thi</del> of this side of the sea,
+            was of your Lordship's name, though he
+            be known by another."</p>
+            <note type="authorial" resp="#h2" rend="vertical" place="left"><hi rend="circled">Jan '57&#8212;Smith continued these lectures</hi></note></div1>
+            <pb xml:id="leaf012r" facs="duk.00173.011.jpg" type="recto"/><div1 type="section">
+            <head type="main-derived" rend="underline"><handShift new="#h1"/>Overcoloring.</head>
+            <p>Many little things are too much
+            overcolored, in Shakespeare&#8212;<hi rend="underline" hand="#h2">far too
+            much.</hi>&#8212; The features of beloved women, <add rend="insertion" place="supralinear"><handShift new="#h2"/>compliments,</add>
+            <handShift new="#h1"/> the descriptions of <add rend="insertion" place="supralinear">moderately</add> brave actions, <add rend="insertion" place="supralinear"><handShift new="#h2"/>professions of service</add> <handShift new="#h1"/>and
+            hundreds more, are painted too intensely.
+            It is no answer to this, to say that
+            a lover would so state the case
+            about a woman he loved, or that
+            a strong rich nature would be
+            apt to describe incidents in that
+            manner; and <subst><add rend="insertion" place="supralinear" seq="2" hand="#h2"><handShift new="#h2"/>that</add> <del rend="overstrike" seq="1" hand="#h2"><handShift new="#h1"/>therefore</del></subst> Shakespeare
+            is <add rend="insertion" place="supralinear" hand="#h2"><handShift new="#h2"/>therefore</add> <handShift new="#h1"/>correct in so presenting them.&#8212;
+            Immensely too much is unnaturally
+            colored&#8212;the sentiment is piled
+            on, similes, compar<subst><del rend="overwrite" seq="1">a</del><add rend="overwrite" place="over" seq="2">i</add></subst>sons, defiances,
+            exaltations, <del rend="overstrike" hand="#h2">divinities,</del> immortalities,
+                <subst><del rend="overstrike" seq="1">are all</del> <add rend="unmarked" place="supralinear" seq="2">bestowed</add></subst> upon themes certainly not
+            worthy the same,&#8212;<add rend="insertion" place="supralinear"><hi rend="circled" hand="#h2"><handShift new="#h2"/>&#8212;<handShift new="#h1"/>thus losing proportion.&#8212;</hi></add> (Also, <add rend="unmarked" place="supralinear">??</add> <subst><del rend="overstrike" seq="1">many</del> <add rend="unmarked" place="supralinear" seq="2">most</add></subst>
+            of the discursive speeches of the
+            great and little characters are
+            glaringly inappropriate, both words
+            and sentiments such as could not
+            have come from their mouths, <add rend="insertion" place="supralinear" hand="#h2"><handShift new="#h2"/>in real life</add> <handShift new="#h1"/> and
+            therefore should not <add rend="unmarked" place="supralinear"><handShift new="#h2"/>in the plays.&#8212;<handShift new="#h1"/>)</add>.&#8212; Yet on great
+            occasion the character and action are
+            perfect.&#8212; This is what saves Shakespeare
+            &#8212;Is he imitative of Homer? If so, where and how?</p></div1>
+            <pb xml:id="leaf012v" facs="duk_ap_00050.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

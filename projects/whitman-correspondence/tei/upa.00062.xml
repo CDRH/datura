@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="upa.00062">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Herbert Gilchrist, 21 November
+                    [1876]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="jyc">Jonathan Y. Cheng</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="zk">Zachary King</persName>
+                    <persName xml:id="ec">Eric Conrad</persName>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2010</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>upa.00062</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+    <addrLine>Center for Digital Research in the Humanities</addrLine>
+    <addrLine>319 Love Library</addrLine>
+    <addrLine>University of Nebraska-Lincoln</addrLine>
+    <addrLine>P.O. Box 884100</addrLine>
+    <addrLine>Lincoln, NE 68588-4100</addrLine>
+</address>
+                <availability>
+                    <p>Copyright © 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+
+            <sourceDesc>
+                
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Herbert Gilchrist, 21 November [1876]</title>
+                    <date cert="medium" when="1876-11-21" xml:id="dat1">November 21, 1876</date>
+                    <idno type="callno">Box 1, Folder 6</idno>
+                    <orgName xml:id="upa">Walt Whitman Collection, 1842&#8211;1957, Rare Book &amp;
+                        Manuscript Library, University of Pennsylvania</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Gilchrist, Herbert">Herbert Gilchrist</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2014-11-07" who="#nhg">checked, corrected</change>
+            <change when="2014-11-03" who="#ak">added annotations</change>
+            <change when="2014-09-24" who="#jyc">checked, revised</change>
+            <change when="2014-08-15" who="#el">added schematron declaration</change>
+            <change when="2011-05-24" who="#zk">encoded</change>
+            <change when="2010-08-20" who="#ec">extracted transcription from Major Authors
+                cd</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="upa.00062.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <address><addrLine>431 Stevens street</addrLine>
+                        <addrLine>Camden</addrLine></address>
+                    <date when="1876-11-21" rend="right">Nov 21</date>
+                </dateline>
+                <salute>My dear Herbert<!--<ptr target="n0262"/>--></salute>
+            </opener>
+
+            <p>I had a safe little jaunt home yesterday afternoon<ptr target="upa.00062_n1"/>&#8212;What a
+                long-drawn-out storm&#8212;cloudy yet this morning.</p>
+
+            <p>Upon talking more fully with my sister about the colored woman Rosy, I am convinced
+                <hi rend="underline">she would not do</hi>&#8212;so I think we will give up any further
+                thought of her as a help to you&#8212;</p>
+
+            <p>J T Nettleship's<!--<ptr target="n0437"/>--> address is 233 Stanhope street, Regents'
+                Park N W&#8212;The criticism in the <hi rend="underline">Examiner</hi> was written by J H
+                    McCarthy.<ptr target="upa.00062_n2"/> I am feeling pretty well (for me) this
+                morning&#8212;Affectionate regards to all&#8212;</p>
+
+            <closer> 
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="upa.00062.002_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

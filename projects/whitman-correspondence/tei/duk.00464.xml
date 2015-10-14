@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00464">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, 14 November [1865]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ct">Cathy Tisch</persName>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00464</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, 14 November [1865]</title>
+                    <date cert="high" when="1865-11-14" xml:id="dat1">November 14, 1865</date>
+                        <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-11-04" who="#el">replaced gap with unclear</change>
+            <change when="2013-07-29" who="#el">merged files</change>
+            <change when="2013-07-19" who="#wr">Replace internal notes with external notes</change>
+            <change when="2013-06-06" who="#wr">Duke Proofreading Corrections</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent Proof</change>
+            <change when="2012-04-25" who="#wr">Proofreading Corrections</change>
+            <change when="2013-01-02" who="#el">updated TEI header to reflect new project practices; moved editorial notes to external file and replaced with ptr; other editing changes as necessary</change>
+            <change when="2012-12-14" who="#wr">Proofreading Corrections of notes.</change>
+            <change when="2012-09-07" who="#wr">Updated notes from proofreadiong. Replaced Unicode 8210 in Edd note with 8211 (en dash). </change>
+            <change when="2012-08-22" who="#ct">correction on "bed" line 187</change>
+            <change when="2011-06-09" who="#wr">Completed proofreading changes, added note on Whitman departure from Brooklyn to Washington to affirm date, expanded Drum Taps annotation.</change>
+            <change when="2011-12-21" who="#wr">Correct date format in title, update annotations</change>
+            <change when="2011-08-03" who="#wr">Proofread and annotated Eddy.</change>
+            <change when="2011-04-13" who="#wr">Proofread and correct, expand annotation on Drum Taps</change>
+            <change when="2011-04-13" who="#fw">Annotate Drum Taps</change>
+            <change when="2011-04-05" who="#fw">Correct 2 Pages</change>
+            <change when="2011-03-30" who="#wr">Encode regularization of contractions, days of week, and frequently misspelled words</change>
+            <change when="2011-03-28" who="#fw">Transcribe 2 Pages</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <pb xml:id="leaf001r" facs="duk.00464.001.jpg" type="recto"/>            
+            
+            <note type="editorial" resp="#rmb" place="top"><hi rend="underline">1865</hi> November 14</note>
+            
+            <opener>
+                <dateline>
+                    <date when="1865-11-14"><choice><orig>tuesday</orig> <reg>Tuesday</reg></choice> noon <choice><orig>Nv</orig> <reg>Nov</reg></choice> 14<ptr target="duk.00464_n7"/></date>
+                </dateline>
+                <salute>My dear Walt</salute>
+            </opener>
+           
+            <p>i have waited and waited to hear from you and have got no word from you since you
+                    left<ptr target="duk.00464_n5"/> which seems so strang<unclear
+                    reason="illegible" cert="medium" resp="#wr">e</unclear> that i feel quite uneasy
+                for fear something is the matter i may get a letter this afternoon but i
+                        <choice><orig>cant</orig>
+                    <reg>can't</reg></choice>
+                <choice><orig>conceeve</orig>
+                    <reg>conceive</reg></choice> why i have not heard from you you are so
+                        <choice><orig>promt</orig>
+                    <reg>prompt</reg></choice> to write and i wanted so to hear of your safe arrival
+                it is very warm here to day uncomfortably so Edd<ptr target="duk.00425_n13"/> has
+                been quite sick with his eye and face all <choice><orig>swoln</orig>
+                    <reg>swollen</reg></choice> up so he could not see</p>
+            <pb xml:id="leaf001v" facs="duk.00464.002.jpg" type="verso"/>
+            <p>he has taken some medicine and is some better to day Walt wher<unclear
+                    reason="illegible" cert="medium" resp="#wr">e</unclear> is all the Drum taps we
+                have looked all over for one or two i thought you left some up stairs but
+                        <choice><orig>cant</orig>
+                    <reg>can't</reg></choice> find one<ptr target="duk.00464_n3"/> i had one of the
+                first ones on the table here and i <choice><orig>cant</orig>
+                    <reg>can't</reg></choice> find it i used to read some in it almost every night
+                before i went to <unclear reason="illegible" cert="medium" resp="#wr">Bed</unclear>
+                you must write just as quick as you get this no more but w<unclear reason="illegible" resp="#wr">rite</unclear><ptr target="duk.00464_n6"/>
+            </p>
+            <closer>
+                <salute>your mothe<unclear reason="illegible" cert="medium" resp="#wr">r</unclear></salute>
+                <signed>L Wh<unclear reason="illegible" cert="medium" resp="#wr">itman</unclear><ptr target="duk.00425_n3"/></signed>
+            </closer>
+            <postscript>
+                <p>did you get the paper the new yorker<ptr target="duk.00464_n4"/></p>
+            </postscript>
+        </body>
+    </text>
+</TEI>

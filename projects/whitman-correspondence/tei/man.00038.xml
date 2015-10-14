@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="man.00038">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Elisa Seaman Leggett to Walt Whitman, 19 July 1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Elisa Seaman Leggett</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="am">Alicia Meyer</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="crl">Courtney Rebecca Lawton</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>man.00038</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Elisa Seaman Leggett</author>
+                    <title>Elisa Seaman Leggett to Walt Whitman, 19 July 1880</title>
+                    <date cert="high" when="1880-07-19" xml:id="dat1">July 19, 1880</date>
+                    <idno type="callno">GB 133 Eng 1170/1/1/11/2</idno>
+                    <orgName xml:id="man">Charles Sixsmith Collection at the John Rylands Library, University of Manchester</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+
+                <person role="sender">
+                    <persName key="Leggett, Elisa Seaman">Elisa Seaman Leggett</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-03-30" who="#ss">annotations added</change>
+            <change when="2013-12-05" who="#nhg">checked, corrected</change>
+            <change when="2013-11-19" who="#am">proofed</change>
+            <change when="2013-10-17" who="#ej">Checked and Corrected</change>
+            <change when="2013-07-22" who="#crl">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="man_ej.00093_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">Detroit</name>
+                    <date when="1880-07-19">July 19<hi rend="superscript">th</hi> 1880</date>
+                    <name type="place">169 East Elisabeth <choice><abbr>St</abbr><expan>Street</expan></choice></name>
+                </dateline>
+                <salute>Mr W Whitman</salute>
+                <salute>Dear Friend&#8212;</salute>
+            </opener>
+
+            <p>I was ever so sorry today to see by the Paper you sent me,<ptr target="n1017"/> that you were ill I hope
+                this will find you ever so much better&#8212;<choice><orig>Cant</orig><reg>Can't</reg></choice> you let me know that you are I
+                <choice><orig>dont</orig><reg>don't</reg></choice> want you to go home without visiting Detroit, I would like to have you make
+                your visit a little late, I will tell you why&#8212;My husband and a son in law
+                are making a trip around the Lakes to Chicago and back&#8212;and my son in law
+                Lewis T Ives&#8212;with his
+                <pb xml:id="leaf001v" facs="man_ej.00095_large.jpg"
+                    type="verso"/>
+                <pb xml:id="leaf002r" facs="man_ej.00203_large.jpg"
+                    type="verso"/>son<ptr target="man.00038_n1"/> are at Pittsfield Mass they are both Artists, Father and son&#8212;the latter just sixteen years of age&#8212;but of great promise&#8212;I
+                know that my son Lewis would be so glad to meet you. You will remember that he was
+                the one who rescued your Leaves of Grass for me, and brought it from
+                England Did you get the story of the Book?</p>
+
+            <p>If you do not feel well enough to answer my questions&#8212;<choice><orig>wont</orig><reg>won't</reg></choice> some friend do it
+                for me&#8212;and please let me be assured of a visit from you before you
+                return</p>
+
+            <closer>
+                <salute>I am very truly</salute>
+                <salute>Yours obliged</salute>
+                <signed>Elisa S Leggett.</signed>
+            </closer><pb xml:id="leaf002v" facs="man_ej.00204_large.jpg"
+                type="verso"/>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="med.00642">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Frederick Locker-Lampson to Walt Whitman, 13 October
+                    1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Frederick Locker-Lampson</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="crl">Courtney Rebecca Lawton</persName>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>med.00642</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <biblStruct>
+                    <monogr>
+                        <author>Thomas Donaldson</author>
+                        <title xml:id="td">Walt Whitman the Man</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>Francis P. Harper</publisher>
+                            <date when="1896">1896</date>
+                            <biblScope type="page">237</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+
+
+                <bibl>
+                    <author>Frederick Locker-Lampson</author>
+                    <title>Frederick Locker-Lampson to Walt Whitman, 13 October 1880</title>
+                    <date cert="high" when="1880-10-13" xml:id="dat1">October 13, 1880</date>
+                    <orgName xml:id="med">The location of the original is unknown.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Locker-Lampson, Frederick">Frederick
+                        Locker-Lampson</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-11" who="#ss">annotations added</change>
+            <change when="2014-01-23" who="#nhg">checked, corrected</change>
+            <change when="2013-12-19" who="#ss">checked</change>
+            <change when="2013-06-10" who="#crl">proofed, checked</change>
+            <change when="2013-02-12" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <p>I have just received your card,<ptr target="med.00642_n1"/> dated 28th September, and I am very glad to hear that
+                you have had so pleasant a summer, and that you are in better health.<ptr target="n0905"/> Long may you
+                remain so, say I. Did you receive a letter I sent you some weeks ago, asking you to
+                write four or six lines in an MS. poem by Walter Scott?<ptr target="med.00642_n2"/> Not hearing from you, I fear
+                you have not received it. If you have not received it, may I send it to you again,
+                when I will explain my wishes? It will only occupy you for five minutes. I spent a
+                very pleasant hour yesterday with Lowell. We smoked the pipe of
+                good-fellowship. Tennyson is in Sussex, quite well. I shall send him your card.</p>
+
+            <closer>
+                <salute>Yours,</salute>
+                <signed>F. Locker.</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

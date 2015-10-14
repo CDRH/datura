@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?><?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules_mss.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03415">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Principal products</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author xml:id="ww">Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="lmg">Lauren Grewe</persName><persName xml:id="tra">Ty Alyea</persName><persName xml:id="nhg">Nicole Gray</persName><persName xml:id="mc">Matt Cohen</persName>
+                </respStmt>
+                <sponsor>University of Texas at Austin</sponsor>
+                <sponsor>University of Nebraska-Lincoln</sponsor>
+                <funder>The National Endowment for the Humanities</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03415</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                    <addrLine>kprice@unlnotes.unl.edu</addrLine>
+                    <addrLine>Ed-Folsom@uiowa.edu</addrLine>
+                    <addrLine>bbarney2@unlnotes.unl.edu</addrLine>
+                </address>
+                <availability><p>The text of the original document is in the public domain. Subject to certain exceptions, public domain works may be freely copied or used in the creation of derivative works without permission, or authorization, of the former copyright owners.</p><p>The text encoding was created and/or prepared by the Walt Whitman Archive and is governed by a <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref> (CC BY 4.0).</p><p>Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p></availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>The States and Their Resources</title>
+                    <idno type="callno">Box 40, Folder 32</idno>
+                    <date notBefore="1847-01-01" notAfter="1892-03-26">Undated</date>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                    <note type="project">Transcribed from digital images of the original item.</note>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="h1" scribeRef="#ww" medium="pencil"/> 
+            </handNotes>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-03-04">completed date information, tweaked encoding</change>
+            <change who="#nhg" when="2015-01-26">added schematron declaration, updated schema declaration, changed text type to annotations</change><change who="#lmg" when="2013-05-17">Transcribed and encoded.</change>
+            <change who="#lmg" when="2013-10-07">Checked.</change>
+            <change who="#tra" when="2013-11-20">Checked bibliographical information.</change>
+            <change who="#mc" when="2014-10-12">Proofed.</change>
+        </revisionDesc> 
+    </teiHeader>
+    <text type="annotations">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_nhg.00144.jpg" type="recto"/>
+            <head type="main-authorial" rend="underline"><handShift new="#h1"/>Principal products</head>
+            <ab>Delaware&#8212;Wheat
+            (The wheat of Delaware and
+            Maryland
+            <pb xml:id="leaf002r" facs="loc_nhg.00145.jpg" type="recto"/>
+                The <del rend="overstrike">measureless</del> maize fields
+                of the earth&#8212;the <add rend="unmarked" place="supralinear">tall, gracefull</add> long‑
+                leafed maize&#8212;slender,
+                bright‑green&#8212;with tassels&#8212;
+                with beautiful ears, <add rend="unmarked" place="supralinear">each</add> folded
+                in its husks&#8212;the beautiful
+                maize!</ab>
+            <pb xml:id="leaf003r" facs="loc_nhg.00146.jpg" type="recto"/>
+            <ab>an entirely new system, theory,
+            &amp; <hi rend="underline">practice</hi> of Education,
+            viz: to do that which will
+            <hi rend="underline">teach to think</hi>&#8212;every
+            one for himself&#8212;giving
+            facts, data</ab>
+            <milestone unit="undeclared" rend="horbar-full"/>
+            <ab>The honey and beeswax of
+            Missouri, Kentucky and
+            Tennessee,
+            The rice of South Carolina <del rend="overstrike">and
+            Georgia</del>&#8212;The wool of
+            Ohio and of the Empire
+            State,&#8212;The tobacco
+            of Virginia and
+            Maryland
+            The cotton of <del rend="overstrike"><add rend="unmarked" place="supralinear">Georgia</add></del> Alabama,
+            Mississippi, <subst><del rend="overstrike" seq="1">South Carolina</del> <add rend="unmarked" place="supralinear" seq="2">Georgia, South Carolina</add></subst>
+            and Texas,&#8212;The sugar of
+            Louisiana.</ab>
+        </body>
+    </text>
+</TEI>

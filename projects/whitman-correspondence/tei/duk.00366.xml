@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00366">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">George Washington Whitman to Louisa Van Velsor Whitman, 8 May 1865</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>George Washington Whitman</author>
+            <editor>Jerome M. Loving</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+
+               <persName xml:id="kk">Kathryn Kruger</persName>
+               <persName xml:id="gp">Gillian Price</persName>
+               <persName xml:id="al">April Lambert</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>duk.00366</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>George Washington Whitman</author>
+                  <editor>Jerome M. Loving</editor>
+                  <title xml:id="cwl">Civil War Letters of George Washington Whitman</title>
+                  <imprint>
+                     <pubPlace>Durham, North Carolina</pubPlace>
+                     <publisher>Duke University Press</publisher>
+                     <date>1975</date>
+                     <biblScope type="page">135</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>George Washington Whitman</author>
+               <title>George Washington Whitman to Louisa Van Velsor Whitman, 8 May 1865</title>
+               <date when="1865-05-08">May 8, 1865</date>
+               <orgName xml:id="duk">Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, George Washington">George Washington Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#el" when="20010-04-06">proofread and edited</change>
+         <change who="#el" when="2008-07-21">updated TEI header</change>
+         <change who="#kk" when="2008-04-01">checked and proofed</change>
+         <change who="#gp" when="2006-12-18">copy-edited transcription against source text and made necessary
+corrections</change>
+         <change who="#al" when="2006-12-15">Transcribed, Encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <dateline rend="right">
+                  <name type="place">Head Quarters  Prince St. Military Prison <lb/>Alexandria Va.</name>
+                  <date when="1865-05-08">  May 8th 1865<ptr target="duk.00366_n100"/>
+               </date>
+               </dateline>
+               <salute>Dear Mother</salute>
+            </opener>
+            <p>I arrived here and joined the Regiment about ten days ago and was placed in command of this Prison.</p>
+            <p>I am very well, indeed but have plenty to do as I have about 300 Prisoners (mostly thieves, Bounty jumpers and Deserters) to look after. I have 100 of the men of our Regt. and 5 Officers here with me guarding the Prisoners.</p>
+            <p>There is about 20 Rebel officers here (Paroled Prisoners) but they are used very different from what we were, when we were in Rebeldom.</p>
+            <p>I saw Walt when I came through Washington, and I hear he was over to see me yesterday but did not find me. Well Mammy the war seems to be over, and I think the most of us will soon be sent home. It is now getting late (after Eleven O clock at night) and as I feel rather tired I will go through the Prison and see that all is right and then turn in. I sleep here in the building (I have a very good room) and take my meals at a Boarding house  I pay 6 dollars per week for grub but dont live any of the best.</p>
+            <closer rend="right">
+               <salute>Good night to all</salute>
+
+            </closer>
+         <postscript>
+            <p>Direct Capt G. W. Whitman <lb/>Comdng Prince St Military <lb/>Prison  Alexandria Va</p>
+         </postscript>
+         
+      </body>
+   </text>
+</TEI>

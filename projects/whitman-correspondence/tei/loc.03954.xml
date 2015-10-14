@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03954">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Elmer E. Stafford to Walt Whitman, 9 November 1877</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Elmer E. Stafford</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="vm">Vince Moran</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03954</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Elmer E. Stafford</author>
+                    <title>Elmer E. Stafford to Walt Whitman, 9 November 1877</title>
+                    <date cert="high" when="1877-11-09" xml:id="dat1">November 9, 1877</date>
+                    <idno type="callno">MSS18630</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Stafford, Elmer E.">Elmer E. Stafford</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-02-25" who="#nhg">added annotation pointers</change>
+            <change when="2013-10-03" who="#nhg">checked, corrected</change>
+            <change when="2013-04-14" who="#ab">checked</change>
+            <change when="2012-11-14" who="#ej">checked, corrected</change>
+            <change when="2012-11-14" who="#vm">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_jc.00371_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <date when="1877-11-09"><choice><abbr>Nov.</abbr><expan>November</expan></choice> 9, 1877.</date>
+                </dateline>
+                <salute>Dear sir.</salute>
+            </opener>
+
+            <p>I am well and hope you the same<ptr target="n0858"/> I would be very glad to see you as i did expect to come down <gap reason="damage" extent="2 words" quantity="6" unit="chars"/> you <choice><orig>to day</orig><reg>today</reg></choice> or i would of wrote sooner. and if nothing <choice><sic>hapins</sic><corr>happens</corr></choice> I will be down next <choice><sic>wensday</sic><corr>Wednesday</corr></choice> night and stay until thursday night I would like very much to see you you must <choice><sic>rite</sic><corr>write</corr></choice> right <choice><sic>a way</sic><corr>away</corr></choice> and tell me how you are a getting along I would like to be with you all the time if i could i would like very much to go with you on your trip to washington. we are very <choice><sic>buisy</sic><corr>busy</corr></choice> husking just now and will be <choice><sic>fore</sic><corr>for</corr></choice> a few days and we will have nothing to do for a while)</p>
+            
+            <pb xml:id="leaf001v" facs="loc_jc.00372_large.jpg" type="verso"/>
+            
+            <p>I am in a hurry i cant <choice><sic>rite</sic><corr>write</corr></choice> any so it is <choice><sic>good by</sic><corr>goodbye</corr></choice> i hope you well</p>
+
+            <closer>
+                <signed rend="right">Elmer E. Stafford</signed>
+                <signed rend="right">Glendale</signed>
+            <address><addrLine>To</addrLine>
+                <addrLine>Walt. Whitman</addrLine>
+                <addrLine>NJ</addrLine></address>
+            </closer>
+            
+            <!--This page is endorsed, in Whitman's hand: from Elmer Stafford Nov 9 '77-->
+            
+        </body>
+    </text>
+</TEI>
