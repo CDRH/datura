@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -79,11 +80,9 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Alexander, William B.</term>
+<term xml:id="per.001344">Alexander, William B.</term>
 <term xml:id="per.000004">Cranch, William, 1769-1855</term>
-<term>Hunter, Alexander</term>
-<term>Swann, Edward</term>
-<term>Swann, William Thomas</term>
+<term xml:id="per.000739">Hunter, Alexander</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places"> 
@@ -95,17 +94,20 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001342">
 <persName>Graham, Moses</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001343">
 <persName>Alexander, Richard B.</persName>
 </person>
 <person role="attorney_petitioner">
 <persName/>
 </person>
-<person role="attorney_defendant">
-<persName/>
+<person role="attorney_defendant" xml:id="per.001366">
+<persName>Swann, Edward</persName>
+</person>
+<person role="attorney_defendant" xml:id="per.001367">
+<persName>Swann, William Thomas</persName>
 </person>
 </listPerson>
             
@@ -119,6 +121,7 @@
 </profileDesc>
         
 <revisionDesc>    
+<change when="2015-10-07" who="#lkw">added xml:ids</change> 
 <change when="2014-02-17" who="#kln">reviewed; edited</change>         
 <change when="2014-10" who="#snc">encoded</change>
 </revisionDesc>

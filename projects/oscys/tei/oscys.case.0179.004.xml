@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -79,8 +80,8 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Brown, Elizabeth</term>
-<term>Milly</term>
+<term xml:id="per.001348">Brown, Elizabeth</term>
+<term xml:id="per.001352">Milly</term>
 <term xml:id="per.001155">Taney, Roger Brooke, 1777-1864</term>
 </keywords>
 
@@ -93,19 +94,19 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001342">
 <persName>Graham, Moses</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001343">
 <persName>Alexander, Richard B.</persName>
 </person>
 <person role="attorney_petitioner">
 <persName/>
 </person>
-<person role="attorney_defendant">
+<person role="attorney_defendant" xml:id="per.001366">
 <persName>Swann, Edward</persName>
 </person>
-<person role="attorney_defendant">
+<person role="attorney_defendant" xml:id="per.001367">
 <persName>Swann, William Thomas</persName>
 </person>
 
@@ -120,7 +121,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>             
+<revisionDesc>  
+<change when="2015-10-07" who="#lkw">added xml:ids; transcription</change>            
 <change when="2014-02-17" who="#kln">reviewed; edited</change>
 <change when="2014-10" who="#snc">encoded</change>
 </revisionDesc>
@@ -143,7 +145,7 @@
 
 <div2 type="body">
 
-<p>The Petition of Richard B. Alexander humbly represents that at March Term 1840 of the Circuit Court of the District of Columbia for the County of Washington, on a petition for freedom filed by Moses Graham against the said Richard B. Alexander, complaining of illegal detention in slavery, judgment was rendered for the said Richard B. Alexander, but not as fully and complete a judgment as ought in law have been rendered in the care, as will more fully appear by a copy of the record and proceedings in the said cause and hereto annexed.</p>
+<p>The Petition of Richard B. Alexander humbly represents that at March Term 1840 of the Circuit Court of the District of Columbia for the County of Washington, on a petition for freedom filed by Moses Graham against the said Richard B. Alexander, complaining of illegal detention in slavery, judgment was rendered for the said Richard B. Alexander, but not as fully and complete a judgment as ought in law have been rendered in the case, as will more fully appear by a copy of the record and proceedings in the said cause and hereto annexed.</p>
 
 <p>And the said Richard B. Alexander assigns error as follows:</p>
 
