@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="McCormick, Kylie L." xml:id="klm">Kylie L. McCormick</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -81,7 +82,7 @@
 <keywords scheme="lcsh" n="people">
 <term xml:id="per.000003">Brent, William, 1774-1848</term>
 <term xml:id="per.000004">Cranch, William, 1769-1855</term>
-<term>Sheckles, Benjamin O.</term>
+<term xml:id="per.001416">Sheckles, Benjamin O.</term>
 <term xml:id="per.000748">Wallace, Robert</term>
 </keywords>
 
@@ -94,13 +95,13 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001209">
 <persName>Duckett, Mary</persName> 
 </person>
-<person role="defendant"> 
+<person role="defendant" xml:id="per.001211"> 
 <persName>McCutchen, John</persName>
 </person>
-<person role="defendant"> 
+<person role="defendant" xml:id="per.001212"> 
 <persName>McCutchen, John H.G.</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.000533">
@@ -120,7 +121,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>             
+<revisionDesc>      
+<change when="2015-10-12" who="#lkw">added xml:ids</change>       
 <change when="2014-12-01" who="#kln">encoded transcription</change>
 </revisionDesc>
 

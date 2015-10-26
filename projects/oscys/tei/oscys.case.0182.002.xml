@@ -12,6 +12,7 @@
 <name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -81,7 +82,7 @@
     
 <keywords scheme="lcsh" n="people">
 <term xml:id="per.000003">Brent, William, 1774-1848</term>
-<term>Burr, Richard R.</term>
+<term xml:id="per.000622">Burr, Richard R.</term>
 <term xml:id="per.000004">Cranch, William, 1769-1855</term>
 </keywords>
 
@@ -98,10 +99,10 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001373">
 <persName>Jones, Nancy</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.000739">
 <persName>Hunter, Alexander</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.000873">
@@ -121,7 +122,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>           
+<revisionDesc>      
+<change when="2015-10-07" who="#lkw">added xml:ids</change>      
 <change when="2015-06-23" who="#ea">added case outcome</change>
 <change when="2015-02-17" who="#kln">reviewed; edited</change>   
 <change when="2014-10" who="#snc">encoded</change>

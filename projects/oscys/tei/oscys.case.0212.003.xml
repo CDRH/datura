@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -80,8 +81,8 @@
     
 <keywords scheme="lcsh" n="people">
 <term xml:id="per.000003">Brent, William, 1774-1848</term>
-<term>Scalon, W. W.</term>
-<term>Dells, John</term>
+<term xml:id="per.001394">Dells, John</term>
+<term xml:id="per.001395">Scalon, W. W.</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -96,37 +97,37 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001385">
 <persName>Butler, Airy</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001386">
 <persName>Butler, Eliza</persName> 
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001387">
 <persName>Butler, Liddy</persName> 
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001388">
 <persName>Butler, Matilda</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001389">
 <persName>Butler, Reason</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001390">
 <persName>Butler, Sally</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001391">
 <persName>Butler, Sarah</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001392">
 <persName>Butler, Thomas</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001393">
 <persName>Duvall, Gabriel, 1752-1844</persName>
 </person>
 <person role="attorney_petitioner">
 <persName/>
 </person>
-<person role="attorney_defendant">
+<person role="attorney_defendant" corresp="per.001393">
 <persName>Duvall, Gabriel, 1752-1844</persName>
 </person>
 </listPerson>
@@ -140,7 +141,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>             
+<revisionDesc>        
+<change when="2015-10-12" who="#lkw">added xml:ids; transcription</change>       
 <change when="2014-12-01" who="#kln">reviewed, edited</change>
 <change when="2014-11" who="#snc">encoded</change>
 </revisionDesc>
@@ -168,7 +170,7 @@ Petition for Freedom.</p>
 
 <div2 type="body">
 
-<p>Gabriel Duvall, the defendant in this suit, being duly sworn on the holy evangels of Almighty God, <gap extent="several words" reason="torn page"/> more than fourteen years back past. He has <gap extent="several words" reason="torn page"/> in Prince George's County, in Maryland, on his farm there, and not elsewhere; and that his slaves and servants including the petitioners, excepting such as have been disposed of have resided there and not elsewhere during the period aforesaid. That for more than forty years back past He has <gap extent="one word" reason="illegible"/> and carried on a farm in the county aforesaid, and always had a domicil there, and all the slaves which from time to time he owned, his <gap extent="one or two words"/> excepted resided there and not elsewhere: That on the 29th or 30th of May 1805, he bought Tom &amp; Sarah and a young child of one John Dells, who then resided in George Town, and paid him form them; the others have been born since on the said farm in Prince Georges: That the
+<p>Gabriel Duvall, the defendant in this suit, being duly sworn on the holy evangels of Almighty God, <gap extent="several words" reason="torn page"/> more than fourteen years back past. He has <gap extent="several words" reason="torn page"/> in Prince George's County, in Maryland, on his farm there, and not elsewhere; and that his slaves and servants including the petitioners, excepting such as have been disposed of have resided there and not elsewhere during the period aforesaid. That for more than forty years back past He has <gap extent="one word" reason="illegible"/> and carried on a farm in the county aforesaid, and always had a domicil there, and all the slaves which from time to time he owned, his <gap extent="one or two words"/> excepted resided there and not elsewhere: That on the 29th or 30th of May 1805, he bought Tom &amp; Sarah and a young child of one John Dells, who then resided in George Town, and paid him for them; the others have been born since on the said farm in Prince Georges: That the
 
 <pb xml:id="p002" facs="oscys.case.0212.003.002.jpg"/>
 

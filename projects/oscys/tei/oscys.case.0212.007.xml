@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -79,18 +80,19 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Davis, John</term>
-<term>Dells, John</term> <!--alternate spelling Dales-->
-<term>Duvall, William</term>
-<term>Flaut</term>
-<term>Getzendanner, Christian</term>
-<term>Gossum, Thomas</term> <!-- aka Gossam -->
-<term>Gossum, John</term> <!-- aka Gossam -->
-<term>Gossum, Thompson</term> <!-- aka Gossam -->
-<term>Gossum, Sandy</term> <!-- aka Gossam -->
-<term>Jacobs, William</term>
-<term>Kennedy, Matthew</term>
-<term>Thompson</term> <!-- mrs -->
+
+<term xml:id="per.001396">Davis, John</term>
+<term xml:id="per.001394">Dells, John</term>
+<term xml:id="per.001404">Duvall, William</term>
+<term xml:id="per.001405">Flaut</term>
+<term xml:id="per.001406">Getzendanner, Christian</term>
+<term xml:id="per.001397">Gossum, John</term>
+<term xml:id="per.001398">Gossum, Sandy</term>
+<term xml:id="per.001399">Gossum, Thomas</term>
+<term xml:id="per.001400">Gossum, Thomson</term>
+<term xml:id="per.001401">Jacobs, William</term>
+<term xml:id="per.001402">Kennedy, Matthew</term>
+<term xml:id="per.001407">Thompson</term> <!-- mrs -->
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -105,31 +107,31 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001385">
 <persName>Butler, Airy</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001386">
 <persName>Butler, Eliza</persName> 
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001387">
 <persName>Butler, Liddy</persName> 
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001388">
 <persName>Butler, Matilda</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001389">
 <persName>Butler, Reason</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001390">
 <persName>Butler, Sally</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001391">
 <persName>Butler, Sarah</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001392">
 <persName>Butler, Thomas</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001393">
 <persName>Duvall, Gabriel, 1752-1844</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.000572">
@@ -149,7 +151,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>             
+<revisionDesc>         
+<change when="2015-10-12" who="#lkw">added xml:ids; transcription; changed names to Sandey and Thomson and added alternate spellings to persons file</change>      
 <change when="2014-12-01" who="#kln">reviewed, edited</change>
 <change when="2014-11" who="#snc">encoded</change>
 </revisionDesc>
@@ -180,13 +183,13 @@ Gabriel Duvall</p>
 
 <p>1. Do you know the Parties, Petitioners, or Defendant, and how long have you known them?</p>
 
-<p>2. Did you know John Dales who formerly owned Tom &amp; his wis, and did you know him when he lived in Montgomery County, &amp; afterwards in George Town, and how long did he live in George Town, and in what year or years; and had he then Tom &amp; Sarah with him, as slaves?</p>
+<p>2. Did you know John Dales who formerly owned Tom &amp; his wife, and did you know him when he lived in Montgomery County, &amp; afterwards in George Town, and how long did he live in George Town, and in what year or years; and had he then Tom &amp; Sarah with him, as slaves?</p>
 
 <p>3. Do you know that he brought Tom &amp; Sarah with him when he removed from Montgomery County to George Town?</p>
 
 <p>4. Do you know how long &amp; in what year Dales lived in George Town &amp; what was his occupation?</p>
 
-<p>5. Did you know him when he was a tenant to Mrs. Thompson. to Matthew Kennedy. When he lived with one Flaut. and with Christian Getzandanner. and with William Duvall; and in what year; and was he engaged with Christian Getzendanner in a Grocery Store, and was he in the capacity
+<p>5. Did you know him when he was a tenant to Mrs. Thompson &#8212; to Matthew Kennedy &#8212; When he lived with one Flaut &#8212; and with Christian Getzandanner &#8212; and with William Duvall; and in what year; and was he engaged with Christian Getzendanner in a Grocery Store, and was he in the capacity
 
 <pb xml:id="p002" facs="oscys.case.0212.007.002.jpg"/>
 
@@ -200,7 +203,7 @@ of partner or Storekeeper?</p>
 
 <p>1 Do you know that said Dells moved to the state of Virginia and took with him Tom and Sarah his wife &amp; when he moved</p>
 
-<p>2 Do you know (if said Dells moved to Virginia) whether it was while I was a resident of said state that he sold said Thomas and Sarah to Gabriel Duvall</p>
+<p>2 Do you know (if said Dells moved to Virginia) whether it was while he was a resident of said state that he sold said Thomas and Sarah to Gabriel Duvall</p>
 
 <p>3 Do you know when the sale took place &amp; where it took place</p>
 
