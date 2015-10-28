@@ -14,6 +14,7 @@
 <resp>transcription and encoding</resp>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
 <name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -82,27 +83,26 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Baden Jr., John</term>
-<term>Boone, Joseph</term>
-<term>Brooker, Benjamin</term>
-<term>Brugess, John Magruder</term>
-<term>Coolidge, Samuel Judson</term>
-<term>Craufurd, David</term>
-<term>Doe, John</term>
-<term>Duckett, Thomas</term>
-<term>Harwood, Thomas</term>
-<term>Hilleary, Tilghman</term>
-<term>Hodges, Charles</term>
-<term>Jackson, William John</term>
-<term xml:id="per.000183">Kilty, William, 1757-1821</term>
-<term>Lansdale, Isaac</term>
-<term>Magill, Thomas</term>
-<term>Magruder, Dennis</term>
-<term>Magruder, Francis</term>
-<term>Magruder Jr., John Read</term>
-<term>Mewburry, James</term>
-<term>Roe, Richard</term> 
-<term>Stone, Michael J.</term>
+<term xml:id="per.001517">Baden Jr., John</term>
+<term xml:id="per.001518">Boone, Joseph</term>
+<term xml:id="per.001519">Brooker, Benjamin</term>
+<term xml:id="per.001520">Brugess, John Magruder</term>
+<term xml:id="per.001521">Coolidge, Samuel Judson</term>
+<term xml:id="per.001522">Craufurd, David</term>
+<term xml:id="per.001523">Doe, John</term>
+<term xml:id="per.001488">Duckett, Thomas</term>
+<term xml:id="per.000219">Harwood, Thomas</term>
+<term xml:id="per.001505">Hilleary, Tilghman</term>
+<term xml:id="per.001524">Hodges, Charles</term>
+<term xml:id="per.001525">Jackson, William John</term>
+<term xml:id="per.001526">Lansdale, Isaac</term>
+<term xml:id="per.001527">Magill, Thomas</term>
+<term xml:id="per.001528">Magruder, Dennis</term>
+<term xml:id="per.001529">Magruder, Francis</term>
+<term xml:id="per.000128">Magruder Jr., John Read</term>
+<term xml:id="per.001530">Mewburry, James</term>
+<term xml:id="per.001531">Roe, Richard</term> 
+<term xml:id="per.001532">Stone, Michael J.</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -121,10 +121,10 @@
 <person role="defendant" xml:id="per.000215">
 <persName>Ashton, John</persName>
 </person>
-<person role="attorney_petitioner">
+<person role="attorney_petitioner" xml:id="per.001495">
 <persName>Key, Philip Barton, 1757-1815</persName>
 </person>
-<person role="attorney_defendant">
+<person role="attorney_defendant" xml:id="per.000183">
 <persName>Kilty, William, 1757-1821</persName>
 </person>
 </listPerson>
@@ -139,6 +139,7 @@
 </profileDesc>
         
 <revisionDesc>   
+<change when="2015-10-21" who="#lkw">added xml:ids</change>
 <change when="2015-07-20" who="#kln">reviewed; edited</change>            
 <change when="2015-05-20" who="#ea">edited; updated encoding</change>
 <change when="2014-01-16" who="#kln">corrected spelling of Craufurd</change>

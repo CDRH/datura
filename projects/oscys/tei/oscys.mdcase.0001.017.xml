@@ -14,6 +14,7 @@
 <resp>transcription and encoding</resp>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
 <name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -82,11 +83,11 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Digges, Thomas</term>
-<term>Gwinn, John</term>
-<term>Jiams, Plummer</term>
+<term xml:id="per.001515">Digges, Thomas</term>
+<term xml:id="per.001493">Gwinn, John</term>
+<term xml:id="per.001491">Jiams, Plummer</term>
 <term xml:id="per.000068">Queen, Mary</term>
-<term>Queen, Phillis</term>
+<term xml:id="per.001476">Queen, Phillis</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -104,10 +105,10 @@
 <person role="defendant" xml:id="per.000215">
 <persName>Ashton, John</persName>
 </person>
-<person role="attorney_petitioner">
+<person role="attorney_petitioner" xml:id="per.001393">
 <persName>Duvall, Gabriel, 1752-1844</persName>
 </person>
-<person role="attorney_petitioner">
+<person role="attorney_petitioner" xml:id="per.001495">
 <persName>Key, Philip Barton, 1757-1815</persName>
 </person>
 <person role="attorney_defendant">
@@ -125,6 +126,7 @@
 </profileDesc>
         
 <revisionDesc>  
+<change when="2015-10-21" who="#lkw">added xml:ids</change>
 <change when="2015-07-21" who="#kln">reviewed; edited</change>            
 <change when="2015-05-20" who="#ea">updated encoding</change>
 <change when="2013-08-13" who="#kln">edited transcription</change>

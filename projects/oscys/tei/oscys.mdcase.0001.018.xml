@@ -14,6 +14,7 @@
 <resp>transcription and encoding</resp>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
 <name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -99,10 +100,10 @@
 <person role="defendant" xml:id="per.000215">
 <persName>Ashton, John</persName>
 </person>
-<person role="attorney_petitioner">
+<person role="attorney_petitioner" xml:id="per.001393">
 <persName>Duvall, Gabriel, 1752-1844</persName>
 </person>
-<person role="attorney_defendant">
+<person role="attorney_defendant" xml:id="per.001496">
 <persName>Cooke, William</persName>
 </person>
 </listPerson>
@@ -117,6 +118,7 @@
 </profileDesc>
         
 <revisionDesc>   
+<change when="2015-10-21" who="#lkw">added xml:ids</change>
 <change when="2015-07-21" who="#kln">reviewed; edited</change>            
 <change when="2015-05-20" who="#ea">updated encoding</change>
 <change when="2013-04-23" who="#kln">added attorneys to header</change>
