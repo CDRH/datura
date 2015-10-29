@@ -18,7 +18,7 @@ def csv_to_solr(file_path, options)
       # doc.add_child("<field name='uri'>#{options['TODO_LOCATION']}doc/#{row['id']}</field>")
       if options['file_location']
         doc.add_child("<field name='uriXML'>#{options['file_location']}csv/#{file_name}</field>")
-        doc.add_child("<field name='uriHTML'>#{options['file_location']}html-generated/#{row['id']}.xml</field>")
+        doc.add_child("<field name='uriHTML'>#{options['file_location']}html-generated/#{row['id']}.txt</field>")
       end
       doc.add_child("<field name='dataType'>csv</field>")
 
