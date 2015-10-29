@@ -4,6 +4,7 @@ require 'nokogiri'
 def csv_to_solr(file_path, options)
   data = read_csv(file_path)
   file_name = File.basename(file_path)
+  puts "Generating solr format for #{file_name}"
   solr_doc = Nokogiri::XML("<add></add>")
   data.each do |row|
     if !row.header_row?
@@ -17,8 +18,8 @@ def csv_to_solr(file_path, options)
       doc.add_child("<field name='project'>#{options['project']}</field>") if options['project']
       # doc.add_child("<field name='uri'>#{options['TODO_LOCATION']}doc/#{row['id']}</field>")
       if options['file_location']
-        doc.add_child("<field name='uriXML'>#{options['file_location']}csv/#{file_name}</field>")
-        doc.add_child("<field name='uriHTML'>#{options['file_location']}html-generated/#{row['id']}.xml</field>")
+        doc.add_child("<field name='uriXML'>#{options['file_location']}#{options['slug']}/csv/#{file_name}</field>")
+        doc.add_child("<field name='uriHTML'>#{options['file_location']}#{options['slug']}/html-generated/#{row['id']}.txt</field>")
       end
       doc.add_child("<field name='dataType'>csv</field>")
 

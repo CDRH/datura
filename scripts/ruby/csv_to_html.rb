@@ -24,7 +24,7 @@ def csv_to_html(file_path, options, output)
             html += "<a rel='prettyPhoto[pp_gal]' href='#{img_large}'>"
             html += "<span class='thumbnail_div'>"
             html += "<img src='#{img_med}'/>"
-            html += "</span></a></div>"
+            html += "</span></a></div>\n"
           end
         else
           html += "<img src='#{options["fig_location"]}large/#{id}.jpg'/>"
