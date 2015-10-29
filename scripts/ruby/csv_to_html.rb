@@ -27,7 +27,7 @@ def csv_to_html(file_path, options, output)
             html += "</span></a></div>\n"
           end
         else
-          html += "<img src='#{options["fig_location"]}large/#{id}.jpg'/>"
+          html += "<img src='#{options["fig_location"]}large/#{id}.001.jpg'/>"
         end
       end
       write_file(html, id, output)    
