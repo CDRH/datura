@@ -51,7 +51,8 @@ def csv_to_solr(file_path, options)
       # CDRH fields #
       ###############
       doc.add_child("<field name='caption_s'>#{row['caption']}</field>") if row['caption']
-      doc.add_child("<field name='pages_s'>#{get_page_ext(row['pages'])}</field>") if row['pages']
+      doc.add_child("<field name='pages_s'>#{get_page_ext(row['pages'])}</field>")
+      doc.add_child("<field name='fig_location_s'>#{options['fig_location']}</field>")
 
       # adds <doc> with all the above fields to main xml
       solr_doc.at_css("add").add_child(doc)
@@ -72,7 +73,11 @@ end
 # this pads results so 10 => "010", 4 => "004", etc
 # because this is how the pages are identified in jpg form
 def get_page_ext(page)
-  return page.rjust(3, "0") if page
+  if page
+    return page.rjust(3, "0")
+  else
+    return "001"
+  end
 end
 
 def make_it_sortable(title)
