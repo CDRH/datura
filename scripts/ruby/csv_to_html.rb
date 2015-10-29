@@ -18,8 +18,8 @@ def csv_to_html(file_path, options, output)
           pages.times do |page|
             real_page = page+1
             page_ext = get_page_ext(real_page.to_s)
-            img_large = "#{options["fig_location"]}large/#{id}-#{page_ext}.jpg"
-            img_med = "#{options["fig_location"]}medium/#{id}-#{page_ext}.jpg"
+            img_large = "#{options["fig_location"]}large/#{id}.#{page_ext}.jpg"
+            img_med = "#{options["fig_location"]}medium/#{id}.#{page_ext}.jpg"
             html += "<div class='thumbnail_listing_images'>"
             html += "<a rel='prettyPhoto[pp_gal]' href='#{img_large}'>"
             html += "<span class='thumbnail_div'>"
