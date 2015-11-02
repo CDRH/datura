@@ -14,6 +14,8 @@
    <field name="uriXML" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="uriHTML" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="dataType" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="fig_location" type="string" indexed="true" stored="true" multiValued="false" />
+   <field name="image_id" type="string" indexed="true" stored="true" multiValued="false" />
    
 <!-- Dublin Core metadata elements + supporting fields. More details here: http://dublincore.org/documents/dcmi-terms/ -->
    <field name="title" type="string" indexed="true" stored="true" multiValued="false" />
@@ -59,8 +61,6 @@
    <field name="people" type="string" indexed="true" stored="true" multiValued="true" />
    <field name="places" type="string" indexed="true" stored="true" multiValued="true" />
    <field name="works" type="string" indexed="true" stored="true" multiValued="true" />
-   <field name="fig_location" type="string" indexed="true" stored="true" multiValued="false" />
-   <field name="image_id" type="string" indexed="true" stored="true" multiValued="false" />
    
  
    <defaultSearchField>text</defaultSearchField> 
