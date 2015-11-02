@@ -58,6 +58,8 @@
    <field name="people" type="string" indexed="true" stored="true" multiValued="true" />
    <field name="places" type="string" indexed="true" stored="true" multiValued="true" />
    <field name="works" type="string" indexed="true" stored="true" multiValued="true" />
+   <field name="fig_location" type="string" indexed="true" stored="true" multiValued="false" />
+   <field name="image_id" type="string" indexed="true" stored="true" multiValued="false" />
    
  
    <defaultSearchField>text</defaultSearchField> 
