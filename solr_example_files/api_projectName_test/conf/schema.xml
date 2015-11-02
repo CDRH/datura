@@ -51,6 +51,8 @@
    <field name="placeName" type="string" indexed="true" stored="true" multiValued="false" />
    <field name="recipient" type="string" indexed="true" stored="true" multiValued="false" />
    <field name="recipients" type="string" indexed="true" stored="true" multiValued="true" />
+   <field name="sender" type="string" indexed="true" stored="true" multiValued="false" />
+   <field name="senders" type="string" indexed="true" stored="true" multiValued="true" />
      
 <!-- CDRH specific categorization (all pulled directly from the profileDesc) -->
    
