@@ -521,8 +521,6 @@
 					</xsl:if>
 				</xsl:for-each>
 				
-			
-				
 				<!-- text -->
 				
 				<field name="text">
@@ -533,7 +531,12 @@
 					</xsl:for-each>
 				</field>
 				
-				
+				<!-- fig_location -->
+				<xsl:if test="$fig_location">
+					<field name="fig_location_s">
+						<xsl:value-of select="$fig_location"/>
+					</field>
+				</xsl:if>
 			</doc>
 		</add>
 			
