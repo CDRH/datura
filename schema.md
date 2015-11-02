@@ -12,7 +12,7 @@ I have not compared these fields to every project to make sure they fit, but her
 * **uriXML** (full URL to XML of data, when available)
 * **uriHTML** (full URL to HTML snippit of data)
 * **dataType** (the format the data was originally stored in at CDRH. current options: tei, dublin_core, vra_core, csv)
-* * **fig_location** Used when the figures are kept in a place other than the normal place CDRH will store images. 
+* **fig_location** Used when the figures are kept in a place other than the normal place CDRH will store images. 
 * **image_id** Used when an image id does not match the file id. This is NOT multivalued, and is meant to only link to one image (for instance, the one which will be used as the thumbnail)
 
 ### Dublin Core Metadata Elements. 
