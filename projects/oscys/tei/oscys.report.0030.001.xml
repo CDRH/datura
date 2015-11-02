@@ -13,6 +13,7 @@
 <resp>transcription and encoding</resp>
 <name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -98,10 +99,10 @@
 <persName>Butler, Airy</persName>
 </person>
 <person role="petitioner" xml:id="per.001386">
-<persName>Butler, Eliza</persName> 
+<persName>Butler, Eliza</persName>
 </person>
 <person role="petitioner" xml:id="per.001387">
-<persName>Butler, Liddy</persName> 
+<persName>Butler, Liddy</persName>
 </person>
 <person role="petitioner" xml:id="per.001388">
 <persName>Butler, Matilda</persName>
@@ -127,7 +128,7 @@
 <person role="attorney_defendant" xml:id="per.000435">
 <persName>Jones, Walter, 1776-1861</persName>
 </person>
-<person role="attorney_defendant">
+<person role="attorney_defendant" xml:id="per.001533">
 <persName>Lee, Charles C.</persName>
 </person>
 </listPerson>
@@ -142,6 +143,7 @@
 </profileDesc>
 
 <revisionDesc> 
+<change when="2015-10-21" who="#lkw">added xml:ids</change>
 <change when="2015-09" who="#kln">converted to new TEI template</change>
 <change when="2013" who="#kln">transcribed, encoded</change>
 </revisionDesc>
