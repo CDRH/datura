@@ -361,6 +361,9 @@
 						<xsl:when test="/TEI/text/body/div1[@type='letter']">
 							<xsl:text>letter</xsl:text>
 						</xsl:when>
+						<xsl:when test="/TEI/text[@type='letter']">
+							<xsl:text>letter</xsl:text>
+						</xsl:when>
 						<!-- magazine/journal -->
 						<xsl:when test="/TEI/teiHeader/fileDesc/sourceDesc/bibl/title[@level='j']">
 							<xsl:text>periodical</xsl:text>
@@ -477,31 +480,16 @@
 				
 				<!-- category -->
 				
-				<xsl:choose>
-					<xsl:when test="/TEI/teiHeader/profileDesc/textClass/keywords[@n='category'][1]/term">
-						<xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='category'][1]/term">
-							<xsl:if test="normalize-space(.) != ''">
-								<field name="category">
-									<xsl:value-of select="."/>
-								</field>
-							</xsl:if>
-						</xsl:for-each>
-					</xsl:when>
-					<xsl:otherwise>
-						<field name="category">texts</field>
-					</xsl:otherwise>
-				</xsl:choose>
 				
-				
+				<field name="category">
+					<xsl:text>manuscripts</xsl:text>
+				</field>
+							
 				<!-- subCategory -->
 				
-				<xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='subcategory'][1]/term">
-					<xsl:if test="normalize-space(.) != ''">
-						<field name="subCategory">
-							<xsl:value-of select="."/>
-						</field>
-					</xsl:if>
-				</xsl:for-each>
+				<field name="subCategory">
+					<xsl:text>scribal</xsl:text>
+				</field>
 				
 				
 				<!-- topic -->
