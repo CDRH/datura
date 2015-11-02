@@ -103,17 +103,8 @@
 	<!-- placeName -->
 	<!-- recipient -->
 	<!-- recipients -->
-	
-	<!-- ==============================
-	Other Elements 
-	===================================-->
-	
-	<!-- principalInvestigator -->
-	<!-- principalInvestigators -->
-	<!-- place -->
-	<!-- placeName -->
-	<!-- recipient -->
-	<!-- recipients -->
+	<!-- sender -->
+	<!-- senders -->
 	
 	<!-- ==============================
 	CDRH specific categorization
@@ -187,6 +178,23 @@
 				<field name="dataType"> 
 					<xsl:text>tei</xsl:text>
 				</field>
+				
+				<!-- fig_location -->
+				
+				<xsl:if test="$fig_location != ''">
+					<field name="fig_location">
+						<xsl:value-of select="$fig_location"/>
+					</field>
+				</xsl:if>
+				
+				<!-- image_id -->
+				
+				<xsl:if test="//pb">
+					<field name="image_id">
+						<xsl:value-of select="(//pb)[1]/@facs"/>
+					</field>
+				</xsl:if>
+				
 				
 				
 				<!-- ==============================
@@ -310,7 +318,7 @@
 							<xsl:with-param name="datebefore"><xsl:value-of select="substring($doc_date,1,10)"/></xsl:with-param>
 						</xsl:call-template>
 						
-						<xsl:text>T00:00:00Z</xsl:text>
+						<!--<xsl:text>T00:00:00Z</xsl:text>-->
 						
 					</field>
 					
@@ -418,19 +426,49 @@
 				<!-- recipient -->
 				<!-- recipients -->
 				
-				<!-- This is currently the way we encode for Neihardt. Other projects may need special rules. 
-					Also, the TEI rules for may change.
-					Currently, there is only one persName per letter, but that too could change
-				-->
-				<xsl:if test="/TEI/teiHeader/profileDesc/particDesc/person[@role='recipient']/persName != ''">
+				<xsl:if test="/TEI/teiHeader/profileDesc/particDesc/person/@role='recipient'">
+					
+					<!-- All in one field -->
 					<field name="recipient">
-						<xsl:value-of select="/TEI/teiHeader/profileDesc/particDesc/person[@role='recipient']/persName"/>
+						<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/person[@role='recipient']/persName/@key">
+							<xsl:value-of select="normalize-space(.)"/>
+							<xsl:if test="position() != last()"><xsl:text>; </xsl:text></xsl:if>
+						</xsl:for-each>
 					</field>
-					<field name="recipients">
-						<xsl:value-of select="/TEI/teiHeader/profileDesc/particDesc/person[@role='recipient']/persName"/>
-					</field>
+					<!-- Individual fields -->
+					
+					<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/person[@role='recipient']/persName/@key">
+						<field name="recipients">
+							<xsl:value-of select="."></xsl:value-of>
+						</field>
+					</xsl:for-each>
+					
 					
 				</xsl:if>
+				
+				<!-- recipient -->
+				<!-- recipients -->
+				
+				<xsl:if test="/TEI/teiHeader/profileDesc/particDesc/person/@role='sender'">
+					
+					<!-- All in one field -->
+					<field name="sender">
+						<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/person[@role='sender']/persName/@key">
+							<xsl:value-of select="normalize-space(.)"/>
+							<xsl:if test="position() != last()"><xsl:text>; </xsl:text></xsl:if>
+						</xsl:for-each>
+					</field>
+					<!-- Individual fields -->
+					
+					<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/person[@role='sender']/persName/@key">
+						<field name="senders">
+							<xsl:value-of select="."></xsl:value-of>
+						</field>
+					</xsl:for-each>
+					
+					
+				</xsl:if>
+				
 				
 				
 				<!-- ==============================
@@ -531,12 +569,6 @@
 					</xsl:for-each>
 				</field>
 				
-				<!-- fig_location -->
-				<xsl:if test="$fig_location">
-					<field name="fig_location_s">
-						<xsl:value-of select="$fig_location"/>
-					</field>
-				</xsl:if>
 			</doc>
 		</add>
 			
