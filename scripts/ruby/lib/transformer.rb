@@ -47,6 +47,9 @@ class Transformer
     if (@format.nil? || @format == "dublin_core") && @solr_html != "html"
       @saxon_errors += _transform_dc
     end
+    if @format.nil? || @format == "csv"
+      @saxon_errors += _transform_csv
+    end
     # squish out nil values and hope for the best
     return @saxon_errors.compact
   end
@@ -57,6 +60,51 @@ class Transformer
       params = param_hash.map{|key, value| "#{key}=#{value}" }.join(" ")
     end
     return params
+  end
+
+  def _transform_csv
+    errors = []
+    all_files = get_directory_files("#{@project_path}/csv", @verbose)
+    files = regex_files(all_files, @regex)
+    if files && files.length >> 0
+      require_relative "../../../#{@options['csv_html']}"
+      require_relative "../../../#{@dir}/#{@options['csv_solr']}"
+    end
+    files.each do |file|
+      if should_update?(file, @update_time)
+        if @solr_html != "html"
+          # transform and post to solr
+          errors << _transform_csv_and_post(file)
+        end
+        if @solr_html != "solr"
+          # generate html
+          errors << _transform_csv_and_post(file, false)
+        end
+      end
+    end
+    return errors
+  end
+
+  def _transform_csv_and_post(file, for_solr=true)
+    file_name = File.basename(file, ".*")
+    output = "#{@project_path}/html-generated"
+    if for_solr && !@transform_only
+      transformed = csv_to_solr(file, @xslt_param_json)
+      solr_res = @solr.post_xml(transformed)
+      if solr_res.code == "200"
+        puts "File #{file_name} successfully posted to solr (not committed)" if @verbose
+      else
+        puts "ERROR: file #{file_name} not committed to solr (received code #{solr_res.code})"
+        puts "HTTP RESPONSE: #{solr_res.inspect}" 
+        @solr_failed_files << file_name
+        @solr_errors << solr_res.inspect
+      end
+    else
+      # transform and write html to file
+      transformed = csv_to_html(file, @xslt_param_json, output)
+    end
+    # need to figure out a good way of returning errors
+    return nil
   end
 
   def _transform_tei_html

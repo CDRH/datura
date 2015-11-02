@@ -9,7 +9,7 @@
   
   <!-- For display in TEI framework, have changed all namespace declarations to http://www.tei-c.org/ns/1.0. If different (e.g. Whitman), will need to change -->
   
-  <xsl:output method="xml" indent="no" encoding="UTF-8" omit-xml-declaration="yes"/>
+  <xsl:output method="xml" indent="yes" encoding="UTF-8" omit-xml-declaration="yes"/>
   
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     PARAMETERS
@@ -32,6 +32,57 @@
   <!-- ===================================================================================
     CODE TO INCLUDE
     =================================================================================== -->
+  
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    PERSONOGRAPHY HANDLING
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  
+  <xsl:template match="body//listPerson">
+   
+    <ul class="life_item">
+      <xsl:for-each select="//person">
+        <xsl:sort select="@xml:id"/>
+        <li>
+          <a>
+            <xsl:attribute name="href">
+              <xsl:text>#</xsl:text>
+              <xsl:value-of select="@xml:id"/>
+            </xsl:attribute>
+            <xsl:attribute name="title">
+              <xsl:value-of select="persName[@type='display']"/>
+            </xsl:attribute>
+            <xsl:value-of select="persName[@type='display']"/>
+          </a>
+        </li>
+        
+      </xsl:for-each>
+    </ul>
+    
+    
+    
+    <xsl:for-each select="//person">
+      <xsl:sort select="@xml:id"/>
+      <div>
+        <xsl:attribute name="class">
+          <xsl:text>life_item</xsl:text>
+        </xsl:attribute>
+        <xsl:attribute name="id">
+          <xsl:value-of select="@xml:id"/>
+        </xsl:attribute>
+        <h3>
+          <a>
+            <xsl:attribute name="class">persNameLink</xsl:attribute>
+            <xsl:attribute name="href"><xsl:value-of select="persName[@type='display']"/></xsl:attribute>
+            <xsl:value-of select="persName[@type='display']"/>
+          </a>
+        </h3>
+        <p><xsl:apply-templates select="note"/></p>
+      </div>
+    </xsl:for-each>
+    
+  </xsl:template>
+  
+  
   
   <!-- DELETE THIS AND PULL METADATA FROM SOLR -->
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

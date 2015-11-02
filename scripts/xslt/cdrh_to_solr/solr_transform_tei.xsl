@@ -4,19 +4,31 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/">
 	<xsl:output indent="yes" omit-xml-declaration="yes"/>
 	
-	<xsl:param name="date"/>
+        <!-- PARAMS -->
+        <!-- Defined in project config files -->
+	<xsl:param name="date"/>          <!-- TODO kmd look at if date and string are still being used by anything -->
 	<xsl:param name="string"/>
-	<xsl:param name="site_location">http://rosie.unl.edu/transmississippi/</xsl:param>
-	<xsl:param name="file_location">http://rosie.unl.edu/data/projects/</xsl:param>
-	<xsl:param name="project" select="/TEI/teiHeader/fileDesc/publicationStmt/authority[1]"></xsl:param>
+        <xsl:param name="fig_location"/>  <!-- url for figures -->
+        <xsl:param name="file_location"/> <!-- url for tei files -->
+        <xsl:param name="figures"/>       <!-- boolean for if figs should be displayed (not for this script, for html script) -->
+        <xsl:param name="fw"/>            <!-- boolean for html not for this script -->
+        <xsl:param name="pb"/>            <!-- boolean for page breaks in html, not this script -->
+        <xsl:param name="project"/>       <!-- longer name of project -->
+        <xsl:param name="slug"/>          <!-- slug of project -->
+        
+        <!-- TODO kmd jvd is site_location important to this script? -->
+	<xsl:param name="site_location"/>
+	<!-- <xsl:param name="project" select="/TEI/teiHeader/fileDesc/publicationStmt/authority[1]"></xsl:param> -->
 	
+        <!-- INCLUDES -->
 	<xsl:include href="lib/common.xsl"/>
 	
+        <!-- SCRIPT -->
 	<xsl:template match="/" exclude-result-prefixes="#all">
 		<xsl:variable name="filename" select="tokenize(base-uri(.), '/')[last()]"/>
 		<!-- The part of the url after the main document structure and before the filename. 
 			Collected so we can link to files, even if they are nested, i.e. whitmanarchive/manuscripts -->
-		<xsl:variable name="slug" select="substring-before(substring-before(substring-after(base-uri(.),'data/projects/'),$filename),'/')"/>
+		<!-- <xsl:variable name="slug" select="substring-before(substring-before(substring-after(base-uri(.),'data/projects/'),$filename),'/')"/> -->
 		
 		<!-- Split the filename using '\.' -->
 		<xsl:variable name="filenamepart" select="substring-before($filename, '.xml')"/>
@@ -509,8 +521,6 @@
 					</xsl:if>
 				</xsl:for-each>
 				
-			
-				
 				<!-- text -->
 				
 				<field name="text">
@@ -521,7 +531,12 @@
 					</xsl:for-each>
 				</field>
 				
-				
+				<!-- fig_location -->
+				<xsl:if test="$fig_location">
+					<field name="fig_location_s">
+						<xsl:value-of select="$fig_location"/>
+					</field>
+				</xsl:if>
 			</doc>
 		</add>
 			
