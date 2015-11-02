@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nar.01851">
+    <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title level="m" type="main">Amos T. Akerman to William Whiting, 4 April 1871</title>
+        <title level="m" type="sub">a machine readable transcription</title>
+        <author>Amos T. Akerman</author>
+        <editor>Kenneth M. Price</editor>
+        <editor>Ed Folsom</editor>
+        <respStmt>
+          <resp>Transcription and encoding</resp>
+          <name>The Walt Whitman Archive Staff</name>
+        </respStmt>
+        <sponsor>Center for Digital Research in the Humanities, University of
+          Nebraska-Lincoln</sponsor>
+        <sponsor>University of Iowa</sponsor>
+        <funder>National Historical Publications and Records Commission</funder>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <date>2011</date>
+        </edition>
+      </editionStmt>
+      <publicationStmt>
+        <idno>nar.01851</idno>
+        <distributor>The Walt Whitman Archive</distributor>
+        <address>
+          <addrLine>Center for Digital Research in the Humanities</addrLine>
+          <addrLine>319 Love Library</addrLine>
+          <addrLine>University of Nebraska-Lincoln</addrLine>
+          <addrLine>P. O. Box 884100</addrLine>
+          <addrLine>Lincoln, NE 68588-4100</addrLine>
+        </address>
+        <availability>
+          <p>Copyright &#169; 2011 by Ed Folsom and Kenneth M. Price, all rights
+            reserved. Items in the Archive may be shared in accordance with the Fair Use
+            provisions of U. S. copyright law. Redistribution or republication on other
+            terms, in any medium, requires express written consent from the editors and
+            advance notification of the publisher, Center for Digital Research in the
+            Humanities. Permission to reproduce the graphic images in this archive has
+            been granted by the owners of the originals for this publication only.</p>
+        </availability>
+      </publicationStmt>
+      <notesStmt>
+        <note type="project">The following are responsible for particular readings or for
+          changes to this file, as noted: <persName xml:id="el">Elizabeth Lorang</persName>
+          <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+          <persName xml:id="km">Kevin McMullen</persName>
+          <persName xml:id="js">John Schwaninger</persName>
+        </note>
+      </notesStmt>
+      <sourceDesc>
+
+        <bibl>
+          <author>Amos T. Akerman</author>
+          <title>Amos T. Akerman to William Whiting, 4 April 1871</title>
+
+         
+          <date cert="high" when="1871-04-04" xml:id="dat1">April 4, 1871</date>
+          <idno type="callno">Entry 10, Record Group 60, Letter Book H</idno>
+          <biblScope type="page">726</biblScope>
+          <orgName xml:id="nar">National Archives and Records Administration</orgName>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <particDesc>
+        
+        <person role="sender">
+          <persName key="Akerman, Amos T. ">Amos T. Akerman</persName>
+        </person>
+        <person role="recipient">
+          <persName key="Whiting, William">William Whiting</persName>
+        </person>
+        <person role="scribe">
+          <persName key="Whitman, Walt">Walt Whitman</persName>
+        </person>
+      </particDesc>
+    </profileDesc>
+    <revisionDesc>       <change when="2011-12-20" who="#el">removed spaces surrounding em-dashes and inserted space between initials</change><change when="2011-11-17" who="#el">checked file for values of @facs, further revised header information, revised encoding</change><change when="2011-11-15" who="#el">changes to TEI header, including punctuation of titles and replacing initials with full names when possible</change>
+      <change when="2011-05-10" who="#js">proofed</change>
+      <change when="2011-04-05" who="#km">proofed</change>
+      <change when="2011-01-18" who="#">transcribed, encoded</change>
+    </revisionDesc>
+  </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <pb xml:id="leaf001v" facs="nar.01851.001.jpg" type="verso"/>
+            <ab>April 4, 1871</ab>
+            <ab>Hon. William Whiting,</ab>
+            <ab>Boston, Mass.</ab>
+            <ab>Sir:</ab>
+            <ab>You are hereby retained as special assistant to the Attorney General of the United States in matters of controversy between the Government and various Telegraph companies. You will take the oath required by law of District Attorneys, and transmit the same to this office.</ab>
+            <ab>For this service you will be paid a reasonable compensation, to be determined by this <choice><sic>Department</sic><corr>Department.</corr></choice></ab>
+            <ab>In the performance of this service, you will for the present, and until further directions, act in Co&#337;peration wit Brevet Brig. Gen. Albert J. Myer, Chief Signal Officer of the Army&#8212;and will place yourself in immediate communication with him. He will fully make known to you the nature of the service upon which you are employed.</ab>
+            <ab>Very respectfully,</ab>
+            <ab>A. T. Akerman,</ab>
+            <ab>Attorney General.</ab>
+            <note type="authorial" place="left">Hon W. Whiting retained</note>
+            <note type="authorial" place="left">see Ex B'k. A. p. 58.</note>             
+        </body>
+    </text>
+</TEI>
