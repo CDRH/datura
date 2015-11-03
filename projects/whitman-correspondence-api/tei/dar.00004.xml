@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="dar.00004">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Ralph Waldo Emerson, 30 November 1868</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <name>The Walt Whitman Archive Staff</name>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2010</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>dar.00004</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2010 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note type="project">The following are responsible for particular readings or for
+                    changes to this file, as noted:
+<persName xml:id="kmp">Kenneth M. Price</persName> 
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="zk">Zachary King</persName>
+                    <persName xml:id="ec">Eric Conrad</persName>
+                </note>
+            </notesStmt>
+            <sourceDesc>
+
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author><editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961–1977</date><biblScope type="volume">2</biblScope>
+                            <biblScope type="page">71–72</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Ralph Waldo Emerson, 30 November 1868</title>
+                    <date cert="high" when="1868-11-30" xml:id="dat1">November 30, 1868</date>
+                    <orgName xml:id="dar">The Rauner Special Collections Library, Dartmouth College</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Emerson, Ralph Waldo">Ralph Waldo Emerson</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+<change when="2012-03" who="#kp">blessed</change>
+            <change when="2011-03-07" who="#el">checked</change>
+            <change when="2010-10-27" who="#zk">encoded</change>
+            <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <opener>
+                <dateline>
+                    <name type="place" rend="center">Attorney General's Office</name>
+                    <name type="place" rend="right"><hi rend="italic">Washington</hi></name>
+                    <date when="1868-11-30" rend="right">Nov. 30, <hi rend="italic">18</hi>68</date>.
+                </dateline>
+                <salute>Dear Mr. Emerson:</salute>
+            </opener>
+
+            <p>On the eve of sending the enclosed piece<ptr target="dar.00004_n1"/> abroad, I have taken a notion to first offer it to 
+                the <hi rend="italic">Atlantic</hi>—and, if not too great a liberty, to solicit your services for that purpose.
+            </p>
+            
+            <p>I would be much obliged if you would take it in to Mr. Fields<ptr target="dar.00004_n2"/> the first time you go to Boston—show him this letter—If available at all, I propose it for about the February number of the magazine. 
+                The price is $100, &amp; 30 copies of the number in which it may be printed—and I will ask Mr. Fields 
+                to do me the favor to send me an answer within a week from the time he receives the piece—or perhaps he can give his decision at once on receiving it.<ptr target="dar.00004_n3"/></p>
+            
+            <closer>
+                <salute>With best respect &amp; love,</salute>
+                <signed rend="right">Walt Whitman.</signed>
+            </closer>
+            
+            <postscript>
+                <p>The piece appears in printed form because I have had it put in type for my own convenience, 
+                    and to insure greater correctness—I forgot to say, above, that I scrupulously reserve the 
+                    right to print this piece in future in my book—(which, however, will not be for several months.)
+                </p>
+                    <p rend="right">W. W.</p>
+            </postscript>
+            
+        </body>
+    </text>
+</TEI>

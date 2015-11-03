@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.06000">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Henry M. Alden to Walt Whitman, 20 September
+                    1886</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Henry M. Alden</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2015</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.06000</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Horace Traubel</author>
+                        <title xml:id="ht">With Walt Whitman in Camden</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>Rowman and Littlefield, Inc.</publisher>
+                            <date when="1961">1961</date>
+                            <biblScope type="volume">2</biblScope>
+                            <biblScope type="page">226</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Henry M. Alden</author>
+                    <title>Henry M. Alden to Walt Whitman, 20 September 1886</title>
+                    <date cert="high" when="1886-09-20" xml:id="dat1">September 20, 1886</date>
+                    <idno type="callno">Box 4, Reel 2-3</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Alden, Henry M." ref="n4971">Henry M. Alden</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-08-12" who="#nhg">checked, corrected</change>
+            <change when="2015-07-26" who="#kb">edited</change>
+            <change when="2015-06-30" who="#if">edited</change>
+            <change when="2015-05-16" who="#ss">added annotations</change>
+            <change when="2015-01-29" who="#ss">encoded based on WWIC2</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place">Harper &#38; Brothers' Editorial Rooms.</name>
+                    <name type="place">New York,</name>
+                    <date when="1886-09-20">Sept. 20, 1886.</date>
+                </dateline>
+                <salute><hi rend="italic">Dear Mr. Whitman</hi>,</salute>
+            </opener>
+            <p> I am unable to avail myself of your War Memoranda, which I herewith return. The
+                Century Magazine has so strongly occupied this field that we do not wish to enter
+                upon it.<ptr target="loc.06000_n1"/></p>
+            <closer>
+                <salute>With thanks, sincerely yours,</salute>
+                <signed>H. M. Alden</signed>
+                <signed>Editor Harpers' Magazine.</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

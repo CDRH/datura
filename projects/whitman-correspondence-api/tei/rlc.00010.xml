@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="rlc.00010">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title level="m" type="main">Walt Whitman to Rudolf Schmidt, 25 April 1874</title>
+        <title level="m" type="sub">a machine readable transcription</title>
+        <author>Walt Whitman</author>
+        <editor>Kenneth M. Price</editor>
+        <editor>Ed Folsom</editor>
+        <respStmt>
+          <resp>Transcription and encoding</resp>
+          <name>The Walt Whitman Archive Staff</name>
+        </respStmt>
+        <sponsor>Center for Digital Research in the Humanities, University of
+          Nebraska-Lincoln</sponsor>
+        <sponsor>University of Iowa</sponsor>
+        <funder>National Historical Publications and Records Commission</funder>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <date>2012</date>
+        </edition>
+      </editionStmt>
+      <publicationStmt>
+        <idno>rlc.00010</idno>
+        <distributor>The Walt Whitman Archive</distributor>
+        <address>
+          <addrLine>Center for Digital Research in the Humanities</addrLine>
+          <addrLine>319 Love Library</addrLine>
+          <addrLine>University of Nebraska-Lincoln</addrLine>
+          <addrLine>P.O. Box 884100</addrLine>
+          <addrLine>Lincoln, NE 68588-4100</addrLine>
+        </address>
+        <availability>
+          <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the
+            Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law.
+            Redistribution or republication on other terms, in any medium, requires express written
+            consent from the editors and advance notification of the publisher, Center for Digital
+            Research in the Humanities. Permission to reproduce the graphic images in this archive
+            has been granted by the owners of the originals for this publication only.</p>
+        </availability>
+      </publicationStmt>
+      <notesStmt>
+        <note type="project">The following are responsible for particular readings or for changes to
+          this file, as noted: <persName xml:id="el">Elizabeth Lorang</persName>
+          <persName xml:id="al">Ashley Lawson</persName>
+          <persName xml:id="zk">Zachary King</persName>
+          <persName xml:id="ec">Eric Conrad</persName>
+        </note>
+      </notesStmt>
+      <sourceDesc>
+
+        <biblStruct>
+          <monogr>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <title xml:id="ehm">The Correspondence</title>
+            <imprint>
+              <pubPlace>New York</pubPlace>
+              <publisher>New York University Press</publisher>
+              <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+              <biblScope type="volume">2</biblScope>
+              <biblScope type="page">295</biblScope>
+            </imprint>
+          </monogr>
+        </biblStruct>
+
+        <bibl>
+          <author>Walt Whitman</author>
+          <title>Walt Whitman to Rudolf Schmidt, 25 April 1874</title>
+          <date cert="high" when="1874-04-25" xml:id="dat1">April 25, 1874</date>
+          <orgName xml:id="rlc">The Royal Library of Copenhagen</orgName>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <particDesc>
+        <person role="sender">
+          <persName key="Whitman, Walt">Walt Whitman</persName>
+        </person>
+        <person role="recipient">
+          <persName key="Schmidt, Rudolf">Rudolf Schmidt</persName>
+        </person>
+      </particDesc>
+    </profileDesc>
+    <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+      <change when="2012-11-29" who="#el">checked</change>
+      <change when="2012-06-20" who="#el">checked</change>
+      <change when="2012-05-02" who="#al">checked</change>
+      <change when="2011-03-22" who="#zk">encoded</change>
+      <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+    </revisionDesc>
+  </teiHeader>
+
+  <text type="letter">
+    <body>
+      <opener>
+        <dateline>
+          <name type="place" rend="right">431 Stevens st. Camden, <lb/>N. Jersey, <lb/>U. S.
+            America</name>. <date when="1874-04-25" rend="right">April 25, 1874</date>. </dateline>
+        <salute>Rudolf Schmidt<ptr target="n0793"/></salute>
+        <salute>Dear friend&#8212;</salute>
+      </opener>
+
+      <p>Yours of April 4 has come to hand&#8212;with picture, which I prize<ptr
+          target="rlc.00010_n1"/>&#8212;you speak of Mr. Elster's<ptr target="rlc.00010_n2"/>
+        criticism&#8212;when it comes I shall have it carefully translated to me&#8212;if you
+        communicate with him, please give him my serious thanks &amp; good will&#8212;</p>
+
+      <p>All your <hi rend="italic">papers</hi>, copies of <hi rend="italic">D. Fremblik</hi> &amp;
+        your <hi rend="italic">letters</hi> have reached me safely in the past&#8212;(also the large
+          <hi rend="italic">photo</hi>. by poor Clausen<ptr target="n0163"/>.) Did you receive <hi
+            rend="italic">Redwood Tree</hi><ptr target="n0578"/> in Harper's Magazine<ptr target="n0290"/>&#8212;&amp; <hi
+          rend="italic">Prayer of Columbus</hi><ptr target="n0482"/>&#8212;sent some weeks (March 4)
+        since? <hi rend="italic">This piece</hi> of C. Petersen is in the May <hi rend="italic"
+          >Galaxy</hi>,<ptr target="rlc.00010_n3"/> a New York Monthly. I will make inquiry about
+        Petersen, &amp; if I see him or find out I will duly write you. I am not well yet&#8212;far
+        from it&#8212;but live in hopes&#8212;</p>
+
+      <closer>
+        <signed rend="right">Walt Whitman</signed>
+      </closer>
+
+      <postscript>
+        <p>John Burroughs visited me for two days lately<ptr target="rlc.00010_n4"/>&#8212;He is
+          well, is married, (36 years old), has left Washington, &amp; has settled on a little farm
+          with horse, cows, &amp; fowls on the banks of the Hudson river, 60 miles from New York,
+          his native state &amp; mine. I am to go there the coming summer. J. B. is a most natural,
+          homely, good man&#8212;(like an <hi rend="italic">apple&#8211;tree</hi>, or <hi
+            rend="italic">pine</hi>, or a good <hi rend="italic">field</hi> of <hi rend="italic"
+            >wheat</hi>&#8212;yet thoroughly human)<ptr target="rlc.00010_n5"/>&#8212;has a nice
+          wife, kind &amp; good to me, like a sister. </p>
+
+        <p><choice>
+            <orig>To&#8211;day</orig>
+            <reg>Today</reg>
+          </choice> is dark &amp; rainy here&#8212;spring very backward here&#8212;I sit here in the
+          room alone, writing this&#8212;I am much alone&#8212;</p>
+      </postscript>
+
+      <closer>
+        <signed rend="right">W. W.</signed>
+      </closer>
+    </body>
+  </text>
+</TEI>

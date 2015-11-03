@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="tex.00168">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Le Baron Russell to Walt Whitman, 6 October 1863</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Le Baron Russell</author>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="jc">Janel Cayer</persName>
+               <persName xml:id="kk">Kathryn Kruger</persName>
+
+               <persName xml:id="tg">Ted Genoways</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2009</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>tex.00168</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <author>Le Baron Russell</author>
+               <title>Le Baron Russell to Walt Whitman, 6 October 1863</title>
+               <date when="1863-10-04">October 6, 1863</date>
+               <orgName xml:id="tex">Walt Whitman Collection, Harry Ransom Humanities Research Center, The University of Texas at Austin</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Russell, Le Baron">Le Baron Russell</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#jc" when="2011-10-13">corrected idno</change>
+         <change who="#kk" when="2010-04-07">Ken's proofreading changes</change>
+         <change who="#el" when="2009-09-16">encoded</change>
+         <change who="#tg" when="2009-09-09">transcribed</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         <pb facs="tex.00168.001.jpg" type="recto"/>
+         
+            <opener>
+               <dateline>
+                  <name type="place">Boston</name> 
+                  <date when="1863-10-06">Oct 6th 1863.</date>
+               </dateline>
+               <salute>My dear sir,</salute>
+            </opener>
+         <p>Having an opportunity to send by Miss Lowe the $20. From H. Lee, &amp; B. H Silsbee<ptr target="tex.00168_n2"/> of which I wrote you, I am very glad to take advantage of it&#8212;<ptr target="tex.00168_n100"/>
+         </p>
+            <p>You will find the amt enclosed&#8212;Hoping that we may be able to send you more hereafter,</p>
+            <closer>
+               <salute>I am very truly yours</salute>
+               <signed>L B Russell.</signed>
+            </closer>
+         
+         <postscript>
+            <p>Walt Whitman Esq.</p>
+         </postscript>
+      </body>
+   </text>
+</TEI>

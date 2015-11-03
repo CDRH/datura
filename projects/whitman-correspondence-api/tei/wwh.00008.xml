@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="wwh.00008">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to Louisa Van Velsor Whitman, 25 May 1865</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+
+               <persName xml:id="ao">Alyssa Olson</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>wwh.00008</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Walt Whitman</author>
+                  <editor>Edwin Haviland Miller</editor>
+                  <title xml:id="ehm">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>New York</pubPlace>
+                     <publisher>New York University Press</publisher>
+                     <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                     <biblScope type="volume">1</biblScope>
+                     <biblScope type="page">260-263</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to Louisa Van Velsor Whitman, 25 May 1865</title>
+               <date when="1865-05-25">May 25, 1865</date>
+               <orgName xml:id="wwh">Whitman House, Camden</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#el" when="2010-04-09">proofread and edited</change>
+         <change who="#vs" when="2009-08-27">proofread and edited annotations</change>
+         <change who="#vs" when="2008-10-14">added main TEI markup</change>
+         <change who="#el" when="2008-07-30">added TEI header structure w/o IDs and titles; added minimal TEI markup</change>
+         <change who="#ao" when="2008-07-29">pulled transcription from Primary Source Media</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <dateline rend="right">
+                  <name type="place">Indian Bureau, basement of Patent Office. &#8212;house 468 M st 2d door west of 12th Washington,</name>
+                  <date when="1865-05-25">Thursday, May 25, '65</date>
+               </dateline>
+               <salute>Dear Mother,</salute>
+            </opener>
+            <p>I received your letter of the 22d&#8212;I feel uneasy about you all the time, &amp; hope I shall get a letter to-day, &amp; find you have recovered.</p>
+            <p>Well, the Review is over, &amp; it was very grand&#8212;it was too much &amp; too impressive, to be described&#8212;but you will see a good deal about it in the papers. If you can imagine a great wide avenue like Flatbush avenue, quite flat, &amp; stretching as far as you can see, with a great white building half as big as fort Greene on a hill at the commencement of the avenue, &amp; then through this avenue marching solid ranks of soldiers, 20 or 25 abreast, just marching steady all day long for two days, without intermission, one regiment after another, real war-worn <hi rend="italic">soldiers</hi>, that have been marching &amp; fighting for years&#8212;sometimes for an hour nothing but cavalry, just solid ranks, on good horses, with sabres glistening, &amp; carbines hanging by their saddles, &amp; their clothes showing hard service, but they mostly all good-looking hardy young men&#8212;then great masses of guns, batteries of cannon, four or six abreast, each drawn by six horses, with the gunners seated on the ammunition wagons&#8212;&amp; these perhaps a long while in passing, nothing but batteries&#8212;(it seemed as if all the cannon in the world were here)&#8212;then great battalions of blacks, with axes &amp; shovels &amp; pick axes, (real southern darkies, black as tar)&#8212;then again hour after hour the old infantry regiments, the men all sunburnt&#8212;nearly every one with some old tatter all in shreds, (that <hi rend="italic">had been</hi> a costly &amp; beautiful <hi rend="italic">flag</hi>)&#8212;the great drum corps of sixty or eighty drummers massed at the heads of the brigades, playing away&#8212;now and then a fine brass band&#8212;but oftener nothing but the drums &amp; whistling fifes&#8212;but they sounded very lively&#8212;(perhaps a band of sixty drums &amp; fifteen or twenty fifes playing "Lannigan's ball")&#8212;the different corps banners, the generals with their staffs &amp;c&#8212;the Western Army, led by Gen. Sherman,<ptr target="wwh.00008_n1"/> (old Bill, the soldiers all call him)&#8212;well, dear mother, that is a brief sketch, give you some idea of the great panorama of the Armies that have been passing through here the last two days.</p>
+            <p>I saw the President several times, stood close by him, &amp; took a good look at him&#8212;&amp; like his expression much&#8212;he is very plain &amp; substantial&#8212;it seemed wonderful that just that plain middling-sized ordinary man, dressed in black, without the least badge or ornament, should be the master of all these myriads of soldiers, the best that ever trod the earth, with forty or fifty Major-Generals, around him or riding by, with their broad yellow-satin belts around their waists&#8212;and of all the artillery &amp; cavalry&#8212;to say nothing of all the Forts &amp; Ships, &amp;c, &amp;c.</p>
+            <p>I saw Gen. Grant too several times&#8212;He is the noblest Roman of them all&#8212;none of the pictures do justice to him&#8212;about sundown I saw him again riding on a large fine horse, with his hat off in answer to the hurrahs&#8212;he rode by where I stood, &amp; I saw him well, as he rode by on a slow canter, with nothing but a single orderly after him&#8212;He looks like a good man&#8212;(&amp; I believe there is much in looks)&#8212;I saw Gen. Meade, Gen. Thomas,<ptr target="wwh.00008_n2"/> Secretary Stanton, &amp; lots of other celebrated government officers &amp; generals&#8212;but the <hi rend="italic">rank &amp; file</hi> was the greatest sight of all.</p>
+            <p>The 51st was in the line Tuesday with the 9th Corps. I saw George, but did not get a chance to speak to him. He is well. George is now <hi rend="italic">Major</hi> George W. Whitman<ptr target="wwh.00008_n3"/>&#8212;has been commissioned &amp; mustered in. (Col. Wright<ptr target="wwh.00008_n4"/> &amp; Col. Shephard<ptr target="wwh.00008_n5"/> have done it, I think.) The 51st is over to the Old Convalescent camp, between here and Alexandria, doing provost duty. It (the old camp) is now called Augur General Hospital. If you should write direct,</p>
+            <p>Major G. W. Whitman | 51st New York V. V. | on provost duty at | Augur Gen'l Hospital | near Alexandria | Va.</p>
+            <p>It is thought that the 51st will not be mustered out for the present&#8212;It is thought the Government will retain the re-enlisted veteran regiments, such as the 51st&#8212;If that is so, George will remain as he is for the summer, or most of it&#8212;The reason I havn't seen him is, I knew they had left provost duty in the Prince st. prison, but didn't know where they had gone till Tuesday&#8212;I saw Capt. Caldwell<ptr target="wwh.00008_n6"/> Tuesday, also Col. Wright Tuesday night&#8212;they said they all have pleasant quarters over there.</p>
+            <p>Dear brother Jeff, I was very sorry you wasn't able to come on to see the Review&#8212;we had perfect weather &amp; every thing just as it should be&#8212;the streets now are full of soldiers scattered around loose, as the armies are in camp near here, getting ready to be mustered out. I am quite well &amp; visit the Hospitals the same. Mother, you didn't write whether you got the package of 5 Drum-Taps&#8212;I keep thinking about you every few minutes all day&#8212;I wish I was home a couple of days&#8212;Jeff, you will take this acc't of the Review, same as if it was written to you.</p>
+            <closer rend="right">
+               <signed>Walt</signed>
+            </closer>
+         
+      </body>
+   </text>
+</TEI>

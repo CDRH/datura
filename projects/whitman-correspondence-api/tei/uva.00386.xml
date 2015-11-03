@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="uva.00386">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to John Burroughs, 11 June [1879]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>uva.00386</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to John Burroughs, 11 June [1879]</title>
+                    <date cert="medium" when="1879-06-11" xml:id="dat1">June 11, 1879</date>
+                    <orgName xml:id="uva">Papers of Walt Whitman (MSS 3829), Clifton Waller Barrett
+                        Library of American Literature, Albert H. Small Special Collections Library,
+                        University of Virginia</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Burroughs, John">John Burroughs</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-07" who="#nhg">updated transcription based on images</change>
+            <change when="2013-05-01" who="#km">checked</change>
+            <change when="2013-01-15" who="#ej">Checked and Corrected</change>
+            <change when="2012-12-18" who="#gt">checked</change>
+            <change when="2012-10-26" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="uva_jc.00470_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">1309 Fifth avenue</name>
+                    <name type="place" rend="right">New York</name>
+                    <date when="1879-06-11" rend="right">June 11</date>
+                </dateline>
+                <salute>Dear John Burroughs</salute>
+            </opener>
+
+            <p>As you see I am still here&#8212;but I leave for Camden next Saturday&#8212;I still
+                keep <choice>
+                    <abbr>ab't</abbr>
+                    <expan>about</expan>
+                </choice> the same as when I last saw you&#8212;The Johnstons all well&#8212;The
+                Gilchrists sailed last Saturday in the Circassia<ptr target="uva.00386_n1"
+                />&#8212;</p>
+
+            <p>&#8212;I send you the "<hi rend="underline">Tobacco Plant</hi>" with a piece of mine will
+                interest you&#8212;(you'll see I have used one of your<pb xml:id="leaf001v"
+                    facs="uva_jc.00471_large.jpg" type="verso"/> letters of last winter)<ptr
+                    target="uva.00386_n2"/>&#8212;How nicely those English get up their print
+                things&#8212;</p>
+
+            <p>&#8212;This has been a good visit for me&#8212;it sort o' <hi rend="underline"
+                    >rehabilitates</hi> me for speaking &#38; literary handling, writing, off-hand,
+                more than I anticipated&#8212;half-paralytic as I am&#8212;henceforth I feel more at
+                ease, more self confidence&#8212;which is always half the battle&#8212;</p>
+
+            <p>I hope 'Sula is comfortable this hot weather (very hot here to-day)&#8212;&#38; the
+                    babe<pb xml:id="leaf002r" facs="uva_jc.00472_large.jpg" type="recto"
+                />&#8212;When you write direct to Camden&#8212;I send Smith<ptr
+                    target="uva.00386_n3"/> a paper, with my love</p>
+
+            <closer>
+                <signed rend="right">Walt</signed>
+            </closer>
+            <pb xml:id="leaf002v" facs="uva_jc.00473_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

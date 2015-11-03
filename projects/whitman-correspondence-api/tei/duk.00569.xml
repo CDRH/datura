@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00569">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, [13&#8211;17? August 1863]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                    </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00569</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, [13&#8211;17? August 1863]</title>
+                    <date cert="medium" notBefore="1863-08-13" notAfter="1863-08-17">August 13&#8211;17?, 1863</date>               
+                    <idno type="callno">III-5C. Letter 32</idno>
+                    <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                    <relatedItem>
+                        <ptr target="duk.00343"/>
+                    </relatedItem>
+                    <note type="project">Louisa wrote this letter on a letter she received from George Washington Whitman. She forwarded George's letter to Walt Whitman and included this note on the last page of George's letter.</note>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+                <particDesc>
+                    <person role="sender">
+                        <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                    </person>
+                    <person role="recipient">
+                        <persName key="Whitman, Walt">Walt Whitman</persName>
+                    </person>
+                </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-11-04" who="#el">checked; notes moved to external file and ptrs added</change>
+            <change when="2013-06-25" who="#wr">Transcription and date note</change>
+            <change when="2013-07-16" who="#wr">Change date range to notAfter 1863-08-16 (formerly year 1872, a typo). </change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        
+        <body>
+            
+            <pb xml:id="leaf001r" facs="duk.00569.001.jpg" type="recto"/>
+            
+            <opener>
+                <salute>dear Walt<ptr target="duk.00569_n1"/></salute>
+            </opener>
+            
+            <p>i will write
+            to you to morrow all
+            the particulars<ptr target="duk.00569_n2"/>
+            i was
+            doubly glad to get
+            this letter<ptr target="duk.00569_n5"/>
+                <choice><orig>dont</orig><reg>don't</reg></choice> send it to
+                han<ptr target="duk.00438_n4"/> at present</p>
+            <closer>
+                <signed>your mother<ptr target="duk.00425_n3"/></signed>
+            </closer>
+            
+            <pb facs="duk.00343.009.jpg" type="verso" xml:id="leaf001v"/>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05677">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Sierra Grande Mining Company (Benjamin Shoemaker) to
+                    Walt Whitman, 20 March 1883</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Benjamin Shoemaker</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="bbb">Blake Bronson-Bartlett</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05677</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Benjamin Shoemaker</author>
+                    <title>Sierra Grande Mining Company (Benjamin Shoemaker) to Walt Whitman, 20
+                        March 1883</title>
+                    <date cert="high" when="1883-03-20" xml:id="dat1">March 20, 1883</date>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Shoemaker, Benjamin">Benjamin Shoemaker</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2014-10-27" who="#nhg">checked, corrected</change>
+            <!--no date for check by bbb-->
+            <change when="2014-07-23" who="#ss">transcribed, encoded and annotated</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        
+        <body>
+
+            
+            <pb xml:id="leaf001r" facs="loc_ad.00757_large.jpg" type="recto"/>
+            <note type="editorial" place="top"><handShift rend="printed"/>The Sierra Grande Mining Company of Lake Valley, New
+                Mexico.</note>
+            <opener>
+                <dateline>
+                    <name type="place">Transfer Office,</name>
+                    <name type="place">18 Exchange Building.</name>
+                    <name type="place">Philadelphia,</name>
+                    <date when="1883-03-20">March 20th, 1883.</date>
+                </dateline>
+            </opener>
+            <head type="main-authorial">Dividend No. 6.<ptr target="loc.05677_n1"/></head>
+
+            <p>The Board of Directors have this day declared a dividend (Number 6) of one hundred
+                thousand dollars ($100,000), being twenty-five cents per share, payable at the
+                Transfer Office of the Company on and after April 2d, 1883, to the stockholders
+                then of record. Transfer books close on March 24th, at 3 P.M., and reopen April 3d,
+                at 10 A. M.</p>
+
+            <closer> 
+                <salute>By order</salute>
+                <signed>Benjamin H. Shoemaker, President</signed>
+                <signed>Attest:&#8212;Geo. L. Smedley, Sec.</signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="loc_ad.00756_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

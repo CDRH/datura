@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00544">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, [May? 1868]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="zk">Zachary King</persName>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00544</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, [May? 1868]</title>
+                    <date cert="medium" notBefore="1868-05-07" notAfter="1868-05-28" xml:id="dat1">May? 1868</date>
+                    <idno type="callno">III-5D</idno>
+                    <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-12-10" who="#el">removed choice encoding around janey maquire</change>
+            <change when="2013-09-17" who="#el">checked</change>
+            <change when="2013-06-17" who="#wr">Note proofreading corrections</change>
+            <change when="2013-05-22" who="#wr">Duke proofreading corrections</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent Proof</change>
+            <change when="2013-02-24" who="#wr">Minor proofreading corrections of notes.</change>
+            <change when="2013-02-20" who="#wr">Oral proofreading corrections: maquire</change>
+            <change when="2011-08-22" who="#wr">corrected date note and explained McClure matter with regard to dating.</change>
+            <change when="2011-12-20" who="#zk">corrected spacing</change>
+            <change when="2011-08-03" who="#zk">corrected date format in title; added call no., annotations</change>
+            <change when="2011-03-07" who="#wr">Review text and update annotations for style.</change>
+            <change when="2011-03-07" who="#fw">Annotate Home of the Friendless, Nancy and family</change>
+            <change when="2011-02-09" who="#fw">Correct 2 surfaces</change>
+            <change when="2011-01-24" who="#fw">Transcribe 2 surfaces</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+          
+            <pb xml:id="leaf001r" facs="duk.00544.001.jpg" type="recto"/>
+            
+            
+            <note type="editorial" resp="#rmb" place="top">14 May '68</note>
+            
+            <opener>
+                <dateline>
+                    <date notBefore="1868-05-07" notAfter="1868-05-28"><choice><orig>thursday</orig><reg>Thursday</reg></choice><ptr target="duk.00544_n16"/>
+                    
+                    </date>
+                </dateline>
+                
+                <salute>My dear Walt</salute>
+            </opener>
+            <p>i<ptr target="duk.00425_n3"/>
+                write to tell
+                you that janey maquire<ptr target="duk.00544_n9"/>
+                that is
+                <choice><orig>nanc</orig> <reg>Nancy</reg></choice> <choice><orig>brothers</orig>
+                    <reg>brother's</reg></choice> wife has been
+                here and tells me <choice><orig>awfull</orig> <reg>awful</reg></choice> things
+                of the <choice><orig>wreched</orig> <reg>wretched</reg></choice> creature she has
+                had twins one is dead the other is living<ptr target="duk.00544_n1"/>
+            and the children is sent out to beg
+            by the day and her brother the one to the
+            court house wants to get the 3 children
+            away from her and have them put
+            in some institution) what i want
+            you to <choice><orig>doo</orig> <reg>do</reg></choice> Walter dear is this
+                to write a letter to James Cornell<ptr target="duk.00544_n10"/>
+            for him to intercede in getting
+            them from her she drinks and every
+            thing else <choice><orig>thats</orig> <reg>that's</reg></choice> bad)
+            tell justice <choice><orig>cornell</orig><reg>Cornell</reg></choice>
+            for <choice><orig>Andrew s</orig> <reg>Andrew's</reg></choice> sake<ptr target="duk.00544_n13"/>
+                for <choice><orig>heavens s</orig> <reg>heaven's</reg></choice> sake
+            to <choice><orig>doo</orig> <reg>do</reg></choice> what he can) i wish you would
+            say to him that the home of the friendless
+            in <choice><orig>new york</orig><reg>New York</reg></choice><ptr target="duk.00544_n2"/>
+            is a good institution
+            half orphan children can be got in
+            there without pay) <choice><orig>janey</orig><reg>Janey</reg></choice> says if they are
+            put in the <choice><orig>brooklyn</orig> <reg>Brooklyn</reg></choice> institution they have
+                to pay something that <choice><orig>eddwar<unclear reason="illegible" resp="#wr" cert="medium">d</unclear> maquire</orig><reg>Edward McClure</reg></choice><ptr target="duk.00544_n3"/>
+
+            <pb xml:id="leaf001v" facs="duk.00544.002.jpg" type="verso"/>
+            
+            that is the <choice><orig>wretches</orig> <reg>wretch's</reg></choice> brother will pay
+            for two if we will pay for one
+            but they i think if the proper way it
+            taken can be got in <choice><orig>new york</orig><reg>New York</reg></choice><ptr target="duk.00544_n4"/>
+            she said she <choice><orig>couldent</orig> <reg>couldn't</reg></choice> tell me
+            how bad things were that if the children
+            can be got away from her they
+            never will countenance her
+            she said her brother Jim that is
+            another brother of <choice><orig>nancee</orig> <reg>Nancy</reg></choice> would
+            have shot her he was so <choice><orig>inbitter</orig> <reg>embittered</reg></choice>
+            <choice><orig>Edwar</orig><reg>Edward</reg></choice><ptr target="duk.00544_n11"/>
+            is the one with one arm
+            keeps the new court house<ptr target="duk.00544_n5"/>
+            and
+            his wife Janey said to day it affected
+            him so that it made him sick
+            the money you left for the children
+            and her we could never find
+            her Edd<ptr target="duk.00425_n13"/>
+                went to look for her and she
+            had <choice><orig>mooved</orig><reg>moved</reg></choice>)
+                i told Janey to day
+            about the money and for her to take
+            it and get something for them she said
+            she would come here again soon that it 
+            was no use to get any thing now <choice><orig>nance</orig><reg>Nance</reg></choice> pawn<unclear reason="illegible" resp="#wr" cert="medium">s</unclear>
+            every thing i hope you will write to <choice><orig>cornell</orig><reg>Cornell</reg></choice> <choice><orig>walter</orig><reg>Walter</reg></choice>
+             </p>
+            <p>i am <choice><orig>midling</orig><reg>middling</reg></choice> well only lame<ptr target="duk.00544_n12"/></p>
+            <pb sameAs="#leaf001r"/>
+            <postscript><p>the <choice><orig>maquires</orig><reg>Maquires</reg></choice> is very respectable men<ptr target="duk.00544_n7"/></p></postscript>
+        </body>
+    </text>
+</TEI>

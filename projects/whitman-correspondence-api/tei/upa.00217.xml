@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>  
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="upa.00217">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Anne Gilchrist to Walt Whitman, 18 June 1882</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Anne Gilchrist</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="no">Natalie O'Neal</persName>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>upa.00217</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>           
+            <sourceDesc>
+                <bibl>
+                    <author>Anne Gilchrist</author>
+                    <title>Anne Gilchrist to Walt Whitman, 18 June 1882</title>
+                    <date cert="high" when="1882-06-18" xml:id="dat1">June 18, 1882</date>
+                    <orgName xml:id="upa">Walt Whitman Collection, 1842&#8211;1957, Rare Book &#38; Manuscript Library, University of Pennsylvania</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Gilchrist, Anne">Anne Gilchrist</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-01-05" who="#nhg">corrected</change>
+            <change when="2014-11-22" who="#nhg">checked, corrected</change>
+            <change when="2014-11-07" who="#ak">corrected transcription and encoding</change>
+            <change when="2014-10-31" who="#no">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <pb xml:id="leaf001r" facs="upa_nhg.00011_large.jpg" type="recto"/>
+
+            <opener>
+                <dateline>
+                    <name type="place">England, Hampstead</name>
+                    <date when="1882-06-18">June 18./82</date>
+                </dateline>
+                <salute>Dearest friend,</salute>
+             </opener>
+
+            <p>I like with all my heart (&#38; head too) "A memorandum at a venture". It is as clear as daylight to me that you speak truth&#8212;invigorating ennobling truth, full of hope &#38; promise &#38; impetus for the race. I have never for a moment wavered in my belief in this truth since it burst upon me a veritable
+                
+                <pb xml:id="leaf001v" facs="upa_nhg.00012_large.jpg" type="verso"/>
+                
+                sunrise in reading your poems in 1869&#8212;each part of those poems necessary to the whole&#8212;It would indeed be betraying a great cause a sacred trust to cancel what is now once more attacked.</p>
+            
+            <p>I cannot think the smallest harm of any kind, even pecuniary, (except to the men themselves who thus expose the nature of their thoughts)&#8212;will come of it. I do not think you will sell one less copy, &#38; I suppose you will have a larger
+            
+            <pb xml:id="leaf002r" facs="upa_nhg.00013_large.jpg" type="recto"/>
+            
+            share of the profits. I am very glad you have written these clear strong words for the North American.</p>
+            <p>A real pleasure it is to see John Burroughs&#8212;both for your sake&#8212;for it seems in a kind of way almost like seeing you&#8212;&#38; for his own. What eyes he has for the ways of the whole dumb world. He has gone just now to my favorite Haslemere, in quest of nightingales&#8212;&#38; I hope
+            
+                <pb xml:id="leaf002v" facs="upa_nhg.00014_large.jpg" type="verso"/>
+            
+            will make the acquaintance of an excellent friend of mine there to whom I gave an introduction Unluckily Herby is away&#8212;painting some portraits in Monmouthshire with which he has succeeded well. He has also sold his Academy picture&#8212;&#38; will be back in time to see John Burroughs on his way <choice><abbr>thro'</abbr><expan>through</expan></choice> <gap reason="illegible" unit="chars" quantity="8"/>. Ah if you had but come with him! Best love from Giddy &#38; I.</p>
+                
+
+            <closer>
+                <salute>Goodbye dearest friend</salute>
+                <signed>Anne Gilchrist</signed>
+            </closer>
+            <postscript><p>Friendliest remembrance to your brother &#38; sister &#38; nieces.</p><!-- this note appears top of first page of the letter -->
+            </postscript>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="man.00041">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">C. A. J. Hueckberny [?] to Walt Whitman, 24 June
+                    1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>C. A. J. Hueckberny [?]</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="crl">Courtney Rebecca Lawton</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>man.00041</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>C. A. J. Hueckberny</author>
+                    <title>C. A. J. Hueckberny to Walt Whitman, 24 June 1880.</title>
+                    <date cert="high" when="1880-06-24" xml:id="dat1">June 24, 1880</date>
+                    <idno type="callno">GB 133 Eng 1170/1/1/14</idno>
+                    <orgName xml:id="man">Charles Sixsmith Collection at the John Rylands Library, University of Manchester</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Hueckberny, C. A. J.">C. A. J. Hueckberny</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-05-26" who="#nhg">revised for final check</change>
+            <change when="2013-11-01" who="#nhg">checked, corrected</change>
+            <change when="2013-10-25" who="#ej">Checked and Corrected</change>
+            <change when="2013-09-05" who="#nnk">proofed</change>
+            <change when="2013-06-24" who="#crl">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="man_ej.00104.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">New York</name>
+                    <date when="1880-06-24" rend="right">June 24<hi rend="superscript">th</hi> 1880</date>
+                </dateline>
+                <salute>Mr Walt Whitman.</salute>
+                <salute>Dear Sir:&#8212;</salute>
+            </opener>
+
+            <p>I received your Postal-Card this Morning, that is Wednesday the 20<hi rend="underline">th</hi>? and I thought
+                it my Duty to answer it <choice><orig>soo</orig><reg>soon</reg></choice> as possible. Mr Walt Whitman I thank you for your kindness of
+                Remembering me I am sure I don't know What I have done as to draw your Attention to
+                me I only hope that some day I will be able to return the Compliment <choice>
+                    <sic>hopping</sic>
+                    <corr>hoping</corr>
+                </choice> that this Letter will find you in the Best of spirits and <choice>
+                    <sic>helth</sic>
+                    <corr>health</corr>
+                </choice> my Compliments and wishes I remain yours
+                <pb xml:id="leaf001v" facs="man_ej.00209.jpg" type="verso"/>
+                <pb xml:id="leaf002r" facs="man_ej.00210.jpg" type="recto"/> affectionate.</p>
+            <closer>                
+                <signed>C. A. J. <unclear reason="illegible" cert="medium" resp="#crl">Hueckberny</unclear></signed>
+                <signed>37 U.S. City</signed>
+                <signed>U. S. A.</signed>
+            </closer>
+            <pb xml:id="leaf002v" facs="man_ej.00106.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

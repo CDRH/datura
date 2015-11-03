@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nyp.00481">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to William D. O'Connor, 14 March
+                    1883</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>nyp.00481</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">331&#8211;332</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to William D. O'Connor, 14 March 1883</title>
+                    <date cert="high" when="1883-03-14" xml:id="dat1">March 14, 1883</date>
+                    <idno type="callno">Series III</idno>
+                    <orgName xml:id="nyp">The Henry W. and Albert A. Berg Collection of English and
+                        American Literature, New York Public Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="O'Connor, William D.">William D. O'Connor</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-06-06" who="#nhg">checked, corrected</change>
+            <change when="2014-02-20" who="#nnk">proofed</change>
+            <change when="2014-02-03" who="#kc">checked, corrected</change>
+            <change when="2013-10-18" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">431 Stevens Street <lb/>Camden New Jersey<ptr
+                            target="nyp.00481_n1"/></name>
+                    <date when="1883-03-14" rend="right">March 14 '83</date>
+                </dateline>
+                <salute>Dear friend</salute>
+            </opener>
+            <p>Your telegram just <choice>
+                    <abbr>rec'd</abbr><expan>received</expan></choice>&#8212;Your letter <choice>
+                    <abbr>rec'd</abbr>
+                    <expan>received</expan>
+                </choice> last Monday&#8212;I had however sent proofs of the entire Introductory
+                Letter by Sunday night's mail hence in a parcel to Washington&#8212;&#38; I have just
+                sent a letter directed to (Acting) Chief Clerk L S S, asking him (if not already
+                done) to forward the parcel to you at Providence&#8212;</p>
+            <p>I last night forwarded proofs of good part of the G[ood] G[ray] P[oet] to you at
+                Providence direct&#8212;will forward the rest in a day or two&#8212;</p>
+            <p>I send best love to Nelly, I send best sympathy and love to the dear sufferer
+                    Jeannie<ptr target="nyp.00481_n2"/>&#8212;Love too to Dr and Mrs Channing,<ptr
+                    target="nyp.00481_n3"/> &#38; their children&#8212;</p>
+            <p>Beautiful sunny day here&#8212;noon&#8212;the window open as I write&#8212;Dr
+                B[ucke]'s book is half in type&#8212;Send the proofs back soon as
+                convenient&#8212;(no immanent hurry)&#8212;</p>
+            <p>Yes, I like the letter very much&#8212;</p>
+            <p>I am well as usual&#8212;</p>
+            <closer>
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

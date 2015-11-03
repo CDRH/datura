@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="col.00012">
+    <teiHeader>
+        <fileDesc> 
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Talcott Williams, 12 October
+                    1884</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>col.00012</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Talcott Williams, 12 October 1884</title>
+                    <date cert="high" when="1884-10-12" xml:id="dat1">October 12, 1884</date>
+                    <orgName xml:id="col">Columbia University Libraries, Rare Book &amp; Manuscript
+                        Library, New York</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Williams, Talcott" ref="loc.05142_n5">Talcott Williams</persName>
+                </person>
+            </particDesc>
+        </profileDesc> 
+        <revisionDesc>
+            <change when="2014-09-21" who="#ss">transcribed, encoded and annotated from
+            Miller.</change>
+            <change when="2015-01-12" who="#kb">edited</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter"> 
+        <body>
+            <opener>
+                <pb xml:id="leaf001r" facs="col.00012.001_large.jpg" type="recto"/>
+                <dateline>
+                    <name type="place" rend="center">328 Mickle Street</name>
+                    <name type="place" rend="center">Camden</name>
+                    <date when="1884-10-12" rend="right">Oct 12 pm</date>
+
+                </dateline>
+                <salute>My dear Williams</salute>
+            </opener>
+            <p>After I sent your note in answer yesterday&#8212;&#38; reading yours again&#8212;I
+                have perpetrated this&#8212;do I understand you are to have a long varied Blaine
+                melange like in sections&#8212;the Presidential canvas business, of course? If so
+                you might find a spot in the course of it all, where this <unclear reason="illegible" resp="#kb" cert="high">screed</unclear> may come
+                in<ptr target="col.00012_n1"/>&#8212;</p>
+            <p>&#8212;If that don't suit you, or is not practicable (though I hope it will be, as I should
+                like it just as well) print it by itself, like the little piece of Friday
+                last.<ptr target="col.00012_n2"/></p>
+            <p>&#8212;I will call about 10. this evening to see proof.</p>
+
+            <closer>
+                <signed>Whitman</signed>
+            </closer>
+
+
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nyp.00509">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Henry Wadsworth Longfellow to Walt Whitman, 22 February
+                    1881</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Henry Wadsworth Longfellow</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>nyp.00509</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <biblStruct>
+                    <monogr>
+                        <editor>Andrew Hilen</editor>
+                        <title xml:id="ah">The Letters of Henry Wadsworth Longfellow</title>
+                        <imprint>
+                            <pubPlace>Cambridge, Massachusetts</pubPlace>
+                            <publisher>Harvard University Press</publisher>
+                            <date when="1982">1982</date>
+                            <biblScope type="vol">6</biblScope>
+                            <biblScope type="page">692</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+
+                <bibl>
+                    <author>Henry Wadsworth Longfellow</author>
+                    <title>Henry Wadsworth Longfellow to Walt Whitman, 22 February 1881</title>
+                    <date cert="high" when="1881-02-22" xml:id="dat1">February 22, 1881</date>
+                    <orgName xml:id="nyp">The Henry W. and Albert A. Berg Collection of English and
+                        American Literature, New York Public Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Longfellow, Henry Wadsworth">Henry Wadsworth Longfellow</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-17" who="#nhg">checked, corrected</change>
+            <change when="2014-03-26" who="#ej">Checked and Corrected</change>
+            <change when="2014-03-24" who="#nnk">proofed</change>
+            <change when="2014-03-19" who="#kc">Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place"><choice>
+                            <abbr>Camb.<ptr
+                    target="nyp.00509_n1"/></abbr>
+                            <expan>Cambridge</expan>
+                        </choice></name>
+                    <date when="1881-02-22">Feb. 22. 1881.</date>
+                </dateline>
+                <salute>Dear Mr Whitman,</salute>
+            </opener>
+
+            <p>It gives me great pleasure to comply with your request.</p>
+
+            <p>Enclosed you will find the autograph for your Canadian friend.<ptr target="nyp.00509_n2"/></p>
+
+            <closer>
+                <salute rend="right">Yours very truly</salute>
+                <signed rend="right">Henry W. Longfellow.</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+ 
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.04933">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Thomas W. H. Rolleston, 9 October
+                    1885</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="smb">Stephanie Blalock</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.04933</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Thomas W. H. Rolleston, 9 October 1885</title>
+                    <date cert="high" when="1885-10-09" xml:id="dat1">October 9, 1885</date>
+                    <idno type="callno">MSS18630 Box 19</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Rolleston, Thomas W. H." ref="n1027">Thomas W. H.
+                        Rolleston</persName>
+                </person>
+            </particDesc>
+        </profileDesc> 
+        <revisionDesc>
+            <change when="2015-08-06" who="#nhg">checked, corrected</change>
+            <change when="2015-07-15" who="#smb">corrected, added links</change>
+            <change when="2015-07-09" who="#smb">final check</change>
+            <change when="2015-06-22" who="#nhg">corrected title</change>
+            <change when="2015-06-11" who="#if">edited</change>
+            <change when="2015-04-12" who="#ss">added annotations</change>
+            <change when="2015-01-25" who="#ss">checked and corrected</change>
+            <change when="2014-12-04" who="#ak">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <div1 type="letter">
+                <pb xml:id="leaf001r" facs="loc_vm.01689_large.jpg" type="recto"/>
+                <opener>
+                    <dateline>
+                        <name type="place">Camden</name>
+                        <date when="1885-10-09"><choice><abbr>Oct</abbr><expan>October</expan></choice> 9 '85</date>
+                    </dateline>
+                    <salute>Dear friend</salute>
+                </opener>
+                <p> I have <choice><abbr>rec'd</abbr><expan>received</expan></choice> this from Dr Knortz<ptr target="uva.00476_n1"/> &amp; send
+                    you&#8212;although he has of course notified you to same effect&#8212;I am still
+                    living here in my own little house, &amp; keep up fair spirits&#8212;but get
+                    around with great difficulty, (or rather I should say hardly at all) &amp; have
+                    been stricken in my eyes, which makes me partially blind &amp; growing
+                    worse.&#8212;Some friends have presented me with a horse &amp; wagon&#8212;so I
+                    get out a little every day&#8212;a young friend drives for me&#8212;I receive
+                    the <hi rend="underline">University Magazine</hi>,<ptr target="loc.03573_n3"/>
+                    &amp; thank you&#8212;I shall send you anything I write&#8212;(if there should
+                    be anything)&#8212;or whatever might interest you </p>
+                <closer>
+                    <salute>Love to you &amp; yours&#8212;</salute>
+                    <signed>Walt Whitman</signed>
+                </closer>
+                <postscript>
+                    <p>I have sent <choice><abbr>L of G</abbr><expan>Leaves of Grass</expan></choice> to Schabelitz</p>
+                </postscript>
+            </div1>
+
+            <pb xml:id="leaf001v" facs="loc_vm.01690_large.jpg" type="verso"/>
+
+            <div1 type="enclosure">
+                <opener>
+                    <dateline>
+                        <name type="place">540 East 155<hi rend="superscript">th</hi> <choice><abbr>Str.</abbr><expan>Street</expan></choice> New
+                            York.</name>
+                    </dateline>
+                    <salute>My dear Sir;</salute>
+                </opener>
+                <p> The translations of your poems are now ready for the printer and the MS will sail
+                    for Europe on Saturday next. You will receive a copy of the book in due time.</p>
+                <p>
+                    <hi rend="underline">J. Schabelitz</hi>, of <hi rend="underline">Z&#252;rich,
+                        Switzerland</hi>, is the publisher.<!--<ptr target="loc.05150_n2"/>--> I wish you
+                    would send him a copy of the "Leaves of Grass," as he reads English.</p>
+                <closer>
+                    <salute>Yours very truly</salute>
+                    <signed>Karl Knortz</signed>
+                    <salute/>
+                    <salute>Walt Whitman</salute>
+                    <address><addrLine>328 Mickle <choice><abbr>St.</abbr><expan>Street</expan></choice><ptr target="loc.04933_n1"/></addrLine></address>
+                </closer>
+            </div1>
+        </body>
+    </text>  
+</TEI>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00475">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, [27 February 1867]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="zk">Zachary King</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00475</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, [27 February 1867]</title>
+                    <date cert="high" when="1867-02-27" xml:id="dat1">February 27, 1867</date>
+                    <idno type="callno">III-5D</idno>
+                    <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+           <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-07-30" who="#el">merged files</change>
+            <change when="2013-06-08" who="#wr">proofreading changes</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent Proof</change>
+            <change when="2013-01-14" who="#el">updated TEI header to follow new encoding of respStmt within titlStmt; moved notes to external notes file and replaced with ptr encoding; removed empty opener elements</change>
+            <change when="2012-12-14" who="#wr">Proofreading Corrections of notes.</change>
+            <change when="2012-07-31" who="#wr">Moved RMBucke to HandNote; fixed editor, date, and title; reviewed paragraphing </change>
+            <change when="2012-07-16" who="#wr">Replaced smart quotes with straight; removed external URL links. </change>
+            <change when="2012-07-04" who="#wr">Proofreading corrections and annotated alamanac receipt and mustard plaster.</change>
+            <change when="2012-06-14" who="#wr">Replace straight quotes with smart quotes</change>
+            <change when="2012-04-25" who="#wr">Proofreading Corrections</change><change when="2011-12-19" who="#fw">Regularized Monday and bye, corrected spacing</change>
+            <change when="2011-07-29" who="#zk">added call no., annotations</change>
+            <change when="2011-01-09" who="#wr">Corrected transcription</change>
+            <change when="2010-12-29" who="#wr">Transcribed 2 surfaces</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="duk.00475.001.jpg" type="recto"/>
+            
+            <note type="editorial" resp="#rmb" place="top">27 Feb '67</note>
+            
+            <opener>
+                <dateline>
+                    <date when="1867-02-27"><choice><orig>februy</orig><reg>February</reg></choice> 27<ptr target="duk.00475_n14"/>
+                    </date>
+                </dateline>
+                <salute>my dear walt</salute>
+            </opener>
+           
+            <p>i feel as if i must
+            write a few lines<ptr target="duk.00425_n3"/>
+                every time i get a
+            letter i <choice><orig>cant</orig> <reg>can't</reg></choice> feel satisfied <choice><orig>untill</orig> <reg>until</reg></choice> i
+            write sometimes i think its real
+            foolish to write every week but
+            if i <choice><orig>dont</orig> <reg>don't</reg></choice> it seems as if i had something
+            to <choice><orig>doo</orig> <reg>do</reg></choice> that i had neglected my wrist
+                hurts me so bad i have got <choice><orig>Jeffs</orig><reg>Jeff's</reg></choice><ptr target="duk.00422_n2"/> gold
+            pen i <choice><orig>dident</orig> <reg>didn't</reg></choice> know but it would
+            help me along but <choice><orig>iam</orig> <reg>i am</reg></choice> so afraid of
+            injuring it that i <choice><orig>dont</orig> <reg>don't</reg></choice> know as it
+            will <choice><orig>doo</orig> <reg>do</reg></choice> me much good) i got your
+            letter Walt and money to day all right
+            it is very warm here now for the
+            time of year but very muddy i
+            never go out any where except around
+            the door i am midling well sometimes
+            i think <choice><orig>im</orig> <reg>I'm</reg></choice> real sick but it goes over
+            i have been troubled with a pain in my
+            side i have had a mustard <choice><orig>plaister</orig> <reg>plaster</reg></choice> on
+                part of the time i thought it <choice><orig>helpt</orig> <reg>helped</reg></choice> me some
+                <ptr target="duk.00475_n11"/>
+            but i feel my age more this winter
+            than i ever did before of course <choice><orig>im</orig> <reg>I'm</reg></choice> older
+            but i seem to be so tired every day the
+            children annoy me very much there is
+            no time to read nor any quiet they almost
+            
+            <pb xml:id="leaf001v" facs="duk.00475.002.jpg" type="verso"/>
+
+            live up stairs i like them of course but
+            i get very tired of them they are very wild
+            and noisy matty<ptr target="duk.00465_n9"/> has no help at present
+                but is to have a colored girl on <choice><orig>monday</orig> <reg>Monday</reg></choice>
+                they expect the masons<ptr target="duk.00474_n4"/> here next week to
+                make a visit) george<ptr target="duk.00425_n2"/> was up to day as usual
+            he seldom misses he comes up in the lumber
+            waggon he has put his houses in an <choice><orig>agents</orig> <reg>agent's</reg></choice>
+            hands to sell he says he feels real poor
+            they owe considerable but if they sell i suppose
+            they will come out square and not much more
+            every thing is so costly the plumbing and painting
+            and they pay the most of the men 3 &#189; dollars per day
+            walt you may <choice><orig>laughf</orig> <reg>laugh</reg></choice> at this figure three it
+            looks a little like a comic picture i <choice><orig>cant</orig> <reg>can't</reg></choice> help
+            but <choice><orig>laughf</orig> <reg>laugh</reg></choice> myself O walt i got the
+                almanacks<ptr target="duk.00475_n9"/>
+            i have been trying to get one
+            ever since <choice><orig>new year s</orig> <reg>New Year's</reg></choice> i sent by Jeff and
+            matt and george so many times i told
+            them at last i was going to send to washington
+            i wanted to see about the moon and the sun
+            rising and all) i am going to try to write a letter
+            to mary<ptr target="duk.00425_n6"/> i expect she thinks we have all forgotten
+                her as to han<ptr target="duk.00438_n4"/>
+                i <choice><orig>dont</orig> <reg>don't</reg></choice> know as i shall ever get
+            a letter from her i will try to write to
+            her before long) write walt how you like
+            your new boarding house<ptr target="duk.00475_n7"/>
+                and O the poor
+            soldiers i <choice><orig>doo</orig> <reg>do</reg></choice> so hope that poor fellow will live
+                it is so sad to suffer so much)<ptr target="duk.00475_n13"/>
+            i think walt <choice><orig>Jeffs</orig> <reg>Jeff's</reg></choice>
+            visit yes it has done him good</p>
+            <closer>
+                <salute>good bie Walt
+                till i write again</salute>
+            </closer>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.02070">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to the Editor of the <hi rend="italic">Century Illustrated
+                    Monthly Review</hi>, 25 July 1886</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.02070</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive July be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to the Editor of the Century Illustrated Monthly Review, 25
+                        July 1886</title>
+                    <date cert="high" when="1886-07-25" xml:id="dat1">July 25, 1886</date>
+                    <orgName xml:id="loc">Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="unk"><persName key="Unknown">Unknown</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Editor of the Century Illustrated Monthly Review" ref="n0871">Editor of the
+                        Century Illustrated Monthly Review</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-03-23" who="#kb">edited</change>
+            <change when="2014-10-21" who="#ss">encoded from images</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <note type="editorial" resp="#unk" place="top">750.00 | (?) | 73; To Dane H. Ferrier | of the Century C.; Walt Whitman</note>
+
+            <pb xml:id="leaf001r" facs="loc.02070.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">3[2]8 Mickle street</name>
+                    <name type="place">Camden New Jersey</name>
+                    <date when="1886-07-25" rend="right">July 25 '86</date>
+                </dateline>
+                <salute>Dear Sir,</salute>
+            </opener>
+            <p>I have finished the article <list>
+                    <item><hi rend="underline">Army Hospitals and Cases</hi></item>
+                    <item><hi rend="underline">Memoranda at the time&#8212;1863-'6</hi></item>
+                <item>By <hi rend="underline">Walt Whitman</hi></item>
+                </list> &#38; will send it on in a couple of days<ptr target="loc.02070_n1"
+                />&#8212;It will make perhaps six pages&#8212;</p>
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="loc.02070.002_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI> 

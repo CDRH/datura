@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nwu.00004">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Thomas Jefferson Whitman, 15 September
+                    [1886]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>nwu.00004</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">4</biblScope>
+                            <biblScope type="page">50&#8211;51</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Thomas Jefferson Whitman, 15 September [1886]</title>
+                    <date cert="medium" when="1886-09-15" xml:id="dat1">September 15, 1886</date>
+                    <orgName xml:id="nwu">Charles Deering McCormick Library of Special Collections, Northwestern University</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Thomas Jefferson" ref="n4995">Thomas Jefferson Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-07-17" who="#ss">added note</change>
+            <change when="2015-04-13" who="#kb">edited</change>
+            <change when="2014-10-28" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place">Camden<ptr target="nwu.00004_n1"/></name>
+                    <date when="1886-09-15" rend="right">Sept 15 noon</date>
+                </dateline>
+            </opener>
+            <p>Lou got home last night all safe<ptr target="nwu.00004_n3"/>&#8212;She &#38; George came here <choice><abbr>ab't</abbr><expan>about</expan></choice> 10 last
+                night&#8212;She told me many little particulars I was glad to hear, though all is so
+                sad&#8212;Nothing special in my affairs&#8212;I am writing some&#8212;have just sent
+                off a piece to Harpers<ptr target="nwu.00004_n2"/>&#8212;(they may take it, &#38;
+                may <hi rend="italic">not</hi>)&#8212;I have written a piece <choice><abbr>ab't</abbr><expan>about</expan></choice> "War Hospitals"
+                for the Century&#8212;which they have taken &#38; paid me for&#8212;(Both mag's pay
+                handsomely)&#8212;I send you &#38; Jess a letter just <choice><abbr>rec'd</abbr><expan>received</expan></choice> from Hannah&#8212;We
+                have had several inquiries here about dear Hattie's death&#8212;two ladies <choice><abbr>call'd</abbr><expan>called</expan></choice>
+                yesterday who had seen Hattie here at Lou's. Love to you, dear brother&#8212;Love to
+                you, Jessie dear&#8212;</p>
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

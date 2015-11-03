@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="mhs.00016">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Mannahatta Whitman and Jessie Louisa Whitman, 2 October [1877]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="ad">Anthony Dreesen</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>mhs.00016</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Mannahatta Whitman and Jessie Louisa Whitman, 2 October [1877]</title>
+                    <date cert="medium" when="1877-10-02" xml:id="dat1">October 2, 1877</date>                    
+                    <orgName xml:id="mhs">Missouri Historical Society</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Mannahatta">Mannahatta Whitman</persName>
+                    
+                </person>
+                <person role="recipient">
+                    
+                    <persName key="Whitman, Jessie Louisa">Jessie Louisa Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2014-09-02" who="#nhg">corrected</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-01-28" who="#nhg">added image references, updated transcription</change>
+            <change when="2013-03-13" who="#km">checked</change>
+            <change when="2012-12-18" who="#ab">checked</change>
+            <change when="2012-10-24" who="#el">checked</change>
+            <change when="2012-09-28" who="#ad">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="mhs.00016.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">431 Stevens Street<ptr target="mhs.00016_n1"/></name>
+                    <name type="place">Camden</name>
+                    <date when="1877-10-02"><choice><abbr>Oct</abbr><expan>October</expan></choice> 2</date>
+                </dateline>
+                <salute>My dear girls (for this letter is for you both)</salute>
+            </opener>
+
+            <p>I will just write you a few lines without formality&#8212;</p>
+            <p>It is evening&#8212;has just struck 8&#8212;I am sitting up in my room alone&#8212;I still feel pretty well for me&#8212;went over to <choice><abbr>Phila:</abbr><expan>Philadelphia</expan></choice> &amp; took a long pleasant ride out to the Park in the open car, this afternoon&#8212;<choice><abbr>return'd</abbr><expan>returned</expan></choice> about an hour ago, &amp; had my supper&#8212;Lou is well&#8212;she went over to <choice><abbr>Phila:</abbr><expan>Philadelphia</expan></choice> this forenoon, &amp; this afternoon &amp; evening she has had company, (Aunt Libby, &amp; her daughter &amp; daughter's husband&#8212;they are down stairs now)&#8212;George is well,&#8212;he has been to New York <choice><orig>to-day</orig><reg>today</reg></choice>, &amp; has just <choice><abbr>return'd</abbr><expan>returned</expan></choice>, &amp; is down stairs eating his supper&#8212;
+                
+                <pb xml:id="leaf001v" facs="mhs.00016.002_large.jpg" type="verso"/>
+                
+                Eddy is well &amp; hearty&#8212;Tip ditto&#8212;We all get along pretty much in the old way&#8212;<choice><orig>To-day</orig><reg>Today</reg></choice> I <choice><abbr>rec'd</abbr><expan>received</expan></choice> an order for five full sets of my books from England, <hi rend="underline">accompanied by the money</hi><ptr target="mhs.00016_n2"/>&#8212;(which of course doesn't hurt my feelings a bit)&#8212;</p>
+            
+            <p>I <choice><orig>havn't</orig><reg>haven't</reg></choice> been over to the Gilchrists' for about two weeks, as they are all deeply absorbed in Mrs. G's illness (from the operation)&#8212;but Lou was there a few minutes <choice><orig>to-day</orig><expan>today</expan></choice>&#8212;didn't see Mrs G, she is doing well, &amp; will probably be up in a couple of weeks, or so&#8212;Lou saw Beatrice&#8212;Herbert is in New York, (up the Hudson) visiting at Mr Burroughs's&#8212;</p>
+            
+            <p>I have <choice><abbr>rec'd</abbr><expan>received</expan></choice> a good letter from your father, dated Sept 24<ptr target="mhs.00016_n3"/>&#8212;he was well, &amp; busy in his new office&#8212;So, my darlings, you see I have just rattled off all the domestic gossip &amp; have now only room to send love from</p>
+
+            <closer>
+                <signed rend="right">Uncle Walt</signed>
+            </closer>
+            <pb xml:id="leaf002r" facs="mhs.00016.003_large.jpg" type="recto"/>
+            <pb xml:id="leaf002v" facs="mhs.00016.004_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.01331">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Kenningale Cook to Walt Whitman, 23 April 1877</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Kenningale Cook</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>                   
+                    <persName xml:id="vm">Vince Moran</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="kp">Kenneth Price</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.01331</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>            
+                <bibl>
+                    <author>Kenningale Cook</author>
+                    <title>Kenningale Cook to Walt Whitman, 23 April 1877</title>
+                    <date cert="high" when="1877-04-23" xml:id="dat1">April 23, 1877</date>
+                    <idno type="callno">MSS18630</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="ht"><persName key="Traubel, Horace">Horace Traubel</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Cook, Kenningale">Kenningale Cook</persName>
+                </person>
+                <person role="recipient" xml:id="ww">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-01-17" who="#kp">blessed</change>
+            <change when="2013-11-07" who="#nhg">updated encoding of notes</change>
+            <change when="2013-08-12" who="#km">checked</change>
+            <change when="2013-02-03" who="#ab">checked</change>
+            <change when="2013-01-25" who="#ej">checked, corrected</change>
+            <change when="2012-10-29" who="#vm">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+         
+            <pb xml:id="leaf001r" facs="loc.01331.001_large.jpg" type="recto"/>
+            
+            <note type="editorial" resp="#ht" place="top">see notes Aug 26 &amp; 29 '88</note>
+            
+            <note type="editorial" resp="#ww" place="top">send something?</note>
+            
+            <opener>
+                <dateline>
+                    <address>
+                        <addrLine>1 Adam St.</addrLine>
+                        <addrLine>Adelphi.</addrLine>
+                        <addrLine>London</addrLine>
+                        <addrLine>W.C.</addrLine>
+                    </address>
+                
+                    <date when="1877-04-23">23 April 1877</date>
+                </dateline>
+                
+                <salute>Dear Sir,</salute>
+            </opener>
+
+            <p>I have been reading aloud your 'Whispers of Heavenly Death'<ptr target="n0695"/> this evening from the copy which you so kindly sent me in March 1876; and it has led me on to ask if you have any poems still unpublished in
+            
+             
+            <pb xml:id="leaf001v" facs="loc.01331.002_large.jpg" type="verso"/>
+            
+            
+            <pb xml:id="leaf002r" facs="loc.01331.003_large.jpg" type="recto"/>
+                
+            
+            <pb xml:id="leaf002v" facs="loc.01331.004_large.jpg" type="verso"/>
+            the same vein of mystic realism.<ptr target="n0821"/> And if so, could you spare me one or two for the Magazine which I represent? I am sorry that but a trifle could be offered for them, as the Magazine has been neglected of late, and has only recently come into my hands, to be worked up again by labour &amp; patience</p>
+            
+            <p>I trust you are as well as you expect to be, and nearly as happy as you hope.</p>
+
+            <closer>
+                <salute rend="right">Yours faithfully</salute>
+                <signed rend="right">Kenningale Cook.</signed>
+                <signed rend="left">to Walt Whitman <unclear reason="illegible" cert="high" resp="#km">Esq.</unclear></signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

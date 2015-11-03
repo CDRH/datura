@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05169">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Richard Maurice Bucke to Walt Whitman, 12 March
+                    1883</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Richard Maurice Bucke</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt> 
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05169</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive November be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+
+            <sourceDesc>
+
+                <biblStruct>
+                    <monogr>
+                        <editor>Artem Lozynsky</editor>
+                        <title xml:id="al">The Letters of Dr. Richard Maurice Bucke to Walt
+                            Whitman</title>
+                        <imprint>
+                            <pubPlace>Detroit</pubPlace>
+                            <publisher>Wayne State University Press</publisher>
+                            <date when="1977">1977</date>
+                            <biblScope type="page">17</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+
+                <bibl>
+                    <author>Richard Maurice Bucke</author>
+                    <title>Richard Maurice Bucke to Walt Whitman, 12 March 1883</title>
+                    <date cert="high" when="1883-03-12" xml:id="dat1">March 12, 1883</date>
+                    <idno type="callno">Box 53</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-06-06" who="#nhg">checked, corrected</change>
+            <change when="2014-04-29" who="#ss">annotations added</change>
+            <change when="2014-04-02" who="#nnk">proofed</change>
+            <change when="2014-03-25" who="#ej">Checked and Corrected</change>
+            <change when="2014-02-12" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place"><hi rend="underline">Asylum, London,</hi></name>
+                    <date when="1883-03-12"><hi rend="underline">March 12, 83</hi><ptr target="loc.05169_n1"
+                        /></date>
+                </dateline>
+            </opener>
+            <p>I have yours of 9<hi rend="underline"><hi rend="superscript">th</hi></hi><ptr target="loc.05169_n2"/> &#38;
+                proofs down to galley N<hi rend="underline"><hi rend="superscript">o</hi></hi>
+                18<ptr target="loc.05169_n4"/>&#8212;If 1<hi rend="underline"><hi rend="superscript">st</hi></hi> batch
+                proofs not reached you yet go on without it, no important corrections as far as I
+                remember&#8212;You need not send O'Connor's letter<ptr target="loc.05169_n3"/> or Good Gray Poet to me in proof
+                 I will leave them to you &#38;
+                him&#8212;I will mail 3<hi rend="underline"><hi rend="superscript">d</hi></hi> &#38;
+                    4<hi rend="underline"><hi rend="superscript">th</hi></hi> batches back to you
+                tomorrow morning&#8212;I am well satisfied on the whole so far</p>
+            <closer>
+                <signed rend="right">R M B.</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

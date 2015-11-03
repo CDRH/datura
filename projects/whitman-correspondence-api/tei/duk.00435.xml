@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00435">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, [5 March 1865]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="zk">Zachary King</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00435</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, [5 March 1865]</title>
+                    <date cert="medium" when="1865-03-05" xml:id="dat1">March 5, 1865</date>
+                    <idno type="callno">III-5D</idno>
+                    <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Whitman, Louisa Van Velsor</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Whitman, Walt</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2014-09-23" who="#nhg">updated date range</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-11-05" who="#el">final check; removed Bucke note that was not on letter leaf</change>
+            <change when="2013-07-29" who="#el">merged files</change>
+            <change when="2013-07-19" who="#wr">Replace internal notes with external notes</change>
+            <change when="2013-06-05" who="#wr">Duke Proofreading Corrections</change>
+            <change when="2013-05-08" who="#wr">Silent Proofreading Correctios and Miller date note</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent Proof</change>
+            <change when="2013-04-28" who="#nr">Silent Proofreading</change>
+            <change when="2012-04-25" who="#wr">Proofreading Corrections</change>
+            <change when="2012-12-18" who="#el">revised header to move WWA staff names to respStmt; removed empty opener child elements; replaced wwa editorial notes with ptrs to external notes file.</change>
+            <change when="2012-12-14" who="#wr">Proofreading Corrections of notes.</change>
+            <change when="2012-07-31" who="#wr">Moved RMBucke to HandNote; fixed editor, date, and title; reviewed paragraphing </change>
+            <change when="2012-07-16" who="#wr">Replaced smart quotes with straight; removed external URL links. </change>
+            <change when="2012-06-14" who="#wr">Replace straight quotes with smart quotes</change>
+            <change when="2011-12-19" who="#fw">correct spacing</change>
+            <change when="2011-07-29" who="#zk">added call no.</change>
+            <change when="2011-07-28" who="#zk">added annotations</change>
+            <change when="2010-11-01" who="#wr">transcribed, encoded irregular spellings, wolvs and morng</change>
+            <change when="2010-09-24" who="#er">checked, encoded irregular spelling</change>
+            <change when="2010-09-10" who="#wr">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="duk.00435.001.jpg" type="recto"/>
+            
+            <opener>
+                <dateline>
+                    <date when="1865-03-05">Sunday night<ptr target="duk.00435_n7"/></date>
+                </dateline>
+                <salute>dear Walt</salute>
+            </opener>
+            
+            <p>George<ptr target="duk.00425_n2"/> has
+                come home came this
+                morning he looks quite
+                thin and shows his prison
+                life but feels pretty well
+                considering what he suffered
+                he was very sick
+                at one time i think it was
+                in <choice><orig>january</orig> <reg>January</reg></choice> with the lung
+                fever he was six weeks
+                in the hospital so bad
+                that the doctor thought he
+                would die this doctor i
+                think he calls his name
+                wilson<ptr target="duk.00435_n8"/>
+                 seems to have
+            <pb xml:id="leaf001v" facs="duk.00435.002.jpg" type="verso"/>
+            taken A liking to him
+                and did what he could
+                for him he had no
+                medicine blistered him
+                and gave him mercury
+                he was <choice><orig>dilirious</orig> <reg>delirious</reg></choice> and lay
+                in A stupor till the night
+                the fever turned he
+                says he felt A thrill
+                run through him and thought he was dying
+                he was in the dark he
+                <choice><orig>cald</orig> <reg>called</reg></choice> to one of the nurses
+                to bring A light and to
+                raise him up and give
+                him A piece of paper
+                and pencil and he wrote
+                to me that was his last night
+                and what was due him
+                from the <choice><orig>goverment</orig> <reg>government</reg></choice> and
+                told the man to blow
+                <pb xml:id="leaf002r" facs="duk.00435.003.jpg" type="recto"/>
+                out the light and go to
+                bed and he said he shut
+                his eyes and never
+                expected to open them
+                again and went to
+                sleep and when he
+                awoke he was all in
+                a sweat and just at
+                daylight one of the
+                officials of the place
+                came very softly to take all
+                he had in his pockets
+                they thought he would
+                be dead he says he has
+                seen them before the poor
+                fellows is dead turn
+                their pockets inside out
+                and take all when the
+                doctor came in the <choice><orig>morng</orig> <reg>morning</reg></choice>
+                he says you are better
+                he said it was his constitution
+                that saved him
+                he lay on the <choice><orig>flour</orig> <reg>floor</reg></choice>              
+                <pb xml:id="leaf002v" facs="duk.00435.004.jpg" type="verso"/>
+               two or three days before
+                he went to the hospital
+                he had no drawers and
+                only A thin pair of <choice><orig>flann<unclear reason="illegible" cert="medium" resp="#wr">el</unclear></orig> <reg>flannel</reg></choice>
+                <choice><orig>trowsers</orig> <reg>trousers</reg></choice> and no shirt
+                part of the time they stole
+                his things it seems awful
+                to think of but he is got home
+                when they were captured they
+                <choice><orig>dident</orig> <reg>didn't</reg></choice> give them any thing
+                    to eat from <choice><orig>friday</orig> <reg>Friday</reg></choice> <choice><orig>morng</orig> <reg>morning</reg></choice>
+                    till <choice><orig>sunday</orig> <reg>Sunday</reg></choice> when he was
+                captured he had 100 dol they
+                searched him 3 times and
+                he saved his money he
+                cut A place in his neck
+                tie and put 50 d bill in and
+                put some in his tobacco and
+                some silver in his mouth
+                one next to him they took
+                600 dl from they took
+                <pb xml:id="leaf003r" facs="duk.00435.005.jpg" type="recto"/>
+                all sam pooley s<ptr target="duk.00435_n2"/>
+                George says sam would
+                fared <choice><orig>poorley</orig> <reg>poorly</reg></choice> if it
+                <choice><orig>hadent</orig> <reg>hadn't</reg></choice> been for him
+                he cooked what they
+                could get and george
+                provided he says that
+                beans kept them alive
+                they would get A quart
+                and cook them without
+                any thing he brought
+                home A piece of the corn
+                bread how they lived
+                on it i <choice><orig>cant</orig> <reg>can't</reg></choice> see they would
+                have nothing else for
+                six weeks at a time
+                i sent <choice><orig>Georges</orig> <reg>George's</reg></choice> letter<ptr target="duk.00435_n9"/>
+
+                yesterday as soon as i
+                got yours i had no
+                idea but what you 
+                see <choice><orig>Georges</orig> <reg>George's</reg></choice> name
+                <pb xml:id="leaf003v" facs="duk.00435.006.jpg" type="verso"/>
+                amongst the arrived
+                Georg says there was
+                20 yesterday died at
+                <choice><orig>anapolus</orig> <reg>Annapolis</reg></choice> some died
+                eating they were he
+                says like hungry <choice><orig>woolvs</orig> <reg>wolves</reg></choice>
+                had got so famished
+                i told him to day to not
+                think any more about
+                it he has pains in his
+                legs effects of the fever
+                Jeffy<ptr target="duk.00422_n2"/>
+                is not home yet
+                and sis is not well yet<ptr target="duk.00435_n4"/>
+                she seems to have A kind
+                of fever write walt
+                when you get this
+                i feel better than i
+                have felt the rest is all
+                well i thought you
+                would like to hear something
+                about his prison life
+            </p>
+            <closer>
+                <signed>L W<ptr target="duk.00425_n3"/></signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

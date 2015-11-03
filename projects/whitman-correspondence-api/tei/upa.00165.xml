@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="upa.00165">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Anne and Herbert Gilchrist, 12 June [1877]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>                   
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                    <persName xml:id="kp">Kenneth Price</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>upa.00165</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">84&#8211;85</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Anne and Herbert Gilchrist, 12 June [1877]</title>
+                    <date cert="high" when="1877-06-12" xml:id="dat1">June 12, 1877</date>
+                    <orgName xml:id="upa">Walt Whitman Collection, 1842&#8211;1957, Rare Book &amp; Manuscript Library, University of Pennsylvania</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Gilchrist, Anne and Herbert">Anne and Herbert Gilchrist</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-01-17" who="#kp">blessed</change>
+            <change when="2013-02-22" who="#km">checked</change>
+            <change when="2013-01-18" who="#ej">Checked and Corrected</change>
+            <change when="2013-01-04" who="#ab">checked</change>
+            <change when="2012-09-27" who="#gt">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">at Geo: Stafford's Kirkwood</name> 
+                    <name type="place" rend="right"><choice><abbr>N J</abbr><expan>New Jersey</expan></choice></name> 
+                    <date when="1877-06-12" rend="right">Tuesday p m</date>
+                    <date when="1877-06-12" rend="right">June 12</date>
+                </dateline>
+                <salute>Dearest friend</salute>
+            </opener>
+
+            <p>After dinner, now, seated out in an arm chair under the tree, the grass below, &amp; the good breeze laving me, I have just read (&amp; reread) the three letters, yours &amp; Herby's &amp; Mr Carpenter's&#8212;sweet, &amp; welcome &amp; bracing all of them somehow<ptr target="upa.00165_n1"/>&#8212;</p>
+            
+            <p>Yes, dear friend, I will be up by Thursday evening, in time for tea, if nothing happens&#8212;Count much on seeing you all, &amp; the cluster of friends&#8212;<choice><orig>May-be</orig><reg>Maybe</reg></choice> while there are so many with you I had better sleep over in Camden, &amp; Herby &amp; Mr Burroughs<ptr target="upa.00165_n2"/> take my room &amp; bed&#8212;but we will see when I come&#8212;the days I shall surely be there&#8212;</p>
+
+            <closer>
+                <salute>Love to you, Herby &amp; the girls&#8212;&amp; to John Burroughs &amp; Mr Carpenter<ptr target="upa.00165_n3"/> if they get there before me&#8212;</salute>
+                <signed rend="right">W W</signed>
+            </closer>       
+        <postscript>
+        <p>Herby, to-day is cloudy &amp; threatening here though no rain yet&#8212;(I shouldn't wonder if Mr Stafford's prophecy <choice><abbr>ab't</abbr><expan>about</expan></choice> the week proved true)&#8212;You ought to have been here yesterday &amp; be here <choice><orig>to-day</orig><reg>today</reg></choice> for one thing&#8212;we have oceans of <hi rend="italic">delicious strawberries</hi> most every meal&#8212;</p>
+        
+        <p>(The camp-out <hi rend="italic">project</hi> in Aug: with J[ohn] B[urroughs] is magnificent<ptr target="upa.00165_n4"/>&#8212;O that I were well &amp; hardy enough, to go with you&#8212;but it is out of the question)&#8212;</p>
+        
+        </postscript> 
+        </body>
+    </text>
+</TEI>

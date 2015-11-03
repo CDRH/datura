@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.01288">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Francis P. Church to Walt Whitman, 15 May 1868</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Francis P. Church</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <name>The Walt Whitman Archive Staff</name>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2010</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.01288</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2010 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note type="project">The following are responsible for particular readings or for
+                    changes to this file, as noted:
+<persName xml:id="kmp">Kenneth M. Price</persName>
+                    <persName xml:id="al">Ashley Lawson</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="br">Beverley Rilett</persName>
+                </note>
+            </notesStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Francis P. Church</author>
+                    <title>Francis P. Church to Walt Whitman, 15 May 1868</title>
+                    <date cert="high" when="1868-05-15" xml:id="dat1">May 15, 1868</date>
+                    <idno type="callno">MSS18630, Box 8</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839-1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Church, Francis P.">Francis P. Church</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+<change when="2012-03" who="#kp">blessed</change>
+            <change when="2011-09-22" who="#el">transcribed and encoded letterhead</change>
+            <change when="2011-02-15" who="#al">checked</change>
+            <change when="2010-10-26" who="#el">checked</change>
+             <change when="2010-09-17" who="#br">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+           <pb xml:id="leaf001r" facs="loc.01288.003.jpg" type="recto"/>
+            <opener>
+                <handShift rend="printed"/>
+                <note>An Illustrated Magazine of Entertaining Reading.</note>
+                <note>Published Monthly</note>
+                <address>
+                    <addrLine>OFFICE OF THE GALAXY</addrLine>
+                    <addrLine>No. 39 Park Row,</addrLine>
+                </address>
+                <dateline rend="right">
+                    <name type="place">New York</name>,
+                    <handShift rend="manuscript"/>
+                    <date when="1868-05-15">May 15 <handShift rend="printed"/>186<handShift rend="manuscript"/>8</date>
+                </dateline>    
+                <salute>My dear Sir:</salute>
+            </opener>
+
+            <p>After thinking over your article for several days, &amp; consulting with <unclear reason="illegible" cert="low" resp="el">Mr.</unclear> Sheldon
+                (who of course has no editorial control over The Galaxy, but whose opinion in courtesy I am bound to regard) I am obliged to come to the conclusion that for the present at least, 
+                it is best that it should not be printed in The Galaxy.</p>
+            
+           
+            <pb xml:id="leaf02r" facs="loc.01288.004.jpg" type="recto"/>
+
+            <p>The July number for which it was <gap reason="unclear" extent="five letters" quantity="5" unit="chars"/>ded ought to be a light number for Summer reading:
+            this is an article that requires thought; cannot be read on cars &amp;c, &amp; ought to appear in soberer weather.</p>
+            
+            <p>But lest you should wish to use it elsewhere immediately I return the MS. in a separate package.</p>
+            
+            <p>I regret that there has been any delay in reaching this conclusion, but the 
+               
+                <pb xml:id="leaf001v" facs="loc.01288.005.jpg" type="verso"/>
+                question could not be decided hastily, in justice to you.</p>
+            <closer>
+                <salute>I am</salute>
+                <salute>Very truly yours</salute>
+                <signed>F. P. Church</signed>
+            </closer>
+                <postscript>
+                    <p>Mr Walt Whitman</p>
+                </postscript>              
+          
+            <pb xml:id="leaf002v" facs="loc.01288.006.jpg" type="verso"/>    
+        </body>
+    </text>
+</TEI>

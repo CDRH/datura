@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="med.00418">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title level="m" type="main">Walt Whitman to Louisa Van Velsor Whitman, 21 March [1873]</title>
+        <title level="m" type="sub">a machine readable transcription</title>
+        <author>Walt Whitman</author>
+        <editor>Kenneth M. Price</editor>
+        <editor>Ed Folsom</editor>
+        <respStmt>
+          <resp>Transcription and encoding</resp>
+          <name>The Walt Whitman Archive Staff</name>
+        </respStmt>
+        <sponsor>Center for Digital Research in the Humanities, University of
+          Nebraska-Lincoln</sponsor>
+        <sponsor>University of Iowa</sponsor>
+        <funder>National Historical Publications and Records Commission</funder>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <date>2012</date>
+        </edition>
+      </editionStmt>
+      <publicationStmt>
+        <idno>med.00418</idno>
+        <distributor>The Walt Whitman Archive</distributor>
+        <address>
+          <addrLine>Center for Digital Research in the Humanities</addrLine>
+          <addrLine>319 Love Library</addrLine>
+          <addrLine>University of Nebraska-Lincoln</addrLine>
+          <addrLine>P.O. Box 884100</addrLine>
+          <addrLine>Lincoln, NE 68588-4100</addrLine>
+        </address>
+        <availability>
+          <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+            reserved. Items in the Archive may be shared in accordance with the Fair Use
+            provisions of U.S. copyright law. Redistribution or republication on other
+            terms, in any medium, requires express written consent from the editors and
+            advance notification of the publisher, Center for Digital Research in the
+            Humanities. Permission to reproduce the graphic images in this archive has
+            been granted by the owners of the originals for this publication only.</p>
+        </availability>
+      </publicationStmt>
+      <notesStmt>
+        <note type="project">The following are responsible for particular readings or for
+          changes to this file, as noted: 
+          <persName xml:id="jc">Janel Cayer</persName>
+<persName xml:id="kmp">Kenneth M. Price</persName>
+<persName xml:id="el">Elizabeth Lorang</persName>
+ <persName xml:id="kk">Kathryn Kruger</persName>
+          <persName xml:id="zk">Zachary King</persName>
+          <persName xml:id="ec">Eric Conrad</persName>
+        </note>
+      </notesStmt>
+      <sourceDesc>
+
+        <biblStruct>
+          <monogr>
+            <editor>Edwin Haviland Miller</editor>
+<author>Walt Whitman</author>
+<title xml:id="ehm">The Correspondence</title>
+<imprint>
+              <pubPlace>New York</pubPlace>
+              <publisher>New York University Press</publisher>
+              <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+              <biblScope type="page">207</biblScope>
+                <biblScope type="volume">2</biblScope>
+            </imprint>
+          </monogr>
+        </biblStruct>
+
+        <bibl>
+          <author>Walt Whitman</author>
+          <title>Walt Whitman to Louisa Van Velsor Whitman, 21 March [1873]</title>
+
+          <date cert="medium" when="1873-03-21" xml:id="dat1">March 21, 1873</date>
+          <orgName xml:id="med">The location of the original manuscript is unknown.</orgName>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <particDesc>
+        <person role="sender">
+           <persName key="Whitman, Walt">Walt Whitman</persName>
+        </person>
+        <person role="recipient">
+          <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+        </person>
+      </particDesc>
+    </profileDesc>
+    <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+      <change when="2012-08-01" who="#jc">extracted notes and added pointers</change>
+<change when="2012-05-18" who="#kmp">blessed</change><change when="2011-01-24" who="#kk">checked</change>
+      <change when="2011-02-02" who="#zk">encoded</change>
+      <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+    </revisionDesc>
+  </teiHeader>
+
+  <text type="letter">
+    <body>
+      <opener>
+        <dateline>
+          <date when="1873-03-21" rend="right">March 21, Friday noon</date>.
+        </dateline>
+        <salute>Dearest mother,</salute>
+      </opener>
+
+      <p>I am still feeling on the gain to-day&#8212;I go out a little every day, 
+        &#38; think I shall try to make a beginning at work in the office Monday or Tuesday&#8212;beginning by degrees&#8212;I got a letter from Jeff yesterday,<ptr target="med.00418_n1"/> very good&#8212;they seem to like Mr. &#38; Mrs. Buckley's&#8212;Jeff has some extra work, making plans 
+        for new water works for Kansas City, Mo.&#8212;it is all the better&#8212;Mother, 
+        I suppose you got the letters I wrote Monday &#38; Wednesday,<ptr target="med.00418_n2"/> this week&#8212;</p>
+      
+      <p>It was dark and rainy here yesterday, but is pleasant to-day&#8212;I am going out a little this afternoon&#8212;I send you some more papers, to-day&#8212;mother, do you get the papers I send. 
+        Already you can see the grass looking green here, on the south side of buildings, 
+        &#38; the willow trees are budding out slightly&#8212;Spring will soon be upon us&#8212;It is now noon, &#38; I am sitting here in the room&#8212;Mrs. O'Connor has come in, 
+        first time in three days&#8212;Mammy dear, I hope you will have a pleasant Sundays&#8212;Love to you and Georgie &#38; Lou &#38; all.
+      </p>
+      
+      <!-- Unsigned. -->
+    </body>
+  </text>
+</TEI>

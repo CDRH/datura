@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+   <TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03061">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">William D. O'Connor to Walt Whitman, 13 July 1882</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>William D. O'Connor</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03061</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>            
+            <sourceDesc>
+                <bibl>
+                    <author>William D. O'Connor</author>
+                    <title>William D. O'Connor to Walt Whitman, 13 July 1882</title>
+                    <date cert="high" when="1882-07-13" xml:id="dat1">July 13, 1882</date>
+                    <idno type="callno">MSS18630, Box 14, Reel 8-9</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="O'Connor, William D.">William D. O'Connor</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-05-07" who="#nhg">checked, corrected</change>
+            <change when="2014-03-05" who="#ej">Checked and Corrected</change>
+            <change when="2014-01-21" who="#kc">checked, corrected</change>
+            <change when="2013-11-18" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.03061.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">Washington, D.C.</name> 
+                    <date when="1882-07-13" rend="right">July 13, 1882.</date>                    
+                </dateline>
+                <salute>Dear Walt:</salute>
+            </opener>
+            <p>I enclose a copy of a letter I got yesterday from John Burroughs, as you may like to see what he says of Rossetti. It is incredible that a man who translated Dante, and knows what art and taste sanction in the <hi rend= "underline">Divina Comedia</hi>, can have
+                <pb xml:id="leaf001v" facs="loc.03061.002_large.jpg" type="verso"/>
+                so gone back on  his old acceptance of your book. It is sad and sickening.</p>
+            <p>I have your postal card of the 11th. It is funny, but take it for all in all, the newspaper account of the P.M.G's decision is right&#8212;the interior sense, as Swedenborg would say, being about as they                
+                <pb xml:id="leaf002r" facs="loc.03061.003_large.jpg" type="recto"/>
+                say. The story has gone broadcast over the country, and must have dismayed the Comstockians.</p>
+            <p>Comstock, Ingersoll tells me, is not an honest bigot, but an arrant black-hearted scoundrel. This he personally knows of him.</p>
+            <p>When the new edition comes out, we may expect a row.</p>
+                <pb xml:id="leaf002v" facs="loc.03061.004_large.jpg" type="verso"/>
+            <p>George Chainey had better be careful, or they may nip him with a libel suit. He has just done an astonishing thing&#8212;printed my private letter in his paper&#8212;the letter in which I asked him for information. This is too bad and he ought to know better. A letter of yours also is given. I am surprised at his lack of sense.</p>
+            <closer>
+                <salute>Faithfully</salute>
+                <signed rend="right">W. D. O'Connor.</signed>
+                <salute>W.W.</salute>
+            </closer>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.04000">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Harry and Eva Stafford, 18 November
+                    1884</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.04000</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Harry and Eva Stafford, 18 November 1884</title>
+                    <date cert="high" when="1884-11-18" xml:id="dat1">November 18, 1884</date>
+                    <idno type="callno">Box 16, Reel 10</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Stafford, Harry" ref="n0590">Harry Stafford</persName>
+                    <persName key="Stafford, Eva" ref="n6107">Eva Stafford</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+
+        <revisionDesc>
+            <change when="2014-09-21" who="#ss">transcribed, encoded and annotated from
+            Miller.</change>
+            <change when="2015-01-18" who="#kb">edited</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            
+            <pb xml:id="leaf002r" facs="loc_vm.00213_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place" rend="left">328 Mickle street</name>
+                    <name type="place" rend="right">Camden<ptr target="loc.04000_n1"/></name>
+                    <date when="1884-11-18" rend="right">Evn'g Nov. 18 '84</date>
+                </dateline>
+                <salute>My dear friends</salute>
+            </opener>
+
+            <p>Your kind letter (Eva's) came this afternoon &#38; it gave me real comfort both to
+                hear from you &#38; have such loving remembrance &#38; friendly
+                invitation&#8212;Harry, dear boy, I hardly think I shall be able to come down &#38;
+                be with you this Thanksgiving<ptr target="loc.04000_n2"/>&#8212;but I will come one
+                of these times&#8212;Since I have got into this shanty, although I go out every day,
+                I don't go any distance&#8212;havn't been away this past summer, only one short trip
+                to Cape May<ptr target="loc.04000_n3"/>&#8212;My lameness increases on me&#8212;it
+                probably won't be long before I shall be unable to get around at all&#8212;&#8212;General
+                health otherwise about the same as usual&#8212;Eva, my dear friend it would be a
+                true comfort for me if it was so I could come in every few days, and you and Harry
+                and I 
+                 <pb xml:id="leaf002v" facs="loc_vm.00214_large.jpg" type="verso"/> 
+                could be together&#8212;I am sure it would be good for me&#8212;&#8212;Nothing very new in my affairs&#8212;not much sale for my books at present, or for
+                the last fifteen months&#8212;Harry your Mother call'd here last Monday, but I was
+                not in, was over to Germantown&#8212;I was sorry to be away&#8212;I am writing this
+                up in my room&#8212;am alone most of the time&#8212;write a little most every
+                day&#8212;sell a piece once in a while&#8212;Maintain good spirits and a first-rate
+                appetite&#8212;My dear friends, indeed I appreciate your loving wishes &#38;
+                feelings, &#38; send you mine the same, for both of you&#8212;</p>
+
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+            
+            <postscript>  
+                <p>Eva would you like to have me send you some papers now &#38; then? Write me
+                    whenever you can. Harry I am sorry about the neck&#8212;I think it will get
+                    right &#38; heal in time</p>
+            </postscript>
+            <pb xml:id="leaf001r" facs="loc_vm.00211_large.jpg" type="recto"/>
+            <pb xml:id="leaf001v" facs="loc_vm.00212_large.jpg" type="verso"/>
+      
+        </body>
+    </text>
+</TEI>  

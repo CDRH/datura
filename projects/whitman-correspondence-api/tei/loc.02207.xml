@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.02207">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Jeannette L. Gilder, 9 April
+                    1881</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.02207</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Letter from Walt Whitman to Jeannette L. Gilder, 9 April 1881</title>
+                    <date cert="high" when="1881-04-09" xml:id="dat1">April 9, 1881</date>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Gilder, Jeannette L.">Jeannette L. Gilder</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2014-09-02">updated name of recipient</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-02-03" who="#nhg">checked, corrected</change>
+            <change when="2014-01-16" who="#nnk">proofed</change>
+            <change when="2013-12-19" who="#ss">checked</change>
+            <change when="2013-11-04" who="#kc">Transcribed and Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.02207.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">431 Stevens Street</name>
+                    <name type="place">Camden New Jersey</name>
+                    <date when="1881-04-09">April 9 '81</date>
+                </dateline>
+                <salute>My Dear Miss Gilder</salute>
+            </opener>
+
+            <p>Thanks for the slips of <choice>
+                    <abbr>No:</abbr>
+                    <expan>Number</expan>
+                </choice> 2,<ptr target="loc.02207_n1"/> which have duly come. Also the paper&#8212;I believe I shall have to
+                decline writing about Victor Hugo, for you&#8212;don't know enough about
+                him<ptr target="loc.02207_n2"/>&#8212;(the article in to-day's <hi rend="underline">Critic</hi> seems to
+                me to have it about right)&#8212;</p>
+                <p>I send you two more batches of <hi rend="underline"
+                    >Notes</hi>&#8212;</p>
+                <p>I am going on to Boston middle of next week&#8212;return
+                forthwith.<ptr target="loc.02207_n3"/></p>
+
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+            <postscript>
+                <p>Send on the proofs as before&#8212;Have you ever thought of asking <choice>
+                        <abbr>Wm.</abbr>
+                        <expan>William</expan>
+                    </choice> D. O'Connor of Washington, Life Saving Service Bureau to write for
+                    you?<ptr target="loc.02207_n4"/></p>
+            </postscript>
+            <pb xml:id="leaf001v" facs="loc.02207.002_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

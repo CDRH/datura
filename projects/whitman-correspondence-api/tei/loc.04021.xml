@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.04021">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Ruth Stafford, 11 December 1881</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.04021</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>            
+            <sourceDesc>
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Ruth Stafford, 11 December 1881</title>
+                    <date cert="medium" when="1881-12-11" xml:id="dat1">December 11, 1881</date>
+                    <idno type="callno">MSS18630, Box 17, Reel 10-11</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Stafford, Ruth">Ruth Stafford</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-18" who="#nhg">checked, corrected</change>
+            <change when="2014-03-03" who="#kc">checked, corrected</change>
+            <change when="2013-10-10" who="#nnk">proofed</change>
+            <change when="2013-10-11" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_vm.00267.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">Camden</name>
+                    <date when="1881-12-11" rend="right">Dec: 11 '81<ptr target="loc.04021_n1"/></date>
+                </dateline>
+                <salute>Dear Ruthey</salute>
+            </opener>
+            <p>Yours <choice><abbr>rec'd</abbr><expan>received</expan></choice>&#8212;It seems a friend of mine who is in the <hi rend="underline">Ledger</hi> office Philadelphia,<ptr target="loc.04021_n2"/> <choice><orig>tho't</orig><reg>thought</reg></choice> I was down at Kirkwood&#8212;he was very anxious I should know of the bad illness of a particular friend of mine, &#38; so wrote to Kirkwood&#8212;My friend died Friday morning&#8212;I go to the funeral to-morrow<ptr target="loc.04021_n3"/>&#8212;</p>
+            <p>&#8212;I get a little news from you all, once in a while&#8212;(by a visit from Ed some time ago&#8212;&#38; early last week by a visit from Harry.)</p>
+            <p>&#8212;<hi rend= "underline">Thank you for the honey</hi>&#8212;it was very acceptable&#8212;we ate every drop of it, &#38; enjoyed it&#8212;it was like the <hi rend="underline">singed cat</hi>&#8212;a great deal better than it <choice><orig>look'd</orig><reg>looked</reg></choice>&#8212;</p>
+            <p>&#8212;I am well as usual&#8212;have a little work to do, but not much&#8212;Want to come down &#38; see you all before long&#8212;will write a day or two before<ptr target="loc.04021_n4"/></p>
+            <closer>
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="loc_vm.00268_large.jpg" type="verso"/>
+            <pb xml:id="leaf002r" facs="loc_gt.00009_large.jpg" type="recto"/>
+            <pb xml:id="leaf002v" facs="loc_gt.00010_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

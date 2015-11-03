@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05141">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Thomas W. H. Rolleston to Walt Whitman, 24
+                    September 1882</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Thomas W. H. Rolleston</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05141</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Thomas W. H. Rolleston</author>
+                    <title>Thomas W. H. Rolleston to Walt Whitman, 24 September 1882</title>
+                    <date cert="high" when="1882-09-24" xml:id="dat1">September 24, 1882</date>
+                    <idno type="callno">Box 17, Reel 10-11</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Rolleston, Thomas W. H.">Thomas W. H.
+                        Rolleston</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-08-12" who="#nhg">checked, corrected</change>
+            <change when="2014-07-10" who="#ss">images added</change>
+            <change when="2014-04-29" who="#ss">annotations added</change>
+            <change when="2014-03-12" who="#ej">Checked and Corrected</change>
+            <change when="2014-02-12" who="#nnk">proofed</change>
+            <change when="2013-12-04" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                
+                <pb xml:id="leaf001v" facs="loc_af.01034_large.jpg" type="verso"/>
+                <dateline>
+                    <date when="1882-09-24">Sept. 24</date>
+                    <name type="place">29 Lange Str.<lb/>Dresden.<ptr
+                            target="loc.05141_n1"/></name>
+                </dateline>
+                <note type="editorial" resp="#ww" place="top">'82</note>
+            </opener>
+            <p>Your two <hi rend="underline">postcards</hi> just recd.<ptr target="n1027"/> Nothing
+                further as yet, but packages sometimes take a day or two longer to get to me. Sorry
+                you didn't receive the piece of translation&#8212;sent it with a letter a good time
+                ago &amp; was rather wondering I hadn't heard from you about it.<ptr
+                    target="loc.05141_n2"/> Am working away at it with full steam up &#38; feel that
+                it looks promising. Will defer lecture till it is nearer completion. Rees Welsh &#38;
+                Co all hail! May your shadows never grow less! Will get prose book as soon as it
+                    appears.<ptr target="loc.05141_n3"/> Will write soon as pictures arrive. Many
+                thanks.</p>
+            <closer>
+                <signed rend="right">TWR.</signed>
+            </closer>     
+            <pb xml:id="leaf001r" facs="loc_af.01033_large.jpg" type="recto"/>
+        </body>
+    </text>
+</TEI>

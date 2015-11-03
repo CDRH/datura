@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>  
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?> 
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05791">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">John S. Stott to Walt Whitman, 10 November 1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>John S. Stott</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="no">Natalie O'Neal</persName>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date> 
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05791</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>           
+            <sourceDesc>
+                <bibl>
+                    <author>John S. Stott</author>
+                    <title>John S. Stott to Walt Whitman, 10 November 1880</title>
+                    <date cert="high" when="1880-11-10" xml:id="dat1">November 10, 1880</date>
+                    <idno type="callno">MSS18630, Box 33</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="ww"><persName key="Whitman, Walt">Walt Whitman</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Stott, John S.">John S. Stott</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2014-11-21" who="#nhg">checked, corrected</change>
+            <change when="2014-11-07" who="#ak">corrected transcription and encoding</change>
+            <change when="2014-10-07" who="#no">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <pb xml:id="leaf001r" facs="loc_no.00032_large.jpg" type="recto"/>
+            
+            <note type="editorial" place="top" resp="#ww">books sent</note>
+           
+            <opener>
+                <dateline rend="left">
+                    <name type="place"><handShift rend="printed"/>&#8212;FROM&#8212;<ptr target="loc.05791_n1"/> <lb/>JNO. S. STOTT, <lb/>Stationery, Blank Books, <lb/>AND FANCY GOODS,</name> 
+                    <name type="place">244 STATE ST.&#8212;CHICAGO.</name>
+                    <date when="1880-11-10"><handShift rend="manuscript"/>Nov 10th 1880</date> 
+                </dateline>
+                <salute><gap reason="cut away" unit="lines" quantity="1"/></salute>
+
+               <note type="editorial" place="interlinear" resp="#ww">Paid | write from the author</note>
+                <salute>Dr Sir</salute>
+            </opener>
+            
+            <p>Enclosed find <choice><abbr>chk</abbr><expan>check</expan></choice> for ten dollars for which please send me by express the two volumes of the Centennial or Authors editions of your collected poems&#8212;the edition I mean is <gap reason="cut away" unit="lines" quantity="2"/>
+            <!-- letter incomplete -->
+            </p>
+                            
+            <pb xml:id="leaf001v" facs="loc_no.00031_large.jpg" type="verso"/>
+                <!-- Whitman wrote prose on this page - unrelated to letter -->
+                
+        </body>
+    </text>
+</TEI>

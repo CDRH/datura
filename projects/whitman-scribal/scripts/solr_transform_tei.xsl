@@ -4,7 +4,11 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/">
 	<xsl:output indent="yes" omit-xml-declaration="yes"/>
 	
-        <!-- PARAMS -->
+	<!-- ===================================
+	SCRIBAL
+	=======================================-->
+	
+    <!-- PARAMS -->
         <!-- Defined in project config files -->
 	<xsl:param name="date"/>          <!-- TODO kmd look at if date and string are still being used by anything -->
 	<xsl:param name="string"/>
@@ -391,11 +395,9 @@
 				
 				<!-- rightsHolder -->
 				
-				<xsl:if test="/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/repository[1] != ''">
-					<field name="rightsHolder">
-						<xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/repository"/>
-					</field>
-				</xsl:if>
+				<field name="rightsHolder">
+					<xsl:value-of select="//sourceDesc/bibl/orgName"/>
+				</field>
 				
 				<!-- rights -->
 				<!-- rightsURI -->
@@ -547,15 +549,62 @@
 					</xsl:if>
 				</xsl:for-each>
 				
+				
+				<!-- ==============================
+				Whitman specific 
+				===================================-->
+				
+				<!-- repository_s 
+				May be the same as rightsHolder, but duplicating for clarity
+				-->
+				
+				<field name="repository_s">
+					<xsl:value-of select="//sourceDesc/bibl/orgName"/>
+				</field>
+				
 				<!-- text -->
 				
-				<field name="text">
+				<!--<field name="text">
 					<xsl:for-each select="//text">
 						<xsl:text> </xsl:text>
 						<xsl:value-of select="normalize-space(.)"/>
 						<xsl:text> </xsl:text>
 					</xsl:for-each>
+				</field>-->
+				
+				<field name="text">
+					<!-- To duplicate 'Editorial notes' section of metadata box in web view -->
+					<!-- 1. Notes in others' hand on the document -->
+					<xsl:for-each select="//body//note[@type='editorial']">
+						<xsl:variable name="person_name"><xsl:value-of select="substring-after(@resp, '#')"/></xsl:variable>
+						<xsl:text>The annotation, "</xsl:text><xsl:value-of select="//body//note[@type='editorial']"/><xsl:text>," is in the hand of </xsl:text> <xsl:value-of select="//handNote[@xml:id=$person_name]/persName"/><xsl:text>. </xsl:text>
+					</xsl:for-each>
+					<!-- 2. Notes about the document, such as about other items on the same leaf. -->
+					<xsl:if test="//note[@type='project']"><xsl:value-of select="//note"/></xsl:if>
+					
+					
+					<!-- Everything from text element -->
+					<xsl:value-of select="//text"/>
+					
+					
+					<!-- Footnotes -->
+					<xsl:for-each select="//ptr">
+						<xsl:variable name="ptr_target">
+							<xsl:value-of select="@target"></xsl:value-of>
+						</xsl:variable>                            
+						
+						<xsl:value-of select="document('notes.xml')//body/descendant::note[@xml:id=$ptr_target]"/><xsl:text>&#13;</xsl:text>
+					</xsl:for-each>
+					
+					<xsl:for-each select="//profileDesc//persName[@ref]">
+						<xsl:variable name="ref_target">
+							<xsl:value-of select="@ref"/>
+						</xsl:variable>
+						<xsl:value-of select="document('notes.xml')//body/descendant::note[@xml:id=$ref_target]"/><xsl:text>&#13;</xsl:text>
+					</xsl:for-each>
 				</field>
+				
+				
 				
 			</doc>
 		</add>

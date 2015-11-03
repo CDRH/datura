@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="wel.00001">
+    <teiHeader>
+        <fileDesc> 
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Jeannette L. and Joseph B. Gilder, 10
+                    January 1884</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>       
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>wel.00001</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2014 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Jeannette L. and Joseph B. Gilder, 10 January
+                        1884</title>
+                    <date cert="high" when="1884-01-10" xml:id="dat1">January 10, 1884</date>
+                    <orgName xml:id="wel">Wellesley College.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>  
+                <person role="recipient">
+                    <persName key="Gilder, Jeannette L." ref="n0264">Jeannette L. Gilder</persName>
+                    <persName key="Gilder, Joseph B.">Joseph B. Gilder</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-07-23" who="#nhg">corrected notes</change>
+            <change when="2015-07-21" who="#nhg">corrected</change>
+            <change when="2014-09-02" who="#ss">transcribed, encoded, annotated</change>
+            <change when="2014-11-19" who="#kb">edited</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            
+            <pb xml:id="leaf001r" facs="wel.00001.001_large.jpg" type="recto"/>
+            
+            <opener>
+                <dateline>
+                    <name type="place">Camden</name>
+                    <date when="1884-01-10" rend="right">Jan: 10 '84<ptr target="wel.00001_n1"
+                        /></date>
+                </dateline>
+            </opener>
+            <p>The slips <choice>
+                    <orig>rec'd</orig><reg>received</reg></choice>,<!--<ptr target="n0264"/>--> (thanks) of course making it unnecessary for you to
+                send the ten copies <choice>
+                    <orig>C</orig>
+                    <reg>Critic</reg>
+                </choice>But did you mail the five copies of paper to the addresses?<ptr
+                    target="wel.00001_n2"/> Send me a postal telling me. </p>
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+            <postscript>
+                <p>If not already mailed, you need <hi rend= "underline">not</hi> do it&#8212;I will attend to it&#8212;</p>
+            </postscript>
+            <pb xml:id="leaf001v" facs="wel.00001.002_large.jpg" type="verso"/>
+        </body>    
+    </text>
+</TEI>

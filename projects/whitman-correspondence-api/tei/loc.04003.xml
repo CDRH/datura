@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.04003">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Harry Stafford, 20 August 1881</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.04003</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Harry Stafford, 20 August 1881</title>
+                    <date cert="high" when="1881-08-20" xml:id="dat1">August 20, 1881</date>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Stafford, Harry">Harry Stafford</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-02-10" who="#nhg">checked, corrected</change>
+            <change when="2014-01-21" who="#ss">checked</change>
+            <change when="2013-10-15" who="#nnk">proofed</change>
+            <change when="2013-09-16" who="#kc">Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_vm.00221_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place"><handShift rend="printed"/><hi rend="italic"
+                            >Boston</hi>.</name>
+                    <date when="1881-08-20"><handShift rend="manuscript"/><choice>
+                            <abbr>Aug:</abbr>
+                            <expan>August</expan>
+                        </choice> 20 <handShift rend="printed"/>1881.<ptr target="loc.04003_n2"/></date>
+                </dateline>
+                <salute><handShift rend="manuscript"/>Dear Hank</salute>
+            </opener>
+
+            <p>I am here seeing to the setting up &amp; stereotyping of my book in a big printing
+                office, (Rand &amp; Avery.)<ptr target="loc.04003_n1"/>&#8212;Every thing goes
+                satisfactory enough, so far. I suppose you <choice>
+                    <abbr>rec'd</abbr>
+                    <expan>received</expan>
+                </choice> the paper (or papers?) I sent&#8212;they will give you some <choice>
+                    <abbr>acc't</abbr>
+                    <expan>account</expan>
+                </choice> of two or three little happenings in my jaunt&#8212;I was down on Long
+                Island at the spot where I was born &amp; where I had spent my summers in youth from
+                time to time&#8212;went around to all the old places I hadn't seen before for 40
+                years&#8212;seems to me now the most beautiful region on earth&#8212;Dr Bucke was
+                with me &amp; he thought so too&#8212;Before I went there, I was at Rockaway (<choice><abbr>L I</abbr><expan>Long Island</expan></choice>) &amp; at Long Branch (N J)&#8212;The last two weeks I have been in N Y
+                City&#8212;So you see I have been the rounds&#8212;I am pretty well&#8212;&amp; have
+                been so&#8212;</p>
+
+            <pb xml:id="leaf001v" facs="loc_vm.00222_large.jpg" type="verso"/>
+            <p>I shall probably stay here a month or more&#8212;Dear boy I wish you would write to
+                me a good long letter &amp; tell me all the news, especially about yourself. Direct
+                to me <hi rend="underline">care of Osgood &amp; Co: 211 Tremont Street, Boston, <choice>
+                        <orig>Mass:</orig><reg>Massachusetts</reg></choice></hi> and I shall get it. I have not been much about Boston this
+                time, but it is a lively place to be in&#8212;the streets all crumpled up, short,
+                and more corners &amp; angles than any thing else, but clean &amp;
+                handsome&#8212;this forenoon I have been some time on <hi rend="underline">the
+                    Common</hi> (an old Park of 60 or 70 acres right in the midst of the city with
+                lots of fine very old trees)&#8212;I am now writing this in Osgood's place in Boston
+                (they are the publishers of my book)&#8212;How are you &amp; all getting along?&#8212;I wish you to give my love to your father &amp; mother&#8212;Debbie &amp; Jo Ed,
+                Mont, &amp; Van&#8212;Ruth &amp; little George&#8212;&amp; tell them I remember the
+                good times I have had, past summers&#8212;&amp; show this letter to them, if they
+                wish&#8212;</p>
+
+            <p>It is now nearly 1, &amp; I must go off to my dinner&#8212;God bless you dear boy
+                &amp; farewell for this time&#8212;I shall write again before long&#8212;</p>
+
+                     <closer>
+                <signed rend="right">Your old Walt</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.00456">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Thomas Jefferson Whitman  to Walt Whitman, 10 November 1872</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Thomas Jefferson Whitman</author>
+            <editor>Dennis Berthold</editor>
+            <editor>Kenneth M. Price</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+
+               <persName xml:id="kk">Kathryn Kruger</persName>
+               <persName xml:id="al">April Lambert</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>loc.00456</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Thomas Jefferson Whitman</author>
+                  <editor>Dennis Berthold</editor>
+                  <editor>Kenneth M. Price</editor>
+                  <title xml:id="dbw">Dear Brother Walt: The Letters of Thomas Jefferson Whitman</title>
+                  <imprint>
+                     <pubPlace>Kent, Ohio</pubPlace>
+                     <publisher>Kent State University Press</publisher>
+                     <date>1984</date>
+                     <biblScope type="page">146-147</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Thomas Jefferson Whitman</author>
+               <title>Thomas Jefferson Whitman  to Walt Whitman, 10 November 1872</title>
+               <date when="1872-11-10">November 10, 1872</date>
+               <orgName xml:id="loc">Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Thomas Jefferson">Thomas Jefferson Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#el" when="2008-07-21">updated TEI header</change>
+         <change who="#kk" when="2008-04-01">checked and proofed</change>
+         <change who="#al" when="2006-10-03">Transcribed, Encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <dateline rend="right">
+                  <name type="place">St. Louis,</name>
+                  <date when="1872-11-10">Nov 10th 1872</date>
+               </dateline>
+               <salute>Dear Walt,</salute>
+            </opener>
+            <p>Your letter to Mat received<ptr target="loc.00456_n1"/>  We were very glad to hear that you were with Mother&#8212;Mattie and I both feared that Mother was having a bad time with her swollen hand&#8212;I suppose you have ere this received Mats letter to you at Washington.<ptr target="loc.00456_n2"/>
+            </p>
+            <p>Now about Mats going to Camden and Mothers return with her&#8212;our situation here is just this  we have a nice house&#8212;and good servants  Mat has nothing to do in the housekeeping way&#8212;nor is it needed&#8212;the children&#8212;one or tother&#8212;attends to the marketing&#8212;so that there is nothing to attend to&#8212;now our idea was that the great change of air, diet and scene that coming west would be to Mother might do her great good&#8212;I have a good horse and buggy that she could ride often (every day if she wished)  she could thus see all the city without trouble&#8212;Our good weather is now, the fall and early winter&#8212;As to her traveling I do not think she would have any trouble&#8212;she would take a car in Philadelphia that comes to within abt a mile and a half of my house  here she would take the R. R. stage and be brought to the door&#8212;no change but that&#8212;and her ticket in Philadelphia brings her and her trunks and puts them both in the house (is not that an improvement over old times)  The run from Philadelphia is about 38 to 40 hours (say a day and two nights) good beds (taking a section) and [I] do not believe hardly Mother would know she was traveling. Unless Mat thinks Mother would come back with her I hardly think Mat will go East just now&#8212;her chest and lungs both seem better now and if by care I can get her in the way of taking some little food I have hopes she will get along yet</p>
+            <p>Not much news with me  am still pegging away&#8212;write us what you think of Mothers coming&#8212;I would like to write more but am called away by a notice that a pipe is "<hi rend="italic">busted</hi>"</p>
+            <closer rend="right">
+               <signed>affectionately Jeff</signed>
+            </closer>
+         
+      </body>
+   </text>
+</TEI>

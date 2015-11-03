@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nyp.00405">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to John Burroughs, 24 January 1877</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="gt">Grace Thomas</persName>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="ad">Anthony Dreesen</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                    <persName xml:id="kp">Kenneth Price</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>nyp.00405</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">76</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to John Burroughs, 24 January 1877</title>
+                    <date cert="high" when="1877-01-24" xml:id="dat1">January 24, 1877</date>
+                    <orgName xml:id="nyp">The Henry W. and Albert A. Berg Collection of English and American Literature </orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Burroughs, John">John Burroughs</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-01-17" who="#kp">blessed</change>
+            <change when="2013-02-15" who="#km">checked</change>
+            <change when="2013-01-07" who="#ad">checked</change>
+            <change when="2012-11-27" who="#ab">Checked</change>
+            <change when="2012-11-08" who="#gt">Corrected</change>
+            <change when="2012-10-11" who="#gt">Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">431 Stevens street | Camden New Jersey<ptr target="nyp.00405_n1"/></name>
+                    <date when="1877-01-24">Jan 24 '77</date>
+                </dateline>
+                
+            </opener>
+
+            <p>I think <hi rend="italic">Birds and Poets</hi> not only much the best name for the book, but a first-rate good name, appropriate, original &#38; fresh, without being at all affected or strained. The piece you put <choice><orig>4th</orig><reg>forth</reg></choice> should then be <hi rend="italic">first</hi>&#8212;should lead the book, giving it its title, &#38; having the name of the piece changed to "Birds and Poets"&#8212;which I think would be an improvement. The whole collection would be sufficiently homogeneous, (and it were a fault to be too much so)&#8212;You just want <hi rend="italic">a hint</hi> for the name of a book&#8212;Only it must be in the spirit of the book&#8212;&#38; not too much so either. "<hi rend="italic">Nature and Genius" is too Emersony altogether</hi>.<ptr target="nyp.00405_n2"/></p>
+   
+            <p> I will think over the name of the piece devoted to me, &#38; will in a couple of days write you the result. <choice><orig>May-be</orig><reg>maybe</reg></choice> I can think of a better name. I have not rec'd the MS from Church.<ptr target="nyp.00405_n3"/> You send on any thing&#8212;any MS&#8212;which I will cheerfully read &#38; will return with any suggestions that may occur to me&#8212;I keep pretty well for me&#8212;</p>
+
+            <closer>
+                <signed rend="right">W W</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

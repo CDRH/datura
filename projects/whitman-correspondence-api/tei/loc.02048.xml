@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.02048">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">George William Foote to Walt Whitman, [February or March 1878]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>George William Foote</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                    <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.02048</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                
+                <bibl>
+                    <author>George William Foote</author>
+                    <title>George William Foote to Walt Whitman, [February or March 1878]</title>              
+                    <date cert="medium" notBefore="1878-02" notAfter="1878-03" xml:id="dat1">February or March 1878</date>
+                    <orgName xml:id="loc">Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Foote, George William">George William Foote</persName>
+                </person>
+                <person role="recipient" xml:id="ww">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-08-04" who="#nhg">checked, corrected</change>
+            <change when="2014-02-20" who="#ss">checked</change>
+            <change when="2014-01-07" who="#ej">Checked and Corrected</change>
+            <change when="2013-12-10" who="#kc">Transcribed and Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+                        
+            <pb xml:id="leaf001r" facs="loc.02048.001_large.jpg" type="recto"/><note type="editorial" resp="#ww">recd Feb or March '78</note>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">12 Gower St <lb/><hi rend="underline">London W.C.</hi></name>
+                </dateline>
+                <salute>Dear Sir,</salute>
+            </opener>
+
+            <p>Your letter, which Mr Rossetti forwarded to me, took me by surprise, and gave me pain also. I had just returned to the above address after a twelve-months absence, during which I had married and buried a gifted and beautiful young wife, and such a letter from you did not tend to solace the pain of my bereavement.</p>
+            
+            <p>I gave my employ&#233; at the <hi rend="underline">Secularist</hi> office the sum of &#163;3 to procure a P.O.O. which I instructed him to forward to you. He was also to see that the books were sent to their proper destinations as soon as received, as I was much away from home. The &#163;3 included about &#163;1 from myself, the subscriptions mentioned in your
+                
+            <pb xml:id="leaf001v" facs="loc.02048.002_large.jpg" type="verso"/>letter being almost all I received from others.</p>
+            
+            <p>I had some difficulty in finding the address of the gentleman who subscribed a guinea, but having done so, I find that he never received his copy of the "Leaves of Grass" although strangely enough he never made any complaint about it. My employ&#233;, then, must have cheated me. I discovered that he drank and neglected the business, and had to discharge him, and soon after to drop the paper too; but I did not suspect him in pecuniary matters. Where he is now I don't know.</p>
+            
+            <p>Of course I hold myself responsible, and in a week or two I will send a remittance with a list of the subscribers. I would have done this at once on receiving your letter, but my wife's illness and death were so costly and so unspeakably painful, that I was impoverished in pocket and broken down in health. I wrote you a letter at Christmas, when I expected some money, but the money was not forthcoming and so the letter was not sent.</p>
+
+            <closer>
+                <salute rend="right">Yours truly</salute>
+                <signed rend="right"><hi rend="underline">G. W. Foote</hi></signed>
+            </closer>
+        </body>
+        <pb xml:id="leaf002r" facs="loc.02048.003_large.jpg" type="recto"/>
+        <pb xml:id="leaf002v" facs="loc.02048.004_large.jpg" type="verso"/>
+    </text>
+</TEI>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="wwh.00009">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title level="m" type="main">Walt Whitman to Thomas Jefferson Whitman, 26 January
+          1872</title>
+        <title level="m" type="sub">a machine readable transcription</title>
+        <author>Walt Whitman</author>
+        <editor>Kenneth M. Price</editor>
+        <editor>Ed Folsom</editor>
+        <respStmt>
+          <resp>Transcription and encoding</resp>
+          <name>The Walt Whitman Archive Staff</name>
+        </respStmt>
+        <sponsor>Center for Digital Research in the Humanities, University of
+          Nebraska-Lincoln</sponsor>
+        <sponsor>University of Iowa</sponsor>
+        <funder>National Historical Publications and Records Commission</funder>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <date>2012</date>
+        </edition>
+      </editionStmt>
+      <publicationStmt>
+        <idno>wwh.00009</idno>
+        <distributor>The Walt Whitman Archive</distributor>
+        <address>
+          <addrLine>Center for Digital Research in the Humanities</addrLine>
+          <addrLine>319 Love Library</addrLine>
+          <addrLine>University of Nebraska-Lincoln</addrLine>
+          <addrLine>P.O. Box 884100</addrLine>
+          <addrLine>Lincoln, NE 68588-4100</addrLine>
+        </address>
+        <availability>
+          <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the
+            Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law.
+            Redistribution or republication on other terms, in any medium, requires express written
+            consent from the editors and advance notification of the publisher, Center for Digital
+            Research in the Humanities. Permission to reproduce the graphic images in this archive
+            has been granted by the owners of the originals for this publication only.</p>
+        </availability>
+      </publicationStmt>
+      <notesStmt>
+        <note type="project">The following are responsible for particular readings or for changes to
+          this file, as noted: <persName xml:id="al">Ashley Lawson</persName>
+          <persName xml:id="el">Elizabeth Lorang</persName>
+          <persName xml:id="zk">Zachary King</persName>
+          <persName xml:id="ec">Eric Conrad</persName>
+        </note>
+      </notesStmt>
+      <sourceDesc>
+
+        <biblStruct>
+          <monogr>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <title xml:id="ehm">The Correspondence</title>
+            <imprint>
+              <pubPlace>New York</pubPlace>
+              <publisher>New York University Press</publisher>
+              <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+              <biblScope type="volume">2</biblScope>
+              <biblScope type="page">157&#8211;158</biblScope>
+            </imprint>
+          </monogr>
+        </biblStruct>
+
+        <bibl>
+          <author>Walt Whitman</author>
+          <title>Walt Whitman to Thomas Jefferson Whitman, 26 January 1872</title>
+          <date cert="high" when="1872-01-26" xml:id="dat1">January 26, 1872</date>
+          <orgName xml:id="wwh">Walt Whitman House, Camden, New Jersey</orgName>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <particDesc>
+        <person role="sender">
+          <persName key="Whitman, Walt">Walt Whitman</persName>
+        </person>
+        <person role="recipient">
+          <persName key="Whitman, Thomas Jefferson">Thomas Jefferson Whitman</persName>
+        </person>
+      </particDesc>
+    </profileDesc>
+    <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+      <change when="2012-11-29" who="#el">checked</change>
+      <change when="2012-06-20" who="#el">checked</change>
+      <change when="2012-04-02" who="#al">revised according to Ken's suggestions</change>
+      <change when="2011-05-09" who="#el">checked</change>
+      <change when="2010-12-01" who="#zk">encoded</change>
+      <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+    </revisionDesc>
+  </teiHeader>
+
+  <text type="letter">
+    <body>
+      <opener>
+        <dateline>
+          <name type="place" rend="center">Department of Justice</name>, <name type="place"
+            rend="center"><hi rend="underline">Office of the Solicitor of the Treasury</hi></name>,
+            <name type="place" rend="right"><hi rend="italic">Washington, D. C.</hi></name>, <date
+            when="1872-01-26" rend="right">Jan. 26, <hi rend="italic">187</hi>2</date>. </dateline>
+        <salute>Dear brother Jeff<ptr target="n0710"/>,</salute>
+      </opener>
+
+      <p>I have just rec'd your letter, &amp; glad indeed to hear directly from you all. I hear
+        through mother<ptr target="n0705"/>, but have been expecting a letter from Mat<ptr
+          target="n0707"/> now for some time&#8212;Mother's letters are almost always mentioning
+        Matty with love &amp; sympathy, &amp; fretting when she <choice>
+          <orig>dont</orig>
+          <reg>don't</reg>
+        </choice> hear from her&#8212;Dear Mat, we all love her so much, &amp; think about her more
+        than she knows&#8212;</p>
+
+      <p>I am now working in another branch of the Department&#8212;have it easier&#8212;whenever
+        you write direct to me&#8212;"<hi rend="italic">Solicitor's Office, Treasury</hi>"
+        Washington, D. C.</p>
+
+      <p>I have just written a letter to Han<ptr target="n0285"/>&#8212;I write quite often, &amp;
+        send papers, &amp;c&#8212;I shall write to mother this morning&#8212;Mother is quite alone
+        there in the house, as the people down stairs<ptr target="wwh.00009_n1"/> have moved
+        out&#8212;(George turned 'em out for impudence to mother)&#8212;I write every other day,
+        &amp; send papers &amp; stuff&#8212;My next piece is to appear in the "<hi rend="italic"
+          >Kansas Magazine</hi>" for February<ptr target="wwh.00009_n2"/>&#8212;will be out very
+        shortly&#8212;It is a new magazine, same style as the Atlantic&#8212;intended for <hi
+          rend="italic">Western thought</hi> &amp; reminiscences &amp;c&#8212;</p>
+
+      <p>Dear Brother, &amp; dear Sister Matty, I should like to come on, according to your
+        invitation, &amp; pay you a good visit, but it is doubtful this time&#8212;My bringing out a
+        new book is only bringing out a new edition, from the stereotype plates, the same as the
+        last&#8212;only in one Vol&#8212;as the edition printed a year ago is all
+        exhausted&#8212;(But I stereotyped it, &amp; have all the plates in New York.) But I should
+        like to have a good long visit home, &amp; be with mother&#8212;my getting leave does not
+        work yet as I hoped&#8212;but I expect to fix it somehow, &amp; go home before very
+        long&#8212;I am very well this winter&#8212;My book is flourishing in foreign lands at a
+        great rate&#8212;I get letters from all parts of Europe&#8212;I believe I told you Tennyson
+        had written me twice and very hearty &amp; friendly letters, inviting me to come &amp; be
+        his guest, &amp;c&#8212;Then the professors in the Universities, Dublin &amp; elsewhere in
+        Great Britain deliver lectures on "Leaves of Grass"&#8212;&amp;c&#8212;But <hi rend="italic"
+          >here</hi> the enemy have the ground mostly to themselves&#8212;</p>
+
+      <p>I suppose you see we have a new Attorney General<ptr target="wwh.00009_n3"/>&#8212;It
+        doesn't seem to make much difference to me so far&#8212;</p>
+
+      <p>Jeff, did the photos I sent of mother &amp; me come to you, December?</p>
+
+      <p>Dear sister Mat, &amp; Hatty &amp; California,<ptr target="wwh.00009_n4"/> love to you
+        all&#8212;I am writing this at my desk, toward noon, very bright &amp; sunny, but cold
+        enough&#8212;I often think of you all&#8212;Mat, when I go home I shall do my part at that
+          <hi rend="italic">cake</hi> you speak of in letter to mother&#8212;Wm. O'Connor<ptr
+          target="n0452"/> &amp; family have gone on a short trip to Cuba, to be back in three
+        weeks&#8212;They are all well&#8212;</p>
+
+      <p>Mother told me the barrel of flour came safe&#8212;but it was too bad Mat's Christmas
+        letter got lost&#8212;</p>
+
+      <closer>
+        <salute>Good bye to you for this time, Brother Jeff &amp; Matty dear,</salute>
+        <signed rend="right">Walt.</signed>
+      </closer>
+
+      <postscript>
+        <p>Mat, you write to mother often as you can&#8212;</p>
+      </postscript>
+
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.00474">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Thomas Jefferson Whitman  to Walt Whitman, 5 July 1875</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Thomas Jefferson Whitman</author>
+            <editor>Dennis Berthold</editor>
+            <editor>Kenneth M. Price</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+
+               <persName xml:id="kk">Kathryn Kruger</persName>
+               <persName xml:id="al">April Lambert</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>loc.00474</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Thomas Jefferson Whitman</author>
+                  <editor>Dennis Berthold</editor>
+                  <editor>Kenneth M. Price</editor>
+                  <title xml:id="dbw">Dear Brother Walt: The Letters of Thomas Jefferson Whitman</title>
+                  <imprint>
+                     <pubPlace>Kent, Ohio</pubPlace>
+                     <publisher>Kent State University Press</publisher>
+                     <date>1984</date>
+                     <biblScope type="page">171</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Thomas Jefferson Whitman</author>
+               <title>Thomas Jefferson Whitman  to Walt Whitman, 5 July 1875</title>
+               <date when="1875-07-05">July 5, 1875</date>
+               <orgName xml:id="loc">Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Thomas Jefferson">Thomas Jefferson Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#el" when="2008-07-21">updated TEI header</change>
+         <change who="#kk" when="2008-04-01">checked and proofed</change>
+         <change who="#al" when="2006-10-03">Transcribed, Encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <dateline rend="right">
+                  <name type="place">St. Louis,</name>
+                  <date when="1875-07-05">July 5th 1875</date>
+               </dateline>
+               <salute>My dear Walt</salute>
+            </opener>
+            <p>Although you hear from us so seldom yet we do not forget you&#8212;I expected to get to Camden before this<ptr target="loc.00474_n1"/>&#8212;but business prevented&#8212;We have had lots of political trouble here this spring and summer and the end is not yet&#8212;how it will affect me I am unable to even guess now&#8212;sometimes it looks bad and then again as if it would blow over&#8212;at any rate it cannot be long before it will decide itself one way or another<ptr target="loc.00474_n2"/>&#8212;</p>
+            <p>Tis a long while since we have heard from you&#8212;how are you getting along  now and then we see some little thing in the papers&#8212;the last was that you were engaged in getting up another book<ptr target="loc.00474_n3"/>&#8212;I was glad to know that you were feeling well enough&#8212;</p>
+            <p>How is George and Loo. I hope well  Is George busy still on the pipe question  We are having very hot weather for the last few days&#8212;On Thursday next Hattie and Jessie depart for Iowa or Wisconsin for a month or two&#8212;Jess and Hat have grown quite up and begin to look like young ladies&#8212;they keep to school pretty close and study well&#8212;</p>
+            <p>Let me hear form you when you can&#8212;if matters change here I shall make you a visit for awhile&#8212;I should endeavor to get a job in Baltimore as I see they are getting ready to build works there&#8212;</p>
+            <p>Love to all&#8212;not forgetting Ed</p>
+            <closer rend="right">
+               <signed>Jeff</signed>
+            </closer>
+         
+      </body>
+   </text>
+</TEI>

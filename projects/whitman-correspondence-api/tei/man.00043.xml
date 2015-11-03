@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="man.00043">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">John H. Johnston to Walt Whitman, 26 June 1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>John H. Johnston</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="crl">Courtney Rebecca Lawton</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>man.00043</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>John H. Johnston</author>
+                    <title>John H. Johnston to Walt Whitman, 26 June 1880</title>
+                    <date cert="high" when="1880-06-26" xml:id="dat1">June 26, 1880</date>
+                    <idno type="callno">GB 133 Eng 1170/1/1/16</idno>
+                    <orgName xml:id="man">Charles Sixsmith Collection at the John Rylands Library, University of Manchester</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Johnston, John H.">John H. Johnston</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-05-26" who="#nhg">revised for final check</change>
+            <change when="2014-03-30" who="#ss">checked and annotations added</change>
+            <change when="2013-11-01" who="#nhg">checked, corrected</change>
+            <change when="2013-10-25" who="#ej">Checked and Corrected</change>
+            <change when="2013-09-05" who="#nnk">proofed</change>
+            <change when="2013-06-24" who="#crl">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="man_ej.00109_large.jpg" type="recto"/>
+            <opener>
+            <dateline>
+                <name type="place" rend="center"><handShift rend="printed"/><hi rend="bold">J. H. JOHNSTON,</hi></name>
+                    <name type="place" rend="center">JEWELER,</name>
+                        <name type="place" rend="center">150 Bowery, New York.</name>
+                        <name type="place" rend="center">C. P. F.</name>
+                        <name type="place" rend="center">D<hi rend="smallcaps">UPLICATE</hi> W<hi rend="smallcaps">EDDING</hi> P<hi rend="smallcaps">RESENTS</hi>,</name>
+                        <name type="place" rend="center">S B. M. C.</name>
+                        <name type="place" rend="center">(TRADE MARK COPYRIGHTED.)</name>
+                <handShift rend="manuscript"/>
+                    <date when="1880-06-26">June 26, 1880</date>
+                </dateline>
+                <salute>Dear Walt,</salute>
+            </opener>
+            <p>I <choice>
+                    <abbr>rec'd</abbr>
+                    <expan>received</expan>
+                </choice> your Postal and am glad you are having such a good time.<ptr target="n0336"/></p>
+            <p>Hinton's wife died
+                night before last. Poor fellow! he is in the depths, he loved her deeply,
+                intensely, she arrived from London only a week ago yesterday, he wishes me to tell
+                Dr Bucke<ptr target="n0119"/> that as soon as he can turn around he will "<hi rend="underline">Write
+                    about Walt</hi>" have it appear in the Mail perhaps and will make it what the Dr
+                needs.</p>
+            <p>Albert graduated all O.K. I question whether he gets to
+                <pb xml:id="leaf001v" facs="man_ej.00110_large.jpg" type="verso"/>                 
+                Camden this Summer.
+                Tell the Dr. that with seven to support, I dont have much surplus to let them go on
+                long journeys. Moreover I need him in the store with me, if I go to Colorado next
+                month he will look after things here.</p>
+            <p>I will do my best to send the Dr something while I am on my vacation.</p>
+            <p>Give my love to him, and <unclear reason="illegible" cert="high" resp="#crl"
+                    >commend</unclear> me to his wife and little ones.</p>
+            <p>Alma<ptr target="n3029"/> and Calder are doing well. We go to <unclear reason="illegible" resp="#nhg" cert="low">Equinunk</unclear> a week from yesterday</p>
+            <p/>
+            <closer>
+                <signed>JHJ</signed>
+            </closer>
+            <pb xml:id="leaf002r" facs="man_ej.00111_large.jpg" type="recto"/>
+            <pb xml:id="leaf002v" facs="man_ej.00112_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

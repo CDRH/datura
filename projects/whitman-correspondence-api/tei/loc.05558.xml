@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05558">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">H. S. Kneedler to Walt Whitman, 23 April 1882</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>H. S. Kneedler</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="bbb">Blake Bronson-Bartlett</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05558</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>H. S. Kneedler</author>
+                    <title>H. S. Kneedler to Walt Whitman, 23 April 1882</title>
+                    <date cert="high" when="1882-04-23" xml:id="dat1">April 23, 1882</date>
+                    <idno type="callno">MSS45443, Box 3-4, Reel 2-3</idno>
+                    <orgName xml:id="loc">The Thomas Biggs Harned Collection of the Papers of Walt
+                    Whitman, 1842&#8211;1937, Library of Congress, Washington, D.C.</orgName>
+                    
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Kneedler, H. S.">H. S. Kneedler</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2014-10-24" who="#nhg">corrected image names</change>
+            <change when="2014-10-03" who="#nhg">checked, corrected</change>
+            <change when="2014-08-25" who="#bbb">checked</change>
+            <change when="2014-07-24" who="#ss">transcribed, encoded and annotated</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_nk.00229_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place" rend="left"><handShift rend="printed"/>H. S. KNEEDLER, <lb/>
+                        P.O. BOX 370 <lb/>
+                        IOWA CITY, IOWA.</name>
+                    <name type="place" rend="right"><handShift rend="manuscript"/>Iowa City, Ia.</name>
+                    <date when="1882-04-23">4/23, 1882.</date>
+                </dateline>
+                <salute>Honored Sir<!--<ptr target="n3089"/>-->&#8212;</salute>
+            </opener>
+
+            <p>But a few moments ago in an unknown country paper a paragraph with a "fling" at your
+                poetry attracted my attention, and under the impulse of the moment, with an
+                undefined purpose of assuring you of the love and reverence in which you are held by
+                    thousands, I took up my pen.</p>
+
+            <p>If the recognition of you has not been as demonstrative as that awarded to some
+                others it is because your thought is in advance of your generation, and it will be
+                the <choice><orig>privelege</orig><reg>privilege</reg></choice> of another age to award what this shortsighted one has neglected. Let
+                one who sincerely reverences you as a <hi rend="underline">man</hi> and admires you
+                as a <hi rend="underline">poet</hi> thank you for the example of your life and the <choice>
+                    <sic>heretage</sic>
+                    <corr>heritage</corr>
+                </choice> of song you will leave to your race.</p>
+            <closer>
+                <salute>Respectfully,</salute>
+                <signed>H. S. Kneedler.</signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="loc_nk.00230_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

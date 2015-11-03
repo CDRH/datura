@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="med.00766">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Thomas W. H. Rolleston to Walt Whitman, 5 May [1884]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Thomas W. H. Rolleston</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="ef">Ed Folsom</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>med.00766</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <editor>Horst Frenz</editor>
+                        <title xml:id="hf">Whitman and Rolleston: A Correspondence</title>
+                        <imprint>
+                            <pubPlace>Bloomington, IN</pubPlace>
+                            <publisher>Indiana University Press</publisher>
+                            <date when="1951">1951</date>
+                            <biblScope type="page">90&#8211;91</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Thomas W. H. Rolleston</author>
+                    <title>Thomas W. H. Rolleston to Walt Whitman, 5 May [1884]</title>
+                    <date cert="high" when="1884-05-05" xml:id="dat1">May 5, 1884</date>
+                    <orgName xml:id="med">The location of the manuscript is not known.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Rolleston, Thomas W. H." ref="n1027">Thomas W. H. Rolleston</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>    
+        <revisionDesc>
+            <change when="2015-07-07" who="#ef">blessed</change>
+            <change when="2015-07-07" who="#nhg">corrected</change>
+            <change when="2015-03-26" who="#nhg">checked, corrected</change>
+            <change when="2015-02-07" who="#ss">added annotations (med.00766_n1, _n2, _n3 appear to be by #ak)</change>
+            <change when="2015-01-25" who="#ss">checked and corrected</change>
+            <change when="2014-12-19" who="#ak">transcribed, encoded, and annotated</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <date when="1884-05-05">May 5 [1884]</date>
+                    <name type="place">28 Terrassen Ufer</name> 
+                    <name type="place">Dresden<ptr target="med.00766_n1"/></name>
+                </dateline>
+            </opener>
+            <p> Your two letters<ptr target="med.00766_n4"/> received this day. I think, after all, that my former objections to
+                giving the English of the L. of G. with the translation were not so well-founded as
+                they seemed, and it shall be done as you wish so far as I can see at present. I will
+                gladly insert the extract from your letter in the preface,<ptr target="med.00766_n2"
+                /> and will give Salut au Monde.<ptr target="med.00766_n3"/> We go for a month or so
+                into the country soon, and from the time you get this till the end of June my
+                address will be Liegau bei Radeberg, Saxony, if you have anything to say or send. I
+                am sorry to hear you have been ill&#8212;hope this finds you still on the
+                mend&#8212; </p>
+            <closer>
+                <signed>T. W. R.</signed>  
+            </closer>
+        </body>
+    </text>
+</TEI>

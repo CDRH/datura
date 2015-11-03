@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="wwh.00003">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to Thomas Jefferson Whitman, 10 May 1860</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+
+               <persName xml:id="ao">Alyssa Olson</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>wwh.00003</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Walt Whitman</author>
+                  <editor>Edwin Haviland Miller</editor>
+                  <title xml:id="ehm">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>New York</pubPlace>
+                     <publisher>New York University Press</publisher>
+                     <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                     <biblScope type="volume">1</biblScope>
+                     <biblScope type="page">52-54</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to Thomas Jefferson Whitman, 10 May 1860</title>
+               <date when="1860-05-10">May 10, 1860</date>
+               <orgName xml:id="wwh">Whitman House, Camden</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Thomas Jefferson">Thomas Jefferson Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#vs" when="2008-09-09">added main TEI markup</change>
+         <change who="#el" when="2008-07-30">added TEI header structure w/o IDs and titles; added minimal TEI markup</change>
+         <change who="#ao" when="2008-07-29">pulled transcription from Primary Source Media</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <dateline rend="right">
+                  <name type="place">Boston,</name>
+                  <date when="1860-05-10">Thursday morning, May 10.</date>
+               </dateline>
+               <salute>Dear Brother,</salute>
+            </opener>
+            <p>I have nothing particular to write about, yet I know you will be glad to hear from me anyhow. The book is finished in all that makes the reading part, and is all through the press complete&#8212;It is electrotyped&#8212;that is, by a chemical process, a solution of copper, silver, zinc, &amp;c. is precipitated in a "bath," so as to cover the face of the plates of type all over, and make it very much harder and more enduring. Plates finished by that process wear well for hundreds of thousands of copies, and are probably a neater impression. But perhaps you know about it yourself.</p>
+            <p>Thayer &amp; Eldridge have put through 1000 copies, for the first pop. They have very accurate ideas of the whole matter. They expect it to be a valuable investment, increasing by months and years&#8212;not going off in a rocket way, (like "Uncle Tom's Cabin.")<ptr target="wwh.00003_n1"/>   The typographical appearance of the book has been just as I directed it, in every respect. The printers and foremen thought I was crazy, and there were all sorts of supercilious squints (about the typography I ordered, I mean)&#8212;but since it has run through the press, they have simmered down. Yesterday the foreman of the press-room (Rand's,<ptr target="wwh.00003_n2"/> an old establishment where all the best work is done,) pronounced it, in plain terms, the freshest and handsomest piece of typography that had ever passed through his mill&#8212;I like it, I think, first rate&#8212;though I think I could improve much upon it now. It is quite "odd," of course. As to Thayer &amp; Eldridge they think every thing I do is the right thing. We are just now in "suspenders" on account of the engraving. I have about decided, though, to have 1000 copies printed from it, as it is&#8212;and then let Schoff,<ptr target="wwh.00003_n3"/> the engraver, finish it afterwards&#8212;I do not know for certain whether it is a good portrait or not&#8212;The probability is that the book will be bound and ready, May 19.</p>
+            <p>I make Thayer &amp; Eldridge crack on the elegant workmanship of the book, its material, &amp;c. but I won't allow them to puff the poetry&#8212;though I had quite a hard struggle&#8212;as they had prepared several tremendous puff advertisements&#8212;altogether ahead of Ned Buntline and the "Ledger"<ptr target="wwh.00003_n4"/>&#8212;I persuaded them to give me the copy to make some little corrections&#8212;which I did effectually by going straight to my lodgings, and putting the whole stuff in the fire&#8212;Oh, I forgot to tell you, they have printed a very neat little brochure, (pamphlet,) of 64 pages, called "Leaves of Grass Imprints," containing a very readable collection of criticisms on the former issues&#8212;This is given away gratis, as an advertisement and circular. Altogether, Jeff, I am very, very much satisfied and relieved that the thing, in the permanent form it now is, looks as well and reads as well (to my own notion) as I anticipated&#8212;because a good deal, after all, was an experiment&#8212;and now I am satisfied.</p>
+            <p>And how goes it with you, my dear? I watched the N. Y. papers to see if Spinola's<ptr target="wwh.00003_n5"/> bill passed&#8212;but it didn't, of course, or I should of heard of it in many ways. So you must be on the works still&#8212;If I get a chance I will take a look at the Boston Works before I leave. The water is almost exactly like the Brooklyn water in taste. I got Mother's letter<ptr target="wwh.00003_n6"/>&#8212;tell Mother I may not write next Monday, as I am in hopes to be home, I can't tell exactly what day, but through the week. Oh the awful expense I have been under here, Jeff, living the way I have, hiring a room, and eating at restaurants&#8212;7 cents for a cup of coffee, and 19 cts for a beefsteak&#8212;<hi rend="italic">and me so fond of coffee and beefsteak</hi>. Tell mother I think it would have been worth while for her to have moved on here, and boarded me&#8212;</p>
+            <p>I have had a very fair time, though, here in Boston&#8212;Very, very many folks I meet I like much&#8212;I have never seen finer&#8212;they are fine in almost every respect&#8212;very friendly, very generous, very good feeling, and of course intelligent people&#8212;The great <hi rend="italic">cramper</hi> of the Bostonian is, though, to be kept on the rack by the old idea of <hi rend="italic">respectability</hi>, how the rest do, and what they will say. There are plenty of splendid specimens of men come from the other New England states to settle here, especially from Maine, New Hampshire, Vermont, &amp;c, that if they would <hi rend="italic">let themselves be</hi>, and only make <hi rend="italic">that</hi> better and finer, would beat the world. For there is no denying that these Yanks are the first-class race. But, without exception, they all somehow allow themselves to be squeezed into the stereotype mould, and wear straight collars and hats, and say "my respects"&#8212;like the rest. Of course <hi rend="italic">I</hi> cannot walk through Washington street, (the Broadway here,) without creating an immense sensation.</p>
+            <p>I sent a couple of papers to Han this morning. Oh how much I would like to see her once more<ptr target="wwh.00003_n7"/>&#8212;and I <hi rend="italic">must</hi>, this summer&#8212;After I recruit a while home, I shall very likely take a tour, partly business and partly for edification, through all the N[ew] E[ngland] states&#8212;then I shall see Han&#8212;I shall write to her before I leave here&#8212;and do you write also, Jeff&#8212;don't fail&#8212;Should you write to me, in response to this, you must write so that I would get the letter not later than Wednesday morning next&#8212;as I feel the fit growing upon me stronger and stronger to move&#8212;And the fare is only $3 now from here to New York, cabin passage, in the boat&#8212;Besides I could go dead head if I was to apply&#8212;Jeff, I feel as if things had taken a turn with me, at last&#8212;Give my love to Mat, and all my dear brothers, especially Georgie.</p>
+            <closer rend="right">
+               <signed>Walt.</signed>
+            </closer>
+         
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.02332">
+    <teiHeader> 
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Richard Monckton Milnes, Lord Houghton,
+                    20 June 1885</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.02332</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Richard Monckton Milnes, Lord Houghton, 20 June
+                        1885</title>
+                    <date cert="high" when="1885-06-20" xml:id="dat1">June 20, 1885</date>
+                    <idno type="callno">Box 11, Reel 7</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Milnes, Richard Monckton" ref="n0420">Richard Monckton Milnes</persName>
+                </person>
+            </particDesc>  
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-02-13" who="#kb">edited</change>
+            <change when="2014-09-28" who="#ss">encoded and annotated from Miller.</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.02332.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">328 Mickle street </name>
+                    <name type="place">Camden New Jersey U S A<ptr target="loc.02332_n1"/></name>
+                    <date when="1885-06-20" rend="right">June 20 1885</date>
+                </dateline>
+                <salute>Dear old friend</salute>
+            </opener>
+            <p>If convenience helps I want to present two American girls, sisters, Mary Whitall and
+                Alys Smith, of Quaker stock[,] special personal friends of mine&#8212;to
+                you&#8212;They are traveling in Europe with their parents&#8212;Mary can tell you
+                all about my perplexing self to latest dates<ptr target="loc.02332_n2"/>&#8212;</p>
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+            <postscript>
+                <p>To Lord Houghton</p>
+            </postscript>
+            <pb xml:id="leaf001v" facs="loc.02332.002_large.jpg" type="verso"/>
+            <pb xml:id="leaf002r" facs="loc.02332.003_large.jpg" type="recto"/>
+            <pb xml:id="leaf002v" facs="loc.02332.004_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

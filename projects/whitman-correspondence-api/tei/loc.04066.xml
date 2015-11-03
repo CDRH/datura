@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.04066">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">John T. Trowbridge to Walt Whitman, 2 December 1877</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>John T. Trowbridge</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.04066</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>John T. Trowbridge</author>
+                    <title>John T. Trowbridge to Walt Whitman, 2 December 1877</title>
+                    <date cert="high" when="1877-12-02" xml:id="dat1">December 2, 1877</date>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="ht"><persName key="Traubel, Horace">Horace Traubel</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Trowbridge, John T.">John T. Trowbridge</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-02" who="#nhg">added annotations</change>
+            <change when="2013-10-03" who="#nhg">checked, corrected</change>
+            <change when="2013-04-08" who="#gt">Checked and Corrected</change>
+            <change when="2013-02-25" who="#ej">Checked and Corrected</change>
+            <change when="2013-02-02" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_vm.00685_large.jpg" type="recto"/><note type="editorial" resp="#ht" place="top">see notes Aug, 29 &amp; 30, 88</note>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">Arlington, <choice><abbr>Mass.</abbr><expan>Massachusetts</expan></choice></name>
+                    <date when="1887-12-02" rend="right"><choice><abbr>Dec.</abbr><expan>December</expan></choice> 2, 1877.</date>
+                </dateline>
+                <salute>Dear Friend Whitman,</salute>
+            </opener>
+
+            <p>By the time you get this, I suppose you will have received "The Book of Eden," which I have ordered for you from the publishing house.<ptr target="n0860"/> I think you will find some things in it that will interest you.</p>
+            
+            <p>I have heard nothing
+                
+                <pb xml:id="leaf001v" facs="loc_vm.00686_large.jpg" type="verso"/>from the projected bust of you, for a long while. The last time I saw it, nearly a year ago, it had quite lost headway. I hope, however, that Morse<ptr target="n0862"/> will take a new departure, &amp; finally succeed.</p>
+            
+            <p>I see that somebody has stepped forward to "defend" you (in a mild way) in the Contributors' Club of the last Atlantic. I am astonished that
+                
+                <pb xml:id="leaf002r" facs="loc_vm.00687_large.jpg" type="recto"/>these latter-day critics should have so little to say of the first "Leaves of Grass," or venture to speak of them only apologetically. They still stand to me as the most powerful prophetic utterances in modern literature.</p>
+
+            <p>I have now two dear little girls, and we are all pretty well. I trust you are comfortable.</p>
+            
+            <closer>
+                <signed rend="right">J. T. Trowbridge.</signed>
+            </closer>
+            
+            <pb xml:id="leaf002v" facs="loc_vm.00688_large.jpg" type="verso"/>
+            
+            <!-- endorsed on this page, in Whitman's hand: Letter from | J T Trowbridge | Dec 2 '77. -->
+            
+        </body>
+    </text>
+</TEI>

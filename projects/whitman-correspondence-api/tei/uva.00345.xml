@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="uva.00345">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to Nathaniel Bloom and John F. S. Gray, 19&#8211;20 March 1863</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="kk">Kathryn Kruger</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+
+               <persName xml:id="ao">Alyssa Olson</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>uva.00345</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Walt Whitman</author>
+                  <editor>Edwin Haviland Miller</editor>
+                  <title xml:id="ehm">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>New York</pubPlace>
+                     <publisher>New York University Press</publisher>
+                     <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                     <biblScope type="volume">1</biblScope>
+                     <biblScope type="page">80-85</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to Nathaniel Bloom and John F. S. Gray, 19&#8211;20 March 1863</title>
+               <date when="1863-03-19">March 19, 1863</date>
+               <orgName xml:id="uva">Clifton Waller Barrett Collection, University of Virginia</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Bloom, Nathaniel">Nathaniel Bloom</persName>
+               
+            </person>
+            <person role="recipient">
+               <persName key="Gray, John F. S.">John F. S. Gray</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#kk" when="2009-08-24">proofread and edited</change>
+         <change who="#vs" when="2008-09-16">added main TEI markup</change>
+         <change who="#el" when="2008-07-30">added TEI header structure w/o IDs and titles; added minimal TEI markup</change>
+         <change who="#ao" when="2008-07-29">pulled transcription from Primary Source Media</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <dateline rend="right">
+                  <name type="place">Washington,</name>
+                  <date when="1863-03-19">March 19, 1863.</date>
+               </dateline>
+               <salute>Dear Nat,<ptr target="uva.00345_n1"/> and Fred Gray:<ptr target="uva.00345_n2"/>
+               </salute>
+            </opener>
+            <p>Since I left New York, I was down in the Army of the Potomac in front with my brother a good part of the winter, commencing time of the battle of Fredericksburgh<ptr target="uva.00345_n3"/>&#8212;have seen <hi rend="italic">war-life</hi>, the real article&#8212;folded myself in a blanket, lying down in the mud with composure&#8212;relished salt pork &amp; hard tack&#8212;have been on the battle-field among the wounded, the faint and the bleeding, to give them nourishment&#8212;have gone over with a flag of truce the next day to help direct the burial of the dead&#8212;have struck up a tremendous friendship with a young Mississippi captain (about 19)<ptr target="uva.00345_n4"/> that we took prisoner badly wounded at Fredericksburgh&#8212;(he has followed me here, is in Emory hospital here, minus a leg&#8212;he wears his confederate uniform, proud as the devil&#8212;I met him first at Falmouth, in the Lacy house,<ptr target="uva.00345_n5"/> middle of December last, his leg just cut off, and cheered him up&#8212;poor boy, he has suffered a great deal, and still suffers&#8212;has eyes bright as a hawk, but face pale&#8212;our affection is quite an affair, quite romantic&#8212;sometimes when I lean over to say I am going, he puts his arm round my neck, draws my face down, &amp;c. quite a scene for the New Bowery.)</p>
+            <p>I spent the Christmas holidays on the Rappahannock&#8212;during January came up hither, took a lodging room here&#8212;did the 37th Congress, especially the night sessions the last three weeks, explored the Capitol then, meandering the gorgeous painted interminable senate corridors, getting lost in them, (a new sensation, rich &amp; strong, that endless painted interior at night)&#8212;got very much interested in some particular cases in Hospitals here&#8212;go now steadily to more or less of said Hospitals by day or night&#8212;find always the sick and dying soldiers forthwith begin to cling to me in a way that makes a fellow feel funny enough. These Hospitals, so different from all others&#8212;these thousands, and tens and twenties of thousands of American young men, badly wounded, all sorts of wounds, operated on, pallid with diarrhea, languishing, dying with fever, pneumonia, &amp;c. open a new world somehow to me, giving closer insights, new things, exploring deeper mines than any yet, showing our humanity, (I sometimes put myself in fancy in the cot, with typhoid, or under the knife,) tried by terrible, fearfulness tests, probed deepest, the living soul's, the body's tragedies, bursting the petty bonds of art. To these, what are your dramas and poems, even the oldest and the tearfulest? Not old Greek mighty ones, where man contends with fate, (and always yields)&#8212;not Virgil showing Dante on and on among the agonized &amp; damned, approach what here I see and take a part in. For here I see, not at intervals, but quite always, how certain, man, our American man&#8212;how he holds himself cool and unquestioned master above all pains and bloody mutilations. It is immense, the best thing of all, nourishes me of all men. This then, what frightened us all so long! Why it is put to flight with ignominy, a mere stuffed scarecrow of the fields. O death where is thy sting? O grave where is thy victory? &amp;c. In the Patent Office, as I stood there one night, just off the cot-side of a dying soldier, in a large Ward that had received the worst cases of 2d Bull Run, Antietam and Fredericksburgh, the surgeon, Dr. Stone, (Horatio Stone, the sculptor,)<ptr target="uva.00345_n6"/> told me, of all who had died in that crowded ward the past six months, he had still to find the <hi rend="italic">first man or boy</hi> who had met the approach of death with a single tremor, or unmanly fear. But let me change the subject&#8212;I have given you screed enough about death and Hospitals&#8212;and too much, since I got started. Only I have some curious yarns I promise you, my darlings and gossips, by word of mouth, whene'er we meet.</p>
+            <p>Washington and its points I find bear a second and a third perusal, and doubtless indeed many. My first impressions, architectural, &amp;c. were not favorable;<ptr target="uva.00345_n7"/> but upon the whole, the city, the spaces, buildings, &amp;c make no unfit emblem of our country, so far, so broadly planned, every thing in plenty, money &amp; materials staggering with plenty, but the fruit of the plans, the knit, the combination yet wanting&#8212;Determined to express ourselves greatly in a capital but no fit capital yet here&#8212;(time, associations, wanting, I suppose)&#8212;many a hiatus yet&#8212;many a thing to be taken down and done over again yet&#8212;perhaps an entire change of base&#8212;may-be a succession of changes. Congress does not seize very hard upon me&#8212;I studied it and its members with curiosity, and long&#8212;much gab, great fear of public opinion, plenty of low business talent, but no masterful man in Congress, (probably best so.) I think well of the President. He has a face like a hoosier Michael Angelo, so awful ugly it becomes beautiful, with its strange mouth, its deep cut, criss-cross lines, and its doughnut complexion. My notion is, too, that underneath his outside smutched mannerism, and stories from third-class county bar-rooms, (it is his humor,) Mr. Lincoln keeps a fountain of first-class practical telling wisdom. I do not dwell on the supposed failures of his government; he has shown, I sometimes think, an almost supernatural tact in keeping the ship afloat at all, with head steady, not only not going down, and now certain not to, but with proud and resolute spirit, and flag flying in sight of the world, menacing and high as ever. I say never yet captain, never ruler, had such a perplexing, dangerous task as his, the past two years. I more and more rely upon his idiomatic western genius, careless of court dress or court decorums.</p>
+            <p>I am living here without much definite aim, (except going to the hospitals)&#8212;yet I have quite a good time&#8212;I make some money by scribbling for the papers, and as copyist. I have had, (and have,) thoughts of trying to get a clerkship or something, but I only try in a listless sort of way, and of course do not succeed. I have strong letters of introduction from Mr. Emerson to Mr. Seward and Mr. Chase, but I have not presented them.<ptr target="uva.00345_n8"/> I have seen Mr. Sumner several times anent of my office-hunting&#8212;he promised fair once&#8212;but he does not seem to be finally fascinated. I hire a bright little 3d story front room, with service, &amp;c. for $7 a month, dine in the same house, (394 L st. a private house)&#8212;and remain yet much of the old vagabond that so gracefully becomes me. I miss you all, my darlings &amp; gossips, Fred Gray, and Bloom and Russell and every body. I wish you would all come here in a body&#8212;that would be divine. (We would drink ale, which is here of the best.) My health, strength, personal beauty, &amp;c. are, I am happy to inform you, without diminution, but on the contrary quite the reverse. I weigh full 220 pounds avoirdupois, yet still retain my usual perfect shape&#8212;a regular model. My beard, neck, &amp;c. are woolier, fleecier, whiteyer than ever. I wear army boots, with magnificent black morocco tops, the trousers put in, wherein shod and legged confront I Virginia's deepest mud with supercilious eyes. The scenery around Washington is really fine, the Potomac a lordly river, the hills, woods, &amp;c all attractive. I poke about quite a good deal. Much of the weather here is from heaven&#8212;of late, though, a stretch decidedly from the other point. To-night (for it is night, about 10) I sit alone writing this epistle, (which will doubtless devour you all with envy and admiration,) in the room adjoining my own particular. A gentleman and his wife,<ptr target="uva.00345_n9"/> who occupy the two other apartments on this floor, have gone to see Heron<ptr target="uva.00345_n10"/> in Medea&#8212;have put their little child to bed, and left me in charge. The little one is sleeping soundly there in the back room, and I, (plagued with a cold in the head,) sit here in the front, by a good fire, writing as aforesaid to my gossips &amp; darlings. The evening is lonesome &amp; still. I am entirely alone. "O solitude where are the charms," &amp;c &amp;c.</p>
+            <p>Now you write to me good long letters, my own boys. You, Bloom, give me your address particular, dear friend. Tell me Charles Russell's address, particular&#8212;also write me about Charles Chauncey.<ptr target="uva.00345_n11"/> Tell me about every body. For, dearest gossips, as the hart panteth, &amp;c. so my soul after any and all sorts of items about you all. My darling, dearest boys, if I could be with you this hour, long enough to take only just three mild hot rums, before the cool weather closes.</p>
+            <p>
+               <hi rend="italic">Friday Morning, 20th</hi>&#8212;I finish my letter in the office of Major Hapgood, a paymaster, and a friend of mine. This is a large building, filled with paymasters' offices, some thirty or forty or more. This room is up on the fifth floor, (a most noble and broad view from my window.) Curious scenes around here&#8212;a continual stream of soldiers, officers, cripples, &amp;c &amp;c. some climbing wearily up the stairs. They seek their pay&#8212;and every hour, almost every minute, has its incident, its hitch, its romance, farce or tragedy. There are two paymasters in this room. A sentry at the street door, another half way up the stairs, another at the chief clerk's door, all with muskets &amp; bayonets&#8212;sometimes a great swarm, hundreds, around the side walk in front, waiting. (Every body is waiting for something here.) I take a pause, look up a couple of minutes from my pen and paper&#8212;see spread, off there, the Potomac, very fine, nothing petty about it&#8212;the Washington monument,<ptr target="uva.00345_n12"/> not half finished&#8212;the public grounds around it filled with ten thousand beeves, on the hoof&#8212;to the left the Smithsonian with its brown turrets&#8212;to the right, far across, Arlington Heights, the forts, eight or ten of them&#8212;then the long bridge, and down a ways, but quite plain, the shipping of Alexandria&#8212;opposite me, and in stone throw, is the Treasury building&#8212;and below the bustle and life of Pennsylvania avenue. I shall hasten with my letter, and then go forth and take a stroll down "the avenue" as they call it here.</p>
+            <p>Now, you boys, don't you think I have done the handsome thing by writing this astounding, magnificent letter&#8212;certainly the longest I ever wrote in my life. Fred, I wish you to present my best respects to your father.<ptr target="uva.00345_n13"/> Bloom and all, one of these days we will meet, and make up for lost time, my dearest boys.</p>
+            <closer rend="right">
+               <signed>Walt.</signed>
+            </closer>
+         
+         <postscript>
+            <p>
+Address me, care Major Hapgood, paymaster, U.S. Army, cor 15th &amp; F sts. Washington. How is Mullen?<ptr target="uva.00345_n14"/> give him my respects&#8212;How is Ben Knower?<ptr target="uva.00345_n15"/> how the twinkling and temperate Towle? remember me to them.<ptr target="uva.00345_n16"/>
+            </p>
+         </postscript>
+      </body>
+   </text>
+</TEI>

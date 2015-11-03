@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nyh.00001">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to Mr. and Mrs. Samuel B. Haskell, 27 July 1863</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="tj">Tim Jackson</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+
+               <persName xml:id="ao">Alyssa Olson</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>nyh.00001</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Walt Whitman</author>
+                  <editor>Edwin Haviland Miller</editor>
+                  <title xml:id="ehm">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>New York</pubPlace>
+                     <publisher>New York University Press</publisher>
+                     <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                     <biblScope type="volume">1</biblScope>
+                     <biblScope type="page">119</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to Mr. and Mrs. Samuel B. Haskell, 27 July 1863</title>
+               <date when="1863-07-27">July 27, 1863</date>
+               <orgName xml:id="nyh">New York Historical Society</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Haskell, Samuel B.">Samuel B. Haskell</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#tj" when="2009-08-24">proofread and modified</change>
+         <change who="#vs" when="2008-09-23">added main TEI markup</change>
+         <change who="#el" when="2008-07-30">added TEI header structure w/o IDs and titles; added minimal TEI markup</change>
+         <change who="#ao" when="2008-07-29">pulled transcription from Primary Source Media</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <dateline rend="right">
+                  <name type="place">Washington</name>
+                  <date when="1863-07-27">July 27 1863</date>
+               </dateline>
+               <salute>Mr and Mrs Haskell</salute>
+            </opener>
+            <p>Your son Erastus Haskell,<ptr target="nyh.00001_n1"/> of Co K 141st New York, is now lying sick with typhoid fever here in hospital.</p>
+            <p>I have been with him quite a good deal, from day to day, was with him yesterday &amp; indeed almost every day, &amp; feel much interested in the young man. He has been very sick, &amp; seems to be so now, as I should judge, but the doctor says he will recover. I had a talk with the doctor yesterday, &amp; he says so still. But Erastus seems to me very sick, &amp; I thought I would write to you. He had some one write to you about two weeks ago, but has received no answer.</p>
+            <p>Erastus does not talk much, so I do not understand much about his affairs. I am merely a friend. The address of Erastus is</p>
+            <p>Ward E, Armory Square Hospital | Washington D C</p>
+            <p>should you wish to write to him direct.</p>
+            <closer rend="right">
+               <signed>Walt Whitman</signed>
+            </closer>
+         
+         <postscript>
+            <p>care Major Hapgood, paymaster | U S A cor 15th &amp; F st | Washington | D C</p>
+            <p>Upon second thought I enclose you an envelope to send your letter to Erastus&#8212;put a stamp on it, &amp; write soon. I suppose you know he has been sick a great deal since he has been in the service.</p>
+         </postscript>
+      </body>
+   </text>
+</TEI>

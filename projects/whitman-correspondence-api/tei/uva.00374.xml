@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="uva.00374">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title level="m" type="main">Walt Whitman to Edmund W. Gosse, 19 May [1876]</title>
+        <title level="m" type="sub">a machine readable transcription</title>
+        <author>Walt Whitman</author>
+        <editor>Kenneth M. Price</editor>
+        <editor>Ed Folsom</editor>
+        <respStmt>
+          <resp>Transcription and encoding</resp>
+          <name>The Walt Whitman Archive Staff</name>
+        </respStmt>
+        <sponsor>Center for Digital Research in the Humanities, University of
+          Nebraska-Lincoln</sponsor>
+        <sponsor>University of Iowa</sponsor>
+        <funder>National Historical Publications and Records Commission</funder>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <date>2012</date>
+        </edition>
+      </editionStmt>
+      <publicationStmt>
+        <idno>uva.00374</idno>
+        <distributor>The Walt Whitman Archive</distributor>
+        <address>
+          <addrLine>Center for Digital Research in the Humanities</addrLine>
+          <addrLine>319 Love Library</addrLine>
+          <addrLine>University of Nebraska-Lincoln</addrLine>
+          <addrLine>P.O. Box 884100</addrLine>
+          <addrLine>Lincoln, NE 68588-4100</addrLine>
+        </address>
+        <availability>
+          <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the
+            Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law.
+            Redistribution or republication on other terms, in any medium, requires express written
+            consent from the editors and advance notification of the publisher, Center for Digital
+            Research in the Humanities. Permission to reproduce the graphic images in this archive
+            has been granted by the owners of the originals for this publication only.</p>
+        </availability>
+      </publicationStmt>
+      <notesStmt>
+        <note type="project">The following are responsible for particular readings or for changes to
+          this file, as noted: <persName xml:id="el">Elizabeth Lorang</persName>
+          <persName xml:id="al">Ashley Lawson</persName>
+          <persName xml:id="zk">Zachary King</persName>
+          <persName xml:id="ec">Eric Conrad</persName>
+        </note>
+      </notesStmt>
+      <sourceDesc>
+        <biblStruct>
+          <monogr>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <title xml:id="ehm">The Correspondence</title>
+            <imprint>
+              <pubPlace>New York</pubPlace>
+              <publisher>New York University Press</publisher>
+              <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+              <biblScope type="volume">3</biblScope>
+              <biblScope type="page">48</biblScope>
+            </imprint>
+          </monogr>
+        </biblStruct>
+
+        <bibl>
+          <author>Walt Whitman</author>
+          <title>Walt Whitman to Edmund W. Gosse, 19 May [1876]</title>
+          <date cert="medium" when="1876-05-19" xml:id="dat1">May 19, 1876</date>
+          <idno type="callno">MSS 3829<!-- Box-folder 3:30--></idno>
+          <orgName xml:id="uva">Papers of Walt Whitman (MSS 3829), Clifton Waller Barrett Library of
+            American Literature, Albert H. Small Special Collections Library, University of
+            Virginia</orgName>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <particDesc>
+        <person role="sender">
+          <persName key="Whitman, Walt">Walt Whitman</persName>
+        </person>
+        <person role="recipient">
+          <persName key="Gosse, Edmund W.">Edmund W. Gosse</persName>
+        </person>
+      </particDesc>
+    </profileDesc>
+    <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+      <change when="2012-11-29" who="#el">checked</change>
+      <change when="2012-06-20" who="#el">checked</change>
+      <change when="2012-05-07" who="#al">checked</change>
+      <change when="2011-05-17" who="#zk">encoded</change>
+      <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+    </revisionDesc>
+  </teiHeader>
+
+  <text type="letter">
+    <body>
+      <opener>
+        <dateline>
+          <name type="place" rend="right">431 Stevens st <lb/>Camden New Jersey <lb/>U S
+            America</name>
+          <date when="1876-05-19" rend="right">May 19</date><ptr target="uva.00374_n1"/>
+        </dateline>
+      </opener>
+
+      <p>I have this day forwarded to you<ptr target="n0273"/> by mail&#8212;same address as this card&#8212;<hi
+          rend="italic">my new edition, Two Volumes</hi> (separate parcels)&#8212;Please notify me
+        (by postal card will do) when they arrive safely&#8212;</p>
+
+      <closer>
+        <signed rend="right">W.W.</signed>
+      </closer>
+    </body>
+  </text>
+</TEI>

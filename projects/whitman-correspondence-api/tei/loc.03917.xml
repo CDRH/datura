@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03917">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Harry Stafford to Walt Whitman, 10 February
+                    1884</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Harry Stafford</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="aa">Alex Ashland</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03917</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Harry Stafford</author>
+                    <title>Harry Stafford to Walt Whitman, 10 February 1884</title>
+                    <date cert="high" when="1884-02-10" xml:id="dat1">February 10, 1884</date>
+                    <idno type="callno">MSS18630, Box 10, Reel 6</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Stafford, Harry" ref="n0590">Harry Stafford</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-04-07" who="#nhg">corrected</change>
+            <change when="2015-02-26" who="#nhg">checked, corrected, added correspondent ref</change>
+            <change when="2015-02-07" who="#ss">added annotations</change>
+            <change when="2014-12-19" who="#ss">encoded and checked</change>
+            <change when="2014-12-05" who="#aa">transcribed</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_jc.00537_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">London</name>
+                    <date when="1884-02-10">Feb 10&#8212;84</date>
+                </dateline>
+                <salute><choice><abbr>Dr</abbr><expan>Dear</expan></choice> Old Friend:</salute>
+            </opener>
+            <p>Am quite well with the exception of the abcess on my neck, it has come again. Dr.
+                B&#8212;<ptr target="loc.03917_n1"/> lanced it few days ago but it dont appear to get much better.
+                Recieved the papers and am glad to get them for it is the only way I can get posted.
+                Most of my friends appear to have forgotten me or think me of too little importance
+                to drop a line.
+            Will leave here the first of next month and start for Detroit where I will put
+                in a month or so if I can find bread and butter. Please send me a letter of
+                introduction to someone there if you know any body it will make it much better for me
+                and I will not feel entirely alone. I think perhaps Dr. B can give me a letter to
+                some of his friends there as he is going to give a lecture there Wednesday evening.
+                Don't get the blues worth a <choice><orig>dam</orig><reg>damn</reg></choice> and dont expect to. Will close for the present.</p>
+            <closer>
+                <salute>With lots of love, I remain as Ever your true and devoted son</salute>
+                <signed>Harry</signed><ptr target="loc.03917_n2"/>  
+            </closer>
+            <pb xml:id="leaf001v" facs="loc_jc.00538_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05766">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">John H. Johnston to Walt Whitman, 25 March 1884</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>John H. Johnston</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05766</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Horace Traubel</author>
+                        <title xml:id="ht">With Walt Whitman in Camden</title>
+                        <imprint>
+                            <pubPlace>Philadelphia</pubPlace>
+                            <publisher>University of Pennsylvania Press</publisher>
+                            <date when="1953">1953</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">331</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>John H. Johnston</author>
+                    <title>John H. Johnston to Walt Whitman, 25 March 1884</title>
+                    <date cert="high" when="1884-03-25" xml:id="dat1">March 25, 1884</date>
+                    <idno type="callno">Box 12, Reel 7-8</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Johnston, John H." ref="n0336">John H. Johnston</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-02-27" who="#nhg">checked, corrected, added correspondent ref</change>
+            <change when="2015-02-07" who="#ss">added annotations</change>
+            <change when="2014-12-20" who="#ss">checked and corrected</change>
+            <change when="2014-12-19" who="#ak">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place">New York,</name>
+                    <date when="1884-03-25">March 25th, 1884.</date>
+                </dateline>
+                <salute>Dear Walt:</salute>
+            </opener>
+            <p> I promised you I would send you fifty dollars four times over for your portrait by
+                    Hine,<ptr target="loc.05766_n1"/> but the thought has occurred to me that your
+                moving may make it desirable to have some extra cash just now, and so I send you my
+                check for one hundred dollars and will send the balance before you need it, I trust;
+                if not a gentle reminder from you will fetch it. </p>
+            <p> As I looked at your things packed up for moving, I wondered if you had in any way by
+                will or otherwise secured their safe care when you have passed away. Some one who
+                loves you should have them to give to the world in proper shape. I do not consider
+                myself the proper one, although I hope some day to tell the world "what I know about
+                Walt Whitman," but the safe care of your literary remains I feel anxious to have in
+                right hands. </p>
+            <p> Mr. Montgomery<ptr target="loc.05766_n2"/> was wonderfully delighted with meeting you, and talked of nothing
+                else all day and evening. He is a man of very marked ability, who will be heard of
+                before long in politics and literature. I think he has a wonderfully well-balanced
+                mind. Alma<ptr target="n3029"/> was sorely disappointed at my not bringing you home
+                with us Sunday and hope you will very soon visit us. </p>
+            <p> I want you to write me the full history of the painting by Hine&#8212;when, where,
+                how, &amp;c &amp;c. </p>
+            <closer>
+                <salute>Sincerely yours,</salute> 
+                <signed>J. H. Johnston</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

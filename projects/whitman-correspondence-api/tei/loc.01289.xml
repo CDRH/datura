@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.01289">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Francis P. Church to Walt Whitman, 4 March 1869</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Francis P. Church</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <name>The Walt Whitman Archive Staff</name>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2010</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.01289</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2010 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note type="project">The following are responsible for particular readings or for
+                    changes to this file, as noted:
+<persName xml:id="kmp">Kenneth M. Price</persName>
+                    <persName xml:id="al">Ashley Lawson</persName>
+                    <persName xml:id="br">Beverley Rilett</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </note>
+            </notesStmt>
+            <sourceDesc>
+
+               <bibl>
+                    <author>Francis P. Church</author>
+                    <title>Francis P. Church to Walt Whitman, 4 March 1869</title>
+                    <date cert="high" when="1869-03-04" xml:id="dat1">March 4, 1869</date>
+                    <idno type="callno">MSS18630, Box 8</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839-1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Church, Francis P.">Francis P. Church</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+<change when="2012-03" who="#kp">blessed</change>
+            <change when="2011-09-22" who="#el">transcribed and encoded letterhead</change>
+            <change when="2010-02-15" who="#al">checked</change>
+            <change when="2010-11-02" who="#el">checked</change>
+            <change when="2010-09-17" who="#br">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+           <pb xml:id="leaf001r" facs="loc.01289.003.jpg" type="recto"/>
+            <opener>                
+                <handShift rend="printed"/>    
+                <address>
+                        <addrLine>EDITORIAL OFFICE OF THE GALAXY,</addrLine>
+                        <addrLine>N<hi rend="smallcaps">O</hi>. 40 P<hi rend="smallcaps">ARK</hi> R<hi rend="smallcaps">OW</hi>,</addrLine>
+                    </address>
+                    <dateline>
+                        <name type="place">New York</name>,
+                        <handShift rend="manuscript"/>                        
+                        <date when="1869-03-04">Mar 4, <handShift rend="printed"/>186<handShift rend="manuscript"/>9</date>
+                    </dateline>                
+                <salute>My dear Sir:</salute>
+            </opener>
+
+            <p>I am sorry not to be able to use your poem in the April Galaxy.</p>
+            <p>I supposed the poem had gone back to you
+                
+                <pb xml:id="leaf001v" facs="loc.01289.005.jpg" type="verso"/>
+                <pb xml:id="leaf002r" facs="loc.01289.004.jpg" type="recto"/>
+                as it should have done some time ago.</p>
+            <closer>
+                <salute>I am</salute>
+                <salute>Very truly yours,</salute>
+                <signed>F. P. Church</signed>                        
+            </closer>
+            <postscript><p>Mr. Walt Whitman</p></postscript>
+
+            <pb xml:id="leaf002v" facs="loc.01289.004.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

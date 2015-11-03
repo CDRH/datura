@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.02222">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Richard Watson Gilder to Walt Whitman, 7 June
+                    1883</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Richard Watson Gilder</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="no">Natalie O'Neal</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.02222</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Richard Watson Gilder</author>
+                    <title>Richard Watson Gilder to Walt Whitman, 7 June 1883</title>
+                    <date cert="high" when="1883-06-07" xml:id="dat1">June 7, 1883</date>
+                    <idno type="callno">MSS18630</idno>
+                    <orgName xml:id="loc">Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+
+            <particDesc>
+                <person role="sender">
+                    <persName key="Gilder, Richard Watson">Richard Watson Gilder</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2014-11-25" who="#nhg">checked, corrected</change>
+            <change when="2014-11-24" who="#no">checked, corrected dateline to read like letterhead, corrected punctuation</change>
+            <change when="2014-11-10" who="#ak">corrected transcription and encoding</change>
+            <change when="2014-07-18" who="#ss">transcribed, encoded and annotations added</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.02222.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <handShift rend="printed"/>
+                    <name type="place" rend="center">Editorial Department 
+                        <lb/> The Century Magazine</name>
+                    <name type="place" rend="left">Union Square New York</name>
+                    <handShift rend="manuscript"/>
+                    <date when="1883-06-07" rend="right">June 7, '83.</date>
+                </dateline>
+                <salute>My dear Mr. Whitman:</salute>
+            </opener>
+
+            <p>I do not know whether you saw a little paragraph in a recent number of the
+                Critic&#8212;in the Lounger's department.<!--<ptr target="n0871"/>--> I have not seen Dr.
+                Bucke's book,<!--<ptr target="n0119"/>--> but I was told that he had done me the honor of
+                quoting some verses of mine. I was asked whether those verses were written for the
+                book, or about yourself, and I said 
+                
+                <pb xml:id="leaf001v" facs="loc.02222.002_large.jpg" type="verso"/>
+                
+                "No&#8212;they were published in
+                the magazine some time ago and were suggested by another writer." I am very sorry
+                that paragraph appeared as it did, or at
+                    all, as it might look as if I were not a friend and admirer of the subject
+                of the book.</p>
+
+            <p>Are you coming North this summer? I wish you would come and see me at Marion, on
+                Buzzard's Bay in <choice><abbr>Mass.</abbr><expan>Massachusetts</expan></choice> If you will give me the slightest encouragement I will try to
+                get Burroughs<!--<ptr target="n0129"/>--> there to meet you. Splendid pine woods&#8212;good 
+                
+                <pb xml:id="leaf002r" facs="loc.02222.003_large.jpg" type="recto"/> 
+                
+                fishing and
+                boating&#8212;a quiet little whaling village. Think well of it and let me know by
+                return mail</p>
+
+            <closer>
+                <salute>Very sincerely yours</salute>
+                <signed rend="right">R.W. Gilder.</signed>
+                <salute>Walt Whitman Esq.</salute></closer>
+            
+            <pb xml:id="leaf002v" facs="loc.02222.004_large.jpg" type="verso"/>
+        </body>
+
+    </text>
+</TEI>

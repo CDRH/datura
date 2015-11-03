@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03892">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Susan Stafford to Walt Whitman, 4 April 1878</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Susan Stafford</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="vm">Vince Moran</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03892</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Susan Stafford</author>
+                    <title>Susan Stafford to Walt Whitman, 4 April 1878</title>
+                    <date cert="high" when="1878-04-04" xml:id="dat1">April 4, 1878</date>
+                    <idno type="callno">MSS18630</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Stafford, Susan">Susan Stafford</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-03-06" who="#ss">annotations added</change>
+            <change when="2013-10-08" who="#nhg">checked, corrected</change>
+            <change when="2013-02-17" who="#ab">checked</change>
+            <change when="2013-02-06" who="#ej">checked, corrected</change>
+            <change when="2012-11-28" who="#vm">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_jc.00467_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <date when="1878-04-04" rend="right">April 4th 1878</date>
+                </dateline>
+                <salute></salute>
+            </opener>
+
+            <p><gap reason="damage" extent="4 or 5 words" quantity="15" unit="chars"/> glad to hear that <gap reason="damage" extent="1 words" quantity="10" unit="chars"/> thing bother &amp; hope that you will soon be able to come down again &amp; stay with us a week or two.<ptr target="n0817"/> Debbie<ptr target="n0844"/> wants to <choice><sic>se</sic><corr>see</corr></choice> you for something very particular &amp; wishes <choice><orig>evry</orig><reg>every</reg></choice> day that Mr. Whitman would come down. we all want to <choice><sic>se</sic><corr>see</corr></choice> you so much dont wait to get well f <choice><sic>befor</sic><corr>before</corr></choice> you come we will take good care of you here.</p>
+            
+            <p>George<ptr target="n0852b"/> is <choice><sic>buisy</sic><corr>busy</corr></choice> planting potatoes &amp; <choice><sic>geting</sic><corr>getting</corr></choice> ready for corn planting he is trying to get his work a long while he has such good help <gap reason="damage" extent="3 words" quantity="12" unit="chars"/></p>
+           
+            <p><gap reason="damage" extent="5 words" quantity="20" unit="chars"/> love to <gap reason="damage" extent="2 words" quantity="7" unit="chars"/></p>
+            <closer>
+                <signed>SM Stafford</signed>
+            </closer>
+            
+            <pb xml:id="leaf001v" facs="loc_jc.00468_large.jpg" type="verso"/>
+            <pb xml:id="leaf002r" facs="loc_jc.00465_large.jpg" type="recto"/>
+            <pb xml:id="leaf002v" facs="loc_jc.00466_large.jpg" type="verso"/>
+        
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.00475">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main"> Thomas Jefferson Whitman  to Walt Whitman, 22 July 1877</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Thomas Jefferson Whitman</author>
+            <editor>Dennis Berthold</editor>
+            <editor>Kenneth M. Price</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="kk">Kathryn Kruger</persName>
+               <persName xml:id="al">April Lambert</persName>
+               <persName xml:id="nhg">Nicole Gray</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>loc.00475</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <author>Thomas Jefferson Whitman</author>
+               <title> Thomas Jefferson Whitman  to Walt Whitman, 22 July 1877</title>
+               <date when="1877-07-22">July 22, 1877</date>
+               <orgName xml:id="loc">Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Thomas Jefferson">Thomas Jefferson Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change when="2013-11-27" who="#el">updated values of @facs</change>
+         <change when="2013-11-25" who="#nhg">checked, corrected</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#el" when="2008-07-21">updated TEI header</change>
+         <change who="#kk" when="2008-04-01">checked and proofed</change>
+         <change who="#al" when="2006-10-03">Transcribed, Encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         <pb xml:id="leaf001r" facs="loc_ad.00523.jpg" type="recto"/>
+            <opener>
+               <dateline rend="right">
+                  <name type="place"><handShift rend="printed"/>St. Louis,</name>
+                  <date when="1877-07-22"><handShift rend="manuscript"/>July 22nd 1877</date>
+               </dateline>
+               <salute>Dear Walt&#8212;</salute>
+            </opener>
+            <p>I could not answer you before this as I have just returned from a trip down in South East Missouri.</p>
+            <p>On 1st of July the Bd of Water Com. abolished my office and consequently it left me out in the cold&#8212;it was a political move and done to get me out of the way on the question of re-appointment&#8212;and I am sorry to say I fear it will be successful<ptr target="loc.00475_n1"/>
+            </p>
+            <p>To-morrow I go to Little Rock Ark&#8212;to look into the water works question there&#8212;shall be gone a few days, and if I succeed shall have the job of making plans &amp;c for that place&#8212;this will take me a month or so&#8212;</p>
+            <p>Mrs Archer, the lady of the school<ptr target="loc.00475_n2"/> where the children are has written me saying that she thinks it would be much best for them to remain with her during the vacation on account 
+            <pb xml:id="leaf001v" facs="loc_ad.00524.jpg" type="verso"/>   
+               of the question of health.<ptr target="loc.00475_n3"/>  I have just written her that I would like to have them visit you at Camden and spend also a <choice><orig>shot</orig><reg>short</reg></choice> visit with Mrs Gilchrist.<ptr target="loc.00475_n4"/>
+            </p>
+            <p>When I returned here I found your letter and postal telling about Lou.<ptr target="loc.00475_n5"/> I am sincerely glad that she is getting well again  It is sad to think of how she must have suffered  My love to her and to George also. I hope ere this she has recovered her health again.</p>
+            <p>Everything in this section is very quiet  I have just made an arrangement about the right to operate some lead mines<ptr target="loc.00475_n6"/> which if I can carry through will return a fortune to the party investing and will also be an excellent thing for me. I may likely come East this fall or latter part of the summer to see about getting the money to start the work. It is a most favorable thing and it seems to me I ought to have no difficulty in putting the matter into working shape  I would like to have you drop me a line as to how Lou and all of you are&#8212;</p>
+            <closer rend="right">
+               <salute>Affectionately</salute>
+               <signed>Jeff</signed>
+            </closer>
+         
+      </body>
+   </text>
+</TEI>

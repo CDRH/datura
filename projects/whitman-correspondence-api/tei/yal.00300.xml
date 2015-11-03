@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="yal.00300">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Charles Allen Thorndike Rice to Walt Whitman, 21 January 1881</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Charles Allen Thorndike Rice</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="vm">Vince Moran</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>yal.00300</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Charles Allen Thorndike Rice</author>
+                    <title>Charles Allen Thorndike Rice to Walt Whitman, 21 January 1881</title>
+                    <date cert="high" when="1881-01-21" xml:id="dat1">January 21, 1881</date>
+                    <idno type="callno">YCAL MSS 202</idno>
+                    <orgName xml:id="yal">Yale Collection of American Literature, Beinecke Rare Book and Manuscript Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Rice, Charles Allen Thorndike">Charles Allen Thorndike Rice</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-16" who="#ss">image names corrected, annotations added</change>
+            <change when="2013-10-08" who="#nhg">checked, corrected</change>
+            <change when="2013-04-30" who="#gt">Checked and Corrected</change>
+            <change when="2013-02-12" who="#ej">Checked and Corrected</change>
+            <change when="2013-01-09" who="#vm">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="yal.00300.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                <handShift rend="printed"/>
+                    <name type="place">THE NORTH AMERICAN REVIEW,</name>
+                <name type="place">NEW YORK, N. Y.</name>                                      
+                <date when="1881-01-21"><handShift rend="manuscript"/>Jan 21 1881</date>
+            </dateline>
+            <salute>Walt Whitman</salute> 
+                <salute>My dear Sir<!--<ptr target="loc.02206_n4"/>--></salute>         
+             
+            </opener>
+            
+            <p>Permit me to thank you on behalf of the readers of the Review for the singularly interesting and valuable article you contribute to the February number.<!--<ptr target="yal.00300_n1"/>--> With the cooperation of yourself and other American thinkers of the first <unclear reason="illegible" resp="#nhg" cert="medium">note</unclear>, the Review must become indeed a necessity for every thinking man in America. I hope
+
+                <pb xml:id="leaf001v" facs="yal.00300.002_large.jpg" type="verso"/>
+            
+            to be able to afford to the readers of the Review frequent opportunity of being instructed by you</p>
+                       
+            <closer>
+                <salute>I am my dear sir yours <choice><sic>vey</sic><corr>very</corr></choice> truly</salute>
+                <signed>A Thorndike Rice</signed>
+            </closer>
+            <pb xml:id="leaf002r" facs="yal.00300.003_large.jpg" type="recto"/>
+            <pb xml:id="leaf002v" facs="yal.00300.004_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

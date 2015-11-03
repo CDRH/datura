@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05827">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Edwin Booth to Walt Whitman, 28 August 1884</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Edwin Booth</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="ef">Ed Folsom</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05827</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Horace Traubel</author>
+                        <title xml:id="ht">With Walt Whitman in Camden</title>
+                        <imprint>
+                            <pubPlace>Philadelphia</pubPlace>
+                            <publisher>University of Pennsylvania Press</publisher>
+                            <date when="1953">1953</date>
+                            <biblScope type="volume">1</biblScope>
+                            <biblScope type="page">46</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Edwin Booth</author>
+                    <title>Edwin Booth to Walt Whitman, 28 August 1884</title>
+                    <date cert="high" when="1884-08-28" xml:id="dat1">August 28, 1884</date>
+                    <idno type="callno">Box 4, Reel 2-3</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Booth, Edwin" ref="loc.05827_n1">Edwin Booth</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-07-07" who="#ef">blessed</change>
+            <change when="2015-07-07" who="#nhg">corrected</change>
+            <change when="2015-03-27" who="#nhg">checked, corrected</change>
+            <change when="2015-02-14" who="#ss">added annotations</change>
+            <change when="2014-12-20" who="#ss">checked and corrected</change>
+            <change when="2014-12-18" who="#ak">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place">Newport,</name>
+                    <date when="1884-08-28">Aug. 28th, '84.</date>
+                </dateline>
+                <salute>Walt Whitman, Esq.</salute>
+                <salute>Dear Sir&#8212;</salute>
+            </opener>
+            <p> I have tried in vain to obtain a good portrait of my father for you and am reduced
+                to this last extremity<ptr
+                    target="loc.05827_n2"/>&#8212;I must send you a book (which you need not read)
+                containing poor copies of the good portraits that are in some 
+                secure, forgotten place among my traps&#8212;stored in garret or cellar of my new
+                house where all things are at sixes and sevens. </p>
+            <p> The one as Richard is from a copper plate, taken in England about 1820; the
+                frontispiece is from a daguerreotype taken in Albany 1848&#8212;the original is
+                excellent; <choice><orig>Posthumus</orig><reg>posthumous</reg></choice> is from an engraving&#8212;taken very early in his career at
+                Covent Garden&#8212;which I never saw. I am sorry that I can find none better than
+                these poor reproductions. They give his face before and after his nose was broken,
+                but are badly printed. I trust they will be of service to you. </p>
+            <closer>
+                <salute>Very truly yours,</salute>
+                <signed>Edwin Booth.</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

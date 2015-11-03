@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00465">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, 10 December 1865</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ct">Cathy Tisch</persName>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00465</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, 10 December 1865</title>
+                    <date cert="high" when="1865-12-10" xml:id="dat1">December 10, 1865</date>
+                        <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-07-29" who="#el">merged files</change>
+            <change when="2013-06-06" who="#wr">Duke Proofreading Corrections</change>
+            <change when="2013-01-02" who="#el">updated TEI header to reflect new project practices; moved editorial notes to external file and replaced with ptr; other editing changes as necessary</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent
+                Proof</change>
+            <change when="2012-04-25" who="#wr">Proofreading Corrections</change>
+            <change when="2012-12-14" who="#wr">Proofreading Corrections of notes.</change>
+            <change when="2012-09-15" who="#wr">Proofreading correction of notes.</change>
+            <change when="2012-09-05" who="#wr">Review proofreading corrections. Fix signature on leaf 1. Revise date note. Add note
+             on Walt's recent letter and Mrs. Jones. Annotate Ruggles, and remove unneeded note on Hannah. </change>
+            <change when="2012-08-22" who="#ct">Oral Proofreading Corrections</change>
+            <change when="2012-01-10" who="#fw">Correct date in title, annotations and abbreviations</change>
+            <change when="2011-08-03" who="#wr">Correct and annotate George, Hannah visit, Jeff, Edward, and burglary.</change>
+            <change when="2011-04-05" who="#fw">Correct 4 Pages</change>
+            <change when="2011-03-30" who="#wr">Encode regularization of contractions, days of week, and frequently misspelled words</change>
+            <change when="2011-03-29" who="#fw">Transcribe 4 Pages</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <pb xml:id="leaf001r" facs="duk.00465.001.jpg" type="recto"/>
+            
+            <note type="editorial" resp="#rmb" place="top">Brooklyn 10 Dec 1865</note>
+            
+            <opener>
+                <dateline>
+                    <date when="1868-12-10">Sunday 10<ptr target="duk.00465_n10"/></date>
+                </dateline>
+                <salute>Dear Walt</salute>
+            </opener>
+            
+            <p>i have got in
+            the habit of writing to you
+            every <choice><orig>sunday</orig> <reg>Sunday</reg></choice> so i thought
+            i <choice><orig>wouldent</orig> <reg>wouldn't</reg></choice> break through
+            to day) i received your letter
+            yesterday<ptr target="duk.00465_n1"/> after looking all day
+            for one i was glad to have
+            the letter and glad to have the
+            2 dollars at noon i <choice><orig>hadent</orig> <reg>hadn't</reg></choice> one
+                cent and i asked georgee<ptr target="duk.00425_n2"/> to
+            give me 50 cents and after looking
+            for a considerable time he laid
+            me down 50 cents
+            well Walt i felt
+            so bad and child like i cried because
+            he <choice><orig>dident</orig> <reg>didn't</reg></choice> give me more if i had
+            got the 2 dollars a little sooner i
+            should not have asked
+            </p>
+            
+            <pb xml:id="leaf001v" facs="duk.00465.002.jpg" type="verso"/>
+            
+            <p>i have got along very well
+            up to about 2 weeks ago and since that
+            time <choice><orig>goerge</orig> <reg>George</reg></choice> has been moody and would hardly speak only when i
+                spoke to him well of course you will say mother put the worst constructions on it
+                well Walt i did not the first few days i thought perhaps something had gone wrong in
+                his business affairs but up to to day he has been so different from what he was ever
+                since i have been home<ptr target="duk.00465_n13"/> but to day he is more like
+                himself Well Walt i thought of every thing sometimes i would think
+                        <choice><orig>maybee</orig> <reg>maybe</reg></choice> he is tired of having
+                me and Edd<ptr target="duk.00425_n13"/> and then i would
+            think george is too noble a fellow
+            for that to be the cause and i knew
+            that i had not or he had not
+            been to more <choice><orig>expence</orig> <reg>expense</reg></choice> than if
+                he paid his board Jeffy<ptr target="duk.00422_n2"/> told me
+            to have a talk with george and
+            ask him what made him so
+            <pb xml:id="leaf002r" facs="duk.00465.003.jpg" type="recto"/>
+            
+            but i <choice><orig>dident</orig> <reg>didn't</reg></choice> like to i would ask
+            him if he <choice><orig>wasent</orig> <reg>wasn't</reg></choice> well and so on
+            but i <choice><orig>doo</orig> <reg>do</reg></choice> hope it will go over
+            i acted just the same as if i did
+            not notice any change but i felt
+            awful bad and what has
+            made him act so god only knows
+            but i believe it runs in the
+            Whitman family to have such
+            spells any how i hope they
+            <choice><orig>wont</orig> <reg>won't</reg></choice> come often) Jeff is quite
+            sick to day he was sick nearly
+            all night vomiting and purging
+            he has eaten very heartily
+            lately he eat chicken and stuffing
+            for his supper and cranberry
+            pie before he went to bed and
+            i think that is one great cause
+            of his sickness he looks bad
+            but probably it will <choice><orig>doo</orig> <reg>do</reg></choice> him
+            good to have a good clearing 
+            out the rest is all well mat<ptr target="duk.00465_n9"/>
+            has had company 4 days this
+            past week and expects the
+            Doctor<ptr target="duk.00465_n12"/>
+            to day we had quite an
+            alarm not at this house
+            
+            <pb xml:id="leaf002v" facs="duk.00465.004.jpg" type="verso"/>
+            
+            but the 
+                <unclear reason="illegible" cert="low" resp="#wr">recent parknesses</unclear><ptr target="duk.00465_n7"/>
+            A burglar broke in the basement
+            while the man and his wife lay
+            sleeping in the front basement when
+            she awoke he was lighting the big
+            lamp he had taken the <choice><orig>mans</orig> <reg>man's</reg></choice> 
+            <choice><orig>wa<unclear reason="cut away" cert="high" resp="#wr">ch</unclear></orig> <reg>watch</reg></choice>
+            and 5 dollars and walked into 
+            the back basement and came <choice><orig>bac<unclear reason="cut away" cert="high" resp="#wr">k</unclear></orig> <reg>back</reg></choice>
+            and kicked the window open
+            and walked out<ptr target="duk.00465_n8"/> the lady mrs
+                jones<ptr target="duk.00465_n11"/> came here the next morning very much
+                alarmed indeed there is very much house breaking and robbery going on in this city
+                there is hardly a night but there is a dance over the way and an awful fight the
+                other night) well Walt next <choice><orig>sunday</orig> <reg>Sunday</reg></choice>
+            when i write maybe it will be
+            more cheerful i wish walt
+            you will send me ten <choice><orig><unclear reason="illegible" cert="high" resp="#wr">dolls</unclear></orig> <reg>dollars</reg></choice>
+            not all at one time but if you
+            can send me 5 at the next
+            writing my shoes is rather bad
+            for cold weather i have some mi<unclear reason="illegible" cert="high" resp="#wr">nd</unclear>
+            to not send this letter now i have
+            wrote it if you write any thing abou<unclear reason="illegible" cert="high" resp="#wr">t</unclear>
+            it put it in a separate <choice><orig>peice</orig> <reg>piece</reg></choice></p>
+            
+            <pb sameAs="#leaf001r"/>
+            <closer>
+                <signed>L Whit<ptr target="duk.00465_n5"/></signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

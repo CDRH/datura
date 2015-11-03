@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="tex.00422">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to James R. Osgood, 29 May 1881</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>tex.00422</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">226&#8211;227</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to James R. Osgood, 29 May 1881</title>
+                    <date cert="high" when="1881-05-29" xml:id="dat1">May 29, 1881</date>
+                    <idno type="callno">Series II., Container bv15</idno>
+                    <orgName xml:id="tex">T. E. Hanley Collection, Harry Ransom Humanities
+                        Research Center, The University of Texas at Austin</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Osgood, James R.">James R. Osgood</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-02-06" who="#nhg">checked, corrected</change>
+            <change when="2014-01-29" who="#ej">Checked and Corrected</change>
+            <change when="2013-10-14" who="#nnk">proofed</change>
+            <change when="2013-09-19" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place">431 Stevens Street</name>
+                    <name type="place">Camden New Jersey</name>
+                    <date when="1881-05-29">May 29 '81</date>
+                </dateline>
+                <salute>My dear Mr Osgood</salute>
+            </opener>
+            <p>I suppose you <choice>
+                <orig>rec'd</orig>
+                <reg>received</reg>
+            </choice> the copy yesterday (Saturday) as I sent it the previous day. You
+                already have my plan&#8212;a volume of say 400 pages, (not over 450) handy size,
+                first class (but I know you wouldn't issue any other) in paper, print, binding
+                &#38;c: but markedly plain &#38; simple even to Quakerness&#8212;I have a desire
+                that all through even in capitalization, punctuation &#38;c it shall be so&#8212;no
+                sensationalism or luxury&#8212;a well made book for honest wear &#38; use &#38;
+                carrying with you&#8212;to retail at &#36;3&#8212;</p>
+            <p>The book has not hitherto been really <hi rend="italic">published</hi> at
+                all&#8212;the issues have been <hi rend="italic"><choice>
+                    <orig>reconnoisances</orig><reg>reconnaissances</reg></choice></hi>&#8212;printings
+                in proof for zealous friends &#38;c.</p>
+            <p>The British market is an important consideration.</p>
+            <p>The copy I sent will have to be returned before very long to me, for complete minor
+                &#38; technical revision, as I did not wait to finish it after receiving your last
+                letter.</p>
+            <p>But I reserve any thing further until I hear your definite decision on the main
+                point&#8212;the publication<ptr target="tex.00422_n1"/>&#8212;</p>
+            <closer>
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

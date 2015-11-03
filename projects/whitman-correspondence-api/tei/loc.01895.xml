@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.01895">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Scott &amp; Williams to Walt
+                    Whitman, 14 August 1867</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Scott &amp; Williams</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <name>The Walt Whitman Archive Staff</name>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2011</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.01895</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2011 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note type="project">The following are responsible for particular readings or for
+                    changes to this file, as noted:
+<persName xml:id="kmp">Kenneth M. Price</persName> 
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="al">Ashley Lawson</persName>
+                    <persName xml:id="br">Beverley Rilett</persName>
+                </note>
+            </notesStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Scott &amp; Williams</author>
+                    <title>Scott &amp; Williams to Walt Whitman, 14 August 1867</title>
+                    <date cert="high" when="1867-08-14" xml:id="dat1">August 14, 1867</date>
+                    <idno type="callno">MSS18630</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839–1919, Library of Congress, Washington, DC</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+
+                <person role="sender">
+                    <persName key="Scott &amp; Williams">Scott &amp; Williams</persName>
+                </person>
+                <person role="sender">
+                    <persName key="Scott, John">John Scott</persName>
+                </person>
+                <person role="sender">
+                    <persName key="Williams, J. P.">J. P. Williams</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+<change when="2012-03" who="#kp">blessed</change>
+            <change when="2011-09-22" who="#el">transcribed and encoded letterhead</change>
+            <change when="2011-08-02" who="#el">checked</change>
+            <change when="2011-03-28" who="#al">checked</change>
+            <change when="2011-03-07" who="#br">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <pb xml:id="leaf001r" facs="loc.01895.001.jpg" type="recto"/>
+            <opener>
+                <handShift rend="printed"/>
+                <address>
+                    <addrLine>OFFICE OF SCOTT &amp; WILLIAMS, BOOK AND JOB PRINTERS,</addrLine>
+                    <addrLine>24 BEEKMAN STREET,</addrLine>
+                </address>
+                <dateline rend="right">
+                    <name type="place">New York</name><handShift rend="manuscript"/>,                    
+                    <date when="1867-08-14">Aug 14th <handShift rend="printed"/>186<handShift rend="manuscript"/>7</date>
+                </dateline>
+                <salute>Walt Whitman Esq</salute>
+                <salute>Dear Sir</salute>
+            </opener>
+            
+            <p>We respectfully call your attention to the enclosed statement of a/c showing a <choice><sic>ballance</sic><corr>balance</corr></choice> in our favor of $23.50. Your earliest attention will much oblige</p>
+            <closer rend="right">
+                <salute>Yours Respectfully</salute>
+                <signed>Scott &amp; Williams</signed>
+                <signed>for Kent</signed>
+            </closer>
+            
+            <postscript>
+                <p>P.S.</p>
+                <p>Any further orders you have will be thankfully received &amp; promptly attended to—<choice><sic>pleas</sic><corr>please</corr></choice> send a copy of your Book for Mr. Sterne</p>
+                <ab>S&amp;W</ab>
+                <ab>K</ab>
+            </postscript>
+            <pb xml:id="leaf001v" type="verso"/>
+            
+            
+            
+        </body>
+    </text>
+
+</TEI>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="upa.00078">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Herbert Gilchrist, 1 August
+                    1885</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>  
+                <idno>upa.00078</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Herbert Gilchrist, 1 August 1885</title>
+                    <date cert="high" when="1885-08-01" xml:id="dat1">August 1, 1885</date>
+                    <orgName xml:id="upa">Walt Whitman Collection, 1842&#8211;1957, Rare Book &#38;
+                        Manuscript Library, University of Pennsylvania</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="unk"><persName key="Unknown">Unknown</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>  
+                <person role="recipient">
+                    <persName key="Gilchrist, Herbert" ref="n0262">Herbert Gilchrist</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+ 		 <change when="2015-08-13" who="#ss">added note for mrs. davis</change>
+            <change when="2015-08-04" who="#nhg">checked, corrected</change>
+            <change when="2015-07-02" who="#kb">edited</change>
+            <change when="2015-06-03" who="#if">edited</change>
+            <change when="2014-09-28" who="#ss">encoded and annotated from Miller.</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <opener>
+                <pb xml:id="leaf001r" facs="upa.00078.001_large.jpg" type="recto"/>
+                <note type="editorial" resp="#unk" place="top">Original Letter</note>
+                <dateline>
+                    <name type="place">328 Mickle Street</name>
+                    <name type="place">Camden New Jersey U S America<ptr target="upa.00078_n1"/></name>
+                    <date when="1885-08-01" rend="right">August 1 '85</date>
+                </dateline>
+                <salute>Dear Herbert Gilchrist</salute>
+            </opener>
+            <p>Yours of July 21 just rec'd, soliciting some definite word from me ab't an English or
+                transatlantic "free will offering"&#8212;a proposed affectionate and voluntary gift
+                to me from my friends there.<ptr target="upa.00078_n2"/> I feel deeply, even for the
+                prompting of it, and should decidedly and gratefully accept any thing it produces.
+                (My publisher David McKay, of Philadelphia, has just been over to pay the last
+                half-annual royalty on my two Volumes <hi rend="underline">Leaves of Grass</hi> and
+                    <hi rend="underline">Specimen Days</hi>, which amounted to twenty-two dollars
+                and six cents&#8212;this being the income to me from the sale of my books for the
+                last six months.)<ptr target="upa.00078_n3"/></p>
+            <p>Fearfully hot weather here. I have had a sunstroke which has made me weak, and kept
+                me indoors for the last twelve days; but I move around the house, eat my rations
+                fairly, write a little, and shall quite certainly soon resume my usual state of
+                health, late times&#8212;(doubtless lower'd a slight notch or two, as I find that is
+                the way things go on year after year.) Fortunately I have a good faithful young
+                Jersey woman and friend, Mary Davis, who cooks for me, and vigilantly sees to
+                me.<ptr target="n6113"/></p>
+            <p>Give my love to Wm M. Rossetti<ptr target="upa.00078_n4"/> and to all enquiring
+                friends, known or unknown.</p>
+            <p>You are at liberty to make any use of this letter you see fit.<ptr
+                    target="upa.00078_n5"/></p>
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="upa.00078.002_large.jpg" type="verso"/>
+            <note type="editorial" resp="#unk" place="top">Sprague Collection No 34</note>
+            <note type="editorial" resp="#unk" place="top">W. #18</note>
+            
+        </body>
+    </text>
+</TEI>  

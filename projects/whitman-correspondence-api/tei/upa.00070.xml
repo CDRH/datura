@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="upa.00070">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Herbert Gilchrist, 29 April
+                    [1879]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>upa.00070</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Herbert Gilchrist, 29 April [1879]</title>
+                    <date cert="medium" when="1879-04-29" xml:id="dat1">April 29, 1879</date>
+                    <orgName xml:id="upa">Walt Whitman Collection, 1842&#8211;1957, Rare Book &#38;
+                        Manuscript Library, University of Pennsylvania</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Gilchrist, Herbert">Herbert Gilchrist</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-07" who="#nhg">checked transcription against images</change>
+            <change when="2013-04-29" who="#km">checked</change>
+            <change when="2013-01-15" who="#ej">Checked and Corrected</change>
+            <change when="2012-12-18" who="#gt">checked</change>
+            <change when="2012-10-26" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="upa.00070.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">Esopus<ptr target="upa.00070_n1"/></name>
+                    <date when="1879-04-29">April 29</date>
+                </dateline>
+            </opener>
+
+            <p>All goes well&#8212;enjoyed my journey up the river that afternoon &#38;
+                evening&#8212;10&#189; when I got in&#8212;Every thing soothes, comforts,
+                invigorates me here&#8212;the hills, rocks, sky, river, nearer &#38; more to me than
+                    ever<ptr target="upa.00070_n2"/>&#8212;</p>
+
+            <p>All well here&#8212;the baby superb<ptr target="upa.00070_n3"/>&#8212;yesterday we
+                spent at Po'keepsie &#38; in Vassar College<ptr target="upa.00070_n4"/>&#8212;I
+                return to <choice>
+                    <abbr>N Y</abbr>
+                    <expan>New York</expan>
+                </choice> Friday or Saturday&#8212;</p>
+
+            <closer>
+                <signed rend="right">W W</signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="upa.00070.002_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="yal.00370">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Edward D. Bellows, 20 November 1877</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="ad">Anthony Dreesen</persName>                                   
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2010</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>yal.00370</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Edward D. Bellows, 20 November 1877</title>              
+                    <date cert="high" when="1877-11-20" xml:id="dat1">November 20, 1877</date>
+                    <idno type="callno"></idno>
+                    <orgName xml:id="yal">Yale Collection of American Literature, Beinecke Rare Book and Manuscript Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Bellows, Edward D.">Edward D. Bellows</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-02-10" who="#nhg">added image references, updated transcription</change>
+            <change when="2013-03-29" who="km">checked</change>
+            <change when="2013-01-18" who="ej">Checked and Corrected</change>
+            <change when="2013-01-09" who="ab">checked</change>
+            <change when="2012-09-25" who="ad">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="yal.00370.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">431 Stevens Street</name>
+                    <name type="place">Camden New Jersey<ptr target="yal.00370_n1"/></name>
+                    <date when="1877-11-20">Nov 20/77</date>
+                </dateline>
+                <salute>Dear Sir<ptr target="yal.00370_n2"/></salute>
+            </opener>
+          
+            <p>I <choice><abbr>rec'd</abbr><expan>received</expan></choice> the letter with the money&#8212;&amp; yesterday I sent you by Adams' express, paid, to same address as this letter a set of my books <hi rend="underline">Leaves of Grass</hi> and <hi rend="underline">Two Rivulets</hi> with John Burroughs's <hi rend="underline">Notes</hi>&#8212;Should like to have you notify me if they reach you safely&#8212;I can lend you a copy of Mr O'Connor's pamphlet <hi rend= "underline">Good Gray Poet</hi>, which you can have for a month, if you wish &amp; then return by mail to me&#8212;or if you want rather to purchase a copy I will get you one at the store of rare books in Philadelphia where they sell it at &#36;1 a copy&#8212;</p>
+            
+            <closer>
+                <signed rend="right">Walt Whitman</signed><ptr target="yal.00370_n3"/>
+            </closer>
+            <pb xml:id="leaf001v" facs="yal.00370.002_large.jpg" type="verso"/>
+            <pb xml:id="leaf002r" facs="yal.00370.003_large.jpg" type="recto"/>
+            <pb xml:id="leaf002v" facs="yal.00370.004_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

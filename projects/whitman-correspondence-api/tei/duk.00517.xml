@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00517">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, [25 February 1868]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00517</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, [25 February 1868]</title>
+                    <date cert="high" when="1868-02-25" xml:id="dat1">February 25, 1868</date>
+                    <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-11-04" who="#el">completed gap encoding</change>
+            <change when="2013-08-06" who="#el">checked</change>
+            <change when="2013-08-06" who="#el">moved notes to external notes file and added pts</change>
+            <change when="2013-08-06" who="#el">merged files; began checking process</change>
+            <change when="2013-05-21" who="#wr">Duke proofreading corrections</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent Proof</change>
+            <change when="2012-12-14" who="#wr">Proofreading corrections</change>
+            <change when="2012-08-10" who="#wr">Made proofreading orrections and corrected 
+                annotation on impeachment, Stevens's speech, Aunt Fanny, and Tecumseh Sherman's St. Louis house,
+                documented Galaxy appearance of O'Connor's Sir Ball and Whitman's receipt of payment for
+                "Whispers of Heavenly Death" from Broadway.</change>
+            <change when="2012-01-10" who="#fw">Correct date format in title, update annotations</change>
+            <change when="2011-04-26" who="#fw">Annotate Davis</change>
+            <change when="2011-04-13" who="#fw">Annotate O'Connor and his piece in the Galaxy</change>
+            <change when="2011-04-13" who="#fw">Annotate Aunt Fanny, piece in English magazine</change>
+            <change when="2011-04-12" who="#fw">Regularize spelling</change>
+            <change when="2011-04-11" who="#fw">Correct 2 Pages</change>
+            <change when="2011-03-30" who="#wr">Encode regularization of contractions, days of week, and frequently misspelled words</change>
+            <change when="2011-03-29" who="#fw">Transcribe 2 Pages</change>
+        </revisionDesc>
+    </teiHeader>
+    
+    <text type="letter">
+        
+        <body>
+            
+            <pb xml:id="leaf001r" facs="duk.00517.001.jpg" type="recto"/>
+            
+            <opener>
+                <dateline>
+                    <date when="1868-02-25"><choice><orig>tuesday</orig><reg>Tuesday</reg></choice><ptr target="duk.00517_n10"/></date>
+                </dateline>
+                <salute>well Walt</salute>
+            </opener>
+            
+            <p>we have lived
+                to see something that never was
+                i<ptr target="duk.00425_n3"/>
+                suppose known before in <choice><orig>america</orig> <reg>America</reg></choice>
+                the impeachment) i think it rather
+                sad but notwithstanding exactly as
+                it should be i suppose the excitement
+                at <choice><orig>washington</orig> <reg>Washington</reg></choice> is far greater
+                than here the copperheads<ptr target="duk.00517_n13"/>
+                here is all
+                for fight that a war will be
+                <note type="editorial" resp="#rmb" place="inline">25 Feb 68</note>
+                the result some great politician
+                down town wanted to bet
+                yesterday that the impeachment
+                would not take place so our
+                georgey<ptr target="duk.00425_n2"/>
+                took him up told
+                him he would bet him that
+                <choice><orig>andrew Johnso</orig> <reg>Andrew Johnson</reg></choice> would be impeached
+                in ten hours from that time<ptr target="duk.00517_n9"/>
+                the gentleman backed down
+                after putting his hand in his
+                pocket to take out his money
+                george came home on <choice><orig>sunday</orig> <reg>Sunday</reg></choice>
+                morning very unexpected as
+                i <choice><orig>dident</orig> <reg>didn't</reg></choice> look for him till next
+                <choice><orig>saturday</orig> <reg>Saturday</reg></choice> he came something about
+                the iron of the pipes he rejected
+                as unfit) i got your letter walter
+                yesterday <choice><orig>monday</orig> <reg>Monday</reg></choice> with 5 dollars
+                i was glad to have it walt but
+                i <choice><orig>doo</orig> <reg>do</reg></choice> think sometimes you send
+                me more than you can afford
+                and more than i ought to expect
+                but mamma appreciates it if she
+                <choice><orig>dont</orig> <reg>don't</reg></choice> make many <gap reason="illegible" extent="one word" unit="chars" quantity="4"/> walt you
+                wrote about your <choice><orig>peice</orig> <reg>piece</reg></choice> in an
+                english magazine<ptr target="duk.00517_n1"/>
+                that you got
+                50 d in gold its first rate to handle
+                gold in these days<ptr target="duk.00517_n11"/>
+                but i want
+                
+                <pb xml:id="leaf001v" facs="duk.00517.002.jpg" type="verso"/>
+                
+                to know what <choice><orig>peice</orig> <reg>piece</reg></choice> it was i
+                thought of every one and could
+                not make out what <choice><orig>peice</orig> <reg>piece</reg></choice> it was
+                when you write again i wish you
+                would tell me all about it
+                but the gold is quite a new thing
+                to be paid in these days) i think we
+                will get the galaxy and see Ocono<unclear reason="cut away" cert="high" resp="#wr">rs</unclear>
+                <choice><orig>peice</orig><reg>piece</reg></choice><ptr target="duk.00517_n17"/>
+                if its as stupid as his others
+                i <choice><orig>dont</orig> <reg>don't</reg></choice> think it will be worth
+                25 <choice><orig>cts</orig> <reg>cents</reg></choice>  i <choice><orig>dont</orig> <reg>don't</reg></choice> see into his writing
+                such <choice><orig>peices</orig> <reg>pieces</reg></choice> as he writes i should
+                think him<ptr target="duk.00470_n8"/> capable of writing
+                something more <choice><orig>substancial</orig> <reg>substantial</reg></choice>
+                a man that can converse as he can</p>
+            
+            
+            <p>well davis<ptr target="duk.00479_n9"/>
+                was here last <choice><orig>sunday</orig> <reg>Sunday</reg></choice>
+                he gave a good account of
+                the <choice><orig>st louis</orig> <reg>St. Louis</reg></choice> folks he says jeff<ptr target="duk.00422_n2"/>
+                is much better there than here
+                it agrees with him better and
+                he thinks matty<ptr target="duk.00465_n9"/>
+                will be all right
+                when they get settled he says
+                they all felt the effects of the
+                change of climate its affect
+                is a kind of <choice><orig>diarea</orig> <reg>diarrhea</reg></choice> he says he
+                thinks matty will like it better
+                there than here when they get to
+                housekeeping it is in the neighborhood
+                of <choice><orig>general Shermans</orig> <reg>General Sherman's</reg></choice> house
+                that was
+                presented to him)<ptr target="duk.00517_n14"/> and a nice <choice><orig>sckool</orig> <reg>school</reg></choice>
+                near he davis looks very well
+                indeed says he is very glad
+                he went out there that he and
+                Jeff has worked very hard but
+                have got through the worst of it
+                <choice><orig>aint</orig> <reg>ain't</reg></choice> it been cold Walt i <choice><orig>gess</orig> <reg>guess</reg></choice>
+                it has been stinging here but <choice><orig>its</orig> <reg>it's</reg></choice>
+                quite moderate to day) i have heard
+                nothing from aunt fanny i <choice><orig>suppos</orig> <reg>suppose</reg></choice>
+                she is living yet)<ptr target="duk.00517_n4"/>
+                the last speech
+                of <choice><orig>stephens</orig><reg>Stevens</reg></choice><ptr target="duk.00517_n18"/> that was read before the impeachment
+                was good very indeed)</p>
+            
+            <pb sameAs="#leaf001r"/>
+            
+            <postscript>
+                <p>i am pretty well good bye walt dear<ptr target="duk.00517_n16"/></p>
+            </postscript>
+            
+        </body>
+    </text>
+</TEI>

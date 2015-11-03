@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="prc.00009">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to William C. Church, 7
+                    August 1867</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <name>The Walt Whitman Archive Staff</name>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2010</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>prc.00009</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note type="project">The following are responsible for particular readings or for
+                    changes to this file, as noted:
+<persName xml:id="kmp">Kenneth M. Price</persName> <persName xml:id="el">Elizabeth
+                        Lorang</persName>
+                    <persName xml:id="zk">Zachary King</persName>
+                    <persName xml:id="ec">Eric Conrad</persName>
+                </note>
+            </notesStmt>
+            <sourceDesc>
+
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author><editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961–1977</date>
+                            <biblScope type="volume">1</biblScope>
+                            <biblScope type="page">335–336</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to William C. Church, 7 August 1867</title>
+                    <date cert="high" when="1867-08-07" xml:id="dat1">August 7, 1867</date>
+                    <orgName xml:id="prc">Private collection of Mrs. Joseph Perkins</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Church, William C.">William C. Church</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+<change when="2012-03" who="#kp">blessed</change>
+            <change ana="2010-12-16" who="#el">checked</change>
+            <change when="2010-09-29" who="#zk">encoded</change>
+            <change when="2010-08-20" who="#ec">extracted transcription from Major Authors
+                cd</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">Washington</name>, <date when="1867-08-07" rend="right">Wednesday afternoon, <lb/>Aug. 7, 1867</date>. </dateline>
+                <salute>My dear Mr. Church,<ptr target="prc.00009_n1"/></salute>
+            </opener>
+
+            <p>In response to your letter to William O'Connor, I send herewith the piece,
+                <q who="Walt Whitman">
+                    <floatingText>
+                        <body>
+                            <l>"<hi rend="italic">A Carol of Harvest, for 1867</hi>,"</l>
+                        </body>
+                    </floatingText>
+                </q>
+                for the Galaxy.<ptr target="prc.00009_n2"/> I presume it will be in time for the September number. I wish, if
+                acceptable, you would have it set up <hi rend="italic">immediately</hi>, proved,
+                read carefully by copy, carefully corrected, &amp; then a <hi rend="italic">good
+                    proof</hi> taken &amp; sent to me here. I would mail it back again the same day
+                I get it, so you would receive it next day.</p>
+
+            <p>If practicable, I should like to have the piece commence on an odd-numbered page of
+                the magazine—&amp; wish it could come the second article in the Number.</p>
+
+            <p>The "Carol" will make about five pages more or less.</p>
+
+            <p>Please acknowledge the receipt of this. Direct to me, Attorney General's Office.<ptr target="prc.00009_n3"/>
+            </p>
+
+            <closer>
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

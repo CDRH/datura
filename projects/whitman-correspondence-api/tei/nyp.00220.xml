@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nyp.00220">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">William T. Otto to Walt Whitman, 24 January 1865</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>William T. Otto</author>
+            <editor>Kenneth M. Price</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="kk">Kathryn Kruger</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+               <persName xml:id="ec">Eric Conrad</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2009</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>nyp.00220</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Horace Traubel</author>
+                  <title xml:id="wwwc">With Walt Whitman in Camden</title>
+                  <imprint>
+                     <pubPlace>New York</pubPlace>
+                     <publisher>Mitchell Kennerley</publisher>
+                     <date when="1914">1914</date>
+                     <biblScope type="volume">3</biblScope>
+                     <biblScope type="page">471</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>William T. Otto</author>
+               <title>William T. Otto to Walt Whitman, 24 January 1865</title>
+               <date when="1865-01-24">January 24, 1865</date>
+               <orgName xml:id="nyp">Oscar Lion Papers, 1914&#8211;1955, New York Public Library, New York, N.Y</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Otto, William T.">William T. Otto</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#kk" when="2011-08-31">updated Oscar Lion info</change>
+         <change who="#el" when="2010-04-03">proofread and edited</change>
+         <change who="#vs" when="2009-08-31">proofread and edited annotations</change>
+         <change who="#ec" when="2009-08-13">annotations</change>
+         <change who="#vs" when="2009-07-17">Transcribed, Encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener rend="right">
+               <dateline>
+                  <name type="place">Department of the Interior,<lb/>
+Washington, D. C.,</name>
+                  <date when="1865-01-24">January 24, 1865.</date>
+               </dateline>
+               <salute>Sir:</salute>
+            </opener>
+            <p>You are hereby appointed to a Clerkship of the first class&#8212;in the Office of Indian Affairs, of this Department&#8212;the salary of which is $1200 per annum, to commence when you have subscribed the enclosed oath, and entered upon duty. I am, Sir, very respectfully, your obedient servant</p>  
+            <closer rend="right">
+               <signed>W. T. Otto, <lb/>Assistant Secretary.<ptr target="nyp.00220_n100"/>
+            </signed>
+            </closer>
+         
+         <postscript>
+            <p>Walt Whitman, Esq.<lb/>
+of New York</p>
+         </postscript>
+      </body>
+   </text>
+</TEI>

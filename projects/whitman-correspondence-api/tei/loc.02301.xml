@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.02301">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Bret Harte to Walt Whitman, 13 April 1870</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Francis Bret Harte</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <name>The Walt Whitman Archive Staff</name>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2011</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.02301</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2011 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note type="project">The following are responsible for particular readings or for
+                    changes to this file, as noted:
+<persName xml:id="kmp">Kenneth M. Price</persName> 
+                    <persName xml:id="al">Ashley Lawson</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="kk">Kathryn Kruger</persName>
+                </note>
+            </notesStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Francis Bret Harte</author>
+                    <title>Francis Bret Harte to Walt Whitman, 13 April 1870</title>
+                    <date cert="high" when="1870-04-13" xml:id="dat1">April 13, 1870</date>
+                    <idno type="callno">MSS18630, Box 11</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839–1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Harte, Francis Bret">Bret Harte</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+<change when="2012-03" who="#kp">blessed</change>
+            <change when="2012-03-26" who="#al">Made Ken's correction</change>
+            <change when="2011-10-17" who="#el">revised encoding of closer</change>
+            <change when="2011-09-22" who="#el">transcribed and encoded letterhead</change>
+            <change when="2011-08-08" who="#el">checked</change>
+            <change when="2011-07-27" who="#kk">encoded and transcribed</change>            
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <pb xml:id="leaf001r" facs="loc.02301.001.jpg" type="recto"/>
+        <body>
+<opener>
+    <handShift rend="printed"/>
+    <address>
+        <addrLine>ROOMS OF The Overland Monthly</addrLine>
+    </address>
+                <dateline>
+                    <name type="place">San Francisco.</name>
+                    <handShift rend="manuscript"/>
+                    <date when="1870-04-13">Apl 13<hi rend="superscript">th</hi> <handShift rend="printed"/>18<handShift rend="manuscript"/>70</date>
+                </dateline>
+                <salute>My dear sir,</salute>
+            </opener>
+
+            <p>I fear that the "Passage to India" is a poem too long and too abstract for the hasty and material minded readers of the <hi rend="underline">O. M.</hi>.</p>
+            
+
+            <closer>
+                <salute rend="right">With many thanks, I am</salute>
+                <salute rend="right">Your <choice><abbr>obt</abbr><expan>obedient</expan></choice> <abbr><orig>svt</orig><expan>servant</expan></abbr></salute>
+                <signed rend="right"><hi rend="underline">F. Bret Harte</hi></signed>
+                <signed rend="right">Ed. O. M.</signed>
+                <address>
+                    <addrLine>Mr. Walt Whitman</addrLine>
+                    <addrLine>Washington D.C.</addrLine></address>
+            </closer>
+            
+            
+            <pb xml:id="leaf001v" facs="loc.02301.002.jpg" type="verso"/>
+            <pb xml:id="leaf002r" facs="loc.02301.003.jpg" type="recto"/>
+            <pb xml:id="leaf002v" facs="loc.02301.004.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

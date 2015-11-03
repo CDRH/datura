@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="rut.00026">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Whitelaw Reid to Walt Whitman, 18 November 1878</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Whitelaw Reid</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>rut.00026</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Whitelaw Reid</author>
+                    <title>Whitelaw Reid to Walt Whitman, 18 November 1878</title>
+                    <date cert="high" when="1878-11-18" xml:id="dat1">November 18, 1878</date>
+                    <orgName xml:id="rut">Special Collections and University Archives, Rutgers
+                        University Libraries, Rutgers, The State University of New Jersey</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Reid, Whitelaw">Whitelaw Reid</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-03-31" who="#nhg">checked, corrected</change>
+            <change when="2014-03-26" who="#ej">Checked and Corrected</change>
+            <change when="2014-03-20" who="#nnk">proofed</change>
+            <change when="2014-03-19" who="#kc">Transcribed and Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="rut.00012.002_large.jpg" type="recto"/><!-- should this recto be marked as crossed out? [ej] -->
+            <opener>
+                <dateline>
+                    <name type="place" rend="right"><handShift rend="printed"/>New York,<ptr target="rut.00026_n1"/></name>
+                    <date when="1878-11-18" rend="right"><handShift rend="manuscript"/>Nov 18 <handShift rend="printed"/>187<handShift rend="manuscript"/>8</date>
+                </dateline>
+                <salute>My Dear Whitman:</salute>
+            </opener>
+
+            <p>I am sorry that the pay for that Gathering the Corn article was overlooked.<ptr target="n0500"/> Thanks for your reminder of the 27th. I
+                hasten to enclose it.</p>
+
+            <closer>
+                <salute>With best wishes,</salute>
+                <salute>Very truly yours,</salute>
+                <signed><hi rend="underline">Whitelaw Reid.</hi></signed>
+                <address><addrLine>Walt Whitman, Esq</addrLine></address>
+            </closer>
+            <pb xml:id="leaf001v" facs="rut.00012.001_large.jpg" type="verso"/>
+            <!--Transcription of manuscript in separate file. See rut.00012. <add>
+                <p rend="center">Tennyson</p>
+                <p>he loves to haunt old castles, to deal with kings and courts, Earls, Bishops,
+                    Knights, Princesses, noble ladies, &amp;c. Never indeed has there been a more
+                    "aristocratic" poet, with closest affiliations of his plots, to "high blood."
+                    But don't he take persons &amp; plots something from low life? and don't he
+                    render them very finely too? Yes; but it is in that loftiest, daintiest (in one
+                    sense most democratic) spirit of aristocracy&#8212;the very salt of "good
+                    birth"&#8212;that these very plots &amp; characters are always seasoned.</p>
+            </add>-->
+        </body>
+    </text>
+</TEI>

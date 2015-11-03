@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="upa.00014">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title level="m" type="main">Walt Whitman to Anne Gilchrist, 20 March 1872</title>
+        <title level="m" type="sub">a machine readable transcription</title>
+        <author>Walt Whitman</author>
+        <editor>Kenneth M. Price</editor>
+        <editor>Ed Folsom</editor>
+        <respStmt>
+          <resp>Transcription and encoding</resp>
+          <name>The Walt Whitman Archive Staff</name>
+        </respStmt>
+        <sponsor>Center for Digital Research in the Humanities, University of
+          Nebraska-Lincoln</sponsor>
+        <sponsor>University of Iowa</sponsor>
+        <funder>National Historical Publications and Records Commission</funder>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <date>2012</date>
+        </edition>
+      </editionStmt>
+      <publicationStmt>
+        <idno>upa.00014</idno>
+        <distributor>The Walt Whitman Archive</distributor>
+        <address>
+          <addrLine>Center for Digital Research in the Humanities</addrLine>
+          <addrLine>319 Love Library</addrLine>
+          <addrLine>University of Nebraska-Lincoln</addrLine>
+          <addrLine>P.O. Box 884100</addrLine>
+          <addrLine>Lincoln, NE 68588-4100</addrLine>
+        </address>
+        <availability>
+          <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the
+            Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law.
+            Redistribution or republication on other terms, in any medium, requires express written
+            consent from the editors and advance notification of the publisher, Center for Digital
+            Research in the Humanities. Permission to reproduce the graphic images in this archive
+            has been granted by the owners of the originals for this publication only.</p>
+        </availability>
+      </publicationStmt>
+      <notesStmt>
+        <note type="project">The following are responsible for particular readings or for changes to
+          this file, as noted: <persName xml:id="el">Elizabeth Lorang</persName>
+          <persName xml:id="al">Ashley Lawson</persName>
+          <persName xml:id="zk">Zachary King</persName>
+          <persName xml:id="ec">Eric Conrad</persName>
+        </note>
+      </notesStmt>
+      <sourceDesc>
+
+        <biblStruct>
+          <monogr>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <title xml:id="ehm">The Correspondence</title>
+            <imprint>
+              <pubPlace>New York</pubPlace>
+              <publisher>New York University Press</publisher>
+              <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+              <biblScope type="volume">2</biblScope>
+              <biblScope type="page">170</biblScope>
+            </imprint>
+          </monogr>
+        </biblStruct>
+
+        <bibl>
+          <author>Walt Whitman</author>
+          <title>Walt Whitman to Anne Gilchrist, 20 March 1872</title>
+          <date cert="high" when="1872-03-20" xml:id="dat1">March 20, 1872</date>
+          <orgName xml:id="upa">Walt Whitman Collection, 1842&#8211;1957, Rare Book &amp; Manuscript
+            Library, University of Pennsylvania</orgName>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <particDesc>
+        <person role="sender">
+          <persName key="Whitman, Walt">Walt Whitman</persName>
+        </person>
+        <person role="recipient">
+          <persName key="Gilchrist, Anne">Anne Gilchrist</persName>
+        </person>
+      </particDesc>
+    </profileDesc>
+    <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+      <change when="2014-05-06" who="#el">updated value of target on first ptr</change>
+      <change when="2012-11-29" who="#el">checked</change>
+      <change when="2012-06-20" who="#el">checked</change>
+      <change when="2012-05-04" who="#al">checked</change>
+      <change when="2010-12-10" who="#zk">encoded</change>
+      <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+    </revisionDesc>
+  </teiHeader>
+
+  <text type="letter">
+    <body>
+      <opener>
+        <dateline>
+          <name type="place" rend="right">Brooklyn, N. Y.</name>
+          <date when="1872-03-20" rend="right">March 20, 1872</date>. </dateline>
+        <salute>My dear friend<ptr target="n0259"/>,</salute>
+      </opener>
+
+      <p>Your letter is <choice>
+          <orig>rec'd</orig>
+          <reg>received</reg>
+        </choice>, having been sent on to me from Washington.<ptr target="upa.00014_n1"/> My address
+        still remains Solicitor's office, Treasury there. I am moving about a good deal the past
+        year, &amp; shall be for the ensuing year&#8212;I am to start for northern New England,
+        &amp; remain awhile<ptr target="upa.00014_n2"/>&#8212;am also arranging for a trip afterward
+        to California&#8212;a journey I have had in contemplation for several years, &amp; which has
+        been two or three times fixed, but postponed, during that time.</p>
+
+      <p>I have been stopping for two months, (Feb. &amp; March,) home with my Mother<ptr target="n0705"/>, &amp; am
+        writing this home. Mother is towards eighty&#8212;has had an active domestic &amp; maternal
+        life&#8212;has had eight children&#8212;has brought them all up&#8212;has been healthy &amp;
+        strong, always worked hard&#8212;now shows the infirmities of age (indeed rapidly advancing)
+        but looks finely, &amp; is cheerful hearted&#8212;will probably soon give up her
+        housekeeping &amp; go to live with one of my brothers, who is married<ptr
+          target="upa.00014_n3"/>&#8212;My father died seventeen years since.</p>
+
+      <p>Dear friend, I am quite sure that <hi rend="italic">every one</hi> of your letters has
+        safely reached me&#8212;sometimes after delays &amp; circuits, (as you will now understand
+        better) on account of my more &amp; more frequent
+        wanderings<!-- Do we want to maintain Miller's sentiment here? <note xml:id="n4" type="editorial" resp="miller">This was a deliberate fib in order to explain his delays in replying to a woman whom he did not quite know how to handle.</note> -->&#8212;The
+        letter with the photographs gave me great pleasure&#8212;&amp; was acknowledged by a letter
+        I sent you<ptr target="upa.00014_n4"/>&#8212;Have you not received it?</p>
+
+      <closer>
+        <signed rend="right">Walt Whitman</signed>
+      </closer>
+
+      <postscript>
+        <p>Dear friend, let me warn you somewhat about myself&#8212;&amp; yourself also. You must
+          not construct such an unauthorized &amp; imaginary ideal Figure, &amp; call it W. W. and
+          so devotedly invest your loving nature in it. The actual W. W. is a very plain personage,
+          &amp; entirely unworthy such devotion.<ptr target="upa.00014_n5"/></p>
+      </postscript>
+    </body>
+  </text>
+</TEI>

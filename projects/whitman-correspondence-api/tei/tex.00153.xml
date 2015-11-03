@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="tex.00153">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to Louisa Van Velsor Whitman, 4 December 1866</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+
+               <persName xml:id="ao">Alyssa Olson</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>tex.00153</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Walt Whitman</author>
+                  <editor>Edwin Haviland Miller</editor>
+                  <title xml:id="ehm">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>New York</pubPlace>
+                     <publisher>New York University Press</publisher>
+                     <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                     <biblScope type="volume">1</biblScope>
+                     <biblScope type="page">299-300</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to Louisa Van Velsor Whitman, 4 December 1866</title>
+               <date when="1866-12-04">December 4, 1866</date>
+               <orgName xml:id="tex">T. E. Hanley Collection, University of Texas</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#vs" when="2009-08-27">proofread and edited annotations</change>
+         <change who="#vs" when="2008-10-31">added main TEI markup</change>
+         <change who="#el" when="2008-07-30">added TEI header structure w/o IDs and titles; added minimal TEI markup</change>
+         <change who="#ao" when="2008-07-29">pulled transcription from Primary Source Media</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <dateline rend="right">
+                  <name type="place">ATTORNEY GENERAL'S OFFICE, <hi rend="italic">Washington</hi>,</name>
+                  <date when="1866-12-04">Dec. 4, <hi rend="italic">1866.</hi>
+                  </date>
+               </dateline>
+               <salute>Dearest Mother,</salute>
+            </opener>
+            <p>I wrote you yesterday, (Monday,) which I suppose you rec'd, with the money. I have just heard from Han, &amp; I write to-day because I knew it would be a comfort to you to know right away. Heyde has just sent me a letter&#8212;he seems to be in a very good humor&#8212;writes a lot of stuff&#8212;but <hi rend="italic">not</hi> about domestic affairs this time&#8212;on "poetry" &amp; "criticism" &amp;c. &amp;c&#8212;of no interest at all to me&#8212;then at the close of the letter he says:</p>
+            <p>"Han is much better than usual, &amp; is constantly promising to write to her mother."<ptr target="tex.00153_n1"/>
+            </p>
+            <p>Mother, I send you the part of the N. Y. Times, containing a good long piece about me. It is the N. Y. Daily Times, of Sunday, Dec 2&#8212;but perhaps George or Jeff brought it to you last Sunday.</p>
+            <p>I feel pretty well generally&#8212;with now &amp; then a poorish spell&#8212;</p>
+            <p>I am going to hear the great actress Ristori<ptr target="tex.00153_n2"/> to-morrow night. One of my fellow clerks has taken a seat for me, &amp; made me a present of it&#8212;the play is "Queen Elisabeth"&#8212;I wish you &amp; Mat could go with me&#8212;</p>
+            <p>The piece in the <hi rend="italic">Times</hi> is by O'Connor.<ptr target="tex.00153_n3"/> He grows stronger &amp; stronger, &amp; fiercer &amp; fiercer in his championship of "Leaves of Grass"&#8212;no one can ever say a word against it in his presence, without a storm. Did you get the "Galaxy" of Dec 1&#8212;?</p>
+            <p>William Swinton<ptr target="tex.00153_n4"/> is here in Washington, temporarily. He is interested in speculating in gold. It is very fine weather here to-day. I am writing this by my big window, where I can look out on the water&#8212;the sun is shining bright as silver.</p>
+            <closer rend="right">
+               <signed>Walt.</signed>
+            </closer>
+         
+      </body>
+   </text>
+</TEI>

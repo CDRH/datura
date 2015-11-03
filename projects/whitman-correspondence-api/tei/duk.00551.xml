@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00551">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, [4 November 1868]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp><persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="zk">Zachary King</persName><persName xml:id="fw">Felicia Wetzig</persName><persName xml:id="wr">Wesley Raabe</persName><persName xml:id="nr">Natalie Raabe</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00551</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note type="project">An image of the verso of the second leaf is not currently available. The verso is blank.</note>              
+            </notesStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, [4 November 1868]</title>
+
+                    <date cert="high" when="1868-11-04" xml:id="dat1">November 4, 1868</date>
+                    <idno type="callno">III-5D</idno>
+                    <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-12-10" who="#el">changed regularizes spelling 'Stears's' to 'Steers's'</change>
+            <change when="2013-11-07" who="#el">added project note about not having image of second verso</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-09-17" who="#el">checked</change>
+            <change when="2013-05-24" who="#wr">Duke proofreading corrections</change>
+           <change when="2013-05-06" who="#wr">Silent Proofreading Corrections</change>
+           <change when="2013-04-28" who="#nr">Silent Proofreading</change>
+              <change when="2013-02-28" who="#wr">Update Steers annotation.</change>
+            <change when="2013-02-24" who="#wr">Minor proofreading corrections of notes.</change>
+            <change when="2013-02-22" who="#wr">Date note and Grant revised</change>
+            <change when="2013-02-12" who="#wr">Proofreading corrections and annotation revisions</change>
+            <change when="2012-11-02" who="#wr">Add Bucke, correct margintop value.</change>
+            <change when="2011-12-20" who="#fw">corrected spacing</change>
+            <change when="2011-08-03" who="#zk">corrected date format in title; added call no., annotations</change>
+            <change when="2011-03-30" who="#wr">Proofread and review annotations (add Hannah Heyde, Ulysses S. Grant)</change>
+            <change when="2011-03-30" who="#wr">Encode regularization of contractions, days of week, and frequently misspelled words</change>
+            <change when="2011-03-17" who="#fw">Annotate Helen Price</change>
+            <change when="2011-03-16" who="#fw">Annotate O'Connor</change>
+            <change when="2011-02-14" who="#fw">Correct 3 surfaces</change>
+            <change when="2011-01-26" who="#fw">Transcribe 3 surfaces</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="duk.00551.001.jpg" type="recto"/>
+            
+            <note type="editorial" resp="#rmb" place="top">Evening 4 Nov. 1868</note>
+            
+            <opener>
+                <dateline>
+                    
+                    <date when="1868-11-04"><choice><orig>wensday</orig><reg>Wednesday</reg></choice><ptr target="duk.00551_n9"/>
+                    </date>
+                </dateline>
+                
+                <salute>Dear Walt</salute>
+            </opener>
+            <p>i<ptr target="duk.00425_n3"/>
+                got your
+            letter to day <choice><orig>wensday</orig> <reg>Wednesday</reg></choice> all
+                safe and one from <choice><orig>Heyd</orig><reg>Heyde</reg></choice>
+            saying <choice><orig>hanna</orig><reg>Hannah</reg></choice>h was sick<ptr target="duk.00551_n4"/>
+            i <choice><orig>dont</orig> <reg>don't</reg></choice> know what to
+            make out by the letter
+            but i should think she
+            was better
+            he says he
+            had telegraph to you
+            i wish i could know
+            the <choice><orig>thruth</orig> <reg>truth</reg></choice> about her) it
+            made me feel bad
+            with my other afflictions
+            but i hope to stand it
+            some how or other <choice><orig>matty</orig><reg>Matty</reg></choice><ptr target="duk.00465_n9"/>
+            is i <choice><orig>dont</orig> <reg>don't</reg></choice> know what to
+            say the doctor has sounded
+            her lungs and said
+            
+            <pb xml:id="leaf001v" facs="duk.00551.002.jpg" type="verso"/>
+            
+            they were not as bad
+            as he first thought
+            but she is not able
+            to <choice><orig>doo</orig> <reg>do</reg></choice> much<ptr target="duk.00551_n8"/>
+                but
+            i hope she will be
+            better the doctor pays
+            good attention to her
+            has given her <choice><orig>somthing</orig> <reg>something</reg></choice>
+            for her <choice><orig>coughf</orig> <reg>cough</reg></choice> to take
+                when she has bad <choice><orig>spels</orig> <reg>spells</reg></choice>
+                <choice><orig>mr</orig><reg>Mr.</reg></choice> <choice><orig>Oconer</orig><reg>O'Connor</reg></choice><ptr target="duk.00470_n8"/> was here
+            awhile to day but
+            <choice><orig>wouldnt</orig><reg>wouldn't</reg></choice> have any
+            dinner or lunch said
+            he had just had his 
+            breakfast) Ellen 
+            price<ptr target="duk.00551_n2"/> was here last
+            <choice><orig>saturday</orig> <reg>Saturday</reg></choice> she <choice><orig>diden</orig> <reg>didn't</reg></choice>
+            stay long she had
+            
+            <pb xml:id="leaf002r" facs="duk.00551.003.jpg" type="recto"/>
+            
+            lost her purse and
+            i let her have some 
+            change to go home with
+            they had hired their
+            rooms to a man and
+            wife and 2 little boys<ptr target="duk.00551_n11"/>
+            the <choice><orig>stears s</orig><reg>Steers's</reg></choice> have
+                moved in to day<ptr target="duk.00515_n4"/>
+            so we have had
+            a pretty jolly noise
+            but its good to have
+            something to keep
+            up a little excitemen<unclear reason="cut away" resp="#wr" cert="medium">t</unclear>
+            but the best of all
+            is grant is elected<ptr target="duk.00551_n3"/>
+            </p>
+            <closer>
+                <salute>good bie <choice><orig>walter</orig><reg>Walter</reg></choice> dear i wrote this in a hurry as you see</salute>
+            </closer>
+            
+            <pb xml:id="leaf002v" type="verso"/>
+        </body>
+    </text>
+</TEI>

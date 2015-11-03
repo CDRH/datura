@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="tex.00346">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title level="m" type="main">Walt Whitman to William Michael Rossetti, 10 September
+          1876</title>
+        <title level="m" type="sub">a machine readable transcription</title>
+        <author>Walt Whitman</author>
+        <editor>Kenneth M. Price</editor>
+        <editor>Ed Folsom</editor>
+        <respStmt>
+          <resp>Transcription and encoding</resp>
+          <persName xml:id="el">Elizabeth Lorang</persName>
+            <persName xml:id="al">Ashley Lawson</persName>
+            <persName xml:id="zk">Zachary King</persName>
+            <persName xml:id="ec">Eric Conrad</persName>
+            <persName xml:id="nhg">Nicole Gray</persName>
+        </respStmt>
+        <sponsor>Center for Digital Research in the Humanities, University of
+          Nebraska-Lincoln</sponsor>
+        <sponsor>University of Iowa</sponsor>
+        <funder>National Historical Publications and Records Commission</funder>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <date>2012</date>
+        </edition>
+      </editionStmt>
+      <publicationStmt>
+        <idno>tex.00346</idno>
+        <distributor>The Walt Whitman Archive</distributor>
+        <address>
+          <addrLine>Center for Digital Research in the Humanities</addrLine>
+          <addrLine>319 Love Library</addrLine>
+          <addrLine>University of Nebraska-Lincoln</addrLine>
+          <addrLine>P.O. Box 884100</addrLine>
+          <addrLine>Lincoln, NE 68588-4100</addrLine>
+        </address>
+        <availability>
+          <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the
+            Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law.
+            Redistribution or republication on other terms, in any medium, requires express written
+            consent from the editors and advance notification of the publisher, Center for Digital
+            Research in the Humanities. Permission to reproduce the graphic images in this archive
+            has been granted by the owners of the originals for this publication only.</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+
+        <biblStruct>
+          <monogr>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <title xml:id="ehm">The Correspondence</title>
+            <imprint>
+              <pubPlace>New York</pubPlace>
+              <publisher>New York University Press</publisher>
+              <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+              <biblScope type="volume">3</biblScope>
+              <biblScope type="page">59&#8211;60</biblScope>
+            </imprint>
+          </monogr>
+        </biblStruct>
+
+        <bibl>
+          <author>Walt Whitman</author>
+          <title>Walt Whitman to William Michael Rossetti, 10 September 1876</title>
+          <date cert="high" when="1876-09-10" xml:id="dat1">September 10, 1876</date>
+          <idno type="callno">Container 3.2</idno>
+          <orgName xml:id="tex">The Walt Whitman Collection, Harry Ransom Humanities Research
+            Center, The University of Texas at Austin</orgName>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <particDesc>
+        <person role="sender">
+          <persName key="Whitman, Walt">Walt Whitman</persName>
+        </person>
+        <person role="recipient">
+          <persName key="Rossetti, William Michael">William Michael Rossetti</persName>
+        </person>
+      </particDesc>
+    </profileDesc>
+    <revisionDesc>
+      <change who="#nhg" when="2015-01-05">corrected annotation, moved resp names to respStmt</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+      <change when="2012-11-29" who="#el">checked</change>
+      <change when="2012-06-20" who="#el">checked</change>
+      <change when="2012-05-03" who="#al">checked</change>
+      <change when="2011-05-22" who="#zk">encoded</change>
+      <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+    </revisionDesc>
+  </teiHeader>
+
+  <text type="letter">
+    <body>
+      <opener>
+        <dateline>
+          <name type="place" rend="right">Camden, New Jersey&#8212;U S America</name>
+          <date when="1876-09-10" rend="right">Sept 10, '76</date>
+        </dateline>
+        <salute>Dear friend<ptr target="n0522"/>,</salute>
+      </opener>
+
+      <p>I wrote to you three [or] four days ago,<ptr target="tex.00346_n1"/> by which you must have <choice>
+          <orig>recd</orig>
+          <reg>received</reg>
+        </choice> partial list. The list on the other sheet will more fully show you what books I
+        have sent, <hi rend="italic">comprising I believe all the names &amp; remitting subscribers
+          you have sent me</hi>&#8212;Your two (principal) remittances £28.4 (April 19) and £45.9.6.
+        (June 20) were accompanied with lists of subscribers' <choice>
+          <orig>am'ts</orig>
+          <reg>amounts</reg>
+        </choice> &amp; addresses&#8212;the names on which lists &amp; addresses I have carefully
+        followed &amp; sent to. I hope &amp; think I have not missed any. <hi rend="italic">If you
+          discover or know of any so missed, pray notify me at once</hi>. </p>
+
+      <p>Looking over the pretty voluminous correspondence &amp; extracts you have sent me so
+        kindly, the last six months, there appear to be <hi rend="italic">a number of other
+          names</hi>, both men's &amp; women's, mentioned, or writing themselves, as ordering the
+        books in letters to you. But of course <hi rend="italic">I have exclusively confined myself
+          to the names &amp; addresses specified in the lists accompanying your
+          remittance&#8211;letters</hi>, above alluded to. I have been somewhat exercised about
+        those <hi rend="italic">other names</hi>. <list>
+          <item>Prof Atkinson<ptr target="tex.00346_n2"/></item>
+          <item>" Armstrong<ptr target="tex.00346_n3"/></item>
+          <item>A G B<ptr target="tex.00346_n4"/></item>
+          <item>G L Cathcart<ptr target="tex.00346_n5"/></item>
+          <item>Mrs. Deschamps<ptr target="tex.00346_n6"/></item>
+          <item>J D<ptr target="tex.00346_n7"/></item>
+          <item>Lady Hardy<ptr target="tex.00346_n8"/></item>
+          <item>Harold Littledale</item>
+          <item>C W S<ptr target="tex.00346_n9"/></item>
+          <item>Dr Todhunter<ptr target="tex.00346_n10"/></item>
+        </list> &#9758; Nothing has been sent to any of these <list>
+          <item>(D G Rossetti<ptr target="n0521"/></item>
+          <item>C A Howell</item>
+          <item>J T Nettleship<ptr target="tex.00346_n11"/> for self &amp; others</item>
+          <item>H G Dakyns<ptr target="tex.00346_n12"/></item>
+          <item>Herbert Herkomer<ptr target="tex.00346_n13"/></item>
+          <item>Roden Noel<ptr target="tex.00346_n14"/></item>
+          <item>A C Swinburne<ptr target="n0610"/></item>
+          <item>G W Foote<ptr target="tex.00346_n15"/></item>
+          <item>Cicely Marston<ptr target="tex.00346_n16"/></item>
+          <item>&amp; several others</item>
+        </list>&#8212;but know no other course than to <hi rend="italic">confine myself to sending
+          to the addresses on your remittance lists only</hi>&#8212;which I have done. Any errors or
+        oversights will be gladly &amp; promptly corrected on information. <hi rend="italic">I have
+          now plenty of Books, &amp; orders will be complied with promptly</hi>. The delay of the
+        last two months in getting ready my second instalment of the 1876 Edition, has annoyed me
+        much&#8212;but it is past&#8212;&amp; I have as I believe forwarded now every British paid
+        subscriber his or her books, (duplicate sets are yet to go to three or four)&#8212;A parcel
+        of 17 <choice>
+          <orig>Vols.</orig>
+          <reg>Volumes</reg>
+        </choice> has gone by Express to <choice>
+          <orig>Robt</orig>
+          <reg>Robert</reg>
+        </choice> Buchanan<ptr target="tex.00346_n17"/> to subscribers, sent through him to me&#8212;<choice>
+          <orig>Prof.</orig>
+          <reg>Professor</reg>
+        </choice> Dowden's<ptr target="n0199"/> 4 sets specified in your list have been sent to his
+        subscribers to their addresses, &amp; Mr. Conway's 3 sets (ordered in his letter to me) to
+          theirs<ptr target="tex.00346_n18"/>&#8212;It is now some weeks since I have heard from
+        you. I want to hear about Mrs. Gilchrist.<ptr target="tex.00346_n19"/>
+      </p>
+
+      <closer>
+        <signed rend="right">Walt Whitman</signed>
+      </closer>
+    </body>
+  </text>
+</TEI>

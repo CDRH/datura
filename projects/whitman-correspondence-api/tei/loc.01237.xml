@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.01237">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Edward Carpenter to Walt Whitman, 16 March 1882</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Edward Carpenter</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="vm">Vince Moran</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.01237</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Edward Carpenter</author>
+                    <title>Edward Carpenter to Walt Whitman, 16 March 1882</title>
+                    <date cert="high" when="1882-03-16" xml:id="dat1">March 16, 1882</date>
+                    <idno type="callno">MSS18630</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839-1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Carpenter, Edward">Edward Carpenter</persName>
+                </person>
+                <person role="recipient" xml:id="ww">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-10-10" who="#nhg">checked, corrected</change>
+            <change when="2013-04-15" who="#gt">Checked and Corrected</change>
+            <change when="2013-02-13" who="#ej">Checked and Corrected</change>
+            <change when="2013-01-16" who="#vm">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.01237.003_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">Bradway near Sheffield</name>
+                    <date when="1882-03-16">16. <choice><abbr>Mar.</abbr><expan>March</expan></choice>/82</date>
+                </dateline>
+                <salute>Dear Old Walt&#8212;</salute>       
+            </opener>
+            
+            <p>I should like a line from you. I have not had time exactly to write to you lately&#8212;or rather I have written so many letters, business affairs mostly, connected with my brothers &amp; sisters, that I
+
+            <pb xml:id="leaf001v" facs="loc.01237.004_large.jpg" type="verso"/>
+            
+            have not wanted to write any more.</p>
+            <p>I enclose you a letter I am sure you will like to read&#8212;which I got the other day from a friend. He is a clever fellow, with flashes of genius&#8212;classical minded&#8212;but you are too much for him!</p>
+            <p>I have about finished what
+            
+            <pb xml:id="leaf002r" facs="loc.01237.005_large.jpg" type="recto"/>
+            
+            I am writing at present. It is in paragraphs some short, (half a line or so), some long, in the ordinary prose form, tho' poetical in character. It is a good deal made up of previous writings of the last 5 or 6 years <hi rend="underline">squeezed out</hi>&#8212;a drop or two here &amp; there. I have thought for some time of calling it "Towards Democracy" and I do not see any reason for altering the title&#8212;though the
+            
+            <pb xml:id="leaf002v" facs="loc.01237.006_large.jpg" type="verso"/>
+            
+            word democracy does not often occur in it.</p>
+                       
+            <closer>
+                <salute>With love to you as always</salute>
+                <salute>Your friend</salute>
+                <signed>E.C.</signed>
+            </closer>
+            
+            <pb xml:id="leaf003r" facs="loc.01237.001_large.jpg" type="recto"/>
+            <note type="editorial" resp="#ww" place="left">from E Carpenter (enclosing Sharp letter on L of G)</note>
+            <pb xml:id="leaf003v" facs="loc.01237.002_large.jpg" type="verso"/>
+            
+        </body>
+    </text>
+</TEI>

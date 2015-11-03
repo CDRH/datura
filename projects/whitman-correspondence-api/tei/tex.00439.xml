@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+ 
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="tex.00439">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to James R. Osgood &#38; Company, 21 March
+                    1882</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>tex.00439</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">268&#8211;270</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to James R. Osgood &#38; Company, 21 March 1882</title>
+                    <date cert="high" when="1882-03-21" xml:id="dat1">March 21, 1882</date>
+                    <orgName xml:id="tex">T. E. Hanley Collection, Harry Ransom Center, The University of Texas at Austin</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Osgood, James R.">James R. Osgood</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-14" who="#kc">updated ID</change>
+            <change when="2014-03-06" who="#nhg">checked, corrected</change>
+            <change when="2014-02-05" who="#ej">Checked and Corrected</change>
+            <change when="2013-10-23" who="#nnk">proofed</change>
+            <change when="2013-09-29" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place">Camden New Jersey</name>
+                    <date when="1882-03-21">March 21 '82</date>
+                </dateline>
+                <salute>Dear Sirs</salute>
+            </opener>
+            <p>Yours of 20th <choice>
+                <orig>rec'd</orig><reg>received</reg></choice>, <choice>
+                <orig>ab't</orig>
+                <reg>about</reg>
+            </choice> Dr Bucke's book. I know something about it, &#38; do not
+                object. Dr B. has spent considerable on the illustrations (I have seen them, they
+                are quite creditable) has gathered a variety of biographical
+                information&#8212;criticises my poems from an almost passionately friendly point of
+                view (as scientist, student of poetry, medical doctor &#38;c)&#8212;&#38; has
+                included what as time goes on may prove a curiously valuable collection of
+                cumulative opinions on L of G. from 1856 to the present day&#8212;&#38; I should say
+                it would be a safe publication-enterprise&#8212;but you must of course judge &#38;
+                decide for yourselves<ptr target="upa.00203_n1"/>&#8212;</p>
+            <p>Another thing I must broach&#8212;hoping you are not alarmed at the District Attorney
+                episode, (as I am not at all,) but see your way clear to continue on in
+                earnest&#8212;</p> 
+            <p>I have about got into shape a volume (<hi rend="italic">It</hi> at least will not be
+                liable to any District <choice>
+                    <orig>Att'y</orig>
+                    <reg>Attorney</reg>
+                </choice> episodes&#8212;) comprising all my <hi rend="italic"
+                    >prose writings</hi> to be called (probably)</p>
+            <lg><l><hi rend="italic">Specimen Days</hi></l>
+            <l><hi rend="italic">&#38; Thoughts</hi></l>
+            <l>by Walt Whitman</l></lg>
+            <p>to be about same size as L of G. This little <choice>
+                <orig>Dist.</orig>
+                <reg>District</reg>
+            </choice> <choice>
+                <orig>Att'y</orig>
+                <reg>Attorney</reg>
+            </choice> flurry blowing over, &#38;
+                we getting things into good shape&#8212;(as of course I suppose <hi rend="italic">it</hi> surely will,
+                &#38; <hi rend="italic">we</hi> will)&#8212;would you bring it out say late this summer, same terms as L of
+                G? In that case there would be three Volumes gyrating together, the L of G&#8212;the
+                S D &#38; T&#8212;and Dr Bucke's book&#8212;</p>
+            <p>Upon the whole, &#38; as my friend seems determined to bring out his book, I hope you
+                will take it. I know Dr Bucke well, &#38; have for some years&#8212;He is a
+                perfectly honorable, reliable solid man to deal with&#8212;a linguist, well
+                conversant with the best German, French &#38; British poetry&#8212;of English stock
+                &#38; birth, but grown up in Canada and the California regions of America, &#38;
+                combining in my opinion the best traits of both nationalities. He is now &#38; has
+                been for some years, (in fact he built up &#38; organized it) at the head of the
+                largest &#38; most complete &#38; modernized Asylum for the Insane in
+                America&#8212;(one of the largest in the world&#8212;1000 persons under his
+                charge)&#8212;near London, Ontario, Canada&#8212;Though enthusiastic he has a
+                careful eye to practical &#38; business responsibilities&#8212;has a fine very large
+                family of children&#8212;his social, professional, citizen &#38;c reputation, all
+                first class in Canada.</p>
+            <closer>
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+            <postscript>
+                <p>My last three letters to you have been
+                <list><item>One of March 8 (or 7)</item>
+                <item>"<space extent="one word" unit="chars" quantity="7"/>" 19</item>
+                <item>&#38; the present one</item></list></p>
+                <p>find Dr Bucke's letter to you herewith returned <choice>
+                    <orig>encl'd</orig><reg>enclosed</reg></choice>&#8212;</p>
+            </postscript>
+        </body>
+    </text>
+</TEI>

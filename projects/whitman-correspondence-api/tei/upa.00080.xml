@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="upa.00080">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Herbert Gilchrist, 30 November
+                    1885</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>upa.00080</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Herbert Gilchrist, 30 November 1885</title>
+                    <date cert="high" when="1885-11-30" xml:id="dat1">November 30, 1885</date>
+                    <orgName xml:id="upa">Walt Whitman Collection, 1842&#8211;1957, Rare Book &#38;
+                        Manuscript Library, University of Pennsylvania</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="unk"><persName key="Unknown">Unknown</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Gilchrist, Herbert" ref="n0262">Herbert Gilchrist</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-07-22" who="#nhg">corrected</change>
+            <change when="2015-03-01" who="#kb">edited</change>
+            <change when="2014-10-04" who="#ss">encoded and annotated from Miller.</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <note type="editorial" resp="#unk" place="bottom">Sprague Collection No 35.</note>
+            <opener>
+               
+                <pb xml:id="leaf001r" facs="upa.00080.001_large.jpg" type="recto"/>
+                <dateline> 
+                    <name type="place">328 Mickle street</name>
+                    <name type="place">Camden New Jersey<ptr target="upa.00080_n1"/></name>
+                    <date when="1885-11-30" rend="right">Nov: 30 '85 p m</date>
+                </dateline>
+                <salute>Dear Herbert Gilchrist</salute>
+            </opener>
+            <p>What on earth can I say to you in response to the news about your dearest mother in
+                    my<ptr target="upa.00080_n2"/> letter rec'd this morning?&#8212;words are such
+                weak things any how in so deep &#38; solemn a case&#8212;makes me heavy hearted
+                indeed, &#38; have been so, all the day. As it is I can only send best best love
+                &#38; thoughts dwelling with her all the time<ptr target="upa.00080_n3"/>&#8212;I
+                have seriously considered coming to London&#8212;but it seems impossible&#8212;I am
+                still here&#8212;my eyesight is less disturbed, is nearly ab't as formerly&#8212;but
+                my walking power worse than ever&#8212;they have to half carry me out to the wagon
+                to take the only little exercise I get every day&#8212;but my spirits remain cheery
+                &#38; buoyant as ever&#8212;I eat and sleep fairly&#8212;am so far without any pain
+                of violence&#8212;&#38; still have my good &#38; kind housekeeper Mrs.
+                Davis&#8212;Have just rec'd the third instalment (31 pounds 19 shillings) of the good English
+                "offering" from Wm Rossetti&#8212;(some 49 pounds previously,&#8212;making 81 pounds
+                or thereabout altogether so far rec'd)<ptr target="upa.00080_n4"/>&#8212;and I can
+                assure you it has been <pb xml:id="leaf001v" facs="upa.00080.002_large.jpg"
+                    type="verso"/> all most acceptable to me&#8212;&#38; heart's thanks to you
+                all&#8212;I was down yesterday to the Staffords' at Glendale.<ptr
+                    target="upa.00080_n5"/>&#8212;O how I wish I could see your dearest mother&#8212;again my best, deepest love to
+                her.</p>
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+            <pb xml:id="leaf002r" facs="loc.02181.001_large.jpg" type="recto"/>
+            <pb xml:id="leaf002v" facs="loc.02181.002_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>   

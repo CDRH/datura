@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05965">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Sarah E. [Bownes?] to Walt Whitman, 6 April 1877</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Sarah E. [Bownes?]</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05965</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>            
+            <sourceDesc>
+                <bibl>
+                    <author>Sarah E. [Bownes?]</author>
+                    <title>Sarah E. [Bownes?] to Walt Whitman, 6 April 1877</title>
+                    <date cert="high" when="1877-04-06" xml:id="dat1">April 6, 1877</date>
+                    <idno type="callno">MSS18630, Box 194</idno>
+                    <orgName xml:id="loc">Photocopy held at the Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc> 
+                <person role="sender">
+                    <persName key="Bownes[?], Sarah E.">Sarah E. [Bownes?]</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-01-05" who="#nhg">corrected annotation</change>
+            <change when="2014-12-08" who="#nhg">checked, corrected</change>
+            <change when="2014-12-05" who="#ak">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_jp.00178.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">Woodside</name>
+                    <date when="1877-04-06">April 6 1877</date>
+                </dateline>
+                <salute>Dear Friend</salute>
+            </opener>
+            <p>Your paper was received
+                yesterday and was very much pleased with the
+                Contents and also with your kindness in sending it.
+                I saw in the paper the death of Mrs Johnson. I was
+                very much surprised to see it and felt very sad about it
+                although a stranger to me I never met one so lady
+                like and pleasing as she was and made the remark
+                several times what an entertaining hostess she was I thought
+                she must have made your visit very pleasant for you
+                while there. I am glad that your health is better
+                than it has been. Our little Walter has been very sick
+                since I saw you we were afraid we would lose him
+                but is just well now all the rest are well, send
+                <choice><sic>there</sic><corr>their</corr></choice> love to you hoping to see you soon.
+            </p>
+            <closer>
+                <salute>I remain yours</salute>
+                <signed>Sarah</signed><ptr target="loc.05965_n1"/> 
+            </closer>
+            <postscript>
+                <p>PS Ma desires me to say do not forget us Woodsiders
+                    this summer.
+                </p>  
+            </postscript>
+        </body>
+    </text>
+</TEI>
