@@ -27,6 +27,9 @@
         <!-- INCLUDES -->
 	<xsl:include href="../../../scripts/xslt/cdrh_to_solr/lib/common.xsl"/>
 	
+	
+	
+	
         <!-- SCRIPT -->
 	<xsl:template match="/" exclude-result-prefixes="#all">
 		<xsl:variable name="filename" select="tokenize(base-uri(.), '/')[last()]"/>
@@ -47,11 +50,21 @@
 			<xsl:value-of select="substring-before(substring-before(substring-after(base-uri(.),$path),$filename), '/')"/>
 		</xsl:variable>-->
 		
+		<!--<xsl:if test="$included = 'true'">ttt</xsl:if>--> <!-- Left from an experiment in generalizing the templates -->
 		
+		<add>
+			<doc>
+				
+				<xsl:call-template name="tei_resource">
+					<xsl:with-param name="filenamepart" select="$filenamepart"/>
+					<xsl:with-param name="slug" select="$slug"/>
+				</xsl:call-template>
 		<xsl:call-template name="tei_template">
 			<xsl:with-param name="filenamepart" select="$filenamepart"/>
 			<xsl:with-param name="slug" select="$slug"/>
 		</xsl:call-template>
+			</doc>
+		</add>
 		
 	</xsl:template>
 
@@ -122,82 +135,88 @@
 	<!-- places -->
 	<!-- works -->
 	
+	<xsl:template name="tei_resource" exclude-result-prefixes="#all">
+		<xsl:param name="filenamepart"/>
+		<xsl:param name="slug"/>
+		<!-- ==============================
+				resource identification 
+				===================================-->
+		
+		<!-- id -->
+		
+		<field name="id">
+			<xsl:value-of select="$filenamepart"/>
+		</field>
+		
+		<!-- slug -->
+		
+		<field name="slug">
+			<xsl:value-of select="$slug"/>
+		</field>
+		
+		<!-- project -->
+		
+		<field name="project">
+			<xsl:value-of select="$project"/>
+		</field>
+		
+		<!-- uri -->
+		
+		<field name="uri"><xsl:value-of select="$site_location"/><xsl:text>files/</xsl:text><xsl:value-of select="$filenamepart"/>.html</field>
+		
+		<!-- uriXML -->
+		
+		<field name="uriXML">
+			<xsl:value-of select="$file_location"/>
+			<xsl:value-of select="$slug"/>
+			<xsl:text>/tei/</xsl:text>
+			<xsl:value-of select="$filenamepart"/>
+			<xsl:text>.xml</xsl:text>
+		</field>
+		
+		<!-- uriHTML -->
+		
+		<field name="uriHTML">
+			<xsl:value-of select="$file_location"/>
+			<xsl:value-of select="$slug"/>
+			<xsl:text>/html-generated/</xsl:text>
+			<xsl:value-of select="$filenamepart"/>
+			<xsl:text>.txt</xsl:text>
+		</field>
+		
+		<!-- dataType -->
+		
+		<field name="dataType"> 
+			<xsl:text>tei</xsl:text>
+		</field>
+		
+		<!-- fig_location -->
+		
+		<xsl:if test="$fig_location != ''">
+			<field name="fig_location">
+				<xsl:value-of select="$fig_location"/>
+			</field>
+		</xsl:if>
+		
+		<!-- image_id -->
+		
+		<xsl:if test="//pb">
+			<field name="image_id">
+				<xsl:value-of select="(//pb)[1]/@facs"/>
+			</field>
+		</xsl:if>
+		
+	</xsl:template>
+	
 	
 
 	<xsl:template name="tei_template" exclude-result-prefixes="#all">
 		<xsl:param name="filenamepart"/>
 		<xsl:param name="slug"/>
 		
-		<add>
-			<doc>
+		
 				
-				<!-- ==============================
-				resource identification 
-				===================================-->
 				
-				<!-- id -->
-				
-				<field name="id">
-					<xsl:value-of select="$filenamepart"/>
-				</field>
-				
-				<!-- slug -->
-				
-				<field name="slug">
-					<xsl:value-of select="$slug"/>
-				</field>
-				
-				<!-- project -->
-				
-				<field name="project">
-					<xsl:value-of select="$project"/>
-				</field>
-				
-				<!-- uri -->
-				
-				<field name="uri"><xsl:value-of select="$site_location"/><xsl:text>files/</xsl:text><xsl:value-of select="$filenamepart"/>.html</field>
-				
-				<!-- uriXML -->
-				
-				<field name="uriXML">
-					<xsl:value-of select="$file_location"/>
-					<xsl:value-of select="$slug"/>
-					<xsl:text>/tei/</xsl:text>
-					<xsl:value-of select="$filenamepart"/>
-					<xsl:text>.xml</xsl:text>
-				</field>
-				
-				<!-- uriHTML -->
-				
-				<field name="uriHTML">
-					<xsl:value-of select="$file_location"/>
-					<xsl:value-of select="$slug"/>
-					<xsl:text>/html-generated/</xsl:text>
-					<xsl:value-of select="$filenamepart"/>
-					<xsl:text>.txt</xsl:text>
-				</field>
-				
-				<!-- dataType -->
-				
-				<field name="dataType"> 
-					<xsl:text>tei</xsl:text>
-				</field>
-				
-				<!-- fig_location -->
-				
-				<xsl:if test="$fig_location != ''">
-					<field name="fig_location">
-						<xsl:value-of select="$fig_location"/>
-					</field>
-				</xsl:if>
-				
-				<!-- image_id -->
-				
-				<xsl:if test="//pb">
-					<field name="image_id">
-						<xsl:value-of select="(//pb)[1]/@facs"/>
-					</field>
-				</xsl:if>
 				
 				
 				
@@ -484,7 +503,7 @@
 				
 				
 				<field name="category">
-					<xsl:text>life_and_letters</xsl:text>
+					<xsl:text>biography</xsl:text>
 				</field>
 							
 				<!-- subCategory -->
@@ -606,8 +625,6 @@
 				
 				
 				
-			</doc>
-		</add>
 			
 		
 
