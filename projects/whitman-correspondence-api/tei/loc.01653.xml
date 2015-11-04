@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.01653">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Peter Doyle, 26 December [1873]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="el">Elizabeth Lorang</persName><persName xml:id="kk">Kathryn Kruger</persName><persName xml:id="zk">Zachary King</persName><persName xml:id="ec">Eric Conrad</persName><persName xml:id="ak">Alex Kinnaman</persName><persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.01653</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2014 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Peter Doyle, 26 December [1873]</title>
+
+                    <date cert="medium" when="1873-12-26" xml:id="dat1">December 26, 1873</date>
+                    <idno type="callno">MSS18630, Box 9, Reel 5-6</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839–1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="unk"><persName key="Unknown">Unknown</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                     <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Doyle, Peter" ref="n0752">Peter Doyle</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-07-01">checked, corrected</change>
+            <change who="#ak" when="2014-10-31">added annotations</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+<change when="2014-08-12" who="#el">made basic checking changes to file</change>
+            <change when="2011-01-09" who="#kk">checked</change>
+            <change when="2011-02-24" who="#zk">encoded</change>
+            <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+        </revisionDesc>
+    </teiHeader>
+    
+    <text type="letter">
+        <body><pb xml:id="leaf001r" facs="loc.01653.001.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <note type="editorial" resp="#unk" place="right">1875 or 6</note>
+                    <name type="place" rend="left">431 Stevens st. <lb/>cor West</name><name type="place" rend="right">Camden <lb/>N. J.</name>
+                    <note type="editorial" resp="#unk" place="left">1873</note>
+                    <date when="1873-12-26" rend="right"><choice><abbr>Dec.</abbr><expan>December</expan></choice> 26&#8212;Noon</date>.<ptr target="loc.01653_n1"/>
+                </dateline>
+                <salute>Dear boy Pete,</salute>
+            </opener>
+
+            <p>I have been looking for you the last two days &amp; nights&#8212;but I have about given you up now. 
+                I have been kept in pretty close, as we have had real winter here, snow &amp; bad weather, 
+                &amp; bad walking&#8212;I have been quite alone, as my brother &amp; sister went off to Delaware 
+                on Wednesday on a Christmas visit, to return to-morrow, Saturday&#8212;I am about the same&#8212;My strength still keeps quite <pb xml:id="leaf001v" facs="loc.01653.002.jpg" type="verso"/>
+                
+                
+                encouraging&#8212;I think is better than any time yet&#8212;my walking no better, &amp; still a good deal of distress in the head&#8212;but, as I said in my letter of Monday last,<ptr target="loc.01653_n2"/> (did you get it Tuesday?)&#8212;I somehow feel a little more like myself 
+                than any time since I was taken down&#8212;your last letter was quite a treat&#8212;so much about Washington, &amp; folks, one thing &amp; another&#8212;As I write I sit here in the parlor&#8212;we have had an awful time from the fire going out in the heater, &amp; making it up again&#8212;there is so much complicated machinery about one of these heaters with all the late improvements&#8212;give me my old stove &amp; wood fire yet&#8212;It is snowing by fits here this morning.
+            </p>
+            
+            <closer>
+                <signed>Walt</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="dar.00003">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to James Speed, 13 October 1866</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+
+               <persName xml:id="ao">Alyssa Olson</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>dar.00003</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Walt Whitman</author>
+                  <editor>Edwin Haviland Miller</editor>
+                  <title xml:id="ehm">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>New York</pubPlace>
+                     <publisher>New York University Press</publisher>
+                     <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                     <biblScope type="volume">5</biblScope>
+                     <biblScope type="page">288-289</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to James Speed, 13 October 1866</title>
+               <date when="1866-10-13">October 13, 1866</date>
+               <orgName xml:id="dar">Baker Library, Dartmouth College</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Speed, James">James Speed</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#vs" when="2009-08-27">proofread and edited annotations</change>
+         <change who="#el" when="2009-07-27">added page breaks according to images</change>
+         <change who="#vs" when="2008-10-31">added main TEI markup</change>
+         <change who="#el" when="2008-07-30">added TEI header structure w/o IDs and titles; added minimal TEI markup</change>
+         <change who="#ao" when="2008-07-29">pulled transcription from Primary Source Media</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <pb facs="dar.00003.001.jpg" type="recto"/>
+            <opener>
+               <dateline rend="right">
+                  <name type="place">ATTORNEY GENERAL'S OFFICE, <hi rend="italic">Washington</hi>,</name>
+                  <date when="1866-10-13">Oct. 13, 1866.</date>
+               </dateline>
+               <salute>Dear Mr. Speed,<ptr target="dar.00003_n1"/>
+               </salute>
+            </opener>
+            <p>I send herewith a copy I have procured of the new edition "Leaves of Grass." The price is $3.</p>
+            <p>In the office here every thing goes on much as before you left. Mr. Ashton has been home to vote, remaining away three days. He &amp; Mrs. A. are well. He seems to be busy preparing for the ensuing term, Supreme Court. <pb facs="dar.00003.002.jpg" type="verso"/>Mr. Stanberry is quite popular&#8212;he is a still, bland, old fellow&#8212;is much at the President's&#8212;has left every thing in the office to go on as before. Pleasants, Stitt, &amp;c are well. Andy Kerr is off on leave of absence.<ptr target="dar.00003_n2"/>
+            </p>
+            <p>All hands join in sending best esteem &amp; love to you.</p>
+            <p>We have had an awful rain storm of <hi rend="italic">five days</hi>, raining with hardly any intermission. The water is way up on the base-ball grounds &amp; on 11th st from the<pb facs="dar.00003.003.jpg" type="recto"/> Canal most up to the avenue.</p>
+            <p>Tell Charley that I have not forgotten him&#8212;I send him my love, &amp; hope we may meet again one these days.</p>
+            <p>To-day there has been quite a rush of Confederate Generals to the office&#8212;Gen. Beauregard, Gilmore, &amp; three or four others, have had interviews with Mr. Stanbery.</p>
+            <closer rend="right">
+               <signed>Walt Whitman</signed>
+            </closer>
+            <pb facs="dar.00003.004.jpg" type="verso"/>
+         
+      </body>
+   </text>
+</TEI>

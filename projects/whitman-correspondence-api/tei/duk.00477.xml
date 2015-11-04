@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00477">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, 28 March [1867]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>                    
+                    <persName xml:id="zk">Zachary King</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2011</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00477</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, 28 March [1867]</title>
+                    <date cert="medium" when="1867-03-28" xml:id="dat1">March 28, 1867</date>
+                    <idno type="callno">III-5D</idno>
+                    <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-07-30" who="#el">merged files</change>
+            <change when="2013-06-10" who="#wr">Duke Proofreading</change>
+            <change when="2013-05-20" who="#wr">Duke proofreading corrections and minor note corrections.</change> 
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent Proof</change>
+            <change when="2012-04-25" who="#wr">Proofreading Corrections</change>
+            <change when="2013-01-14" who="#el">updated TEI header to follow new encoding of respStmt within titlStmt; moved notes to external notes file and replaced with ptr encoding; removed empty opener elements</change>
+            <change when="2012-12-14" who="#wr">Proofreading Corrections of notes.</change>
+            <change when="2012-07-31" who="#wr">Moved RMBucke to HandNote; fixed editor, date, and title; reviewed paragraphing </change>
+            <change when="2012-07-16" who="#wr">Replaced smart quotes with straight; removed external URL links. </change>
+            <change when="2012-07-05" who="#wr">Proofreading corrections, smart quotes, grocer debt</change>
+            <change when="2011-12-19" who="#fw">Regularize spelling, correct spacing</change>
+            <change when="2011-07-29" who="#zk">added call no., annotations</change>
+            <change when="2011-01-15" who="#wr">Corrected 2 surfaces</change>
+            <change when="2010-12-30" who="#wr">Transcribed 2 surfaces</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="duk.00477.001.jpg" type="recto"/>
+            
+            <note type="editorial" resp="#rmb" place="top">Brooklyn 1867</note>
+            
+            <opener>
+                <dateline>
+                    <date when="1867-03-28"><choice><orig>march</orig> <reg>March</reg></choice> 28 th<ptr target="duk.00477_n7"/>
+                    </date>
+                </dateline>
+                <salute>Dear Walt</salute>
+            </opener>
+    
+            <p>i thought i must write A few
+            lines<ptr target="duk.00425_n3"/>
+                although i am very tired indeed it is
+                evening no one home but Edd and hattie<ptr target="duk.00477_n2"/>
+                and me martha<ptr target="duk.00465_n9"/>
+                has been gone to <choice><orig>philadelphe</orig> <reg>Philadelphia</reg></choice>
+                most a week Jeff<ptr target="duk.00422_n2"/>
+                came home last night but
+            mat <choice><orig>dident</orig> <reg>didn't</reg></choice> come they were to come tuesday
+            or <choice><orig>wensday</orig> <reg>Wednesday</reg></choice> sure i <choice><orig>dont</orig> <reg>don't</reg></choice> think they will come
+            such a game over me again she has no girl
+            and the work has been very hard on me davis s
+            cousin has been here come the same night they
+            went and <choice><orig>staid</orig> <reg>stayed</reg></choice> till <choice><orig>monday</orig> <reg>Monday</reg></choice> then he came again
+            last night but Jeff helped me get breakfast
+            this morning i hope mat will come <choice><orig>to morrow</orig> <reg>tomorrow</reg></choice>
+            they think its all nothing i <choice><orig>dont</orig> <reg>don't</reg></choice> even get thanked
+            i have been left so much alone here this winter
+            they leave me a <choice><orig>whissel</orig> <reg>whistle</reg></choice> to blow three times
+                if <choice><orig>any body</orig> <reg>anybody</reg></choice> comes to break in davis<ptr target="duk.00479_n9"/> says the
+            watchmen will come over if i blow three times
+            i told him i should be more afraid of
+            the watchmen than i should of the burglars
+            i <choice><orig>dont</orig> <reg>don't</reg></choice> suppose there is any danger but
+            it is very dreary up here in cold winter
+            nights i am most afraid of fire but it
+            will be spring one of these days i hope) <choice><orig>its</orig> <reg>it's</reg></choice> very
+            cold here <choice><orig>to night</orig> <reg>tonight</reg></choice> hattee is <choice><orig>setting</orig> <reg>sitting</reg></choice> one side
+            of me and Edd the other Jeff and davis has
+            gone away to be out very late)</p>
+            <p>i forgot to tell you when i wrote last Emma
+                price<ptr target="duk.00477_n6"/> had been here i got her dinner and
+                last <choice><orig>sunday</orig> <reg>Sunday</reg></choice> she was here to tea and she
+            came again on <choice><orig>monday</orig> <reg>Monday</reg></choice> she brought me a 
+                lot of oranges her mother<ptr target="duk.00477_n13"/>
+                is very well
+                and been to the theater George<ptr target="duk.00425_n2"/> was up to
+            day he seldom misses without it storms
+
+            
+            <pb xml:id="leaf001v" facs="duk.00477.002.jpg" type="verso"/>
+
+            very bad he is well looks real fat he is
+            in hopes they can sell one of the other houses
+            </p>
+            <p>i see walt by your letter mr Heyde<ptr target="duk.00477_n9"/>
+            has not forgotten you i too have had a short
+            epistle from him but mine was quite moderate
+            he says he sent me a long letter this last
+            winter but he <choice><orig>dident</orig> <reg>didn't</reg></choice> direct it right so he
+            thinks i <choice><orig>dident</orig> <reg>didn't</reg></choice> get it but i did it was very
+            long it treated mostly about a <choice><orig>rabbitt</orig> <reg>rabbit</reg></choice> in the
+                wood house i must write to han<ptr target="duk.00477_n10"/>
+                as soon as i
+            can my arm keeps lame yet it gets up my
+            arm more i got your letter yesterday
+            walt with the money all safe if you
+            can walt just as well as not in about
+            two weeks send me ten dollars i have
+            bought a barrel of flour and am to pay him
+            five dollars and he is to wait two weeks
+            for the ten  so walt if you can send it
+            by that time i would be glad) there was
+            something i wanted to tell you i thought
+                <choice><orig>off</orig> <reg>of</reg></choice> <choice><orig>to day</orig> <reg>today</reg></choice> but i <choice><orig>cant</orig> <reg>can't</reg></choice> think what it is <choice><orig>nothin</orig> <reg>nothing</reg></choice>
+            of great importance or i could think of it
+            we have got a lot of little chickens was
+            <choice><orig>haching</orig> <reg>hatching</reg></choice> when they went away so we had
+            to fetch them in some died hattie buried one
+            after she covered it up she asked me if i
+            thought it would go to heaven hattie is
+            a very smart child if she had the right tutoring
+            i <choice><orig>doo</orig> <reg>do</reg></choice> hope when mat comes home she will
+            settle down they have went it this winter
+            if they never did before walt i think when you
+            read this <choice><orig>you l</orig> <reg>you'll</reg></choice> say mother is getting childish
+            i think very like she is
+            </p>
+            <closer>
+                <salute>good bie walte dear</salute>
+            </closer>
+        </body>
+    </text>
+</TEI>

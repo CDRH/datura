@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+ 
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00396">
+    <teiHeader> 
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Charles Louis Heyde to Walt Whitman, 2 November
+                    1884</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Charles Louis Heyde</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="aa">Alex Ashland</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00396</idno>
+                <distributor>Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Charles Louis Heyde</author>
+                    <title>Charles Louis Heyde to Walt Whitman, 2 November 1884</title>
+                    <date cert="high" when="1884-11-02" xml:id="dat1">November 2, 1884</date>
+                    <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare
+                        Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Heyde, Charles Louis" ref="n0299">Charles Louis Heyde</persName>
+                </person>
+                <person role="recipient"> 
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-05-27" who="#kb">edited</change>
+            <change when="2015-05-20" who="#nhg">checked, corrected</change>
+            <change when="2015-05-20" who="#if">edited</change>
+            <change when="2015-02-14" who="#ss">added annotations</change>
+            <change when="2014-12-19" who="#ss">encoded and checked</change>
+            <change when="2014-12-05" who="#aa">transcribed</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="duk.00396.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">Burlington Vermont</name>
+                    <date when="1884-11-02">Nov 2, 1884.</date>
+                </dateline>
+                <salute><choice><abbr>Bro</abbr><expan>Brother</expan></choice> Walt,</salute>
+            </opener>
+            <p>Han is certainly better, although fluctuating in her condition. I essayed to drive with her yesterday but was compelled
+                to return. Some nights she does not sleep, at others sleeps well. She is about the
+                house this morning: little appetite. She keeps your letters close by her: she cannot
+                read much, or endure reading or talking. Dr Lund<ptr
+                    target="duk.00396_n1"/>  is attending her steadily; he is a good physician:
+                Asks no fee, but I shall pay <pb xml:id="leaf001v" facs="duk.00396.002_large.jpg"
+                    type="verso"/>him in my way. I have used a portion of the money sent to Han,
+                which I shall repay&#8212;to help get a frame. I have numerous good paintings, but
+                money is scarce. I have to meet my annual interest next <unclear reason="cut away"
+                    cert="medium" resp="#if">week</unclear> 15 dollars; that paid I <unclear
+                    reason="cut away" cert="low" resp="#if">shall</unclear> have a year before me to
+                housekeeping.</p>
+            <p>I washed our sheets yesterday, with Siddalls Soap<ptr
+                target="duk.00396_n2"/> nicely. I shall have a strange and
+                instructing history to report some day probably, but I have saved in household
+                service and other ways, over 60 dollars.</p>
+            <p>I shall continue as I am[:] our condition, of course is current through the town.</p>
+            <closer>
+                <signed>C L Heyde&#8212;</signed>
+            </closer>
+
+        </body>
+    </text>
+</TEI>

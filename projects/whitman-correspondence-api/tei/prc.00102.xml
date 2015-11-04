@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>   
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="prc.00102">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Thomas Donaldson, [8 April
+                    1886]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>prc.00102</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Ted Genoways</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>Iowa City</pubPlace>
+                            <publisher>University of Iowa Press</publisher>
+                            <date when="2004">2004</date>
+                            <biblScope type="volume">7</biblScope>
+                            <biblScope type="page">82</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Thomas Donaldson, [8 April 1886]</title>
+                    <date cert="high" when="1886-04-08" xml:id="dat1">April 8, 1886</date>
+                    <orgName xml:id="prc">Kendall Reed Collection</orgName>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C. </orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Donaldson, Thomas" ref="syr.00024_n3">Thomas Donaldson</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-03-06" who="#kb">edited</change>
+            <change when="2014-10-24" who="#nhg">updated transcription from Genoways</change>
+            <change when="2014-10-04" who="#ss">encoded and annotated from Miller.</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            
+            <opener>
+                <dateline>
+                    <name type="place">328 Mickle st: Camden N J<ptr target="prc.00102_n2"/></name>
+                    <date when="1886-04-08" rend="right">forenoon</date>
+                </dateline>
+<salute>Dear T D</salute>
+            </opener>
+            
+            <p>Yours of yesterday <choice><abbr>rec'd</abbr><expan>received</expan></choice> announcing the 3 o'clock P M arrangement. Opera House Chestnut above 10th&#8212;for 15th inst. I will be ready &amp; on hand.<ptr target="prc.00102_n1"/> When you come over, Sunday or any other day <hi rend="italic">soon</hi>, come in the forenoon or before 3 in afternoon or in <choice><abbr>even'g</abbr><expan>evening</expan></choice> as convenient</p>
+            
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+
+            <pb xml:id="leaf001r" facs="loc.01480.001_large.jpg" type="recto"/>
+            <pb xml:id="leaf001v" facs="loc.01480.002_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>    

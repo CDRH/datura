@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="hyb.00005">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Herbert Gilchrist, 23 March [1878]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>
+                    <persName xml:id="ad">Anthony Dreesen</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>hyb.00005</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>              
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date when="1964">1964</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">112&#8211;113</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Herbert Gilchrist, 23 March [1878]</title>
+                    <date cert="medium" when="1878-03-23" xml:id="dat1">March 23, 1878</date>                    
+                    <orgName xml:id="upa">Walt Whitman Collection, 1842&#8211;1957, Rare Book &#38; Manuscript Library, University of Pennsylvania</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                    <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Gilchrist, Herbert">Herbert Gilchrist</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-02" who="#nhg">corrected transcription</change>
+            <change when="2014-02-27" who="#nhg">updated WWA ID</change>
+            <change when="2013-04-01" who="#km">checked</change>
+            <change when="2013-01-09" who="#ad">checked</change> 
+            <change when="2012-11-30" who="#gt">checked</change> 
+            <change when="2012-09-28" who="#el">checked</change>            
+            <change when="2012-09-24" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+        <opener>
+                <dateline>
+                    <name type="place" rend="right">Camden</name>
+                    <date when="1878-03-23" rend="right">March 23 a m<ptr target="upa.00163_n1"/></date>
+                </dateline>
+                <salute>Dear Herby</salute>
+            </opener> 
+
+            <p>Last night the best night for a week &#38; I count on getting better now&#8212;only weakness very pronounced &#38; general, &#38; a little sickish&#8212;rheumatic pains in shoulder &#38; wrist still present, but much modified&#8212;tell Bee I am wearing the flannel sleeve constantly&#8212;it was just about what I was wanting&#8212;</p>
+            
+            <p>Herb, I hope you will lay on while your hand is in &#38; finish the black &#38; white drawing all up<ptr target="upa.00163_n2"/>&#8212;hope you will put in to-morrow some good licks, Lord willing&#8212;I am making great <hi rend="italic">calculations</hi> about it&#8212;hope I shant be disappointed&#8212;</p>
+                        
+         <closer>
+             <salute>Love to all&#8212;</salute>
+             <salute>Hope to be over Monday evening next&#8212;</salute>
+             <signed rend="right">WW</signed>
+         </closer>
+            <pb xml:id="leaf002r" facs="loc.02165.001_large.jpg" type="recto"/>
+            <pb xml:id="leaf002v" facs="loc.02165.002_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

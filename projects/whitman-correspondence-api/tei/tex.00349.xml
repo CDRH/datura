@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="tex.00349">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main" level="m">
+                    <title level="a">Louisa Van Velsor Whitman to Walt Whitman, [16 May 1873]</title>
+                </title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>tex.00349</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note type="project">An image of the verso of the leaf is not currently available. The verso is blank.</note>              
+            </notesStmt>
+            <sourceDesc> 
+                <bibl xml:id="tex.00349b">
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, [16 May 1873]</title>
+                    <date cert="medium" notBefore="1873-05-09" notAfter="1873-05-16" xml:id="dat1">May 16, 1873</date>
+                    <orgName xml:id="tex">The Walt Whitman Collection, Harry Ransom Humanities Research Center, The University of Texas at Austin</orgName>
+                    <relatedItem>
+                        <!--<ptr target="tex.00430"/>-->
+                    </relatedItem>
+                    <note type="project">This letter from Louisa Van Velsor Whitman is written on the same sheet of paper as a letter from Louisa Orr Haslam Whitman to Walt from the same date.</note>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>            
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>                    
+                </person>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Orr Haslam">Louisa Orr Haslam Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-11-07" who="#el">updated project note about missing image of verso of leaf</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-01-21" who="#el">moved LOHW letter to tex.00430</change>
+            <change when="2013-07-31" who="#el">moved notes to external file and added ptrs; added group encoding; checked</change>
+            <change when="2013-07-29" who="#el">merged files</change>
+            <change when="2013-06-04" who="#wr">Silent Proofreading Corrections; REM Louisa Orr Letter for XML Validation and XSLT Rendering</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent Proof</change>
+            <change when="2012-12-14" who="#wr">Proofreading correction of notes.</change>
+            <change when="2012-07-31" who="#wr">Added Louisa Orr Whitman Letter with notes on Louisa Orr Haslam and George and Walt's last letter.</change>
+            <change when="2012-07-27" who="#el">checked metadata and encoding and revised as necessary</change>
+            <change when="2012-07-16" who="#wr">Replaced smart quotes with straight; removed external URL links.</change>
+            <change when="2012-06-11" who="#wr">Changed straight quotes to character reference smart quotes.</change>
+            <change when="2012-06-09" who="#wr">Transcribed and annotated letter</change>
+        </revisionDesc>
+    </teiHeader>
+    
+    <text type="letter">
+        
+        <body>
+                
+                <pb xml:id="leaf001r" facs="tex.00349.001.jpg" type="recto"/>
+            
+                <opener> 
+                    <salute>dear walter<ptr target="tex.00349_n2"/></salute>
+                </opener>
+                
+                <p><choice><orig>dont</orig><reg>don't</reg></choice> be worried i shall be
+                    better dont come till you can walk
+                    good and without injury to your
+                    getting fully recovered<ptr target="tex.00349_n4"/></p>
+                
+                <closer>
+                    <salute>good bie my dear beloved walter</salute>
+                    <signed>your mother<ptr target="duk.00425_n3"/></signed>
+                </closer>
+                
+                <pb xml:id="leaf001v" type="verso"/>
+
+        </body>
+        
+        
+    </text>
+</TEI>

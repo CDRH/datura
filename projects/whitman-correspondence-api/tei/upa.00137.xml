@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="upa.00137">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Rees Welsh &#38; Company to Walt Whitman, 21 June 1882</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Rees Welsh &#38; Company</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>upa.00137</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>            
+            <sourceDesc>
+                <bibl>
+                    <author>Rees Welsh &#38; Company</author>
+                    <title>Rees Welsh &#38; Company to Walt Whitman, 21 June 1882</title>
+                    <date cert="high" when="1882-06-21" xml:id="dat1">June 21, 1882</date>
+                    <orgName xml:id="upa">Walt Whitman Collection, 1842&#8211;1957, Rare Book &#38; Manuscript Library, University of Pennsylvania</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Rees Welsh &amp; Company">Rees Welsh &#38; Company</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-29" who="#nhg">checked, corrected</change>
+            <change when="2014-02-25" who="#ej">Checked and Corrected</change>
+            <change when="2014-01-30" who="#kc">checked, corrected</change>
+            <change when="2013-11-15" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            
+                <pb xml:id="leaf001r" facs="upa.00137.001_large.jpg" type="recto"/>
+                <head type="print">OLD BOOKS BOUGHT.</head>
+            <opener>
+
+                <dateline>
+                    <name type="place" rend="right"><handShift rend="printed"/>REES WELSH &amp; CO.,
+                    <lb/>BOOKSELLERS AND PUBLISHERS.</name>
+                    <name type="place">23 South Ninth Street,
+                    <lb/>Philadelphia,</name>
+                    <date when="1882-06-21" rend="right"><handShift rend="manuscript"/>June 21 <handShift rend="printed"/>188<handShift rend="manuscript"/>2</date>
+                </dateline>
+                <salute><handShift rend="manuscript"/>Walt Whitman Esq</salute>
+                <salute>431 Stevens St.</salute>
+                <salute>Camden N.J.</salute>
+                <salute>Dear Sir</salute>
+                </opener>
+            <p>Replying to your favor of 20th, The terms regarding "Leaves of Grass" are satisfactory, we publishing the books for two (2) years or as much longer as both parties agree, with privilege of purchasing the plates for an amount to be agreed upon.</p>
+            <p>Regarding "Specimen Days" We could not "of course" enter into an agreement without seeing the manuscript, although we are satisfied that your terms would be satisfactory</p>
+            <p>The Study of Whitman, we are of
+                <pb xml:id="leaf001v" facs="upa.00137.002_large.jpg" type="verso"/>
+                opinion can not be copyrighted in this Country, if such however can be done and the work is endorsed by you, we shall entertain the proposition very favorably, at a copyright of about 20&#162;. Did you get from <hi rend="underline">HM&#38;Co</hi> the dies used by them for stamping cover of the book?</p>
+            <closer>
+                <salute>Awaiting your reply</salute>
+                <salute>We are Sir</salute>           
+                <salute>Very Truly Yours</salute>                
+                <signed rend="right">Rees Welsh &amp; Co.</signed> 
+                <signed>McK</signed>
+           </closer>
+        </body>
+    </text>
+</TEI>

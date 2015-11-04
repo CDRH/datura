@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="med.00697">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to William J. Linton, 11 April
+               [1872]</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Kenneth M. Price</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="ak">Alex Kinnaman</persName>
+               <persName xml:id="jyc">Jonathan Y. Cheng</persName>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="nnk">Nima Najafi Kianfar</persName>               
+               <persName xml:id="nhg">Nicole Gray</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of
+               Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2014</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>med.00697</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in
+                  the Archive may be shared in accordance with the Fair Use provisions of U.S.
+                  copyright law. Redistribution or republication on other terms, in any medium,
+                  requires express written consent from the editors and advance notification of the
+                  publisher, Center for Digital Research in the Humanities. Permission to reproduce
+                  the graphic images in this archive has been granted by the owners of the originals
+                  for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <editor>Ted Genoways</editor>
+                  <author>Walt Whitman</author>
+                  <title xml:id="tg">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>Iowa City</pubPlace>
+                     <publisher>University of Iowa Press</publisher>
+                     <date>2004</date>
+                     <biblScope type="volume">7</biblScope>
+                     <biblScope type="page">34</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to William J. Linton, 11 April [1872]</title>
+               <date cert="medium" when="1872-04-11" xml:id="dat1">April 11, 1872</date>
+               <orgName xml:id="med">The location of this manuscript is unknown.</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Linton, William J." ref="n6008">William J. Linton</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+         <change who="#ak" when="2015-04-20">added correspondent ref</change>
+         <change who="#nhg" when="2015-02-24">checked, corrected</change>
+         <change who="#ak" when="2014-11-05">added annotations</change>
+         <change who="#jyc" when="2014-09-26">checked, revised</change>
+         <change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#nnk" when="2014-06-04">transcribed, encoded</change>
+
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+
+         <opener>
+            <dateline><name type="place" rend="right">Brooklyn,</name> <date when="1872-04-11"
+                  rend="right">Thursday forenoon</date> <date when="1872-04-11">April 11</date></dateline>
+            <salute rend="left">My dear Linton,</salute>
+         </opener>
+         <p>I have just been spending an hour looking over "The Future"&#8212;and the "Ireland"<ptr
+               target="med.00697_n1"/> you sent me&#8212;&amp; stopping at certain pieces here &amp;
+            there, &amp; reading them quite carefully, &amp; dwelling upon them. They touch me
+            deeply&#8212;indeed more than anything of the kind had previously done&#8212;the
+            undertone of anguish and despair&#8212;the Laoco&#246;n struggles, (apparently useless)
+            under the tightening grip[p]ing folds of the serpent&#8212;the cries &amp; complaints
+            &amp; remonstrances &amp; calls for help&#8212;somehow, in your verses, brought the
+            fearful condition of the laboring millions not only of Ireland, Italy, Poland
+            &amp;c&#8212;but all Europe&#8212;more vividly than ever yet, before me.</p>
+         <p>And it is well for me to get such reminding's&#8212;</p>
+         <p>But my own vein is full of hope, promise, faith, certainty&#8212;I see how an
+            American&#8212;I for instance&#8212;cannot perhaps realize the <choice><sic>peoples</sic><corr>peoples'</corr></choice> desperate
+            condition over the major part of the world&#8212;</p>
+         <p>&#8212;This point you have to-day brought up sharply before me.</p>
+         <closer rend="right">
+
+            <signed>Walt Whitman</signed>
+         </closer>
+<postscript><p>I return to Washington Saturday.</p></postscript>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00541">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, 24 March [1868]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="zk">Zachary King</persName>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00541</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, 24 March [1868]</title>
+                    <date cert="high" when="1868-03-24" xml:id="dat1">March 24, 1868</date>
+                    <idno type="callno">III-5D</idno>
+                    <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2014-09-18">corrected date information</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-12-09" who="#el">changed 'Edd' to 'Eddy'</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-09-17" who="#el">checked</change>
+            <change when="2013-05-22" who="#wr">Duke proofreading corrections</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent Proof</change>
+            <change when="2012-12-14" who="#wr">Proofreading corrections</change>
+            <change when="2012-08-20" who="#wr">Updated notes, proofreading</change>
+            <change when="2012-08-13" who="#wr">Proofreading corrections, updated annotations on Galaxy and Sir Ball, date of Aunt Fanny's death
+                date of letter, Martha Whitman's package, </change>
+            <change when="2011-12-20" who="#fw">corrected spacing</change>
+            <change when="2011-07-31" who="#zk">corrected date format in title; added call no., annotations</change>
+            <change when="2011-03-20" who="#wr">Correct and update transcription</change>
+            <change when="2011-03-07" who="#fw">Annotate Ballad of Sir Ball, Mary's Family, foolscap</change>
+            <change when="2011-02-28" who="#fw">Correct 2 surfaces</change>
+            <change when="2011-02-09" who="#fw">Correct 2 surfaces</change>
+            <change when="2011-01-24" who="#fw">Transcribe 2 surfaces</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <pb xml:id="leaf001r" facs="duk.00541.001.jpg" type="recto"/>
+            
+             <note type="editorial" resp="#rmb" place="top">1868</note>
+           
+            <opener>
+                <dateline>
+                    <date when="1868-03-24"><choice><orig>tuesday</orig> <reg>Tuesday</reg></choice> 24
+                        <choice><orig>march</orig><reg>March</reg></choice><ptr target="duk.00541_n16"/></date>
+                </dateline>
+                <salute>My dear <choice><orig>walter</orig><reg>Walter</reg></choice></salute>
+            </opener>
+            
+            <p><choice><orig>its</orig> <reg>it's</reg></choice> quite a spell since
+                i<ptr target="duk.00425_n3"/>
+                have written at any rate it <choice><orig>seemes</orig><reg>seems</reg></choice>
+            so to me i should have wrote and
+            said i had received the letter of <choice><orig>friday</orig><reg>Friday</reg></choice>
+            but it was such a dreadful storm
+            <choice><orig>saturday</orig> <reg>Saturday</reg></choice> then i thought i would wait
+            till to day i have got the one you sent
+            on <choice><orig>friday</orig> <reg>Friday</reg></choice> or i got it on <choice><orig>friday</orig> <reg>Friday</reg></choice> and one to
+            day both with 5 dollars and the book for 
+             <choice><orig>mary</orig><reg>Mary</reg></choice><ptr target="duk.00541_n7"/> came <choice><orig>friday</orig> <reg>Friday</reg></choice> and the <choice><orig>galaxy</orig> <reg>Galaxy</reg></choice> to day
+                with the ballad of sir ball<ptr target="duk.00541_n6"/>
+                i had <choice><orig>forgotton</orig> <reg>forgotten</reg></choice>
+                all about the <choice><orig>peice</orig> <reg>piece</reg></choice> till i see it and
+            then i had to think where i had heard
+            of it and then it came to my mind
+            what piece it was it is signed w i hope
+            nobody will think you wrote it <choice><orig>walt</orig><reg>Walt</reg></choice>)</p>
+            <p>Mary has gone home to day she has had
+            a very satisfactory visit but she thought
+            she must go to day she came last <choice><orig>monday</orig> <reg>Monday</reg></choice>
+            a week ago yesterday) she thinks so much
+            of her daughter <choice><orig>minnie</orig><reg>Minnie</reg></choice> she almost
+            worships her nothing but what they will
+            indulge her in)<ptr target="duk.00541_n18"/>
+            when <choice><orig>martha</orig><reg>Martha</reg></choice><ptr target="duk.00465_n9"/>
+            was there
+            she seemed to think they were either
+            
+            <pb xml:id="leaf001v" facs="duk.00541.002.jpg" type="verso"/>
+            
+            too close or stingy to or <choice><orig>hadent</orig> <reg>hadn't</reg></choice> the means
+            but the means they have whether they have
+            the heart or not to use the means they talk
+            of selling their place and buying one up
+            town further and one more <choice><orig>stilish</orig> <reg>stylish</reg></choice>
+                after aunt fanny<ptr target="duk.00541_n8"/> was buried they had
+            a division of money that she had laid up
+            it was equally divided between Ansel
+            and Noah and <choice><orig>george</orig><reg>George</reg></choice> <choice><orig> <choice><orig>mary</orig><reg>Mary</reg></choice>s</orig> <reg>Mary's</reg></choice> son <choice><orig>george</orig><reg>George</reg></choice><ptr target="duk.00541_n2"/>
+             <choice><orig>mary</orig><reg>Mary</reg></choice> said she <choice><orig>dident</orig> <reg>didn't</reg></choice> know how much
+                they had but i <choice><orig>shouldent</orig> <reg>shouldn't</reg></choice> wonder if she
+            did as her son <choice><orig>george</orig><reg>George</reg></choice> came down with her
+            at any rate i <choice><orig>gess</orig> <reg>guess</reg></choice> they will keep what
+            they have got) poor old woman <choice><orig>she s</orig> <reg>she's</reg></choice> been 
+            saving up i suppose all her life for who
+            she knows not)
+                i got a letter from <choice><orig>matty</orig><reg>Matty</reg></choice><ptr target="duk.00541_n9"/>
+            yesterday i <choice><orig>havent</orig> <reg>haven't</reg></choice> had one in a long while
+            they have got nicely fixed <choice><orig>matty</orig><reg>Matty</reg></choice> says and have
+            laid out 1000 dollars that  <choice><orig>jeffy</orig><reg>Jeffy</reg></choice><ptr target="duk.00422_n2"/>
+                is glad they came
+            and they get along nicely <choice><orig>matti</orig><reg>Matty</reg></choice> said she was
+            going to send a box of things to me she said before
+            she went away she would make me some things
+            when she got settled and amongst the rest she said she
+            would send <choice><orig>eddy</orig><reg>Eddy</reg></choice> a present too Edd<ptr target="duk.00425_n13"/> said he thought
+            matt was the best of all of them)
+            <choice><orig>matty</orig><reg>Matty</reg></choice> says they was
+            so glad to get your letter that i must tell you
+            you must write often and she will write to you
+            but Jeffy is so busy <choice><orig>davis</orig><reg>Davis</reg></choice><ptr target="duk.00479_n9"/>
+                is with them)
+            i sent a 
+            small paper of lozenges to the children by <choice><orig>davis</orig><reg>Davis</reg></choice> tied
+            up with a thread matt said <choice><orig>hattie</orig><reg>Hattie</reg></choice><ptr target="duk.00440_n3"/>
+                <choice><orig>kised</orig> <reg>kissed</reg></choice> the string 
+                and put it away cause <choice><orig>gramma</orig><reg>grandma</reg></choice> had sent it
+            </p>
+            <closer>
+                <salute>good bie <choice><orig>walter</orig><reg>Walter</reg></choice> dear<ptr target="duk.00541_n17"/>
+                </salute>
+            </closer>
+            <postscript><p>no news from <choice><orig>hanna</orig><reg>Hannah</reg></choice> yet<ptr target="duk.00541_n13"/></p>
+                <p>i had a letter or package from <choice><orig>charley hay</orig> <reg>Charles Heyde</reg></choice> three sheets
+                    of foolscap paper and a fool wrote on them<ptr target="duk.00541_n5"/>
+                </p>
+            </postscript>
+        </body>
+    </text>
+</TEI>

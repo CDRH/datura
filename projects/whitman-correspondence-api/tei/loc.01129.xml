@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.01129">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">John Burroughs to Walt Whitman, 25 February 1878</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>John Burroughs</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="vm">Vince Moran</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.01129</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>John Burroughs</author>
+                    <title>John Burroughs to Walt Whitman, 25 February 1878</title>
+                    <date cert="high" when="1878-02-25" xml:id="dat1">February 25, 1878</date>
+                    <idno type="callno">MSS18630</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Burroughs, John">John Burroughs<ptr target="nyp.00210_n7"/></persName>
+                </person>
+                <person role="recipient" xml:id="ww">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-03-06" who="#ss">annotations added</change>
+            <change when="2013-10-04" who="#nhg">checked, corrected</change>
+            <change when="2013-02-06" who="#ej">Checked and Corrected</change>
+            <change when="2012-11-26" who="#vm">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.01129.003_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">Esopus <choice><abbr>N.Y.</abbr><expan>New York</expan></choice></name>
+                    <date when="1878-02-25" rend="right"><choice><abbr>Feb.</abbr><expan>February</expan></choice> 25, 1878</date>
+                </dateline>
+                <salute>Dear Walt:</salute>
+            </opener>
+
+            <p>Your letter came today.<ptr target="n0129"/> I have done nothing &amp; said nothing about the lecture since I wrote you, as hearing from you was the first thing in order. I think we can work the thing up by April. I shall go to <choice><abbr>N.Y.</abbr><expan>New York</expan></choice> the last of this week &amp; talk the matter up with Gilder<ptr target="n0871"/> &amp; Stedman<ptr target="n1043"/> &amp; others. I know all depends upon how the matter is
+            
+            <pb xml:id="leaf001v" facs="loc.01129.004_large.jpg" type="verso"/>
+            
+            is put through &amp; we have time enough to go to work in order.</p>
+            
+            <p>I presume I shall go to <choice><abbr>NY.</abbr><expan>New York</expan></choice> on Thursday: if you want to write to me there, write care of Scribner &amp; Co 743 Broadway.</p>
+            
+            <p>The 14<hi rend="supersrcipt">th</hi> of April comes on Sunday, Monday night would be our time. All well. Much love to the Gilchrists.<ptr target="n3001"/></p>
+            
+            <closer>
+                <salute>As Ever</salute>
+                <signed rend="right">John Burroughs.</signed>
+            </closer>
+            
+            <pb xml:id="leaf002r" facs="loc.01129.005_large.jpg" type="recto"/>
+            <pb xml:id="leaf002v" facs="loc.01129.006_large.jpg" type="verso"/>
+            <pb xml:id="leaf003r" facs="loc.01129.001_large.jpg" type="recto"/>
+            <note type="editorial" resp="#ww" place="left">John Burroughs | Feb 26 '78 | (abt the lecture)</note>
+            <pb xml:id="leaf003v" facs="loc.01129.002_large.jpg" type="verso"/>
+            
+        </body>
+    </text>
+</TEI>

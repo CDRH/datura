@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nar.00003">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to Henry Stanbery, 26 October 1866</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="bb">Brett Barney</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+
+               <persName xml:id="ao">Alyssa Olson</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>nar.00003</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Walt Whitman</author>
+                  <editor>Edwin Haviland Miller</editor>
+                  <title xml:id="ehm">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>New York</pubPlace>
+                     <publisher>New York University Press</publisher>
+                     <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                     <biblScope type="volume">1</biblScope>
+                     <biblScope type="page">289-291</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to Henry Stanbery, 26 October 1866</title>
+               <date when="1866-10-26">October 26, 1866</date>
+               <orgName xml:id="nar">National Archives</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Stanbery, Henry">Henry Stanbery</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#bb" when="2010-04-12">added a missing paragraph break; tweaked the note that refers to the Prices and rearranged information about the enclosures</change>
+         <change who="#vs" when="2009-08-27">proofread and edited annotations</change>
+         <change who="#vs" when="2008-10-28">added main TEI markup</change>
+         <change who="#el" when="2008-07-30">added TEI header structure w/o IDs and titles; added minimal TEI markup</change>
+         <change who="#ao" when="2008-07-29">pulled transcription from Primary Source Media</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <dateline rend="right">
+                  <name type="place">Washington City</name>
+                  <date when="1866-10-26">Oct. 26. 1866.</date>
+               </dateline>
+               <salute>To | Hon. Henry Stanbery | Attorney General. | Sir:<ptr target="nar.00003_n1"/>
+               </salute>
+            </opener>
+            <p>I hereby respectfully apply for the pardon of Erastus O. Parker, aged 55 years, formerly Postmaster at the village of Monument, Mass. on the Cape Cod Railroad&#8212;now in prison at Plymouth Jail, Plymouth, Mass.</p>
+            <p>The following is a statement of his case, condensed from the accompanying documents:<ptr target="nar.00003_n2"/>
+            </p>
+            <p>At a term of U. S. Circuit Court, at Boston, Mass. in October, 1862, Parker was tried on an indictment of [please notice]<ptr target="nar.00003_n3"/> 
+               <hi rend="italic">Seven Counts</hi>; the 1st charged him with, on Oct. 22, 1860, unlawfully detaining a package sent by mail from the Falmouth Bank, containing a sum of money; the 2d charged him with opening the packet; the 3d charged him with embezzlement of $500, part of the contents of said packet; the 4th charged him with stealing &amp; taking out said $500; the 5th charged him with advising &amp; assisting one Joseph S. Hewins to steal &amp; take out said valuable packet; the 6th charged him with advising &amp; assisting one Henry C. Hewins to steal said valuable packet; &amp; the 7th charged him with receiving &amp; concealing a bank-note of $500, which had been stolen from the mail, &amp; which he, Parker, knew had been stolen.</p>
+            <p>The evidence proved that on Oct. 22, 1860, the Falmouth Bank sent through the mail a package containing some $5000, (of which about $1700 was in cash, &amp; the rest in drafts,) to Suffolk Bank, Boston&#8212;that the mail from Falmouth in due course passes through Monument, at which place the bag is usually opened to put in the Boston matter&#8212;&amp; that the package with the $5000 never reached Suffolk Bank. </p>
+            <p>Furthermore, that on the 12th of Jan. 1861, Joseph S. Hewins, of Monument, a mail contractor &amp; driver of the mail (implicated with Parker, as just seen in the 6th count of the indictment,) receives from Monument post office a letter postmarked Boston, which, on opening, he, to his amazement, finds to contain a $500 note, &amp; nothing else;&#8212;that on the 15th of Jan. said Joseph Hewins sends a younger brother Henry C. Hewins, with this $500 note to Falmouth Bank, to get it changed into small bills. The cashier, (the same man who had made up &amp; sent the $5000 package to Suffolk Bank,) gives Henry Hewins the small bills as requested. Some time afterward a question is raised of this $500 note being identical with one in the stolen or missing package. Joseph Hewins is sent for, answers all questions frankly, cannot account for the $500, openly acknowledges that he has no idea who sent it to him, &amp; produces the envelope it was sent in. This is the basis of suspicion against Parker.</p>
+            <p>The prosecution charges the handwriting of the direction on the envelope to Parker. Witnesses are called to prove the handwriting on him. Several witnesses testify to its being Parker's writing to the best of their belief; but the preponderance of the testimony is against it. The best experts swear positively that it is not Parker's hand.</p>
+            <p>Parker proves a remarkably good character all his previous life, by a long train of witnesses, of the best standing in the county &amp; town. No attempt is made to prove a bad character. As to the identity of the $500 note, with one in the stolen package, the testimony makes that identity probable, but not certain.</p>
+            <p>The foregoing contains every point made against Parker.</p>
+            <p>Incredible as it would seem, the Jury, who, with the Court, had been thoroughly wearied out with several preceding long &amp; tedious trials&#8212;though they brought in a verdict of <hi rend="italic">Not Guilty</hi> on the 1st, 2d, 3d, 4th, 5th, &amp; 6th counts, [see, back,]<ptr target="nar.00003_n4"/> found him <hi rend="italic">Guilty</hi> on the 7th count.</p>
+            <p>On this finding Parker was sentenced to Five Years imprisonment, &amp; sent to Jail Oct. 22, 1862&#8212;&amp; has been incarcerated there since.</p>
+            <p>Joseph S. Hewins was also tried &amp; convicted; but was soon after <hi rend="italic">pardoned</hi>. He immediately resumed his station as a respectable member of the community at Monument, &amp; has been for some time, &amp; is now, occupying his old position as mail carrier &amp; contracter under the Post Office Department. When Parker was arrested he was station master on the Cape Cod Railroad, as well as postmaster of the village. Both are small positions in a pecuniary point of view. I may mention that ever since, &amp; at this time, the officers of the Road have been &amp; are, keeping his place for him; &amp; his daughter is performing the duties of the post, to support the family.</p>
+            <p>The belief is universal in Monument &amp; the neighborhood that old Mr. Parker is innocent.<ptr target="nar.00003_n5"/> It seems to be one of those curious &amp; helpless cases that sometimes occur in judicial trials, where the accused becomes a victim in defiance of law &amp; common sense. I am informed by the Sheriff, &amp; the Jailer at Plymouth,<ptr target="nar.00003_n6"/> that the old man is one of the most truthful &amp; benevolent persons they ever knew; they use him as an assistant &amp; messenger, and have for years allowed him to go about the jail premises &amp; grounds on his own parole. Both warmly join in the application for his pardon, &amp; one of them adds his belief in Parker's innocence.<ptr target="nar.00003_n7"/>
+            </p>
+            <p>I have but respectfully to add, that as the whole theory on which he was convicted was but an inference from an inference&#8212;that, as on the substantial counts of his indictment he was pronounced <hi rend="italic">not guilty</hi>&#8212;that as the sentence, on that comparatively mild 7th count, was a cruel &amp; heavy one&#8212;&amp; that, waiving my claim of his innocence, (which, after a thorough examination of the Case, I devoutly believe in)<ptr target="nar.00003_n8"/>&#8212;I submit, that he has already served four years in prison, &amp; is now a most proper subject for Warrant of Pardon.</p>
+            <closer rend="right">
+               <signed>Walt Whitman</signed>
+            </closer>
+         
+      </body>
+   </text>
+</TEI>

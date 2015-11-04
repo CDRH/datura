@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="tex.00423">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to James R. Osgood, 20 May 1881</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>tex.00423</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">225&#8211;226</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to James R. Osgood, 20 May 1881</title>
+                    <date cert="high" when="1881-05-20" xml:id="dat1">May 20, 1881</date>
+                    <idno type="callno">Series II., Container bv15</idno>
+                    <orgName xml:id="tex">The Walt Whitman Collection, Harry Ransom Humanities Research Center, The University of Texas at Austin</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Osgood, James R.">James R. Osgood</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-02-27" who="#nhg">checked, corrected</change>
+            <change when="2014-02-27" who="#kc">checked, corrected</change>
+            <change when="2014-01-29" who="#nnk">proofed</change>
+            <change when="2013-09-19" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">Camden New Jersey</name>
+                    <date when="1881-05-20" rend="right">May 20 '81</date>
+                </dateline>
+                <salute>My dear Mr Osgood</salute>
+            </opener>
+            <p>Yours <choice>
+                    <abbr>rec'd</abbr><expan>received</expan></choice>,<ptr target="tex.00423_n1"/> &#38; accordingly I am fixing up the copy, 
+                which I will send on to you in a few days&#8212;perhaps it will be a week&#8212;</p>
+            <closer>
+                <signed rend="right">Walt Whitman<ptr target="tex.00423_n2"/></signed>
+            </closer>
+            <postscript>
+                <p>Yes&#8212;a new one <choice>
+                        <abbr>Vol:</abbr>
+                        <expan>Volume</expan>
+                    </choice> edition would supersede all others not only legally (I am sole owner
+                    of the copyright, which I have kept thoroughly fortified from the beginning) but
+                    by superiority, additions, modernness, &#38;c&#8212;The Thayer &#38; Eldridge
+                    plates of 1860 <hi rend="italic">are</hi> in existence in the hands of R 
+                    Worthington<ptr target="tex.00423_n3"/> N Y (a bad egg) who has sold languid
+                    surreptitious copies&#8212;can be <choice>
+                        <sic>stopt</sic>
+                        <corr>stopped</corr>
+                    </choice> instantly by me &#38; will be&#8212;(The matter is not of any moment
+                    however)&#8212;The plates were offered to me two years ago &#38; I refused them
+                    as worthless&#8212;</p>
+            </postscript>
+        </body>
+    </text>
+</TEI>

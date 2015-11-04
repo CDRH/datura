@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="tex.00340">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, [11&#8211;14 November 1868]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="nr">Natalie Raabe</persName> 
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>tex.00340</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note type="project">An image of the verso of the leaf is not currently available. On the verso is Hannah (Whitman) Heyde's November 10, 1868 letter to Louisa Van Velsor Whitman.</note>              
+            </notesStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, [11&#8211;14 November 1868]</title>
+                    <date cert="high" notBefore="1868-11-11" notAfter="1868-11-14" xml:id="dat1">November 11&#8211;14, 1868</date>
+                    <orgName xml:id="tex">The Walt Whitman Collection, Harry Ransom Humanities Research Center, The University of Texas at Austin</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="hhw"><persName key="Whitman, Hannah Heyde">Hannah Heyde Whitman</persName></handNote>
+            </handNotes> 
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-11-07" who="#el">updated project note about missing image of verso of leaf</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-07-31" who="#el">moved notes to external file and added ptrs; checked</change>
+            <change when="2013-07-30" who="#el">merged files</change>
+            <change when="2013-06-04" who="#wr">Silent Proofreading Corrections</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent Proof</change>
+            <change when="2012-11-26" who="#wr">Proofreading corrections and updated date</change>
+            <change when="2012-11-23" who="#nr">Proofreading notes.</change>
+            <change when="2012-07-27" who="#el">checked metadata and encoding and revised as necessary</change>
+            <change when="2012-07-16" who="#wr">Replaced smart quotes with straight; removed external URL links. </change>
+            <change when="2012-06-11" who="#wr">Changed straight quotes to character reference smart quotes. </change>
+            <change when="2012-05-31" who="#wr">Proofreading corrections in Ransom Center and dating</change>
+            <change when="2012-01-24" who="#fw">Added annotations</change>
+            <change when="2011-04-19" who="#fw">Transcribe 1 Page, regularize spelling, annotate Dr. Thayer</change>
+        </revisionDesc>
+    </teiHeader>
+    
+    <text type="letter">
+        <body>
+            
+            <pb xml:id="leaf001r" facs="tex.00340.001.jpg" type="recto"/>
+            
+            <opener>
+                <salute>dear walt</salute><ptr target="tex.00340_n7"/>
+            </opener>
+            <p>i<ptr target="duk.00425_n3"/>
+                <choice><orig>dont</orig> <reg>don't</reg></choice> want to worry
+                you but i thought i would send you
+                <choice><orig>hanna s</orig><reg>hanna's</reg></choice>
+                letter it is rather a strangely
+                connected letter<ptr target="tex.00340_n2"/>
+                
+                but god only knows
+                what will be the end of her troubles
+                i have got one from him one of his
+                ranting ones<ptr target="tex.00340_n8"/>
+                i <choice><orig>cant</orig> <reg>can't</reg></choice> tell what an awful
+                letter it is) i wish she could be got here
+                if matty and jeff<ptr target="duk.00575_n9"/>
+                does go back she could
+                take that room till spring) The <choice><orig>erysiplus</orig><reg>erysipelas</reg></choice><ptr target="tex.00340_n6"/>
+                generally affects the head so i think probably
+                she will be quite smart) as she gets <choice><orig>strenght</orig><reg>strength</reg></choice>
+                <choice><orig>doo</orig> <reg>do</reg></choice> you think she gets your letters walter
+                perhaps she does i was thinking <choice><orig>maybee</orig> <reg>maybe</reg></choice>
+                it would be as well to send her one
+                to the care of Dr. Thayer<ptr target="duk.00585_n1"/>
+                as i suppose he
+                has a box at the post office but <choice><orig>doo</orig> <reg>do</reg></choice>
+                as you think best walter dear)
+                i am pretty well matty is about as usual
+                Jeffy will come in a few weeks</p>
+            <p><choice><orig>dont</orig> <reg>don't</reg></choice>be worried no more than you can help walter
+                i know the nature of the disease george<ptr target="duk.00425_n2"/>
+                would get
+                something in his head and worry as she does about<ptr target="tex.00340_n11"/>
+                the letter if heyd was kind to her she would get well</p>
+            <p>i wish you had went there walter when you was home<ptr target="tex.00340_n12"/></p>
+            
+            <note type="editorial" resp="#hhw" place="bottom"><p>Dear Mother</p> <p>Burlington</p></note>
+            
+            <pb xml:id="leaf001v" type="verso"/>
+            
+        </body>
+    </text>
+</TEI>

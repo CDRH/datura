@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="csl.00001">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to W. O. Baldwin, 4 March
+               1868</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Kenneth M. Price</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="jyc">Jonathan Y Cheng</persName>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+               <persName xml:id="ak">Alex Kinnaman</persName>
+               <persName xml:id="nhg">Nicole Gray</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of
+               Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2014</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>csl.00001</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in
+                  the Archive may be shared in accordance with the Fair Use provisions of U.S.
+                  copyright law. Redistribution or republication on other terms, in any medium,
+                  requires express written consent from the editors and advance notification of the
+                  publisher, Center for Digital Research in the Humanities. Permission to reproduce
+                  the graphic images in this archive has been granted by the owners of the originals
+                  for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <editor>Ted Genoways</editor>
+                  <author>Walt Whitman</author>
+                  <title xml:id="tg">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>Iowa City</pubPlace>
+                     <publisher>University of Iowa Press</publisher>
+                     <date>2004</date>
+                     <biblScope type="volume">7</biblScope>
+                     <biblScope type="page">29</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to W. O. Baldwin, 4 March 1868</title>
+               <date cert="high" when="1868-03-04" xml:id="dat1">March 4, 1868</date>
+               <orgName xml:id="csl">Connecticut State Library State Archives</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Baldwin, W. O." ref="n4987">W. O. Baldwin</persName>
+            </person> 
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+         <change who="#nhg" when="2015-04-24">corrected annotations</change>
+         <change who="#ak" when="2015-04-20">added correspondent ref</change>
+         <change who="#nhg" when="2015-02-24">checked, corrected</change>
+         <change who="#ak" when="2014-11-06">added annotations</change>
+         <change who="#jyc" when="2014-09-24">checked, revised</change>
+         <change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#nnk" when="2014-06-03">transcribed, encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         <opener>
+            <name type="place"><handShift rend="printed"/>ATTORNEY GENERAL'S OFFICE,</name>
+            <dateline><handShift rend="manuscript"/><name type="place" rend="right">Washington,</name>
+               <date when="1868-03-04" rend="right">March 4, 1868</date></dateline>
+            <salute rend="left">My dear Mr. Baldwin:</salute>
+         </opener>
+         <p>I write in reference to a friend of mine, Dr. Charles H. Bowen,<ptr
+               target="csl.00001_n1"/> of this city, who will soon call upon you personally. He
+            seeks the appointment of Surgeon to the Metropolitan Police here. I have known Dr. Bowen for several years. He was a volunteer
+            U.S. Army surgeon during the war, &amp; was considered one of the best. I can fully join
+            in the same testimony, as he treated, as physician or surgeon, many a case under my own
+            eye, for days &amp; even months. He is a good Union man, of full professional
+            experience, gentlemanly manners, temperate, in the prime of life&#8212;&amp; I have more
+            than once, when watching his treatment, called him an intuitive physician.</p>
+         <p>I most strongly recommend him as the right man, &amp; one without deficiency in any of
+            the qualifications needed for the place of Police Surgeon.</p>
+         <p>Should you wish it, I will be glad to wait upon you, to testify further regarding Dr. B.
+            I send you, dear sir, my friendliest respects &amp; well wishes,</p>
+         <closer rend="right">
+            <signed>Walt Whitman</signed>
+         </closer>
+
+      </body>
+   </text>
+</TEI>

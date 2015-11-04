@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03899">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Susan Stafford to Walt Whitman, 23 December
+                    1877</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Susan Stafford</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03899</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive November be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+
+            <sourceDesc>
+
+
+                <bibl>
+                    <author>Susan Stafford</author>
+                    <title>Susan Stafford to Walt Whitman, 23 December 1877</title>
+                    <date cert="high" when="1877-12-23" xml:id="dat1">December 23, 1877</date>
+                    <idno type="callno">MSS18630, Box 16</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Stafford, Susan">Susan Stafford</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-06-20" who="#nhg">checked, corrected</change>
+            <change when="2014-04-02" who="#nnk">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_vm.00167_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">Home</name>
+                    <date when="1877-12-23">Sunday evening Dec 23rd</date>
+                </dateline>
+            </opener>
+            <p>Dear friend we have looked for you down with us so long &amp; you have not come that we have given up all hope of ever seeing you again with 
+            us so <gap reason="damage" quantity="3" unit="words"/> the kit of fish <gap reason="damage" quantity="3" unit="words"/> that you have
+            <gap reason="damage" quantity="3" unit="words"/> come safe
+            <gap reason="damage" quantity="3" unit="words"/> more than words can tell <gap reason="damage" quantity="1" unit="word"/> would have written for 
+            you last week to spend Christmas with us but I had a very severe <choice><orig>attact</orig><reg>attack</reg></choice> of the heart 
+            &amp; was not able to do so I am better now will you please come this week we shall look
+            <pb xml:id="leaf001v" facs="loc_vm.00168_large.jpg" type="verso"/>
+            for you do not disappoint us we have waited so long</p>
+            <p>please write what day you will come &amp; we will meet you at the station</p>
+            <closer>
+                <salute>ever your friend</salute>
+                <signed>S. M. Stafford</signed>
+            </closer>
+                <pb xml:id="leaf002r" facs="loc_jc.00489_large.jpg" type="recto"/>
+            
+            <note resp="#ww" place="left" type="editorial">from Mrs Stafford Dec 23 '77&#8212;bro't up by Herbert ans'd next day</note>
+
+            <pb xml:id="leaf002v" facs="loc_jc.00490_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="whs.00001">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to James R. Osgood &amp; Company, 17 July
+                    1881</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>whs.00001</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to James R. Osgood &amp; Company, 17 July 1881</title>
+                    <date cert="high" when="1881-07-17" xml:id="dat1">July 17, 1881</date>
+                    <orgName xml:id="whs">Wisconsin Historical Society</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="James R. Osgood &amp; Company">James R. Osgood &amp;
+                        Company</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-02-07" who="#nhg">checked, corrected</change>
+            <change when="2014-02-07" who="#nhg">changed WWA ID, added image references</change>
+            <change when="2014-01-21" who="#ss">checked</change>
+            <change when="2013-10-15" who="#nnk">proofed</change>
+            <change when="2013-09-12" who="#kc">Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="whs.00001.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">431 Stevens Street<ptr target="whs.00001_n2"/></name>
+                    <name type="place" rend="right">Camden New
+                        Jersey</name>
+                    <date when="1881-07-17" rend="right">July 17 '81</date>
+                </dateline>
+                <salute>Dear Sirs</salute>
+            </opener>
+
+            <p>I have been unwell &amp; disabled the last fifteen days from the heat &amp; several
+                little things happening. Am pretty well shattered anyhow&#8212;Am busy with the
+                copy of the book&#8212;thought I had finished&#8212;but I find it will bear about as
+                much work as I can put on it&#8212;&amp; I can't hurry&#8212;But it is about in
+                printing office shape&#8212;</p>
+            <p>How will it do to have this definite arrangement&#8212;that I come on by (or just
+                before) 1st of September to Boston&#8212;&amp; we make a clear start with it at once
+                then?&#8212;Ought to be put through I suppose in two months&#8212;say by the end of
+                October&#8212;</p>
+            <p>I was thinking something might be done with an extra bound edition for the holiday
+                book trade for '81&#8211;2 for gift books&#8212;<pb xml:id="leaf001v" facs="whs.00001.002_large.jpg" type="verso"/><pb xml:id="leaf002r" facs="whs.00001.003_large.jpg" type="recto"/>Couldn't we get it out early half of November if I am
+                in Boston with the copy complete on or before 1st September sure?<ptr
+                    target="whs.00001_n1"/></p>
+
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+            <pb xml:id="leaf002v" facs="whs.00001.004_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

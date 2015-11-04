@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00468">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, 3 December [1865]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ct">Cathy Tisch</persName> 
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00468</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, 3 December [1865]</title>
+                    <date cert="high" when="1865-12-03" xml:id="dat1">December 3, 1865</date>
+                        <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>  
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-12-09" who="#el">added 'can' in the phrase 'will write to her as soon as i can get a chance'</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-07-29" who="#el">merged files</change>
+            <change when="2013-07-19" who="#wr">Replace internal notes with external notes</change>
+            <change when="2013-01-10" who="#el">updated TEI header to follow new encoding of respStmt within titlStmt; moved notes to external notes file and replaced with ptr encoding; removed empty opener elements</change>
+            <change when="2013-06-09" who="#wr">Duke Proofreading Corrections; Louisa's thriftiness
+                note</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent
+                Proof</change>
+            <change when="2012-04-25" who="#wr">Proofreading Corrections</change>
+            <change when="2012-12-14" who="#wr">Proofreading corrections </change>
+            <change when="2012-09-15" who="#wr">Proofreading correction of notes.</change>
+            <change when="2012-09-07" who="#wr">Review oral proofreading corrections; add RMBucke Hand note and date note.</change>
+            <change when="2012-08-22" who="#ct">Oral Proofreading Corrections</change>
+            <change when="2011-12-21" who="#wr">Correct date format in title, annotate</change>
+            <change when="2011-04-06" who="#wr">Regularize and annotate George, Hannah, Jeff, Nancy, Jimmy, Union Review, and Fiskkell.</change>
+            <change when="2011-04-06" who="#fw">Correct 2 Pages</change>
+            <change when="2011-03-30" who="#wr">Encode regularization of contractions, days of week, and frequently misspelled words</change>
+            <change when="2011-03-29" who="#fw">Transcribe 2 Pages</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <pb xml:id="leaf001r" facs="duk.00468.001.jpg" type="recto"/>
+            
+            <note type="editorial" resp="#rmb" place="top">1865</note>
+            
+            <opener>
+                <dateline>
+                    <date when="1865-12-03"><choice><orig>Decem</orig> <reg>December</reg></choice> 3<ptr target="duk.00468_n14"/></date>
+                </dateline>
+                <salute>Dear Walt</salute>
+            </opener>
+            
+            <p>it is <choice><orig>sunday</orig> <reg>Sunday</reg></choice> and i thought
+            i would write A few lines to you again
+            i received your letter yesterday and the
+            one on <choice><orig>monday</orig> <reg>Monday</reg></choice> or <choice><orig>tuesday</orig> <reg>Tuesday</reg></choice> the first with 2 <choice><orig>dolr</orig> <reg>dollars</reg></choice>
+                the one yesterday with one dollar<ptr target="duk.00468_n1"/>
+            i write this
+            because you said when you was home i never
+            wrote when you sent me any money
+            whether i received it) i have not written to han<ptr target="duk.00468_n10"/>
+                but once since you went away<ptr target="duk.00468_n2"/> 
+            but i will write to her as soon as i can get A chance
+            i seem to have very much work to <choice><orig>doo</orig> <reg>do</reg></choice> and
+                get very tired when night comes george<ptr target="duk.00425_n2"/>
+            comes home to dinner mostly every 
+                day he is very busily engaged buying lumber and material<unclear reason="illegible"
+                    cert="medium" resp="#wr">l</unclear> for finishing their building in
+                        <choice><orig>new york</orig>
+                    <reg>New York</reg></choice> i <choice><orig>beleive</orig>
+                    <reg>believe</reg></choice> they have hired one or two carpenters there is
+                plenty to be got i suppose since the great discharge in the navy yard they say there
+                was three thousand discharged quite A number of bosses i hope jake striker is among
+                the number<ptr target="duk.00468_n4"/> well Walt
+                i suppose there is stirring times in <choice><orig>washington</orig>
+                    <reg>Washington</reg></choice> just now as congress so soon meets it seems such
+                A short time since last winter but time <choice><orig>wont</orig>
+                    <reg>won't</reg></choice> wait for us </p>
+            
+            <pb xml:id="leaf001v" facs="duk.00468.002.jpg" type="verso"/>
+
+            <p>well Walt i <choice><orig>dident</orig>
+                    <reg>didn't</reg></choice> get my shoes i had made for me they
+                        <choice><orig>dident</orig>
+                    <reg>didn't</reg></choice> fit me they were to tight i <choice><orig>dont</orig>
+                    <reg>don't</reg></choice> know when i shall get any more i
+                        <choice><orig>dont</orig>
+                    <reg>don't</reg></choice> have much money to spend now adays to think i was such
+                A fool as to use all the money i had in the bank and save the other now i want it
+                and wish i had saved my own<ptr target="duk.00468_n24"/>
+                George is good <choice><orig>enoughf</orig>
+                    <reg>enough</reg></choice> and gives mone<unclear reason="illegible"
+                    cert="medium" resp="#wr">y</unclear> when i ask him but Walt you know how i
+                dislike to ask and there is so many little things to take money that young men that
+                never had A family <choice><orig>dont</orig>
+                    <reg>don't</reg></choice> think <choice><orig>off</orig>
+                    <reg>of</reg></choice> but i might be very much worse off but i get kind of down
+                hearted sometimes living always in the basement and working so hard but i
+                        <choice><orig>gess</orig>
+                    <reg>guess</reg></choice> i <choice><orig>wont</orig>
+                    <reg>won't</reg></choice> say any more about it at present Walt
+                        <choice><orig>dont</orig>
+                            <reg>don't</reg></choice> send this letter to han the last one<ptr
+                                target="duk.00468_n5"/>
+                you can send if you like only it is wrote on such bad paper Jeff<ptr target="duk.00422_n2"/> has been away up
+                back of fishkills<ptr target="duk.00468_n6"/> but has got back they are all
+                well and sis is as fat as butter<ptr target="duk.00472_n2"/> did you get the union<ptr target="duk.00468_n12"/> i give it to Jeffy to send nancy<ptr target="duk.00432_n21"/> has
+                been here as usual and Jimmy comes occational<unclear reason="illegible"
+                    cert="medium" resp="#wr">ly</unclear> it is very warm here to day
+                        <choice><orig>Edds</orig>
+                    <reg>Edd's</reg></choice> eyes and face has got better so he has gone to
+                church<ptr target="duk.00425_n13"/> to day no
+                        <choice><orig>mor</orig>
+                    <reg>more</reg></choice>
+            </p>
+            <closer>
+                <salute>your mother</salute> 
+                <signed>L W<ptr target="duk.00425_n3"/></signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

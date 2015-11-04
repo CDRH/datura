@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="man.00036">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Frederick Locker-Lampson to Walt Whitman, 3 July 1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Frederick Locker</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>man.00036</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Frederick Locker-Lampson</author>
+                    <title>Frederick Locker-Lampson to Walt Whitman, 3 July 1880</title>
+                    <date cert="high" when="1880-07-03" xml:id="dat1">July 3, 1880</date>
+                    <orgName xml:id="man">Charles Sixsmith Collection at the John Rylands Library, University of Manchester</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Locker-Lampson, Frederick">Frederick Locker-Lampson</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-03-30" who="#ss">annotations added</change>
+            <change when="2014-01-16" who="#nhg">checked</change>
+            <change when="2013-12-19" who="#ss">checked</change>
+            <change when="2013-09-24" who="#nnk">proofed</change>
+            <change when="2013-09-05" who="#ej">Transcribed and Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="man_ej.00083_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">25 Chesham Street</name>
+                    <name type="place">London S. W.</name>
+                    <date when="1880-07-03">3 July 1880</date>
+                </dateline>
+                <salute/>My dear Friend</opener>
+
+            <p>I write you one line to ask you if you can do me a little <choice>
+                <orig>favour</orig><reg>favor</reg></choice>.<ptr target="n0905"/> I possess Walter Scott's poem of "Harold the Dauntless," in Walter Scott's
+                    <hi rend="underline">own hand writing</hi>, &amp; one or two leaves of the
+                precious <choice><abbr>MS</abbr><expan>manuscript</expan></choice> are unfortunately lost. A few of my friends,
+                who are poets, have been pleased to do honour to themselves &amp; to Scott, &amp; they have Copied in the missing lines
+                of the poem. Would you kindly write in one stanza of nine lines. I have marked the
+                exact place where they are to come. A Tennyson, Longfellow, Emerson, Whittier,
+                Holmes, Browning, &amp; a few others, English &amp; American Poets, have already
+                written in their share, &amp; the book is nearly complete. I wish I could send you
+                the Volume, but I hardly dare trust it by post. So I send a leaf which when you,
+                &amp; three or four others, have written in the Contents, will be added to the
+                Scott. <choice><abbr>MS</abbr><expan>manuscript</expan></choice>.</p>
+
+            <p>Pardon me for troubling you on this rather absurd subject, &amp; for asking you for
+                this favour</p>
+
+            <pb xml:id="leaf001v" facs="man_ej.00235_large.jpg" type="verso"/>
+
+            <p>Tennyson has been at Venice. &amp; is now in Paris. I expect him in London early next
+                week.</p>
+
+            <closer>
+                <salute>Believe me Affectionate Your Friend,</salute>
+                <signed>F Locker</signed>
+            </closer>
+            <pb xml:id="leaf002r" facs="man_ej.00236_large.jpg" type="recto"/>
+            <pb xml:id="leaf002v" facs="man_ej.00085_large.jpg" type="verso"/>
+            <pb xml:id="leaf003r" facs="man_ej.00086_large.jpg" type="recto"/>
+            <pb xml:id="leaf003v" facs="man_ej.00087_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.00761">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Ralph Waldo Emerson to Walt Whitman, 12 January 1863</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Ralph Waldo Emerson</author>
+            <editor>Edwin Haviland Miller</editor>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="kk">Kathryn Kruger</persName>
+               <persName xml:id="ec">Eric Conrad</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+
+               <persName xml:id="ao">Alyssa Olson</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>loc.00761</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Ralph Waldo Emerson</author>
+                  <editor>Edwin Haviland Miller</editor>
+                  <title xml:id="ehm">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>New York</pubPlace>
+                     <publisher>New York University Press</publisher>
+                     <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                     <biblScope type="volume">1</biblScope>
+                     <biblScope type="page">66</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Ralph Waldo Emerson</author>
+               <title>Ralph Waldo Emerson to Walt Whitman, 12 January 1863</title>
+               <date when="1863-01-12">January 12, 1863</date>
+               <orgName xml:id="loc">Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Emerson, Ralph Waldo">Ralph Waldo Emerson</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#kk" when="2011-08-08">Seward link</change>
+         <change who="#ec" when="2009-08-25">style sheet proofreading</change>
+         <change who="#vs" when="2008-09-12">added main TEI markup</change>
+         <change who="#el" when="2008-07-30">added TEI header structure w/o IDs and titles; added minimal TEI markup</change>
+         <change who="#ao" when="2008-07-29">pulled transcription from Primary Source Media</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+            <opener>
+               <dateline rend="right">
+                  <name type="place">Buffalo&#8212;</name>
+                  <date when="1863-01-12">12 Jan<hi rend="superscript">y</hi> 1863<ptr target="loc.00761_n100"/>
+               </date>
+               </dateline>
+               <salute>Dear Sir,</salute>
+            </opener>
+            <p>I am very sorry to be so late with my reply to your note, which was received by me just on leaving home to go to Canada, &amp; thence to some of your West N.Y. cities, a journey which has left me no leisure for writing notes to diplomatists, until today.<ptr target="loc.00761_n3"/>
+            </p>
+            <p>If you wish to live in that least attractive (to me) of cities, I must think you can easily do so. Perhaps better in the journalism than in the Departments.
+You will see that I have dated my note from my known residence.<ptr target="loc.00761_n4"/> With best hope,</p>
+            <closer rend="right">
+               <signed>R. W. Emerson</signed>
+            </closer>
+         
+
+            <postscript>
+            <p>Walt Whitman, Esq.</p>
+         </postscript>
+
+      </body>
+   </text>
+</TEI>

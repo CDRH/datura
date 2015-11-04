@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.01597">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title level="m" type="main">Walt Whitman to John Flood, Jr., 8 March [1871?]</title>
+        <title level="m" type="sub">a machine readable transcription</title>
+        <author>Walt Whitman</author>
+        <editor>Kenneth M. Price</editor>
+        <editor>Ed Folsom</editor>
+        <respStmt>
+          <resp>Transcription and encoding</resp>
+          <name>The Walt Whitman Archive Staff</name>
+        </respStmt>
+        <sponsor>Center for Digital Research in the Humanities, University of
+          Nebraska-Lincoln</sponsor>
+        <sponsor>University of Iowa</sponsor>
+        <funder>National Historical Publications and Records Commission</funder>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <date>2012</date>
+        </edition>
+      </editionStmt>
+      <publicationStmt>
+        <idno>loc.01597</idno>
+        <distributor>The Walt Whitman Archive</distributor>
+        <address>
+          <addrLine>Center for Digital Research in the Humanities</addrLine>
+          <addrLine>319 Love Library</addrLine>
+          <addrLine>University of Nebraska-Lincoln</addrLine>
+          <addrLine>P.O. Box 884100</addrLine>
+          <addrLine>Lincoln, NE 68588-4100</addrLine>
+        </address>
+        <availability>
+          <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the
+            Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law.
+            Redistribution or republication on other terms, in any medium, requires express written
+            consent from the editors and advance notification of the publisher, Center for Digital
+            Research in the Humanities. Permission to reproduce the graphic images in this archive
+            has been granted by the owners of the originals for this publication only.</p>
+        </availability>
+      </publicationStmt>
+      <notesStmt>
+        <note type="project">The following are responsible for particular readings or for changes to
+          this file, as noted: <persName xml:id="el">Elizabeth Lorang</persName>
+          <persName xml:id="zk">Zachary King</persName>
+          <persName xml:id="ec">Eric Conrad</persName>
+        </note>
+      </notesStmt>
+      <sourceDesc>
+
+        <biblStruct>
+          <monogr>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <title xml:id="ehm">The Correspondence</title>
+            <imprint>
+              <pubPlace>New York</pubPlace>
+              <publisher>New York University Press</publisher>
+              <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+              <biblScope type="volume">2</biblScope>
+              <biblScope type="page">119</biblScope>
+            </imprint>
+          </monogr>
+        </biblStruct>
+
+        <bibl>
+          <author>Walt Whitman</author>
+          <title>Walt Whitman to John Flood, Jr., 8 March [1871?]</title>
+          <date cert="medium" when="1871-03-08" xml:id="dat1">March 8, 1871</date>
+          <idno type="callno">MSS18630<!--  Box 9 --></idno>
+          <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman,
+            1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <particDesc>
+        <person role="sender">
+          <persName key="Whitman, Walt">Walt Whitman</persName>
+        </person>
+        <person role="recipient">
+          <persName key="Flood Jr., John">John Flood, Jr.</persName>
+        </person>
+      </particDesc>
+    </profileDesc>
+    <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+      <change when="2012-11-29" who="#el">checked</change>
+      <change when="2012-06-20" who="#el">checked</change>
+      <change when="2010-11-10" who="#zk">encoded</change>
+      <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+    </revisionDesc>
+  </teiHeader>
+
+  <text type="letter">
+    <body>
+      <opener>
+        <dateline>
+          <date when="1871-03-08" rend="right">Wednesday evening <lb/>March 8</date><ptr
+            target="loc.01597_n1"/>
+        </dateline>
+        <salute>Dear son,<ptr target="loc.01597_n2"/></salute>
+      </opener>
+
+      <p>I thought I would write you just a short letter, if no more, as you are in my mind this
+        evening. I sometimes come to the office nights, to read, it is so quiet&#8212;and now I am
+        sitting here at my desk, with a good lamp, all alone. So I thought of my dear boy, and will
+        send a few words, though nothing particular to say. </p>
+
+      <p>Johnny, I wish you would write to me when you receive this, whether you have got work yet.
+        Dear son, if you feel to come on here on a visit, you come with me&#8212;you shall not be
+        under any expense for board and lodging. </p>
+
+      <p>Johnny, I send you my love, &amp; good night for this time&#8212;the mail closes at 8,
+        &amp; it is some after 7 now. </p>
+
+      <!-- Unsigned. -->
+
+    </body>
+  </text>
+</TEI>

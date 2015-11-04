@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03918">
+    <teiHeader> 
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Susan Stafford, 10 November
+                    [1884]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03918</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Susan Stafford, 10 November [1884]</title>
+                    <date cert="medium" when="1884-11-10" xml:id="dat1">November 10, 1884</date>
+                    <idno type="callno">Box 16, Reel 10</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="unk"><persName key="Unknown">Unknown</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Stafford, Susan" ref="n0817">Susan Stafford</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+
+        <revisionDesc>
+            <change when="2014-09-21" who="#ss">transcribed, encoded and annotated from
+            Miller.</change>
+            <change when="2015-01-15" who="#kb">edited</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_jc.00539_large.jpg" type="recto"/>
+            <note type="editorial" resp="#unk" place="top">(1884)</note>
+
+            <opener>
+                <dateline>
+                    <name type="place">328 Mickle street</name>
+                    <name type="place">Camden</name>
+                    <date when="1884-11-10" rend="right">Monday 3 pm Nov 10<ptr
+                            target="loc.03918_n1"/></date>
+                </dateline>
+            </opener> 
+
+            <p>Thanks my dear friend for the nice chicken&#8212;I have just had a part of it for
+                my dinner&#8212;&#38; the <hi rend="underline">honey in the comb</hi> just like that
+                is something I like&#8212;I had a very pleasant visit out in Germantown&#8212;I went
+                partly at the request of a fine jolly young Englishman who is visiting there for a
+                few days, &#38; told me much about my friends in England (of whom I find I have far
+                more than I knew of)&#8212;</p>
+            <p>I am about as usual&#8212;feel considerably better, more able to get around <pb
+                    xml:id="leaf001v" facs="loc_jc.00540_large.jpg" type="verso"/>since the cool
+                weather has set in&#8212;had rather a bad summer&#8212;my walking power gives out
+                more this year, &#38; I am afraid is destined to be worse, instead of
+                better&#8212;otherwise I am about the same&#8212;appetite good&#8212;spirits
+                ditto&#8212;</p>
+            <p>&#8212;I am sorry I wasn't in when you stopped this forenoon&#8212;have been hoping you
+                would stop this afternoon&#8212;Does George keep well this fall?&#8212;Ruth how do you
+                like married life?<ptr target="loc.03918_n2"/>&#8212;I rec'd <hi rend="underline">the
+                    cake</hi>&#8212;very nice&#8212;Well Ed, how are you about Cleveland?<ptr
+                        target="loc.03918_n3"/>&#8212;I am just as well satisfied&#8212;</p>
+            <p>&#8212;I have rec'd a long letter from Herbert<ptr target="loc.03918_n4"/>&#8212;nothing
+                very new. The Lord bless you &#38; be with you all&#8212;</p>
+
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+
+        </body>
+    </text>
+</TEI> 

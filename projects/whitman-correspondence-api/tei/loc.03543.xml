@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03543">
+    <teiHeader> 
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Thomas W. H. Rolleston, 20 April
+                    1884</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03543</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive April be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Thomas W. H. Rolleston, 20 April 1884</title>
+                    <date cert="medium" when="1884-04-20" xml:id="dat1">April 20, 1884</date>
+                    <idno type="callno">Box 15, Reel 9</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the
+                        Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington,
+                        D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>      
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="ww"><persName key="Whitman, Walt">Walt
+                    Whitman</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Rolleston, Thomas W. H." ref="n1027">Thomas W. H. Rolleston</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-07-21" who="#nhg">corrected</change>
+            <change when="2014-09-11" who="#ss">transcribed, encoded and annotated</change>
+            <change when="2014-12-15" who="#kb">edited</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+
+        <body>
+            <pb xml:id="leaf001r" facs="loc.03543.001_large.jpg" type="recto"/>
+
+            <opener>
+                <dateline>
+                    <note type="editorial" resp="#ww" place="top">April 22 '84 Sent to Rolleston
+                        Dresden, to put in his preface</note>
+                </dateline>
+            </opener>
+ 
+            <p>I thought I would write a brief endorsement of your friendly enterprise,<ptr
+                    target="loc.03543_n2"/> translating and publishing in Germany, some of the poems
+                of my <hi rend="underline">Leaves of Grass</hi>.<ptr target="loc.03543_n1"/> It has
+                not been for my own country alone <add rend="pasteon" place="right">&#8212;ambitious as
+                    the saying so may seem&#8212;</add> that I have composed that work. It has been to
+                practically start an internationality of poems. The final aim of the United
+                States of America is the solidarity of the world. What fails so far, may yet be accomplished by song, radiating,
+                clustering, concentrating from all the lands of the earth, into a new chorus and
+                diapason. One purpose of my chants is to cordially salute all foreign lands in
+                America's name. And happy, most happy shall I be, to gain entrance and hearing among
+                the great Germanic peoples.</p>
+
+            <pb xml:id="leaf001v" facs="loc.03543.002_large.jpg" type="verso"/>
+        </body>
+    </text> 
+</TEI>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.04874">
+    <teiHeader>
+        <fileDesc> 
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Talcott Williams, 16 June 1886</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.04874</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive June be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Talcott Williams, 16 June 1886</title>
+                    <date cert="high" when="1886-06-16" xml:id="dat1">June 16, 1886</date>
+                    <idno type="callno">Box 19, Reel 11-12</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Williams, Talcott" ref="loc.05142_n5">Talcott Williams</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-03-16" who="#kb">edited</change>
+            <change when="2014-10-12" who="#ss">encoded and annotated from Miller.</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_vm.01354_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">328 Mickle street</name>
+                    <name type="place">Camden</name>
+                    <date when="1886-06-16" rend="right">June 16 '86</date>
+                </dateline>
+                <salute>My dear friend</salute>
+            </opener>
+            <p>Enclosed I send my piece in Thorndike Rice's just issued <hi rend="underline"
+                    >Lincoln Reminiscences</hi><ptr target="loc.04874_n1"/>&#8212;I don't
+                know whether you will want it&#8212;but I do know you like to have earliest copies
+                of any thing. Should you print it, I leave the head-lines &#38; introductory to
+                you&#8212;&#38; dont forget to give Rice's book the due credit. Should you print, I
+                wish you would send me here 25 copies paper.</p>
+            <p>&#8212;I am ab't as usual&#8212;just going to drive down 12 miles to visit a poor young
+                fellow, Walter Borton,<ptr target="loc.04874_n2"/> very low with consumption.</p> <p>Love
+                to Mrs. W. and the sister.</p>
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+            <postscript>
+                <p>If you cant use it, return the enclosed proof to me.</p>
+            </postscript>
+            <pb xml:id="leaf001v" facs="loc_vm.01355_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>  

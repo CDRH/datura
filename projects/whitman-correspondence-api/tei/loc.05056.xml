@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+ 
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05056">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Ainsworth R. Spofford, [September(?) 1881]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                    <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05056</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date when="1964">1964</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">247</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Ainsworth R. Spofford, [September(?) 1881]</title>              
+                    <date cert="low" when="1881-09" xml:id="dat1">September 1881</date>
+                    <orgName xml:id="loc">Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Spofford, Ainsworth R.">Ainsworth R. Spofford</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>            
+            <change when="2014-08-06" who="#nhg">checked, corrected</change>
+            <change when="2014-02-20" who="#ss">checked</change>
+            <change when="2014-01-16" who="#ej">Checked and Corrected</change>
+            <change when="2013-10-01" who="#kc">Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">  
+        <body>
+
+            <opener>
+                <salute>My dear <choice><orig>Mr</orig><reg>Mr.</reg></choice> Spofford<ptr target="loc.05056_n1"/></salute>
+            </opener>
+
+            <p>If convenient won't you inform me soon as possible by letter here, of the dates of my copyrights on <hi rend="italic">Leaves of Grass</hi>&#8212;I think they were in 1856, 1860, 1866 (or 7) and in 1876&#8212;but want to know <hi rend="italic">exactly</hi>&#8212;</p>
+
+            <closer>
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+            <postscript><p>If you have a printed slip or abstract of the copyright laws, please enclose that also.</p>
+                    <p>address me <address><addrLine>Boston</addrLine>
+                        <addrLine>care Osgood &amp; <choice><abbr>Co:</abbr><expan>Company</expan></choice></addrLine>
+                        <addrLine>211 Tremont Street</addrLine></address></p></postscript>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="med.00663">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Miss Chevalier, [?] October 1878</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                    <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>med.00663</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Ted Genoways</editor>
+                        <title xml:id="tg">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>Iowa City, IA</pubPlace>
+                            <publisher>University of Iowa Press</publisher>
+                            <date when="2004">2004</date>
+                            <biblScope type="volume">7</biblScope>
+                            <biblScope type="page">53</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Miss Chevalier, [?] October 1878</title>              
+                    <date cert="medium" notBefore="1878-10-01" notAfter="1878-10-31" xml:id="dat1">October 1878</date>
+                    <orgName xml:id="med">The location of the original manuscript is unknown. Genoways's transcription is derived from a facsimile in the auction catalogs of Joseph Rubinfine American Historical Autographs, West Palm Beach, Florida (Item 45, List 137).</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Chevalier, Miss">Miss Chevalier<ptr target="med.00663_n1"/></persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>            
+            <change when="2014-08-04" who="#nhg">checked, corrected</change>
+            <change when="2014-02-20" who="#ss">checked</change>
+            <change when="2014-01-07" who="#ej">Checked and Corrected</change>
+            <change when="2013-12-10" who="#kc">Transcribed and Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            
+            <p>Autumn Leaves<ptr target="med.00663_n2"/></p>
+            <p>for October 1878</p>
+            <p>Miss Chevalier<ptr target="med.00663_n1"/></p>
+
+            <closer>
+                <salute>&#8212;&#8212;&#8212;&#8212;</salute>
+                <signed>Walt Whitman</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

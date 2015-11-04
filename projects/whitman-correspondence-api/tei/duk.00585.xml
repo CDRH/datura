@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00585">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, 19 October [1869]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="ct">Cathy Tisch</persName>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00585</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, 19 October [1869]</title>
+                    <date cert="high" when="1869-10-19" xml:id="dat1">October 19, 1869</date>
+                    <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>          
+            <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-12-10" who="#el">corrected mis-regularization of st. louis; changed transcription 'received' to 'receeved' and added choice encoding; added unclear to Louisa's 'deliru tremes'; removed unclear from 'prices'; remove space between 'L' and 'W' in closer</change>
+            <change when="2013-11-07" who="#el">corrected values of @facs on pbs</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-11-04" who="#el">checked</change>
+            <change when="2013-09-17" who="#el">checked</change>
+            <change when="2013-01-15" who="#wr">Note Proofreading Corrections</change>         
+            <change when="2013-01-10" who="#wr">Review Proofreading Corrections and add annotations
+            on letter date, Harper's Magazine, add RMB handnote; annotation on Mattie's return on
+            Brooklyn, Walt's visit to New York, correct deficient Thayer note.</change>
+            <change when="2012-08-16" who="#ct">Oral Proofreading Corrections</change>
+            <change when="2012-08-14" who="#wr">Clean encoding (editor, date, remove "_large") and add standard annotations on unannotated files (Jeff W, Martha [Mattie], George W, Lou Haslam)</change>
+            <change when="2011-01-31" who="#fw">Transcribe 2 surfaces</change>
+            <change when="2011-02-16" who="#fw">Correct 2 surfaces</change>
+            <change when="2011-03-16" who="#fw">Annotate O'Connor</change>
+            <change when="2011-03-30" who="#wr">Encode regularization of contractions, days of week, and frequently misspelled words</change>
+            <change when="2011-04-13" who="#fw">Annotate Dr. Thayer</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+           
+            <pb xml:id="leaf001r" facs="duk.00585.001.jpg" type="recto"/>
+            
+            <note type="editorial" resp="#rmb" place="top">19 Oct 1869</note>
+            
+            <opener>
+                <dateline>
+                    
+                    <date when="1869-10-19"><choice><orig>tuesday</orig><reg>Tuesday</reg></choice> October 19<ptr target="duk.00585_n9"/>
+                    </date>
+                </dateline>
+                <salute>my dear Walter</salute>
+            </opener>
+            
+            <p>i <choice><orig>receeved</orig><reg>received</reg></choice> your letter to day
+                with the money and <choice><orig>harpers magsine</orig><reg>Harper's Magazine</reg></choice><ptr target="duk.00585_n13"/>
+                i was
+            glad to have the number and letter too i scarce
+            ever see the magazine now adays but 
+            like to read it particularly at present
+            for i have had such a sore thumb on 
+            my right hand i <choice><orig>couldent</orig> <reg>couldn't</reg></choice> hardly sew
+                a stich i got a <choice><orig>splenter</orig> <reg>splinter</reg></choice> in it before the
+            folks went away and then slopping about
+            in cold water it got so bad i put
+                <choice><orig>slipery</orig> <reg>slipery</reg></choice> elm<ptr target="duk.00585_n17"/> on it but it <choice><orig>dident</orig> <reg>didn't</reg></choice> <choice><orig>doo</orig> <reg>do</reg></choice> much
+            good but it has got so i can use it to day
+            i was so disappointed last <choice><orig>saturday</orig> <reg>Saturday</reg></choice> in 
+            Georges not coming home i wanted him
+            to come very much to fix the stove for one
+            thing but Edd and i got it up yesterday
+            i thought we could hardly get it out
+            but we did and its much better it has
+            been quite cold here i got a bushel of
+            coal this morning and it works much
+            better than wood) i <choice><orig>havent</orig> <reg>haven't</reg></choice> heard from
+                <choice><orig>st louis</orig> <reg>St. Louis</reg></choice> since i last wrote to you <choice><orig>walter</orig><reg>Walter</reg></choice>
+            i <choice><orig>dont</orig> <reg>don't</reg></choice> know whether <choice><orig>matty</orig><reg>Matty</reg></choice><ptr target="duk.00585_n7"/> is coming
+            on here this fall or not i <choice><orig>dont</orig> <reg>don't</reg></choice> think
+                it would be good for her i think <choice><orig>its</orig> <reg>it's</reg></choice>
+            too late in the season but if they come we
+            will <choice><orig>doo</orig> <reg>do</reg></choice> the best we can) not one of the
+               prices has been here since you went
+            away you know helen<ptr target="hyb.00002_n11"/> was here just
+            before you left and i said i thought
+            she <choice><orig>hadent</orig> <reg>hadn't</reg></choice> a very good time
+            <pb xml:id="leaf001v" facs="duk.00585.002.jpg" type="verso"/>
+            i sent a letter to <choice><orig>hanna</orig><reg>Hannah</reg></choice><ptr target="duk.00438_n4"/> last week a
+            good long letter urging her as much
+            as i thought would <choice><orig>doo</orig> <reg>do</reg></choice> to come and <choice><orig>mak</orig> <reg>make</reg></choice>
+                us a good <choice><orig>vesit</orig> <reg>visit</reg></choice> that i particularly
+            wanted her to come and that she must
+            write to me as soon as she received
+            my letter without fail and i suppose
+            that will be the last of it i put one dollar
+            in the letter and said i send a little
+            change but will send more next time
+            whether she ever gets any of the letters
+            i <choice><orig>dont</orig> <reg>don't</reg></choice> know) i have had thoughts
+                of sending a line to Dr <choice><orig>thayer</orig><reg>Thayer</reg></choice><ptr target="duk.00585_n1"/> what
+            <choice><orig>doo</orig> <reg>do</reg></choice> you think of it <choice><orig>walter</orig><reg>Walter</reg></choice> <choice><orig>doo</orig> <reg>do</reg></choice> you
+                think it would be best or not)  <choice><orig>mary</orig><reg>Mary</reg></choice><ptr target="duk.00425_n6"/>
+                wanted me very much to go to <choice><orig>Burlng</orig><reg>Burlington</reg></choice><ptr target="duk.00585_n14"/>
+                and she would stay and keep <choice><orig>edd</orig><reg>Edd</reg></choice><ptr target="duk.00425_n13"/>
+            i told her i <choice><orig>dident</orig> <reg>didn't</reg></choice> feel able to
+            undergo the journey) you know  <choice><orig>mary</orig><reg>Mary</reg></choice> 
+            wrote that Ansel<ptr target="duk.00585_n15"/>
+            they thought failed
+            the business was while they were down
+            in <choice><orig>virginia</orig> <reg>Virginia</reg></choice> he got a drinking and
+                John <choice><orig>Louisa s</orig> <reg>Louisa's</reg></choice> husband<ptr target="duk.00585_n18"/>
+                got very much
+            put out with him and throwed his liquor
+            overboard and they came home <choice><orig>ansel</orig><reg>Ansel</reg></choice>
+            come near dying with the <choice><orig>deliru trem<unclear reason="illegible" cert="medium" resp="#wr">es</unclear></orig><reg>delirium tremes</reg></choice><ptr target="duk.00585_n20"/>
+                he was master mason in <unclear reason="illegible">his</unclear> lodge 
+                but is broke and gone down to a common man<ptr target="duk.00585_n26"/>
+                 <choice><orig>mary</orig><reg>Mary</reg></choice> and <choice><orig>louisa</orig><reg>Louisa</reg></choice>
+            belongs to the <choice><orig>presbeteran</orig><reg>Presbyterian</reg></choice>
+            church but the change of heart we <choice><orig>wont</orig> <reg>won't</reg></choice>
+            say any thing about she says she is as good
+            as the rest and have a 20 <choice><orig>dol</orig> <reg>dollars</reg></choice> pew and <unclear reason="illegible">with</unclear>
+            </p>
+
+            <closer>
+                <salute>Love to all of the <choice><orig>Oconors</orig><reg>O'Connors</reg></choice><ptr target="duk.00585_n2"/></salute>
+                <signed>LW<ptr target="duk.00425_n3"/></signed>
+            
+            </closer>
+            <postscript><p>sorry to hear her sister is ill<ptr target="duk.00585_n3"/></p>
+            </postscript>
+        </body>
+    </text>
+</TEI>

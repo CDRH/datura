@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nyp.00200">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to Ellen M. O'Connor, 12 October 1865</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+
+               <persName xml:id="ao">Alyssa Olson</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>nyp.00200</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Walt Whitman</author>
+                  <editor>Edwin Haviland Miller</editor>
+                  <title xml:id="ehm">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>New York</pubPlace>
+                     <publisher>New York University Press</publisher>
+                     <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                     <biblScope type="volume">1</biblScope>
+                     <biblScope type="page">267-268</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to Ellen M. O'Connor, 12 October 1865</title>
+               <date when="1865-10-12">October 12, 1865</date>
+               <orgName xml:id="nyp">Henry W. and Albert A. Berg Collection, New York Public Library</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="O'Connor, Ellen M.">Ellen M. O'Connor</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#el" when="2010-04-11">proofread and edited</change>
+         <change who="#vs" when="2009-08-27">proofread and edited annotations</change>
+         <change who="#vs" when="2008-10-14">added main TEI markup</change>
+         <change who="#el" when="2008-07-30">added TEI header structure w/o IDs and titles; added minimal TEI markup</change>
+         <change who="#ao" when="2008-07-29">pulled transcription from Primary Source Media</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <dateline rend="right">
+                  <name type="place">Brooklyn,</name>
+                  <date when="1865-10-12">October 12, 1865.<ptr target="nyp.00200_n2"/>
+                  </date>
+               </dateline>
+               <salute>My dear Nelly,<ptr target="nyp.00200_n3"/>
+               </salute>
+            </opener>
+            <p>I sit down home here in the front basement alone to write you a few lines. Mother is still at Burlington,<ptr target="nyp.00200_n4"/> &amp; I am waiting to hear from her, what she decides, about coming home&#8212;I shall probably go for her very shortly. I find it makes a mighty difference in my visit&#8212;(What is home without&#8212;&amp;c)&#8212;</p>
+            <p>My dear little California is sick&#8212;infantile remittent fever&#8212;for the past week has just been lying quiet &amp; pale, eats literally nothing&#8212;it is pitiful, &amp; throws a gloom over every thing&#8212;doctor comes every day, &amp; sometimes twice a day&#8212;when I ask him about the chances, he is rather noncommittal&#8212;saying the disease in such a case as hers is expected to run fourteen days, before a turn for either better or worse&#8212;the fourteen days are up next Sunday&#8212;meanwhile she grows weaker &amp; weaker&#8212;</p>
+         <p>I am middling well&#8212;My brother George has resumed carpentering<ptr target="nyp.00200_n5"/>&#8212;he is well, &amp; looks fine&#8212;I see him every day&#8212;the rest of the folks all well. I send my love to Charles Eldridge&#8212;same to Ashton&#8212;when you write tell me the latest from the baby &amp; Mrs. Ashton. Send William the enclosed piece<ptr target="nyp.00200_n6"/>&#8212;it is one of those I spoke of&#8212;When you write direct to me, <hi rend="italic">Portland av. near Myrtle</hi>.<ptr target="nyp.00200_n100"/>
+         </p>
+            <closer rend="right">
+               <signed>Walt.</signed>
+            </closer>
+         
+      </body>
+   </text>
+</TEI>

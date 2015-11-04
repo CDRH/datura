@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.01734">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Peter Doyle, 5 April [1872]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="kk">Kathryn Kruger</persName>
+                    <persName xml:id="zk">Zachary King</persName>
+                    <persName xml:id="ec">Eric Conrad</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.01734</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+
+            <sourceDesc>
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Peter Doyle, 5 April [1872]</title>
+
+                    <date cert="medium" when="1872-04-05" xml:id="dat1">April 5, 1872</date>
+                    <idno type="callno">MSS18630, Box 9, Reel 5-6</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="unk"><persName key="Unknown">Unknown</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                     <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Doyle, Peter" ref="n0752">Peter Doyle</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-07-01">checked, corrected</change>
+            <change who="#ak" when="2015-05-12">added correspondent ref</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2011-01-11" who="#kk">checked</change>
+            <change when="2010-12-10" who="#zk">encoded</change>
+            <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body><pb xml:id="leaf001r" facs="loc.01734.002.jpg" type="recto"/><!--the images are labeled out of order on the database; thus the .002-->
+            <opener><note type="editorial" rend="left" resp="#unk">1870</note>
+                <dateline>
+                    <name type="place" rend="right">Brooklyn</name>,                    
+                    <date when="1872-04-05" rend="right">Friday forenoon, <lb/>April 5</date>.
+                    <note type="editorial" rend="left" resp="#unk">1872</note>
+                </dateline>
+                <salute>Dear son,</salute>
+            </opener>
+
+            <p>I expect to be back in Washington next week&#8212;somewhere in the middle of the week.&#8212;I am well&#8212;Mother is pretty well&#8212;I rec'd your letter three days since&#8212;Pete, things must 
+                be going on about the same as ever&#8212;</p>
+            
+            <p>&#812;As I write, it is pleasant weather, &#38; I am going out to get the good of it&#8212;Pete take care of yourself till I see you dear boy.
+            </p>
+            
+            <closer>
+                <signed>Walt</signed>
+            </closer>
+        </body><pb xml:id="leaf001v" facs="loc.01734.003.jpg" type="verso"/>
+        <pb xml:id="leaf002r" facs="loc.01734.004.jpg" type="recto"/>
+        <pb xml:id="leaf002v" facs="loc.01734.005.jpg" type="verso"/>
+    </text>
+</TEI>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="med.00313">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to Byron Sutherland, 15 October 1865</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+
+               <persName xml:id="ao">Alyssa Olson</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>med.00313</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Walt Whitman</author>
+                  <editor>Edwin Haviland Miller</editor>
+                  <title xml:id="ehm">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>New York</pubPlace>
+                     <publisher>New York University Press</publisher>
+                     <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                     <biblScope type="volume">1</biblScope>
+                     <biblScope type="page">268-269</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to Byron Sutherland, 15 October 1865</title>
+               <date when="1865-10-15">October 15, 1865</date>
+               <orgName xml:id="med">Location of original letter manuscript is unknown.</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Sutherland, Byron">Byron Sutherland</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#el" when="2010-04-11">proofread and edited</change>
+         <change who="#vs" when="2009-08-27">proofread and edited annotations</change>
+         <change who="#vs" when="2008-10-14">added main TEI markup</change>
+         <change who="#el" when="2008-07-30">added TEI header structure w/o IDs and titles; added minimal TEI markup</change>
+         <change who="#ao" when="2008-07-29">pulled transcription from Primary Source Media</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <dateline rend="right">
+                  <name type="place">Brooklyn,</name>
+                  <date when="1865-10-15">October 15, 1865.</date>
+               </dateline>
+               <salute>Dear Friend:</salute>
+            </opener>
+            <p>I write you a few lines to let you know that I have come home on a month's furlough&#8212;there is nothing very new or special with me. I am still employed in the Attorney Gen'l's office, &amp; shall return there before the middle of next month. I often think about you, &amp; wish it was so we could have each others society frequently&#8212;Byron,<ptr target="med.00313_n2"/> I don't know certain whether I have written to you since I rec'd your last letter or not&#8212;but it came safe, &amp; was glad to hear from you&#8212;write soon, my dear comrade, &amp; direct your letter to me, Portland Av. near Myrtle, Brooklyn, New York.<ptr target="med.00313_n3"/> Soon as I get back to Washington, I will send you word.</p>
+            <p>Here in this place &amp; New York, I go around quite a good deal&#8212;it is a great excitement to go around the busiest parts of New York, Broadway, &amp; the wharves, &amp; great ferries&#8212;The oceans of people, the trucks &amp; omnibuses, go all jammed together, &amp; such bustle &amp; noise&#8212;I like it much for a few hours now and then&#8212;but don't want to be continually in it&#8212;I have made an addition to the little book "Drum Taps,"<ptr target="med.00313_n4"/> &amp; will send you one of the perfect copies soon&#8212;we had a fine long pouring rain here all last night&#8212;I am writing this home at my mother's, in the front basement sitting by the stove, as the weather is cool&#8212;Mother is absent at Burlington, Vt, but returns to-morrow&#8212;the others have gone to church, etc&#8212;so I am entirely alone to-day&#8212;so I thought I couldn't do better than write to you. Dear comrade, I hope you are well &amp; doing well&#8212;write soon, boy&#8212;from your loving friend and comrade&#8212;</p>
+            <closer rend="right">
+               <signed>Walt Whitman.</signed>
+            </closer>
+         
+      </body>
+   </text>
+</TEI>

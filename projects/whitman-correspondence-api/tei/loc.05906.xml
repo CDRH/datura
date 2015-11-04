@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>  
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05906">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">D. L. Proudfit to Walt Whitman, 14 March 1883</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>D. L. Proudfit</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="no">Natalie O'Neal</persName>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05906</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>           
+            <sourceDesc>
+                <bibl>
+                    <author>D. L. Proudfit</author>
+                    <title>D. L. Proudfit to Walt Whitman, 14 March 1883</title>
+                    <date cert="high" when="1883-03-14" xml:id="dat1">March 14, 1883</date>
+                    <idno type="callno">MSS18630, Box 33</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Proudfit, D. L.">D. L. Proudfit</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-02-16" who="#nhg">added images and transcription for top half of letter</change>
+            <change when="2014-11-17" who="#nhg">checked, corrected</change>
+            <change when="2014-11-10" who="#ak">corrected transcription and encoding</change>
+            <change when="2014-10-13" who="#no">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_nhg.00207.jpg" type="recto"/>
+            <opener>
+                <dateline>  
+                    <name type="place"><handShift rend="printed"/>LITHOGRAPHIC DEPARTMENT<ptr target="loc.05906_n1"/> <lb/>AMERICAN BANK NOTE COMPANY</name>
+                    <name type="place">American Bank Note Company, National Bank Note Company, Continental Bank Note Company, <lb/>Consolidated.</name>
+                    <name type="place">RAILROAD TICKET AND TYPE DEPARTMENT 53 BROADWAY.</name>
+                    <name type="place">P.O. BOX. 781.</name>
+                    <name type="place">Address All Communications to the Company.</name>
+                    <name type="place">New York,</name>
+                    <date when="1883-03-14" rend="right"><handShift rend="manuscript"/>March 14, <handShift rend="printed"/>188<handShift rend="manuscript"/>3</date>
+                </dateline>
+                <salute>My Dear Mr Whitman</salute>
+            </opener>
+            <p>Enclosed please find <choice><abbr>CK</abbr><expan>check</expan></choice> for $12. Please send me at your convenience four copies
+            <pb xml:id="leaf001v" facs="loc_nhg.00206.jpg" type="verso"/>
+            <pb xml:id="leaf002r" facs="loc_jp.00026_large.jpg" type="recto"/>
+
+of <choice><abbr>L of G</abbr><expan>Leaves of Grass</expan></choice>. Think I can dispose of orders still &#38; wonder I never thought of it before. Do you remember the graceful willowy reader we heard together&#8212;bird-like &#38; feather-like? She is fat.</p>
+
+            <closer>
+                <salute>Yours truly</salute>
+                <signed>D. L. Proudfit</signed>
+            </closer>
+
+        </body>
+        <pb xml:id="leaf002v" facs="loc_jp.00025_large.jpg" type="verso"/>
+        <!-- Whitman wrote prose on this page - unrelated to letter -->
+        
+    </text>
+</TEI>

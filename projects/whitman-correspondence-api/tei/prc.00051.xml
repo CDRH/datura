@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="prc.00051">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Mr. and Mrs. Damon Y. Kilgore, 24 January 1877</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="gt">Grace Thomas</persName>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="ad">Anthony Dreesen</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="kp">Kenneth Price</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>prc.00051</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">75-76</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Mr. and Mrs. Damon Y. Kilgore, 24 January 1877</title>
+                    <date cert="high" when="1877-01-24" xml:id="dat1">January 24, 1877</date>
+                    <orgName xml:id="prc">This letter is privately owned by Florence A. Hoadley.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Kilgore, Mr. and Mrs. Damon Y.">Mr. and Mrs. Damon Y. Kilgore</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-01-17" who="#kp">blessed</change>
+            <change when="2014-01-14" who="#nhg">updated source information</change>
+            <change when="2013-02-18" who="#km">checked</change>
+            <change when="2013-01-07" who="#ad">Checked</change>
+            <change when="2012-11-29" who="#ab">Checked</change>
+            <change when="2012-11-08" who="#gt">Corrected</change>
+            <change when="2012-10-11" who="#gt">Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <date when="1877-01-24" rend="right"><choice><abbr>Jan</abbr><expan>January</expan></choice> 24 '77</date>
+                </dateline>
+                <salute>My dear Damon Kilgore | &#38; Mrs Kilgore</salute>
+            </opener>
+
+            <p>I will be at the Commemorative meeting. I would like to speak from ten to twenty minutes <hi rend="italic">before</hi> Mr Phillips's address. What I have to offer might be called <hi rend="italic">A true Reminiscence of Thomas Paine</hi>. I shall be to-morrow evening &#38; night, and all Friday, &#38; the following night &#38; forenoon, <hi rend="italic">at 1929 north 22d street, <choice><abbr>Phila</abbr><expan>Philadelphia</expan></choice></hi>. (north of Berks)<ptr target="prc.00051_n1"/>&#8212;&#38; if it would be convenient for you to send a carriage <hi rend="italic">there</hi> for me at about 1&#189; p m Sunday it would suit me&#8212;Call on or address me there Friday forenoon or evening, or Saturday forenoon before 12&#8212;</p>
+
+            <closer>
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+            <postscript><p>Thanks for the hospitality&#8212;hearty thanks&#8212;I will accept if I can Sunday&#8212;but it is not certain&#8212;</p></postscript>
+        </body>
+    </text>
+</TEI>

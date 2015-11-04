@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="man.00045">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Herbert J. Bathgate to Walt Whitman, 2 July
+                    1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Herbert J. Bathgate</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="am">Alicia Meyer</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>man.00045</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Herbert J. Bathgate</author>
+                    <title>Herbert J. Bathgate to Walt Whitman, 2 July 1880</title>
+                    <date cert="high" when="1880-07-02" xml:id="dat1">July 2, 1880</date>
+                    <orgName xml:id="man">Charles Sixsmith Collection at the John Rylands Library, University of Manchester</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Bathgate, Herbert J.">Herbert J. Bathgate</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-03-30" who="#ss">annotations added</change>
+            <change when="2013-12-02" who="#nhg">checked, corrected</change>
+            <change when="2013-11-19" who="#am">proofed</change>
+            <change when="2013-09-24" who="#nnk">proofed</change>
+            <change when="2013-08-29" who="#ej">Transcribed and Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="man_ej.00118_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">Oakenholt Hall</name> 
+                    <name type="place"><choice>
+                        <abbr>nr</abbr>
+                        <expan>near</expan>
+                    </choice> Flint: England</name>
+                    <date when="1880-07-02">2<hi rend="superscript">nd</hi> July 1880</date>
+                </dateline>
+                <salute>Dear Walt Whitman</salute></opener>
+
+            <p>I am very grateful for your kindness in sending me so many interesting papers from
+                time to time.<ptr target="n3019"/> The article on Emerson has touched me very nearly. It is great and
+                good&#8212;</p>
+
+            <p>My object in writing now is merely to thank you for your thoughtfulness &amp; to call
+                your attention to my change of address.</p>
+
+            <closer>
+                <salute>With affection &amp; respect</salute>
+                <signed><hi rend="underline">Herbert J. Bathgate</hi></signed>
+            </closer>
+           <pb xml:id="leaf001v" facs="man_ej.00119_large.jpg" type="verso"/> 
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="hyb.00015">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Richard Watson Gilder, 26 November 1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>hyb.00015</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Richard Watson Gilder, 26 November 1880</title>
+                    <date cert="high" when="1880-11-26" xml:id="dat1">November 26, 1880</date>
+                    <orgName xml:id="med">The current location of the manuscript of the letter is unknown. A microfilm image of the letter was obtained from Rutgers University</orgName>
+                    <orgName xml:id="duk">the enclosure is in the Trent Collection of Walt Whitman Manuscripts, Duke
+                        University Rare Book, Manuscript, and Special Collections Library.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Gilder, Richard Watson">Richard Watson Gilder</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-05-28" who="#nhg">updated ID and orgName, added images, updated transcription</change>
+            <change when="2014-04-10" who="#kc">updated ID</change>
+            <change when="2013-05-16" who="#km">checked</change>
+            <change when="2013" who="#gt">checked</change>
+            <change when="2013-02-04" who="#ej">Checked and Corrected</change>
+            <change when="2013-11-26" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <div1 type="letter">
+            <pb xml:id="leaf001r" facs="prc_af.00003_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place" rend="center">431 Stevens Street</name>
+                    <name type="place">Camden New Jersey</name>
+                    <date when="1880-11-26" rend="right"><choice><abbr>Nov:</abbr><expan>November</expan></choice> 26 '80, p m</date>
+                </dateline>
+                <salute>My dear Gilder</salute>
+            </opener>
+
+            <p>I wonder if you can help me in the matter of <choice><abbr>wh'</abbr><expan>which</expan></choice> the enclosed two pp. are a statement&#8212;<choice><sic>Havn't</sic><corr>Haven't</corr></choice> you connected with your establishment some one learn'd in copyright law &#38; its infractions, that could take the thing in hand? <hi rend="italic">injunct</hi>  Worthington or something?<ptr target="hyb.00015_n1"/></p>
+            
+            <p>&#8212;I have sent a duplicate of the two pages to John Burroughs&#8212;&#38; asked him to call &#38; see you&#8212;I am <choice><abbr>ab't</abbr><expan>about</expan></choice> the same as of late years but unable to travel &#38; mainly helpless.</p>
+            
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+            
+            <postscript>
+                <p>Nothing must be done involving heavy fees, as I couldn't pay them</p>
+            </postscript>
+            </div1>
+            <div1 type="enclosure">
+            <pb xml:id="leaf002r" facs="duk_am.00239_large.jpg" type="recto"/>
+                <opener>
+                    <date when="1880-11-26" rend="right"><choice><abbr>Nov:</abbr><expan>November</expan></choice> 26 1880</date>
+                </opener>
+                                
+                <p>R Worthington 770 Broadway New York about a year ago <choice><abbr>bo't</abbr><expan>bought</expan></choice> at auction the electrotype plates (456 pages) of the 1860&#8211;'61 edition of my book <hi rend="underline">Leaves of Grass</hi>&#8212;plates originally made by a young firm <hi rend="underline">Thayer &#38; Eldridge</hi> under my supervision there and then in Boston, (in the spring of 1860, on an agreement running five years.) A small edition was printed and issued at the time, but in six months or thereabout Thayer &#38; Eldridge failed, and these plates were stored away and nothing further done;&#8212;till about a year ago (latter part of 1879) they were put up in <choice><abbr>N Y</abbr><expan>New York</expan></choice> city by Leavitt, auctioneer, &#38; bought in by said Worthington. (Leavitt, before putting them up, wrote to me offering the plates for sale. I wrote back that said plates were worthless, being superseded by a larger &#38; different edition&#8212;that I could not use them, the 1860 ones, myself, nor would I allow them to be used by any one else&#8212;I being the sole owner of the copyright.)</p>
+                
+                <p>However it seems Leavitt did auction them &#38; Worthington <choice><abbr>bo't</abbr><expan>bought</expan></choice> them (I suppose for a mere song)&#8212;W. then wrote to me offering &#36;250 if I would add something to the text &#38; authenticate the plates, to be published in a book by him. I wrote back (I was in St Louis at the time, helpless, sick) thanking him for the offer, regretting he had purchased the plates, refusing the proposal, &#38; forbidding any use of the plates. Then &#38; since I thought the matter had dropt. But I have to add that about September 1880 (I was in London
+                    <pb xml:id="leaf002v" facs="duk_am.00240_large.jpg" type="verso"/> 
+                    <pb xml:id="leaf003r" facs="duk_am.00241_large.jpg" type="recto"/>
+                    
+                    Canada at the time) I wrote to Worthington, referring to his previous offer, then declined by me, and asking whether he still had the plates &#38; was disposed to make the same offer; to which I <choice><abbr>rec'd</abbr><expan>received</expan></choice> no answer. I wrote a second time; and again no answer.<ptr target="hyb.00015_n2"/></p>
+                
+                <p>I had supposed the whole thing dropt, &#38; nothing done, but within a week past, I learn that Worthington has been slyly printing and selling the Volume of <hi rend="underline">Leaves of Grass</hi> from those plates (must have commenced early in 1880) and is now printing and selling it. On <choice><abbr>Nov.</abbr><expan>November</expan></choice> 22, 1880, I found the book, (printed from those plates,) at Porter &#38; Coates' store, <choice><abbr>cor:</abbr><expan>corner</expan></choice> 9th &#38; Chestnut Sts. Philadelphia. P &#38; C told me they procured it from Worthington, &#38; had been so procuring it off &#38; on, for nearly a year.</p>
+                
+                <p>First I want Worthington effectually stopt from issuing the books. Second I want my royalty for all he has sold, (though I have no idea of ever getting a cent.) Third I want W. taken hold of, if possible, on criminal proceeding.</p>
+                    
+                <p>I am the sole owner of the copyright&#8212;&#38; I think my copyright papers are all complete&#8212;I publish &#38; sell the book myself&#8212;it is my sole means of living&#8212;what Worthington has done has already been a serious detriment to me.&#8212;Mr Eldridge, (of the Boston firm alluded to) is accessible in Washington D C&#8212;will corroborate first parts of the foregoing&#8212;(is my friend)</p>
+                
+                <closer>
+                <signed>Walt Whitman</signed>
+                
+                <signed>431 Stevens Street</signed>
+                
+                <signed>Camden New Jersey</signed></closer>
+                <pb xml:id="leaf003v" facs="duk_am.00242_large.jpg" type="verso"/>
+            </div1>    
+        </body>
+    </text>
+</TEI>

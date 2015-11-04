@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.04007">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Harry Stafford to Walt Whitman, 29 January 1878</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Harry Stafford</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="vm">Vince Moran</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.04007</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Harry Stafford</author>
+                    <title>Harry Stafford to Walt Whitman, 29 January 1878</title>
+                    <date cert="medium" when="1878-01-29" xml:id="dat1">January 29, 1878</date>
+                    <idno type="callno">MSS18630</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Stafford, Harry">Harry Stafford</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-04-24" who="#nhg">corrected</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-03-06" who="#ss">annotations added</change>
+            <change when="2013-10-04" who="#nhg">checked, corrected</change>
+            <change when="2013-05-29" who="#ej">Checked and Corrected</change>
+            <change when="2013-02-16" who="#ab">checked, corrected</change>
+            <change when="2013-01-23" who="#vm">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_vm.00230.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">Kirkwood <choice><abbr>N.J.</abbr><expan>New Jersey</expan></choice></name>
+                    <date when="1878-01-29" rend="right"><choice><abbr>Jan</abbr><expan>January</expan></choice> 29th&#8211;78</date>
+                </dateline>
+                <salute>Walt Whitman</salute>       
+            </opener>
+            
+            <p>Dear sir!<ptr target="n0590"/> would you oblige me by bringing me one of your books containing the "Poem on the death of ex-President Lincoln?" If so you will oblige your true friend. I wish it for a particular purpose.</p>
+            
+            <closer>
+                <salute>Yours and etc.,</salute>
+                <signed>H. Stafford</signed>
+            </closer>
+
+            <pb xml:id="leaf001v" facs="loc_vm.00229.jpg" type="verso"/>
+                       
+        </body>
+    </text>
+</TEI>

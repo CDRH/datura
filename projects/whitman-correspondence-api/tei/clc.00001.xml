@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="clc.00001">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to Le Baron Russell, 3 December 1863</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Kenneth M. Price</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="kk">Kathryn Kruger</persName>
+               <persName xml:id="tj">Tim Jackson</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2009</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>clc.00001</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Walt Whitman</author>
+                  <editor>Ted Genoways</editor>
+                  <title level="m">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>Iowa City</pubPlace>
+                     <publisher>University of Iowa Press</publisher>
+                     <date when="2004">2004</date>
+                     <biblScope type="volume">7</biblScope>
+                     <biblScope type="page">21</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to Le Baron Russell, 3 December 1863</title>
+               <date when="1863-12-03">December 3, 1863</date>
+               <orgName xml:id="clc">Percival Library, Clifton College, Bristol, England</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Russell, Le Baron">Le Baron Russell</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#el" when="2010-04-11">edited sourceDesc; commented out note five, since it's not clear whether we have permission to use the note, which is Baker's</change>
+         <change who="#kk" when="2010-04-09">proofreading changes</change>
+         <change who="#tj" when="2009-09-02">proofread and modified</change>
+         <change who="#vs" when="2009-07-17">Transcribed, Encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener rend="right">
+               <dateline>
+                  <name type="place">Washington<ptr target="clc.00001_n100"/> /</name>
+                  <date when="1863-12-03">Dec. 3d 1863<ptr target="clc.00001_n2"/>
+                  </date>
+               </dateline>
+               <salute>Dear Friend<ptr target="clc.00001_n3"/>,</salute> 
+            </opener>
+            <p>Your note<ptr target="clc.00001_n4"/> with $20 from a friend, (formerly a Breckenridge democrat<!-- <ptr target="n5" xml:id="r5"/> -->) came safe. Doctor, I have been away for a few days, but have now returned to remain here certainly for the winter &amp; ensuing spring, &amp; probably for two or three years. I feel much possessed with the wounded &amp; sick soldiers&#8212;they have taken a powerful hold of me, &amp; I am very happy among them&#8212;it is perhaps the greatest interchange of magnetism human relations are capable of&#8212;I have told you how young &amp; how American they mostly are&#8212;so on my own account&#8212;I shall continue as a missionary among them as sure as I live&#8212;I shall continue for years&#8212;tell your friend that his mony is being distributed as mony or what little purchas I find appropriate for the men of all states&#8212;I reject none of course&#8212;not rebel wounded nor blacks, nor any when I find them suffering &amp; dying&#8212;Doctor to the other friends that assisted me in Boston &amp; to yourself, I send my regards &amp; love</p>
+            <closer rend="right">
+               <signed>Walt Whitman</signed>
+            </closer>
+         
+         
+            <postscript>
+            <p>Care Major Hapgood <lb/>
+Paymaster U.S.A.</p>
+         </postscript>
+         
+      </body>
+   </text>
+</TEI>

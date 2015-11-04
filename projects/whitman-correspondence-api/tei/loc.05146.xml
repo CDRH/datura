@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05146">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Richard Maurice Bucke to Walt Whitman, 9 September
+                    1883</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Richard Maurice Bucke</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05146</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <biblStruct>
+                    <monogr>
+                        <editor>Artem Lozynsky</editor>
+                        <title xml:id="al">The Letters of Dr. Richard Maurice Bucke to Walt
+                            Whitman</title>
+                        <imprint>
+                            <pubPlace>Detroit</pubPlace>
+                            <publisher>Wayne State University Press</publisher>
+                            <date when="1977">1977</date>
+                            <biblScope type="page">23</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+
+                <bibl>
+                    <author>Richard Maurice Bucke</author>
+                    <title>Richard Maurice Bucke to Walt Whitman, 9 September 1883</title>
+                    <date cert="high" when="1883-09-09" xml:id="dat1">September 9, 1883</date>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-07-16" who="#nhg">checked, corrected</change>
+            <change when="2014-04-29" who="#ss">annotations added</change>
+            <change when="2014-03-13" who="#nnk">proofed</change>
+            <change when="2014-01-21" who="#ss">checked</change>
+            <change when="2013-12-09" who="#kc">Transcribed and Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place">[London,]<ptr target="loc.05146_n5"/></name>
+                    <date when="1883-09-09" rend="right">9<hi rend="superscript"><hi
+                                rend="underline">th</hi></hi>
+                        <choice>
+                            <abbr>Sept</abbr>
+                            <expan>September</expan>
+                        </choice> [188]3</date>
+                </dateline>
+                <salute>Dear Walt</salute>
+            </opener>
+
+            <p>I have your card of <choice>
+                    <abbr>Aug.</abbr>
+                    <expan>August</expan>
+            </choice> 30.<ptr target="n0119"/> Yes, all right&#8212;I am satisfied with "Walt Whitman" except that it
+                does not express one tenth what it ought to do justice to the subject, but I believe
+                it is the best I can do after all and so it must go&#8212;as for the paying part of
+                the business I am quite easy <choice>
+                    <abbr>abt.</abbr>
+                    <expan>about</expan>
+                </choice> that&#8212;I think it will pay in the long run and if it does not I am
+                equally satisfied except that I would like it to have some circulation on the chance
+                of its doing some good.</p>
+            <p>Yes, I saw the Santa F&#233; letter too (thanks
+                for it),<ptr target="loc.05146_n1"/> and I also saw the <choice>
+                    <abbr>N.Y.</abbr>
+                    <expan>New York</expan>
+                </choice> Times of <choice>
+                    <abbr>Aug</abbr>
+                    <expan>August</expan>
+                </choice> 8<hi rend="underline"><hi rend="superscript">th</hi></hi> on it&#8212;did
+                you see it? was it not <choice>
+                    <sic>shamefull</sic><corr>shameful</corr></choice>? The man glories in his want of sympathy, and laughs consumedly that
+                any one else should have <gap reason="damage"/> any. I saw Tommy Nicholson<ptr
+                    target="loc.05146_n2"/> down town yesterday and he showed me your letter to
+                    him.<ptr target="loc.05146_n3"/> I was well pleased to see that you really have
+                some notion of paying us another visit&#8212;I hope to see you next month and then
+                perhaps we can arrange something&#8212;perhaps you will return with me, who knows,
+                there may be luck in store for me yet! And you think of "breaking up where you
+                are living"? But you must tell me all about it when I see you, please goodness
+                that will be soon&#8212;but I cannot tell yet when I can get away East, there are
+                many things to do first and a great deal to think of&#8212;will let you know all
+                about it when I know myself&#8212;</p>
+
+            <closer>
+                <salute>Goodly dear Walt</salute>
+                <salute>Your friend</salute>
+                <signed>R M Bucke</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

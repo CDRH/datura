@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03273"><!--formerly har.00055-->
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title level="m" type="main">Walt Whitman to the Editor of the Boston <hi rend="italic">Daily Advertiser</hi> (?), 25 June [1872]</title>
+        <title level="m" type="sub">a machine readable transcription</title>
+        <author>Walt Whitman</author>
+        <editor>Kenneth M. Price</editor>
+        <editor>Ed Folsom</editor>
+        <respStmt>
+          <resp>Transcription and encoding</resp>
+          <persName xml:id="el">Elizabeth Lorang</persName>
+          <persName xml:id="kk">Kathryn Kruger</persName>          
+          <persName xml:id="zk">Zachary King</persName>
+          <persName xml:id="ec">Eric Conrad</persName>
+          <persName xml:id="nhg">Nicole Gray</persName>
+        </respStmt>
+        <sponsor>Center for Digital Research in the Humanities, University of
+          Nebraska-Lincoln</sponsor>
+        <sponsor>University of Iowa</sponsor>
+        <funder>National Historical Publications and Records Commission</funder>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <date>2012</date>
+        </edition>
+      </editionStmt>
+      <publicationStmt>
+        <idno>loc.03273</idno><!--formerly har.00055-->
+        <distributor>The Walt Whitman Archive</distributor>
+        <address>
+          <addrLine>Center for Digital Research in the Humanities</addrLine>
+          <addrLine>319 Love Library</addrLine>
+          <addrLine>University of Nebraska-Lincoln</addrLine>
+          <addrLine>P.O. Box 884100</addrLine>
+          <addrLine>Lincoln, NE 68588-4100</addrLine>
+        </address>
+        <availability>
+          <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights
+            reserved. Items in the Archive may be shared in accordance with the Fair Use
+            provisions of U.S. copyright law. Redistribution or republication on other
+            terms, in any medium, requires express written consent from the editors and
+            advance notification of the publisher, Center for Digital Research in the
+            Humanities. Permission to reproduce the graphic images in this archive has
+            been granted by the owners of the originals for this publication only.</p>
+        </availability>
+      </publicationStmt>
+      
+      <sourceDesc>
+        
+        <biblStruct>
+          <monogr>
+            <editor>Edwin Haviland Miller</editor>
+            <author>Walt Whitman</author>
+<title xml:id="ehm">The 
+Correspondence
+       </title>
+            <imprint>
+              <pubPlace>New York</pubPlace>
+              <publisher>New York University Press</publisher>
+              <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+              <biblScope type="page">295</biblScope>
+                <biblScope type="volume">5</biblScope>
+            </imprint>
+          </monogr>
+        </biblStruct>
+
+        <bibl>
+          <author>Walt Whitman</author>
+          <title>Walt Whitman to the Editor of the Boston <hi rend="italic">Daily Advertiser</hi> (?), 25 June [1872]</title>
+          <date cert="medium" when="1872-06-25" xml:id="dat1">June 25, 1872</date>
+          
+          <idno type="callno"/><!--Miller states that this MS is held in Feinberg, although we haven't encountered it there yet-->
+          <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+            Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+        </bibl>
+          
+          
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <particDesc>
+        <person role="sender">
+           <persName key="Whitman, Walt">Walt Whitman</persName>
+        </person>
+        <person role="recipient">
+            <persName key="Editor of the Boston Daily Advertiser">Editor of the Boston <hi rend="italic">Daily Advertiser</hi></persName>
+        </person>
+      </particDesc>
+    </profileDesc>
+      <revisionDesc>
+        <change who="#nhg" when="2015-06-20">corrected persName, updated respStmt structure</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change><change when="2012-11-29" who="#el">checked</change>
+<change when="2012-06-20" who="#el">checked</change>
+<change when="2012-02-29" who="#el">added additional encoding for choice; updated header</change>
+      <change when="2011-10-24" who="#kk">Feinberg not Harvard; har.00055 to loc.03273</change>
+      <change when="2011-08-01" who="#el">checked</change>
+      <change when="2010-12-13" who="#zk">encoded</change>
+      <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+    </revisionDesc>
+  </teiHeader>
+
+  <text type="letter">
+    <body>
+      <opener>
+        <dateline>
+          <name type="place" rend="right">New York</name>
+          <date when="1872-06-25" rend="right">June 25</date>.
+        </dateline>
+        <salute>Private</salute>
+        <salute>My dear Sir:</salute><ptr target="loc.03273_n1"/>       
+      </opener>
+
+      <p>I send herewith a proof of my poem for convenience for use in your paper, should you wish. As the piece is to be delivered on Wednesday afternoon, June 26, you are at liberty to print it, if you wish, in your paper of <hi rend="italic">Thursday, June 27</hi>. Of course not before.</p>
+      
+      <closer>
+        <salute>Very respectfully,</salute>
+        <signed rend="right">Walt Whitman</signed>
+      </closer>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="man.00004">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Richard Maurice Bucke to Walt Whitman, 6 February 1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Richard Maurice Bucke</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>man.00004</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>   
+                <bibl>
+                    <author>Richard Maurice Bucke</author>
+                    <title>Richard Maurice Bucke to Walt Whitman, 6 February 1880</title>
+                    <date cert="high" when="1880-02-06" xml:id="dat1">February 6, 1880</date>
+                    <orgName xml:id="man">Charles Sixsmith Collection at the John Rylands Library, University of Manchester</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName>
+                </person>
+                <person role="recipient" xml:id="ww">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-04-21" who="#nhg">added note</change>
+            <change when="2013-09-13" who="#nhg">checked, corrected</change>
+            <change when="2013-02-20" who="#ej">Checked and Corrected</change>
+            <change when="2013-02-05" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            
+            <pb xml:id="leaf001r" facs="man_ej.00025.jpg" type="recto"/>
+            <note type="editorial" place="top" resp="#ww">send 10 L of G (14 <hi rend="underline">altogether</hi>) 4 of these paid for &#38; 10 to be acct'd for &#38; 4 TR</note>
+            <opener>
+                <dateline>
+                    <name type="place" rend="center"><handShift rend="printed"/>Asylum for the Insane,</name>
+                    <name type="place" rend="right">London,</name>
+                    <date when="1880-02-06" rend="right"><handShift rend="manuscript"/><choice><abbr>Feb</abbr><expan>February</expan></choice> 6 <handShift rend="printed"/>18<handShift rend="manuscript"/>80</date>
+                </dateline>
+                <salute>My dear Walt</salute>
+            </opener>
+
+            <p>Enclosed please find a draft for twenty (&#36;20.) dollars for which please send me 3 copies of "Leaves of Grass" and 1 copy of "Two Rivulets."<ptr target="man.00004_n2"/> I delivered my lecture in Chatham the other day and this is some of the result&#8212;I shall probably have some more orders from them after a little&#8212;I am engaged to deliver the lecture in London &amp; Sarnia this month and I shall be pretty sure to have orders from both these towns I think therefore that 
+                
+                <pb xml:id="leaf001v" facs="man_ej.00026.jpg" type="verso"/>
+                
+                it would be as well for you to send me some copies to account for&#8212;say 4 copies of "L. of G." &amp; 2 of "T. R." or even more if you have plenty of copies on hand&#8212;If you send the books in a box please take care that there are no nails projecting into it&#8212;one vol. of the last batch got a little scratched up this way&#8212;You had better leave the expressage to be paid here as before &amp; I will charge it against future remittances</p>
+                            
+                
+            <closer>
+                <salute>I am yours always</salute>
+                <signed rend="right">R M Bucke</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="tex.00180">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, 5 October [1871]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>       
+                    <persName xml:id="nr">Natalie Raabe</persName> 
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>tex.00180</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, 5 October [1871]</title>
+                    <date cert="medium" when="1871-10-05" xml:id="dat1">October 5, 1871</date>
+                    <orgName xml:id="tex">The Walt Whitman Collection, Harry Ransom Humanities Research Center, The University of Texas at Austin</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="gww"><persName key="Whitman, George Washington">George Washington Whitman</persName></handNote>
+            </handNotes>                   
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient" xml:id="ww">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-07-31" who="#el">moved notes to external file and added ptrs; checked</change>
+            <change when="2013-07-30" who="#el">merged files</change>
+            <change when="2013-06-04" who="#wr">Silent Proofreading Corrections</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent Proof</change>
+            <change when="2012-11-26" who="#wr">Proofreading corrections and updated date</change>
+            <change when="2012-11-23" who="#nr">Proofreading notes.</change>
+            <change when="2012-07-27" who="#el">checked metadata and encoding and revised as necessary</change>
+            <change when="2012-07-16" who="#wr">Replaced smart quotes with straight; removed external URL links. </change>
+            <change when="2012-06-11" who="#wr">Changed straight quotes to character reference smart quotes. </change>
+            <change when="2012-05-30" who="#wr">Completed proofreading corrections</change>
+            <change when="2012-01-24" who="#fw">Added Annotations</change>
+            <change when="2012-01-20" who="#fw">Regularize spelling</change>
+            <change when="2012-01-19" who="#fw">Transcribe and correct 1 Page</change>
+        </revisionDesc>
+    </teiHeader>
+    
+    <text type="letter">
+        <body>
+            
+            <pb xml:id="leaf001r" facs="tex.00180.001.jpg" type="recto"/>
+            
+            <note type="editorial" resp="#gww" place="top">Direct to George at Camden Iron Works, Camden N.J.</note>
+            
+            <opener>
+                <dateline>
+                    <date when="1871-10-05"><choice><orig>Oct</orig> <reg>October</reg></choice> 5<ptr target="tex.00180_n4"/></date>
+                </dateline>                                               
+                <salute>my dear walt</salute>
+            </opener>
+            
+            <p>i<ptr target="duk.00425_n3"/>
+                send you the
+                receipt for the money george<ptr target="duk.00425_n2"/>
+                has sent you by <choice><orig>addams s express</orig><reg>Adams Express</reg></choice><ptr target="tex.00180_n14"/>
+                100 <choice><orig>dolr</orig> <reg>dollars</reg></choice> he wants you to write
+                to him at the above direction
+                when you receive it all right
+                <choice><orig>to day</orig> <reg>today</reg></choice> is the 4th i want to go down
+                to the post office <choice><orig>to morrow</orig> <reg>tomorrow</reg></choice> and
+                see if alls right with the order
+                george is here but will go back
+                <choice><orig>to morrow</orig> <reg>tomorrow</reg></choice> our company is here
+                yet and i <choice><orig>dont</orig> <reg>don't</reg></choice> know how long
+                they will remain<ptr target="tex.00180_n3"/>
+                i have to work
+                but i suppose i shall get through
+                i will write again walter dear
+                i got your letter <choice><orig>satterday</orig> <reg>Saturday</reg></choice> with the
+                money it come very acceptable</p>
+            <closer>
+                <salute>good bie</salute>
+            </closer>
+            
+            <pb xml:id="leaf001v" facs="tex.00180.002.jpg" type="verso"/>
+            
+            <note type="editorial" resp="#ww" place="inline">from dear mother</note>
+            
+        </body>
+    </text>
+</TEI>

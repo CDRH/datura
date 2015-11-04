@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="prc.00005">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to John Burroughs, 10 September 1866</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+               <persName xml:id="ao">Alyssa Olson</persName>
+               <persName xml:id="nhg">Nicole Gray</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>prc.00005</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            
+            <bibl>
+               <author>Walt Whitman</author>
+               <title> Walt Whitman to John Burroughs, 10 September 1866</title>
+               <date when="1866-09-10">September 10, 1866</date>
+               <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Burroughs, John">John Burroughs</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2015-01-16" who="#nhg">corrected image name</change>
+         <change when="2014-11-07" who="#nhg">added images, updated transcription to match images</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#vs" when="2009-08-27">proofread and edited annotations</change>
+         <change who="#vs" when="2008-10-31">added main TEI markup</change>
+         <change who="#el" when="2008-07-30">added TEI header structure w/o IDs and titles; added minimal TEI markup</change>
+         <change who="#ao" when="2008-07-29">pulled transcription from Primary Source Media</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         <pb xml:id="leaf001r" facs="loc.01143.003_large.jpg" type="recto"/>
+            <opener>
+               <dateline rend="right">
+                  <name type="place">New York</name>
+                  <date when="1866-09-10">Sept. 10, 1866.</date>
+               </dateline>
+               <salute>My dear friend,<ptr target="prc.00005_n1"/>
+               </salute>
+            </opener>
+            <p>My book has been delayed among the printers,&#8212;but I shall stay till it is all printed&#8212;it is a little over half done, &amp; they promise that it shall be done, or mainly so, this week. If convenient, send me a draft for the $100. If practicable send a draft payable to me, at Atlantic National 
+               
+               <pb xml:id="leaf001v" facs="loc.01143.004_large.jpg" type="verso"/>
+               
+               Bank, of Brooklyn, New York. Write me a note separate, also. Direct to me at 279 East 55th street, New York City.</p>
+            <p>The book is going to suit me pretty well&#8212;it will make a volume of 500 pages, size &amp; style &amp; type, &amp;c fully equal to Drum Taps.&#8212;I shall feel glad enough when it is completed&#8212;I have a constant struggle with the printers&#8212;They are good fellows &amp; willing enough&#8212;but it seems impossible to prevent them 
+               <pb xml:id="leaf002r" facs="loc.01143.005_large.jpg" type="recto"/>
+               
+               making lots of ridiculous errors&#8212;it is my constant dread that the book will be disfigured in that way&#8212;though we have got along pretty well thus far&#8212;I rec'd a letter from William O'Connor, &amp; wrote him in return.&#8212;I shan't be back for nine or ten days.</p>
+         <p>Remember 279 East 55th street, New York City.</p> 
+            <p>I have been well &amp; hearty. My mother is pretty well for an old woman of 72&#8212;John, I hope this will find you, &amp; the wife too
+               
+               <pb xml:id="leaf002v" facs="loc.01143.006_large.jpg" type="verso"/>
+               in good health. I send you both my love.&#8212;The weather is perfect here, &amp; if it wasn't for the worriment of the book, I should be as happy as a clam at high water, as they say down on old Long Island.</p>
+            <closer rend="right">
+               <signed>Walt.</signed>
+            </closer>
+         <pb xml:id="leaf003r" facs="loc.01143.001_large.jpg" type="recto"/>
+         <pb xml:id="leaf003v" facs="loc.01143.002_large.jpg" type="verso"/>
+      </body>
+   </text>
+</TEI>

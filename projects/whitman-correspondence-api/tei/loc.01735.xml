@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.01735">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Peter Doyle, 14 June [1872]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName><persName xml:id="el">Elizabeth Lorang</persName><persName xml:id="kk">Kathryn Kruger</persName><persName xml:id="zk">Zachary King</persName><persName xml:id="ec">Eric Conrad</persName><persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.01735</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2014 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Peter Doyle, 14 June [1872]</title>
+
+                    <date cert="medium" when="1872-06-14" xml:id="dat1">June 14, 1872</date>
+                    <idno type="callno">MSS18630, Box 9, Reel 5-6</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839–1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="unk"><persName key="Unknown">Unknown</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                     <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Doyle, Peter" ref="n0752">Peter Doyle</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-07-01">checked, corrected</change>
+            <change who="#ak" when="2015-05-12">added correspondent ref</change>
+            <change who="#ak" when="2014-10-30">added annotations</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+<change when="2014-08-12" who="#el">made basic checking changes to file</change><change when="2011-01-11" who="#kk">checked</change>
+            <change when="2010-12-13" who="#zk">encoded</change>
+            <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body><pb xml:id="leaf001r" facs="loc.01735.001.jpg" type="recto"/><note type="editorial" rend="right" resp="#unk">1872</note>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">Brooklyn, <lb/>107 north Portland av.</name>
+                    <date when="1872-06-14" rend="right">June 14</date>.
+                </dateline>
+                <salute>Dear son,</salute>
+            </opener>
+
+            <p>I got home all right Saturday night&#8212;&amp; have been having quite a good time. There is nothing 
+                very new&#8212;Mother is well as usual. I shall print my College Poem in a small book&#8212;it will be small&#8212;&amp; is intended as the beginning of a larger one<ptr target="loc.01735_n1"/>&#8212;I am having it set up at the printing office&#8212;will send you one in ten or twelve days.
+            </p>
+            
+            
+            <pb xml:id="leaf001v" facs="loc.01735.002.jpg" type="verso"/>
+            <p>Pete, how are you getting along&#8212;I suppose on 14<ptr target="loc.01735_n2"/> the same as when I was there&#8212;I see by the papers that the head men have mostly migrated from Washington, 
+                &amp; that it is said to be hot &amp; dull enough there<ptr target="loc.01735_n3"/>&#8212;
+            </p>
+            
+            <p>&#8212;Do you see any thing of Mr. Tasistro? I rec'd the letter he sent to the office for me&#8212;I am writing this in the house in Portland av&#8212;we are having a showery afternoon&#8212;</p>
+            <p>&#8212;Good bye, my darling boy&#8212;&amp; I will try to write again soon, (&amp; a more interesting letter)&#8212;</p>
+
+            <closer>
+                
+                <signed>Walt.</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

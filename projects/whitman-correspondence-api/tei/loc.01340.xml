@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.01340">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt> 
+                <title level="m" type="main">Walt Whitman to Mary Whitall Smith Costelloe, 27 July
+                    1884</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.01340</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc> 
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Mary Whitall Smith Costelloe, 27 July 1884</title>
+                    <date cert="high" when="1884-07-27" xml:id="dat1">July 27, 1884</date>
+                    <idno type="callno">Box 53</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Costelloe, Mary Whitall Smith" ref="loc.02189_n1">Mary Whitall Smith
+                        Costelloe</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+
+        <revisionDesc>
+            <change when="2015-07-23" who="#nhg">corrected sender name</change>
+            <change when="2014-09-16" who="#ss">transcribed, encoded and 
+            annotated.</change>
+            <change when="2014-12-25" who="#kb">edited</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.01340.001_large.jpg" type="recto"/>
+
+            <opener>
+                <dateline>
+                    <name type="place">328 Mickle Street</name>
+                    <name type="place">Camden N J </name>
+                    <date when="1884-05-14" rend="right">July 27 '84</date>
+                </dateline>
+                <salute>Dear friend</salute>
+            </opener>
+            <p>Your letters have been rec'd<ptr target="loc.01340_n3"/>  &#38; Alys's<ptr target="loc.04268_n3"/>  also&#8212;&#38; have given me
+                comfort&#8212;So full of living buoyancy &#38; youth&#8212;I see <hi
+                    rend="underline">those qualities</hi>&#8212;or the tally of them&#8212;are the
+                important matter, &#38; then the circumstances &#38; happenings may be whatever may
+                chance&#8212;The son [&#8212;] a friend of mine [&#8212;] of the proprietor of the paper here asked me
+                to "help him out" in yesterday's paper<ptr target="loc.01340_n1"/>&#8212;so I gave
+                him the letter to print&#8212;I enclose you the slip&#8212;how well &#38; off-hand
+                it reads <pb xml:id="leaf001v" facs="loc.01340.002_large.jpg" type="verso"/>&#8212;I
+                am living here in my den in Mickle Street the same as ever&#8212;A little
+                episode&#8212;the 9-month-old baby grandson of Mrs. Lay (my housekeeper) was
+                attacked with cholera infantum &#38; brain trouble a week ago&#8212;the doctor
+                insisted on a change of <hi rend="underline">locale</hi>&#8212;they lived in hot
+                close rooms&#8212;so the babe &#38; mother &#38; two other children are here the
+                past week&#8212;&#38; the babe (an exceptionally fine one), is out of
+                danger&#8212;but it has been a close shave&#8212;the doctor comes twice a
+                day&#8212;says it has been <hi rend="underline">this</hi> <hi rend="underline">house</hi> &#38; back yard, (very nice &#38;
+                breezy&#8212;we have had a hammock swung there), that has done most of the
+                curing&#8212;Are you interested in the episode? I have been much.<ptr
+                    target="loc.01340_n2"/></p>
+            <closer>
+                <salute>Love to Alys, Logan &#38; all&#8212;</salute>
+                <signed>W W</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

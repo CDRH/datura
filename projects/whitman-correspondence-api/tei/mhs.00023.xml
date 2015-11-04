@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="mhs.00023">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Thomas Jefferson and Jessie Louisa
+                    Whitman, 8 September [1886]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>mhs.00023</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Thomas Jefferson and Jessie Louisa Whitman, 8 September
+                        [1886]</title>
+                    <date cert="high" when="1886-09-08" xml:id="dat1">September 8, 1886</date>
+                    <orgName xml:id="mhs">Missouri Historical Society</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Thomas Jefferson" ref="n4995">Thomas Jefferson Whitman</persName>
+                    <persName key="Whitman, Jessie Louisa" ref="n1055">Jessie Louisa Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-03-30" who="#kb">edited</change>
+            <change when="2014-10-24" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <opener>
+                <pb xml:id="leaf001r" facs="mhs.00023.001_large.jpg" type="recto"/>
+                <dateline>
+                    <name type="place">Camden</name>
+                    <date when="1886-09-08" rend="right">Sept: 8</date>
+                </dateline>
+                <salute>Dear Brother</salute>
+                <salute>&#38; Dear Jess</salute>
+            </opener> 
+            <p>Our hearts out here are with you more than you probably think at this gloomy time.<ptr target="mhs.00023_n1"/> I
+                hope &#38; trust you both bear up under it, &#38; that the "God help us" of your
+                telegraphic message will be fulfilled&#8212;I find myself better than toward the
+                conclusion of former summers&#8212;am still living here at 328 Mickle st&#8212;&#38;
+                comfortable.</p><p>&#8212;I am anxious to hear whether Lou got there all right&#8212;am
+                sitting here down stairs by the open window as I write&#8212;warm here for two
+                days.</p>
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="mhs.00023.002_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

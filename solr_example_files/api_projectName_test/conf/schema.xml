@@ -2,18 +2,20 @@
 
 <!-- example taken from: http://svn.apache.org/viewvc/lucene/dev/tags/lucene_solr_4_3_0/solr/example/solr/collection1/conf/schema.xml?view=markup#l179  -->
 
-<schema name="api_projectName_test" version="1.5">
+<schema name="api_projectName_" version="1.5">
 
  <fields>
      
 <!-- resource identification -->
    <field name="id" type="string" indexed="true" stored="true" required="true" multiValued="false" /> 
-   <field name="slug" type="string" indexed="true" stored="true" required="true" multiValued="false" /> 
-   <field name="project" type="string" indexed="true" stored="true" required="true" multiValued="false" />
+   <field name="slug" type="string" indexed="true" stored="true" required="false" multiValued="false" /> 
+   <field name="project" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="uri" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="uriXML" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="uriHTML" type="string" indexed="true" stored="true" required="false" multiValued="false" />
    <field name="dataType" type="string" indexed="true" stored="true" required="false" multiValued="false" />
+   <field name="fig_location" type="string" indexed="true" stored="true" multiValued="false" />
+   <field name="image_id" type="string" indexed="true" stored="true" multiValued="false" />
    
 <!-- Dublin Core metadata elements + supporting fields. More details here: http://dublincore.org/documents/dcmi-terms/ -->
    <field name="title" type="string" indexed="true" stored="true" multiValued="false" />
@@ -26,7 +28,8 @@
    <field name="publisher" type="string" indexed="true" stored="true" multiValued="false" />
    <field name="contributor" type="string" indexed="true" stored="true" multiValued="false" />
    <field name="contributors" type="string" indexed="true" stored="true" multiValued="true" />
-   <field name="date" type="date" indexed="true" stored="true" multiValued="false" />
+   <field name="date" type="string" indexed="true" stored="true" multiValued="false" />
+   <field name="dateSort" type="date" indexed="true" stored="true" multiValued="false" />
    <field name="dateDisplay" type="string" indexed="true" stored="true" multiValued="false" />
    <field name="type" type="string" indexed="true" stored="true" multiValued="false" />
    <field name="format" type="string" indexed="true" stored="true" multiValued="false" />
@@ -48,6 +51,8 @@
    <field name="placeName" type="string" indexed="true" stored="true" multiValued="false" />
    <field name="recipient" type="string" indexed="true" stored="true" multiValued="false" />
    <field name="recipients" type="string" indexed="true" stored="true" multiValued="true" />
+   <field name="sender" type="string" indexed="true" stored="true" multiValued="false" />
+   <field name="senders" type="string" indexed="true" stored="true" multiValued="true" />
      
 <!-- CDRH specific categorization (all pulled directly from the profileDesc) -->
    

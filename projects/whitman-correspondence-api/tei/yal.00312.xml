@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="yal.00312">
+    <teiHeader> 
+        <fileDesc>
+            <titleStmt>
+<title level="m" type="main">Richard Worthington to Walt Whitman, 29
+    September 1879</title>
+<title level="m" type="sub">a machine readable transcription</title>
+<author>Richard Worthington</author>
+<editor>Kenneth M. Price</editor>
+<editor>Ed Folsom</editor>
+<respStmt>
+    <resp>Transcription and encoding</resp>
+    <persName xml:id="kc">Kirsten Clawson</persName>
+    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+    <persName xml:id="ej">Eder Jaramillo</persName>
+    <persName xml:id="nhg">Nicole Gray</persName>    
+    <persName xml:id="ss">Stefan Schöberlein</persName>
+</respStmt>
+<sponsor>Center for Digital Research in the Humanities, University of
+    Nebraska-Lincoln</sponsor>
+<sponsor>University of Iowa</sponsor>
+<funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+<edition>
+    <date>2013</date>
+</edition>
+            </editionStmt>
+            <publicationStmt>
+<idno>yal.00312</idno>
+<distributor>The Walt Whitman Archive</distributor>
+<address>
+    <addrLine>Center for Digital Research in the Humanities</addrLine>
+    <addrLine>319 Love Library</addrLine>
+    <addrLine>University of Nebraska-Lincoln</addrLine>
+    <addrLine>P.O. Box 884100</addrLine>
+    <addrLine>Lincoln, NE 68588-4100</addrLine>
+</address>
+<availability>
+    <p>Copyright © 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+        Items in the Archive may be shared in accordance with the Fair Use
+        provisions of U.S. copyright law. Redistribution or republication on other
+        terms, in any medium, requires express written consent from the editors and
+        advance notification of the publisher, Center for Digital Research in the
+        Humanities. Permission to reproduce the graphic images in this archive has
+        been granted by the owners of the originals for this publication only.</p>
+</availability>
+            </publicationStmt>
+            <sourceDesc><bibl>
+    <author>Richard Worthington</author>
+    <title>Richard Worthington to Walt Whitman, 29 September 1879</title>
+    <date cert="high" when="1879-09-29" xml:id="dat1">September 29, 1879</date>
+    <orgName xml:id="yal">Yale Collection of American Literature, Beinecke Rare Book
+        and Manuscript Library</orgName>
+</bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+<person role="sender">
+    <persName key="Worthington, Richard">Richard Worthington</persName>
+</person>
+<person role="recipient">
+    <persName key="Whitman, Walt">Walt Whitman</persName>
+</person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-03-13" who="#ss">annotations added</change>
+            <change when="2013-11-26" who="#nhg">checked, corrected</change>
+            <change when="2013-11-12" who="#nnk">proofed</change>
+            <change when="2013-10-28" who="#kc">Transcribed and Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <pb xml:id="leaf001r" facs="yal.00312.001_large.jpg" type="recto"/>
+            <opener><dateline><name type="place"><handShift rend="printed"/>R. WORTHINGTON,<ptr target="n1053"/></name>
+                <name type="place"><hi rend="italic">PUBLISHER,</hi></name>
+                <name type="place">750 BROADWAY.</name>
+                    <date when="1879-09-29" rend="right">New York, <handShift rend="manuscript"/>
+                        <choice>
+                            <abbr>Sept</abbr>
+                            <expan>September</expan>
+                        </choice> 29th
+                        <handShift rend="printed"/>1879.</date>
+                    <name type="place"><handShift rend="manuscript"/>Mr Walt Whitman</name>
+                    <name type="place">Camden</name>
+                    <name type="place">N.J.</name>
+                </dateline>
+                <salute>Dear Sir:</salute>
+            </opener>
+
+            <p>We have recently purchased at the Auction Rooms of Messrs Geo. A. Leavitt Co
+                of this city the electrotype plates of an edition of your "Leaves of Grass" bearing the imprint of Thayer
+                and Eldridge, Boston 1860–61.<ptr target="n0801"/> As the edition is not complete although subject
+                as I understand to a copyright of ten percent it seems to me that it would be better
+                for all parties to have it <pb xml:id="leaf001v" facs="yal.00312.002_large.jpg" type="verso"/>completed. If this idea meets your views on the subject I would
+                be willing to make you an immediate payment of $250.00 on account and will <unclear reason="damage" cert="high" resp="#kc">do</unclear> everything in my power to make the book
+                sell.<ptr target="yal.00312_n1"/> </p>
+
+            <p>An early reply would oblige</p>
+
+            <closer>
+                <salute>Your Truly</salute>
+                <signed>R. Worthington</signed>
+            </closer>
+
+            <postscript>
+                <p>P.S. Porter &amp; Coates, Claxton Remsen &amp; Hafflefinger of Philadelphia or Gebbie &amp; Harris or any of the leading Houses of the country
+                    would inform you that I am perfectly responsible &amp; that you are sure of getting your
+                    copyright.</p>
+            </postscript>
+            <closer>
+                <salute><hi rend="underline">R. W.</hi></salute>
+            </closer>
+
+        </body>
+    </text>
+</TEI>

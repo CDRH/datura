@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="med.00691">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt> 
+                <title level="m" type="main">Walt Whitman to John Burroughs, 13 August
+                    [1882]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>med.00691</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">301</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to John Burroughs, 13 August [1882]</title>
+                    <date cert="medium" when="1882-08-13" xml:id="dat1">August 13, 1882</date>
+                    <orgName xml:id="med">The location of this manuscript is unknown.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Burroughs, John">John Burroughs</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-05-08" who="#nhg">updated orgName, checked, corrected</change>
+            <change when="2014-04-10" who="#kc">updated ID</change>
+            <change when="2014-03-07" who="#ej">Checked and Corrected</change>
+            <change when="2013-10-25" who="#nnk">proofed</change>
+            <change when="2013-10-12" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place">Camden</name>
+                    <date when="1882-08-13"><choice>
+                        <orig>Aug:</orig>
+                        <reg>August</reg>
+                    </choice> 13&#8212;<choice><orig>Evn'g</orig>
+                        <reg>Evening</reg>
+                    </choice></date>
+                </dateline>
+            </opener>
+            <p><hi rend="italic">Welcome home again</hi><ptr target="sjs.00017_n1"/>&#8212;by no
+                means forgetting 'Sula &#38; the youngster&#8212;</p>
+            <p>I am well&#8212;have had a very fair summer, (though so much hot weather)&#8212;</p>
+            <p>I commenced publishing L of G in June on my own hook, but found it vexatious from the
+                    start,<ptr target="sjs.00017_n2"/> &#38; having quite vehement proposals from
+                Rees Welsh, (2d hand book dealer &#38; law book publisher) 23 South 9th St. <choice>
+                    <orig>Phila.</orig>
+                    <reg>Philadelphia</reg>
+                </choice> I
+                <choice>
+                    <orig>pass'd</orig>
+                    <reg>passed</reg>
+                </choice> the use of the plates into his hands&#8212;he printed it (the plates are here
+                 in <choice>
+                    <orig>Phila</orig><reg>Philadelphia</reg></choice>) an exact copy of the Osgood edition&#8212;Welsh's first edition (a
+                cautious 1000) was ready <choice>
+                    <orig>ab't</orig>
+                    <reg>about</reg>
+                </choice> three weeks ago &#38; was exhausted in a day&#8212;the
+                second came in <choice>
+                    <orig>ab't</orig>
+                    <reg>about</reg>
+                </choice> five days ago, &#38; is now nearly gone&#8212;a third is
+                ordered&#8212;I am glad I let him have it&#8212;</p>
+            <p>I am throwing together a <hi rend="italic">prose</hi> jumble, <hi rend="italic"
+                    >Specimen Days</hi>&#8212;(see slips enclosed)&#8212;nearly 200 pages already
+                cast&#8212;O'Connor sent me a copy of your letter about visiting W M Rossetti<ptr
+                    target="sjs.00017_n3"/>&#8212;(O'C &#38; I correspond now quite often, &#38;
+                just on the same terms as of yore)<ptr target="sjs.00017_n4"/>&#8212;When you have a
+                leisure hour reel me off a letter&#8212;put in <choice>
+                    <orig>ab't</orig>
+                    <reg>about</reg>
+                </choice> Mrs Gilchrist and
+                Herbert&#8212;Dr Bucke is keeping back his book till <hi rend="italic">Specimen
+                    Days</hi> comes out<ptr target="sjs.00017_n5"/>&#8212;will come out by winter
+                likely&#8212;</p>
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.01500">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Edward Dowden to Walt Whitman, 21 November 1882</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Edward Dowden</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.01500</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Edward Dowden</author>
+                    <title>Edward Dowden to Walt Whitman, 21 November 1882</title>
+                    <date cert="high" when="1882-11-21" xml:id="dat1">November 21, 1882</date>
+                    <idno type="callno">MSS18630, Box 9, Reel 5-6</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="ht"><persName key="Traubel, Horace">Horace Traubel</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Dowden, Edward">Edward Dowden</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-06-02" who="#nhg">checked, corrected</change>
+            <change when="2014-03-24" who="#ej">Checked and Corrected</change>
+            <change when="2014-02-13" who="#nnk">proofed</change>
+            <change when="2013-12-09" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.01500.001_large.jpg" type="recto"/>
+            <note type="editorial" place="top left" resp="#ht">see notes Sept 22 1888</note>
+            
+            <opener>
+                <dateline>
+                    <name type="place"><handShift rend="printed"/>WINSTEAD, <lb/>TEMPLE ROAD.</name>
+                    <name type="place" rend="right"><handShift rend="manuscript"/>Rathmines, Dublin.</name>
+                    <date when="1882-11-21" rend="right">November 21. 1882.</date>
+                </dateline>
+                <salute>Dear Mr. Whitman,</salute>
+            </opener>
+            <p>Your card &amp; "Progress" have just arrived. I rejoice that with the ill tidings of
+                your recent prostration comes good news of your recovery. May this better condition
+                continue! You annex your friends so closely, that your health &amp; strength becomes
+                part of theirs&#8212;</p>
+            <p>I send you the <hi rend="underline">Academy</hi> with my notice of <hi
+                    rend="underline">Specimen 
+                <pb xml:id="leaf001v" facs="loc.01500.002_large.jpg" type="verso"/>
+                        Days</hi>. I closed my review with a wish that you might try
+                a voyage across the Atlantic. It would be a happy thing if we could have you <hi
+                    rend="underline">here</hi> for a while, where you would find a bedroom, books,
+                &amp;, in summer, flowers &amp; birds, beside a friend or two. Think of this. In
+                London, I am sure, your
+                <pb xml:id="leaf002r" facs="loc.01500.003_large.jpg" type="recto"/> 
+                    welcome would be hearty.</p>
+            <p>Please notice a few lines by the editor of the <hi rend="underline">Academy</hi> (I
+                suppose) on p. 362. Who his informant was I do not know.</p>
+            <closer>
+                <salute>Most truly yours, dear friend,</salute>
+                <signed rend="right">Edward Dowden.</signed>
+            </closer>
+            <pb xml:id="leaf002v" facs="loc.01500.004_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

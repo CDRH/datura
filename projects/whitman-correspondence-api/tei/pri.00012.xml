@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="pri.00012">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to William M. Rossetti, 22 November 1867</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <name>The Walt Whitman Archive Staff</name>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>pri.00012</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note type="project">The following are responsible for particular readings or for
+                    changes to this file, as noted:
+<persName xml:id="kmp">Kenneth M. Price</persName>
+<persName xml:id="el">Elizabeth Lorang</persName>
+ 
+                    
+                    <persName xml:id="zk">Zachary King</persName>
+                    <persName xml:id="ec">Eric Conrad</persName>
+                </note>
+            </notesStmt>
+            <sourceDesc>
+                
+                <biblStruct>
+                    <monogr>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">Walt Whitman—The
+                            Correspondence, Volume I:
+                            1842–1867</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date when="1961">1961</date>
+                            <biblScope type="page">350–351</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to William M. Rossetti, 22 November 1867</title>
+                    <date cert="high" when="1867-11-22" xml:id="dat1">November 22, 1867</date>
+                    <orgName xml:id="pri">Manuscripts Division, Department of Rare Books and Special Collections, Princeton University Library </orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                     <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Rossetti, William M.">William M. Rossetti</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+<change when="2012-03" who="#kp">blessed</change>
+<change when="2012-02-29" who="#el">added additional encoding for choice; updated header</change>
+
+            <change when="2010-12-17" who="#el">checked</change>
+            <change when="2010-10-06" who="#zk">encoded</change>
+            <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">Washington, U. S.</name>
+                    <date when="1867-11-22" rend="right">November 22, 1867</date>.
+                </dateline>
+                <salute>My dear Mr. <choice><orig><choice><sic>Rosetti</sic><corr>Rossetti</corr></choice></orig> <reg>Rossetti</reg></choice>:</salute><ptr target="pri.00012_n1"/>
+            </opener>
+
+            <p>I suppose Mr. Conway has received, &amp; you have read, 
+                the letter I sent over about three weeks since, 
+                assenting to the substitution of other words, &amp;c. 
+                as proposed by you, in your reprint of my book, or selections therefrom.<ptr target="pri.00012_n2"/>
+            </p>
+            
+            <p>I suppose the reprint intends to avoid any expressed or 
+                implied character of being an expurgated edition. 
+                I hope it will simply assume the form &amp; name of a selection 
+                from the various editions of my pieces printed here. 
+                I suggest, in the interest of that view, whether the 
+                adjoining might not be a good form of Title page:<ptr target="pri.00012_n3"/>
+            </p>
+            
+            <p>I wish particularly not only that the little figures 
+                numbering the stanzas, but also that the larger figures 
+                dividing the pieces into separate passages or sections 
+                be carefully followed &amp; preserved, as in copy.
+            </p>
+            
+            <p>When I have my next edition brought out here, 
+                I shall change the title of the piece "When lilacs last in the dooryard bloom'd," 
+                to <hi rend="italic">President Lincoln's Funeral Hymn</hi>.<ptr target="pri.00012_n4"/>
+                You are at liberty to take the latter name, or the 
+                old one, at your option, (that is, if you include the piece.)
+            </p>
+            
+            <p>It is quite certain that I shall add to my next edition 
+                (carrying out my plan from the first,) a brief cluster 
+                of pieces, born of thoughts on the deep themes of Death &amp; Immortality.
+            </p>
+            
+            <p>Allow me to send you an article I have written on "Democracy"—a hasty charcoal-sketch of a piece, but indicative, 
+                to any one interested in Leaves of Grass, as of the audience the book supposes, 
+                &amp; in whose interest it is made. I shall probably send it next mail.
+            </p>
+            
+            <p>Allow me also to send you (as the ocean-postage law is now so easy,) 
+                a copy of Mr. Burroughs's <hi rend="italic">Notes</hi>,<ptr target="pri.00012_n5"/> 
+                &amp; some papers. They go same mail with this.
+            </p>
+            
+            <p>And now, my dear sir, you must just make what use—or no use at all—of any thing I suggest or send—as your occasions call for. 
+                Very likely some of my suggestions have been anticipated.
+            </p>
+            
+            <closer>
+                <salute>I remain, believe me, with friendliest feelings &amp; wishes,</salute>
+                <signed rend="right">Walt Whitman.</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="uva.00361">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Peter Doyle to Walt Whitman, 23 September 1868</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Peter Doyle</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <name>The Walt Whitman Archive Staff</name>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2011</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>uva.00361</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2010 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note type="project">The following are responsible for particular readings or for
+                    changes to this file, as noted:
+<persName xml:id="kmp">Kenneth M. Price</persName> 
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="al">Ashley Lawson</persName>
+                    <persName xml:id="jc">Janel Cayer</persName>
+                </note>
+            </notesStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Peter Doyle</author>
+                    <title>Peter Doyle to Walt Whitman, 23 September 1868</title>
+                    <date cert="high" when="1868-09-23" xml:id="dat1">September 23, 1868</date>
+                    <orgName xml:id="uva">Papers of Walt Whitman (MSS 3829), Clifton Waller Barrett Library of American Literature, Albert H. Small Special Collections Library, University of Virginia</orgName>                    
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>                
+                <person role="sender">
+                    <persName key="Doyle, Peter">Peter Doyle</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+<change when="2012-03" who="#kp">blessed</change>
+            <change when="2011-08-01" who="#el">checked against manuscript, as transcription was originally derived from Shively</change>
+            <change when="2011-04-28" who="#al">checked</change>
+            <change when="2010-01-18" who="#jc">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb facs="uva.00361.001.jpg" type="recto" xml:id="leaf001r"/>
+            
+            <opener>
+            <dateline>
+                <name type="place">Washington</name>
+                7½ o clock <lb/>Evening <date when="1868-09-23">23rd <lb/>Sept '68</date>
+            </dateline>    
+               
+                <salute>Dear Walt</salute>
+            </opener>
+            <p>As <choice><sic>i</sic><corr>I</corr></choice> send this I am getting ready to go to the <choice><orig>Theatre</orig><reg>Theater</reg></choice> to see the Black Crook nothing new today but the <choice><sic>Weather</sic><corr>weather</corr></choice> <choice><sic>Very</sic><corr>very</corr></choice> <choice><sic>Wet</sic><corr>wet</corr></choice> &amp; <choice><sic>Stormy</sic><corr>stormy</corr></choice> &amp; <choice><sic>i</sic><corr>I</corr></choice> am afraid to <choice><sic>Venture</sic><corr>venture</corr></choice> to work until the <choice><sic>Storm</sic><corr>storm</corr></choice> is past just received your letter of the 20th about ten minutes ago <choice><sic>i</sic><corr>I</corr></choice> cant <choice><sic>Explain</sic><corr>explain</corr></choice> the <choice><sic>Pleasure</sic><corr>pleasure</corr></choice> <choice><sic>i</sic><corr>I</corr></choice> experience from your letters</p>            
+            
+            <closer>
+                <salute>Farewell my good &amp; true Friend,</salute>
+                <signed>Pete the Great</signed>
+            </closer>
+            
+            <pb facs="uva.00361.002.jpg" type="verso" xml:id="leaf001v"/>            
+            
+            <note type="editorial" resp="ww" place="margin-left"><hi rend="underline">23 Sept '68</hi></note>
+            <note type="editorial" resp="unk" place="inline">Dear Walt <lb/>Pete</note>
+        </body>
+    </text>
+</TEI>

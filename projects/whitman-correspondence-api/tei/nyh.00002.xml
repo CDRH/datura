@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nyh.00002">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to Mr. and Mrs. S. B. Haskell, 10 August 1863</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="tj">Tim Jackson</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+
+               <persName xml:id="ao">Alyssa Olson</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>nyh.00002</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Walt Whitman</author>
+                  <editor>Edwin Haviland Miller</editor>
+                  <title xml:id="ehm">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>New York</pubPlace>
+                     <publisher>New York University Press</publisher>
+                     <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                     <biblScope type="volume">1</biblScope>
+                     <biblScope type="page">127-130</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to Mr. and Mrs. S. B. Haskell, 10 August 1863</title>
+               <date when="1863-08-10">August 10, 1863</date>
+               <orgName xml:id="nyh">New York Historical Society</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Haskell, Samuel B.">Samuel B. Haskell</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#tj" when="2009-08-25">proofread and modified</change>
+         <change who="#vs" when="2008-09-23">added main TEI markup</change>
+         <change who="#el" when="2008-07-30">added TEI header structure w/o IDs and titles; added minimal TEI markup</change>
+         <change who="#ao" when="2008-07-29">pulled transcription from Primary Source Media</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <dateline rend="right">
+                  <name type="place">Washington </name>
+                  <date when="1863-08-10">August 10 1863<ptr target="nyh.00002_n100"/>
+               </date>
+               </dateline>
+               <salute>Mr and Mrs Haskell,<ptr target="nyh.00002_n2"/>
+               </salute>
+            </opener>
+            <p>Dear friends, I thought it would be soothing to you to have a few lines about the last days of your son Erastus Haskell of Company K, 141st New York Volunteers. I write in haste, &amp; nothing of importance&#8212;only I thought any thing about Erastus would be welcome. From the time he came to Armory Square Hospital till he died, there was hardly a day but I was with him a portion of the time&#8212;if not during the day, then at night. I had no opportunity to do much, or any thing for him, as nothing was needed, only to wait the progress of his malady. I am only a friend, visiting the wounded &amp; sick soldiers, (not connected with any society&#8212;or State.) From the first I felt that Erastus was in danger, or at least was much worse than they in the hospital supposed. As he made no complaint, they perhaps [thought him]<ptr target="nyh.00002_n3"/> not very bad&#8212;I told the [doctor of the ward] to look him over again&#8212;he was a much [sicker boy?] than he supposed, but he took it lightly, said, I know more about these fever cases than you do&#8212;the young man looks very sick, but I shall certainly bring him out of it all right. I have no doubt the doctor meant well &amp; did his best&#8212;at any rate, about a week or so before Erastus died he got really alarmed &amp; after that he &amp; all the doctors tried to help him, but without avail&#8212;Maybe it would not have made any difference any how&#8212;I think Erastus was broken down, poor boy, before he came to the hospital here&#8212;I believe he came here about July 11th&#8212;Somehow I took to him, he was a quiet young man, behaved always correct &amp; decent, said little&#8212;I used to sit on the side of his bed&#8212;I said once, You don't talk any, Erastus, you leave me to do all the talking&#8212;he only answered quietly, I was never much of a talker. The doctor wished every one to cheer him up very lively&#8212;I was always pleasant &amp; cheerful with him, but did not feel to be very lively&#8212;Only once I tried to tell him some amusing narratives, but after a few moments I stopt, I saw that the effect was not good, &amp; after that I never tried it again&#8212;I used to sit by the side of his bed, pretty silent, as that seemed most agreeable to him, &amp; I felt it so too&#8212;he was generally opprest for breath, &amp; with the heat, &amp; I would fan him&#8212;occasionally he would want a drink&#8212;some days he dozed a good deal&#8212;sometimes when I would come in, he woke up, &amp; I would lean down &amp; kiss him, he would reach out his hand &amp; pat my hair &amp; beard a little, very friendly, as I sat on the bed &amp; leaned over him.</p>
+            <p>Much of the time his breathing was hard, his throat worked&#8212;they tried to keep him up by giving him stimulants, milk-punch, wine &amp;c&#8212;these perhaps affected him, for often his mind wandered somewhat&#8212;I would say, Erastus, don't you remember me, dear son?&#8212;can't you call me by name?&#8212;once he looked at me quite a while when I asked him, &amp; he mentioned over in[audibly?] a name or two (one sounded like [Mr. Setchell]) &amp; then, as his eyes closed, he said quite slow, as if to himself, I don't remember, I dont remember, I dont remember&#8212;it was quite pitiful&#8212;one thing was he could not talk very comfortably at any time, his throat &amp; chest seemed stopped&#8212;I have no doubt at all he had some complaint besides the typhoid&#8212;In my limited talks with him, he told me about his brothers &amp; sisters by name, &amp; his parents, wished me to write to his parents &amp; send them &amp; all his love&#8212;I think he told me about his brothers living in different places, one in New York City, if I recollect right&#8212;From what he told me, he must have been poorly enough for several months before he came to Armory Sq[uare] Hosp[ital]&#8212;the first week in July I think he told me he was at the regimental hospital at a place called Baltimore Corners not many miles from White House, on the peninsula&#8212;previous to that, for quite a long time, although he kept around, he was not at all well&#8212;couldn't do much&#8212;was in the band as a fifer I believe&#8212;While he lay sick here he had his fife laying on the little stand by his side&#8212;he once told me that if he got well he would play me a tune on it<ptr target="nyh.00002_n4"/>&#8212;but, he says, I am not much of a player yet.</p>
+            <p>I was very anxious he should be saved, &amp; so were they all&#8212;he was well used by the attendants&#8212;poor boy, I can see him as I write&#8212;he was tanned &amp; had a fine head of hair, &amp; looked good in the face when he first came, &amp; was in pretty good flesh too&#8212;(had his hair cut close about ten or twelve days before he died)&#8212;He never complained&#8212;but it looked pitiful to see him lying there, with such a look out of his eyes. He had large clear eyes, they seemed to talk better than words&#8212;I assure you I was attracted to him much&#8212;Many nights I sat in the hospital by his bedside till far in the night&#8212;The lights would be put out&#8212;yet I would sit there silently, hours, late, perhaps fanning him&#8212;he always liked to have me sit there, but never cared to talk&#8212;I shall never forget those nights, it was a curious &amp; solemn scene, the sick &amp; wounded lying around in their cots, just visible in the darkness, &amp; this dear young man close at hand lying on what proved to be his death bed&#8212;I do not know his past life, but what I do know, &amp; what I saw of him, he was a noble boy&#8212;I felt he was one I should get very much attached to. I think you have reason to be proud of such a son, &amp; all his relatives have cause to treasure his memory.</p>
+            <p>I write to you this letter, because I would do something at least in his memory&#8212;his fate was a hard one, to die so&#8212;He is one of the thousands of our unknown American young men in the ranks about whom there is no record or fame, no fuss made about their dying so unknown, but I find in them the real precious &amp; royal ones of this land, giving themselves up, aye even their young &amp; precious lives, in their country's cause&#8212;Poor dear son, though you were not my son, I felt to love you as a son, what short time I saw you sick &amp; dying here&#8212;it is as well as it is, perhaps better&#8212;for who knows whether he is not better off, that patient &amp; sweet young soul, to go, than we are to stay? So farewell, dear boy&#8212;it was my opportunity to be with you in your last rapid days of death&#8212;no chance as I have said to do any thing particular, for nothing [could be done&#8212;only you did not lay] here &amp; die among strangers without having one at hand who loved you dearly, &amp; to whom you gave your dying kiss&#8212;</p>
+            <p>Mr and Mrs Haskell, I have thus written rapidly whatever came up about Erastus,<ptr target="nyh.00002_n5"/> &amp; must now close. Though we are strangers &amp; shall probably never see each other, I send you &amp; all Erastus' brothers &amp; sisters my love&#8212;</p>
+            <closer rend="right">
+               <signed>Walt</signed>
+            </closer>
+         
+         <postscript>
+            <p>I live when home, in Brooklyn, N Y. (in Portland avenue, 4th door north of Myrtle, my mother's residence.) My address here is care of Major Hapgood, paymaster U S A, cor 15th &amp; F st, Washington D C.</p>
+         </postscript>
+      </body>
+   </text>
+</TEI>

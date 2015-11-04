@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00798">
+    <teiHeader> 
+        <fileDesc>
+            <titleStmt>       
+                <title level="m" type="main">Walt Whitman to Robert Underwood Johnson, 4 August
+                    1884</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00798</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">373&#8211;374</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Robert Underwood Johnson, 4 August 1884</title>
+                    <date cert="high" when="1884-08-04" xml:id="dat1">August 4, 1884</date>
+                    <orgName xml:id="duk">The Trent Collection of Walt Whitman Manuscripts, Duke
+                        University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Johnson, Robert Underwood" ref="uva.00388_n1">Robert Underwood Johnson</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2014-09-16" who="#ss">transcribed, encoded, partially annotated.</change>
+            <change when="2015-01-05" who="#kb">edited</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place">328 Mickle Street</name>
+                    <name type="place">Camden New Jersey</name>
+                    <date when="1884-08-04" rend="right">August 4 1884</date>
+                </dateline>
+                <salute>Dear Sir<ptr target="duk.00798_n1"/></salute>
+            </opener>
+            <p>In answer to your letter &#38; request a few days ago <hi rend= "italic">Yes</hi> I will gladly write for the
+                <hi rend= "italic">Century</hi> an article on the Hospitals &#38; Hospital Nursing of the Secession War,
+                such as outlined by you&#8212;I will set about it immediately&#8212;</p>
+            <p>I enclose a short sketch &#38; reminiscence of Father Taylor, with authentic
+                portrait, (given me by his daughter). The price is $50&#8212;If you use it I would
+                want to see proof, &#38; would like to reserve the right of printing it in future
+                book&#8212;Say after the lapse of a year&#8212;Respects to Watson
+                Gilder<ptr target="duk.00798_n2"/>&#8212;</p>
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+            
+        </body>
+    </text>
+</TEI>

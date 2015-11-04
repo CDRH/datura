@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+ 
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03197">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">James Knowles to Walt Whitman, 20 August 1884</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>James Knowles</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="aa">Alex Ashland</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03197</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>2019 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884200</addrLine>
+                    <addrLine>Lincoln, NE 68588-4200</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>James Knowles</author>
+                    <title>James Knowles to Walt Whitman, 20 August 1884</title>
+                    <date cert="high" when="1884-08-20" xml:id="dat1">August 20, 1884</date>
+                    <idno type="callno">Box 13, Reel 8</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="ww"><persName key="Whitman, Walt">Walt
+                    Whitman</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Knowles, James" ref="n6110">James Knowles</persName>
+                </person>  
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-01-06" who="#kb">edited</change>
+            <change when="2014-11-26" who="#ss">encoded and corrected</change>
+            <change when="2014-11-11" who="#aa">transcribed</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.03197.001_large.jpg" type="recto"/>
+            <note type="editorial" resp="#ww" place="bottom">from Editor <hi rend="underline">Nineteenth Century</hi></note>
+            <opener>
+                <dateline>
+                    <name type="place">Queen Anne's Lodge,</name>
+                    <name type="place">St James's Park. S. W.</name>
+                    <date when="1884-08-20"><hi rend="underline">20th Aug 1884</hi></date>
+                </dateline>
+                <salute>Dear Sir /</salute>
+            </opener>
+            <p>I am very much obliged by your kind offer of the little <choice><abbr>M.S.</abbr><expan>manuscript</expan></choice> on "What lurks behind
+                Shakespeare's Historical Plays?" &#38; greatly regret that its extreme brevity renders
+                it hardly suitable as an article for the XIX<hi rend="superscript"><hi rend="underline">th</hi></hi> Century.</p>
+            <p>I return it accordingly herewith but in the hope that you may see your way to amplify
+                the treatment beyond its present limits of a mere hint or suggestion, &#38; give it
+                the importance by way of illustration &#38; proof which the subject deserves. Hoping
+                to hear again from you &#38; thanking you cordially for writing to me at all, I remain
+            </p>
+            <closer>
+                <salute>Yours very truly</salute>
+                <signed><hi rend="underline">James Knowles</hi></signed>
+            </closer>
+            <postscript>
+                <p><hi rend="underline">Walt Whitman Esq</hi></p>
+            </postscript>
+        </body>
+        <pb xml:id="leaf001v" facs="loc.03197.002_large.jpg" type="verso"/>
+        <pb xml:id="leaf002r" facs="loc.03197.003_large.jpg" type="recto"/>
+        <pb xml:id="leaf002v" facs="loc.03197.004_large.jpg" type="verso"/>
+    </text>
+</TEI>

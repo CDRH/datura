@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.00877">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Horace Wentworth to Walt Whitman, 27 November 1866</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Horace Wentworth</author>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="bb">Brett Barney</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+               <persName xml:id="hb">Heidi Bean</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>loc.00877</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <author>Horace Wentworth</author>
+               <title>Horace Wentworth to Walt Whitman, 27 November 1866</title>
+               <date when="1866-11-27">November 27, 1866</date>
+               <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Wentworth, Horace">Horace Wentworth</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#bb" when="2010-04-08">corrected encoding of salutation; added link to loc.00584</change>
+         <change who="#vs" when="2009-08-27">proofread and edited annotations</change>
+         <change who="#el" when="2009-08-03">Added encoding for page breaks</change>
+         <change who="#vs" when="2009-07-24">Added encoding for annotations made by John from UVA.</change>
+         <change who="#hb" when="2008-10-18">Transcribed, Encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         <pb facs="loc.00877.001.jpg" type="recto"/>
+         
+            <opener rend="right">
+               <dateline>
+                  <name type="place">Boston</name>
+                  <date when="1866-11-27">Nov 27th 1866</date>
+                  <name type="person">Mr. Walt Whitman</name>
+               </dateline>
+               <salute>Dear Sir.</salute> 
+            </opener>
+            <p>I own the stereotype plates of the work, "Leaves of Grass" by Walt Whitman with portrait of the author, and also the right to publish, which I bought of the assignees of Thayer and Eldridge, &amp; in which I am protected by the assignees, the master in Chancery, and by the laws of the Country, if I understand them.</p>
+            <p>I shall unqualifiedly protest against the printing or publication of any work, bearing the title or containing in any way the same matter as the "Leaves of Grass."  The plates and<pb facs="loc.00877.002.jpg" type="verso"/> engraving are in the market at a nominal price, tho' I intend to republish if they are not soon disposed of.  Also the stereotype plates of the pamphlets notices which we should be pleased to sell with the plates.</p>
+            <p>We have a very few of the "Imprints" which we wish to keep, in case we publish and need them.</p>
+	
+            <closer>
+               <salute>Yours Resptly,</salute>
+               <signed>H. Wentworth<ptr target="loc.00877_n1"/>
+               </signed>
+            </closer>
+         
+         <!-- <pb facs="loc.00877.003.jpg" type="recto" />
+<pb facs="loc.00877.004.jpg" type="verso" /> -->
+      </body>
+   </text>
+</TEI>

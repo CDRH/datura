@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="med.00401">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Anderson &amp; Archer, 19 February 1868</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <name>The Walt Whitman Archive Staff</name>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2010</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>med.00401</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2010 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note type="project">The following are responsible for particular readings or for
+                    changes to this file, as noted:
+<persName xml:id="kmp">Kenneth M. Price</persName> 
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="zk">Zachary King</persName>
+                    <persName xml:id="ec">Eric Conrad</persName>
+                </note>
+            </notesStmt>
+            <sourceDesc>
+                
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author><editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961–1977</date><biblScope type="volume">2</biblScope>
+                            <biblScope type="page">18</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Anderson &amp; Archer, 19 February 1868</title>
+                    <date cert="high" when="1868-02-19" xml:id="dat1">February 19, 1868</date>
+                    <orgName xml:id="med">The location of the original manuscript is unknown.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Anderson &amp; Archer">Anderson &amp; Archer</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+<change when="2012-03" who="#kp">blessed</change>
+            <change when="2011-05-09" who="#el">checked</change>
+            <change when="2010-12-03" who="#zk">amended as per Miller, Vol. VI</change>
+            <change when="2010-10-09" who="#zk">encoded</change>
+            <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <opener>
+                <dateline>
+                    <name type="place" rend="center">Attorney General's Office</name>,
+                    <name type="place" rend="right"><hi rend="italic">Washington</hi></name>,
+                    <date when="1868-02-19" rend="right">February 19, <hi rend="italic">1868</hi></date>
+<ptr target="med.00401_n1"/>
+                </dateline>                
+            </opener>
+
+            <p>Your letter of 13th<ptr target="med.00401_n2"/> was rec'd—</p>
+            
+            <p>Please find herewith a check for $31:50, which I suppose is the am't of your bill for binding 90 copies, Leaves of Grass, at 35 cts.<ptr target="med.00401_n3"/></p>
+            
+            <p>Please put up 40 copies in good substantial wrapping envelope, &amp; send me by express. Direct <hi rend="italic">Walt Whitman, Attorney Gen's Office, Treasury Building, Washington, D. C.</hi>—Please keep the remaining 50 copies till I send some order about them.</p>
+            
+            <p>You have overlooked one thing. When I called upon you 2d January,<ptr target="med.00401_n4"/> we found a discrepancy in the two lists of sheets on hand—yours had it that Sheet B, 2d consisted of only 225 sheets—while my list had it that Sheet B 2d consisted of 325 sheets—I wish you to carefully count sheet B 2d &amp; inform me how many there are—as it will decide how many of the deficient signatures of "Drum-Taps" etc.,<ptr target="med.00401_n5"/> I will require to finish up the edition. Please acknowledge the reception of this, with check.</p>
+            
+            <p>(check for $31:50 enclosed)</p>            
+        </body>
+    </text>
+</TEI>

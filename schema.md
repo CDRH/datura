@@ -12,6 +12,8 @@ I have not compared these fields to every project to make sure they fit, but her
 * **uriXML** (full URL to XML of data, when available)
 * **uriHTML** (full URL to HTML snippit of data)
 * **dataType** (the format the data was originally stored in at CDRH. current options: tei, dublin_core, vra_core, csv)
+* **fig_location** Used when the figures are kept in a place other than the normal place CDRH will store images. 
+* **image_id** Used when an image id does not match the file id. This is NOT multivalued, and is meant to only link to one image (for instance, the one which will be used as the thumbnail)
 
 ### Dublin Core Metadata Elements. 
 
@@ -48,6 +50,8 @@ I’ve included a couple of extra elements here as they make sense to support th
 * **place** (solr lat/long type) (for now, I am assuming each document has only one place. we may need to reevaluate in the future)
 * **placeName** (name for the place above, or may be used without the lat/long)
 * **recipient** (a singular field for the recipient(s), used for sorting. If there are multiple recipients, they will be alphabetized  i.e. “Boggs, Jeremy; Earhart, Amy; Graham, Wayne”
+* **recipients** (multivalued field containing the names from above - <field>Boggs, Jeremy</field>, <field>Earhart, Amy</field>, <field>Graham, Wayne</field>)
+* **recipient** (a singular field for the sender(s), used for sorting. If there are multiple recipients, they will be alphabetized  i.e. “Boggs, Jeremy; Earhart, Amy; Graham, Wayne”
 * **recipients** (multivalued field containing the names from above - <field>Boggs, Jeremy</field>, <field>Earhart, Amy</field>, <field>Graham, Wayne</field>)
 
 ### CDRH specific categorization (all pulled directly from the profileDesc)

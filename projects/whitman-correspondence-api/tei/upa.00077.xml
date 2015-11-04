@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="upa.00077">
+    <teiHeader>
+        <fileDesc>  
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Herbert Gilchrist, 12 February
+                    1884</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>upa.00077</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2014 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Herbert Gilchrist, 12 February 1884</title>
+                    <date cert="low" when="1884-02-12" xml:id="dat1">February 12, 1884</date>
+                    <orgName xml:id="upa">Walt Whitman Collection, 1842&#8211;1957, Rare Book &#38;
+                        Manuscript Library, University of Pennsylvania</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Gilchrist, Herbert" ref="n0262">Herbert Gilchrist</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2014-09-02" who="#ss">transcribed, encoded, annotated</change>
+            <change when="2014-12-02" who="#kb">edited</change>
+        </revisionDesc> 
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="upa.00077.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">431 Stevens St.</name>
+                    <name type="place">Camden N J, U S A</name>
+                    <date when="1884-02-12" rend="right">Feb 12 '84</date>
+                </dateline>
+                <salute>Dear Herb</salute>
+            </opener>
+            <p>Thanks for your affectionate letter&#8212;(thank your dear mother also for
+                hers&#8212;a most welcome one)<ptr target="upa.00077_n1"/>&#8212;Nothing special or
+                new to write about&#8212;health &#38; every thing go on with me ab't as
+                usual&#8212;I enclose <hi rend="underline">a piece of cloth</hi><ptr
+                    target="upa.00077_n2"/>&#8212;cannot find a <hi rend="underline">coat</hi> that I think would serve you,
+                (which is the garment I suppose you most want)&#8212;Dr Bucke<ptr target="n0119"/>
+                has told me of a picture he got from you, he prizes immensely&#8212;I havn't seen
+                it&#8212;Write whenever you can, dear boy, &#38; I will to you&#8212;</p>
+            <closer>
+            <signed>Walt Whitman</signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="upa.00077.002_large.jpg" type="verso"/>
+        </body>
+    </text> 
+</TEI>

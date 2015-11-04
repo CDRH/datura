@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00349">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">George Washington Whitman  to Louisa Van Velsor Whitman, 6 March 1864</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>George Washington Whitman</author>
+            <editor>Jerome M. Loving</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="br">Bev Rilett</persName>
+               <persName xml:id="kk">Kathryn Kruger</persName>
+               <persName xml:id="gp">Gillian Price</persName>
+               <persName xml:id="al">April Lambert</persName>
+               <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>duk.00349</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>George Washington Whitman</author>
+                  <editor>Jerome M. Loving</editor>
+                  <title xml:id="cwl">Civil War Letters of George Washington Whitman</title>
+                  <imprint>
+                     <pubPlace>Durham, North Carolina</pubPlace>
+                     <publisher>Duke University Press</publisher>
+                     <date>1975</date>
+                     <biblScope type="page">111-112</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>George Washington Whitman</author>
+               <title>George Washington Whitman  to Louisa Van Velsor Whitman, 6 March 1864</title>
+               <date when="1864-03-06">March 6, 1864</date>
+               <idno type="callno">III5C</idno>
+               <orgName xml:id="duk">Trent Collection of Whitmaniana, Duke University Rare Book,
+Manuscript, and Special Collections Library</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, George Washington">George Washington Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change when="2014-01-21" who="#ss">checked</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#br" when="2009-10-02">proofed and edited</change>
+         <change who="#el" when="2008-07-21">updated TEI header</change>
+         <change who="#kk" when="2008-04-01">checked and proofed</change>
+         <change who="#gp" when="2006-12-18">copy-edited transcription against source text and made necessary
+corrections</change>
+         <change who="#al" when="2006-12-15">Transcribed, Encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <dateline rend="right">
+                  <name type="place">Nashville Tennessee</name>
+                  <date when="1864-03-06"> March 6th '64<ptr target="duk.00349_n100"/>
+               </date>
+               </dateline>
+               <salute>Dear Mother</salute>
+            </opener>
+            <p>We arrived here last night, and will leave for Knoxville in the course of an hour or two. I am very well indeed and we have had a very pleasant trip out this far. We staid in Louisville Ky. 4 days, boarding at a first rate Hotel, and I am trying to eat enough to last me for a week or two after I get to the front. I found my trunk up at Fort Schuyler all right the morning I left home. Everything seems to be quiet just now in this Department  we are ordered to proceed to Knoxville by way of Chatanooga. I have not written to Walt since I left home but I shall write as soon as we get to our destination. Mother when you write  direct to Knoxville and when you write to Walt tell him to not wait to get a letter from me, but to let me hear from him immediately.</p>
+            <p>How are you all at home  the baby you know was not well when I left, but I hope she is all right before now,  When you write to Han tell her I shall write to her Soon, and if you hear from her tell me all about her in your next letter. I must stop now as it is about time for me to get ready to start. Kind regards to all</p>
+            <closer rend="right">
+               <signed>George W. Whitman</signed>
+            </closer>
+         
+      </body>
+   </text>
+</TEI>

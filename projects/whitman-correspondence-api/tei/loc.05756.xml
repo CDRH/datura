@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>  
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05756">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">W. J. Forbes to Walt Whitman, [1880]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>W. J. Forbes</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="no">Natalie O'Neal</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05756</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>           
+            <sourceDesc>
+                <bibl>
+                    <author>W. J. Forbes</author>
+                    <title>W. J. Forbes to Walt Whitman, [1880]</title>
+                    <date cert="low" when="1880" xml:id="dat1">1880</date> <!-- date uncertain but surrounding letters dated 1880 -->
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="ww"><persName key="Whitman, Walt">Walt Whitman</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Forbes, W. J.">W. J. Forbes</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-03-23">checked, corrected, annotated</change>
+            <change who="#ak" when="2015-03-13">checked, corrected</change>
+            <change when="2014-11-24" who="#no">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <pb xml:id="leaf001r" facs="loc_no.00002_large.jpg" type="recto"/>
+            
+           <p>Enclosed find $10<ptr target="loc.05756_n1"/> <!-- looks like a division sign --> (ten dolls<!-- another division sign -->)
+               will you kindly send to W.J. Forbes
+               <address>
+                   <addrLine>P.O. Box 4141</addrLine>
+                   <addrLine>New York.</addrLine>
+               </address></p>
+           <p>The 2 vol. Centennial Edition of your works.</p>
+            
+            <p>If you will let me know the cost of carriage on 
+                same I will gladly reimburse you.</p>
+            
+            <p>I should count it as a favor if you would 
+                put your autograph on the fly leaf of each
+            
+                <pb xml:id="leaf001v" facs="loc_ej.00921_large.jpg" type="verso"/>
+                <!-- Whitman wrote prose on this page, unrelated to letter -->
+                <pb xml:id="leaf002r" facs="loc_ej.01019b_large.jpg" type="recto"/>
+                
+            volume.</p>
+            
+            <p>Excuse my thus troubling <gap reason="cut away"/></p>
+            
+           <closer>
+               <salute>Respectfully</salute>
+               <signed>W.J. <gap reason="cut away"/></signed>
+           </closer>
+            
+            <pb xml:id="leaf002v" facs="loc_ej.00925_large.jpg" type="verso"/>             
+            <!-- Whitman wrote prose on this page, unrelated to letter -->
+        </body>
+    </text>
+</TEI>

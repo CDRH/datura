@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.04069">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Joseph C. Baldwin to Walt Whitman, 11 September
+                    1877</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Joseph C. Baldwin</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.04069</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <editor>Charley Shively</editor>
+                        <title xml:id="cs">Calamus Lovers: Walt Whitman's Working Class
+                            Camerados</title>
+                        <imprint>
+                            <pubPlace>San Francisco</pubPlace>
+                            <publisher>Gay Sunshine Press</publisher>
+                            <date when="1987">1987</date>
+                            <biblScope type="page">134</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+
+                <bibl>
+                    <author>Joseph C. Baldwin</author>
+                    <title>Joseph C. Baldwin to Walt Whitman, 11 September 1877</title>
+                    <date cert="high" when="1877-09-11" xml:id="dat1">September 11, 1877</date>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Baldwin, Joseph C.">Joseph C. Baldwin</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-12-18" who="#nhg">checked, corrected</change>
+            <change when="2013-12-13" who="#ej">Checked and Corrected</change>
+            <change when="2013-12-03" who="#nnk">proofed</change>
+            <change when="2013-02-03" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place">Elliottstown, Illinois,</name>
+                    <date when="1877-09-11">September 11, 1877</date>
+                </dateline><!-- is this part of the actual letter?-nnk -->
+                <salute>Dear Walt</salute>
+            </opener>
+
+            <p>I am well now But I Have just got out of a bed of sickness.<ptr target="n0822"/> I Have Had the <choice>
+                    <sic>Intermiten</sic>
+                    <corr>intermittent</corr>
+                </choice> fever and pretty Bad.</p>
+
+            <p>Walt a friend in need is a friend indeed. I will ask you <choice>
+                    <sic>wanst</sic>
+                    <corr>once</corr>
+                </choice> more to Help me a little if you could lend me ten Dollars for a short time
+                say six weeks or two months until I can sell <choice>
+                    <sic>som</sic>
+                    <corr>some</corr>
+                </choice> corn. I will Have about 2000 <choice>
+                    <sic>Buishels</sic>
+                    <corr>bushels</corr>
+                </choice> But it wont be ripe for six weeks or two months and then I will send it
+                Back to you with <choice>
+                    <sic>may</sic>
+                    <corr>many</corr>
+                </choice> thanks after I get things <choice>
+                    <sic>fixt</sic>
+                    <corr>fixed</corr>
+                </choice> up then I think I will pay you a visit and we will enjoy <choice>
+                    <sic>ourslves</sic>
+                    <corr>ourselves</corr>
+                </choice> as of old</p>
+            <p>write just as soon as you get this,</p>
+
+            <closer>
+                <salute>yours truly,</salute>
+                <signed>Joseph C. Baldwin</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

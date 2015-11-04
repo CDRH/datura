@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
 <name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
+<name n="Weakly, Laura K." xml:id="lkw">Weakly, Laura K.</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -99,13 +100,13 @@
 <person role="attorney_petitioner" xml:id="per.000001">
 <persName>Key, Francis Scott, 1779-1843</persName>
 </person>
-<person role="attorney_petitioner">
-<persName>Swann, Thomas</persName>
+<person role="attorney_petitioner" xml:id="per.001562">
+<persName>Swann, Thomas, 1789-1845</persName>
 </person>
 <person role="attorney_defendant" xml:id="per.000435">
 <persName>Jones, Walter, 1776-1861</persName>
 </person>
-<person role="attorney_defendant">
+<person role="attorney_defendant" xml:id="per.001563">
 <persName>Lee, Charles, 1758-1815</persName>
 </person>
 </listPerson>
@@ -120,6 +121,7 @@
 </profileDesc>
 
 <revisionDesc> 
+<change when="2015-10-28" who="#lkw">added xml:ids</change>
 <change when="2015-05-22" who="#ea">updated case number</change>
 <change when="2015-04-10" who="#kln">encoded</change>
 </revisionDesc>

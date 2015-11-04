@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.02069">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to the Editor of the <hi rend="italic">Century Monthly
+                    Review</hi>, 31 July 1886</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2015</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.02069</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to the Editor of the <hi rend="italic">Century Monthly Review</hi>, 31 July
+                        1886</title>
+                    <date cert="high" when="1886-07-31" xml:id="dat1">July 31, 1886</date>
+                    <idno type="callno">Box 9</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="unk"><persName key="Unknown">Unknown</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Editor of the Century Monthly Review" ref="loc.02069_n1">Editor
+                        of the Century Monthly Review</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-08-12" who="#nhg">checked, corrected</change>
+            <change when="2015-07-26" who="#kb">edited</change>
+            <change when="2015-06-27" who="#if">edited</change>
+            <change when="2015-05-16" who="#ss">added annotations</change>
+            <change when="2015-01-30" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.02069.001_large.jpg" type="recto"/>
+            <note type="editorial" place="top" resp="#unk">To Dana H Ferreu of The Century Co</note>
+            <note type="editorial" place="top" resp="#unk">*'Army Hospitals and Cases | Memoranda of the Time, 1863&#8211;6'</note>
+            <note type="editorial" place="top right" resp="#unk">$75.00 <gap reason="illegible"/></note>
+            <opener>
+                <dateline>
+                    <name type="place">328 Mickle street</name>
+                    <name type="place">Camden New Jersey</name>
+                    <date when="1886-07-31">July 31 '86</date>
+                </dateline>
+                <salute>Dear Sir</salute>
+            </opener>
+            <p>Yours of yesterday <choice><abbr>rec'd</abbr><expan>received</expan></choice><ptr target="loc.02069_n2"/>&#8212;In answer: please send me,
+                soon as convenient, a typewritten copy&#8212;or, (better still) a good <hi
+                    rend="underline">proof</hi>, of the article, to which I could make additions or
+                emendations&#8212;Yes, I "leave its publication to your convenience"&#8212;I shall
+                consider your Magazine the owner of the article&#8212;I reserving the right to print
+                in future book, but only <hi rend="underline">after</hi> its publication by
+                you&#8212;(some months after at least&#8212;probably a year after)&#8212;</p>
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+            <postscript>
+                <p>The enclosed slip returned having probably got in your yesterday's letter to me by
+                    mistake</p>
+            </postscript>
+            <pb xml:id="leaf001v" facs="loc.02069.002_large.jpg" type="verso"/>
+            <note type="editorial" place="top" resp="#unk">Walt Whitman</note>
+        </body>
+    </text> 
+</TEI>

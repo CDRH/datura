@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="dbw.00001">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Richard Maurice Bucke, 16(?) October
+                    1879</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>dbw.00001</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <analytic>
+                        <author>Artem Lozynsky</author>
+                        <title level="a">A Lost Whitman Letter to Bucke</title>
+                    </analytic>
+                    <monogr>
+                        <editor>William White</editor>
+                        <editor>Charles Feinberg</editor>
+                        <title level="j" xml:id="wwr">Walt Whitman Review</title>
+                        <imprint>
+                            <pubPlace>Detroit</pubPlace>
+                            <publisher>Wayne State University Press</publisher>
+                            <date when="1973">December 1973</date>
+                            <biblScope type="page">168</biblScope>
+                            <biblScope type="volume">19</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Richard Maurice Bucke, 16(?) October 1879</title>
+                    <date cert="low" when="1879-10-16" xml:id="dat1">October 16, 1879</date>
+                    <orgName xml:id="dbw">The original manuscript has not been located.  This partial transcript was written in a letter from Richard Maurice Bucke to his wife Jessie, held in the Bucke Collection of the D. B. Weldon Library of the University of Western Ontario, London, Ontario.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-01-05" who="#nhg">corrected</change>
+            <change when="2014-11-22" who="#nhg">checked, corrected</change>
+            <change when="2014-08-26" who="#ss">transcribed, encoded, annotated</change>
+        </revisionDesc>
+    </teiHeader>
+ 
+    <text type="letter">   
+        <body>
+            <p>Have been absent from Camden the last five weeks<ptr target="dbw.00001_n2"/>&#8212;been over
+                the Plains &#38; up in the Rocky Mountains&#8212;gave out about two weeks ago &#38;
+                have been quite sick ever since (principal trouble with my head) but am
+                recovering&#8212;only received yours (of Sept 22)
+                today&#8212;will send the book from Camden soon as I get back&#8212;shall stay here
+                twelve days<ptr target="dbw.00001_n1"/></p>
+            <closer>
+                <signed>W W</signed>
+            </closer>
+
+        </body>
+    </text>
+</TEI>

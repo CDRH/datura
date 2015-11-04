@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nyp.00557">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Edward Carpenter to Walt Whitman, 2 March 1884</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Edward Carpenter</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2015</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>nyp.00557</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Horace Traubel</author>
+                        <title xml:id="ht">With Walt Whitman in Camden</title>
+                        <imprint>
+                            <pubPlace>Philadelphia</pubPlace>
+                            <publisher>University of Pennsylvania Press</publisher>
+                            <date when="1953">1953</date>
+                            <biblScope type="volume">4</biblScope>
+                            <biblScope type="page">76&#8211;77</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Edward Carpenter</author>
+                    <title>Edward Carpenter to Walt Whitman, 2 March 1884</title>
+                    <date cert="high" when="1884-03-02" xml:id="dat1">March 2, 1884</date>
+                    <orgName xml:id="nyp">The Oscar Lion Papers, 1914&#8211;1955, New York Public
+                        Library, New York, N.Y.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Carpenter, Edward" ref="n0141b">Edward Carpenter</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-02-27" who="#nhg">checked, corrected, added correspondent ref</change>
+            <change when="2015-02-07" who="#ss">added annotations</change>
+            <change when="2015-01-25" who="#ss">checked and corrected</change>
+            <change when="2015-01-12" who="#ak">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place">Millthorpe near Chesterfield,</name>
+                    <date when="1884-03-02">March 2, 1884.</date>
+                </dateline>
+                <salute>Dear Walt:</salute>
+            </opener>
+            <p> Just a line to give you my changed address. I have been here
+                since October last&#8212;very busy all last summer getting a little homestead built,
+                and this winter digging and planting&#8212;have about seven acres
+                altogether&#8212;we are gardening about two acres; fruit, flowers and vegetables;
+                have about two and a half acres grass and about the same quantity part wheat for
+                ourselves and part oats for the horse. My friends the Fearnehoughs<ptr
+                    target="n3063"/> have come with me, and we are employing one or two extra hands
+                beside, just now. It is a beautiful valley right up against the Derbyshire moors,
+                but warm; we are about eight miles form Sheffield and five and a half from
+                Chesterfield&#8212;three and a half from the nearest station. </p>
+            <p> I got your bit about the American aborigines.<ptr target="uva.00452_n1"/> Thanks. </p>
+            <p> There is a quite old flour mill here, from which the place no doubt takes its name;
+                very quaint old wooden wheels and cogs&#8212;the stream which feeds it runs at the
+                bottom of my three fields&#8212;lots of wood and water all about the valley.
+                Millthorpe itself is a small hamlet of a dozen houses or so. </p>
+            <p> Have not seen the Gilchrists<ptr target="n3001"/> for some time, but I heard from
+                Grace the other day. </p>
+            <p> I was reading Rolleston's<ptr target="n1027"/> translation into German of your
+                Answerer this morning. It is as far as I can judge very exact and natural. </p>
+            <p> I hope you are well and enjoying yourself. I often think about you. Best
+                remembrances to the Staffords<ptr target="n1009"/> when you see them. </p>
+            <closer>
+                <salute>Your affectionate</salute>
+                <signed>Edward Carpenter.</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

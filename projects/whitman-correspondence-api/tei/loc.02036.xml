@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.02036">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to F. S. Ellis, 7 September [1876]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName><persName xml:id="el">Elizabeth Lorang</persName><persName xml:id="kk">Kathryn Kruger</persName><persName xml:id="zk">Zachary King</persName><persName xml:id="ec">Eric Conrad</persName><persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.02036</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2014 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to F. S. Ellis, 7 September [1876]</title>
+
+                    <date cert="medium" when="1876-09-07" xml:id="dat1">September 7, 1876</date>
+                    <idno type="callno">Box 9, Reel 5-6</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839–1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                     <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Ellis, F. S." ref="n4984">F. S. Ellis</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc> 
+            <change who="#nhg" when="2015-07-07">checked, corrected, added correspondent ref</change>
+            <change who="#ak" when="2014-10-30">added annotations</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+<change when="2014-08-12" who="#el">made basic checking changes to file</change><change when="2011-01-16" who="#kk">checked</change>
+            <change when="2011-05-22" who="#zk">encoded</change>
+            <change when="2010-08-20" who="#ec">extracted transcription from Major Authors cd</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body><pb xml:id="leaf001r" facs="loc.02036.001_large.jpg" type="recto"/>
+           <opener>
+                <dateline>
+                    <name type="place">Camden, N Jersey&#8212;US America</name>
+                    <date when="1876-09-07"><hi rend="underline"><choice><abbr>Sept</abbr><expan>September</expan></choice> 7</hi></date><ptr target="loc.02036_n1"/>&#8212;</dateline>
+            </opener><p>I send you to-day by mail, to same address as this card, my Volume, <hi rend="underline">Two Rivulets</hi>. Please 
+                send me word, (by postal card will do,) soon as it reaches you safely</p>
+             
+            <closer>
+                <signed>W Whitman</signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="loc.02036.002_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

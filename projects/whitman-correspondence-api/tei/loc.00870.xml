@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.00870">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">John Swinton to Walt Whitman, 5 February 1865</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>John Swinton</author>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+               <persName xml:id="ec">Eric Conrad</persName>
+               <persName xml:id="hb">Heidi Bean</persName>
+               <persName xml:id="elc">Elise Cook</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>loc.00870</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <author>John Swinton</author>
+               <title>John Swinton to Walt Whitman, 5 February 1865</title>
+               <date when="1865-02-05">February 5, 1865</date>
+               <orgName xml:id="loc">Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Swinton, John">John Swinton</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5; added pbs/page images and checked transcription against images</change>
+         <change who="#el" when="2010-04-03">proofread and edited. Commented-out Swinton note, as it does not seem to make sense in this context; none of the information references the period of the letter.</change>
+         <change who="#vs" when="2009-08-31">proofread and edited annotations</change>
+         <change who="#ec" when="2009-08-13">annotations</change>
+         <change who="#hb" when="2008-11-06">Encoded</change>
+         <change who="#elc" when="2008-10-25">Transcribed</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         <pb facs="loc_gt.00267.jpg" type="recto"/>
+            <opener rend="right">
+               <dateline>
+                  <date when="1865-02-05">Feb. 5</date>
+                  <name type="place">New York</name>
+               </dateline>
+               <salute>My dear Walt&#8212;</salute>
+            </opener>
+            <p>I most cheerfully write the note you request to Gen. Grant, though I do not know that it will be of any service.  I enclose it to you, for the reason that in the new aspect of the Exchange question you may not think it worth mailing.  Since your letter was written, the statement has been published (and you have doubtless seen it) that Grant has made the arrangements for a general exchange which is to be begun immediately, and carried on with all possible promptitude.  It may be, and I trust will be, that under these circumstances your brother will be at once exchanged in the general mode.  However, I leave this for you to decide by what you may have heard when you get this.  Hoping you are now in health and that your lost brother may soon be restored to you and his mother</p>
+            <closer rend="right">
+               <salute>I remain yours</salute>
+               <signed>J. Swinton</signed>
+            </closer>
+         <pb facs="loc_gt.00268.jpg" type="verso"/>
+      </body>
+   </text>
+</TEI>

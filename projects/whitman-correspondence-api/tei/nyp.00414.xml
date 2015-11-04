@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nyp.00414">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Frederick Locker-Lampson, 26 May 1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>                   
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>nyp.00414</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date when="1964">1964</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">179&#8211;180</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Frederick Locker-Lampson, 26 May 1880</title>
+                    <date cert="high" when="1880-05-26" xml:id="dat1">May 26, 1880</date>
+                    <orgName xml:id="nyp">The Henry W. and Albert A. Berg Collection of English and American Literature, New York Public Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Locker-Lampson, Frederick">Frederick Locker-Lampson</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-05-08" who="#km">checked</change>
+            <change when="2013-01-11" who="#ej">Checked and Corrected</change>
+            <change when="2013-01-03" who="#gt">checked</change>
+            <change when="2012-11-04" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">Camden New Jersey&#8212;U S America<ptr target="nyp.00414_n1"/></name>
+                    <date when="1880-05-26" rend="right">May 26 1880</date>
+                </dateline>
+                <salute>Frederic Locker</salute>
+                <salute>Dear friend</salute>
+            </opener>
+
+            <p>I <choice><abbr>rec'd</abbr><expan>received</expan></choice> yours of April 7th &#38; believe me I fully respond to your cheery greetings &#38; kind wishes&#8212;I am pretty well for me (call myself now a <hi rend="italic">half-paralytic</hi>)&#8212;am much of the time in the country &#38; on the water<ptr target="nyp.00414_n2"/>&#8212;yet take deep interest in the world &#38; all its bustle, (though perhaps keeping it at arm's length)&#8212;I send you a Boston paper same mail with this, an "Emerson number" that may interest you&#8212;a piece by me in it<ptr target="nyp.00414_n3"/>&#8212;After you are through with it, send it to Mr Tennyson, if you think proper&#8212;&#38; should you do me kindness to write me again (I hope you will) send me Mr T's post office address (a good permanent one that whatever sent to will finally reach him)&#8212;</p>
+            
+            <p>We are having a dash of the hottest weather here ever known, &#38; I am standing it finely. I believe I sent you a month ago a little paper with my late piece "Riddle Song." The early summer is very fine here, &#38; I am enjoying it, even heat and all&#8212;I live on the banks of the Delaware river like&#8212;I wish you could know my dear friend Mrs Gilchrist &#38; her family, now 5 Mount Vernon, Hampstead&#8212;they were three years here in America&#8212;Best respects &#38; love to you&#8212;</p>
+            
+            <closer>
+                <signed rend="right">Walt Whitman</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

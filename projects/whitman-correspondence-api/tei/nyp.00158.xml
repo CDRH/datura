@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nyp.00158">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Thomas P. Sawyer to Walt Whitman, 21 January 1864</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Thomas P. Sawyer</author>
+            <editor>Dennis Berthold</editor>
+            <editor>Kenneth M. Price</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="br">Bev Rilett</persName>
+               <persName xml:id="ec">Eric Conrad</persName>
+
+               <persName xml:id="kk">Kathryn Kruger</persName>
+               <persName xml:id="nk">Nick Krauter</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>nyp.00158</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <editor>Charley Shively</editor>
+                  <title xml:id="cl">Calamus Lovers: Walt Whitman's Working-Class Camerados</title>
+                  <imprint>
+                     <pubPlace>San Francisco, California</pubPlace>
+                     <publisher>Gay Sunshine Press</publisher>
+                     <biblScope type="page">82-83</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Thomas P. Sawyer</author>
+               <title>Thomas P. Sawyer to Walt Whitman, 21 January 1864</title>
+               <date when="1864-01-21">January 21, 1864</date>
+               <orgName xml:id="nyp">Henry W. and Albert A. Berg Collection of English and American Literature at the New York Public Library</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Sawyer, Thomas P.">Thomas P. Sawyer</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#br" when="2008-08-28">edited and proofed</change>
+         <change who="#ec" when="2009-08-04">annotations</change>
+         <change who="#el" when="2008-07-21">updated TEI header</change>
+         <change who="#kk" when="2008-04-01">checked and proofed</change>
+         <change who="#nk" when="2007-06-14">Transcribed, Encoded</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener> 
+               <dateline rend="right"> </dateline>
+               <salute>Dear Brother Walter,</salute>
+            </opener>
+         <p>As I<ptr target="nyp.00158_n100"/> have just written to Lewis I thought I would try and pen you a few lines hooping that they will [find] you in the best of health and enjoying your self&#8212;and I wish I was there with you.<ptr target="nyp.00158_n2"/>
+            </p>
+            <p>Dear brother I hardly know what to say to you in this letter for it is my first one to you but it will not be my last I should have written to you before but I am not a great hand at written and I have ben very buisy fixing my tent for this winter and I hope you will forgive me and in the future I will do better and I hope we may meet again in this world and now as it is getting very late you must ecuse this short letter this time&#8212;and I hope to here from [you] soon. I send you my love and best wishes. Good by from</p>
+            <closer rend="right">
+               <salute>Your Brother,</salute>
+               <signed>Sergt Thomas P Sawyer</signed>
+            </closer>
+         
+         <postscript>
+            <p>P.S.  if I knew your addrss I should not send it this Way. Good by Brother.</p>
+         </postscript>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?> 
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="med.00705">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Richard Maurice Bucke to Walt Whitman, 20 March
+                    1883</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Richard Maurice Bucke</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="no">Natalie O'Neal</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>med.00705</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <editor>Artem Lozynsky</editor>
+                        <title xml:id="al">The Letters of Dr. Richard Maurice Bucke to Walt
+                            Whitman</title>
+                        <imprint>
+                            <pubPlace>Detroit</pubPlace>
+                            <publisher>Wayne State University Press</publisher>
+                            <date when="1977">1977</date>
+                            <biblScope type="page">19</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Richard Maurice Bucke</author>
+                    <title>Richard Maurice Bucke to Walt Whitman, 20 March 1883</title>
+                    <date cert="high" when="1883-03-20" xml:id="dat1">March 20, 1883</date>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+
+                <person role="sender">
+                    <persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2014-11-24" who="#nhg">checked, corrected</change>
+            <change when="2014-08-19" who="#ss">transcribed, encoded, annotated</change>
+            <change when="2014-10-14" who="#no">checked, added place to dateline, updated spelling and capitalization</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place">[London,]</name>
+                    <date when="1883-03-20"><hi rend="underline">20th March [188]3</hi></date>
+                </dateline>
+                <salute>My dear Walt</salute>
+            </opener>
+
+            <p>I have this afternoon received,<ptr target="n0119"/> read, and remailed to you galleys 37 to 45
+                    inclusive.<ptr target="med.00705_n1"/> I open and read these parcels of proof in
+                fear and trembling (you must go as easy as you can, you are the terrible surgeon
+                with the knife &#38; saw and I am the patient). You left out my remarks on "children
+                of Adam,<ptr target="med.00705_n2"/> I believe they were good but I
+                acquiesce&#8212;your additions are <gap reason="cut away"/> excellent as they have
+                been all through. I shall not feel half comfortable <choice>
+                    <sic>untill</sic>
+                    <corr>until</corr>
+                </choice> I have had the proof of the rest of <choice>
+                    <abbr>p</abbr>
+                    <expan>part</expan>
+                </choice> ii and have seen how much of me will be left. Poor O'Connor<!--<ptr
+                    target="n2002"/>--> too, he had to submit to the fatal shears<ptr
+                    target="med.00705_n3"/>&#8212;but you are going to make a book of it (if that be
+                possible) so go ahead if we do flinch. But still, for the Lord's sake, spare my ch
+                iii pt ii as much as possible. I want you please (if I am not speaking <choice>
+                    <sic>to</sic>
+                    <corr>too</corr>
+                </choice> late) to save the M.S. and send it all to me when you are done with it. I
+                shall be glad to have plate proofs as fast as made, if I see any thing in them that
+                needs correcting will notify you otherwise will just put them by&#8212;I suppose you
+                do not want them returned? It is still <hi rend="underline">winter</hi> here, lots
+                of snow, good sleighing,</p>
+     
+            <closer>
+                <signed>R M Bucke</signed>
+            </closer>
+
+        </body> 
+    </text>
+</TEI>

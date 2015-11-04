@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="upa.00209">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Thomas W. H. Rolleston to Walt Whitman, [February&#8211;May 1881]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Thomas W. H. Rolleston</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                    <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>upa.00209</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <biblStruct>   
+                    <monogr>
+                        <editor>Horst Frenz</editor>
+                        <title xml:id="hf">Whitman and Rolleston: A Correspondence</title>
+                        <imprint>
+                            <pubPlace>Bloomington, Indiana</pubPlace>
+                            <publisher>Indiana University Press</publisher>
+                            <date when="1951">1951</date>
+                            <biblScope type="page">28&#8211;29</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                
+                <bibl>
+                    <author>Thomas W. H. Rolleston</author>
+                    <title>Thomas W. H. Rolleston to Walt Whitman, [February&#8211;May 1881]</title>              
+                    <date cert="low" notBefore="1881-02-01" notAfter="1881-05-31" xml:id="dat1">February&#8211;May 1881</date>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Rolleston, Thomas W. H.">Thomas W. H. Rolleston</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc> 
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>            
+            <change when="2014-08-06" who="#nhg">checked, corrected</change>
+            <change when="2014-02-20" who="#ss">checked</change>
+            <change when="2014-01-22" who="#ej">Checked and Corrected</change>
+            <change when="2014-01-15" who="#kc">Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <opener>
+                <dateline>
+                    <name type="place" rend="right">Glasshouse<ptr target="upa.00209_n1"/>
+                        <lb/>Shinrone 
+                        <lb/>Ireland</name>
+                </dateline>
+            </opener>
+
+            <p>I wish you would send a card to say whether you received safely the guinea I sent per money order, as usual for a copy of the Leaves of Grass. I acknowledged the latter, and asked you to let me know when you got the money safely, but as I have not heard from you since I am beginning to fear that it may have gone wrong.</p>
+            
+            <p>I missed some things from the 'Leaves of Grass' which I expected to find in it. It has three or four poems not in my old copy,<ptr target="upa.00209_n2"/> but I heard of a poem beginning&#8212;"Thou who hast slept all night upon the storm"<ptr target="upa.00209_n3"/>&#8212;which I did not find in this 1876 <choice><abbr>edn.</abbr><expan>edition</expan></choice> nor can it be in the &#8211;76 Two Rivulets, as I possess that already. Is there any other collection of poems, not included in these two volumes? If so, I wish you would send it to me.</p>
+            
+            <p>I have been in Dublin for some days and saw Dowden.<ptr target="upa.00209_n4"/> He is preparing an article on Carlyle for the XIX Century. It is said that in this as in another article shortly to appear by some other author there will be some "damaging" facts revealed  from <choice><abbr>C's</abbr><expan>Carlyle's</expan></choice> private correspondence.<ptr target="upa.00209_n5"/> I pity anyone whose notion of Carlyle is likely to be damaged by any facts that could be revealed. Lilliputians, looking at the great man through a telescope and judging him by the facts, 'damaging' or otherwise which they may have the fortune so to discover!</p>
+
+            <closer>
+                <salute rend="right">Yours sincerely</salute>
+                <signed rend="right">T W H Rolleston</signed>
+            </closer>
+        </body>
+        </text>
+</TEI>

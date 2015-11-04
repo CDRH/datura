@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="bur.00001">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to John and Ursula Burroughs, 26 June
+                    [1878]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ab">Alicia Bones</persName>
+                    <persName xml:id="gt">Grace Thomas</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>bur.00001</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Ted Genoways</editor>
+                        <title xml:id="tg">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>Iowa City</pubPlace>
+                            <publisher>University of Iowa Press</publisher>
+                            <date when="2004">2004</date>
+                            <biblScope type="volume">7</biblScope>
+                            <biblScope type="page">53</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to John and Ursula Burroughs, 26 June [1878]</title>
+                    <date cert="medium" when="1878-06-26" xml:id="dat1">June 26, 1878</date>
+                    <orgName xml:id="bur">Burlington Public Library, Burlington, Iowa</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Burroughs, John and Ursula">John and Ursula Burroughs</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-02-13" who="#nhg">corrected biblStruct info</change>
+            <change when="2013-12-13" who="#nhg">changed wwa ID</change>
+            <change when="2013-11-27" who="#nhg">checked, corrected</change>
+            <change when="2013-11-26" who="#nnk">proofed</change>
+            <change when="2013-04-19" who="#gt">checked and corrected</change>
+            <change when="2013-01-17" who="#ab">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place">1309 Fifth <choice>
+                        <orig>av.</orig>
+                        <reg>avenue</reg>
+                    </choice> 2d house south</name>
+                    <name type="place">of 86th street</name>
+                    <name type="place">New York</name>
+                    <date when="1878-06-26" rend="right">June 26 P M</date>
+                </dateline>
+                <salute>Dear John &#38; 'Sula</salute>
+            </opener>
+
+            <p>I got in all right before sundown&#8212;Still keep well, (&#38; all the better for my
+                Esopus trip&#8212;&#38; the berries, &#38;c.)<ptr target="bur.00001_n1"/></p>
+                <p>&#8212;Yesterday went on a sail down the
+                bay to Sandy Hook with some Sorosis ladies &#38; only a few men&#8212;a real
+                sea-sail, sea-breeze &#38;c&#8212;(I went up in the Pilot house most of the time
+                with the pilots)&#8212;had dinner on board&#8212;I enjoyed it, but was pretty
+                tired&#8212;got in before dark&#8212;</p>
+
+            <p>&#8212;Shall stay here a few days longer&#8212;find it hard to get away,&#8212;John, I
+                send you a slip cut from the <hi rend="italic">Tribune</hi>&#8212;</p>
+
+            <closer>
+                <signed>Walt</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

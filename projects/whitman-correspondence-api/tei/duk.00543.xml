@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00543">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman, 5 May [1868]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="zk">Zachary King</persName>
+                    <persName xml:id="fw">Felicia Wetzig</persName>
+                    <persName xml:id="wr">Wesley Raabe</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00543</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>              
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, 5 May 1868</title>
+                    <date cert="high" when="1868-05-05" xml:id="dat1">May 5, 1868</date>
+                    <idno type="callno">III-5D</idno>
+                    <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>              
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-12-09" who="#el">encoded final t as unclear in haven't; added word chicago and choice encoding; removed comma after 'how he feels'</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-11-01" who="#el">added closer element</change>
+            <change when="2013-09-17" who="#el">checked</change>
+            <change when="2013-05-22" who="#wr">Duke proofreading corrections</change>
+            <change when="2013-05-04" who="#wr">Proofreading Corrections: Heyde dates and Silent Proof</change>
+            <change when="2012-12-14" who="#wr">Proofreading Corrections of notes.</change>
+            <change when="2012-08-15" who="#wr">Updated notes, proofreading</change>
+            <change when="2012-08-02" who="#wr">Added date annotation and proofreading corrections, updated notes</change>
+            <change when="2011-12-20" who="#zk">corrected spacing</change>
+            <change when="2011-08-03" who="#zk">corrected date format in title; added call no., annotations</change>
+            <change when="2011-03-16" who="#wr">Review and correct encoding</change>
+            <change when="2011-03-16" who="#fw">Annotate Mr. Lane</change>
+            <change when="2011-03-07" who="#fw">Annotate Bingham</change>
+            <change when="2011-02-09" who="#fw">Correct 4 surfaces</change>
+            <change when="2011-01-24" who="#fw">Transcribe 4 surfaces</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="duk.00543.001.jpg" type="recto"/>
+            
+            <note type="editorial" resp="#rmb" place="top"><hi rend="underline">Brooklyn</hi></note>
+            
+            <opener>
+                <dateline>
+                    <date when="1868-05-05">May <unclear cert="low" resp="#wr" reason="illegible">th</unclear>5 1868<ptr target="duk.00543_n16"/>
+                    </date>
+                </dateline>
+                <salute>My dear Walt</salute>
+            </opener>
+           
+            <p>it seemed quite
+            a treat to get your letter you
+            are the only <choice><orig>correspondente</orig> <reg>correspondent</reg></choice> i<ptr target="duk.00425_n3"/>
+                 have at present they seem to
+            all dropped off i <choice><orig>havent</orig> <reg>haven't</reg></choice> had
+                a letter from Matty<ptr target="duk.00465_n9"/>
+                in a very
+            long while except a few lines
+            from Jeff<ptr target="duk.00422_n2"/>
+                from <choice><orig>cincinnatta</orig> <reg>Cincinnati</reg></choice> i <choice><orig>haven<unclear reason="illegible" cert="medium" resp="#wr">t</unclear></orig> <reg>haven't</reg></choice>
+            had any word from him since
+            his arrival home<ptr target="duk.00543_n1"/>            
+            he promised
+            he would write as soon as he
+            arrived i told him if he was
+            busy when he got back for
+            <choice><orig>matty</orig><reg>Matty</reg></choice> to write because i wanted
+            to hear but i have not got any
+            if they have wrote to me i
+            have not got it i think <choice><orig>maybee</orig> <reg>maybe</reg></choice>
+            they have and it has been taken
+            and han<ptr target="duk.00543_n2"/>
+                too she promised in
+            her letter she would never</p>
+            
+            <pb xml:id="leaf001v" facs="duk.00543.002.jpg" type="verso"/>
+            
+            <p>be so long again without
+            writing
+            but i suppose they
+            all have <choice><orig>enoughf</orig> <reg>enough</reg></choice> to <choice><orig>doo</orig> <reg>do</reg></choice> without
+            writing when one gets out of the
+            way of writing its hard to get
+            in it again <choice><orig>matty</orig><reg>Matty</reg></choice> was going
+            to write to me so often she
+            said before <choice><orig>shee</orig> <reg>she</reg></choice> went away
+            she would write every week
+            i got the papers to day with the letter
+            <choice><orig>walter</orig><reg>Walter</reg></choice> i like the <choice><orig>chicago</orig><reg>Chicago</reg></choice> news<ptr target="duk.00543_n3"/>
+            very much i never saw one
+            before i wish whenever you have
+            one you would send it to me
+            
+            well <choice><orig>walter</orig><reg>Walter</reg></choice> dear we have <choice><orig>leved</orig> <reg> lived</reg></choice>
+            to see another <choice><orig>may day</orig> <reg>May Day</reg></choice> come and
+            gone not as much moving as
+            usual they say in the papers
+            many has broke up <choice><orig>houskeeping</orig> <reg>housekeeping</reg></choice>
+            on the account of rents being
+            so high<ptr target="duk.00543_n13"/> i have been to look at
+            several places <choice><orig>george</orig><reg>George</reg></choice><ptr target="duk.00543_n10"/>
+                wants
+            to get out of this place very much
+            i went yesterday to look at one
+            in <choice><orig>carlton aven</orig> <reg>Carlton Avenue</reg></choice> just out of <choice><orig>fulton</orig><reg>Fulton</reg></choice><ptr target="duk.00543_n14"/>
+            but it was no better nor any
+            more room than we have here
+            
+           <pb xml:id="leaf002r" facs="duk.00543.003.jpg" type="recto"/>
+                
+            and 10 <choice><orig>doll</orig> <reg>dollars</reg></choice> more rent a month
+            i would rather live here than
+            there and all the places i have
+            been to see was something that
+            would make it <choice><orig>disagreable</orig> <reg>disagreeable</reg></choice>
+            in some way or other) here i
+            can <choice><orig>doo</orig> <reg>do</reg></choice> just as i like but
+                of course there is some <choice><orig>disagreable</orig> <reg>disagreeable</reg></choice>
+            things but they are all as clever
+            to me as they can <choice><orig>bee</orig><reg>be</reg></choice>) <choice><orig>george</orig><reg>George</reg></choice>
+            has lots of fun about their calling
+            me lady <choice><orig>whitman</orig><reg>Whitman</reg></choice> the family
+            that has come in up stairs has
+            five children but i think she
+            is very clean woman and
+            the children seems orderly
+            but they have to run up and
+            down so there is some noise
+            i told <choice><orig>george</orig><reg>George</reg></choice> yesterday
+            i <choice><orig>wasent</orig> <reg>wasn't</reg></choice> going any where
+            to look at any more houses
+            but was going to wait for
+            something to turn up i am
+            quite lame in one of my
+            knees i <choice><orig>dont</orig> <reg>don't</reg></choice> know what
+            makes it so it pains me
+            considerable i suppose it
+            
+            <pb xml:id="leaf002v" facs="duk.00543.004.jpg" type="verso"/>
+                must be the rheumatism<ptr target="duk.00515_n14"/>
+           settled there) sometimes i can
+           hardly walk and then it will
+           be better to day it feels quite 
+           bad on account perhaps of the 
+           appearance of a storm)</p>
+            
+           <p>i suppose the impeachment
+           is <choice><orig>draging</orig> <reg>dragging</reg></choice> to a close <choice><orig>george</orig><reg>George</reg></choice>
+           thinks <choice><orig>Bingams</orig> <reg>Bingham's</reg></choice> speech is
+               splendid<ptr target="duk.00543_n4"/> just his sentiments
+           exactly he said at dinner
+           time) i <choice><orig>havent</orig> <reg>haven't</reg></choice> read it yet
+           their speeches is so long i hope
+           this will not be so lengthy as
+           the others poor old man i wonder
+           how he feels it will be rather
+           sad if he is convicted for all i
+           suppose he <choice><orig>hasent</orig> <reg>hasn't</reg></choice> done right
+           i see in the papers if he leaves
+           he will be <choice><orig>esscorted</orig> <reg>escorted</reg></choice> through
+           the <choice><orig>citys</orig><reg>cities</reg></choice>) <choice><orig>walter</orig><reg>Walter</reg></choice> you must have
+           congratulations from all quarters
+           poor old <choice><orig>alcot</orig><reg>Alcott</reg></choice><ptr target="duk.00543_n11"/>
+               he must be very
+           old seems to me) you remember
+           <choice><orig>walt</orig><reg>Walt</reg></choice> that <choice><orig>sunday</orig> <reg>Sunday</reg></choice> morning we
+               <choice><orig>couldent</orig> <reg>couldn't</reg></choice> have him)<ptr target="duk.00543_n5"/></p>
+            <closer>
+                <salute>good bie <choice><orig>walter</orig><reg>Walter</reg></choice> dea<unclear cert="medium" resp="#wr" reason="illegible">r</unclear></salute>
+            </closer>
+            <pb sameAs="#leaf001r"/>
+            
+            <postscript><p><choice><orig>mr</orig><reg>Mr.</reg></choice> Lane<ptr target="duk.00518_n3"/> told <choice><orig>george</orig><reg>George</reg></choice> they had raised
+            <choice><orig>Jeffs</orig> <reg>Jeff's</reg></choice> salary to 6000 but i think it
+            must be a mistake<ptr target="duk.00543_n6"/></p></postscript>
+            
+            <pb sameAs="#leaf001r"/>
+            
+            <closer><signed><unclear cert="low" resp="#wr" reason="illegible">LW</unclear><ptr target="duk.00543_n17"/>
+            </signed></closer>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="duk.00620">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Louisa Van Velsor Whitman to Walt Whitman,  [1 March 1873]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Louisa Van Velsor Whitman</author>
+                <editor>Wesley Raabe</editor>
+                <editor role="assistant">Felicia Wetzig</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp><persName xml:id="el">Elizabeth Lorang</persName>
+                    <persName xml:id="ct">Cathy Tisch</persName><persName xml:id="fw">Felicia Wetzig</persName><persName xml:id="wr">Wesley Raabe</persName><persName xml:id="nr">Natalie Raabe</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <sponsor>Kent State University</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>duk.00620</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2012 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Louisa Van Velsor Whitman</author>
+                    <title>Louisa Van Velsor Whitman to Walt Whitman, [1 March 1873]</title>
+                    <date cert="high" when="1873-03-01" xml:id="dat1">March 1, 1873</date>
+                    
+                        <orgName xml:id="duk">The Trent Collection of Whitmaniana, Duke University Rare Book, Manuscript, and Special Collections Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="rmb"><persName key="Bucke, Richard Maurice">Richard Maurice Bucke</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2013-12-10" who="#el">removed extra space before ptr following lou; corrected choice encoding of 'georgey'</change>
+            <change when="2013-11-05" who="#el">final check</change>
+            <change when="2013-09-17" who="#el">checked</change>
+            <change when="2013-05-28" who="#wr">Duke Proofreading Corrections</change>
+            <change when="2013-05-08" who="#wr">Silent Proofreading Correctios and Miller date note</change>
+            <change when="2013-04-28" who="#nr">Silent Proofreading</change>
+            <change when="2013-04-17" who="#wr">Proofreading corrections</change>            
+            <change when="2013-04-15" who="#nr">Proofreading corrections</change>
+            <change when="2013-03-31" who="#wr">Proofreading corrections</change>
+            <change when="2013-03-29" who="#wr">Date note; Edward's board</change>
+            <change when="2012-08-20" who="#ct">Oral Proofreading Corredctions</change>
+            <change when="2012-08-14" who="#wr">Clean encoding (editor, date, remove "_large") and add standard annotations on unannotated files (Jeff W, Martha [Mattie], George W, Lou Haslam)</change>
+            <change when="2011-03-08" who="#fw">Transcribe 2 Pages</change>
+            <change when="2011-03-09" who="#fw">Correct 2 Pages and annotate Mattie's death</change>
+            <change when="2011-05-03" who="#fw">Annotate Jeff's letter</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="duk.00620.001.jpg" type="recto"/>
+            
+            <note type="editorial" resp="#rmb" place="top">28 Feb. 1873</note>
+            
+            <opener>
+                <dateline>
+                    
+                    <date when="1873-03-01">Saturday noon<ptr target="duk.00620_n1"/></date>
+                </dateline>
+                
+                <salute>My dear dear <choice><orig>walt</orig><reg>Walt</reg></choice></salute>
+            </opener>
+ 
+            <p>i<ptr target="duk.00425_n3"/> have just got your letter
+            the money came all
+            safe<ptr target="duk.00620_n3"/>
+            and i have just paid
+            <choice><orig>lou</orig><reg>Lou</reg></choice><ptr target="duk.00615_n6"/>
+                
+                <choice><orig>edds</orig> <reg>Edd's</reg></choice> board<ptr target="duk.00620_n5"/>
+                
+            </p>
+                <p>she is going to <choice><orig>phelidelpha</orig> <reg>Philadelphia</reg></choice>
+            to get <choice><orig>georgey</orig><reg>Georgey</reg></choice><ptr target="duk.00425_n2"/>
+                    <unclear reason="damage" cert="medium" resp="#wr">a hat</unclear>
+            dear <choice><orig>walt</orig><reg>Walt</reg></choice> i feel as
+            if i wanted somebody
+            to talk <choice><orig>too</orig> <reg>to</reg></choice> about poor matt<ptr target="duk.00614_n8"/>
+                    i have got a letter f<unclear reason="illegible" cert="medium" resp="#wr">ro</unclear>m
+            Jeffy<ptr target="duk.00620_n8"/> a long one and one
+            from <choice><orig>hatty</orig><reg>Hattie</reg></choice><ptr target="duk.00440_n3"/> Jeff gives the
+            particulars of <choice><orig>matti</orig><reg>Matty</reg></choice>es
+            death says he <choice><orig>couldent</orig> <reg>couldn't</reg></choice>
+            write before poor <choice><orig>jeff</orig><reg>Jeff</reg></choice> he
+            feels very sad and <choice><orig>lonesom</orig> <reg>lonesome</reg></choice>
+            i am glad he will keep
+            his children with him
+            <choice><orig>lou</orig><reg>Lou</reg></choice>  and <choice><orig>george</orig><reg>George</reg></choice> wished
+            me to write to <choice><orig>jeff</orig><reg>Jeff</reg></choice> that
+            they would take them 
+            i <choice><orig>dident</orig> <reg>didn't</reg></choice> want to write it
+            but they insisted upon it
+            <pb xml:id="leaf001v" facs="duk.00620.002.jpg" type="verso"/>
+            i knew <choice><orig>walt</orig><reg>Walt</reg></choice> it <choice><orig>wouldent</orig> <reg>wouldn't</reg></choice>
+                <choice><orig>doo</orig> <reg>do</reg></choice> of course but i wrote
+            what they wished) of course
+            they expected <choice><orig>jeff</orig><reg>Jeff</reg></choice> to pay
+            a good board <choice><orig>george</orig><reg>George</reg></choice>
+            thought <choice><orig>lou</orig><reg>Lou</reg></choice>  could manage
+            them but <choice><orig>walter</orig><reg>Walter</reg></choice> dear it
+            would never do</p>
+            <p>they would never be
+            satisfied to live as we
+            <choice><orig>doo</orig> <reg>do</reg></choice> so its best as it is
+                i told you i <choice><orig>beleive</orig> <reg>believe</reg></choice> <choice><orig>george</orig><reg>George</reg></choice>
+            had bought a lot the price
+            was 1200 he got it for 1100 hundred
+            now if they only had money
+            to build a house<ptr target="duk.00620_n11"/> <choice><orig>thats</orig><reg>that's</reg></choice> the
+            talk i get quite tired of hearin<unclear reason="illegible" cert="medium" resp="#wr">g</unclear>
+                of money matters <choice><orig>somtime)</orig> <reg>sometime)</reg></choice>
+            i <choice><orig>havent</orig> <reg>haven't</reg></choice> felt lately
+            as if i cared much about
+            it Lou told <choice><orig>george</orig><reg>George</reg></choice> he
+            ought to give the house
+            to her) poo<unclear reason="illegible" cert="medium" resp="#wr">r</unclear> <choice><orig>hattie</orig><reg>Hattie</reg></choice> she wants
+            to see grandma so much
+            she said grandma mama is
+            gone i shall never see
+            her again)<ptr target="duk.00620_n12"/>
+            poor children
+            they will never have their loss
+            filled</p>
+            
+            <postscript><p><choice><orig>dont</orig><reg>don't</reg></choice> say any thing in your letter about
+                the <choice><orig>childrens</orig><reg>children's</reg></choice> coming <choice><orig>her</orig> <reg>here</reg></choice> to live<ptr target="duk.00620_n19"/></p></postscript>
+        </body>
+    </text>
+</TEI>

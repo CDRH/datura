@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.02426">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Albert Johnston, 10 August
+                    [1884]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.02426</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Albert Johnston, 10 August [1884]</title>
+                    <date cert="medium" when="1884-08-10" xml:id="dat1">August 10, 1884</date>
+                    <idno type="callno">Box 11, Reel 7</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Johnston, Albert" ref="loc.02426_n3">Albert Johnston</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+
+        <revisionDesc>
+            <change when="2015-08-11" who="#nhg">checked, corrected</change>
+            <change when="2015-07-22" who="#kb">edited</change>
+            <change when="2015-06-02" who="#if">edited</change>
+            <change when="2014-09-16" who="#ss">transcribed, encoded and partially
+            annotated.</change>
+            <change when="2015-01-06" who="#kb">edited</change>
+        </revisionDesc> 
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.02426.001_large.jpg" type="recto"/>
+
+            <opener>
+                <dateline>
+                    <name type="place">Camden</name>
+                    <date when="1884-08-10" rend="right">Sunday <choice><abbr>Evn'g</abbr><expan>evening</expan></choice> Aug 10<ptr
+                            target="loc.02426_n1"/></date>
+                </dateline>
+                <salute>Dear Boy Al</salute>
+            </opener>
+            <p>The 25 arrived safely<ptr target="loc.02426_n2"/>&#8212;thanks&#8212;I am about as
+                usual, only extra lameness&#8212;I am coming soon&#8212;Love to father, mother, May
+                and all&#8212;</p>
+            <closer>
+                <signed>W W</signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="loc.02426.002_large.jpg" type="verso"/>
+        </body>
+    </text>  
+</TEI>
+  

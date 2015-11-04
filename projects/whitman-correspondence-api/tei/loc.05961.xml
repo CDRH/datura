@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05961">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to the Editor of the <hi rend="italic">Critic</hi>, 17 June
+                    1886</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05961</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive June be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to the Editor of the <hi rend="italic">Critic</hi>, 17 June 1886</title>
+                    <date cert="high" when="1886-06-17" xml:id="dat1">June 17, 1886</date>
+                    <idno type="callno">Box 8, Reel 5</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="unk"><persName key="Unknown">Unknown</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Editor of the Critic" ref="loc.05961_n3">Editor of the Critic</persName>
+                </person>
+            </particDesc> 
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-07-07" who="#nhg">added enclosure and second image, corrected</change>
+            <change when="2015-03-16" who="#kb">edited</change>
+            <change when="2014-10-12" who="#ss">encoded and annotated from Miller.</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.01415.002b_large.jpg" type="recto"/>
+            
+            <div1 type="letter"><opener>
+                <dateline>
+                    <name type="place">Camden N J</name>
+                    <date when="1886-06-17" rend="right">June 17 '86</date>
+                </dateline>
+                <salute>Dear Sir</salute>
+            </opener> 
+            <p>I send you this note just rec'd&#8212;as you might possibly care to make an item from
+                it&#8212;Please return it to me<ptr target="loc.05961_n2"/></p>
+            <closer> 
+                <signed>Walt Whitman</signed> 
+            </closer>
+                <note type="editorial" resp="#unk" place="bottom">See <hi rend= "underline">Critic</hi> Lounger July 3</note>
+            </div1>
+            <div1 type="letter">
+                <pb xml:id="leaf001v" facs="loc.01415.001_large.jpg" type="verso"/>
+                <opener>
+                    <handShift rend="printed"/>
+                    <name>SCAMMEL BROTHERS,</name>
+                    <dateline>
+                        <name type="place">29 BEAVER STREET, <lb/>NEW YORK.</name>
+                        <name type="place">MAGEE BLOCK, WATER ST., <lb/>SAINT. JOHN, N.B.</name>
+                        <date when="1886-06-14">New York, <handShift rend="manuscript"/>June 14th
+                            <handShift rend="printed"/>188<handShift rend="manuscript"/>6</date>
+                    </dateline>
+                    <salute>Walt Whitman Esq</salute>
+                    <salute>Dear Sir</salute>
+                </opener>
+                <p> Trusting that the intelligence conveyed will plead for my presumption, I venture
+                    to enclose you a few lines. At a sale of Autographs &#38; Books a few days ago
+                    the following prices were obtained. 
+                    <list>
+                        <item>"Autograph letter, Whitman, Walt, Poet," $80.00</item>
+                        <item>Leaves of Grass 1st Edition 10.00</item>
+                    </list> 
+                    Which prices were the highest paid for any similar lots. Thinking you might not
+                    get the above information, I venture to enclose it. </p>
+                <closer>
+                    <salute>with best wishes</salute>
+                    <salute>Yours Truly</salute>
+                    <signed>W. I. Whiting</signed>
+                </closer>
+            </div1>
+        </body>
+    </text>
+</TEI> 

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="mhs.00024">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Thomas Jefferson and Jessie Louisa
+                    Whitman, 11 September [1886]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>mhs.00024</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Thomas Jefferson and Jessie Louisa Whitman, 11 September
+                        [1886]</title>
+                    <date cert="medium" when="1886-09-11" xml:id="dat1">September 11, 1886</date>
+                    <orgName xml:id="mhs">Missouri Historical Society</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Thomas Jefferson" ref="n4995">Thomas Jefferson Whitman</persName>
+                    <persName key="Whitman, Jessie Louisa" ref="n1055">Jessie Louisa Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-07-23" who="#nhg">corrected</change>
+            <change when="2015-03-30" who="#kb">edited</change>
+            <change when="2014-10-24" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <opener>
+                <pb xml:id="leaf001r" facs="mhs.00024.001_large.jpg" type="recto"/>
+                <dateline>
+                    <name type="place">Camden&#8212;</name>
+                    <date when="1886-09-11" rend="right">Saturday, near noon</date>
+                    <date when="1886-09-11" rend="right">Sept: 11&#8212;</date>
+                </dateline>
+                <salute>Dear Brother</salute>
+                <salute>&#38; Dear Jess&#8212;</salute>
+            </opener>
+            <p>The days slip away, &#38; ones sorrow&#8212;though it does not cease&#8212;seems to
+                mellow &#38; spread with the lapse of time.<ptr target="mhs.00024_n2"/></p>
+            <p>&#8212;I continue ab't as usual in
+                health&#8212;but it is very monotonous &#38; lonesome, as I can hardly get around at
+                all&#8212;often remain in the house all day, most of my time in the big chair by the
+                window&#8212;afternoons are the worst &#38; most tedious&#8212;happily my spirits
+                keep pretty good, &#38; I write some, though nothing but "pot-boilers"<ptr target="mhs.00024_n1"/> <gap
+                    reason="cut away"/></p>
+            <pb xml:id="leaf001v" facs="mhs.00024.002_large.jpg" type="verso"/>
+        </body> 
+    </text>
+</TEI>  

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="upa.00076">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Herbert Gilchrist, 15 April
+                    1883</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Schoeberlein</persName>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>upa.00076</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Herbert Gilchrist, 15 April 1883</title>
+                    <date cert="high" when="1883-04-15" xml:id="dat1">April 15, 1883</date>
+                    <orgName xml:id="upa">Walt Whitman Collection, 1842&#8211;1957, Rare Book &#38;
+                        Manuscript Library, University of Pennsylvania</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Gilchrist, Herbert">Herbert Gilchrist</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-07-11" who="#nhg">checked, corrected</change>
+            <change when="2014-02-26" who="#nnk">proofed</change>
+            <change when="2014-02-05" who="#kc">checked, corrected</change>
+            <change when="2013-10-25" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="upa.00076.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place"><hi rend="underline">Kirkwood</hi> (Glendale) America<ptr
+                            target="upa.00076_n1"/></name>
+                    <date when="1883-04-15" rend="right">April 15 '83</date>
+                </dateline>
+            </opener>
+            <p>I am down here for a few days&#8212;Mrs. <choice>
+                    <abbr>S.</abbr>
+                    <expan>Stafford</expan>
+                </choice> has had a severe fit of illness&#8212;three weeks&#8212;one <hi
+                    rend="underline">week quite alarming</hi>&#8212;but is now better&#8212;to day&#8212;is
+                up&#8212;&#38; has been down stairs once or twice for a few minutes&#8212;with luck
+                &#38; good weather the doctor thinks she will get around again as usual before
+                long</p>
+            <p>&#8212;Nothing specially new with me&#8212;I keep about as usual&#8212;have had a fair
+                winter&#8212;Dr Bucke's book is being printed &#38; is to have your intaglio for a
+                    frontispiece<ptr target="upa.00076_n2"/>&#8212;it arouses the strongest opinions
+                pro and con&#8212;(Dr B. &#38; several,&#8212;including myself,&#8212;decidedly like
+                it)</p>
+            <p>Love to you, to your dear <choice>
+                    <abbr>M.</abbr>
+                    <expan>Mother</expan>
+                </choice> &#38; to <choice>
+                    <abbr>G</abbr><expan>Grace</expan></choice>.</p>
+            <closer>
+                <signed rend="right">W W</signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="upa.00076.002_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

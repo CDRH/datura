@@ -85,49 +85,6 @@ osrdf:per.000071 a "person";
      osrdf:per.000058;
    oscys:sex "male" .
 
-osrdf:per.000072 a "person";
-   oscys:deponentAgainst osrdf:per.000058;
-   oscys:deponentFor osrdf:per.000056,
-     osrdf:per.000057;
-   oscys:enslavedBy osrdf:per.000017;
-   oscys:fullName "Davis, George";
-   oscys:fullname "Davis, George";
-   oscys:sex "male";
-   oscys:witnessOf osrdf:per.000213 .
-
-osrdf:per.000073 a "person";
-   oscys:deponentAgainst osrdf:per.000058;
-   oscys:deponentFor osrdf:per.000056,
-     osrdf:per.000057;
-   oscys:fullName "Disney, Richard";
-   oscys:fullname "Disney, Richard";
-   oscys:sex "male";
-   oscys:witnessOf osrdf:per.000213 .
-
-osrdf:per.000074 a "person";
-   oscys:deponentAgainst osrdf:per.000058;
-   oscys:deponentFor osrdf:per.000056,
-     osrdf:per.000057;
-   oscys:fullName "Warfield, Thomas";
-   oscys:fullname "Warfield, Thomas";
-   oscys:sex "male";
-   oscys:witnessOf osrdf:per.000213 .
-
-osrdf:per.000075 a "person";
-   oscys:fullName "Jiams, John";
-   oscys:fullname "Jiams, John";
-   oscys:sex "male" .
-
-osrdf:per.000077 a "person";
-   oscys:fullName "Lee, Lewis";
-   oscys:fullname "Lee, Lewis";
-   oscys:sex "male" .
-
-osrdf:per.000078 a "person";
-   oscys:fullName "Queen, Edward";
-   oscys:fullname "Queen, Edward";
-   oscys:sex "male" .
-
 osrdf:per.000079 a "person";
    oscys:fullName "Andrews, George";
    oscys:fullname "Andrews, George";
@@ -171,6 +128,9 @@ osrdf:per.000083 a "person";
 osrdf:per.000084 a "person";
    oscys:fullName "Callis, Henry A.";
    oscys:fullname "Callis, Henry A.";
+   oscys:jurorFor osrdf:per.000056,
+     osrdf:per.000057,
+     osrdf:per.000058;
    oscys:juryPoolOf osrdf:per.000056,
      osrdf:per.000057,
      osrdf:per.000058;
@@ -202,7 +162,10 @@ osrdf:per.000087 a "person";
 
 osrdf:per.000088 a "person";
    oscys:fullName "Cleaver, James";
-   oscys:fullname "Cleaver, James";
+   oscys:fullname "Deaver, James";
+   oscys:jurorFor osrdf:per.000056,
+     osrdf:per.000057,
+     osrdf:per.000058;
    oscys:juryPoolOf osrdf:per.000056,
      osrdf:per.000057,
      osrdf:per.000058;
@@ -211,6 +174,9 @@ osrdf:per.000088 a "person";
 osrdf:per.000089 a "person";
    oscys:fullName "Delaplaine, Joseph";
    oscys:fullname "Delaplaine, Joseph";
+   oscys:jurorFor osrdf:per.000056,
+     osrdf:per.000057,
+     osrdf:per.000058;
    oscys:juryPoolOf osrdf:per.000056,
      osrdf:per.000057,
      osrdf:per.000058;
@@ -235,6 +201,9 @@ osrdf:per.000091 a "person";
 osrdf:per.000092 a "person";
    oscys:fullName "Graham, William";
    oscys:fullname "Graham, William";
+   oscys:jurorFor osrdf:per.000056,
+     osrdf:per.000057,
+     osrdf:per.000058;
    oscys:juryPoolOf osrdf:per.000056,
      osrdf:per.000057,
      osrdf:per.000058;
@@ -243,6 +212,9 @@ osrdf:per.000092 a "person";
 osrdf:per.000093 a "person";
    oscys:fullName "Hollingshead, John";
    oscys:fullname "Hollingshead, John";
+   oscys:jurorFor osrdf:per.000056,
+     osrdf:per.000057,
+     osrdf:per.000058;
    oscys:juryPoolOf osrdf:per.000056,
      osrdf:per.000057,
      osrdf:per.000058;
@@ -251,6 +223,9 @@ osrdf:per.000093 a "person";
 osrdf:per.000095 a "person";
    oscys:fullName "Hough, John";
    oscys:fullname "Hough, John";
+   oscys:jurorFor osrdf:per.000056,
+     osrdf:per.000057,
+     osrdf:per.000058;
    oscys:juryPoolOf osrdf:per.000056,
      osrdf:per.000057,
      osrdf:per.000058;
@@ -259,6 +234,8 @@ osrdf:per.000095 a "person";
 osrdf:per.000096 a "person";
    oscys:fullName "Ingle, Henry";
    oscys:fullname "Ingle, Henry";
+   oscys:jurorFor osrdf:per.000002,
+     osrdf:per.000005;
    oscys:juryPoolOf osrdf:per.000056,
      osrdf:per.000057,
      osrdf:per.000058;
@@ -291,6 +268,9 @@ osrdf:per.000099 a "person";
 osrdf:per.000100 a "person";
    oscys:fullName "McCormick, Alexander";
    oscys:fullname "McCormick, Alexander";
+   oscys:jurorFor osrdf:per.000056,
+     osrdf:per.000057,
+     osrdf:per.000058;
    oscys:juryPoolOf osrdf:per.000056,
      osrdf:per.000057,
      osrdf:per.000058;
@@ -316,6 +296,9 @@ osrdf:per.000102 a "person";
 osrdf:per.000103 a "person";
    oscys:fullName "Rennor, Daniel";
    oscys:fullname "Rennor, Daniel";
+   oscys:jurorFor osrdf:per.000056,
+     osrdf:per.000057,
+     osrdf:per.000058;
    oscys:juryPoolOf osrdf:per.000056,
      osrdf:per.000057,
      osrdf:per.000058;
@@ -332,14 +315,17 @@ osrdf:per.000104 a "person";
 osrdf:per.000105 a "person";
    oscys:fullName "Stephenson, Clat";
    oscys:fullname "Stephenson, Clat";
+   oscys:jurorFor osrdf:per.000056,
+     osrdf:per.000057,
+     osrdf:per.000058;
    oscys:juryPoolOf osrdf:per.000056,
      osrdf:per.000057,
      osrdf:per.000058;
    oscys:sex "male" .
 
 osrdf:per.000106 a "person";
-   oscys:fullName "Thomas, John";
-   oscys:fullname "Thomas, John III";
+   oscys:fullName "Thomas, John, III";
+   oscys:fullname "Thomas, John, III";
    oscys:juryPoolOf osrdf:per.000056,
      osrdf:per.000057,
      osrdf:per.000058;
@@ -364,6 +350,11 @@ osrdf:per.000110 a "person";
 osrdf:per.000111 a "person";
    oscys:fullName "Worthington, William";
    oscys:fullname "Worthington, William";
+   oscys:jurorFor osrdf:per.000056,
+     osrdf:per.000057,
+     osrdf:per.000058,
+     osrdf:per.000002,
+     osrdf:per.000005;
    oscys:juryPoolOf osrdf:per.000056,
      osrdf:per.000057,
      osrdf:per.000058;
@@ -386,9 +377,11 @@ osrdf:per.000128 a "person";
    oscys:clerkOf osrdf:per.000130,
      osrdf:per.000131,
      osrdf:per.000195,
-     osrdf:per.000076;
-   oscys:fullName "Magruder, John Read";
-   oscys:fullname "Magruder, John Read";
+     osrdf:per.000076,
+     osrdf:per.000078,
+     osrdf:per.000215;
+   oscys:fullName "Magruder, John Read, Jr.";
+   oscys:fullname "Magruder, John Read, Jr.";
    oscys:sex "male" .
 
 osrdf:per.000129 a "person";
@@ -519,11 +512,6 @@ osrdf:per.000182 a "person";
    oscys:fullname "Toher, Nobert";
    oscys:sex "male" .
 
-osrdf:per.000183 a "person";
-   oscys:fullName "Kilty, William";
-   oscys:fullname "Kilty, William";
-   oscys:sex "male" .
-
 osrdf:per.000198 a "person";
    oscys:fullName "Galloway, John";
    oscys:fullname "Galloway, John";
@@ -539,16 +527,12 @@ osrdf:per.000200 a "person";
    oscys:fullname "Wilson, Cumberland";
    oscys:sex "male" .
 
-osrdf:per.000215 a "person";
-   oscys:fullName "Ashton, John";
-   oscys:fullname "Ashton, John";
-   oscys:sex "male" .
-
 osrdf:per.000216 a "person";
    oscys:deponentFor osrdf:per.000214;
    oscys:fullName "Beard, Richard";
    oscys:fullname "Beard, Richard";
-   oscys:sex "male" .
+   oscys:sex "male";
+   oscys:witnessFor osrdf:per.000215 .
 
 osrdf:per.000217 a "person";
    oscys:fullName "Belt, Humphry";
@@ -565,6 +549,8 @@ osrdf:per.000218 a "person";
 osrdf:per.000219 a "person";
    oscys:fullName "Harwood, Thomas";
    oscys:fullname "Hardwood, Thomas";
+   oscys:jurorFor osrdf:per.000078,
+     osrdf:per.000215;
    oscys:sex "male";
    oscys:witnessFor osrdf:per.000213 .
 
@@ -573,12 +559,6 @@ osrdf:per.000220 a "person";
    oscys:fullName "Lake, Joseph";
    oscys:fullname "Lake, Joseph";
    oscys:sex "male" .
-
-osrdf:per.000221 a "person";
-   oscys:deponentFor osrdf:per.000214;
-   oscys:fullName "Lusby, Deborah";
-   oscys:fullname "Lusby, Deborah";
-   oscys:sex "female" .
 
 osrdf:per.000222 a "person";
    oscys:deponentFor osrdf:per.000214;
@@ -757,8 +737,8 @@ osrdf:per.000347 a "person";
    oscys:sex "female" .
 
 osrdf:per.000348 a "person";
-   oscys:fullName "Combs, William";
-   oscys:fullname "Combs, William";
+   oscys:fullName "Combs, William, Sr.";
+   oscys:fullname "Combs, William, Sr.";
    oscys:sex "male" .
 
 osrdf:per.000349 a "person";
@@ -847,8 +827,8 @@ osrdf:per.000365 a "person";
    oscys:sex "male" .
 
 osrdf:per.000366 a "person";
-   oscys:fullName "Goldsberry, William";
-   oscys:fullname "Goldsberry, William";
+   oscys:fullName "Goldsberry, William, Sr.";
+   oscys:fullname "Goldsberry, William, Sr.";
    oscys:sex "male" .
 
 osrdf:per.000367 a "person";
@@ -902,8 +882,8 @@ osrdf:per.000376 a "person";
    oscys:sex "male" .
 
 osrdf:per.000377 a "person";
-   oscys:fullName "Greenwill, Clemt";
-   oscys:fullname "Greenwill, Clement";
+   oscys:fullName "Greenwill, Clement, Sr.";
+   oscys:fullname "Greenwill, Clement, Sr.";
    oscys:sex "male" .
 
 osrdf:per.000378 a "person";
@@ -949,8 +929,8 @@ osrdf:per.000386 a "person";
    oscys:fullname "Lurty, Chloe" .
 
 osrdf:per.000387 a "person";
-   oscys:fullName "Mallingly, Ignatius";
-   oscys:fullname "Mattingly Jr., Ignatius";
+   oscys:fullName "Mattingly, Ignatius, Jr.";
+   oscys:fullname "Mattingly, Ignatius, Jr.";
    oscys:sex "male" .
 
 osrdf:per.000388 a "person";
@@ -964,7 +944,7 @@ osrdf:per.000389 a "person";
    oscys:sex "male" .
 
 osrdf:per.000390 a "person";
-   oscys:fullName "Mattingly, Igns";
+   oscys:fullName "Mattingly, Ignatius";
    oscys:fullname "Mattingly, Ignatius";
    oscys:sex "male" .
 
@@ -979,8 +959,8 @@ osrdf:per.000392 a "person";
    oscys:sex "female" .
 
 osrdf:per.000393 a "person";
-   oscys:fullName "Milburn, Willm";
-   oscys:fullname "Milburn, Willm";
+   oscys:fullName "Milburn, William";
+   oscys:fullname "Milburn, William";
    oscys:sex "male" .
 
 osrdf:per.000394 a "person";
@@ -1162,8 +1142,8 @@ osrdf:per.000430 a "person";
    oscys:sex "male" .
 
 osrdf:per.000437 a "person";
-   oscys:fullName "Green, John";
-   oscys:fullname "Green, John";
+   oscys:fullName "Green, John, Jr.";
+   oscys:fullname "Green, John, Jr.";
    oscys:sex "male";
    oscys:witnessFor osrdf:per.000434 .
 
@@ -1237,7 +1217,7 @@ osrdf:per.000502 a "person";
    oscys:marshalOf osrdf:per.000755,
      osrdf:per.000756,
      osrdf:per.000836,
-     osrdf:per.000835,
+     osrdf:per.000278,
      osrdf:per.000869,
      osrdf:per.001039,
      osrdf:per.001058,
@@ -1248,7 +1228,9 @@ osrdf:per.000502 a "person";
      osrdf:per.001189,
      osrdf:per.001196,
      osrdf:per.001068,
-     osrdf:per.001378;
+     osrdf:per.001378,
+     osrdf:per.001432,
+     osrdf:per.001442;
    oscys:sex "male" .
 
 osrdf:per.000505 a "person";
@@ -2298,28 +2280,619 @@ osrdf:per.001418 a "person";
    oscys:fullname "Woodyens, John";
    oscys:sex "male" .
 
-osrdf:per.000061 a "person";
-   oscys:deponentAgainst osrdf:per.000058;
-   oscys:deponentFor osrdf:per.000056,
-     osrdf:per.000057;
-   oscys:descendantOf osrdf:per.000062;
-   oscys:fullName "Clarke, Caleb";
-   oscys:fullname "Clarke, Caleb";
-   oscys:sex "male";
-   oscys:witnessOf osrdf:per.000213 .
-
-osrdf:per.000062 a "person";
-   oscys:ancestorOf osrdf:per.000061;
-   oscys:deponentFor osrdf:per.000214;
-   oscys:fullName "Duvall, Marsh Mareen";
-   oscys:fullname "Duvall, Marsh Mareen";
+osrdf:per.001452 a "person";
+   oscys:fullName "Baltzer, George";
+   oscys:fullname "Baltzer, George";
+   oscys:jurorFor osrdf:per.000213,
+     osrdf:per.000214;
    oscys:sex "male" .
 
-osrdf:per.000065 a "person";
-   oscys:fullName "Carroll, James";
-   oscys:fullname "Carroll, James";
+osrdf:per.001453 a "person";
+   oscys:fullName "Burnett, Charles A.";
+   oscys:fullname "Burnett, Charles A.";
+   oscys:jurorFor osrdf:per.000213,
+     osrdf:per.000214;
+   oscys:sex "male" .
+
+osrdf:per.001454 a "person";
+   oscys:fullName "Cassin, Joseph";
+   oscys:fullname "Cassin, Joseph";
+   oscys:jurorFor osrdf:per.000213,
+     osrdf:per.000214;
+   oscys:sex "male" .
+
+osrdf:per.001455 a "person";
+   oscys:fullName "Cochrane, Alexander";
+   oscys:fullname "Cochrane, Alexander";
+   oscys:jurorFor osrdf:per.000213,
+     osrdf:per.000214;
+   oscys:sex "male" .
+
+osrdf:per.001456 a "person";
+   oscys:fullName "Greenfield, Walter";
+   oscys:fullname "Greenfield, Walter";
+   oscys:jurorFor osrdf:per.000213,
+     osrdf:per.000214;
+   oscys:sex "male" .
+
+osrdf:per.001457 a "person";
+   oscys:fullName "Herford, Henry";
+   oscys:fullname "Herford, Henry";
+   oscys:jurorFor osrdf:per.000213,
+     osrdf:per.000214;
+   oscys:sex "male" .
+
+osrdf:per.001458 a "person";
+   oscys:fullName "Moore, William";
+   oscys:fullname "Moore, William";
+   oscys:jurorFor osrdf:per.000213,
+     osrdf:per.000214;
+   oscys:sex "male" .
+
+osrdf:per.001459 a "person";
+   oscys:fullName "Peltz, John";
+   oscys:fullname "Peltz, John";
+   oscys:jurorFor osrdf:per.000213,
+     osrdf:per.000214;
+   oscys:sex "male" .
+
+osrdf:per.001460 a "person";
+   oscys:fullName "Reintzell, John";
+   oscys:fullname "Reintzell, John";
+   oscys:jurorFor osrdf:per.000213,
+     osrdf:per.000214;
+   oscys:sex "male" .
+
+osrdf:per.001461 a "person";
+   oscys:fullName "St. Clair, George";
+   oscys:fullname "St. Clair, George";
+   oscys:jurorFor osrdf:per.000213,
+     osrdf:per.000214;
+   oscys:sex "male" .
+
+osrdf:per.001462 a "person";
+   oscys:fullName "Weaver, C. Willis";
+   oscys:fullname "Weaver, C. Willis";
+   oscys:jurorFor osrdf:per.000213,
+     osrdf:per.000214;
+   oscys:sex "male" .
+
+osrdf:per.001463 a "person";
+   oscys:fullName "Wilson, Henry";
+   oscys:fullname "Wilson, Henry";
+   oscys:jurorFor osrdf:per.000213,
+     osrdf:per.000214;
+   oscys:sex "male" .
+
+osrdf:per.001464 a "person";
+   oscys:fullName "Carroll, Daniel";
+   oscys:fullname "Carroll, Daniel";
    oscys:sex "male";
-   oscys:slaveholderOf osrdf:per.000066 .
+   oscys:witnessFor osrdf:per.000058 .
+
+osrdf:per.001465 a "person";
+   oscys:fullName "Nevitt";
+   oscys:fullname "Nevitt";
+   oscys:sex "female";
+   oscys:witnessFor osrdf:per.000056,
+     osrdf:per.000057 .
+
+osrdf:per.001466 a "person";
+   oscys:fullName "Quaid";
+   oscys:fullname "Quaid";
+   oscys:sex "female";
+   oscys:witnessFor osrdf:per.000056,
+     osrdf:per.000057 .
+
+osrdf:per.001467 a "person";
+   oscys:fullName "Sewell, Robert";
+   oscys:fullname "Sewell, Robert";
+   oscys:sex "male";
+   oscys:witnessFor osrdf:per.000058 .
+
+osrdf:per.001468 a "person";
+   oscys:fullName "Young, Nicholas";
+   oscys:fullname "Young, Nicholas";
+   oscys:sex "male";
+   oscys:witnessFor osrdf:per.000058 .
+
+osrdf:per.001473 a "person";
+   oscys:fullName "Duvall, Ann";
+   oscys:sex "female" .
+
+osrdf:per.001490 a "person";
+   oscys:fullName "Chapman, William";
+   oscys:fullname "Chapman, William";
+   oscys:sex "male" .
+
+osrdf:per.001493 a "person";
+   oscys:clerkOf osrdf:per.000078,
+     osrdf:per.000215;
+   oscys:fullName "Gwinn, John";
+   oscys:fullname "Gwinn, John";
+   oscys:sameAs "https://viaf.org/viaf/65732822";
+   oscys:sex "male" .
+
+osrdf:per.001494 a "person";
+   oscys:fullName "Williams, J.";
+   oscys:fullname "Williams, J.";
+   oscys:marshalOf osrdf:per.000215;
+   oscys:sex "male" .
+
+osrdf:per.001497 a "person";
+   oscys:fullName "Beall, John";
+   oscys:fullname "Beall, John";
+   oscys:sex "male";
+   oscys:witnessFor osrdf:per.000215 .
+
+osrdf:per.001498 a "person";
+   oscys:fullName "Beall Jr., Richard";
+   oscys:fullname "Beall Jr., Richard";
+   oscys:jurorFor osrdf:per.000215,
+     osrdf:per.000078;
+   oscys:sex "male" .
+
+osrdf:per.001499 a "person";
+   oscys:fullName "Billingsley, Walter";
+   oscys:fullname "Billingsley, Walter";
+   oscys:jurorFor osrdf:per.000215,
+     osrdf:per.000078;
+   oscys:sex "male" .
+
+osrdf:per.001500 a "person";
+   oscys:fullName "Cooper, Spencer";
+   oscys:fullname "Cooper, Spencer";
+   oscys:jurorFor osrdf:per.000215,
+     osrdf:per.000078;
+   oscys:sex "male" .
+
+osrdf:per.001501 a "person";
+   oscys:fullName "Cresap, James";
+   oscys:fullname "Cresap, James";
+   oscys:jurorFor osrdf:per.000215,
+     osrdf:per.000078;
+   oscys:sex "male" .
+
+osrdf:per.001503 a "person";
+   oscys:fullName "Gover, Robert";
+   oscys:fullname "Gover, Robert";
+   oscys:jurorFor osrdf:per.000215,
+     osrdf:per.000078;
+   oscys:sex "male" .
+
+osrdf:per.001505 a "person";
+   oscys:fullName "Hilleary, Tilghman";
+   oscys:fullname "Hilleary, Tilghman";
+   oscys:jurorFor osrdf:per.000215,
+     osrdf:per.000078;
+   oscys:sex "male" .
+
+osrdf:per.001506 a "person";
+   oscys:fullName "Matthews, James";
+   oscys:fullname "Matthews, James";
+   oscys:jurorFor osrdf:per.000215,
+     osrdf:per.000078;
+   oscys:sex "male" .
+
+osrdf:per.001508 a "person";
+   oscys:fullName "McCubbin, John C.";
+   oscys:fullname "McCubbin, John Cray";
+   oscys:jurorFor osrdf:per.000215,
+     osrdf:per.000078;
+   oscys:sex "male" .
+
+osrdf:per.001509 a "person";
+   oscys:fullName "Merrikin, Richard";
+   oscys:fullname "Merrikin, Richard";
+   oscys:jurorFor osrdf:per.000215,
+     osrdf:per.000078;
+   oscys:sex "male" .
+
+osrdf:per.001510 a "person";
+   oscys:fullName "Robinson, Archibald";
+   oscys:fullname "Robinson, Archibald";
+   oscys:jurorFor osrdf:per.000215,
+     osrdf:per.000078;
+   oscys:sex "male" .
+
+osrdf:per.001511 a "person";
+   oscys:fullName "Trueman, John";
+   oscys:fullname "Trueman, John";
+   oscys:jurorFor osrdf:per.000215,
+     osrdf:per.000078;
+   oscys:sex "male" .
+
+osrdf:per.001512 a "person";
+   oscys:fullName "Welch, Benjamin";
+   oscys:fullname "Welch, Benjamin";
+   oscys:sex "male";
+   oscys:witnessFor osrdf:per.000215 .
+
+osrdf:per.001513 a "person";
+   oscys:fullName "West, Benjamin";
+   oscys:fullname "West, Benjamin";
+   oscys:jurorFor osrdf:per.000215,
+     osrdf:per.000078;
+   oscys:sex "male" .
+
+osrdf:per.001516 oscys:fullname "Kilty, John";
+   oscys:sex "male" .
+
+osrdf:per.001517 a "person";
+   oscys:fullName "Baden Jr., John";
+   oscys:fullname "Baden Jr., John";
+   oscys:jurorFor osrdf:per.000078,
+     osrdf:per.000215;
+   oscys:sex "male" .
+
+osrdf:per.001518 a "person";
+   oscys:fullName "Boone, Joseph";
+   oscys:fullname "Boone, Joseph";
+   oscys:marshalOf osrdf:per.000215;
+   oscys:sex "male" .
+
+osrdf:per.001519 a "person";
+   oscys:fullName "Brooker, Benjamin";
+   oscys:fullname "Brooker, Benjamin";
+   oscys:jurorFor osrdf:per.000078,
+     osrdf:per.000215;
+   oscys:sex "male" .
+
+osrdf:per.001520 a "person";
+   oscys:fullName "Brugess, John Magruder";
+   oscys:fullname "Brugess, John Magruder";
+   oscys:jurorFor osrdf:per.000078,
+     osrdf:per.000215;
+   oscys:sex "male" .
+
+osrdf:per.001521 a "person";
+   oscys:fullName "Coolidge, Samuel Judson";
+   oscys:fullname "Coolidge, Samuel Judson";
+   oscys:jurorFor osrdf:per.000078,
+     osrdf:per.000215;
+   oscys:sex "male" .
+
+osrdf:per.001524 a "person";
+   oscys:fullName "Hodges, Charles";
+   oscys:fullname "Hodges, Charles";
+   oscys:jurorFor osrdf:per.000078,
+     osrdf:per.000215;
+   oscys:sex "male" .
+
+osrdf:per.001525 a "person";
+   oscys:fullName "Jackson, William John";
+   oscys:fullname "Jackson, William John";
+   oscys:sex "male" .
+
+osrdf:per.001526 a "person";
+   oscys:fullName "Lansdale, Isaac";
+   oscys:fullname "Lansdale, Isaac";
+   oscys:jurorFor osrdf:per.000078,
+     osrdf:per.000215;
+   oscys:sex "male" .
+
+osrdf:per.001527 a "person";
+   oscys:fullName "Magill, Thomas";
+   oscys:fullname "Magill, Thomas";
+   oscys:jurorFor osrdf:per.000078,
+     osrdf:per.000215;
+   oscys:sex "male" .
+
+osrdf:per.001528 a "person";
+   oscys:fullName "Magruder, Dennis";
+   oscys:fullname "Magruder, Dennis";
+   oscys:jurorFor osrdf:per.000078,
+     osrdf:per.000215;
+   oscys:sex "male" .
+
+osrdf:per.001529 a "person";
+   oscys:fullName "Magruder, Francis";
+   oscys:fullname "Magruder, Francis";
+   oscys:jurorFor osrdf:per.000078,
+     osrdf:per.000215;
+   oscys:sex "male" .
+
+osrdf:per.001530 a "person";
+   oscys:fullName "Mewburry, James";
+   oscys:fullname "Mewburry, James";
+   oscys:jurorFor osrdf:per.000078,
+     osrdf:per.000215;
+   oscys:sex "male" .
+
+osrdf:per.001537 a "person";
+   oscys:fullName "Carroll, Daniel";
+   oscys:fullname "Carroll, Daniel";
+   oscys:sex "male" .
+
+osrdf:per.001539 a "person";
+   oscys:fullName "Hepburn, Samuel";
+   oscys:fullname "Hepburn, Samuel";
+   oscys:sex "male" .
+
+osrdf:per.001550 a "person";
+   oscys:fullName "Terry, Soloman";
+   oscys:fullname "Terry, Soloman";
+   oscys:sex "male" .
+
+osrdf:per.001551 a "person";
+   oscys:fullName "Wence, James";
+   oscys:fullname "Wence, James";
+   oscys:sex "male" .
+
+osrdf:per.001552 a "person";
+   oscys:fullName "Jameson, Richard";
+   oscys:fullname "Jameson, Richard";
+   oscys:sex "male";
+   oscys:witnessFor osrdf:per.000005 .
+
+osrdf:per.001555 a "person";
+   oscys:birth "1759";
+   oscys:death "1815";
+   oscys:fullName "Brent, Daniel Carroll, 1759-1815";
+   oscys:fullname "Brent, Daniel Carroll, 1759-1815";
+   oscys:marshalOf osrdf:per.000005;
+   oscys:sameAs "https://viaf.org/viaf/170005472";
+   oscys:sex "male" .
+
+osrdf:per.001559 a "person";
+   oscys:fullName "Wren, Polly";
+   oscys:fullname "Wren, Polly";
+   oscys:sex "female";
+   oscys:witnessAgainst osrdf:per.000002;
+   oscys:witnessFor osrdf:per.000005 .
+
+osrdf:per.001564 a "person";
+   oscys:fullName "Barber, Barnabas";
+   oscys:fullname "Barber, Barnabas";
+   oscys:sex "male";
+   oscys:witnessFor osrdf:per.000002 .
+
+osrdf:per.001565 a "person";
+   oscys:fullName "Boyd, Thomas";
+   oscys:fullname "Boyd, Thomas";
+   oscys:sex "male";
+   oscys:witnessFor osrdf:per.000005 .
+
+osrdf:per.001566 a "person";
+   oscys:fullName "Boyer, Richard M.";
+   oscys:fullname "Boyer, Richard M.";
+   oscys:jurorFor osrdf:per.000002,
+     osrdf:per.000005;
+   oscys:sex "male" .
+
+osrdf:per.001567 a "person";
+   oscys:fullName "Brown, Charles";
+   oscys:fullname "Brown, Charles";
+   oscys:sex "male";
+   oscys:witnessFor osrdf:per.000005 .
+
+osrdf:per.001568 a "person";
+   oscys:fullName "Collins, John";
+   oscys:fullname "Collins, John";
+   oscys:sex "male";
+   oscys:witnessFor osrdf:per.000002 .
+
+osrdf:per.001569 a "person";
+   oscys:fullName "Doyle, Sarah";
+   oscys:fullname "Doyle, Sarah";
+   oscys:sex "female";
+   oscys:witnessFor osrdf:per.000002 .
+
+osrdf:per.001570 a "person";
+   oscys:fullName "Goldrope, John";
+   oscys:fullname "Goldrope, John";
+   oscys:sex "male";
+   oscys:witnessFor osrdf:per.000002 .
+
+osrdf:per.001571 a "person";
+   oscys:fullName "Harp, Mathew";
+   oscys:fullname "Harp, Mathew";
+   oscys:sex "male";
+   oscys:witnessFor osrdf:per.000005 .
+
+osrdf:per.001572 a "person";
+   oscys:fullName "Hedges, Nicholas";
+   oscys:fullname "Hedges, Nicholas";
+   oscys:jurorFor osrdf:per.000002,
+     osrdf:per.000005;
+   oscys:sex "male" .
+
+osrdf:per.001573 a "person";
+   oscys:fullName "Hodges, Thomas C.";
+   oscys:fullname "Hodges, Thomas C.";
+   oscys:jurorFor osrdf:per.000002,
+     osrdf:per.000005;
+   oscys:sex "male" .
+
+osrdf:per.001574 a "person";
+   oscys:fullName "Hyde, Thomas";
+   oscys:fullname "Hyde, Thomas";
+   oscys:jurorFor osrdf:per.000002,
+     osrdf:per.000005;
+   oscys:sex "male";
+   oscys:witnessAgainst osrdf:per.000005;
+   oscys:witnessFor osrdf:per.000002 .
+
+osrdf:per.001575 a "person";
+   oscys:fullName "King, George";
+   oscys:fullname "King, George";
+   oscys:jurorFor osrdf:per.000002,
+     osrdf:per.000005;
+   oscys:sex "male" .
+
+osrdf:per.001576 a "person";
+   oscys:fullName "King, John";
+   oscys:fullname "King, John";
+   oscys:sex "male";
+   oscys:witnessAgainst osrdf:per.000002;
+   oscys:witnessFor osrdf:per.000005 .
+
+osrdf:per.001577 a "person";
+   oscys:fullName "Krouse, Mary";
+   oscys:fullname "Krouse, Mary";
+   oscys:sex "male",
+     "female";
+   oscys:witnessFor osrdf:per.000005 .
+
+osrdf:per.001578 a "person";
+   oscys:fullName "Macles, Benjamin";
+   oscys:fullname "Macles, Benjamin";
+   oscys:sex "male";
+   oscys:witnessFor osrdf:per.000002 .
+
+osrdf:per.001579 a "person";
+   oscys:fullName "Naylor, John L.";
+   oscys:fullname "Naylor, John L.";
+   oscys:jurorFor osrdf:per.000002,
+     osrdf:per.000005;
+   oscys:sex "male" .
+
+osrdf:per.001580 a "person";
+   oscys:fullName "Newton, Ignatius";
+   oscys:fullname "Newton, Ignatius";
+   oscys:jurorFor osrdf:per.000002,
+     osrdf:per.000005;
+   oscys:sex "male" .
+
+osrdf:per.001581 a "person";
+   oscys:fullName "Speake, Samuel";
+   oscys:fullname "Speake, Samuel";
+   oscys:jurorFor osrdf:per.000002,
+     osrdf:per.000005;
+   oscys:sex "male" .
+
+osrdf:per.001582 a "person";
+   oscys:fullName "Stelle, Pontius D.";
+   oscys:fullname "Stelle, Pontius D.";
+   oscys:jurorFor osrdf:per.000002,
+     osrdf:per.000005;
+   oscys:sex "male" .
+
+osrdf:per.001583 a "person";
+   oscys:fullName "Atkinson";
+   oscys:fullname "Atkinson";
+   oscys:sex "female";
+   oscys:witnessAgainst osrdf:per.000005;
+   oscys:witnessFor osrdf:per.000002 .
+
+osrdf:per.001584 a "person";
+   oscys:fullName "Boone, Alexius";
+   oscys:fullname "Boone, Alexius";
+   oscys:jurorFor osrdf:per.000002,
+     osrdf:per.000005;
+   oscys:sex "male" .
+
+osrdf:per.001585 a "person";
+   oscys:fullName "Cann, Robert W.";
+   oscys:fullname "Cann, Robert W.";
+   oscys:sex "male";
+   oscys:witnessAgainst osrdf:per.000005;
+   oscys:witnessFor osrdf:per.000002 .
+
+osrdf:per.001586 a "person";
+   oscys:fullName "Furgerson, Enos D.";
+   oscys:fullname "Furgerson, Enos D.";
+   oscys:jurorFor osrdf:per.000002,
+     osrdf:per.000005;
+   oscys:sex "male" .
+
+osrdf:per.001587 a "person";
+   oscys:fullName "Harp, William";
+   oscys:fullname "Harp, William";
+   oscys:sex "male";
+   oscys:witnessAgainst osrdf:per.000002;
+   oscys:witnessFor osrdf:per.000005 .
+
+osrdf:per.001588 a "person";
+   oscys:fullName "Hearn, John";
+   oscys:fullname "Hearn, John";
+   oscys:jurorFor osrdf:per.000002,
+     osrdf:per.000005;
+   oscys:sex "male" .
+
+osrdf:per.001589 a "person";
+   oscys:fullName "Lennox, Peter";
+   oscys:fullname "Lennox, Peter";
+   oscys:jurorFor osrdf:per.000002,
+     osrdf:per.000005;
+   oscys:sex "male" .
+
+osrdf:per.001590 a "person";
+   oscys:fullName "Lowe, Michael";
+   oscys:fullname "Lowe, Michael";
+   oscys:jurorFor osrdf:per.000002,
+     osrdf:per.000005;
+   oscys:sex "male" .
+
+osrdf:per.001591 a "person";
+   oscys:fullName "McIntire, Samuel";
+   oscys:fullname "McIntire, Samuel";
+   oscys:jurorFor osrdf:per.000002,
+     osrdf:per.000005;
+   oscys:sex "male" .
+
+osrdf:per.001592 a "person";
+   oscys:fullName "Moore, George";
+   oscys:fullname "Moore, George";
+   oscys:jurorFor osrdf:per.000002,
+     osrdf:per.000005;
+   oscys:sex "male" .
+
+osrdf:per.001593 a "person";
+   oscys:fullName "Munro, Philip";
+   oscys:fullname "Munro, Philip";
+   oscys:jurorFor osrdf:per.000002,
+     osrdf:per.000005;
+   oscys:sex "male" .
+
+osrdf:per.001594 a "person";
+   oscys:fullName "Nicholson, Rachel";
+   oscys:fullname "Nicholson, Rachel";
+   oscys:sex "female";
+   oscys:witnessAgainst osrdf:per.000002;
+   oscys:witnessFor osrdf:per.000005 .
+
+osrdf:per.001595 a "person";
+   oscys:fullName "Pickerell, Benjamin";
+   oscys:fullname "Pickerell, Benjamin";
+   oscys:sex "male";
+   oscys:witnessAgainst osrdf:per.000005;
+   oscys:witnessFor osrdf:per.000002 .
+
+osrdf:per.001596 a "person";
+   oscys:fullName "Queen, Samuel";
+   oscys:fullname "Queen, Samuel";
+   oscys:jurorFor osrdf:per.000002,
+     osrdf:per.000005;
+   oscys:sex "male" .
+
+osrdf:per.001597 a "person";
+   oscys:fullName "Smallwood, Samuel N.";
+   oscys:fullname "Smallwood, Samuel N.";
+   oscys:jurorFor osrdf:per.000002,
+     osrdf:per.000005;
+   oscys:sex "male" .
+
+osrdf:per.001598 a "person";
+   oscys:fullName "Stephenson, James S.";
+   oscys:fullname "Stephenson, James S.";
+   oscys:jurorFor osrdf:per.000002,
+     osrdf:per.000005;
+   oscys:sex "male" .
+
+osrdf:per.001599 a "person";
+   oscys:fullName "Threlkeld, John";
+   oscys:fullname "Threlkeld, John";
+   oscys:sex "male";
+   oscys:witnessAgainst osrdf:per.000005;
+   oscys:witnessFor osrdf:per.000002 .
+
+osrdf:per.001600 a "person";
+   oscys:fullName "Renn, Mary";
+   oscys:fullname "Renn, Mary";
+   oscys:sex "female";
+   oscys:witnessAgainst osrdf:per.000002;
+   oscys:witnessFor osrdf:per.000005 .
 
 osrdf:per.000076 a "person";
    oscys:fullName "Queen, Simon";
@@ -2762,7 +3335,7 @@ osrdf:per.000561 a "person";
    oscys:death "1833";
    oscys:employerOf osrdf:per.000560;
    oscys:fullName "Bainbridge, William";
-   oscys:fullname "Bainbridge, William";
+   oscys:fullname "Bainbridge, William, 1774-1833";
    oscys:sex "male" .
 
 osrdf:per.000568 a "person";
@@ -2857,12 +3430,6 @@ osrdf:per.000680 a "person";
    oscys:fullName "Berry, Brooke";
    oscys:fullname "Berry, Brooke";
    oscys:legal osrdf:per.000685;
-   oscys:sex "male" .
-
-osrdf:per.000699 a "person";
-   oscys:fullName "Naylor, George";
-   oscys:fullname "Naylor, George";
-   oscys:legal osrdf:per.000694;
    oscys:sex "male" .
 
 osrdf:per.000702 a "person";
@@ -2967,15 +3534,10 @@ osrdf:per.000826 a "person";
    oscys:sex "female";
    oscys:witnessOf osrdf:per.000777 .
 
-osrdf:per.000839 a "person";
-   oscys:fullName "Webb, William";
-   oscys:fullname "Webb, William";
-   oscys:legal osrdf:per.000838 .
-
 osrdf:per.000840 a "person";
    oscys:fullName "Simsen, John";
    oscys:fullname "Simsen, John";
-   oscys:legal osrdf:per.000835;
+   oscys:legal osrdf:per.000278;
    oscys:sex "male" .
 
 osrdf:per.000841 a "person";
@@ -3055,15 +3617,9 @@ osrdf:per.000987 a "person";
 osrdf:per.000988 a "person";
    oscys:deponentAgainst osrdf:per.000983;
    oscys:deponentFor osrdf:per.000982;
-   oscys:deposedBy osrdf:per.000989;
+   oscys:deposedBy osrdf:per.000839;
    oscys:fullName "Manning, Ignatious";
    oscys:fullname "Manning, Ignatious";
-   oscys:sex "male" .
-
-osrdf:per.000989 a "person";
-   oscys:deposed osrdf:per.000988;
-   oscys:fullName "Webb, William";
-   oscys:fullname "Webb, William";
    oscys:sex "male" .
 
 osrdf:per.000992 a "person";
@@ -3375,8 +3931,8 @@ osrdf:per.001186 a "person";
    oscys:sex "male" .
 
 osrdf:per.001187 a "person";
-   oscys:fullName "Marshall, J.";
-   oscys:fullname "Marshall, Jr., J.";
+   oscys:fullName "Marshall, J., Jr.";
+   oscys:fullname "Marshall, J., Jr.";
    oscys:legal osrdf:per.001184;
    oscys:sex "male" .
 
@@ -3406,8 +3962,8 @@ osrdf:per.001221 a "person";
 
 osrdf:per.001231 a "person";
    oscys:death "before March 14, 1849";
-   oscys:fullName "Hope, George";
-   oscys:fullname "Hope, George";
+   oscys:fullName "Hope, George, Sr.";
+   oscys:fullname "Hope, George, Sr.";
    oscys:sex "male";
    oscys:slaveholderOf osrdf:per.001228 .
 
@@ -3532,7 +4088,6 @@ osrdf:per.001360 a "person";
    oscys:fullName "Taylor, R. I.";
    oscys:fullname "Taylor, R. I.";
    oscys:legal osrdf:per.001354;
-   oscys:sex "";
    oscys:witnessOf osrdf:per.001348 .
 
 osrdf:per.001361 a "person";
@@ -3616,11 +4171,152 @@ osrdf:per.001414 a "person";
    oscys:legal osrdf:per.001415;
    oscys:sex "male" .
 
+osrdf:per.001440 a "person";
+   oscys:fullName "Smoot";
+   oscys:fullname "Smoot";
+   oscys:legal osrdf:per.000001 .
+
+osrdf:per.001470 a "person";
+   oscys:fullName "Carrick, John";
+   oscys:fullname "Carrick, John";
+   oscys:sex "male";
+   oscys:spouseOf osrdf:per.001469 .
+
+osrdf:per.001483 a "person";
+   oscys:fullName "Randall, John";
+   oscys:fullname "Randall, John";
+   oscys:legal osrdf:per.000221;
+   oscys:sex "male" .
+
+osrdf:per.001484 a "person";
+   oscys:acquaintanceOf osrdf:per.000221;
+   oscys:death "before 1794";
+   oscys:fullName "Welch, Robert";
+   oscys:fullname "Welch, Robert";
+   oscys:sex "male" .
+
+osrdf:per.001489 a "person";
+   oscys:fullName "Belt, James B.";
+   oscys:fullname "Belt, James B.";
+   oscys:legal osrdf:per.000073;
+   oscys:sex "male" .
+
+osrdf:per.001502 a "person";
+   oscys:fullName "Gassaway, John";
+   oscys:fullname "Gassaway, John";
+   oscys:legal osrdf:per.000065;
+   oscys:sex "male" .
+
+osrdf:per.001504 a "person";
+   oscys:enslavedBy osrdf:per.000065;
+   oscys:fullName "Henry";
+   oscys:fullname "Henry";
+   oscys:sex "male" .
+
+osrdf:per.001507 a "person";
+   oscys:fullName "Mackubin, James";
+   oscys:fullname "Mackubin, James";
+   oscys:legal osrdf:per.000074;
+   oscys:sex "male" .
+
+osrdf:per.001536 a "person";
+   oscys:fullName "Allison, William";
+   oscys:fullname "Allison, William";
+   oscys:legal osrdf:per.001541;
+   oscys:sex "male" .
+
+osrdf:per.001538 a "person";
+   oscys:fullName "English, John";
+   oscys:fullname "English, John";
+   oscys:legal osrdf:per.001541;
+   oscys:sex "male" .
+
+osrdf:per.001544 a "person";
+   oscys:employerOf osrdf:per.001545;
+   oscys:fullName "Lingan, James M.";
+   oscys:fullname "Lingan, James M.";
+   oscys:sex "male" .
+
+osrdf:per.001545 a "person";
+   oscys:employeeOf osrdf:per.001544;
+   oscys:fullName "Smith, Walter";
+   oscys:fullname "Smith, Walter";
+   oscys:sex "male";
+   oscys:witnessAgainst osrdf:per.000005;
+   oscys:witnessFor osrdf:per.000002 .
+
+osrdf:per.001547 a "person";
+   oscys:fullName "Faw, Abraham";
+   oscys:fullname "Faw, Abraham";
+   oscys:legal osrdf:per.001540;
+   oscys:sex "male" .
+
+osrdf:per.001548 a "person";
+   oscys:employeeOf osrdf:per.001540;
+   oscys:fullName "Powell, Joseph";
+   oscys:fullname "Powell, Joseph";
+   oscys:sex "male" .
+
+osrdf:per.001549 a "person";
+   oscys:fullName "Ratcliffe, John";
+   oscys:fullname "Ratcliffe, John";
+   oscys:parentOf osrdf:per.001540;
+   oscys:sex "male" .
+
+osrdf:per.001553 a "person";
+   oscys:fullName "Bussard, Daniel";
+   oscys:fullname "Bussard, Daniel";
+   oscys:legal osrdf:per.000005;
+   oscys:sex "male" .
+
+osrdf:per.001554 a "person";
+   oscys:fullName "Riggs, George W.";
+   oscys:fullname "Riggs, George W.";
+   oscys:jurorFor osrdf:per.000002,
+     osrdf:per.000005;
+   oscys:legal osrdf:per.000005;
+   oscys:sex "male" .
+
+osrdf:per.001556 a "person";
+   oscys:fullName "Beall, Upton";
+   oscys:fullname "Beall, Upton";
+   oscys:legal osrdf:per.000005;
+   oscys:sex "male" .
+
+osrdf:per.001557 a "person";
+   oscys:fullName "Glove, Charles";
+   oscys:fullname "Glove, Charles";
+   oscys:legal osrdf:per.000005;
+   oscys:sex "male" .
+
+osrdf:per.001558 a "person";
+   oscys:enslavedBy osrdf:per.000005;
+   oscys:fullName "Winn";
+   oscys:fullname "Winn";
+   oscys:sex "female" .
+
+osrdf:per.001560 a "person";
+   oscys:birth "1764";
+   oscys:death "1819";
+   oscys:fullName "Brent, Robert";
+   oscys:fullname "Brent, Robert, 1764-1819";
+   oscys:legal osrdf:per.001561;
+   oscys:sameAs "https://viaf.org/viaf/11568981";
+   oscys:sex "male" .
+
+osrdf:per.001561 a "person";
+   oscys:fullName "Wilson, John A.";
+   oscys:fullname "Wilson, John A.";
+   oscys:legal osrdf:per.001560;
+   oscys:marshalOf osrdf:per.000002;
+   oscys:sex "male" .
+
 osrdf:per.000007 a "person";
    oscys:fullName "Ott, John";
    oscys:fullname "Ott, John";
    oscys:judgeOf osrdf:per.000005,
      osrdf:per.000002;
+   oscys:marshalOf osrdf:per.000002;
    oscys:sex "male";
    oscys:witnessOf osrdf:per.000434 .
 
@@ -3631,17 +4327,20 @@ osrdf:per.000020 a "person";
    oscys:sex "male";
    oscys:slaveholderOf osrdf:per.000021 .
 
-osrdf:per.000068 a "person";
-   oscys:ancestorOf osrdf:per.000213;
-   oscys:fullName "Queen, Mary";
-   oscys:fullname "Queen, Mary";
-   oscys:parentOf osrdf:per.000066;
-   oscys:sex "female" .
+osrdf:per.000075 a "person";
+   oscys:acquaintanceOf osrdf:per.001476;
+   oscys:fullName "Jiams, John";
+   oscys:fullname "Jiams, John";
+   oscys:sex "male";
+   oscys:siblingOf osrdf:per.001491 .
 
 osrdf:per.000108 a "person";
    oscys:attorneyFor osrdf:per.000595;
    oscys:fullName "Vanzandt, Nicholas B.";
    oscys:fullname "Vanzandt, Nicholas B.";
+   oscys:jurorFor osrdf:per.000056,
+     osrdf:per.000057,
+     osrdf:per.000058;
    oscys:juryPoolOf osrdf:per.000056,
      osrdf:per.000057,
      osrdf:per.000058;
@@ -3664,6 +4363,16 @@ osrdf:per.000146 a "person";
    oscys:deponentFor osrdf:per.000137;
    oscys:fullName "Ponsonby, Richard";
    oscys:fullname "Ponsonby, Richard";
+   oscys:sex "male" .
+
+osrdf:per.000183 a "person";
+   oscys:attorneyAgainst osrdf:per.000078;
+   oscys:attorneyFor osrdf:per.000215;
+   oscys:birth "1757";
+   oscys:death "1821";
+   oscys:fullName "Kilty, William, 1757-1821";
+   oscys:fullname "Kilty, William, 1757-1821";
+   oscys:sameAs "https://viaf.org/viaf/63124644";
    oscys:sex "male" .
 
 osrdf:per.000190 a "person";
@@ -3728,7 +4437,7 @@ osrdf:per.000433 a "person";
    oscys:birth "1776";
    oscys:death "1825";
    oscys:fullName "Bowie, Washington";
-   oscys:fullname "Bowie, Washington";
+   oscys:fullname "Bowie, Washington, 1776-1825";
    oscys:sex "male";
    oscys:slaveholderOf osrdf:per.000431 .
 
@@ -3782,8 +4491,8 @@ osrdf:per.000468 a "person";
    oscys:sex "male" .
 
 osrdf:per.000472 a "person";
-   oscys:fullName "Way, Andrew";
-   oscys:fullname "Way, Andrew";
+   oscys:fullName "Way, Andrew, Jr.";
+   oscys:fullname "Way, Andrew, Jr.";
    oscys:purchasedSlaveFrom osrdf:per.000466;
    oscys:sex "male";
    oscys:slaveholderOf osrdf:per.000462 .
@@ -4134,6 +4843,12 @@ osrdf:per.000828 a "person";
      osrdf:per.000826;
    oscys:sex "male" .
 
+osrdf:per.000839 a "person";
+   oscys:deposed osrdf:per.000988;
+   oscys:fullName "Webb, William";
+   oscys:fullname "Webb, William";
+   oscys:legal osrdf:per.000838 .
+
 osrdf:per.000844 a "person";
    oscys:attorneyAgainst osrdf:per.000843;
    oscys:attorneyFor osrdf:per.000842;
@@ -4300,8 +5015,8 @@ osrdf:per.001009 a "person";
    oscys:soldSlaveTo osrdf:per.001011 .
 
 osrdf:per.001020 a "person";
-   oscys:fullName "Kean, James";
-   oscys:fullname "Kean, Jr. James";
+   oscys:fullName "Kean, James, Jr.";
+   oscys:fullname "Kean, James, Jr.";
    oscys:sex "male" .
 
 osrdf:per.001025 oscys:deposedBy osrdf:per.001037;
@@ -4558,7 +5273,7 @@ osrdf:per.001407 a "person";
 
 osrdf:per.001408 a "person";
    oscys:fullName "Mason, Richard";
-   oscys:fullname "Mason, Richard";
+   oscys:fullname "Mason, Richard C.";
    oscys:legal osrdf:per.001399,
      osrdf:per.001410;
    oscys:sex "male" .
@@ -4584,21 +5299,86 @@ osrdf:per.001425 a "person";
    oscys:fullname "Williams";
    oscys:sex "male" .
 
-osrdf:per.000005 a "person";
-   oscys:defendantAgainst osrdf:per.000002;
-   oscys:fullName "Scott, Sabret";
-   oscys:fullname "Scott, Sabret";
-   oscys:judgedBy osrdf:per.000007;
+osrdf:per.001478 a "person";
+   oscys:fullName "Lee, Edward";
+   oscys:fullname "Lee, Edward";
+   oscys:parentOf osrdf:per.000221;
    oscys:sex "male";
-   oscys:slaveholderOf osrdf:per.000002 .
+   oscys:siblingOf "per000077" .
 
-osrdf:per.000066 a "person";
-   oscys:ancestorOf osrdf:per.000057;
-   oscys:childOf osrdf:per.000068;
-   oscys:enslavedBy osrdf:per.000065;
-   oscys:fullName "Cooper, Nanny";
-   oscys:fullname "Cooper, Nanny";
+osrdf:per.001514 a "person";
+   oscys:birth "1741";
+   oscys:death "1811";
+   oscys:fullName "Chase, Samuel";
+   oscys:fullname "Chase, Samuel, 1741-1811";
+   oscys:judgeOf osrdf:per.000078,
+     osrdf:per.000215;
+   oscys:sameAs "https://viaf.org/viaf/42639490";
+   oscys:sex "male" .
+
+osrdf:per.001522 a "person";
+   oscys:fullName "Craufurd, David";
+   oscys:fullname "Craufurd, David";
+   oscys:judgeOf osrdf:per.000078,
+     osrdf:per.000215;
+   oscys:sex "male" .
+
+osrdf:per.001523 a "person";
+   oscys:fullName "Doe, John";
+   oscys:fullname "Doe, John";
+   oscys:legal osrdf:per.000078,
+     osrdf:per.001531;
+   oscys:sex "male" .
+
+osrdf:per.001531 a "person";
+   oscys:fullName "Roe, Richard";
+   oscys:fullname "Roe, Richard";
+   oscys:legal osrdf:per.001495,
+     osrdf:per.001523;
+   oscys:sex "male" .
+
+osrdf:per.001532 a "person";
+   oscys:fullName "Stone, Michael J.";
+   oscys:fullname "Stone, Michael J.";
+   oscys:judgeOf osrdf:per.000078,
+     osrdf:per.000215;
+   oscys:sex "male" .
+
+osrdf:per.001542 a "person";
+   oscys:enslavedBy osrdf:per.001541;
+   oscys:fullName "Terry";
+   oscys:fullname "Terry";
+   oscys:parentOf osrdf:per.000002;
    oscys:sex "female" .
+
+osrdf:per.001543 a "person";
+   oscys:fullName "Duckett, Allen Bowie";
+   oscys:fullname "Duckett, Allen Bowie";
+   oscys:judgeOf osrdf:per.000002,
+     osrdf:per.000005;
+   oscys:sex "male" .
+
+osrdf:per.001546 a "person";
+   oscys:fullName "Barnes, John";
+   oscys:fullname "Barnes, John";
+   oscys:legal osrdf:per.000002,
+     osrdf:per.000005;
+   oscys:sex "male" .
+
+osrdf:per.000074 a "person";
+   oscys:acquaintanceOf osrdf:per.001476;
+   oscys:deponentAgainst osrdf:per.000058;
+   oscys:deponentFor osrdf:per.000056,
+     osrdf:per.000057,
+     osrdf:per.000078;
+   oscys:deponentOf osrdf:per.000078,
+     osrdf:per.000215;
+   oscys:employeeOf osrdf:per.000065;
+   oscys:fullName "Warfield, Thomas";
+   oscys:fullname "Warfield, Thomas";
+   oscys:legal osrdf:per.001507;
+   oscys:sex "male";
+   oscys:witnessOf osrdf:per.000213 .
 
 osrdf:per.000141 a "person";
    oscys:childOf osrdf:per.000139,
@@ -4759,7 +5539,8 @@ osrdf:per.000461 a "person";
      osrdf:per.000734,
      osrdf:per.000741,
      osrdf:per.000983,
-     osrdf:per.001393;
+     osrdf:per.001393,
+     osrdf:per.001432;
    oscys:sex "male" .
 
 osrdf:per.000480 a "person";
@@ -4831,10 +5612,18 @@ osrdf:per.000660 a "person";
    oscys:birth "1787";
    oscys:death "1876";
    oscys:fullName "Weightman, Roger Chew";
-   oscys:fullname "Weightman, Roger Chew";
+   oscys:fullname "Weightman, Roger Chew, 1787-1876";
    oscys:legal osrdf:per.000656,
      osrdf:per.000659,
      osrdf:per.000654;
+   oscys:sex "male" .
+
+osrdf:per.000699 a "person";
+   oscys:fullName "Naylor, George";
+   oscys:fullname "Naylor, George";
+   oscys:legal osrdf:per.000694,
+     osrdf:per.001436,
+     osrdf:per.001438;
    oscys:sex "male" .
 
 osrdf:per.000704 a "person";
@@ -4874,10 +5663,12 @@ osrdf:per.000740 a "person";
      osrdf:per.001376,
      osrdf:per.001419,
      osrdf:per.001420,
-     osrdf:per.001421;
+     osrdf:per.001421,
+     osrdf:per.001441,
+     osrdf:per.001442;
    oscys:fullName "Smith, John A.";
    oscys:fullname "Smith, John A.";
-   oscys:legal osrdf:per.000835,
+   oscys:legal osrdf:per.000278,
      osrdf:per.001279;
    oscys:sex "male" .
 
@@ -4891,8 +5682,8 @@ osrdf:per.000760 a "person";
    oscys:spouseOf osrdf:per.000765 .
 
 osrdf:per.000762 a "person";
-   oscys:fullName "Wells, J. Junior";
-   oscys:fullname "Wells, J.";
+   oscys:fullName "Wells, J., Jr.";
+   oscys:fullname "Wells, J., Jr.";
    oscys:legal osrdf:per.000760,
      osrdf:per.000765,
      osrdf:per.000767;
@@ -4905,7 +5696,7 @@ osrdf:per.000770 a "person";
    oscys:birth "1793";
    oscys:death "1865";
    oscys:fullName "Morfit, Henry Mason";
-   oscys:fullname "Morfit, Henry Mason";
+   oscys:fullname "Morfit, Henry Mason, 1793-1865";
    oscys:sex "male" .
 
 osrdf:per.000815 a "person";
@@ -5168,14 +5959,72 @@ osrdf:per.001422 a "person";
    oscys:fullname "Dent, H. H.";
    oscys:sex "male" .
 
-osrdf:per.000002 a "person";
-   oscys:clientOf osrdf:per.000001;
-   oscys:enslavedBy osrdf:per.000005;
-   oscys:fullName "Ben";
-   oscys:fullname "Ben";
-   oscys:judgedBy osrdf:per.000007;
-   oscys:petitionerAgainst osrdf:per.000005;
+osrdf:per.001437 a "person";
+   oscys:acquaintanceOf osrdf:per.001436,
+     osrdf:per.001430,
+     osrdf:per.001438;
+   oscys:deponentOf osrdf:per.001426,
+     osrdf:per.001427,
+     osrdf:per.001428,
+     osrdf:per.001429,
+     osrdf:per.001434,
+     osrdf:per.001435,
+     osrdf:per.001430,
+     osrdf:per.001431,
+     osrdf:per.001432;
+   oscys:fullName "Riley, Farrill";
+   oscys:fullname "Riley, Farrill";
    oscys:sex "male" .
+
+osrdf:per.001439 a "person";
+   oscys:acquaintanceOf osrdf:per.001436;
+   oscys:fullName "Moxley, Daniel";
+   oscys:fullname "Moxley, Daniel";
+   oscys:legal osrdf:per.001432,
+     osrdf:per.001430;
+   oscys:sex "male" .
+
+osrdf:per.001471 a "person";
+   oscys:familyOf osrdf:per.000065;
+   oscys:fullName "Carroll, Anthony";
+   oscys:fullname "Carroll, Anthony";
+   oscys:inheritedSlaveFrom osrdf:per.000065;
+   oscys:sex "male";
+   oscys:slaveholderOf osrdf:per.000068 .
+
+osrdf:per.001474 a "person";
+   oscys:childOf osrdf:per.000062;
+   oscys:fullName "Fowler, Susannah";
+   oscys:fullname "Fowler, Susannah";
+   oscys:sex "female";
+   oscys:siblingOf osrdf:per.001472,
+     osrdf:per.001469 .
+
+osrdf:per.001475 a "person";
+   oscys:acquaintanceOf osrdf:per.000062,
+     osrdf:per.001472;
+   oscys:fullName "Larkin, Thomas";
+   oscys:fullname "Larkin, Thomas";
+   oscys:sex "male";
+   oscys:slaveholderOf osrdf:per.000068 .
+
+osrdf:per.001515 a "person";
+   oscys:fullName "Digges, Thomas",
+     "Kilty, John";
+   oscys:fullname "Digges, Thomas";
+   oscys:legal osrdf:per.001393,
+     osrdf:per.001495,
+     osrdf:per.000078;
+   oscys:sex "male" .
+
+osrdf:per.001540 a "person";
+   oscys:childOf osrdf:per.001549;
+   oscys:employerOf osrdf:per.001548;
+   oscys:fullName "Ratcliffe, Richard";
+   oscys:fullname "Ratcliffe, Richard";
+   oscys:legal osrdf:per.001547;
+   oscys:sex "male";
+   oscys:witnessFor osrdf:per.000005 .
 
 osrdf:per.000015 a "person";
    oscys:childOf osrdf:per.000016;
@@ -5301,7 +6150,7 @@ osrdf:per.000491 a "person";
    oscys:death "1830";
    oscys:familyOf osrdf:per.000582;
    oscys:fullName "Hay, George";
-   oscys:fullname "Hay, George";
+   oscys:fullname "Hay, George, 1765-1830";
    oscys:oppositionsAttorney osrdf:per.000584;
    oscys:sex "male" .
 
@@ -5611,6 +6460,92 @@ osrdf:per.001382 a "person";
    oscys:slaveholderOf osrdf:per.001377;
    oscys:soldSlaveTo osrdf:per.001379 .
 
+osrdf:per.001438 a "person";
+   oscys:acquaintanceOf osrdf:per.001436,
+     osrdf:per.001437;
+   oscys:fullName "Booth, Joseph";
+   oscys:fullname "Booth, Joseph";
+   oscys:legal osrdf:per.000699;
+   oscys:sex "male";
+   oscys:worksWith osrdf:per.001436 .
+
+osrdf:per.001469 a "person";
+   oscys:childOf osrdf:per.000062;
+   oscys:fullName "Carrick, Ann";
+   oscys:fullname "Carrick, Ann";
+   oscys:sex "female";
+   oscys:siblingOf osrdf:per.001472,
+     osrdf:per.001474;
+   oscys:spouseOf osrdf:per.001470 .
+
+osrdf:per.001477 a "person";
+   oscys:fullName "Quynn, Allen";
+   oscys:fullname "Quynn, Allen";
+   oscys:legal osrdf:per.000078,
+     osrdf:per.000215,
+     osrdf:per.000061,
+     osrdf:per.000072;
+   oscys:sex "male" .
+
+osrdf:per.001486 a "person";
+   oscys:acquaintanceOf osrdf:per.000072,
+     osrdf:per.000077;
+   oscys:businessRelationshipWith osrdf:per.001488;
+   oscys:fullName "Atwell";
+   oscys:fullname "Atwell";
+   oscys:sex "female";
+   oscys:spouseOf osrdf:per.001487 .
+
+osrdf:per.001487 a "person";
+   oscys:acquaintanceOf osrdf:per.000072,
+     osrdf:per.000077;
+   oscys:fullName "Atwell, John";
+   oscys:fullname "Atwell, John";
+   oscys:neighborOf osrdf:per.000215;
+   oscys:sex "male";
+   oscys:spouseOf osrdf:per.001486 .
+
+osrdf:per.001488 a "person";
+   oscys:businessRelationshipWith osrdf:per.001486;
+   oscys:fullName "Duckett, Thomas";
+   oscys:fullname "Duckett, Thomas";
+   oscys:judgeOf osrdf:per.000078,
+     osrdf:per.000215;
+   oscys:neighborOf osrdf:per.000215;
+   oscys:sex "male" .
+
+osrdf:per.001491 a "person";
+   oscys:fullName "Jiams, Plummer";
+   oscys:fullname "Jiams, Plummer";
+   oscys:legal osrdf:per.001393,
+     osrdf:per.001495,
+     osrdf:per.000078;
+   oscys:sex "male";
+   oscys:siblingOf osrdf:per.000075 .
+
+osrdf:per.001496 a "person";
+   oscys:attorneyAgainst osrdf:per.000078;
+   oscys:attorneyFor osrdf:per.000215;
+   oscys:fullName "Cooke, William";
+   oscys:fullname "Cooke, William";
+   oscys:opposingAttorneys osrdf:per.001495,
+     osrdf:per.001393;
+   oscys:sex "male" .
+
+osrdf:per.001562 a "person";
+   oscys:attorneyAgainst osrdf:per.000005;
+   oscys:attorneyFor osrdf:per.000002;
+   oscys:attorneyWith osrdf:per.000001;
+   oscys:birth "1789";
+   oscys:death "1845";
+   oscys:fullName "Swann, Thomas, 1789-1845";
+   oscys:fullname "Swann, Thomas, 1789-1845";
+   oscys:opposingAttorneys osrdf:per.000435,
+     "",
+     osrdf:per.001563;
+   oscys:sameAs "https://viaf.org/viaf/65493466";
+   oscys:sex "male" .
+
 osrdf:per.000003 a "person";
    oscys:birth "1774";
    oscys:clerkOf osrdf:per.000008,
@@ -5876,7 +6811,6 @@ osrdf:per.000003 a "person";
      osrdf:per.000832,
      osrdf:per.000833,
      osrdf:per.000834,
-     osrdf:per.000835,
      osrdf:per.000836,
      osrdf:per.000842,
      osrdf:per.000843,
@@ -6080,11 +7014,30 @@ osrdf:per.000003 a "person";
      osrdf:per.001392,
      osrdf:per.001393,
      osrdf:per.001423,
-     osrdf:per.001424;
+     osrdf:per.001424,
+     osrdf:per.001426,
+     osrdf:per.001427,
+     osrdf:per.001428,
+     osrdf:per.001429,
+     osrdf:per.001431,
+     osrdf:per.001430,
+     osrdf:per.001434,
+     osrdf:per.001435,
+     osrdf:per.001441,
+     osrdf:per.001442,
+     osrdf:per.001443,
+     osrdf:per.001444,
+     osrdf:per.001445,
+     osrdf:per.001446,
+     osrdf:per.001447,
+     osrdf:per.001448,
+     osrdf:per.001449,
+     osrdf:per.001450,
+     osrdf:per.001451;
    oscys:death "1848";
    oscys:deposed osrdf:per.000873;
    oscys:fullName "Brent, William";
-   oscys:fullname "Brent, William";
+   oscys:fullname "Brent, William, 1774-1848";
    oscys:legal osrdf:per.001268;
    oscys:sameAs "https://viaf.org/viaf/18936621";
    oscys:sex "male" .
@@ -6133,6 +7086,18 @@ osrdf:per.000025 a "person";
    oscys:judgedBy osrdf:per.000004;
    oscys:petitionerAgainst osrdf:per.000027;
    oscys:sex "female" .
+
+osrdf:per.000077 a "person";
+   oscys:acquaintanceOf osrdf:per.001487,
+     osrdf:per.000072,
+     osrdf:per.001486;
+   oscys:death "before 1794";
+   oscys:employeeOf osrdf:per.000065;
+   oscys:employerOf osrdf:per.000073;
+   oscys:fullName "Lee, Lewis";
+   oscys:fullname "Lee, Lewis";
+   oscys:sex "male";
+   oscys:siblingOf osrdf:per.001478 .
 
 osrdf:per.000115 a "person";
    oscys:clientOf osrdf:per.000001;
@@ -6242,6 +7207,20 @@ osrdf:per.000209 a "person";
      osrdf:per.000201;
    oscys:fullName "Lyons, Polly";
    oscys:fullname "Lyons, Polly";
+   oscys:sex "female" .
+
+osrdf:per.000221 a "person";
+   oscys:acquaintanceOf osrdf:per.001484,
+     osrdf:per.001476,
+     osrdf:per.000066;
+   oscys:childOf osrdf:per.001478;
+   oscys:deponentFor osrdf:per.000214,
+     osrdf:per.000215;
+   oscys:deponentOf osrdf:per.000078,
+     osrdf:per.000215;
+   oscys:fullName "Lusby, Deborah";
+   oscys:fullname "Lusby, Deborah";
+   oscys:legal osrdf:per.001483;
    oscys:sex "female" .
 
 osrdf:per.000225 a "person";
@@ -6978,6 +7957,47 @@ osrdf:per.001423 a "person";
    oscys:petitionerAgainst osrdf:per.001424;
    oscys:sex "female" .
 
+osrdf:per.001436 a "person";
+   oscys:acquaintanceOf osrdf:per.001437,
+     osrdf:per.001438,
+     osrdf:per.001439;
+   oscys:fullName "Webster, Samuel";
+   oscys:fullname "Webster, Samuel";
+   oscys:legal osrdf:per.000699;
+   oscys:sex "male";
+   oscys:witnessFor osrdf:per.001426,
+     osrdf:per.001427,
+     osrdf:per.001428,
+     osrdf:per.001429,
+     osrdf:per.001430,
+     osrdf:per.001431,
+     osrdf:per.001434,
+     osrdf:per.001435;
+   oscys:worksWith osrdf:per.001438 .
+
+osrdf:per.001541 a "person";
+   oscys:fullName "Ray, Thomas";
+   oscys:fullname "Ray, Thomas";
+   oscys:legal osrdf:per.001536,
+     osrdf:per.001538;
+   oscys:sex "male";
+   oscys:slaveholderOf osrdf:per.000002,
+     osrdf:per.001542;
+   oscys:soldSlaveTo osrdf:per.000005 .
+
+osrdf:per.001563 a "person";
+   oscys:attorneyAgainst osrdf:per.000002;
+   oscys:attorneyFor osrdf:per.000005;
+   oscys:attorneyWith osrdf:per.000435;
+   oscys:birth "1758";
+   oscys:death "1815";
+   oscys:fullName "Lee, Charles, 1758-1815";
+   oscys:fullname "Lee, Charles, 1758-1815";
+   oscys:opposingAttorneys osrdf:per.000001,
+     osrdf:per.001562;
+   oscys:sameAs "https://viaf.org/viaf/65472738";
+   oscys:sex "male" .
+
 osrdf:per.000009 a "person";
    oscys:childOf osrdf:per.000008;
    oscys:clientOf osrdf:per.000011;
@@ -7075,6 +8095,72 @@ osrdf:per.000055 a "person";
    oscys:sex "female";
    oscys:siblingOf osrdf:per.000052,
      osrdf:per.000054 .
+
+osrdf:per.000061 a "person";
+   oscys:acquaintanceOf osrdf:per.000078,
+     osrdf:per.000215,
+     osrdf:per.001476;
+   oscys:childOf osrdf:per.001472;
+   oscys:deponentAgainst osrdf:per.000058;
+   oscys:deponentFor osrdf:per.000056,
+     osrdf:per.000057,
+     osrdf:per.000078;
+   oscys:deponentOf osrdf:per.000078,
+     osrdf:per.000215;
+   oscys:descendantOf osrdf:per.000062;
+   oscys:fullName "Clarke, Caleb";
+   oscys:fullname "Clarke, Caleb";
+   oscys:legal osrdf:per.001477;
+   oscys:sex "male";
+   oscys:witnessOf osrdf:per.000213 .
+
+osrdf:per.000068 a "person";
+   oscys:ancestorOf osrdf:per.000213;
+   oscys:enslavedBy osrdf:per.001475,
+     osrdf:per.000065,
+     osrdf:per.001471;
+   oscys:fullName "Queen, Mary";
+   oscys:fullname "Queen, Mary";
+   oscys:parentOf osrdf:per.000066,
+     osrdf:per.001476;
+   oscys:sex "female" .
+
+osrdf:per.000072 a "person";
+   oscys:acquaintanceOf osrdf:per.000078,
+     osrdf:per.001476,
+     osrdf:per.001486,
+     osrdf:per.001487,
+     osrdf:per.000077;
+   oscys:deponentAgainst osrdf:per.000058;
+   oscys:deponentFor osrdf:per.000056,
+     osrdf:per.000057,
+     osrdf:per.000078;
+   oscys:deponentOf osrdf:per.000078,
+     osrdf:per.000215;
+   oscys:enslavedBy osrdf:per.000017;
+   oscys:fullName "Davis, George";
+   oscys:fullname "Davis, George";
+   oscys:legal osrdf:per.001477;
+   oscys:sex "male";
+   oscys:witnessOf osrdf:per.000213 .
+
+osrdf:per.000073 a "person";
+   oscys:acquaintanceOf osrdf:per.000066,
+     osrdf:per.001476,
+     osrdf:per.000065;
+   oscys:deponentAgainst osrdf:per.000058;
+   oscys:deponentFor osrdf:per.000056,
+     osrdf:per.000057,
+     osrdf:per.000078;
+   oscys:deponentOf osrdf:per.000078,
+     osrdf:per.000215;
+   oscys:employeeOf osrdf:per.000065,
+     osrdf:per.000077;
+   oscys:fullName "Disney, Richard";
+   oscys:fullname "Disney, Richard";
+   oscys:legal osrdf:per.001489;
+   oscys:sex "male";
+   oscys:witnessOf osrdf:per.000213 .
 
 osrdf:per.000116 a "person";
    oscys:defendantAgainst osrdf:per.000115;
@@ -7466,19 +8552,6 @@ osrdf:per.000701 a "person";
    oscys:oppositionsAttorney osrdf:per.000572;
    oscys:sex "male";
    oscys:slaveholderOf osrdf:per.000700 .
-
-osrdf:per.000725 a "person";
-   oscys:birth "1755";
-   oscys:death "1835";
-   oscys:fullName "Marshall, John";
-   oscys:fullname "Marshall, John";
-   oscys:judgeOf osrdf:per.000708,
-     osrdf:per.000709,
-     osrdf:per.000710,
-     osrdf:per.000711,
-     osrdf:per.000712,
-     osrdf:per.000713;
-   oscys:sex "male" .
 
 osrdf:per.000731 a "person";
    oscys:defendantAgainst osrdf:per.000730;
@@ -8212,6 +9285,94 @@ osrdf:per.001424 a "person";
    oscys:sex "male";
    oscys:slaveholderOf osrdf:per.001423 .
 
+osrdf:per.001441 a "person";
+   oscys:clientOf osrdf:per.000001;
+   oscys:enslavedBy osrdf:per.001442;
+   oscys:fullName "Noah";
+   oscys:fullname "Noah";
+   oscys:judgedBy osrdf:per.000004;
+   oscys:petitionerAgainst osrdf:per.001442;
+   oscys:sex "male" .
+
+osrdf:per.001472 a "person";
+   oscys:acquaintanceOf osrdf:per.001475,
+     osrdf:per.000065;
+   oscys:birth "1716 ca.";
+   oscys:childOf osrdf:per.000062;
+   oscys:death "1785 ca.";
+   oscys:fullName "Clarke, Mary";
+   oscys:fullname "Clarke, Mary";
+   oscys:parentOf osrdf:per.000061;
+   oscys:sex "female";
+   oscys:siblingOf osrdf:per.001474,
+     osrdf:per.001469 .
+
+osrdf:per.001479 a "person";
+   oscys:childOf osrdf:per.001476;
+   oscys:fullName "Queen, Gervais";
+   oscys:fullname "Queen, Gervais";
+   oscys:sex "male";
+   oscys:siblingOf osrdf:per.000078,
+     osrdf:per.001481,
+     osrdf:per.001485,
+     osrdf:per.001482,
+     osrdf:per.001480 .
+
+osrdf:per.001480 a "person";
+   oscys:childOf osrdf:per.001476;
+   oscys:fullName "Queen, Proteus";
+   oscys:fullname "Queen, Proteus";
+   oscys:sex "male";
+   oscys:siblingOf osrdf:per.000078,
+     osrdf:per.001481,
+     osrdf:per.001485,
+     osrdf:per.001479,
+     osrdf:per.001482 .
+
+osrdf:per.001481 a "person";
+   oscys:childOf osrdf:per.001476;
+   oscys:fullName "Queen, Sukey";
+   oscys:fullname "Queen, Sukey";
+   oscys:sex "female";
+   oscys:siblingOf osrdf:per.000078,
+     osrdf:per.001485,
+     osrdf:per.001479,
+     osrdf:per.001482,
+     osrdf:per.001480 .
+
+osrdf:per.001482 a "person";
+   oscys:childOf osrdf:per.001476;
+   oscys:fullName "Queen, Winifred";
+   oscys:fullname "Queen, Winifred";
+   oscys:sex "female";
+   oscys:siblingOf osrdf:per.000078,
+     osrdf:per.001481,
+     osrdf:per.001485,
+     osrdf:per.001479,
+     osrdf:per.001480 .
+
+osrdf:per.001485 oscys:childOf osrdf:per.001476;
+   oscys:fullname "Queen, Mary";
+   oscys:sex "female";
+   oscys:siblingOf osrdf:per.000078,
+     osrdf:per.001481,
+     osrdf:per.001479,
+     osrdf:per.001482,
+     osrdf:per.001480 .
+
+osrdf:per.001534 a "person";
+   oscys:birth "1771";
+   oscys:death "1834";
+   oscys:fullName "Johnson, William, 1771-1834";
+   oscys:fullname "Johnson, William, 1771-1834";
+   oscys:judgeOf osrdf:per.000708,
+     osrdf:per.000709,
+     osrdf:per.000710,
+     osrdf:per.000711,
+     osrdf:per.000712,
+     osrdf:per.000713;
+   oscys:sex "male" .
+
 osrdf:per.000013 a "person";
    oscys:childOf osrdf:per.000012;
    oscys:clientOf osrdf:per.000011,
@@ -8222,6 +9383,31 @@ osrdf:per.000013 a "person";
    oscys:judgedBy osrdf:per.000004;
    oscys:petitionerAgainst osrdf:per.000014;
    oscys:sex "male" .
+
+osrdf:per.000062 a "person";
+   oscys:acquaintanceOf osrdf:per.001475,
+     osrdf:per.000065;
+   oscys:ancestorOf osrdf:per.000061;
+   oscys:deponentFor osrdf:per.000214;
+   oscys:fullName "Duvall, Marsh Mareen";
+   oscys:fullname "Duvall, Marsh Mareen";
+   oscys:neighborOf osrdf:per.000065;
+   oscys:parentOf osrdf:per.001469,
+     osrdf:per.001472,
+     osrdf:per.001474;
+   oscys:sex "male" .
+
+osrdf:per.000066 a "person";
+   oscys:acquaintanceOf osrdf:per.000221,
+     osrdf:per.000073;
+   oscys:ancestorOf osrdf:per.000057;
+   oscys:childOf osrdf:per.000068;
+   oscys:enslavedBy osrdf:per.000065,
+     osrdf:per.000215;
+   oscys:fullName "Cooper, Nanny";
+   oscys:fullname "Cooper, Nanny";
+   oscys:sex "female";
+   oscys:siblingOf osrdf:per.001476 .
 
 osrdf:per.000125 a "person";
    oscys:defendantAgainst osrdf:per.000123,
@@ -8567,9 +9753,11 @@ osrdf:per.000753 oscys:attorneyAgainst osrdf:per.001214,
      osrdf:per.001278;
    oscys:attorneyFor osrdf:per.001213,
      osrdf:per.001277;
+   oscys:birth "1816";
    oscys:childOf osrdf:per.000464;
+   oscys:death "1881";
    oscys:fullName "Wallach, Richard";
-   oscys:fullname "Wallach, Richard";
+   oscys:fullname "Wallach, Richard, 1816-1881";
    oscys:legal osrdf:per.001279;
    oscys:marshalOf osrdf:per.000750,
      osrdf:per.000850,
@@ -8628,7 +9816,7 @@ osrdf:per.000838 a "person";
      osrdf:per.000832,
      osrdf:per.000833,
      osrdf:per.000834,
-     osrdf:per.000835,
+     osrdf:per.000278,
      osrdf:per.000836,
      osrdf:per.000839 .
 
@@ -8790,7 +9978,7 @@ osrdf:per.001155 a "person";
    oscys:birth "1777";
    oscys:death "1864";
    oscys:fullName "Taney, Roger Brooke";
-   oscys:fullname "Taney, Roger Brooke";
+   oscys:fullname "Taney, Roger Brooke, 1777-1864";
    oscys:judgeOf osrdf:per.001145,
      osrdf:per.000816,
      osrdf:per.001277,
@@ -9016,6 +10204,30 @@ osrdf:per.001419 a "person";
    oscys:petitionerAgainst osrdf:per.001420,
      osrdf:per.001421;
    oscys:sex "female" .
+
+osrdf:per.001442 a "person";
+   oscys:defendantAgainst osrdf:per.001441;
+   oscys:fullName "Riley, John H.";
+   oscys:fullname "Riley, John H.";
+   oscys:judgedBy osrdf:per.000004;
+   oscys:oppositionsAttorney osrdf:per.000001;
+   oscys:sex "male";
+   oscys:slaveholderOf osrdf:per.001441 .
+
+osrdf:per.001495 a "person";
+   oscys:attorneyAgainst osrdf:per.000215;
+   oscys:attorneyFor osrdf:per.000078;
+   oscys:attorneyWith osrdf:per.001393;
+   oscys:birth "1757";
+   oscys:death "1815";
+   oscys:fullName "Key, Philip Barton, 1757-1815";
+   oscys:fullname "Key, Philip Barton, 1757-1815";
+   oscys:legal osrdf:per.001515,
+     osrdf:per.001491,
+     osrdf:per.001531;
+   oscys:opposingAttorneys osrdf:per.001496;
+   oscys:sameAs "https://viaf.org/viaf/58180178";
+   oscys:sex "male" .
 
 osrdf:per.000008 a "person";
    oscys:clientOf osrdf:per.000011;
@@ -9357,7 +10569,8 @@ osrdf:per.000739 a "person";
      osrdf:per.001278,
      osrdf:per.001307,
      osrdf:per.001372,
-     osrdf:per.001424;
+     osrdf:per.001424,
+     osrdf:per.001451;
    oscys:oppositionsAttorney osrdf:per.000873;
    oscys:sex "male";
    oscys:slaveholderOf osrdf:per.001373 .
@@ -9392,17 +10605,6 @@ osrdf:per.000754 a "person";
    oscys:petitionerAgainst osrdf:per.000755,
      osrdf:per.000756;
    oscys:sex "female" .
-
-osrdf:per.000830 a "person";
-   oscys:attorneyAgainst osrdf:per.000772,
-     osrdf:per.000773,
-     osrdf:per.000774,
-     osrdf:per.000816;
-   oscys:attorneyFor osrdf:per.000775,
-     osrdf:per.001145;
-   oscys:fullName "Marbury, John";
-   oscys:fullname "Marbury, John";
-   oscys:sex "male" .
 
 osrdf:per.000853 a "person";
    oscys:defendantAgainst osrdf:per.000852;
@@ -9793,7 +10995,7 @@ osrdf:per.000485 a "person";
    oscys:death "1852";
    oscys:defendantAgainst osrdf:per.000484;
    oscys:fullName "Sawyer, Lemuel";
-   oscys:fullname "Sawyer, Lemuel";
+   oscys:fullname "Sawyer, Lemuel, 1777-1852";
    oscys:judgedBy osrdf:per.000004;
    oscys:oppositionsAttorney osrdf:per.000476,
      osrdf:per.000001;
@@ -10031,39 +11233,39 @@ osrdf:per.000719 a "person";
 osrdf:per.000832 a "person";
    oscys:clientOf osrdf:per.000001,
      osrdf:per.000476;
-   oscys:enslavedBy osrdf:per.000835,
+   oscys:enslavedBy osrdf:per.000278,
      osrdf:per.000836;
    oscys:fullName "Williams, Ann Maria";
    oscys:fullname "Williams, Ann Maria";
    oscys:judgedBy osrdf:per.000004;
    oscys:legal osrdf:per.000838;
-   oscys:petitionerAgainst osrdf:per.000835,
+   oscys:petitionerAgainst osrdf:per.000278,
      osrdf:per.000836;
    oscys:sex "female" .
 
 osrdf:per.000833 a "person";
    oscys:clientOf osrdf:per.000001,
      osrdf:per.000476;
-   oscys:enslavedBy osrdf:per.000835,
+   oscys:enslavedBy osrdf:per.000278,
      osrdf:per.000836;
    oscys:fullName "Williams, John";
    oscys:fullname "Williams, John";
    oscys:judgedBy osrdf:per.000004;
    oscys:legal osrdf:per.000838;
-   oscys:petitionerAgainst osrdf:per.000835,
+   oscys:petitionerAgainst osrdf:per.000278,
      osrdf:per.000836;
    oscys:sex "male" .
 
 osrdf:per.000834 a "person";
    oscys:clientOf osrdf:per.000001,
      osrdf:per.000476;
-   oscys:enslavedBy osrdf:per.000835,
+   oscys:enslavedBy osrdf:per.000278,
      osrdf:per.000836;
    oscys:fullName "Williams, Tobias";
    oscys:fullname "Williams, Tobias";
    oscys:judgedBy osrdf:per.000004;
    oscys:legal osrdf:per.000838;
-   oscys:petitionerAgainst osrdf:per.000835,
+   oscys:petitionerAgainst osrdf:per.000278,
      osrdf:per.000836;
    oscys:sex "male" .
 
@@ -10126,7 +11328,7 @@ osrdf:per.001002 a "person";
    oscys:birth "1794";
    oscys:death "1868";
    oscys:fullName "Fendall, R.";
-   oscys:fullname "Fendall, P. R.";
+   oscys:fullname "Fendall, Philip Ricard, 1794-1868";
    oscys:sex "male" .
 
 osrdf:per.001006 a "person";
@@ -10204,7 +11406,7 @@ osrdf:per.001129 a "person";
 osrdf:per.001229 a "person";
    oscys:defendantAgainst osrdf:per.001228;
    oscys:fullName "Hope, George";
-   oscys:fullname "Hope, George";
+   oscys:fullname "Hope, George, Jr.";
    oscys:judgedBy osrdf:per.000004;
    oscys:oppositionsAttorney osrdf:per.000533,
      osrdf:per.001230;
@@ -10251,6 +11453,74 @@ osrdf:per.001399 a "person";
      osrdf:per.001391,
      osrdf:per.001392;
    oscys:oppositionsAttorney osrdf:per.000435;
+   oscys:sex "male" .
+
+osrdf:per.001433 a "person";
+   oscys:attorneyAgainst osrdf:per.001432;
+   oscys:attorneyFor osrdf:per.001430,
+     osrdf:per.001426,
+     osrdf:per.001427,
+     osrdf:per.001428,
+     osrdf:per.001429,
+     osrdf:per.001431;
+   oscys:attorneyWith osrdf:per.000001,
+     osrdf:per.000496;
+   oscys:fullName "Smith, B. P.";
+   oscys:fullname "Smith, B. P.";
+   oscys:sex "male" .
+
+osrdf:per.001447 a "person";
+   oscys:childOf osrdf:per.001449;
+   oscys:clientOf osrdf:per.000737,
+     osrdf:per.000738;
+   oscys:enslavedBy osrdf:per.001138,
+     osrdf:per.001451;
+   oscys:fullName "Lee, John";
+   oscys:fullname "Lee, John";
+   oscys:judgedBy osrdf:per.000004;
+   oscys:petitionerAgainst osrdf:per.001138,
+     osrdf:per.001451;
+   oscys:sex "male" .
+
+osrdf:per.001449 a "person";
+   oscys:clientOf osrdf:per.000737,
+     osrdf:per.000738;
+   oscys:enslavedBy osrdf:per.001138,
+     osrdf:per.001451;
+   oscys:fullName "Lee, Olivia";
+   oscys:fullname "Lee, Olivia";
+   oscys:judgedBy osrdf:per.000004;
+   oscys:parentOf osrdf:per.001447;
+   oscys:petitionerAgainst osrdf:per.001138,
+     osrdf:per.001451;
+   oscys:sex "female" .
+
+osrdf:per.001533 a "person";
+   oscys:attorneyAgainst osrdf:per.001393;
+   oscys:attorneyFor osrdf:per.001385,
+     osrdf:per.001386,
+     osrdf:per.001387,
+     osrdf:per.001389,
+     osrdf:per.001390,
+     osrdf:per.001391,
+     osrdf:per.001392;
+   oscys:attorneyWith osrdf:per.000435;
+   oscys:fullName "Lee, Charles C.";
+   oscys:fullname "Lee, Charles C.";
+   oscys:sex "male" .
+
+osrdf:per.001535 a "person";
+   oscys:attorneyAgainst osrdf:per.000708,
+     osrdf:per.000709,
+     osrdf:per.000710,
+     osrdf:per.000711;
+   oscys:attorneyFor osrdf:per.000712,
+     osrdf:per.000713;
+   oscys:attorneyWith osrdf:per.000545;
+   oscys:fullName "Sampson";
+   oscys:fullname "Sampson";
+   oscys:opposingAttorneys osrdf:per.000001,
+     osrdf:per.000435;
    oscys:sex "male" .
 
 osrdf:per.000122 a "person";
@@ -10325,8 +11595,8 @@ osrdf:per.000284 a "person";
      osrdf:per.000289,
      osrdf:per.000304,
      osrdf:per.000308;
-   oscys:fullName "Thompson, Joseph";
-   oscys:fullname "Thompson, Joseph";
+   oscys:fullName "Thompson, Joe";
+   oscys:fullname "Thompson, Joe";
    oscys:judgedBy osrdf:per.000004;
    oscys:parentOf osrdf:per.000286;
    oscys:petitionerAgainst osrdf:per.000287;
@@ -10339,6 +11609,8 @@ osrdf:per.000287 a "person";
    oscys:fullName "Clarke, Walter";
    oscys:fullname "Clarke, Walter";
    oscys:judgedBy osrdf:per.000004;
+   oscys:jurorFor osrdf:per.000002,
+     osrdf:per.000005;
    oscys:oppositionsAttorney osrdf:per.000001;
    oscys:sex "male";
    oscys:siblingOf osrdf:per.000337;
@@ -10413,8 +11685,8 @@ osrdf:per.000647 a "person";
 osrdf:per.000655 a "person";
    oscys:clientOf osrdf:per.000770;
    oscys:defendantAgainst osrdf:per.000654;
-   oscys:fullName "Miller, Thomas";
-   oscys:fullname "Miller, Thomas";
+   oscys:fullName "Miller, Thomas, Jr.";
+   oscys:fullname "Miller, Thomas, Jr.";
    oscys:judgedBy osrdf:per.000004;
    oscys:oppositionsAttorney osrdf:per.000572,
      osrdf:per.000545;
@@ -10466,13 +11738,13 @@ osrdf:per.000759 a "person";
 osrdf:per.000831 a "person";
    oscys:clientOf osrdf:per.000001,
      osrdf:per.000476;
-   oscys:enslavedBy osrdf:per.000835,
+   oscys:enslavedBy osrdf:per.000278,
      osrdf:per.000836;
    oscys:fullName "Williams, Ann";
    oscys:fullname "Williams, Ann";
    oscys:judgedBy osrdf:per.000004;
    oscys:legal osrdf:per.000838;
-   oscys:petitionerAgainst osrdf:per.000835,
+   oscys:petitionerAgainst osrdf:per.000278,
      osrdf:per.000836;
    oscys:sex "female" .
 
@@ -10922,6 +12194,24 @@ osrdf:per.000693 a "person";
    oscys:sex "male";
    oscys:spouseOf osrdf:per.000695 .
 
+osrdf:per.000725 a "person";
+   oscys:birth "1755";
+   oscys:death "1835";
+   oscys:fullName "Marshall, John";
+   oscys:fullname "Marshall, John, 1755-1835";
+   oscys:judgeOf osrdf:per.000708,
+     osrdf:per.000709,
+     osrdf:per.000710,
+     osrdf:per.000711,
+     osrdf:per.000712,
+     osrdf:per.000713,
+     osrdf:per.000056,
+     osrdf:per.000057,
+     osrdf:per.000058,
+     osrdf:per.000002,
+     osrdf:per.000005;
+   oscys:sex "male" .
+
 osrdf:per.001067 a "person";
    oscys:childOf osrdf:per.001074;
    oscys:clientOf osrdf:per.000873;
@@ -11080,16 +12370,6 @@ osrdf:per.000210 a "person";
      osrdf:per.000209;
    oscys:sex "female" .
 
-osrdf:per.000214 a "person";
-   oscys:defendantAgainst osrdf:per.000213;
-   oscys:fullName "Neale, Francis";
-   oscys:fullname "Neale, Francis";
-   oscys:judgedBy osrdf:per.000004,
-     osrdf:per.000063;
-   oscys:oppositionsAttorney osrdf:per.000001;
-   oscys:sex "male";
-   oscys:slaveholderOf osrdf:per.000213 .
-
 osrdf:per.000236 a "person";
    oscys:clientOf osrdf:per.000001;
    oscys:enslavedBy osrdf:per.000232,
@@ -11117,40 +12397,6 @@ osrdf:per.000249 a "person";
    oscys:petitionerAgainst osrdf:per.000232;
    oscys:sex "female" .
 
-osrdf:per.000278 a "person";
-   oscys:defendantAgainst osrdf:per.000276,
-     osrdf:per.000279,
-     osrdf:per.000280;
-   oscys:fullName "Miller, George";
-   oscys:fullname "Miller, George";
-   oscys:judgedBy osrdf:per.000274,
-     osrdf:per.000004,
-     osrdf:per.000044;
-   oscys:oppositionsAttorney osrdf:per.000001,
-     osrdf:per.000194;
-   oscys:sex "male";
-   oscys:slaveholderOf osrdf:per.000279,
-     osrdf:per.000280 .
-
-osrdf:per.000460 a "person";
-   oscys:attorneyAgainst osrdf:per.000453,
-     osrdf:per.000515,
-     osrdf:per.000516,
-     osrdf:per.000712,
-     osrdf:per.000713;
-   oscys:attorneyFor osrdf:per.000451,
-     osrdf:per.000452,
-     osrdf:per.000514,
-     osrdf:per.000708,
-     osrdf:per.000709,
-     osrdf:per.000710,
-     osrdf:per.000711;
-   oscys:fullName "Taney, Augustus";
-   oscys:fullname "Taney, Augustus";
-   oscys:opposingAttorneys osrdf:per.000545;
-   oscys:sex "male";
-   oscys:siblingOf osrdf:per.001155 .
-
 osrdf:per.000619 a "person";
    oscys:childOf osrdf:per.000615,
      osrdf:per.000626;
@@ -11177,22 +12423,6 @@ osrdf:per.000681 a "person";
      osrdf:per.000683,
      osrdf:per.000684;
    oscys:spouseOf osrdf:per.000685 .
-
-osrdf:per.000708 a "person";
-   oscys:clientOf osrdf:per.000460;
-   oscys:enslavedBy osrdf:per.000719,
-     osrdf:per.000720,
-     osrdf:per.000722,
-     osrdf:per.000705;
-   oscys:fullName "Derrick, Louisa";
-   oscys:fullname "Derrick, Louisa";
-   oscys:judgedBy osrdf:per.000725;
-   oscys:legal osrdf:per.000044,
-     osrdf:per.000707,
-     osrdf:per.000716,
-     osrdf:per.000717;
-   oscys:oppositionsAttorney osrdf:per.000545;
-   oscys:sex "female" .
 
 osrdf:per.001071 a "person";
    oscys:childOf osrdf:per.001072;
@@ -11311,6 +12541,24 @@ osrdf:per.000014 a "person";
      osrdf:per.000012,
      osrdf:per.000532 .
 
+osrdf:per.000065 a "person";
+   oscys:acquaintanceOf osrdf:per.000062,
+     osrdf:per.001472,
+     osrdf:per.000073;
+   oscys:employerOf osrdf:per.000073,
+     osrdf:per.000077,
+     osrdf:per.000074;
+   oscys:familyOf osrdf:per.001471;
+   oscys:fullName "Carroll, James";
+   oscys:fullname "Carroll, James";
+   oscys:leftSlaveTo osrdf:per.001471;
+   oscys:legal osrdf:per.001502;
+   oscys:neighborOf osrdf:per.000062;
+   oscys:sex "male";
+   oscys:slaveholderOf osrdf:per.000066,
+     osrdf:per.000068,
+     osrdf:per.001504 .
+
 osrdf:per.000630 a "person";
    oscys:childOf osrdf:per.000615,
      osrdf:per.000626;
@@ -11326,31 +12574,14 @@ osrdf:per.000630 a "person";
    oscys:siblingOf osrdf:per.000619,
      osrdf:per.000616 .
 
-osrdf:per.000640 a "person";
-   oscys:attorneyAgainst osrdf:per.000638,
-     osrdf:per.000639,
-     osrdf:per.000712,
-     osrdf:per.000713,
-     osrdf:per.001201;
-   oscys:attorneyFor osrdf:per.000636,
-     osrdf:per.000637,
-     osrdf:per.000709,
-     osrdf:per.000710,
-     osrdf:per.000711,
-     osrdf:per.000044;
-   oscys:attorneyWith osrdf:per.000549,
-     osrdf:per.000044;
-   oscys:fullName "Turner, Thomas";
-   oscys:fullname "Turner, Thomas";
-   oscys:sex "male" .
-
 osrdf:per.000836 a "person";
+   oscys:clerkOf osrdf:per.000740;
    oscys:defendantAgainst osrdf:per.000831,
      osrdf:per.000832,
      osrdf:per.000833,
      osrdf:per.000834;
-   oscys:fullName "Miller, George";
-   oscys:fullname "Miller, Jr., George";
+   oscys:fullName "Miller, George, Jr.";
+   oscys:fullname "Miller, George, Jr.";
    oscys:judgedBy osrdf:per.000004;
    oscys:legal osrdf:per.000838;
    oscys:oppositionsAttorney osrdf:per.000001,
@@ -11406,22 +12637,6 @@ osrdf:per.001072 oscys:childOf osrdf:per.001074;
    oscys:petitionerAgainst osrdf:per.001068,
      osrdf:per.001069,
      osrdf:per.001070 .
-
-osrdf:per.001138 a "person";
-   oscys:defendantAgainst osrdf:per.001137,
-     osrdf:per.001164,
-     osrdf:per.001165,
-     osrdf:per.001166;
-   oscys:fullName "Conrad, Nelson";
-   oscys:fullname "Conrad, Nelson";
-   oscys:judgedBy osrdf:per.000004;
-   oscys:oppositionsAttorney osrdf:per.000737,
-     osrdf:per.000738;
-   oscys:sex "male";
-   oscys:slaveholderOf osrdf:per.001137,
-     osrdf:per.001164,
-     osrdf:per.001165,
-     osrdf:per.001166 .
 
 osrdf:per.001205 a "person";
    oscys:childOf osrdf:per.001207;
@@ -11555,6 +12770,108 @@ osrdf:per.001242 a "person";
    oscys:sex "female";
    oscys:slaveholderOf osrdf:per.001239,
      osrdf:per.001240 .
+
+osrdf:per.001443 a "person";
+   oscys:clientOf osrdf:per.000737,
+     osrdf:per.000738;
+   oscys:enslavedBy osrdf:per.001138,
+     osrdf:per.001451;
+   oscys:fullName "Lee, Betsy";
+   oscys:fullname "Lee, Betsy";
+   oscys:judgedBy osrdf:per.000004;
+   oscys:parentOf osrdf:per.001448,
+     osrdf:per.001445,
+     osrdf:per.001450,
+     osrdf:per.001446,
+     osrdf:per.001444;
+   oscys:petitionerAgainst osrdf:per.001138,
+     osrdf:per.001451;
+   oscys:sex "female" .
+
+osrdf:per.001444 a "person";
+   oscys:childOf osrdf:per.001443;
+   oscys:clientOf osrdf:per.000737,
+     osrdf:per.000738;
+   oscys:enslavedBy osrdf:per.001138,
+     osrdf:per.001451;
+   oscys:fullName "Lee, Caroline";
+   oscys:fullname "Lee, Caroline";
+   oscys:judgedBy osrdf:per.000004;
+   oscys:petitionerAgainst osrdf:per.001138,
+     osrdf:per.001451;
+   oscys:sex "female";
+   oscys:siblingOf osrdf:per.001448,
+     osrdf:per.001445,
+     osrdf:per.001450,
+     osrdf:per.001446 .
+
+osrdf:per.001445 a "person";
+   oscys:childOf osrdf:per.001443;
+   oscys:clientOf osrdf:per.000737,
+     osrdf:per.000738;
+   oscys:enslavedBy osrdf:per.001138,
+     osrdf:per.001451;
+   oscys:fullName "Lee, Charles";
+   oscys:fullname "Lee, Charles";
+   oscys:judgedBy osrdf:per.000004;
+   oscys:petitionerAgainst osrdf:per.001138,
+     osrdf:per.001451;
+   oscys:sex "male";
+   oscys:siblingOf osrdf:per.001448,
+     osrdf:per.001450,
+     osrdf:per.001446,
+     osrdf:per.001444 .
+
+osrdf:per.001446 a "person";
+   oscys:childOf osrdf:per.001443;
+   oscys:clientOf osrdf:per.000737,
+     osrdf:per.000738;
+   oscys:enslavedBy osrdf:per.001138,
+     osrdf:per.001451;
+   oscys:fullName "Lee, George";
+   oscys:fullname "Lee, George";
+   oscys:judgedBy osrdf:per.000004;
+   oscys:petitionerAgainst osrdf:per.001138,
+     osrdf:per.001451;
+   oscys:sex "male";
+   oscys:siblingOf osrdf:per.001448,
+     osrdf:per.001445,
+     osrdf:per.001450,
+     osrdf:per.001444 .
+
+osrdf:per.001448 a "person";
+   oscys:childOf osrdf:per.001443;
+   oscys:clientOf osrdf:per.000737,
+     osrdf:per.000738;
+   oscys:enslavedBy osrdf:per.001138,
+     osrdf:per.001451;
+   oscys:fullName "Lee, Milly";
+   oscys:fullname "Lee, Milly";
+   oscys:judgedBy osrdf:per.000004;
+   oscys:petitionerAgainst osrdf:per.001138,
+     osrdf:per.001451;
+   oscys:sex "female";
+   oscys:siblingOf osrdf:per.001445,
+     osrdf:per.001450,
+     osrdf:per.001446,
+     osrdf:per.001444 .
+
+osrdf:per.001450 a "person";
+   oscys:childOf osrdf:per.001443;
+   oscys:clientOf osrdf:per.000737,
+     osrdf:per.000738;
+   oscys:enslavedBy osrdf:per.001138,
+     osrdf:per.001451;
+   oscys:fullName "Lee, William";
+   oscys:fullname "Lee, William";
+   oscys:judgedBy osrdf:per.000004;
+   oscys:petitionerAgainst osrdf:per.001138,
+     osrdf:per.001451;
+   oscys:sex "male";
+   oscys:siblingOf osrdf:per.001448,
+     osrdf:per.001445,
+     osrdf:per.001446,
+     osrdf:per.001444 .
 
 osrdf:per.000150 a "person";
    oscys:ancestorOf osrdf:per.000152;
@@ -11774,6 +13091,27 @@ osrdf:per.001008 a "person";
      osrdf:per.001006,
      osrdf:per.001007 .
 
+osrdf:per.000460 a "person";
+   oscys:attorneyAgainst osrdf:per.000453,
+     osrdf:per.000515,
+     osrdf:per.000516,
+     osrdf:per.000712,
+     osrdf:per.000713;
+   oscys:attorneyFor osrdf:per.000451,
+     osrdf:per.000452,
+     osrdf:per.000514,
+     osrdf:per.000708,
+     osrdf:per.000709,
+     osrdf:per.000710,
+     osrdf:per.000711;
+   oscys:attorneyWith osrdf:per.000640;
+   oscys:fullName "Taney, Augustus";
+   oscys:fullname "Taney, Augustus";
+   oscys:opposingAttorneys osrdf:per.000545,
+     osrdf:per.000435;
+   oscys:sex "male";
+   oscys:siblingOf osrdf:per.001155 .
+
 osrdf:per.000514 a "person";
    oscys:childOf osrdf:per.000525;
    oscys:clientOf osrdf:per.000460;
@@ -11812,41 +13150,6 @@ osrdf:per.000617 a "person";
      osrdf:per.000623,
      osrdf:per.000630 .
 
-osrdf:per.000712 a "person";
-   oscys:clientOf osrdf:per.000545;
-   oscys:defendantAgainst osrdf:per.000709,
-     osrdf:per.000710,
-     osrdf:per.000711;
-   oscys:fullName "Mason, George";
-   oscys:fullname "Mason, George";
-   oscys:judgedBy osrdf:per.000064,
-     osrdf:per.000725;
-   oscys:legal osrdf:per.000044;
-   oscys:oppositionsAttorney osrdf:per.000640,
-     osrdf:per.000460;
-   oscys:sex "male";
-   oscys:slaveholderOf osrdf:per.000709,
-     osrdf:per.000710,
-     osrdf:per.000711;
-   oscys:spouseOf osrdf:per.000720 .
-
-osrdf:per.000713 a "person";
-   oscys:clientOf osrdf:per.000545;
-   oscys:defendantAgainst osrdf:per.000709,
-     osrdf:per.000710,
-     osrdf:per.000711;
-   oscys:fullName "Moore, Alexander";
-   oscys:fullname "Moore, Alexander";
-   oscys:judgedBy osrdf:per.000064,
-     osrdf:per.000725;
-   oscys:legal osrdf:per.000044;
-   oscys:oppositionsAttorney osrdf:per.000640,
-     osrdf:per.000460;
-   oscys:sex "male";
-   oscys:slaveholderOf osrdf:per.000709,
-     osrdf:per.000710;
-   oscys:spouseOf osrdf:per.000722 .
-
 osrdf:per.001254 a "person";
    oscys:defendantAgainst osrdf:per.001253;
    oscys:fullName "Armistead, Susan";
@@ -11859,6 +13162,40 @@ osrdf:per.001254 a "person";
    oscys:sex "female";
    oscys:slaveholderOf osrdf:per.001253;
    oscys:spouseOf osrdf:per.001255 .
+
+osrdf:per.001434 a "person";
+   oscys:childOf osrdf:per.001430;
+   oscys:clientOf osrdf:per.000001;
+   oscys:enslavedBy osrdf:per.001432;
+   oscys:fullName "Lemon, Harriet";
+   oscys:fullname "Lemon, Harriet";
+   oscys:judgedBy osrdf:per.000004;
+   oscys:oppositionsAttorney osrdf:per.000830;
+   oscys:petitionerAgainst osrdf:per.001432;
+   oscys:sex "female";
+   oscys:siblingOf osrdf:per.001435,
+     osrdf:per.001426,
+     osrdf:per.001427,
+     osrdf:per.001428,
+     osrdf:per.001429,
+     osrdf:per.001431 .
+
+osrdf:per.001435 a "person";
+   oscys:childOf osrdf:per.001430;
+   oscys:clientOf osrdf:per.000001;
+   oscys:enslavedBy osrdf:per.001432;
+   oscys:fullName "Lemon, Kitty";
+   oscys:fullname "Lemon, Kitty";
+   oscys:judgedBy osrdf:per.000004;
+   oscys:oppositionsAttorney osrdf:per.000830;
+   oscys:petitionerAgainst osrdf:per.001432;
+   oscys:sex "female";
+   oscys:siblingOf osrdf:per.001434,
+     osrdf:per.001426,
+     osrdf:per.001427,
+     osrdf:per.001428,
+     osrdf:per.001429,
+     osrdf:per.001431 .
 
 osrdf:per.000040 a "person";
    oscys:childOf osrdf:per.000035;
@@ -11900,35 +13237,26 @@ osrdf:per.000043 a "person";
      osrdf:per.000041,
      osrdf:per.000042 .
 
-osrdf:per.000213 a "person";
-   oscys:clientOf osrdf:per.000001;
-   oscys:descendantOf osrdf:per.000068;
-   oscys:enslavedBy osrdf:per.000214;
-   oscys:fullName "Queen, Priscilla";
-   oscys:fullname "Queen, Priscilla";
-   oscys:judgedBy osrdf:per.000004,
-     osrdf:per.000063;
-   oscys:petitionerAgainst osrdf:per.000214;
-   oscys:sex "female" .
-
-osrdf:per.000835 a "person";
-   oscys:defendantAgainst osrdf:per.000831,
-     osrdf:per.000832,
-     osrdf:per.000833,
-     osrdf:per.000834;
-   oscys:fullName "Miller, George";
-   oscys:fullname "Miller, George";
-   oscys:judgedBy "per.0004";
-   oscys:legal osrdf:per.000740,
-     osrdf:per.000838,
-     osrdf:per.000840;
-   oscys:oppositionsAttorney osrdf:per.000001,
-     osrdf:per.000476;
-   oscys:sex "male";
-   oscys:slaveholderOf osrdf:per.000831,
-     osrdf:per.000832,
-     osrdf:per.000833,
-     osrdf:per.000834 .
+osrdf:per.001476 a "person";
+   oscys:acquaintanceOf osrdf:per.000061,
+     osrdf:per.000221,
+     osrdf:per.000072,
+     osrdf:per.000073,
+     osrdf:per.000074,
+     osrdf:per.000075;
+   oscys:childOf osrdf:per.000068;
+   oscys:enslavedBy osrdf:per.000215;
+   oscys:fullName "Queen, Phillis";
+   oscys:fullname "Queen, Phillis";
+   oscys:livesWith osrdf:per.000215;
+   oscys:parentOf osrdf:per.000078,
+     osrdf:per.001481,
+     osrdf:per.001485,
+     osrdf:per.001479,
+     osrdf:per.001480,
+     osrdf:per.001482;
+   oscys:sex "female";
+   oscys:siblingOf osrdf:per.000066 .
 
 osrdf:per.000136 a "person";
    oscys:birth "ca. 1765";
@@ -11993,30 +13321,26 @@ osrdf:per.000272 a "person";
      osrdf:per.000270,
      osrdf:per.000271 .
 
-osrdf:per.000435 a "person";
-   oscys:attorneyAgainst osrdf:per.000431,
-     osrdf:per.000565,
-     osrdf:per.000567,
-     osrdf:per.000587,
-     osrdf:per.000588,
-     osrdf:per.001385,
-     osrdf:per.001386,
-     osrdf:per.001397,
-     osrdf:per.001398,
-     osrdf:per.001399,
-     osrdf:per.001390,
-     osrdf:per.001391,
-     osrdf:per.001392;
-   oscys:attorneyFor osrdf:per.000432,
-     osrdf:per.000564,
-     osrdf:per.000589,
-     osrdf:per.001393;
-   oscys:birth "1771",
-     "1776";
-   oscys:death "1861";
-   oscys:fullName "Jones, Walter";
-   oscys:fullname "Jones, Walter";
-   oscys:opposingAttorneys osrdf:per.000545;
+osrdf:per.000640 a "person";
+   oscys:attorneyAgainst osrdf:per.000638,
+     osrdf:per.000639,
+     osrdf:per.000712,
+     osrdf:per.000713,
+     osrdf:per.001201;
+   oscys:attorneyFor osrdf:per.000636,
+     osrdf:per.000637,
+     osrdf:per.000709,
+     osrdf:per.000710,
+     osrdf:per.000711,
+     osrdf:per.000044,
+     osrdf:per.000708;
+   oscys:attorneyWith osrdf:per.000549,
+     osrdf:per.000044,
+     osrdf:per.000460;
+   oscys:fullName "Turner, Thomas";
+   oscys:fullname "Turner, Thomas";
+   oscys:opposingAttorneys osrdf:per.000435,
+     osrdf:per.000545;
    oscys:sex "male" .
 
 osrdf:per.000696 a "person";
@@ -12053,6 +13377,26 @@ osrdf:per.000774 a "person";
    oscys:petitionerAgainst osrdf:per.000775;
    oscys:sex "male";
    oscys:siblingOf osrdf:per.000773 .
+
+osrdf:per.000830 a "person";
+   oscys:attorneyAgainst osrdf:per.000772,
+     osrdf:per.000773,
+     osrdf:per.000774,
+     osrdf:per.000816,
+     osrdf:per.001426,
+     osrdf:per.001427,
+     osrdf:per.001428,
+     osrdf:per.001429,
+     osrdf:per.001430,
+     osrdf:per.001431,
+     osrdf:per.001434,
+     osrdf:per.001435;
+   oscys:attorneyFor osrdf:per.000775,
+     osrdf:per.001145,
+     osrdf:per.001432;
+   oscys:fullName "Marbury, John";
+   oscys:fullname "Marbury, John";
+   oscys:sex "male" .
 
 osrdf:per.000847 a "person";
    oscys:attorneyAgainst osrdf:per.000846,
@@ -12192,6 +13536,101 @@ osrdf:per.001394 a "person";
    oscys:slaveholderOf osrdf:per.001392,
      osrdf:per.001391;
    oscys:soldSlaveTo osrdf:per.001393 .
+
+osrdf:per.001426 a "person";
+   oscys:childOf osrdf:per.001430;
+   oscys:clientOf osrdf:per.000496,
+     osrdf:per.001433,
+     osrdf:per.000001;
+   oscys:enslavedBy osrdf:per.001432;
+   oscys:fullName "Lemon, Amy";
+   oscys:fullname "Lemon, Amy";
+   oscys:judgedBy osrdf:per.000004;
+   oscys:oppositionsAttorney osrdf:per.000830;
+   oscys:petitionerAgainst osrdf:per.001432;
+   oscys:sex "female";
+   oscys:siblingOf osrdf:per.001427,
+     osrdf:per.001428,
+     osrdf:per.001429,
+     osrdf:per.001431,
+     osrdf:per.001434,
+     osrdf:per.001435 .
+
+osrdf:per.001427 a "person";
+   oscys:childOf osrdf:per.001430;
+   oscys:clientOf osrdf:per.000496,
+     osrdf:per.001433,
+     osrdf:per.000001;
+   oscys:enslavedBy osrdf:per.001432;
+   oscys:fullName "Lemon, Betsey";
+   oscys:fullname "Lemon, Betsey";
+   oscys:judgedBy osrdf:per.000004;
+   oscys:oppositionsAttorney osrdf:per.000830;
+   oscys:petitionerAgainst osrdf:per.001432;
+   oscys:sex "female";
+   oscys:siblingOf osrdf:per.001426,
+     osrdf:per.001428,
+     osrdf:per.001429,
+     osrdf:per.001431,
+     osrdf:per.001434,
+     osrdf:per.001435 .
+
+osrdf:per.001428 a "person";
+   oscys:childOf osrdf:per.001430;
+   oscys:clientOf osrdf:per.000496,
+     osrdf:per.001433,
+     osrdf:per.000001;
+   oscys:enslavedBy osrdf:per.001432;
+   oscys:fullName "Lemon, Dennis";
+   oscys:fullname "Lemon, Dennis";
+   oscys:judgedBy osrdf:per.000004;
+   oscys:oppositionsAttorney osrdf:per.000830;
+   oscys:petitionerAgainst osrdf:per.001432;
+   oscys:sex "male";
+   oscys:siblingOf osrdf:per.001426,
+     osrdf:per.001427,
+     osrdf:per.001429,
+     osrdf:per.001431,
+     osrdf:per.001434,
+     osrdf:per.001435 .
+
+osrdf:per.001429 a "person";
+   oscys:childOf osrdf:per.001430;
+   oscys:clientOf osrdf:per.000496,
+     osrdf:per.001433,
+     osrdf:per.000001;
+   oscys:enslavedBy osrdf:per.001432;
+   oscys:fullName "Lemon, Lavinia";
+   oscys:fullname "Lemon, Lavinia";
+   oscys:judgedBy osrdf:per.000004;
+   oscys:oppositionsAttorney osrdf:per.000830;
+   oscys:petitionerAgainst osrdf:per.001432;
+   oscys:sex "female";
+   oscys:siblingOf osrdf:per.001426,
+     osrdf:per.001427,
+     osrdf:per.001428,
+     osrdf:per.001431,
+     osrdf:per.001434,
+     osrdf:per.001435 .
+
+osrdf:per.001431 a "person";
+   oscys:childOf osrdf:per.001430;
+   oscys:clientOf osrdf:per.000496,
+     osrdf:per.001433,
+     osrdf:per.000001;
+   oscys:enslavedBy osrdf:per.001432;
+   oscys:fullName "Lemon, Thomas";
+   oscys:fullname "Lemon, Thomas";
+   oscys:judgedBy osrdf:per.000004;
+   oscys:oppositionsAttorney osrdf:per.000830;
+   oscys:petitionerAgainst osrdf:per.001432;
+   oscys:sex "male";
+   oscys:siblingOf osrdf:per.001426,
+     osrdf:per.001427,
+     osrdf:per.001428,
+     osrdf:per.001429,
+     osrdf:per.001434,
+     osrdf:per.001435 .
 
 osrdf:per.000031 a "person";
    oscys:childOf osrdf:per.000035;
@@ -12422,43 +13861,6 @@ osrdf:per.000674 a "person";
      osrdf:per.000673,
      osrdf:per.000675 .
 
-osrdf:per.001387 a "person";
-   oscys:clientOf osrdf:per.000572;
-   oscys:descendantOf osrdf:per.001391,
-     osrdf:per.001392;
-   oscys:enslavedBy osrdf:per.001393;
-   oscys:fullName "Butler, Liddy";
-   oscys:fullname "Butler, Liddy";
-   oscys:judgedBy osrdf:per.000620,
-     osrdf:per.000004;
-   oscys:oppositionsAttorney osrdf:per.001393;
-   oscys:petitionerAgainst osrdf:per.001393;
-   oscys:sex "female" .
-
-osrdf:per.000023 a "person";
-   oscys:attorneyAgainst osrdf:per.000022,
-     osrdf:per.000137,
-     osrdf:per.000196,
-     osrdf:per.000272;
-   oscys:attorneyFor osrdf:per.000020,
-     osrdf:per.000132,
-     osrdf:per.000133,
-     osrdf:per.000134,
-     osrdf:per.000135,
-     osrdf:per.000136,
-     osrdf:per.000197,
-     osrdf:per.000265,
-     osrdf:per.000266,
-     osrdf:per.000267,
-     osrdf:per.000268,
-     osrdf:per.000269,
-     osrdf:per.000270,
-     osrdf:per.000271;
-   oscys:attorneyWith osrdf:per.000194;
-   oscys:fullName "Law, John";
-   oscys:fullname "Law, John";
-   oscys:sex "male" .
-
 osrdf:per.000035 a "person";
    oscys:descendantOf osrdf:per.000028;
    oscys:enslavedBy osrdf:per.000043,
@@ -12478,6 +13880,29 @@ osrdf:per.000035 a "person";
      osrdf:per.000040,
      osrdf:per.000041,
      osrdf:per.000042;
+   oscys:sex "female" .
+
+osrdf:per.000708 a "person";
+   oscys:clientOf osrdf:per.000460,
+     osrdf:per.000640,
+     osrdf:per.000001;
+   oscys:enslavedBy osrdf:per.000719,
+     osrdf:per.000720,
+     osrdf:per.000722,
+     osrdf:per.000705;
+   oscys:fullName "Derrick, Louisa";
+   oscys:fullname "Derrick, Louisa";
+   oscys:judgedBy osrdf:per.000725,
+     osrdf:per.000064,
+     osrdf:per.001534,
+     osrdf:per.001393;
+   oscys:legal osrdf:per.000044,
+     osrdf:per.000707,
+     osrdf:per.000716,
+     osrdf:per.000717;
+   oscys:oppositionsAttorney osrdf:per.000545,
+     osrdf:per.000435,
+     osrdf:per.001535;
    oscys:sex "female" .
 
 osrdf:per.000773 a "person";
@@ -12604,44 +14029,26 @@ osrdf:per.001070 a "person";
      osrdf:per.001368;
    oscys:spouseOf osrdf:per.001069 .
 
-osrdf:per.001386 a "person";
-   oscys:clientOf osrdf:per.000572;
-   oscys:descendantOf osrdf:per.001391,
-     osrdf:per.001392;
-   oscys:enslavedBy osrdf:per.001393;
-   oscys:fullName "Butler, Eliza";
-   oscys:fullname "Butler, Eliza";
-   oscys:judgedBy osrdf:per.000620,
-     osrdf:per.000004;
-   oscys:oppositionsAttorney osrdf:per.001393,
-     osrdf:per.000435;
-   oscys:petitionerAgainst osrdf:per.001393;
+osrdf:per.001430 a "person";
+   oscys:acquaintanceOf osrdf:per.001437;
+   oscys:clientOf osrdf:per.000496,
+     osrdf:per.001433,
+     osrdf:per.000001;
+   oscys:enslavedBy osrdf:per.001432;
+   oscys:fullName "Lemon, Nelly";
+   oscys:fullname "Lemon, Nelly";
+   oscys:judgedBy osrdf:per.000004;
+   oscys:legal osrdf:per.001439;
+   oscys:oppositionsAttorney osrdf:per.000830;
+   oscys:parentOf osrdf:per.001426,
+     osrdf:per.001427,
+     osrdf:per.001428,
+     osrdf:per.001429,
+     osrdf:per.001431,
+     osrdf:per.001435,
+     osrdf:per.001434;
+   oscys:petitionerAgainst osrdf:per.001432;
    oscys:sex "female" .
-
-osrdf:per.000063 a "person";
-   oscys:fullName "Fitzhugh, Nicholas";
-   oscys:fullname "Fitzhugh, Nicholas";
-   oscys:judgeOf osrdf:per.000056,
-     osrdf:per.000057,
-     osrdf:per.000058,
-     osrdf:per.000150,
-     osrdf:per.000151,
-     osrdf:per.000152,
-     osrdf:per.000161,
-     osrdf:per.000162,
-     osrdf:per.000163,
-     osrdf:per.000164,
-     osrdf:per.000165,
-     osrdf:per.000153,
-     osrdf:per.000166,
-     osrdf:per.000213,
-     osrdf:per.000214,
-     osrdf:per.000232,
-     osrdf:per.000236,
-     osrdf:per.000248,
-     osrdf:per.000249,
-     osrdf:per.000250;
-   oscys:sex "male" .
 
 osrdf:per.000194 a "person";
    oscys:attorneyAgainst osrdf:per.000193,
@@ -12670,10 +14077,12 @@ osrdf:per.000194 a "person";
      osrdf:per.000710,
      osrdf:per.000711,
      osrdf:per.000712,
-     osrdf:per.000713;
+     osrdf:per.000713,
+     osrdf:per.000002,
+     osrdf:per.000005;
    oscys:death "1825";
    oscys:fullName "Caldwell, Elias Boudinot";
-   oscys:fullname "Caldwell, Elias Boudinot";
+   oscys:fullname "Caldwell, Elias Boudinot, 1776-1825";
    oscys:notaryFor osrdf:per.000232;
    oscys:sex "male" .
 
@@ -12700,6 +14109,51 @@ osrdf:per.000590 a "person";
      osrdf:per.000592,
      osrdf:per.000593;
    oscys:sex "male" .
+
+osrdf:per.000712 a "person";
+   oscys:clientOf osrdf:per.000545,
+     osrdf:per.000435,
+     osrdf:per.001535;
+   oscys:defendantAgainst osrdf:per.000709,
+     osrdf:per.000710,
+     osrdf:per.000711;
+   oscys:fullName "Mason, George";
+   oscys:fullname "Mason, George";
+   oscys:judgedBy osrdf:per.000064,
+     osrdf:per.000725,
+     osrdf:per.001534,
+     osrdf:per.001393;
+   oscys:legal osrdf:per.000044;
+   oscys:oppositionsAttorney osrdf:per.000640,
+     osrdf:per.000460,
+     osrdf:per.000001;
+   oscys:sex "male";
+   oscys:slaveholderOf osrdf:per.000709,
+     osrdf:per.000710,
+     osrdf:per.000711;
+   oscys:spouseOf osrdf:per.000720 .
+
+osrdf:per.000713 a "person";
+   oscys:clientOf osrdf:per.000545,
+     osrdf:per.000435,
+     osrdf:per.001535;
+   oscys:defendantAgainst osrdf:per.000709,
+     osrdf:per.000710,
+     osrdf:per.000711;
+   oscys:fullName "Moore, Alexander";
+   oscys:fullname "Moore, Alexander";
+   oscys:judgedBy osrdf:per.000064,
+     osrdf:per.000725,
+     osrdf:per.001534,
+     osrdf:per.001393;
+   oscys:legal osrdf:per.000044;
+   oscys:oppositionsAttorney osrdf:per.000640,
+     osrdf:per.000460,
+     osrdf:per.000001;
+   oscys:sex "male";
+   oscys:slaveholderOf osrdf:per.000709,
+     osrdf:per.000710;
+   oscys:spouseOf osrdf:per.000722 .
 
 osrdf:per.000744 a "person";
    oscys:attorneyAgainst osrdf:per.000743,
@@ -12916,106 +14370,6 @@ osrdf:per.000051 a "person";
      osrdf:per.000054,
      osrdf:per.000055 .
 
-osrdf:per.000496 a "person";
-   oscys:attorneyAgainst osrdf:per.000495,
-     osrdf:per.000559,
-     osrdf:per.000581,
-     osrdf:per.000696,
-     osrdf:per.000741,
-     osrdf:per.000869,
-     osrdf:per.001252;
-   oscys:attorneyFor osrdf:per.000494,
-     osrdf:per.000560,
-     osrdf:per.000491,
-     osrdf:per.000582,
-     osrdf:per.000690,
-     osrdf:per.000691,
-     osrdf:per.000692,
-     osrdf:per.000693,
-     osrdf:per.000694,
-     osrdf:per.000695,
-     osrdf:per.000868,
-     osrdf:per.001251;
-   oscys:attorneyWith osrdf:per.000751;
-   oscys:birth "1792";
-   oscys:death "1865";
-   oscys:fullName "Coxe, Richard Smith";
-   oscys:fullname "Coxe, Richard Smith";
-   oscys:opposingAttorneys osrdf:per.000001,
-     osrdf:per.000476,
-     osrdf:per.000586;
-   oscys:sex "male" .
-
-osrdf:per.000545 a "person";
-   oscys:attorneyAgainst osrdf:per.000538,
-     osrdf:per.000539,
-     osrdf:per.000540,
-     osrdf:per.000541,
-     osrdf:per.000544,
-     osrdf:per.000589,
-     osrdf:per.000655,
-     osrdf:per.000708,
-     osrdf:per.000709,
-     osrdf:per.000710,
-     osrdf:per.000711,
-     osrdf:per.001378;
-   oscys:attorneyFor osrdf:per.000543,
-     osrdf:per.000587,
-     osrdf:per.000588,
-     osrdf:per.000654,
-     osrdf:per.000712,
-     osrdf:per.000713,
-     osrdf:per.001377;
-   oscys:fullName "Lear, B. L.";
-   oscys:fullname "Lear, B. L.";
-   oscys:sex "male" .
-
-osrdf:per.000709 a "person";
-   oscys:childOf osrdf:per.000710;
-   oscys:clientOf osrdf:per.000640,
-     osrdf:per.000460;
-   oscys:enslavedBy osrdf:per.000712,
-     osrdf:per.000713,
-     osrdf:per.000719,
-     osrdf:per.000720,
-     osrdf:per.000722,
-     osrdf:per.000705;
-   oscys:fullName "Derrick, Lucy";
-   oscys:fullname "Derrick, Lucy";
-   oscys:judgedBy osrdf:per.000064,
-     osrdf:per.000725;
-   oscys:legal osrdf:per.000044,
-     osrdf:per.000707,
-     osrdf:per.000716,
-     osrdf:per.000717;
-   oscys:oppositionsAttorney osrdf:per.000545;
-   oscys:petitionerAgainst osrdf:per.000712,
-     osrdf:per.000713;
-   oscys:sex "female" .
-
-osrdf:per.000711 a "person";
-   oscys:childOf osrdf:per.000710;
-   oscys:clientOf osrdf:per.000640,
-     osrdf:per.000460;
-   oscys:enslavedBy osrdf:per.000712,
-     osrdf:per.000713,
-     osrdf:per.000719,
-     osrdf:per.000720,
-     osrdf:per.000722,
-     osrdf:per.000705;
-   oscys:fullName "Derrick, Matilda";
-   oscys:fullname "Derrick, Matilda";
-   oscys:judgedBy osrdf:per.000064,
-     osrdf:per.000725;
-   oscys:legal osrdf:per.000044,
-     osrdf:per.000707,
-     osrdf:per.000716,
-     osrdf:per.000717;
-   oscys:oppositionsAttorney osrdf:per.000545;
-   oscys:petitionerAgainst osrdf:per.000712,
-     osrdf:per.000713;
-   oscys:sex "female" .
-
 osrdf:per.000920 a "person";
    oscys:childOf osrdf:per.000964,
      osrdf:per.000965;
@@ -13089,32 +14443,117 @@ osrdf:per.001069 a "person";
    oscys:spouseOf osrdf:per.001070,
      osrdf:per.001075 .
 
-osrdf:per.000710 a "person";
-   oscys:clientOf osrdf:per.000640,
-     osrdf:per.000460;
-   oscys:enslavedBy osrdf:per.000712,
-     osrdf:per.000713,
-     osrdf:per.000705,
-     osrdf:per.000719,
-     osrdf:per.000720,
-     osrdf:per.000722;
-   oscys:fullName "Derrick, Matilda";
-   oscys:fullname "Derrick, Matilda";
-   oscys:judgedBy osrdf:per.000064,
-     osrdf:per.000725;
-   oscys:legal osrdf:per.000044,
-     osrdf:per.000707,
-     osrdf:per.000714,
-     osrdf:per.000716,
-     osrdf:per.000717;
-   oscys:nextFriendOf osrdf:per.000709,
-     osrdf:per.000711;
-   oscys:oppositionsAttorney osrdf:per.000545;
-   oscys:parentOf osrdf:per.000709,
-     osrdf:per.000711;
-   oscys:petitionerAgainst osrdf:per.000712,
-     osrdf:per.000713;
+osrdf:per.001387 a "person";
+   oscys:clientOf osrdf:per.000572,
+     osrdf:per.001533,
+     osrdf:per.000435;
+   oscys:descendantOf osrdf:per.001391,
+     osrdf:per.001392;
+   oscys:enslavedBy osrdf:per.001393;
+   oscys:fullName "Butler, Liddy";
+   oscys:fullname "Butler, Liddy";
+   oscys:judgedBy osrdf:per.000620,
+     osrdf:per.000004;
+   oscys:oppositionsAttorney osrdf:per.001393,
+     osrdf:per.000001;
+   oscys:petitionerAgainst osrdf:per.001393;
    oscys:sex "female" .
+
+osrdf:per.001451 a "person";
+   oscys:defendantAgainst osrdf:per.001443,
+     osrdf:per.001444,
+     osrdf:per.001445,
+     osrdf:per.001446,
+     osrdf:per.001447,
+     osrdf:per.001448,
+     osrdf:per.001449,
+     osrdf:per.001450;
+   oscys:fullName "Homans, Benjamin";
+   oscys:fullname "Homans, Benjamin";
+   oscys:judgedBy osrdf:per.000004;
+   oscys:oppositionsAttorney osrdf:per.000738,
+     osrdf:per.000737;
+   oscys:sex "male";
+   oscys:slaveholderOf osrdf:per.001443,
+     osrdf:per.001444,
+     osrdf:per.001445,
+     osrdf:per.001446,
+     osrdf:per.001447,
+     osrdf:per.001448,
+     osrdf:per.001449,
+     osrdf:per.001450 .
+
+osrdf:per.000063 a "person";
+   oscys:fullName "Fitzhugh, Nicholas";
+   oscys:fullname "Fitzhugh, Nicholas";
+   oscys:judgeOf osrdf:per.000056,
+     osrdf:per.000057,
+     osrdf:per.000058,
+     osrdf:per.000150,
+     osrdf:per.000151,
+     osrdf:per.000152,
+     osrdf:per.000161,
+     osrdf:per.000162,
+     osrdf:per.000163,
+     osrdf:per.000164,
+     osrdf:per.000165,
+     osrdf:per.000153,
+     osrdf:per.000166,
+     osrdf:per.000213,
+     osrdf:per.000214,
+     osrdf:per.000232,
+     osrdf:per.000236,
+     osrdf:per.000248,
+     osrdf:per.000249,
+     osrdf:per.000250,
+     osrdf:per.000002,
+     osrdf:per.000005;
+   oscys:sex "male" .
+
+osrdf:per.001386 a "person";
+   oscys:clientOf osrdf:per.000572,
+     osrdf:per.001533,
+     osrdf:per.000435;
+   oscys:descendantOf osrdf:per.001391,
+     osrdf:per.001392;
+   oscys:enslavedBy osrdf:per.001393;
+   oscys:fullName "Butler, Eliza";
+   oscys:fullname "Butler, Eliza";
+   oscys:judgedBy osrdf:per.000620,
+     osrdf:per.000004;
+   oscys:oppositionsAttorney osrdf:per.001393,
+     osrdf:per.000435,
+     osrdf:per.000001;
+   oscys:petitionerAgainst osrdf:per.001393;
+   oscys:sex "female" .
+
+osrdf:per.000023 a "person";
+   oscys:attorneyAgainst osrdf:per.000022,
+     osrdf:per.000137,
+     osrdf:per.000196,
+     osrdf:per.000272,
+     osrdf:per.000056,
+     osrdf:per.000057;
+   oscys:attorneyFor osrdf:per.000020,
+     osrdf:per.000132,
+     osrdf:per.000133,
+     osrdf:per.000134,
+     osrdf:per.000135,
+     osrdf:per.000136,
+     osrdf:per.000197,
+     osrdf:per.000265,
+     osrdf:per.000266,
+     osrdf:per.000267,
+     osrdf:per.000268,
+     osrdf:per.000269,
+     osrdf:per.000270,
+     osrdf:per.000271,
+     osrdf:per.000058;
+   oscys:attorneyWith osrdf:per.000194,
+     osrdf:per.000435;
+   oscys:fullName "Law, John";
+   oscys:fullname "Law, John";
+   oscys:sex "male" .
 
 osrdf:per.000464 a "person";
    oscys:attorneyAgainst osrdf:per.000463,
@@ -13178,22 +14617,43 @@ osrdf:per.001388 a "person";
      osrdf:per.001390,
      osrdf:per.001385 .
 
-osrdf:per.001389 a "person";
-   oscys:childOf osrdf:per.001391,
-     osrdf:per.001392;
-   oscys:clientOf osrdf:per.000572;
-   oscys:enslavedBy osrdf:per.001393;
-   oscys:familyOf osrdf:per.001391,
-     osrdf:per.001392;
-   oscys:fullName "Butler, Reason";
-   oscys:fullname "Butler, Reason";
-   oscys:judgedBy osrdf:per.000620,
-     osrdf:per.000004;
-   oscys:oppositionsAttorney osrdf:per.001393;
-   oscys:petitionerAgainst osrdf:per.001393;
-   oscys:siblingOf osrdf:per.001390,
-     osrdf:per.001385,
-     osrdf:per.001388 .
+osrdf:per.000214 a "person";
+   oscys:defendantAgainst osrdf:per.000213;
+   oscys:fullName "Neale, Francis";
+   oscys:fullname "Neale, Francis";
+   oscys:judgedBy osrdf:per.000004,
+     osrdf:per.000063;
+   oscys:oppositionsAttorney osrdf:per.000001;
+   oscys:sex "male";
+   oscys:slaveholderOf osrdf:per.000213 .
+
+osrdf:per.000545 a "person";
+   oscys:attorneyAgainst osrdf:per.000538,
+     osrdf:per.000539,
+     osrdf:per.000540,
+     osrdf:per.000541,
+     osrdf:per.000544,
+     osrdf:per.000589,
+     osrdf:per.000655,
+     osrdf:per.000708,
+     osrdf:per.000709,
+     osrdf:per.000710,
+     osrdf:per.000711,
+     osrdf:per.001378;
+   oscys:attorneyFor osrdf:per.000543,
+     osrdf:per.000587,
+     osrdf:per.000588,
+     osrdf:per.000654,
+     osrdf:per.000712,
+     osrdf:per.000713,
+     osrdf:per.001377;
+   oscys:attorneyWith osrdf:per.001535;
+   oscys:fullName "Lear, B. L.";
+   oscys:fullname "Lear, B. L.";
+   oscys:opposingAttorneys osrdf:per.000640,
+     osrdf:per.000460,
+     osrdf:per.000001;
+   oscys:sex "male" .
 
 osrdf:per.000816 a "person";
    oscys:clientOf osrdf:per.000829,
@@ -13261,42 +14721,32 @@ osrdf:per.000893 a "person";
      osrdf:per.000899;
    oscys:sex "female" .
 
-osrdf:per.001385 a "person";
-   oscys:childOf osrdf:per.001391,
-     osrdf:per.001392;
-   oscys:clientOf osrdf:per.000572;
-   oscys:enslavedBy osrdf:per.001393;
-   oscys:familyOf osrdf:per.001391,
-     osrdf:per.001392;
-   oscys:fullName "Butler, Airy";
-   oscys:fullname "Butler, Airy";
-   oscys:judgedBy osrdf:per.000620,
-     osrdf:per.000004;
-   oscys:oppositionsAttorney osrdf:per.001393,
-     osrdf:per.000435;
-   oscys:petitionerAgainst osrdf:per.001393;
-   oscys:siblingOf osrdf:per.001388,
-     osrdf:per.001389,
-     osrdf:per.001390 .
-
-osrdf:per.001390 a "person";
-   oscys:childOf osrdf:per.001391,
-     osrdf:per.001392;
-   oscys:clientOf osrdf:per.000572;
-   oscys:enslavedBy osrdf:per.001393;
-   oscys:familyOf osrdf:per.001391,
-     osrdf:per.001392;
-   oscys:fullName "Butler, Sally";
-   oscys:fullname "Butler, Sally";
-   oscys:judgedBy osrdf:per.000620,
-     osrdf:per.000004;
-   oscys:oppositionsAttorney osrdf:per.001393,
-     osrdf:per.000435;
-   oscys:petitionerAgainst osrdf:per.001393;
-   oscys:sex "female";
-   oscys:siblingOf osrdf:per.001385,
-     osrdf:per.001388,
-     osrdf:per.001389 .
+osrdf:per.000278 a "person";
+   oscys:defendantAgainst osrdf:per.000276,
+     osrdf:per.000279,
+     osrdf:per.000280,
+     osrdf:per.000831,
+     osrdf:per.000832,
+     osrdf:per.000833,
+     osrdf:per.000834;
+   oscys:fullName "Miller, George";
+   oscys:fullname "Miller, George";
+   oscys:judgedBy osrdf:per.000274,
+     osrdf:per.000004,
+     osrdf:per.000044,
+     "per.0004";
+   oscys:legal osrdf:per.000838,
+     osrdf:per.000840;
+   oscys:oppositionsAttorney osrdf:per.000001,
+     osrdf:per.000194,
+     osrdf:per.000476;
+   oscys:sex "male";
+   oscys:slaveholderOf osrdf:per.000279,
+     osrdf:per.000280,
+     osrdf:per.000831,
+     osrdf:per.000832,
+     osrdf:per.000833,
+     osrdf:per.000834 .
 
 osrdf:per.000873 a "person";
    oscys:attorneyAgainst osrdf:per.000872,
@@ -13408,6 +14858,141 @@ osrdf:per.001310 a "person";
    oscys:sex "female";
    oscys:slaveholderOf osrdf:per.001305 .
 
+osrdf:per.001432 a "person";
+   oscys:clientOf osrdf:per.000830;
+   oscys:defendantAgainst osrdf:per.001430,
+     osrdf:per.001426,
+     osrdf:per.001427,
+     osrdf:per.001428,
+     osrdf:per.001429,
+     osrdf:per.001431,
+     osrdf:per.001434,
+     osrdf:per.001435;
+   oscys:fullName "Bayne, John H.";
+   oscys:fullname "Bayne, John H.";
+   oscys:judgedBy osrdf:per.000004;
+   oscys:legal osrdf:per.001439;
+   oscys:oppositionsAttorney osrdf:per.000496,
+     osrdf:per.001433,
+     osrdf:per.000001;
+   oscys:sex "male";
+   oscys:slaveholderOf osrdf:per.001430,
+     osrdf:per.001426,
+     osrdf:per.001427,
+     osrdf:per.001428,
+     osrdf:per.001429,
+     osrdf:per.001431,
+     osrdf:per.001434,
+     osrdf:per.001435 .
+
+osrdf:per.000709 a "person";
+   oscys:childOf osrdf:per.000710;
+   oscys:clientOf osrdf:per.000640,
+     osrdf:per.000460,
+     osrdf:per.000001;
+   oscys:enslavedBy osrdf:per.000712,
+     osrdf:per.000713,
+     osrdf:per.000719,
+     osrdf:per.000720,
+     osrdf:per.000722,
+     osrdf:per.000705;
+   oscys:fullName "Derrick, Lucy";
+   oscys:fullname "Derrick, Lucy";
+   oscys:judgedBy osrdf:per.000064,
+     osrdf:per.000725,
+     osrdf:per.001534,
+     osrdf:per.001393;
+   oscys:legal osrdf:per.000044,
+     osrdf:per.000707,
+     osrdf:per.000716,
+     osrdf:per.000717;
+   oscys:oppositionsAttorney osrdf:per.000545,
+     osrdf:per.000435,
+     osrdf:per.001535;
+   oscys:petitionerAgainst osrdf:per.000712,
+     osrdf:per.000713;
+   oscys:sex "female" .
+
+osrdf:per.000711 a "person";
+   oscys:childOf osrdf:per.000710;
+   oscys:clientOf osrdf:per.000640,
+     osrdf:per.000460,
+     osrdf:per.000001;
+   oscys:enslavedBy osrdf:per.000712,
+     osrdf:per.000713,
+     osrdf:per.000719,
+     osrdf:per.000720,
+     osrdf:per.000722,
+     osrdf:per.000705;
+   oscys:fullName "Derrick, Matilda";
+   oscys:fullname "Derrick, Matilda";
+   oscys:judgedBy osrdf:per.000064,
+     osrdf:per.000725,
+     osrdf:per.001534,
+     osrdf:per.001393;
+   oscys:legal osrdf:per.000044,
+     osrdf:per.000707,
+     osrdf:per.000716,
+     osrdf:per.000717;
+   oscys:oppositionsAttorney osrdf:per.000545,
+     osrdf:per.000435,
+     osrdf:per.001535;
+   oscys:petitionerAgainst osrdf:per.000712,
+     osrdf:per.000713;
+   oscys:sex "female" .
+
+osrdf:per.001389 a "person";
+   oscys:childOf osrdf:per.001391,
+     osrdf:per.001392;
+   oscys:clientOf osrdf:per.000572,
+     osrdf:per.001533,
+     osrdf:per.000435;
+   oscys:enslavedBy osrdf:per.001393;
+   oscys:familyOf osrdf:per.001391,
+     osrdf:per.001392;
+   oscys:fullName "Butler, Reason";
+   oscys:fullname "Butler, Reason";
+   oscys:judgedBy osrdf:per.000620,
+     osrdf:per.000004;
+   oscys:oppositionsAttorney osrdf:per.001393,
+     osrdf:per.000001;
+   oscys:petitionerAgainst osrdf:per.001393;
+   oscys:siblingOf osrdf:per.001390,
+     osrdf:per.001385,
+     osrdf:per.001388 .
+
+osrdf:per.000710 a "person";
+   oscys:clientOf osrdf:per.000640,
+     osrdf:per.000460,
+     osrdf:per.000001;
+   oscys:enslavedBy osrdf:per.000712,
+     osrdf:per.000713,
+     osrdf:per.000705,
+     osrdf:per.000719,
+     osrdf:per.000720,
+     osrdf:per.000722;
+   oscys:fullName "Derrick, Matilda";
+   oscys:fullname "Derrick, Matilda";
+   oscys:judgedBy osrdf:per.000064,
+     osrdf:per.000725,
+     osrdf:per.001534,
+     osrdf:per.001393;
+   oscys:legal osrdf:per.000044,
+     osrdf:per.000707,
+     osrdf:per.000714,
+     osrdf:per.000716,
+     osrdf:per.000717;
+   oscys:nextFriendOf osrdf:per.000709,
+     osrdf:per.000711;
+   oscys:oppositionsAttorney osrdf:per.000545,
+     osrdf:per.000435,
+     osrdf:per.001535;
+   oscys:parentOf osrdf:per.000709,
+     osrdf:per.000711;
+   oscys:petitionerAgainst osrdf:per.000712,
+     osrdf:per.000713;
+   oscys:sex "female" .
+
 osrdf:per.000777 a "person";
    oscys:employerOf osrdf:per.000813;
    oscys:familyOf osrdf:per.000808,
@@ -13459,6 +15044,49 @@ osrdf:per.001278 a "person";
    oscys:purchasedSlaveFrom osrdf:per.001284;
    oscys:sex "male";
    oscys:slaveholderOf osrdf:per.001277 .
+
+osrdf:per.001385 a "person";
+   oscys:childOf osrdf:per.001391,
+     osrdf:per.001392;
+   oscys:clientOf osrdf:per.000572,
+     osrdf:per.001533,
+     osrdf:per.000435;
+   oscys:enslavedBy osrdf:per.001393;
+   oscys:familyOf osrdf:per.001391,
+     osrdf:per.001392;
+   oscys:fullName "Butler, Airy";
+   oscys:fullname "Butler, Airy";
+   oscys:judgedBy osrdf:per.000620,
+     osrdf:per.000004;
+   oscys:oppositionsAttorney osrdf:per.001393,
+     osrdf:per.000435,
+     osrdf:per.000001;
+   oscys:petitionerAgainst osrdf:per.001393;
+   oscys:siblingOf osrdf:per.001388,
+     osrdf:per.001389,
+     osrdf:per.001390 .
+
+osrdf:per.001390 a "person";
+   oscys:childOf osrdf:per.001391,
+     osrdf:per.001392;
+   oscys:clientOf osrdf:per.000572,
+     osrdf:per.001533,
+     osrdf:per.000435;
+   oscys:enslavedBy osrdf:per.001393;
+   oscys:familyOf osrdf:per.001391,
+     osrdf:per.001392;
+   oscys:fullName "Butler, Sally";
+   oscys:fullname "Butler, Sally";
+   oscys:judgedBy osrdf:per.000620,
+     osrdf:per.000004;
+   oscys:oppositionsAttorney osrdf:per.001393,
+     osrdf:per.000435,
+     osrdf:per.000001;
+   oscys:petitionerAgainst osrdf:per.001393;
+   oscys:sex "female";
+   oscys:siblingOf osrdf:per.001385,
+     osrdf:per.001388,
+     osrdf:per.001389 .
 
 osrdf:per.000232 a "person";
    oscys:defendantAgainst osrdf:per.000230,
@@ -13538,6 +15166,87 @@ osrdf:per.000899 a "person";
      osrdf:per.000896,
      osrdf:per.000897 .
 
+osrdf:per.000213 a "person";
+   oscys:clientOf osrdf:per.000001;
+   oscys:descendantOf osrdf:per.000068;
+   oscys:enslavedBy osrdf:per.000214;
+   oscys:fullName "Queen, Priscilla";
+   oscys:fullname "Queen, Priscilla";
+   oscys:judgedBy osrdf:per.000004,
+     osrdf:per.000063;
+   oscys:petitionerAgainst osrdf:per.000214;
+   oscys:sex "female" .
+
+osrdf:per.000496 a "person";
+   oscys:attorneyAgainst osrdf:per.000495,
+     osrdf:per.000559,
+     osrdf:per.000581,
+     osrdf:per.000696,
+     osrdf:per.000741,
+     osrdf:per.000869,
+     osrdf:per.001252,
+     osrdf:per.001432;
+   oscys:attorneyFor osrdf:per.000494,
+     osrdf:per.000560,
+     osrdf:per.000491,
+     osrdf:per.000582,
+     osrdf:per.000690,
+     osrdf:per.000691,
+     osrdf:per.000692,
+     osrdf:per.000693,
+     osrdf:per.000694,
+     osrdf:per.000695,
+     osrdf:per.000868,
+     osrdf:per.001251,
+     osrdf:per.001430,
+     osrdf:per.001426,
+     osrdf:per.001427,
+     osrdf:per.001428,
+     osrdf:per.001429,
+     osrdf:per.001431;
+   oscys:attorneyWith osrdf:per.000751,
+     osrdf:per.001433;
+   oscys:birth "1792";
+   oscys:death "1865";
+   oscys:fullName "Coxe, Richard Smith";
+   oscys:fullname "Coxe, Richard S. (Richard Smith), 1792-1865";
+   oscys:opposingAttorneys osrdf:per.000001,
+     osrdf:per.000476,
+     osrdf:per.000586;
+   oscys:sex "male" .
+
+osrdf:per.001138 a "person";
+   oscys:defendantAgainst osrdf:per.001137,
+     osrdf:per.001164,
+     osrdf:per.001165,
+     osrdf:per.001166,
+     osrdf:per.001443,
+     osrdf:per.001444,
+     osrdf:per.001445,
+     osrdf:per.001446,
+     osrdf:per.001447,
+     osrdf:per.001448,
+     osrdf:per.001449,
+     osrdf:per.001450;
+   oscys:fullName "Conrad, Nelson";
+   oscys:fullname "Conrad, Nelson";
+   oscys:judgedBy osrdf:per.000004;
+   oscys:oppositionsAttorney osrdf:per.000737,
+     osrdf:per.000738;
+   oscys:sex "male";
+   oscys:slaveholderOf osrdf:per.001137,
+     osrdf:per.001164,
+     osrdf:per.001165,
+     osrdf:per.001166,
+     osrdf:per.001443,
+     osrdf:per.001444,
+     osrdf:per.001445,
+     osrdf:per.001446,
+     osrdf:per.001447,
+     osrdf:per.001448,
+     osrdf:per.001449,
+     osrdf:per.001450 .
+
 osrdf:per.001145 a "person";
    oscys:clientOf osrdf:per.000830;
    oscys:defendantAgainst osrdf:per.000816;
@@ -13552,45 +15261,6 @@ osrdf:per.001145 a "person";
    oscys:purchasedSlaveFrom osrdf:per.000775;
    oscys:sex "male";
    oscys:slaveholderOf osrdf:per.000816 .
-
-osrdf:per.000064 a "person";
-   oscys:birth "1763";
-   oscys:death "1845";
-   oscys:fullName "Thruston, Buckner";
-   oscys:fullname "Thruston, Buckner";
-   oscys:judgeOf osrdf:per.000056,
-     osrdf:per.000057,
-     osrdf:per.000058,
-     osrdf:per.000150,
-     osrdf:per.000151,
-     osrdf:per.000152,
-     osrdf:per.000161,
-     osrdf:per.000162,
-     osrdf:per.000163,
-     osrdf:per.000164,
-     osrdf:per.000165,
-     osrdf:per.000153,
-     osrdf:per.000166,
-     osrdf:per.000196,
-     osrdf:per.000197,
-     osrdf:per.000230,
-     osrdf:per.000231,
-     osrdf:per.000232,
-     osrdf:per.000636,
-     osrdf:per.000637,
-     osrdf:per.000638,
-     osrdf:per.000639,
-     osrdf:per.000709,
-     osrdf:per.000710,
-     osrdf:per.000711,
-     osrdf:per.000712,
-     osrdf:per.000713,
-     osrdf:per.000714,
-     osrdf:per.001145,
-     osrdf:per.000816;
-   oscys:legal osrdf:per.000646,
-     osrdf:per.000647;
-   oscys:sex "male" .
 
 osrdf:per.000572 a "person";
    oscys:attorneyAgainst osrdf:per.000571,
@@ -13687,6 +15357,48 @@ osrdf:per.001277 a "person";
    oscys:petitionerAgainst osrdf:per.001278;
    oscys:sex "male" .
 
+osrdf:per.000064 a "person";
+   oscys:birth "1763";
+   oscys:death "1845";
+   oscys:fullName "Thruston, Buckner";
+   oscys:fullname "Thruston, Buckner, 1763-1845";
+   oscys:judgeOf osrdf:per.000056,
+     osrdf:per.000057,
+     osrdf:per.000058,
+     osrdf:per.000150,
+     osrdf:per.000151,
+     osrdf:per.000152,
+     osrdf:per.000161,
+     osrdf:per.000162,
+     osrdf:per.000163,
+     osrdf:per.000164,
+     osrdf:per.000165,
+     osrdf:per.000153,
+     osrdf:per.000166,
+     osrdf:per.000196,
+     osrdf:per.000197,
+     osrdf:per.000230,
+     osrdf:per.000231,
+     osrdf:per.000232,
+     osrdf:per.000636,
+     osrdf:per.000637,
+     osrdf:per.000638,
+     osrdf:per.000639,
+     osrdf:per.000709,
+     osrdf:per.000710,
+     osrdf:per.000711,
+     osrdf:per.000712,
+     osrdf:per.000713,
+     osrdf:per.000714,
+     osrdf:per.001145,
+     osrdf:per.000816,
+     osrdf:per.000708,
+     osrdf:per.000002,
+     osrdf:per.000005;
+   oscys:legal osrdf:per.000646,
+     osrdf:per.000647;
+   oscys:sex "male" .
+
 osrdf:per.000289 a "person";
    oscys:death "1804";
    oscys:familyOf osrdf:per.000303,
@@ -13726,47 +15438,6 @@ osrdf:per.000289 a "person";
      osrdf:per.000335;
    oscys:spouseOf osrdf:per.000304 .
 
-osrdf:per.000737 a "person";
-   oscys:attorneyAgainst osrdf:per.000736,
-     osrdf:per.000858,
-     osrdf:per.000879,
-     osrdf:per.000883,
-     osrdf:per.000898,
-     osrdf:per.000899,
-     osrdf:per.000999,
-     osrdf:per.001138,
-     osrdf:per.001139,
-     osrdf:per.001140,
-     osrdf:per.001168,
-     osrdf:per.001173,
-     osrdf:per.001278,
-     osrdf:per.001372;
-   oscys:attorneyFor osrdf:per.000735,
-     osrdf:per.000857,
-     osrdf:per.000878,
-     osrdf:per.000882,
-     osrdf:per.000998,
-     osrdf:per.001137,
-     osrdf:per.001164,
-     osrdf:per.001165,
-     osrdf:per.001166,
-     osrdf:per.001167,
-     osrdf:per.001172,
-     osrdf:per.001277,
-     osrdf:per.001369,
-     osrdf:per.001370,
-     osrdf:per.001371;
-   oscys:birth "1811";
-   oscys:childOf osrdf:per.000738;
-   oscys:death "1872";
-   oscys:fullName "Brent, Robert James";
-   oscys:fullname "Brent, Robert James";
-   oscys:legal osrdf:per.001239,
-     osrdf:per.001240,
-     osrdf:per.001241,
-     osrdf:per.001242;
-   oscys:sex "male" .
-
 osrdf:per.000476 a "person";
    oscys:attorneyAgainst osrdf:per.000475,
      osrdf:per.000485,
@@ -13777,7 +15448,7 @@ osrdf:per.000476 a "person";
      osrdf:per.000593,
      osrdf:per.000647,
      osrdf:per.000729,
-     osrdf:per.000835,
+     osrdf:per.000278,
      osrdf:per.000836,
      osrdf:per.001039,
      osrdf:per.001267;
@@ -13799,56 +15470,12 @@ osrdf:per.000476 a "person";
    oscys:attorneyWith osrdf:per.000001;
    oscys:birth "1793";
    oscys:fullName "Dunlop, James";
-   oscys:fullname "Dunlop, James";
+   oscys:fullname "Dunlop, James, 1793-";
    oscys:judgeOf osrdf:per.001213,
      osrdf:per.001214;
    oscys:legal osrdf:per.001253,
      osrdf:per.001254,
      osrdf:per.001255;
-   oscys:sex "male" .
-
-osrdf:per.000738 a "person";
-   oscys:attorneyAgainst osrdf:per.000736,
-     osrdf:per.000858,
-     osrdf:per.000879,
-     osrdf:per.000883,
-     osrdf:per.000898,
-     osrdf:per.000899,
-     osrdf:per.000994,
-     osrdf:per.000999,
-     osrdf:per.001138,
-     osrdf:per.001139,
-     osrdf:per.001140,
-     osrdf:per.001145,
-     osrdf:per.001168,
-     osrdf:per.001173,
-     osrdf:per.001278,
-     osrdf:per.001372;
-   oscys:attorneyFor osrdf:per.000735,
-     osrdf:per.000857,
-     osrdf:per.000878,
-     osrdf:per.000882,
-     osrdf:per.000993,
-     osrdf:per.000998,
-     osrdf:per.001137,
-     osrdf:per.000816,
-     osrdf:per.001164,
-     osrdf:per.001165,
-     osrdf:per.001166,
-     osrdf:per.001167,
-     osrdf:per.001172,
-     osrdf:per.001277,
-     osrdf:per.001369,
-     osrdf:per.001370,
-     osrdf:per.001371;
-   oscys:attorneyWith osrdf:per.000829;
-   oscys:birth "1784";
-   oscys:death "1848";
-   oscys:fullName "Brent, William Leigh";
-   oscys:fullname "Brent, William Leigh";
-   oscys:opposingAttorneys osrdf:per.000830;
-   oscys:parentOf osrdf:per.000737;
-   oscys:sameAs "https://viaf.org/viaf/38728091";
    oscys:sex "male" .
 
 osrdf:per.001391 a "person";
@@ -13858,7 +15485,9 @@ osrdf:per.001391 a "person";
      osrdf:per.001402;
    oscys:ancestorOf osrdf:per.001386,
      osrdf:per.001387;
-   oscys:clientOf osrdf:per.000572;
+   oscys:clientOf osrdf:per.000572,
+     osrdf:per.001533,
+     osrdf:per.000435;
    oscys:enslavedBy osrdf:per.001393,
      osrdf:per.001394;
    oscys:familyOf osrdf:per.001385,
@@ -13872,7 +15501,8 @@ osrdf:per.001391 a "person";
      osrdf:per.000004;
    oscys:livesWith osrdf:per.001399;
    oscys:oppositionsAttorney osrdf:per.001393,
-     osrdf:per.000435;
+     osrdf:per.000435,
+     osrdf:per.000001;
    oscys:parentOf osrdf:per.001385,
      osrdf:per.001388,
      osrdf:per.001389,
@@ -13888,7 +15518,9 @@ osrdf:per.001392 a "person";
      osrdf:per.001402;
    oscys:ancestorOf osrdf:per.001386,
      osrdf:per.001387;
-   oscys:clientOf osrdf:per.000572;
+   oscys:clientOf osrdf:per.000572,
+     osrdf:per.001533,
+     osrdf:per.000435;
    oscys:enslavedBy osrdf:per.001393,
      osrdf:per.001394;
    oscys:familyOf osrdf:per.001385,
@@ -13902,7 +15534,8 @@ osrdf:per.001392 a "person";
      osrdf:per.000004;
    oscys:livesWith osrdf:per.001399;
    oscys:oppositionsAttorney osrdf:per.001393,
-     osrdf:per.000435;
+     osrdf:per.000435,
+     osrdf:per.000001;
    oscys:parentOf osrdf:per.001385,
      osrdf:per.001388,
      osrdf:per.001389,
@@ -13911,51 +15544,54 @@ osrdf:per.001392 a "person";
    oscys:sex "male";
    oscys:spouseOf osrdf:per.001391 .
 
-osrdf:per.000044 a "person";
-   oscys:attorneyAgainst osrdf:per.000043,
-     osrdf:per.001201;
-   oscys:attorneyFor osrdf:per.000031,
-     osrdf:per.000032,
-     osrdf:per.000033,
-     osrdf:per.000034,
-     osrdf:per.000035,
-     osrdf:per.000036,
-     osrdf:per.000037,
-     osrdf:per.000038,
-     osrdf:per.000039,
-     osrdf:per.000040,
-     osrdf:per.000041,
-     osrdf:per.000042,
-     osrdf:per.001200;
-   oscys:attorneyWith osrdf:per.000001,
-     osrdf:per.000640;
-   oscys:fullName "Morsell, James Sewall";
-   oscys:fullname "Morsell, James Sewall";
-   oscys:judgeOf osrdf:per.000278,
-     osrdf:per.000279,
-     osrdf:per.000280,
-     osrdf:per.000281,
-     osrdf:per.000282,
-     osrdf:per.000283,
-     osrdf:per.000772,
-     osrdf:per.000773,
-     osrdf:per.000774,
-     osrdf:per.000775,
-     osrdf:per.001145,
-     osrdf:per.000816;
-   oscys:legal osrdf:per.000682,
-     osrdf:per.000683,
-     osrdf:per.000684,
-     osrdf:per.000685,
-     osrdf:per.000708,
-     osrdf:per.000709,
-     osrdf:per.000710,
-     osrdf:per.000711,
-     osrdf:per.000712,
-     osrdf:per.000713,
-     osrdf:per.001253,
-     osrdf:per.001254,
-     osrdf:per.001255;
+osrdf:per.000737 a "person";
+   oscys:attorneyAgainst osrdf:per.000736,
+     osrdf:per.000858,
+     osrdf:per.000879,
+     osrdf:per.000883,
+     osrdf:per.000898,
+     osrdf:per.000899,
+     osrdf:per.000999,
+     osrdf:per.001138,
+     osrdf:per.001139,
+     osrdf:per.001140,
+     osrdf:per.001168,
+     osrdf:per.001173,
+     osrdf:per.001278,
+     osrdf:per.001372,
+     osrdf:per.001451;
+   oscys:attorneyFor osrdf:per.000735,
+     osrdf:per.000857,
+     osrdf:per.000878,
+     osrdf:per.000882,
+     osrdf:per.000998,
+     osrdf:per.001137,
+     osrdf:per.001164,
+     osrdf:per.001165,
+     osrdf:per.001166,
+     osrdf:per.001167,
+     osrdf:per.001172,
+     osrdf:per.001277,
+     osrdf:per.001369,
+     osrdf:per.001370,
+     osrdf:per.001371,
+     osrdf:per.001443,
+     osrdf:per.001444,
+     osrdf:per.001445,
+     osrdf:per.001446,
+     osrdf:per.001447,
+     osrdf:per.001448,
+     osrdf:per.001449,
+     osrdf:per.001450;
+   oscys:birth "1811";
+   oscys:childOf osrdf:per.000738;
+   oscys:death "1872";
+   oscys:fullName "Brent, Robert James";
+   oscys:fullname "Brent, Robert J., 1811-1872";
+   oscys:legal osrdf:per.001239,
+     osrdf:per.001240,
+     osrdf:per.001241,
+     osrdf:per.001242;
    oscys:sex "male" .
 
 osrdf:per.001077 a "person";
@@ -13998,46 +15634,112 @@ osrdf:per.001077 a "person";
      osrdf:per.001118,
      osrdf:per.001119 .
 
-osrdf:per.001393 a "person";
-   oscys:acquaintanceOf osrdf:per.001402;
-   oscys:attorneyAgainst osrdf:per.001385,
+osrdf:per.000738 a "person";
+   oscys:attorneyAgainst osrdf:per.000736,
+     osrdf:per.000858,
+     osrdf:per.000879,
+     osrdf:per.000883,
+     osrdf:per.000898,
+     osrdf:per.000899,
+     osrdf:per.000994,
+     osrdf:per.000999,
+     osrdf:per.001138,
+     osrdf:per.001139,
+     osrdf:per.001140,
+     osrdf:per.001145,
+     osrdf:per.001168,
+     osrdf:per.001173,
+     osrdf:per.001278,
+     osrdf:per.001372,
+     osrdf:per.001451;
+   oscys:attorneyFor osrdf:per.000735,
+     osrdf:per.000857,
+     osrdf:per.000878,
+     osrdf:per.000882,
+     osrdf:per.000993,
+     osrdf:per.000998,
+     osrdf:per.001137,
+     osrdf:per.000816,
+     osrdf:per.001164,
+     osrdf:per.001165,
+     osrdf:per.001166,
+     osrdf:per.001167,
+     osrdf:per.001172,
+     osrdf:per.001277,
+     osrdf:per.001369,
+     osrdf:per.001370,
+     osrdf:per.001371,
+     osrdf:per.001443,
+     osrdf:per.001444,
+     osrdf:per.001445,
+     osrdf:per.001446,
+     osrdf:per.001447,
+     osrdf:per.001448,
+     osrdf:per.001449,
+     osrdf:per.001450;
+   oscys:attorneyWith osrdf:per.000829;
+   oscys:birth "1784";
+   oscys:death "1848";
+   oscys:fullName "Brent, William Leigh";
+   oscys:fullname "Brent, William Leigh, 1784-1848";
+   oscys:opposingAttorneys osrdf:per.000830;
+   oscys:parentOf osrdf:per.000737;
+   oscys:sameAs "https://viaf.org/viaf/38728091";
+   oscys:sex "male" .
+
+osrdf:per.000435 a "person";
+   oscys:attorneyAgainst osrdf:per.000431,
+     osrdf:per.000565,
+     osrdf:per.000567,
+     osrdf:per.000587,
+     osrdf:per.000588,
+     osrdf:per.001385,
+     osrdf:per.001386,
+     osrdf:per.001397,
+     osrdf:per.001398,
+     osrdf:per.001399,
+     osrdf:per.001390,
+     osrdf:per.001391,
+     osrdf:per.001392,
+     osrdf:per.000056,
+     osrdf:per.000057,
+     osrdf:per.001393,
+     osrdf:per.000708,
+     osrdf:per.000709,
+     osrdf:per.000710,
+     osrdf:per.000711,
+     osrdf:per.000002;
+   oscys:attorneyFor osrdf:per.000432,
+     osrdf:per.000564,
+     osrdf:per.000589,
+     osrdf:per.001393,
+     osrdf:per.000058,
+     osrdf:per.001385,
      osrdf:per.001386,
      osrdf:per.001387,
-     osrdf:per.001388,
      osrdf:per.001389,
      osrdf:per.001390,
      osrdf:per.001391,
-     osrdf:per.001392;
-   oscys:attorneyFor osrdf:per.001393;
-   oscys:birth "1752";
-   oscys:clientOf osrdf:per.001393,
-     osrdf:per.000435;
-   oscys:death "1844";
-   oscys:defendantAgainst osrdf:per.001385,
-     osrdf:per.001386,
-     osrdf:per.001387,
-     osrdf:per.001388,
-     osrdf:per.001389,
-     osrdf:per.001390,
-     osrdf:per.001391,
-     osrdf:per.001392;
-   oscys:fullName "Duvall, Gabriel";
-   oscys:fullname "Duvall, Gabriel, 1752-1844";
-   oscys:judgedBy osrdf:per.000620,
-     osrdf:per.000004;
-   oscys:legal osrdf:per.001395;
-   oscys:oppositionsAttorney osrdf:per.000572;
-   oscys:purchasedSlaveFrom osrdf:per.001394;
-   oscys:sameAs "https://viaf.org/viaf/24463108";
-   oscys:sex "male";
-   oscys:slaveholderOf osrdf:per.001385,
-     osrdf:per.001386,
-     osrdf:per.001387,
-     osrdf:per.001388,
-     osrdf:per.001389,
-     osrdf:per.001390,
-     osrdf:per.001391,
-     osrdf:per.001392 .
+     osrdf:per.001392,
+     osrdf:per.000712,
+     osrdf:per.000713,
+     osrdf:per.000005;
+   oscys:attorneyWith osrdf:per.000023,
+     osrdf:per.001533,
+     osrdf:per.000001,
+     osrdf:per.000044,
+     osrdf:per.001563;
+   oscys:birth "1771",
+     "1776";
+   oscys:death "1861";
+   oscys:fullName "Jones, Walter";
+   oscys:fullname "Jones, Walter, 1776-1861";
+   oscys:opposingAttorneys osrdf:per.000545,
+     osrdf:per.000640,
+     osrdf:per.000460,
+     osrdf:per.001535,
+     osrdf:per.000001;
+   oscys:sex "male" .
 
 osrdf:per.000900 a "person";
    oscys:friendOf osrdf:per.000908,
@@ -14091,43 +15793,81 @@ osrdf:per.000900 a "person";
      osrdf:per.000916,
      osrdf:per.000947 .
 
-osrdf:per.000056 a "person";
-   oscys:childOf osrdf:per.000057;
-   oscys:clientOf osrdf:per.000001;
-   oscys:enslavedBy osrdf:per.000058;
-   oscys:fullName "Queen, Louisa";
-   oscys:fullname "Queen, Louisa";
-   oscys:judgedBy osrdf:per.000004,
-     osrdf:per.000063,
-     osrdf:per.000064;
-   oscys:petitionerAgainst osrdf:per.000058;
-   oscys:sex "female" .
-
-osrdf:per.000057 a "person";
-   oscys:clientOf osrdf:per.000001;
-   oscys:descendantOf osrdf:per.000066;
-   oscys:enslavedBy osrdf:per.000058;
-   oscys:fullName "Queen, Mima";
-   oscys:fullname "Queen, Mima";
-   oscys:judgedBy osrdf:per.000004,
-     osrdf:per.000063,
-     osrdf:per.000064;
-   oscys:parentOf osrdf:per.000056;
-   oscys:petitionerAgainst osrdf:per.000058;
-   oscys:sex "female" .
-
-osrdf:per.000058 a "person";
-   oscys:defendantAgainst osrdf:per.000056,
-     osrdf:per.000057;
-   oscys:fullName "Hepburn, John";
-   oscys:fullname "Hepburn, John";
-   oscys:judgedBy osrdf:per.000004,
-     osrdf:per.000063,
-     osrdf:per.000064;
-   oscys:oppositionsAttorney osrdf:per.000001;
+osrdf:per.000215 a "person";
+   oscys:acquaintanceOf osrdf:per.000061;
+   oscys:clientOf osrdf:per.001496,
+     osrdf:per.000183;
+   oscys:fullName "Ashton, John";
+   oscys:fullname "Ashton, John";
+   oscys:judgedBy osrdf:per.001514,
+     osrdf:per.001532,
+     osrdf:per.001488,
+     osrdf:per.001522;
+   oscys:legal osrdf:per.001477;
+   oscys:livesWith osrdf:per.001476;
+   oscys:neighborOf osrdf:per.001487,
+     osrdf:per.001488;
+   oscys:oppositionsAttorney osrdf:per.001495,
+     osrdf:per.001393;
    oscys:sex "male";
-   oscys:slaveholderOf osrdf:per.000056,
-     osrdf:per.000057 .
+   oscys:slaveholderOf osrdf:per.000066,
+     osrdf:per.001476 .
+
+osrdf:per.000044 a "person";
+   oscys:attorneyAgainst osrdf:per.000043,
+     osrdf:per.001201,
+     osrdf:per.000058,
+     osrdf:per.000002;
+   oscys:attorneyFor osrdf:per.000031,
+     osrdf:per.000032,
+     osrdf:per.000033,
+     osrdf:per.000034,
+     osrdf:per.000035,
+     osrdf:per.000036,
+     osrdf:per.000037,
+     osrdf:per.000038,
+     osrdf:per.000039,
+     osrdf:per.000040,
+     osrdf:per.000041,
+     osrdf:per.000042,
+     osrdf:per.001200,
+     osrdf:per.000056,
+     osrdf:per.000057,
+     osrdf:per.000005;
+   oscys:attorneyWith osrdf:per.000001,
+     osrdf:per.000640,
+     osrdf:per.000435;
+   oscys:fullName "Morsell, James Sewall";
+   oscys:fullname "Morsell, James Sewall";
+   oscys:judgeOf osrdf:per.000278,
+     osrdf:per.000279,
+     osrdf:per.000280,
+     osrdf:per.000281,
+     osrdf:per.000282,
+     osrdf:per.000283,
+     osrdf:per.000772,
+     osrdf:per.000773,
+     osrdf:per.000774,
+     osrdf:per.000775,
+     osrdf:per.001145,
+     osrdf:per.000816;
+   oscys:legal osrdf:per.000682,
+     osrdf:per.000683,
+     osrdf:per.000684,
+     osrdf:per.000685,
+     osrdf:per.000708,
+     osrdf:per.000709,
+     osrdf:per.000710,
+     osrdf:per.000711,
+     osrdf:per.000712,
+     osrdf:per.000713,
+     osrdf:per.001253,
+     osrdf:per.001254,
+     osrdf:per.001255,
+     osrdf:per.000002,
+     osrdf:per.000005;
+   oscys:opposingAttorneys osrdf:per.000001;
+   oscys:sex "male" .
 
 osrdf:per.000775 a "person";
    oscys:clientOf osrdf:per.000830;
@@ -14166,6 +15906,193 @@ osrdf:per.000775 a "person";
      osrdf:per.000825,
      osrdf:per.000827;
    oscys:soldSlaveTo osrdf:per.001145 .
+
+osrdf:per.000078 a "person";
+   oscys:acquaintanceOf osrdf:per.000061,
+     osrdf:per.000072;
+   oscys:childOf osrdf:per.001476;
+   oscys:clientOf osrdf:per.001495,
+     osrdf:per.001393;
+   oscys:fullName "Queen, Edward";
+   oscys:fullname "Queen, Edward";
+   oscys:judgedBy osrdf:per.001514,
+     osrdf:per.001532,
+     osrdf:per.001488,
+     osrdf:per.001522;
+   oscys:legal osrdf:per.001477,
+     osrdf:per.001515,
+     osrdf:per.001491,
+     osrdf:per.001523;
+   oscys:oppositionsAttorney osrdf:per.001496,
+     osrdf:per.000183;
+   oscys:sex "male";
+   oscys:siblingOf osrdf:per.001481,
+     osrdf:per.001485,
+     osrdf:per.001479,
+     osrdf:per.001482,
+     osrdf:per.001480 .
+
+osrdf:per.000002 a "person";
+   oscys:childOf osrdf:per.001542;
+   oscys:clientOf osrdf:per.000001,
+     osrdf:per.001562;
+   oscys:enslavedBy osrdf:per.000005,
+     osrdf:per.001541;
+   oscys:fullName "Ben";
+   oscys:fullname "Ben";
+   oscys:judgedBy osrdf:per.000007,
+     osrdf:per.000725,
+     osrdf:per.001543,
+     osrdf:per.000063,
+     osrdf:per.000004,
+     osrdf:per.000064;
+   oscys:legal osrdf:per.001546,
+     osrdf:per.000044;
+   oscys:oppositionsAttorney osrdf:per.000435,
+     osrdf:per.000044,
+     osrdf:per.001563;
+   oscys:petitionerAgainst osrdf:per.000005;
+   oscys:sex "male" .
+
+osrdf:per.001393 a "person";
+   oscys:acquaintanceOf osrdf:per.001402;
+   oscys:attorneyAgainst osrdf:per.001385,
+     osrdf:per.001386,
+     osrdf:per.001387,
+     osrdf:per.001388,
+     osrdf:per.001389,
+     osrdf:per.001390,
+     osrdf:per.001391,
+     osrdf:per.001392,
+     osrdf:per.000215;
+   oscys:attorneyFor osrdf:per.001393,
+     osrdf:per.000078;
+   oscys:attorneyWith osrdf:per.001495;
+   oscys:birth "1752";
+   oscys:clientOf osrdf:per.001393,
+     osrdf:per.000435,
+     osrdf:per.000001;
+   oscys:death "1844";
+   oscys:defendantAgainst osrdf:per.001385,
+     osrdf:per.001386,
+     osrdf:per.001387,
+     osrdf:per.001388,
+     osrdf:per.001389,
+     osrdf:per.001390,
+     osrdf:per.001391,
+     osrdf:per.001392;
+   oscys:fullName "Duvall, Gabriel";
+   oscys:fullname "Duvall, Gabriel, 1752-1844";
+   oscys:judgeOf osrdf:per.000056,
+     osrdf:per.000057,
+     osrdf:per.000058,
+     osrdf:per.000708,
+     osrdf:per.000709,
+     osrdf:per.000710,
+     osrdf:per.000711,
+     osrdf:per.000712,
+     osrdf:per.000713;
+   oscys:judgedBy osrdf:per.000620,
+     osrdf:per.000004;
+   oscys:legal osrdf:per.001395,
+     osrdf:per.001515,
+     osrdf:per.001491;
+   oscys:opposingAttorneys osrdf:per.001496;
+   oscys:oppositionsAttorney osrdf:per.000572,
+     osrdf:per.001533,
+     osrdf:per.000435;
+   oscys:purchasedSlaveFrom osrdf:per.001394;
+   oscys:sameAs "https://viaf.org/viaf/24463108";
+   oscys:sex "male";
+   oscys:slaveholderOf osrdf:per.001385,
+     osrdf:per.001386,
+     osrdf:per.001387,
+     osrdf:per.001388,
+     osrdf:per.001389,
+     osrdf:per.001390,
+     osrdf:per.001391,
+     osrdf:per.001392;
+   oscys:witnessFor osrdf:per.000213,
+     osrdf:per.000056,
+     osrdf:per.000057 .
+
+osrdf:per.000005 a "person";
+   oscys:clientOf osrdf:per.000435,
+     osrdf:per.000044,
+     osrdf:per.001563;
+   oscys:defendantAgainst osrdf:per.000002;
+   oscys:fullName "Scott, Sabret";
+   oscys:fullname "Scott, Sabret";
+   oscys:judgedBy osrdf:per.000007,
+     osrdf:per.000725,
+     osrdf:per.001543,
+     osrdf:per.000063,
+     osrdf:per.000004,
+     osrdf:per.000064;
+   oscys:legal osrdf:per.001546,
+     osrdf:per.001553,
+     osrdf:per.001554,
+     osrdf:per.000044,
+     osrdf:per.001556,
+     osrdf:per.001557;
+   oscys:oppositionsAttorney osrdf:per.001562;
+   oscys:purchasedSlaveFrom osrdf:per.001541;
+   oscys:sex "male";
+   oscys:slaveholderOf osrdf:per.000002,
+     osrdf:per.001558 .
+
+osrdf:per.000056 a "person";
+   oscys:childOf osrdf:per.000057;
+   oscys:clientOf osrdf:per.000001,
+     osrdf:per.000044;
+   oscys:enslavedBy osrdf:per.000058;
+   oscys:fullName "Queen, Louisa";
+   oscys:fullname "Queen, Louisa";
+   oscys:judgedBy osrdf:per.000004,
+     osrdf:per.000063,
+     osrdf:per.000064,
+     osrdf:per.000725,
+     osrdf:per.001393;
+   oscys:oppositionsAttorney osrdf:per.000435,
+     osrdf:per.000023;
+   oscys:petitionerAgainst osrdf:per.000058;
+   oscys:sex "female" .
+
+osrdf:per.000057 a "person";
+   oscys:clientOf osrdf:per.000001,
+     osrdf:per.000044;
+   oscys:descendantOf osrdf:per.000066;
+   oscys:enslavedBy osrdf:per.000058;
+   oscys:fullName "Queen, Mima";
+   oscys:fullname "Queen, Mima";
+   oscys:judgedBy osrdf:per.000004,
+     osrdf:per.000063,
+     osrdf:per.000064,
+     osrdf:per.000725,
+     osrdf:per.001393;
+   oscys:oppositionsAttorney osrdf:per.000435,
+     osrdf:per.000023;
+   oscys:parentOf osrdf:per.000056;
+   oscys:petitionerAgainst osrdf:per.000058;
+   oscys:sex "female" .
+
+osrdf:per.000058 a "person";
+   oscys:clientOf osrdf:per.000435,
+     osrdf:per.000023;
+   oscys:defendantAgainst osrdf:per.000056,
+     osrdf:per.000057;
+   oscys:fullName "Hepburn, John";
+   oscys:fullname "Hepburn, John";
+   oscys:judgedBy osrdf:per.000004,
+     osrdf:per.000063,
+     osrdf:per.000064,
+     osrdf:per.000725,
+     osrdf:per.001393;
+   oscys:oppositionsAttorney osrdf:per.000001,
+     osrdf:per.000044;
+   oscys:sex "male";
+   oscys:slaveholderOf osrdf:per.000056,
+     osrdf:per.000057 .
 
 osrdf:per.000001 a "person";
    oscys:attorneyAgainst osrdf:per.000058,
@@ -14207,7 +16134,6 @@ osrdf:per.000001 a "person";
      osrdf:per.000684,
      osrdf:per.000727,
      osrdf:per.000729,
-     osrdf:per.000835,
      osrdf:per.000836,
      osrdf:per.000860,
      osrdf:per.000991,
@@ -14218,7 +16144,18 @@ osrdf:per.000001 a "person";
      osrdf:per.001189,
      osrdf:per.001267,
      osrdf:per.001306,
-     osrdf:per.001378;
+     osrdf:per.001378,
+     osrdf:per.001432,
+     osrdf:per.001442,
+     osrdf:per.001385,
+     osrdf:per.001386,
+     osrdf:per.001387,
+     osrdf:per.001389,
+     osrdf:per.001390,
+     osrdf:per.001391,
+     osrdf:per.001392,
+     osrdf:per.000712,
+     osrdf:per.000713;
    oscys:attorneyFor osrdf:per.000002,
      osrdf:per.000056,
      osrdf:per.000057,
@@ -14275,16 +16212,39 @@ osrdf:per.000001 a "person";
      osrdf:per.001188,
      osrdf:per.001266,
      osrdf:per.001305,
-     osrdf:per.001377;
+     osrdf:per.001377,
+     osrdf:per.001426,
+     osrdf:per.001427,
+     osrdf:per.001428,
+     osrdf:per.001429,
+     osrdf:per.001431,
+     osrdf:per.001430,
+     osrdf:per.001434,
+     osrdf:per.001435,
+     osrdf:per.001441,
+     osrdf:per.001393,
+     osrdf:per.000708,
+     osrdf:per.000709,
+     osrdf:per.000710,
+     osrdf:per.000711;
    oscys:attorneyWith osrdf:per.000194,
      osrdf:per.000476,
-     osrdf:per.000044;
+     osrdf:per.000044,
+     osrdf:per.001433,
+     osrdf:per.000435,
+     osrdf:per.001562;
    oscys:birth "1779";
    oscys:death "1843";
    oscys:fullName "Key, Francis Scott";
-   oscys:fullname "Key, Francis Scott";
-   oscys:legal osrdf:per.001384;
-   oscys:opposingAttorneys osrdf:per.000584;
+   oscys:fullname "Key, Francis Scott, 1779-1843";
+   oscys:legal osrdf:per.001384,
+     osrdf:per.001440;
+   oscys:opposingAttorneys osrdf:per.000584,
+     osrdf:per.001535,
+     osrdf:per.000545,
+     osrdf:per.000435,
+     osrdf:per.000044,
+     osrdf:per.001563;
    oscys:sameAs "https://viaf.org/viaf/824500";
    oscys:sex "male";
    oscys:witnessOf osrdf:per.001310 .
@@ -14293,7 +16253,7 @@ osrdf:per.000004 a "person";
    oscys:birth "1769";
    oscys:death "1855";
    oscys:fullName "Cranch, William";
-   oscys:fullname "Cranch, William";
+   oscys:fullname "Cranch, William 1769-1855";
    oscys:judgeOf osrdf:per.000008,
      osrdf:per.000009,
      osrdf:per.000010,
@@ -14525,7 +16485,6 @@ osrdf:per.000004 a "person";
      osrdf:per.000832,
      osrdf:per.000833,
      osrdf:per.000834,
-     osrdf:per.000835,
      osrdf:per.000842,
      osrdf:per.000843,
      osrdf:per.000845,
@@ -14720,7 +16679,29 @@ osrdf:per.000004 a "person";
      osrdf:per.001392,
      osrdf:per.001393,
      osrdf:per.001423,
-     osrdf:per.001424;
+     osrdf:per.001424,
+     osrdf:per.001426,
+     osrdf:per.001427,
+     osrdf:per.001428,
+     osrdf:per.001429,
+     osrdf:per.001431,
+     osrdf:per.001430,
+     osrdf:per.001432,
+     osrdf:per.001434,
+     osrdf:per.001435,
+     osrdf:per.001441,
+     osrdf:per.001442,
+     osrdf:per.001443,
+     osrdf:per.001444,
+     osrdf:per.001445,
+     osrdf:per.001446,
+     osrdf:per.001447,
+     osrdf:per.001448,
+     osrdf:per.001449,
+     osrdf:per.001450,
+     osrdf:per.001451,
+     osrdf:per.000002,
+     osrdf:per.000005;
    oscys:legal osrdf:per.001159,
      osrdf:per.001160;
    oscys:sameAs "https://viaf.org/viaf/27114318";

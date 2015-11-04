@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="man.00054">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Franklin B. Sanborn to Walt Whitman, 21 July
+                    1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Franklin B. Sanborn</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="crl">Courtney Rebecca Lawton</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="ej">Eder Jaramillo</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>man.00054</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Franklin B. Sanborn</author>
+                    <title>Franklin B. Sanborn to Walt Whitman, 21 July 1880</title>
+                    <date cert="high" when="1880-07-21" xml:id="dat1">July 21, 1880</date>
+                    <idno type="callno">GB 133 Eng 1170/1/1/26</idno>
+                    <orgName xml:id="man">Charles Sixsmith Collection at the John Rylands Library, University of Manchester</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+
+                <person role="sender">
+                    <persName key="Sanborn, Franklin B.">Franklin B. Sanborn</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-03-30" who="#ss">annotations added</change>
+            <change when="2013-11-04" who="#nhg">checked, corrected</change>
+            <change when="2013-10-17" who="#ej">Checked and Corrected</change>
+            <change when="2013-09-10" who="#nnk">proofed</change>
+            <change when="2013-07-13" who="#crl">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="man_ej.00152_large.jpg" type="recto"/>
+            <opener>
+                <dateline rend="right">
+                    <name type="place">Concord Mass.</name>
+                    <date when="1880-07-21">July 21 1880</date>
+                </dateline>
+                <salute>My dear Sir:</salute>
+            </opener>
+
+            <p>I have long been waiting for an opportunity to invite you to my house here, under
+                circumstances which would be agreeable to you, and now the time seems to have come.<ptr target="n0915"/>
+                We have here this summer a school of philosophy<ptr target="n3031"/> which has drawn hither many
+                thoughtful persons, and furnishes an 
+                
+                <pb xml:id="leaf001v"
+                    facs="man_ej.00225_large.jpg" type="verso"/>occasion for saying many good
+                things. I mailed you the <choice>
+                    <orig>programme</orig>
+                    <reg>program</reg>
+                </choice> some days ago, and now write to invite you to come to my house for a week
+                or two after the 26<hi rend="superscript">th</hi> when some friends who are visiting me will take their leave. I
+                am in a new house where I can give you freedom and some degree of comfort, and shall
+                esteem it a favor if you will make it your home for a <pb xml:id="leaf002r"
+                    facs="man_ej.00226_large.jpg" type="recto"/>time.</p>
+            <p>The newspapers report you as ill in Canada. I hope this is not so, and that you may be
+                well enough to make the journey hither; while here you may rest or be active as you
+                may choose.</p>
+            <closer>
+                <salute>Very truly yours</salute>
+                <signed>F. B. Sanborn</signed>
+                <address><addrLine>Walt Whitman <choice><abbr>Esq</abbr><expan>Esquire</expan></choice>, </addrLine><addrLine>at Dr R. M. <choice><orig>Buck's</orig><reg>Bucke's</reg></choice><ptr target="n0119"/> </addrLine><addrLine>London,</addrLine><addrLine>Ontario.</addrLine></address>
+            </closer>
+            <pb xml:id="leaf002v" facs="man_ej.00154_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

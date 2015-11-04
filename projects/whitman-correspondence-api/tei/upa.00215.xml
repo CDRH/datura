@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="upa.00215">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>   
+                <title level="m" type="main">Walt Whitman to the Librarian of Congress, 30 July
+                    1884</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="kb">Kyle Barton</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>upa.00215</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">373</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to the Librarian of Congress, 30 July 1884</title>
+                    <date cert="high" when="1884-07-30" xml:id="dat1">July 30, 1884</date>
+                    <orgName xml:id="upa">Walt Whitman Collection, 1842&#8211;1957,
+                        Rare Book &#38; Manuscript Library, University of Pennsylvania</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="ww"><persName key="Whitman, Walt">Walt
+                    Whitman</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Spofford, Ainworth Rand" ref="n0768">Ainsworth Rand Spofford</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2014-09-12" who="#ss">transcribed, encoded, partially annotated.</change>
+            <change when="2015-01-04" who="#kb">edited</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+
+            <opener>
+                <note type="editorial" resp="#ww" place="top">Copy of | letter sent Librarian of
+                    Congress | July 30 1884 | renewal granted &#38; | rec'd by me.</note>
+                <dateline>
+                    <name type="place">328 Mickle street<ptr target="upa.00215_n1"/></name>
+                    <name type="place">Camden New Jersey</name>
+                    <date when="1884-07-30" rend="right">July 30 '84</date>
+                </dateline>
+                <salute>Dear Sir</salute>
+            </opener> 
+            <p>Please give me, (as under Section 6 of your <hi rend="italic">Copyright
+                    Directions</hi> of 1882), the 14 years renewal of my copyright to the edition of
+                    <hi rend="italic">Leaves of Grass</hi> granted Sept 11, 1856&#8212;Printed title
+                page herewith enclosed&#8212;Please send me a certificate of such renewal&#8212;One
+                dollar herewith enclosed. </p>
+            <closer>
+                <salute>Respectfully &#38;c</salute>
+                <signed>Walt Whitman</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

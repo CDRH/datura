@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="med.00769">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Harry Stafford, 13 January
+                    [1884]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2015</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>med.00769</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <analytic>
+                        <author>Ed Folsom</author>
+                        <title level="a">Three Unpublished Whitman Letters to Harry Stafford and a
+                                <hi rend="italic">Specimen Days</hi> Prose Fragment</title>
+                    </analytic>
+                    <monogr>
+                        <editor>Ed Folsom</editor>
+                        <title level="j" xml:id="ef">Walt Whitman Quarterly Review</title>
+                        <imprint>
+                            <pubPlace>Iowa City</pubPlace>
+                            <publisher>The University of Iowa</publisher>
+                            <date when="2008">Spring 2008</date>
+                            <biblScope type="page">198&#8211;199</biblScope>
+                            <biblScope type="volume">25</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Harry Stafford, 13 January [1884]</title>
+                    <date cert="medium" when="1884-01-13" xml:id="dat1">January 13, 1884</date>
+                    <orgName xml:id="med">The location of the manuscript is unknown.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Stafford, Harry" ref="n0590">Harry Stafford</persName>
+                </person>
+            </particDesc>  
+        </profileDesc>  
+        <revisionDesc>
+            <change when="2015-02-25" who="#nhg">checked, corrected, added correspondent ref</change>
+            <change when="2015-02-07" who="#ss">added annotations (loc.07038_n1 and _n2 done by
+                ak)</change>
+            <change when="2015-01-25" who="#ss">checked and corrected</change>
+            <change when="2015-01-12" who="#ak">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place">Camden</name>
+                    <date when="1884-01-13">Sunday Jan 13 [1884]<lb/> 1&#189; p m</date>
+                </dateline>
+            </opener>
+            <p> I am going out to a small dinner party of friends,<ptr target="loc.07038_n1"/> &amp;
+                am sitting here in my 3d story room waiting for half an hour&#8212; </p>  
+            <p> &#8212;I have not heard from your folks directly&#8212;but a man at the ferry, (a
+                relation of Joe Brownings) told me that "Debbie had had
+                a baby, &amp; that it was buried last Sunday."<ptr target="loc.07038_n2"/> I asked
+                him how Debbie was getting along since, &amp; he said he believed pretty
+                well&#8212;but I suppose you have heard more fully &amp; exactly from
+                home&#8212;Nothing else to write about specially&#8212;we have had over three weeks
+                of severe winter weather, storms &amp;c&#8212;many wrecks on the coast&#8212;I am
+                glad you keep well &amp; in good spirits&#8212;pray God it may continue so, &amp;
+                believe it will&#8212;Good bye for this time, dear Hank&#8212;</p>
+            <closer>
+                <signed>W.W.</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

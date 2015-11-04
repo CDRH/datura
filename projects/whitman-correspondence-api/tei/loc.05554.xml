@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.05554">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">D. M. Zimmerman to Walt Whitman, 25 January
+                    1877</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>D. M. Zimmerman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="bbb">Blake Bronson-Bartlett</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.05554</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>D. M. Zimmerman</author>
+                    <title>D. M. Zimmerman to Walt Whitman, 25 January 1877</title>
+                    <date cert="high" when="1877-01-25" xml:id="dat1">January 25, 1877</date>
+                    <idno type="callno">Box 3-4 Reel 2-3</idno>
+                    <orgName xml:id="loc">The Thomas Biggs Harned Collection of the Papers of Walt
+                        Whitman, 1842&#8211;1937, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+
+                <person role="sender">
+                    <persName key="Zimmerman, D. M.">D. M. Zimmerman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-08-13" who="#nhg">checked, corrected</change>
+            <change when="2014-08-04" who="#ss">checked, corrected, annotated</change>
+            <change when="2014-07-15" who="#bbb">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            
+            <pb xml:id="leaf001r" facs="loc_nk.00215_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place" rend="center"><handShift rend="printed"/>OFFICE OF THE<lb/>
+                        Camden &#38; Atlantic Railroad Co.</name>
+                    <name type="place" rend="right">Camden, N.J.,</name>
+                    <date when="1877-01-25" rend="right"><handShift rend="manuscript"/>Jany 25
+                            <handShift rend="printed"/>187<handShift rend="manuscript"/>7</date>
+                    <name type="place" rend="left"><handShift rend="printed"/>D.M. Zimmerman,<lb/>
+                        <hi rend="italic">Secretary and Treasurer</hi></name>
+                </dateline>
+                <salute><handShift rend="manuscript"/>Walt Whitman Esq</salute>
+                <salute>Dear Sir</salute>
+            </opener>
+
+            <p>I would like to have a little article on Lake Side Park (at Kirkwood) for publication
+                over your name, if you do not object.<!--<ptr target="loc.30974_n1"/>--> The enclosed by yourself is good, and if it
+                    was in mss I could
+                get it published in one of the <choice>
+                    <orig>Philada</orig>
+                    <reg>Philadelphia</reg>
+                </choice> Papers; &#38; others would
+                copy. We also propose to collect such articles and have printed in circular
+                form.</p>
+
+            <p>I hope I do not ask you to take too much trouble</p>
+
+            <closer>
+                <salute>Yours truly</salute>
+                <signed>DM Zimmerman</signed><signed><choice>
+                    <orig>Treas</orig>
+                    <reg>Treasurer</reg>
+                </choice></signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="loc_nk.00216_large.jpg" type="verso"/>
+            <pb xml:id="leaf002r" facs="loc_nk.00213_large.jpg" type="recto"/>
+            <pb xml:id="leaf002v" facs="loc_nk.00214_large.jpg" type="verso"/>
+
+        </body>
+    </text>
+</TEI>

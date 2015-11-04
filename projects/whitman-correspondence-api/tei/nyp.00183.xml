@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nyp.00183">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to Louisa Van Velsor Whitman, 30 June 1863</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="tj">Tim Jackson</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+
+               <persName xml:id="ao">Alyssa Olson</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>nyp.00183</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Walt Whitman</author>
+                  <editor>Edwin Haviland Miller</editor>
+                  <title xml:id="ehm">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>New York</pubPlace>
+                     <publisher>New York University Press</publisher>
+                     <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                     <biblScope type="volume">1</biblScope>
+                     <biblScope type="page">111-114</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to Louisa Van Velsor Whitman, 30 June 1863</title>
+               <date when="1863-06-30">June 30, 1863</date>
+               <orgName xml:id="nyp">Henry W. and Albert A. Berg Collection, New York Public Library</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#tj" when="2009-08-20">proofread and modified</change>
+         <change who="#vs" when="2008-09-23">added main TEI markup</change>
+         <change who="#el" when="2008-07-30">added TEI header structure w/o IDs and titles; added minimal TEI markup</change>
+         <change who="#ao" when="2008-07-29">pulled transcription from Primary Source Media</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <opener>
+               <dateline rend="right">
+                  <name type="place">Washington </name>
+                  <date when="1863-06-30">June 30 1863</date>
+               </dateline>
+               <salute>Dearest Mother,</salute>
+            </opener>
+            <p>Your letter with Han's I have sent to George, though whether it will find him or not I cannot tell, as I think the 51st must be away down at Vicksburgh&#8212;I have not had a word from George yet&#8212;Mother, I have had quite an attack of sore throat &amp; distress in my head for some days past, up to last night, but to-day I feel nearly all right again. I have been about the city same as usual, nearly&#8212;to the Hospitals, &amp;c, I mean&#8212;I am told that I hover too much over the beds of the hospitals, with fever &amp; putrid wounds, &amp;c. One soldier, brought here about fifteen days ago, very low with typhoid fever, Livingston Brooks,<ptr target="nyp.00183_n1"/> Co B 17th Penn Cavalry, I have particularly stuck to, as I found him in what appeared to be a dying condition, from negligence, &amp; a horrible journey of about forty miles, bad roads &amp; fast driving&#8212;&amp; then after he got here, as he is a simple country boy, very shy &amp; silent, &amp; made no complaint, they neglected him&#8212;I found him something like I found John Holmes<ptr target="nyp.00183_n2"/> last winter&#8212;I called the doctor's attention to him, shook up the nurses, had him bathed in spirits, gave him lumps of ice, &amp; ice to his head, he had a fearful bursting pain in his head, &amp; his body was like fire&#8212;he was very quiet, a very sensible boy, old fashioned&#8212;he did not want to die, &amp; I had to lie to him without stint, for he thought I knew everything, &amp; I always put in of course that what I told him was exactly the truth, &amp; that if he got really dangerous I would tell him &amp; not conceal it.</p>
+            <p>The rule is to remove bad fever patients out from the main wards to a tent by themselves, &amp; the doctor told me he would have to be removed. I broke it gently to him, but the poor boy got it immediately in his head that he was marked with death, &amp; was to be removed on that account&#8212;it had a great effect upon him, &amp; although I told the truth this time it did not have as good a result as my former fibs&#8212;I persuaded the doctor to let him remain&#8212;for three days he lay just about an even chance, go or stay, with a little leaning toward the first&#8212;But, mother, to make a long story short, he is now out of any immediate danger&#8212;he has been perfectly rational throughout&#8212;begins to taste a little food, (for a week he eat nothing, I had to compel him to take a quarter of an orange, now &amp; then)&#8212;&amp; I will say, whether any one calls it pride or not, that if he <hi rend="italic">does</hi> get up &amp; around again, it's me that saved his life. Mother, as I have said in former letters, you can have no idea how these sick &amp; dying youngsters cling to a fellow, &amp; how fascinating it is, with all its hospital surroundings of sadness &amp; scenes of repulsion &amp; death.</p>
+            <p>In this same hospital, Armory Square, where this cavalry boy is, I have about fifteen or twenty particular cases I see much too, some of them as much as him&#8212;there are two from East Brooklyn, George Monk,<ptr target="nyp.00183_n3"/> Co A 78th N Y, &amp; Stephen Redgate,<ptr target="nyp.00183_n4"/> (his mother is a widow in E[ast] B[rooklyn], I have written her,) both are pretty badly wounded&#8212;both are youngsters under 19&#8212;O mother, there seems to me as I go through these rows of cots, as if it was too bad to accept these <hi rend="italic">children</hi>, to subject them to such premature experiences&#8212;I devote myself much to Armory Square Hospital because it contains by far the worst cases, most repulsive wounds, has the most suffering &amp; most need of consolation&#8212;I go every day without fail, &amp; often at night&#8212;sometimes stay very late&#8212;no one interferes with me, guards, doctors, nurses, nor any one&#8212;I am let to take my own course.</p>
+            <p>Well, mother, I suppose you folks think we are in a somewhat dubious position here in Washington, with Lee in strong force almost between us &amp; you northerners<ptr target="nyp.00183_n5"/>&#8212;Well it does look ticklish, if the rebs cut the connection, then there will be fun&#8212;The reb cavalry come quite near us, dash in &amp; steal wagon trains, &amp;c&#8212;It would be funny if they should come some night to the President's country house, (soldier's home,) where he goes out to sleep every night&#8212;it is in the same direction as their saucy raid last Sunday&#8212;[Mr. Lincoln passes here (14th st) every evening on his way out&#8212;I noticed him last evening about ½ past 6, he was in his barouche, two horses, guarded by about thirty cavalry. The barouche comes first under a slow trot, driven by one man in the box, no servant or footman beside&#8212;the cavalry all follow closely after with a lieutenant at their head&#8212;I had a good view of the President last evening&#8212;he looks more careworn even than usual&#8212;his face with deep cut lines, seams, &amp; his <hi rend="italic">complexion gray</hi>, through very dark skin, a curious looking man, very sad&#8212;I said to a lady who was looking with me, "Who can see that man without losing all wish to be sharp upon him personally? Who can say he has not a good soul?" The lady assented, although she is almost vindictive on the course of the administration, (thinks it wants nerve &amp;c., the usual complaint).<ptr target="nyp.00183_n6"/> The equipage is rather shabby, horses indeed almost what my friends the Broadway drivers would call <hi rend="italic">old plugs</hi>. The President dresses in plain black clothes, cylinder hat&#8212;he was alone yesterday&#8212;As he came up, he first drove over to the house of the Sec[retary] of War, on K st about 300 feet from here, sat in his carriage while Stanton came out &amp; had a 15 minutes interview with him (I can see from my window)&#8212;&amp; then wheeled around, &amp; slowly trotted around the corner &amp; up Fourteenth st., the cavalry after him&#8212;I really think it would be safer for him just now to stop at the White House, but I expect he is too proud to abandon the former custom&#8212;] Then about an hour after, we had a large cavalry regiment pass, with blankets, arms, &amp;c, on the war march over the same track&#8212;the reg't was very full, over a thousand, indeed thirteen or fourteen hundred&#8212;it was an old reg't, veterans, <hi rend="italic">old fighters</hi>, young as they were&#8212;they were preceded by a fine mounted band of sixteen, (about ten bugles, the rest cymbals &amp; drums)&#8212;I tell you, mother, it made every thing ring&#8212;made my heart leap, they played with a will&#8212;then <hi rend="italic">the accompaniment</hi>&#8212;the sabres rattled on a thousand men's sides&#8212;they had pistols, their heels spurred&#8212;handsome American young men, (I make no acc't of any other)&#8212;rude uniforms, well worn, but good cattle, prancing&#8212;all good riders, full of the devil, nobody shaved, all very sunburnt. The regimental officers (splendidly mounted, but just as roughly drest as the men) came immediately after the band, then company after company, with each its officers at its head&#8212;the tramping of so many horses (there is a good hard turnpike)&#8212;then a long train of men with led horses, mounted negroes, &amp; a long long string of baggage wagons, each with four horses&#8212;&amp; then a strong rear guard&#8212;I tell you it had the look of real war&#8212;noble looking fellows&#8212;a man looks &amp; feels so proud on a good horse, &amp; armed&#8212;They are off toward the region of Lee's (supposed) rendezvous, toward the Susquehannah, for the great anticipated battle&#8212;Alas, how many of these healthy handsome rollicking young men will lie cold in death, before the apples ripe in the orchards<ptr target="nyp.00183_n7"/>&#8212;</p>
+            <p>Mother, it is curious &amp; stirring here, in some respects&#8212;smaller or larger bodies of troops are moving continually&#8212;many just well men are turned out of the hospitals&#8212;I am where I see a good deal of them&#8212;There are getting to be <hi rend="italic">many black troops</hi>&#8212;there is one very good reg't here black as tar&#8212;they go armed, have the regular uniform&#8212;they submit to no nonsense&#8212;others are constantly forming&#8212;it is getting to be a common sight&#8212;they press them. [<hi rend="italic">Incomplete</hi>]</p>
+         
+      </body>
+   </text>
+</TEI>

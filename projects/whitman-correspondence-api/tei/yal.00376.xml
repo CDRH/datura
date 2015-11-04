@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="yal.00376">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Karl Knortz to Walt Whitman, 14 September 1883</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Karl Knortz</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="am">Alicia Meyer</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2012</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>yal.00376</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Karl Knortz</author>
+                    <title>Karl Knortz to Walt Whitman, 14 September 1883</title>
+                    <date cert="high" when="1883-09-14" xml:id="dat1">September 14, 1883</date>
+                    <orgName xml:id="yal">Yale Collection of American Literature, Beinecke Rare Book
+                        and Manuscript Library</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Knortz, Karl">Karl Knortz</persName>
+                </person>
+                <person role="recipient" xml:id="ww">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-07-16" who="#nhg">checked, corrected</change>
+            <change when="2014-03-05" who="#nnk">proofed</change>
+            <change when="2014-01-21" who="#ss">checked</change>
+            <change when="2013-12-11" who="#am">Transcribed and Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <div1 type="letter">
+            <pb xml:id="leaf001r" facs="yal.00376.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">Cor. Morris Ave &amp; 155th St.<lb/> New York</name>
+                </dateline>
+                <note resp="#ww" place="top right" type="editorial">Sept 14 '83</note>
+                <salute>My dear Sir;</salute>
+            </opener>
+
+            <p>Dr. Adolf Strodtmann has a few translations of your smaller poems in his book
+                "Amerikanische Anthologie" (Leipzig: Bibliograph. Institute). The late doctor did
+                not, I am very sorry to say, give you a favorable introduction to the German public.&#8212;I <choice>
+                    <abbr>rec<hi rend="superscript">d</hi></abbr>
+                    <expan>received</expan>
+                </choice> Dr. Bucke's book and was greatly delighted with it.</p>
+
+            <p>I am at present very busy as I want to complete my critical history of American
+                literature as soon as possible. In this book a whole chapter (about 20 printed
+                pages) will be devoted to your poetry.</p>
+
+            <pb xml:id="leaf001v" facs="yal.00376.002_large.jpg" type="verso"/>
+
+            <p>I flattered myself with the hope of seeing you in the course of this summer, but it
+                was not granted to me. If possible for me and agreeable to you I shall come to Camden
+                before the winter sets in and spend a few hours there. </p>
+
+            <closer>
+                <salute>Yours very Truly</salute>
+                <signed>Karl Knortz</signed>
+            </closer></div1>
+            <div1 type="enclosure">
+            <pb xml:id="leaf002r" facs="yal.00376.003_large.jpg" type="recto"/>
+                <head type="main"><handShift rend="printed"/>Schriften</head>
+                <ab><handShift rend="printed"/>&#8212;von&#8212;</ab>
+                <ab><handShift rend="printed"/>CARL KNORTZ
+                <handShift rend="printed"/><list><item>M&#228;rchen und Sagen der nordamerikanischen Indianer. Jena 1871. H. Coftenoble.</item>
+                    <item>Aus dem Wigwam. Uralte und neue M&#228;rchen und Sagen der nordamerikanifchen Indianer. Leipzig 1880. Otto Spamer.</item>
+                    <item>Amerikanische Skizzen. Halle 1876. Hermann Gefenius.</item>
+                    <item>Aus der transatlantischen Gesellschaft. Nordamerikanische Kulturbilder. Leipzig 1882. Bernh. Schlicke.</item>
+                    <item>Mythologie und Civilisation der nordamerikanischen Indianer. Leipzig 1882. Paul Frohberg.</item>
+                    <item>Kapital und Arbeit in Amerika. Z&#252;rich 1881. C&#228;far Schmidt</item>
+                    <item>Staat und Kirche in Amerika. Gotha 1882. Stollberg'fcher Verlag.</item>
+                    <item>Amerikanische Lebensbilder. Skizzen und Tagebuchbl&#228;tter. Z&#252;rich 1884. Verlagsmagazin.</item>
+                    <pb xml:id="leaf002v" facs="yal.00376.004_large.jpg" type="verso"/>
+                    <item>Gines deutschen Matrosen Nordpolfahrten. Wilhelm Nindemann's Erinnerungen an die Nordpolerpedition der "Polaris" und "Jeanette." Z&#252;rich 1885. Verlagsmagazin.</item>
+                    <item>Longfellow. Eine literarhistorische Studie. Hamburg 1879. H. Gr&#252;ning.</item>
+                    <item>AN AMERICAN SHAKESPEARE BIBLIOGRAPHY. Boston 1876. C. Schoenhof.</item>
+                    <item>Shakespeare in Amerika. Literarhistorische Studie. Berlin 1882. Theodor Hofmann.</item>
+                    <item>Amerikanische Gedichte der Neuzeit. Frei&#252;bertragen. Leipzig 1883. E. Wartig.</item>
+                    <item>MODERN AMERICAN LYRICS. Leipzig 1880. F. U. Brodhaus.</item>
+                    <item>Zwei amerikanische Idyllen; "Elisabeth" von H. W. Longfellow, und "Eingeschneit" von J. G. Whittier. Uebersctzt. Berlin 1879. Jul. Bohne.</item>
+                    <item>Longfellow's "Hiawatha." Uebersctzt, eingeleitet und erfl&#228;rt. J. Costinoble.</item>
+                    <item>Longfellow's "Evangeline." Uebersctzt. Reclam's Universalbibliothek.</item>
+                    <item>Longfellow's "Brautwerbung des Miles Standish." Uebersctzt. Reclam's Universalbibliothek.</item>
+                    <item>Gedichte. Reclam's Universalbiblothek.</item>
+                    <item>Neue Gedichte. Glarus 1884. Jakob Vogel.</item>
+                    <pb xml:id="leaf003r" facs="yal.00376.005_large.jpg" type="recto"/>
+                    <item>Humoristische Gedichte. Baltimore 1877. Roszm&#228;szler und Morf.</item>
+                    <item>Lieder und Romanzen Altengland's. K&#246;then 1872. Paul Schettler.</item>
+                    <item>Schottische Balladen. Halle 1875. Waifenhaus. Epigramme. Lyk 1877. Emil Wiebe.</item>
+                    <item>Neue Epigramme. Z&#252;rich 1884. Verlagsmagazin.</item>
+                    <item>REPRESENTATIVE GERMAN POEMS: Ballad and Lyrical. German Text with English Translations. New York 1885. Henry Holt &amp; Co.</item>
+                    <item>G&#246;the und die Wertherzeit. Mit dem Unhang: G&#246;the in Amerika. Z&#252;rich 1885. Verlagsmagazin.</item>
+                    <item>Irl&#228;ndische M&#228;rchen. Z&#252;rich 1886. Verlagsmagazin.</item>
+                    <item>Brook Farm und Margareth Fuller. Vortrag. New York 1886. (Vortr&#228;ge des gesellig-wissenschaftlichen Vereins No. 11.)</item>
+                    <item>Walt Whitman. Vortrag. New York 1886. (Vortr&#228;ge des gesellig-wissenschaftlichen Vereins No. 14.)</item>
+                    <item>Gustav Seyffarth. Biographische Skizze. New York 1886. E. Steiger &amp; Co.</item>
+                    <item>THE LIFE AND WORKS OF GUSTAVUS SEYFFARTH. New York 1886. E. Steiger &amp; Co.</item>
+                </list></ab>
+                <milestone unit="undeclared" rend="horbar-short-center"/>
+                <pb xml:id="leaf003v" facs="yal.00376.006_large.jpg" type="verso"/></div1>
+        </body>
+    </text>
+</TEI>

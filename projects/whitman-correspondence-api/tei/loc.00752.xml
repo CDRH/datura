@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.00752">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Hannah Whitman Heyde to Walt Whitman, 16 June
+                    [1883]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Hannah Whitman Heyde</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="kc">Kirsten Clawson</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.00752</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2010 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+
+                <bibl>
+                    <author>Hannah Whitman Heyde</author>
+                    <title>Hannah Whitman Heyde to Walt Whitman, 16 June [1883]</title>
+                    <date cert="medium" when="1883-06-16" xml:id="dat1">June 16, 1883</date>
+                    <orgName xml:id="loc">Hannah Louisa Whitman Heyde Papers, 1853&#8211;1892, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Heyde, Hannah">Hannah Whitman Heyde</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+            <change when="2014-07-14" who="#nhg">checked, corrected</change>
+            <change when="2014-02-26" who="#nnk">proofed</change>
+            <change when="2013-12-02" who="#kc">Transcribed and Encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.00752.001.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">Burlington <choice>
+                            <abbr>Vt.</abbr>
+                            <expan>Vermont</expan>
+                        </choice></name>
+                    <date when="1883-06-16" rend="right">Saturday afternoon June 16</date>
+                </dateline>
+            </opener>
+
+            <p>Are you well enough my <hi rend="underline">dear brother</hi> for me to send you my love and tell you I am so
+                glad and happy&#8212;<hi rend="underline">for</hi> I know you are gaining</p>
+            <p>That was a wonderful welcome <unclear reason="illegible" cert="high" resp="#ss"
+                    >card</unclear> Walt dear&#8212;You <choice>
+                    <orig>wont</orig>
+                    <reg>won't</reg>
+                </choice> have to write to me again dearest brother, <choice>
+                    <orig>till</orig>
+                    <reg>until</reg>
+                </choice> you get stronger.&#8212;I <choice>
+                        <sic>dont</sic>
+                        <corr>don't</corr>
+                    </choice> feel uneasy.&#8212;I know you are getting better and I <hi rend="underline"
+                    >am oh so thankful</hi></p>
+
+            <closer>
+                <signed>sister Han</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>
