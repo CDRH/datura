@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://digitalhumanities.unl.edu/resources/schemas/tei/TEIP5.2.6.0/tei_all.rng" type="xml"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0235.026">
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://digitalhumanities.unl.edu/resources/schemas/tei/TEIP5.2.6.0/tei_all.rng" type="xml"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0288.002">
     
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>Lucy Bosy v. Ann Maria Fitzhugh. Summons of Ann Maria Fitzhugh</title>
+<title>Milford Foote v. John B. Armistead. Petition for Freedom</title>
 <principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
 <principal n="Muñoz, Trevor" xml:id="tm">Trevor Muñoz</principal>
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
 <respStmt>
 <resp>transcription and encoding</resp>
-<name n="Camerone, Stephanie N." xml:id="snc">Steph N. Camerone</name>
+<name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
@@ -35,31 +35,30 @@
 <addrLine>cdrh@unl.edu</addrLine>
 </address>
 </distributor>
-<idno type="project">oscys.case.0235.026</idno>
-<idno type="case">oscys.caseid.0240</idno>
+<idno type="project">oscys.case.0288.002</idno>
+<idno type="case">oscys.caseid.0287</idno>
 
 <availability>
 <licence>http://creativecommons.org/licenses/by-nc-sa/3.0/</licence>
 <p>Licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. Derivatives must be credited to O Say Can You See, made available non-commercially, and distributed under the same terms. Requests for permission for commercial publication or other use should be emailed to the project team.</p>
 </availability>
 </publicationStmt>
-            
+
 <sourceDesc>
 <bibl>
-<title level="m" type="main">Summons of Ann Maria Fitzhugh</title>
-<date when="1861-02-19">February 19, 1861</date>
+<title level="m" type="main">Petition for Freedom</title>
+<date when="1817-03-06">March 6, 1817</date>
 <note type="project">Our transcription is based on a digital image of the original.</note>
 </bibl>
 <msDesc>
 <msIdentifier>
 <repository>National Archives and Records Administration</repository>
-<collection>Record Group 21.6</collection>
-<idno>Box 949, Folder 104</idno>
+<idno>Box 332, Folder 3</idno>
 </msIdentifier>
 </msDesc>
 </sourceDesc>
 </fileDesc>
-        
+
 <profileDesc>
 <textClass>
 <keywords scheme="original" n="category">
@@ -67,7 +66,7 @@
 </keywords>
     
 <keywords scheme="original" n="subcategory">
-<term>Summons</term>
+<term>Petition</term>
 </keywords>
 
 <keywords scheme="original" n="type">
@@ -75,13 +74,11 @@
 </keywords>
 
 <keywords scheme="original" n="term">
-<term><date when="1861-05">May 1861</date></term>
+<term><date when="1824-12">December 1824</date></term>
 </keywords>
     
-<keywords scheme="lcsh" n="people">
-<term xml:id="per.000476">Dunlop, James, 1793-</term>
-<term xml:id="per.001217">Selden, William</term>
-<term xml:id="per.000740">Smith, John A.</term>
+<keywords scheme="lcsh" n="people"> 
+<term xml:id="per.000003">Brent, William, 1774-1848</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -94,13 +91,13 @@
 <particDesc>   
 <listPerson>            
 <person role="petitioner">
-<persName>Bosy, Lucy</persName>
+<persName>Foote, Milford</persName>
 </person>
 <person role="defendant">
-<persName>Fitzhugh, Ann Maria</persName>
+<persName>Armistead, John B.</persName>
 </person>
-<person role="attorney_petitioner">
-<persName/>
+<person role="attorney_petitioner" xml:id="per.000023">
+<persName>Law, John</persName>
 </person>
 <person role="attorney_defendant">
 <persName/>
@@ -115,65 +112,50 @@
 </listOrg>   
 </particDesc> 
 </profileDesc>
-        
-<revisionDesc>  
-<change when="2015-10-21" who="#kln">reviewed; edited</change>         
-<change when="2015-10-02" who="#snc">encoded; transcribed</change>
-</revisionDesc>
 
+<revisionDesc>
+<change when="2015-11-05" who="#kln">reviewed, edited</change>
+<change when="2015-08-05" who="#snc">transcribed, encoded</change>
+</revisionDesc>
 </teiHeader>
     
 <text>
 
-<body>  
-               
+<body>
+           
+<pb xml:id="p001" facs="oscys.case.0288.002.001.jpg"/>
+                
 <div1 type="case">
-
-<pb xml:id="p001" facs="oscys.case.0235.026.001.jpg"/>
 
 <div2 type="caption">
 
-<p>District of Columbia, to wit:<lb/> 
-The United States of America,<lb/>
-To the Marshal of the District of Columbia&#8212;Greeting:</p>
+<p>To the Honble the Judges of the Circuit court of the United States for the district of Columbia &#38; county of Washington</p>
 
 </div2>
 
 <div2 type="body">
 
-<p>We command you that you <del>take</del> Summon Ann Maria Fitzhugh <del>late of Washington County, if shall be found within the County of Washington in your said District, and safely keep, so that you have bod</del> before the Circuit Court of the District of Columbia, to be held for the County aforesaid, at the City of Washington, on the 1st Monday of May next, to answer <del>unto</del> The petition for freedom of Lucy Bosey</p>
+<p>The petition of Milford Foote respectfully sheweth That your petitioner is held in b ondage &amp; claimed by John B. Armistead as a slave, tho' your petitioner is justly entitled to his freedom in consequence of his having been illegally imported into &amp; sold within the district of Columbia. Your petitioner therefor prays that your honors will take his case into consideration &amp; that a subpoena may issue commanding the said John B to appear &amp;c: &amp; grant him such further &amp; other process &amp; relief as to your Honors may seen meet &amp; his case may require And as in duty bound he will ever pray &amp;c:</p>
 
-<p>Hereof fail not at your peril, and have you then and there this writ.</p>
-
-<p>Witness, Jas. Dunlop Esquire, Chief Justice of our said Court, at the City of Washington, the 18th day of Feby Anno Domini one thousand eight hundred and 61</p>
-
-<p>Issued the 19th day of Feb'y 1861.</p>
-     
-<p>Jno A Smith Clk</p>
-
-<p>R &#38; K</p>
+<p>John Law<lb/>
+for Petr.</p>
 
 </div2>
 
-<pb xml:id="p002" facs="oscys.case.0235.026.002.jpg"/>
+<pb xml:id="p002" facs="oscys.case.0288.002.002.jpg"/>
 
 <div2 type="back">
 
-<p>104</p>
+<p><del>198</del> <del>456</del> <del>151.</del> <del>31.</del> <del>50</del> <del>32.</del> <del>16.</del> <del>14.</del> <del>4</del> <del>27</del> <del>7</del> <del>6</del> <del>10.</del> 3. <del>12</del></p>
 
-<p>Lucy Bosey<lb/>
-v<lb/>
-Ann Maria Fitzhugh</p>
+<p>Milford Foote<lb/>
+v.<lb/>
+John B Armistead</p>
 
-<p>Sub<lb/>
-27 Bre</p>
+<p>Mr. Brent will please to file this petition &#38; issue subpoena<lb/>
+J Law.</p>
 
-<p>pet for freedom<lb/>
-+</p>
-
-<p>Non Est<lb/>
-W Selden<lb/>
-Marshal</p>
+<p>filed 6th Mar 1817.</p>
 
 </div2>
 </div1>
