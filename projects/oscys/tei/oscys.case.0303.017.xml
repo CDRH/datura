@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?oxygen RNGSchema="http://digitalhumanities.unl.edu/resources/schemas/tei/TEIP5.2.6.0/tei_all.rng" type="xml"?> 
 
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0303.012">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0303.017">
     
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>Stephen Ambush v. James G. Robinson. Summons of James G. Robinson</title>
+<title>Stephen Ambush v. James G. Robinson. Petition for Freedom</title>
 <principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
 <principal n="Mu&#241;oz, Trevor" xml:id="tm">Trevor Mu&#241;oz</principal>
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
@@ -38,7 +38,7 @@
 <addrLine>cdrh@unl.edu</addrLine>
 </address>
 </distributor>
-<idno type="project">oscys.case.0303.012</idno>
+<idno type="project">oscys.case.0303.017</idno>
 <idno type="case">oscys.caseid.0305</idno>
 
 <availability>
@@ -49,15 +49,15 @@
             
 <sourceDesc>
 <bibl>
-<title level="m" type="main">Summons of James G. Robinson</title>
-<date when="1859-10-26">October 26, 1859</date>
+<title level="m" type="main">Petition for Freedom</title>
+<date when="1854-11-09">November 9, 1854</date>
 <note type="project">Our transcription is based on a digital image of the original.</note>
 </bibl>
 <msDesc>
 <msIdentifier>
 <repository>National Archives and Records Administration</repository>
 <collection>Record Group 21.6</collection>
-<idno>Box 913, Folder 96</idno>
+<idno>Box 949, Folder 129</idno>
 </msIdentifier>
 </msDesc>
 </sourceDesc>
@@ -70,7 +70,7 @@
 </keywords>
     
 <keywords scheme="original" n="subcategory">
-<term>Summons</term>
+<term>Petition</term>
 </keywords>
 
 <keywords scheme="original" n="type">
@@ -78,14 +78,11 @@
 </keywords>
 
 <keywords scheme="original" n="term">
-<term><date when="1860-01">January 1860</date></term>
+<term><date when="1861-05">May 1861</date></term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term xml:id="per.000476">Dunlop, James, 1793-</term>
 <term>Frazier, Amelia</term>
-<term xml:id="per.001217">Selden, William</term>
-<term xml:id="per.000740">Smith, John A.</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -103,11 +100,11 @@
 <person role="defendant">
 <persName>Robinson, James G.</persName>
 </person>
-<person role="attorney_petitioner">
-<persName/>
+<person role="attorney_petitioner" xml:id="per.000829">
+<persName>Bradley, Joseph H. (Joseph Habersham), 1802-1887</persName>
 </person>
-<person role="attorney_petitioner">
-<persName/>
+<person role="attorney_petitioner" xml:id="per.000751">
+<persName>Ratcliffe, Daniel</persName>
 </person>
 <person role="attorney_defendant">
 <persName/>
@@ -123,9 +120,9 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>          
-<change when="2015-11-05" who="#kln">reviewed, edited</change>    
-<change when="2015-09-09" who="#snc">encoded; transcribed</change>
+<revisionDesc>             
+<change when="2015-11-06" who="#kln">reviewed, edited</change>
+<change when="2015-10-07" who="#snc">encoded; transcribed</change>
 </revisionDesc>
 
 </teiHeader>
@@ -136,49 +133,38 @@
                
 <div1 type="case">
 
-<pb xml:id="p001" facs="oscys.case.0303.012.001.jpg"/>
+<pb xml:id="p001" facs="oscys.case.0303.017.001.jpg"/>
 
 <div2 type="caption">
 
-<p>District of Columbia, to wit:<lb/> 
-The United States of America,<lb/>
-To the Marshal of the District of Columbia&#8212;Greeting:</p>
+<p>To the Honorable the Judges of the Circuit Court.</p>
 
 </div2>
 
 <div2 type="body">
 
-<p>We command you that you <del>take</del> summon Jas. Robinson <del>late of Washington County, if shall be found within the County of Washington in your said District, and safely keep, so that you have bod</del> before the Circuit Court of the District of Columbia, to be held for the County aforesaid, at the City of Washington, on the 3d Monday of January next, to answer <del>unto</del> the petition of freedom of Stephen Ambush</p>
+<p>The Petition of Stephen Ambush a negro humbly sheweth that he hath been seized as a slave by James &#160; &#160; Robinson claiming to be the administrator of the estate of Amelia Frazier late of Washington County deceased, and appraised as part of the said Estate</p>
 
-<p>Hereof fail not at your peril, and have you then and there this writ.</p>
+<p>He shews to your Honors, that he is free, and was duly and lawfully manumitted by the said Amelia Frazier in her life time, and he prays that his rights may be enquired into, and determined by the judgement of this Court, and your Petitioner will ever &amp;c</p>
 
-<p>Witness, Jas. Dunlop Esquire, Chief Justice of our said Court, at the City of Washington, the 25" day of October Anno Domini one thousand eight hundred and 59</p>
+<p>Bradley &#38; Ratcliffe<lb/>
+for Petitioner.</p>
 
-<p>Issued the 26th day of October 1859</p>
-
-<p>John A. Smith Clk.</p>
- 
 </div2>
 
-<pb xml:id="p002" facs="oscys.case.0303.012.002.jpg"/>
+<pb xml:id="p002" facs="oscys.case.0303.017.002.jpg"/>
 
 <div2 type="back">
 
-<p>96.</p>
+<p><del>114.</del> <del>183</del> <del>184</del> <del>21</del> <del>670</del> <del>237.</del> <del>348.</del> <del>273</del> <del>257</del> <del>161</del> 129 <del>130</del> <del>72</del> <del>87</del> <del>94</del> <del>100</del> <del>109</del></p>
 
 <p>Stephen Ambush<lb/>
-vs<lb/>
-Jas. Robinson adr. of Amelia Frazier</p>
+v<lb/>
+James Robinson admr. Amelia Frazier</p>
 
-<p>Sub<lb/>
-12 Bre</p>
+<p>Petition</p>
 
-<p>Pet for freedom<lb/>
-+</p>
-
-<p>Non Est<lb/>
-W. Selden<lb/>
-Marshal</p>
+<p>Filed 9th Novr. 1854</p>
 
 </div2>
 

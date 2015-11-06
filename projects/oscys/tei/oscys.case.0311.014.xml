@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?oxygen RNGSchema="http://digitalhumanities.unl.edu/resources/schemas/tei/TEIP5.2.6.0/tei_all.rng" type="xml"?> 
 
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0303.012">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0311.014">
     
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>Stephen Ambush v. James G. Robinson. Summons of James G. Robinson</title>
+<title>Joseph Green v. Henry Green &amp; Peter Wheeler. Petition for Freedom</title>
 <principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
 <principal n="Mu&#241;oz, Trevor" xml:id="tm">Trevor Mu&#241;oz</principal>
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
 <respStmt>
 <resp>transcription and encoding</resp>
-<name n="Camerone, Stephanie N." xml:id="snc">Steph N. Camerone</name>
+<name n="Camerone, Stephanie N" xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
@@ -38,8 +38,8 @@
 <addrLine>cdrh@unl.edu</addrLine>
 </address>
 </distributor>
-<idno type="project">oscys.case.0303.012</idno>
-<idno type="case">oscys.caseid.0305</idno>
+<idno type="project">oscys.case.0311.014</idno>
+<idno type="case">oscys.caseid.0313</idno>
 
 <availability>
 <licence>http://creativecommons.org/licenses/by-nc-sa/3.0/</licence>
@@ -49,15 +49,15 @@
             
 <sourceDesc>
 <bibl>
-<title level="m" type="main">Summons of James G. Robinson</title>
-<date when="1859-10-26">October 26, 1859</date>
+<title level="m" type="main">Petition for Freedom</title>
+<date when="1856-09-05">September 5, 1856</date>
 <note type="project">Our transcription is based on a digital image of the original.</note>
 </bibl>
 <msDesc>
 <msIdentifier>
 <repository>National Archives and Records Administration</repository>
 <collection>Record Group 21.6</collection>
-<idno>Box 913, Folder 96</idno>
+<idno>Box 949, Folder 137</idno>
 </msIdentifier>
 </msDesc>
 </sourceDesc>
@@ -70,7 +70,7 @@
 </keywords>
     
 <keywords scheme="original" n="subcategory">
-<term>Summons</term>
+<term>Petition</term>
 </keywords>
 
 <keywords scheme="original" n="type">
@@ -78,14 +78,11 @@
 </keywords>
 
 <keywords scheme="original" n="term">
-<term><date when="1860-01">January 1860</date></term>
+<term><date when="1861-05">May 1861</date></term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term xml:id="per.000476">Dunlop, James, 1793-</term>
-<term>Frazier, Amelia</term>
-<term xml:id="per.001217">Selden, William</term>
-<term xml:id="per.000740">Smith, John A.</term>
+<term/>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -98,16 +95,16 @@
 <particDesc>   
 <listPerson>            
 <person role="petitioner">
-<persName>Ambush, Stephen</persName>
+<persName>Green, Joseph</persName>
 </person>
 <person role="defendant">
-<persName>Robinson, James G.</persName>
+<persName>Green, Henry</persName> <!--father of Joseph Green-->
+</person>
+<person role="defendant">
+<persName>Wheeler, Peter</persName>
 </person>
 <person role="attorney_petitioner">
-<persName/>
-</person>
-<person role="attorney_petitioner">
-<persName/>
+<persName>Carrington, Edward C.</persName>
 </person>
 <person role="attorney_defendant">
 <persName/>
@@ -123,9 +120,9 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>          
-<change when="2015-11-05" who="#kln">reviewed, edited</change>    
-<change when="2015-09-09" who="#snc">encoded; transcribed</change>
+<revisionDesc>   
+<change when="2015-11-06" who="#kln">reviewed, edited</change> 
+<change when="2015-10-07" who="#snc">transcribed; encoded</change>
 </revisionDesc>
 
 </teiHeader>
@@ -136,49 +133,45 @@
                
 <div1 type="case">
 
-<pb xml:id="p001" facs="oscys.case.0303.012.001.jpg"/>
+<pb xml:id="p001" facs="oscys.case.0311.014.001.jpg"/>
 
 <div2 type="caption">
 
-<p>District of Columbia, to wit:<lb/> 
-The United States of America,<lb/>
-To the Marshal of the District of Columbia&#8212;Greeting:</p>
+<p>To the Hon. the Judges of the Circuit Court of the District of Columbia for Washington County</p>
 
 </div2>
 
 <div2 type="body">
 
-<p>We command you that you <del>take</del> summon Jas. Robinson <del>late of Washington County, if shall be found within the County of Washington in your said District, and safely keep, so that you have bod</del> before the Circuit Court of the District of Columbia, to be held for the County aforesaid, at the City of Washington, on the 3d Monday of January next, to answer <del>unto</del> the petition of freedom of Stephen Ambush</p>
+<p>The petition of Joseph Green a free man of colour of Washington City District of Columbia respectfully represents&#8212; that he has been claimed by one Henry Green his father also a free man of colour of said City and District as his slave. And that his said father has employed agents, one Peter Wheeler with others to <unclear reason="illegible">take</unclear> forcible possession of him and carry him beyond the said District and sell him into slavery.</p>
 
-<p>Hereof fail not at your peril, and have you then and there this writ.</p>
+<p>Wherefore, he prays that the same may be enquired of by your Honours and such relief granted to him as to your Honours may seem right, <unclear reason="illegible">proved</unclear>, legal and equitable</p>
 
-<p>Witness, Jas. Dunlop Esquire, Chief Justice of our said Court, at the City of Washington, the 25" day of October Anno Domini one thousand eight hundred and 59</p>
+<p>And as is Duty bound he will ever pray &#38;c</p> 
 
-<p>Issued the 26th day of October 1859</p>
-
-<p>John A. Smith Clk.</p>
- 
+<p>Edward C. Carrington<lb/>
+Counsel for Petitioner</p>  
+     
 </div2>
 
-<pb xml:id="p002" facs="oscys.case.0303.012.002.jpg"/>
+<pb xml:id="p002" facs="oscys.case.0311.014.002.jpg"/>
 
 <div2 type="back">
 
-<p>96.</p>
+<p><del>108</del> <del>112</del> <del>127</del> <del>525.</del> <del>336</del> <del>295</del> <del>181</del> <del>198</del> <del>199.</del> <del>107</del> <del>99.</del> <del>82</del> <del>139</del> 137</p>
 
-<p>Stephen Ambush<lb/>
+<p>Joseph Green<lb/>
 vs<lb/>
-Jas. Robinson adr. of Amelia Frazier</p>
+Henry Green &amp; Peter Wheeler</p>
 
-<p>Sub<lb/>
-12 Bre</p>
+<p>petition for freedom</p>
 
-<p>Pet for freedom<lb/>
-+</p>
+<p>The clerk will file this petition and issue subpoena<lb/>
+Edward C. Carrington<lb/>
+Counsel for pet.<lb/>
+Sept 5th 1856</p>
 
-<p>Non Est<lb/>
-W. Selden<lb/>
-Marshal</p>
+<p>Filed 5t Septr. 1856.</p>
 
 </div2>
 
