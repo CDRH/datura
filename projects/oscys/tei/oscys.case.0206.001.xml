@@ -3,7 +3,7 @@
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>Sarah v. George V. Kirby. Petition for Freedom</title>
+<title>Sarah v. George Kirby. Petition for Freedom</title>
 <principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
 <principal n="Muñoz, Trevor" xml:id="tm">Trevor Muñoz</principal>
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -47,7 +48,7 @@
 <sourceDesc>
 <bibl>
 <title level="m" type="main">Petition for Freedom</title>
-<date when="18??-06-12" >June 12</date>
+<date>June 12, 18??</date>
 <note type="project">Our transcription is based on a digital image of the original.</note>
 </bibl>
 <msDesc>
@@ -79,7 +80,7 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Kirby, John B.</term>
+<term xml:id="per.000689">Kirby, John Baptist</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places"> 
@@ -91,11 +92,11 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001703">
 <persName>Sarah</persName>
 </person>
-<person role="defendant">
-<persName>Kirby, George V.</persName>
+<person role="defendant" xml:id="per.000696">
+<persName>Kirby, George</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.000001">
 <persName>Key, Francis Scott, 1779-1843</persName>
@@ -114,7 +115,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>             
+<revisionDesc>  
+<change when="2015-11-09" who="#lkw">added xml:ids; changed George V. Kirby to George Kirby; added Baptist as John Kirby's middle name</change>             
 <change when="2015-02-18" who="#kln">reviewed; edited</change>
 <change when="2014-11" who="#snc">encoded</change>
 </revisionDesc>
