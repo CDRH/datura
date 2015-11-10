@@ -1,0 +1,2612 @@
+<!DOCTYPE ead PUBLIC '+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN' "ead.dtd">
+
+
+
+<ead audience="external" relatedencoding="MARC21">
+    <eadheader audience="internal"
+              langencoding="iso639-2b"
+              scriptencoding="iso15924"
+              relatedencoding="marc21"
+              repositoryencoding="iso15511"
+              countryencoding="iso3166-1"
+              dateencoding="iso8601"
+              findaidstatus="edited-full-draft"
+              id="a0">
+        <eadid countrycode="us" mainagencycode="NbU" identifier="yal.ead01">yal.ead01</eadid>
+        <filedesc>
+            <titlestmt>
+                <titleproper encodinganalog="245$a">Catalog of the Walt Whitman Literary Manuscripts in
+                    The Yale Collection of American Literature, Beinecke Rare Book and Manuscript
+                    Library</titleproper>
+                <author>Original records created by the Beinecke Rare Book and Manuscript Library;
+                    revised and expanded by the <emph render="italic">Walt Whitman Archive</emph>
+                    and the University of Nebraska-Lincoln Libraries. </author>
+                <sponsor>Encoded Archival Description completed with the assistance of the Gladys
+                    Kreible Delmas Foundation, the University of Nebraska Research Council, and the
+                    Institute for Museum and Library Services.</sponsor>
+            </titlestmt>
+            <publicationstmt>
+                <publisher encodinganalog="260$b">Published by <emph render="italic">The Walt
+                        Whitman Archive</emph> in collaboration with the University of
+                    Nebraska-Lincoln Libraries. </publisher>
+                <date encodinganalog="260$c" era="ce" calendar="gregorian">2003</date>
+                <address>
+               <addressline>29 Love Library </addressline>
+               <addressline>P.O. Box 884100</addressline>
+               <addressline>University of Nebraska-Lincoln</addressline>
+               <addressline>Lincoln, NE 68508</addressline>
+            </address>
+            </publicationstmt>
+        </filedesc>
+        <profiledesc>
+            <creation>Machine-readable finding aid created by Andrew Jewell, <emph render="italic">The Walt Whitman Archive</emph>, and Mary Ellen Ducey, University of
+                Nebraska-Lincoln Libraries, <date era="ce" calendar="gregorian">2003.</date> Revised
+                by Brett Barney, <emph render="italic">The Walt Whitman Archive</emph> and
+                University of Nebraska-Lincoln Libraries, <date era="ce" calendar="gregorian">2004.</date> Revised by Kathryn Kruger, <emph render="italic">The Walt Whitman
+                    Archive</emph>, 2009. Expanded by Janel Cayer, <emph render="italic">The Walt Whitman Archive</emph>, <date era="ce" calendar="gregorian">2014</date>.</creation>
+            <langusage>Finding aid written in <language encodinganalog="546" langcode="eng">English</language>.</langusage>
+        </profiledesc>
+    </eadheader>
+    <frontmatter>
+        <titlepage id="tp001">
+            <titleproper encodinganalog="245$a">Catalog of the Walt Whitman Literary Manuscripts in The
+                Yale Collection of American Literature, Beinecke Rare Book and Manuscript
+                Library</titleproper>
+            <publisher>Published by <emph render="italic">The Walt Whitman Archive</emph> in
+                collaboration with the University of Nebraska-Lincoln Libraries. </publisher>
+            <date era="ce" calendar="gregorian">2003</date>
+        </titlepage>
+    </frontmatter>
+    <archdesc audience="external"
+             level="otherlevel"
+             type="inventory"
+             relatedencoding="marc21">
+        <did id="al">
+            <unittitle audience="external" label="Title:" encodinganalog="245$a">Walt Whitman Literary
+                Manuscripts in The Yale Collection of American Literature, Beinecke Rare Book and
+                Manuscript Library</unittitle>
+            <unitid audience="external"
+                 label="Collection Number:"
+                 encodinganalog="099"
+                 repositorycode="CtY-BR"
+                 countrycode="us">N/A</unitid>
+            <origination audience="external" label="Creator:">
+                <persname encodinganalog="100">Whitman, Walt, 1819-1892</persname>
+            </origination>
+            <physdesc>
+            <genreform>poetry</genreform>
+                <genreform>prose</genreform>
+            <genreform>Manuscripts</genreform>
+         </physdesc>
+            <repository encodinganalog="852$a" label="Repository:">
+            <corpname encodinganalog="852$a">Beinecke Rare Book and Manuscript Library</corpname>
+                <address>
+                    <addressline>Beinecke Rare Book and Manuscript Library</addressline>
+               <addressline>Yale University Library</addressline>
+               <addressline>P.O. Box 208240</addressline>
+               <addressline>New Haven, Connecticut  06520-8240</addressline>
+            </address>
+         </repository>
+            <abstract>This electronic catalog was created from catalog cards obtained by the <emph render="italic">Walt Whitman Archive</emph>. The original papers and catalog
+                cards are held at The Beinecke Rare Book and Manuscript Library, Yale
+                University.</abstract>
+        </did>
+        <descgrp id="ds001" type="admininfo">
+            <accessrestrict audience="external" encodinganalog="506" id="a14">
+                <head>Restrictions on Original Materials:</head>
+                <p>Please consult with the repository.</p>
+            </accessrestrict>
+            <!-- <userestrict encodinganalog="540" id="a15"> 
+<head>Copyright:</head><p>The use of Archives and Special Collections material is governed by the U.S. Copyright Law (title 17 U.S. Code). </p> </userestrict> 
+ -->
+            <prefercite encodinganalog="524" id="a18">
+                <head>Preferred Citation:</head>
+                <p>To identify this catalog as a source, see the <emph render="italic">Archive's
+                        </emph>
+               <extref href="http://www.whitmanarchive.org/about/conditions.html"
+                       linktype="simple">"Conditions of Use"</extref> page.</p>
+            </prefercite>
+            <!-- <altformavail type="paper" encodinganalog="530" id="a17"> 
+<head>Alternative Format:</head><p> Original Documents held in the <corpname>Yale Collection of American Literature, Beinecke Rare Book and Manuscript Library</corpname></p> 
+</altformavail>  -->
+        </descgrp>
+        <scopecontent id="sc001">
+            <head>Scope and Content</head>
+            <p>The Yale Collection of American Literature, Beinecke Rare Book and Manuscript Library
+                holds a variety of documents related to Walt Whitman, including drafts of poetry and
+                prose, notes, letters, printed versions of Whitman compositions, and pieces written
+                about Whitman by others. This catalog includes item-level
+                descriptions of only those documents deemed poetry and prose manuscripts.</p>
+        </scopecontent>
+        <bioghist id="bh001">
+            <head>Biographical Information</head>
+            <p/>
+        </bioghist>
+        <controlaccess id="ca001">
+            <head>Subjects</head>
+            <persname encodinganalog="600">Whitman, Walt, 1819-1892</persname>
+            <subject encodinganalog="650">Whitman, Walt, 1819-1892--Manuscripts</subject>
+            <subject encodinganalog="650">Poets, American--19th century</subject>
+        </controlaccess>
+        <dsc id="dc001" type="in-depth">
+            <head>Item List</head>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00004</unitid>
+                    <unitid type="work">xxx.00567</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">As in a
+                        Swoon</title>
+               </unittitle>
+                    <unitdate normal="1872/1876" era="ce" calendar="gregorian">about 1876</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                            leaf</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00004.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00004.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a manuscript of the poem <title render="doublequote" linktype="simple">As in a Swoon,</title> first published in the <date type="publication" era="ce" calendar="gregorian">1876</date> printing of
+                            <title render="italic" linktype="simple">Leaves of Grass</title>.
+                        Although this poem was not included in any subsequent editions of <title render="italic" linktype="simple">Leaves of Grass</title>, Whitman did
+                        include it in the <date type="publication" era="ce" calendar="gregorian">1891</date> volume <title render="italic" linktype="simple">Good-Bye My Fancy</title>, and as one of the few poems in the <date type="publication" era="ce" calendar="gregorian">1892</date> volume <title render="italic" linktype="simple">Complete Prose Works</title>.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00014</unitid>
+                    <unitid type="work">xxx.00340</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">By thine own lips, O
+                            Sea</title>
+               </unittitle>
+                    <unitdate normal="1875/1890" era="ce" calendar="gregorian">about 1884</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                            leaf</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00014.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00014.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This manuscript is a draft of the poem first published as <title render="doublequote" linktype="simple">With Husky-Haughty Lips, O
+                            Sea!</title> in the <date type="publication" era="ce" calendar="gregorian">March 1884</date> edition of <title render="italic" linktype="simple">Harper's Monthly Magazine</title>. The poem was
+                        reprinted in the <title render="doublequote" linktype="simple">Sands at
+                            Seventy</title> annex to the <date type="publication" era="ce" calendar="gregorian">1888</date> edition of <title render="italic" linktype="simple">Leaves of Grass</title>. Whitman wrote this draft on the verso of a sheet of stationery for the <geogname>Sheldon
+                            House</geogname> of <geogname>Ocean Grove, New Jersey</geogname>.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00039</unitid>
+                    <unitid type="work">xxx.00330</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">Fancies at
+                            Navesink</title>
+               </unittitle>
+                    <unitdate normal="1880/1885" era="ce" calendar="gregorian">1885</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                    leaf</extent>
+                  <physfacet>handwritten</physfacet>
+                    </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00039.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00072.009.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This manuscript appears to concern the possible arrangement of the eight-poem
+                        cycle <title render="doublequote" linktype="simple">Fancies at
+                            Navesink,</title> which was published in the <date type="publication" era="ce" calendar="gregorian">August 1885</date> issue of <title render="italic" linktype="simple">Nineteenth Century</title>. The
+                        titles of three poems not included in <title render="doublequote" linktype="simple">Fancies at Navesink</title>—<title render="doublequote" linktype="simple">After the Supper and
+                            Talk,</title>
+                        <title render="doublequote" linktype="simple">You Lingering Sparse Leaves of
+                            Me,</title> and <title render="doublequote" linktype="simple">Ah, Not
+                            This Granite Dead and Cold</title>—are also mentioned. This manuscript
+                        is bound with others under the title <title render="doublequote" linktype="simple">Fancies at Navesink.</title>
+               </p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00072</unitid>
+                    <unitid type="work">xxx.00330</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">Fancies at
+                            Navesink</title>
+               </unittitle>
+                    <unitdate normal="1880/1885" era="ce" calendar="gregorian">about 1885</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>5
+                    leaves</extent>
+                  <physfacet>handwritten</physfacet>
+                    </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00072.014.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00072.015.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00072.020.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00072.021.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00072.024.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00072.025.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00072.036.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00072.037.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00072.044.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00072.045.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>These five leaves remain from what was originally a six-leaf manuscript (a
+                        note at the top of the first leaf reads, in Whitman's hand, "these six pages
+                        all one piece") of <title render="doublequote" linktype="simple">Fancies at
+                            Navesink,</title> an eight-poem cycle which was first published in the <date type="publication" era="ce" calendar="gregorian">August 1885</date> issue of <title render="italic" linktype="simple">Nineteenth Century</title>. The poems included are <title render="doublequote" linktype="simple">The Pilot in the Mist,</title>
+                        <title render="doublequote" linktype="simple">Had I the Choice,</title>
+                        <title render="doublequote" linktype="simple">Last of Ebb, and Daylight
+                            Waning,</title>
+                        <title render="doublequote" linktype="simple">Proudly the Flood Comes
+                            In,</title>
+                        <title render="doublequote" linktype="simple">By That Long Scan of
+                            Waves,</title> and <title render="doublequote" linktype="simple">Then
+                            Last of All.</title> These leaves are bound with others under the title
+                            <title render="doublequote" linktype="simple">Fancies at
+                            Navesink.</title>
+               </p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00073</unitid>
+                    <unitid type="work">xxx.00332</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">Had I the
+                            Choice</title>
+               </unittitle>
+                    <unitdate normal="1880/1885" era="ce" calendar="gregorian">about 1885</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                    leaf</extent>
+                  <physfacet>handwritten</physfacet>
+                    </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00073.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00072.013.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This manuscript is an early draft of the poem <title render="doublequote" linktype="simple">Had I the Choice,</title> published as part of <title render="doublequote" linktype="simple">Fancies at Navesink</title> in the
+                        <date type="publication" era="ce" calendar="gregorian">August 1885</date> issue of <title render="italic" linktype="simple">Nineteenth Century</title>. This manuscript is bound with
+                        others under the title <title render="doublequote" linktype="simple">Fancies at Navesink.</title>
+               </p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00040</unitid>
+                    <unitid type="work">xxx.00332</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">Had I the
+                            Choice</title>
+               </unittitle>
+                    <unitdate normal="1880/1885" era="ce" calendar="gregorian">about 1885</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                    leaf</extent>
+                  <physfacet>handwritten</physfacet>
+                    </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00040.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00072.019.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a draft of the poem <title render="doublequote" linktype="simple">Had I the Choice,</title> published as part of <title render="doublequote" linktype="simple">Fancies at Navesink</title> in
+                        the <date type="publication" era="ce" calendar="gregorian">August 1885</date> issue of <title render="italic" linktype="simple">Nineteenth Century</title>. <!--This manuscript has a small sheet of paper pasted on top of a larger piece which provides a revised opening to the poem.--> The leaf is bound with others under the title <title render="doublequote" linktype="simple">Fancies at Navesink.</title>
+               </p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00042</unitid>
+                    <unitid type="work">xxx.00334</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">[waning
+                        day]</title>
+               </unittitle>
+                    <unitdate normal="1880/1885" era="ce" calendar="gregorian">about 1885</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                    leaf</extent>
+                  <physfacet>handwritten</physfacet>
+                    </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00042.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00042.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a revised draft of poetic lines that may be an early version of
+                            <title render="doublequote" linktype="simple">Last of Ebb, and Daylight
+                            Waning,</title> published as part of <title render="doublequote" linktype="simple">Fancies at Navesink</title> in the <date type="publication" era="ce" calendar="gregorian">August 1885</date> issue of <title render="italic" linktype="simple">Nineteenth Century</title>. On
+                        the verso is part of a cancelled letter to Whitman. The leaf is bound with
+                        others under the title <title render="doublequote" linktype="simple">Fancies at Navesink.</title>
+               </p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00044</unitid>
+                    <unitid type="work">xxx.00334</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">[Last of ebb, and
+                            daylight waning]</title>
+               </unittitle>
+                    <unitdate normal="1880/1885" era="ce" calendar="gregorian">about 1885</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                    leaf</extent>
+                  <physfacet>handwritten</physfacet>
+                    </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00044.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00072.023.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a draft of the poem <title render="doublequote" linktype="simple">Last of Ebb, and Daylight Waning,</title> published as part of <title render="doublequote" linktype="simple">Fancies at Navesink</title> in
+                        <date type="publication" era="ce" calendar="gregorian">August 1885</date> issue of <title render="italic" linktype="simple">Nineteenth Century</title>. This manuscript is bound with
+                        others under the title <title render="doublequote" linktype="simple">Fancies at Navesink.</title>
+               </p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00046</unitid>
+                    <unitid type="work">xxx.00334</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">[Last of ebb, and
+                            daylight waning]</title>
+               </unittitle>
+                    <unitdate normal="1880/1885" era="ce" calendar="gregorian">about 1885</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>3
+                    leaves</extent>
+                  <physfacet>handwritten</physfacet>
+                    </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00046.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00072.027.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00046.002.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00072.029.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00046.003.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00072.031.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a draft on three leaves of the poem <title render="doublequote" linktype="simple">Last of Ebb, and Daylight Waning,</title> published as
+                        part of <title render="doublequote" linktype="simple">Fancies at
+                            Navesink</title> in the <date type="publication" era="ce" calendar="gregorian">August 1885</date> issue of <title render="italic" linktype="simple">Nineteenth Century</title>. The
+                        manuscript has the cancelled title <title render="doublequote" linktype="simple">At the Mouth of the
+                        River.</title> The first leaf is written on the back of a letter from J. M. Rollo, requesting an authograph. This manuscript is bound with others under the title <title render="doublequote" linktype="simple">Fancies at Navesink.</title>
+               </p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00049</unitid>
+                    <unitid type="work">xxx.00335</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">[Nor you
+                        alone]</title>
+               </unittitle>
+                    <unitdate normal="1880/1885" era="ce" calendar="gregorian">about 1885</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                    leaf</extent>
+                  <physfacet>handwritten</physfacet>
+                    </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00049.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00072.033.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a draft of the poem <title render="doublequote" linktype="simple">And Yet Not You Alone,</title> published as part of <title render="doublequote" linktype="simple">Fancies at Navesink</title> in
+                        the <date type="publication" era="ce" calendar="gregorian">August 1885</date> issue of <title render="italic" linktype="simple">Nineteenth Century</title>. The draft also has, in the
+                        bottom margin, the title of the poem which follows it in <title render="doublequote" linktype="simple">Fancies at Navesink,</title>
+                        <title render="doublequote" linktype="simple">Proudly the Flood Comes
+                            In.</title> This manuscript is bound with others under the title <title render="doublequote" linktype="simple">Fancies at Navesink.</title>
+               </p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00050</unitid>
+                    <unitid type="work">xxx.00335</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">[your needed
+                            blending]</title>
+               </unittitle>
+                    <unitdate normal="1880/1885" era="ce" calendar="gregorian">about 1885</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                    leaf</extent>
+                  <physfacet>handwritten</physfacet>
+                    </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00050.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00072.035.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a draft of the poem <title render="doublequote" linktype="simple">And Yet Not You Alone,</title> published as part of <title render="doublequote" linktype="simple">Fancies at Navesink</title> in
+                        the <date type="publication" era="ce" calendar="gregorian">August 1885</date> issue of <title render="italic" linktype="simple">Nineteenth Century</title>.<!--The manuscript is heavily- edited and has several smaller pieces of paper glued together to make one leaf.-->
+                        This manuscript is bound with others under the title <title render="doublequote" linktype="simple">Fancies at Navesink.</title>
+               </p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00052</unitid>
+                    <unitid type="work">xxx.00336</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">[Proudly the flood
+                            comes in]</title>
+               </unittitle>
+                    <unitdate normal="1880/1885" era="ce" calendar="gregorian">about 1885</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                    leaf</extent>
+                  <physfacet>handwritten</physfacet>
+                    </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00052.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00052.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a draft of <title render="doublequote" linktype="simple">Proudly the
+                            Flood Comes In,</title> published as part of <title render="doublequote" linktype="simple">Fancies at Navesink</title> in the <date type="publication" era="ce" calendar="gregorian">August 1885</date> issue of <title render="italic" linktype="simple">Nineteenth Century</title>.<!--The manuscript has the title, <title render="doublequote">Proudly the flood comes in</title> cancelled and replaced with a "3."-->
+                        The verso of this manuscript is an advertisement for Whitman's book, <title render="italic" linktype="simple">Drum-Taps</title>. This manuscript is
+                        bound with others under the title <title render="doublequote" linktype="simple">Fancies at Navesink.</title>
+               </p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00054</unitid>
+                    <unitid type="work">xxx.00338</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">[and deeper
+                            still]</title>
+               </unittitle>
+                    <unitdate normal="1880/1885" era="ce" calendar="gregorian">about 1885</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                    leaf</extent>
+                  <physfacet>handwritten</physfacet>
+                    </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00054.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00072.041.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a revised draft of the poem <title render="doublequote" linktype="simple">Then Last of All,</title> published as part of <title render="doublequote" linktype="simple">Fancies at Navesink</title> in
+                        the <date type="publication" era="ce" calendar="gregorian">August 1885</date> issue of <title render="italic" linktype="simple">Nineteenth Century</title>. This manuscript is bound with
+                        others under the title <title render="doublequote" linktype="simple">Fancies at Navesink.</title>
+               </p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00055</unitid>
+                    <unitid type="work">xxx.00338</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">[last—Dec
+                        11]</title>
+               </unittitle>
+                    <unitdate normal="1880/1885" era="ce" calendar="gregorian">about 1885</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                    leaf</extent>
+                  <physfacet>handwritten</physfacet>
+                    </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00055.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00055.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a revised draft of the poem <title render="doublequote" linktype="simple">Then Last of All,</title> published as part of <title render="doublequote" linktype="simple">Fancies at Navesink</title> in
+                        the <date type="publication" era="ce" calendar="gregorian">August 1885</date> issue of <title render="italic" linktype="simple">Nineteenth Century</title>. The verso of this manuscript is
+                        an advertisement for Whitman's book, <title render="italic" linktype="simple">Drum-Taps</title>. This manuscript is bound with
+                        others under the title <title render="doublequote" linktype="simple">Fancies at Navesink.</title>
+               </p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00013</unitid>
+                    <unitid type="work">xxx.00393</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">Funeral
+                            Interpolations</title>
+               </unittitle>
+                    <unitdate era="ce" calendar="gregorian">1888</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                            leaf</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00013.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00013.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a signed draft of <title render="doublequote" linktype="simple">Funeral Interpolations,</title> a poem published first as <title render="doublequote" linktype="simple">Over and Through the Burial
+                            Chant</title> in the <title render="italic" linktype="simple">New York
+                            Herald</title> on <date type="publication" era="ce" calendar="gregorian">August 12, 1888</date>, on the occasion of <persname normal="Sheridan, Philip Henry, 1831-1888"
+                            encodinganalog="600$a"
+                            source="lcnaf">General Philip K. Sheridan's</persname> death, and later
+                        as <title render="doublequote" linktype="simple">Interpolation
+                            Sounds</title> in <title render="italic" linktype="simple">Good-Bye My Fancy</title> (<date type="publication" era="ce" calendar="gregorian">1891</date>).</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00032</unitid>
+                    <unitid type="work">xxx.00557</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">For Queen Victoria's
+                            Birthday</title>
+               </unittitle>
+                    <unitdate normal="1885/1895" era="ce" calendar="gregorian">about 1890</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1 leaf</extent>
+                  <physfacet>handwritten</physfacet>
+                  <physfacet>printed</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00032.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00032.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a typed and corrected proof of <title render="doublequote" linktype="simple">For Queen Victoria's Birthday,</title> first published
+                        in the <title render="italic" linktype="simple">Philadelphia Public
+                            Ledger</title> on <date type="publication" era="ce" calendar="gregorian">May 24, 1890</date>. Whitman later included this poem in <title render="italic" linktype="simple">Good-Bye My Fancy</title> (<date type="publication" era="ce" calendar="gregorian">1891</date>).<!--The proof is signed and, on the verso, has a note from Whitman to the printer.--></p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 1</container>
+                    <container type="folder">53</container>
+                    <unitid type="WWA">yal.00008</unitid>
+                    <unitid type="work">xxx.00663</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">Incidents, for (Soldier
+                            in the Ranks)</title>
+               </unittitle>
+                    <unitdate normal="1863/1870" era="ce" calendar="gregorian">about 1863</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                        <genreform>prose</genreform>
+                  <extent>1
+                            leaf</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00008.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00008.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This manuscript includes both a description of the aftermath of a Civil War
+                        battle and the poem <title render="doublequote" linktype="simple">Incidents, for (Soldier in the Ranks),</title> which addresses "the
+                        second day of the battle" at <geogname encodinganalog="651" source="lcsh" normal="Gettysburg (Pa.)">Gettysburg</geogname>.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00010</unitid>
+                    <unitid type="work">xxx.00024</unitid>
+                    <unitid type="work">xxx.00353</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">Inscription: to the 4th
+                            Edition of Leaves of Grass</title>
+               </unittitle>
+                    <unitdate normal="1860/1867" era="ce" calendar="gregorian">about 1867</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1 leaf</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00010.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00010.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a draft of the poem <title render="doublequote" linktype="simple">Inscription,</title> which was first published in the <date type="publication" era="ce" calendar="gregorian">1867</date> edition of <title render="italic" linktype="simple">Leaves of Grass</title>. The poem was
+                        later revised and published as <title render="doublequote" linktype="simple">One's-Self I Sing.</title> In <title render="italic" linktype="simple">Leaves of Grass</title> (<date type="publication" era="ce" calendar="gregorian">1891&#8211;92</date>), lines from this
+                        manuscript appear in both <title render="doublequote" linktype="simple">One's-Self I Sing</title> and <title render="doublequote" linktype="simple">Small the Theme of My Chant.</title>
+               </p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00003</unitid>
+                    <unitid type="work">xxx.00257</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">Italian Music in
+                            Dakota</title>
+               </unittitle>
+                    <unitdate normal="1871/1881" era="ce" calendar="gregorian">about 1881</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>2
+                            leaves</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00003.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00003.002.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00003.003.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00003.004.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a draft of <title render="doublequote" linktype="simple">Italian
+                            Music in Dakota,</title> first published in the <date normal="1881/1882"
+                        type="publication"
+                        era="ce"
+                        calendar="gregorian">1881–82</date> edition
+                        of <title render="italic" linktype="simple">Leaves of
+                        Grass</title>.<!--The manuscript is written in pencil on five separate pieces of paper pasted together to make two leaves.--></p>
+                </scopecontent>
+            </c01>
+    
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <container type="folder">155</container>
+                    <unitid type="WWA">yal.00035</unitid>
+                    <unitid type="work">xxx.00001</unitid>
+                    <unittitle>
+                  <title render="italic" linktype="simple">Leaves of Grass</title>
+                        advertisements and table of contents</unittitle>
+                    <unitdate normal="1880/1881" era="ce" calendar="gregorian">about 1881</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>10 leaves</extent>
+                  <physfacet>printed</physfacet>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00035.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00035.002.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00035.003.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00035.004.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00035.005.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00035.006.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00035.007.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00035.008.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00035.009.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00035.010.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Proofs of the publisher's advertisement and the table
+                        of contents for the <date normal="1881/1882"
+                        type="publication"
+                        era="ce"
+                        calendar="gregorian">1881–82</date> edition of <title render="italic" linktype="simple">Leaves of Grass</title>, with corrections and
+                        deletions in Whitman's hand.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00005</unitid>
+                    <unitid type="work">xxx.00134</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">The Man-of-War
+                            Bird</title>
+               </unittitle>
+                    <unitdate normal="1860/1876" era="ce" calendar="gregorian">about 1876</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                            leaf</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00005.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00005.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This manuscript is a note by Whitman for the poem <title render="doublequote" linktype="simple">To the Man-of-War Bird,</title> which was
+                        first published in the <date type="publication" era="ce" calendar="gregorian" normal="1876-04-01">April 1, 1876</date> issue of <title render="italic">Athenaeum.</title></p>
+                </scopecontent>
+            </c01>
+            <!--
+                Commented out becuase this item is prose and doesn't seem to have led to a publication, jc 2014-06-12.
+                <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00033</unitid>
+                    <unitid type="work">xxx.#####</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">[A modern
+                            'poem']</title>
+               </unittitle>
+                    <unitdate normal="1819/1892" era="ce" calendar="gregorian">undated</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                            leaf</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00033.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00033.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a short note, lightly revised, which discusses in disparaging terms
+                        the "modern 'poem.'"</p>
+                </scopecontent>
+            </c01>-->
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00015</unitid>
+                    <unitid type="work">xxx.00854</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">[names]</title>
+               </unittitle>
+                    <unitdate normal="1819/1892" era="ce" calendar="gregorian">undated</unitdate>
+                    <physdesc>
+                  <genreform>prose</genreform>
+                        <genreform>poetry</genreform>
+                  <extent>1
+                            leaf</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00015.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00015.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a note in Whitman's handwriting which lists "names," including "the
+                        Niam-Niams," "the Battas," "the Tonga-Taboos," and "the Aleuts"; also
+                        included in this note is the address of <persname>John P. Soule</persname>,
+                        a Boston "photographer and publisher." The relationship of this note to
+                        Whitman's published work is unknown.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item"> 
+                <did> 
+                    <container type="box">3</container>
+                    <container type="folder">135</container>
+                    <unitid type="WWA">yal.00031</unitid>
+                    <unitid type="work">xxx.00502</unitid> 
+                    <unittitle><title render="doublequote">A Night Battle in the late War</title></unittitle> 
+                    <unitdate normal="1863">1863</unitdate> 
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent>1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                </did>
+                <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00031.001.jpg"/>
+                <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00031.002.jpg"/>
+                <scopecontent>
+                    <p>This is a brief note, dated <date normal="1863-05-02">May 2, 1863</date> and titled <title render="doublequote">A Night Battle in the late War.</title> The night battle to which this note refers is probably the battle of <geogname>Chancellorsville</geogname>. Similar phraseology appeared in <title render="italic">Memoranda During the War</title> (<date type="publication">1875&#8211;76</date>), in the section headed <title render="doublequote"><date normal="1863-05-12" era="ce" calendar="gregorian">May 12</date>&#8212;A Night Battle, Over a Week Since.</title></p>
+                </scopecontent>
+            </c01>
+            
+            <c01 level="item">
+                <did>
+                    <container type="box">3</container>
+                    <unitid type="WWA">yal.00037</unitid>
+                    <unitid type="work">xxx.00400</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">Osceola</title>
+               </unittitle>
+                    <unitdate normal="1880/1890" era="ce" calendar="gregorian">1890</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                            leaf</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00037.001.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This manuscript is apparently a printer's copy of the poem <title render="doublequote" linktype="simple">Osceola,</title> which was first published
+                        in <title render="italic" linktype="simple">Munyon's Illustrated
+                            World</title> in <date type="publication" era="ce" calendar="gregorian">April 1890</date>. This manuscript is bound together with others.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00020</unitid>
+                    <unitid type="work">xxx.00310</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">Sands at
+                            Seventy</title>
+               </unittitle>
+                    <unitdate normal="1875/1885" era="ce" calendar="gregorian">about 1884</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                            leaf</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00020.002.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00020.001.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a note, written on the verso of a postmarked envelope, that offers the
+                        title <title render="doublequote" linktype="simple">Sands on the Shores of
+                            Seventy &amp;c &amp;c for Annex to the preceding,</title> as an
+                        alternative to the title <title render="doublequote" linktype="simple">Sands at Seventy,</title> which was first used for a cluster of poems
+                        in <title render="italic" linktype="simple">November Boughs</title> (<date type="publication" era="ce" calendar="gregorian">1888</date>).</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00061</unitid>
+                    <unitid type="work">xxx.00123</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">Song of the
+                            Universal</title>
+               </unittitle>
+                    <unitdate normal="1874" era="ce" calendar="gregorian">1874</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                            leaf</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00061.001.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This manuscript is a note in Whitman's hand about the poem <title render="doublequote" linktype="simple">Song of the Universal,</title>
+                        with the date <date normal="1874-06-17" era="ce" calendar="gregorian">June
+                            17, 1874</date>. The leaf is bound together with other manuscripts.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00062</unitid>
+                    <unitid type="work">xxx.00123</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">[Come, said the
+                            Muse]</title>
+               </unittitle>
+                    <unitdate normal="1869/1879" era="ce" calendar="gregorian">about 1874</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>2
+                            leaves</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00062.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00062.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Very early draft fragment of <title render="doublequote" linktype="simple">Song of the Universal,</title> first published simultaneously in the
+                            <title render="italic" linktype="simple">New York Evening Post</title> and the New York Daily Graphic on <date type="publication" era="ce" calendar="gregorian" normal="1874-06-17">June 17, 1874</date>. The manuscript
+                        bears the cancelled date "<date normal="1874-03-31" era="ce" calendar="gregorian">March 31, '74</date>." The two leaves are bound
+                        together with other manuscripts.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00064</unitid>
+                    <unitid type="work">xxx.00123</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">Song of the
+                            Universal</title>
+               </unittitle>
+                    <unitdate normal="1869/1879" era="ce" calendar="gregorian">about 1874</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                            leaf</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00064.001.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Very early draft fragment of <title render="doublequote" linktype="simple">Song of the Universal,</title> first published simultaneously in the
+                            <title render="italic" linktype="simple">New York Evening Post</title> and the New York Daily Graphic on <date type="publication" era="ce" calendar="gregorian" normal="1874-06-17">June 17, 1874</date>. The
+                        leaf is bound together with other manuscripts.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00065</unitid>
+                    <unitid type="work">xxx.00123</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">[all the vast
+                            mass]</title>
+               </unittitle>
+                    <unitdate normal="1869/1879" era="ce" calendar="gregorian">about 1874</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                            leaf</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00065.001.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Very early draft fragment of <title render="doublequote" linktype="simple">Song of the Universal,</title> first published simultaneously in the
+                            <title render="italic" linktype="simple">New York Evening Post</title> and the New York Daily Graphic on <date type="publication" era="ce" calendar="gregorian" normal="1874-06-17">June 17, 1874</date>. The
+                        leaf is bound together with other manuscripts.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00066</unitid>
+                    <unitid type="work">xxx.00123</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">[Christ]</title>
+               </unittitle>
+                    <unitdate normal="1869/1879" era="ce" calendar="gregorian">about 1874</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                            leaf</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00066.001.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Very early draft fragment of <title render="doublequote" linktype="simple">Song of the Universal,</title> first published simultaneously in the
+                            <title render="italic" linktype="simple">New York Evening Post</title> and the New York Daily Graphic on <date type="publication" era="ce" calendar="gregorian" normal="1874-06-17">June 17, 1874</date>. The
+                        leaf is bound together with other manuscripts.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00068</unitid>
+                    <unitid type="work">xxx.00123</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">Song of the
+                            Universal</title>
+               </unittitle>
+                    <unitdate normal="1874-06" era="ce" calendar="gregorian">June 1874</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>5
+                            leaves</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00068.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00068.002.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00068.003.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00068.004.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00068.005.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>These five leaves make up what is apparently a complete printer's copy of
+                            <title render="doublequote" linktype="simple">Song of the
+                            Universal,</title> first published simultaneously in the
+                            <title render="italic" linktype="simple">New York Evening Post</title> and the New York Daily Graphic on <date type="publication" era="ce" calendar="gregorian" normal="1874-06-17">June 17, 1874</date>. The
+                        manuscript is dated <date normal="1874-06" era="ce" calendar="gregorian">June 1874</date>. The leaves are bound together with other
+                        manuscripts.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00069</unitid>
+                    <unitid type="work">xxx.00123</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">Song of the
+                            Universal</title>
+               </unittitle>
+                    <unitdate normal="1865/1874" era="ce" calendar="gregorian">about 1874</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>4
+                            leaves</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00069.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00069.002.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00069.003.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00069.004.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>These four leaves make up an early complete draft of <title render="doublequote" linktype="simple">Song of the Universal,</title>
+                        first published simultaneously in the
+                            <title render="italic" linktype="simple">New York Evening Post</title> and the New York Daily Graphic on <date type="publication" era="ce" calendar="gregorian" normal="1874-06-17">June 17, 1874</date>. The four leaves are bound together
+                        with other manuscripts.</p>
+                </scopecontent>
+            </c01>
+            <!--
+
+<c01 level="item">
+Commented out because this item is prose that doesn't seem to have led to a published work; jc, 2014-06-12.
+<did> 
+<container type="box">box 3</container>
+<unitid type="WWA">yal.00016</unitid>
+<unitid type="work">xxx.#####</unitid> 
+<unittitle><title render="doublequote">[theoretically]</title></unittitle> 
+<unitdate normal="1819/1892">undated</unitdate> 
+<physdesc>
+<extent>1 leaf</extent>
+<physfacet>handwritten</physfacet>
+<extptr linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00016.001.jpg"/>
+<extptr linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00016.002.jpg"/>
+</physdesc>
+</did> 
+<scopecontent>
+<p>This note begins with the phrase, "theoretically thought of Democracy &amp; political rights, have already gone to excess." The relationship of this note to Whitman's published work is unknown.</p>
+</scopecontent> 
+</c01>
+
+
+-->
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <container type="folder">142</container>
+                    <unitid type="WWA">yal.00021</unitid>
+                    <unitid type="work">xxx.00267</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">[the Idea of
+                            All]</title>
+               </unittitle>
+                    <unitdate normal="1860/1872" era="ce" calendar="gregorian">about 1872</unitdate>
+                    <physdesc>
+                        <genreform>poetry</genreform>
+                        <genreform>prose</genreform>
+                        <extent>16 leaves</extent>
+                  <physfacet>handwritten</physfacet>
+                  <dimensions unit="inches">6.25 x 3.5 in.</dimensions>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00021.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00021.002.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00021.003.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00021.004.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00021.005.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00021.006.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00021.007.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00021.008.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00021.009.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00021.010.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00021.011.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00021.012.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00021.013.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>These leaves are pages from a top-bound notebook containing draft lines of
+                        poetry, apparently for a poem delivered at the <geogname>Dartmouth
+                            College</geogname> commencement in <date era="ce" calendar="gregorian">June 1872</date> and first published under the title, <title render="doublequote" linktype="simple">As a Strong Bird on Pinions
+                            Free,</title> later revised and published as <title render="doublequote" linktype="simple">Thou Mother with Thy Equal Brood.</title> Many of the
+                        pages have been cut out or trimmed, and seven envelope faces have been
+                        attached at the back of the notebook.</p>
+                </scopecontent>
+            </c01>
+            <!--
+
+<c01 level="item"> 
+<did> 
+<container type="box">box 3</container>
+<unitid type="WWA">yal.00017</unitid>
+<unitid type="work">xxx.00502</unitid> 
+<unittitle><title render="doublequote">[the United]</title></unittitle> 
+<unitdate normal="1819/1892">undated</unitdate> 
+<physdesc>
+<extent>1 leaf</extent>
+<physfacet>handwritten</physfacet>
+<extptr linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00017.001.jpg"/>
+<extptr linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00017.002.jpg"/>
+</physdesc>
+</did> 
+<scopecontent>
+<p>This is a note fragment written on small scraps of paper affixed to each other. The phrases "the following transcripts," "of the War," and "'65" point to a possible relationship with the introduction Whitman wrote for <title render="italic">Memoranda during the War</title>, first published in <date type="publication">1875</date>.</p>
+</scopecontent> 
+</c01>
+
+-->
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00011</unitid>
+                    <unitid type="work">xxx.00203</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">Rise, Lurid
+                            Stars</title>
+               </unittitle>
+                    <unitdate normal="1860/1865" era="ce" calendar="gregorian">about 1865</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                            leaf</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00011.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00011.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a poem draft, the last three lines of which were later revised and
+                        published in <title render="italic">Drum-Taps</title> (<date type="publication" era="ce" calendar="gregorian">1865</date>) as <title render="doublequote" linktype="simple">World Take Good
+                            Notice</title> and included in subsequent editions of <title render="italic">Leaves of Grass.</title> On the verso of this draft is a prose fragment discussing
+                        slavery and Southern
+                        aristocracy.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00006</unitid>
+                    <unitid type="work">xxx.00139</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">Sea Captains, Young or
+                            Old</title>
+               </unittitle>
+                    <unitdate normal="1865/1873" era="ce" calendar="gregorian">about 1873</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>2
+                            leaves</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00006.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00006.002.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00006.003.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00006.004.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This manuscript is a signed draft of <title render="doublequote" linktype="simple">Sea Captains, Young or Old,</title> which was
+                        published first in the <title render="italic" linktype="simple">New York
+                            Daily Graphic</title> on <date type="publication" era="ce" calendar="gregorian">April 4, 1873</date>. The poem was later retitled,
+                            <title render="doublequote" linktype="simple">Song for All Seas, All
+                            Ships,</title> and appeared in <title render="italic" linktype="simple">Two Rivulets</title>, the companion volume to the <date type="publication" era="ce" calendar="gregorian">1876</date> Author's
+                        edition of <title render="italic" linktype="simple">Leaves of
+                        Grass</title>.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00009</unitid>
+                    <unitid type="work">xxx.00178</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">[I cross'd the
+                            Nevadas]</title>
+               </unittitle>
+                    <unitdate normal="1860/1865" era="ce" calendar="gregorian">about 1865</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                            leaf</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00009.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00009.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>These six lines make up a draft of <title render="doublequote" linktype="simple">Rise O Days from Your Fathomless Deeps,</title> which
+                        was published in <title render="italic" linktype="simple">Drum-Taps</title>
+                        in <date type="publication" era="ce" calendar="gregorian">1865</date> and in subsequent editions of <title render="italic">Leaves of Grass</title>.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00007</unitid>
+                    <unitid type="work">xxx.00389</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">To the Year
+                            1889</title>
+               </unittitle>
+                    <unitdate normal="1888/1889" era="ce" calendar="gregorian">about 1889</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                            leaf</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00007.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00007.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a late draft of <title render="doublequote" linktype="simple">To the
+                            Year 1889,</title> published first on <date type="publication" era="ce" calendar="gregorian">January 5, 1889</date>, in the <title render="italic" linktype="simple">Critic</title>. Retitled <title render="doublequote" linktype="simple">To the Pending Year,</title> the poem appeared in <title render="italic" linktype="simple">Good-Bye My Fancy</title> in 1891.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00012</unitid>
+                    <unitid type="work">xxx.00407</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">The
+                        Unexpress'd</title>
+               </unittitle>
+                    <unitdate normal="1880/1890" era="ce" calendar="gregorian">1890</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                            leaf</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00012.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00012.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a draft of <title render="doublequote" linktype="simple">The
+                            Unexpress'd,</title> which was published in <title render="italic" linktype="simple">Lippincott's Magazine</title> in <date type="publication" era="ce" calendar="gregorian">March 1891</date>. A
+                        note on the manuscript in Whitman's hand indicates that the poem was sent
+                        for publication in <date era="ce" calendar="gregorian">1890</date> to
+                            <persname>W. H. Alden</persname>, the editor of <title render="italic">Harper's Monthly Magazine,</title> but was rejected.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00060</unitid>
+                    <unitid type="work">xxx.00401</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">A Voice from
+                            Death</title>
+               </unittitle>
+                    <unitdate normal="1889-06" era="ce" calendar="gregorian">June 1889</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>5
+                            leaves</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00060.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00060.002.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00060.003.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00060.004.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00060.005.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a signed manuscript of <title render="doublequote" linktype="simple">A Voice from Death,</title> a poem written in response to the <geogname normal="Johnstown (Pa.)" source="lcsh" encodinganalog="651">Johnstown,
+                            Pennsylvania</geogname>, flood in the spring of <date era="ce" calendar="gregorian">1889</date> in which 2,000 people died after a dam
+                        collapsed following torrential rains. This poem was published on <date type="publication" era="ce" calendar="gregorian">June 7, 1889</date>, in
+                        the <title render="italic" linktype="simple">New York World.</title> The
+                        manuscript is the printer's copy and each page is mounted separately and
+                        bound in a volume with a lettered title page and a portrait frontispiece by
+                            <persname>E. Whittlesey Kotz</persname>.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <container type="folder">170</container>
+                    <unitid type="WWA">yal.00002</unitid>
+                    <unitid type="work">xxx.00340</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">with husky-haughty
+                            lips, O sea</title>
+               </unittitle>
+                    <unitdate normal="1874/1884" era="ce" calendar="gregorian">1884</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                            leaf</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00002.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00002.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a draft of <title render="doublequote" linktype="simple">With
+                            Husky-Haughty Lips, O Sea!,</title> first published in <title render="italic" linktype="simple">Harper's Monthly Magazine</title> in
+                            <date normal="1884-03" type="publication" era="ce" calendar="gregorian">March
+                        1884</date>, written on the verso of a discarded review of <persname encodinganalog="600$a"
+                            source="lcnaf"
+                            normal="Burroughs, John, 1837-1921">John Burrough</persname>'s <title render="italic" linktype="simple">Notes on Walt Whitman.</title> This
+                        poem was reprinted in the <title render="doublequote" linktype="simple">Sands at Seventy</title> annex to <title render="italic" linktype="simple">Leaves of Grass</title> in <date normal="1888" type="publication" era="ce" calendar="gregorian">1888</date> and after.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00001</unitid>
+                    <unitid type="work">xxx.00340</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">with husky-haughty
+                            lips, O Sea!</title>
+               </unittitle>
+                    <unitdate normal="1875/1884" era="ce" calendar="gregorian">1884</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                            leaf</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00001.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00001.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a signed and revised draft of <title render="doublequote" linktype="simple">With Husky-Haughty Lips, O Sea!,</title> which was
+                        published first in <title render="italic" linktype="simple">Harper's Monthly
+                            Magazine</title> in <date type="publication" era="ce" calendar="gregorian">March 1884</date>. This poem was reprinted in the
+                            <title render="doublequote" linktype="simple">Sands at Seventy</title>
+                        annex to <title render="italic" linktype="simple">Leaves of Grass</title> in
+                            <date type="publication" era="ce" calendar="gregorian">1888</date> and after.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00034</unitid>
+                    <unitid type="work">xxx.00340</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">With Husky-Haughty
+                            Lips, O Sea!</title>
+               </unittitle>
+                    <unitdate normal="1875/1884" era="ce" calendar="gregorian">1884</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                            leaf</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00034.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00034.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a printed draft of the poem, <title render="doublequote" linktype="simple">With Husky-Haughty Lips, O Sea!,</title> with
+                        corrections in Whitman's hand. The poem was published first in <title render="italic" linktype="simple">Harper's Monthly Magazine</title> in
+                            <date type="publication" era="ce" calendar="gregorian">March
+                        1884</date>, and was reprinted in the <title render="doublequote" linktype="simple">Sands at Seventy</title> annex to <title render="italic" linktype="simple">Leaves of Grass</title> in <date type="publication" era="ce" calendar="gregorian">1888</date> and after.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">box 3</container>
+                    <unitid type="WWA">yal.00036</unitid>
+                    <unitid type="work">xxx.00340</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">With Husky-Haughty
+                            Lips, O Sea!</title>
+               </unittitle>
+                    <!--<unittitle><title render="doublequote">with husky-haughty lips, O Sea!</title></unittitle>-->
+                    <unitdate normal="1875/1884" era="ce" calendar="gregorian">1884</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>1
+                            leaf</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00036.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00036.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a printed draft of the poem, <title render="doublequote" linktype="simple">With Husky-Haughty Lips, O Sea!,</title> with
+                        corrections in Whitman's hand. The poem was published first in <title render="italic" linktype="simple">Harper's Monthly Magazine</title> in
+                            <date type="publication" era="ce" calendar="gregorian">March
+                        1884</date>, and was reprinted in the <title render="doublequote" linktype="simple">Sands at Seventy</title> annex to <title render="italic" linktype="simple">Leaves of Grass</title> in <date type="publication" era="ce" calendar="gregorian">1888</date> and later.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">1</container>
+                    <container type="folder">56</container>
+                    <unitid type="WWA">yal.00150</unitid>
+                    <unitid type="work">xxx.00193</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">[While I so deeply
+                            loved]</title>
+               </unittitle>
+                    <unitdate normal="1860/1865" era="ce" calendar="gregorian">1864</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                        <genreform>prose</genreform>
+                  <extent>1
+                            leaf</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00150.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00150.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a manuscript with poem notes relating to Whitman's experience as a
+                        nurse during the Civil War, some lines of which correspond to <title render="doublequote">The Wound-Dresser,</title> first published in <title render="italic">Leaves of Grass</title> (<date normal="1876" type="publication" era="ce" calendar="gregorian">1876</date>). The verso contains notes about a call Whitman received from a mother, dated December 23, 1864, regarding her son Frank
+                        Lester, an imprisoned soldier. The relationship of these prose notes to Whitman's
+                        published work is unknown.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">3</container>
+                    <container type="folder">137</container>
+                    <unitid type="WWA">yal.00081</unitid>
+                    <unitid type="work">xxx.00259</unitid>
+                    <unitid type="work">xxx.00614</unitid>
+                    <!-- I have given this item two work ids: one for the posthumously published "Pictures" and one for the lines related to "My Picture-Gallery." jc, 1-22-14. -->
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">Pictures</title>
+               </unittitle>
+                    <unitdate normal="1850/1860" era="ce" calendar="gregorian">about 1855</unitdate>
+                    <!-- Holloway and the Yale finding guide date this ms to ca. 1850; Grier suggests that the earliest possible date of composition was 1855.-->
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent>27 leaves</extent>
+                  <physfacet>handwritten</physfacet>
+                        <!-- We currently do not have blank verso images for this item. If/when we obtain these verso images, they should be linked immediately following their corresponding recto images. jc, 1/22/14. -->
+                    </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.002.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.003.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.004.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.005.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.006.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.007.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.008.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.009.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.010.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.011.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.012.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.013.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.014.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.015.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.016.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.017.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.018.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.019.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.020.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.021.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.022.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.023.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.024.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.025.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.026.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.027.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.028.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/yal.00081.029.jpg"/>
+                </did>
+                <scopecontent>
+                    <p><!-- This is the description given in the Beinecke finding aid: ""Pictures," holograph notebook, corrected [ca. 1850]" -->
+                        Bound draft of a poem unpublished in Whitman's lifetime, titled "Pictures." The first several lines of draft were revised and published as <title render="doublequote" linktype="simple">My Picture-Gallery</title> in <title render="italic" linktype="simple">The American</title> in <date type="publication" era="ce" calendar="gregorian">October 1880</date>. <!-- In 1925 Emory Holloway published a version of "Pictures" in the Southwest Review. In 1927 Holloway published a slightly revised version of the poem. Both versions seem to be based largely on this poetry manuscript. Holloway dates the manuscript to about 1850. -->
+                    </p>
+                </scopecontent>
+            </c01>
+
+            <c01 level="item">
+                <did>
+                    <container type="box">3</container>
+                    <container type="folder">143</container>
+                    <unitid type="WWA">yal.00346</unitid>
+                    <unitid type="work">xxx.00524</unitid>
+                    <unitid type="work">xxx.00502</unitid>
+                    <unitid type="work">xxx.00993</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">Memoranda of a Year</title>
+                    </unittitle>
+                    <unitdate normal="1863" era="ce" calendar="gregorian">1863</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">9 leaves</extent>
+                        <physfacet>handwritten</physfacet>
+                        <physfacet>printed</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00346.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00346.002.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00346.003.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00346.004.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00346.005.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00346.006.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00346.007.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00346.008.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00346.009.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00346.010.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00346.011.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00346.012.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00346.013.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00346.014.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00346.015.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00346.016.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00346.017.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00346.018.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Draft of letter, heavily revised, to publisher James Redpath. Included with the letter, which pitches Whitman's idea for a book about his firsthand experiences among Civil War soldiers, are a title page mock-up, a draft publisher's announcement, the label that Whitman created for these items, and a blank envelope. The letter is written on the reverse of proofs of a circular for the United States Christian Commission, and the label, which dates the letter to October 21, 1863, is written on the clipped front of a United States Christian Commission envelope. Whitman was unable to get such a book published for over a decade. <title render="italic">Memoranda During the War</title> (<date type="publication" normal="1875/1876" era="ce" calendar="gregorian">1875&#8211;76</date>) includes the short essay <title render="doublequote">A New Army Organization Fit for America Needed,</title> which echoes specifically the ideas and language about military reform from the draft letter. This essay was later shortened to a single paragraph and republished in <title render="italic">Specimen Days &amp; Collect</title> (<date type="publication" normal="1882/1883" era="ce" calendar="gregorian">1882&#8211;83</date>), given the slightly altered title <title render="doublequote">A New Army Organization Fit for America.</title> The same language from the letter draft might also have contributed to a note on the topic of military reform that Whitman added to <title render="italic">Democratic Vistas</title> (<date type="publication" normal="1871" era="ce" calendar="gregorian">1871</date>) when he created that book-length essay from several earlier pieces.</p>
+                </scopecontent>
+            </c01>
+
+
+
+
+
+            <c01 level="item">
+                <did>
+                    <container type="box">1</container>
+                    <container type="folder">55</container>
+                    <unitid type="WWA">yal.00149</unitid>
+                    <unitid type="work">xxx.00481</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">[Immense numbers (several thousands)]</title>
+                    </unittitle>
+                    <unitdate normal="1865" era="ce" calendar="gregorian">1865</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                        <physfacet>printed</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00149.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00149.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A draft fragment of <title render="doublequote">Small Memoranda,</title> first published in <title render="italic">November Boughs</title> (<date normal="1888" type="publication" era="ce" calendar="gregorian">1888</date>).</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">1</container>
+                    <container type="folder">56</container>
+                    <unitid type="WWA">yal.00152</unitid>
+                    <unitid type="work">xxx.00502</unitid>
+                    <unitid type="work">xxx.00855</unitid>
+                    <unitid type="work">xxx.00856</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">Brooklyn, Jan 19 &#038; 20, 1865</title>
+                    </unittitle>
+                    <unitdate normal="1865" era="ce" calendar="gregorian">1865</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00152.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00152.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Whitman's response to learning of George Whitman's imprisonment at Danville during the Civil War. This manuscript contains much of the same information about George and his status as a prisoner of war that Whitman published in <title render="doublequote" actuate="onrequest" href="http://whitmanarchive.org/published/periodical/journalism/tei/per.00212.html" linktype="simple" show="new">A Brooklyn Soldier, and A Noble One,</title> which appeared in the <date normal="1865-01-19" type="publication" era="ce" calendar="gregorian">19 January 1865</date> issue of the <title render="italic">Brooklyn Daily Eagle</title>. Material in this manuscript also contributed to <title render="doublequote" actuate="onrequest" href="http://whitmanarchive.org/published/periodical/journalism/tei/per.00202.html" linktype="simple" show="new">The Fifty-first New-York Volunteers,</title> published in the <title render="italic">New-York Times</title>, <date normal="1865-01-24" type="publication" era="ce" calendar="gregorian">24 January 1865</date>  as well as portions of <title render="italic">Memoranda During the War</title> (<date normal="1875/1876" type="publication" era="ce" calendar="gregorian">1875&#8211;76</date>).</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">1</container>
+                    <container type="folder">57</container>
+                    <unitid type="WWA">yal.00169</unitid>
+                    <unitid type="work">xxx.00856</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">[mention with honor Capt Daniel E Jenkins]</title>
+                    </unittitle>
+                    <unitdate normal="1864/1865" era="ce" calendar="gregorian">1864&#8211;1865</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                        <physfacet>printed</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00169.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00169.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A short piece of Civil War memoranda that contributed to a portion of <title render="doublequote" actuate="onrequest" href="http://whitmanarchive.org/published/periodical/journalism/tei/per.00202.html" linktype="simple" show="new">The Fifty-first New-York Volunteers,</title> published in the <date normal="1865-01-24">24 January 1865</date> issue of the <title render="italic">New-York Times</title>.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">1</container>
+                    <container type="folder">57</container>
+                    <unitid type="WWA">yal.00171</unitid>
+                    <unitid type="work">xxx.00856</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">[Martin Weaver]</title>
+                    </unittitle>
+                    <unitdate normal="1864/1865" era="ce" calendar="gregorian">1864&#8211;1865</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00171.002.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00171.001.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A scrap of Whitman's Civil War memoranda. His notes on Robert B. Potter and Edward Ferrero were used in <title render="doublequote" actuate="onrequest" href="http://whitmanarchive.org/published/periodical/journalism/tei/per.00202.html" linktype="simple" show="new">The Fifty-first New-York Volunteers,</title> which appeared in the <date normal="1865-01-24">24 January 1865</date> issue of the <title render="italic">New-York Times</title>.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">1</container>
+                    <container type="folder">57</container>
+                    <unitid type="WWA">yal.00172</unitid>
+                    <unitid type="work">xxx.00857</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">[deserter arrested election day]</title>
+                    </unittitle>
+                    <unitdate normal="1864/1865" era="ce" calendar="gregorian">1864&#8211;1865</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00172.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00172.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Notes and memoranda of the Civil War, some of which contributed to <title render="doublequote" actuate="onrequest" href="http://whitmanarchive.org/published/periodical/journalism/tei/per.00199.html" linktype="simple" show="new">Fifty-first New-York City Veterans,</title> published in the <date normal="1864-10-29" type="publication" era="ce" calendar="gregorian">29 October 1864</date> issue of the <title render="italic">New-York Times</title>.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">1</container>
+                    <container type="folder">57</container>
+                    <unitid type="WWA">yal.00173</unitid>
+                    <unitid type="work">xxx.00856</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">[51st N Y V]</title>
+                    </unittitle>
+                    <unitdate normal="1864/1865" era="ce" calendar="gregorian">1864&#8211;1865</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00173.002.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00173.001.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A scrap of Civil War memoranda headed "51st N Y V" in which Whitman mentions the death of Captain Daniel E. Jenkins. Whitman wrote about Jenkins in <title render="doublequote" actuate="onrequest" href="http://www.whitmanarchive.org/published/periodical/journalism/tei/per.00202.html" linktype="simple" show="new">The Fifty-first New-York Volunteers,</title> which appeared in the <date normal="1864-01-24">24 January 1864</date> issue of the <title render="italic">New-York Times</title>.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">1</container>
+                    <container type="folder">57</container>
+                    <unitid type="WWA">yal.00185</unitid>
+                    <unitid type="work">xxx.00856</unitid>
+                    <unitid type="work">xxx.00857</unitid>
+                    <unitid type="work">xxx.00859</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">[some interesting items of 51st]</title>
+                    </unittitle>
+                    <unitdate normal="1864" era="ce" calendar="gregorian">1864</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">16 leaves</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.002.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.003.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.004.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.005.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.006.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.007.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.008.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.009.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.010.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.011.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.012.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.013.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.014.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.015.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.016.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.017.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.018.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.019.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.020.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.021.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.022.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.023.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.024.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.025.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.026.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.027.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.028.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.029.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.030.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.031.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00185.032.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A notebook on the 51st New York Veterans in which Whitman recorded notes on George W. Whitman and other soldiers in that regiment, including their involvement in the war and snippets of biographical information. While significant passages from this notebook cannot be found verbatim in Whitman's published work, it is clear that these notes contributed to Whitman's Civil War writings, including <title render="doublequote" actuate="onrequest" href="http://www.whitmanarchive.org/published/periodical/journalism/tei/per.00199.html" linktype="simple" show="new">Fifty-first New-York City Veterans,</title> <title render="italic">New-York Times</title>, <date normal="1864-10-29" type="publication" era="ce" calendar="gregorian">29 October 1864</date>; <title render="doublequote" actuate="onrequest" href="http://www.whitmanarchive.org/published/periodical/journalism/tei/per.00202.html" linktype="simple" show="new">Fifty-first New-York Volunteers,</title> <title render="italic">New-York Times</title>, <date normal="1865-01-24" type="publication" era="ce" calendar="gregorian">24 January 1865</date>; and <title render="doublequote" actuate="onrequest" href="http://www.whitmanarchive.org/published/periodical/journalism/tei/per.00205.html" linktype="simple" show="new">Return of a Brooklyn Veteran,</title> <title render="italic">Brooklyn Daily Union</title>, <date normal="1865-03-16" type="publication" era="ce" calendar="gregorian">16 March 1865</date>.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">1</container>
+                    <container type="folder">57</container>
+                    <unitid type="WWA">yal.00186</unitid>
+                    <unitid type="work">xxx.00856</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">[Jan 21, 1865, New York]</title>
+                    </unittitle>
+                    <unitdate normal="1865" era="ce" calendar="gregorian">1865</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00186.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00186.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Notes from Whitman's interview with E. F. Shephard regarding officers of the 51st New-York Volunteers. Portions of this manuscript were used in <title render="doublequote" actuate="onrequest" href="http://www.whitmanarchive.org/published/periodical/journalism/tei/per.00202.html" linktype="simple" show="new">The Fifty-first New-York Volunteers,</title> <title render="italic">New-York Times</title>, <date normal="1865-01-24" type="publication" era="ce" calendar="gregorian">24 January 1865</date>.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">1</container>
+                    <container type="folder">58</container>
+                    <unitid type="WWA">yal.00211</unitid>
+                    <unitid type="work">xxx.00857</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">[In acc't of 51st]</title>
+                    </unittitle>
+                    <unitdate normal="1864" era="ce" calendar="gregorian">1864</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00211.001_large.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00211.002_large.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A small scrap of paper with Whitman's notes on the 51st New-York Veterans, his account of which was published in the <date normal="1864-10-29" type="publication" era="ce" calendar="gregorian">29 October 1864</date> issue of the <title render="italic">New-York Times</title> as <title render="doublequote" actuate="onrequest" href="http://www.whitmanarchive.org/published/periodical/journalism/tei/per.00199.html" linktype="simple" show="new">Fifty-first New-York City Veterans.</title></p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">1</container>
+                    <container type="folder">58</container>
+                    <unitid type="WWA">yal.00212</unitid>
+                    <unitid type="work">xxx.00855</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">[Frank Butler was from Massachusetts]</title>
+                    </unittitle>
+                    <unitdate normal="1864/1865" era="ce" calendar="gregorian">1864&#8211;1865</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00212.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00212.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Whitman's notes on Frank Butler, an officer of the 51st New-York Veterans who died in action. Whitman wrote about Butler's death in <title render="doublequote" actuate="onrequest" href="http://www.whitmanarchive.org/published/periodical/journalism/tei/per.00212.html" linktype="simple" show="new">A Brooklyn Soldier, and a Noble One,</title> which appeared in the <date normal="1865-01-19" type="publication" era="ce" calendar="gregorian">19 January 1865</date> issue of the <title render="italic">Brooklyn Daily Eagle</title>.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">3</container>
+                    <container type="folder">110</container>
+                    <unitid type="WWA">yal.00317</unitid>
+                    <unitid type="work">xxx.00860</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">[It has been good fun]</title>
+                    </unittitle>
+                    <unitdate normal="1872" era="ce" calendar="gregorian">1872</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">3 leaves</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00317.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00317.002.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00317.003.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00317.004.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00317.005.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00317.006.jpg"/>                    
+                </did>
+                <scopecontent>
+                    <p>Draft of a prose piece which appeared in the <date normal="1872-10-17" type="publication" era="ce" calendar="gregorian">17 October 1872</date> issue of the Washington <title render="italic">Evening Star</title>, under the head <title render="doublequote">Washington News and Gossip.</title> For more on this manuscript and its contribution to this published work, see Martin G. Murray, <title render="doublequote" actuate="onrequest" href="http://www.whitmanarchive.org/criticism/wwqr/pdf/anc.02068.pdf" linktype="simple" show="new">Walt Whitman Laughs: An Uncollected Piece of Prose Journalism,</title> <title render="italic">Walt Whitman Quarterly Review</title> 30 (Winter 2013), 138-149.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">3</container>
+                    <container type="folder">116</container>
+                    <unitid type="WWA">yal.00324</unitid>
+                    <unitid type="work">xxx.00861</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">Real American Red Men</title>
+                    </unittitle>
+                    <unitdate normal="1870/1872" era="ce" calendar="gregorian">1870&#8211;1872</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">2 leaves</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00324.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00324.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Draft of a prose piece which appeared in the <date normal="1872-09-20" type="publication" era="ce" calendar="gregorian">20 September 1872</date> issue of the Washington <title render="italic">Evening Star</title>, under the head <title render="doublequote">Washington News and Gossip.</title> For more on this manuscript and its historical context, see Martin Murray, <title render="doublequote" actuate="onrequest" href="http://www.whitmanarchive.org/criticism/wwqr/pdf/anc.00815.pdf" linktype="simple" show="new">The Poet-Chief Greets the Sioux,</title> <title render="italic">Walt Whitman Quarterly Review</title> 17 (Summer 1999), 25-37.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="folder">119</container>
+                    <unitid type="WWA">yal.00328</unitid>
+                    <unitid type="work">xxx.00862</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">Washington as a Central Winter Residence</title>
+                    </unittitle>
+                    <unitdate normal="1871/1872" era="ce" calendar="gregorian">1871&#8211;1872</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">6 leaves</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00328.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00328.002.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00328.003.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00328.004.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00328.005.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00328.006.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00328.007.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00328.008.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00328.009.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00328.010.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00328.011.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00328.012.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This manuscript touches on the developing "distinctive metropolitan American Character" of Washington, including the city's status as a literary center. Portions of this manuscript were used in <title render="doublequote">Washington as a Central Winter Residence</title> and <title render="doublequote">Authors of Washington,</title> the latter of which was published in two installments. The first installment appeared in the <date normal="1872-01-06" type="publication" era="ce" calendar="gregorian">6 January 1872</date> issue of the Washington <title render="italic">Evening Star</title>, which also included <title render="doublequote">Washington as a Central Winter Residence.</title> The second installment was published in the <date normal="1872-01-09" type="publication" era="ce" calendar="gregorian">9 January 1872</date> issue of the same. For more details regarding how this manuscript contributed to these two pieces of journalism, see Martin G. Murray, <title render="doublequote" actuate="onrequest" href="http://www.whitmanarchive.org/criticism/wwqr/pdf/anc.00896.pdf" linktype="simple" show="new">Two Pieces of Uncollected Whitman Journalism: 'Washington as a Central Winter Residence' and 'The Authors of Washington,'</title> <title render="italic">Walt Whitman Quarterly Review</title> 20 (Winter/Spring 2003), 151-176.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">3</container>
+                    <container type="folder">126</container>
+                    <unitid type="WWA">yal.00335</unitid>
+                    <unitid type="work">xxx.00864</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">[Walt Whitman (from Holland and English]</title>
+                    </unittitle>
+                    <unitdate normal="1890/1891" era="ce" calendar="gregorian">1890&#8211;1891</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves"></extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00335.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00335.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Draft of a biographical entry on Whitman that appeared nearly verbatim in G. Washington Moon's <title render="italic">Men and Women of the Time: A Dictionary of Contemporaries</title> (Routledge 1891).</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">3</container>
+                    <container type="folder">138</container>
+                    <unitid type="WWA">yal.00342</unitid>
+                    <unitid type="work">xxx.00525</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">Putrid Politics</title>
+                    </unittitle>
+                    <unitdate normal="1873/1875" era="ce" calendar="gregorian">1873&#8211;1875</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00342.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00342.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A draft fragment composed on two scraps of paper, pasted together to form one leaf. In this manuscript, Whitman addresses the symptoms and causes of the Civil War. The ideas presented in this manuscript appeared in <title render="italic">Memoranda During the War</title> (<date normal="1875/1876" type="publication" era="ce" calendar="gregorian">1875&#8211;76</date>) before being revised and collected in <title render="italic">Specimen Days &#038; Collect</title> (<date normal="1882" type="publication" era="ce" calendar="gregorian">1882</date>) as <title render="doublequote">Origins of Attempted Secession: Not the whole matter, but some side facts worth conning to-day and any day.</title> On the verso of one scrap is a draft letter, addressed to A. R. Butts, dated <date normal="1873-12-29">29 December 1873</date>.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">3</container>
+                    <container type="folder">140</container>
+                    <unitid type="WWA">yal.00451</unitid>
+                    <unitid type="work">xxx.00865</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">O blare! blare!</title>
+                    </unittitle>
+                    <unitdate normal="1850/1856" era="ce" calendar="gregorian">1850&#8211;1856</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <genreform>poetry</genreform>
+                        <extent unit="leaves">1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00344.003.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00344.004.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A scrap of paper featuring heavily revised poetic lines. The verso contains a prose fragment, the bulk of which is struck through. The connection between these fragments and Whitman's published work is unclear.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">3</container>
+                    <container type="folder">140</container>
+                    <unitid type="WWA">yal.00452</unitid>
+                    <unitid type="work">xxx.00048</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">In the gymnasium</title>
+                    </unittitle>
+                    <unitdate normal="1850/1855" era="ce" calendar="gregorian">1850&#8211;1855</unitdate>
+                    <physdesc>
+                        <genreform>poetry</genreform>
+                        <extent unit="leaves">1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00344.005.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00344.006.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Two poetic fragments, written on the front and back of one leaf. The lines on one side, describing an imagined scene in a Greek gymnasium, are not identifiably related to any of Whitman's published works. Those on the other side were used in the poem ultimately titled <title render="doublequote">Song of Myself.</title> which was first published in <title render="italic">Leaves of Grass</title> (<date normal="1855" type="publication" era="ce" calendar="gregorian">1855</date>).</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">3</container>
+                    <container type="folder">125</container>
+                    <unitid type="WWA">yal.00334</unitid>
+                    <unitid type="work">xxx.00589</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">The Van Velsors</title>
+                    </unittitle>
+                    <unitdate normal="1873" era="ce" calendar="gregorian">1873</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                        <physfacet>printed</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00334.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00334.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Notes on the women of the Van Velsor family. Portions of this manuscript contributed to <title render="doublequote">Some Personal and Old-Age Jottings,</title> <title render="italic">Good-Bye My Fancy</title> (<date normal="1891" type="publication" era="ce" calendar="gregorian">1891</date>).</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">3</container>
+                    <container type="fodler">113</container>
+                    <unitid type="WWA">yal.00076</unitid>
+                    <unitid type="work">xxx.00529</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">[in Poetry of the Future]</title>
+                    </unittitle>
+                    <unitdate normal="1865/1875" era="ce" calendar="gregorian">1865&#8211;1875</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00076.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00076.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A partial draft of <title render="doublequote">Poetry of the Future,</title> first published in <title render="italic">North American Review</title> 132 (<date normal="1881-02" type="publication" era="ce" calendar="gregorian">February 1881</date>), 195&#8211;210. Whitman revised this essay and reprinted it as <title render="doublequote">Poetry To-day in America&#8212;Shakespere&#8212;the Future</title> in <title render="italic">Specimen Days &#038; Collect</title> (<date normal="1882/1883" type="publication" era="ce" calendar="gregorian">1882&#8211;83</date>).</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">1</container>
+                    <container type="folder">8</container>
+                    <unitid type="WWA">yal.00117</unitid>
+                    <unitid type="work">xxx.00528</unitid>
+                    <unitid type="work">xxx.00537</unitid>
+                    <unitid type="work">xxx.00805</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">[other than merely literary points]</title>
+                    </unittitle>
+                    <unitdate normal="1876" era="ce" calendar="gregorian">1876</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">2 leaves</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00117.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00117.002.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00117.004.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00117.003.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A heavily revised draft fragment, composed of several scraps of paper pasted together to form two leaves. The notes found on the first leaf were used in <title render="doublequote">Preface, 1876, to the two-volume Centennial Edition of L. of G. and 'Two Rivulets'</title> (<date normal="1876" type="publication" era="ce" calendar="gregorian">1876</date>). The prose fragment on the second leaf contributed to <title render="doublequote">Darwinism&#8212;(then Furthermore),</title> a short prose piece that orginally appeared in <title render="italic">Two Rivulets</title> (<date normal="1876" type="publication" era="ce" calendar="gregorian">1876</date>), but that was later incorporated into the <title render="doublequote">Notes Left Over</title> section of <title render="italic">Collect</title> in <title render="italic">Specimen Days &#038; Collect</title> (<date normal="1882/1883" type="publication" era="ce" calendar="gregorian">1882&#8211;83</date>). Both of these pieces were eventually included in <title render="italic">Complete Prose Works</title> (<date normal="1892" type="publication" era="ce" calendar="gregorian">1892</date>). Cancelled Civil War "reminiscences" on the Battle of First Fredericksburgh and the sinking of the U.S.S. <emph render="italic">Hatteras</emph> appear on the verso of the second leaf. Whitman wrote about both of these events in <title render="doublequote">'Tis But Ten Years Since (Third Paper),</title> <title render="italic">New York Weekly Graphic</title> (<date normal="1874-02-14">14 February 1874</date>).</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">1</container>
+                    <container type="folder">52</container>
+                    <unitid type="WWA">yal.00146</unitid>
+                    <unitid type="work">xxx.00866</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">Walt Whitman's Last&#8212;Good-Bye My Fancy</title>
+                    </unittitle>
+                    <unitdate normal="1891" era="ce" calendar="gregorian">1891</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00146.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00146.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A draft of <title render="doublequote">Walt Whitman's Last,</title> which appeared in <title render="italic">Lippincott's Magazine</title> (<date normal="1891-08" type="publication" era="ce" calendar="gregorian">August 1891</date>). On the verso of this manuscript is an incoming letter from F. A. Hilliard, dated <date normal="1891-05-25" era="ce" calendar="gregorian">25 May 1891</date>.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">3</container>
+                    <container type="folder">112</container>
+                    <unitid type="WWA">yal.00318</unitid>
+                    <unitid type="work">xxx.00558</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">An old man's rejoinder</title>
+                    </unittitle>
+                    <unitdate normal="1890" era="ce" calendar="gregorian">1890</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">9 leaves</extent>
+                        <physfacet>handwritten</physfacet>
+                        <physfacet>printed</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00318.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00318.002.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00318.003.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00318.004.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00318.005.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00318.006.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00318.007.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00318.008.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00318.009.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00318.010.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00318.011.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00318.012.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00318.013.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00318.014.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00318.015.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00318.016.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00318.017.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00318.018.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00318.019.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This manuscript is a draft of <title render="doublequote">An Old Man's Rejoinder,</title> first published in the <title render="italic">Critic</title> 17 (<date normal="1890-08-16" type="publication" era="ce" calendar="gregorian">16 August 1890</date>) before being reprinted in <title render="italic">Good-Bye My Fancy</title> (<date normal="1891" type="publication" era="ce" calendar="gregorian">1891</date>). Some of the versos include envelopes and letters to Whitman from A. Edward Newton, Charles A. Burkhardt, Charles B. Campbell.</p></scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">3</container>
+                    <container type="folder">115</container>
+                    <unitid type="WWA">yal.00322</unitid>
+                    <unitid type="work">xxx.00586</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">Copy of the OConnor preface</title>
+                    </unittitle>
+                    <unitdate normal="1890" era="ce" calendar="gregorian">1890</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">16 leaves</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.002.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.003.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.004.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.005.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.006.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.007.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.008.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.009.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.010.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.011.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.012.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.013.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.014.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.015.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.016.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.017.jpg"/>
+                    <dao linktype="simple" href="http://www.whtimanarchive.org/manuscripts/figures/yal.00322.018.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.019.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.020.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.021.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.022.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.023.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.024.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.025.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.026.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.027.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.028.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.029.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.030.jpg"/>
+                    <dao linktype="simple" href="http://www.whtimanarchive.org/manuscripts/figures/yal.00322.031.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00322.032.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A copy of Whitman's <title render="doublequote">Preface to a volume of essays and tales by Wm. JD. O'Connor, pub'd posthumously in 1891,</title> which appeared in <title render="italic">Good-Bye My Fancy</title> (<date normal="1891" type="publication" era="ce" calendar="gregorian">1891</date>), and in William Douglas O'Connor's <title render="italic">Three Tales</title> (<date normal="1892" type="publication" era="ce" calendar="gregorian">1892</date>).</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">3</container>
+                    <container type="folder">115</container>
+                    <unitid type="WWA">yal.00323</unitid>
+                    <unitid type="work">xxx.00586</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">Preface</title>
+                    </unittitle>
+                    <unitdate normal="1890" era="ce" calendar="gregorian">1890</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                        <physfacet>printed</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00323.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00323.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A corrected galley proof of Whitman's Preface to William Douglas O'Connor's <title render="italic">Three Tales</title> (<date normal="1892" type="publication" era="ce" calendar="gregorian">1892</date>). Whitman included this preface in <title render="italic">Good-Bye My Fancy</title> (<date normal="1891" type="publication" era="ce" calendar="gregorian">1891</date>) as <title render="doublequote">Preface to a volume of essays and tales by Wm. JD. O'Connor, pub'd posthumously in 1891.</title></p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">3</container>
+                    <container type="folder">118</container>
+                    <unitid type="WWA">yal.00327</unitid>
+                    <unitid type="work">xxx.00867</unitid>
+                    <unitid type="work">xxx.00267</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">Walt Whitman's poem to-day at Dartmouth College</title>
+                    </unittitle>
+                    <unitdate normal="1872" era="ce" calendar="gregorian">1872</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <genreform>poetry</genreform>
+                        <extent unit="leaves">7 leaves</extent>
+                        <physfacet>handwritten</physfacet>
+                        <physfacet>printed</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00327.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00327.002.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00327.003.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00327.004.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00327.005.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00327.006.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscritps/figures/yal.00327.007.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00327.008.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00327.009.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00327.010.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00327.011.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00327.012.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00327.013.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00327.014.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A draft of <title render="doublequote">Walt Whitman's Poem Today at Dartmouth College,</title> an essay announcing the commencement poem Whitman delivered at Dartmouth <date normal="1872-06-26">June 26, 1872</date>. This piece was published in the <date normal="1872-06-26" type="publication" era="ce" calendar="gregorian">26 June 1872</date> issue of the <title render="italic">Washington Evening Star</title> and includes excerpts from Whitman's poem, <title render="doublequote">Thou Mother with Thy Equal Brood,</title> originally published in the <title render="italic">New York Herald</title> <date normal="1872-06-26" type="publication" era="ce" calendar="gregorian">26 June 1872</date> under the title <title render="doublequote">As a Strong Bird on Pinions Free.</title> This poem was later published with seven other poems in a pamphlet, <title render="italic">As a Strong Bird on Pinions Free</title> (<date normal="1872" type="publication" era="ce" calendar="gregorian">1872</date>). It was also included in a supplement bound with <title render="italic">Two Rivulets</title> (<date normal="1876" type="publication" era="ce" calendar="gregorian">1876</date>). Whitman eventually changed the title to <title render="doublequote">Thou Mother with Thy Equal Brood,</title> added a new opening stanza, made additional revisions, and incorporated the poem into <title render="italic">Leaves of Grass</title> (<date normal="1881/1882" type="publication" era="ce" calendar="gregorian">1881&#8211;82</date>).</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">3</container>
+                    <container type="folder">122</container>
+                    <unitid type="WWA">yal.00331</unitid>
+                    <unitid type="work">xxx.00826</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">Convalescent hours</title>
+                    </unittitle>
+                    <unitdate normal="1877" era="ce" calendar="gregorian">1877</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00331.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00331.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This manuscript is a draft of the first paragraph of <title render="doublequote">A Sun-Bath&#8212;Nakedness,</title> published in <title render="italic">Specimen Days &#038; Collect</title> (<date normal="1882" type="publication" era="ce" calendar="gregorian">1882</date>).</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">3</container>
+                    <container type="folder">129</container>
+                    <unitid type="WWA">yal.00338</unitid>
+                    <unitid type="work">xxx.00579</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">At the Complimentary Dinner, Camden</title>
+                    </unittitle>
+                    <unitdate normal="1889" era="ce" calendar="gregorian">1889</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                        <physfacet>printed</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00338.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00338.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A corrected proof of <title render="doublequote">To Be Present Only,</title> Whitman's response to an invitation to give an address at the complimentary dinner held in honor of his 70th birthday in Camden on <date normal="1889-05-31">31 May 1889</date>. Horace Traubel published Whitman's response as <title render="doublequote">At the Complimentary Dinner, Camden, New Jersey, <date normal="1889-05-31" era="ce" calendar="gregorian">May 31, 1889</date></title> in <title render="italic">Camden's Compliment to Walt Whitman, May 31, 1889: Notes, Addresses, Letters, Telegrams</title> (Philadelphia: David McKay, <date normal="1889" type="publication" era="ce" calendar="gregorian">1889</date>). Whitman later collected this response in <title render="italic">Complete Prose</title> (<date normal="1892" type="publication" era="ce" calendar="gregorian">1892</date>), under the title <title render="doublequote">To Be Present Only.</title></p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">3</container>
+                    <container type="folder">129</container>
+                    <unitid type="WWA">yal.00454</unitid>
+                    <unitid type="work">xxx.00579</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">At the Complimentary Dinner, Camden</title>
+                    </unittitle>
+                    <unitdate normal="1889" era="ce" calendar="gregorian">1889</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                        <physfacet>printed</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00338.003.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00338.004.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A corrected proof of <title render="doublequote">To Be Present Only,</title> Whitman's response to an invitation to give an address at the complimentary dinner held in honor of his 70th birthday in Camden on <date normal="1889-05-31">31 May 1889</date>. Horace Traubel published Whitman's response as <title render="doublequote">At the Complimentary Dinner, Camden, New Jersey, May 31, 1889</title> in <title render="italic">Camden's Compliment to Walt Whitman, May 31, 1889: Notes, Addresses, Letters, Telegrams</title> (Philadelphia: David McKay, 1889). Whitman later collected this response in <title render="italic">Complete Prose</title> (<date normal="1892" type="publication" era="ce" calendar="gregorian">1892</date>), under the title <title render="doublequote">To Be Present Only.</title></p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">3</container>
+                    <container type="folder">129</container>
+                    <unitid type="WWA">yal.00455</unitid>
+                    <unitid type="work">xxx.00579</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">At the Complimentary Dinner, Camden</title>
+                    </unittitle>
+                    <unitdate normal="1889" era="ce" calendar="gregorian">1889</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                        <physfacet>printed</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00338.005.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00338.006.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A corrected proof of <title render="doublequote">To Be Present Only,</title> Whitman's response to an invitation to give an address at the complimentary dinner held in honor of his 70th birthday in Camden on <date normal="1889-05-31">31 May 1889</date>. Horace Traubel published Whitman's response as <title render="doublequote">At the Complimentary Dinner, Camden, New Jersey, May 31, 1889</title> in <title render="italic">Camden's Compliment to Walt Whitman, May 31, 1889: Notes, Addresses, Letters, Telegrams</title> (Philadelphia: David McKay, 1889). Whitman later collected this response in <title render="italic">Complete Prose</title> (<date normal="1892" type="publication" era="ce" calendar="gregorian">1892</date>), under the title <title render="doublequote">To Be Present Only.</title></p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">3</container>
+                    <container type="folder">153</container>
+                    <unitid type="WWA">yal.00080</unitid>                    
+                    <unitid type="work">xxx.00257</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">Italian Music in Dakota</title>
+                    </unittitle>
+                    <unitdate normal="1880/1882" era="ce" calendar="gregorian">about 1881</unitdate>
+                    <physdesc>
+                        <genreform>poetry</genreform>
+                        <extent unit="leaves">1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                        <physfacet>printed</physfacet> 
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00080.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00349.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Corrected galley proof of the poem <title render="doublequote">Italian Music in Dakota,</title> first published in <title render="italic">Leaves of Grass</title> (<date normal="1881/1882" type="publication" era="ce" calendar="gregorian">1881&#8211;82</date>).</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">3</container>
+                    <container type="folder">139</container>
+                    <unitid type="WWA">yal.00343</unitid>
+                    <unitid type="work">xxx.00483</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">Written Impromptu in an album</title>
+                    </unittitle>
+                    <unitdate normal="1883" era="ce" calendar="gregorian">1883</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00343.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00343.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Notes, dated <date normal="1883-12-26">26 December 1883</date>, which Whitman wrote to commemorate "these merry Christmas days and nights." The contents of this manuscript were used in <title render="italic">Complete Prose</title> (<date normal="1892" type="publication" era="ce" calendar="gregorian">1892</date>), under the title <title render="doublequote">Written Impromptu in an Album.</title></p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">3</container>
+                    <container type="folder">167</container>
+                    <unitid type="WWA">yal.00353</unitid>
+                    <unitid type="work">xxx.00866</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">Walt Whitman's Last</title>
+                    </unittitle>
+                    <unitdate normal="1891" era="ce" calendar="gregorian">1891</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                        <physfacet>printed</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00353.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00353.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A corrected proof of <title render="doublequote">Walt Whitman's Last,</title> a short treatise on the theory behind <title render="italic">Leaves of Grass</title>, which includes a plug for Whitman's latest work, <title render="italic">Good-Bye My Fancy</title>. This piece of prose appeared in the <date normal="1891-08" type="publication" era="ce" calendar="gregorian">August 1891</date> issue of <title render="italic">Lippincott's Magazine</title>.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">10</container>
+                    <container type="folder">222</container>
+                    <unitid type="WWA">yal.00382</unitid>
+                    <unitid type="work">xxx.00589</unitid>
+                    <unitid type="work">xxx.00874</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">Whitman, Walt, poet, was born May 31</title>
+                    </unittitle>
+                    <unitdate normal="1888" era="ce" calendar="gregorian">1888</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">2 leaves</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00382.003.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00382.004.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00382.005.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00382.006.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Draft notes towards an autobiographical essay. Portions of this manuscript were used in <title render="doublequote">Autobiographic Note. From an old 'remembrance copy,'</title> in <title render="italic">Camden's Compliment to Walt Whitman, May 31, 1889: Notes, Addresses, Letters, Telegrams</title> (Philadelphia: David McKay, <date normal="1889" type="publication" era="ce" calendar="gregorian">1889</date>). Portions of this manuscript also appeared in <title render="doublequote">Some Personal and Old-Age Jottings,</title> first published in <title render="italic">Good-Bye My Fancy</title> (<date normal="1891" type="publication" era="ce" calendar="gregorian">1891</date>).</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">3</container>
+                    <container type="folder">140</container>
+                    <unitid type="WWA">yal.00422</unitid>
+                    <unitid type="work">xxx.00530</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">I think the principal obstacle</title>
+                    </unittitle>
+                    <unitdate normal="1882" era="ce" calendar="gregorian">1882</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                        <physfacet>printed</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00422.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00422.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Whitman's notes on the "treatment of sex" as the chief obstacle to the advancement of women's rights, pasted to a backing sheet with a clipping of <title render="doublequote">What Women Can Do</title> from the <title render="italic">New York Herald</title> <date normal="1882-04-17" era="ce" calendar="gregorian">17 April 1882</date>. Portions of this manuscript were revised and used in <title render="doublequote">A Memorandum at a Venture,</title> first published in the <date normal="1882-06" type="publication" era="ce" calendar="gregorian">June 1882</date> issue of the <title render="italic">North American Review</title>. This essay was reprinted in <title render="italic">Specimen Days</title> (<date normal="1882" type="publication" era="ce" calendar="gregorian">1882</date>).</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">3</container>
+                    <container type="folder">140</container>
+                    <unitid type="WWA">yal.00441</unitid>
+                    <unitid type="work">xxx.00430</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">Silence</title>
+                    </unittitle>
+                    <unitdate normal="1850/1865" era="ce" calendar="gregorian">1850&#8211;1865</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <genreform>poetry</genreform>
+                        <extent unit="leaves">1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal_af.00010.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal_af.00011.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Two manuscript scraps, pasted together to make one leaf. The top scrap is written in a looser hand, perhaps that of the <date normal="1860/1869" era="ce" calendar="gregorian">1860</date>s. The bottom scrap is composed in a neat and small hand, perhaps of the <date normal="1850/1859">1850</date>s. These two scraps are largely unrelated, perhaps the only connection between the two being the theme of silence. The relationship of the first scrap to Whitman's published work is unclear. However, portions of the second scrap are related to <title render="doublequote">Great Are the Myths,</title> first published, untitled, in the <date normal="1855" type="publication" era="ce" calendar="gregorian">1855</date> edition of <title render="italic">Leaves of Grass</title> as the concluding poem, and again in the <date normal="1856" type="publication" era="ce" calendar="gregorian">1856</date> edition as <title render="doublequote">Poem of a Few Greatnesses.</title> The poem went through many revisions through the different editions of <title render="italic">Leaves of Grass,</title> then was permanently dropped in <date normal="1881" type="publication" era="ce" calendar="gregorian">1881</date>, except the two couplets that became the poem <title render="doublequote">Youth, Day, Old Age, and Night.</title> On the verso of this manuscript is the cancelled prose note: "do nothing but lose from the spread of slavery;&#8212;can get nothing but gain from the spread of free institutions.&#8212;"</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">3</container>
+                    <container type="folder">130</container>
+                    <unitid type="WWA">yal.00339</unitid>
+                    <unitid type="work">xxx.00531</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">How often since that dark and chilly Saturday</title>
+                    </unittitle>
+                    <unitdate normal="1880/1882" era="ce" calendar="gregorian">1880&#8211;1882</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">3 leaves</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00339.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00339.002.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00339.003.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00339.004.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00339.005.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/yal.00339.006.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A late draft of <title render="doublequote">Death of Abraham Lincoln. Lecture deliver'd in New York, <date normal="1879-04-14" era="ce" calendar="gregorian">April 14, 1879</date>&#8212;in Philadelphia, '<date normal="1880" era="ce" calendar="gregorian">80</date>&#8212;in Boston, '<date normal="1881" era="ce" calendar="gregorian">81</date>,</title> published in <title render="italic">Specimen Days</title> (<date normal="1882" type="publication" era="ce" calendar="gregorian">1882</date>). Though Whitman delivered this lecture for the first time in <date normal="1879-04" era="ce" calendar="gregorian">April 1879</date>, based on the letters which comprise the versos of this manuscript, this draft was not composed until some time after <date normal="1880-03" era="ce" calendar="gregorian">March 1880</date>.</p>
+                </scopecontent>
+            </c01>            
+        </dsc>
+    </archdesc>
+</ead>

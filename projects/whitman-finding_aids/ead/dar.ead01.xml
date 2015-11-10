@@ -1,0 +1,163 @@
+<!-- <?xml-stylesheet href="http://www.whitmanarchive.org/servlets/xmlfindaids/shared/styles/eadwhit.xsl" type="text/xsl"?> -->
+<!DOCTYPE ead PUBLIC '+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN' "ead.dtd">
+
+
+<ead audience="external" relatedencoding="MARC21">
+    <eadheader audience="internal"
+        langencoding="iso639-2b"
+        scriptencoding="iso15924"
+        relatedencoding="marc21"
+        repositoryencoding="iso15511"
+        countryencoding="iso3166-1"
+        dateencoding="iso8601"
+        findaidstatus="edited-full-draft"
+        id="a0">
+        <eadid countrycode="us" mainagencycode="NbU" identifier="dar.ead01">dar.ead01</eadid>
+        <filedesc>
+            <titlestmt>
+                <titleproper encodinganalog="245$a">Catalog of a Walt Whitman Poetry Manuscript in
+                    the The Rauner Special Collections Library, Dartmouth College</titleproper>
+                <author>Original records created by The Rauner Special Collections Library,
+                    Dartmouth College; revised and expanded by the <emph render="italic">Walt
+                        Whitman Archive</emph> and the University of Nebraska-Lincoln Libraries. </author>
+                <sponsor>Encoded Archival Description completed with the assistance of the Gladys
+                    Krieble Delmas Foundation, the University of Nebraska Research Council, the
+                    Institute for Museum and Library Services, and the National Endowment for the Humanities.</sponsor>
+            </titlestmt>
+            <publicationstmt>
+                <publisher encodinganalog="260$b">Published by <emph render="italic">The Walt
+                    Whitman Archive</emph> in collaboration with the University of
+                    Nebraska-Lincoln Libraries. </publisher>
+                <date encodinganalog="260$c" era="ce" calendar="gregorian">2003</date>
+                <address>
+               <addressline>29 Love Library </addressline>
+               <addressline>P.O. Box 884100</addressline>
+               <addressline>University of Nebraska-Lincoln</addressline>
+               <addressline>Lincoln, NE 68508</addressline>
+            </address>
+            </publicationstmt>
+        </filedesc>
+        <profiledesc>
+            <creation>Machine-readable finding aid created by Andrew Jewell, <emph render="italic">The Walt Whitman Archive</emph>, and Mary Ellen Ducey, University of
+                Nebraska-Lincoln Libraries; revised by Brett Barney, <emph render="italic">The Walt
+                    Whitman Archive</emph>. <date normal="2006" era="ce" calendar="gregorian">2006</date>; revised by Timothy Jackson <emph render="italic">The Walt Whitman
+                        Archive</emph>.<date era="ce" calendar="gregorian">2010</date>; revised by Kevin McMullen <emph render="italic">The Walt Whitman Archive</emph>. <date era="ce" calendar="gregorian">2015</date>
+            </creation>
+            <langusage>Finding aid written in <language encodinganalog="546" langcode="eng">English</language>.</langusage>
+        </profiledesc>
+    </eadheader>
+    <frontmatter>
+        <titlepage id="tp001">
+            <titleproper encodinganalog="245$a">Catalog of a Walt Whitman Poetry Manuscript in the
+                The Rauner Special Collections Library, Dartmouth College</titleproper>
+            <publisher>Published by <emph render="italic">The Walt Whitman Archive</emph> in
+                collaboration with the University of Nebraska-Lincoln Libraries. </publisher>
+            <date era="ce" calendar="gregorian">2003</date>
+        </titlepage>
+    </frontmatter>
+    <archdesc audience="external"
+        level="otherlevel"
+        type="inventory"
+        relatedencoding="marc21">
+        <did id="al">
+            <unittitle audience="external" label="Title:" encodinganalog="245$a">A Walt Whitman Poetry
+                Manuscript in the The Rauner Special Collections Library, Dartmouth
+                College</unittitle>
+            <unitid audience="external"
+                label="Collection Number:"
+                encodinganalog="099"
+                repositorycode="NhD"
+                countrycode="us">N/A</unitid>
+            <origination audience="external" label="Creator:">
+                <persname encodinganalog="100">Whitman, Walt, 1819-1892</persname>
+            </origination>
+            <physdesc>
+                <genreform>poetry</genreform>
+                <genreform>Manuscripts</genreform>
+            </physdesc>
+            <repository encodinganalog="852$a" label="Repository:">
+                <corpname encodinganalog="852$a">The Rauner Special Collections Library</corpname>
+                <address>
+               <addressline>The Rauner Special Collections Library</addressline>
+               <addressline>Dartmouth College</addressline>
+               <addressline>6065 Webster Hall</addressline>
+               <addressline>Hanover, New Hampshire 03755-3525 </addressline>
+               <addressline/>
+            </address>
+            </repository>
+            <abstract>This catalog was created from the original catalog record
+                obtained by <emph render="italic">The Walt Whitman Archive</emph>. The original
+                manuscript and catalog record are held at The Rauner Special Collections Library,
+                Dartmouth College.</abstract>
+        </did>
+        <descgrp id="ds001" type="admininfo">
+            <accessrestrict audience="external" encodinganalog="506" id="a14">
+                <head>Restrictions on Original Materials:</head>
+                <p>Please consult with repository.</p>
+            </accessrestrict>
+            <!-- <userestrict encodinganalog="540" id="a15">
+<head>Copyright:</head><p>The use of Archives and Special Collections material is governed by the U.S. Copyright Law (title 17 U.S. Code). </p> </userestrict>  -->
+            <prefercite encodinganalog="524" id="a18">
+                <head>Preferred Citation:</head>
+                <p>To identify this catalog as a source, see the <emph render="italic">Archive's
+                </emph>
+                    <extref href="http://www.whitmanarchive.org/about/conditions.html"
+                        linktype="simple">"Conditions of Use"</extref> page.</p>
+            </prefercite>
+            <!-- <altformavail type="paper" encodinganalog="530" id="a17">
+<head>Alternative Format:</head><p> Original Documents held at the <corpname>The Rauner Special Collections Library, Dartmouth College</corpname></p> </altformavail>  -->
+        </descgrp>
+        <scopecontent id="sc001">
+            <head>Scope and Content</head>
+            <p>The Rauner Special Collections Library, Dartmouth College, holds one Whitman poetry
+                manuscript, described below.</p>
+        </scopecontent>
+        <bioghist id="bh001">
+            <head>Biographical Information</head>
+            <p/>
+        </bioghist>
+        <controlaccess id="ca001">
+            <head>Subjects</head>
+            <persname encodinganalog="600">Whitman, Walt, 1819-1892</persname>
+            <subject encodinganalog="650">Whitman, Walt, 1819-1892--Manuscripts</subject>
+            <subject encodinganalog="650">Poets, American--19th century</subject>
+        </controlaccess>
+        <dsc id="dc001" type="in-depth">
+            <head>Item List</head>
+            <c01 level="item">
+                <did>
+                    <unitid type="WWA">dar.00001</unitid>
+                    <unitid type="work">xxx.00353</unitid>
+                    <unittitle>
+                        <title render="doublequote" linktype="simple" type="WWA">[The Epos of a
+                            Life]</title>
+                    </unittitle>
+                    <unitdate normal="1862/1872" era="ce" calendar="gregorian">about 1867</unitdate>
+                    <physdesc>
+                        <genreform>poetry</genreform>
+                        <extent unit="leaves">2
+                            leaves</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple"
+                        href="http://www.whitmanarchive.org/manuscripts/figures/dar.00001.001.jpg"/>
+                    <dao linktype="simple"
+                        href="http://www.whitmanarchive.org/manuscripts/figures/dar.00001.003.jpg"/>
+                    <dao linktype="simple"
+                        href="http://www.whitmanarchive.org/manuscripts/figures/dar.00001.002.jpg"/>                   
+                    <dao linktype="simple"
+                        href="http://www.whitmanarchive.org/manuscripts/figures/dar.00001.004.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This draft is related to <title render="doublequote" linktype="simple">Inscription,</title> the prefatory poem of the <date type="publication" era="ce" calendar="gregorian">1867</date> edition of <title render="italic" linktype="simple">Leaves of Grass</title>, which was
+                        later revised as <title render="doublequote" linktype="simple">Small the
+                            Theme of My Chant.</title> The smaller leaf, bearing a revised first
+                        line, was formerly pasted to the larger leaf. Other manuscripts held at the
+                        Library of Congress (Charles E. Feinberg Collection) and the New York Public
+                        Library (Oscar Lion Collection) open with the same revised line, though the
+                        published poem does not.</p>
+                </scopecontent>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TEI.2 PUBLIC "-/UVA::IATH/DTD whitman.dtd (Whitman Archive)/EN" 
+"whitman.dtd"
+[
+<!ENTITY respStmt PUBLIC "-/UVA::IATH/TEXT (Whitman Archive Responsibility Statement)/EN"
+ "respStmt.xml">
+<!ENTITY pubStmt PUBLIC "-/UVA::IATH/TEXT (Whitman Archive Publication Statement)/EN"
+ "pubStmt.xml">
+]>
+<TEI.2 id="xxx.00609" type="work">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="a" type="main">Scantlings</title>
+            <title level="a" type="uniform">Scantlings</title>
+            &respStmt;
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2006</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>xxx.00609</idno>
+            &pubStmt;
+         </publicationStmt>
+         <sourceDesc>
+            <p>Original</p>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textClass>
+            <keywords>
+               <term type="genreForm">Poetry</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text type="ancillary">
+      <body>
+         <p><!--Commentary--></p>
+      </body>
+   </text>
+</TEI.2>

@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- <?xml-stylesheet href="http://www.whitmanarchive.org/servlets/xmlfindaids/shared/styles/eadwhit.xsl" type="text/xsl"?> -->
+	
+		<!DOCTYPE ead PUBLIC '+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN' "ead.dtd">
+	
+<ead audience="external" relatedencoding="MARC21">
+    <eadheader audience="internal" langencoding="iso639-2b" scriptencoding="iso15924"
+        relatedencoding="marc21" repositoryencoding="iso15511" countryencoding="iso3166-1"
+        dateencoding="iso8601" findaidstatus="edited-full-draft" id="a0">
+        <eadid countrycode="us" mainagencycode="NbU" identifier="owu.ead01">owu.ead01</eadid>
+        <filedesc>
+            <titlestmt>
+                <titleproper encodinganalog="245$a">Catalog of a Walt Whitman Poetry Manuscript in
+                    The Bayley-Whitman Collection, Ohio Wesleyan University, Delaware,
+                    Ohio</titleproper>
+                <author>Original records created by the Bayley-Whitman Collection, Ohio Wesleyan University and expanded by the <emph render="italic">Walt Whitman Archive</emph> based upon information from the repository.</author>
+                <sponsor>Encoded Archival Description completed with the assistance of the National Endowment for the Humanities.</sponsor>
+            </titlestmt>
+            <publicationstmt>
+                <publisher encodinganalog="260$b">Published by <emph render="italic">The Walt
+                        Whitman Archive</emph> in collaboration with the University of
+                    Nebraska-Lincoln Libraries. </publisher>
+                <date encodinganalog="260$c" era="ce" calendar="gregorian">2014</date>
+                <address><addressline>29 Love Library </addressline><addressline>P.O. Box 884100</addressline><addressline>University of Nebraska-Lincoln</addressline><addressline>Lincoln, NE 68508</addressline></address>
+            </publicationstmt>
+        </filedesc>
+        <profiledesc>
+            <creation>Machine-readable finding aid created by Brett Barney, <emph render="italic">The Walt
+                Whitman Archive</emph>. <date normal="2014" era="ce" calendar="gregorian">2014</date>, <date normal="2014" era="ce" calendar="gregorian"
+                >2014</date>. Expanded by Caterina Bernardini, <emph render="italic">The Walt Whitman Archive</emph>, <date normal="2014" era="ce" calendar="gregorian">2014</date>.</creation>
+            <langusage>Finding aid written in <language encodinganalog="546" langcode="eng"
+                    >English</language>.</langusage>
+        </profiledesc>
+    </eadheader>
+    <frontmatter>
+        <titlepage id="tp001">
+            <titleproper encodinganalog="245$a">Catalog of a Walt Whitman Poetry Manuscript in The
+                Bayley-Whitman Collection, Ohio Wesleyan University</titleproper>
+            <publisher>Published by <emph render="italic">The Walt Whitman Archive</emph> in
+                collaboration with the University of Nebraska-Lincoln Libraries. </publisher>
+            <date era="ce" calendar="gregorian">2014</date>
+        </titlepage>
+    </frontmatter>
+    <archdesc audience="external" level="otherlevel" type="inventory" relatedencoding="marc21">
+        <did id="al">
+            <unittitle audience="external" label="Title:" encodinganalog="245$a">A Walt Whitman Poetry
+                Manuscript in The Bayley-Whitman Collection, Ohio Wesleyan University, Delaware,
+                Ohio</unittitle>
+            <unitid audience="external" label="Collection Number:" encodinganalog="099"
+                repositorycode="ODW" countrycode="us">N/A</unitid>
+            <origination audience="external" label="Creator:">
+                <persname encodinganalog="100">Whitman, Walt, 1819-1892</persname></origination>
+            <physdesc>
+                <genreform>poetry</genreform>
+                <genreform>prose</genreform>
+                <genreform>manuscripts</genreform>
+            </physdesc>
+            <repository encodinganalog="852$a" label="Repository:"><corpname encodinganalog="852$a"
+                    >L. A. Beeghly Library</corpname>
+                <address><addressline>Ohio Wesleyan University</addressline><addressline>43 Rowland Ave.</addressline><addressline>Delaware, Ohio  43015</addressline></address></repository>
+            <abstract>This catalog was created from the original finding aid and a
+                photocopy obtained by <emph render="italic">The Walt Whitman Archive</emph>. The
+                original papers and finding aid are held at Ohio Wesleyan University.</abstract>
+        </did>
+        <descgrp id="ds001" type="admininfo">
+            <accessrestrict audience="external" encodinganalog="506" id="a14">
+                <head>Restrictions on Original Materials:</head>
+                <p>Please consult with repository.</p>
+            </accessrestrict>
+            <!-- <userestrict encodinganalog="540" id="a15">
+<head>Copyright:</head><p>The use of Archives and Special Collections material is governed by the U.S. Copyright Law (title 17 U.S. Code).</p>
+</userestrict> -->
+            <prefercite encodinganalog="524" id="a18">
+                <head>Preferred Citation:</head>
+                <p>To identify this catalog as a source, see the <emph render="italic">Archive's
+                        </emph><extref href="http://www.whitmanarchive.org/about/conditions.html"
+                        linktype="simple">"Conditions of Use"</extref> page.</p>
+            </prefercite>
+            <!-- <altformavail type="paper" encodinganalog="530" id="a17">
+<head>Alternative Format:</head><p> Original Documents held at <corpname>Ohio Wesleyan University</corpname></p></altformavail> -->
+        </descgrp>
+        <scopecontent id="sc001">
+            <head>Scope and Content</head>
+            <p>The Bayley-Whitman Collection holds a wide variety of Whitman items, including
+                correspondence; manuscripts; facsimiles and photocopies of manuscripts;
+                transcriptions; artifacts; books and articles by and about Whitman; newspaper
+                clippings; bibliographies; dealer catalogs; newsletters; papers from the Walt
+                Whitman Fellowship, the Walt Whitman Society, and the Walt Whitman Foundation; and
+                many other miscellaneous items. In this catalog, only the documents
+                deemed poetry manuscripts are described at the item level.</p>
+        </scopecontent>
+        <bioghist id="bh001">
+            <head>Biographical Information</head>
+            <p/>
+        </bioghist>
+        <controlaccess id="ca001">
+            <head>Subjects</head>
+            <persname encodinganalog="600">Whitman, Walt, 1819-1892</persname>
+            <subject encodinganalog="650">Whitman, Walt, 1819-1892--Manuscripts</subject>
+            <subject encodinganalog="650">Poets, American--19th century</subject>
+        </controlaccess>
+        <dsc id="dc001" type="in-depth">
+            <head>Item List</head>
+          
+
+            
+            
+            <!--
+ <c01 level="series">
+ <did>
+<container type="box">1-3</container>
+  <unittitle>William D. Bayley</unittitle></did>
+
+
+<c02 level="subseries">
+ <did>
+  <container type="box">1-2</container>
+  <container type="folder">1-13, 1-7</container>
+  <unittitle>Whitman Collection Information</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">3</container>
+  <container type="folder">1-3</container>
+  <unittitle>Bayley's Collecting Interests Other than Whitman</unittitle>
+</did>
+</c02>
+</c01>
+
+<c01 level="series">
+ <did><container type="box">3-4</container>
+  <unittitle>Original Manuscripts and Biographical</unittitle>
+  </did>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">3</container>
+  <container type="folder">4-11</container>
+  <unittitle>Whitman Correspondence</unittitle>
+ </did>
+</c02>
+<c02 level="subseries">
+ <did>
+  <container type="box">3</container>
+  <container type="folder">12-13</container>
+  <unittitle>Whitman Manuscripts</unittitle>
+ </did>-->
+            <c01 level="item">
+                <did>
+                    <container type="box">3</container>
+                    <container type="folder">12</container>
+                    <unitid type="WWA">owu.00001</unitid>
+                    <unitid type="work">xxx.00622</unitid>
+                    <unittitle><title render="doublequote">[A procession without
+                            halt]</title></unittitle>
+                    <unitdate normal="1819/1892" era="ce" calendar="gregorian">undated</unitdate>
+                    <physdesc>
+                        <genreform>poetry</genreform>
+                        <extent unit="leaves">1
+                            leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                        <dao linktype="simple"
+                            href="http://www.whitmanarchive.org/manuscripts/figures/owu.00001.001.jpg"
+                            />
+                        <dao linktype="simple"
+                            href="http://www.whitmanarchive.org/manuscripts/figures/owu.00001.002.jpg"
+                        />
+                </did>
+                <scopecontent>
+                    <p>A draft of a poem beginning "A procession without halt." The relation of this
+                        poem to Whitman's published work is unknown. </p>
+                </scopecontent>
+            </c01>
+            
+            <!-- SLB: None of the following appear to be poetry MS
+
+<c02 level="subseries">
+ <did>
+  <container type="box">3-4</container>
+  <container type="folder">14; 1</container>
+  <unittitle>Miscellaneous Letters of Friends or of Whitman Significance</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">4</container>
+  <container type="folder">2-6</container>
+  <unittitle><persname normal="Carpenter, Edward, 1844-1929" source="lcnaf" encodinganalog="600$a">Edward Carpenter</persname></unittitle>
+ </did>
+</c02>
+
+
+<c02 level="subseries">
+ <did>
+  <container type="box">4</container>
+  <container type="folder">7-11</container>
+  <unittitle><persname normal="Oconnor, William Douglas, 1832-1889" source="lcnaf" encodinganalog="600$a">William D. O'Connor</persname></unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">4</container>
+  <container type="folder">12-14</container>
+  <unittitle><persname normal="Bucke, Richard Maurice, 1837-1902" source="lcnaf" encodinganalog="600$a">Richard Maurice Bucke</persname></unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">4</container>
+  <container type="folder">15</container>
+  <unittitle><persname normal="Traubel, Horace, 1858-1919" source="lcnaf" encodinganalog="600$a">Horace Traubel</persname> and <title render="italic">The Conservator</title></unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">4</container>
+  <container type="folder">16-17</container>
+  <unittitle><persname normal="Johnston, Bertha" source="lcnaf" encodinganalog="600$a">Miss Bertha Johnston</persname></unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">4</container>
+  <container type="folder">18</container>
+  <unittitle><persname normal="Fern, Fanny, 1811-1872" source="lcnaf" encodinganalog="600$a">Fanny Fern</persname>, <persname normal="Parton, James, 1822-1891" source="lcnaf" encodinganalog="600$a">James Parton</persname>, and Walt Whitman</unittitle>
+ </did>
+</c02>
+</c01>
+
+<c01 level="series">
+ <did>
+<container type="box">4</container>
+  <unittitle>Original Manuscripts</unittitle>
+  </did>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">4</container>
+  <container type="folder">19-20</container>
+  <unittitle>Walt Whitman and <persname normal="Lincoln, Abraham, 1819-1865" source="lcnaf" encodinganalog="600$a">Abraham Lincoln</persname></unittitle>
+ </did>
+</c02>
+</c01>
+
+<c01 level="series">
+ <did>
+<container type="box">5-6</container>
+  <unittitle>Facsimiles and Photocopies</unittitle>
+  </did>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">5</container>
+  <container type="folder">1-3</container>
+  <unittitle>Correspondence from William D. Bayley Collection</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">5</container>
+  <container type="folder">4-6</container>
+  <unittitle>Correspondence From Other Collections</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">5</container>
+  <container type="folder">7</container>
+  <unittitle>Inscriptions</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">6</container>
+  <container type="folder">1-2</container>
+  <unittitle>Manuscripts</unittitle>
+ </did>
+</c02>
+</c01>
+
+<c01 level="series">
+ <did><container type="box">6</container>
+  <unittitle>Transcriptions</unittitle>
+  </did>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">6</container>
+  <container type="folder">3</container>
+  <unittitle>Transcriptions of Letters and Manuscripts Owned by <corpname>Rosenbach Company</corpname></unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">6</container>
+  <container type="folder">4</container>
+  <unittitle>Transcriptions of Letters in Other Collections</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">6</container>
+  <container type="folder">5</container>
+  <unittitle>Transcriptions of Works</unittitle>
+ </did>
+</c02>
+</c01>
+
+<c01 level="series">
+ <did><container type="box">6</container>
+  <unittitle>Artifacts</unittitle>
+  </did>
+</c01>
+
+<c01 level="series">
+ <did><container type="box">6-7</container>
+  <unittitle>Whitman's Writings</unittitle>
+  </did>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">6-7</container>
+  <container type="folder">7-10; 1</container>
+  <unittitle>General</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">7</container>
+  <container type="folder">2</container>
+  <unittitle>Translations</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">7</container>
+  <container type="folder">3</container>
+  <unittitle>Book Jackets</unittitle>
+ </did>
+</c02>
+</c01>
+
+<c01 level="series">
+ <did><container type="box">7</container>
+  <unittitle>Broadsides and Decorative Illustrations</unittitle>
+  </did>
+</c01>
+
+<c01 level="series">
+ <did><container type="box">7-8</container>
+  <unittitle>Clippings</unittitle>
+  </did>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">7</container>
+  <container type="folder">5</container>
+  <unittitle>Proof Sheets</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">7</container>
+  <container type="folder">6-9</container>
+  <unittitle>Newspaper Clippings</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">8</container>
+  <container type="folder">1-3</container>
+  <unittitle>Newspaper and Magazine Clippings</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">8</container>
+  <container type="folder">4-6</container>
+  <unittitle>Newspaper and Magazine Clippings of Reviews</unittitle>
+ </did>
+</c02>
+</c01>
+
+<c01 level="series">
+ <did><container type="box">8-15</container>
+  <unittitle>About Whitman</unittitle>
+  </did>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">8</container>
+  <container type="folder">7</container>
+  <unittitle>Radio Broadcasts</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">8</container>
+  <container type="folder">8</container>
+  <unittitle>Book Chapters and Excerpts</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">9</container>
+  <container type="folder">1</container>
+  <unittitle>Pamphlets About Whitman</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">9</container>
+  <container type="folder">2</container>
+  <unittitle>Other Writers' Poems About Whitman</unittitle>
+</did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">9</container>
+  <container type="folder">3-4</container>
+  <unittitle>Book Reviews</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">9</container>
+  <container type="folder">5-6</container>
+  <unittitle>Celebrations and Tributes</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">9-10</container>
+  <container type="folder">7-8; 1-2</container>
+  <unittitle>Bibliographies</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">10-11</container>
+  <container type="folder">3-6; 1-3</container>
+  <unittitle>Catalogs and Information About Whitman Collections</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">11-12</container>
+  <container type="folder">4-7; 1-4</container>
+  <unittitle>Dealer's Catalogs</unittitle>
+</did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">12-14</container>
+  <container type="folder">5-7; 1-6; 1</container>
+  <unittitle>Exhibits</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">14</container>
+  <container type="folder">2</container>
+  <unittitle>Periodicals With More Than One Article Devoted to Whitman</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">14-16</container>
+  <container type="folder">3-7; 1-7; 1-5</container>
+  <unittitle>Articles About Whitman</unittitle>
+ </did>
+</c02>
+</c01>
+
+<c01 level="series">
+ <did><container type="box">16-17</container>
+  <unittitle>Miscellaneous</unittitle>
+  </did>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">16-17</container>
+  <container type="folder">6-9; 1</container>
+  <unittitle>Walt Whitman Fellowship (<date normal="1819/1919">1819-1919</date>)</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">17</container>
+  <container type="folder">2</container>
+  <unittitle>Walt Whitman Society</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">17</container>
+  <container type="folder">3</container>
+  <unittitle>Walt Whitman Foundation</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">17</container>
+  <container type="folder">4</container>
+  <unittitle>Newsletters</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">17</container>
+  <container type="folder">5</container>
+  <unittitle>The Long Islander</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">17</container>
+  <container type="folder">6</container>
+  <unittitle>Whitman Club of <geogname>Bon Echo</geogname></unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">17</container>
+  <container type="folder">7</container>
+  <unittitle>Mickle Street House, <geogname>Camden, New Jersey</geogname></unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">17</container>
+  <container type="folder">8</container>
+  <unittitle>Walt Whitman Birthplace</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">17</container>
+  <container type="folder">9</container>
+  <unittitle>Walt Whitman's Buggy and Horse</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">17</container>
+  <container type="folder">10</container>
+  <unittitle>Announcements of Whitman's Death</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">17</container>
+  <container type="folder">11</container>
+  <unittitle>Tear Sheets</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">17</container>
+  <container type="folder">12</container>
+  <unittitle>Chronological Notes of Whitman's Life</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">17</container>
+  <container type="folder">13</container>
+  <unittitle>Advertising</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">17</container>
+  <container type="folder">14</container>
+  <unittitle>English Followers of Walt Whitman</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">17</container>
+  <container type="folder">15</container>
+  <unittitle>Whitman as School Teacher</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">17</container>
+  <container type="folder">16</container>
+  <unittitle>Phrenology</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">17</container>
+  <container type="folder">17</container>
+  <unittitle>Inspired by Whitman</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">17</container>
+  <container type="folder">18</container>
+  <unittitle>Notes</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">17</container>
+  <container type="folder">19</container>
+  <unittitle><persname normal="Whitman, Louisa Van Velsor">Louisa Van Velsor Whitman</persname></unittitle>
+ </did>
+</c02>
+</c01>
+
+<c01 level="series">
+ <did><container type="box">17</container>
+  <unittitle>Recordings</unittitle>
+  </did>
+</c01>
+
+<c01 level="series">
+ <did><container type="box">18</container>
+  <unittitle>Music</unittitle>
+  </did>
+</c01>
+
+<c01 level="series">
+ <did><container type="box">19-20</container>
+  <unittitle>Scrapbooks</unittitle>
+  </did>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">19</container>
+  <container type="folder"></container>
+  <unittitle>Walt Whitman's Personal Scrapbook</unittitle>
+ </did>
+</c02>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">20</container>
+  <unittitle>Anonymous Scrapbook About Whitman, <geogname>Philadelphia</geogname>, <date>1913</date></unittitle>
+ </did>
+</c02>
+</c01>
+
+<c01 level="series">
+ <did><container type="box">21</container>
+  <unittitle>Oversized Materials</unittitle>
+  </did>
+
+<c02 level="subseries">
+ <did>
+  <container type="box">21</container>
+  <unittitle>Large Materials from All Series</unittitle>
+ </did>
+</c02>
+-->
+        </dsc>
+    </archdesc>
+</ead>
+

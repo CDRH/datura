@@ -1,0 +1,152 @@
+<?xml-stylesheet href="http://www.whitmanarchive.org/servlets/xmlfindaids/shared/styles/eadwhit.xsl" type="text/xsl"?>
+
+<!DOCTYPE ead PUBLIC '+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN' "ead.dtd">
+
+<ead audience="external" relatedencoding="MARC21">
+    <eadheader audience="internal"
+        langencoding="iso639-2b"
+        scriptencoding="iso15924"
+        relatedencoding="marc21"
+        repositoryencoding="iso15511"
+        countryencoding="iso3166-1"
+        dateencoding="iso8601"
+        findaidstatus="edited-full-draft"
+        id="a0">
+        <eadid countrycode="us" mainagencycode="NbU" identifier="mcf.ead01">mcf.ead01</eadid>
+        <filedesc>
+            <titlestmt>
+                <titleproper encodinganalog="245$a">Catalog of a Walt Whitman Poetry Manuscript in the
+                    Musée de la Coopération Franco-Américaine</titleproper>
+                <author>Original record created by the <emph render="italic">Walt Whitman
+                    Archive</emph> and the University of Nebraska-Lincoln Libraries.</author>
+                <sponsor> Encoded Archival Description completed with the assistance of the
+                    Gladys Krieble Delmas Foundation, the University of Nebraska Research Council, the Institute for Museum and Library Services, and the National Endowment for the Humanities.</sponsor>
+            </titlestmt>
+            <publicationstmt>
+                <publisher encodinganalog="260$b">Published by the <emph render="italic">Walt
+                    Whitman Archive</emph> in collaboration with the University of
+                    Nebraska-Lincoln Libraries. </publisher>
+                <date encodinganalog="260$c" era="ce" calendar="gregorian">2015</date>
+                <address>
+               <addressline>319 Love Library</addressline>
+               <addressline>P.O. Box 884100</addressline>
+               <addressline>University of Nebraska-Lincoln</addressline>
+               <addressline>Lincoln, NE 68508</addressline>
+            </address>
+            </publicationstmt>
+        </filedesc>
+        <profiledesc>
+            <creation>Machine-readable finding aid created by Liz Lorang, <emph render="italic">The
+                Walt Whitman Archive</emph>, and Brett Barney, University of Nebraska-Lincoln
+                Libraries.<date era="ce" calendar="gregorian">2008</date>; revised by Kevin McMullen, <emph render="italic">The Walt Whitman Archive</emph>, <date normal="2015" era="ce" calendar="gregorian">2015</date>.
+            </creation>
+            <langusage>Finding aid written in <language encodinganalog="546" langcode="eng">English</language>.</langusage>
+        </profiledesc>
+    </eadheader>
+    <frontmatter>
+        <titlepage id="tp001">
+            <titleproper encodinganalog="245$a">Catalog of a Walt Whitman Poetry Manuscript in the
+                Musée de la Coopération Franco-Américaine</titleproper>
+            <publisher>Published by <emph render="italic">The Walt Whitman Archive</emph> in
+                collaboration with the University of Nebraska-Lincoln Libraries. </publisher>
+            <date era="ce" calendar="gregorian">2015</date>
+        </titlepage>
+    </frontmatter>
+    <archdesc audience="external"
+        level="otherlevel"
+        type="inventory"
+        relatedencoding="marc21">
+        <did id="al">
+            <unittitle audience="external" label="Title:" encodinganalog="245$a">A Walt Whitman
+                Poetry Manuscript in the Musée de la Coopération Franco-Américaine</unittitle>
+            <origination audience="external" label="Creator:">
+                <persname encodinganalog="100">Whitman, Walt, 1819-1892</persname>
+            </origination>
+            <!--       <physdesc audience="external" encodinganalog="300$a">
+        <genreform>Manuscripts</genreform>
+      </physdesc> -->
+            <repository encodinganalog="852$a" label="Repository:">
+                <corpname encodinganalog="852$a">The Musée de la Coopération
+                    Franco-Américaine</corpname>
+                <address>
+                    <addressline>The Musée de la Coopération
+                    Franco-Américaine</addressline>
+               <addressline>Fonds Documentaire</addressline>
+               <addressline>Château de Blérancourt</addressline>
+               <addressline>02300 Blérancourt, France</addressline>
+            </address>
+            </repository>
+            <abstract>This catalog was created by the <emph render="italic">Walt Whitman
+                Archive</emph> from a digital image of the original manuscript and from
+                information found on the Musée de la Coopération Franco-Américaine website. The
+                original manuscript is held at the Musée de la Coopération
+                Franco-Américaine.</abstract>
+        </did>
+        <descgrp id="ds001" type="admininfo">
+            <accessrestrict audience="external" encodinganalog="506" id="a14">
+                <head>Restrictions on Original Materials: </head>
+                <p>Please consult with repository.</p>
+            </accessrestrict>
+            <!-- <userestrict encodinganalog="540" id="a15">
+	     <head>Copyright:</head>
+	     <p>The use of Archives and Special Collections material is governed by the U.S. Copyright Law (title 17 U.S. Code). </p>
+	   </userestrict>  -->
+            <prefercite encodinganalog="524" id="a18">
+                <head>Preferred Citation: </head>
+                <p>To identify this catalog as a source, see the <emph render="italic">Archive's
+                </emph>
+                    <extref href="http://www.whitmanarchive.org/about/conditions.html"
+                        linktype="simple">"Conditions of Use"</extref> page.</p>
+            </prefercite>
+            <!-- <altformavail type="paper" encodinganalog="530" id="a17">
+	     <head>Alternative Format: </head>
+	     <p>Original document held at the <corpname>American Antiquarian Society</corpname>.</p>
+	   </altformavail>  -->
+        </descgrp>
+        <scopecontent id="sc001">
+            <head>Scope and Content</head>
+            <p>The Musée de la Coopération Franco-Américaine has one poetry manuscript, described
+                below.</p>
+        </scopecontent>
+        <bioghist id="bh001">
+            <head>Biographical Information</head>
+            <p/>
+        </bioghist>
+        <controlaccess id="ca001">
+            <head>Subjects</head>
+            <persname encodinganalog="600">Whitman, Walt, 1819-1892</persname>
+            <subject encodinganalog="650">Whitman, Walt, 1819-1892--Manuscripts</subject>
+            <subject encodinganalog="650">Poets, American--19th century</subject>
+        </controlaccess>
+        <dsc id="dc001" type="in-depth">
+            <head>Item List</head>
+            <c01 level="item">
+                <did>
+                    <unitid type="WWA">mcf.00001</unitid>
+                    <unitid type="work">xxx.00253</unitid>
+                    <unittitle>
+                        <title render="doublequote" linktype="simple">O Star of France</title>
+                    </unittitle>
+                    <unitdate normal="1871" era="ce" calendar="gregorian">ca. 1871</unitdate>
+                    <physdesc>
+                        <genreform>poetry</genreform>
+                        <physfacet>handwritten</physfacet>
+                        <extent unit="leaves">4 leaves</extent>
+                    </physdesc>
+                    <dao linktype="simple"
+                        href="http://www.whitmanarchive.org/manuscripts/figures/mcf.00001.001.jpg"/>
+                    <dao linktype="simple"
+                        href="http://www.whitmanarchive.org/manuscripts/figures/mcf.00001.002.jpg"/>
+                    <dao linktype="simple"
+                        href="http://www.whitmanarchive.org/manuscripts/figures/mcf.00001.003.jpg"/>
+                    <dao linktype="simple"
+                        href="http://www.whitmanarchive.org/manuscripts/figures/mcf.00001.004.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Draft of <title render="doublequote" linktype="simple">O Star of
+                        France,</title> first published in the <title render="italic" linktype="simple">Galaxy</title> in June <date type="publication" era="ce" calendar="gregorian">1871</date>. Images of the versos are unavailable.</p>
+                </scopecontent>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>

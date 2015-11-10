@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TEI.2 PUBLIC "-/UVA::IATH/DTD whitman.dtd (Whitman Archive)/EN"
+"whitman.dtd"
+[
+<!ENTITY respStmt PUBLIC "-/UVA::IATH/TEXT (Whitman Archive Responsibility Statement)/EN"
+ "respStmt.xml">
+<!ENTITY pubStmt PUBLIC "-/UVA::IATH/TEXT (Whitman Archive Publication Statement)/EN"
+ "pubStmt.xml">
+<!ENTITY xxx.00555 PUBLIC "-/UVA::IATH/TEXT (Whitman Archive xxx.00555)/EN"
+ "xxx.00555.xml" NDATA xml>
+]>
+<TEI.2 id="xxx.00559" type="work">
+   <relations>
+      <workparent entity="xxx.00555">
+         <bibl>
+            <title>Good-Bye my Fancy (cluster in Complete Prose
+		  Works)</title>
+         </bibl>
+      </workparent>
+   </relations>
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Old Poets</title>
+            <title level="a" type="uniform">Old Poets</title>
+            &respStmt;
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2003</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>xxx.00559</idno>
+            &pubStmt;
+         </publicationStmt>
+         <sourceDesc>
+            <p>Original</p>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textClass>
+            <keywords>
+               <term type="genreForm">Non-fiction</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text type="ancillary">
+      <body>
+         <p><!--Commentary--></p>
+      </body>
+   </text>
+</TEI.2>

@@ -1,0 +1,2273 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- <?xml-stylesheet href="http://www.whitmanarchive.org/servlets/xmlfindaids/shared/styles/whitmanead1.xsl" type="text/xsl"?> -->
+	
+		<!DOCTYPE ead PUBLIC '+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN' "ead.dtd">
+	
+<ead audience="external" relatedencoding="MARC21">
+    <eadheader audience="internal" langencoding="iso639-2b" scriptencoding="iso15924"
+        relatedencoding="marc21" repositoryencoding="iso15511" countryencoding="iso3166-1"
+        dateencoding="iso8601" findaidstatus="edited-full-draft" id="a0">
+        <eadid countrycode="us" mainagencycode="NbU" identifier="upa.ead01">upa.ead01</eadid>
+        <filedesc>
+            <titlestmt>
+                <titleproper encodinganalog="245$a">Catalog of the Walt Whitman Literary Manuscripts in
+                    the Walt Whitman Collection, Annenberg Rare Book &amp; Manuscript Library,
+                    University of Pennsylvania</titleproper>
+                <author>Original records created by Leslie J. Delauter for the Annenberg Rare Book &amp; Manuscript Library at the University of Pennsylvania; revised and expanded by <emph render="italic">The Walt Whitman Archive</emph> and the University of
+                    Nebraska-Lincoln Libraries. </author>
+                <sponsor>Encoded Archival Description completed with the assistance of the Gladys
+                    Kreible Delmas Foundation, the University of Nebraska Research Council, the
+                    Institute for Museum and Library Services, and the National Endowment for the Humanities.</sponsor>
+            </titlestmt>
+            <publicationstmt>
+                <publisher encodinganalog="260$b">Published by <emph render="italic">The Walt
+                        Whitman Archive</emph> in collaboration with the University of
+                    Nebraska-Lincoln Libraries. </publisher>
+                <date encodinganalog="260$c" era="ce" calendar="gregorian">2014</date>
+                <address><addressline>29 Love Library</addressline><addressline>P.O. Box 884100</addressline><addressline>University of Nebraska-Lincoln</addressline><addressline>Lincoln, NE 68508</addressline></address>
+            </publicationstmt>
+        </filedesc>
+        <profiledesc>
+            <creation>Converted from the printed Register by Pacific Data Conversion Corporation;
+                edited by Nancy Thorne, Rare Book &amp; Manuscript Library, University of
+                Pennsylvania, <date type="single" era="ce" calendar="gregorian">1999</date>; edited
+                by Nancy Shawcross; edited to conform to <emph render="italic">Walt Whitman
+                    Archive</emph> practices by Brett Barney, <emph render="italic">The Walt Whitman
+                    Archive</emph>, <date era="ce" calendar="gregorian">2003</date> and <date
+                    era="ce" calendar="gregorian">2006</date>; revised by Kathryn Kruger, <emph
+                        render="italic">The Walt Whitman Archive</emph>, 2009. Machine-readable finding aid created by Brett Barney, <emph render="italic">The Walt
+                            Whitman Archive</emph>. <date normal="2014" era="ce" calendar="gregorian">2014</date>.Expanded by Caterina Bernardini,<emph render="italic">The Walt Whitman Archive</emph>.<date normal="2014" era="ce" calendar="gregorian">2014</date>
+            </creation>
+            <langusage>Finding aid written in <language encodinganalog="546" langcode="eng"
+                    >English</language>.</langusage>
+        </profiledesc>
+    </eadheader>
+    <frontmatter>
+        <titlepage id="tp001">
+            <titleproper encodinganalog="245$a">Catalog of the Walt Whitman Literary Manuscripts in the
+                Walt Whitman Collection, Annenberg Rare Book &amp; Manuscript Library, University of
+                Pennsylvania</titleproper>
+            <publisher>Published by <emph render="italic">The Walt Whitman Archive</emph> in
+                collaboration with the University of Nebraska-Lincoln Libraries.</publisher>
+            <note>
+                <p><extref href="http://www.whitmanarchive.org/fair_use/index.html"
+                        linktype="simple">Copyright by Ed Folsom and Kenneth M. Price, <date
+                            era="ce" calendar="gregorian">2003</date>.</extref></p>
+            </note>
+        </titlepage>
+    </frontmatter>
+    <archdesc audience="external" level="otherlevel" type="inventory" relatedencoding="marc21">
+        <did id="al">
+            <unittitle audience="external" label="Title:" encodinganalog="245$a">Walt Whitman Literary
+                Manuscripts in the Walt Whitman Collection, Annenberg Rare Book &amp; Manuscript
+                Library, University of Pennsylvania</unittitle>
+            <unitid audience="external" label="Collection Number:" encodinganalog="099"
+                repositorycode="DLC" countrycode="us">Ms. Coll. 190</unitid>
+            <origination audience="external" label="Creator:">
+                <persname encodinganalog="100">Whitman, Walt, 1819-1892</persname></origination>
+            <origination audience="external" label="Collector:">
+                <persname encodinganalog="110" normal="Sprague, Harriet Chapman Jones">Sprague, Harriet Chapman Jones</persname>
+                <persname normal="Cridland, Margery">Margery Cridland</persname>
+                <persname normal="Stevenson, John R.">John R. Stevenson</persname>
+            </origination>
+            <physdesc><genreform>poetry</genreform><genreform>prose</genreform><genreform>Manuscripts</genreform></physdesc>
+            <repository encodinganalog="852$a" label="Repository:">
+                <corpname encodinganalog="852$a">Annenberg Rare Book &amp; Manuscript Library,
+                    University of Pennsylvania</corpname>
+                <address>
+                     <addressline>Annenberg Rare Book &amp; Manuscript Library</addressline>
+                    <addressline>University of Pennsylvania</addressline>
+                    <addressline>Philadelphia, PA 19104-6206</addressline>
+                </address>
+            </repository>
+            <abstract label="Abstract"> This catalog was created from the original
+                register created by the Rare Book &amp; Manuscript Library, University of
+                Pennsylvania, and obtained by <emph render="italic">The Walt Whitman Archive</emph>.
+                The original papers and the finding aid completed by Leslie J. Delauter are held at
+                the Rare Book &amp; Manuscript Library, University of Pennsylvania.</abstract>
+        </did>
+        <descgrp id="ds001" type="admininfo">
+            <accessrestrict audience="external" encodinganalog="506" id="a14">
+                <head>Restrictions on Original Materials:</head>
+                <p>Please consult with Annenberg Rare Book &amp; Manuscript Library, University of
+                    Pennsylvania.</p>
+            </accessrestrict>
+            <prefercite encodinganalog="524" id="a18">
+                <head>Preferred Citation:</head>
+                <p>To identify this finding aid as a source, see the <emph render="italic">Archive's
+                        </emph><extref href="http://www.whitmanarchive.org/about/conditions.html"
+                        linktype="simple">"Conditions of Use"</extref> page.</p>
+            </prefercite>
+        </descgrp>
+        <scopecontent id="sc001">
+            <head>Scope and Content</head>
+            <p>The bulk of the Walt Whitman Collection at the University of Pennsylvania Library was
+                acquired from Mrs. Frank Julian Sprague of New York, a collector of Whitmania, with
+                additional contributors including Mrs. Charles Cridland (the granddaughter of David
+                McKay) and John R. Stevenson. The manuscript collection contains correspondence,
+                manuscripts, and memorabilia that primarily represent Whitman's life and career
+                after the Civil War and until his death, from 1867 to 1892. It also holds letters
+                and papers of early supporters, biographers, and guardians of the Whitman legacy.
+                These letters shed particular light on Whitman's relationship with William Michael
+                Rossetti, the Gilchrist family, and Whitman's publishers in the 1880s. Roughly a
+                third of the Whitman collection comprises correspondence, including Whitman's
+                personal correspondence, dated between 1868 and 1891. Most of these items were
+                exchanged between Whitman and Anne Gilchrist, whom he called his "noblest woman
+                friend." Their correspondence, begun immediately following the 1870 publication of
+                her article, "A Woman's Estimate of Walt Whitman," continued until she died; this
+                collection contains all of the known letters written to her by Whitman. The
+                collection also includes correspondence with her children and Whitman's 1869 letter
+                to Michael William Rossetti, through whom he sent a first, indirect message
+                Gilchrist. Literary correspondents include John Burroughs, William Sloane Kennedy,
+                Bernard O'Dowd, Richard Maurice Bucke, Thomas Biggs Harned, Horace Traubel, Henry
+                Bryan Binns, Mary Mapes Dodge, William Dean Howells, William Douglass O'Connor, and
+                John Addington Symonds. Also represented in this series are letters to close friends
+                and family, including Whitman's mother, Louisa Van Velsor Whitman, and Susan and
+                George Stafford.</p>
+            <p>The collection holds papers concerning Whitman's finances and dealings with
+                publishers dating primarily from the 1880s, including letters concerning the 1881–82
+                edition of <title render="italic" linktype="simple">Leaves of Grass</title>, which
+                was published and then suppressed by James Osgood &amp; Co. of Boston. The
+                collection's holdings also include the correspondence and contract between Whitman
+                and the Philadelphia publisher who picked up the censored edition, Rees Welsh &amp;
+                Co., notes and statements of account concerning works published by David McKay
+                between 1882 and 1892, and documents concerning the proposed congressional bill to
+                award Whitman a pension in recognition of his service during the Civil War.</p>
+            <p>The collection includes a small number of Whitman manuscripts, various proof sheets,
+                and manuscript fragments. Writings about Whitman by his contemporaries include a
+                draft of John Burroughs's introduction to the 1912 edition of <title render="italic"
+                    linktype="simple">The Rolling Earth</title>, proofsheet excerpts of Burroughs's
+                    <title render="italic" linktype="simple">Notes on Walt Whitman</title>, a
+                notebook belonging to Herbert Gilchrist that records conversations with Whitman
+                (1876), partial galley sheets (with notes) to William Sloane Kennedy's "A Study of
+                Walt Whitman" (1881), and page proofs of Horace Traubel's "Walt Whitman's Birthday"
+                (1891). There are a number of clippings, some gathered by Whitman himself,
+                pertaining to the publication and suppression of the 1881–82 edition of <title
+                    render="italic" linktype="simple">Leaves of Grass</title>.</p>
+            <p>Whitman portraits including photographs and reprints and original sketches are
+                included in the collection, as are engravings and printed descriptions of Whitman's
+                birthplace, the Long Island schoolhouse in which he taught, and his house on Mickle
+                Street. Odds and ends include a ticket to Robert Ingersoll's 1890 lecture, Whitman's
+                visiting card, and a lock of hair supposedly cut from Whitman's head upon his death
+                by his housekeeper, Mary Davis.</p>
+            <p>E. Sculley Bradley (1919–1967), a professor of English and American Literature at the
+                University of Pennsylvania, was instrumental in the University's acquiring this
+                collection. With Gay Wilson Allen of New York University, Bradley oversaw the
+                editing of <title render="italic" linktype="simple">The Collected Works of Walt
+                    Whitman</title>. The contents of the Whitman manuscript collection no doubt were
+                utilized by Bradley in the editing of these texts.</p>
+            <p>In this catalog, only the documents
+                deemed poetry and prose manuscripts are described at the item level.</p>
+        </scopecontent>
+        <!-- <bioghist id="bh001">
+<head>Biographical Information</head>
+</bioghist> -->
+        <controlaccess id="ca001">
+            <head>Subjects</head>
+            <persname encodinganalog="600">Whitman, Walt, 1819-1892</persname>
+            <subject encodinganalog="650">Whitman, Walt, 1819-1892--Manuscripts</subject>
+            <subject encodinganalog="650">Poets, American--19th century</subject>
+        </controlaccess>
+        <!-- <admininfo>
+<head>Administrative Information</head>
+<prefercite>
+<head>Preferred Citation</head>
+<p>Cite as: Walt Whitman Collection, 1842-1957, Rare Book &amp; Manuscript Library, University of Pennsylvania </p>
+</prefercite>
+<accessrestrict>
+<head>Access</head>
+<p>Restrictions:  None</p>
+</accessrestrict>
+<acqinfo>
+<head>Acquisition</head>
+<p>Status:  Purchase (with additional gifts)</p>
+<p>Received:  1942 through 1966</p>
+</acqinfo>
+<processinfo>
+<head>Processing</head>
+<p>Processed by: Leslie J. Delauter</p>
+<p>Date completed: August 1997</p>
+</processinfo>
+</admininfo> -->
+        <dsc id="dc001" type="in-depth">
+            <head>Item List</head>
+            <!-- Correspondence
+
+<c01 level="series" id="I">
+<did>
+<unittitle>Correspondence</unittitle>
+
+</did>
+<scopecontent>
+<p>Original outgoing and incoming correspondence with or relating to Walt Whitman. Letters to and from publishers or pertaining to the legal aspects of publication (e.g., copyright) may be found by looking in the Financial Papers and Correspondence Series, under the name of the publishing company or periodical. </p>
+</scopecontent>
+
+<c02 level="subseries">
+<did>
+<unittitle>General Correspondence</unittitle>
+</did>
+<scopecontent>
+<p>Incoming and outgoing letters and drafts (or copies), arranged alphabetically by name of addressee when written by Whitman, otherwise by name of correspondent. Correspondence is arranged chronologically within each file. </p>
+</scopecontent>
+
+<c03 level="item">
+<did>
+<container type="box">1</container>
+<container type="folder">1</container>
+<unittitle>Burroughs, John, 1837-1921</unittitle> 
+<unitdate normal="1883">1883</unitdate>
+<physdesc>
+<extent unit="leaves">1 leaf</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">2</container>
+<unittitle>Emerson, Ralph Waldo, 1803-1882</unittitle> 
+<unitdate normal="1855">1855</unitdate>
+<physdesc>
+<extent unit="items">4 items (2 photocopies and 2 negatives)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">1 </container>
+<container type="folder">3</container>
+<unittitle>Gilchrist, Anne Burrows, 1828-1885</unittitle> 
+<unitdate normal="1871/1879">1871-1879</unitdate>
+<physdesc>
+<extent unit="leaves">37 leaves</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">4</container>
+<unittitle>Gilchrist, Anne Burrows, 1828-1885</unittitle>
+<unitdate normal="1880/1885">1880-1885</unitdate>
+<physdesc>
+<extent unit="leaves">14 leaves</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">5</container>
+<unittitle>Gilchrist, Beatrice</unittitle>
+<unitdate normal="1877/1879">1877-1879</unitdate>
+<physdesc>
+<extent unit="leaves">4 leaves</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">6</container>
+<unittitle>Gilchrist, Herbert Harlakenden, b. 1857</unittitle>
+<unitdate normal="1876/1880">1876-1880</unitdate>
+<physdesc>
+<extent unit="leaves">12 leaves</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">7</container>
+<unittitle>Gilchrist, Herbert Harlakenden, b. 1857</unittitle>
+<unitdate normal="1881/1891">1881-1891</unitdate>
+<physdesc>
+<extent unit="leaves">18 leaves</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">8</container>
+<unittitle>Johnston, John [of England]</unittitle>
+<unitdate normal="1891">1891</unitdate>
+<physdesc>
+<extent unit="leaves">1 leaf</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">9</container>
+<unittitle>Johnston, John H. [Jeweler, New York]</unittitle>
+<unitdate normal="1887">1887</unitdate>
+<physdesc>
+<extent unit="leaves">1 leaf</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">10</container>
+<unittitle>Kennedy, William Sloane, 1850-1929</unittitle>
+<unitdate normal="1888/1890">1888-1890</unitdate>
+<physdesc>
+<extent unit="leaves">2 leaves</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">11</container>
+<unittitle>O'Dowd, Bernard, 1866-1953</unittitle>
+<unitdate normal="1891">1891</unitdate>
+<physdesc>
+<extent unit="leaves">2 leaves</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Letter draft.</p>
+</scopecontent>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">12</container>
+<unittitle>Rossetti, William Michael, 1829-1919</unittitle>
+<unitdate normal="1869/1886">1869-1886</unitdate>
+<physdesc>
+<extent unit="leaves">2 leaves</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">13</container>
+<unittitle>Stafford, Susan (and George)</unittitle>
+<unitdate normal="1891">1891</unitdate>
+<physdesc>
+<extent unit="leaves">3 leaves</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">14</container>
+<unittitle>Whitman, Louisa Van Velsor, 1795-1873</unittitle>
+<unitdate normal="1868">1868</unitdate>
+<physdesc>
+<extent unit="leaves">2 leaves</extent>
+</physdesc>
+</did>
+</c03>
+
+</c02>
+
+<c02 level="subseries">
+<did>
+<unittitle>Miscellaneous Correspondence Pertaining to Whitman</unittitle>
+<physdesc>
+<extent unit="folders">27 folders</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Correspondence between individuals other than Whitman, related to or concerning Whitman. These letters are arranged alphabetically by correspondent, with notes identifying the addressees.</p>
+</scopecontent>
+
+<c03 level="item">
+<did>
+<container type="box">1</container>
+<container type="folder">14</container>
+<unittitle>Whitman, Louisa Van Velsor, 1795-1873</unittitle>
+<unitdate normal="1868">1868</unitdate>
+<physdesc>
+<extent unit="leaves">2 leaves</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">1</container>
+<container type="folder">15</container>
+<unittitle>Bazalgette, L&#233;on to Thomas Biggs Harned</unittitle>
+<unitdate normal="1917">1917</unitdate>
+<physdesc>
+<extent unit="leaves">1 leaf</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">1</container>
+<container type="folder">16</container>
+<unittitle>Binns, Henry Bryan, b. 1873, to Thomas Biggs Harned</unittitle>
+<unitdate normal="1904">1904</unitdate>
+<physdesc>
+<extent>1 leaf</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">1</container>
+<container type="folder">17</container>
+<unittitle>Bucke, Richard Maurice, 1837-1902, to Thomas Biggs Harned</unittitle>
+<unitdate normal="1889">1889</unitdate>
+<physdesc>
+<extent unit="leaves">1 leaf</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">17</container>
+<unittitle>Bucke, Richard Maurice, 1837-1902, to Mary Van Bibber</unittitle>
+<unitdate normal="1901/1902">1901-1902</unitdate>
+<physdesc>
+<extent unit="items">7 items (7 leaves)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">18</container>
+<unittitle>Burroughs, John, 1837-1921, to Anne Burrows Gilchrist</unittitle>
+<unitdate normal="1875/1885">1875-1885</unitdate>
+<physdesc>
+<extent unit="items">3 items (4 leaves)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">19</container>
+<unittitle>Burroughs, John, 1837-1921, to Herbert Harlakenden Gilchrist</unittitle>
+<unitdate normal="1883/1887">1883-1887</unitdate>
+<physdesc>
+<extent unit="items">5 items (6 leaves)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">1</container>
+<container type="folder">20</container>
+<unittitle>Burroughs, John, 1837-1921 to William Sloane Kennedy</unittitle>
+<unitdate normal="1888">1888</unitdate>
+<physdesc>
+<extent unit="items">1 item (1 leaf)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">1</container>
+<container type="folder">20</container>
+<unittitle>Burroughs, John, 1837-1921 to David McKay</unittitle>
+<unitdate normal="1918">1918</unitdate>
+<physdesc>
+<extent unit="items">1 item (1 leaf)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">1</container>
+<container type="folder">21</container>
+<unittitle>Davis, Mary Oakes to Dr. Bell</unittitle>
+<unitdate normal="1906">1906</unitdate><physdesc>
+<extent unit="items">1 item (1 leaf)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">1</container>
+<container type="folder">22</container>
+<unittitle>Dodge, Mary Mapes, 1830-1905, to Thomas Biggs Harned</unittitle>
+<unitdate normal="1898">1898</unitdate><physdesc>
+<extent unit="items">1 item (1 leaf)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">23</container>
+<unittitle>Dowden, Edward, 1843-1913, to Anne Burrows Gilchrist</unittitle>
+<unitdate normal="1884">1884</unitdate>
+<physdesc>
+<extent unit="items">4 items (5 leaves)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">24</container>
+<unittitle>Fritzinger, Warren to Johnston, John [of England]</unittitle>
+<unitdate normal="1891/1892">1891-1892</unitdate>
+<physdesc>
+<extent unit="items">4 items (5 leaves)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">1</container>
+<container type="folder">25</container>
+<unittitle>Fritzinger, Warren to Wallace, J.W. (James William)</unittitle>
+<unitdate normal="1892">1892</unitdate>
+<physdesc>
+<extent unit="items">1 item (1 leaf)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">1</container>
+<container type="folder">26</container>
+<unittitle>Garland, Hamlin, 1860-1940, to Thomas Biggs Harned</unittitle>
+<unitdate normal="1860/1940">undated</unitdate>
+<physdesc>
+<extent unit="items">1 item (1 leaf)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">1 </container>
+<container type="folder">27 </container>
+<unittitle>Gilchrist, Anne Burrows, 1828-1885, to Herbert Harlakenden Gilchrist</unittitle>
+<unitdate normal="1877">1877</unitdate>
+<physdesc>
+<extent unit="items">1 item (1 leaf)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">27</container>
+<unittitle>Gilchrist, Anne Burrows, 1828-1885, to prospective subscribers to Whitman aid fund</unittitle>
+<unitdate normal="1828/1885">undated</unitdate>
+<physdesc>
+<extent unit="items">2 items (2 leaves)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">1 </container>
+<container type="folder">28 </container>
+<unittitle>Gilchrist, Herbert Harlakenden, b. 1857, to William Sloane Kennedy</unittitle>
+<unitdate normal="1860">1860</unitdate>
+<physdesc>
+<extent>1 item (1 leaf)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">29</container>
+<unittitle>Harned, Thomas Biggs, b. 1851 , to Harriet Chapman (Jones) Sprague ("Mrs. Frank Julian Sprague")</unittitle>
+<unitdate normal="1919/1920">1919-1920</unitdate>
+<physdesc>
+<extent unit="items">4 items (4 leaves)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">1</container>
+<container type="folder">29</container>
+<unittitle>Harned, Thomas Biggs, b. 1851, to William Sloane Kennedy</unittitle>
+<unitdate normal="1921">1921</unitdate>
+<physdesc>
+<extent unit="items">1 item (3 leaves)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">30</container>
+<unittitle>Howells, William Dean, 1837-1920, to Harriet Chapman (Jones) Sprague ("Mrs. Frank Julian Sprague")</unittitle>
+<unitdate normal="1919">1919</unitdate>
+<physdesc>
+<extent unit="items">3 items (3 leaves)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">1</container>
+<container type="folder">31</container>
+<unittitle>Moore, John G., b. 1900, to Sculley Bradley</unittitle>
+<unitdate normal="1900/2003">undated</unitdate>
+<physdesc>
+<extent unit="items">1 item (8 leaves)</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Includes transcript of 1925 written exchange between William Sloane Kennedy and Gustave Percival Wiksell.</p>
+</scopecontent>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">1</container>
+<container type="folder">32</container>
+<unittitle>Morse, Sidney H., to William Sloane Kennedy</unittitle>
+<unitdate normal="1886">1886</unitdate>
+<physdesc>
+<extent unit="items">1 item (1 leaf)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">1</container>
+<container type="folder">33</container>
+<unittitle>O'Connor, William Douglass, 1832-1889, to William Sloane Kennedy</unittitle>
+<unitdate normal="1886">1886</unitdate>
+<physdesc>
+<extent unit="items">1 item (1 leaf)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">34</container>
+<unittitle>Kennedy, William Sloane, 1850-1929</unittitle>
+<unitdate normal="1884/1926">1884-1926</unitdate>
+<physdesc>
+<extent unit="items">5 items (8 leaves)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">1</container>
+<container type="folder">35</container>
+<unittitle>Rossetti, William Michael, 1829-1919, to John Camden Hotten</unittitle>
+<unitdate normal="1867">1867</unitdate>
+<physdesc>
+<extent unit="items">1 item (1 leaf)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">36</container>
+<unittitle>Rossetti, William Michael, 1829-1919, to Anne Burrows Gilchrist</unittitle>
+<unitdate normal="1879/1885">1879-1885</unitdate>
+<physdesc>
+<extent unit="items">12 items (15 leaves)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">36</container>
+<unittitle>Rossetti, William Michael, 1829-1919, to Herbert Harlakenden Gilchrist</unittitle>
+<unitdate normal="18852/1887">18852-1887</unitdate>
+<physdesc>
+<extent unit="items">8 items (9 leaves)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">1</container>
+<container type="folder">36</container>
+<unittitle>Rossetti, William Michael, 1829-1919</unittitle>
+<unitdate normal="1876">1876</unitdate>
+<physdesc>
+<extent unit="items">1 item (1 leaf + 1 photocopy)</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>List of prospective subscribers to Whitman aid fund [circular].</p>
+</scopecontent>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">1</container>
+<container type="folder">37</container>
+<unittitle>Sprague, Harriet Chapman (Jones) ("Mrs. Frank Julian Sprague") to Silvia Saunders</unittitle>
+<unitdate normal="1947">1947</unitdate>
+<physdesc>
+<extent unit="items">1 item (4 leaves)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">38</container>
+<unittitle>Symonds, John Addington, 1840-1893, to Herbert Harlakenden Gilchrist</unittitle>
+<unitdate normal="1885/">1885</unitdate>
+<physdesc>
+<extent unit="items">2 items</extent> <extent unit="leaves">(2 leaves)</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Correspondence regarding Whitman subscription.</p>
+</scopecontent>
+
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">1</container>
+<container type="folder">39</container>
+<unittitle>Traubel, Horace, 1858-1919, to Thomas Biggs Harned</unittitle>
+<unitdate normal="1919">1919</unitdate>
+<physdesc>
+<extent unit="items">1 item (1 leaf)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">1</container>
+<container type="folder">40</container>
+<unittitle>Trowbridge, J.T. (John Townsend), 1827-1916, to John Burroughs</unittitle>
+<unitdate normal="1874">1874</unitdate>
+<physdesc>
+<extent unit="items">1 item (1 leaf)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">41</container>
+<unittitle>Wallace, J.W. (James William), 1853-1926, to Clara Barrus</unittitle>
+<unitdate normal="1919">1919</unitdate>
+<physdesc>
+<extent unit="items">2 items (4 leaves)</extent>
+</physdesc>
+</did>
+</c03>
+
+</c02>
+
+</c01>
+
+<c01 level="series" id="II">
+<did>
+<unittitle>Financial Papers and Correspondence.</unittitle>
+<physdesc>
+<extent unit="folders">8 folders</extent> 
+</physdesc>
+</did>
+<scopecontent>
+<p>Correspondence and papers (including contracts and statements of account) relating to publications in the <title render="italic">Boston Miscellany</title> and later by James Osgood &amp; Co., Rees Welsh &amp; Co., and David McKay. Papers are filed alphabetically under publisher's name. At end of the series are two folders having to do with the United States government: a Congressional bill to pension Whitman and a letter relating to copyright renewal.</p>
+</scopecontent>
+
+<c02 level="item">
+<did>
+<container type="box">1</container>
+<container type="folder">42</container>
+<unittitle><title render="italic">The Boston Miscellany of Literature and Fashion</title> 1842</unittitle>
+<unitdate normal="1842">1842</unitdate>
+<physdesc>
+<extent unit="items">1 item (1 leaf)</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>To editor, Nathan Hale.</p>
+</scopecontent>
+
+</c02>
+
+<c02 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">43</container>
+<unittitle>David McKay</unittitle>
+<unitdate normal="1882/1891">1882-1891</unitdate>
+<physdesc>
+<extent unit="items">17 items (17 leaves)</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Accounts of sale.</p>
+</scopecontent>
+
+</c02>
+
+<c02 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">44</container>
+<unittitle>David McKay</unittitle>
+<unitdate normal="1882/1891">1882-1891</unitdate>
+<physdesc>
+<extent unit="items">8 items (6 leaves + 2 leaves photocopies)</extent>
+</physdesc>
+</did>
+</c02>
+
+<c02 level="item">
+<did>
+<container type="box">1</container>
+<container type="folder">45</container>
+<unittitle>James R. Osgood &amp; Co.</unittitle>
+<unitdate normal="1882">1882</unitdate>
+<physdesc>
+<extent unit="items">1 item</extent> <extent unit="leaves">(9 leaves)</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Transcript by Richard Maurice Bucke.</p>
+</scopecontent>
+</c02>
+
+<c02 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">46</container>
+<unittitle>James R. Osgood &amp; Co.</unittitle>
+<unitdate normal="1882">1882</unitdate>
+<physdesc>
+<extent unit="items">2 items (14 leaves)</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Letters between Benjamin R. Tucker and William Douglass O'Connor.</p>
+</scopecontent>
+</c02>
+
+<c02 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">47</container>
+<unittitle>Rees Welsh &amp; Co.</unittitle>
+<unitdate normal="1882">1882</unitdate>
+<physdesc>
+<extent unit="items">6 items (11 leaves)</extent>
+</physdesc>
+</did>
+</c02>
+
+<c02 level="item">
+<did>
+<container type="box">1</container>
+<container type="folder">48</container>
+<unittitle>United States. Congress. House. Committee on Invalid Pensions.</unittitle>
+<unitdate normal="1887">1887</unitdate>
+<physdesc>
+<extent unit="items">1 item (1 leaf)</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Report.</p>
+</scopecontent>
+</c02>
+
+<c02 level="file">
+<did>
+<container type="box">1</container>
+<container type="folder">49</container>
+<unittitle>United States. Library of Congress. Copyright Office.</unittitle>
+<unitdate normal="1884">1884</unitdate>
+<physdesc>
+<extent unit="items">2 items (2 leaves).</extent>
+</physdesc>
+</did>
+</c02>
+
+</c01>
+
+
+-->
+            <!-- 
+<c01 level="series">
+<did>
+<unittitle> Writings by Whitman</unittitle>
+<physdesc>
+<extent unit="folders">22 folders</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Items have been divided into poetry and prose, and then arranged alphabetically by title. This series includes original and photocopied manuscript drafts and fragments as well as proof sheets of both published and unpublished work. Occasionally it also includes unusual or noteworthy printings of Whitman's work. </p>
+</scopecontent> -->
+            <!-- <c02 level="subseries">
+<did>
+<unittitle>Poetry</unittitle>
+<physdesc>
+<extent unit="folders">11 folders</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Loose drafts, proof sheets, and fragments of individual poems. Titled poems are arranged alphabetically and interfiled with fragments provisionally entitled by the first line, or an initial portion thereof. Two folders, each containing an unusual 20th-century printing of a single poem, are placed at the end. </p>
+</scopecontent> -->
+            <c01 level="item">
+                <did>
+                    <container type="box">2</container>
+                    <container type="folder">50</container>
+                    <unitid type="WWA">upa.00001</unitid>
+                    <unitid type="work">xxx.00221</unitid>
+                    <unitid type="work">xxx.00232</unitid>
+                    <unitid type="work">xxx.00243</unitid>
+                    <unitid type="work">xxx.00526</unitid>
+                    <unittitle>
+                        <title render="doublequote" linktype="simple">[after all]</title>
+                    </unittitle>
+                    <unitdate normal="1850/1860" era="ce" calendar="gregorian">between about 1855 and 1860</unitdate>
+                    <physdesc><genreform>poetry</genreform><physfacet>handwritten</physfacet><extent
+                            unit="leaves">1 leaf</extent>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/upa.00001.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/upa.00001.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This manuscript is written on a green sheet used for the
+                        endpapers of the first edition of the
+                        <title render="italic" linktype="simple">Leaves of
+                        Grass</title> (<date type="publication" normal="1855" era="ce"
+                            calendar="gregorian">1855</date>), an edition that
+                        begins with a ten-page statement in prose, originally untitled and later
+                        known generally as the <date type="publication" normal="1855" era="ce"
+                            calendar="gregorian">1855</date>
+                        <title linktype="simple">Preface</title>. This manuscript seems to represent
+                        an early attempt by Whitman to recast the <date type="publication" era="ce"
+                            calendar="gregorian">1855</date> prose <title linktype="simple"
+                            >Preface</title> into poetry. The 1860&#8211;61 edition of <title render="italic">Leaves of Grass</title> introduced two new poems created in this way: <title render="doublequote">Poem of Many in One</title> (later <title render="doublequote">By Blue Ontario's Shore</title>) and <title render="doublequote">Poem of the Last Explanation of Prudence</title> (later <title render="doublequote">Song of Prudence</title>). Neither of the published poems incorporates lines from this manuscript, though it and <title render="doublequote">Song of Prudence</title> are drawn from adjacent portions of the 1855 Preface.</p>
+                </scopecontent>
+            </c01>
+            <!-- 
+<c03 level="item">
+<did>
+  <container type="box">2</container>
+  <container type="folder">51</container>
+  <unitid type="WWA">upa.00008</unitid>
+  <unitid type="work">xxx.00343</unitid>
+  <unittitle>
+    <title render="doublequote">Ah, Not This Granite Dead and Cold</title>
+  </unittitle>
+  <unitdate normal="1885">1885</unitdate>
+  <physdesc>
+    <extent unit="leaves">1 leaf</extent>
+    <extptr linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/upa.00008.001.jpg"/>
+  </physdesc>
+</did>
+<scopecontent>
+  <p>Proof sheet, uncorrected.</p> 
+</scopecontent>
+</c03> 
+
+<c03 level="item">
+<did>
+  <container type="box">2 </container>
+  <container type="folder">52</container>
+  <unitid type="work">xxx.00155</unitid>
+    <unittitle><title render="doublequote">The Dalliance of the Eagles</title></unittitle> 
+  <unitdate normal="1875/1885">about 1880</unitdate> 
+  <physdesc>
+    <extent unit="leaves">1 leaf (photocopy)</extent>
+  </physdesc>
+</did>
+ 
+<scopecontent>
+  <p>A negative-image black and white reproduction of a manuscript of about 10 lines. The original is in the Charles E. Feinberg Collection at the Library of Congress.</p> 
+</scopecontent>
+</c03> 
+-->
+            <!--
+<c03 level="file">
+<did>
+<container type="box">2</container>
+<container type="folder">53</container>
+<unittitle>"Going Somewhere" 1887</unittitle>
+<physdesc>
+<extent unit="items">2 items (2 leaves)</extent>
+</physdesc>
+</did>
+<scopecontent><p>Manuscript and proofsheet.</p></scopecontent> -->
+            <c01 level="item">
+                <did>
+                    <container type="box">2</container>
+                    <container type="folder">53</container>
+                    <unitid type="WWA">upa.00003</unitid>
+                    <unitid type="work">xxx.00352</unitid>
+                    <unittitle><title render="doublequote" linktype="simple">'Going Somewhere.'</title></unittitle>
+                    <unitdate normal="1882-1892" era="ce" calendar="gregorian">about 1887</unitdate>
+                    <physdesc>
+                        <genreform>poetry</genreform>
+                        <physfacet>handwritten</physfacet>
+                        <extent unit="leaves">1 leaf</extent>
+                    </physdesc>
+                    
+                    <dao linktype="simple"
+                        href="http://www.whitmanarchive.org/manuscripts/figures/upa.00003.001.jpg"
+                    /><dao linktype="simple"
+                        href="http://www.whitmanarchive.org/manuscripts/figures/upa.00003.002.jpg"
+                    />
+                    
+                </did>
+                <scopecontent>
+                    <p>This is a manuscript of the poem, <title render="doublequote"
+                            linktype="simple">'Going Somewhere,'</title> which was one of four poems published under the collective title <title render="doublequote" linktype="simple">November
+                            Boughs,</title> in <title render="italic"
+                            linktype="simple">Lippincott's Magazine</title> in <date
+                            normal="November 1887" type="publication" era="ce" calendar="gregorian">November 1887</date>.
+                            <title render="doublequote" linktype="simple">'Going Somewhere'</title>
+                        was later reprinted in the <title render="doublequote" linktype="simple"
+                            >Sands of Seventy</title> annex to the <date type="publication" normal="1888" era="ce"
+                            calendar="gregorian">1888</date> printing of <title render="italic"
+                            linktype="simple">Leaves of Grass</title>.</p>
+                </scopecontent>
+            </c01>
+            <!--
+<c04 level="item">
+<did>
+<container type="box">2 </container>
+<container type="folder">53</container>
+<unitid type="work">xxx.00352</unitid>
+<unittitle><title render="doublequote">'GOING SOMEWHERE.'</title></unittitle>
+<unitdate normal="1882-1892">about 1887</unitdate>
+<physdesc>
+  <extent unit="leaves">1 leaf</extent>
+</physdesc>
+</did>
+<scopecontent><p>Uncorrected proof sheet of poem first published in <title render="italic">Lippincott's Magazine</title>, <date type="publication">November 1887</date>. </p></scopecontent>
+</c04>
+
+-->
+            <!--
+<c03 level="file">
+<did>
+<container type="box">2</container>
+<container type="folder">54</container>
+<unittitle>Leaves of Grass 1855</unittitle>
+<physdesc>
+<extent unit="leaves">3 leaves</extent>
+</physdesc>
+</did>
+<scopecontent><p>Photocopy of a manuscript that is now part of the Charles E. Feinberg Collection at the Library of Congress. Also, a two-page handwritten note by Sculley Bradley, explaining the evidence that the original is a manuscript leaf of the first edition of <title render="italic">Leaves of Grass</title>.</p></scopecontent>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">2</container>
+<container type="folder">55</container>
+<unittitle><title render="italic">Leaves of Grass </title> 1876</unittitle>
+<unitdate normal="1876">1876</unitdate>
+<physdesc>
+<extent unit="leaves">1 leaf</extent>
+</physdesc>
+</did>
+<scopecontent><p>Title page from the 1876 printing of <title render="italic">Leaves of Grass</title>.</p></scopecontent>
+</c03>
+
+-->
+            
+            <c01 level="item">
+                <did>
+                    
+                    <container type="box">2</container>
+                    <container type="folder">69</container>
+                    <unitid type="WWA">upa.00158</unitid>
+                    <unitid type="work">xxx.00467</unitid>
+                   
+                    <unittitle>
+                        <title render="doublequote" type="repository">Robert Burns</title>
+                        <title render="doublequote" type="WWA">Robert Burns</title>
+                    </unittitle>
+                    <unitdate normal="">1882</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">10 leaves</extent>
+                        <physfacet>handwritten</physfacet>
+                        <physfacet>printed</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/upa.00158.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/upa.00158.002.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/upa.00158.003.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/upa.00158.004.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/upa.00158.005.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/upa.00158.006.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/upa.00158.007.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/upa.00158.008.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/upa.00158.009.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/upa.00158.010.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/upa.00158.011.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/upa.00158.012.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/upa.00158.013.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/upa.00158.014.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/upa.00158.015.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/upa.00158.016.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/upa.00158.017.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/upa.00158.018.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/upa.00158.019.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/upa.00158.020.jpg"/>
+                    
+                    
+                </did>
+                <scopecontent><p>This is a draft for the article entitled <title render= "doublequote">Robert Burns</title> published on <date normal="1882" type="publication" era="ce" calendar="gregorian">16 December 1882</date> in <title render= "italic">The Critic</title>. The draft contains annotated clippings from a previous article on Burns that Whitman had published on <date normal="1875" type="publication" era="ce" calendar="gregorian">25 January 1875</date> in <title render= "italic">Our Land and Time</title> (the article was copied the same day in the New York <title render= "italic">Daily Graphic</title>.) Parts of the previous 1875 article were used in the 1882 article. Later, Whitman revised the article again for publication in the <title render= "italic">North American Review</title> in <date normal="1886" type="publication" era="ce" calendar="gregorian">November 1886</date> under the title <title render= "doublequote">Robert Burns as Poet and Person.</title> The same title was kept for later versions published in <title render= "italic">November Boughs, Democratic Vistas and Other Papers</title> in <date normal="1888" type="publication" era="ce" calendar="gregorian">1888</date>; in <title render= "italic">Complete Poems &amp; Prose</title> in <date normal="1888" type="publication" era="ce" calendar="gregorian">1888</date> and in <title render= "italic">Complete Prose Works</title> in <date normal="1891/1892" type="publication" era="ce" calendar="gregorian">1891-1892</date>. For more on this, see Gary Scharnhorst, <title render="doublequote">Whitman on Robert Burns: An Early Essay Recovered,</title> <title render= "italic">Walt Whitman Quarterly Review</title>, 13 (Spring 1996), 4.
+
+                </p>
+                </scopecontent>
+            </c01>
+ 
+
+            
+            <c01 level="item">
+                <did>
+                    <container type="box">2</container>
+                    <container type="folder">67</container>
+                    <unitid type="WWA">upa.00153</unitid>
+                    <unitid type="work">xxx.00835</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="repository">Henry D. Howell</title>
+                        <title render="doublequote" type="WWA">Henry D. Howell</title>
+                    </unittitle>
+                    <unitdate normal="1863" era="ce" calendar="gregorian">1863</unitdate>
+                    <physdesc><genreform>prose</genreform><physfacet>handwritten</physfacet><extent
+                        unit="leaves">1 leaf</extent></physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/upa.00153.001.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/upa.00153.002.jpg"/>
+                    
+                </did>
+                <scopecontent>
+                    <p>This manuscript contains notes on the story of a young soldier, Benjamin G. Howell, who died in the Civil War, and particularly about his parents learning about his death. Whitman would write about this same soldier in the article <title render= "doublequote">From Washington</title> published in the <title render= "italic">Brooklyn Daily Union</title> on <date normal="1863-09-22" type="publication" era="ce" calendar="gregorian">September 22, 1863</date>.</p>
+                </scopecontent>
+            </c01>
+            
+          
+            <c01 level="item">
+                <did>
+                    <container type="box">2</container>
+                    <container type="folder">56</container>
+                    <unitid type="WWA">upa.00002</unitid>
+                    <unitid type="work">xxx.00037</unitid>
+                    <unittitle><title render="doublequote" linktype="simple">Poem for the good old
+                            cause</title> and <title render="doublequote" linktype="simple">Poem of
+                            the People</title></unittitle>
+                    <unitdate normal="1819/1892" era="ce" calendar="gregorian">undated</unitdate>
+                    <physdesc><genreform>poetry</genreform><physfacet>handwritten</physfacet><extent
+                            unit="leaves">1 leaf</extent></physdesc>
+                    <dao linktype="simple"
+                        href="http://www.whitmanarchive.org/manuscripts/figures/upa.00002.001.jpg"
+                    />
+                </did>
+                <scopecontent>
+                    <p>This manuscript includes Whitman's notes toward two possible poems, neither
+                        of which can be conclusively connected to any of Whitman's published poems.
+                        The first, however, bears some resemblance to <title render="doublequote"
+                            linktype="simple">To a Cantatrice,</title> published in the <title
+                            render="doublequote" linktype="simple">Messenger Leaves</title> cluster
+                        of the <date type="publication" era="ce" calendar="gregorian">1860</date>
+                        <title render="italic" linktype="simple">Leaves of Grass</title>. Whitman
+                        later ungrouped retitled this poem as <title
+                            render="doublequote" linktype="simple">To a Certain Cantatrice</title>
+                        for the 1867 and subsequent editions of <title render="italic" linktype="simple">Leaves of
+                            Grass</title>.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">2</container>
+                    <container type="folder">57</container>
+                    <unitid type="WWA">upa.00005</unitid>
+                    <unitid type="work">xxx.00526</unitid>
+                    <unitid type="work">xxx.00232</unitid>
+                    <unitid type="work">xxx.00221</unitid>
+                    <unitid type="work">xxx.00243</unitid>
+                    <unittitle>
+                        <title render="doublequote" linktype="simple">[are you and me]</title>
+                        <title render="doublequote" linktype="simple">[Sanity and ensemble characterise the great master]</title>
+                    </unittitle>
+                    <unitdate normal="1851/1861" era="ce" calendar="gregorian">about 1856</unitdate>
+                    <physdesc><genreform>poetry</genreform><physfacet>handwritten</physfacet><extent
+                            unit="leaves">1 leaf</extent><extptr linktype="simple"
+                            href="http://www.whitmanarchive.org/manuscripts/figures/upa.00005.001.jpg"
+                            /><extptr linktype="simple"
+                            href="http://www.whitmanarchive.org/manuscripts/figures/upa.00005.002.jpg"
+                        /></physdesc>
+                </did>
+                <scopecontent>
+                    <p>On one side of the leaf are fourteen lines related to the <date
+                            type="publication" era="ce" calendar="gregorian">1855</date>
+                        <title linktype="simple">Preface</title> to <title render="italic"
+                            linktype="simple">Leaves of Grass</title>. The writing probably represents one of Whitman's attempts to reshape material from the Preface into poems for the 1856 edition. These include <title render="doublequote" linktype="simple">Poem of Perfect Miracles</title> (later Miracles), <title render="doublequote">Poem of Many in One</title> (later <title render="doublequote">By Blue Ontario's Shore</title>), and <title render="doublequote">Poem of the Last Explanation of Prudence</title> (later <title render="doublequote">Song of Prudence</title>). None of these poems, however, bear obvious similarities to the lines on this side of the manuscript. On the reverse side of the leaf is a partial draft, about twenty lines, of <title render="doublequote">By Blue Ontario's Shore.</title> Much of the material had appeared in the 1855 Preface.</p>
+                </scopecontent>
+            </c01>
+
+            <c01 level="item">
+                <did>
+                    <container type="box">2</container>
+                    <container type="folder">58</container>
+                    <unitid type="WWA">upa.00006</unitid>
+                    <unitid type="work">xxx.00259</unitid>
+                    <unittitle>
+                        <title render="doublequote" linktype="simple">[See there is Epicurus]</title>
+                    </unittitle>
+                    <unitdate normal="1847/1867" era="ce" calendar="gregorian">about 1857</unitdate>
+                    <physdesc><genreform>poetry</genreform><physfacet>handwritten</physfacet><extent
+                            unit="leaves">1 leaf</extent><extptr linktype="simple"
+                            href="http://www.whitmanarchive.org/manuscripts/figures/upa.00006.001.jpg"
+                        /></physdesc>
+                </did>
+                <scopecontent>
+                    <p>This manuscript includes three lines of poetry on a trimmed sheet of paper.
+                        This appears to be one of a group of manuscripts related to the poem,
+                        unpublished in Whitman's lifetime, with the manuscript title, <title
+                            render="doublequote" linktype="simple">Pictures.</title> Whitman used
+                        lines from <title render="doublequote" linktype="simple">Pictures</title>
+                        for the
+                        poem <title render="doublequote" linktype="simple">My Picture-Gallery,</title> first published in <title render="italic">Leaves of Grass</title> (<date type="publication" era="ce" calendar="gregorian">1881</date>).</p>
+                </scopecontent>
+            </c01>
+            
+            <c01 level="item">
+                <did>
+                    <container type="box">2</container>
+                    <container type="folder">64</container>
+                    <unitid type="WWA">upa.00152</unitid>
+                    <unitid type="work">xxx.00581</unitid>
+                    <unitid type="work">xxx.00531</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">Death of Abraham Lincoln</title>
+                    </unittitle>
+                    <unitdate normal="1889/1890">1889-1890</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">1</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    
+                    <dao linktype="simple"
+                        href="http://www.whitmanarchive.org/manuscripts/figures/upa.00152.001_large.jpg"/> 
+                    <dao linktype="simple"
+                        href="http://www.whitmanarchive.org/manuscripts/figures/upa.00152.002_large.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This manuscript contains a passage that appears almost verbatim in <title render="doublequote">Walt Whitman's Last Public,</title> included within the <title render="italic">Memoranda</title> section of <title render="italic">Complete Prose Works</title> published in <date normal="1892" type="publication" era="ce" calendar="gregorian">1892</date>. In the piece, written in third person, Whitman describes the speech he gave on the 25th anniversary of Abraham Lincoln's death at the Art Rooms, in Philadelphia, on April 15, 1890, and the passage appearing in this manuscript is reported to be the literal opening address of the talk. We don't have certainty that this is true, though, as we do not have a written version of the talk. Some phrases in this version also bear resemblance with the printed version of the lecture <title render="doublequote">Death of Abraham Lincoln,</title> delivered in New York in 1879, in Philadelphia in 1880 and in Boston in 1881 <!-- can we really call it "printed version"? -->. <!-- I assume these publications of 1876 and earlier than 1880 should not be included in this entry, this is just the entirety of Janel's entry -->Portions of this lecture were also originally published as <title render="doublequote">Abraham Lincoln's Death. Walt Whitman's Account of the Scene at Ford's Theatre</title>, in the <title render="italic">New York Sun</title> on <date normal="1876" type="publication" era="ce" calendar="gregorian">12 February 1876</date> and were included in <title render="italic">Memoranda During the War</title> (<date normal="1875-1876" type="publication" era="ce" calendar="gregorian">1875-1876</date>). <title render="doublequote">Abraham Lincoln's Death</title> was revised and published as <title render="doublequote">A Poet on the Platform</title> in the <title render="italic">New York Daily Tribune</title> on <date normal="1879" type="publication" era="ce" calendar="gregorian">15 April 1879</date> and was subsequently reprinted as <title render="doublequote">Death of Abraham Lincoln</title> in <title render="italic">Specimen Days &#38; Collect</title> (<date normal="1882-1883" type="publication" era="ce" calendar="gregorian">1882-1883</date>) before finally appearing in <title render="italic">Complete Prose Works</title> in <date normal="1892" type="publication" era="ce" calendar="gregorian">1892</date>.</p>
+                </scopecontent>
+                </c01>
+            <!--
+<c03 level="item">
+<did>
+<container type="box">2 </container>
+<container type="folder">59</container>
+<physdesc>
+<extent unit="items">1 item (1 leaf)</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>
+A postcard of "O Captain! My Captain!" printed for the bookstore at Whitman Schoolhouse.
+</p>
+</scopecontent>
+</c03>
+
+
+<c03 level="item">
+<did>
+<container type="box">2</container>
+<container type="folder">60</container>
+<physdesc>
+<extent unit="items">1 item (1 leaf)</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>
+A broadside of "When the Psalm Sings," printed by Roycroft Shop.
+</p>
+</scopecontent>
+</c03>
+
+-->
+            <!-- Prose 
+
+<c02 level="subseries">
+<did>
+<unittitle>Prose</unittitle>
+<physdesc>
+<extent unit="folders">11 folders</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Drafts and fragments of essays, lectures, and notes, arranged in alphabetical order by title, or in the case of untitled fragments, by the first words of the manuscript fragment. A galley sheet version (with notes) of "A Backward Glance on My Own Road" has been placed in <ref target="VII" actuate="onrequest">Box 4</ref> (for oversize material). At the end of this series are two folders that contain materials pertaining to posthumous first printings of Whitman writings. The first of these is <title render="italic">The Wound Dresser</title> (1898), containing Whitman's war-time letters to his mother. The second is his "Education in Our Schools," edited by Anna Traubel and published in 1936 in the <title render="italic">Brooklyn Daily Eagle</title>. </p>
+</scopecontent>
+
+<c03 level="item">
+<did>
+<container type="box">2</container>
+<container type="folder">61</container>
+<unittitle><title render="doublequote">A Backward Glance on My Own Road</title></unittitle>
+<unitdate normal="1879/1889">about 1884</unitdate>
+<physdesc>
+<extent unit="items">1 item (20 leaves)</extent>
+<physfacet>handwritten</physfacet>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">2</container>
+<container type="folder">62</container>
+<unittitle><title render="doublequote">All through writings</title></unittitle>
+<unitdate normal="1819/1892">undated</unitdate>
+<physdesc>
+<extent unit="items">1 item (1 leaf)</extent>
+<physfacet>handwritten</physfacet>
+</physdesc>
+</did>
+<scopecontent>
+<p>Prose manuscript fragment.</p>
+</scopecontent>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">2</container>
+<container type="folder">63</container>
+<unittitle><title render="doublequote">A Note yet - The United States to-day</title></unittitle>
+<unitdate normal="1819/1892">undated</unitdate>
+<physdesc>
+<extent unit="items">1 item (1 leaf)</extent>
+<physfacet>handwritten</physfacet>
+</physdesc>
+</did>
+<scopecontent>
+<p>Prose manuscript fragment.</p>
+</scopecontent>
+</c03>
+
+
+<c03 level="file">
+<did>
+<container type="box">2 </container>
+<container type="folder">64</container>
+<unitdate normal="1880/1892">1880, 1886, and about 1889</unitdate>
+<unittitle><title render="doublequote">Death of Abraham Lincoln</title></unittitle>
+<physdesc>
+<extent unit="items">3 items</extent>
+<physfacet>handwritten</physfacet>
+</physdesc>
+</did>
+<scopecontent>
+<p>A prose manuscript fragment, a printed program from 1886, and a ticket from 1880.</p>
+</scopecontent>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">2</container>
+<container type="folder">65</container>
+    <unitid type="WWA">upa.00004</unitid>
+    <unitid type="work">xxx.00079</unitid>
+<unittitle><title render="doublequote">[Whose happiest days were those]</title></unittitle>
+<unitdate normal="1855/1865">about 1860</unitdate>
+<physdesc>
+<extent unit="leaves">2 leaves</extent>
+<physfacet>handwritten</physfacet>
+      <extptr linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/upa.00004.001.jpg"/>
+      <extptr linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/upa.00004.002.jpg"/>
+    </physdesc>
+</did>
+<scopecontent>
+<p>Manuscript fragment of the final two lines of <title render="doublequote">Calamus 10,</title> first published in 1860 and later titled <title render="doublequote">Recorders Ages Hence</title>. On the verso, and on another leaf that was formerly attached to it, is a prose fragment of about 100 words.</p>
+</scopecontent>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">2</container>
+<container type="folder">66</container>
+<unittitle><title render="doublequote">Education in Our Schools</title></unittitle>
+<physdesc>
+<extent unit="items">1 item (1 leaf)</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>An essay edited by Anna Traubel, clipped from the 12 July 1936 <title render="italic">Brooklyn Daily Eagle</title>.</p>
+</scopecontent>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">2</container>
+<container type="folder">67</container>
+<unittitle><title render="doublequote">Henry D. Howell</title></unittitle>
+<unitdate normal="1858/1868">about 1863</unitdate>
+<physdesc>
+<extent unit="items">1 item (1 leaf)</extent>
+<physfacet>handwritten</physfacet>
+</physdesc>
+</did>
+<scopecontent>
+<p>Prose manuscript fragment.</p>
+</scopecontent>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">2</container>
+<container type="folder">68</container>
+<unittitle><title render="doublequote">Poet! beware</title></unittitle>
+<unitdate normal="1819/1892">undated</unitdate>
+<physdesc>
+<extent unit="items">1 item (1 leaf)</extent>
+<physfacet>handwritten</physfacet>
+</physdesc>
+</did>
+<scopecontent>
+<p>Prose manuscript.</p>
+</scopecontent>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">2</container>
+<container type="folder">69</container>
+<unittitle><title render="doublequote">Robert Burns</title></unittitle>
+<unitdate normal="1877/1887">about 1882</unitdate>
+<physdesc>
+<extent unit="items">1 item (10 leaves)</extent>
+<physfacet>handwritten</physfacet>
+</physdesc>
+</did>
+<scopecontent>
+<p>Prose manuscript.</p>
+</scopecontent>
+
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">2</container>
+<container type="folder">70</container>
+<unittitle><title render="doublequote">Tell the American</title></unittitle>
+<physdesc>
+<extent unit="items">1 item (2 leaves)</extent>
+<physfacet>handwritten</physfacet>
+</physdesc>
+</did>
+<scopecontent>
+<p>Prose manuscript.</p>
+</scopecontent>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">2</container>
+<container type="folder">71</container>
+<unittitle><title render="italic">The Wound Dresser</title></unittitle>
+<unitdate normal="1898">1898</unitdate>
+<physdesc>
+<extent unit="items">1 item (1 leaf)</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Advertisement published by Small, Maynard &amp; Company.</p>
+</scopecontent>
+</c03>
+
+</c02>
+
+</c01>
+
+<c01 level="series" id="IV">
+<did>
+<unittitle>Contemporaries' Biographical and Critical Writings about Whitman</unittitle>
+<physdesc>
+<extent unit="folders">7 folders</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>This series consists of manuscript and printed writings by Whitman's contemporaries, alphabetized by author's name. Included are introductions to Whitman publications, notes on conversations and events involving Whitman, and articles and newspaper reviews concerning the 1881-82 Osgood edition of <title render="italic">Leaves of Grass</title>. Galleys of William Sloane Kennedy's "Study of Walt Whitman" have been placed in Box 4. </p>
+</scopecontent>
+
+<c02 level="file">
+<did>
+<container type="box">2</container>
+<container type="folder">72</container>
+<unittitle>Burroughs, John, (1837-1921)</unittitle>
+<unitdate normal="1912">1912</unitdate>
+<physdesc>
+<extent unit="leaves">2 items (9 leaves + 1 notecard)</extent>
+<physfacet>handwritten</physfacet>
+</physdesc>
+</did>
+<scopecontent><p>A nine-page introduction to <title render="doublequote">The Rolling Earth,</title> written in the form of a letter to Waldo R. Browne(1876-1954); one notecard.</p>
+</scopecontent>
+</c02>
+
+<c02 level="item">
+<did>
+<container type="box">2</container>
+<container type="folder">73</container>
+<unittitle> Burroughs, John, (1837-1921)</unittitle>
+<unitdate normal="1871">1871</unitdate>
+<physdesc>
+<extent unit="items">1 item (8 leaves)</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Galley proofs of <title render="italic">Notes on Walt Whitman,</title> (2nd edition).</p>
+</scopecontent>
+</c02>
+
+<c02 level="item">
+<did>
+<container type="box">2</container>
+<container type="folder">74</container>
+<unittitle>Gilchrist, Herbert Harlakenden, (b. 1857)</unittitle>
+<unitdate normal="1876/1877">1876-1877</unitdate>
+<physdesc>
+<extent unit="items">1 item (20 [loose] leaves + notepad binding with 2 attached leaves + one photocopy)</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Notebook that records conversations with Whitman.</p>
+</scopecontent>
+</c02>
+
+<c02 level="item">
+<did>
+<container type="box">2</container>
+<container type="folder">75</container>
+<unittitle>O'Connor, William Douglass, 1832-1889, 1882 <title render="doublequote">Suppressing Walt Whitman</title></unittitle>
+<unitdate normal="1882">1882</unitdate>
+<physdesc>
+<extent unit="items">1 item (8 leaves [photocopy plus duplicate])</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Photocopies of manuscript fragment. The article was published in the <title render="italic">New York Tribune</title>.</p>
+</scopecontent>
+</c02>
+
+<c02 level="item">
+<did>
+<container type="box">2</container>
+<container type="folder">76</container>
+<unittitle>Sarrazin, Gabriel, b. 1853</unittitle>
+<unitdate normal="1888">1888</unitdate>
+<physdesc>
+<extent unit="items">1 item (1 leaf [photocopy])</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Photocopied excerpt from <title render="doublequote">Poétes Modernes de l'Amerique: Whitman,</title> which appeared in <title render="italic">La Nouvelle revue.</title></p>
+</scopecontent>
+</c02>
+
+<c02 level="item">
+<did>
+<container type="box">2</container>
+<container type="folder">77</container>
+<unittitle>Traubel, Horace, 1858-1919</unittitle>
+<unitdate normal="1891">1891</unitdate>
+<physdesc>
+<extent unit="items">1 item (11 leaves)</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Page proofs of "Walt Whitman's Birthday."</p>
+</scopecontent>
+</c02>
+
+
+<c02 level="file">
+<did>
+<container type="box">2</container>
+<container type="folder">78</container>
+<unittitle>Newspaper clippings</unittitle>
+<unitdate normal="1882">1882</unitdate>
+<physdesc>
+<extent unit="volumes">2 booklets</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Clippings pertaining to the suppressed Osgood edition of <title render="italic">Leaves of Grass.</title></p>
+</scopecontent>
+</c02>
+
+</c01>
+
+<c01 level="series" id="V">
+<did>
+<unittitle>Tributes to Whitman</unittitle>
+<physdesc>
+<extent unit="folders">12 folders</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Commemorative tributes to Walt Whitman, mostly from the twentieth century. Includes early papers of the Whitman Fellowship, poetry dedicated to Whitman, invitations to events celebrating Whitman, information about Whitman collections, and miscellaneous newspaper clippings. </p>
+</scopecontent>
+
+<c02 level="file">
+<did>
+<container type="box">2</container>
+<container type="folder">79</container>
+<unittitle>Beach, Chester, 1881-1956</unittitle>
+<unitdate normal="1931">1931</unitdate>
+<physdesc>
+<extent unit="items">3 items (1 leaf + 2 pamphlets)</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Invitation to unveiling of bust of Whitman</p>
+</scopecontent>
+</c02>
+
+<c02 level="file">
+<did>
+<container type="box">2</container>
+<container type="folder">80</container>
+<unittitle>Delaware River Port Authority</unittitle>
+<unitdate normal="1957">1957</unitdate>
+<physdesc>
+<extent unit="leaves">2 leaves (1 item + duplicate)</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Invitation to opening of Walt Whitman Bridge.</p>
+</scopecontent>
+</c02>
+
+<c02 level="item">
+<did>
+<container type="box">2</container>
+<container type="folder">81</container>
+<unittitle><title render="italic">The Long-Islander</title></unittitle>
+<unitdate normal="1938">1938</unitdate>
+<physdesc>
+<extent unit="items">1 item (1 leaf)</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Announcement of the 100th anniversary of this newspaper founded by Whitman.</p>
+</scopecontent>
+</c02>
+
+<c02 level="item">
+<did>
+<container type="box">2</container>
+<container type="folder">82</container>
+<unittitle><title render="italic">New Yorker</title> 1945</unittitle>
+<unitdate normal="1945">1945</unitdate>
+<physdesc>
+<extent unit="items">1 item</extent>
+</physdesc>
+</did>
+</c02>
+
+
+
+CHANGED PROCEDURE HERE
+
+<c02 level="subseries">
+<did>
+<container type="box">2</container>
+<container type="folder">83</container>
+<unittitle>Poetic Tributes</unittitle>
+<unitdate normal="undated">undated</unitdate>
+<physdesc>
+<extent unit="items">16 items (17 leaves + 1 magazine)</extent>
+</physdesc>
+</did>
+
+<c03 level="item">
+<did>
+<unittitle>Brotherton, J. Lundy</unittitle>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<unittitle>Clark, Thomas Curtis, 1877-1953</unittitle>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<unittitle>Crane, Nathalia, 1913-</unittitle>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<unittitle>Erickson, William</unittitle>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<unittitle>Frankel, Doris C.</unittitle>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<unittitle>Gold, Michael, 1894-1967</unittitle>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<unittitle>Henry, Anna Graves</unittitle>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<unittitle>Hervey, John L.</unittitle>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<unittitle>Hughes, Langston, 1902-1967</unittitle>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<unittitle>Mitchell, Ruth Comfort, 1882-1954</unittitle>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<unittitle>Morgan, Emmanuel [Bynner, Witter], 1881-1968</unittitle>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<unittitle>Seymour, George Steele</unittitle>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<unittitle>Speyer, Leonara</unittitle>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<unittitle>Taggard, Genevieve, 1894-1948</unittitle>
+</did>
+<scopecontent>
+<p><title render="italic">New Frontier Magazine</title>, June 1936</p>
+</scopecontent>
+</c03>
+
+<c03 level="item">
+<did>
+<unittitle>Turner, Lewis McKenzie, 1898-1960</unittitle>
+</did>
+</c03>
+
+</c02>
+
+<c02 level="item">
+<did>
+<container type="box">2</container>
+<container type="folder">84</container>
+<unittitle><title render="italic">Redbook Magazine</title> 1946</unittitle>
+<unitdate normal="1946">1946</unitdate>
+<physdesc>
+<extent unit="items">1 item (1 leaf)</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Article entitled <title render="doublequote">The World's Ten Greatest Poets.</title></p>
+</scopecontent>
+</c02>
+
+<c02 level="item">
+<did>
+<container type="box">2</container>
+<container type="folder">85</container>
+<unittitle><title render="italic">Saturday Evening Post</title> 1951</unittitle>
+<unitdate normal="1951">1951</unitdate>
+<physdesc>
+<extent unit="items">1 item (1 leaf)</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Advertisement.</p>
+</scopecontent>
+</c02>
+
+<c02 level="file">
+<did>
+<container type="box">2</container>
+<container type="folder">86</container>
+<unittitle>Saunders, Henry Scholey, 1864-1951</unittitle>
+<unitdate normal="1912/1920">1912-1920</unitdate>
+<physdesc>
+<extent unit="items">8 items (8 leaves)</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Christmas postcards bearing Whitman quotations.</p>
+</scopecontent>
+</c02>
+
+<c02 level="item">
+<did>
+<container type="box">2 </container>
+<container type="folder">87 </container>
+<unittitle>Tinker, Edward Larocque, 1881-1968</unittitle>
+<unitdate normal="1939">1939</unitdate>
+<physdesc>
+<extent unit="items">1 item (4 leaves)</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Article <title render="italic">Our 'Good Gray Poet,'</title> printed in the <title render="italic">New York Times Magazine.</title></p>
+</scopecontent>
+</c02>
+
+<c02 level="item">
+<did>
+<container type="box">2</container>
+<container type="folder">88</container>
+<unittitle>Trimble, W. H. 1927</unittitle>
+<unitdate normal="1927">1927</unitdate>
+<physdesc>
+<extent>1 item (1 leaf)</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Notice of presentation by Trimble's daughter to the Walt Whitman Library in Dunedin, New Zealand.</p>
+</scopecontent>
+</c02>
+
+<c02 level="item">
+<did>
+<container type="box">2</container>
+<container type="folder">89</container>
+<unittitle>Van Sinderen, Adrian, 1887-1963</unittitle>
+<physdesc>
+<extent unit="items">1 item (33 photocopy leaves)</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Contents of the Van Sinderen Collection of Walt Whitman, now at Yale.</p>
+</scopecontent>
+</c02>
+
+<c02 level="file">
+<did>
+<container type="box">2</container>
+<container type="folder">90</container>
+<unittitle>Whitman Fellowship 1894-1936</unittitle>
+<physdesc>
+<extent unit="items">12 items (10 leaves + 2 pamphlets)</extent>
+</physdesc>
+</did>
+</c02>
+
+</c01>
+
+<c01 level="series" id="VI">
+<did>
+<unittitle>Memorabilia</unittitle>
+<physdesc>
+<extent unit="folders">18 folders</extent> 
+</physdesc>
+</did>
+<scopecontent>
+<p>Portraits of Whitman and of his family and friends, photographs and sketches of places he lived or worked, and miscellaneous items.</p>
+</scopecontent>
+
+<c02 level="subseries">
+<did>
+<unittitle>A.  Visual Representations of Whitman.</unittitle>
+<physdesc>
+<extent unit="folders">8 folders.</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Photographs and other visual representations of Whitman (sketches and photos of paintings and sculpture), produced from the 1840s to the latter part of his life and afterwards. </p>
+</scopecontent>
+
+<c03 level="file">
+<did>
+<container type="box">3</container>
+<container type="folder">91</container>
+<unittitle>Photographs approx. 1840-1888</unittitle>
+<physdesc>
+<extent unit="items">5 items</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Photos taken by unknown photographers.</p>
+</scopecontent>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">3</container>
+<container type="folder">92</container>
+<unittitle>Photograph (by Alexander Gardner, 1821-1882)</unittitle>
+<unitdate normal="1865">1865</unitdate>
+<physdesc>
+<extent unit="items">1 item</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">3</container>
+<container type="folder">93</container>
+<unittitle>Sketch (by Herbert Harlakenden Gilchrist, b. 1857) WW at Timber Creek </unittitle>
+<unitdate normal="1878">1878</unitdate>
+<physdesc>
+<extent unit="items">1 item</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">3</container>
+<container type="folder">94</container>
+<unittitle><title render="doublequote">The Tea Party</title> (from painting by Herbert Harlakenden Gilchrist, b. 1857)</unittitle>
+<unitdate normal="1878/1888">1883</unitdate>
+<physdesc>
+<extent unit="items">2 items (1 print + 1 negative)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">3</container>
+<container type="folder">95</container>
+<unittitle>Portrait of WW (from painting by Herbert Harlakenden Gilchrist, b. 1857)</unittitle>
+<unitdate normal="1887">1887</unitdate>
+<physdesc>
+<extent unit="items">6 items (3 prints + 3 negatives)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">3</container>
+<container type="folder">96</container>
+<unittitle>Portrait of WW (from painting by Dora Wheeler Keith, 1856-1940)</unittitle>
+<unitdate normal="1887">1887</unitdate>
+<physdesc>
+<extent unit="items">1 item</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">3</container>
+<container type="folder">97</container>
+<unittitle>[Photograph of] Bust of WW (by Sidney H. Morse)</unittitle>
+<unitdate normal="1887">1887</unitdate>
+<physdesc>
+<extent unit="items">1 item</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03>
+<did>
+<container type="box">3 </container>
+<container type="folder">98 </container>
+<unittitle>[Photograph of] WW Statue, "Song of the Open Road" (by Jo Davidson, 1883-1952)</unittitle>
+<unitdate normal="1939">1939</unitdate>
+<physdesc>
+<extent unit="items">1 item</extent>
+</physdesc>
+</did>
+</c03>
+
+</c02>
+
+<c02 level="subseries">
+<did>
+<unittitle>Miscellaneous</unittitle>
+<physdesc>
+<extent unit="folders">10 folders</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Pictures of family, friends, and places of biographical importance. At the end of this series are included one ticket to Robert Ingersoll's 1890 benefit lecture, Whitman's visiting card (with his address written in his hand), and a lock of his hair. </p>
+</scopecontent>
+
+<c03 level="file">
+<did>
+<container type="box">3</container>
+<container type="folder">99</container>
+<unittitle>Family photographs</unittitle>
+<unitdate>undated</unitdate>
+<physdesc>
+<extent unit="items">3 items</extent>
+</physdesc>
+</did>
+
+<c04 level="item">
+<did>
+<unittitle>George Washington Whitman (WW's brother)</unittitle>
+<physdesc>
+<extent unit="items">1 item</extent>
+</physdesc>
+</did>
+</c04>
+
+<c04 level="item">
+<did>
+<unittitle>Louisa Van Velsor Whitman, 1795-1873 (WW's mother)</unittitle>
+<unitdate normal="1831/1873">undated</unitdate>
+<physdesc>
+<extent unit="items">1 item</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Photograph by Frederick Gutekunst, 1831-1917.</p>
+</scopecontent>
+</c04>
+
+<c04 level="item">
+<did>
+<unittitle>Walter Whitman (WW's father)</unittitle>
+<unitdate normal="1831/1855">undated</unitdate>
+<physdesc>
+<extent unit="items">1 item</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Photograph by Frederick Gutekunst, 1831-1917</p>
+</scopecontent>
+</c04>
+
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">3</container>
+<container type="folder">100</container>
+<unittitle>Portraits of Anne Burrows Gilchrist, 1828-1885</unittitle>
+<unitdate normal="1851/1884">1851-1884</unitdate>
+<physdesc>
+<extent unit="items">5 items (2 leaves + 3 photographs)</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Includes portraits by Herbert Harlakenden Gilchrist, b. 1857.</p>
+</scopecontent>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">3</container>
+<container type="folder">101</container>
+<unittitle>Portrait of Herbert Harlakenden Gilchrist, b. 1857</unittitle>
+<unitdate normal="1889">1889</unitdate>
+<physdesc>
+<extent unit="items">1 item</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">3</container>
+<container type="folder">102</container>
+<unittitle>Whitman's Birthplace</unittitle>
+<unitdate normal="1898/1910">1898-1910</unitdate>
+<physdesc>
+<extent>3 items (1 photograph + 3 leaves)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">3</container>
+<container type="folder">103</container>
+<unittitle>Long Island Schoolhouse (where Whitman taught, 1837-38)</unittitle>
+<unitdate normal="1927">1927</unitdate>
+<physdesc>
+<extent>3 items (1 photograph + 2 leaves)</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">3</container>
+<container type="folder">104</container>
+<unittitle>Timber Creek (engraving by Herbert Harlakenden Gilchrist, b. 1857)</unittitle>
+<unitdate>undated</unitdate>
+<physdesc>
+<extent unit="items">1 item</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="file">
+<did>
+<container type="box">3</container>
+<container type="folder">105</container>
+<unittitle>WW's House on Mickle Street (Camden, N.J.)</unittitle>
+<unitdate>undated</unitdate>
+<physdesc>
+<extent unit="items">5 items (4 photographs + 1 postcard)</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Includes photographs of interior furnishings.</p>
+</scopecontent>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">3</container>
+<container type="folder">106</container>
+<unittitle>Ticket to lecture by Robert G. Ingersoll</unittitle>
+<unitdate normal="1890">1890</unitdate>
+<physdesc>
+<extent unit="items">1 item</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">3</container>
+<container type="folder">107</container>
+<unittitle>WW's visiting card</unittitle>
+<unitdate normal="1819/1892">undated</unitdate>
+<physdesc>
+<extent unit="items">1 item</extent>
+</physdesc>
+</did>
+</c03>
+
+<c03 level="item">
+<did>
+<container type="box">3</container>
+<container type="folder">108</container>
+<unittitle>WW's hair</unittitle>
+<unitdate normal="1892">1892</unitdate>
+<physdesc>
+<extent unit="lock">1 lock</extent>
+</physdesc>
+</did>
+</c03>
+
+</c02>
+
+</c01>
+
+<c01 level="series" id="VII">
+<did>
+<unittitle>Oversize</unittitle>
+<physdesc>
+<extent unit="boxes">1 box</extent>
+</physdesc>
+</did>
+<scopecontent>
+<p>Oversize galley sheets.</p>
+</scopecontent>
+
+<c02 level="item">
+<did>
+<container type="box">4</container>
+<unittitle><title render="doublequote">A Backward Glance on My Own Road</title> (galleys with notes)</unittitle>
+<unitdate normal="1884">1884</unitdate>
+<physdesc>
+<extent unit="items">1 item (2 leaves)</extent>
+</physdesc>
+</did>
+</c02>
+
+<c02 level="item">
+<did>
+<container type="box">4</container>
+<unittitle><title render="doublequote">A Study of Walt Whitman</title> (extract of galleys, with notes)</unittitle>
+<unitdate normal="1881">1881</unitdate>
+<physdesc>
+<extent unit="items">1 item (4 leaves)</extent>
+</physdesc>
+</did>
+
+</c02>
+</c01>
+
+-->
+            
+            
+        </dsc>
+    </archdesc>
+</ead>
