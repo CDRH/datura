@@ -440,10 +440,28 @@
 					
 					<!-- All in one field -->
 					<field name="recipient">
-						<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/person[@role='recipient']/persName/@key">
-							<xsl:value-of select="normalize-space(.)"/>
-							<xsl:if test="position() != last()"><xsl:text>; </xsl:text></xsl:if>
-						</xsl:for-each>
+						<xsl:if test="count(//person[@role='recipient']) = 1"><xsl:value-of select="//person[@role='recipient']/persName/attribute::key"/></xsl:if>
+						<xsl:if test="count(//person[@role='recipient']) = 2">
+							<xsl:value-of select="//person[@role='recipient'][1]/persName/attribute::key"/>
+							<xsl:text>; </xsl:text>
+							<xsl:value-of select="//person[@role='recipient'][2]/persName/attribute::key"/>
+						</xsl:if>
+						<xsl:if test="count(//person[@role='recipient']) = 3">
+							<xsl:value-of select="//person[@role='recipient'][1]/persName/attribute::key"/>
+							<xsl:text>; </xsl:text>
+							<xsl:value-of select="//person[@role='recipient'][2]/persName/attribute::key"/>
+							<xsl:text>; </xsl:text>
+							<xsl:value-of select="//person[@role='recipient'][3]/persName/attribute::key"/>
+						</xsl:if>
+						<xsl:if test="count(//person[@role='recipient']) &gt; 3">
+							<xsl:value-of select="//person[@role='recipient'][1]/persName/attribute::key"/>
+							<xsl:text>; </xsl:text>
+							<xsl:value-of select="//person[@role='recipient'][2]/persName/attribute::key"/>
+							<xsl:text>; </xsl:text>
+							<xsl:value-of select="//person[@role='recipient'][3]/persName/attribute::key"/>
+							<xsl:text> and others</xsl:text><!--
+                        <xsl:value-of select="//person[@role='recipient'][4]/persName/attribute::key"/>-->
+						</xsl:if>
 					</field>
 					<!-- Individual fields -->
 					
