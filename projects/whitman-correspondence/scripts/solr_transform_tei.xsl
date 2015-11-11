@@ -331,7 +331,8 @@
 				
 				<!-- date -->
 				
-		<xsl:if test="/TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/date/@notBefore or /TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/date/@when">
+				<!-- commented out because it's not working right -->
+		<!--<xsl:if test="/TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/date/@notBefore or /TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/date/@when">
 			<xsl:variable name="doc_date">
 				<xsl:choose>
 					<xsl:when test="/TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/date/@notBefore">
@@ -358,7 +359,26 @@
 				</xsl:call-template>
 			</field>
 			
-		</xsl:if>
+		</xsl:if>-->
+		
+		<!-- Eighth field is the item date in human-readable format, pulled from the date in source description. -->
+		<field name="dateDisplay">
+			<xsl:value-of select="//sourceDesc/bibl/date"/>
+		</field>
+		
+		
+		<!-- Ninth field is a sortable version of the date in the format yyyy-mm-dd pulled from @when or @notBefore on date element in the source description. -->
+		<field name="date">
+			<xsl:choose>
+				<xsl:when test="//sourceDesc/bibl/date/attribute::notBefore">
+					<xsl:value-of select="//sourceDesc/bibl/date/attribute::notBefore"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="//sourceDesc/bibl/date/attribute::when"/>
+				</xsl:otherwise>
+			</xsl:choose>
+		</field>
+		
 				
 				<!-- type -->
 				
