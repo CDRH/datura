@@ -312,9 +312,17 @@
 				
 				<!-- date -->
 				
-				<xsl:if test="/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@when">
+				<xsl:if test="/TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/date/@notBefore or /TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/date/@when">
 					<xsl:variable name="doc_date">
-						<xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@when"/>
+						<xsl:choose>
+							<xsl:when test="/TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/date/@notBefore">
+								<xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@notBefore"/>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/date[1]/@when"/>
+							</xsl:otherwise>
+						</xsl:choose>
+						
 					</xsl:variable>
 					
 					<field name="date">
@@ -322,29 +330,7 @@
 							<xsl:with-param name="datebefore"><xsl:value-of select="substring($doc_date,1,10)"/></xsl:with-param>
 						</xsl:call-template>
 						
-						<!--<xsl:text>T00:00:00Z</xsl:text>-->
-						
 					</field>
-					
-					<!-- datesExact - a multivalued field for matching exact dates: 
-						i.e. pulling all the things that happened on a certain date -->
-					
-					
-					
-					<!--<xsl:choose>
-							<!-\- Only have an exact date when document has an exact date. Used when pulling documents from a certain date -\->
-							<xsl:when test="translate($doc_date, '1234567890-', '') = '' and string-length(dc:date) = 10">
-								<field name="datesExact">
-									<xsl:call-template name="date_standardize">
-										<xsl:with-param name="datebefore"><xsl:value-of select="dc:date"/></xsl:with-param>
-									</xsl:call-template>
-									<xsl:text>T00:00:00Z</xsl:text>
-								</field>
-							</xsl:when>
-							<xsl:otherwise><!-\- blank for no date -\-></xsl:otherwise>
-						</xsl:choose>-->
-					
-					
 					
 					<field name="dateDisplay">
 						<xsl:call-template name="extractDate">
@@ -352,6 +338,8 @@
 								select="$doc_date"/>
 						</xsl:call-template>
 					</field>
+					
+				</xsl:if>
 					
 				</xsl:if>
 				
