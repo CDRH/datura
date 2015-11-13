@@ -339,7 +339,7 @@
 						</xsl:call-template>
 					</field>
 					
-				</xsl:if>
+				
 					
 				</xsl:if>
 				
