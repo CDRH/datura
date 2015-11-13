@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -79,11 +80,11 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Crowner, Charity</term>
-<term>Evans, Mrs. Mary</term>
+<term xml:id="per.000859">Crowner, Charity</term>
+<term xml:id="per.001756">Evans, Mary</term>
 <term xml:id="per.000533">Hall, David A.</term>
-<term>Sayers</term>
-<term>Talbert, Henry</term> <!-- also Harry -->
+<term xml:id="per.001757">Sayers</term>
+<term xml:id="per.001758">Talbert, Henry</term> <!-- also Harry -->
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -95,10 +96,10 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001754">
 <persName>Crowner, William</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001755">
 <persName>Scott, George B.</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.000847">
@@ -121,7 +122,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>             
+<revisionDesc>          
+<change when="2015-11-09" who="#lkw">added xml:ids</change>    
 <change when="2015-02-24" who="#kln">reviewed; edited</change> 
 <change when="2014-11" who="#snc">encoded</change>
 </revisionDesc>
