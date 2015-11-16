@@ -617,6 +617,10 @@
 					<xsl:value-of select="TEI/teiHeader/fileDesc/sourceDesc/bibl/idno"></xsl:value-of><xsl:text>&#10;</xsl:text>
 					<xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/bibl/author"></xsl:value-of>, <xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/bibl/title"></xsl:value-of>, <xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/bibl/publisher"></xsl:value-of>, <xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/bibl/pubPlace"></xsl:value-of>, <xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@when"></xsl:value-of>
 					<xsl:value-of select="//text"/>
+					
+					<!-- adding in repository to be searched -->
+						<xsl:value-of select="//sourceDesc/bibl/orgName"/>
+					
 				</field>
 				
 				

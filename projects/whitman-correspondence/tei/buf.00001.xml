@@ -17,6 +17,7 @@
                     <persName xml:id="ab">Alicia Bones</persName>
                     <persName xml:id="ss">Stefan Schoeberlein</persName>
                     <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="el">Elizabeth Lorang</persName>
                 </respStmt>
                 <sponsor>Center for Digital Research in the Humanities, University of
                     Nebraska-Lincoln</sponsor>
@@ -68,8 +69,8 @@
                     <author>Walt Whitman</author>
                     <title>Walt Whitman to Frederic Almy, 30 October 1880</title>
                     <date cert="high" when="1880-10-30" xml:id="dat1">October 30, 1880</date>
-                    <orgName xml:id="buf">University of Buffalo</orgName>
-                </bibl>
+                    <orgName xml:id="buf">University at Buffalo</orgName>
+                </bibl> 
             </sourceDesc>
         </fileDesc>
         <profileDesc>
@@ -78,11 +79,13 @@
                     <persName key="Whitman, Walt">Walt Whitman</persName>
                 </person>
                 <person role="recipient">
-                    <persName key="Almy, Frederic">Frederic Almy</persName>
+                    <persName key="Almy, Frederic" ref="n1062">Frederic Almy</persName>
                 </person>
             </particDesc>
         </profileDesc>
         <revisionDesc>
+            <change who="#nhg" when="2015-10-23">removed first footnote, added correspondent ref, revised second footnote</change>
+            <change who="#nhg" when="2015-10-22">corrected orgName</change>
 <change who="#el" when="2014-08-15">added schematron declaration</change>
             <change when="2014-01-23" who="#nhg">checked, corrected</change>
             <change when="2013-12-19" who="#ss">checked</change>
@@ -96,15 +99,15 @@
 
             <opener>
                 <dateline>
-                    <name type="place"><hi rend="italic">Camden New Jersey</hi><ptr
-                            target="pri.00036_n2"/></name>
+                    <name type="place"><hi rend="italic">Camden New Jersey</hi><!--<ptr
+                            target="pri.00036_n2"/>--></name>
                     <date when="1880-10-30" cert="high"><hi rend="italic">Oct: 30
-                            '80</hi></date><ptr target="pri.00036_n1"/>
+                            '80</hi></date>
                 </dateline>
             </opener>
 
             <p>I to-day forward by mail (same address as this card) my two Vols: according to your
-                letter (<choice><abbr>enc</abbr><expan>enclosure</expan></choice> <choice><abbr>rec'd</abbr><expan>received</expan></choice>: thanks)&#8212;Will you please send me a postal notifying
+                letter (<choice><abbr>enc</abbr><expan>enclosure</expan></choice> <choice><abbr>rec'd</abbr><expan>received</expan></choice>: thanks)<ptr target="buf.00001_n1"/>&#8212;Will you please send me a postal notifying
                 me on their safe arrival.</p>
 
             <closer>

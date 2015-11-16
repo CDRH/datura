@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.02363">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Percy Ives to Walt Whitman, 21 October 1886</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Percy Ives</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt> 
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="smb">Stephanie Blalock</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.02363</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Percy Ives</author>
+                    <title>Percy Ives to Walt Whitman, 21 October 1886</title>
+                    <date cert="high" when="1886-10-21" xml:id="dat1">October 21, 1886</date>
+                    <idno type="callno">Box 11, Reel 7</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Ives, Percy" ref="mnh.00002_n3">Percy Ives</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-08-03" who="#smb">final check, corrected</change>
+            <change when="2015-06-28" who="#if">edited</change>
+            <change when="2015-05-16" who="#ss">added annotations</change>
+            <change when="2014-10-14" who="#ss">checked and corrected</change>
+            <change when="2014-10-09" who="#ak">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.02363.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <date when="1886-10-21">Oct 21-1886.</date>
+                    <name type="place">48 Rue d'Orsel</name>
+                    <name type="place">Montmartre</name>
+                </dateline>
+                <salute>My dear Walt Whitman.</salute>
+            </opener>
+            <p>Yesterday I gave a letter of introduction to you to a lady friend of mine, Miss Helen
+                Moore. Miss Moore was speaking to me of your poetry yesterday as she and I were
+                walking through the galleries of the Louvre, she is an intellectual lady and she
+                admires <pb xml:id="leaf001v" facs="loc.02363.002_large.jpg" type="verso"/> a great
+                deal you have written, she enjoyed so much your lecture on the assassination of
+                Lincoln. She leaves Paris for her home in Philadelphia in a few weeks, stopping at
+                London on her way. </p>
+            <p>Miss Moore has just had her first book published, "Mary Wolstonecraft
+                Shelley" and I think you would feel that it was well written if you should read
+                    it.<ptr target="loc.02363_n1"/></p>
+            <p>I feel sure you will <pb xml:id="leaf002r" facs="loc.02363.003_large.jpg"
+                    type="recto"/> find pleasure in Miss Moore's company for she is very
+                appreciative. </p>
+            <p>I was more than pleased to receive the papers you sent me in which I found so much
+                about you. I am sorry I could not have heard the lecture on Lincoln, there is a
+                spirit and movement to your work that I feel directly. </p>
+            <p>I hope you are better and able to get about without trouble. <pb xml:id="leaf002v"
+                    facs="loc.02363.004_large.jpg" type="verso"/> If you can find time and strength
+                to write me even a line I shall be much pleased. There is something about a written
+                word from one that brings more happiness than anything excepting the person himself. </p>
+            <p>Again many thanks for the papers and I trust that the letter of introduction I gave
+                to Miss Moore will be agreeable to you and you will not feel I have taken too much
+                liberty. </p>
+            <closer>
+                <salute>Sincerely</salute>
+                <signed>Percy Ives</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

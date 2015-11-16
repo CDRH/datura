@@ -11,12 +11,13 @@
             <editor>Ted Genoways</editor>
             <respStmt>
                <resp>Transcription and encoding</resp>
+               <persName xml:id="ak">Alex Kinnaman</persName>
                <persName xml:id="el">Elizabeth Lorang</persName>
                <persName xml:id="kk">Kathryn Kruger</persName>
                <persName xml:id="tj">Tim Jackson</persName>
                <persName xml:id="vs">Vanessa Steinroetter</persName>
-
                <persName xml:id="ao">Alyssa Olson</persName>
+               <persName xml:id="km">Kevin McMullen</persName>
             </respStmt>
             <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
             <sponsor>University of Iowa</sponsor>
@@ -44,7 +45,7 @@
          <sourceDesc>
             <biblStruct>
                <monogr>
-                  <author>James Redpath</author>
+                  <author>Walt Whitman</author>
                   <editor>Edwin Haviland Miller</editor>
                   <title xml:id="ehm">The Correspondence</title>
                   <imprint>
@@ -60,7 +61,7 @@
                <author>James Redpath</author>
                <title>Walt Whitman to James Redpath, 21 October 1863</title>
                <date when="1863-10-21">October 21, 1863</date>
-               <orgName xml:id="yal">Yale University</orgName>
+               <orgName xml:id="yal">Yale Collection of American Literature, Beinecke Rare Book and Manuscript Library</orgName>
             </bibl>
          </sourceDesc>
       </fileDesc>
@@ -70,11 +71,13 @@
                <persName key="Whitman, Walt">Walt Whitman</persName>
             </person>
             <person role="recipient">
-               <persName key="Redpath, James">James Redpath</persName>
+               <persName key="Redpath, James" ref="n4981">James Redpath</persName>
             </person>
          </particDesc>
       </profileDesc>
       <revisionDesc>
+         <change who="#km" when="2015-11-05">inserted correct correspondent note, and moved part of the old correspondent note to a separate note (yal.00093_n2); fixed several typos in note</change>
+         <change who="#ak" when="2015-04-16">corrected orgName, added choice tags</change>
 <change who="#el" when="2014-08-15">added schematron declaration</change>
          <change who="#el" when="2013-11-22">converted to P5</change>
          <change who="#kk" when="2011-08-08">Seward footnote</change>
@@ -89,12 +92,12 @@
       <body>
          
             <opener>
-               <salute>Dear friend,<ptr target="yal.00093_n2"/>
+               <salute>Dear friend,
                </salute>
             </opener>
-            <p>My idea is a book of the time, worthy the time&#8212;something considerably beyond mere hospital sketches&#8212;a book for sale perhaps in a larger American market&#8212;the premises or skeleton memoranda of incidents, persons, places, sights, the past year (mostly jotted down either on the spot or in the spirit of seeing or hearing what is narrated)&#8212;(I left New York early last December, &amp; have been around in the front<ptr target="yal.00093_n3"/> or here ever since)&#8212;full of interest I surely think&#8212;in some respects somewhat a combination in handling of the Old French Memoires, &amp; my own personality (things seen through my eyes, &amp; what my vision brings)&#8212;a book full enough of mosaic, but all fused to one comprehensive thing&#8212;one of the drifts is to push forward the very big &amp; needed truth, that our national military system needs shifting, revolutionizing &amp; made to tally with democracy, the people<ptr target="yal.00093_n4"/>&#8212;The officers should almost invariably rise from the ranks&#8212;there is an absolute want of democratic spirit in the present system &amp; officers&#8212;it is the feudal spirit exclusively&#8212;nearly the entire capacity, keenness &amp; courage of our army are in the ranks&#8212;(what has been done has been unavoidable so far, but the time has arrived to discuss the change)&#8212;</p>    
+            <p>My idea is a book of the time, worthy the time&#8212;something considerably beyond mere hospital sketches&#8212;a book for sale perhaps in a larger American market&#8212;the premises or skeleton memoranda of incidents, persons, places, sights, the past year (mostly jotted down either on the spot or in the spirit of seeing or hearing what is narrated)<ptr target="yal.00093_n2"/>&#8212;(I left New York early last December, &amp; have been around in the front<ptr target="yal.00093_n3"/> or here ever since)&#8212;full of interest I surely think&#8212;in some respects somewhat a combination in handling of the Old French Memoires, &amp; my own personality (things seen through my eyes, &amp; what my vision brings)&#8212;a book full enough of mosaic, but all fused to one comprehensive thing&#8212;one of the drifts is to push forward the very big &amp; needed truth, that our national military system needs shifting, revolutionizing &amp; made to tally with democracy, the people<ptr target="yal.00093_n4"/>&#8212;The officers should almost invariably rise from the ranks&#8212;there is an absolute want of democratic spirit in the present system &amp; officers&#8212;it is the feudal spirit exclusively&#8212;nearly the entire capacity, keenness &amp; courage of our army are in the ranks&#8212;(what has been done has been unavoidable so far, but the time has arrived to discuss the change)&#8212;</p>    
             <p>I have much to say of the hospitals, the immense national hospitals&#8212;in them too most radical changes of premises are demanded&#8212;(the air, the spirit of a thing is every thing, the details follow &amp; adjust themselves). I have many hospital incidents, [that] will take with the general reader&#8212;I ventilate my general democracy with details very largely &amp; with reference to the future&#8212;bringing in persons, the President, Seward<ptr target="yal.00093_n5"/>, Congress, the Capitol, Washington City, many of the actors of the drama&#8212;have something to say of the great trunk America, the West &amp;c &amp;c&#8212;do not hesitate to diffuse <hi rend="italic">myself</hi>&#8212;the book is very rapid&#8212;is a book that can be read by the five or ten minutes at (being full of small parts, pieces, paragraphs with their dates, incidents &amp;c)&#8212;I should think two or three thousand sale ought to be certainly depended on here in hospitals in Washington, among departments &amp;c&#8212;</p>
-            <p>My idea is a book of handy size &amp; form, 16 mo or smallish 12 mo, <hi rend="italic">first rate paper</hi> (this last indispensable), ordinary binding, strongly stitched, to cost including copyright not more than 35 or 40cts or there-abouts to make, to retail for a dollar. It should be got out <hi rend="italic">immediately</hi>. I think an edition, elegantly bound, might be pushed off for books for presents &amp;c for the holidays, if advertised for that purpose. It would be very appropriate. I think it a book that would please women. I should expect it to be popular with the trade.</p>
+            <p>My idea is a book of handy size &amp; form, 16 mo or smallish 12 mo, <hi rend="italic">first rate paper</hi> (this last indispensable), ordinary binding, strongly stitched, to cost including copyright not more than 35 or 40cts or <choice><sic>there-abouts</sic><corr>thereabouts</corr></choice> to make, to retail for a dollar. It should be got out <hi rend="italic">immediately</hi>. I think an edition, elegantly bound, might be pushed off for books for presents &amp;c for the holidays, if advertised for that purpose. It would be very appropriate. I think it a book that would please women. I should expect it to be popular with the trade.</p>
          <p>Of course I propose the affair to you publisherially as something to invest in, to make out of (for both of us)&#8212;I take it it would be a very handsome speculation. Only it is to be done while the thing is warm, namely <hi rend="italic">at once</hi>. I have been &amp; am in the midst of these things, I feel myself full of them, &amp; I know the people generally now are too (far more than they know,) &amp; would readily absorb &amp; understand my mem[oranda]. Wherefore let us make &amp; publish the book, &amp; out with it so as to have it for sale by middle or 20th of November.<ptr target="yal.00093_n100"/>
          </p>
          

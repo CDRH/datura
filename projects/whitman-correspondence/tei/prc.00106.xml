@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="prc.00106">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Alma Calder Johnston, 6 March
+                    1887</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                    <persName xml:id="smb">Stephanie Blalock</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2015</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>prc.00106</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2015 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">4</biblScope>
+                            <biblScope type="page">73&#8211;74</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Alma Calder Johnston, 6 March 1887</title>
+                    <date cert="high" when="1887-03-06" xml:id="dat1">March 6, 1887</date>
+                    <orgName xml:id="prc">Private collection of Doris Neale</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Johnston, Alma Calder" ref="n3029">Alma Calder
+                        Johnston</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-10-12" who="#smb">final check, corrected</change>
+            <change when="2015-10-01" who="#km">checked</change>
+            <change when="2015-07-20" who="#if">edited</change>
+            <change when="2015-05-24" who="#ss">annotated</change>
+            <change when="2014-11-13" who="#ss">encoded and annotated from Miller.</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter"> 
+        <body>
+            <opener>
+                <dateline rend="right">
+                    <name type="place">Camden</name>
+                    <date when="1887-03-06">Sunday Afternoon March 6 '87</date>
+                </dateline>
+            </opener>
+            <p>Am sitting here quietly&#8212;(rather dully)&#8212;to-day in the little down stairs
+                room&#8212;nothing at all eventful or new with me&#8212;a dark sulky day outside,
+                cold yet not quite cold enough to freeze&#8212;no visitors&#8212;have had my dinner
+                &#38; relished it with appetite&#8212;went over to the theatre yesterday
+                afternoon&#8212;Wilson Barrett<ptr target="loc.01370_n2"/> sent over a carriage for
+                me &#38; I had just a good ride, &#38; liked the play "Clito"<ptr
+                    target="prc.00106_n2"/>&#8212;Mrs. Davis<ptr
+                    target="n6113"/> went with me, &#38; every thing was enjoyable&#8212;I
+                was <hi rend="italic">made much of</hi> &#38; got back (thro' a snow storm) just
+                before sunset&#8212;So you see I <hi rend="italic">do</hi> get around
+                some&#8212;(when I am helped&#8212;not much of my own volition)&#8212;Alma, I shall
+                have to draw on your good nature to accept [this thin?] gossip for a
+                letter&#8212;thank you for yours, &#38; the girls' from Dresden, that came to me
+                safely&#8212;</p>
+            <closer>
+                <salute>Love to you &#38; John<ptr target="n0336"/>&#8212;&#38; Ally<ptr
+                        target="prc.00106_n1"/> &#38; all&#8212;</salute>
+                <signed>Walt Whitman</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>
