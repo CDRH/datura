@@ -5,11 +5,19 @@
 	<xsl:output indent="yes" omit-xml-declaration="yes"/>
 	
 	
-	<xsl:param name="date"/>
-	<xsl:param name="string"/>
-	<xsl:param name="site_location">http://codyarchive.org/</xsl:param>
-	<xsl:param name="file_location">http://rosie.unl.edu/data/projects/</xsl:param>
-	<xsl:param name="project">The William F. Cody Archive</xsl:param>
+	<!-- <xsl:param name="date"/> -->
+	<!-- <xsl:param name="string"/> -->
+	<xsl:param name="fig_location"/> <!-- url for figures -->
+	<xsl:param name="file_location"/>
+	<xsl:param name="figures"/>
+	<xsl:param name="fw"/>  <!-- form works -->
+	<xsl:param name="pb"/>
+	<xsl:param name="project"/>
+	<xsl:param name="slug"/>
+
+	<xsl:param name="string"/>  <!-- common.xsl is using, but what is it? -->
+	<xsl:param name="site_location"/>  <!-- note currently being used? -->
+
 	<xsl:include href="lib/common.xsl"/>
 	
 	<xsl:template match="/" exclude-result-prefixes="#all">
@@ -19,7 +27,6 @@
 		<xsl:variable name="filename" select="tokenize(base-uri(.), '/')[last()]"/>
 		<!-- The part of the url after the main document structure and before the filename. 
 			Collected so we can link to files, even if they are nested, i.e. whitmanarchive/manuscripts -->
-		<xsl:variable name="slug" select="substring-before(substring-before(substring-after(base-uri(.),'data/projects/'),$filename),'/')"/>
 		
 		<!-- Split the filename using '\.' -->
 		<xsl:variable name="filenamepart" select="substring-before($filename, '.xml')"/>
@@ -232,7 +239,7 @@
 					<!-- rightsHolder -->
 					<!-- rights -->
 					
-					<field name="sourceURI">
+					<field name="rightsURI">
 						<xsl:value-of select="dc:rights"/>
 					</field>
 					
