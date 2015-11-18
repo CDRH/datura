@@ -184,11 +184,9 @@
 				
                                 <!-- image_id -->
 				<field name="image_id">
-			          <xsl:choose>
-			            <xsl:when test="//pb">
-				      <xsl:value-of select="//pb[1]/@facs"/>
-				    </xsl:when>
-				  </xsl:choose>
+			          <xsl:if test="//pb">
+				    <xsl:value-of select="//pb[1]/@facs"/>
+				  </xsl:if>
 				</field>
 
 				<!-- dataType -->
