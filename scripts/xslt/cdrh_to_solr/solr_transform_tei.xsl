@@ -182,6 +182,15 @@
 					<xsl:text>.txt</xsl:text>
 				</field>
 				
+                                <!-- image_id -->
+				<field name="image_id">
+			          <xsl:choose>
+			            <xsl:when test="//pb">
+				      <xsl:value-of select="//pb[1]/@facs"/>
+				    </xsl:when>
+				  </xsl:choose>
+				</field>
+
 				<!-- dataType -->
 				
 				<field name="dataType"> 
