@@ -108,7 +108,11 @@
 						<xsl:text>/</xsl:text>
 						<xsl:value-of select="@about"/>-->
 					</field>
-					
+				        
+                                        <field name="image_id">
+                                          <xsl:value-of select="dc:identifier"/>
+                                        </field>
+   	
 					<!-- dataType --> <!-- tei, dublin_core, csv, vra_core -->
 					
 					<field name="dataType">
