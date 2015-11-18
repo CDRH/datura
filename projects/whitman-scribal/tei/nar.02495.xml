@@ -55,7 +55,7 @@
         <bibl>
           <author>Benjamin Helm Bristow</author>
           <title>Benjamin Helm Bristow to Carlisle &amp; McPherson, 2 October 1871</title>
-          <date cert="high" when="2011-10-02" xml:id="dat1">October 2, 1871</date>
+          <date cert="high" when="1871-10-02" xml:id="dat1">October 2, 1871</date>
           <idno type="callno">Microcopy 699, Roll 14</idno>
           <biblScope type="page">74</biblScope>
           <orgName xml:id="nar">National Archives and Records Administration</orgName>
@@ -75,7 +75,9 @@
         </person>
       </particDesc>
     </profileDesc>
-    <revisionDesc><change when="2011-11-17" who="#el">checked file for values of @facs, further revised header information, revised encoding</change><change when="2011-11-15" who="#el">changes to TEI header, including punctuation of titles and replacing initials with full names when possible</change>
+    <revisionDesc>
+      <change when="2015-11-16" who="#el">updated value of @when in sourceDesc</change>
+      <change when="2011-11-17" who="#el">checked file for values of @facs, further revised header information, revised encoding</change><change when="2011-11-15" who="#el">changes to TEI header, including punctuation of titles and replacing initials with full names when possible</change>
       <change when="2011-12-12" who="#nnk">proofed</change>
       <change when="2011-10-28" who="#js">proofed</change>
       <change when="2011-09-23" who="#mk">transcribed, encoded</change>
