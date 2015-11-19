@@ -185,7 +185,7 @@
                                 <!-- image_id -->
 				<field name="image_id">
 			          <xsl:if test="//pb">
-				    <xsl:value-of select="//pb[1]/@facs"/>
+				    <xsl:value-of select="(//pb)[1]/@facs"/>
 				  </xsl:if>
 				</field>
 
