@@ -3,7 +3,7 @@
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>Lucy Bosy v. Ann Maria Fitzhugh. Summons of Ann Maria Fitzhugh</title>
+<title>Lucy Bosey v. Ann Maria Fitzhugh. Summons of Ann Maria Fitzhugh</title>
 <principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
 <principal n="Muñoz, Trevor" xml:id="tm">Trevor Muñoz</principal>
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
@@ -12,6 +12,7 @@
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="McCormick, Kylie L." xml:id="klm">Kylie L. McCormick</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -94,10 +95,10 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
-<persName>Bosy, Lucy</persName>
+<person role="petitioner" xml:id="per.001828">
+<persName>Bosey, Lucy</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001829">
 <persName>Fitzhugh, Ann Maria</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.000751">
@@ -118,6 +119,7 @@
 </profileDesc>
         
 <revisionDesc>  
+<change when="2015-11-16" who="#lkw">added xml:ids</change> 
 <change when="2015-02-25" who="#kln">reviewed; edited</change>            
 <change when="2014-10" who="#snc">encoded</change>
 </revisionDesc>

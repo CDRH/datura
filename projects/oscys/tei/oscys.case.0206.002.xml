@@ -3,7 +3,7 @@
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>Sarah v. George V. Kirby. Certificate of Marriage</title>
+<title>Sarah v. George Kirby. Certificate of Marriage</title>
 <principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
 <principal n="Muñoz, Trevor" xml:id="tm">Trevor Muñoz</principal>
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -79,11 +80,12 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Foot</term>
-<term>Kirby, John B.</term>
+<term xml:id="per.001704">Foot</term>
+<term xml:id="per.000689">Kirby, John Baptist</term>
 <term xml:id="per.000830">Marbury, John</term>
-<term>Moore, Elenor</term>
-<term>Ryland, William</term>
+<term xml:id="per.001705">Moore, Elenor</term>
+<term xml:id="per.001706">Naylor</term><!-- Miss -->
+<term xml:id="per.001707">Ryland, William</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places"> 
@@ -94,11 +96,11 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001703">
 <persName>Sarah</persName>
 </person>
-<person role="defendant">
-<persName>Kirby, George V.</persName>
+<person role="defendant" xml:id="per.000696">
+<persName>Kirby, George</persName>
 </person>
 <person role="attorney_petitioner">
 <persName/>
@@ -117,7 +119,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>             
+<revisionDesc>           
+<change when="2015-11-09" who="#lkw">added xml:ids; changed George V. Kirby to George Kirby; added Baptist as John Kirby's middle name; added Miss Naylor as a person</change>   
 <change when="2015-02-18" who="#kln">reviewed; edited</change>
 <change when="2014-11" who="#snc">encoded</change>
 </revisionDesc>

@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -80,8 +81,8 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Naylor, Henry</term>
-<term>Philips, Cecilia</term>
+<term xml:id="per.001652">Naylor, Henry</term>
+<term xml:id="per.001651">Philips, Cecilia</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -94,10 +95,10 @@
             
 <particDesc>   
 <listPerson type="oscys.caseid.0204">            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001650">
 <persName>Cross, Sally</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001649">
 <persName>Linton, Sarah E.</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.000751">
@@ -108,10 +109,10 @@
 </person>
 </listPerson>
 <listPerson type="oscys.caseid.0203">            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001648">
 <persName>Cross, Martha</persName>
 </person>
-<person role="defendant">
+<person role="defendant" corresp="per.001649">
 <persName>Linton, Sarah E.</persName>
 </person>
 <person role="attorney_petitioner">
@@ -132,6 +133,7 @@
 </profileDesc>
         
 <revisionDesc>     
+<change when="2015-11-02" who="#lkw">added xml:ids</change> 
 <change when="2015-02-18" who="#kln">reviewed; edited</change>        
 <change when="2014-10" who="#snc">encoded</change>
 </revisionDesc>
