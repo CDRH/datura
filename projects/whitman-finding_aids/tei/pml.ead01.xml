@@ -1,0 +1,563 @@
+<!-- <?xml-stylesheet href="http://www.whitmanarchive.org/servlets/xmlfindaids/shared/styles/eadwhit.xsl" type="text/xsl"?> -->
+<!DOCTYPE ead PUBLIC '+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN' "ead.dtd">
+
+
+<ead audience="external" relatedencoding="MARC21">
+    <eadheader audience="internal"
+              langencoding="iso639-2b"
+              scriptencoding="iso15924"
+              relatedencoding="marc21"
+              repositoryencoding="iso15511"
+              countryencoding="iso3166-1"
+              dateencoding="iso8601"
+              findaidstatus="edited-full-draft"
+              id="a0">
+        <eadid countrycode="us" mainagencycode="NbU" identifier="pml.ead01">pml.ead01</eadid>
+        <filedesc>
+            <titlestmt>
+                <titleproper encodinganalog="245$a">Catalog of the Walt Whitman Literary Manuscripts in
+                    The Pierpont Morgan Library, New York</titleproper>
+                <author>Original records created by The Pierpont Morgan Library, New York; revised
+                    and expanded by the <emph render="italic">Walt Whitman Archive</emph> and the
+                    University of Nebraska-Lincoln Libraries. </author>
+                <sponsor>Encoded Archival Description completed with the assistance of the Gladys
+                    Krieble Delmas Foundation, the University of Nebraska Research Council, the
+                    Institute for Museum and Library Services, and the National Endowment for the Humanities.</sponsor>
+            </titlestmt>
+            <publicationstmt>
+                <publisher encodinganalog="260$b">Published by <emph render="italic">The Walt
+                        Whitman Archive</emph> in collaboration with the University of
+                    Nebraska-Lincoln Libraries. </publisher>
+                <date encodinganalog="260$c" era="ce" calendar="gregorian">2015</date>
+                <address>
+               <addressline>29 Love Library </addressline>
+               <addressline>P.O. Box 884100</addressline>
+               <addressline>University of Nebraska-Lincoln</addressline>
+               <addressline>Lincoln, NE 68508</addressline>
+            </address>
+            </publicationstmt>
+        </filedesc>
+        <profiledesc>
+            <creation>Machine-readable finding aid created by Andrew Jewell, <emph render="italic">The Walt Whitman Archive</emph>, and Mary Ellen Ducey, University of
+                Nebraska-Lincoln Libraries, <date era="ce" calendar="gregorian">2003</date>. Revised
+                by Brett Barney, <emph render="italic">The Walt Whitman Archive</emph>, <date normal="2006" era="ce" calendar="gregorian">2006</date>. Expanded by Janel Cayer, <emph render="italic">The Walt Whitman Archive</emph>, <date normal="2014" era="ce" calendar="gregorian">2014</date>; revised by Kevin McMullen, <emph render="italic">The Walt Whitman Archive</emph>, <date normal="2015" era="ce" calendar="gregorian">2015</date>.</creation>
+            <langusage>Finding aid written in <language encodinganalog="546" langcode="eng">English</language>.</langusage>
+        </profiledesc>
+    </eadheader>
+    <frontmatter>
+        <titlepage id="tp001">
+            <titleproper encodinganalog="245$a">Catalog of the Walt Whitman Literary Manuscripts in The
+                Pierpont Morgan Library, New York</titleproper>
+            <publisher>Published by <emph render="italic">The Walt Whitman Archive</emph> in
+                collaboration with the University of Nebraska-Lincoln Libraries. </publisher>
+            <date era="ce" calendar="gregorian">2015</date>
+        </titlepage>
+    </frontmatter>
+    <archdesc audience="external"
+             level="otherlevel"
+             type="inventory"
+             relatedencoding="marc21">
+        <did id="al">
+            <unittitle audience="external" label="Title:" encodinganalog="245$a">Walt Whitman Literary
+                Manuscripts in The Pierpont Morgan Library, New York</unittitle>
+            <unitid audience="external"
+                 label="Collection Number:"
+                 encodinganalog="099"
+                 repositorycode="NNPM"
+                 countrycode="us">N/A</unitid>
+            <origination audience="external" label="Creator:">
+                <persname encodinganalog="100">Whitman, Walt, 1819-1892</persname>
+         </origination>
+            <physdesc>
+            <genreform>poetry</genreform>
+            <genreform>prose</genreform>
+            <genreform>Manuscripts</genreform>
+         </physdesc>
+            <repository encodinganalog="852$a" label="Repository:">
+            <corpname encodinganalog="852$a">The Pierpont Morgan Library</corpname>
+                <address>
+                    <addressline>The Pierpont Morgan Library</addressline>
+               <addressline>29 East 36th Street</addressline>
+               <addressline>New York, NY  10016-3490</addressline>
+            </address>
+         </repository>
+            <abstract>This catalog was created from the original finding aid and
+                digital images of the original manuscripts obtained by <emph render="italic">The
+                    Walt Whitman Archive</emph>. The original papers and finding aid are held at The
+                Pierpont Morgan Library, New York.</abstract>
+        </did>
+        <descgrp id="ds001" type="admininfo">
+            <accessrestrict audience="external" encodinganalog="506" id="a14">
+                <head>Restrictions on Original Materials:</head>
+                <p>Please consult with repository.</p>
+            </accessrestrict>
+            <!-- <userestrict encodinganalog="540" id="a15">
+<head>Copyright:</head><p>The use of Archives and Special Collections material is governed by the U.S. Copyright Law (title 17 U.S. Code). </p></userestrict>  -->
+            <prefercite encodinganalog="524" id="a18">
+                <head>Preferred Citation:</head>
+                <p>To identify this catalog as a source, see the <emph render="italic">Archive's
+                        </emph>
+               <extref href="http://www.whitmanarchive.org/about/conditions.html"
+                       linktype="simple">"Conditions of Use"</extref> page.</p>
+            </prefercite>
+            <!-- <altformavail type="paper" encodinganalog="530" id="a17"><head>Alternative Format:</head>
+<p> Original Documents held at the <corpname>The Pierpont Morgan Library, New York</corpname></p>
+</altformavail> -->
+        </descgrp>
+        <scopecontent id="sc001">
+            <head>Scope and Content</head>
+            <p>The Pierpont Morgan Library holds several Whitman items, including letters, poetry
+                manuscripts, prose manuscripts, and pages from one of Whitman's diaries written during the
+                Civil War. The library also holds letters and manuscripts by other authors
+                (including <persname normal="Burroughs, John, 1837-1921"
+                      source="lcnaf"
+                      encodinganalog="600$a">John Burroughs</persname>, <persname normal="Updike, John" source="lcnaf" encodinganalog="600$a">John
+                    Updike</persname>, and <persname normal="Lawrence, D. H., (David Herbert), 1885-1930"
+                      source="lcnaf"
+                      encodinganalog="600$a">D. H. Lawrence</persname>) concerning Whitman and his
+                work. This catalog describes at the item level only documents by Whitman deemed poetry or prose manuscripts.</p>
+        </scopecontent>
+        <bioghist id="bh001">
+            <head>Biographical Information</head>
+            <p/>
+        </bioghist>
+        <controlaccess id="ca001">
+            <head>Subjects</head>
+            <persname encodinganalog="600">Whitman, Walt, 1819-1892</persname>
+            <subject encodinganalog="650">Whitman, Walt, 1819-1892--Manuscripts</subject>
+            <subject encodinganalog="650">Poets, American--19th century</subject>
+        </controlaccess>
+        <dsc id="dc001" type="in-depth">
+            <head>Item List</head>
+            <c01 level="item">
+                <did>
+                    <unitid type="WWA">pml.00008</unitid>
+                    <unitid type="work">xxx.00555</unitid>
+                    <unitid type="repository">MA 517</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple">[In general
+                            civilization]</title>
+               </unittitle>
+                    <unitdate normal="1890/1892" era="ce" calendar="gregorian">about 1890</unitdate>
+                    <physdesc>
+                  <genreform>prose</genreform>
+                  <physfacet>handwritten</physfacet>
+                  <extent unit="leaves">1 leaf</extent>
+               </physdesc>
+                    <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/pml.00008.001.jpg"/>
+                    <dao linktype="simple"
+                        href="http://www.whitmanarchive.org/manuscripts/figures/pml_ak.00031.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Eighteen lines of prose in Whitman's hand, beginning "In general
+                        civilization" and concerning the formation of a "National Literature,"
+                        written in pencil with corrections in purple crayon. This is a draft of the essay Whitman later
+                        published as <title render="doublequote" linktype="simple">American National
+                            Literature</title> in <title render="italic" linktype="simple">Good-Bye
+                                My Fancy</title> (<date type="publication" era="ce" calendar="gregorian">1891</date>). It is laid in one of Whitman's diaries of the war. The draft is composed
+                        on the inside of an envelope addressed to "Walt Whitman, Esq., Camden, N.J.,
+                        <date normal="1890-10-09" era="ce" calendar="gregorian">Oct. 9(?),
+                            1890</date>" from the <title render="italic" linktype="simple">North
+                                American Review</title>.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <unitid type="WWA">pml.00004</unitid>
+                    <unitid type="work">xxx.00200</unitid>
+                    <unitid type="repository">MA 518.1</unitid>
+                    <unittitle>
+                  <title render="doublequote" type="WWA" linktype="simple">Ethiopia saluting the
+                            colors</title>
+               </unittitle>
+                    <unitdate normal="1867/1871" era="ce" calendar="gregorian">between 1867 and 1871</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <physfacet>handwritten</physfacet>
+                  <extent unit="leaves">2 leaves</extent>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/pml.00004.001.jpg"/>
+                    <dao linktype="simple"
+                        href="http://www.whitmanarchive.org/manuscripts/figures/pml_ak.00025.jpg"/>    
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/pml.00004.002.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/pml.00004.003.jpg"/>
+                    <dao linktype="simple"
+                        href="http://www.whitmanarchive.org/manuscripts/figures/pml_ak.00026.jpg"/>
+                    <dao linktype="simple"
+                        href="http://www.whitmanarchive.org/manuscripts/figures/pml_ak.00028.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A two-page draft of <title render="doublequote" linktype="simple">Ethiopia
+                        Saluting the Colors,</title> which was first published in the <date type="publication" era="ce" calendar="gregorian">1871</date> edition of <title render="italic">Leaves of Grass</title>. Whitman had written the poem several years earlier and submitted it for publication in the <title render="italic">Galaxy</title> in <date normal="1867" era="ce" calendar="gregorian">1867</date>, under the title <title render="doublequote">Ethiopia Commenting.</title> The poem was accepted by the <title render="italic">Galaxy</title> but never published. The poem was slightly revised after its <date normal="1871" era="ce" calendar="gregorian">1871</date> printing before being included in the "Drum-Taps" cluster of the <date normal="1881" era="ce" calendar="gregorian">1881</date> edition of <title render="italic">Leaves</title>. The placement of commas and dashes, as well as the inclusion of numbered sections, suggest that this particular draft was written sometime between <date normal="1867" era="ce" calendar="gregorian">1867</date> and <date normal="1871" era="ce" calendar="gregorian">1871</date> (the numbered sections were not included in the <date normal="1881" era="ce" calendar="gregorian">1881</date> version). The second page of the draft shows two versions of stanza four, one written on the page and another on a separate slip of paper that Whitman pasted over the first as a revision.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <unitid type="WWA">pml.00006</unitid>
+                    <unitid type="work">xxx.00595</unitid>
+                    <unitid type="repository">MA 518.3</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA" linktype="simple">After certain
+                            disastrous campaigns</title>
+                        <title render="doublequote" type="repository">After certain disastrous campaigns: autograph poem</title>
+                    </unittitle>
+                    <unitdate normal="1860/1865" era="ce" calendar="gregorian">about 1862</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <physfacet>handwritten</physfacet>
+                  <extent unit="leaves">1 leaf</extent>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/pml.00006.001.jpg"/>
+                    <dao linktype="simple"
+                        href="http://www.whitmanarchive.org/manuscripts/figures/pml_ak.00001.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A poem unpublished in Whitman's lifetime, <title render="doublequote" linktype="simple">After Certain Disastrous Campaigns</title> was
+                        published first in <title render="italic" linktype="simple">The Uncollected
+                            Poetry and Prose of Walt Whitman</title> (ed. Emory Holloway. Garden
+                        City, N.Y., Toronto: Doubleday, Page and Company, <date type="publication" era="ce" calendar="gregorian">1921</date>). The manuscript shows that
+                        Whitman originally considered the title <title render="doublequote" linktype="simple">Answer me, year of repulses,</title> which is also the
+                        first line of the poem.
+               </p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <unitid type="WWA">pml.00007</unitid>
+                    <unitid type="work">xxx.00607</unitid>
+                    <unitid type="repository">MA 518.4</unitid>
+                    <unittitle>
+                  <title render="doublequote" type="WWA" linktype="simple">Starry Union
+                        </title>
+               </unittitle>
+                    <unitdate normal="1876/1880" era="ce" calendar="gregorian">about 1876</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <physfacet>handwritten</physfacet>
+                  <extent unit="leaves">1 leaf</extent>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/pml.00007.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/pml.00007.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A draft of a poem unpublished in Whitman's lifetime but existing in various
+                        draft states, including one with the same title in the T. E. Hanley
+                        Collection at the <corpname>University of Texas</corpname> and another,
+                        titled <title render="doublequote" linktype="simple">Hands Ro[und],</title>
+                        in the Trent Collection at <corpname>Duke University</corpname>. The precise
+                        date of composition is unknown, but Whitman very possibly wrote this piece
+                        for the Centennial Celebration of <date era="ce" calendar="gregorian">1876</date>, as the date of the letter on the reverse ("Feb 11/76")
+                        suggests.</p>
+                </scopecontent>
+            </c01>
+
+            <c01 level="item">
+                <did>
+                    <unitid type="WWA"><ref linktype="simple" id="pml.00001">pml.00001</ref></unitid>
+                    <unitid type="work">xxx.00343</unitid>
+                    <unitid type="repository">MA 627</unitid>
+                    <unittitle>
+                  <title render="doublequote" type="WWA" linktype="simple">Ah, not this granite
+                            dead and cold</title>
+               </unittitle>
+                    <unitdate normal="1880/1885" era="ce" calendar="gregorian">about 1885</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <physfacet>handwritten</physfacet>
+                  <extent unit="leaves">1 leaf</extent>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/pml.00001.001.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Draft of the poem originally published as <title render="doublequote" linktype="simple">Ah, Not This Granite Dead and Cold</title> in the <title render="italic">Philadelphia Press</title> on <date normal="1885-02-22" type="publication" era="ce" calendar="gregorian">February 22, 1885</date>.  It would later be reprinted
+                        as <title render="doublequote" linktype="simple">Washington's Monument,
+                            February, 1885</title> in the <title render="doublequote">Sands at Seventy</title> annex to <title render="italic">Leaves of Grass</title> (<date normal="1888" era="ce" calendar="gregorian">1888</date>). This is a later draft than <ref linktype="simple" actuate="onrequest" target="pml.00005">pml.00005</ref> and <ref linktype="simple" actuate="onrequest" target="pml.00009">pml.00009</ref>. An image of the verso is currently unavailable. 
+               </p>
+                </scopecontent>
+            </c01>
+            
+            <c01 level="item">
+                <did>
+                    <unitid type="WWA"><ref linktype="simple" actuate="onrequest" id="pml.00005">pml.00005</ref></unitid>
+                    <unitid type="work">xxx.00343</unitid>
+                    <unitid type="repository">MA 931.1</unitid>
+                    <unittitle>
+                  <title render="doublequote" type="WWA" linktype="simple">Beyond this granite
+                            dead and cold</title>
+               </unittitle>
+                    <unitdate normal="1885" era="ce" calendar="gregorian">1885</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <physfacet>handwritten</physfacet>
+                  <extent unit="leaves">1 leaf</extent>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/pml.00005.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/pml.00005.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Draft of the poem originally published as <title render="doublequote" linktype="simple">Ah, Not This Granite Dead and Cold</title> in the <title render="italic">Philadelphia Press</title> on <date normal="1885-02-22" type="publication" era="ce" calendar="gregorian">February 22, 1885</date>.  It would later be reprinted
+                        as <title render="doublequote" linktype="simple">Washington's Monument,
+                            February, 1885</title> in the <title render="doublequote">Sands at Seventy</title> annex to <title render="italic">Leaves of Grass</title> (<date normal="1888" era="ce" calendar="gregorian">1888</date>). This draft (a later draft than <ref linktype="simple" actuate="onrequest" target="pml.00009">pml.00009</ref> but earlier than <ref linktype="simple" actuate="onrequest" target="pml.00001">pml.00001</ref>) is written on a piece of paper with an envelope pasted at the bottom, postmarked <date normal="1885-02-18" era="ce" calendar="gregorian">February 18, 1885</date>. </p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <unitid type="WWA"><ref linktype="simple" actuate="onrequest" id="pml.00009">pml.00009</ref></unitid>
+                    <unitid type="work">xxx.00343</unitid>
+                    <unitid type="repository">MA 931 (B)</unitid>
+                    <unittitle>
+                  <title render="doublequote" type="WWA" linktype="simple">[Thou, Washington, art
+                            the worlds]</title>
+               </unittitle>
+                    <unitdate normal="1880/1885" era="ce" calendar="gregorian">about 1885</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <physfacet>handwritten</physfacet>
+                  <extent unit="leaves">1 leaf</extent>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/pml.00009.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/pml.00009.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>An early draft of the poem originally published as <title render="doublequote" linktype="simple">Ah, Not This Granite Dead and Cold</title> in the <title render="italic">Philadelphia Press</title> on <date normal="1885-02-22" type="publication" era="ce" calendar="gregorian">February 22, 1885</date>.  It would later be reprinted
+                        as <title render="doublequote" linktype="simple">Washington's Monument,
+                            February, 1885</title> in the <title render="doublequote">Sands at Seventy</title> annex to <title render="italic">Leaves of Grass</title> (<date normal="1888" era="ce" calendar="gregorian">1888</date>). This draft, written on both sides of a thin leaf of
+                        paper, is the earliest of the four drafts of this poem held at the Pierpont Morgan Library (the others are <ref linktype="simple" actuate="onrequest" target="pml.00005">pml.00005</ref>, <ref linktype="simple" actuate="onrequest" target="pml.00001">pml.00001</ref>, and <ref linktype="simple" actuate="onrequest" target="pml.00010">pml.00010</ref>).</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <unitid type="WWA"><ref linktype="simple" actuate="onrequest" id="pml.00010">pml.00010</ref></unitid>
+                    <unitid type="work">xxx.00343</unitid>
+                    <unitid type="repository">MA 931 (C)</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA">Ah, not that granite
+                            dead and cold!</title>
+                        <title render="doublequote" type="repository">Washington's Monument, February, 1885: autograph manuscript drafts of the poem</title>
+               </unittitle>
+                    <unitdate normal="1880/1885" era="ce" calendar="gregorian">about 1885</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <physfacet>handwritten</physfacet>
+                  <extent unit="leaves">1 leaf</extent>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/pml.00010.001.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A late draft of the poem originally published as <title render="doublequote" linktype="simple">Ah, Not This Granite Dead and Cold</title> in the <title render="italic">Philadelphia Press</title> on <date normal="1885-02-22" type="publication" era="ce" calendar="gregorian">February 22, 1885</date>.  It would later be reprinted
+                        as <title render="doublequote" linktype="simple">Washington's Monument,
+                            February, 1885</title> in the <title render="doublequote">Sands at Seventy</title> annex to <title render="italic">Leaves of Grass</title> (<date normal="1888" era="ce" calendar="gregorian">1888</date>). This draft is the latest of the four drafts of this poem held at the Pierpont Morgan Library (the others are <ref linktype="simple" actuate="onrequest" target="pml.00009">pml.00009</ref>, <ref linktype="simple" actuate="onrequest" target="pml.00005">pml.00005</ref>, and <ref linktype="simple" actuate="onrequest" target="pml.00001">pml.00001</ref>). An image of the verso is currently unavailable.
+               </p>
+                </scopecontent>
+            </c01>
+            <!-- 
+<c01 level="item">
+ <did>
+		<unitid type="WWA">pml.#####</unitid>
+		<unitid type="work">xxx.00343</unitid>
+		<unitid type="repository">MA 931 (D)</unitid>
+  <unittitle><title render="doublequote">Ah, Not This Granite Dead and Cold</title></unittitle>
+  <unitdate normal="1885-02-22">February 22, 1885</unitdate>
+  <physdesc>
+  <physfacet>handwritten</physfacet><extent unit="leaves">2 leaves</extent></physdesc>
+ </did>
+ <scopecontent><p>A printed version of <title render="doublequote">Ah, Not This Granite Dead and Cold</title> from the Philadelphia <title render="italic">Press</title>, <date normal="1885-02-22">February 22, 1885</date>, with notes in Whitman's hand.  Also included is a sheet of paper with the autograph words "proof from" and Whitman's signature.</p>
+ </scopecontent>
+</c01> -->
+            <c01 level="item">
+                <did>
+                    <unitid type="WWA">pml.00002</unitid>
+                    <unitid type="work">xxx.00218</unitid>
+                    <unitid type="repository">MA 1212</unitid>
+                    <unittitle>
+                  <title render="doublequote" type="WWA" linktype="simple">O Captain! My
+                            Captain!</title>
+               </unittitle>
+                    <unitdate normal="1890-04-27" era="ce" calendar="gregorian">27 April
+                        1890</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <physfacet>handwritten</physfacet>
+                  <extent unit="leaves">1 leaf</extent>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/pml.00002.001.jpg"/>
+                    <dao linktype="simple"
+                        href="http://www.whitmanarchive.org/manuscripts/figures/pml_ak.00029.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>
+                  <title render="doublequote" linktype="simple">O Captain! My Captain!</title>
+                        was written in response to the death of Abraham Lincoln and first published
+                        on <date normal="1865-11-04" type="publication" era="ce" calendar="gregorian">November 4, 1865</date> in the <extref linktype="simple" actuate="onrequest" show="new" href="http://www.whitmanarchive.org/published/periodical/poems/per.00076"><title render="italic">New-York Saturday Press</title></extref>. It would later be reprinted in <title render="italic">Sequel to Drum-Taps</title> (<date normal="1865" era="ce" calendar="gregorian">1865</date>) and then again, with slight revisions, in <title render="italic">Passage to India</title> (<date normal="1871" era="ce" calendar="gregorian">1871</date>) and <title render="italic">Leaves of Grass</title> (<date normal="1881/1882" era="ce" calendar="gregorian">1881-82</date>).   This particular
+                        manuscript was written out by Whitman for <persname normal="Mitchell, S. Weir (Silas Weir), 1829-1914"
+                            source="lcnaf"
+                            encodinganalog="600$a">Dr. S. Weir Mitchell</persname> (a prominent
+                        author and doctor) at the request of <persname normal="Furness, Horace Howard, 1833-1912"
+                            source="lcnaf"
+                            encodinganalog="600$a">Horace Howard Furness</persname>, for the amount
+                        of one-hundred dollars. A note on the back of the manuscript in Mitchell's
+                        hand says, "To give Walt a little money I offered for a gentleman 100$ for
+                        an autograph copy of My Captain—I pin it to Furness note <date normal="1890-04" era="ce" calendar="gregorian">April 1890</date>." This
+                        manuscript differs slightly from the first printing, but agrees with that in
+                            <title render="italic" linktype="simple">Leaves of Grass</title>, <date normal="1881/1882" type="publication" era="ce" calendar="gregorian">1881-82</date>, with one
+                        exception: In the penultimate line, Whitman has probably mistakenly
+                        written "dead" instead of "deck."</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <unitid type="WWA">pml.00003</unitid>
+                    <unitid type="work">xxx.00528</unitid>
+                    <unitid type="repository">MA 4500</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="repository" linktype="simple">Second preface to 'As a strong bird': autograph manuscript</title>
+                        <title render="doublequote" type="WWA" linktype="simple">2d Preface to As a Strong Bird</title>
+                    </unittitle>
+                    <unitdate normal="1871/1876" era="ce" calendar="gregorian">about 1876</unitdate>
+                    <physdesc>
+                  <genreform>prose</genreform>
+                  <physfacet>handwritten</physfacet>
+                  <extent unit="leaves">1 leaf</extent>
+               </physdesc>
+                    <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/pml.00003.001.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A brief prose note headed "2d Preface to As a Strong Bird." On <date normal="1872-06-26" era="ce" calendar="gregorian">June 26, 1872</date>,
+                        Whitman presented the poem <title render="doublequote" linktype="simple">As
+                            a Strong Bird on Pinions Free</title> for the Dartmouth College
+                        commencement, and it appeared in print that same date in both the <title render="italic">New York Herald</title> and the <title render="italic">Washington Evening Post</title>. Whitman published it later that year as the title poem in a
+                        small book, <title render="italic" linktype="simple">As a Strong Bird on Pinions Free: and Other Poems</title> (<date normal="1872" type="publication" era="ce" calendar="gregorian">1872</date>). The title was later revised to <title render="doublequote" linktype="simple">Thou Mother with Thy Equal Brood</title> when it was included in <title render="italic" linktype="simple">Leaves of Grass</title> in <date normal="1881/1882" type="publication" era="ce" calendar="gregorian">1881&#8211;1882</date>. Though this prose draft may have been intended as a second preface to the poem before its title revision in <date normal="1881" type="publication" era="ce" calendar="gregorian">1881</date>, portions of this manuscript were first used in an essay titled, <title render="doublequote" linktype="simple">Preface,</title> which appeared at the beginning of <title render="italic" linktype="simple">Two Rivulets</title>, the second volume of the "Centennial Edition" of <title render="italic" linktype="simple">Leaves of Grass</title> (<date normal="1876" type="publication" era="ce" calendar="gregorian">1876</date>). The title was later changed to <title render="doublequote" linktype="simple">Preface, <date normal="1876" era="ce" calendar="gregorian">1876</date>, to the two-volume Centennial Edition of L. of G. and 'Two Rivulets.'</title> In the top left corner Whitman has written <title render="doublequote" linktype="simple">Waves in the Vessel's Wake,</title> a title that was used in manuscript for the poem published first as <title render="doublequote" linktype="simple">In the Wake Following</title> in <date normal="1874" type="publication" era="ce" calendar="gregorian">1874</date> and as <title render="doublequote" linktype="simple">After the Sea-Ship</title> in <date normal="1876" type="publication" era="ce" calendar="gregorian">1876</date>. </p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <unitid type="WWA">pml.00057</unitid>
+                    <unitid type="work">xxx.00559</unitid>
+                    <unitid type="repository">MA 518.2</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="repository">American poets: autograph manuscript</title>
+                        <title render="doublequote" type="WWA">American Poets</title>
+                    </unittitle>
+                    <unitdate normal="1850/1891" era="ce" calendar="gregorian">1850&#8211;1891</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                  <physfacet>handwritten</physfacet>
+                  <extent/>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00007.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A partial draft of <title render="doublequote">Old Poets,</title> first published in <title render="italic">North American Review</title> (<date normal="1890-11" type="publication" era="ce" calendar="gregorian">November 1890</date>). It was reprinted under the title, <title render="doublequote">Old Poets and the New Poetry</title> in <title render="italic">Pall Mall Gazette</title> (<date normal="1890-11-17" type="publication" era="ce" calendar="gregorian">17 November 1890</date>), before it appeared in <title render="italic">Good-Bye My Fancy</title> (<date normal="1891" type="publication" era="ce" calendar="gregorian">1891</date>) and again in <title render="italic">Complete Prose Works</title> (<date normal="1892" type="publication" era="ce" calendar="gregorian">1892</date>).</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <unitid type="WWA">pml.00060</unitid>
+                    <unitid type="work">xxx.00802</unitid>
+                    <unitid type="repository">MA 1337</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="repository">Death of Longfellow: Camden, N.J.: autograph manuscript</title>
+                        <title render="doublequote" type="WWA">Death of Longfellow</title>
+                    </unittitle>
+                        <unitdate normal="1882" era="ce" calendar="gregorian">1882</unitdate>
+                        <physdesc>
+                            <genreform>prose</genreform>
+                  <physfacet>handwritten</physfacet>
+                  <extent>5 leaves</extent>
+                        </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00015.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00016.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00017.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00018.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00019.jpg"/>
+                </did>
+                <scopecontent>
+                    <p><title render="doublequote">Death of Longfellow</title> first appeared in the <date normal="1882-04-08" type="publication" era="ce" calendar="gregorian">8 April 1882</date> issue of <title render="italic">The Critic</title>, a literary magazine founded in <date normal="1881" era="ce" calendar="gregorian">1881</date> by Jeanette L. Gilder and Joseph B. Gilder. This piece was reprinted in <title render="italic">Essays from "The Critic"</title> (<date normal="1882" type="publication" era="ce" calendar="gregorian">1882</date>), alongside pieces by figures such as John Burroughs and Edmund C. Stedman. Whitman included <title render="doublequote">Death of Longfellow</title> in <title render="italic">Specimen Days</title> (<date normal="1882/1883" type="publication" era="ce" calendar="gregorian">1882&#8211;1883</date>) as well as <title render="italic">Complete Prose Works</title> (<date normal="1892" type="publication" era="ce" calendar="gregorian">1892</date>).</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <unitid type="WWA">pml.00084</unitid>
+                    <unitid type="work">xxx.00496</unitid>
+                    <unitid type="repository">MA 8645</unitid>                    
+                    <unittitle>
+                        <title render="doublequote" type="repository">Thou vast rondure, swimming in space: autograph manuscript poem signed</title>
+                        <title render="doublequote" type="WWA">Thou vast Rondure, swimming in space</title>
+                    </unittitle>
+                    <unitdate normal="1848/1869" era="ce" calendar="gregorian">about 1868</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">2 leaves</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00117.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00118.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A fair copy of a poem titled, <title render="doublequote">Thou vast Rondure, swimming in space,</title> that Whitman attempted to publish in several venues, to no avail. In <date normal="1868-12" era="ce" calendar="gregorian">December 1868</date> Whitman sent a copy of this poem to John Morley, then editor of the <title render="italic">Fortnightly Review</title>. Morley replied that he could not print the poem until April. For the solicitation to the <title render="italic">Fortnightly Review</title>, see Whitman's <extref actuate="onrequest" href="hhtp://www.whitmanarchive.org/biography/correspondence/tei/loc.01571.html" linktype="simple" show="new"><date normal="1868-12-17" era="ce" calendar="gregorian">December 17, 1868</date></extref> letter to Morley. On <extref  actuate="onrequest" href="http://www.whitmanarchive.org/biography/correspondence/tei/uva.00353.html" linktype="simple" show="new"><date normal="1869-01-20" era="ce" calendar="gregorian">20 January 1869</date></extref>, Whitman sent the poem to James T. Fields at the <title render="italic">Atlantic Monthly</title>. Unaccountably, the poem did not appear in print. Parts of the poem were reworked and first published as section five of <title render="doublequote">Passage to India</title> (<date normal="1871" type="publication" era="ce" calendar="gregorian">1871</date>). A facsimile of this manuscript appeared in the <title render="italic">Brooklyn Daily Eagle, </title> <date normal="1911-10-26" type="publication" era="ce" calendar="gregorian">26 October 1911</date>.  For more on the publication history of <title render="doublequote">Thou vast Rondure, swimming in space,</title> see Joann P. Krieg, <title render="doublequote" linktype="simple" actuate="onrequest" show="new" href="http://www.whitmanarchive.org/criticism/wwqr/pdf/anc.00480.pdf">Holograph Manuscript of 'Thou Vast Rondure' Comes to Light On Long Island,</title> <title render="italic">Walt Whitman Quarterly Review</title> 5 (Summer 1987), 32-36.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <unitid type="WWA">pml.00087</unitid>
+                    <unitid type="work">xxx.00485</unitid>
+                    <unitid type="repository">MA 517</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="repository">Fragments from his Civil War diary: autograph manuscript</title>
+                        <title render="doublequote" type="WWA">[New York State furnished]</title>
+                    </unittitle>
+                    <unitdate normal="1863/1888" era="ce" calendar="gregorian">1863&#8211;1868</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">25 leaves</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00022.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00023.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00024.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00025.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00026.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00027.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00028.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00029.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00030.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00031.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00032.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00033.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00034.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00035.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00036.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00037.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00038.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00039.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscritps/figures/pml_nk.00040.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00041.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00042.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00043.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00044.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00045.jpg"/>
+                    <dao linktype="simple" href="http://www.whitmanarchive.org/manuscripts/figures/pml_nk.00046.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A manuscript draft of <title render="doublequote">Army Hospitals and Cases: Memoranda at the Time, 1863&#8211;1866,</title> <title render="italic">Century Illustrated Magazine</title> (<date normal="1888-10" type="publication" era="ce" calendar="gregorian">October 1888</date>), a publication which incorporates material from the <title render="doublequote">'Tis but Ten Years Since</title> series (specifically the fourth through the sixth papers, which appeared in the <title render="italic">New York Weekly Graphic</title> on <date normal="1874-02-21" type="publication" era="ce" calendar="gregorian">21</date>, <date normal="1874-02-28" type="publication" era="ce" calendar="gregorian">28 February</date>, and <date normal="1874-03-07" type="publication" era="ce" calendar="gregorian">7 March 1874</date>, respectively) and <title render="italic">Memoranda During the War</title> (<date normal="1875/1876" type="publication" era="ce" calendar="gregorian">1875&#8211;1876</date>). However, this manuscript does not seem to have contributed directly to this earlier series of articles or to <title render="italic">Memoranda</title>. This manuscript seems to be composed of selections from a Civil War journal that Whitman compiled in preparation for the <title render="italic">Century</title> piece, and which he also used in letters sent to his mother during the war. <title render="doublequote">Army Hospitals and Cases</title> was revised as <title render="doublequote">Last of the War Cases</title> in <title render="italic">November Boughs</title> (<date normal="1888" type="publication" era="ce" calendar="gregorian">1888</date>) before it appeared in <title render="italic">Complete Prose Works</title> (<date normal="1892" type="publication" era="ce" calendar="gregorian">1892</date>).</p>
+                </scopecontent>
+            </c01>
+            
+        </dsc>
+    </archdesc>
+</ead>

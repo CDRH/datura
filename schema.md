@@ -51,6 +51,8 @@ I’ve included a couple of extra elements here as they make sense to support th
 * **placeName** (name for the place above, or may be used without the lat/long)
 * **recipient** (a singular field for the recipient(s), used for sorting. If there are multiple recipients, they will be alphabetized  i.e. “Boggs, Jeremy; Earhart, Amy; Graham, Wayne”
 * **recipients** (multivalued field containing the names from above - <field>Boggs, Jeremy</field>, <field>Earhart, Amy</field>, <field>Graham, Wayne</field>)
+* **sender** (a singular field for the sender(s), used for sorting. If there are multiple recipients, they will be alphabetized  i.e. “Boggs, Jeremy; Earhart, Amy; Graham, Wayne”
+* **sender** (multivalued field containing the names from above - <field>Boggs, Jeremy</field>, <field>Earhart, Amy</field>, <field>Graham, Wayne</field>)
 
 ### CDRH specific categorization (all pulled directly from the profileDesc)
 

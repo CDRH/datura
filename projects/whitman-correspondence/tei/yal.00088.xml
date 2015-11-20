@@ -4,7 +4,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title level="m" type="main">Thomas Jefferson Whitman  to Walt Whitman, 11 September 1885</title>
+            <title level="m" type="main">Thomas Jefferson Whitman to Walt Whitman, 11 September 1885</title>
             <title level="m" type="sub">a machine readable transcription</title>
             <author>Thomas Jefferson Whitman</author>
             <editor>Dennis Berthold</editor>
@@ -12,9 +12,9 @@
             <respStmt>
                <resp>Transcription and encoding</resp>
                <persName xml:id="el">Elizabeth Lorang</persName>
-
                <persName xml:id="kk">Kathryn Kruger</persName>
                <persName xml:id="al">April Lambert</persName>
+               <persName xml:id="nhg">Nicole Gray</persName>
             </respStmt>
             <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
             <sponsor>University of Iowa</sponsor>
@@ -40,32 +40,19 @@
             </availability>
          </publicationStmt>
          <sourceDesc>
-            <biblStruct>
-               <monogr>
-                  <author>Thomas Jefferson Whitman</author>
-                  <editor>Dennis Berthold</editor>
-                  <editor>Kenneth M. Price</editor>
-                  <title xml:id="dbw">Dear Brother Walt: The Letters of Thomas Jefferson Whitman</title>
-                  <imprint>
-                     <pubPlace>Kent, Ohio</pubPlace>
-                     <publisher>Kent State University Press</publisher>
-                     <date>1984</date>
-                     <biblScope type="page">183</biblScope>
-                  </imprint>
-               </monogr>
-            </biblStruct>
+            
             <bibl>
                <author>Thomas Jefferson Whitman</author>
-               <title>Thomas Jefferson Whitman  to Walt Whitman, 11 September 1885</title>
+               <title>Thomas Jefferson Whitman to Walt Whitman, 11 September 1885</title>
                <date when="1885-09-11">September 11, 1885</date>
-               <orgName xml:id="yal">Yale Collection of American Literature, Beinecke Rare Book and Manuscript Library at Yale University</orgName>
+               <orgName xml:id="yal">Yale Collection of American Literature, Beinecke Rare Book and Manuscript Library</orgName>
             </bibl>
          </sourceDesc>
       </fileDesc>
       <profileDesc>
          <particDesc>
             <person role="sender">
-               <persName key="Whitman, Thomas Jefferson">Thomas Jefferson Whitman</persName>
+               <persName key="Whitman, Thomas Jefferson" ref="n4995">Thomas Jefferson Whitman</persName>
             </person>
             <person role="recipient">
                <persName key="Whitman, Walt">Walt Whitman</persName>
@@ -73,6 +60,9 @@
          </particDesc>
       </profileDesc>
       <revisionDesc>
+         <change when="2015-10-29" who="#nhg">corrected</change>
+         <change when="2015-09-25" who="#nhg">added images, updated transcription</change>
+         <change when="2015-02-23" who="#nhg">checked, corrected</change>
 <change who="#el" when="2014-08-15">added schematron declaration</change>
          <change who="#el" when="2013-11-22">converted to P5</change>
          <change who="#el" when="2008-07-21">updated TEI header</change>
@@ -82,24 +72,25 @@
    </teiHeader>
    <text type="letter">
       <body>
-         
+         <pb xml:id="leaf001r" facs="yal.00330.002_large.jpg" type="recto"/>
             <opener>
-               <dateline rend="right">
+               <dateline rend="right"> 
+                  <name type="place"><handShift rend="printed"/>Office of <lb/>Water Commissioner.<ptr target="yal.00088_n5"/></name>
                   <name type="place">St. Louis,</name>
-                  <date when="1885-09-11">Sept. 11th 1885</date>
+                  <date when="1885-09-11"><handShift rend="manuscript"/>Sept. 11th <handShift rend="printed"/>188<handShift rend="manuscript"/>5</date>
                </dateline>
                <salute>My dear Walt</salute>
             </opener>
             <p>Enclosed please find check for $10&#8212;payable to your order  This check is sent by Mr Chaphe<ptr target="yal.00088_n1"/>  he is so much pleased with his books.</p>
             <p>We are getting on about in the usual manner&#8212;all well&#8212;I am pretty busy&#8212;but still hope to get away long enough to make you all a visit</p>
             <p>Weather here just perfect for the last few days&#8212;Hat and Jess doing the "Exposition" which has just opened<ptr target="yal.00088_n2"/>&#8212;they say tis first class</p>
-            <p>Glad to see that you are all right again&#8212;saw a little notice in last evenings paper stating this fact<ptr target="yal.00088_n3"/>&#8212;</p>
+            <p>Glad to see that you are all right again&#8212;saw a little notice in last evenings paper stating the fact<ptr target="yal.00088_n3"/>&#8212;</p>
             <p>Have just received a telegram from Horace Tarr of New York (Mr Lane's nephew)<ptr target="yal.00088_n4"/> stating that he would call on me to-day&#8212;shall be glad to see him&#8212;</p>
             <p>All send love</p>
             <closer rend="right">
-               <signed>Jeff</signed>
+               <signed>Jeff</signed> 
             </closer>
-         
+         <pb xml:id="leaf001v" facs="yal.00330.001_large.jpg" type="recto"/>
       </body>
    </text>
 </TEI>

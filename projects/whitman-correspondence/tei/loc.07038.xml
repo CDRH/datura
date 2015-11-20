@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.07038">    
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Morley C. Roberts to Walt Whitman, 12 December
+                    1886</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Morley C. Roberts</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="smb">Stephanie Blalock</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2015</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.07038</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>Horace Traubel</author>
+                        <title xml:id="ht">With Walt Whitman in Camden</title>
+                        <imprint>
+                            <pubPlace>Philadelphia</pubPlace>
+                            <publisher>University of Pennsylvania Press</publisher>
+                            <date when="1953">1953</date>
+                            <biblScope type="volume">3</biblScope>
+                            <biblScope type="page">466&#8211;467</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Morley C. Roberts</author>
+                    <title>Morley C. Roberts to Walt Whitman, 12 December 1886</title>
+                    <date cert="high" when="1886-12-12" xml:id="dat1">December 12, 1886</date>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Roberts, Morley C." ref="loc.07038_n1">Morley C. Roberts</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-08-05" who="#smb">final check, corrected, note</change>
+            <change when="2015-06-30" who="#if">edited</change>
+            <change when="2015-05-16" who="#ss">added annotations</change>
+            <change when="2015-01-29" who="#ss">encoded based on WWIC3</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place">14 The Grove, Clapham Common,</name>
+                    <name type="place">London, S. W.,</name>
+                    <date when="1886-12-12">Dec. 12, '86.</date>
+                </dateline>
+                <salute>Dear Sir.</salute>
+            </opener>
+            <p>I have but lately read your poems, Leaves of Grass, but I find in them so much
+                encouragement and hope, and such a great personality, that I write to express my
+                simple thanks for the gift of the book and the great thoughts in it. Though I belong
+                to England, and am English heart and soul, I know your America, who finds in you her
+                first poetical expression, from the Atlantic to the Pacific, from New York to Texas,
+                and Minnesota, and the great West, Oregon, Washington, and California. I have toiled
+                and travelled thousands of miles on the Pacific slope, and only regret that I had
+                not Leaves of Grass with me to make me see even more than I did in three years of
+                arduous struggle. But I thank you now, and with all sincerity, for a new religion
+                and the knowledge of a great personality. In all events to come for me, you have had
+                a great influence,<ptr target="loc.07038_n2"/></p>
+            <closer>
+                <salute>and I am, dear sir, yours gratefully</salute>
+                <signed>Morley C. Roberts</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

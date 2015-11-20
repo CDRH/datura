@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="brn.00007">
+    <teiHeader>
+        <fileDesc> 
+            <titleStmt>
+                <title level="m" type="main">John Hay to Walt Whitman, 12 March 1887</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>John Hay</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="smb">Stephanie Blalock</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>brn.00007</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>John Hay</author>
+                    <title>John Hay to Walt Whitman, 12 March 1887</title>
+                    <date cert="high" when="1887-03-12" xml:id="dat1">March 12, 1887</date>
+                    <idno type="callno">Reels F5701: 2-12</idno>
+                    <orgName xml:id="brn">John Hay Library, Brown University</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="ww"><persName key="Whitman, Walt">Walt
+                    Whitman</persName></handNote>
+            </handNotes>
+            <particDesc> 
+                <person role="sender">
+                    <persName key="Hay, John" ref="n3080">John Hay</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc> 
+            <change when="2015-08-29" who="#smb">final check, corrected</change>
+            <change when="2015-07-11" who="#if">edited</change>
+            <change when="2014-10-14" who="#ss">checked and corrected</change>
+            <change when="2014-10-01" who="#ak">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+           
+            <pb xml:id="leaf001r" facs="brn.00007.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <handShift rend="printed"/>
+                    <name type="place">800 SIXTEENTH STREET,<lb/>LAFAYETTE SQUARE.</name>
+                    <handShift rend="manuscript"/>
+                    <name type="place">Washington<ptr target="brn.00007_n1"/></name>
+                    <date when="1887-03-12">March 12.</date>
+                </dateline>
+                <salute>Dear Walt Whitman;</salute>
+            </opener>
+            <p> I have received your books and MS. and send, with my hearty thanks, a New York check
+                for &#36;30. It is a little more than your modest charge. You will pardon the
+                liberty; I am not giving you anything like what the writing is worth to me, but
+                trying to give a just compensation for the trouble of copying, simply. </p>
+            <p> My boy, ten years old, said <pb xml:id="leaf001v" facs="brn.00007.002_large.jpg"
+                    type="verso"/> to me this morning, "Have you got a book with a poem in it called
+                'O Captain! My Captain!' I want to learn it to speak in school." I stared at him,
+                bearing you in mind at the moment, as if he were a mind-reader&#8212; and asked him
+                where he had heard of that poem. He said a boy had repeated it last year somewhere. </p>
+            <p> I made him happy by showing him the MS. and <pb xml:id="leaf002r"
+                    facs="brn.00007.003_large.jpg" type="recto"/> promising him it should be his if
+                he deserved it, after I am gone. </p>
+            <p> With love and good wishes and hopes that the spring may bring healing on its wings
+                to you </p>
+            <closer>
+                <salute>I am faithfully yours</salute>
+                <signed>John Hay</signed>
+            </closer>
+            <pb xml:id="leaf002v" facs="brn.00007.004_large.jpg" type="verso"/>
+            <pb xml:id="leaf003r" facs="brn.00007.005_large.jpg" type="recto"/>
+            <note type="editorial" resp="#ww" place="top">from John Hay, acknowledging
+                &#38; paying for MS of "Captain, O Captain!"</note>
+            <pb xml:id="leaf003v" facs="brn.00007.006_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

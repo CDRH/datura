@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?> 
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.01240">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Edward Carpenter to Walt Whitman, 17 May 1886</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Edward Carpenter</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="smb">Stephanie Blalock</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.01240</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Edward Carpenter</author>
+                    <title>Edward Carpenter to Walt Whitman, 17 May 1886</title>
+                    <date cert="high" when="1886-05-17" xml:id="dat1">May 17, 1886</date>
+                    <idno type="callno">Box 8, Reel 5</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="ww"><persName key="Whitman, Walt">Walt
+                    Whitman</persName></handNote>
+            </handNotes>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Carpenter, Edward" ref="n0141b">Edward Carpenter</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-11-02" who="#nhg">tweaked encoding of list</change>
+            <change when="2015-07-21" who="#smb">final check</change>
+            <change when="2015-06-30" who="#if">edited</change>
+            <change when="2015-06-30" who="#nhg">corrected image names</change>
+            <change when="2015-05-16" who="#ss">added annotations</change>
+            <change when="2014-11-21" who="#ss">checked and corrected</change>
+            <change when="2014-10-22" who="#ak">transcribed and encoded</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="loc.01240.001_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place">Millthorpe</name>
+                    <name type="place"> nr Chesterfield</name>
+                    <date when="1886-05-17">17 May 1886</date><ptr target="loc.01240_n1"/>
+                </dateline>
+                <salute>Dear old Walt</salute>
+            </opener>
+            <p> I just enclose a letter of credit for &#65505;45 on a bank in Philadelphia. It is
+                the result of contributions, unsolicited, among a few friends 
+                <list>  
+                    <item>R. D. Roberts of Cambridge MA</item>
+                    <item>Bessie H. Ford {of Leeds}</item>
+                    <item>Isabella Ford<ptr target="n6108"/></item>
+                    <item>Charles R Ashbee of Cambridge undergraduate<ptr target="loc.01240_n2"/></item>
+                    <item>Wm Thompson of Nottingham</item> 
+                        <item>&#38; a brother &#38; sister</item>
+                    <item>and Myself.</item>
+                </list>
+            
+            <pb xml:id="leaf001v" facs="loc.01240.002_large.jpg" type="verso"/>
+            We shall be very pleased if you will accept the little present as our remembrance of
+                your birthday &#38; we wish you good times &#38; much happiness yet&#8212;with our
+                love. </p>
+            <p> I have just heard from Maurice Bucke<ptr target="n0119"/>&#8212;he writes from
+                Dorset, &#38; talks of coming north in a fortnight, so I hope to see him</p>
+            <closer>
+                <signed>Edward Carpenter</signed><ptr target="loc.01240_n3"/>
+            </closer>
+            <pb xml:id="leaf002r" facs="loc.01240.003_large.jpg" type="recto"/>
+            <postscript>
+                <p> I saw you had a good lecture in Phila.
+                </p>
+            </postscript>
+            <pb xml:id="leaf002v" facs="loc.01240.004_large.jpg" type="verso"/>
+            <note type="editorial" resp="#ww" place="top">Letter from Edward Carpenter May 17 '86
+            (&#65505;45 from friends birthday present)</note>
+        </body>
+    </text>
+</TEI>

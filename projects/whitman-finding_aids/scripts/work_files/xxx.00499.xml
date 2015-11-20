@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TEI.2 PUBLIC "-/UVA::IATH/DTD whitman.dtd (Whitman Archive)/EN"
+"whitman.dtd"
+[
+<!ENTITY respStmt PUBLIC "-/UVA::IATH/TEXT (Whitman Archive Responsibility Statement)/EN"
+ "respStmt.xml">
+<!ENTITY pubStmt PUBLIC "-/UVA::IATH/TEXT (Whitman Archive Publication Statement)/EN"
+ "pubStmt.xml">
+<!ENTITY xxx.00489 PUBLIC "-/UVA::IATH/TEXT (Whitman Archive xxx.00489)/EN"
+ "xxx.00489.xml" NDATA xml>
+]>
+<TEI.2 id="xxx.00499" type="work">
+   <relations>
+      <workparent entity="xxx.00489">
+         <bibl>
+            <title>Two Rivulets, including Democratic Vistas,
+		Centennial Songs, and Passage to India</title>
+         </bibl>
+      </workparent>
+   </relations>
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="a" type="main">Ashes of Soldiers [cluster in <hi rend="italic">Leaves of Grass</hi>]</title>
+            <title level="a" type="uniform">Ashes of Soldiers [cluster in <hi rend="italic">Leaves of Grass</hi>]</title>
+            &respStmt;
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2003</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>xxx.00499</idno>
+            &pubStmt;
+         </publicationStmt>
+         <sourceDesc>
+            <p>Original</p>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textClass>
+            <keywords>
+               <term type="genreForm">Poetry</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text type="ancillary">
+      <body>
+         <p><!--Commentary--></p>
+      </body>
+   </text>
+</TEI.2>

@@ -1593,7 +1593,7 @@ This file was compiled from information found in
 <sex>female</sex>
 <trait type="color"><ab></ab></trait>
 <socecStatus>enslaved</socecStatus>
-<note>Not the same Sarah Davis as in Sarah Davis v. James Clerklee.</note>
+<!--<note>Not the same Sarah Davis as in Sarah Davis v. James Clerklee.</note>-->
 </person>
 
 <person xml:id="per.000166" source="http://earlywashingtondc.org/doc/oscys.case.0017.003">
@@ -1763,10 +1763,11 @@ This file was compiled from information found in
 <!-- oscys.case.0020.001 start -->
 
 <person xml:id="per.000184" source="http://earlywashingtondc.org/doc/oscys.case.0020.001">
-<persName type="display">Davis, David</persName>
+<persName type="display">Davis, Davy</persName>
 <persName type="full"> <surname>Davis</surname>, <forename type="first" full="yes">Davy</forename> <addName type="forename" subtype="alternate">David</addName></persName>
 <sex>male</sex>
 <trait type="color"><ab></ab></trait>
+<socecStatus>enslaved</socecStatus>
 </person>
 
 <person xml:id="per.000185" source="http://earlywashingtondc.org/doc/oscys.case.0020.001">
@@ -2639,7 +2640,7 @@ This file was compiled from information found in
 </person>
 
 <person xml:id="per.000278" source="http://earlywashingtondc.org/doc/oscys.case.0033.001">
-<persName type="display">Miller, George, Sr.</persName>
+<persName type="display">Miller, George</persName>
 <persName type="full"><surname>Miller</surname>, <forename type="first" full="yes">George</forename> <genName>Senior</genName></persName>
 <birth></birth>
 <sex>male</sex>
@@ -7831,7 +7832,7 @@ This file was compiled from information found in
 
 <person xml:id="per.000836" source="http://earlywashingtondc.org/doc/oscys.case.0105.001">
 <persName type="display">Miller, George, Jr.</persName>
-<persName type="full"> <surname>Miller</surname>, <forename type="first" full="yes">George</forename> c</persName>
+<persName type="full"> <surname>Miller</surname>, <forename type="first" full="yes">George</forename> <genName>Junior</genName></persName>
 <sex>male</sex>
 <trait type="color"><ab></ab></trait>
 <residence>Washington County, District of Columbia</residence>
@@ -9229,13 +9230,14 @@ This file was compiled from information found in
 <trait type="color"><ab></ab></trait>
 </person>
 
+<!-- same as per.000839
 <person xml:id="per.000989" source="http://earlywashingtondc.org/doc/oscys.case.0125.005">
 <persName type="display">Webb, William</persName>
 <persName type="full"> <surname>Webb</surname>, <forename type="first" full="yes">William</forename></persName>
 <sex>male</sex>
 <trait type="color"><ab></ab></trait>
 <occupation when="1830-09-15">justice of the peace</occupation>
-</person>
+</person>-->
 
 <!-- oscys.case.0125.005 end -->
 
@@ -12320,7 +12322,7 @@ This file was compiled from information found in
 <sex>female</sex>
 <trait type="color"><ab></ab></trait>
 <socecStatus when="1809-04-13">enslaved</socecStatus>
-<note>Not the same Sarah Davis as in Ann Davis, David Davis, Sarah Davis, Frederick Davis, &amp; Hanson Davis v. Charles Minifee.</note>
+<!--<note>Not the same Sarah Davis as in Ann Davis, David Davis, Sarah Davis, Frederick Davis, &amp; Hanson Davis v. Charles Minifee.</note>-->
 </person>
 
 <!-- addition to oscys.case.0021.001 end -->
@@ -13162,7 +13164,11 @@ This file was compiled from information found in
 
 <person xml:id="per.001396" source="http://earlywashingtondc.org/doc/oscys.case.0212.004">
 <persName type="display">David, John</persName>
+<<<<<<< HEAD
 <persName type="full"> <surname>David</surname> <addName type="last" subtype="alternate">Davis</addName>, <forename type="first" full="yes">John</forename></persName>
+=======
+<persName type="full"> <surname>David</surname>, <forename type="first" full="yes">John</forename></persName>
+>>>>>>> master
 <sex>male</sex>
 <trait type="color"><ab></ab></trait>
 <residence when="1830-04-03">Virginia</residence>
@@ -14367,8 +14373,8 @@ This file was compiled from information found in
 
 
 <person xml:id="per.001533" source="http://earlywashingtondc.org/doc/oscys.report.0030.001">
-<persName type="display">Lee, Charles C.</persName>
-<persName type="full"> <surname>Lee</surname>, <forename type="first" full="yes">Charles</forename> <forename type="middle" full="init">C.</forename></persName>
+<persName type="display">Lee, C. C.</persName>
+<persName type="full"> <surname>Lee</surname>, <forename type="first" full="init">C.</forename> <forename type="middle" full="init">C.</forename></persName>
 <sex></sex>
 <trait type="color"><ab></ab></trait>
 <occupation>attorney</occupation>

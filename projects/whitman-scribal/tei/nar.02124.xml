@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="nar.02124">
+    <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title level="m" type="main">Benjamin Helm Bristow to H. E. Hudson, 4 November 1871</title>
+        <title level="m" type="sub">a machine readable transcription</title>
+        <author>Benjamin Helm Bristow</author>
+        <editor>Kenneth M. Price</editor>
+        <editor>Ed Folsom</editor>
+        <respStmt>
+          <resp>Transcription and encoding</resp>
+          <name>The Walt Whitman Archive Staff</name>
+        </respStmt>
+        <sponsor>Center for Digital Research in the Humanities, University of
+          Nebraska-Lincoln</sponsor>
+        <sponsor>University of Iowa</sponsor>
+        <funder>National Historical Publications and Records Commission</funder>
+      </titleStmt>
+      <editionStmt>
+        <edition>
+          <date>2011</date>
+        </edition>
+      </editionStmt>
+      <publicationStmt>
+        <idno>nar.02124</idno>
+        <distributor>The Walt Whitman Archive</distributor>
+        <address>
+          <addrLine>Center for Digital Research in the Humanities</addrLine>
+          <addrLine>319 Love Library</addrLine>
+          <addrLine>University of Nebraska-Lincoln</addrLine>
+          <addrLine>P. O. Box 884100</addrLine>
+          <addrLine>Lincoln, NE 68588-4100</addrLine>
+        </address>
+        <availability>
+          <p>Copyright &#169; 2011 by Ed Folsom and Kenneth M. Price, all rights
+            reserved. Items in the Archive may be shared in accordance with the Fair Use
+            provisions of U. S. copyright law. Redistribution or republication on other
+            terms, in any medium, requires express written consent from the editors and
+            advance notification of the publisher, Center for Digital Research in the
+            Humanities. Permission to reproduce the graphic images in this archive has
+            been granted by the owners of the originals for this publication only.</p>
+        </availability>
+      </publicationStmt>
+      <notesStmt>
+        <note type="project">The following are responsible for particular readings or for
+          changes to this file, as noted: <persName xml:id="el">Elizabeth Lorang</persName>
+          <persName xml:id="mk">Melanie Krupa</persName>
+          <persName xml:id="js">John Schwaninger</persName>
+          <persName xml:id="nnk">Nima Najafi Kianfar</persName>
+          <persName xml:id="km">Kevin McMullen</persName>
+          
+          
+        </note>
+      </notesStmt>
+      <sourceDesc>
+        <bibl>
+          <author>Benjamin Helm Bristow</author>
+          <title>Benjamin Helm Bristow to H. E. Hudson, 4 November 1871</title>
+          <date cert="high" when="1871-11-04" xml:id="dat1">November 4, 1871</date>
+          <idno type="callno"></idno>
+          <biblScope type="page">15-16</biblScope>
+          <orgName xml:id="nar">National Archives and Records Administration</orgName>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <particDesc>
+        <person role="sender">
+          <persName key="Bristow, Benjamin Helm ">Benjamin Helm Bristow</persName>
+        </person>
+        <person role="recipient">
+          <persName key="Hudson, H. E. ">H. E. Hudson</persName>
+        </person>
+        <person role="scribe">
+          <persName key="Whitman, Walt">Walt Whitman</persName>
+        </person>
+      </particDesc>
+    </profileDesc>
+    <revisionDesc>       <change when="2011-12-20" who="#el">removed spaces surrounding em-dashes and inserted space between initials</change><change when="2011-11-17" who="#el">checked file for values of @facs, further revised header information, revised encoding</change><change when="2011-11-15" who="#el">changes to TEI header, including punctuation of titles and replacing initials with full names when possible</change>
+      <change when="2011-09-13" who="#km">proofed</change>
+      <change when="2011-09-12" who="#nnk">checked</change>
+      <change when="2011-09-07" who="#mk">transcribed, encoded</change>
+      
+    </revisionDesc>
+  </teiHeader>
+
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="nar.02124.001.jpg" type="recto"/>
+            <ab>Nov. 4, 1871,</ab>
+            <ab>H. E. Hudson, Esq. U. S. Attorney,</ab>
+            <ab>Memphis, Tenn.</ab>
+            <ab>Sir:</ab>
+            <ab>I enclose herewith a copy of a letter from Mark Edwards, the Disbursing Officer of Claims 
+                <!-- IMPORTANT NOTE HERE: When a paragraph (or in this case, "anonymous block", continues from one page to another, the </ab> closing tag does not come until the paragraph has ended. So, here, the page break simply interrupts the <ab>, which then continues on the next page. I've made the changes accordingly. KM -->
+            <note type="authorial" place="left">140</note>
+           
+            <pb xml:id="leaf001v" facs="nar.02124.002.jpg" type="verso"/>
+           of the Bureau of Refugees, Freedmen, and Abandoned Lands, at Memphis; also a copy of a letter to the Department from the Secretary of War, of the 2d <!--2nd--> inst. relative to your alleged refusal to bring indictments against parties violating the 13th Section of the Act of July 4, 1864, in defrauding the ex-soldiers of their bounty money&#8212;and requesting that you be instructed to bring such indictments.</ab>
+            <ab>From what I can learn from these letters, I am unable at present to give any instructions in the premises. I therefore desire that you will at your earliest convenience report to this Department the cause and the grounds upon which you decline to indict parties under said law.  In making this request I wish you to understand that the Department finds no fault with your action in the matter, but wishes to learn your views before taking action upon the request of the Secretary.</ab>
+            <ab>Very respectfully,</ab>
+            <ab>B. H. Bristow, Solicitor General</ab>
+            <ab>&#38; Acting Attorney Gen'l.</ab>
+            
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE TEI.2 PUBLIC "-/UVA::IATH/DTD whitman.dtd (Whitman Archive)/EN"
+"whitman.dtd"
+[
+<!ENTITY respStmt PUBLIC "-/UVA::IATH/TEXT (Whitman Archive Responsibility Statement)/EN"
+ "respStmt.xml">
+<!ENTITY pubStmt PUBLIC "-/UVA::IATH/TEXT (Whitman Archive Publication Statement)/EN"
+ "pubStmt.xml">
+]>
+<TEI.2 id="xxx.00622" type="work">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">A procession without halt</title>
+            <title level="m" type="uniform">procession without halt, A</title>
+            &respStmt;
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2009</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>xxx.00622</idno>
+            &pubStmt;
+         </publicationStmt>
+         <sourceDesc>
+            <p>Original</p>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textClass>
+            <keywords>
+               <term type="genreForm">Poetry</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text type="ancillary">
+      <body>
+         <p><!--Commentary--></p>
+      </body>
+   </text>
+</TEI.2>

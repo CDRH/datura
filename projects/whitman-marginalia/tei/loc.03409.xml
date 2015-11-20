@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?><?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules_mss.sch"?><TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03409">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Long Island</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author xml:id="ww">Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="lcb">Laura Beerits</persName><persName xml:id="tra">Ty Alyea</persName><persName xml:id="lmg">Lauren Grewe</persName><persName xml:id="nhg">Nicole Gray</persName><persName xml:id="mc">Matt Cohen</persName>
+                </respStmt>
+                <sponsor>University of Texas at Austin</sponsor>
+                <sponsor>University of Nebraska-Lincoln</sponsor>
+                <funder>The National Endowment for the Humanities</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2013</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03409</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                    <addrLine>kprice@unlnotes.unl.edu</addrLine>
+                    <addrLine>Ed-Folsom@uiowa.edu</addrLine>
+                    <addrLine>bbarney2@unlnotes.unl.edu</addrLine>
+                </address>
+                <availability><p>The text of the original document is in the public domain. Subject to certain exceptions, public domain works may be freely copied or used in the creation of derivative works without permission, or authorization, of the former copyright owners.</p><p>The text encoding was created and/or prepared by the Walt Whitman Archive and is governed by a <ref target="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</ref> (CC BY 4.0).</p><p>Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p></availability>
+            </publicationStmt>
+            
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Long Island</title>
+                    <idno type="callno">Box 39, Folder 71</idno>
+                    <date notBefore="1838-05-31" notAfter="1892-03-26">Undated</date>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                    <note type="project">Transcribed from digital images of the original item.</note>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <handNotes>
+                <handNote xml:id="h1" scribeRef="#ww" medium="black-ink"/>
+            </handNotes>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-02-24">completed date information</change>
+            <change who="#nhg" when="2015-01-26">added schematron declaration, updated schema declaration, changed text type to annotations</change><change who="#lcb" when="2013-06-16">Transcribed.</change>
+            <change who="#tra" when="2013-08-23">Encoded.</change>
+            <change who="#lmg" when="2013-09-05">Checked.</change>
+            <change who="#tra" when="2013-10-17">Checked and revised bibliographical information and encoding.</change>
+            <change who="#mc" when="2014-09-13">Proofed.</change>
+        </revisionDesc> 
+    </teiHeader>
+    <text type="annotations">
+        <body>
+            <pb xml:id="leaf001r" facs="loc_nhg.00120.jpg" type="recto"/>        
+            <p><handShift new="#h1"/><hi rend="underline">Long Island</hi>.&#8212;40 and 50 years ago it was
+                customary for Indian women, "squaws," to go
+                round mending and straw‑bottoming chairs.&#8212;
+                They carried the rushes on their backs
+                and went from house to house.&#8212; Mother 
+                mentions that there came to her father's
+                in her young days, one of the most beautiful
+                young women she ever saw&#8212;a squaw
+                with a load of rushes on her back, asking 
+                a job in <del rend="overstrike">the</del> chair‑mending.&#8212; She never returned.</p>
+                <p>Sometimes the squaws would bring their
+                papooses strapped on their backs also<del rend="overstrike">.</del>&#8212;
+                silent curious babes, little accustomed
+                to crying or to any soft and tender nursing.&#8212;</p>
+            <pb xml:id="leaf001v" facs="loc_nhg.00121.jpg" type="verso"/>
+                <p> </p>
+        </body>
+    </text>
+</TEI>
