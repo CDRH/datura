@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="yal.00461">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">M. C.[?] Wheeler to Walt Whitman, 20 March 1880</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>M. C.[?] Wheeler</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ak">Alex Kinnaman</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2015</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>yal.00461</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright © 2010 by Ed Folsom and Kenneth M. Price, all rights
+                        reserved. Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>                
+                <bibl>
+                    <author>M. C.[?] Wheeler</author>
+                    <title>M. C.[?] Wheeler to Walt Whitman, 20 March 1880</title>
+                    <date cert="high" when="1880-03-20" xml:id="dat1">March 20, 1880</date>
+                    <orgName xml:id="yal">Yale Collection of American Literature, Beinecke Rare Book and Manuscript Library</orgName>
+                    <relatedItem>
+                        <ref target="yal.00339 yal.00462 yal.00463"/>
+                    </relatedItem>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Wheeler, M. C.[?]" ref="n5000">M. C.[?] Wheeler</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change who="#nhg" when="2015-10-29">corrected</change>
+            <change who="#nhg" when="2015-09-18">checked, corrected</change>
+            <change who="#ak" when="2015-03-30">transcribed, encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001r" facs="yal.00339.002b_large.jpg" type="recto"/>
+            <opener>
+                <dateline>
+                    <name type="place"><gap reason="cut away"/><handShift rend="printed"/>ss.<ptr target="yal.00461_n1"/></name>
+                    <date when="1880-03-20"><handShift rend="manuscript"/>March 20 <handShift rend="printed"/>188<handShift rend="manuscript"/>0</date>
+                </dateline>
+                <salute><gap reason="cut away"/>ar Mr Whitman</salute>
+            </opener>
+            <p>
+                <gap reason="cut away"/> you at hand
+                <gap reason="cut away"/> do me a
+                <gap reason="cut away"/> poem for <unclear reason="illegible" resp="#nhg" cert="low">Mi</unclear>
+                <gap reason="cut away"/><unclear reason="illegible" resp="#nhg" cert="low">undler</unclear> of the
+                <gap reason="cut away"/> Press? If so,
+                <gap reason="cut away"/> send it with
+                <gap reason="cut away"/> to yours
+            </p>
+            <closer>
+                <salute>Sincerely</salute>
+                <signed><unclear reason="illegible" resp="#nhg" cert="medium">M. C.</unclear> Wheeler</signed>
+                <signed><gap reason="illegible" unit="words" quantity="2"/></signed>
+            </closer>
+            <pb xml:id="leaf001v" facs="yal.00339.001_large.jpg" type="verso"/>
+            <!-- Whitman wrote some prose on this page - unrelated to letter -->
+        </body>
+    </text>
+</TEI>

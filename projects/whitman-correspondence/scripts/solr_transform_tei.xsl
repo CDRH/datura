@@ -331,48 +331,54 @@
 				
 				<!-- date -->
 				
-				<xsl:if test="/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@when">
-					<xsl:variable name="doc_date">
-						<xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@when"/>
-					</xsl:variable>
-					
-					<field name="date">
-						<xsl:call-template name="date_standardize">
-							<xsl:with-param name="datebefore"><xsl:value-of select="substring($doc_date,1,10)"/></xsl:with-param>
-						</xsl:call-template>
-						
-						<!--<xsl:text>T00:00:00Z</xsl:text>-->
-						
-					</field>
-					
-					<!-- datesExact - a multivalued field for matching exact dates: 
-						i.e. pulling all the things that happened on a certain date -->
-					
-					
-					
-					<!--<xsl:choose>
-							<!-\- Only have an exact date when document has an exact date. Used when pulling documents from a certain date -\->
-							<xsl:when test="translate($doc_date, '1234567890-', '') = '' and string-length(dc:date) = 10">
-								<field name="datesExact">
-									<xsl:call-template name="date_standardize">
-										<xsl:with-param name="datebefore"><xsl:value-of select="dc:date"/></xsl:with-param>
-									</xsl:call-template>
-									<xsl:text>T00:00:00Z</xsl:text>
-								</field>
-							</xsl:when>
-							<xsl:otherwise><!-\- blank for no date -\-></xsl:otherwise>
-						</xsl:choose>-->
-					
-					
-					
-					<field name="dateDisplay">
-						<xsl:call-template name="extractDate">
-							<xsl:with-param name="date"
-								select="$doc_date"/>
-						</xsl:call-template>
-					</field>
-					
-				</xsl:if>
+				<!-- commented out because it's not working right -->
+		<!--<xsl:if test="/TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/date/@notBefore or /TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/date/@when">
+			<xsl:variable name="doc_date">
+				<xsl:choose>
+					<xsl:when test="/TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/date/@notBefore">
+						<xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@notBefore"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/date[1]/@when"/>
+					</xsl:otherwise>
+				</xsl:choose>
+				
+			</xsl:variable>
+			
+			<field name="date">
+				<xsl:call-template name="date_standardize">
+					<xsl:with-param name="datebefore"><xsl:value-of select="substring($doc_date,1,10)"/></xsl:with-param>
+				</xsl:call-template>
+				
+			</field>
+			
+			<field name="dateDisplay">
+				<xsl:call-template name="extractDate">
+					<xsl:with-param name="date"
+						select="$doc_date"/>
+				</xsl:call-template>
+			</field>
+			
+		</xsl:if>-->
+		
+		<!-- Eighth field is the item date in human-readable format, pulled from the date in source description. -->
+		<field name="dateDisplay">
+			<xsl:value-of select="//sourceDesc/bibl/date"/>
+		</field>
+		
+		
+		<!-- Ninth field is a sortable version of the date in the format yyyy-mm-dd pulled from @when or @notBefore on date element in the source description. -->
+		<field name="date">
+			<xsl:choose>
+				<xsl:when test="//sourceDesc/bibl/date/attribute::notBefore">
+					<xsl:value-of select="//sourceDesc/bibl/date/attribute::notBefore"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="//sourceDesc/bibl/date/attribute::when"/>
+				</xsl:otherwise>
+			</xsl:choose>
+		</field>
+		
 				
 				<!-- type -->
 				
@@ -454,10 +460,28 @@
 					
 					<!-- All in one field -->
 					<field name="recipient">
-						<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/person[@role='recipient']/persName/@key">
-							<xsl:value-of select="normalize-space(.)"/>
-							<xsl:if test="position() != last()"><xsl:text>; </xsl:text></xsl:if>
-						</xsl:for-each>
+						<xsl:if test="count(//person[@role='recipient']) = 1"><xsl:value-of select="//person[@role='recipient']/persName/attribute::key"/></xsl:if>
+						<xsl:if test="count(//person[@role='recipient']) = 2">
+							<xsl:value-of select="//person[@role='recipient'][1]/persName/attribute::key"/>
+							<xsl:text>; </xsl:text>
+							<xsl:value-of select="//person[@role='recipient'][2]/persName/attribute::key"/>
+						</xsl:if>
+						<xsl:if test="count(//person[@role='recipient']) = 3">
+							<xsl:value-of select="//person[@role='recipient'][1]/persName/attribute::key"/>
+							<xsl:text>; </xsl:text>
+							<xsl:value-of select="//person[@role='recipient'][2]/persName/attribute::key"/>
+							<xsl:text>; </xsl:text>
+							<xsl:value-of select="//person[@role='recipient'][3]/persName/attribute::key"/>
+						</xsl:if>
+						<xsl:if test="count(//person[@role='recipient']) &gt; 3">
+							<xsl:value-of select="//person[@role='recipient'][1]/persName/attribute::key"/>
+							<xsl:text>; </xsl:text>
+							<xsl:value-of select="//person[@role='recipient'][2]/persName/attribute::key"/>
+							<xsl:text>; </xsl:text>
+							<xsl:value-of select="//person[@role='recipient'][3]/persName/attribute::key"/>
+							<xsl:text> and others</xsl:text><!--
+                        <xsl:value-of select="//person[@role='recipient'][4]/persName/attribute::key"/>-->
+						</xsl:if>
 					</field>
 					<!-- Individual fields -->
 					

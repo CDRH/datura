@@ -9,7 +9,7 @@
                 <editor>Kenneth M. Price</editor>
                 <editor>Ed Folsom</editor>
                 <respStmt><resp>Transcription and encoding</resp>
-                    <persName xml:id="nhg">Nicole Gray</persName><persName xml:id="lmg">Lauren Grewe</persName><persName xml:id="tra">Ty Alyea</persName><persName xml:id="mc">Matt Cohen</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName><persName xml:id="lmg">Lauren Grewe</persName><persName xml:id="tra">Ty Alyea</persName><persName xml:id="mc">Matt Cohen</persName><persName xml:id="bb">Brett Barney</persName>
                 </respStmt>
                 <sponsor>University of Texas at Austin</sponsor>
                 <sponsor>University of Nebraska-Lincoln</sponsor>
@@ -74,6 +74,7 @@
             <change who="#tra" when="2013-10-17">Checked and revised bibliographical information and encoding.</change>
             <change who="#lmg" when="2014-03-09">Added dimensions to pasteons, checked cbs, footnotes.</change>
             <change who="#mc" when="2014-11-02">Proofed.</change>
+            <change who="#bb" when="2015-11-04">tweaked encoding of footnotes</change>
         </revisionDesc>
     </teiHeader>
     <text type="marginalia">
@@ -416,9 +417,9 @@
             <p>Glamis thou art, and Cawdor, <hi rend="italic">and shalt be</hi><ref target="#fn2" rend="supralinear">1</ref></p>
             <p>What thou art promised:<ref target="#fn3" rend="supralinear">2</ref> yet do I fear thy nature;</p>
                             
-            <note xml:id="fn1" n="0" type="footnote" place="bottom" anchored="true">0 Mrs. Siddons.</note>
-            <note xml:id="fn2" n="1" type="footnote" place="bottom" anchored="true">1 Exalted prophetic tone, as if the whole future were present to her soul.</note>
-            <note xml:id="fn3" n="2" type="footnote" place="bottom" anchored="true">2 A slight tincture of contempt throughout.</note>            
+            <note xml:id="fn1" n="0" type="footnote" place="bottom" anchored="true">Mrs. Siddons.</note>
+            <note xml:id="fn2" n="1" type="footnote" place="bottom" anchored="true">Exalted prophetic tone, as if the whole future were present to her soul.</note>
+            <note xml:id="fn3" n="2" type="footnote" place="bottom" anchored="true">A slight tincture of contempt throughout.</note>            
             <pb xml:id="leaf005v" facs="loc.03428.008.jpg" type="verso"/>
                         <div1 type="section"><delSpan rend="hashmark" hand="#h3" spanTo="#d1"/><fw type="pageNum" place="top left" rend="overstrike">314</fw>
                         <fw type="header" place="top" rend="overstrike"><hi rend="italic">THE NINETEENTH CENTURY</hi></fw>

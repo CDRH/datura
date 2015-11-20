@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TEI.2 PUBLIC "-/UVA::IATH/DTD whitman.dtd (Whitman Archive)/EN"
+"whitman.dtd"
+[
+<!ENTITY respStmt PUBLIC "-/UVA::IATH/TEXT (Whitman Archive Responsibility Statement)/EN"
+ "respStmt.xml">
+<!ENTITY pubStmt PUBLIC "-/UVA::IATH/TEXT (Whitman Archive Publication Statement)/EN"
+ "pubStmt.xml">
+<!ENTITY xxx.00446 PUBLIC "-/UVA::IATH/TEXT (Whitman Archive xxx.00446)/EN"
+ "xxx.00446.xml" NDATA xml>
+]>
+<TEI.2 id="xxx.00447" type="work">
+   <relations>
+      <workparent entity="xxx.00446">
+         <bibl>
+            <title>Leaves of Grass (1871-72 cluster 5)</title>
+         </bibl>
+      </workparent>
+   </relations>
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="a" type="main">Solid, Ironical, Rolling Orb</title>
+            <title level="a" type="uniform">Solid, Ironical, Rolling Orb</title>
+            &respStmt;
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2003</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>xxx.00447</idno>
+            &pubStmt;
+         </publicationStmt>
+         <sourceDesc>
+            <p>Original</p>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textClass>
+            <keywords>
+               <term type="genreForm">Poetry</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+   </teiHeader>
+   <text type="ancillary">
+      <body>
+         <p><!--Commentary--></p>
+      </body>
+   </text>
+</TEI.2>

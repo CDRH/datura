@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://jetson.unl.edu/cdrh/schemas/tei_all.rng"  type="xml"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="wfc.css00396">
+<teiHeader>
+<fileDesc>
+<titleStmt>
+<title type="main">Letter from William F. Cody to John H. Tait, March 4, 1914</title>
+<author>Cody, William Frederick, 1846-1917</author>
+<principal>Johnston, Jeremy</principal>
+<principal>Christianson, Frank</principal>
+<principal>Seefeldt, Douglas, 1964-</principal>
+</titleStmt>
+<editionStmt>
+<edition>
+<date>2012</date>
+</edition>
+</editionStmt>
+<publicationStmt>
+<authority>William F. Cody Archive</authority>
+<publisher>University of Nebraska-Lincoln</publisher>
+<distributor>
+<name>Center for Digital Research in the Humanities</name>
+<address>
+<addrLine>319 Love Library</addrLine>
+<addrLine>University of Nebraska&#8211;Lincoln</addrLine>
+<addrLine>Lincoln, NE 68588-4100</addrLine>
+<addrLine>cdrh@unlnotes.unl.edu</addrLine>
+</address>
+</distributor>
+<pubPlace>Lincoln, Nebraska</pubPlace> 
+<address>
+<addrLine>University of Nebraska-Lincoln</addrLine>
+<addrLine>Lincoln, NE 68588-4100</addrLine>
+</address>
+<idno type="module"></idno>
+<idno type="project">wfc.css00396</idno>
+<availability>
+<p></p>
+</availability>
+</publicationStmt>
+
+<notesStmt><note><!-- notes  --></note></notesStmt>
+
+<sourceDesc>
+<bibl>
+<author>Cody, William Frederick, 1846-1917</author>
+<title level="m" type="main">Letter from William F. Cody to John H. Tait</title>
+<date when="1914-03-04">March 4, 1914</date>
+<extent>1 page, plus envelope</extent>
+</bibl>
+<msDesc>
+<msIdentifier>
+<repository>McCracken Research Library, John H. Tait Collection</repository>
+<idno>MS231.1.32</idno>
+</msIdentifier>
+<msContents>
+<p>1 hand-written page</p>
+</msContents>
+<physDesc>
+<objectDesc>
+<supportDesc>
+<support></support>
+<extent>1 page
+<dimensions unit="mm"><height></height><width></width></dimensions>
+</extent>
+<condition>
+<p></p></condition>
+</supportDesc>
+</objectDesc>
+<handDesc hands="1">
+<handNote xml:id="wfc1" script="rough" medium="pen"><p>Media: black ink</p></handNote>
+</handDesc>
+<typeDesc>
+<typeNote><p></p></typeNote>
+</typeDesc>
+</physDesc>
+<history><origin></origin>
+<provenance></provenance>
+<acquisition></acquisition>
+</history>
+</msDesc>
+
+</sourceDesc>
+</fileDesc>
+
+<encodingDesc>
+<editorialDecl>
+<correction>
+<p></p>
+</correction>
+<normalization>
+<p></p>
+</normalization>
+</editorialDecl>
+</encodingDesc>
+
+<profileDesc>
+<textClass>
+<keywords scheme="original" n="category">
+<term>Texts</term>
+</keywords>
+<keywords scheme="original" n="subcategory">
+<term>Correspondence</term>
+</keywords>
+<keywords scheme="original" n="topic">
+<term>Empire</term>
+</keywords>
+<keywords scheme="lcsh" n="keywords">
+<term></term>
+</keywords>
+<keywords scheme="lcsh" n="people">
+<term></term>
+</keywords>
+<keywords scheme="lcsh" n="places">
+<term></term>
+</keywords>
+</textClass>
+</profileDesc>
+
+<revisionDesc>
+ <change when="2012-09-26"><name xml:id="lkw">Weakly, Laura K.</name> Initial encoding</change>
+  <change when="2012"><name xml:id="lc">Clark, Linda</name> Transcription and proofreading</change>
+  <change when="2012"><name xml:id="gb">Boyce, Gary</name> Transcription</change>
+</revisionDesc>
+</teiHeader>
+
+<text>
+<body>
+
+<div1 type="letter">
+<pb facs="wfc.css00396.01"/>
+
+<note type="letterhead">
+<figure n="drawing"><p>La Salle at Madison St.</p></figure>
+Hotel La Salle<lb/>
+</note>
+
+<opener>
+<dateline>Chicago Mar. 4th 1914</dateline>
+
+
+<salute>My Dear <persName xml:id="tait.j">Tait</persName></salute>
+</opener>
+
+<p>I be in Denver Saturday Morning.<ref target="n01">1</ref> Will lecture on pictures at Tabor Opera house&#8212;<ref target="n02">2</ref></p>
+
+<p>Everything fast as possible &amp; allright.</p>
+<closer>
+<signed>Col</signed>
+</closer>
+</div1>
+<div1 type="envelope">
+
+<note type="letterhead">
+Hotel La Salle<lb/>
+La Salle at Madison St.<lb/>
+Chicago
+</note>
+<ab type="postmark">Chicago, Ill.<lb/>
+Mar 4<lb/>
+1-PM<lb/>
+1914</ab>
+
+<figure n="stamp"><ab>U.S. Postage<lb/>
+2 Cents 2</ab></figure>
+
+<ab type="address">
+<address>
+<addrLine>John Tait </addrLine>
+<addrLine>Albany Hotel</addrLine>
+<addrLine>Denver</addrLine>
+<addrLine>Colo</addrLine>
+</address>
+</ab>
+</div1>
+</body>
+
+<back>
+<note xml:id="n01">Note 1: The next Saturday was March 7, 1914.</note>
+
+<note xml:id="n02">Note 2: Cody refers to his motion picture <hi rend="italic">The Indian Wars</hi>. On March 8, 1914, Cody began a week-long engagement to exhibit and lecture on the film at the Tabor Grand Opera House. The opera house, which was located at 16th and Curtis Streets in Denver, no longer survives.</note>
+</back>
+</text>
+</TEI>

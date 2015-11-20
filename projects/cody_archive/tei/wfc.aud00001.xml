@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://jetson.unl.edu/cdrh/schemas/tei_all.rng"  type="xml"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="wfc.aud00001">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Sentiments on the Cuban Question</title>
+                <author>Cody, William Frederick, 1846-1917</author>
+                <principal>Johnston, Jeremy</principal>
+                <principal>Christianson, Frank</principal>
+                <principal>Seefeldt, Douglas, 1964-</principal>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2011</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <authority>William F. Cody Archive</authority>
+                <publisher>University of Nebraska-Lincoln</publisher>
+                <distributor>
+                    <name>Center for Digital Research in the Humanities</name>
+                    <address>
+                        <addrLine>319 Love Library</addrLine>
+                        <addrLine>University of Nebraska&#8211;Lincoln</addrLine>
+                        <addrLine>Lincoln, NE 68588-4100</addrLine>
+                        <addrLine>cdrh@unlnotes.unl.edu</addrLine>
+                    </address>
+                </distributor>
+                <pubPlace>Lincoln, Nebraska</pubPlace>
+                <address>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <idno type="module"/>
+                <idno type="project">wfc.aud00001</idno>
+                <availability>
+                    <p/>
+                </availability>
+            </publicationStmt>
+
+            <notesStmt>
+                <note/>
+            </notesStmt>
+
+            <sourceDesc>
+                <bibl>
+                    <title level="m" type="main">Sentiments on the Cuban Question</title>
+                    <author n="Cody, William Frederick, 1846-1917">William F. Cody</author>
+                    <publisher>E. Berliner's Gramophone</publisher>
+                    <note/>
+                    <date when="1898-04-20">April 20, 1898</date>
+                    <pubPlace>New York</pubPlace>
+                    <extent/>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+
+        <encodingDesc>
+            <editorialDecl>
+                <correction>
+                    <p/>
+                </correction>
+                <normalization>
+                    <p/>
+                </normalization>
+            </editorialDecl>
+        </encodingDesc>
+
+        <profileDesc>
+            <textClass>
+                <keywords scheme="original" n="category">
+                    <term>Multimedia</term>
+                </keywords>
+                <keywords scheme="original" n="subcategory">
+                    <term>Audio</term>
+                </keywords>
+                <keywords scheme="lcsh" n="subject">
+                    <term/>
+                </keywords>
+                <keywords scheme="lcsh" n="keywords">
+                    <term>Cuba</term>
+                    <term>Theodore Roosevelt</term>
+                    <term>Spanish American War</term>
+                    <term>Congress of Rough Riders</term>
+                    <term>War</term>
+
+                </keywords>
+            </textClass>
+        </profileDesc>
+
+        <revisionDesc>
+            <change when="2011-08-22"><name xml:id="jah">Heppler, Jason</name> Initial transcription and markup</change>
+        </revisionDesc>
+    </teiHeader>
+
+    <text>
+        <body>
+            <div1 type="html">
+
+                <h3>Sentiments on the Cuba Question</h3>
+
+                            <audio controls="controls">
+                                <source src="../audio/mp3/codycuba.mp3" type="audio/mpeg"/>
+                                <source src="../audio/ogg/codycuba.ogg" type="audio/ogg"/> <embed
+                                    src="http://www.google.com/reader/ui/3523697345-audio-player.swf"
+                                    flashvars="audioUrl=../audio/mp3/codycuba.mp3"
+                                    type="application/x-shockwave-flash" width="230" height="27"
+                                    quality="best"/>
+                            </audio>
+
+                <p>The opponents of intervention have no substitute proposition. They have no plans
+                    save those that have already failed. If the government were guided by their
+                    advice, butchery, devastation, and barbarity would become permanent social
+                    conditions in Cuba, and the unrest, the tumult, and the passion of the last
+                    sixty days would take their places as established features of our national
+                    life.</p>
+                <p>No man who is not willing to hear about the hideous crimes in Cuba, to read the
+                    war speeches of jingo Senators, and look upon the war headlines of the yellow
+                    journals every day in the year for the remainder of their natural life has any
+                    right to oppose intervention in Cuba unless he submits an effective plan for the
+                    permanent abatement of these nuisances, which, in the language of the President,
+                    have become intolerable.</p>
+                <p>There is one more consideration. Any American who finds himself unable now to
+                    support the president in his proposed policy towards Spain shows himself to be
+                    perfectly content that this country should exhibit itself with an attitude of a
+                    nation that will not fight for its peace and safety, for its honor and
+                    self-respect, or in the performance of its duty imposed by humanity and
+                    civilization.</p>
+                <p>Ladies and gentlemen, permit me to introduce to you, a Congress of the Rough
+                    Riders of the World.</p>
+
+            </div1>
+
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://jetson.unl.edu/cdrh/schemas/tei_all.rng"  type="xml"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="wfc.000.search">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Search the Archive</title>
+                <author/>
+                <principal>Johnston, Jeremy</principal>
+                <principal>Christianson, Frank</principal>
+                <principal>Seefeldt, Douglas, 1964-</principal>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2011</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <authority>William F. Cody Archive</authority>
+                <publisher>University of Nebraska-Lincoln</publisher>
+                <distributor>
+                    <name>Center for Digital Research in the Humanities</name>
+                    <address>
+<addrLine>319 Love Library</addrLine>
+<addrLine>University of Nebraska&#8211;Lincoln</addrLine>
+<addrLine>Lincoln, NE 68588-4100</addrLine>
+<addrLine>cdrh@unlnotes.unl.edu</addrLine>
+</address>
+                </distributor>
+                <pubPlace>Lincoln, Nebraska</pubPlace>
+                <address>
+<addrLine>University of Nebraska-Lincoln</addrLine>
+<addrLine>Lincoln, NE 68588-4100</addrLine>
+</address>
+                <idno type="module">bbww.indians.letter.brennentocommissioner.19130728</idno>
+                <idno type="project">wfc.000.search</idno>
+                <availability>
+                    <p/>
+                </availability>
+            </publicationStmt>
+
+            <notesStmt>
+                <note><!-- notes that pertain to the entire file can be placed here; the note tag can be repeated as often as necessary within the notesStmt --></note>
+            </notesStmt>
+
+            <sourceDesc>
+                <bibl>
+                    <author/>
+                    <title level="m" type="main">Search the Archive</title>
+
+                    <extent>1 page</extent>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+
+        <encodingDesc>
+            <editorialDecl>
+                <correction>
+                    <p/>
+                </correction>
+                <normalization>
+                    <p/>
+                </normalization>
+            </editorialDecl>
+        </encodingDesc>
+
+        <profileDesc> </profileDesc>
+
+    </teiHeader>
+
+    <text>
+        <body>
+
+
+
+            <div1 type="html">
+
+                <h2>Search</h2>
+
+                <div id="searchForm">
+
+
+                    <div id="basic">
+
+
+
+                        <form action="result.html" method="get" enctype="text/plain">
+                            <div class="basicSearch1">
+                                <h3>Search by keyword:</h3>
+
+
+                                <input id="basic-q" type="text" name="q" value="" class="textField"/>
+
+                                <p class="submit">
+                                    <input type="submit" value="Search Documents" class="submit"/>
+                                </p>
+
+                                <p>Tips: <br/> To exclude a word, preceed with "-" (i.e. cody
+                                    -buffalo)<br/> To search for a phrase, include in quotations
+                                    (i.e. "bringing indians")</p>
+                            </div>
+                            <!-- basicSearch1-->
+
+                        </form>
+
+                        <div class="basicSearch2">
+                            <p>or find:</p>
+
+                            <div id="searchNounOption">
+
+
+                                <ul>
+                                    <li>
+                                        <a href="#people">People</a>
+                                    </li>
+                                    <li>
+                                        <a href="#places">Places</a>
+                                    </li>
+                                </ul>
+                                <div id="people" class="namebox">
+
+                                    <form action="people.html" method="get" enctype="text/plain">
+                                        <input id="peopleSearch"
+                                            class="peopleSearch peopleinput textField" type="text"
+                                            name="q" value=""/>
+
+                                        <p class="submit">
+                                            <input type="submit" value="Go" class="submit"/>
+                                        </p>
+                                    </form>
+
+                                </div>
+                                <div id="places" class="namebox">
+
+                                    <form action="places.html" method="get" enctype="text/plain">
+                                        <input id="placesSearch"
+                                            class="placesSearch placesinput textField" type="text"
+                                            name="q" value=""/>
+
+                                        <p class="submit">
+                                            <input type="submit" value="Go" class="submit"/>
+                                        </p>
+                                    </form>
+
+
+                                </div>
+                                <!-- /#places-->
+                            </div>
+                            <!-- /#searchNounOption-->
+                        </div>
+                        <!-- /#basicSearch2-->
+
+
+
+
+
+                    </div>
+                    <!-- /#basic -->
+
+                    
+
+                </div>
+
+            </div1>
+        </body>
+
+    </text>
+</TEI>

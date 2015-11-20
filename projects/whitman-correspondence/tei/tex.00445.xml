@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="tex.00445">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">William Michael Rossetti to Walt Whitman, 25 August
+                    1885</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>William Michael Rossetti</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="smb">Stephanie Blalock</persName>
+                    <persName xml:id="nhg">Nicole Gray</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>tex.00445</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <biblStruct>
+                    <monogr>
+                        <author>William Michael Rossetti</author>
+                        <editor>Roger W. Peattie</editor>
+                        <title xml:id="pea">Selected Letters of William Michael Rossetti</title> <!--I'm unsure where the monogr-ids are listed. I made this one up-->
+                        <imprint>
+                            <pubPlace>University Park</pubPlace>
+                            <pubPlace>London</pubPlace>
+                            <publisher>The Pennsylvania State University Press</publisher>
+                            <date when="1990">1990</date>
+                            <biblScope type="page">474</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>William Michael Rossetti</author>
+                    <title>William Michael Rossetti to Walt Whitman, 25 August 1885</title>
+                    <date cert="high" when="1885-08-25" xml:id="dat1">August 25, 1885</date>
+                    <orgName xml:id="tex">The Walt Whitman Collection, Harry Ransom Humanities
+                        Research Center, The University of Texas at Austin</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Rossetti, William Michael" ref="n0522">William Michael Rossetti</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-11-02" who="#nhg">tweaked encoding of list</change>
+            <change when="2015-08-13" who="#smb">final check, corrected</change>
+            <change when="2015-06-11" who="#if">edited</change>
+            <change when="2015-02-19" who="#ss">transcribed, encoded and annotated.</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline>
+                    <name type="place">5 Endsleigh Gardens,</name>
+                    <date when="1885-08-25" rend="right">25 August 1885</date>
+                </dateline>
+                <salute>Dear Whitman,</salute>
+            </opener>
+            <p>You will believe that I received with pride and warm feeling the
+                love which you sent me in a letter to Gilchrist,<ptr target="n0262"/> now published
+                in the <hi rend="italic">Athenaeum</hi>; and that I reciprocate your love with
+                reverential affection.<ptr target="tex.00445_n1"/></p>
+            <p>That movement for a few English people to express in a practical form the feeling
+                which they entertain towards you has not as yet taken any extended
+                development&#8212;nothing I believe having been done outside a few general
+                paragraphs in journals. Gilchrist will now be taking steps in a more detailed and
+                direct way: from him and his mother<ptr target="n0259"/> you will no doubt hear many
+                particulars from time to time.</p>
+            <p>The sums which have as yet come into my hands as Treasurer are &#163;22.2.6. I beg to
+                forward this amount in the within form&#8212;being
+            <list>
+                <item>1. 3 Post-Office orders which will be made good to you upon your signing them,
+                    and presenting them at Camden&#8212;and</item>
+                <item>2. A Brank-draft which, as I am advised, you can get cashed in Camden or
+                    Philadelphia.</item>
+            </list>
+            The draft comes from Charles Aldrich,<ptr target="med.00763_n1"/> of Webster City,
+                Iowa, who had an interview with you some months ago, and wrote me several
+                interesting details about it. Indeed Mr. Aldrich's letter was the immediate
+                incentive and opportunity for Mrs. Gilchrist and the rest of us to bestir ourselves,
+                and see who among us would honour himself by associating his name in this small way
+                with yours.</p>
+            <p>I enclose a little list of names, and remain, like so many others who have hearts to
+                feel and ears to hear,</p>
+            <closer>
+                <salute>Your lifelong debtor,</salute>
+                <signed>W. M. Rossetti</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>
