@@ -1,14 +1,15 @@
 # script for Laura to quickly generate some relationships (all to all)
-# change the ids below to whatever you need!
+# change the ids below to whatever you need and save!
 # in terminal, navigate to directory (Desktop/data/projects/oscys/scripts), type ruby relationship_generation.rb, hit enter
 # this will generate two lists, you need to put them back together in the csv as columns A and C of the rdf csv
 
 ids = [
-  "per.001809",
-  "per.001810",
-  "per.001811",
-  "per.001192",
-  "per.001193"
+  "per.001855",
+  "per.001856",
+  "per.001857",
+  "per.001158",
+  "per.001159",
+  "per.001160"
 ]
 
 # Don't change anything below this line!
