@@ -5,10 +5,10 @@
 !**/*.example.yml
 
 # ignore all the repositories in the projects directory
-projects/*
+ projects/*
 # except the keep file
 !projects/.keep
-
+!projects/oscys
 
 # ignore tmp directory even though will need to create it each time
 tmp/*
