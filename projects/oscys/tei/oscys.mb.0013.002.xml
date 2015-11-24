@@ -14,6 +14,7 @@
 <resp>transcription and encoding</resp>
 <name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -84,20 +85,19 @@
 
 <keywords scheme="lcsh" n="people">
 <term xml:id="per.000159">Bentley, Rosamond</term>
-<term>Boothe, George N.</term>
-<term>Coonabe, Griffith</term>
-<term xml:id="per.000011">Hiort, Henry</term>
-<term>Hollingshead, John</term>
-<term>Joncherez, Alexander L.</term>
-<term>King, Charles</term>
-<term>Lindsay, Adam</term>
-<term>Moore, George</term>
-<term>Newton, Ignatius</term>
-<term>Queen, Nicholas L.</term>
+<term xml:id="per.001868">Boothe, George N.</term>
+<term xml:id="per.001869">Coombs, Griffith</term>
+<term xml:id="per.000093">Hollingshead, John</term>
+<term xml:id="per.001870">Joncherez, Alexander L.</term>
+<term xml:id="per.001871">King, Charles</term>
+<term xml:id="per.001872">Lindsay, Adam</term>
+<term xml:id="per.001592">Moore, George</term>
+<term xml:id="per.001580">Newton, Ignatius</term>
+<term xml:id="per.001873">Queen, Nicholas L.</term>
 <term xml:id="per.000156">Rabbit, John</term>
-<term>Thompson, John</term>
-<term>Veitch, James</term>
-<term>Wharm, David</term>
+<term xml:id="per.001874">Thompson, John</term>
+<term xml:id="per.001875">Veitch, James</term>
+<term xml:id="per.001876">Wharm, David</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -112,7 +112,7 @@
 
 <particDesc>   
 <listPerson> 
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001608">
 <persName>Davis, Airy</persName>
 </person>
 <person role="petitioner" xml:id="per.000160">
@@ -121,8 +121,8 @@
 <person role="defendant" xml:id="per.000168">
 <persName>Swann, Caleb</persName>
 </person>
-<person role="attorney_petitioner">
-<persName/>
+<person role="attorney_petitioner" xml:id="per.000011">
+<persName>Hiort, Henry</persName>
 </person>
 <person role="attorney_defendant">
 <persName/>
@@ -139,6 +139,7 @@
 </profileDesc>
 
 <revisionDesc>
+<change when="2015-11-17" who="#lkw">added xml:ids; changed unclear last name to Coombs</change>
 <change when="2015-05-22" who="#ea">updated case number</change>
 <change when="2015-01-27" who="#kln">reviewed; edited</change>
 <change when="2015-01-20" who="#ea">Encoded and transcribed.</change>
@@ -178,7 +179,7 @@ Caleb Swann</p>
 <item>3 Alexr. L Joncherez</item>
 <item>4 <unclear reason="ink">Geo N</unclear> Boothe</item>
 <item>5 David <unclear reason="illegible">Wharm</unclear></item>
-<item>6 Griffith <unclear reason="illegible">Coonabe</unclear></item>
+<item>6 Griffith <unclear reason="illegible">Coombs</unclear></item>
 <item>7 John Hollingshead</item>
 <item>8 Adam Lindsay</item>
 <item>9 Nichs L Queen</item>
