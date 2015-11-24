@@ -1,0 +1,316 @@
+<?xml-stylesheet href="http://www.whitmanarchive.org/servlets/xmlfindaids/shared/styles/eadwhit.xsl" type="text/xsl"?>
+
+<!DOCTYPE ead PUBLIC '+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN' "ead.dtd">
+
+
+<ead audience="external" relatedencoding="MARC21">
+    <eadheader audience="internal"
+              langencoding="iso639-2b"
+              scriptencoding="iso15924"
+              relatedencoding="marc21"
+              repositoryencoding="iso15511"
+              countryencoding="iso3166-1"
+              dateencoding="iso8601"
+              findaidstatus="edited-full-draft"
+              id="a0">
+        <eadid countrycode="us" mainagencycode="NbU" identifier="tem.ead01">tem.ead01</eadid>
+        <filedesc>
+            <titlestmt>
+                <titleproper encodinganalog="245$a">Catalog of the Walt Whitman Poetry Manuscripts in
+                    the Rare Books and Manuscripts, Special Collections, Temple University
+                    Libraries, Temple University</titleproper>
+                <author>Original records created by Rare Books and Manuscripts, Special Collections,
+                    Temple University Libraries; revised and expanded by the <emph render="italic">Walt Whitman Archive</emph> and the University of Nebraska-Lincoln
+                    Libraries. </author>
+                <sponsor>Encoded Archival Description completed with the assistance of the Gladys
+                    Krieble Delmas Foundation, the University of Nebraska Research Council, and the
+                    Institute for Museum and Library Services.</sponsor>
+            </titlestmt>
+            <publicationstmt>
+                <publisher encodinganalog="260$b">Published by <emph render="italic">The Walt
+                        Whitman Archive</emph> in collaboration with the University of
+                    Nebraska-Lincoln Libraries. </publisher>
+                <date encodinganalog="260$c" era="ce" calendar="gregorian">2003</date>
+                <address>
+               <addressline>29 Love Library </addressline>
+               <addressline>P.O. Box 884100</addressline>
+               <addressline>University of Nebraska-Lincoln</addressline>
+               <addressline>Lincoln, NE 68508</addressline>
+            </address>
+            </publicationstmt>
+        </filedesc>
+        <profiledesc>
+            <creation>Machine-readable finding aid created by Andrew Jewell, <emph render="italic">The Walt Whitman Archive</emph>, and Mary Ellen Ducey, University of
+                Nebraska-Lincoln Libraries <date era="ce" calendar="gregorian">2003</date>. Revisions by Janel Cayer, <emph render="italic">The Walt Whitman Archive</emph>, <date era="ce" calendar="gregorian">2015</date>. 
+         </creation>
+            <langusage>Finding aid written in <language encodinganalog="546" langcode="eng">English</language>.</langusage>
+        </profiledesc>
+    </eadheader>
+    <frontmatter>
+        <titlepage id="tp001">
+            <titleproper encodinganalog="245$a">Catalog of the Walt Whitman Poetry Manuscripts in the
+                Rare Books and Manuscripts, Special Collections, Temple University Libraries, Temple
+                University</titleproper>
+            <publisher>Published by <emph render="italic">The Walt Whitman Archive</emph> in
+                collaboration with the University of Nebraska-Lincoln Libraries. </publisher>
+            <date era="ce" calendar="gregorian">2003</date>
+        </titlepage>
+    </frontmatter>
+    <archdesc audience="external"
+             level="otherlevel"
+             type="inventory"
+             relatedencoding="marc21">
+        <did id="al">
+            <unittitle audience="external" label="Title:" encodinganalog="245$a">Walt Whitman Poetry
+                Manuscripts in the Rare Books and Manuscripts, Special Collections, Temple
+                University Libraries, Temple University</unittitle>
+            <unitid audience="external"
+                 label="Collection Number:"
+                 encodinganalog="099"
+                 repositorycode="PPT"
+                 countrycode="us">N/A</unitid>
+            <origination audience="external" label="Creator:">
+                <persname encodinganalog="100">Whitman, Walt, 1819-1892</persname>
+         </origination>
+            <physdesc>
+            <genreform>poetry</genreform>
+            <genreform>Manuscripts</genreform>
+         </physdesc>
+            <repository encodinganalog="852$a" label="Repository:">
+            <corpname encodinganalog="852$a">Rare Books and Manuscripts, Special Collections</corpname>
+                <address>
+               <addressline>Temple University Libraries</addressline>
+               <addressline>Paley Library</addressline>
+               <addressline>1210 W. Berks Street</addressline>
+               <addressline>Temple University</addressline>
+               <addressline>Philadelphia, PA  19122</addressline>
+            </address>
+         </repository>
+            <abstract>This catalog was created from the original finding aid obtained by <emph render="italic">The Walt Whitman Archive</emph>. The original manuscripts and
+                finding aid are held at Temple University.</abstract>
+        </did>
+        <descgrp id="ds001" type="admininfo">
+            <accessrestrict audience="external" encodinganalog="506" id="a14">
+                <head>Restrictions on Original Materials:</head>
+                <p>Please consult with repository.</p>
+            </accessrestrict>
+            <!-- <userestrict encodinganalog="540" id="a15">
+<head>Copyright:</head><p>The use of Archives and Special Collections material is governed by the U.S. Copyright Law (title 17 U.S. Code). </p>
+</userestrict> -->
+            <prefercite encodinganalog="524" id="a18">
+                <head>Preferred Citation:</head>
+                <p>To identify this catalog as a source, see the <emph render="italic">Archive's
+                        </emph>
+               <extref href="http://www.whitmanarchive.org/about/conditions.html"
+                       linktype="simple">"Conditions of Use"</extref> page.</p>
+            </prefercite>
+            <!-- <altformavail type="paper" encodinganalog="530" id="a17">
+<head>Alternative Format:</head>
+<p> Original Documents held in <corpname>Rare Books and Manuscripts, Special Collections, Temple University Libraries, Temple University</corpname></p>
+</altformavail> -->
+        </descgrp>
+        <scopecontent id="sc001">
+            <head>Scope and Content</head>
+            <p>Temple University's Rare Books and Manuscripts, Special Collections Department holds
+                corrected and uncorrected proofs and two drafts of poetic lines in Whitman's
+                hand.</p>
+        </scopecontent>
+        <bioghist id="bh001">
+            <head>Biographical Information</head>
+            <p/>
+        </bioghist>
+        <controlaccess id="ca001">
+            <head>Subjects</head>
+            <persname encodinganalog="600">Whitman, Walt, 1819-1892</persname>
+            <subject encodinganalog="650">Whitman, Walt, 1819-1892--Manuscripts</subject>
+            <subject encodinganalog="650">Poets, American--19th century</subject>
+        </controlaccess>
+        <dsc id="dc001" type="in-depth">
+            <head>Item List</head>
+            <c01 level="item">
+                <did>
+                    <unitid type="WWA">tem.00001</unitid>
+                    <unitid type="work">xxx.00390</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple" type="WWA">Shakspere's
+                            Cipher</title>
+               </unittitle>
+                    <unitdate normal="1887/1892" era="ce" calendar="gregorian">1887&#8211;1891</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent unit="leaves">1
+                            leaf</extent>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/tem.00001.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/tem.00001.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Lightly corrected draft of <title render="doublequote" linktype="simple">Shakspere-Bacon's Cipher,</title> which was published first in <title render="italic">The Cosmopolitan</title> (<date normal="1887-10" type="publication" era="ce" calendar="gregorian">October 1887</date>) and reprinted in <title render="italic">Good-Bye My Fancy</title> (<date normal="1891" type="publication" era="ce" calendar="gregorian">1891</date>).</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <unitid type="WWA">tem.00003</unitid>
+                    <unitid type="work">xxx.00390</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple" type="WWA">Shakspere—Bacon's
+                            Cipher</title>
+               </unittitle>
+                    <unitdate normal="1887/1892" era="ce" calendar="gregorian">1887&#8211;1891</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent unit="leaves">1 leaf</extent>
+                  <physfacet>handwritten</physfacet>
+                  <physfacet>printed</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/tem.00003.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/tem.00003.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Printed proof, with a single correction, of <title render="doublequote" linktype="simple">Shakspere-Bacon's Cipher,</title> which was published first in <title render="italic">The Cosmopolitan</title> (<date normal="1887-10" type="publication" era="ce" calendar="gregorian">October 1887</date>) and reprinted in <title render="italic">Good-Bye My Fancy</title> (<date normal="1891" type="publication" era="ce" calendar="gregorian">1891</date>).</p>
+                </scopecontent>
+            </c01>
+            <!-- 
+<c01 level="item">
+ <did>
+		<unitid type="WWA">tem.#####</unitid>
+		<unitid type="work">xxx.00330</unitid>
+		<unitid type="work">xxx.00331</unitid>
+		<unitid type="work">xxx.00332</unitid>
+		<unitid type="work">xxx.00333</unitid>
+		<unitid type="work">xxx.00334</unitid>
+		<unitid type="work">xxx.00336</unitid>
+		<unitid type="work">xxx.00337</unitid>
+		<unitid type="work">xxx.00338</unitid>
+		<unitid type="repository">MSS. 2519</unitid>
+  <unittitle><title render="doublequote">Fancies at Navesink</title></unittitle>
+  <unitdate normal="1819/1892">undated</unitdate>
+  <physdesc>
+<extent unit="leaves">1 leaf</extent>
+<dimensions unit="centimeters">48.4 x 15.2 cm</dimensions>
+</physdesc>
+ </did>
+ <scopecontent><p>Flysheet or galley of seven poems, <title render="doublequote">The Pilot in the Mist,</title>  <title render="doublequote">Had I the Choice,</title>  <title render="doublequote">You Tides with Ceaseless Swell,</title>  <title render="doublequote">Last of Ebb, and Daylight Waning,</title>  <title render="doublequote">Proudly the Flood Comes In,</title>  <title render="doublequote">By That Long Scan of Waves,</title>  and <title render="doublequote">Then Last of All.</title>  The sequence <title render="doublequote">Fancies at Navesink</title> was published first in <date type="publication">1885</date>.</p> </scopecontent>
+</c01> -->
+            <!-- 
+<c01 level="item">
+ <did>
+		<unitid type="WWA">tem.#####</unitid>
+		<unitid type="work">xxx.00378</unitid>
+		<unitid type="repository">MSS. 2518</unitid>
+  <unittitle><title render="doublequote">Good-bye My Fancy</title></unittitle>
+  <unitdate normal="1888/1892">ca. 1891</unitdate>
+  <physdesc><extent unit="leaves">9 leaves</extent></physdesc>
+ </did>
+ <scopecontent><p>Page proofs, perhaps corrected by printer, of <title render="doublequote">Good-bye My Fancy,</title> which was published first in <date type="publication">1891</date>.  Also included on the leaves is <title render="doublequote">Old Chants,</title> a poem also first published in <date type="publication">1891</date>.</p>
+ </scopecontent>
+</c01> -->
+            <c01 level="item">
+                <did>
+                    <unitid type="WWA">tem.00002</unitid>
+                    <unitid type="work">xxx.00395</unitid>
+                    <unitid type="repository">Mss. 2517</unitid>
+                    <unittitle>
+                  <title render="doublequote" linktype="simple" type="WWA">Old
+                        Chants</title>
+                        <title render="doublequote" type="repository">Old Chants</title>
+               </unittitle>
+                    <unitdate normal="1888/1892" era="ce" calendar="gregorian">ca. 1891</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <extent unit="leaves">1
+                            leaf</extent>
+                  <dimensions unit="centimeters">36.3 x 21.4
+                            cm</dimensions>
+                  <physfacet>handwritten</physfacet>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/tem.00002.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/tem.00002.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Draft of <title render="doublequote" linktype="simple">Old Chants,</title> made
+                        of fragments pasted together, with corrections in Whitman's hand. Also
+                        included on the page is a note by <persname normal="Traubel, Horace, 1858-1919"
+                            source="lcnaf"
+                            encodinganalog="600$a">Horace Traubel</persname> reading "Given by Walt
+                        Whitman to me and then by me to <persname>Will Innes</persname>, <date era="ce" calendar="gregorian">1905</date>." On verso: "<persname>Henry
+                            Curtis</persname> printer, Cor: Bridge Ave. &amp; 2d,
+                            <geogname>Camden</geogname>." <title render="doublequote">Old Chants</title> first appeared in <title render="italic">Truth</title> (<date normal="1891-03-19" type="publication" era="ce" calendar="gregorian">19 March 1891</date>), and was reprinted in <title render="italic">Good-Bye My Fancy</title> (<date normal="1891" type="publication" era="ce" calendar="gregorian">1891</date>).</p>
+                </scopecontent>
+            </c01>
+            <!-- 
+<c01 level="item">
+ <did>
+		<unitid type="WWA">tem.#####</unitid>
+		<unitid type="work">xxx.00369</unitid>
+		<unitid type="repository">MS. 842-1</unitid>
+  <unittitle><title render="doublequote">Not Meagre, Latent Boughs Alone</title></unittitle>
+  <unitdate normal="1880/1890">ca. 1887</unitdate>
+  <physdesc><extent unit="leaves">1 leaf</extent><dimensions unit="centimeters">12 x 15.4 cm</dimensions></physdesc>
+ </did>
+ <scopecontent><p>Proof leaf of <title render="doublequote">Not Meagre, Latent Boughs Alone,</title> which was published first in <date type="publication">1887</date>, with no corrections on the page.</p>
+ </scopecontent>
+</c01> -->
+            <!-- 
+<c01 level="item">
+ <did>
+		<unitid type="WWA">tem.#####</unitid>
+		<unitid type="work">xxx.00395</unitid>
+		<unitid type="repository">MS. 821-2</unitid>
+  <unittitle><title render="doublequote">Old Chants</title></unittitle>
+  <unitdate normal="1885/1892">ca. 1891</unitdate>
+ <physdesc><extent unit="leaves">1 leaf</extent><dimensions unit="centimeters">21.8 x 18 cm</dimensions></physdesc>
+ </did>
+ <scopecontent><p>Uncorrected proof of <title render="doublequote">Old Chants,</title> which was published first in <date type="publication">1891</date>.</p>
+ </scopecontent>
+</c01> -->
+            <!-- 
+<c01 level="item">
+ <did>
+		<unitid type="WWA">tem.#####</unitid> 
+		<unitid type="work">xxx.#####</unitid>
+		<unitid type="repository">MSS. 2531</unitid>
+  <unittitle><title render="doublequote">[Partial segment of two lines of poetry]</title></unittitle>
+  <unitdate normal="1819/1892">undated</unitdate>
+  <physdesc>
+  <physfacet>handwritten</physfacet><extent unit="leaves">1 leaf</extent><dimensions unit="centimeters">10 x 9 cm</dimensions></physdesc>
+ </did>
+ <scopecontent><p>Written on the verso of an envelope addressed to Whitman from the <corpname>Bell, Lewis &amp; Yates Coal Mining Co.</corpname>, <geogname>Buffalo, New York</geogname>, are two unidentified lines or partial lines of poetry.  The relationship of these lines to Whitman's published work is unknown.</p>
+ </scopecontent>
+</c01> -->
+            <!--
+<c01 level="item">
+ <did>
+		<unitid type="WWA">tem.#####</unitid>
+		<unitid type="work">xxx.00389</unitid>
+		<unitid type="repository">MS. 842-2</unitid>
+  <unittitle><title render="doublequote">To the Year 1889</title></unittitle>
+  <unitdate normal="1888/1889">ca. 1888</unitdate>
+  <physdesc><extent unit="leaves">1 leaf</extent><dimensions unit="centimeters">12.2 x 15.4 cm</dimensions></physdesc>
+ </did>
+ <scopecontent><p>Proof of <title render="doublequote">To the Year 1889,</title> a poem published first on <date type="publication" normal="1889-01-05">January 5, 1889</date>, and later published with the revised title <title render="doublequote">To the Pending Year.</title></p>
+ </scopecontent>
+</c01> -->
+            <!-- 
+<c01 level="item">
+ <did>
+		<unitid type="WWA">tem.#####</unitid>
+		<unitid type="work">xxx.00368</unitid>
+		<unitid type="repository">MS. 821-1</unitid>
+  <unittitle><title render="doublequote">You Lingering Sparse Leaves of Me</title></unittitle>
+  <unitdate normal="1885/1892">ca. 1887</unitdate>
+  <physdesc><extent unit="leaves">1 leaf</extent><dimensions unit="centimeters">12 x 15 cm</dimensions></physdesc>
+ </did>
+ <scopecontent><p>Proof of <title render="doublequote">You Lingering Sparse Leaves of Me,</title> a poem first published in <date type="publication">1887</date>.</p>
+ </scopecontent>
+</c01> -->
+        </dsc>
+    </archdesc>
+</ead>

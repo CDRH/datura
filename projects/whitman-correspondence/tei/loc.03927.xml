@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.03927">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Susan Stafford, 2 March [1887]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                    <persName xml:id="smb">Stephanie Blalock</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2015</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.03927</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2015 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive March be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Susan Stafford, 2 March [1887]</title>
+                    <date cert="medium" when="1887-03-02" xml:id="dat1">March 2, 1887</date>
+                    <idno type="callno">MSS18630, Box 16, Reel 10</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Stafford, Susan" ref="n0817">Susan Stafford</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-10-07" who="#smb">final check, corrected</change>
+            <change when="2015-09-24" who="#km">checked</change>
+            <change when="2015-07-11" who="#if">edited</change>
+            <change when="2015-05-24" who="#ss">annotated</change>
+            <change when="2014-11-13" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">  
+        <body>
+            <pb xml:id="leaf002r" facs="loc_jc.00564_large.jpg" type="recto"/>
+            <opener>
+                <dateline> 
+                    <date when="1887-03-02" rend="right">Camden<ptr target="loc.03927_n1"/> March 2<ptr target="loc.03927_n2"/>&#8212;</date>
+                    <date when="1887-03-02" rend="right">noon</date>
+                </dateline>
+                <salute>Dear friend</salute>
+            </opener>
+            <p>The old story&#8212;nothing very new or different with me&#8212;Still jog along here
+                as before&#8212;have been half sick a great part of this winter&#8212;yet every
+                thing goes on comfortably with me&#8212;I am sitting here by the window down stairs,
+                in my big chair, writing this&#8212;(the sun shining outside, &#38; my little canary
+                singing furiously in his cage in the corner)&#8212;I have occasional
+                visitors&#8212;Wm Duckett<ptr target="med.00747_n1"/> is here yet&#8212;I don't get
+                out much, the roads are so bad. Come up &#38; see us &#38; spend the day.
+                    George<ptr target="n0852c"/> stop when you come up. Susan I enclose a letter
+                    Herbert<ptr target="n0262"/> sent me some months ago&#8212;nothing
+                    particular&#8212;Ed<ptr target="n0589c"/> I still wish to sell my mare </p>
+            <closer>
+                <signed>W W</signed>
+            </closer>
+            <pb xml:id="leaf002v" facs="loc_jc.00565_large.jpg" type="verso"/>
+            <pb xml:id="leaf001r" facs="loc_jc.00562_large.jpg" type="recto"/>
+            <pb xml:id="leaf001v" facs="loc_jc.00563_large.jpg" type="verso"/>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- <?xml-stylesheet href="http://www.whitmanarchive.org/servlets/xmlfindaids/shared/styles/eadwhit.xsl" type="text/xsl"?> -->
+	
+		<!DOCTYPE ead PUBLIC '+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN' "ead.dtd">
+	
+<ead audience="external" relatedencoding="MARC21">
+    <eadheader audience="internal"
+              langencoding="iso639-2b"
+              scriptencoding="iso15924"
+              relatedencoding="marc21"
+              repositoryencoding="iso15511"
+              countryencoding="iso3166-1"
+              dateencoding="iso8601"
+              findaidstatus="edited-full-draft"
+              id="a0">
+        <eadid countrycode="us" mainagencycode="NbU" identifier="bos.ead01">bos.ead01</eadid>
+        <filedesc>
+            <titlestmt>
+                <titleproper encodinganalog="245$a">Catalog of the Walt Whitman Literary Manuscripts in
+                    The Alice and Rollo G. Silver Collection, Department of Special Collections,
+                    Boston University</titleproper>
+                <author>Original records created by the Department of Special Collections,
+                    Boston University; revised and expanded by the <emph render="italic">Walt
+                        Whitman Archive</emph> and the University of Nebraska-Lincoln Libraries. </author>
+                <sponsor>Encoded Archival Description completed with the assistance of the Gladys
+                    Krieble Delmas Foundation, the University of Nebraska Research Council, the
+                    Institute for Museum and Library Services, and the National Endowment for the Humanities.</sponsor>
+            </titlestmt>
+            <publicationstmt>
+                <publisher encodinganalog="260$b">Published by <emph render="italic">The Walt
+                        Whitman Archive</emph> in collaboration with the University of
+                    Nebraska-Lincoln Libraries. </publisher>
+                <date encodinganalog="260$c" era="ce" calendar="gregorian">2003</date>
+                <address>
+               <addressline>29 Love Library</addressline>
+               <addressline>P.O. Box 884100</addressline>
+               <addressline>University of Nebraska-Lincoln</addressline>
+               <addressline>Lincoln, NE 68508</addressline>
+            </address>
+            </publicationstmt>
+        </filedesc>
+        <profiledesc>
+            <creation>Machine-readable finding aid created by Andrew Jewell, <emph render="italic">The Walt Whitman Archive</emph>, and Mary Ellen Ducey, University of
+                Nebraska-Lincoln Libraries; revised by Brett Barney, <emph render="italic">The Walt
+                    Whitman Archive</emph>, <date normal="2006" era="ce" calendar="gregorian">2006</date>; revised by Tim Jackson, <emph render="italic">The Walt Whitman Archive</emph>, <date era="ce" calendar="gregorian">2010</date>; revised and expanded by Brett Barney, <emph render="italic">The Walt Whitman Archive</emph>, <date era="ce" calendar="gregorian">2014</date>.</creation>
+            <langusage>Finding aid written in <language encodinganalog="546" langcode="eng">English</language>.</langusage>
+        </profiledesc>
+    </eadheader>
+    <frontmatter>
+        <titlepage id="tp001">
+            <titleproper encodinganalog="245$a">Catalog of the Walt Whitman Literary Manuscripts in The
+                Alice and Rollo G. Silver Collection, Department of Special Collections, Boston
+                University</titleproper>
+            <publisher>Published by <emph render="italic">The Walt Whitman Archive</emph> in
+                collaboration with the University of Nebraska-Lincoln Libraries. </publisher>
+            <date normal="2003" era="ce" calendar="gregorian">2003</date>
+        </titlepage>
+    </frontmatter>
+    <archdesc audience="external"
+             level="otherlevel"
+             type="inventory"
+             relatedencoding="marc21">
+        <did id="al">
+            <unittitle audience="external" label="Title:" encodinganalog="245$a">Walt Whitman Literary
+                Manuscripts in The Alice and Rollo G. Silver Collection, Department of Special
+                Collections, Boston University</unittitle>
+            <unitid audience="external"
+                 label="Collection Number:"
+                 encodinganalog="099"
+                 repositorycode="MBU"
+                 countrycode="us">N/A</unitid>
+            <origination label="Creator:">
+            <persname encodinganalog="100">Whitman, Walt,
+                    1819-1892</persname>
+         </origination>
+            <origination label="Collector:">
+            <persname encodinganalog="110"
+                      normal="Silver, Rollo Gabriel, 1909-"
+                      source="lcnaf">Silver, Rollo
+                G.</persname>
+         </origination>
+            <physdesc>
+            <genreform>poetry</genreform>
+            <extent>10
+                </extent>
+            <genreform>boxes</genreform>
+         </physdesc>
+            <repository encodinganalog="852$a" label="Repository:">
+            <corpname encodinganalog="852$a">Boston University</corpname>
+                <address>
+               <addressline>Boston University</addressline>
+               <addressline>771 Commonwealth Avenue</addressline>
+               <addressline>Boston, MA  02215</addressline>
+            </address>
+         </repository>
+            <abstract>This catalog was created from a finding aid created by the
+                Department of Special Collections, Boston University, and obtained by the <emph render="italic">Walt Whitman Archive</emph>. The original papers and catalog
+                records are held at Department of Special Collections, Boston University.</abstract>
+        </did>
+        <descgrp id="ds001" type="admininfo">
+            <accessrestrict audience="external" encodinganalog="506" id="a14">
+                <head>Restrictions on Original Materials:</head>
+                <p>Please consult with repository.</p>
+            </accessrestrict>
+            <!-- <userestrict encodinganalog="540" id="a15">
+<head>Copyright:</head><p>The use of Archives and Special Collections material is governed by the U.S. Copyright Law (title 17 U.S. Code).</p>
+</userestrict> -->
+            <prefercite encodinganalog="524" id="a18">
+                <head>Preferred Citation:</head>
+                <p>To identify this catalog as a source, see the <emph render="italic">Archive's
+                        </emph>
+               <extref href="http://www.whitmanarchive.org/about/conditions.html"
+                       linktype="simple">"Conditions of Use"</extref> page.</p>
+            </prefercite>
+            <!-- <altformavail type="paper" encodinganalog="530" id="a17">
+<head>Alternative Format:</head><p> Original Documents and finding aid are held in <corpname>Department of Special Collections, Boston University</corpname></p>
+</altformavail> -->
+        </descgrp>
+        <scopecontent id="sc001">
+            <head>Scope and Content</head>
+            <p>The Whitman collection of the larger Alice and Rollo G. Silver Collection is made up
+                of first editions, collected editions, translations and reprints of the poet's own
+                work, as well as contemporary works about him; many are inscribed or association
+                copies. It also includes holograph letters and literary manuscripts, many
+                photographs, engravings and memorabilia, and correspondence with Whitman's
+                biographers and other collectors. Selected highlights include the first printing of
+                    <title render="italic" linktype="simple">Leaves of Grass</title> (Brooklyn,
+                    <date type="publication" era="ce" calendar="gregorian">1855</date>), the famous
+                deathbed edition of <title render="italic" linktype="simple">Leaves of
+                Grass</title>, (Philadelphia, <date type="publication"
+                  normal="1891/1892"
+                  era="ce"
+                  calendar="gregorian">1891-92</date>), and nearly all of the revised editions
+                published in the thirty-six years between the two. Also present are the novel <title render="italic" linktype="simple">Franklin Evans</title> (Whitman's first book),
+                an unpublished manuscript version of <title render="doublequote" linktype="simple">Sail Out for Good, Eidólon Yacht!</title> from <title render="italic" linktype="simple">Leaves of Grass</title>, and books from Whitman's library. The individual items described in this catalog are only those deemed poetry or prose manuscripts.
+            </p>
+        </scopecontent>
+        <bioghist id="bh001">
+            <head>Biographical Information</head>
+            <p/>
+        </bioghist>
+        <controlaccess id="ca001">
+            <head>Subjects</head>
+            <persname encodinganalog="600">Whitman, Walt, 1819-1892</persname>
+            <subject encodinganalog="650">Whitman, Walt, 1819-1892--Manuscripts</subject>
+            <subject encodinganalog="650">Poets, American--19th century</subject>
+        </controlaccess>
+        <dsc id="dc001" type="in-depth">
+            <head>Item List</head>
+            <!-- <c01 level="series">
+ <did>
+  <unitid type="repository">A</unitid>
+  <unittitle>Whitman Manuscripts and Letters</unittitle>
+  <unitdate normal="1855/1892">undated</unitdate>
+  <container type="box">1</container></did>
+  <scopecontent><p>Poetry, prose, correspondence, and other manuscripts in Whitman's autograph.</p>
+ </scopecontent> -->
+            <c01 level="item">
+                <did>
+                    <container type="box">1</container>
+                    <unitid type="WWA">bos.00001</unitid>
+                    <unitid type="work">xxx.00388</unitid>
+                    <unittitle>
+                         <title render="doublequote" type="repository" linktype="simple">Old Age's Ship &amp; Crafty Death's</title>
+                         <title render="doublequote" type="WWA" linktype="simple">Old Age's Ship &amp; Crafty Death's</title>
+               </unittitle>
+                    <unitdate normal="1885/1890" era="ce" calendar="gregorian">about 1890</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <physfacet>handwritten</physfacet>
+                        <physfacet>printed</physfacet>
+                  <extent unit="leaves">1 leaf</extent>
+                    </physdesc>
+                    <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/bos.00001.001.jpg"/>
+                    <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/bos.00001.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a proof of <title render="doublequote" linktype="simple">Old Age's
+                            Ship &amp; Crafty Death's,</title> first published in <title render="italic">Century Magazine</title> <date normal="1890-02" type="publication" era="ce" calendar="gregorian">February 1890</date>, with
+                        corrections and annotations in Whitman's hand.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">1</container>
+                    <unitid type="WWA">bos.00003</unitid>
+                    <unitid type="work">xxx.00380</unitid>
+                    <unittitle>
+                        <title render="doublequote" linktype="simple" type="WWA">Sail out O mystic
+                            yacht</title>
+                        <title render="doublequote" type="repository">Sail Forth O Mystic Yacht</title>
+                    </unittitle>
+                    <unitdate normal="1885/1891" era="ce" calendar="gregorian">about 1891</unitdate>
+                    <physdesc>
+                  <genreform>poetry</genreform>
+                  <physfacet>handwritten</physfacet>
+                  <extent unit="leaves">1 leaf</extent>
+               </physdesc>
+                    <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/bos.00003.001.jpg"/>
+                    <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/bos.00003.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This is a heavily revised draft of <title render="doublequote" linktype="simple">Sail Out for Good, Eidólon Yacht!</title> The poem was
+                        first published in <title render="italic" linktype="simple">Lippincott's
+                            Magazine</title> in <date normal="1891-03" type="publication" era="ce" calendar="gregorian">March 1891</date> with <title render="doublequote" linktype="simple">Sounds of the Winter,</title>
+                        <title render="doublequote" linktype="simple">The Unexpress'd,</title> and
+                            <title render="doublequote" linktype="simple">After the Argument</title>
+                        under the general title <title render="doublequote" linktype="simple">Old-Age Echoes.</title> The manuscript leaf is made from two scraps
+                        pasted together, one of them an envelope addressed to Whitman, bearing
+                        several postmarks from <date normal="1890-06" era="ce" calendar="gregorian">June 1890</date>.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <container type="box">1</container>
+                    <unitid type="WWA">bos.00005</unitid>
+                    <unitid type="work">xxx.00230</unitid>
+                    <unittitle>
+                  <title render="doublequote" type="WWA" linktype="simple">[Was it thought that all was]</title>
+                        <title render="doublequote" type="repository" linktype="simple">Notes for Lecture</title>
+                    </unittitle>
+                    <unitdate normal="1860/1869" era="ce" calendar="gregorian">1860-1869</unitdate>
+                    <physdesc>
+                  <genreform>prose</genreform>
+                  <physfacet>handwritten</physfacet>
+                  <extent unit="leaves">1 leaf</extent>
+               </physdesc>
+                    <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/bos.00005.001.jpg"/>
+                    <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/bos.00005.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>This manuscript appears to contain notes for a lecture, though it is uncertain whether Whitman ever used them for a lecture or a published prose work. Some of the phrasing in the last clause, regarding exiles, is echoed in the <date calendar="gregorian" type="publication" era="ce" normal="1856">1856</date> poem <title render="doublequote" linktype="simple">Liberty Poem for Asia, Africa, Europe, America, Australia, Cuba, and The Archipelagoes of the Sea,</title> which eventually became <title render="doublequote" linktype="simple">To a Foil'd European Revolutionaire.</title> "Notes for Lecture" is written at the bottom of the page in an unknown hand.</p>
+                </scopecontent>
+            </c01>
+             
+         <c01 level="item">
+            <did>
+               <container type="box">1</container>
+		             <unitid type="WWA">bos.00002</unitid>
+		             <unitid type="work">xxx.00993</unitid>
+               <unittitle>
+                  <title render="doublequote" type="WWA" linktype="simple">[(result of year in army hospitals]</title>
+                  <title render="doublequote" type="repository" linktype="simple">I have had one feeling. . .</title>
+               </unittitle>
+               <unitdate normal="1862/1882" era="ce" calendar="gregorian">about 1864</unitdate>
+               <physdesc>
+                  <genreform>prose</genreform>
+                  <physfacet>handwritten</physfacet>
+                  <extent unit="leaves">1 leaf</extent>
+               </physdesc>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/bos.00002.001.jpg"/>
+               <dao linktype="simple"
+                    href="http://www.whitmanarchive.org/manuscripts/figures/bos.00002.002.jpg"/>
+            </did>
+            <scopecontent>
+                <p>Prose draft fragment decrying the lack of democratic sensibilities among commissioned officers. Edward F. Grier transcribes this manuscript under the title <title render="doublequote">[(Result of Year]</title> in <title render="italic">Notebooks and Unpublished Prose Manuscripts</title> (New York: New York University Press, <date normal="1984" type="publication" era="ce" calendar="gregorian">1984</date>) 2: 675. Grier suggests that this manuscript is (at least thematically) linked to portions of <title render="italic">Democratic Vistas</title> (<date normal="1871" type="publication" era="ce" calendar="gregorian">1871</date>). However, these notes seem to be an early working of ideas that Whitman would later return to and incorporate into his prose. In this manuscript, Whitman mentions the of the role of "true Democracy" in forming a military structure "worthy of America," an idea which he further develops in <title render="doublequote">A New Army Organization Fit for America,</title> <title render="italic">Specimen Days &#038; Collect</title> <date normal="1882/1883" type="publication" era="ce" calendar="gregorian">1882&#8211;1883</date>.</p>
+            </scopecontent>
+         </c01>  
+            <!-- SLB: The rest of these records don't appear to be poetry related, so I've commented them out
+
+<c02 level="item">
+ <did>
+  <container type="box">1</container>
+		<unitid type="WWA">bos.#####</unitid>
+		<unitid type="work">xxx.#####</unitid>
+
+  <unittitle>Check</unittitle>
+  <unitdate normal="1877-04-05">April 5, 1877</unitdate>
+  <physdesc>
+  <physfacet>handwritten</physfacet><extent unit="leaves">1 leaf</extent></physdesc>
+ </did>
+ <scopecontent><p>Check  to <persname normal="Whitman, George Washington, 1829-1901" source="lcnaf" encodinganalog="600$a">George W. Whitman</persname>, <date normal="1877-04-05">April 5, 1877</date></p>
+ </scopecontent>
+</c02>
+
+<c02 level="item">
+ <did>
+  <container type="box">1</container>
+		<unitid type="WWA">bos.#####</unitid>
+		<unitid type="work">xxx.#####</unitid>
+
+  <unittitle>Letters and Envelopes</unittitle>
+  <unitdate normal="1863/1891">1863-1891</unitdate>
+  <physdesc>
+  <physfacet>handwritten</physfacet></physdesc>
+ </did>
+ <scopecontent><p>Various letters and envelopes, <date normal="1863/1891">1863-1891</date> and undated.</p>
+ </scopecontent>
+</c02>
+</c01>
+
+<c01 level="series">
+ <did>
+
+  <unitid type="repository">B</unitid>
+  <unittitle>Letter to Whitman</unittitle>
+  <unitdate>1888</unitdate>
+  <container type="box">1</container></did>
+  <scopecontent><p>Unsigned postcard to Whitman (addressed to "Walt Whitman, the American Poet"), postmarked Paris, <date>1888</date></p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">C</unitid>
+  <unittitle>Whitman Related Items</unittitle>
+  <unitdate>undated</unitdate>
+  <container type="box">1</container>
+ </did>
+  <scopecontent><p>Various items relating to Whitman, including a wrapper for the <date type="publication">1855</date> edition of <title render="italic">Leaves of Grass</title>, advertising proof, a congressional report, and correspondence of <persname>David McKay</persname> and Whitman's literary executors.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">D</unitid>
+  <unittitle>Correspondence Relating to Whitman's Dismissal from the Interior Department</unittitle>
+  <unitdate normal="1902-06-03/1910-11-14">June 3, 1902 and November 14, 1910</unitdate>
+  <container type="box">1</container>
+ </did>
+ <scopecontent><p>Correspondence relating to Whitman's dismissal by <persname normal="Harlan, James">Secretary Harlan</persname> from the Department of Interior.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">E</unitid>
+  <unittitle>Advertisements and Announcements for Whitman's Books</unittitle>
+  <unitdate>undated</unitdate>
+  <container type="box">1</container>
+ </did>
+  <scopecontent><p>Various advertisements for Whitman's books, mostly for editions published after his death.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">F</unitid>
+  <unittitle>Reviews of Books by Whitman</unittitle>
+  <unitdate>undated</unitdate>
+  <container type="box">1</container>
+ </did>
+ <scopecontent><p>Reviews of Whitman's books, including newspaper clippings of contemporary reviews and reviews of twentieth century editions.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">G</unitid>
+  <unittitle>Pieces by Whitman</unittitle>
+  <unitdate>undated</unitdate>
+  <container type="box">1</container>
+ </did>
+  <scopecontent><p>Printed versions of various short pieces by Whitman, both poetry and prose.  In this series are special printings of poems, clippings from newspaper publication of works, facsimiles, and tearsheets.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">H</unitid>
+  <unittitle>Advertisements for Books About Whitman</unittitle>
+  <unitdate>undated</unitdate>
+  <container type="box">1</container>
+ </did>
+  <scopecontent><p>Advertisements for a variety of books about Whitman.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">I</unitid>
+  <unittitle>Reviews of Books About Whitman</unittitle>
+  <unitdate>undated</unitdate>
+  <container type="box">1</container>
+ </did>
+ <scopecontent><p>Various reviews of books written about Whitman.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">J</unitid>
+  <unittitle>Parodies of Whitman's Poems</unittitle>
+  <unitdate>undated</unitdate>
+  <container type="box">1</container>
+ </did>
+ <scopecontent><p>Four parodies of Whitman's poems.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">K</unitid>
+  <unittitle>Whitman Drawings and Photographs:  Framed Items</unittitle>
+  <unitdate>undated</unitdate>
+  <container type="box">2</container>
+ </did>
+ <scopecontent><p>Ten framed photographs and drawings of Whitman and Whitman-related subjects.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">L</unitid>
+  <unittitle>Whitman Drawings, Photographs, and Pictures</unittitle>
+  <unitdate>undated</unitdate>
+  <container type="box">2</container>
+ </did>
+ <scopecontent><p>Various drawings, photographs, postcards, and reproductions of Whitman and Whitman-related subjects.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">M</unitid>
+  <unittitle>Pieces About Whitman</unittitle>
+  <unitdate>undated</unitdate>
+  <container type="box">3-4</container>
+ </did>
+ <scopecontent><p>Several varied articles about Whitman or related to Whitman.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">N</unitid>
+  <unittitle>Pieces About Whitman:  Brief Mention or Entire Issue Devoted to Him</unittitle>
+  <unitdate>undated</unitdate>
+  <container type="box">4</container>
+ </did>
+ <scopecontent><p>Several pieces about Whitman.  This series collects articles with brief mentions or entire issues of periodicals devoted to Whitman.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">O</unitid>
+  <unittitle><title render="doublequote">Sundry Letters Re:  Walt Whitman's Anomaly</title></unittitle>
+  <unitdate>undated</unitdate>
+  <container type="box">4</container>
+ </did>
+ <scopecontent><p>52-page carbon typescript of <title render="doublequote">Sundry Letters Re:  Walt Whitman's Anomaly,</title> labelled "<persname>Paul Munter</persname>, Shorthand Reporter, 71 Broadway."</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">P</unitid>
+  <unittitle>Whitmaniana</unittitle>
+  <unitdate normal="1922/1926">1922-1926</unitdate>
+  <container type="box">5</container>
+ </did>
+  <scopecontent><p>Collected by <persname>A. Faustini</persname>, this series contains four volumes of bound notebooks of clippings related to Whitman.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">Q</unitid>
+  <unittitle>Bound Magazine Articles about Whitman</unittitle>
+  <unitdate normal="1887/1929">1887-1929</unitdate>
+  <container type="box">5</container>
+ </did>
+  <scopecontent><p>Thirty-five articles about Whitman and his work, published between <date type="publication">1887</date> and <date type="publication">1929</date>.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">R</unitid>
+  <unittitle>Walt Whitman Foundation</unittitle>
+  <unitdate>undated</unitdate>
+  <container type="box">6</container>
+ </did>
+  <scopecontent><p>Items relating to the <corpname>Walt Whitman Foundation</corpname>, including the Foundation Bulletin, a brochure, and three announcement sheets for birthday celebrations sponsored by the Foundation.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">S</unitid>
+  <unittitle><title  render="italic">Walt Whitman Newsletter</title></unittitle>
+  <unitdate>undated</unitdate>
+  <container type="box">6</container>
+ </did>
+ <scopecontent><p>Copies and reprints of <title render="italic">Walt Whitman Newsletter</title> published by New York University Press and Wayne State University Press.  Also included is an announcement of the change in publishers.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">T</unitid>
+  <unittitle><title render="italic">The Long Islander</title></unittitle>
+  <unitdate normal="1955-06-02/1965-06-03">June 2, 1955-June 3, 1965</unitdate>
+  <container type="box">6</container>
+ </did>
+  <scopecontent><p>Reprints of articles and pages in <title render="italic">The Long Islander</title>, particularly the "Annual Walt Whitman Page" between <date normal="1959-07-02/1965-06-03">July 2, 1959-June 3, 1965</date>.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">U</unitid>
+  <unittitle>Walt Whitman Society of America</unittitle>
+  <unitdate>undated</unitdate>
+  <container type="box">6</container>
+ </did>
+  <scopecontent><p>Items relating to the <corpname>Walt Whitman Society of America</corpname>, including membership solicitation materials, bulletins, a brochure, a news clipping, and a mimeographed letter.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">V</unitid>
+  <unittitle>Walt Whitman Birthplace</unittitle>
+  <unitdate>undated</unitdate>
+  <container type="box">6</container>
+ </did>
+ <scopecontent><p>Items relating to the <corpname>Walt Whitman Birthplace</corpname> in <geogname>Huntington Station, New York</geogname>, including news clippings and materials of the <corpname>Walt Whitman Birthplace Association</corpname>.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">W</unitid>
+  <unittitle>Walt Whitman's House on Mickle Street in Camden, New Jersey</unittitle>
+  <unitdate normal="1892-10-01">October 1, 1892</unitdate>
+  <container type="box">6</container>
+ </did>
+ <scopecontent><p>Letter from <persname normal="Traubel, Horace, 1858-1919" source="lcnaf" encodinganalog="600$a">Horace Traubel</persname> soliciting funds to purchase Whitman's house in <geogname>Camden, New Jersey</geogname>.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">X</unitid>
+  <unittitle>Walt Whitman Fellowship</unittitle>
+  <unitdate>undated</unitdate>
+  <container type="box">6</container>
+ </did>
+  <scopecontent><p>Various items relating to the <corpname>Walt Whitman Fellowship</corpname> which formed in <geogname>Philadelphia, Pennsylvania</geogname>, in the <date normal="1890/1899">1890s</date>, including announcements, cards, papers, and articles.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">Y</unitid>
+  <unittitle>Programs of Events at Which Walt Whitman was Honored or His Poems Used.</unittitle>
+  <unitdate>undated</unitdate>
+  <container type="box">6</container>
+ </did>
+ <scopecontent><p>Various programs from church, community, and university events that featured the work and life of Whitman.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">Z</unitid>
+  <unittitle>Whitman Quotations on Greeting Cards</unittitle>
+  <unitdate>undated</unitdate>
+  <container type="box">6</container>
+ </did>
+ <scopecontent><p>Various Christmas cards with quotations by Whitman included.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">AA</unitid>
+  <unittitle>Walt Whitman Hall of Fame Bust</unittitle>
+  <unitdate normal="1930/1931">1930-1931</unitdate>
+  <container type="box">6</container>
+ </did>
+ <scopecontent><p>An article and program about a bust of Whitman.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">BB</unitid>
+  <unittitle>Book and Manuscript Catalogues of Whitman Sales</unittitle>
+  <unitdate>undated</unitdate>
+  <container type="box">7</container>
+ </did>
+ <scopecontent><p>Various catalogues, news clippings, and tearsheets of sale catalogues regarding the sale of Whitman materials.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">CC</unitid>
+  <unittitle>Material about Whitman Collections and Exhibits</unittitle>
+  <unitdate>undated</unitdate>
+  <container type="box">8</container>
+ </did>
+ <scopecontent><p>Books, news clippings, letters, articles, programs, invitations, brochures, and catalogues relating to various collections of Whitman materials in universities and libraries.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">DD</unitid>
+  <unittitle>Memorabilia</unittitle>
+  <unitdate>undated</unitdate>
+  <container type="box">8</container>
+ </did>
+ <scopecontent><p>Towel, place mats, and stationery from the <corpname>Walt Whitman Hotel</corpname> in <geogname>Camden, New Jersey</geogname>.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">EE</unitid>
+  <unittitle>Rollo Silver Exhibit</unittitle>
+  <unitdate>1970</unitdate>
+  <container type="box">8</container>
+ </did>
+ <scopecontent><p>Announcement and poster for the <persname encodinganalog="600$a" normal="Silver, Rollo Gabriel, 1909-" source="lcnaf">Rollo Silver</persname> Walt Whitman Exhibit at <corpname>Boston University</corpname> in <date>1970</date>.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">FF</unitid>
+  <unittitle>Correspondence Related to Whitman</unittitle>
+  <unitdate>undated</unitdate>
+  <container type="box">9</container>
+ </did>
+ <scopecontent><p>Correspondence related to Whitman from book dealers, collectors, and researchers in the twentieth century.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">GG</unitid>
+  <unittitle>Rollo G. Silver Manuscripts Relating to Walt Whitman</unittitle>
+  <unitdate>undated</unitdate>
+  <container type="box">10</container>
+ </did>
+ <scopecontent><p>Various manuscripts of <persname encodinganalog="600$a" normal="Silver, Rollo Gabriel, 1909-" source="lcnaf">Rollo G. Silver's</persname> reviews and articles related to Walt Whitman.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">HH</unitid>
+  <unittitle>Printed Articles About Whitman by <persname encodinganalog="600$a" normal="Silver, Rollo Gabriel, 1909-" source="lcnaf">Rollo G. Silver</persname></unittitle>
+  <unitdate normal="1935/1963">1935-1963</unitdate>
+  <container type="box">10</container>
+ </did>
+ <scopecontent><p>Copies of <persname encodinganalog="600$a" normal="Silver, Rollo Gabriel, 1909-" source="lcnaf">Rollo G. Silver's</persname> articles and reviews related to Whitman.</p>
+ </scopecontent>
+</c01>
+
+<c01 level="series">
+ <did>
+  <unitid type="repository">II</unitid>
+  <unittitle>General Items Related to <persname encodinganalog="600$a" normal="Silver, Rollo Gabriel, 1909-" source="lcnaf">Rollo G. Silver's</persname> Research</unittitle>
+  <unitdate>undated</unitdate>
+  <container type="box">10</container>
+ </did>
+ <scopecontent><p>Index cards, a news clip, and a letter related to <persname encodinganalog="600$a" normal="Silver, Rollo Gabriel, 1909-" source="lcnaf">Rollo G. Silver's</persname> research.</p>
+ </scopecontent>
+</c01>
+ -->
+            <!-- </c01>  -->
+        </dsc>
+    </archdesc>
+</ead>

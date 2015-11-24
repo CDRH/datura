@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="wwh.00024">
+    <teiHeader>
+        <fileDesc> 
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Jessie Louisa Whitman, 6 March
+                    [1887]</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="km">Kevin McMullen</persName>
+                    <persName xml:id="smb">Stephanie Blalock</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2015</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>wwh.00024</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2015 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive may be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc> 
+                <biblStruct>
+                    <monogr>
+                        <author>Walt Whitman</author>
+                        <editor>Edwin Haviland Miller</editor>
+                        <title xml:id="ehm">The Correspondence</title>
+                        <imprint>
+                            <pubPlace>New York</pubPlace>
+                            <publisher>New York University Press</publisher>
+                            <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                            <biblScope type="volume">4</biblScope>
+                            <biblScope type="page">72&#8211;73</biblScope>
+                        </imprint>
+                    </monogr>
+                </biblStruct>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Jessie Louisa Whitman, 6 March [1887]</title>
+                    <date cert="medium" when="1887-03-06" xml:id="dat1">March 6, 1887</date>
+                    <orgName xml:id="wwh">Walt Whitman House, Camden, N.J.</orgName>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Whitman, Jessie Louisa" ref="n1055">Jessie Louisa
+                        Whitman</persName>
+                </person>
+            </particDesc>
+        </profileDesc> 
+        <revisionDesc>
+            <change when="2015-10-07" who="#smb">final check, corrected</change>
+            <change when="2015-09-29" who="#km">checked</change>
+            <change when="2015-07-20" who="#if">edited</change>
+            <change when="2015-05-24" who="#ss">annotated</change>
+            <change when="2014-11-13" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <opener>
+                <dateline rend="right">
+                    <name type="place">Camden</name> 
+                    <date when="1887-03-06">March 6&#8212;12&#188; P M</date>
+                </dateline>
+            </opener>
+            <p>Just as I get ready to write you a line, Mrs. Davis<ptr target="loc.03745_n2"/> calls
+                me to dinner&#8212;So as that is important, I will put down the lap tablet on which
+                I am writing&#8212;&#38; finish afterwards&#8212;</p>
+            <p>Well I had my dinner, cold meat, hot potatoes, nice stew'd tomatoes &#38; onions,
+                &#38; a cup of tea &#38; Graham bread&#8212;enjoyed all&#8212;Am feeling pretty well
+                these times&#8212;a couple of Wilson Barrett's<ptr target="loc.01370_n2"/> actors
+                came over in a carriage yesterday afternoon &#38; took me to the theatre to see
+                    "Clito"<ptr target="wwh.00024_n1"/>&#8212;had a good afternoon ride &#38;
+                performance&#8212;was used tip top&#8212;Mrs Davis went with me&#8212;got back here
+                ab't sunset thro' a snow storm&#8212;My friend Wm O'Connor<ptr target="n2002"/> is
+                in a very bad way&#8212;locomotor ataxia&#8212;he is now in Los Angeles County
+                California&#8212;</p>
+            <p>It looks like winter out as I write, all white with snow&#8212;I havn't heard just
+                lately from George<ptr target="n0700"/> &#38; Lou<ptr target="n0368"/> or Ed<ptr target="n1047"
+                />&#8212;but I am sure they are all right&#8212;Love to you, Jessie dear&#8212;</p>
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

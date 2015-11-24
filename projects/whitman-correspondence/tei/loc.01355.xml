@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="ASCII"?>
+<?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>  
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="loc.01355">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title level="m" type="main">Walt Whitman to Mary Whitall Smith Costelloe, 3 January
+                    1887</title>
+                <title level="m" type="sub">a machine readable transcription</title>
+                <author>Walt Whitman</author>
+                <editor>Kenneth M. Price</editor>
+                <editor>Ed Folsom</editor>
+                <respStmt>
+                    <resp>Transcription and encoding</resp>
+                    <persName xml:id="ss">Stefan Sch&#246;berlein</persName>
+                    <persName xml:id="if">Ian Faith</persName>
+                    <persName xml:id="smb">Stephanie Blalock</persName>
+                </respStmt>
+                <sponsor>Center for Digital Research in the Humanities, University of
+                    Nebraska-Lincoln</sponsor>
+                <sponsor>University of Iowa</sponsor>
+                <funder>National Historical Publications and Records Commission</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <idno>loc.01355</idno>
+                <distributor>The Walt Whitman Archive</distributor>
+                <address>
+                    <addrLine>Center for Digital Research in the Humanities</addrLine>
+                    <addrLine>319 Love Library</addrLine>
+                    <addrLine>University of Nebraska-Lincoln</addrLine>
+                    <addrLine>P.O. Box 884100</addrLine>
+                    <addrLine>Lincoln, NE 68588-4100</addrLine>
+                </address>
+                <availability>
+                    <p>Copyright &#169; 2012 by Ed Folsom and Kenneth M. Price, all rights reserved.
+                        Items in the Archive January be shared in accordance with the Fair Use
+                        provisions of U.S. copyright law. Redistribution or republication on other
+                        terms, in any medium, requires express written consent from the editors and
+                        advance notification of the publisher, Center for Digital Research in the
+                        Humanities. Permission to reproduce the graphic images in this archive has
+                        been granted by the owners of the originals for this publication only.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <author>Walt Whitman</author>
+                    <title>Walt Whitman to Mary Whitall Smith Costelloe, 3 January 1887</title>
+                    <date cert="high" when="1887-01-03" xml:id="dat1">January 3, 1887</date>
+                    <idno type="callno">Box 8, Reel 5</idno>
+                    <orgName xml:id="loc">The Charles E. Feinberg Collection of the Papers of Walt
+                        Whitman, 1839&#8211;1919, Library of Congress, Washington, D.C.</orgName>
+                </bibl>
+            </sourceDesc> 
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <person role="sender">
+                    <persName key="Whitman, Walt">Walt Whitman</persName>
+                </person>
+                <person role="recipient">
+                    <persName key="Costelloe, Mary Whitall Smith" ref="loc.02189_n1">Mary Whitall Smith Costelloe</persName>
+                </person>
+            </particDesc>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2015-08-07" who="#smb">final check, corrected</change>
+            <change when="2015-07-01" who="#if">edited</change>
+            <change when="2015-05-24" who="#ss">annotated</change>
+            <change when="2014-11-11" who="#ss">encoded</change>
+        </revisionDesc>
+    </teiHeader>
+    <text type="letter">
+        <body>
+            <pb xml:id="leaf001v" facs="loc.01355.001_large.jpg" type="verso"/>
+            <pb xml:id="leaf001r" facs="loc.01355.002_large.jpg" type="recto"/>
+            
+            <opener>
+                <dateline>
+                    <date when="1887-01-03" rend="right">Camden Jan. 3 '87&#8212;P M<ptr target="loc.01355_n1"/> </date>
+                </dateline>
+            </opener>
+            <p>Henry Norman, of the <hi rend="underline">Pall Mall Gazette</hi> has sent me &#163;81 over, in a very kind &#38;
+                good letter&#8212;enclosing some printed slips from paper&#8212;one written by you
+                ab't my Camden <hi rend="underline">entourage</hi>&#8212;very satisfactory &#38;
+                right to me&#8212;In the Reminiscences stick as much as possible to personal
+                descriptions, anecdotes, &#38; sayings&#8212;&#38; <hi rend="underline">don't make
+                    me too good</hi>&#8212;I am no angel by a long shot<ptr
+                    target="loc.01355_n2"/></p>
+            <closer>
+                <signed>Walt Whitman</signed>
+            </closer>
+        </body>
+    </text>
+</TEI>

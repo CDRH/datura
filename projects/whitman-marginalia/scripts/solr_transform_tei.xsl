@@ -312,7 +312,7 @@
 				
 				<!-- date -->
 				
-				
+				<!--
 				<xsl:if test="/TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/date/@notBefore or /TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/date/@when">
 					<xsl:variable name="doc_date">
 						<xsl:choose>
@@ -340,7 +340,24 @@
 						</xsl:call-template>
 					</field>
 					
-				</xsl:if>
+				</xsl:if>-->
+				
+				<field name="dateDisplay">
+					<xsl:value-of select="//sourceDesc/bibl/date"/>
+				</field>
+				
+				
+				<!-- Ninth field is a sortable version of the date in the format yyyy-mm-dd pulled from @when or @notBefore on date element in the source description. -->
+				<field name="date">
+					<xsl:choose>
+						<xsl:when test="//sourceDesc/bibl/date/attribute::notBefore">
+							<xsl:value-of select="//sourceDesc/bibl/date/attribute::notBefore"/>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="//sourceDesc/bibl/date/attribute::when"/>
+						</xsl:otherwise>
+					</xsl:choose>
+				</field>
 				
 				<!-- type -->
 				
@@ -422,10 +439,28 @@
 					
 					<!-- All in one field -->
 					<field name="recipient">
-						<xsl:for-each select="/TEI/teiHeader/profileDesc/particDesc/person[@role='recipient']/persName/@key">
-							<xsl:value-of select="normalize-space(.)"/>
-							<xsl:if test="position() != last()"><xsl:text>; </xsl:text></xsl:if>
-						</xsl:for-each>
+						<xsl:if test="count(//person[@role='recipient']) = 1"><xsl:value-of select="//person[@role='recipient']/persName/attribute::key"/></xsl:if>
+						<xsl:if test="count(//person[@role='recipient']) = 2">
+							<xsl:value-of select="//person[@role='recipient'][1]/persName/attribute::key"/>
+							<xsl:text>; </xsl:text>
+							<xsl:value-of select="//person[@role='recipient'][2]/persName/attribute::key"/>
+						</xsl:if>
+						<xsl:if test="count(//person[@role='recipient']) = 3">
+							<xsl:value-of select="//person[@role='recipient'][1]/persName/attribute::key"/>
+							<xsl:text>; </xsl:text>
+							<xsl:value-of select="//person[@role='recipient'][2]/persName/attribute::key"/>
+							<xsl:text>; </xsl:text>
+							<xsl:value-of select="//person[@role='recipient'][3]/persName/attribute::key"/>
+						</xsl:if>
+						<xsl:if test="count(//person[@role='recipient']) &gt; 3">
+							<xsl:value-of select="//person[@role='recipient'][1]/persName/attribute::key"/>
+							<xsl:text>; </xsl:text>
+							<xsl:value-of select="//person[@role='recipient'][2]/persName/attribute::key"/>
+							<xsl:text>; </xsl:text>
+							<xsl:value-of select="//person[@role='recipient'][3]/persName/attribute::key"/>
+							<xsl:text> and others</xsl:text><!--
+                        <xsl:value-of select="//person[@role='recipient'][4]/persName/attribute::key"/>-->
+						</xsl:if>
 					</field>
 					<!-- Individual fields -->
 					
@@ -438,8 +473,8 @@
 					
 				</xsl:if>
 				
-				<!-- recipient -->
-				<!-- recipients -->
+				<!-- sender -->
+				<!-- senders -->
 				
 				<xsl:if test="/TEI/teiHeader/profileDesc/particDesc/person/@role='sender'">
 					
@@ -582,6 +617,10 @@
 					<xsl:value-of select="TEI/teiHeader/fileDesc/sourceDesc/bibl/idno"></xsl:value-of><xsl:text>&#10;</xsl:text>
 					<xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/bibl/author"></xsl:value-of>, <xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/bibl/title"></xsl:value-of>, <xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/bibl/publisher"></xsl:value-of>, <xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/bibl/pubPlace"></xsl:value-of>, <xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@when"></xsl:value-of>
 					<xsl:value-of select="//text"/>
+					
+					<!-- adding in repository to be searched -->
+						<xsl:value-of select="//sourceDesc/bibl/orgName"/>
+					
 				</field>
 				
 				

@@ -1,0 +1,172 @@
+<!-- <?xml-stylesheet href="http://www.whitmanarchive.org/servlets/xmlfindaids/shared/styles/eadwhit.xsl" type="text/xsl"?> -->
+<!DOCTYPE ead PUBLIC '+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN' "ead.dtd">
+
+
+<ead audience="external" relatedencoding="MARC21">
+    <eadheader audience="internal"
+        langencoding="iso639-2b"
+        scriptencoding="iso15924"
+        relatedencoding="marc21"
+        repositoryencoding="iso15511"
+        countryencoding="iso3166-1"
+        dateencoding="iso8601"
+        findaidstatus="edited-full-draft"
+        id="a0">
+        <eadid countrycode="us" mainagencycode="NbU" identifier="mil.ead01">mil.ead01</eadid>
+        <filedesc>
+            <titlestmt>
+                <titleproper encodinganalog="245$a">Catalog of a Walt Whitman Poetry Manuscript in
+                    the Albert M. Bender Collection, Special Collections Department, F. W. Olin
+                    Library, Mills College</titleproper>
+                <author>Original records created by the Special Collections Department, F. W. Olin
+                    Library, Mills College; revised and expanded by the <emph render="italic">Walt
+                        Whitman Archive</emph> and the University of Nebraska-Lincoln Libraries. </author>
+                <sponsor>Encoded Archival Description completed with the assistance of the Gladys
+                    Krieble Delmas Foundation, the University of Nebraska Research Council, the
+                    Institute for Museum and Library Services, and the National Endowment for the Humanities.</sponsor>
+            </titlestmt>
+            <publicationstmt>
+                <publisher encodinganalog="260$b">Published by <emph render="italic">The Walt
+                    Whitman Archive</emph> in collaboration with the University of
+                    Nebraska-Lincoln Libraries. </publisher>
+                <date encodinganalog="260$c" era="ce" calendar="gregorian">2006</date>
+                <address>
+               <addressline>29 Love Library</addressline>
+               <addressline>P.O. Box 884100</addressline>
+               <addressline>University of Nebraska-Lincoln</addressline>
+               <addressline>Lincoln, NE 68508</addressline>
+            </address>
+            </publicationstmt>
+        </filedesc>
+        <profiledesc>
+            <creation>Machine-readable finding aid created by Andrew Jewell, <emph render="italic">The Walt Whitman Archive</emph>, and Mary Ellen Ducey, University of
+                Nebraska-Lincoln Libraries, <date normal="2003" era="ce" calendar="gregorian">2003</date>; revised by Brett Barney, <emph render="italic">The Walt Whitman
+                    Archive</emph>, <date normal="2006" era="ce" calendar="gregorian">2006</date>; revised by Kevin McMullen, <emph render="italic">The Walt Whitman Archive</emph>, <date normal="2015" era="ce" calendar="gregorian">2015</date>.</creation>
+            <langusage>Finding aid written in <language encodinganalog="546" langcode="eng">English</language>.</langusage>
+        </profiledesc>
+    </eadheader>
+    <frontmatter>
+        <titlepage id="tp001">
+            <titleproper encodinganalog="245$a">Catalog of a Walt Whitman Poetry Manuscript in the Albert M.
+                Bender Collection, Special Collections Department, F. W. Olin Library, Mills
+                College</titleproper>
+            <publisher>Published by <emph render="italic">The Walt Whitman Archive</emph> in
+                collaboration with the University of Nebraska-Lincoln Libraries. </publisher>
+            <date era="ce" calendar="gregorian">2015</date>
+        </titlepage>
+    </frontmatter>
+    <archdesc audience="external"
+        level="otherlevel"
+        type="inventory"
+        relatedencoding="marc21">
+        <did id="al">
+            <unittitle audience="external" label="Title:" encodinganalog="245$a">A Walt Whitman Poetry
+                Manuscript in the Albert M. Bender Collection, Special Collections Department, F.
+                W. Olin Library, Mills College</unittitle>
+            <unitid audience="external"
+                label="Collection Identifier:"
+                encodinganalog="099"
+                repositorycode="COMC"
+                countrycode="us">Albert M. Bender Collection of Rare Books and
+                Manuscripts</unitid>
+            <origination audience="external" label="Creator:">
+                <persname encodinganalog="100">Whitman, Walt, 1819-1892</persname>
+            </origination>
+            <origination audience="external" label="Collector:">
+                <persname encodinganalog="110">Albert M. Bender</persname>
+            </origination>
+            <physdesc>
+                <genreform>poetry</genreform>
+                <genreform>Manuscripts</genreform>
+            </physdesc>
+            <repository encodinganalog="852$a" label="Repository:">
+                <corpname encodinganalog="852$a">F. W. Olin Library</corpname>
+                <address>
+               <addressline>Mills College</addressline>
+               <addressline>5000 MacArthur Boulevard</addressline>
+               <addressline>Oakland, CA, 94613</addressline>
+            </address>
+            </repository>
+            <abstract>This catalog was created, in part, from digital images of the original
+                manuscripts obtained by <emph render="italic">The Walt Whitman Archive</emph>. The
+                original papers and finding aid are held in the Special Collections Department, F.
+                W. Olin Library, Mills College.</abstract>
+        </did>
+        <descgrp id="ds001" type="admininfo">
+            <accessrestrict audience="external" encodinganalog="506" id="a14">
+                <head>Restrictions on Original Materials:</head>
+                <p>Please consult with repository.</p>
+            </accessrestrict>
+            <!-- <userestrict encodinganalog="540" id="a15">
+<head>Copyright:</head><p>The use of Archives and Special Collections material is governed by the U.S. Copyright Law (title 17 U.S. Code). </p>
+</userestrict>  -->
+            <prefercite encodinganalog="524" id="a18">
+                <head>Preferred Citation:</head>
+                <p>To identify this catalog as a source, see the <emph render="italic">Archive's
+                </emph>
+                    <extref href="http://www.whitmanarchive.org/about/conditions.html"
+                        linktype="simple">"Conditions of Use"</extref> page.</p>
+            </prefercite>
+            <!--
+<altformavail type="paper" encodinganalog="530" id="a17">
+<head>Alternative Format</head><p> Original Documents held in the <corpname>Special Collections Department, F. W. Olin Library, Mills College</corpname>.</p> </altformavail>  -->
+        </descgrp>
+        <scopecontent id="sc001">
+            <head>Scope and Content</head>
+            <p>The Albert M. Bender collection at Mills College contains three Walt Whitman
+                manuscripts: a postal card, a prose manuscript, and a poetry manuscript. As the prose manuscript did not lead to a published work, this
+                catalog includes an item-level description of only the document
+                deemed a poetry manuscript.</p>
+        </scopecontent>
+        <bioghist id="bh001">
+            <head>Biographical Information</head>
+            <p>
+                <persname>Albert M. Bender</persname> was born in <geogname>Dublin,
+                    Ireland</geogname> in <date era="ce" calendar="gregorian">1866</date> and died
+                in <geogname>San Francisco, California</geogname> in <date era="ce" calendar="gregorian">1941</date>. He came to <geogname>San Francisco</geogname>
+                when he was sixteen and started out as an errand boy in the insurance business.
+                Bender was an insurance broker by profession, a patron of the arts, and trustee of
+                <corpname>Mills College</corpname>. He was so widely known and respected that a
+                letter addressed simply "Saint Albert of San Francisco" once reached him through the
+                U.S. Mail. He had friends of distinguished reputation throughout
+                <geogname>California</geogname> and indeed throughout the world.</p>
+        </bioghist>
+        <controlaccess id="ca001">
+            <head>Subjects</head>
+            <persname encodinganalog="600">Whitman, Walt, 1819-1892</persname>
+            <subject encodinganalog="650">Whitman, Walt, 1819-1892--Manuscripts</subject>
+            <subject encodinganalog="650">Poets, American--19th century</subject>
+        </controlaccess>
+        <dsc id="dc001" type="in-depth">
+            <head>Item List</head>
+            <c01 level="item">
+                <did>
+                    <unitid type="WWA">mil.00001</unitid>
+                    <unitid type="work">xxx.00141</unitid>
+                    <unittitle>
+                        <title render="doublequote" linktype="simple">Waves in the Vessel's
+                            wake</title>
+                    </unittitle>
+                    <unitdate normal="1870/1874" era="ce" calendar="gregorian">about 1874</unitdate>
+                    <physdesc>
+                        <genreform>poetry</genreform>
+                        <extent unit="leaves">1
+                            leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple"
+                        href="http://www.whitmanarchive.org/manuscripts/figures/mil.00001.001.jpg"/>
+                    <dao linktype="simple"
+                        href="http://www.whitmanarchive.org/manuscripts/figures/mil.00001.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Heavily revised draft of a poem that, after extensive further revision, was
+                        first published in the <date type="publication" era="ce" calendar="gregorian" normal="1874-12">December 1874</date> issue of the New York <title render="italic" linktype="simple">Daily Graphic</title> as <title render="doublequote" linktype="simple">In the Wake Following.</title>
+                        The poem first appeared under its final title, <title render="doublequote" linktype="simple">After the Sea-Ship,</title> in the
+                        <title render="doublequote" linktype="simple">Sea-Drift</title> group of
+                        <title render="italic" linktype="simple">Two Rivulets</title> (<date normal="1876" type="publication" era="ce" calendar="gregorian">1876</date>).</p>
+                </scopecontent>
+            </c01>
+        </dsc>
+    </archdesc>
+</ead>

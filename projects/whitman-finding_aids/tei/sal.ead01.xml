@@ -1,0 +1,163 @@
+<!DOCTYPE ead PUBLIC '+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN' "ead.dtd">
+
+
+
+<ead audience="external" relatedencoding="MARC21">
+    <eadheader audience="internal"
+        langencoding="iso639-2b"
+        scriptencoding="iso15924"
+        relatedencoding="marc21"
+        repositoryencoding="iso15511"
+        countryencoding="iso3166-1"
+        dateencoding="iso8601"
+        findaidstatus="edited-full-draft"
+        id="a0">
+        <eadid countrycode="us" mainagencycode="NbU" identifier="sal.ead01">sal.ead01</eadid>
+        <filedesc>
+            <titlestmt>
+                <titleproper encodinganalog="245$a">Catalog of the Walt Whitman Literary Manuscripts in
+                    the Collection of the Salisbury House Foundation</titleproper>
+                <author>Original records created by the
+                    Salisbury House; revised and expanded by the <emph render="italic">Walt Whitman Archive</emph> and the University of Nebraska-Lincoln Libraries.</author>
+                <sponsor>Encoded Archival Description completed with the assistance of the National Endowment for the Humanities.</sponsor>
+            </titlestmt>
+            <publicationstmt>
+                <publisher encodinganalog="260$b">Published by <emph render="italic">The Walt
+                    Whitman Archive</emph> in collaboration with the University of
+                    Nebraska-Lincoln Libraries. </publisher>
+                <date encodinganalog="260$c"
+                    normal="2014"
+                    era="ce"
+                    calendar="gregorian">2014</date>
+                <address>
+               <addressline>29 Love Library</addressline>
+               <addressline>P.O. Box 884100</addressline>
+               <addressline>University of Nebraska-Lincoln</addressline>
+               <addressline>Lincoln, NE 68508</addressline>
+            </address>
+            </publicationstmt>
+        </filedesc>
+        <profiledesc>
+            <creation>Machine-readable finding aid created by Janel Cayer, <emph render="italic">The Walt
+                Whitman Archive</emph>. <date normal="2014" era="ce" calendar="gregorian">2014</date>. </creation>
+            <langusage>Finding aid written in <language encodinganalog="546" langcode="eng">English</language>. </langusage>
+        </profiledesc>
+    </eadheader>
+    <frontmatter>
+        <titlepage id="tp001">
+            <titleproper encodinganalog="245$a">Catalog of the Walt Whitman Literary Manuscripts in the Collection of the Salisbury House Foundation</titleproper>
+            <publisher>Published by <emph render="italic">The Walt Whitman Archive</emph> in
+                collaboration with the University of Nebraska-Lincoln Libraries. </publisher>
+            <date normal="2014" era="ce" calendar="gregorian">2014</date>
+        </titlepage>
+    </frontmatter>
+    <archdesc audience="external"
+        level="otherlevel"
+        type="inventory"
+        relatedencoding="marc21">
+        <did id="al">
+            <unittitle audience="external" label="Title:" encodinganalog="245$a">Walt Whitman Manuscripts in the Collection of the Salisbury House Foundation</unittitle>
+            
+            <origination audience="external" label="Creator:">
+                <persname encodinganalog="100">Whitman, Walt, 1819-1892</persname>
+            </origination>
+            <physdesc>
+                <genreform>prose</genreform>
+                <genreform>manuscripts</genreform>
+            </physdesc>
+            <repository encodinganalog="852$a" label="Repository:">
+                
+                <corpname encodinganalog="852$a">Salisbury House and Gardens</corpname>
+                <address>
+                    <addressline>Salisbury House and Gardens</addressline>
+                    <addressline>4025 Tonawanda Drive</addressline>
+                    <addressline>Des Moines, IA 50312</addressline>
+            </address>
+            </repository>
+            
+            <abstract>This electronic catalog was created from catalogue records created by the Salisbury House Foundation and obtained by the <emph render="italic">Walt Whitman Archive</emph>. The original papers and catalogue records are held at the Salisbury House and Gardens, Des Moines, Iowa.</abstract>
+        </did>
+        <descgrp id="ds001" type="admininfo">
+            <accessrestrict audience="external" encodinganalog="506" id="a14">
+                <head>Restrictions on Original Materials:</head>
+                <p>Please consult with repository.</p>
+            </accessrestrict>
+            <prefercite encodinganalog="524" id="a18">
+                <head>Preferred Citation:</head>
+                <p>To identify this catalog as a source, see the <emph render="italic">Archive's
+                </emph>
+                    <extref href="http://www.whitmanarchive.org/about/conditions.html"
+                        linktype="simple">"Conditions of Use"</extref> page.</p>
+            </prefercite>
+        </descgrp>
+        
+        <scopecontent id="sc001">
+            <head>Scope and Content</head>
+            <p>The Salisbury House Foundation holds prose manuscripts and correspondence by Walt Whitman. The individual items described in this catalog are only those deemed prose manuscripts.</p>
+        </scopecontent>
+        
+        
+        <bioghist id="bh001">
+            <head>Biographical Information</head>
+            <p/>
+        </bioghist>
+        <controlaccess id="ca001">
+            <head>Subjects</head>
+            <persname encodinganalog="600">Whitman, Walt, 1819-1892</persname>
+            <subject encodinganalog="650">Whitman, Walt, 1819-1892--Manuscripts</subject>
+            <subject encodinganalog="650">Poets, American--19th century</subject>
+        </controlaccess>
+        <dsc id="dc001" type="in-depth">
+            <head>Item List</head>
+            
+            <c01 level="item">
+                <did>
+                    <unitid type="WWA">sal.00005</unitid>
+                    <unitid type="work">xxx.00528</unitid>
+                    <unitid type="repository">2010.9.261.a-b</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA" linktype="simple">In those Leaves</title>
+                    </unittitle>
+                    <unitdate normal="1870/1876" era="ce" calendar="gregorian">about 1876</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple"
+                        href="http://www.whitmanarchive.org/manuscripts/figures/sal.00002.003.jpg"/>
+                    <dao linktype="simple"
+                        href="http://www.whitmanarchive.org/manuscripts/figures/sal.00002.004.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>A draft fragment of Whitman's <title render="doublequote" linktype="simple">Preface, <date normal="1876" era="ce" calendar="gregorian">1876</date>, to the two-volume Centennial Edition of L. of G. and 'Two Rivulets,'</title> originally published in <title render="italic" linktype="simple">Two Rivulets</title> (<date normal="1876" type="publication" era="ce" calendar="gregorian">1876</date>). Whitman included this preface in his <title render="italic" linktype="simple">Complete Prose Works</title> (<date normal="1892" type="publication" era="ce" calendar="gregorian">1892</date>). This manuscript draft is comprised of three scraps of paper pasted together to make one leaf. On the verso of one of these scraps is a note Whitman made regarding his deteriorating health, which bears no discernible connection to Whitman's published works. This manuscript is catalogued with an envelope addressed to Herbert Gilchrist, postmarked <date normal="1891-01-28" era="ce" calendar="gregorian">28 January 189[1]</date>.</p>
+                </scopecontent>
+            </c01>
+            <c01 level="item">
+                <did>
+                    <unitid type="WWA">sal.00003</unitid>
+                    <unitid type="work">xxx.00560</unitid>
+                    <unitid type="repository">2010.9.262</unitid>
+                    <unittitle>
+                        <title render="doublequote" type="WWA" linktype="simple">[In the main I]</title>
+                    </unittitle>
+                    <unitdate normal="1888/1891" era="ce" calendar="gregorian">about 1891</unitdate>
+                    <physdesc>
+                        <genreform>prose</genreform>
+                        <extent unit="leaves">1 leaf</extent>
+                        <physfacet>handwritten</physfacet>
+                    </physdesc>
+                    <dao linktype="simple"
+                        href="http://www.whitmanarchive.org/manuscripts/figures/sal.00003.001.jpg"/>
+                    <dao linktype="simple"
+                        href="http://www.whitmanarchive.org/manuscripts/figures/sal.00003.002.jpg"/>
+                </did>
+                <scopecontent>
+                    <p>Draft fragment of <title render="doublequote" linktype="simple">American National Literature,</title> first published in <title render="italic" linktype="simple">Good-Bye My Fancy</title> (<date normal="1891" type="publication" era="ce" calendar="gregorian">1891</date>). Whitman included this piece of literary criticism in <title render="italic" linktype="simple">Complete Prose Works</title> (<date normal="1892" type="publication" era="ce" calendar="gregorian">1892</date>).</p>
+                </scopecontent>
+            </c01>
+            
+            
+        </dsc>
+    </archdesc>
+</ead>
