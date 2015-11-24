@@ -1,1 +1,0 @@
-I used this site to do the conversions: http://www.convertcsv.com/csv-to-json.htm
