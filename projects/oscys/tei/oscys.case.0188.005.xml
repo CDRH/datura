@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -53,7 +54,7 @@
 <msDesc>
 <msIdentifier>
 <repository>National Archives and Records Administration</repository>
-<collection>Record Group 21.6</collection>
+<collection>Record Group 21, Entry 6</collection>
 <idno>Box 462, Folder 385</idno>
 </msIdentifier>
 </msDesc>
@@ -80,7 +81,7 @@
     
 <keywords scheme="lcsh" n="people">
 <term xml:id="per.000502">Ashton, Henry</term>
-<term xml:id="per.000003">Brent, William 1774-1848</term>
+<term xml:id="per.000003">Brent, William, 1774-1848</term>
 <term xml:id="per.000004">Cranch, William, 1769-1855</term>
 </keywords>
 
@@ -93,37 +94,37 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001426">
 <persName>Lemon, Amy</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001427">
 <persName>Lemon, Betsey</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001428">
 <persName>Lemon, Dennis</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001434">
 <persName>Lemon, Harriet</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001435">
 <persName>Lemon, Kitty</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001429">
 <persName>Lemon, Lavinia</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001430">
 <persName>Lemon, Nelly</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001431">
 <persName>Lemon, Thomas</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001432">
 <persName>Bayne, John H.</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.000001">
 <persName>Key, Francis Scott, 1779-1843</persName>
 </person>
-<person role="attorney_petitioner">
+<person role="attorney_petitioner" xml:id="per.001433">
 <persName>Smith, B. P.</persName>
 </person>
 <person role="attorney_defendant">
@@ -140,7 +141,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>         
+<revisionDesc>     
+<change when="2015-10-21" who="#lkw">added xml:ids</change>    
 <change when="2015-01-14" who="#kln">reviewed; edited</change>    
 <change when="2014-10" who="#snc">encoded</change>
 </revisionDesc>

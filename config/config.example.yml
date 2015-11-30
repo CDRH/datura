@@ -1,26 +1,70 @@
-# Configuration for all projects, server, etc
+############################################
+#      CONFIGURATION FOR ALL PROJECTS      #
+############################################
 
-# NOTE this is the most important thing in here
-# and if you put in a route like "/" you WILL start
-# erasing any non-root things in your / directory
-# so make sure you've got a real path like
-# /var/www/html/awesome_project  (no ending line)
-repo_directory: /Users/jdussault2/Desktop/repos/data
+# Note:  if you make changes to this file you are potentially altering
+#   every project
+#   It is recommended that you override only those parts that you need in
+#   the project specific configuration files (projects/name/config/config.yml)
 
 log_old_number: 4   # number of log files before beginning to erase
 log_size: 1024000   # size of log file in bytes
 log_level: Logger::WARN  # could change to INFO for more detail
 
-# Make sure that you put a / on the end of the solr_paths
-test:
-  solr_path: http://server.unl.edu:port/solr/
-production:
-  solr_path: http://server.unl.edu:port/path/
+###################
+#   Development   #
+###################
 
-# script location from the root of the repository
-xsl_scripts:
-  # TODO may need to specify p5 etc
-  tei: scripts/xslt/cdrh_to_solr/solr_transform_tei.xsl
-  vra: scripts/xslt/cdrh_to_solr/solr_transform_vra.xsl
-  dc: scripts/xslt/cdrh_to_solr/solr_transform_dc.xsl
-  html: scripts/xslt/cdrh_tei_to_html/tei.p5.xsl
+development:
+  # solr information
+  solr_path: http://server.unl.edu:port/solr/
+
+  # xsl transformation locations
+  tei_xsl: scripts/xslt/cdrh_to_solr/solr_transform_tei.xsl
+  vra_xsl: scripts/xslt/cdrh_to_solr/solr_transform_vra.xsl
+  dc_xsl: scripts/xslt/cdrh_to_solr/solr_transform_dc.xsl
+  html_xsl: scripts/xslt/cdrh_tei_to_html/tei.p5.xsl
+
+  # NOTE! If you are altering ANY of the xsl_params you must
+  #   copy over ALL of them to the project specific config file
+  xsl_params:
+    fig_location: http://server.unl.edu/data_images/projects/example/figures/
+    file_location: http://server.unl.edu/data/projects/
+    figures: true
+    fw: true        # form works (page nums, etc)
+    pb: true        # page breaks
+    project: full_name_of_project
+    slug: short_name_of_project
+
+  # optionally run some script before or after xsl
+  # script will need to be set up with #! in order to execute
+  # WARNING:  Functionality does not yet exist
+  # pre_xsl:
+  # post_xsl:
+
+##################
+#   Production   #
+##################
+production:
+  # solr information
+  solr_path: http://server.unl.edu:port/solr/
+  solr_core: name_of_core
+  # xsl transformation locations
+  tei_xsl: scripts/xslt/cdrh_to_solr/solr_transform_tei.xsl
+  vra_xsl: scripts/xslt/cdrh_to_solr/solr_transform_vra.xsl
+  dc_xsl: scripts/xslt/cdrh_to_solr/solr_transform_dc.xsl
+  html_xsl: scripts/xslt/cdrh_tei_to_html/tei.p5.xsl
+  # NOTE! If you are altering ANY of the xsl_params you must
+  #   copy over ALL of them to the project specific config file
+  xsl_params:
+    fig_location: http://server.unl.edu/data_images/projects/example/figures/
+    file_location: http://server.unl.edu/data/projects/
+    figures: true
+    fw: true        # form works (page nums, etc)
+    pb: true        # page breaks
+    project: full_name_of_project
+    slug: short_name_of_project
+  # optionally run some script before or after xsl
+  # script will need to be set up with #! in order to execute
+  # pre_xsl:
+  # post_xsl:

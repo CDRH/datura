@@ -3,7 +3,7 @@
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>Eleanora Bell v. Susan Armistead. Deed of Manumission</title>
+<title>Mary Bell v. Susan Armistead and Eleanora Bell v. Susan Armistead. Deed of Manumission</title>
 <principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
 <principal n="Muñoz, Trevor" xml:id="tm">Trevor Muñoz</principal>
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
@@ -36,6 +36,7 @@
 </address>
 </distributor>
 <idno type="project">oscys.case.0243.007</idno>
+<idno type="case">oscys.caseid.0174</idno>
 <idno type="case">oscys.caseid.0248</idno>
 
 <availability>
@@ -53,7 +54,7 @@
 <msDesc>
 <msIdentifier>
 <repository>National Archives and Records Administration</repository>
-<collection>Record Group 21.6</collection>
+<collection>Record Group 21, Entry 6</collection>
 <idno>Box 755, Folder 376</idno>
 </msIdentifier>
 </msDesc>
@@ -79,13 +80,12 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Armistead, Robert</term>
+<term xml:id="per.001255">Armistead, Robert</term>
 <term>Bell, Andrew</term>
 <term>Bell, Caroline</term>
-<term>Bell, Daniel</term>
+<term xml:id="per.000773">Bell, Daniel</term>
 <term>Bell, George W.</term>
 <term>Bell, Harriet</term>
-<term>Bell, Mary</term>
 <term>Bell, Mary E.</term>
 <term>Butt, Richard</term>
 <term>Naylor, George</term>
@@ -100,11 +100,26 @@
 </textClass>
             
 <particDesc>   
-<listPerson>            
+<listPerson xml:id="oscys.caseid.0174">            
+<person role="petitioner" xml:id="per.001253">
+<persName>Bell, Mary</persName>
+</person>
+<person role="defendant" xml:id="per.001254">
+<persName>Armistead, Susan</persName>
+</person>
+<person role="attorney_petitioner">
+<persName/>
+</person>
+<person role="attorney_defendant">
+<persName/>
+</person>
+</listPerson>
+
+<listPerson xml:id="oscys.caseid.0248">            
 <person role="petitioner">
 <persName>Bell, Eleanora</persName>
 </person>
-<person role="defendant">
+<person role="defendant" corresp="per.001254">
 <persName>Armistead, Susan</persName>
 </person>
 <person role="attorney_petitioner">

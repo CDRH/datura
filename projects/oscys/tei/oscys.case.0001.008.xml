@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Weakly, Laura K.</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -53,7 +54,7 @@
 <msDesc>
 <msIdentifier>
 <repository>National Archives and Records Administration</repository>
-<collection>Record Group 21.6</collection>
+<collection>Record Group 21, Entry 6</collection>
 <idno>Box 34, Folder 190</idno>
 </msIdentifier>
 </msDesc>
@@ -79,9 +80,9 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Ratcliffe, Richard</term>
-<term>Ray, Thomas</term>
-<term>Terry</term>
+<term xml:id="per.001540">Ratcliffe, Richard</term>
+<term xml:id="per.001541">Ray, Thomas</term>
+<term xml:id="per.001542">Terry</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -117,7 +118,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>     
+<revisionDesc>    
+<change when="2015-10-28" who="#lkw">added xml:ids</change> 
 <change when="2015-03-05" who="#kln">reviewed; edited</change>  
 <change when="2015-02-20" who="#ea">Encoded and transcribed</change>
 </revisionDesc>

@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -53,7 +54,7 @@
 <msDesc>
 <msIdentifier>
 <repository>National Archives and Records Administration</repository>
-<collection>Record Group 21.6</collection>
+<collection>Record Group 21, Entry 6</collection>
 <idno>Box 454, Folder 80</idno>
 </msIdentifier>
 </msDesc>
@@ -79,15 +80,15 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Dells, John</term> <!--alternate spelling Dales-->
-<term>Duvall, William</term>
-<term>Flaut</term>
-<term>Getzendanner, Christian</term>
-<term>Gossam, Thomas</term>
-<term>Kennedy, Matthew</term>
-<term>Mason, Richard</term>
-<term>Thompson</term> <!-- mr -->
-<term>Thompson</term> <!-- mrs -->
+<term xml:id="per.001394">Dells, John</term>
+<term xml:id="per.001404">Duvall, William</term>
+<term xml:id="per.001405">Flaut</term>
+<term xml:id="per.001406">Getzendanner, Christian</term>
+<term xml:id="per.001399">Gossum, Thomas</term>
+<term xml:id="per.001402">Kennedy, Matthew</term>
+<term xml:id="per.001408">Mason, Richard</term>
+<term xml:id="per.001409">Thompson</term> <!-- mr -->
+<term xml:id="per.001407">Thompson</term> <!-- mrs -->
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -103,32 +104,35 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001385">
 <persName>Butler, Airy</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001386">
 <persName>Butler, Eliza</persName> 
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001387">
 <persName>Butler, Liddy</persName> 
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001388">
 <persName>Butler, Matilda</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001389">
 <persName>Butler, Reason</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001390">
 <persName>Butler, Sally</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001391">
 <persName>Butler, Sarah</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001392">
 <persName>Butler, Thomas</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001393">
 <persName>Duvall, Gabriel, 1752-1844</persName>
+</person>
+<person role="attorney_petitioner" xml:id="per.000572">
+<persName>Beale, Robert</persName>
 </person>
 <person role="attorney_petitioner">
 <persName/>
@@ -147,7 +151,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>             
+<revisionDesc>
+<change when="2015-10-12" who="#lkw">added xml:ids; transcription</change>             
 <change when="2014-12-01" who="#kln">reviewed, edited</change>
 <change when="2014-11" who="#snc">encoded</change>
 </revisionDesc>
@@ -174,7 +179,7 @@
 
 <p>3d To the 3rd he answers &amp; says, He did remove into Virginia, but at what time I do not recollect, and brought with him the said slaves, he resided with me a year at least, if not more. The slaves also lived a year with me, and he wished me to take them another year but I refused.</p>
 
-<p>4th To the 4th he answers &amp; says: I advised him to sell them, as I considered them a charge on his hands, but he did not sell them until after he left Virginia and removed to George Town in the District of Columbia. he afterwards informed me that he sold them whilst there to on Duvall.</p>
+<p>4th To the 4th he answers &amp; says: I advised him to sell them, as I considered them a charge on his hands, but he did not sell them until after he left Virginia and removed to George Town in the District of Columbia. he afterwards informed me that he sold them whilst there to one Duvall.</p>
 
 <p>To the 5th he answers and says: I do not recollect the time of his removal and bringing the sd slaves into Virginia. nor do I recollect the period of their sale, of which the said Dels or Dales informed me as I before stated.</p>
 

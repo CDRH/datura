@@ -1,28 +1,11 @@
 # This config file should be copied and added at  projects/<project_name>/config/config.yml
-# It should be specific to each project
+# This config file is specific to each project
+# It automatically uses the general configuration file options unless overridden here
 
-# The name of the core, not the path to the core
-# TODO if the names are different on test and production this code will need to be changed
-solr_core: name_of_core
-
-override_scripts:
-  tei: projects/oscys/scripts/solr_transform_tei.xsl
-xslt:
-  test:
-    fig_location: http://rosie.unl.edu/data_images/projects/example/figures/
-    file_location: http://rosie.unl.edu/data/projects/
-    figures: true
-    fw: true        # form works (page nums, etc)
-    pb: true        # page breaks
-    project: full_name_of_project
-    slug: short_name_of_project
-    override_tei_xslt: true
-  production:
-    fig_location: http://cdrhsites.unl.edu/data_images/projects/example/figures/
-    file_location: http://cdrhsites.unl.edu/data/projects/
-    figures: true
-    fw: true        # form works (page nums, etc)
-    pb: true        # page breaks
-    project: full_name_of_project
-    slug: short_name_of_project
-    override_tei_xslt: true
+development:
+    solr_core: name_of_core
+    # you can optionally override things from the general config file
+    # tei_xsl: projects/name_of_project/scripts/xslt/solr_transform_tei.xsl
+    # solr_path: new/path/to/solr/url
+production:
+    solr_core: name_of_core

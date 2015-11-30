@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -53,7 +54,7 @@
 <msDesc>
 <msIdentifier>
 <repository>National Archives and Records Administration</repository>
-<collection>Record Group 21.6</collection>
+<collection>Record Group 21, Entry 6</collection>
 <idno>Box 539, Folder 475</idno>
 </msIdentifier>
 </msDesc>
@@ -79,9 +80,9 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term xml:id="per.000003">Brent, William 1774-1848</term>
+<term xml:id="per.000003">Brent, William, 1774-1848</term>
 <term xml:id="per.000004">Cranch, William, 1769-1855</term>
-<term>Hunter, Alexander</term>
+<term xml:id="per.000739">Hunter, Alexander</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places"> 
@@ -93,13 +94,16 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001369">
+<persName>Fletcher, Basil</persName>
+</person>
+<person role="petitioner" xml:id="per.001370">
 <persName>Fletcher, Henrietta</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001371">
 <persName>Fletcher, Nancy</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001372">
 <persName>Weightman, Henry T.</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.000737">
@@ -123,6 +127,7 @@
 </profileDesc>
         
 <revisionDesc>   
+<change when="2015-10-07" who="#lkw">added xml:ids</change> 
 <change when="2015-02-17" who="#kln">reviewed; edited</change>                  
 <change when="2014-10" who="#snc">encoded</change>
 </revisionDesc>

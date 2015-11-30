@@ -12,6 +12,7 @@
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="McCormick, Kylie L." xml:id="klm">Kylie L. McCormick</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -54,7 +55,7 @@
 <msDesc>
 <msIdentifier>
 <repository>National Archives and Records Administration</repository>
-<collection>Record Group 21.6</collection>
+<collection>Record Group 21, Entry 6</collection>
 <idno>Box 729, Folder 88</idno>
 </msIdentifier>
 </msDesc>
@@ -80,9 +81,9 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Grammer, Christopher</term>
+<term xml:id="per.001417">Grammer, Christopher</term>
 <term xml:id="per.000740">Smith, John A.</term>
-<term>Woodyens, John</term>
+<term xml:id="per.001418">Woodyens, John</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places"> 
@@ -93,13 +94,13 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001419">
 <persName>Harriet</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001420">
 <persName>Larned, Elizabeth R.</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001421">
 <persName>Larned, James</persName>
 </person>
 <person role="attorney_petitioner">
@@ -119,7 +120,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>             
+<revisionDesc>       
+<change when="2015-10-12" who="#lkw">added xml:ids</change>       
 <change when="2015-02-24" who="#kln">reviewed, edited</change>
 <change when="2014-10" who="#snc">encoded</change>
 </revisionDesc>

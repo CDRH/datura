@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -53,7 +54,7 @@
 <msDesc>
 <msIdentifier>
 <repository>National Archives and Records Administration</repository>
-<collection>Record Group 21.6</collection>
+<collection>Record Group 21, Entry 6</collection>
 <idno>Box 631, Folder 70</idno>
 </msIdentifier>
 </msDesc>
@@ -91,34 +92,34 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001443">
 <persName>Lee, Betsy</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001444">
 <persName>Lee, Caroline</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001445">
 <persName>Lee, Charles</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001446">
 <persName>Lee, George</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001447">
 <persName>Lee, John</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001448">
 <persName>Lee, Milly</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001449">
 <persName>Lee, Olivia</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001450">
 <persName>Lee, William</persName>
 </person>
 <person role="defendant" xml:id="per.001138">
 <persName>Conrad, Nelson</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001451">
 <persName>Homans, Benjamin</persName>
 </person>
 <person role="attorney_petitioner">
@@ -139,6 +140,7 @@
 </profileDesc>
         
 <revisionDesc>       
+<change when="2015-10-21" who="#lkw">added xml:ids</change>
 <change when="2015-02-17" who="#kln">reviewed; edited</change>    
 <change when="2014-10" who="#snc">encoded</change>
 </revisionDesc>

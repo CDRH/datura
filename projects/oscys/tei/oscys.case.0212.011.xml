@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -53,7 +54,7 @@
 <msDesc>
 <msIdentifier>
 <repository>National Archives and Records Administration</repository>
-<collection>Record Group 21.6</collection>
+<collection>Record Group 21, Entry 6</collection>
 <idno>Box 454, Folder 80</idno>
 </msIdentifier>
 </msDesc>
@@ -79,13 +80,14 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Dells, John</term> 
-<term>Duvall, William</term>
-<term>Getzendanner, Christian</term>
-<term>Kennedy, Matthew</term>
-<term>Singley, William</term>
-<term>Skinner, Samuel</term>
-<term>Thompson</term> <!-- mrs -->
+<term xml:id="per.001394">Dells, John</term>
+<term xml:id="per.001404">Duvall, William</term>
+<term xml:id="per.001405">Flaut</term>
+<term xml:id="per.001406">Getzendanner, Christian</term>
+<term xml:id="per.001402">Kennedy, Matthew</term>
+<term xml:id="per.001414">Singley, William</term>
+<term xml:id="per.001415">Skinner, Samuel</term>
+<term xml:id="per.001407">Thompson</term> <!-- mrs -->
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -101,32 +103,35 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001385">
 <persName>Butler, Airy</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001386">
 <persName>Butler, Eliza</persName> 
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001387">
 <persName>Butler, Liddy</persName> 
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001388">
 <persName>Butler, Matilda</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001389">
 <persName>Butler, Reason</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001390">
 <persName>Butler, Sally</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001391">
 <persName>Butler, Sarah</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001392">
 <persName>Butler, Thomas</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001393">
 <persName>Duvall, Gabriel, 1752-1844</persName>
+</person>
+<person role="attorney_petitioner" xml:id="per.000572">
+<persName>Beale, Robert</persName>
 </person>
 <person role="attorney_petitioner">
 <persName/>
@@ -145,7 +150,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>             
+<revisionDesc>    
+<change when="2015-10-12" who="#lkw">added xml:ids; transcription; added Flaut</change>           
 <change when="2014-12-01" who="#kln">reviewed, edited</change>
 <change when="2014-11" who="#snc">encoded</change>
 </revisionDesc>
@@ -162,7 +168,7 @@
 
 <div2 type="body">
 
-<p>The answers of Matthew Kennedy, or Harrison county Ohio, to the annexed interrogatories, taken and reduced to writing in presence of Samuel Skinner a justice of the peace in &amp; for the county of Harrison &amp; state of Ohio at his office in Moorefield in said county of Harrison on the 17th day of April A.D. 1830.</p>
+<p>The answers of Matthew Kennedy, of Harrison county Ohio, to the annexed interrogatories, taken and reduced to writing in presence of Samuel Skinner a justice of the peace in &amp; for the county of Harrison &amp; state of Ohio at his office in Moorefield in said county of Harrison on the 17th day of April A.D. 1830.</p>
 
 <p>To the first interrogatory of Defendant, Deponent answers, that, as early as the year 1801, or 1802, and from that time, until they were sold to one Gabriel Duvall, which he thinks was in 1805, he knew a <del>black</del> colored man by the name of Thomas Butler, and his wife Sarah, and he understood they were owned by one John Dells, as slaves for life. That he knew a man by the name of Gabriel Duvall, who deponent thinks, was comptroller in some of the departments of the General Government, in the years 1802, 1803, 1804 &amp; 1805</p>
 
@@ -170,7 +176,7 @@
 
 <p>To the third interrogatory of Defendant, Deponent answers, that, when said Dells moved to Georgetown, he was a single man, and boarded at different places. While said deponent knew him in Georgetown, Deponent understood that said Thomas and Sarah were hired out by said Dells in the vicinity of Georgetown. That he frequently saw said Thomas &amp; Sarah with said Dells, and he always treated them at such times, as their master, and they treated him as such.</p>
 
-<p>To the fourth interrogatory of Defendant, Deponant answers, that said Dells lived in Georgetown about four years, from sometime in the ear 1801, until sometime in the year 1805. During the time said Deponent knew said Dells in Georgetown, said Dells was in bad health, and was occasionally and alternately employed, except for a part of the years 1802 &amp; 1803, when he kept a Grocery in Deponents house, by one Flout, one Gitzedurner and one William Duvall as a bar-tender and in posting books.</p>
+<p>To the fourth interrogatory of Defendant, Deponant answers, that said Dells lived in Georgetown about four years, from sometime in the year 1801, until sometime in the year 1805. During the time said Deponent knew said Dells in Georgetown, said Dells was in bad health, and was occasionally and alternately employed, except for a part of the years 1802 &amp; 1803, when he kept a Grocery in Deponents house, by one Flout, one Gitzedurner and one William Duvall as a bar-tender and in posting books.</p>
 
 <p>To the fifth interrogatory of Defendant, Deponent answers, that, he knew said Dells when he was a tenant of Mrs Thompson, and when he lived with one Flout, and when he lived with one Christian Gitzedurner. That he was a tenant of this deponent, that he took possession of deponents house, as this deponent
 
@@ -178,7 +184,7 @@
 
 understood, when deponent was absent from home in the fall of 1802, Dells was in possession of said house when deponent came home, in the spring of 1803. That this deponent knew said Dells when he lived with William Duvall in the year 1805. Deponent does not recollect of said Dells being engaged with Gitzedurner in a Grocery Store. But that when this deponent settled with Gitzedurner, Dells assisted as this deponent supposed, as Gitzedurner's clerk.</p>
 
-<p>To the sixth interrogatory of Defendant, deponent answers, that, during the years 1801, 1802, <del>1803</del> 1804 &amp; a part of the year 1805, he frequently saw Thomas &amp; Sarah with said Dells. That they appeared to regard him as their master, and he treated them as his slaves, and Deponent always understood, and believed that said Thomas &amp; Sarah were the slaves for life of said Dells. That Deponent understood said Thomas &amp; Sarah were hired out by said Dells as his slaves in the vicinity of Georgetown, and while deponent knew them appeared to be under the control of Dells. That this deponent was present, with said Dells and said Gabriel Duvall, in the said Gabriel's office in Washington City, which he thinks was in the spring of 1805. Said Dells then proposed in said Deponents presence to sell said Thomas and Sarah and their children, to said Gabriel. Said Dells &amp; Gabriel then agreed upon the terms of sale, if the said Thomas &amp; Sarah, on being consulted should be agreed to the transfer, as both Dells &amp; G. Duvall would not as they said conclude the bargain without the said Thomas &amp; Sarah were willing to be sold to said Gabriel. A short time afterwards said Gabriel came to William Duvall's in Georgetown, where said Dells &amp; Thomas &amp; Sarah were, and in Deponent's presence, asked said Thomas &amp; Sarah if they were willing to be sold to said Gabriel, and the said Thomas &amp; Sarah appeared well agreed to it, and gave their assent with apparent cheerfulness. Whereupon the said Dells &amp; Gabriel concluded the contract, and the said Dells sold the said Thomas &amp; Sarah and their children, most if not all of which were present, to the said Gabriel, as slaves for life. And Deponent has not since, to his knowledge, seen the said Thomas or Sarah or any of their children. And he was afterwards told by said Dells that said Gabriel had paid him the prince agreed upon for the said slaves.</p>
+<p>To the sixth interrogatory of Defendant, deponent answers, that, during the years 1801, 1802, <del>1803</del> 1804 &amp; a part of the year 1805, he frequently saw Thomas &amp; Sarah with said Dells. That they appeared to regard him as their master, and he treated them as his slaves, and Deponent always understood, and believed that said Thomas &amp; Sarah were the slaves for life of said Dells. That Deponent understood said Thomas &amp; Sarah were hired out by said Dells as his slaves in the vicinity of Georgetown, and while deponent knew them appeared to be under the control of Dells. That this deponent was present, with said Dells and said Gabriel Duvall, in the said Gabriel's office in Washington City, which he thinks was in the spring of 1805. Said Dells then proposed in said Deponents presence to sell said Thomas and Sarah and their children, to said Gabriel. Said Dells &amp; Gabriel then agreed upon the terms of sale, if the said Thomas &amp; Sarah, on being consulted should be agreed to the transfer, as both Dells &amp; G. Duvall would not as they said conclude the bargain without the said Thomas &amp; Sarah were willing to be sold to said Gabriel. A short time afterwards said Gabriel came to William Duvall's in Georgetown, where said Dells &amp; Thomas &amp; Sarah were, and in Deponent's presence, asked said Thomas &amp; Sarah if they were willing to be sold to said Gabriel, and the said Thomas &amp; Sarah appeared well agreed to it, and gave their assent with apparent cheerfulness. Whereupon the said Dells &amp; Gabriel concluded the contract, and the said Dells sold the said Thomas &amp; Sarah and their children, most if not all of which were present, to the said Gabriel, as slaves for life. And Deponent has not since, to his knowledge, seen the said Thomas or Sarah or any of their children. And he was afterwards told by said Dells that said Gabriel had paid him the price agreed upon for the said slaves.</p>
 
 <p>To the seventh interrogatory of Defendant, Deponent answers, that, he does not recollect of any thing further than what he has stated in
 

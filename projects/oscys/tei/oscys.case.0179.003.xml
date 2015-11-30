@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -53,7 +54,7 @@
 <msDesc>
 <msIdentifier>
 <repository>National Archives and Records Administration</repository>
-<collection>Record Group 21.6</collection>
+<collection>Record Group 21, Entry 6</collection>
 <idno>Box 627, Folder 115</idno>
 </msIdentifier>
 </msDesc>
@@ -79,28 +80,28 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Alexander, William B.</term>
-<term>Ann</term>
-<term>Christy</term>
-<term>Brown, Alexander</term> <!--listed as sister, think the A of name was left off, but female-->
-<term>Brown, Elizabeth</term>
-<term>Jenny</term>
-<term>Lucinda</term>
-<term>Magruder, Elizabeth</term>
-<term>Milly</term> <!-- living with Frances Swann -->
-<term>Milly</term> <!-- living at Preston -->
-<term>Moore, A.</term>
-<term>Rachael</term>
-<term>Semmes, Thomas</term>
-<term>Swann, Frances</term>
-<term>Swann, Mary</term>
-<term>Swann, William I.</term>
-<term>Taylor, R. I.</term>
-<term>Tyler, Charles</term>
-<term>Tyler, Elizabeth</term>
-<term>Tyler, Richard B.</term>
-<term>Tyler, Sarah</term>
-<term>Venus</term>
+<term xml:id="per.001344">Alexander, William B.</term>
+<term xml:id="per.001345">Ann</term>
+<term xml:id="per.001346">Christy</term>
+<term xml:id="per.001347">Alexander, Mrs.</term> <!--changed from Brown, Alexander-->
+<term xml:id="per.001348">Brown, Elizabeth</term>
+<term xml:id="per.001349">Jenny</term>
+<term xml:id="per.001350">Lucinda</term>
+<term xml:id="per.001351">Magruder, Elizabeth</term>
+<term xml:id="per.001352">Milly</term> <!-- living with Frances Swann -->
+<term xml:id="per.001353">Milly</term> <!-- living at Preston -->
+<term xml:id="per.001354">Moore, A.</term>
+<term xml:id="per.001355">Rachael</term>
+<term xml:id="per.001356">Semmes, Thomas</term>
+<term xml:id="per.001357">Swann, Frances</term>
+<term xml:id="per.001358">Swann, Mary</term>
+<term xml:id="per.001359">Swann, William I.</term>
+<term xml:id="per.001360">Taylor, R. I.</term>
+<term xml:id="per.001361">Tyler, Charles</term>
+<term xml:id="per.001362">Tyler, Elizabeth</term>
+<term xml:id="per.001363">Tyler, Richard B.</term>
+<term xml:id="per.001364">Tyler, Sarah</term>
+<term xml:id="per.001365">Venus</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places"> 
@@ -111,10 +112,10 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001342">
 <persName>Graham, Moses</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001343">
 <persName>Alexander, Richard B.</persName>
 </person>
 <person role="attorney_petitioner">
@@ -135,6 +136,7 @@
 </profileDesc>
         
 <revisionDesc>  
+<change when="2015-10-07" who="#lkw">added xml:ids</change> 
 <change when="2015-02-16" who="#kln">reviewed; edited</change>            
 <change when="2014-10" who="#snc">encoded</change>
 </revisionDesc>
