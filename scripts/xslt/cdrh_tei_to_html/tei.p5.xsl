@@ -25,7 +25,7 @@
   <xsl:param name="pb">true</xsl:param> <!-- true/false Toggle pb's on and off  -->
   
   <!-- link locations - unsure about how these will work in the "real world" -->
-  <xsl:param name="fig_location"><xsl:text>http://rosie.unl.edu/data_images/projects/cody/figures/</xsl:text></xsl:param> <!-- set figure location  -->
+  <xsl:param name="fig_location"/> <!-- set figure location  -->
   <!-- delete --><xsl:param name="keyword_link"><xsl:text>../../</xsl:text></xsl:param> <!-- set keyword link location  -->
   
   
