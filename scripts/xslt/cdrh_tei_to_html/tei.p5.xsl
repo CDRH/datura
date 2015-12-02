@@ -23,10 +23,10 @@
   <xsl:param name="figures">true</xsl:param> <!-- true/false Toggle figures on and off  -->
   <xsl:param name="fw">true</xsl:param> <!-- true/false Toggle fw's on and off  -->
   <xsl:param name="pb">true</xsl:param> <!-- true/false Toggle pb's on and off  -->
-  
+  <xsl:param name="site_url"/>
   <!-- link locations - unsure about how these will work in the "real world" -->
-  <xsl:param name="fig_location"><xsl:text>http://rosie.unl.edu/data_images/projects/cody/figures/</xsl:text></xsl:param> <!-- set figure location  -->
-  <!-- delete --><xsl:param name="keyword_link"><xsl:text>../../</xsl:text></xsl:param> <!-- set keyword link location  -->
+  <xsl:param name="fig_location"></xsl:param> <!-- set figure location  -->
+  <!-- delete --><xsl:param name="keyword_link"></xsl:param> <!-- set keyword link location  -->
   
   
   <!-- ===================================================================================
@@ -62,27 +62,38 @@
     
     <xsl:for-each select="//person">
       <xsl:sort select="@xml:id"/>
-      <div>
-        <xsl:attribute name="class">
-          <xsl:text>life_item</xsl:text>
-        </xsl:attribute>
-        <xsl:attribute name="id">
-          <xsl:value-of select="@xml:id"/>
-        </xsl:attribute>
-        <h3>
-          <a>
-            <xsl:attribute name="class">persNameLink</xsl:attribute>
-            <xsl:attribute name="href"><xsl:value-of select="persName[@type='display']"/></xsl:attribute>
-            <xsl:value-of select="persName[@type='display']"/>
-          </a>
-        </h3>
-        <p><xsl:apply-templates select="note"/></p>
-      </div>
+      <xsl:call-template name="person_info"/>
+    </xsl:for-each>
+
+    <!-- this is the same as the above but written to a specific file -->
+    <xsl:for-each select="person">
+      <!-- the filename will start relative to the html-generated (output) directory of a specific project -->
+      <xsl:variable name="filename" select="concat(@xml:id, '.txt')"/>
+      <xsl:result-document href="{$filename}">
+        <xsl:call-template name="person_info"/>
+      </xsl:result-document>
     </xsl:for-each>
     
   </xsl:template>
   
-  
+  <xsl:template name="person_info">
+    <div>
+      <xsl:attribute name="class">
+        <xsl:text>life_item</xsl:text>
+      </xsl:attribute>
+      <xsl:attribute name="id">
+        <xsl:value-of select="@xml:id"/>
+      </xsl:attribute>
+      <h3>
+        <a>
+          <xsl:attribute name="class">persNameLink</xsl:attribute>
+          <xsl:attribute name="href"><xsl:value-of select="$site_url"/>/doc/<xsl:value-of select="@xml:id"/></xsl:attribute>
+          <xsl:value-of select="persName[@type='display']"/>
+        </a>
+      </h3>
+      <p><xsl:apply-templates select="note"/></p>
+    </div>
+  </xsl:template>
   
   <!-- DELETE THIS AND PULL METADATA FROM SOLR -->
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
