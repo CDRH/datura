@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -80,9 +81,9 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Hurler, Joseph</term>
-<term>Lindsay, George W.</term>
-<term>Rapine, Daniel</term>
+<term xml:id="per.001970">Hurler, Joseph</term>
+<term xml:id="per.001971">Lindsay, George W.</term>
+<term xml:id="per.000014">Rapine, Daniel</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -94,13 +95,13 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001935">
 <persName>Thomas, Dennis</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001936">
 <persName>Thomas, Walter</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001937">
 <persName>Scott, Alexander</persName>
 </person>
 <person role="attorney_petitioner">
@@ -120,7 +121,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>     
+<revisionDesc>   
+<change when="2015-11-30" who="#lkw">added xml:ids</change>  
 <change when="2015-04-24" who="#kln">reviewed; edited</change>         
 <change when="2015-03-19" who="#ea">Encoded and transcribed.</change>
 </revisionDesc>
