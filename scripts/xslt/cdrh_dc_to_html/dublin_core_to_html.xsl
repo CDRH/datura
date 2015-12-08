@@ -9,14 +9,13 @@
     <xsl:output indent="yes" omit-xml-declaration="yes"/>
     
     
-    <xsl:param name="site_location">http://rosie.unl.edu/transmississippi/</xsl:param>
-    <xsl:param name="fig_location"><xsl:text>http://rosie.unl.edu/data_images/projects/transmississippi/figures/</xsl:text></xsl:param> <!-- set figure location  -->
+    <xsl:param name="site_location"/>
+    <xsl:param name="fig_location"/> <!-- set figure location  -->
     <xsl:param name="repo_directory">/var/www/html/data/</xsl:param>
-    
+    <xsl:param name="slug"/>
     <xsl:variable name="filename" select="tokenize(base-uri(.), '/')[last()]"/>
     <!-- The part of the url after the main document structure and before the filename. 
 			Collected so we can link to files, even if they are nested, i.e. whitmanarchive/manuscripts -->
-    <xsl:variable name="slug" select="substring-before(substring-before(substring-after(base-uri(.),'data/projects/'),$filename),'/')"/>
     
     <!-- Split the filename using '\.' -->
     <xsl:variable name="filenamepart" select="substring-before($filename, '.xml')"/>
