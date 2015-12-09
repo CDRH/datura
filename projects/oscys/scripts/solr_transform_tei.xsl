@@ -649,7 +649,7 @@
 				</xsl:for-each>
 		
 		<xsl:for-each select="//orgName">
-			<field name="jurisdiction_ss"><xsl:value-of select="."/></field>
+			<field name="jurisdiction_ss"><xsl:value-of select="normalize-space(.)"/></field>
 		</xsl:for-each>
 				
 				
