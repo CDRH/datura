@@ -1,17 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://digitalhumanities.unl.edu/resources/schemas/tei/TEIP5.2.6.0/tei_all.rng" type="xml"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0009.001">
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://digitalhumanities.unl.edu/resources/schemas/tei/TEIP5.2.6.0/tei_all.rng" type="xml"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0357.003">
     
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>Sarah Oakley v. Mary Ann Fenwick. Petition for Freedom</title>
+<title>Daniel v. Ann Kinchelor. Injunction</title>
 <principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
 <principal n="Muñoz, Trevor" xml:id="tm">Trevor Muñoz</principal>
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
 <respStmt>
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
-<name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
-<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -36,8 +34,8 @@
 <addrLine>cdrh@unl.edu</addrLine>
 </address>
 </distributor>
-<idno type="project">oscys.case.0009.001</idno>
-<idno type="case">oscys.caseid.0009</idno>
+<idno type="project">oscys.case.0357.003</idno>
+<idno type="case">oscys.caseid.0381</idno>
 
 <availability>
 <licence>http://creativecommons.org/licenses/by-nc-sa/3.0/</licence>
@@ -47,15 +45,15 @@
 
 <sourceDesc>
 <bibl>
-<title level="m" type="main">Petition for Freedom</title>
-<date/>
+<title level="m" type="main">Request for Injunction</title>
+<date when="1822-01-18">January 18, 1822</date>
 <note type="project">Our transcription is based on a digital image of the original.</note>
 </bibl>
 <msDesc>
 <msIdentifier>
 <repository>National Archives and Records Administration</repository>
 <collection>Record Group 21, Entry 6</collection>
-<idno>Box 2</idno>
+<idno>Box 245, Folder 390</idno>
 </msIdentifier>
 </msDesc>
 </sourceDesc>
@@ -68,7 +66,7 @@
 </keywords>
     
 <keywords scheme="original" n="subcategory">
-<term>Petition</term>
+<term>Summons</term>
 </keywords>
 
 <keywords scheme="original" n="type">
@@ -76,16 +74,18 @@
 </keywords>
 
 <keywords scheme="original" n="term">
-<term><date when="1808-12">December 1808</date></term>
+<term><date when="1822-04">1822 April</date></term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">  
 <term xml:id="per.000003">Brent, William, 1774-1848</term>
+<term xml:id="per.000004">Cranch, William, 1769-1855</term>
+<term>Legge</term>
+<term xml:id="per.000461">Ringgold, Tench</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
-<term>Washington County (D.C.)</term>
-<term>Washington (D.C.)</term>
+<term/>
 </keywords>
 
 
@@ -93,26 +93,17 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner" xml:id="per.000046">
-<persName>Oakley, Eliza</persName>
+<person role="petitioner">
+<persName>Daniel</persName>
 </person>
-<person role="petitioner" xml:id="per.000047">
-<persName>Oakley, John</persName>
+<person role="defendant">
+<persName>Ann Kinchelor</persName>
 </person>
-<person role="petitioner" xml:id="per.000048">
-<persName>Oakley, Mary Ann</persName>
+<person role="attorney_petitioner" xml:id="per.000476">
+<persName>Dunlop, James, 1793-</persName>
 </person>
-<person role="petitioner" xml:id="per.000049">
-<persName>Oakley, Sarah</persName>
-</person>
-<person role="petitioner" xml:id="per.000050">
-<persName>Oakley, Thomas</persName>
-</person>
-<person role="defendant" xml:id="per.000051">
-<persName>Fenwick, Mary Ann</persName>
-</person>
-<person role="attorney_petitioner" xml:id="per.000011">
-<persName>Hiort, Henry</persName>
+<person role="attorney_petitioner" xml:id="per.000001">
+<persName>Key, Francis Scott, 1779-1843</persName>
 </person>
 <person role="attorney_defendant">
 <persName/>
@@ -129,12 +120,7 @@
 </profileDesc>
 
 <revisionDesc>
-<change when="2015-12-02" who="#snc">transcribed and encoded back of document</change>
-<change when="2015-11-19" who="#snc">added idno</change>
-<change when="2014-07-21" who="#lkw">added xml:ids</change>
-<change when="2014-06-12" who="#kln">converted to new TEI</change>
-<change when="2014-05-28" who="#wgt">reviewed</change>
-<change when="2014-02-21" who="#kln">encoded, transcribed</change>
+<change when="2015-12-04" who="#snc">transcribed; encoded</change>
 </revisionDesc>
 </teiHeader>
 
@@ -142,43 +128,43 @@
 
 <body>
            
-<pb xml:id="p001" facs="oscys.case.0009.001.001.jpg"/>
+<pb xml:id="p001" facs="oscys.case.0357.003.001.jpg"/>
                 
 <div1 type="case">
 
 <div2 type="caption">
                 
-<p>To the Honorable The Judges of the Circuit Court of the District of Columbia for the County of County of Washington.</p>
-                
-<p>The petition of Sarah Oakley in behalf of herself and her four Children John, Mary Ann, Eliza and Thomas</p> 
+<p>Ann Kinchelor appears as defendant</p>
 
 </div2>
 
 <div2 type="body">
-                    
-<p>Humbly sheweth</p> 
-                
-<p>That your Petitioners are detained in Slavery, by Mary Ann Fenwick, and pray process may issue, so that they may assert their right to Freedom.</p>
-                
-<p>And Your Petitioners as in Duty bound will every pray</p>
-                
-<p>Hiort for Complts</p>
-                
+
+<p>The petition of Negro Daniel sheweth your honors that he is a Petitioner for his freedom against a certain Ballard as appears by the certificate him with exhibited.— your Petitioner shows, that he is now forcibly held by Legge &#38; others who are now about to carry him away from this District &#38; to prevent him from having a trial. Your Petitioner states &#38; can prove that the said Legge &#38; others are now in the act of tying him &#38; <unclear>taking</unclear> him off by free. Legge &#38; others are negro buyers. Your Petitioner therefor prays an injunction to issue to said Legge &#38; others prohibiting them from taking your Petitioner from this county with proper security to guarantee their compliance.</p>
+ 
+<p>Jno. Marlborough makes oath to the truth of the facts stated in this petitions</p>
+               
 </div2>
 
-<pb xml:id="p002" facs="oscys.case.0009.001.002.jpg"/>
+<pb xml:id="p002" facs="oscys.case.0357.003.002.jpg"/>
 
 <div2 type="back">
 
-<p>45.</p>
+<p>Let an Injunction issue as prayed<lb/>
+B. Thurston</p>
 
-<p>Sarah Oakley + children<lb/>
-vs<lb/>
-Mary Ann Fenwick.</p>
+<p>Col Brent</p>
+<p>18th Jany 1822</p>
 
-<p>filed 25th July 1808</p>
+<p>Ann Kinchelor appears as Deft. pleads that Petr is<lb/>
+<del>W Brent Mash def</del> the<lb/>
+a slave &#38; her property</p>
 
-<p>W Brent will be pleased to issue supena</p>
+<p>Petr : replies that he is free<lb/>
+grant my issue <unclear extent="one word"/> released</p>
+
+<p>F S Key for Pe<lb/>
+H. Ashton</p>
 
 </div2>
 </div1>
