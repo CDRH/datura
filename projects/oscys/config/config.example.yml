@@ -1,0 +1,57 @@
+############################################
+#      CONFIGURATION FOR OSCYS      #
+############################################
+
+###################
+#   Development   #
+###################
+
+development:
+  # solr information
+  solr_path: http://server.unl.edu:port/path/
+  solr_core: api_oscys
+
+  # xsl transformation locations
+  tei_xsl: projects/oscys/scripts/solr_transform_tei.xsl
+
+  # NOTE! If you are altering ANY of the xsl_params you must
+  #   copy over ALL of them to the project specific config file
+  xsl_params:
+    fig_location: http://server.unl.edu/figures/oscys/
+    file_location: http://server.unl.edu/data/projects/
+    figures: true
+    fw: false        # form works (page nums, etc)
+    pb: true        # page breaks
+    project: O\ Say\ Can\ You\ See
+    slug: oscys
+
+  # optionally run some script before or after xsl
+  # script will need to be set up with #! in order to execute
+  # WARNING:  Functionality does not yet exist
+  # pre_xsl:
+  # post_xsl:
+
+##################
+#   Production   #
+##################
+production:
+  # solr information
+  solr_path: http://server.unl.edu:port/path/
+  solr_core: api_oscys
+  # xsl transformation locations
+  tei_xsl: projects/oscys/scripts/solr_transform_tei.xsl
+
+  # NOTE! If you are altering ANY of the xsl_params you must
+  #   copy over ALL of them to the project specific config file
+  xsl_params:
+    fig_location: http://server.unl.edu/figures/oscys/
+    file_location: http://server.unl.edu/data/projects/
+    figures: true
+    fw: false        # form works (page nums, etc)
+    pb: true        # page breaks
+    project: O\ Say\ Can\ You\ See
+    slug: oscys
+  # optionally run some script before or after xsl
+  # script will need to be set up with #! in order to execute
+  # pre_xsl:
+  # post_xsl:
