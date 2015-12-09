@@ -290,7 +290,11 @@
 					<!-- people -->
 					<!-- places -->
 					<!-- works -->
-					
+				
+                                        <!-- fig_location_s -->
+                                        <field name="fig_location_s">
+                                          <xsl:value-of select="$fig_location"/>
+                                        </field>	
 					
 					<!-- ==============================
 					Project specific 
