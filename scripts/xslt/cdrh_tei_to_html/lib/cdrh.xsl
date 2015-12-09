@@ -18,29 +18,31 @@
         <br/>
         <hr/>
       </xsl:if>
-      <div class="footnotes">
-        <xsl:text> </xsl:text>
-        <xsl:for-each select="//note[@place='foot']">
-          <p>
-            <span class="notenumber"><xsl:value-of select="substring(@xml:id, 2)"/>.</span>
-            <xsl:text> </xsl:text>
-            <xsl:apply-templates/>
-            <xsl:text> </xsl:text>
-            <a>
-              <xsl:attribute name="href">
-                <xsl:text>#</xsl:text>
-                <xsl:text>body</xsl:text>
-                <xsl:value-of select="@xml:id"/>
-              </xsl:attribute>
-              <xsl:attribute name="id">
-                <xsl:text>foot</xsl:text>
-                <xsl:value-of select="@xml:id"/>
-              </xsl:attribute>
-              <xsl:text>[back]</xsl:text>
-            </a>
-          </p>
-        </xsl:for-each>
-      </div>
+      <xsl:if test="//note[@place='foot']">
+        <div class="footnotes">
+          <xsl:text> </xsl:text>
+          <xsl:for-each select="//note[@place='foot']">
+            <p>
+              <span class="notenumber"><xsl:value-of select="substring(@xml:id, 2)"/>.</span>
+              <xsl:text> </xsl:text>
+              <xsl:apply-templates/>
+              <xsl:text> </xsl:text>
+              <a>
+                <xsl:attribute name="href">
+                  <xsl:text>#</xsl:text>
+                  <xsl:text>body</xsl:text>
+                  <xsl:value-of select="@xml:id"/>
+                </xsl:attribute>
+                <xsl:attribute name="id">
+                  <xsl:text>foot</xsl:text>
+                  <xsl:value-of select="@xml:id"/>
+                </xsl:attribute>
+                <xsl:text>[back]</xsl:text>
+              </a>
+            </p>
+          </xsl:for-each>
+        </div>
+      </xsl:if>
     </div>
   </xsl:template>
   

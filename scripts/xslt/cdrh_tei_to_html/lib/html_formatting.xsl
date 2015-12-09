@@ -145,7 +145,21 @@
       <xsl:copy-of select="."/>
     </xsl:when>
     <xsl:otherwise>
-      <xsl:apply-templates/>
+      <div>
+        <xsl:attribute name="class">
+          <xsl:value-of select="@type"/>
+          <xsl:if test="@subtype">
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="@subtype"/>
+          </xsl:if>
+        </xsl:attribute>
+        <xsl:if test="@corresp">
+          <xsl:attribute name="id">
+            <xsl:value-of select="substring-after(@corresp, '#')"/>
+          </xsl:attribute>
+        </xsl:if>
+        <xsl:apply-templates/>
+      </div>
     </xsl:otherwise>
   </xsl:choose>
 </xsl:template>
@@ -188,7 +202,7 @@
     </xsl:when>
     
     <!-- I added the div1 code for OSCYS, but I assume it will pop up elsewhere. 
-    First I test if the div1 has a head. If it does not, I start the div2's on the h3's and work from there.
+    First I test if the div1 has a head. If it does not, I start the div2's on the h3's and work from there. - karin
     -->
     <xsl:when test="//div1">
       <xsl:choose>
