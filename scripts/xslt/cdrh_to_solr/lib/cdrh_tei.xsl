@@ -195,6 +195,7 @@
             
             <!-- rights -->
             <!-- rightsURI -->
+            <xsl:call-template name="rightsURI"/>
             
             <!-- ==============================
             Other elements 
@@ -494,6 +495,10 @@
       </field>
     </xsl:if>
   </xsl:template>
+
+  <!-- ========== rightsURI ========== -->
+
+  <xsl:template name="rightsURI"/>
 
   <!-- ========== investigator and investigators ========== -->
 

@@ -26,12 +26,17 @@
 
         <!-- uri -->
         <xsl:call-template name="uri">
-          <xsl:with-param name="id" select="$filenamepart"/>
+          <xsl:with-param name="id" select="@xml:id"/>
         </xsl:call-template>
 
         <!-- uriXML -->
         <xsl:call-template name="uriXML">
           <xsl:with-param name="id" select="$filenamepart"/>
+        </xsl:call-template>
+
+        <!-- uriHTML -->
+        <xsl:call-template name="uriHTML">
+          <xsl:with-param name="id" select="@xml:id"/>
         </xsl:call-template>
 
         <!-- dataType -->
@@ -50,11 +55,14 @@
         <!-- creator and creators -->
         <xsl:call-template name="perCreators"/>
 
+        <!-- contributors -->
+        <xsl:call-template name="contributors"/>
+
         <!-- keywords -->
         <xsl:call-template name="keywords"/>
 
         <!-- people -->
-        <xsl:call-template name="people"/>
+        <xsl:call-template name="perPeople"/>
 
         <!-- places -->
         <xsl:call-template name="places"/>
@@ -65,7 +73,8 @@
           <xsl:value-of select="note"/>
         </field>
 
-        <xsl:call-template name="format"/>
+        <!-- format -->
+        <!-- <xsl:call-template name="format"/> -->
 
         <!-- category -->
         <field name="category">Life</field>
