@@ -8,6 +8,7 @@
   <!-- ==================================================================== -->
 
   <xsl:import href="lib/common.xsl"/>
+  <xsl:import href="lib/tei_personography.xsl"/>
   <xsl:import href="lib/cdrh_tei.xsl"/>
   <!-- If this file is living in a projects directory, the paths will be
        ../../../scripts/xslt/cdrh_to_solr/lib/common.xsl -->
@@ -26,10 +27,7 @@
   <xsl:param name="pb"/>            <!-- boolean for page breaks in html, not this script -->
   <xsl:param name="project"/>       <!-- longer name of project -->
   <xsl:param name="slug"/>          <!-- slug of project -->
-        
-        <!-- TODO kmd jvd is site_location important to this script? -->
   <xsl:param name="site_url"/>
-  <!-- <xsl:param name="project" select="/TEI/teiHeader/fileDesc/publicationStmt/authority[1]"></xsl:param> -->
         
 
   <!-- ==================================================================== -->
@@ -53,4 +51,8 @@
         in one of the imported files
       </xsl:template> -->
 
+
+  <!-- Uncomment these to prevent personography and encyclopedia behavior -->
+  <!-- <xsl:template name="personography"/> -->
+  <!-- <xsl:template name="encyclopedia"/> -->
 </xsl:stylesheet>

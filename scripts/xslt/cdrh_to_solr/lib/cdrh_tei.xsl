@@ -105,138 +105,147 @@
     <xsl:param name="filenamepart"/>
     
     <add>
-      <doc>
-        
-        <!-- ==============================
-        resource identification 
-        ===================================-->
-        
-        <!-- id -->
-        <xsl:call-template name="id">
-          <xsl:with-param name="filenamepart" select="$filenamepart"/>
-        </xsl:call-template>
-        
-        <!-- slug -->
-        <xsl:call-template name="slug"/>
-        
-        <!-- project -->
-        <xsl:call-template name="project"/>
-        
-        <!-- uri -->
-        <xsl:call-template name="uri">
-          <xsl:with-param name="filenamepart" select="$filenamepart"/>
-        </xsl:call-template>
-        
-        <!-- uriXML -->
-        <xsl:call-template name="uriXML">
-          <xsl:with-param name="filenamepart" select="$filenamepart"/>
-        </xsl:call-template>
-        
-        <!-- uriHTML -->
-        <xsl:call-template name="uriHTML">
-          <xsl:with-param name="filenamepart" select="$filenamepart"/>
-        </xsl:call-template>
-        
-        <!-- image_id -->
-        <xsl:call-template name="image_id"/>
+      <xsl:choose>
+        <xsl:when test="contains($filenamepart, 'person')">
+          <xsl:call-template name="personography">
+            <xsl:with-param name="filenamepart" select="$filenamepart"/>
+          </xsl:call-template>
+        </xsl:when>
+        <xsl:otherwise>
+          <doc>
+            
+            <!-- ==============================
+            resource identification 
+            ===================================-->
+            
+            <!-- id -->
+            <xsl:call-template name="id">
+              <xsl:with-param name="id" select="$filenamepart"/>
+            </xsl:call-template>
+            
+            <!-- slug -->
+            <xsl:call-template name="slug"/>
+            
+            <!-- project -->
+            <xsl:call-template name="project"/>
+            
+            <!-- uri -->
+            <xsl:call-template name="uri">
+              <xsl:with-param name="id" select="$filenamepart"/>
+            </xsl:call-template>
+            
+            <!-- uriXML -->
+            <xsl:call-template name="uriXML">
+              <xsl:with-param name="id" select="$filenamepart"/>
+            </xsl:call-template>
+            
+            <!-- uriHTML -->
+            <xsl:call-template name="uriHTML">
+              <xsl:with-param name="id" select="$filenamepart"/>
+            </xsl:call-template>
+            
+            <!-- image_id -->
+            <xsl:call-template name="image_id"/>
 
-        <!-- dataType -->
-        <field name="dataType"> 
-          <xsl:text>tei</xsl:text>
-        </field>
+            <!-- dataType -->
+            <field name="dataType"> 
+              <xsl:text>tei</xsl:text>
+            </field>
 
-        <!-- ==============================
-        Dublin Core 
-        ===================================-->
-        
-        <!-- title and titleSort-->
-        <xsl:call-template name="title"/>
+            <!-- ==============================
+            Dublin Core 
+            ===================================-->
+            
+            <!-- title and titleSort-->
+            <xsl:call-template name="title"/>
 
-        <!-- creator -->
-        <!-- creators -->
-        <xsl:call-template name="creators"/>
-        
-        <!-- subject -->
-        <!-- subjects -->
-        <!-- description -->
-        <!-- publisher -->
-        <xsl:call-template name="publisher"/>
+            <!-- creator -->
+            <!-- creators -->
+            <xsl:call-template name="creators"/>
+            
+            <!-- subject -->
+            <!-- subjects -->
+            <!-- description -->
+            <!-- publisher -->
+            <xsl:call-template name="publisher"/>
 
-        <!-- contributor -->
-        <!-- contributors -->
-        <xsl:call-template name="contributors"/>
-        
-        <!-- date and dateDisplay-->
-        <xsl:call-template name="date"/>
-        
-        <!-- type -->
-        
-        <!-- format -->
-        <xsl:call-template name="format"/>
-        
-        <!-- medium -->
-        <!-- extent -->
-        
-        <!-- language -->
-        <!-- relation -->
-        <!-- coverage -->
-        <!-- source -->
-        <xsl:call-template name="source"/>
-        
-        <!-- rightsHolder -->
-        <xsl:call-template name="rightsHolder"/>
-        
-        <!-- rights -->
-        <!-- rightsURI -->
-        
-        <!-- ==============================
-        Other elements 
-        ===================================-->
-        
-        <!-- principalInvestigator -->
-        <!-- principalInvestigators -->
-        <xsl:call-template name="investigators"/>
-        
-        <!-- place -->
-        <!-- placeName -->
-        
-        <!-- recipient -->
-        <!-- recipients -->
-        <xsl:call-template name="recipients"/>
-        
-        
-        <!-- ==============================
-        CDRH specific 
-        ===================================-->
-        
-        <!-- category -->
-        <xsl:call-template name="category"/>
-        
-        <!-- subCategory -->
-        <xsl:call-template name="subCategory"/>        
-        
-        <!-- topic -->
-        <xsl:call-template name="topic"/>
-        
-        <!-- keywords -->
-        <xsl:call-template name="keywords"/>
-        
-        <!-- people -->
-        <xsl:call-template name="people"/>
-        
-        <!-- places -->
-        <xsl:call-template name="places"/>
-        
-        <!-- works -->
-        <xsl:call-template name="works"/>
-        
-        <!-- text -->
-        <xsl:call-template name="text"/>
-        
-        <!-- fig_location -->
-        <xsl:call-template name="fig_location"/>
+            <!-- contributor -->
+            <!-- contributors -->
+            <xsl:call-template name="contributors"/>
+            
+            <!-- date and dateDisplay-->
+            <xsl:call-template name="date"/>
+            
+            <!-- type -->
+            
+            <!-- format -->
+            <xsl:call-template name="format"/>
+            
+            <!-- medium -->
+            <!-- extent -->
+            
+            <!-- language -->
+            <!-- relation -->
+            <!-- coverage -->
+            <!-- source -->
+            <xsl:call-template name="source"/>
+            
+            <!-- rightsHolder -->
+            <xsl:call-template name="rightsHolder"/>
+            
+            <!-- rights -->
+            <!-- rightsURI -->
+            
+            <!-- ==============================
+            Other elements 
+            ===================================-->
+            
+            <!-- principalInvestigator -->
+            <!-- principalInvestigators -->
+            <xsl:call-template name="investigators"/>
+            
+            <!-- place -->
+            <!-- placeName -->
+            
+            <!-- recipient -->
+            <!-- recipients -->
+            <xsl:call-template name="recipients"/>
+            
+            
+            <!-- ==============================
+            CDRH specific 
+            ===================================-->
+            
+            <!-- category -->
+            <xsl:call-template name="category"/>
+            
+            <!-- subCategory -->
+            <xsl:call-template name="subCategory"/>        
+            
+            <!-- topic -->
+            <xsl:call-template name="topic"/>
+            
+            <!-- keywords -->
+            <xsl:call-template name="keywords"/>
+            
+            <!-- people -->
+            <xsl:call-template name="people"/>
+            
+            <!-- places -->
+            <xsl:call-template name="places"/>
+            
+            <!-- works -->
+            <xsl:call-template name="works"/>
+            
+            <!-- text -->
+            <xsl:call-template name="text"/>
+            
+            <!-- fig_location -->
+            <xsl:call-template name="fig_location"/>
 
-      </doc>
+          </doc>
+        </xsl:otherwise>
+      </xsl:choose>
     </add>
 
   </xsl:template>
@@ -252,16 +261,15 @@
   <!-- ========== id ========== -->
 
   <xsl:template name="id">
-    <xsl:param name="filenamepart"/>
+    <xsl:param name="id"/>
     <field name="id">
-      <xsl:value-of select="$filenamepart"/>
+      <xsl:value-of select="$id"/>
     </field>
   </xsl:template>
 
   <!-- ========== slug ========== -->
 
   <xsl:template name="slug">
-    <xsl:param name="slug"/>
     <field name="slug">
       <xsl:value-of select="$slug"/>
     </field>
@@ -270,7 +278,6 @@
   <!-- ========== project ========== -->
 
   <xsl:template name="project">
-    <xsl:param name="project"/>
     <field name="project">
       <xsl:value-of select="$project"/>
     </field>
@@ -279,23 +286,23 @@
   <!-- ========== uri ========== -->
 
   <xsl:template name="uri">
-    <xsl:param name="filenamepart"/>
+    <xsl:param name="id"/>
     <field name="uri">
       <xsl:value-of select="$site_url"/>
       <xsl:text>/docs/</xsl:text>
-      <xsl:value-of select="$filenamepart"/>
+      <xsl:value-of select="$id"/>
     </field>
   </xsl:template>
 
   <!-- ========== uriXML ========== -->
 
   <xsl:template name="uriXML">
-    <xsl:param name="filenamepart"/>
+    <xsl:param name="id"/>
     <field name="uriXML">
       <xsl:value-of select="$file_location"/>
       <xsl:value-of select="$slug"/>
       <xsl:text>/tei/</xsl:text>
-      <xsl:value-of select="$filenamepart"/>
+      <xsl:value-of select="$id"/>
       <xsl:text>.xml</xsl:text>
     </field>
   </xsl:template>
@@ -303,12 +310,12 @@
   <!-- ========== uriHTML ========== -->
 
   <xsl:template name="uriHTML">
-    <xsl:param name="filenamepart"/>
+    <xsl:param name="id"/>
     <field name="uriHTML">
       <xsl:value-of select="$file_location"/>
       <xsl:value-of select="$slug"/>
       <xsl:text>/html-generated/</xsl:text>
-      <xsl:value-of select="$filenamepart"/>
+      <xsl:value-of select="$id"/>
       <xsl:text>.txt</xsl:text>
     </field>
   </xsl:template>
@@ -478,7 +485,7 @@
     </xsl:if>
   </xsl:template>
 
-  <!-- ========== source ========== -->
+  <!-- ========== rightsHolder ========== -->
 
   <xsl:template name="rightsHolder">
     <xsl:if test="/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/repository[1] != ''">
