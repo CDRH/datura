@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://digitalhumanities.unl.edu/resources/schemas/tei/TEIP5.2.6.0/tei_all.rng" type="xml"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0005.001">
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://digitalhumanities.unl.edu/resources/schemas/tei/TEIP5.2.6.0/tei_all.rng" type="xml"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0005.001">
     
 <teiHeader>
 <fileDesc>
@@ -80,13 +82,13 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">  
-<term/>
+<term xml:id="per.000003">Brent, William, 1774-1848</term>
+<term>Wilson</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
 <term>Washington (D.C.)</term>
 </keywords>
-
 
 </textClass>
             
@@ -117,13 +119,13 @@
 
 <revisionDesc>
 <change when="2015-11-19" who="#snc">added idno</change>
+<change when="2015-10-28" who="#snc">encoded and transcribed back of document</change>
 <change when="2014-07-17" who="#lkw">added xml:ids</change>
 <change when="2014-06-12" who="#kln">converted to new TEI</change>
 <change when="2014-05-28" who="#wgt">reviewed</change>
 <change when="2014-02-18" who="#kln">encoded transcription</change>
 </revisionDesc>
 </teiHeader>
-
 
 <text>
 
@@ -136,13 +138,13 @@
 <div2 type="caption">
                 
 <p>To the Honble The Judges of The Circuit Court of The District of Columbia</p>
-                
-<p>The Petition of Becky Joyce on behalf of herself and Child.</p>
 
 </div2>
 
 <div2 type="body">
                 
+<p>The Petition of Becky Joyce on behalf of herself and Child.</p>
+
 <p>Humbly Sheweth</p>
                 
 <p>That they <del>were</del> are detained in Slavery by William Jenkins &amp; pray process that they may assert their freedom.</p>
@@ -151,6 +153,25 @@
                 
 <p>Hiort</p>
                 
+</div2>
+
+<pb xml:id="p002" facs="oscys.case.0005.001.002.jpg"/>
+
+<div2 type="back">
+
+<p>41</p>
+
+<p>Joyce<lb/>
+vs<lb/>
+Jenkins</p>
+
+<p>If there is no Petition filed in this Case - pray issue sbpoena</p>
+
+<p>Mr Brent<lb/>
+I dont know Jenkins Christian - I suppose Wilson, or either of the officers can tell you.</p>
+
+<p>Filed 21st July 1808</p>
+
 </div2>
 
 </div1>
