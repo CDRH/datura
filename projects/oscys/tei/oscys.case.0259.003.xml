@@ -14,6 +14,7 @@
 <resp>transcription and encoding</resp>
 <name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -83,7 +84,7 @@
     
 <keywords scheme="lcsh" n="people">
 <term xml:id="per.000003">Brent, William, 1774-1848</term>
-<term>Fitzhugh, Mordecai C.</term>
+<term xml:id="per.002104">Fitzhugh, Mordecai C.</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -95,28 +96,28 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.002106">
 <persName>Caroline</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.002107">
 <persName>Chloe</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.002108">
 <persName>Henry</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.002109">
 <persName>John</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.002110">
 <persName>Nancy</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.002111">
 <persName>Marbury, William</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.001002">
 <persName>Fendall, Philip Ricard, 1794-1868</persName>
 </person>
-<person role="attorney_petitioner">
+<person role="attorney_petitioner" xml:id="per.002112">
 <persName>Mason, Thomson F.</persName>
 </person>
 <person role="attorney_defendant">
@@ -134,6 +135,7 @@
 </profileDesc>
         
 <revisionDesc> 
+<change when="2015-12-10" who="#lkw">added xml:ids</change>
 <change when="2015-09-15" who="#kln">reviewed; edited</change>            
 <change when="2015-06-30" who="#ea">Encoded and transcribed.</change>
 </revisionDesc>

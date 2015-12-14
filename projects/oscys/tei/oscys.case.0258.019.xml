@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -79,10 +80,10 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Hall, Elisha</term>
-<term>Jones, John</term>
-<term>Thompson, James</term>
-<term>Rapine, Daniel</term>
+<term xml:id="per.002005">Hall, Elisha</term>
+<term xml:id="per.002012">Jones</term>
+<term xml:id="per.002007">Thompson, James</term>
+<term xml:id="per.000014">Rapine, Daniel</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -99,13 +100,13 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001935">
 <persName>Thomas, Dennis</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001936">
 <persName>Thomas, Walter</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001937">
 <persName>Scott, Alexander</persName>
 </person>
 <person role="attorney_petitioner">
@@ -126,6 +127,7 @@
 </profileDesc>
         
 <revisionDesc>  
+<change when="2015-11-30" who="#lkw">added xml:ids; transcription</change>
 <change when="2015-04-27" who="#kln">reviewed; edited</change>            
 <change when="2015-03-19" who="#ea">Encoded and transcribed.</change>
 </revisionDesc>
@@ -149,7 +151,7 @@ District of Columbia Set.</p>
 
 <div2 type="body">
      
-<p>James Thompson being duly sworn on the holy Evangels deposeth and saith, That he was present when Elisha Hall came to Alexander Scott's for the negro named Walter to carry him to Charles County Jail &amp; that he accompanied the said Elisha to Charles County &amp; saw the said Walter placed in Jail. That the said Alexander told the said Elisha &amp; this deponent before they set off not to carry Walter thro' George town, as the said Walter had many friends, who might come after him, &amp; convey some thing to him in Jail, &amp; desired this deponent &amp; said Elisha not to let any body speak to the said Walter, but to carry the said Walter by <unclear reason="illegible">Jno.</unclear> Jones, thro' Tenley town &amp; Bladensburgh, but the Sheriff might see this deponent &amp; Elisha Hall &amp; stop them with the negro That this deponent heard the said Walter say that the said Alexander had taken his papers from him &amp; destroyed them &amp; that the said Alexander was conveying him away to prevent him from getting his freedom.</p>
+<p>James Thompson being duly sworn on the holy Evangels deposeth and saith, That he was present when Elisha Hall came to Alexander Scott's for the negro named Walter to carry him to Charles County Jail &amp; that he accompanied the said Elisha to Charles County &amp; saw the said Walter placed in Jail. That the said Alexander told the said Elisha &amp; this deponent before they set off not to carry Walter thro' George town, as the said Walter had many friends, who might come after him, &amp; convey some thing to him in Jail, &amp; desired this deponent &amp; said Elisha not to let any body speak to the said Walter, but to carry the said Walter by <unclear reason="illegible">Mr.</unclear> Jones, thro' Tenley town &amp; Bladensburgh, but the Sheriff might see this deponent &amp; Elisha Hall &amp; stop them with the negro That this deponent heard the said Walter say that the said Alexander had taken his papers from him &amp; destroyed them &amp; that the said Alexander was conveying him away to prevent him from getting his freedom.</p>
 
 <p>Sworn before me this 23rd. day of June 1810<lb/>
 Danl Rapine</p>

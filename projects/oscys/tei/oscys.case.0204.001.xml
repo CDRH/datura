@@ -12,6 +12,7 @@
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="McCormick, Kylie L." xml:id="klm">Kylie L. McCormick</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -92,13 +93,13 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001678">
 <persName>Weaver, Sandy</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001679">
 <persName>Bomford, George</persName>
 </person>
-<person role="attorney_petitioner">
+<person role="attorney_petitioner" xml:id="per.001680">
 <persName>Lawrence, A. H.</persName>
 </person>
 <person role="attorney_defendant">
@@ -115,7 +116,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>       
+<revisionDesc>   
+<change when="2015-11-02" who="#lkw">added xml:ids</change>      
 <change when="2015-02-24" who="#kln">reviewed, edited</change>       
 <change when="2014-11" who="#snc">encoded</change>
 </revisionDesc>

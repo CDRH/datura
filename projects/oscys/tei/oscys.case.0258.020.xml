@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -80,15 +81,16 @@
     
 <keywords scheme="lcsh" n="people">
 <term xml:id="per.000215">Ashton, John</term>
-<term>Hamilton, Samuel</term>
+<term xml:id="per.002013">Hamilton, Samuel</term>
 <term xml:id="per.000128">Magruder, John Read, Jr.</term>
-<term>Mingo, Betty</term>
-<term>Smith, Clement</term>
-<term>Thomas, Charles</term>
-<term>Thomas, Peg</term>
-<term>Thomas, Peter</term>
-<term>Thomas, Stephen</term>
-<term>Tyler, Trueman</term>
+<term xml:id="per.001964">Mingo, Betty</term>
+<term xml:id="per.002014">Smith, Clement</term>
+<term xml:id="per.002015">Thomas, Charles</term>
+<term xml:id="per.002016">Thomas, Peg</term><!-- mother -->
+<term xml:id="per.002019">Thomas, Peg</term><!-- daughter -->
+<term xml:id="per.002017">Thomas, Peter</term>
+<term xml:id="per.002018">Thomas, Stephen</term>
+<term xml:id="per.000828">Tyler, Trueman</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -99,13 +101,13 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001935">
 <persName>Thomas, Dennis</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001936">
 <persName>Thomas, Walter</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001937">
 <persName>Scott, Alexander</persName>
 </person>
 <person role="attorney_petitioner">
@@ -126,6 +128,7 @@
 </profileDesc>
         
 <revisionDesc>       
+<change when="2015-11-30" who="#lkw">added xml:ids</change>
 <change when="2015-04-28" who="#kln">reviewed; edited</change>            
 <change when="2015-03-17" who="#ea">Encoded and transcribed.</change>
 </revisionDesc>
