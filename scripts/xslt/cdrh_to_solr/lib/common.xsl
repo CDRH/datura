@@ -37,7 +37,7 @@
     
     
     <xsl:template name="normalize_name">
-        <xsl:param name="string"><xsl:value-of select="$string"/></xsl:param>
+        <xsl:param name="string"/>
         
         <xsl:variable name="string_lower"><xsl:value-of select="normalize-space(translate(lower-case($string), '“‘&quot;', ''))"/></xsl:variable>
         
