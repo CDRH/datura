@@ -14,6 +14,7 @@
 <resp>transcription and encoding</resp>
 <name n="McCormick, Kylie L." xml:id="klm">Kylie L. McCormick</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -83,7 +84,7 @@
     
 <keywords scheme="lcsh" n="people">
 <term xml:id="per.000004">Cranch, William, 1769-1855</term>
-<term>Duncan, Henry</term>
+<term xml:id="per.001915">Duncan, Henry</term>
 <term xml:id="per.000740">Smith, John A.</term>
 <term xml:id="per.000753">Wallach, Richard, 1816-1881</term>
 </keywords>
@@ -97,10 +98,10 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001916">
 <persName>Duncan, Emily</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001917">
 <persName>Gatewood, Richard</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.000829">
@@ -121,6 +122,7 @@
 </profileDesc>
         
 <revisionDesc>      
+<change when="2015-11-23" who="#lkw">added xml:ids</change>
 <change when="2015-09-22" who="#kln">reviewed; edited</change>        
 <change when="2015-03-09" who="#klm">transcribed; encoded</change>
 </revisionDesc>

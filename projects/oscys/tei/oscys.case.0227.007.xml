@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -79,18 +80,18 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Birth, James</term>
-<term>Casanave, Peter</term>
-<term>Cover, George</term>
-<term>Crandell, G.</term>
-<term>Drake, Willard</term>
-<term>Kennedy, James</term>
-<term>King, Vincent</term>
-<term>Reit, Frieling</term>
-<term>Taylor, Thomas</term>
-<term>Walker, Samuel</term>
-<term>William, Philip</term>
-<term>Williams, Elias E.</term>
+<term xml:id="per.001792">Birth, James</term>
+<term xml:id="per.001793">Casanave, Peter</term>
+<term xml:id="per.001794">Cover, George</term>
+<term xml:id="per.001795">Crandell, G.</term>
+<term xml:id="per.001796">Drake, Willard</term>
+<term xml:id="per.001797">Kennedy, James</term>
+<term xml:id="per.001798">King, Vincent</term>
+<term xml:id="per.001799">Reit, Frieling</term>
+<term xml:id="per.001800">Taylor, Thomas</term>
+<term xml:id="per.001801">Walker, Samuel</term>
+<term xml:id="per.001802">William, Philip</term>
+<term xml:id="per.001803">Williams, Elias E.</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -101,10 +102,10 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001782">
 <persName>Thornton, William</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001783">
 <persName>Graham, George, 1770-1830</persName>
 </person>
 <person role="attorney_petitioner">
@@ -125,6 +126,7 @@
 </profileDesc>
         
 <revisionDesc>    
+<change when="2015-11-09" who="#lkw">added xml:ids</change> 
 <change when="2015-01-12" who="#kln">reviewed; edited</change>         
 <change when="2014-11" who="#snc">encoded</change>
 </revisionDesc>
