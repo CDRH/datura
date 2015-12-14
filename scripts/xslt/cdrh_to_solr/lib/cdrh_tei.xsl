@@ -244,6 +244,15 @@
             <!-- fig_location -->
             <xsl:call-template name="fig_location"/>
 
+
+            <!-- ==============================
+            Project specific 
+            ===================================-->
+
+            <!-- extra fields -->
+            <xsl:call-template name="extras"/>
+              <!-- because you really need some fancy field
+                   with an underscore like planet_class_s -->
           </doc>
         </xsl:otherwise>
       </xsl:choose>
@@ -654,5 +663,11 @@
       </field>
     </xsl:if>
   </xsl:template>
+
+  <!-- ==================================================================== -->
+  <!--                     PROJECT SPECIFIC FIELDS                          -->
+  <!-- ==================================================================== -->
+
+  <xsl:template name="extras"/>  <!-- blank by default, override in specific projects -->
 
 </xsl:stylesheet>

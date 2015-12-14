@@ -55,5 +55,4 @@
 
   <!-- Uncomment these to prevent personography and encyclopedia behavior -->
   <!-- <xsl:template name="personography"/> -->
-  <!-- <xsl:template name="encyclopedia"/> -->
 </xsl:stylesheet>
