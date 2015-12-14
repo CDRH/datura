@@ -151,7 +151,7 @@ This file was compiled from information found in
 </person>
 
 <person xml:id="per.000004" source="http://earlywashingtondc.org/doc/oscys.case.0001.002">
-<persName type="display" source="#viaf">Cranch, William 1769-1855</persName> 
+<persName type="display" source="#viaf">Cranch, William, 1769-1855</persName> 
 <persName type="full"> <surname>Cranch</surname>, <forename type="first" full="yes">William</forename></persName>
 <birth when="1769" source="#viaf">1769</birth>
 <death when="1855" source="#viaf">1855</death>
@@ -909,7 +909,7 @@ This file was compiled from information found in
 </person>
 
 <person xml:id="per.000081" source="http://earlywashingtondc.org/doc/oscys.case.0011.013">
-<persName type="display">Beck, Jospeh</persName> 
+<persName type="display">Beck, Joseph</persName> 
 <persName type="full"> <surname>Beck</surname>, <forename type="first" full="yes">Joseph</forename></persName>
 <sex>male</sex>
 <trait type="color"><ab></ab></trait>
@@ -1093,7 +1093,7 @@ This file was compiled from information found in
 
 <!-- same as per.000070
 <person xml:id="per.000107" source="http://earlywashingtondc.org/doc/oscys.case.0011.013">
-<persName type="display">Thomas, Jospeh</persName>
+<persName type="display">Thomas, Joseph</persName>
 <persName type="full"> <surname>Thomas</surname>, <forename type="first" full="yes">Joseph</forename></persName>
 <sex>male</sex>
 <trait type="color"><ab></ab></trait>
@@ -6583,8 +6583,12 @@ This file was compiled from information found in
 <person xml:id="per.000704" source="http://earlywashingtondc.org/doc/oscys.case.0091.001">
 <persName type="display">White, Joseph M.</persName>
 <persName type="full"> <surname>White</surname>, <forename type="first" full="yes">Joseph</forename> <forename type="middle" full="init">M.</forename></persName>
+<birth when="1781" source="#viaf">1781</birth>
+<death when="1839" source="#viaf">1839</death>
 <sex>male</sex>
-<trait type="color"><ab></ab></trait>
+<trait type="color"><ab>white</ab></trait>
+<occupation>congressional delegate for Florida</occupation>
+<!--<idno type="viaf">230684632</idno>-->
 </person>
 
 <!-- oscys.case.0091.001 end -->
@@ -8021,10 +8025,9 @@ This file was compiled from information found in
 
 <person xml:id="per.000853" source="http://earlywashingtondc.org/doc/oscys.case.0109.001">
 <persName type="display">Turner, Ann</persName>
-<persName type="full"> <surname>Turner</surname>, <forename type="first" full="yes">Ann</forename></persName>
+<persName type="full"><surname type="maiden">Turner</surname> <surname>Allen</surname>, <forename type="first" full="yes">Ann</forename></persName>
 <sex>female</sex>
 <trait type="color"><ab></ab></trait>
-<residence>Washington County, District of Columbia</residence>
 </person>
 
 <person xml:id="per.000854" source="http://earlywashingtondc.org/doc/oscys.case.0109.001">
@@ -9169,7 +9172,6 @@ This file was compiled from information found in
 <age source="http://earlywashingtondc.org/doc/oscys.case.0125.003" when="1822">over 45</age>
 <trait type="color" when="1830-11-23"><ab>negro</ab></trait>
 <socecStatus>enslaved</socecStatus>
-<socecStatus>free</socecStatus>
 </person>
 
 <person xml:id="per.000983" source="http://earlywashingtondc.org/doc/oscys.case.0125.001">
@@ -11556,7 +11558,7 @@ This file was compiled from information found in
 
 <person xml:id="per.001228" source="http://earlywashingtondc.org/doc/oscys.case.0166.001">
 <persName type="display">Williams, Lucy</persName>
-<persName type="full"> <surname>Williams</surname>, <forename type="first" full="yes">Lucy</forename> <surname type="maiden">Bright</surname> <surname type="maiden">White</surname></persName>
+<persName type="full"> <surname>Williams</surname>, <forename type="first" full="yes">Lucy</forename> <surname type="maiden">Bright</surname> <addName type="surname" subtype="alternate">White</addName> <addName type="surname" subtype="alternate">Hall</addName></persName>
 <sex>female</sex>
 <trait type="color"><ab>colored</ab></trait>
 <socecStatus>enslaved</socecStatus>
@@ -13511,9 +13513,10 @@ This file was compiled from information found in
 
 <person xml:id="per.001433" source="http://earlywashingtondc.org/doc/oscys.case.0188.001">
 <persName type="display">Smith, B. P.</persName>
-<persName type="full"> <surname>Smith</surname>, <forename type="first" full="yes">B.</forename> <forename>P.</forename></persName>
+<persName type="full"> <surname>Smith</surname>, <forename type="first" full="yes">B.</forename> <forename type="middle">P.</forename></persName>
 <sex>male</sex>
 <trait type="color"><ab></ab></trait>
+<occupation>attorney</occupation>
 </person>
 
 <!-- oscys.case.0188.001 end  -->
@@ -13886,6 +13889,7 @@ This file was compiled from information found in
 <persName type="full"> <surname>Larkin</surname>, <forename type="first" full="yes">Thomas</forename></persName>
 <sex>male</sex>
 <trait type="color"><ab></ab></trait>
+<occupation>captain</occupation>
 </person>
 
 <person xml:id="per.001476" source="http://earlywashingtondc.org/doc/oscys.mdcase.0001.001">

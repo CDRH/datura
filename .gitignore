@@ -8,10 +8,12 @@
 projects/*
 # except the keep file
 !projects/.keep
-
+!projects/oscys
 
 # ignore tmp directory even though will need to create it each time
 tmp/*
 
 # ignore logs because there are so many of them!
 logs/*
+
+.DS_Store
