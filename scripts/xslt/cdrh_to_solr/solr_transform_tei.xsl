@@ -53,6 +53,12 @@
       </xsl:template> -->
 
 
-  <!-- Uncomment these to prevent personography and encyclopedia behavior -->
+  <!-- Uncomment this to prevent personography behavior -->
   <!-- <xsl:template name="personography"/> -->
+
+  <!-- Uncomment this and fill it in with your own fields
+       this will not affect the personography solr entries -->
+  <!-- <xsl:template name="extras">
+    <field name="new_field_s">Your thing here</field>
+  </xsl:template> -->
 </xsl:stylesheet>
