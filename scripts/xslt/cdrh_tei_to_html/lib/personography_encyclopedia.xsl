@@ -11,9 +11,9 @@
 <!--                          PERSONOGRAPHY                               -->
 <!-- ==================================================================== -->
 
-<xsl:template match="body//listPerson">
+<xsl:template match="TEI[contains(@xml:id, 'person')]//div1">
   <ul class="life_item">
-    <xsl:for-each select="person">
+    <xsl:for-each select="//person">
       <xsl:sort select="@xml:id"/>
       <li>
         <a>
@@ -30,13 +30,13 @@
     </xsl:for-each>
   </ul>
     
-  <xsl:for-each select="person">
+  <xsl:for-each select="//person">
     <xsl:sort select="@xml:id"/>
     <xsl:call-template name="person_info"/>
   </xsl:for-each>
 
   <!-- this is the same as the above but written to a specific file -->
-  <xsl:for-each select="person">
+  <xsl:for-each select="//person">
     <!-- the filename will start relative to the html-generated (output) directory of a specific project -->
     <xsl:variable name="filename" select="concat(@xml:id, '.txt')"/>
     <xsl:result-document href="{$filename}">
@@ -58,7 +58,7 @@
       <a>
         <xsl:attribute name="class">persNameLink</xsl:attribute>
         <xsl:attribute name="href"><xsl:value-of select="$site_url"/>/doc/<xsl:value-of select="@xml:id"/></xsl:attribute>
-        <xsl:value-of select="persName[@type='display']"/>
+       <xsl:value-of select="persName[@type='display']"/>
       </a>
     </h3>
     <p><xsl:apply-templates select="note"/></p>
@@ -69,7 +69,7 @@
 <!--                           ENCYCLOPEDIA                               -->
 <!-- ==================================================================== -->
 
-<xsl:template match="TEI[@xml:id='wfc.encyc']//div1">
+<xsl:template match="TEI[contains(@xml:id, 'encyc')]//div1">
   <ul class="life_item">
     <xsl:for-each select="div2">
       <xsl:sort select="@xml:id"/>

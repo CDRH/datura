@@ -105,157 +105,153 @@
     <xsl:param name="filenamepart"/>
     
     <add>
-      <xsl:choose>
-        <xsl:when test="contains($filenamepart, 'person')">
-          <xsl:call-template name="personography">
-            <xsl:with-param name="filenamepart" select="$filenamepart"/>
-          </xsl:call-template>
-        </xsl:when>
-        <xsl:otherwise>
-          <doc>
-            
-            <!-- ==============================
-            resource identification 
-            ===================================-->
-            
-            <!-- id -->
-            <xsl:call-template name="id">
-              <xsl:with-param name="id" select="$filenamepart"/>
-            </xsl:call-template>
-            
-            <!-- slug -->
-            <xsl:call-template name="slug"/>
-            
-            <!-- project -->
-            <xsl:call-template name="project"/>
-            
-            <!-- uri -->
-            <xsl:call-template name="uri">
-              <xsl:with-param name="id" select="$filenamepart"/>
-            </xsl:call-template>
-            
-            <!-- uriXML -->
-            <xsl:call-template name="uriXML">
-              <xsl:with-param name="id" select="$filenamepart"/>
-            </xsl:call-template>
-            
-            <!-- uriHTML -->
-            <xsl:call-template name="uriHTML">
-              <xsl:with-param name="id" select="$filenamepart"/>
-            </xsl:call-template>
-            
-            <!-- image_id -->
-            <xsl:call-template name="image_id"/>
+      <xsl:if test="contains($filenamepart, 'person')">
+        <xsl:call-template name="personography">
+          <xsl:with-param name="filenamepart" select="$filenamepart"/>
+        </xsl:call-template>
+      </xsl:if>
+      <doc>
+        
+        <!-- ==============================
+        resource identification 
+        ===================================-->
+        
+        <!-- id -->
+        <xsl:call-template name="id">
+          <xsl:with-param name="id" select="$filenamepart"/>
+        </xsl:call-template>
+        
+        <!-- slug -->
+        <xsl:call-template name="slug"/>
+        
+        <!-- project -->
+        <xsl:call-template name="project"/>
+        
+        <!-- uri -->
+        <xsl:call-template name="uri">
+          <xsl:with-param name="id" select="$filenamepart"/>
+        </xsl:call-template>
+        
+        <!-- uriXML -->
+        <xsl:call-template name="uriXML">
+          <xsl:with-param name="id" select="$filenamepart"/>
+        </xsl:call-template>
+        
+        <!-- uriHTML -->
+        <xsl:call-template name="uriHTML">
+          <xsl:with-param name="id" select="$filenamepart"/>
+        </xsl:call-template>
+        
+        <!-- image_id -->
+        <xsl:call-template name="image_id"/>
 
-            <!-- dataType -->
-            <field name="dataType"> 
-              <xsl:text>tei</xsl:text>
-            </field>
+        <!-- dataType -->
+        <field name="dataType"> 
+          <xsl:text>tei</xsl:text>
+        </field>
 
-            <!-- ==============================
-            Dublin Core 
-            ===================================-->
-            
-            <!-- title and titleSort-->
-            <xsl:call-template name="title"/>
+        <!-- ==============================
+        Dublin Core 
+        ===================================-->
+        
+        <!-- title and titleSort-->
+        <xsl:call-template name="title"/>
 
-            <!-- creator -->
-            <!-- creators -->
-            <xsl:call-template name="creators"/>
-            
-            <!-- subject -->
-            <!-- subjects -->
-            <!-- description -->
-            <!-- publisher -->
-            <xsl:call-template name="publisher"/>
+        <!-- creator -->
+        <!-- creators -->
+        <xsl:call-template name="creators"/>
+        
+        <!-- subject -->
+        <!-- subjects -->
+        <!-- description -->
+        <!-- publisher -->
+        <xsl:call-template name="publisher"/>
 
-            <!-- contributor -->
-            <!-- contributors -->
-            <xsl:call-template name="contributors"/>
-            
-            <!-- date and dateDisplay-->
-            <xsl:call-template name="date"/>
-            
-            <!-- type -->
-            
-            <!-- format -->
-            <xsl:call-template name="format"/>
-            
-            <!-- medium -->
-            <!-- extent -->
-            
-            <!-- language -->
-            <!-- relation -->
-            <!-- coverage -->
-            <!-- source -->
-            <xsl:call-template name="source"/>
-            
-            <!-- rightsHolder -->
-            <xsl:call-template name="rightsHolder"/>
-            
-            <!-- rights -->
-            <!-- rightsURI -->
-            <xsl:call-template name="rightsURI"/>
-            
-            <!-- ==============================
-            Other elements 
-            ===================================-->
-            
-            <!-- principalInvestigator -->
-            <!-- principalInvestigators -->
-            <xsl:call-template name="investigators"/>
-            
-            <!-- place -->
-            <!-- placeName -->
-            
-            <!-- recipient -->
-            <!-- recipients -->
-            <xsl:call-template name="recipients"/>
-            
-            
-            <!-- ==============================
-            CDRH specific 
-            ===================================-->
-            
-            <!-- category -->
-            <xsl:call-template name="category"/>
-            
-            <!-- subCategory -->
-            <xsl:call-template name="subCategory"/>        
-            
-            <!-- topic -->
-            <xsl:call-template name="topic"/>
-            
-            <!-- keywords -->
-            <xsl:call-template name="keywords"/>
-            
-            <!-- people -->
-            <xsl:call-template name="people"/>
-            
-            <!-- places -->
-            <xsl:call-template name="places"/>
-            
-            <!-- works -->
-            <xsl:call-template name="works"/>
-            
-            <!-- text -->
-            <xsl:call-template name="text"/>
-            
-            <!-- fig_location -->
-            <xsl:call-template name="fig_location"/>
+        <!-- contributor -->
+        <!-- contributors -->
+        <xsl:call-template name="contributors"/>
+        
+        <!-- date and dateDisplay-->
+        <xsl:call-template name="date"/>
+        
+        <!-- type -->
+        
+        <!-- format -->
+        <xsl:call-template name="format"/>
+        
+        <!-- medium -->
+        <!-- extent -->
+        
+        <!-- language -->
+        <!-- relation -->
+        <!-- coverage -->
+        <!-- source -->
+        <xsl:call-template name="source"/>
+        
+        <!-- rightsHolder -->
+        <xsl:call-template name="rightsHolder"/>
+        
+        <!-- rights -->
+        <!-- rightsURI -->
+        <xsl:call-template name="rightsURI"/>
+        
+        <!-- ==============================
+        Other elements 
+        ===================================-->
+        
+        <!-- principalInvestigator -->
+        <!-- principalInvestigators -->
+        <xsl:call-template name="investigators"/>
+        
+        <!-- place -->
+        <!-- placeName -->
+        
+        <!-- recipient -->
+        <!-- recipients -->
+        <xsl:call-template name="recipients"/>
+        
+        
+        <!-- ==============================
+        CDRH specific 
+        ===================================-->
+        
+        <!-- category -->
+        <xsl:call-template name="category"/>
+        
+        <!-- subCategory -->
+        <xsl:call-template name="subCategory"/>        
+        
+        <!-- topic -->
+        <xsl:call-template name="topic"/>
+        
+        <!-- keywords -->
+        <xsl:call-template name="keywords"/>
+        
+        <!-- people -->
+        <xsl:call-template name="people"/>
+        
+        <!-- places -->
+        <xsl:call-template name="places"/>
+        
+        <!-- works -->
+        <xsl:call-template name="works"/>
+        
+        <!-- text -->
+        <xsl:call-template name="text"/>
+        
+        <!-- fig_location -->
+        <xsl:call-template name="fig_location"/>
 
 
-            <!-- ==============================
-            Project specific 
-            ===================================-->
+        <!-- ==============================
+        Project specific 
+        ===================================-->
 
-            <!-- extra fields -->
-            <xsl:call-template name="extras"/>
-              <!-- because you really need some fancy field
-                   with an underscore like planet_class_s -->
-          </doc>
-        </xsl:otherwise>
-      </xsl:choose>
+        <!-- extra fields -->
+        <xsl:call-template name="extras"/>
+          <!-- because you really need some fancy field
+               with an underscore like planet_class_s -->
+      </doc>
     </add>
 
   </xsl:template>
