@@ -3,7 +3,7 @@
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>Peter Morris v. George Miller. Writ of Habeas Corpus</title>
+<title>Peter Morris v. George Miller. Writ of Habeas Corpus &amp; Answer of George Miller</title>
 <principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
 <principal n="Muñoz, Trevor" xml:id="tm">Trevor Muñoz</principal>
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
@@ -36,7 +36,7 @@
 </address>
 </distributor>
 <idno type="project">oscys.case.0290.002</idno>
-<idno type="case">oscys.caseid.0291</idno>
+<idno type="case">oscys.caseid.0292</idno>
 
 <availability>
 <licence>http://creativecommons.org/licenses/by-nc-sa/3.0/</licence>
@@ -46,7 +46,7 @@
             
 <sourceDesc>
 <bibl>
-<title level="m" type="main">Writ of Habeas Corpus</title>
+<title level="m" type="main">Writ of Habeas Corpus &amp; Answer of George Miller</title>
 <date when="1816-05-15">May 15, 1816</date>
 <note type="project">Our transcription is based on a digital image of the original.</note>
 </bibl>
@@ -80,15 +80,16 @@
     
 <keywords scheme="lcsh" n="people">
 <term xml:id="per.000003">Brent, William, 1774-1848</term>
+<term xml:id="per.000004">Cranch, William, 1769-1855</term>
 <term>Davis, Jonathan</term>
 <term>Kincaid, James</term>
 <term xml:id="per.000044">Morsell, James Sewall</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
-<term/>
+<term>Washington County (D.C.)</term>
+<term>Washington (D.C.)</term>
 </keywords>
-
 
 </textClass>
             
@@ -97,7 +98,7 @@
 <person role="petitioner">
 <persName>Morris, Peter</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.000278">
 <persName>Miller, George</persName>
 </person>
 <person role="attorney_petitioner">
@@ -118,6 +119,7 @@
 </profileDesc>
         
 <revisionDesc>
+<change when="2015-12-15" who="#kln">corrected caseid</change>
 <change when="2015-04-01" who="#kln">reviewed; edited</change>             
 <change when="2015-03-12" who="#ea">Encoded and transcribed.</change>
 </revisionDesc>
