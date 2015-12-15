@@ -11,7 +11,8 @@
 <!--                          PERSONOGRAPHY                               -->
 <!-- ==================================================================== -->
 
-<xsl:template match="TEI[contains(@xml:id, 'person')]//div1">
+<xsl:template match="TEI[contains(@xml:id, 'person')]//body">
+  <xsl:apply-templates select="div1[@type='introduction']"/>
   <ul class="life_item">
     <xsl:for-each select="//person">
       <xsl:sort select="@xml:id"/>
