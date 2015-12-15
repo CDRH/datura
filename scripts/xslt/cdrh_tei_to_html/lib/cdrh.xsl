@@ -56,9 +56,8 @@
         <xsl:attribute name="href">
           <xsl:value-of select="$site_url"/>/doc/<xsl:value-of select="@xml:id"/>
         </xsl:attribute>
-        <xsl:value-of select="persname"/>
+        <xsl:value-of select="."/>
       </a>
-      <xsl:apply-templates/>
     </span>
   </xsl:template>
 
