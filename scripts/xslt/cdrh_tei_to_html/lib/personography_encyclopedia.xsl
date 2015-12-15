@@ -13,38 +13,39 @@
 
 <xsl:template match="TEI[contains(@xml:id, 'person')]//body">
   <xsl:apply-templates select="div1[@type='introduction']"/>
-  <ul class="life_item">
+  <div class="list">
+    <ul class="life_item">
+      <xsl:for-each select="//person">
+        <xsl:sort select="@xml:id"/>
+        <li>
+          <a>
+            <xsl:attribute name="href">
+              <xsl:text>#</xsl:text>
+              <xsl:value-of select="@xml:id"/>
+            </xsl:attribute>
+            <xsl:attribute name="title">
+              <xsl:value-of select="persName[@type='display']"/>
+            </xsl:attribute>
+            <xsl:value-of select="persName[@type='display']"/>
+          </a>
+        </li>
+      </xsl:for-each>
+    </ul>
+      
     <xsl:for-each select="//person">
       <xsl:sort select="@xml:id"/>
-      <li>
-        <a>
-          <xsl:attribute name="href">
-            <xsl:text>#</xsl:text>
-            <xsl:value-of select="@xml:id"/>
-          </xsl:attribute>
-          <xsl:attribute name="title">
-            <xsl:value-of select="persName[@type='display']"/>
-          </xsl:attribute>
-          <xsl:value-of select="persName[@type='display']"/>
-        </a>
-      </li>
-    </xsl:for-each>
-  </ul>
-    
-  <xsl:for-each select="//person">
-    <xsl:sort select="@xml:id"/>
-    <xsl:call-template name="person_info"/>
-  </xsl:for-each>
-
-  <!-- this is the same as the above but written to a specific file -->
-  <xsl:for-each select="//person">
-    <!-- the filename will start relative to the html-generated (output) directory of a specific project -->
-    <xsl:variable name="filename" select="concat(@xml:id, '.txt')"/>
-    <xsl:result-document href="{$filename}">
       <xsl:call-template name="person_info"/>
-    </xsl:result-document>
-  </xsl:for-each>
-    
+    </xsl:for-each>
+
+    <!-- this is the same as the above but written to a specific file -->
+    <xsl:for-each select="//person">
+      <!-- the filename will start relative to the html-generated (output) directory of a specific project -->
+      <xsl:variable name="filename" select="concat(@xml:id, '.txt')"/>
+      <xsl:result-document href="{$filename}">
+        <xsl:call-template name="person_info"/>
+      </xsl:result-document>
+    </xsl:for-each>
+  </div>
 </xsl:template>
     
 <xsl:template name="person_info">
