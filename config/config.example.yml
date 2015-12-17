@@ -11,6 +11,17 @@ log_old_number: 4   # number of log files before beginning to erase
 log_size: 1024000   # size of log file in bytes
 log_level: Logger::WARN  # could change to INFO for more detail
 
+# formats to solr transformation locations
+tei_solr_xsl: scripts/xslt/cdrh_to_solr/solr_transform_tei.xsl
+vra_solr_xsl: scripts/xslt/cdrh_to_solr/solr_transform_vra.xsl
+dc_solr_xsl: scripts/xslt/cdrh_to_solr/solr_transform_dc.xsl
+csv_solr_ruby: scripts/ruby/csv_to_solr.rb
+# formats to html snippets transformation locations
+tei_html_xsl: scripts/xslt/cdrh_tei_to_html/tei.p5.xsl
+vra_html_xsl: 
+dc_html_xsl: scripts/xslt/cdrh_dc_to_html/dublin_core_to_html.xsl
+csv_html_ruby: scripts/ruby/csv_to_html.rb
+
 ###################
 #   Development   #
 ###################
@@ -18,12 +29,7 @@ log_level: Logger::WARN  # could change to INFO for more detail
 development:
   # solr information
   solr_path: http://server.unl.edu:port/solr/
-
-  # xsl transformation locations
-  tei_xsl: scripts/xslt/cdrh_to_solr/solr_transform_tei.xsl
-  vra_xsl: scripts/xslt/cdrh_to_solr/solr_transform_vra.xsl
-  dc_xsl: scripts/xslt/cdrh_to_solr/solr_transform_dc.xsl
-  html_xsl: scripts/xslt/cdrh_tei_to_html/tei.p5.xsl
+  solr_core: name_of_core
 
   # NOTE! If you are altering ANY of the xsl_params you must
   #   copy over ALL of them to the project specific config file
@@ -49,11 +55,7 @@ production:
   # solr information
   solr_path: http://server.unl.edu:port/solr/
   solr_core: name_of_core
-  # xsl transformation locations
-  tei_xsl: scripts/xslt/cdrh_to_solr/solr_transform_tei.xsl
-  vra_xsl: scripts/xslt/cdrh_to_solr/solr_transform_vra.xsl
-  dc_xsl: scripts/xslt/cdrh_to_solr/solr_transform_dc.xsl
-  html_xsl: scripts/xslt/cdrh_tei_to_html/tei.p5.xsl
+
   # NOTE! If you are altering ANY of the xsl_params you must
   #   copy over ALL of them to the project specific config file
   xsl_params:

@@ -11,7 +11,6 @@
     
     <xsl:param name="site_location"/>
     <xsl:param name="fig_location"/> <!-- set figure location  -->
-    <xsl:param name="repo_directory">/var/www/html/data/</xsl:param>
     <xsl:param name="slug"/>
     <xsl:variable name="filename" select="tokenize(base-uri(.), '/')[last()]"/>
     <!-- The part of the url after the main document structure and before the filename. 
@@ -21,38 +20,26 @@
     <xsl:variable name="filenamepart" select="substring-before($filename, '.xml')"/>
     
     <xsl:template match="/">
-
-       
-     
-           
         <xsl:for-each select="/rdf:RDF/rdf:Description" exclude-result-prefixes="#all">
-               <xsl:result-document href="{$repo_directory}projects/{$slug}/html-generated/{@about}.txt">
-                   <div>
-                       <img src="{$fig_location}large/{@about}.jpg"/>
+            <xsl:variable name="filename" select="concat(@about, '.txt')"/>
+            <xsl:result-document href="{$filename}">
+                <div>
+                    <img src="{$fig_location}large/{@about}.jpg"/>
+                    <xsl:if test="dc:description">
+                        <!-- This is used to add paragraphs based on line returns, but the cody DC files have line returns in weird places -->
+                        <!-- <xsl:for-each select="tokenize(dc:description, '&#10;')">
+                        <xsl:if test="normalize-space(.) != ''">
+                            <p>
+                                <xsl:value-of select="."/>
+                            </p>
+                        </xsl:if>
+                        </xsl:for-each> -->
                        
-                       <xsl:if test="dc:description">
-                           <!-- This is used to add paragraphs based on line returns, but the cody DC files have line returns in weird places -->
-                           <!-- <xsl:for-each select="tokenize(dc:description, '&#10;')">
-                    <xsl:if test="normalize-space(.) != ''">
-                        <p>
-                         <xsl:value-of select="."/>
-                        </p>
-                    </xsl:if>
-                </xsl:for-each> -->
-                           
-                           <p><xsl:value-of select="dc:description"/></p>
-                       </xsl:if>
-                       
-                       
-                               
-                       
+                       <p><xsl:value-of select="dc:description"/></p>
+                   </xsl:if>
                </div>
-               </xsl:result-document>
-           </xsl:for-each>
-           
-     
-       
-       
+            </xsl:result-document>
+        </xsl:for-each>
     </xsl:template>
     
     
