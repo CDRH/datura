@@ -107,7 +107,16 @@
     <xsl:attribute name="id">
       <xsl:value-of select="@xml:id"/>
     </xsl:attribute>
-    <h3><xsl:value-of select="head"/></h3>
+    <h3>
+      <a>
+        <xsl:attribute name="href">
+          <xsl:value-of select="$site_url"/>
+          <!-- construct a search url and use quotation marks (%22) on either side of the term -->
+          <xsl:value-of select="concat('/search?fqfield=text&amp;fqtext=%22', head, '%22')"/>
+        </xsl:attribute>
+        <xsl:value-of select="head"/>
+      </a>
+    </h3>
     <xsl:apply-templates select="p"/>
   </div>
 </xsl:template>

@@ -35,18 +35,19 @@ class Transformer
     @solr_failed_files = []
   end
 
-  # expect a specific format -- cannot be "nil" or "all"
-  # so this is likely going to be called multiple times
+  # TODO I do not like calling all of these and relying on instance variables
+  #  I would rather pass in more parameters
   def transform_all
     if @format.nil? || @format == "tei" 
-       @saxon_errors += _transform_tei_html
+       @saxon_errors += _transform_xml("tei", "tei_solr_xsl", "tei_html_xsl")
     end
-    if (@format.nil? || @format == "vra") && @solr_html != "html"
-      @saxon_errors += _transform_vra
+    if (@format.nil? || @format == "vra")
+      @saxon_errors += _transform_xml("vra", "vra_solr_xsl", "vra_html_xsl")
     end
-    if (@format.nil? || @format == "dublin_core") && @solr_html != "html"
-      @saxon_errors += _transform_dc
+    if (@format.nil? || @format == "dublin_core")
+      @saxon_errors += _transform_xml("dublin_core", "dc_solr_xsl", "dc_html_xsl")
     end
+    # csvs should be treated differently because they use a ruby script
     if @format.nil? || @format == "csv"
       @saxon_errors += _transform_csv
     end
@@ -67,8 +68,8 @@ class Transformer
     all_files = get_directory_files("#{@project_path}/csv", @verbose)
     files = regex_files(all_files, @regex)
     if files && files.length >> 0
-      require_relative "../../../#{@options['csv_html']}"
-      require_relative "../../../#{@dir}/#{@options['csv_solr']}"
+      require_relative "../../../#{@options['csv_html_ruby']}"
+      require_relative "../../../#{@dir}/#{@options['csv_solr_ruby']}"
     end
     files.each do |file|
       if should_update?(file, @update_time)
@@ -107,9 +108,10 @@ class Transformer
     return nil
   end
 
-  def _transform_tei_html
+  def _transform_xml(format, solr_script_path, html_script_path)
     errors = []
-    all_files = get_directory_files("#{@project_path}/tei", @verbose)
+
+    all_files = get_directory_files("#{@project_path}/#{format}", @verbose)
     files_to_run = regex_files(all_files, @regex)
     # Start an asynchronous process so that it doesn't wait for each
     # file before continuing on
@@ -119,46 +121,22 @@ class Transformer
         Thread.new do
           if should_update?(file, @update_time)
             # Uncomment to see which file is currently getting sucked in
-            puts "Threading file number: #{files_subset.find_index(file)}"
+            # puts "Threading file number: #{files_subset.find_index(file)}"
             # transform the tei if they requested it
             if @solr_html != "html"
-              errors << _transform_and_post(file, @options["tei_xsl"])
+              errors << _transform_and_post(file, @options[solr_script_path])
             end
             if @solr_html != "solr"
               # make a name for the html snippet and transform it
               file_name = File.basename(file, ".*")
               file_path = "#{@project_path}/html-generated/#{file_name}.txt"
-              errors << _transform_and_post(file, @options["html_xsl"], false, file_path)
+              errors << _transform_and_post(file, @options[html_script_path], false, file_path)
             end
           end
         end
       end
       # wait for all the files to process before moving on with the script
       threads.each {|t| t.join}
-    end
-    return errors
-  end
-
-  def _transform_vra
-    errors = []
-    all_files = get_directory_files("#{@project_path}/vra", @verbose)
-    files = regex_files(all_files, @regex)
-    files.each do |file|
-      if should_update?(file, @update_time)
-        errors << _transform_and_post(file, @options["vra_xsl"])
-      end
-    end
-    return errors
-  end
-
-  def _transform_dc
-    errors = []
-    all_files = get_directory_files("#{@project_path}/dublin_core", @verbose)
-    files = regex_files(all_files, @regex)
-    files.each do |file|
-      if should_update?(file, @update_time)
-        errors << _transform_and_post(file, @options["dc_xsl"])
-      end
     end
     return errors
   end
