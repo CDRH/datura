@@ -111,6 +111,7 @@
       <a>
         <xsl:attribute name="href">
           <xsl:value-of select="$site_url"/>
+          <!-- construct a search url and use quotation marks (%22) on either side of the term -->
           <xsl:value-of select="concat('/search?fqfield=text&amp;fqtext=%22', head, '%22')"/>
         </xsl:attribute>
         <xsl:value-of select="head"/>
