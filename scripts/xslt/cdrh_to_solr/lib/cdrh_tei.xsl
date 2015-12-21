@@ -295,7 +295,7 @@
     <xsl:param name="id"/>
     <field name="uri">
       <xsl:value-of select="$site_url"/>
-      <xsl:text>/docs/</xsl:text>
+      <xsl:text>/doc/</xsl:text>
       <xsl:value-of select="$id"/>
     </field>
   </xsl:template>
