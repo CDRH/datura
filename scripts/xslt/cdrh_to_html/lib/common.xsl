@@ -5,61 +5,10 @@
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     exclude-result-prefixes="xs" version="2.0">
-
-    <xsl:output indent="yes" omit-xml-declaration="yes"/>
-    
-    
-    <xsl:param name="site_location"/>
-    <xsl:param name="fig_location"/> <!-- set figure location  -->
-    <xsl:param name="repo_directory">/var/www/html/data/</xsl:param>
-    <xsl:param name="slug"/>
-    <xsl:variable name="filename" select="tokenize(base-uri(.), '/')[last()]"/>
-    <!-- The part of the url after the main document structure and before the filename. 
-			Collected so we can link to files, even if they are nested, i.e. whitmanarchive/manuscripts -->
-    
-    <!-- Split the filename using '\.' -->
-    <xsl:variable name="filenamepart" select="substring-before($filename, '.xml')"/>
-    
-    <xsl:template match="/">
-
-       
-     
-           
-        <xsl:for-each select="/rdf:RDF/rdf:Description" exclude-result-prefixes="#all">
-               <xsl:result-document href="{$repo_directory}projects/{$slug}/html-generated/{@about}.txt">
-                   <div>
-                       <img src="{$fig_location}large/{@about}.jpg"/>
-                       
-                       <xsl:if test="dc:description">
-                           <!-- This is used to add paragraphs based on line returns, but the cody DC files have line returns in weird places -->
-                           <!-- <xsl:for-each select="tokenize(dc:description, '&#10;')">
-                    <xsl:if test="normalize-space(.) != ''">
-                        <p>
-                         <xsl:value-of select="."/>
-                        </p>
-                    </xsl:if>
-                </xsl:for-each> -->
-                           
-                           <p><xsl:value-of select="dc:description"/></p>
-                       </xsl:if>
-                       
-                       
-                               
-                       
-               </div>
-               </xsl:result-document>
-           </xsl:for-each>
-           
-     
-       
-       
-    </xsl:template>
-    
-    
     
     <!-- ========================================================
-	Helper Templates
-	==========================================================-->
+  Helper Templates
+  ==========================================================-->
     
     <xsl:template name="date_standardize">
         <xsl:param name="datebefore"/>
@@ -93,7 +42,7 @@
     
     
     <xsl:template name="normalize_name">
-        <xsl:param name="string"></xsl:param>
+        <xsl:param name="string"/>
         
         <xsl:variable name="string_lower"><xsl:value-of select="normalize-space(translate(lower-case($string), '“‘&quot;', ''))"/></xsl:variable>
         
@@ -128,6 +77,11 @@
             (Y:"<xsl:value-of select="$YYYY" />" M:"<xsl:value-of select="$MM" />" D:"<xsl:value-of select="$DD" />")
         -->
         <xsl:choose>
+            <!--<xsl:when test="not(contains('0123456789', substring($date,1,1)))"> Works, but dumb -->
+            <xsl:when test="matches($date, '([A-Za-z])')"><!-- if date contains a letter, show as is. todo fix date handling -->
+                
+                <xsl:value-of select="$date"/>
+            </xsl:when>
             <xsl:when test="($DD != '') and ($MM != '') and ($DD != '')">
                 <xsl:call-template name="lookUpMonth"><xsl:with-param name="numValue" select="$MM" /></xsl:call-template><xsl:text> </xsl:text> <xsl:number format="1" value="$DD" />, <xsl:value-of select="$YYYY" />
             </xsl:when>
@@ -164,10 +118,4 @@
             <xsl:when test="$numValue = '12'">December</xsl:when>
             <xsl:otherwise></xsl:otherwise></xsl:choose>
     </xsl:template>
-    
-   
-    
-    
-    
-
 </xsl:stylesheet>

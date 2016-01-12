@@ -85,10 +85,6 @@
         <!-- topics -->
         <xsl:call-template name="topic"/>
 
-        <!-- people -->
-        <!-- only use the current person -->
-        <xsl:call-template name="perPeople"/>
-
       </doc>
     </xsl:for-each>
   </xsl:template>
