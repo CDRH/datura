@@ -13,6 +13,7 @@
 <respStmt>
 <resp>transcription and encoding</resp>
 <name n="Bryant, Samantha M." xml:id="smb">Samantha M. Bryant</name>
+<name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -49,9 +50,9 @@
 <sourceDesc>
 <bibl>
 <title level="m" type="main">Reports of Cases Civil and Criminal in the United States Circuit Court of the District of Columbia, from 1801 to 1841</title>
-<author n="Cranch, William">William Cranch</author>
+<author n="Cranch, William, 1769-1855">William Cranch</author>
 <publisher>Little, Brown and Company</publisher>
-<biblScope>Volume II.</biblScope>
+<biblScope>Volume II</biblScope>
 <date when="1852">1852</date>
 <pubPlace>Boston</pubPlace>
 </bibl>
@@ -76,13 +77,10 @@
 <term><date when="1824-12">December 1824</date></term>
 </keywords>
     
-<keywords scheme="lcsh" n="people">
-<term>Ann</term> 
-<term>Brent, William</term>
-<term>Margarett</term>
+<keywords scheme="lcsh" n="people"> 
+<term xml:id="per.000003">Brent, William, 1774-1848</term>
 <term>Morgan, Jacob</term>
-<term>Thruston, Buckner</term>
-<term>William</term>
+<term xml:id="per.000064">Thruston, Buckner, 1763-1845</term>
 <term/>
 </keywords>
 
@@ -92,24 +90,37 @@
 <term/>
 </keywords>
 
+<keywords scheme="original" n="outcome">
+<term>Verdict for Plaintiff</term>
+</keywords> 
+
 </textClass>
             
 <particDesc>   
 <listPerson>            
 <person role="petitioner">
-<persName>Rebecca</persName> 
+<persName>Ann</persName>
 </person>
-<person role="defendant"> 
-<persName>Pumphery, Lloyd</persName>
+<person role="petitioner">
+<persName>Margaret</persName>
 </person>
-<person role="attorney_petitioner">
+<person role="petitioner">
+<persName>Rebecca</persName>
+</person>
+<person role="petitioner">
+<persName>William</persName>
+</person>
+<person role="defendant">
+<persName>Pumphrey, Lloyd</persName>
+</person>
+<person role="attorney_petitioner" xml:id="per.000640">
 <persName>Turner, Thomas</persName>
-<persName/>
 </person>
-<person role="attorney_defendant">
-<persName>Coxe, Richard S.</persName>
+<person role="attorney_defendant" xml:id="per.000496">
+<persName>Coxe, Richard S. (Richard Smith), 1792-1865</persName>
+</person>
+<person role="attorney_defendant" xml:id="per.000830">
 <persName>Marbury, John</persName>
-<persName/>
 </person>
 </listPerson>
             
@@ -123,6 +134,7 @@
 </profileDesc>
         
 <revisionDesc>             
+<change when="2016-02-04" who="#kln">reviewed, edited</change>
 <change when="2016-02-01" who="#smb">transcribed and encoded</change>
 </revisionDesc>
 
@@ -150,11 +162,11 @@
 
 <div2 type="body">
      
-<p>Petition for freedom. The petition stated that the said Rebecca and her three children, William, Ann, and Margarett, are</p>     
+<p>Petition for freedom. The petition stated that the said Rebecca and her three children, William, Ann, and Margarett, are     
 
 <pb xml:id="p002" facs="oscys.report.0034.001.jpg"/>
 
-<p>entitled to their freedom, but are held in slavery and bondage by a certain Lloyd Pumphrey; she therefore prays for a subpoena to him, commanding him to appear and answer the petition. "She also, having reason to apprehend a sale and removal immediately from the jurisdiction of your honorable Court, prays a writ of injunction, enjoining and forbidding the said Lloyd and his agents from removing her and her children as aforesaid; hoping such other relief as may be meet in the premises; thus ever prays. Thomas Turner, Solicitor for petitioners.</p> 
+entitled to their freedom, but are held in slavery and bondage by a certain Lloyd Pumphrey; she therefore prays for a subpoena to him, commanding him to appear and answer the petition. "She also, having reason to apprehend a sale and removal immediately from the jurisdiction of your honorable Court, prays a writ of injunction, enjoining and forbidding the said Lloyd and his agents from removing her and her children as aforesaid; hoping such other relief as may be meet in the premises; thus ever prays. Thomas Turner, Solicitor for petitioners.</p> 
 
 <p>"District of Columbia, Alexandria county, ss. On this 24th of November, 1824, personally appears before me, justice of peace in and for the county aforesaid, Thomas Turner, and makes oath on the holy evangels of Almighty God that he believes that Lloyd Pumphrey meditates the sale and removal from the district, of the within named petitioner and children, as stated in the petition. Sworn before me, Jacob Morgan. Let an injunction issue as prayed. B. Thruston. William Brent, Esq. clerk,&amp;c., &amp;c., 25th November, 1824."</p> 
 
