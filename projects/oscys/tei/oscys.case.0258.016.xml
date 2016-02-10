@@ -3,7 +3,7 @@
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>Walter Thomas &amp; Dennis Thomas v. Alexander Scott. Affidavit of Gustavus Thomas</title>
+<title>Walter Thomas &amp; Dennis Thomas v. Alexander Scott. Deposition of Gustavus Thomas</title>
 <principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
 <principal n="Muñoz, Trevor" xml:id="tm">Trevor Muñoz</principal>
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -46,7 +47,7 @@
             
 <sourceDesc>
 <bibl>
-<title level="m" type="main">Affidavit of Gustavus Thomas</title>
+<title level="m" type="main">Deposition of Gustavus Thomas</title>
 <date when="1810-06-16">June 16, 1810</date>
 <note type="project">Our transcription is based on a digital image of the original.</note>
 </bibl>
@@ -67,7 +68,7 @@
 </keywords>
     
 <keywords scheme="original" n="subcategory">
-<term>Affidavit</term>
+<term>Deposition</term>
 </keywords>
 
 <keywords scheme="original" n="type">
@@ -79,8 +80,9 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Law, John</term>
-<term>Thomas, Gustavus</term>
+<term xml:id="per.000003">Brent, William, 1774-1848</term>
+<term xml:id="per.000023">Law, John</term>
+<term xml:id="per.002009">Thomas, Gustavus</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -96,13 +98,13 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001935">
 <persName>Thomas, Dennis</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001936">
 <persName>Thomas, Walter</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001937">
 <persName>Scott, Alexander</persName>
 </person>
 <person role="attorney_petitioner">
@@ -123,6 +125,7 @@
 </profileDesc>
         
 <revisionDesc> 
+<change when="2015-11-30" who="#lkw">added xml:ids; added William Brent to people</change>
 <change when="2015-04-27" who="#kln">reviewed; edited</change>               
 <change when="2015-03-19" who="#ea">Encoded and transcribed.</change>
 </revisionDesc>

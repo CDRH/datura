@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -79,36 +80,37 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Barnes, Richard</term>
-<term>Dorsey, Walter</term>
-<term>Eden, Betty Ann</term>
-<term>Hall, Joseph</term>
-<term>Harris, Joseph</term>
-<term>Plowdon, Edmund</term>
-<term>Thomas, Ann</term>
-<term>Thomas, Charity</term>
-<term>Thomas, Charles</term>
-<term>Thomas, David</term>
-<term>Thomas, Elizabeth</term>
-<term>Thomas, Henry</term>
-<term>Thomas, Jeremiah</term>
-<term>Thomas, Jesse</term>
-<term>Thomas, John</term> <!-- enslaved by Edmund Plowdon -->
-<term>Thomas, John</term> <!-- enslaved by Joseph Hall -->
-<term>Thomas, John A.</term> <!-- attorney -->
-<term>Thomas, Juda</term>
-<term>Thomas, Luke</term>
-<term>Thomas, Margaret</term>
-<term>Thomas, Mary</term>
-<term>Thomas, Matilda</term>
-<term>Thomas, Peter</term>
-<term>Thomas, Stephen</term>
-<term>Thomas, Susanna</term>
-<term>Thomas, Teresia</term>
-<term>Thomas, Teressa</term>
-<term>Thomas, William</term> <!-- enslaved by Edmund Plowdon -->
-<term>Thomas, William</term> <!-- enslaved by Betty Ann Eden -->
-<term>Wheeler, Ignatius</term>
+<term xml:id="per.001972">Barnes, Richard</term>
+<term xml:id="per.001973">Dorsey, Walter</term>
+<term xml:id="per.001974">Eden, Betty Ann</term>
+<term xml:id="per.001975">Hall, Joseph</term>
+<term xml:id="per.001976">Harris, Joseph</term>
+<term xml:id="per.001977">Plowdon, Edmund</term>
+<term xml:id="per.001978">Thomas, Ann</term>
+<term xml:id="per.001979">Thomas, Charity</term>
+<term xml:id="per.001980">Thomas, Charles</term>
+<term xml:id="per.001981">Thomas, David</term>
+<term xml:id="per.001982">Thomas, Elizabeth</term>
+<term xml:id="per.001983">Thomas, Henry</term>
+<term xml:id="per.001984">Thomas, Jeremiah</term>
+<term xml:id="per.001985">Thomas, Jesse</term>
+<term xml:id="per.001986">Thomas, John</term> <!-- enslaved by Edmund Plowdon -->
+<term xml:id="per.001987">Thomas, John</term> <!-- enslaved by Joseph Hall -->
+<term xml:id="per.001988">Thomas, John Allen</term> <!-- attorney -->
+<term xml:id="per.001989">Thomas, Juda</term><!-- may be the same person as per.001949  -->
+<term xml:id="per.001990">Thomas, Luke</term>
+<term xml:id="per.001991">Thomas, Margaret</term>
+<term xml:id="per.001992">Thomas, Mary</term>
+<term xml:id="per.001993">Thomas, Matilda</term>
+<term xml:id="per.001994">Thomas, Peter</term>
+<term xml:id="per.001995">Thomas, Stephen</term>
+<term xml:id="per.001996">Thomas, Susanna</term>
+<term xml:id="per.001997">Thomas, Teresia</term>
+<term xml:id="per.001998">Thomas, Teressa</term>
+<term xml:id="per.001999">Thomas, William</term> <!-- enslaved by Edmund Plowdon -->
+<term xml:id="per.002000">Thomas, William</term> <!-- enslaved by Betty Ann Eden -->
+<term xml:id="per.002001">Wheeler, Ignatius</term>
+<term xml:id="per.002002">Wharton, Jesse</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -120,13 +122,13 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001935">
 <persName>Thomas, Dennis</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001936">
 <persName>Thomas, Walter</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001937">
 <persName>Scott, Alexander</persName>
 </person>
 <person role="attorney_petitioner">
@@ -146,7 +148,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>    
+<revisionDesc>  
+<change when="2015-11-30" who="#lkw">added xml:ids; added Jesse Wharton to people; Added the middle name Allen to the attorney John Thomas</change>  
 <change when="2015-04-24" who="#kln">reviewed; edited</change>            
 <change when="2015-03-17" who="#ea">Encoded and transcribed.</change>
 </revisionDesc>

@@ -3,7 +3,7 @@
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>Sam &amp; Ned v. Lewis Childs, Gabriel Childs, &amp; Hiram Emerson. Agreement</title>
+<title>Sam &amp; Edmund v. Lewis Childs, Gabriel Childs, &amp; Hiram Emerson. Agreement</title>
 <principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
 <principal n="Muñoz, Trevor" xml:id="tm">Trevor Muñoz</principal>
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -79,10 +80,10 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Ager, Ann</term>
-<term>Ager, Emily</term>
-<term>Ball, Mottrom</term>
-<term>St. Clair, Jane</term> 
+<term xml:id="per.001662">Ager, Ann</term>
+<term xml:id="per.001663">Ager, Emily</term>
+<term xml:id="per.000244">Ball, Mottrom</term>
+<term xml:id="per.001664">St. Clair, Jane</term> 
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -95,19 +96,19 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
-<persName>Ned</persName>
+<person role="petitioner" xml:id="per.001657">
+<persName>Edmund</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001661">
 <persName>Sam</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001658">
 <persName>Childs, Gabriel</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001659">
 <persName>Childs, Lewis</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001660">
 <persName>Emerson, Hiram</persName>
 </person>
 <person role="attorney_petitioner">
@@ -128,6 +129,7 @@
 </profileDesc>
         
 <revisionDesc>
+<change when="2015-11-02" who="#lkw">added xml:ids</change>  
 <change when="2015-02-18" who="#kln">reviewed; edited</change>             
 <change when="2014-11" who="#snc">encoded</change>
 </revisionDesc>

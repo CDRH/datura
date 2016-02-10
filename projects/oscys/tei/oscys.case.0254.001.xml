@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
 <name n="Nash, Kaci" xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -80,9 +81,9 @@
     
 <keywords scheme="lcsh" n="people">
 <term xml:id="per.000003">Brent, William, 1774-1848</term>
-<term>Brightwell, John L.</term>
+<term xml:id="per.001918">Brightwell, John L.</term>
 <term xml:id="per.000004">Cranch, William, 1769-1855</term>
-<term>Hunter, Alexander</term>
+<term xml:id="per.000739">Hunter, Alexander</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -90,27 +91,26 @@
 <term>Washington (D.C.)</term>
 </keywords>
 
-
 </textClass>
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001919">
 <persName>Wayne, Daniel</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001920">
 <persName>Wayne, Harriet</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001921">
 <persName>Wayne, Joseph C.</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001922">
 <persName>Wayne, Mary Jane</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001923">
 <persName>Wayne, William R.</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001924">
 <persName>Greenleaf, William C.</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.000829">
@@ -130,7 +130,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>             
+<revisionDesc>      
+<change when="2015-11-23" who="#lkw">added xml:ids</change>       
 <change when="2015-02-11" who="#kln">reviewed; edited</change>
 <change when="2015-02-05" who="#ea">Encoded and transcribed.</change>
 </revisionDesc>

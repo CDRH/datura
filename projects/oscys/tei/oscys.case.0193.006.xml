@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -79,8 +80,8 @@
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Burch, C. S.</term>
-<term>Miller, Henry</term>
+<term xml:id="per.001628">Burch, C. S.</term>
+<term xml:id="per.001624">Miller, Henry</term>
 <term xml:id="per.000064">Thruston, Buckner, 1763-1845</term>
 </keywords>
 
@@ -93,13 +94,13 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001614">
 <persName>Hobbs, Rebecca</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001615">
 <persName>Magruder, Thomas</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001616">
 <persName>Robey, Washington</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.000738">
@@ -119,7 +120,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>             
+<revisionDesc>           
+<change when="2015-11-02" who="#lkw">added xml:ids</change>   
 <change when="2015-01-14" who="#kln">reviewed; edited</change>
 <change when="2014-10" who="#snc">encoded</change>
 </revisionDesc>

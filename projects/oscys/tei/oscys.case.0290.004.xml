@@ -3,7 +3,7 @@
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>Peter Morris v. George Miller. Affidavits of John Wiley &amp; George Speake</title>
+<title>Peter Morris v. George Miller. Affidavits of J. Wiley &amp; George Speake</title>
 <principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
 <principal n="Muñoz, Trevor" xml:id="tm">Trevor Muñoz</principal>
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
@@ -36,7 +36,7 @@
 </address>
 </distributor>
 <idno type="project">oscys.case.0290.004</idno>
-<idno type="case">oscys.caseid.0291</idno>
+<idno type="case">oscys.caseid.0292</idno>
 
 <availability>
 <licence>http://creativecommons.org/licenses/by-nc-sa/3.0/</licence>
@@ -46,7 +46,7 @@
             
 <sourceDesc>
 <bibl>
-<title level="m" type="main">Deposition of John Wiley</title>
+<title level="m" type="main">Affidavits of J. Wiley &amp; George Speake</title>
 <date when="1816-05-17">May 17, 1816</date>
 <note type="project">Our transcription is based on a digital image of the original.</note>
 </bibl>
@@ -83,11 +83,10 @@
 <term>Glasse</term>
 <term>Hale, E.</term>
 <term>Kincaid, James</term>
-<term>Miller, George</term>
 <term>Queen, Nicholas L.</term>
-<term>Rapine, Daniel</term>
+<term xml:id="per.000014">Rapine, Daniel</term>
 <term>Speake, George</term>
-<term>Wiley, John</term>
+<term>Wiley, J.</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -97,7 +96,6 @@
 <term>Washington (D.C.)</term>
 </keywords>
 
-
 </textClass>
             
 <particDesc>   
@@ -105,7 +103,7 @@
 <person role="petitioner">
 <persName>Morris, Peter</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.000278">
 <persName>Miller, George</persName>
 </person>
 <person role="attorney_petitioner">
@@ -126,6 +124,7 @@
 </profileDesc>
         
 <revisionDesc>  
+<change when="2015-12-15" who="#kln">corrected caseid</change>
 <change when="2015-04-01" who="#kln">reviewed; edited</change>            
 <change when="2015-03-12" who="#ea">Encoded and transcribed.</change>
 </revisionDesc>
