@@ -605,9 +605,8 @@
       <xsl:text>unclear </xsl:text>
       <xsl:value-of select="@reason"/>
     </xsl:attribute>
-    <xsl:text>[</xsl:text>
     <xsl:apply-templates/>
-    <xsl:text>?]</xsl:text>
+    <xsl:text>[?]</xsl:text>
   </span>
 </xsl:template>
 

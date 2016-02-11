@@ -88,9 +88,7 @@
         </a>
       </xsl:otherwise>
     </xsl:choose>
-    
-   
-  </xsl:template>
+  </xsl:template>  <!-- end ref -->
 
 
 </xsl:stylesheet>
