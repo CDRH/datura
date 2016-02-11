@@ -606,6 +606,12 @@
 			<field name="jurisdiction_ss"><xsl:value-of select="normalize-space(.)"/></field>
 		</xsl:for-each>
 		
+		<xsl:for-each select="//keywords[@n='claims']/term">
+			<field name="claims_ss" update="add">
+				<xsl:value-of select="normalize-space(.)"/>
+			</field>
+		</xsl:for-each>
+
 		<!-- Text -->
 
 		<xsl:if test="$doctype != 'person'">
