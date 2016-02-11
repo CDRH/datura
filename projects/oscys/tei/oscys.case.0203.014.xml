@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://digitalhumanities.unl.edu/resources/schemas/tei/TEIP5.2.6.0/tei_all.rng" type="xml"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0357.005">
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://digitalhumanities.unl.edu/resources/schemas/tei/TEIP5.2.6.0/tei_all.rng" type="xml"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0203.014">
     
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>Daniel v. Ann Kinchelor. Agreement</title>
+<title>Samuel Smith v. Jesse Conn. Summons of Jesse Conn</title>
 <principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
 <principal n="Muñoz, Trevor" xml:id="tm">Trevor Muñoz</principal>
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
 <respStmt>
 <resp>transcription and encoding</resp>
-<name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
+<name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -34,31 +34,31 @@
 <addrLine>cdrh@unl.edu</addrLine>
 </address>
 </distributor>
-<idno type="project">oscys.case.0357.005</idno>
-<idno type="case">oscys.caseid.0381</idno>
+<idno type="project">oscys.case.0203.014</idno>
+<idno type="case">oscys.caseid.0208</idno>
 
 <availability>
 <licence>http://creativecommons.org/licenses/by-nc-sa/3.0/</licence>
 <p>Licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. Derivatives must be credited to O Say Can You See, made available non-commercially, and distributed under the same terms. Requests for permission for commercial publication or other use should be emailed to the project team.</p>
 </availability>
 </publicationStmt>
-
+            
 <sourceDesc>
 <bibl>
-<title level="m" type="main">Agreement</title>
-<date when="1822-05-04">May 4 1822</date>
-<note type="project">Our transcription is based on a digital image of the original.</note>
+<title level="m" type="main">Summons of Jesse Conn</title>
+<date when="1835-03-30">March 30, 1835</date>
+<note type="project">Our transcription is based on a digital image of the original.</note> 
 </bibl>
 <msDesc>
 <msIdentifier>
 <repository>National Archives and Records Administration</repository>
 <collection>Record Group 21, Entry 6</collection>
-<idno>Box 245, Folder 390</idno>
+<idno>Box 537, Folder 7</idno>
 </msIdentifier>
 </msDesc>
 </sourceDesc>
 </fileDesc>
-
+        
 <profileDesc>
 <textClass>
 <keywords scheme="original" n="category">
@@ -66,7 +66,7 @@
 </keywords>
     
 <keywords scheme="original" n="subcategory">
-<term>Agreement</term>
+<term>Summons</term>
 </keywords>
 
 <keywords scheme="original" n="type">
@@ -74,11 +74,13 @@
 </keywords>
 
 <keywords scheme="original" n="term">
-<term><date when="1822-04">1822 April</date></term>
+<term><date when="1835-11">November 1835</date></term>
 </keywords>
     
-<keywords scheme="lcsh" n="people">  
-<term>Lacey, A.</term>
+<keywords scheme="lcsh" n="people">
+<term xml:id="per.000003">Brent, William, 1774-1848</term>
+<term xml:id="per.000004">Cranch, William, 1769-1855</term>
+<term xml:id="per.000739">Hunter, Alexander</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -86,25 +88,21 @@
 <term>Washington (D.C.)</term>
 </keywords>
 
-
 </textClass>
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
-<persName>Daniel</persName>
+<person role="petitioner" xml:id="per.001676">
+<persName>Smith, Samuel</persName>
 </person>
-<person role="defendant">
-<persName>Ann Kinchelor</persName>
-</person>
-<person role="attorney_petitioner" xml:id="per.000476">
-<persName>Dunlop, James, 1793-</persName>
+<person role="defendant" xml:id="per.001677">
+<persName>Conn, Jess</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.000001">
 <persName>Key, Francis Scott, 1779-1843</persName>
 </person>
-<person role="attorney_defendant" xml:id="per.001562">
-<persName>Swann, Thomas, 1789-1845</persName>
+<person role="attorney_defendant">
+<persName/>
 </person>
 </listPerson>
             
@@ -116,39 +114,64 @@
 </listOrg>   
 </particDesc> 
 </profileDesc>
-
-<revisionDesc>
-<change when="2015-12-04" who="#snc">transcribed; encoded</change>
+        
+<revisionDesc>     
+<change when="2016-02-11" who="#kln">transcribed; encoded</change>
 </revisionDesc>
-</teiHeader>
 
+</teiHeader>
+    
 <text>
 
-<body>
-           
-<pb xml:id="p001" facs="oscys.case.0357.005.001.jpg"/>
-                
+<body>  
+               
 <div1 type="case">
 
+<pb xml:id="p001" facs="oscys.case.0203.014.001.jpg"/>
+
 <div2 type="caption">
-                
-<p>Negro Daniel<lb/>
-vs<lb/>
-Anne Kinchelor</p>
+
+<p>District of Columbia, to wit:<lb/>
+The United States of America,<lb/>
+To the Marshal of the District of Columbia, Greeting:</p>
 
 </div2>
 
 <div2 type="body">
 
-<p>It is agreed in this case that the Petr: shall reamin in jail for safe keeping until Mr Swann shall write to FSKey or A. Laney stating that the Deft hath complied with the terms upon which by consent the verdict is taken in this cause whick terms are as follows-</p>
- 
-<p>The Petr: shall be sold to a respectable &#38; settled resident in Alexa: Couty: in this District, who shall be known to be just to T. Swann, upon condition that he be kept within the District of Cola: &#38; never sold thereout, unless T. Swan &#38; FSKey shall concur in stating that they are satisfied the Petr: from his bad conduct &#38; character deserves no longer the benefit of this restriction.— and such Purchaser shall <del>he</del> satisfy the said T. Swann that he makes the said purchaser failry &#38; bon&#226;fide subject to these conditions.</p>
-               
-<p>May 4 1822.</p>
+<p>You are hereby commanded to summon Jesse Conn if he shall be found in the County of Washington, that (all excuses set aside) he be and appear before the Circuit Court of the District of Columbia, to be held for the County of Washington, in the City of Washington, on the fourth Monday of November next, to <del>testify on the part of</del> answer the Petition for freedom of Samuel Smith, filed in said Court against him.</p>
 
-<p>Tho Swann the claimant<lb/>
-FSKey for Petr</p>
+<p>Hereof, fail not at your peril; and have you then and there this precept.</p>
 
+<p>Witness, W Cranch Esquire, Chief Judge of the said Court.</p>
+
+<p>Issued the 30th day of March 1835.</p>
+
+<p>W. Brent, clk</p>
+
+<p>Key</p>
+
+</div2>
+
+<pb xml:id="p002" facs="oscys.case.0203.014.002.jpg"/>
+
+<div2 type="back">
+
+<p>7.</p>
+
+<p>Samuel Smith<lb/>
+vs<lb/>
+Jesse Conn</p>
+
+<p>Subpa<lb/>
+1 Bre</p>
+
+<p>+<lb/>
+Peto for freedom</p>
+
+<p>Non Est<lb/>
+A. Hunter<lb/>
+Marshal</p>
 
 </div2>
 </div1>
