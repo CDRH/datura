@@ -792,7 +792,6 @@
 	<!-- ================================================== -->
 	
 	<xsl:template name="tei_document_join" exclude-result-prefixes="#all">
-		
 		<xsl:for-each select="//idno[@type='case'][normalize-space()]">
 			<doc>
 				<field name="id"> 
@@ -851,6 +850,7 @@
 			
 				<!-- split into case documents and related documents -->
 				<xsl:choose>
+
 					<xsl:when test="normalize-space(//keywords[@n='category']) = 'Case Papers'">
 						<field name="caseDocumentID_ss" update="add">
 							<xsl:value-of select="/TEI/@xml:id"/>
@@ -880,20 +880,21 @@
 							<xsl:value-of select="/TEI/@xml:id"/>
 						</field>
 						<field name="caseRelatedDocumentData_ss" update="add">
-							
 							<xsl:call-template name="JSON_Formatter">
 								<xsl:with-param name="json_label">
 									<xsl:value-of select="/TEI/teiHeader/fileDesc/titleStmt/title[1]"/>
 									<!-- adding the date to the end of the title -->
 									<xsl:text> (</xsl:text>
 									<xsl:call-template name="extractDate">
-										<!--<xsl:with-param name="date" select="/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@when"/>-->
 										<xsl:with-param name="date" select="$doc_date"/>
 									</xsl:call-template>
 									<xsl:text>)</xsl:text>
 								</xsl:with-param>
 								<xsl:with-param name="json_id">
 									<xsl:value-of select="/TEI/@xml:id"/>
+								</xsl:with-param>
+								<xsl:with-param name="json_date">
+									<xsl:value-of select="$doc_date"/>
 								</xsl:with-param>
 							</xsl:call-template>
 						</field>
