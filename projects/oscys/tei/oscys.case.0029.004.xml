@@ -48,7 +48,7 @@
 <sourceDesc>
 <bibl>
 <title level="m" type="main">Interrogatories</title>
-<date when="1814-05-20">May 20, 1814</date>
+<date when="1814-06-06">June 6, 1814</date>
 <note type="project">Our transcription is based on a digital image of the original.</note>
 </bibl>
 <msDesc>
@@ -75,13 +75,20 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1814-06">June 1814</date></term>
 </keywords>
     
 <keywords scheme="lcsh" n="people"> 
 <term xml:id="per.000238">Ball, Spencer</term>
+<term xml:id="per.000247">Claughton, William</term>
 <term xml:id="per.000241">Cockarell, John</term>
+<term xml:id="per.000257">Routt, Catharine</term>
+<term>Routt, Richard</term> <!-- father of William Routt, husband of widow Routt per.000256 -->
 <term xml:id="per.000240">Routt, William</term>
 <term xml:id="per.000242">Straughan, John C.</term>
 </keywords>
@@ -90,7 +97,6 @@
 <term>Northumberland County (Va.)</term>
 <term>Washington (D.C.)</term>
 </keywords>
-
 
 </textClass>
             
@@ -102,8 +108,8 @@
 <person role="defendant" xml:id="per.000232">
 <persName>Ball, Henry W.</persName>
 </person>
-<person role="attorney_petitioner">
-<persName/>
+<person role="attorney_petitioner" xml:id="per.000001">
+<persName>Key, Francis Scott, 1779-1843</persName>
 </person>
 <person role="attorney_defendant">
 <persName/>
@@ -121,13 +127,14 @@
 
         
 <revisionDesc>
+<change when="2015-12-15" who="#kln">added missing second and fourth pages</change>
 <change when="2015-11-20" who="#snc">added idno</change>
 <change when="2014-08-08" who="#lkw">added xml:ids</change>
 <change when="2014-06-05" who="#wgt">reviewed; corrected transcription</change>
 <change when="2014-05-30" who="#kln">converted to new TEI</change>            
-<change when="2013-04-24" who="#kn">added attorney to header</change>
-<change when="2013-03-11" who="#kn">edited encoding</change>
-<change when="2013-01-03" who="#kn">encoded transcription</change>
+<change when="2013-04-24" who="#kln">added attorney to header</change>
+<change when="2013-03-11" who="#kln">edited encoding</change>
+<change when="2013-01-03" who="#kln">encoded transcription</change>
 </revisionDesc>
 </teiHeader>
     
@@ -151,24 +158,47 @@ Henry W. Ball</p>
 </div2>
 
 <div2 type="body">
+
+<p>Filed 6 June 1814</p>
                 
-<p>Interrogatories to be administered to William Roult of
-                    Northumberland County Virginia a
-                    witness for the Petitioner in the above mentioned caused to be produced sworn
-                    &amp; examined on the part of the said Petitioner against the Defendant above
-                    named pursuant to an order of the said Circuit Court, sworn before John Cockarell Esquire a Justice of the peace of the said State of Virginia in &amp; for the county aforesaid</p>
+<p>Interrogatories to be administered to William Roult of Northumberland County Virginia a witness for the Petitioner in the above mentioned caused to be produced sworn &amp; examined on the part of the said Petitioner against the Defendant above named pursuant to an order of the said Circuit Court, sworn before John Cockarell Esquire a Justice of the peace of the said State of Virginia in &amp; for the county aforesaid</p>
                 
 <p>First; Do you know Emanuel the Petitioner above named? If so where was he born and raised and to whom did he belong?</p>
                 
 <p>Secondly; Do you know the hand writing of the pass or permit hereto annexed dated 20th December 1811 at Northumberland County and directed to Henry W. Ball Washington City? Was that pass given by you? Is the signature "Wm Roult" your hand writing? or did you give that or other similar pass?</p>
                 
-<p>Thirdly; When &amp; by whom was the said Emanuel sold to Henry W. Ball? and where was Emanuel at the time</p>
-                
-<gap extent="one or two pages" reason="missing pages"/>
+<p>Thirdly; When &amp; by whom was the said Emanuel sold to Henry W. Ball? and where was Emanuel at the time
 
 <pb xml:id="p002" facs="oscys.case.0029.004.002.jpg"/>
+
+he was sold to said Ball?</p>
+
+<p>Fourthly: State what you know relative to the sale of said Emanuel to said Ball and thte dates of the transactions concerning said sale.</p>
+
+<p>F. S. Key<lb/>
+attorney for Petr.</p>
+
+</div2>
+
+<div2 type="caption">
+
+<p>State of Virginia<lb/>
+Northumberland County<lb/>
+Set:</p>
+
+</div2>
+
+<div2 type="body">
+
+<p>The said William Roult being by me duly sworn to make true answers to the foregoing interrogatories deposeth and saith as follows</p>
+
+<p>To the first Interrogatory he saith: that he has known the petitioner from his infancy. He was born and raised in Northumberland County Virginia and belonged originally to this affiants father Richard Routt senr. after whose decease upon a division of the <gap extent="one word" reason="illegible"/> he was allotted to this affiants sister Catharine Routt. Who subsequently intermarried with Major Wm. Claughton, with whom he lived untill the decease of Major Claughton &amp; after the death of Mrs Blackwell who was formerly Mrs Claughton, the widow of Major Claughton, this affiant became the guardian of his <gap extent="two or three words" reason="illegible"/> and took possession of the said fellow for <gap extent="two or three words" reason="illegible"/>. <del>in the</del></p>
+
+<p>To the second he saith - that the pass or permitt in question was writeen by this affiant and signed by him. no other pass of a similar description was given the petitioner by this affiant. and that here to annexed was</p>
+
+<pb xml:id="p003" facs="oscys.case.0029.004.003.jpg"/>
                                
-<p>given him upon his solemn appearances turn by the following new year day.</p>
+<p>given him upon his solemn assurances to return by the following new year day.</p>
                 
 <p>To the Third he saith that the said Emanuel was not sold to the said Ball. In consequence of his failing to return at the time fixed on this affiant, implored his friend Capt. John C Straughan— who was going to Washington City on business of his own to have him arrested and brought back to the State of Virginia— after having been arrested as this affiant has been informed by Capt. Straughan and the said Emanuel escaped from the said Staughan— and while lurking out was exchanged by him with Mr. Henry W. Ball for a fellow of inferior value. This transaction took place in Mar 1812 to the best of this affiants recollection. To the fourth he saith— that the answer is included in that to the third Interrogatory—</p>
                 
@@ -184,11 +214,26 @@ Henry W. Ball</p>
                 
 </div2>
             
-<pb xml:id="p003" facs="oscys.case.0029.004.003.jpg"/>
+<pb xml:id="p004" facs="oscys.case.0029.004.004.jpg"/>
                 
 <div2 type="back">
 
 <p>Clerk of the county must certify under Seal that this person is a justice of the peace.</p> 
+
+</div2>
+
+<div2 type="body">
+
+<p>Northumberland County 20th Decr 1811</p>
+                
+<p>Sir</p>
+                
+<p>I have permitted Emanuel to come <gap reason="illegible" extent="several words"/> his wife, and hope you will see that he behaves properly while he is there and also must request of you to make him start down timenoughf to get here by new years day and youl very much oblige your friend.</p>
+                
+<p>Wm Routt</p>
+                
+<p>Mr. Henry W. Ball<lb/>
+Washington City</p>
                 
 </div2>
 

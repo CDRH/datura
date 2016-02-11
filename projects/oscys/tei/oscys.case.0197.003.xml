@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -74,12 +75,17 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1835-03">March 1835</date></term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Robertson, Sally Ann</term>
+<term xml:id="per.001640">Robertson, Sally Ann</term>
+<term xml:id="per.001646">Robertson</term><!-- father -->
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -91,22 +97,22 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001641">
 <persName>Robertson, David</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001642">
 <persName>Robertson, Elizabeth</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001643">
 <persName>Robertson, Maria</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001644">
 <persName>Robertson, Mary Jane</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001645">
 <persName>Robertson, Rosanna</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001637">
 <persName>Waugh, Alexander</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.000464">
@@ -127,6 +133,7 @@
 </profileDesc>
         
 <revisionDesc>  
+<change when="2015-11-02" who="#lkw">added xml:ids</change> 
 <change when="2015-02-17" who="#kln">reviewed; edited</change>             
 <change when="2014-10" who="#snc">encoded</change>
 </revisionDesc>
@@ -149,7 +156,7 @@
 
 <div2 type="body">
 
-<p>The Petition of Rosanna Robertson, Maria Robertson, Elizabeth Robertson, Mary Jane Robertson and David Robertson, infants under 21 years of age, by       Robertson their father &amp; next friend, humbly represent that your petitioners are now held in bondage and claimed as slaves by one Alexander Waugh. That your petitioners are entitled to their freedom and they therefor pray hour Honors to grant unto them the United States Writ of Subpoena to be directed to the said War and such other relief in the premises as your Honors may deem just &amp; proper &amp;c</p>
+<p>The Petition of Rosanna Robertson, Maria Robertson, Elizabeth Robertson, Mary Jane Robertson and David Robertson, infants under 21 years of age, by    &#160;&#160;&#160;   Robertson their father &amp; next friend, humbly represent that your petitioners are now held in bondage and claimed as slaves by one Alexander Waugh. That your petitioners are entitled to their freedom and they therefor pray hour Honors to grant unto them the United States Writ of Subpoena to be directed to the said War and such other relief in the premises as your Honors may deem just &amp; proper &amp;c</p>
 
 <p>Richard Wallach for petitioners</p>
 

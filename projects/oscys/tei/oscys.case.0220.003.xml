@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -78,6 +79,10 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1845-03">March 1845</date></term>
 </keywords>
@@ -95,16 +100,16 @@
             
 <particDesc>   
 <listPerson type="oscys.caseid.0220">           
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001744">
 <persName>Blue, Anne</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001745">
 <persName>Colquhoun, William S.</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001746">
 <persName>Williams, John W.</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001747">
 <persName>Williams, Mary S.</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.000751">
@@ -116,16 +121,16 @@
 </listPerson>
 
 <listPerson type="oscys.caseid.0221">           
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001748">
 <persName>Blue, Charles</persName>
 </person>
-<person role="defendant">
+<person role="defendant" corresp="per.001745">
 <persName>Colquhoun, William S.</persName>
 </person>
-<person role="defendant">
+<person role="defendant" corresp="per.001746">
 <persName>Williams, John W.</persName>
 </person>
-<person role="defendant">
+<person role="defendant" corresp="per.001747">
 <persName>Williams, Mary S.</persName>
 </person>
 <person role="attorney_petitioner" corresp="per.000751">
@@ -137,16 +142,16 @@
 </listPerson>
 
 <listPerson type="oscys.caseid.0222">           
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001749">
 <persName>Blue, Evaline</persName>
 </person>
-<person role="defendant">
+<person role="defendant" corresp="per.001745">
 <persName>Colquhoun, William S.</persName>
 </person>
-<person role="defendant">
+<person role="defendant" corresp="per.001746">
 <persName>Williams, John W.</persName>
 </person>
-<person role="defendant">
+<person role="defendant" corresp="per.001747">
 <persName>Williams, Mary S.</persName>
 </person>
 <person role="attorney_petitioner" corresp="per.000751">
@@ -158,16 +163,16 @@
 </listPerson>
 
 <listPerson type="oscys.caseid.0223">           
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001750">
 <persName>Blue, Fanny</persName>
 </person>
-<person role="defendant">
+<person role="defendant" corresp="per.001745">
 <persName>Colquhoun, William S.</persName>
 </person>
-<person role="defendant">
+<person role="defendant" corresp="per.001746">
 <persName>Williams, John W.</persName>
 </person>
-<person role="defendant">
+<person role="defendant" corresp="per.001747">
 <persName>Williams, Mary S.</persName>
 </person>
 <person role="attorney_petitioner" corresp="per.000751">
@@ -179,16 +184,16 @@
 </listPerson>
 
 <listPerson type="oscys.caseid.0224">           
-<person role="petitioner">
-<persName>Tason, Laura V.</persName>
+<person role="petitioner" xml:id="per.001751">
+<persName>Tason, Laura Vietch</persName>
 </person>
-<person role="defendant">
+<person role="defendant" corresp="per.001745">
 <persName>Colquhoun, William S.</persName>
 </person>
-<person role="defendant">
+<person role="defendant" corresp="per.001746">
 <persName>Williams, John W.</persName>
 </person>
-<person role="defendant">
+<person role="defendant" corresp="per.001747">
 <persName>Williams, Mary S.</persName>
 </person>
 <person role="attorney_petitioner" corresp="per.000751">
@@ -200,16 +205,16 @@
 </listPerson>
 
 <listPerson type="oscys.caseid.0225">           
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001752">
 <persName>Blue, Wallace</persName>
 </person>
-<person role="defendant">
+<person role="defendant" corresp="per.001745">
 <persName>Colquhoun, William S.</persName>
 </person>
-<person role="defendant">
+<person role="defendant" corresp="per.001746">
 <persName>Williams, John W.</persName>
 </person>
-<person role="defendant">
+<person role="defendant" corresp="per.001747">
 <persName>Williams, Mary S.</persName>
 </person>
 <person role="attorney_petitioner" corresp="per.000751">
@@ -230,6 +235,7 @@
 </profileDesc>
         
 <revisionDesc>        
+<change when="2015-11-09" who="#lkw">added xml:ids; transcription</change>
 <change when="2015-02-24" who="#kln">reviewed; edited</change>      
 <change when="2014-11" who="#snc">encoded</change>
 </revisionDesc>
@@ -252,7 +258,7 @@
 
 <div2 type="body">
 
-<p>In the several cases of petitions for freedom by Wallace Blue, other Blues, &amp; Laura, against Williams &amp; Colquhoun pending before this Court, I was retained to succeed Mr Dermott, the original council; &amp; having been satisfied by the trial of the first case in the series that I could not succeed for them upon the law as laid down in that case, I desired to withdraw my name; but the court declined to allow me to do so, I have only to say that the Court may dispose of all the said cases as they <gap extent="one word" reason="illegible"/> fit. April 16, 1845</p>
+<p>In the several cases of petitions for freedom by Wallace Blue, other Blues, &amp; Laura, against Williams &amp; Colquhoun pending before this Court, I was retained to succeed Mr Dermott, the original council; &amp; having been satisfied by the trial of the first case in the series that I could not succeed for them upon the law as laid down in that case, I desired to withdraw my name; but the court declined to allow me to do so, I have only to say that the Court may dispose of all the said cases as they think fit. April 16, 1845</p>
 
 <p>Daniel Ratcliffe</p>
 

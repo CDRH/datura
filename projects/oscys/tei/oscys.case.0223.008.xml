@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -74,14 +75,18 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1839-03">March 1839</date></term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Pendleton, Isaac Purnell</term>
-<term>Richardson, Joseph</term>
-<term>Taylor, Hugh</term>
+<term xml:id="per.001764">Pendleton, Isaac Purnell</term>
+<term xml:id="per.001770">Richardson, Joseph</term>
+<term xml:id="per.001772">Taylor, Hugh</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -95,10 +100,10 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001765">
 <persName>Kennedy, William</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001766">
 <persName>Purnell, Clarissa</persName>
 </person>
 <person role="attorney_petitioner">
@@ -118,7 +123,7 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>   
+<revisionDesc> <change when="2015-11-09" who="#lkw">added xml:ids; transcription</change> 
 <change when="2015-01-12" who="#kln">reviewed; edited</change>              
 <change when="2014-11" who="#snc">encoded</change>
 </revisionDesc>
@@ -150,7 +155,7 @@ Petition for Freedom</p>
 
 <p>To the first additional Cross Interrogatory this deponent answereth and saith, that in a former answer he stated that his Aunt Miss Purnell opposed his taking the petitioner to Virginia with him (the deponent) and was aware that he (the deponent) was taking the petition from Maryland, and used no other means than earnest <unclear reason="illegible">persuasion</unclear>, as no other means were in her power at the time.</p>
 
-<p>To the 2d Cross Interrogatory. This deponent answereth and saith that Miss Purnell had full knowledge of the fact that the Petitioner was with the deponent in Virginia, and used no coercive means to have him returned to Maryland, but from time to tim earnestly urged this deponent to send the Petitioner back to Maryland. 
+<p>To the 2d Cross Interrogatory. This deponent answereth and saith that Miss Purnell had full knowledge of the fact that the Petitioner was with the deponent in Virginia, and used no coercive means to have him returned to Maryland, but from time to time earnestly urged this deponent to send the Petitioner back to Maryland. 
 
 <pb xml:id="p002" facs="oscys.case.0223.008.002.jpg"/>
 

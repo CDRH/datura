@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -74,36 +75,39 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1810-06">June 1810</date></term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Briscoe, William D.</term>
-<term>Buchanan, Thomas</term>
-<term>Law, John</term>
-<term>Pile, Henry</term>
-<term>Stone</term>
-<term>Thomas, Judy</term>
-<term>Thomas, Robert</term>
+<term xml:id="per.001946">Briscoe, William D.</term>
+<term xml:id="per.001947">Buchanan, Thomas</term>
+<term xml:id="per.000023">Law, John</term>
+<term xml:id="per.001943">Pile, Henry</term>
+<term xml:id="per.001948">Stone</term>
+<term xml:id="per.001949">Thomas, Judy</term>
+<term xml:id="per.001950">Thomas, Robert</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
 <term>Charles County (Md.)</term>
 </keywords>
 
-
 </textClass>
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001935">
 <persName>Thomas, Dennis</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001936">
 <persName>Thomas, Walter</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001937">
 <persName>Scott, Alexander</persName>
 </person>
 <person role="attorney_petitioner">
@@ -124,6 +128,7 @@
 </profileDesc>
         
 <revisionDesc>    
+<change when="2015-11-30" who="#lkw">added xml:ids</change>
 <change when="2015-04-24" who="#kln">reviewed; edited</change>         
 <change when="2015-03-17" who="#ea">Encoded and transcribed.</change>
 </revisionDesc>
@@ -152,7 +157,7 @@ of the same family, that is, of the Thomass', who also claimed their freedom, so
 
 <pb xml:id="p003" facs="oscys.case.0258.006.003.jpg"/>
 
-probable, but of this I was not certain, that Mr. Scott under a similar arrangement with me. It was my Habit to sue for one or two only if a family, <gap extent="one word" reason="illegible"/> claims to freedom, under a <gap extent="one word" reason="illegible"/> in some Instances, and in others positive stipulations that if they suceeded the rest of the family would be discharged.</p>
+probable, but of this I was not certain, that Mr. Scott under a similar arrangement with me. It was my Habit to sue for one or two only if a family, <unclear extent="one word" reason="illegible">during</unclear> claims to freedom, under a <unclear extent="one word" reason="illegible">Hope</unclear> in some Instances, and in others positive stipulations that if they suceeded the rest of the family would be discharged.</p>
 
 <p>Th Buchanan<lb/>
 June 24, 1810</p>

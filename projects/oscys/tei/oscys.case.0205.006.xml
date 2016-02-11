@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -74,13 +75,17 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1835-03">March 1835</date></term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Brenton, Samuel</term>
-<term>Wallingsford, Rachael</term>
+<term xml:id="per.001693">Brenton, Samuel</term>
+<term xml:id="per.001689">Wallingsford, Rachael</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places"> 
@@ -92,19 +97,19 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001683">
 <persName>Allen, Eliza Jane</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001684">
 <persName>Allen, John Davy</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001685">
 <persName>Allen, Julia Maria</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001686">
 <persName>Allen, Sarah Ann</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001687">
 <persName>Wallingsford, Joseph</persName>
 </person>
 <person role="attorney_petitioner">
@@ -125,6 +130,7 @@
 </profileDesc>
         
 <revisionDesc> 
+<change when="2015-11-09" who="#lkw">added xml:ids; transcription</change>  
 <change when="2015-01-12" who="#kln">reviewed; edited</change>            
 <change when="2014-11" who="#snc">encoded</change>
 </revisionDesc>
@@ -149,7 +155,7 @@ Wallingsford</p>
 
 <div2 type="body">
 
-<p>At the trial of this cause the petitioners to support the issue on their part offered in evidence prom the records of Washington County the following Deed of emancipation day recorded (here insert it) and further proved by S. Brenton <del>&amp; Ferguson</del> a competent witness that <del>they</del> he knew the said Sarah the Petr when living with Rachel Wallingsford the Grantor in said Deed, in the City of Washington &amp; also after her emancipation. That <del>they</del> he has so known her for about nine years. That she always since her manumission went about &amp; lived &amp; received her wages as a free woman &amp; maintained herself &amp; her children. That she went about openly as a free person. That her said mistress resided in Washington City for some years before the manumission &amp; afterwards till shortly before her death which happened ten or eleven months ago. That she sometimes was in great want before her death &amp; was relieved by the witness and others &amp; lived and  acted as a <del>single</del> woman separate &amp; apart from her husband. That Joseph Wallingsford lived in the State of Maryland &amp; never did live in this District.</p>
+<p>At the trial of this cause the petitioners to support the issue on their part offered in evidence from the records of Washington County the following Deed of emancipation day recorded (here insert it) and further proved by S. Brenton <del>&amp; Ferguson</del> a competent witness that <del>they</del> he knew the said Sarah the Petr when living with Rachel Wallingsford the Grantor in said Deed, in the City of Washington &amp; also after her emancipation. That <del>they</del> he has so known her for about nine years. That she always since her manumission went about &amp; lived &amp; received her wages as a free woman &amp; maintained herself &amp; her children. That she went about openly as a free person. That her said mistress resided in Washington City for some years before the manumission &amp; afterwards till shortly before her death which happened ten or eleven months ago. That she sometimes was in great want before her death &amp; was relieved by the witness and others &amp; lived and  acted as a <del>single</del> woman separate &amp; apart from her husband. That Joseph Wallingsford lived in the State of Maryland &amp; never did live in this District.</p>
 
 <p>And the Deft. thereupon objected to the admissibility of the said Deed</p>
 

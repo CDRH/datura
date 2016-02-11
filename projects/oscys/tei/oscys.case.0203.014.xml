@@ -10,6 +10,7 @@
 <respStmt>
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
+<name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -73,6 +74,10 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1835-11">November 1835</date></term>
 </keywords>
@@ -92,10 +97,10 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001676">
 <persName>Smith, Samuel</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001677">
 <persName>Conn, Jess</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.000001">
@@ -115,7 +120,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>      
+<revisionDesc>     
+<change when="2016-02-11" who="#kln">transcribed; encoded</change>
 <change when="2016-01-20" who="#snc">transcribed; encoded</change>
 </revisionDesc>
 
@@ -139,7 +145,7 @@ To the Marshal of the District of Columbia, Greeting:</p>
 
 <div2 type="body">
 
-<p>You are hereby commanded to summon Jesse Conn if he shall be found in the County of Washington, that (all excuses set aside) he be and appear before the Circuit Court of the District of Columbia, to be held for the County of Washington, in the City of Washington, on fourth Monday of November next, to <del>testify on the part of</del> answer the Petition for Freedom of Samuel Smith, filed in said Court against him-</p>
+<p>You are hereby commanded to summon Jesse Conn if he shall be found in the County of Washington, that (all excuses set aside) he be and appear before the Circuit Court of the District of Columbia, to be held for the County of Washington, in the City of Washington, on the fourth Monday of November next, to <del>testify on the part of</del> answer the Petition for freedom of Samuel Smith, filed in said Court against him.</p>
 
 <p>Hereof, fail not at your peril; and have you then and there this precept.</p>
 
@@ -147,7 +153,7 @@ To the Marshal of the District of Columbia, Greeting:</p>
 
 <p>Issued the 30th day of March 1835.</p>
 
-<p>W. Brent Clk</p>
+<p>W. Brent, clk</p>
 
 <p>Key</p>
 
@@ -167,7 +173,7 @@ Jesse Conn</p>
 1 Bre</p>
 
 <p>+<lb/>
-Pets for Freedom</p>
+Peto for freedom</p>
 
 <p>Non Est<lb/>
 A. Hunter<lb/>

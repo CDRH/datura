@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -74,12 +75,16 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1839-03">March 1839</date></term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Pendleton, Isaac Purnell</term>
+<term xml:id="per.001764">Pendleton, Isaac Purnell</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -91,10 +96,10 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001765">
 <persName>Kennedy, William</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001766">
 <persName>Purnell, Clarissa</persName>
 </person>
 <person role="attorney_petitioner">
@@ -114,7 +119,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>             
+<revisionDesc> 
+<change when="2015-11-09" who="#lkw">added xml:ids; transcription</change>           
 <change when="2015-01-12" who="#kln">reviewed; edited</change>  
 <change when="2014-11" who="#snc">encoded</change>
 </revisionDesc>
@@ -147,7 +153,7 @@
 
 <pb xml:id="p003" facs="oscys.case.0223.010.003.jpg"/>
 
-<p>If the jury believe from the evidence aforesaid that the petr being the slave of the deft and residing with her in Maryland and by her consent employed by the sd. Pendleton as his servant was in the year 1834 carried by the sd I. P. Pendleton from said sate to the state of Va without the consent of authority either <gap extent="one word" reason="illegible"/> or subsequent of the <unclear reason="illegible">deft</unclear>. Then it is lawful for the deft to <gap extent="two words" reason="illegible"/> petitioner &amp; carry him back to Maryland at any time and the deft does not lose her title to the petitioner by any delay in exercising that right.</p>
+<p>If the jury believe from the evidence aforesaid that the petr being the slave of the deft and residing with her in Maryland and by her consent employed by the sd. Pendleton as his servant was in the year 1834 carried by the sd I. P. Pendleton from said state to the state of Va without the consent or authority either <gap extent="one word" reason="illegible"/> or subsequent of the <unclear reason="illegible">deft</unclear>. Then it is lawful for the deft to <gap extent="one words" reason="illegible"/> said petitioner &amp; carry him back to Maryland at any time and the deft does not lose her title to the petitioner by any delay in exercising that right.</p>
 
 </div2>
 
@@ -163,7 +169,7 @@
 
 <div2 type="body">
 
-<p>If the jury believe from the evidence that the petitioner having become involved in a breach of the peace in the State of Maryland in company with I. Purnell Pendleton a citizen of said state, and to avoid her consequences thereof the said Pendleton fled to Va. carrying the petitioner with him, &amp; there remained with Petitioner and employing him as his servant during <unclear reason="illegible">two</unclear> years and upwards but never abandoned his residence in Myd and always entertained the purpose of returning to Maryland when he could <del>not</del> do so with safety and did not return the petitioner to Myd, only because he was afraid of the consequences thereof to the petitioner unless accompanied by said Pendleton &amp; said Pendleton at the end of said time <del>returned to</del> sent the petitioner to the City of Washington &amp; afterwards returned himself to Myd. 
+<p>If the jury believe from the evidence that the petitioner having become involved in a breach of the peace in the State of Maryland in company with I. Purnell Pendleton a citizen of said state, and to avoid the consequences thereof the said Pendleton fled to Va. carrying the petitioner with him, &amp; there remained with Petitioner and employing him as his servant during <unclear reason="illegible">two</unclear> years and upwards but never abandoned his residence in Myd and always entertained the purpose of returning to Maryland when he could <del>not</del> do so with safety and did not return the petitioner to Myd, only because he was afraid of the consequences thereof to the petitioner unless accompanied by said Pendleton &amp; said Pendleton at the end of said time <del>returned to</del> sent the petitioner to the City of Washington &amp; afterwards returned himself to Myd. 
 
 <pb xml:id="p006" facs="oscys.case.0223.010.006.jpg"/>
 

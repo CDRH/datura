@@ -6,10 +6,36 @@
 #   every project
 #   It is recommended that you override only those parts that you need in
 #   the project specific configuration files (projects/name/config/config.yml)
+#   For example, you will need a solr_core name for each project
+#   You may place the settings under development / production if the environments
+#   differ, but you may put things outside of development / production if the
+#   setting will be the same for both.  The script locations below are applied to
+#   both development and production, but if you need to run a different script for
+#   each environment, you could copy whichever script override you need into
+#   development and production
+
+##################################################################
+#   Ignore These Unless If You Really Want to Change Some Logs   #
+##################################################################
 
 log_old_number: 4   # number of log files before beginning to erase
 log_size: 1024000   # size of log file in bytes
 log_level: Logger::WARN  # could change to INFO for more detail
+
+########################
+#   Script Locations   #
+########################
+
+# formats to solr transformation locations
+tei_solr_xsl: scripts/xslt/cdrh_to_solr/solr_transform_tei.xsl
+vra_solr_xsl: scripts/xslt/cdrh_to_solr/solr_transform_vra.xsl
+dc_solr_xsl: scripts/xslt/cdrh_to_solr/solr_transform_dc.xsl
+csv_solr_ruby: scripts/ruby/csv_to_solr.rb
+# formats to html snippets transformation locations
+tei_html_xsl: scripts/xslt/cdrh_tei_to_html/tei.p5.xsl
+vra_html_xsl: 
+dc_html_xsl: scripts/xslt/cdrh_dc_to_html/dublin_core_to_html.xsl
+csv_html_ruby: scripts/ruby/csv_to_html.rb
 
 ###################
 #   Development   #
@@ -18,12 +44,7 @@ log_level: Logger::WARN  # could change to INFO for more detail
 development:
   # solr information
   solr_path: http://server.unl.edu:port/solr/
-
-  # xsl transformation locations
-  tei_xsl: scripts/xslt/cdrh_to_solr/solr_transform_tei.xsl
-  vra_xsl: scripts/xslt/cdrh_to_solr/solr_transform_vra.xsl
-  dc_xsl: scripts/xslt/cdrh_to_solr/solr_transform_dc.xsl
-  html_xsl: scripts/xslt/cdrh_tei_to_html/tei.p5.xsl
+  solr_core: name_of_core
 
   # NOTE! If you are altering ANY of the xsl_params you must
   #   copy over ALL of them to the project specific config file
@@ -35,12 +56,6 @@ development:
     pb: true        # page breaks
     project: full_name_of_project
     slug: short_name_of_project
-
-  # optionally run some script before or after xsl
-  # script will need to be set up with #! in order to execute
-  # WARNING:  Functionality does not yet exist
-  # pre_xsl:
-  # post_xsl:
 
 ##################
 #   Production   #
@@ -49,11 +64,7 @@ production:
   # solr information
   solr_path: http://server.unl.edu:port/solr/
   solr_core: name_of_core
-  # xsl transformation locations
-  tei_xsl: scripts/xslt/cdrh_to_solr/solr_transform_tei.xsl
-  vra_xsl: scripts/xslt/cdrh_to_solr/solr_transform_vra.xsl
-  dc_xsl: scripts/xslt/cdrh_to_solr/solr_transform_dc.xsl
-  html_xsl: scripts/xslt/cdrh_tei_to_html/tei.p5.xsl
+
   # NOTE! If you are altering ANY of the xsl_params you must
   #   copy over ALL of them to the project specific config file
   xsl_params:
@@ -64,7 +75,3 @@ production:
     pb: true        # page breaks
     project: full_name_of_project
     slug: short_name_of_project
-  # optionally run some script before or after xsl
-  # script will need to be set up with #! in order to execute
-  # pre_xsl:
-  # post_xsl:

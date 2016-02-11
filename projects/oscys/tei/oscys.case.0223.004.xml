@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -74,20 +75,24 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1839-03">March 1839</date></term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Pendleton, Isaac Purnell</term>
-<term>Pendleton, Serena</term>
-<term>Purnell, Frederick</term>
-<term>Purnell, Isaac</term>
-<term>Richardson, Joseph</term>
-<term>Strother, John</term>
-<term>Taylor, Hugh</term>
-<term>Terrell, Adeline</term>
-<term>Thorndike, Mary M.</term>
+<term xml:id="per.001764">Pendleton, Isaac Purnell</term>
+<term xml:id="per.001767">Pendleton, Serena</term>
+<term xml:id="per.001768">Purnell, Frederick</term>
+<term xml:id="per.001769">Purnell, Isaac</term>
+<term xml:id="per.001770">Richardson, Joseph</term>
+<term xml:id="per.001771">Strother, John</term>
+<term xml:id="per.001772">Taylor, Hugh</term>
+<term xml:id="per.001773">Terrell, Adeline</term>
+<term xml:id="per.001774">Thorndike, Mary M.</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -102,10 +107,10 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001765">
 <persName>Kennedy, William</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001766">
 <persName>Purnell, Clarissa</persName>
 </person>
 <person role="attorney_petitioner">
@@ -126,6 +131,7 @@
 </profileDesc>
         
 <revisionDesc> 
+<change when="2015-11-09" who="#lkw">added xml:ids</change>
 <change when="2015-01-12" who="#kln">reviewed; edited</change>            
 <change when="2014-11" who="#snc">encoded</change>
 </revisionDesc>
@@ -196,7 +202,7 @@ and her heirs at law would be Mrs Adeline <del>Turill</del> Terrell &amp; Mrs Ma
 
 <p>To the 10th Interrogatory. This deponent for his answer to the first part of this Interrogatory refers to his answer to the 3rd Interrogatory on the part of the Defendant, and to the latter part of this Interrogatory, this deponent saith that the petitioner remained a greater part of the time in Virginia with occasional trips across into Maryland</p>
 
-<p>To the 2nd Interrogatory. This deponent saith that he permitted the  Petitioner to hire himself out at the Springs in Virginia one or two seasons and in the absence of this deponent he may have hired himself at other places at Berkeley Springs he hired himself to Mrs John Strother this deponent gave the Petitioner leave to keep his wages and to the best of this deponents knowledge Miss Purnell received no part or parcel of the said wages, and further this deponent saith not.</p>
+<p>To the 2nd Interrogatory. This deponent saith that he permitted the  Petitioner to hire himself out at the Springs in Virginia one or two seasons and in the absence of this deponent he may have hired himself at other places at Berkeley Springs he hired himself to Mr John Strother this deponent gave the Petitioner leave to keep his wages and to the best of this deponents knowledge Miss Purnell received no part or parcel of the said wages, and further this deponent saith not.</p>
 
 <p>Given under my hand this 3rd day of Decr 1838.<lb/>
 I Purnell. Pendleton.</p>

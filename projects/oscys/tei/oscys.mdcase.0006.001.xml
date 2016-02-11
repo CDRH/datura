@@ -1,0 +1,1525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="http://digitalhumanities.unl.edu/resources/schemas/tei/TEIP5.2.6.0/tei_all.rng" type="xml"?> 
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.mdcase.0006.001">
+    
+<teiHeader>
+<fileDesc>
+<titleStmt>
+<title>Robert Thomas v. Henry Pile. Discovery</title>
+<principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
+<principal n="Mu&#241;oz, Trevor" xml:id="tm">Trevor Mu&#241;oz</principal>
+<principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
+<respStmt>
+<resp>transcription and encoding</resp>
+<name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
+<name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
+</respStmt>
+<sponsor>University of Nebraska-Lincoln</sponsor>
+<sponsor>University of Maryland</sponsor>
+<sponsor>National Endowment for the Humanities</sponsor>
+</titleStmt>
+    
+<editionStmt>
+<edition>
+<date>2014</date>
+</edition>
+</editionStmt>
+            
+<publicationStmt>
+<authority>O Say Can You See</authority>
+<publisher>University of Nebraska-Lincoln</publisher>
+<distributor>
+<name>Center for Digital Research in the Humanities</name>
+<address>
+<addrLine>319 Love Library</addrLine>
+<addrLine>University of Nebraska&#8211;Lincoln</addrLine>
+<addrLine>Lincoln, NE 68588-4100</addrLine>
+<addrLine>cdrh@unl.edu</addrLine>
+</address>
+</distributor>
+<idno type="project">oscys.mdcase.0006.001</idno>
+<idno type="case">oscys.caseid.0342</idno>
+
+<availability>
+<licence>http://creativecommons.org/licenses/by-nc-sa/3.0/</licence>
+<p>Licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. Derivatives must be credited to O Say Can You See, made available non-commercially, and distributed under the same terms. Requests for permission for commercial publication or other use should be emailed to the project team.</p>
+</availability>
+</publicationStmt>
+            
+<sourceDesc>
+<bibl>
+<title level="m" type="main">Discovery</title>
+<date/>
+<note type="project">Our transcription is based on a digital image of the original.</note>
+</bibl>
+<msDesc>
+<msIdentifier>
+<repository>Maryland State Archives</repository>
+<collection>General Court of Western Shore (Judgments)</collection>
+<idno>MSA S498-343</idno>
+</msIdentifier>
+</msDesc>
+</sourceDesc>
+</fileDesc>
+        
+<profileDesc>
+<textClass>
+<keywords scheme="original" n="category">
+<term>Supplementary Documents</term>
+</keywords>
+    
+<keywords scheme="original" n="subcategory">
+<term>Discovery</term>
+</keywords>
+
+<keywords scheme="original" n="type">
+<term>Civil</term>
+</keywords>
+
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
+<keywords scheme="original" n="term">
+<term><date when="1794-10">October 1794</date></term>
+</keywords>
+    
+<keywords scheme="lcsh" n="people">
+<term xml:id="per.002025">Barber, Cornelius</term>
+<term xml:id="per.001951">Barnes, Henry</term>
+<term xml:id="per.001972">Barnes, Richard</term>
+<term xml:id="per.002026">Boarman, Dorothea</term>
+<term xml:id="per.002027">Boarman, Ignatius Gerrard</term>
+<term xml:id="per.002077">Boarman, Leonard</term>
+<term xml:id="per.002028">Boarman, Raphael</term>
+<term xml:id="per.002029">Boarman, Sarah</term>
+<term xml:id="per.002083">Brice, Jonathan</term>
+<term xml:id="per.001946">Briscoe, William D.</term>
+<term xml:id="per.002030">Carnes, Margaret</term>
+<term xml:id="per.002031">Carry, Elizabeth</term>
+<term xml:id="per.002032">Cartwright, John</term>
+<term xml:id="per.002079">Cate</term>
+<term xml:id="per.001953">Chapman, Henry Henley, 1764-1821</term>
+<term xml:id="per.002033">Contee, Benjamin</term>
+<term xml:id="per.002034">Cooper, Harry</term>
+<term xml:id="per.002035">Cooper, Nanny</term>
+<term xml:id="per.002036">Curtis, Mary</term>
+<term xml:id="per.002084">Digges, Henry</term>
+<term xml:id="per.002037">Digges, Jane</term>
+<term xml:id="per.002080">Doyne, Sarah</term>
+<term xml:id="per.002038">Dyson, Walter</term>
+<term xml:id="per.002039">Eden, Elizabeth</term>
+<term xml:id="per.002040">Fowke, Sarah</term>
+<term xml:id="per.002078">Freeman, James</term>
+<term xml:id="per.002088">Good, William</term>
+<term xml:id="per.002082">Guss</term>
+<term xml:id="per.001493">Gwinn, John</term>
+<term xml:id="per.002041">Hammersly, Francis</term>
+<term xml:id="per.002091">Hanson, Walter</term>
+<term xml:id="per.002100">Harwood, Richard</term>
+<term xml:id="per.002042">Isabel</term>
+<term xml:id="per.002043">Jack</term>
+<term xml:id="per.002090">Jamison, Thomas</term>
+<term xml:id="per.002044">Leigh, Sophia</term>
+<term xml:id="per.002045">Llewellin, Charles</term>
+<term xml:id="per.002046">Mancaster, James</term>
+<term xml:id="per.002047">McClaron, Jannett</term>
+<term xml:id="per.002048">McConchie, William</term> <!-- make new, possibly xml:id="per.001963" William McConchie Jr. -->
+<term xml:id="per.002049">McKoy, Mary</term>
+<term xml:id="per.002050">McPherson, Alexander</term>
+<term xml:id="per.001964">Mingo, Betty</term>
+<term xml:id="per.002051">Mingo, Charles</term>
+<term xml:id="per.002052">Mingo, Robin</term>
+<term xml:id="per.002053">Neale, Wilfred</term>
+<term xml:id="per.002081">Parnham</term>
+<term xml:id="per.002054">Pile, Elizabeth</term>
+<term xml:id="per.002068">Ray, Bridget</term>
+<term xml:id="per.002069">Ray, Charles</term>
+<term xml:id="per.002070">Ray, Sarah</term>
+<term xml:id="per.002071">Reeder, Margaret</term>
+<term xml:id="per.002072">Reeder, Richard Robins</term>
+<!-- <term>Rob</term> I think this is Robert Thomas, the petitioner -->
+<term xml:id="per.002055">Semple, John</term>
+<term xml:id="per.002056">Simms, William</term> <!-- make new, possibly  xml:id="per.001328" -->
+<term xml:id="per.002076">Smith</term><!-- Mrs. -->
+<term xml:id="per.002057">Smith, Basil</term>
+<term xml:id="per.002087">Smith, Henry</term>
+<term xml:id="per.002058">Stone, Catherine</term>
+<term xml:id="per.002059">Stone, David</term>
+<term xml:id="per.002060">Stone, Mary</term>
+<term xml:id="per.001532">Stone, Michael Jenifer, 1747-1812</term>
+<term xml:id="per.002085">Stone, Richard</term>
+<term xml:id="per.002093">Stone, Samuel</term>
+<term xml:id="per.002062">Stone, Thomas</term>
+<term xml:id="per.002063">Swann, James</term>
+<term xml:id="per.002089">Swann, John</term>
+<term xml:id="per.002064">Swann, William</term><!-- make new, possibly  xml:id="per.001359" -->
+<term xml:id="per.002086">Thomas</term><!-- first husband of Catherine Stone -->
+<term xml:id="per.001932">Thomas, Elizabeth</term> <!-- check -->
+<term xml:id="per.002065">Thomas, John</term><!-- make new -->
+<term xml:id="per.001949">Thomas, Judy</term>
+<term xml:id="per.002016">Thomas, Peg</term>
+<term xml:id="per.002066">Thomas, Sophia</term>
+<term xml:id="per.002092">Thomas, William, Jr.</term>
+<term xml:id="per.002067">Thompson, Ann</term><!-- make new, possibly  xml:id="per.000302" -->
+<term xml:id="per.002073">Webster, Thomas</term>
+<term xml:id="per.002074">Wharton, Henry</term>
+<term xml:id="per.002075">Wheeler, Henrietta</term>
+</keywords>
+
+<keywords scheme="lcsh" n="places">
+<term>Charles County (Md.)</term>
+<term>Saint Mary's County (Md.)</term>
+<term>Port Tobacco (Md.)</term>
+<term>Pointon Manor (Md.)</term>
+</keywords>
+
+</textClass>
+            
+<particDesc>   
+<listPerson>            
+<person role="petitioner" xml:id="per.001950">
+<persName>Thomas, Robert</persName>
+</person>
+<person role="defendant" xml:id="per.001943">
+<persName>Pile, Henry</persName>
+</person>
+<person role="attorney_petitioner" xml:id="per.001393">
+<persName>Duvall, Gabriel, 1752-1844</persName>
+</person>
+<person role="attorney_defendant" xml:id="per.001495">
+<persName>Key, Philip Barton, 1757-1815</persName>
+</person>
+</listPerson>
+            
+<listOrg>
+<org>
+<orgName>Maryland. General Court of the Western Shore</orgName>
+<placeName>Annapolis (Md.)</placeName>
+</org>
+</listOrg>   
+</particDesc> 
+</profileDesc>
+        
+<revisionDesc>      
+<change when="2016-01" who="#kln">reviewed; edited</change>      
+<change when="2015-12-04" who="#lkw">added xml:ids; changed George Duvall to Gabriel Duvall; commented out Rob; added Samuel Stone, William Thomas, Walter Hanson, Thomas Jamison, John Swann, Thomas Jamison, Henry Smith, Captain Thomas, Richard Stone, Henry Digges, Jonathan Brice, Guss, Mrs. Parnham, Sarah Doyne, Cate, Mrs. Smith, Leonard Boarman, and James Freeman to people; transcription</change> 
+<change when="2015-06-09" who="#ea">encoded and transcribed</change>
+</revisionDesc>
+
+</teiHeader>
+    
+<text>
+
+<body>  
+               
+<div1 type="case">
+
+<pb xml:id="p001" facs="oscys.mdcase.0006.001.001.jpg"/>
+
+<div2 type="caption">
+
+<p>Robert Thomas<lb/>
+agt<lb/>
+Henry Pile</p>
+
+<p>Petition for freedom in the General Court</p>
+
+<p>Petitioners Interrogatories</p>     
+
+</div2>
+
+<div2 type="body">
+
+<p>1. Do you know the parties in this suit, and how long have you known them?</p>
+
+<p>2. Do you know Judah, the mother of the Petitioner, &amp; how long have you known her?</p>
+
+<p>3. Do you know Sophia the Grand Mother of the Petitioner &amp; how long have you known her?</p>
+
+<p>4. Did you know Elizabeth commonly called Betty Mingo the Great Grandmother of the Petitioner, and when; and do you know that the said Betty was the daughter of a white woman?</p>
+
+<p>5. Do you know that or have you been informed and by whom that the petitioner or any of his ancestors are descended from a white woman? relate your knowledge fully and freely.</p>
+
+<p>6th. Have you any further knowledge of the subject, if you have, relate it fully and freely?</p>
+
+<p>G Duvall for Petr.</p>
+
+<p>Mrs. Mary McKoy aged sixty nine years being sworn on the Holy Evangils of Almighty God deposeth and saith, that she was well acquainted with Mr. David Stone of Charles County and with his family and negroes, That she knew Peg many years in possession of David Stone before he sold her to John Semple. That this deponent used to frequent Mr. David Stones Family as a Midwife and that she never heard that Peg or any of her Family were entitled to their Freedom or that they set up any claim to it until the Butlers were set free; That David Stone was a man of Good Character and a good master to his Slaves as far as she knew</p>
+
+<p>Sworn before the Subscriber on the 23d March 1793.<lb/>
+Henry Barnes</p>
+
+<p>Taken in the presence of us<lb/>
+G Duvall for Petr.<lb/>
+Philip B Key for Defdt.</p>
+
+<p>The Deposition of Henrietta Wheeler of Charles County aged about 38 or 39 years when this 23d day of march 1793 being first duly sworn on the Holy Evangely of Almighy God, saith that she has known Henry Pile about four or five years, but does not know personally Robert Thomas the Petitioner; that she <fw type="catch">knows,</fw>   
+
+<pb xml:id="p002" facs="oscys.mdcase.0006.001.002.jpg"/>
+
+knows John who petitioned against Raphael Boarman and has known him from his Infancy; he is the son of a dark mulatto woman named Nanny commonly called Nanny Cooper; that she belonged when the deponent first knew her which is ever since she can remember, to Basil Smith who married the Daughter of Mr. Wharton of St. Marys County; that she has heard Mrs Dorotha Boarman deceased, the late wife of the aforesaid Raphael Boarman say that the family of the aforesaid John son of Nanny Cooper came of a free white woman, and that they would be entitled to be free, but that the white woman aforesaid married a Negro, and in them days the marriage of a free white woman with a Negro enslaved her posterity; Being asked if she heard the said Dorothea Boarman say, with what Negro the white woman intermarried? Answers she did not; that she did not ask her any questions about it, as she had often heard before; and this deponent always understood from the aforesaid Dorothea Boarman that they were detained as slaves on account of their ancestor having intermarried with a slave. And she further saith that the said Dorothea Boarman was a Daughter of the aforesaid Basil Smith, and Grand Daughter of the aforesaid Mr. Wharton; and this deponent has often heard, when she was young, that they were entitled to be free; she further saith that this conversation has happened since the said Dorothea Boarman was married to Raphael Boarman and had children by him; and she thinks about ten years ago: and she further saith that she has heard the aforesaid Raphael Boarman in the course of the last year say that his said wife had told him the same as this deponent has related was told to her as above; and further the said Raphael Boarman at the time aforesaid said that his said Wife had asked him if he thought they were free, if he would desire to keep them as slaves, and to which he answered that he would not; but that as their ancestor had married a Negro, the law enslaved them. she further saith that she has known several of the family of the aforesaid John and has generally understood them to be forward; and that they were as well fed and cloathed as negroes usually are and were equally indulged. That the deponent ever since she could remember was intimate in Basil Smiths family having been always a near neighbour. This deponent further saith that she never understood from Mrs Boarman nor did she ask her, of whom she derived her Information respecting the descent of these negroes. That she does not know from whom <fw type="catch">she,</fw>
+
+<pb xml:id="p003" facs="oscys.mdcase.0006.001.003.jpg"/>
+
+she heard the report of their being descended from a White Woman except from Mrs Boarman but probably she has heard it as often from the negroes and from white people; That this deponent always understood the dispute was whether the ancestor of these negroes was married to a slave or not; This deponent says that she told Mrs Boarman that Nanny Cooper and her ancestor was not married to a slave, but Mrs Boarman made answer that Nanny knew nothing about it for they were married; and this deponent never heard it questioned in Mr Smith's Family that these people were descended from a white woman, but the Dispute was whether married or not? And further she saith that she always understood that Nanny Cooper was the Daughter of Betty Mingo who belonged to Mrs Pile mother of the Reverend Mr Pile: she used to go to see her as her mother every year; and she also saith that Mrs Boarman deceased was a descent woman and easy and peaceable in her disposition and indulgent to her slaves, but she never knew her to suffer any improper familiarity with them.</p>
+
+<p>Sworn before Henry Barnes</p>
+
+<p>Taken in the presence of Us<lb/>
+G Duvall for Petrs<lb/>
+Philip B Key for Defdt.</p>
+
+<p>Mrs Ann Thompson aged about sixty years being sworn on the Holy Evangils of Almighty God deposeth, that she was a niece of David Stone who sold Peg to John Semple, that she was bought up within one or two miles of David Stone and very intimate in his family, and that she never heard or knew of Peg or any of her ancestors claiming or being entitled to their Freedom, that Peg and her relations in Mr Stones Possession were always claimed and held as slaves and treated by Mr Stone like his other slaves. And this deponent never heard that any of Peg's Family had any pretensions to being free or claimed their Freedom or setting up any descent from a white woman until after the family of Butler Negroes obtained their Freedom; This deponent never heard or knew of Peg's Mother or Grandmother; This deponent knew Mrs. Catherine Stone the second wife and widow of Thomas Stone, that she was a very old woman when she died, and was a woman of very good Character.</p>
+
+<p>Sworn to before the subscriber on the 23d March 1793.<lb/>
+Henry Barnes</p>
+
+<p>Taken in presence of us<lb/>
+G Duvall for Petrs.<lb/>
+Philip B Key for Defdt.</p>
+
+</div2>
+
+<div2 type="caption">
+
+<p>Robert Thomas<lb/>
+vs<lb/>
+Henry Pile</p>
+
+<p>Petition for freedom in the Genl Court</p>
+
+</div2>
+
+<div2 type="body">
+
+<p>Interrogatories contained in a piece of paper signed <fw type="catch">Philip</fw>
+
+<pb xml:id="p004" facs="oscys.mdcase.0006.001.004.jpg"/>
+
+Philip B Key for defdts and proposed to Leonard Boarman</p>
+
+<p>1st In: Did you know Betty commonly called (Mingo) who died in the Possession of Mrs Pile?</p>
+
+<p>Answer, I did know Betty commonly called (Mingo) who died in the Possession of Mrs Pile.</p>
+
+<p>2d In: Did she formerly belong to Mr Wharton who removed from Charles to St Mary's County and how long since, did she formerly belong to John Stone Father of David Stone of Charles County and sold or exchanged for another negro to said Wharton?</p>
+
+<p>Answer. She formerly belonged to Mr Wharton who lived in St Marys County but do not know how long since, neither do I know that she ever belonged to John Stone Father of David Stone of Charles County or that she was sold or exchanged for another Negro to said Wharton.</p>
+
+<p>3d In: In what year did Betty Mingo die and how old was she reputed to be when she died?</p>
+
+<p>Answer: I do not know what year she died in, she was upwards of eighty years old.</p>
+
+<p>4th In: Did she leave a number of Children, Grand children and Great Grand Children and among them a great number of men and women grown?</p>
+
+<p>Answer: I have heard that she left a number of Children, Grand Children and Great Grand Children and I knew several of them myself that were grown up.</p>
+
+<p>5th In: Do you know or have you heard that Betty Mingo had any Children while she belonged to John Stone and what were their names?</p>
+
+<p>Answer: I do not know neither have I heard that Betty Mingo had any Children while she belonged to John Stone.</p>
+
+<p>6th In: Did you know Margaret commonly called Peg who died in the possession of John Semple?</p>
+
+<p>Answer, I did not know her.</p>
+
+<p>7th In: When Peg belonged to Semple was she his Cook and house Keeper, intrusted with the care of his House A woman who was acquainted with and conversed freely and boldly; and was noted by most people of all Ranks and who frequented Port Tobacco Town?</p>
+
+<p>Answer: I have heard that Semple had a Negro Woman named Peg and that she was the Daughter of Betty Mingo, and that the sd. Peg was Semples Cook, and entrusted with the care of his House.</p>
+
+<p>8th In: Are you acquainted with the Characters of the Family of the petitioner and of those to whom she respectively belonged if so have you not heard that these Negroes were remarkable <fw type="catch">for</fw>
+
+<pb xml:id="p005" facs="oscys.mdcase.0006.001.005.jpg"/>
+
+for for their Interpidity, Independence and understanding, and that their owners were Industrious fed and cloathed them well, and made them work and gave them as much Liberty as usual?</p>
+
+<p>Answer. I was Overlooker for Mrs Pile's for 13 years who had several of the family of the petitioner and during that time the behaved and conducted themselves very well, they were made to work they were fed and cloathed well and had as much Liberty as usual</p>
+
+<p>9th In. Have you ever heard that the Petitioner or any of his family claimed freedom or that they were entitled to it, at what time did you first hear such conversation?</p>
+
+<p>Answer. I have heard that some of the Family of the Petitioners claimed their Freedom upwards of forty years ago and while I lived with Mr Pile Betty Mingo sold a Horse belonging to her and gave a Hhd of Tobacco to a Lawer who visited at Mrs Piles to plead for her Freedom.</p>
+
+<p>10th In: Did you ever hear that this Family claimed their freedom in any other Way than that set up?</p>
+
+<p>Answer: I have never heard that this Family claimed their Freedom in any other way than that set up.</p>
+
+<p>11th In: Has the Petitioner been held in Slavery and reputed a Slave, were his ancestors by the female side held in slavery and reputed to be slaves and for what length of Time?</p>
+
+<p>Answer. The Petitioner and his ancestors by the female Pile has been held in Slavery and reputed to be slaves ever since I knew them.</p>
+
+<p>Charles County Set May 22d: 1792. I hereby certify that the foregoing Interrogatories and answers thereto given on oath have been attentively considered by the Deponant and he declares the said answers to be just and true and these answers to the Interrogatories to which the severally relate according to the best of his recollection and Belief which he further confirms by subscribing his name thereunto<lb/>
+Leonard Boarman</p>
+
+<p>Sworn &amp; subscribed Before<lb/>
+Wm D Briscoe</p>
+
+<p>Admitted to be read in Evidence<lb/>
+G Duvall for Petrs<lb/>
+Philip B Key for Defdt</p>
+
+<p>Charles County to wit</p>
+
+<p>The Deposition of Sarah Fowke aged sixty one or sixty two years taken in consequence of the annex'd Letter of Notice and being sworn upon the Holy Evangels of Almighty God deposeth and saith that she knew Peg who lived <fw type="catch">with</fw>
+
+<pb xml:id="p006" facs="oscys.mdcase.0006.001.006.jpg"/>
+
+with Mr David Stone and conceived her to be his property. That Peg afterwards lived with John Sample in Port Tobacco, and that she was a black woman. Taken the 15th day of October 1792 before the subscriber one of the Trustees of the Peace for the County aforesaid<lb/>
+James Freeman</p>
+
+<p>Sarah Fowke being further sworn on the 22d day of March 1793, and being asked if she was acquainted with the late Mrs Eden answers she was well acquainted with her, but never had any conversation with her respecting the Subject; that she has understood that the late Mrs Pile was Daughter of Mr Wharton with whom Thomas Stone exchanged Betty Mingo for Cate, as this deponent has heard</p>
+
+<p>(Sworn before)</p>
+
+<p>Admitted to be read in Evidence<lb/>
+G Duvall for Petr<lb/>
+Philip B Key for Defds</p>
+
+<p>Miss Mary Stone aged fifty six years being sworn deposeth that she knew David Stone ever since she could remember that she knew of a negro woman named Peg by whom he either swopp'd or sold to John Sample about thirty years ago: That Peg was black and her hair woolly; That Mr. Stone was a good Master, that she lived all her life within two miles of David Stone; that he was a relation of hers and she was very intimate in the family and their negroes mutually intermarried with each other: That Peg was a Daughter of Betty Mingo's; That she never heard or understood in the neighbourhood that Peg or any of her family were entitled to Freedom; That she never knew Betty Mingo who was said to be mother of Peg: This Deponent knew Catherine Stone who was a very old woman very religious and well disposed and of very good Character; that she knew the late Mrs. Eden and was well acquainted with her, but never had any conversation with her on this subject; that she very well remembers Mrs Catherine Stone and she has been dead about forty years; That Mrs Catherine Stone was Mother in law to David Stone, being the second wife and widow of Thomas Stone.</p>
+
+<p>Sworn before the subscriber this 22d March 1793<lb/>
+Richd. Barnes</p>
+
+<p>Taken in the presence of us<lb/>
+G Duvall Atty for Petr<lb/>
+Philip B Key for Defds</p>
+
+<p>The Deposition of Richard Barnes Esqr of Charles County deposeth and saith that from his childhood until he was 14 <fw type="catch">years,</fw>
+
+<pb xml:id="p007" facs="oscys.mdcase.0006.001.007.jpg"/>
+
+years of age, he lived in the neighbourhood of David Stone and knew Peg after John Semple bought her, but never heard or understood that Peg or any of her Family were entitled to their Freedom, until since the presence suit<lb/>
+Richd. Barnes</p>
+
+<p>Taken in presence of us<lb/>
+G Duvall Atty for Petr<lb/>
+Philip B Key for Defdt</p>
+
+<p>Thomas Webster of Charles County aged seventy years and upwards (a mulatto) being sworn on the Holy Evangels of Almighty God deposeth that he was born free and of a free white woman and that he knew David Stone and lived near her when he died that David Stone held and possessed a Negro woman called Peg as a slave whom he afterwards parted with to John Semple, That he never heard that Peg was entitled to her Freedom except from herself, that she used to swear that she was entitled to be free only might overcame her, but this deponent never heard from any other person that she had a right to Freedom; that David Stone was a good man and kind master, but Peg was a woman of high spirit and they could not agree; This deponent did not know <del>this</del> Mrs Catherine Stone widow of Thomas Stone, That this deponent knew Betty Mingo Mother of Peg, and that she was married to a mulatto man called Harry Cooper, That this deponent never heard that Betty Mingo was entitled to or had any claim to her Freedom<lb/>
+Sworn the 23d March 1793. Before Henry Barnes</p>
+
+<p>Taken in the presence of us<lb/>
+G Duvall Atty for Petrs<lb/>
+Philip B Key for Defds</p>
+
+<p>Charles County to wit The Deposition of Sarah Doyne aged fifty eight years or thereabouts taken in consequence of the annex'd Letter of Notice and being sworn upon the Holy Evangels of Almighty God deposeth and saith, That she knew Betty Mingo upwards of Forty years ago. That she was a yellow woman and a supposed slave to Mrs Pile, That she was a cook for the aforesaid Mrs Pile, That she had a Daughter called Peg who lived with John Sample in Port Tobacco, That Peg was black. That she knew Peg when she lived with David Stone and that she was called his Slave. she never understood that Betty Mingo came from a white woman nor did she ever understand that Betty or her Daughter Peg or any of their family claim'd their freedom til since they petitioned that she lived near Mrs Piles <fw type="catch">for</fw>
+
+<pb xml:id="p008" facs="oscys.mdcase.0006.001.008.jpg"/>
+
+for several years with Mrs Parnham sister to Mrs Piles and was intimate with her and frequently at her house she never heard her say that Betty came from White parents. Taken the 15th day of October 1792. before the subscriber one of the Justices of the Peace for the County aforesaid<lb/>
+James Freeman</p>
+
+<p>Admitted to be read in Evidence<lb/>
+G Duvall for Petrs.</p>
+
+<p>Charles County to wit</p>
+
+<p>The Deposition of Margaret Carnes aged forty six years or thereabouts taken in consequence of the annex'd Letter of Notice and being sworn upon the Holy Evangels of Almighty God deposeth and saith, that she heard Mr Stones Boy called Guss offer her mother Jennet McClaron fifteen shilling to swear that his Grand Mother was a white woman, That she understood that he meant Betty Mingo the mother of Peg who formerly belong'd to John Sample. Taken the 15th day of October 1792. before the subscriber one of the Justices of the Peace for the county aforesaid<lb/>
+James Freeman</p>
+
+<p>Admitted to be read in Evidence<lb/>
+G Duvall atty for Petrs</p>
+
+<p>Charles County to wit</p>
+
+<p>The Deposition of Jannett McClaron aged eighty nine years or thereabouts taken in consequence of the annex'd Letter of Notice and being sworn upon the Holy Evangels of Almighty God deposeth and saith, that she knew Peg and understood she belonged to John Sample, That Peg was a black woman. That John Sample gave David Stone a negro man for her who was called Jack. That Peg belonged to Sample upwards of twenty years ago; That she never understood Peg or her mother claim'd their freedom; That she was offered by Mr. Stones boy who she supposes to be between fifteen and twenty years of age, and one of the petitioners who said he was one of the Race of Peg, two Dollars to swear that his Grand Mother was white meaning the mother of Peg. Taken the 15th day of October 1792. before the Subscriber one of the Justices of the peace for the County aforesaid<lb/>
+James Freeman</p>
+
+<p>Mrs. McLaran further deposes that it is forty or fifty years ago since she was acquainted with David Stone and his Family, That Peg was treated by Mr Semple as his House Keeper but held and claimed as a slave. This Deponent knew <fw type="catch">Peg</fw>
+
+<pb xml:id="p009" facs="oscys.mdcase.0006.001.009.jpg"/>
+
+Peg very well but never heard of her claim or of any claim to Freedom by said Peg. This deponent never was at Mr David Stones but once in her life, but her husband was there very often, That Peg was a high spirited woman and used to converse freely with every body, This deponent never heard Peg say she ought to be free because she had borne any Children, or complain of being sold, nor does she recollect any conversation or talk about it, or to this effect, This deponent has heard of Mrs Catherine Stone but never saw or knew her, nor does she recollect any thing of her Character.</p>
+
+<p>Sworn to, the 23d March 1793 Before Henry Barnes</p>
+
+<p>Taken in presence of us<lb/>
+G Duvall Atty for Petrs<lb/>
+Philip B Key for Defdt</p>
+
+<p>Charles County to wit The Deposition of Richard Robin Reeder aged seventy years or thereabouts taken in consequence of the annexed Letter of Notice and being sworn upon the Holy Evangels of Almighty God deposeth and saith, That he knew David Stone the father of Michael J Stone, that he was said to be a good Master to his Slaves, That he allowed his negroes to raise Horses, That he knew Betty Mingo when she belonged to Mr Wharton and was told by Catharine Stone widow of Thomas Stone the father of David Stone That Thomas Stone exchanged Betty Mingo with Mr Wharton for a negro woman called Cate on account of the vile Tongue of Betty Mingo; That Betty Mingo was yellow: That their was a report about fifty years ago that the Butlers were trying to get free at which time it was said that Betty Mingo and her family intended to try for their Freedom, That he was told by Catharine Stone that neither Betty Mingo nor her family had any right to freedom as Betty Mingo was a slave, That he never heard that Betty Mingo nor any of her family were entitled to freedom, That Betty Mingo and her Race were kept in Slavery ever since he knew them which has been sixty years ago. Taken the 15th day of October 1792 before the subscriber one of the Justices of the Peace for the County aforesaid<lb/>
+James Freeman</p>
+
+<p>Richard Robins Reeder being further sworn on the 22d day of March 1793, and being asked if Catharine Stone with whom the within conversation took place with the deponent, was interested <fw type="catch">in</fw>
+
+<pb xml:id="p010" facs="oscys.mdcase.0006.001.010.jpg"/>
+
+in the freedom or slavery of the Mingoes? Answers, she did not own any of the negroes called Mingo, but she took her dower out of the negroes she had of her former husbands Estate, except the within mentioned Negro Cate who was exchanged for Betty Mingoe and whom she took from Mr Stones Estate. This deponent was born and lived all his life adjoining Pointon Manor and within four miles of Thos. Stone and his son David Stone and seven years of his life he lived with Catherine Stone on Pointon Manor after the death of Thos. Stone her husband That Mrs. Catherine Stone was seventy years old he believes when he came to live with her; That Mrs Catherine Stone bore as good a character as any woman in Maryland; That Thomas Stone and David Stone both of them lived and died on Pointon Manor does not know Mrs Pile or that she ever lived near David Stone. The conversation within stated happened the deponent thinks about fifty years ago. Being asked if he ever heard Catherine Stone say any about or concerning Betty Mingo's Mother? answers he never did. He further saith that David Stone and Thomas Stone before mentioned were of good character. Sworn before the Subscriber one of the Justices of Charles County.</p>
+
+<p>Sworn before the subscriber this 22d March 1795.<lb/>
+Richd. Barnes</p>
+
+<p>This deponent knew a white woman of the name of Isabell in the Thomas Stones Family, who had several mulatto children by one of Mr Stones negro men that served until they were 31 years of age. That she has been dead near fifty years, and was then between 30 and 40 years of age</p>
+
+<p>Sworn before Henry Barnes</p>
+
+<p>This Dept. further says that one of the Children of the above said Isabell was called Charles Ray, another Sarah Ray &amp; another called Bridget Ray, who served the above said term of 31 years &amp; have since been free</p>
+
+<p>Henry Barnes</p>
+
+<p>Taken in presence of us<lb/>
+G Duvall for Petrs<lb/>
+Philip B Key for Defdt</p>
+
+<p>Charles Ray a Mulatto man aged between sixty and seventy years deposeth and saith that he was born in the Family of Thomas Stone of Charles County of a white woman named Isabel, and this deponent lived and served in the Stone family until he was of the age of thirty one, at which he was <fw type="catch">set</fw>
+
+<pb xml:id="p011" facs="oscys.mdcase.0006.001.011.jpg"/>
+
+set free, That his Mother was convicted for having this deponent as a bastard That this deponent knew Betty Mingo who was swopped to Mr Wharton of St Marys County, and she used to come sometimes to see her old Mistress Catharine Stone and to see her children of whom Peg was said to be one, This deponent saith that he never heard any White person say, nor ever heard Betty Mingo say that she was entitled to be free or had a right to Freedom, but he has heard Peg say so and has heard the negroes talk so, That he has heard that Betty Mingo was House Keeper to Mr Stone in this first Wife's time and when he married again, his second wife and Betty could not agree and for that reason he parted with her to Mr Wharton. That David Stone was a kind good master and Mrs Catherine Stone a very good woman, That Peg was a High Spirited, impudent, talking woman but a very good Servant.</p>
+
+<p>Sworn to, this 23d day of March 1793.</p>
+
+<p>Before Henry Barnes</p>
+
+<p>Taken in the presence of<lb/>
+G Duvall Atty for Petrs<lb/>
+Philip B Key for Defds</p>
+
+</div2>
+
+<div2 type="caption">
+
+<p>Charles County Sst.</p>
+
+<p>Robert Thomas<lb/>
+vs<lb/>
+Henry Pile</p>
+
+<p>Petition for freedom in the General Court</p>
+
+</div2>
+
+<div2 type="body">
+
+<p>Interrogatories proposed by the Petitioner to Leonard Boarman</p>
+
+<p>1t In: Do you know the parties, the Petitioner &amp; the Defendant in this cause, and how long have you known them?</p>
+
+<p>Answer: I know the Parties in this cause and have known the Petitioner ever since he was a child and the Defendant for forty years.</p>
+
+<p>2d In: Do you know or have you heard, and from whom, that the Petitioner is descended from a free person and from what free person? was her name Elizabeth Thomas or what other name had she?</p>
+
+<p>Answer: I have heard that the petitioner is descended from a white woman, and this I heard from Mrs Elizabeth Pile deceased but never heard that her name was Elizabeth Thomas or any other name?</p>
+
+<p>3d In: Do you know Judy the mother of the Petitioner, and how long have you known her?</p>
+
+<p>Answer. I know Judy the mother of the Petitioner at present in the possession of the Defendant and have known her since she was a child.</p>
+
+<fw type="catch">4th In:</fw>
+
+<pb xml:id="p012" facs="oscys.mdcase.0006.001.012.jpg"/>
+
+<p>4th. In: Do you know Sophia the Grandmother of the Petitioner at present in the possession of the Defendant Henry Pile and how long have you known her?</p>
+
+<p>Answer: I know Sophia the Grandmother of the Petitioner at present in the possession of the Defendant Henry Pile and have known her for fifty years.</p>
+
+<p>5th In: Did you know Elizabeth the Great Grandmother of the Petitioner who died in the possession of Mrs Elizabeth Pile the Defendants Mother, and when did you first known her was she descended from a free woman that you know or have heard and from whom did you hear that she was descended from a free Woman?</p>
+
+<p>Answer: I knew Elizabeth the great Grandmother of the Petitioner who died in the Possession of Mrs Elizabeth Pile the Defendant's mother and I knew her first about forty years ago I have heard Mrs Elizabeth Pile deceased say that Elizabeth the Great Grandmother of the Petitioner was descended from a white woman, but that she became a slave by marrying a Negro slave.</p>
+
+<p>6th In: Did you know Elizabeth Thomas the mother of the aforesaid Elizabeth was she a free woman and a white woman with whom did she live at the time of her death?</p>
+
+<p>Answer: I did not know Elizabeth Thomas the mother of the aforesaid Elizabeth, neither do I know that she was a free or white woman or with whom she lived.</p>
+
+<p>Charles County Sst. May 22d 1792: I hereby certify that the foregoing Interrogatories and Answers thereto given on Oath has been attentively considered by the <del>Defendant</del> Deponant and he declares the said Answers to be just and true and these answers to the Interrogatories to which the severally relate according to the best of his recollection and Belief which he further confirms by subscribing his name thereto</p>
+
+<p>Leonard Boarman</p>
+
+<p>Sworn &amp; Subscribed Before<lb/>
+Wm D Briscoe</p>
+
+<p>Leonard Boarman being further asked if she had frequent conversations with Mrs Pile relative to the Negro family of Betty Mingo's? Answers that he had and she told him that they came from a white woman. Being further asked if Mrs Pile informed him how she derived her Information of their descent, and if from the Negroes themselves, or their Council <fw type="catch">or,</fw>
+
+<pb xml:id="p013" facs="oscys.mdcase.0006.001.013.jpg"/>
+
+or any person employed for them: Answers that he does not recollect that she ever told him from whom or how she obtained that Information, and does not recollect he ever asked her and he thinks the reason was, that it was generally talk'd of in the neighbourhood that they were a Free family, he never heard any of the mulattos speak of it themselves; Being asked how long he transacted business for the late Mrs. Pile, answers upwards of thirteen years; Being asked what was the complexion of the aforesaid Elizabeth commonly called Betty Mingo the Great Grandmother of the Petitioner, Answers she was a middling bright mulatto with long, hair and he knew Charles a brother of the said Betty and he had long hair, but was not so bright a mulatto as his sister; that from the appearance of the aforesaid Betty, he used to think she came of a white woman; Being asked if he ever heard that the father of Betty Mingo was a white man, Answers he never did, and does not believe he was because he has heard he was not. Being asked if he recollects to have heard from any person besides Mrs Pile that Betty Mingo was descended from a white woman, answers he does not recollect that he ever did. Being asked if he recollects to have heard Mrs Pile say, what Negro, or whose negro the said Betty's mother intermarried with, answers, he is pretty sure he has heard her say, but he cannot now recollect whose Negro she said he was.</p>
+
+<p>Charles County Sst. March 23d 1793. I hereby certify that the foregoing Interrogatories and answers thereto given on Oath have been attentively considered by Leonard Boarman the deponent and he declares the said answers to be just and true sworn before the subscriber one of the Justices of the Peace for County aforesaid<lb/>
+James Freeman</p>
+
+<p>Admitted to be read in Evidence<lb/>
+G Duvall for Petrs<lb/>
+Philip B Key for Defdt</p>
+
+</div2>
+
+<div2 type="caption">
+
+<p>Robert Thomas<lb/>
+against<lb/>
+The Revd. Henry Pile</p>
+
+</div2>
+
+<div2 type="body">
+
+<p>Charles County Set. May 19th 1792 Then came Sophia Leigh before me one of the Justices of the peace for the County aforesaid. And being duly sworn on the Holy Evangels of Almighty God declareth in Answer to the several questions put to her as suggested by the Council for the parties; and as all she knows in the matter That she has known the Defedt. as well as she can recollect about 40 years and the petitioner since he was a Child <fw type="catch">that</fw>
+
+<pb xml:id="p014" facs="oscys.mdcase.0006.001.014.jpg"/>
+
+That she knew the Mother, Grandmother, and Great Grand mother of the Petitioner. His mother named Judah, his Grandmother Phia, and his Great grandmother Betty Mingo That she never heard that either his grandmother or great grandmother ever claimed their freedom, or that Betty Mingo was descended from a white person or a free person, and that she never heard of any claim being set up by any of the family to freedom till the Petitioner did it. That she has known Phia now in the possession of Mr Pile about fifty or sixty years and Judah who is about forty years old she has known from an Infant That she never knew, or heard who Betty Mingo's Mother was. That she never knew or heard of any sister or Brother of Betty. That Betty Mingo was a Bright Mulatto and had long Hair for one of her Colour, and she always thought (tho' never heard it said) that the said Betty was descended from a white person. That she knew Betty about fifty or sixty years ago in the possession of Mr Henry Wharton and after his death she lived with his Daughter Mrs Pile Mother to the Defendt with whom she contind as a slave until she died about twenty years ago. She has understood but does not remember from whom that Mr Wharton did get Betty Mingo or some one of the Stone family with whom Mr David Stone was connected, but does not recollect who or what was the Christian name of the person who owned her before she belonged to Mr Wharton. That she knew a Daughter of Betty's called Peg who lived with John Semple who got her of David Stone as this depont. always understood, but whether he bought her or how he got her she knew not. That said Peg was the only child of the aforesaid Betty Mingo, ever known by the Depont before the said Betty belonged to Mr Wharton after which she had several besides the petitioners grand mother to the number of six. That she always heard that Peg while she lived with David Stone belonged to him as a slave, and that she was black. That she knows nothing respecting Peg's having children, or any of the particulars of her death. That when Peg lived with John Semple she was his Cook, and was well known as such. That this depont. knew Peg all the time of her living with Semple in Port Tobacco and never heard either from herself or any other persons that she claimed her Freedom. That all of the family descended from Betty Mingo were brisk lively and active people, and remarked for being valuable House Servants and Cooks. That all the family <fw type="catch">with</fw>
+
+<pb xml:id="p015" facs="oscys.mdcase.0006.001.015.jpg"/>
+
+with whom she was acquainted or ever heard of were considered Slaves, and that she never heard any person, either before or since the present Petition, say that any of them was entitled to freedom except themselves since the Petitioner came forward with his claim That Betty Mingo was mother to Phia who is mother to Judah who is mother to the Petitioner; That this Deponent never heard the said family were called, or called themselves Thomas till the petitioner claimed his freedom. Signed,<lb/>
+Sophia Leigh</p>
+
+<p>Taken and sworn before<lb/>
+Henry H Chapman</p>
+
+<p>Taken on Interrogatories filed by us and admitted to be read in Evidence<lb/>
+G Duvall for Petr.<lb/>
+Philip B Key for Defdt.</p>
+
+<p>Charles County Set.</p>
+
+<p>William Swann, of Allen's Fresh, aged about fifty four or fifty five years having being sworn on the Holy Evangels of Almighty God deposed, That as near as he can recollect about forty four or forty five years ago, a certain Mary Curtis, whom he supposed to be then near fifty years of age, told him, this deponent that Charles Mingo and Betty Mingo had as much right to their freedom as she (the said Mary meaning) had herself; for their mother was as white a woman as she was, meaning, as this deponent supposes, herself. And this deponent adds that the said Mary Curtis was a very fair woman and had a remarkable good skin. That the said Mary Curtis died about twenty years ago. That he has known Robert Thomas the Petitioner in the General Court against Henry Pile, for about five or six years, and that he has also known Henry Pile for about the same space of time. That the said Robert was reputed to be the Slave of the said Henry, and was by him the said Henry held in Slavery, ever since he has known them the said Henry and the said Robert. The said William Swann being severally interrogated on the various questions numbered from 1-9 both inclusive and contained in a certain paper entitled, The Petitioners Interrogatories signed, G Duvall for Petr; and being also examined on each and every of the Interrogatories contained in a paper numbered 1-23 inclusive, and signed Philip B Key for Defdt., answered that he knew nothing relative to or concerning the contents of said papers respectively <fw type="catch">nor</fw>
+
+<pb xml:id="p016" facs="oscys.mdcase.0006.001.016.jpg"/>
+
+nor of Robert Thomas, or this case, more than is expressed in the above deposition in confirmation of all which he hath hereunto subscribed his name<lb/>
+W Swan</p>
+
+<p>I do certify that the above Deposition was sworn to before me, and that the William Swann the Deponent therein named attentively perused it before he subscribed his name and made oath thereto, given under my hand at Allens Fresh this twenty first day of May seventeen hundred and ninety two:<lb/>
+Ben Contee</p>
+
+<p>And the said William Swan being further sworn on the Holy Evangely of Almighty God on the twenty fourth day of October seventeen hundred and ninety two, and being asked if he knew Charles and Betty Mingo above mentioned; answers he knew Charles very well, but did not know Betty that he recollects and he saith that the said Mary Curtis knew them very well and he has often heard her talk of them; and he further saith that Charles was a mulatto with long black hair, and he has heard it often said in the neighbourhood that the father of Charles was a Mingoe Indian: and he further saith that the said Mary Curtis lived at the house of the deponents father about fourteen years and was nurse to the deponent.  Being asked what was the General Character of Mary Curtis for veracity, answers: he never heard anything against her</p>
+
+<p>Sworn to before me this 24 Octr. 1792<lb/>
+Jno Brice</p>
+
+<p>Admitted to be read in Evidence<lb/>
+G Duvall for Petr.<lb/>
+Philip B Key for Defdt.</p>
+
+<p>Charles County Set<lb/>
+At the request of Robert Thomas Petitioner for his freedom in the Genl. Court against the Revd. Henry Pile the following deposition of Mrs Jane Digges wife of Henry Digges was taken. The queries and Interrogatories of the Council for Petitioner and Defendant, being first severally propounded to her, to which she respectfully gave the underwritten answers</p>
+
+<p>Answers to Petitioners queries</p>
+
+<p>I have known the Petitioner Robert Thomas ever since he was born, and have also known the Revd. Mr Pile ever since he was a little Boy. have often heard it said in General conversation <fw type="catch">that</fw>
+
+<pb xml:id="p017" facs="oscys.mdcase.0006.001.017.jpg"/>
+
+that the Petitioner was descended from a free person but do not recollect when or from whom this conversation issued, it happened when I was very young and was probably amongst others from the Mingo's themselves I know Judah the mother of the Petitioner, at present in possession of the Revd Mr Henry Pile and have known her ever since she was born; I also knew Sophia the Grandmother or the petitioner and have known her for forty or fifty years past; I knew the Great Grandmother of the Petitioner and have known her ever since I was born, she was called Betty Mingo; and I have frequently heard that her Mother was a white woman but I do not recollect from whom. I knew nothing of Elizabeth Thomas</p>
+
+<p>Answers to Defendants queries</p>
+
+<p>I knew Betty commonly called Betty Mingo; she once belonged to Mr Wharton of St Mary's: and I have heard she was exchanged by him, for another Negro with a certain Mr Stone of Charles County. Betty Mingo died about nineteen years ago she was very old but how old exactly I cannot pretend to ascertain, she left many children and grand children, also great grand children all of Children were grown up and some of them were pretty old. I have heard that Betty Mingo had two children a Son and a Daughter; while she lived with Mr Stone. Their names I think were Robbin and Peg. I have seen Peg the Daughter of Betty Mingo and remember that she lived with Mr Sample in Portobacco as his Slave, she was a Dark Mulatto. I had very little acquaintance with Peg, and never had much conversation with her; I do not remember ever to have heard her say she was free or that she ought to be so. The Petitioner has always been reputed to be a slave and has been so held as were his Mother Grandmother and great grandmother; and further this deponent knowns not.</p>
+
+<p>Jane Degges</p>
+
+<p>Admitted to be read in Evidence<lb/>
+G Duvall for Petrs.<lb/>
+Philip B Key for Defdt.</p>
+
+<p>I do certify that Mrs Jane Digges being sworn on the holy Evangels of Almighty, declared that the within answers, to the queries proposed to her as within mentioned are true to the best of her knowledge and that she knows nothing further relative to the Petitioner or his family, given under my hand in Charles County this twentieth day of July 1792<lb/>
+Ben Contee</p>
+
+<fw type="catch">Charles</fw>
+
+<pb xml:id="p018" facs="oscys.mdcase.0006.001.018.jpg"/>
+
+<p>Charles County Sst 21 July 1792. At the request of Robert Thomas Petitioner for his freedom in the General Court a Revd. Henry Pile, the following Deposition of William Simms aged aged about eighty three years was Taken, the Questions put to him for Plaintiff and Defendant, as suggested by the Council: and all he knows in the matter</p>
+
+<p>That he knows nothing of the Petitioner or from whom he descends he has heard by many persons that the Black people called Mingo, had a right to their freedom and this talk was about the time the Butlers first contended for their freedom, and have often heard it said since but by what right they claimed it so I can't say. He has seen a black woman called Peg belonging John Semple in Portobacco and commonly called Semples Cook. and further saith not</p>
+
+<p>Willim Simms<lb/>
+his W mark</p>
+
+<p>Charles County Sst. 21 July 1792. I do hereby certifie that William Simms being sworn on the Holy Evangels of Almighty God, that the above deposition contains the whole truths to best of his knowledge</p>
+
+<p>Sworn before Alexr. McPherson</p>
+
+<p>Admitted to be read in Evidence<lb/>
+G Duvall for Petrs.<lb/>
+Philip B Key for Defdt.</p>
+
+<p>The Deposition of Mary Stone of Charles County aged fifty six years, in a suit now depending in the General Court between the representatives of David Stone late of Charles County deceased of the one part and a family of Negroes claiming their freedom who call themselves by the name of Thomas of the other part, the said Mary having been first duly sworn upon the Holy Evangelists of Almighty God saith and Deposeth that she was well acquainted with the said David Stone and Catharine Stone Mother in Law to the said David, and that the said Catharine Stone and David Stone during her this deponents acquaintance with them were oftentimes at variance and that frequent disagreements and quarrels happened between them and this deponent very believes that the said Catharine Stone during the said quarrels &amp; disagreements would have discovered and made known any thing tending to injure the said David Stone, and had the said Catharine known the said Petitioning Negroes to be entitled to their freedoms or had she suspected it, she would have published and declared it to gratify her <fw type="catch">resentments</fw>
+
+<pb xml:id="p019" facs="oscys.mdcase.0006.001.019.jpg"/>
+
+resentments against the said David but this Deponent never heard the said Catharine mention or hint at any thing to that purpose, and this deponent further saith that the said Catharine did thro' the anger and malice she bore the said David once advise a certain Richard Stone to bring an action at Law against the said David for the recovery of a certain tract of Land endeavouring to persuade the said Richard that he had title to the said tract of Land and this deponent further saith that the said Catharine Stone previous to her intermarriage with Thomas Stone father to the said David had intermarried with a certain Capt. Thomas whose widow she was at the time of the said marriage with Thomas Stone and this Deponent saith that the said Captain Thomas imported into this County two free negroes who served the said Capt. Thomas and Catherine Stone during their lives and that the said free negroes were both males and this deponent apprehends from this circumstances the said Petitioning Negroes have assumed the said name of Thomas and have by that name claimed their freedom, and further this deponent saith not.</p>
+
+<p>Mary Stone</p>
+
+<p>I hereby certify that the foregoing Deposition was in due form taken before me one of the Magestrates of Charles County this seventeenth of May in the year of our Lord one thousand seven hundred and ninety three<lb/>
+Richd. Barnes</p>
+
+</div2>
+
+<div2 type="caption">
+
+<p>John Thomas<lb/>
+a<lb/>
+Raphael Boarman</p>
+
+<p>Peto. in the General Court for freedom</p> 
+
+</div2>
+
+<div2 type="body">
+
+<p>Wilfred Neale aged fifty two years being sworn on the Holy Evangely of Almighty God in the above case deposeth and saith that about five or six years ago when the Butlers got free by Judgment of the General Court it was the Common talk of the neighbourhood that several other families, The Shorts and Mingoes now called the Thomas's would probably petition Being asked if any reason was assigned why they would Petition? Answers that it was generally supposed that as the Butlers had got free or would get free that those two families would petition for that they had the same or an equal right.</p>
+
+<p>Sworn to in Open Court this 1 June 1793<lb/>
+Jno Gwinn Clk</p>
+
+<fw type="catch">Robt.</fw>
+
+</div2>
+
+<pb xml:id="p020" facs="oscys.mdcase.0006.001.020.jpg"/>
+
+<div2 type="caption">
+
+<p>Robert Thomas<lb/>
+vs<lb/>
+Henry Pile</p>
+
+<p>Peto.</p>
+
+</div2>
+
+<div2 type="body">
+
+<p>The Deposition of Charles Llewellin aged thirty four years, being sworn on the Holy Evangely of Almighty God, saith that he knew a Yellow Boy named Rob in the possession of Francis Hammersly who belongs as the deponent has since understood to Henry Pile, and he has seen a negro man who drove Mr. Hammersly's carriage, who was said to be his father; when he knew the boy he was considered as the slave of Mr Hammersly, or the Estate of Mrs Pile whose Daughter he married; he does not know the Mother of Bob, or his Grand mother; Being asked if he has ever heard &amp; from whom that Robert the Petitioner was descended from a white woman? answers he has not</p>
+
+<p>Sworn to in Open Court<lb/>
+Jno Gwinn Clk</p>
+
+</div2>
+
+<div2 type="caption">
+
+<p>Robert Thomas<lb/>
+vs<lb/>
+Henry Pyle</p>
+
+</div2>
+
+<div2 type="body">
+
+<p>The Deposition of Ignatius Gerrard Boarman aged sixty seven years being duly sworn on the holy Evangely of Almighty God deposeth &amp; saith that he knows the Petitioner, and Mr Pyle the Defendant, and he knows the mother of the Petitioner and his Grandmother also who is called Sophia, and he knew Betty Mingoe who was generally said to be the mother of Sophia; That Betty Mingo was a light mulatto, and formerly belonged to Mrs Wharton, That he knew also a woman named Peg who was generally said to be a daughter of Betty; Being asked if he ever heard that Betty Mingoe was the Daughter of a white woman? Answers he did not; Betty he has understood married a man called Henry Cooper who belonged to Mr Wharton, and her children were called Cooper after him: Sworn to this 15th day of May 1794.</p>
+
+<p>Before<lb/>
+Richd. Harwood</p>
+
+<p>Washington County &amp; State of Maryland April 9th 1794.</p>
+
+<p>This day came before me Henry Smith about forty four years of age after being duly sworn on the Holy Evanglist of Almighty God, deposeth &amp; saith a follows:</p>
+
+<p>In answer to the 1st Interogatory</p>
+
+<p>I know not the petitioner by the name of Robert Thomas, nor do I know of the petitioning family by the name of Thomas, nor have I heard it untill I received Mr Raphel Boarmans letter bearing date the 7th day of November 1792. I knew Henry Pile (son of Elizabeth Pile late of Charles County deceased) when we were Children previous to his going to the Colledge; but have never seen him since to the best of my Knowledge</p>
+
+<fw type="catch">2.</fw>
+
+<pb xml:id="p021" facs="oscys.mdcase.0006.001.021.jpg"/>
+
+<p>2. I knew Judah when she belonged to the aforesd Elizabeth Pile ever since I can remember going to see my Aunt the aforesd. Elizabeth Pile when I was a child. The above said Judah I believe to be a Daughter of Sophia</p>
+
+<p>3. I knew Sophia, ever since I can remember going to see the aforesd. Elizabeth Pile, whom she belonged to.</p>
+
+<p>4. I knew Betty Mingo the Mother of Sophia ever since I can remember going to see the aforesd. Elizabeth Pile whom she belonged to; her complexion was a lite yellow. I believe she died within these twenty four years, but how long, I can't justly remember, as she died within the lifetim of the aforesd. Elizabeth Pile; as to the descent of the aforesd. Betty Mingo the mother of Sophia, I know nothing of, whether white or black.</p>
+
+<p>5. I have heard my father Basil Smith (late of Charles County deceased) to the best of my knowledge say that if the Butler breed got free the Mingo's would of course, as they were upon the same footing. I knew nothing of any such Elizabeth Thomas being I suppose long before my time, if she was the mother of Betty Mingo aforesd.</p>
+
+<p>6. Nothing more have I any knowledge of then whats contained in my fifth answer:</p>
+
+<p>7. I never knew of any of the above Family known or called by the Sir name of Thomas to my knowledge till the aforesd. Letter from Mr Raphel Boarman.</p>
+
+<p>8: I know nor heard of nothing more that I can recollect to the best of my knowledge to the benefit of the petitioner in the present suit; and further this deponent saith not</p>
+
+<p>Sworn before Wm Good:</p>
+
+</div2>
+
+<div2 type="caption">
+
+<p>Robert Thomas<lb/>
+vs<lb/>
+Henry Pile</p>
+
+</div2>
+
+<div2 type="body">
+
+<p>The Deposition of John Swann aged seventy years being summoned &amp; sworn deposeth and sayith, and made the following answers to the several Interrogatories</p>
+
+<p>Petition for freedom in the General Court, Defendants Interrogatories</p>
+
+<p>1st. Do you know the parties, the Petitioner and the Defendant in this cause, and how long have you known them?</p>
+
+<p>Answer: He has known the defendant Henry Pile three or four years and the Plaintiff only about two years.</p>
+
+<p>2nd. Do you know, or have you heard, and from whom, that the Petitioner is descended from a free person and from what free person was her name Elizabeth Thomas, or what other name had she?</p>
+
+<p>Answer: That he never did know any person by the name of Elisabeth <fw type="catch">Thomas</fw>
+
+<pb xml:id="p022" facs="oscys.mdcase.0006.001.022.jpg"/>
+
+Thomas, and says he does not know that the Petitioner descended from a free person.</p>
+
+<p>3d Did you know Elisabeth Thomas Great Great Grand Mother to the petitioner?</p>
+
+<p>Answer. He did not</p>
+
+<p>4th. Did you know Elizabeth Eden late of St Marys County, deceased if so can you recollect ever to have heard her speak of the Petitioner or any, and which of the family of which he is one, relate any conversation you may have had, or heard from her on the Subject fully &amp; freely?</p>
+
+<p>Answer: He knew Elisabeth Eden but never had any conversation with her on the subject.</p>
+
+<p>5th Has the Petitioner been held in slavery and reputed a slave were his ancestors reputed to be slaves, and held as such, and for what length of time past?</p>
+
+<p>Answer. Ever since he knew them which is about forty years</p>
+
+<p>6th. Did you know Mary Curtice of what Country was she and what was her "General Character"?</p>
+
+<p>Answer: He knew Mary Curtice, and that she was as he believes a native of Ireland, &amp; her general character was bad.</p>
+
+<p>7th: Did you know that Mary Curtice had a Mulatto Child and who was the reputed father?</p>
+
+<p>Answer, He knew Mary Curtice had a Mulatto Bastard Child and that she was sold by St Marys County Court to this deponants father James Swann for bringing it and that Charles Mingo was the reputed father who was the property of Thomas Jamison of Charles County</p>
+
+<p>Jno. Swann (seal)</p>
+
+<p>St Mary's County Ss. October the 5th 1793. I hereby certifie that the aforegoing deposition was this day taken before me the subscriber one of the Justices of the Peace for the County aforesaid in the presence of the Petitioner Robert Thomas<lb/>
+John Cartwright</p>
+
+</div2>
+
+<div2 type="caption">
+
+<p>Robert Thomas<lb/>
+vs<lb/>
+Henry Pile</p>
+
+<p>Petition for freedom in the General Court</p>
+
+</div2>
+
+<div2 type="body">
+
+<p>The Deposition of Mrs Sarah Boarman of Charles County aged forty or thereabouts, deposeth &amp; sayeth that she knows the parties in the above suit that she knew Betty commonly called Betty Mingo &amp; that she has heard her say her Mother was a white women &amp; a Welch woman; this deponant says she knows Judy the Mother &amp; Sophia the Grandmother of the Petitioner &amp; that she has <fw type="catch">known,</fw>
+
+<pb xml:id="p023" facs="oscys.mdcase.0006.001.023.jpg"/>
+
+known them for thirty years, this deponant further sayth that she lived saith Mrs Elizabeth Pile the Mother of the defendant about fifteen years &amp; that she asked her if Betty Mingo's Mother was a white woman &amp; that she answered the family of the Mingo's say so. this deponant further saith that the Petitioner &amp; his descendants has always been reputed slaves &amp; held as such.</p>
+
+<p>Sarah Boarman</p>
+
+<p>Charles County Ss. August 16th 1793. Then the within Deposition was taken &amp; sworn to before the Subscriber one of the Justices of the peace for the County aforesaid in the presence of the Petitioner &amp; Defendant<lb/>
+Wm D. Briscoe</p>
+
+<p>The Deposition of Cornelius Barber aged seventy eight years being duly summoned and sworn deposeth &amp; sayeth, and made the following answers to the several Interrogaries</p>
+
+</div2>
+
+<div2 type="caption">
+
+<p>Robert Thomas<lb/>
+vs<lb/>
+Henry Pile</p>
+
+<p>Petition for freedom in the General Court</p>
+
+</div2>
+
+<div2 type="body">
+
+<p>Defendants Interrogatories</p>
+
+<p>1st Do you know the parties, the Petitioner and the Defendant in this cause and how long have you known them?</p>
+
+<p>Answer: He has known the defendant Henry Pile ever since he was a boy, and the Plaintiff also.</p>
+
+<p>2nd Do you know or have you heard, and from whom that the Petitioner is descended from a free person &amp; from what free person was her name Elisabeth Thomas, or what other name had she?</p>
+
+<p>Answer: That he never did know any person by the name of Elisabeth Thomas, and says he does not know that the Petitioner descended from a free person.</p>
+
+<p>3d Did you know Elizabeth Thomas, Great great Grand Mother to the Petitioner?</p>
+
+<p>Answer: He did not know her.</p>
+
+<p>4th Did you know Elisabeth Eden late of St Marys County deceased, if so, can you recollect ever to have heard her speak of the Petitioner or any, and which of the family of which he is one, relate any conversation you may have had, or heard from her on the subject fully and freely?</p>
+
+<p>Answer: He knew Elisabeth Eden but never had any Conversation with her on that subject.</p>
+
+<p>5th Has the Petitioner been held in Slavery &amp; reputed a slave, were his ancestors reputed to be slaves, and held as such, and <fw type="catch">for</fw>
+
+<pb xml:id="p024" facs="oscys.mdcase.0006.001.024.jpg"/>
+
+for what length of time past?</p>
+
+<p>Answer: Ever since he knew them which is about sixty years.</p>
+
+<p>6th Did you know Mary Curtice &amp; of what country was she and what was her General Character?</p>
+
+<p>Answer, He knew Mary Curtice, and that he only knew she was a foreigner as to her Country and her character was that of a Cold impudent woman.</p>
+
+<p>7th Did you know that Mary Curtice had a Mullatto Child, and who was the reputed Father?</p>
+
+<p>Answer: Yes he knew Mary Curtice had a Mulatto bastard child and that she was sold by St Marys County Court to a Mr Swann for bringing it, and that Charles Mingo was the reputed father a slave to Thomas Jamison of Charles County</p>
+
+<p>Cornelius Barber (seal)</p>
+
+<p>St Marys County Set October the 5th 1793. I hereby certifie that the aforegoing deposition was this day when before me the Subscriber one of the Justices of the peace for the County aforesaid in the presence of the Petitioner Robert Thomas<lb/>
+John Cartwright</p>
+
+</div2>
+
+<div2 type="caption">
+
+<p>Robert Thomas<lb/>
+vs<lb/>
+Henry Pile</p>
+
+<p>Petition for freedom in the General Court</p>
+
+</div2>
+
+<div2 type="body">
+
+<p>Petitioners Interrogatories to Elizabeth Carry (on Oath) aged about sixty nine years Vizt.</p>
+
+<p>1st Do you know the parties in this Suit, and how long have you known them?</p>
+
+<p>Answers: I know them and have known them for these eight or ten years past.</p>
+
+<p>2nd Do you know Judah the mother of the Petitioner and how long have you known her?</p>
+
+<p>Answer, I know Judah the mother of the Petitioner and have known her between twenty &amp; thirty years.</p>
+ 
+<p>3rd Do you know Sophia the Grand mother of the Petitioner and how long have you known her?</p>
+
+<p>Answer. I know Sophia the Grand Mother of the Petitioner and have known her between thirty &amp; forty years.</p>
+ 
+<p>4th Do you know Elizabeth commonly called Betty Mingo the Great Grand Mother of the petitioner; and when, and do you know that the said Betty was the Daughter of a white woman?</p>
+
+<p>Answer I knew Betty Mingo great Grandmother of the Petitioner about forty years ago; but I do not know whether she was Daughter of a white woman of my own knowledge.</p>
+
+<p>5th Do you know, or have you been informed, and by whom that the Petitioner or any of his ancestors are descended from a white woman?</p>
+
+<fw type="catch">Answer</fw>
+
+<pb xml:id="p025" facs="oscys.mdcase.0006.001.025.jpg"/>
+
+<p>Answer: I have been informed by the Petitioners Ancestors that his great grand mother Betty Mingo was the Daughter of a white woman.</p>
+
+<p>6th Have you any further knowledge of the subject?</p>
+
+<p>Answer: I have no further knowledge of the matter only from common hearsay</p>
+
+<p>Charles County Set October 13th 1794. Then appeared before me the subscriber one of the Justices of the Peace for said County and made Oath on the Holy Evangels of Almighty God, that the answers annexed to these several Interrogatories are just and true to the best of her knowledge.<lb/>
+Walter Dyson</p>
+
+</div2>
+
+<div2 type="caption">
+
+<p>Robert Thomas<lb/>
+vs<lb/>
+Henry Pile</p>
+
+<p>Petition for freedom in the General Court</p>
+
+</div2>
+
+<div2 type="body">
+
+<p>Cornelius Barber aged seventy nine years being duly sworn made the several answers annexed to the following interrogatories.</p>
+
+<p>1st Do you know the Petitioner in this Suit &amp; how long, &amp; did you know his ancestors &amp; how long &amp; have they &amp; each of them always been held &amp; reputed as Slaves?</p>
+
+<p>Answer: I know the Petitioner in this suit &amp; have known him ever since he was a child, I have also Known his Ancestors for a number of years &amp; they &amp; each of them have always been held &amp; reputed as slaves.</p>
+
+<p>2d Did you know or have you generally understood that Mary Curtis had a Mulatto Bastard &amp; who was the reputed father?</p>
+
+<p>Answer. I knew &amp; have generally understood that Mary Curtis had a Mulatto Bastard &amp; that a Negro Man commonly called Charles belonging to a certain Thomas Jameson of Charles County was the reputed Father.</p>
+
+<p>3d Was Charles Mingo the reputed Father of said Bastard a slave to whom &amp; was he the son of a Woman called Betty Mingo or generally so reputed to be? or was he reputed to be of the same family with the Petitioner?</p>
+
+<p>Answer: Negro Charles the reputed father of said Bastard was a slave to a certain Thomas Jameson of Charles County, I do not know neither did I ever understand he was the son or reputed to be the son of a woman called Betty Mingo or that he was of the same family of the Petitioner</p>
+
+<p>4th Was Mary Curtis sold as a Servant &amp; to whom for being the Mother of a Bastard Child, was the said Mary Curtis a woman of good or bad General Character &amp; reputation?</p>
+
+<p>Answer, Mary Curtis was sold as a Servant by St Mary's County Court to a certain James Swann of St Marys County <fw type="catch">for,</fw>
+
+<pb xml:id="p026" facs="oscys.mdcase.0006.001.026.jpg"/>
+
+for bringing a Mulatto Bastard Child, &amp; her general Character &amp; reputation as Bad.</p>
+
+<p>5th Was Mary Curtis a Woman of general good or bad Moral Character, conduct in life, veracity &amp; integrity, or was she a lewd woman who connected herself with Negroes or Slaves</p>
+
+<p>Answer: Mary Curtis was a woman of general bad moral, conduct in life she was a lewd woman who connected herself with negroes &amp; slaves.</p>
+
+<p>6th Where was Mrs Pile the Mother of the defendant Born, where did she live at what time did she die &amp; what was her age?</p>
+
+<p>Answer: Mrs Pile the Mother of the defendant was born in St Marys County she lived there until she married Mr Pile &amp; died about twelve or fifteen years ago she was between sixty &amp; seventy years of age.</p>
+
+<p>7th Where did Mary Curtis reside, did she ever reside in Durham Parish in Charles County or was she acquainted with the Stone family of Durham Parish or their neighbours?</p>
+
+<p>Answer: Mary Curtis resided with a certain James Swann of St Marys County when I first knew her, I never heard or understood that she lived in Durham Parish or that she was acquainted with the Stone family of that Parish or their Neighbours.</p>
+
+<p>8th Did Mrs Pile ever live in or was she acquainted with the People of Durham Parish in Charles County, did she know David Stone or his father Thomas Stone or their neighbours?</p>
+
+<p>Answer: Mrs. Pile did not, that I ever knew or heard of live in Durham Parish in Charles County, neither did I ever know or hear that she was acquainted with David Stone or his father Thomas Stone or their neighbours.</p>
+
+<p>Cornelius Barber</p>
+
+<p>Saint Mary's County Set. May 10th 1794. Personally appeared before me the subscriber one of the Justices of the peace for the county aforesaid Cornelius Barber who upon oath gave the several answers contained in the within Deposition to the Interrogatories thereto annexed<lb/>
+Wm Thomas, Junr.</p>
+
+</div2>
+
+<div2 type="caption">
+
+<p>Robert Thomas<lb/>
+vs<lb/>
+Henry Pile</p>
+
+<p>Petition for freedom in General Court</p>
+
+</div2>
+
+<div2 type="body">
+
+<p>Petitioners Interrogatories</p>
+
+<p>1st. Do you know the parties in this suit and how long have you known them?</p>
+
+<p>2: Do you know the Mother of the Petitioner and how long have you known her?</p>
+
+<p>3: Do you know the Grandmother of the Petitioner and how long did you know her?</p>
+
+<pb xml:id="p027" facs="oscys.mdcase.0006.001.027.jpg"/>
+
+<p>4: Did you know Betty Mingo a Mulatto Woman who lived with Mrs Pile mother of the Defendant if yea when and how long did you know her and did you know or have you heard and from whom and when that Betty Mingo was descended from a White woman or a free woman, relate your knowledge fully and freely.</p>
+
+<p>Copy</p>
+
+<p>G Duvall for Compts.</p>
+
+</div2>
+
+<div2 type="caption">
+
+<p>Robert Thomas<lb/>
+vs<lb/>
+Henry Pile</p>
+
+<p>Petition for freedom in the General Court</p>
+
+</div2>
+
+<div2 type="body">
+
+<p>Defendants Interrogatories</p>
+
+<p>1. Where have you lived and how far from Pointon Manor and how long at the place where you now are?</p>
+
+<p>2. Did you know Thomas Stone father of David Stone, and Catherine Stone widow of Thomas Stone, and David Stone or either of them and how long did you know them?</p>
+
+<p>3. Was Betty Mingo and her Descendants held and reputed Slaves and how long have you known her and them thus held?</p>
+
+<p>4. Did you ever know or Did you ever hear that Thomas Stone or David Stone held any persons in slavery who had a right to Freedom?</p>
+
+<p>5. Did you ever know or hear of Mary Curtis who was formerly a servant to Swan of St Marys County?</p>
+
+<p>6. Do you know of an Exchange which took place between old Mr Wharton and Thomas Stone or Negroe Women, relate all you know upon that subject?</p>
+
+<p>7. How long ago has it been since you first heard that the Mingoe's had taken the name of Thomas?</p>
+
+<p>8: Do you know or have you heard why the Negroes who have petitioned took the name of Thomas; or why they were called Mingoes?</p>
+
+<p>PB Key for Deft.</p>
+
+</div2>
+
+<div2 type="caption">
+
+<p>Henry Pile<lb/>
+at suit<lb/>
+Robert Thomas</p>
+
+</div2>
+
+<div2 type="body">
+
+<p>Petition for Freedom by the Complainant in the General Court</p>
+
+<p>Charles County towit: 12th september 1794. Margaret Reeder being duly sworn on the Holy Evanelist of Almighty God deposeth and saith, That she thinks she is now about ninety years of age the 16th day of March last and being interrogated upon the Interrogoritorys of the Petitioner she answered as follows? To the first</p>
+
+<p>1: Knows nothing of Either</p>
+
+<p>2: She does not know nor has she heard anything or the mother of the Petitioner?</p>
+
+<p>3: She does not know Robert Thomas nor from whom he came</p>
+
+<p>4: Has heard of Betty Mingo, but never saw her: she has heard <fw type="catch">that</fw>
+
+<pb xml:id="p028" facs="oscys.mdcase.0006.001.028.jpg"/>
+
+that Thomas Stone whom she knew very well, Swopt Betty Mingo with Mr Wharton for a negro woman and slave called Cate She never knew or heard that Betty Mingo was descended from a free woman or white woman.</p>
+
+<p>Being Interrogated on the Interrogatories of the Defendant she deposeth and saith. To the 1st She lived within five miles of Pointon from her Infancy till she was married after she was married to this time she lived within half a mile of Pointon Manor.</p>
+
+<p>2: She was not acquainted with Thomas above five years before he died: She knew Catherine Stone very well and helpt to put her in her Coffin &amp; if there was a good woman in the place she believes she was one or ever born. She knew David Stone from being a Boy.</p>
+
+<p>3. She never knew Betty Mingo nor her Descendants. Except Robin Mingo who belonged to David Stone but does not know who was his Mother.</p>
+
+<p>4: She has never heard any such thing she has heard of several as Ray, Bridget and Sarah Bowen whose mother was a white woman and who were discharged when their times were out to wit the Men to 31 years</p>
+
+<p>5: Never knew or heard of Mary Curtis</p>
+
+<p>6: Answered in the 4th Question by the Petioner</p>
+
+<p>7: Never heard it till tother Day when her son Richard mentioned the taking this Deposition to her. she never heard any thing of Negroes belonging to the Stones calling themselves Thomas's</p>
+
+<p>8: she does not know</p>
+
+<p>Margaret Reeder<lb/>
+her X mark</p>
+
+<p>I Richard Barnes one of the Justices of Charles County do certify that I on the day and year first mentioned did put the forgoing Interrogatories to Margaret Reeder on oath and received these answers to each separately as they are set down as Witness my hand this 12 day of September 1794.<lb/>
+Richd. Barnes</p>
+
+</div2>
+
+<div2 type="caption">
+
+<p>Robert Thomas<lb/>
+vs<lb/>
+Henry Pile</p>
+
+<p>Petition for freedom in the General Court</p>
+
+</div2>
+
+<div2 type="body">
+
+<p>Petitioners Interrogatories</p>
+
+<p>1. Do you know the parties in this suit, and how long have you known them?</p>
+
+<p>2. Do you know the Mother of the Petitioner and how long have you known her?</p>
+
+<p>3. Do you know the Grandmother of the Petitioner &amp; how <fw type="catch">long</fw>
+
+<pb xml:id="p029" facs="oscys.mdcase.0006.001.029.jpg"/>
+
+long did you know her?</p>
+
+<p>4. Did you know Betty Mingoe a Mulatto woman who formerly lived with Mrs Pile, mother of the Defendant if yea, where &amp; how long did you know her, and do you know or have you heard, and from whom and where, that Betty Mingoe was descended from a white woman or a free woman: relate your knowledge fully and freely</p>
+
+<p>G Duwall for Petr.</p>
+
+</div2>
+
+<div2 type="caption">
+
+<p>Robert Thomas<lb/>
+vs<lb/>
+Henry Pile</p>
+
+<p>Petition for Freedom in the General Court</p>
+
+</div2>
+
+<div2 type="body">
+
+<p>Defendants Interrogatories</p>
+
+<p>1. Have you been acquainted with Thomas Stone Father of David Stone, David Stone and Catherine Stone wife and relict of Thomas Stone, and how long and how far have you lived Pointon Manor?</p>
+
+<p>2: Did David Stone marry your sister and how long ago and were you and he acquainted before that marriage took place?</p>
+
+<p>3: Did Samuel Stone Son of David Stone Marry your daughter?</p>
+
+<p>4: Have you been well acquainted with the Stone Family and their neighbors and how long?</p>
+
+<p>5: Do you now that David Stone Gave to his son Samuel upon his marriage any Negroes other than those who now set up a claim to Freedom, or have you Generally under that the whole of them now claim title to Freedom?</p>
+
+<p>6 Did you know Betty Mingo, or any of Descendants, and were they hold as slaves and by whom and how long.</p>
+
+<p>7. Do you know or have you heard and when and from whom why the negroes in question went by the name of Mingo, and from what source they took the name of Thomas?</p>
+
+<p>8: What is the General Characters of Margaret Reeder, Sarah Fowke, Mary Stone, Mary McCoy, Ann Thompson Richard Reeder</p>
+
+<p>9: And of Charles Ray and Thomas Webster?</p>
+
+<p>10: Did you ever Know or hear of Mary Curtis. Tell her Character?</p>
+
+<p>11: Do you know of Any ancient person Except the above mentioned (to whose character you depose) who would be likely to know the Events that hapned in Stone Family or their neighbourhood.</p>
+
+<p>Charle's County Ss</p>
+
+<p>On this day to wit the 13th day of September 1794. Walter Hanson came before me and was Examined on his Oath touching the Petition of Robert Thomas against Henry Pile in the General Court of Maryland as to the Interogatories on behalf of the Plaintiff he depose and say to the first that he knows of no person by the name of Robert Thomas; as to Henry Pile if he be the Gentleman that is a Catholic Priest, I have seen him several times but no particular acquaintance with him. </p>
+
+<p>As to the 2d Interogatory he knows nothing of the mother of the Petitioner In Answer to the third he knows nothing of the Grand Mother of the Petitioner; <fw type="catch">In</fw>
+
+<pb xml:id="p030" facs="oscys.mdcase.0006.001.030.jpg"/>
+
+In answer to the fourth the Deponent deposes he knew nothing at all of Betty Mingo, nor did he ever to his knowledge hear any thing of her until the petition for freedom was preferrd and further this deponent saith not:</p>
+
+<p>In answer to the first Interogatory taken for the Defendant Henry Pile the deponent Walter Hanson on his Oath declard that he was very well acquainted with Thomas Stone Father of David Stone, with David Stone and Catherine Stone relict of Thomas Stone more than seventy years ago, that he has lived within four miles of Pointon Manor Since the year seventeen hundred and thirty eight</p>
+
+<p>In answer to the second Interogatory the deponent says that David Stone did marry his Sister; he remembers they lived in a married state in the year 1743, when she died but before her death she had three children that he was well acquainted with David Stone before the marriage took place.</p>
+
+<p>To the third Interogatory he says Samuel Stone did marry his Daughter</p>
+
+<p>To the fourth he deposes he has been well acquainted w. the Stone family ever since he was fifteen or sixteen years old he this deponent being now in his eighty third year.</p>
+
+<p>To the fifth he says that he does not know David Stone gave to his Son Samuel any negroes other than those who he has been told has set up a claim to freedom he knows not which of them now claim a title to Freedom only from Heresay</p>
+
+<p>To the sixth he deposes he knew nothing of Betty Mingo or any of her Decendants nor whether they were held as slaves by any person whatever nor does he know why the Negroes in Question went by the name of Mingo or from what source they took the name of Thomas</p>
+
+<p>To the eighth Interogatory he says that the characters of Margaret Reeder, Sarah Fowke, Mary Stone, Mary McCoy, Anne Thompson, Richard Robin Reeder, <del>in his</del> in his oppinion stands as fair and unblemished as any person he ever was acquainted with:</p>
+
+<p>To the ninth he says that Charles Ray and Thomas Webster are poor free mulatto's, but reckon'd very Honest and Inoffensive persons</p>
+
+<p>To the tenth he says he thinks he has heard of Mary Curtis but knows nothing of her Character</p>
+
+<p>To the eleventh he says he apprehends that Mr Richard Barnes William Maconchie and James Mancaster are likely to know the events that happened in the Stone Family as they are <fw type="catch">of</fw>
+
+<pb xml:id="p031" facs="oscys.mdcase.0006.001.031.jpg"/>
+
+of Longstanding and near neighbours and acquaintance, and further this deponent saith not</p>
+
+<p>Walter Hanson</p>
+
+<p>I Certifie that the above deposition of Walter Hanson was taken by me the day and year above written<lb/>
+James Freeman</p>
+
+</div2>
+
+<div2 type="caption">
+
+<p>Robert Thomas<lb/>
+vs<lb/>
+Henry Pile</p>
+
+<p>Petition for freedom in the General Court.</p>
+
+</div2>
+
+<div2 type="body">
+
+<p>Sarah Boarman aged forty one years being duly sworn, made the serveral answers annexed to the following interrogations Vizt.</p>
+
+<p>1st: Mr Pile asked Mrs Boarman how long she had known him the said Defendant?</p>
+
+<p>Ansr. About ten years.</p>
+
+<p>2nd. How long have you known the petitioner?</p>
+
+<p>Ans. I have known him ever since he was a child.</p>
+
+<p>3rd. Were he and his ancestors always held and reputed as slaves?</p>
+
+<p>Ansr. They were</p>
+
+<p>4th. Did you ever know or hear that they were entitled to their freedom and from whom have you heard?</p>
+
+<p>Ansr. I do not know that they are entitled to their freedom but I have been told so by Leonard Boarman Senr. since the institution of the suit</p>
+
+<p>5th. Did you know the defendants mother?</p>
+
+<p>Answr. I have known her from my infancy</p>
+
+<p>6th. Did you ever hear her say that the Petitioners relatitions were entitled to their freedom?</p>
+
+<p>Ansr. I did not.</p>
+
+<p>7th. Do you know whether Betty Mingoes mother was a free or white woman, or did you ever hear Mrs Pile say that she was?</p>
+
+<p>Ansr. During the time I lived with Mrs Pile I one day asked her whether Betty Mingoes mother was a white woman? "her answer was Betty says so."</p>
+
+<p>8th. Did you ever hear Mrs Smith or her Daughter, Mrs Dorothy Boarman say that the Petitioners family were entitled to their freedom?</p>
+
+<p>Ansr. I never Did</p>
+
+<p>Sarah Boarman</p>
+
+<p>Charles County Ss. Septr. 30th 1794: Personally appeared before me the subscriber one of the Justices of the peace for said County Sarah Boarman and, on Oath, gave the several answers to the within Interrogatories thereto annexed<lb/>
+Walter Dyson</p>
+
+<p>Charles County Sst. Sept. 30th 1794. I do hereby certify that both the Petitioner and Defendant were present when the within Interrogatories were put and the answers made thereto and that the same was done between the hours of nine and five agreeably to Mr Piles notice to the Petitioner; In Witness whereof I have hereunto set my hand<lb/>
+Walter Dyson</p>
+
+</div2>
+
+<pb xml:id="p032" facs="oscys.mdcase.0006.001.032.jpg"/>
+
+<div2 type="caption">
+
+<p>Robert Thomas<lb/>
+vs<lb/>
+Henry Pile</p>
+
+<p>Petition for freedom in the General Court.</p>
+
+</div2>
+
+<div2 type="body">
+
+<p>Petitioners Interrogatories to Sarah Boarman aged forty one years, who on Oath gave the following answers annexed thereto, these Interrogatories are signed by G Duvall for Complainant vizt.</p>
+
+<p>1st. Do you know the parties to this suit, and how long have you known them?</p>
+
+<p>Answer, I knew Mr Pile one of the Parties to this suit, and have known him about ten years; I also know Robert the Petitioner, and have known him from his childhood</p>
+
+<p>2nd: Do you know the mother of the Petitioner, and how long have you known her?</p>
+
+<p>Answer, I know the mother of the Petitioner, and have known her about thirty years</p>
+
+<p>3rd: Do you know the Grandmother of the Petitioner, and how long have you known her?</p>
+
+<p>Answer, I know the Grandmother of the Petitioner, and have known her about thirty years</p>
+
+<p>4th: Did you know Betty Mingoe a mulatto woman, who formerly lived with Mrs Pile mother of the Defendant. if yea, when and how long did you know her and did you know or have you heard and from whom and when that Betty Mingo, was descended from a white woman? relate your knowledge fully &amp; freely</p>
+
+<p>Answer I knew her about thirty years ago when I lived with Aunt Pile, and during the time I lived there I one day asked her Aunt Pile whether Betty Mingoes mother was a white woman and her answer was "Betty says so".</p>
+
+<p>Sarah Boarman</p>
+
+<p>Charles County Ss. October 15th. 1794. Personally appeared before me one of the Justices of the Peace for said County Sarah Boarmanand on oath gave the several answers annexed to the above Interrogatories<lb/>
+Walter Dyson</p>
+
+</div2>
+
+<div2 type="caption">
+
+<p>Robert Thomas<lb/>
+vs<lb/>
+Henry Pile</p>
+
+<p>Petition for freedom in the General Court</p>
+
+</div2>
+
+<div2 type="body">
+
+<p>William Swann aged sixty years, being duly sworn made the several answers annexed to the following Interrogatories.</p>
+
+<p>1st. Do you know the Petitioner in this Suit &amp; how long, and did you know his ancestors and how long &amp; have they &amp; each of them always been held and reputed as Slaves?</p>
+
+<p>Answer: I know the Petitioner in this suit and have known him about four or five years, I also know his mother, and have known her about the same length of time &amp; they &amp; each of them have always been held &amp; reputed as Slaves</p>
+
+<fw type="catch">2nd.</fw>
+
+<pb xml:id="p033" facs="oscys.mdcase.0006.001.033.jpg"/>
+
+<p>2nd. Did you know or have you Generally understood that Mary Curtis had a Mulatto Bastard, and who was the reputed father?</p>
+
+<p>Ansr. I have generally understood that Mary Curtis had a Mulatto <unclear reason="illegible">husband</unclear>, and that a Mulatto Man commonly called Charles Mingo was said to be the father of said Bastard.</p>
+
+<p>3rd. Was Charles Mingo the reputed father of said Bastard a Slave to whom and was he the son of a woman called Betty Mingo or generally so reputed to be? or was he reputed to be of the same family with the Petitioner?</p>
+
+<p>Ansr. Charles Mingo the reputed father of said Bastard was held as a Slave by a certain Thomas Jameson of Charles County and I have always understood that he was Brother to the Woman called Betty Mingo.</p>
+
+<p>4th. Was Mary Curtis sold as a servant, and to whom, for being the mother of a Bastard child. was the said Mary Curtis of a good or bad general Character &amp; reputation?</p>
+
+<p>Ansr. Mary Curtis was sold as a servant by St Marys County Court to a certain James Swann of St Mary's County for bringing a Mulatto Bastard Child, and that she served him faithfully but she was reputed to be a lewd loose woman</p>
+
+<p>5th. Was Mary Curtis a woman of general good or bad Moral Character &amp; conduct in life, veracity &amp; integrity, or was she a lewd woman who connected herself with Negroes and Slaves?</p>
+
+<p>Ansr. Mary Curtis was a woman of General bad moral Conduct in life &amp; connected herself with Negroes and Slaves.</p>
+
+<p>6th: Where was Mrs Pile the mother of the defendant born, where did she live, at what time did she die &amp; what was her age?</p>
+
+<p>Ansr. Mrs Pile lived and died where the defendant now lives.</p>
+
+<p>7th. Where did Mary Curtis reside? did she ever reside in Durham Parish in Charles County; or was she acquainted with the Stone family of Durham Parish or their neighbors?</p>
+
+<p>Ansr. Mary Curtis lived with a certain James Swann of St Mary's County she never lived in Durham Parish in Charles County as I know of or ever heard.</p>
+
+<p>8th. Did Mrs Pile ever live in or was she acquainted with the people of Durham Parish in Charles County, did she know David Stone or his father Thomas Stone or their neighbours?</p>
+
+<p>Ansr. Not as I know of</p>
+
+<p>W Swan</p>
+
+<p>Charles County Ss. Septr. 30th 1794.</p>
+
+<p>Personally appeared before me the subscriber a Justice of the peace for said County William Swann and on Oath gave the several answers to the within Interrogations thereto annexed<lb/>
+Walter Dyson</p>
+
+<pb xml:id="p034" facs="oscys.mdcase.0006.001.034.jpg"/>
+
+<p>Charles County Ss. Septr. 30th 1794. I do hereby certify that both the Petitioner and Defendant were present when the within Interrogatories were put and the answers made thereto, and that the same was done between the hours of nine and give O Clock argeably to Mr Pile notice to the Petitioner. In Witness whereof I have hereunto set my hand<lb/>
+Walter Dyson</p>
+
+</div2>
+
+<div2 type="caption">
+
+<p>Robert Thomas<lb/>
+vs<lb/>
+Henry Pile</p>
+
+<p>Petition for freedom in the General Court</p>
+
+</div2>
+
+<div2 type="body">
+
+<p>Petitioners Interrogatories to William Swann (on Oath) aged sixty years vizt. Signed G Duvall for Petitioner</p>
+
+<p>1st. Do you know the parties to this suit, and how long have you known them?</p>
+
+<p>Answer: I know Robert one of the parties to this suit, and have known him for these four or five years past.</p>
+
+<p>2nd. Do you know the mother of the Petitioner, and how long have you known her?</p>
+
+<p>Answer: I know the mother of the Petitioner, whose name is Judah and have known her about ten or twelve months</p>
+
+<p>3rd. Do you know the Grand Mother of the Petitioner, and how long did you know her?</p>
+
+<p>Answer: I have never known her until within these few days past</p>
+
+<p>4th. Did you know Betty Mingoe a mulatto woman who formerly lived with Mrs Pile Mother of the Defendant, if Yea when &amp; how long did you know her; and did you know, or have you heard and from whom, that Betty Mingo was descended from a white woman or a free woman? relate your knowledge fully and freely.</p>
+
+<p>Answer: I never knew Betty Mingo, but I have hear from Mary Curtis when she lived with my father in the capacity of a white servant, that said Betty Mingoe was the Daughter of a white woman</p>
+
+<p>W Swan</p>
+
+<p>Charles County Ss. October 15th 1794. Personally appeared before me one of the Justices of the peace for said County William Swann and on Oath gave the several answers annexed to the above Interrogatories<lb/>
+Walter Dyson</p>
+
+</div2>
+
+<div2 type="caption">
+
+<p>Robert Thomas<lb/>
+vs<lb/>
+Henry Pile</p>
+
+<p>Petition for freedom in the General Court.</p>
+
+</div2>
+
+<div2 type="body">
+
+<p>Petitioner Interrogatories</p>
+
+<p>1. Do you know the parties in this suit and how long have you known them?</p>
+
+<p>2. Do you know the mother of the Petitioner, and how long have you known her?</p>
+
+<p>3 Do you know the Grand Mother of the Petitioner and how long did you know her?</p>
+
+<fw type="catch">4.</fw>
+
+<pb xml:id="p035" facs="oscys.mdcase.0006.001.035.jpg"/>
+
+<p>4. Did you know Betty Mingo and do you know or have you heard and from whom and when, that Betty Mingo was descended from a white woman or a Free woman, Relate your knowledge fully and freely</p>
+
+<p>Copy</p>
+
+<p>G Duvall for Compts.</p>
+
+</div2>
+
+<div2 type="caption">
+
+<p>Robert Thomas<lb/>
+vs<lb/>
+Henry Pile</p>
+
+<p>Petition for Freedom in the General Court</p>
+
+</div2>
+
+<div2 type="body">
+
+<p>Defendants Interrogatories</p>
+
+<p>1. Did you know Peg a Black woman belonging to David Stone, and if yea, was she held in Slavery &amp; by whom</p>
+
+<p>2: Where have you lived, how far from Pointon Manor</p>
+
+<p>3. Was you acquainted with Thomas Stone Father of David Stone, Catherine Stone Widow of Thomas Stone, David Stone, or either of them and how long, and how have you been connected with David Stones Family and have you been generally upon intimate terms with them, and did you know or have you heard that any of the above person held negroes in Slavery who were entitled to freedom?</p>
+
+<p>4. Did you know or ever hear of Mary Curtis?</p>
+
+<p>William McConchie being duly sworn before James Freeman one of the Justices of Charles County on the interrogatories exhibited to him on the part of the Petitioner answereth as follows Vizt.</p>
+
+<p>1st. No neither</p>
+
+<p>2. I do not know her;</p>
+
+<p>3. I know nothing of her</p>
+
+<p>4. I know nothing of her &amp; am ignorant totally of her descent</p>
+
+<p>Answers to Defts Interrogatories</p>
+
+<p>1: I knew Peg a black woman belonging to David Stone held as a slave; she was always treated as a slave and laboured as a slave She was sold, or exchanged to John Semple to whom she served as a slave</p>
+
+<p>2:I have lived great part of my time on Point and Manor, and now within a mile and a half and have never lived father from it.</p>
+
+<p>3: I was not acquainted with Thomas Stone father of David Stone nor Catherine Stone widow of Thomas Stone; I was well acquainted with David Stone, almost all my life: My eldest Brother married daughter of David Stone, I was in General on friendly terms with him and his family; I never heard of their having held persons entitled to their freedom in Slavery</p>
+
+<p>4: Not that I recollect</p>
+
+<p>William McConchie sworn before the subscriber aged about fifty seven or fifty eight years this 11th day of October 1794.</p>
+
+<p>Wm McConchie<lb/>
+James Freeman</p>
+
+<p>James Moncaster Aged 59 or 60 years being duly sworn on the Holy Evangely of Almighty God before the subscriber one of the Justices <fw type="catch">of</fw>
+
+<pb xml:id="p036" facs="oscys.mdcase.0006.001.036.jpg"/>
+
+of Charles County answereth and deposeth as follows. To the Interrogatories of the Petitioner as follows</p>
+
+<p>1. Nothing of either</p>
+
+<p>2: I never knew her at all</p>
+
+<p>3: I knew her not</p>
+
+<p>4: I know nothing of Betty Mingoe nor her pedigree</p>
+
+<p>Defts Interrs. 1 I knew her when she was a slave to David Stone that he afterwards exchanged her with John Semple for a Negroe Man. I always understood she was held as a Slave by Mr Semple</p>
+
+<p>2: I lived on Point and Manor seven years with Richard Stone; and have lived from twenty one to this time on Point and Manor I was only acquainted with David Stone</p>
+
+<p>4: I never did</p>
+
+<p>James Muncaster<lb/>
+his T mark</p>
+
+<p>I certify that the foregoing deposition was taken before me this 11th October 1794.<lb/>
+James Freeman</p>
+
+<p>True Copies taken from the original Deposition filed in the Cause Robert Thomas agst. Henry Pile<lb/>
+Jno. Gwinn Clk</p>
+
+</div2>
+
+<div2 type="back">
+
+<p>130 sid.</p>
+
+<p>Robert Thomas<lb/>
+v<lb/>
+Revd. Henry Pile</p>
+
+<p>Depns</p>
+
+<p>To be read in evidence at the trial of all the Petitions for freedom of the Thomas's.</p>
+
+<p>Recorded in Liber <unclear reason="illegible">IG</unclear> No. 25 folio <del>424</del> 33 <gap extent="one word or symbol"/> one of the Judgment Records of the Genl. Court</p>
+
+<p>Judgt Octo 1794</p>
+
+</div2>
+
+</div1>
+    
+</body>
+</text>
+</TEI>

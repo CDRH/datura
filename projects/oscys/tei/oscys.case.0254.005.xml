@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
 <name n="Nash, Kaci" xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -74,12 +75,16 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1851-10">October 1851</date></term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Brightwell, John L.</term>
+<term xml:id="per.001918">Brightwell, John L.</term>
 <term xml:id="per.000476">Dunlop, James, 1793-</term>
 <term xml:id="per.000044">Morsell, James Sewall</term>
 </keywords>
@@ -88,27 +93,26 @@
 <term/>
 </keywords>
 
-
 </textClass>
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001919">
 <persName>Wayne, Daniel</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001920">
 <persName>Wayne, Harriet</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001921">
 <persName>Wayne, Joseph C.</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001922">
 <persName>Wayne, Mary Jane</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001923">
 <persName>Wayne, William R.</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001924">
 <persName>Greenleaf, William C.</persName>
 </person>
 <person role="attorney_petitioner">
@@ -128,7 +132,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>             
+<revisionDesc>        
+<change when="2015-11-23" who="#lkw">added xml:ids</change>     
 <change when="2015-02-12" who="#kln">reviewed; edited</change> 
 <change when="2015-02-06" who="#ea">Encoded and transcribed.</change>
 </revisionDesc>

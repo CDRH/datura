@@ -12,6 +12,7 @@
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="McCormick, Kylie L." xml:id="klm">Kylie L. McCormick</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -75,14 +76,18 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1848-10">October 1848</date></term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Gray, Melvina A.</term>
-<term>Robertson, Henry B.</term>
-<term>Waters, John</term>
+<term xml:id="per.001806">Gray, Melvina A.</term>
+<term xml:id="per.001807">Robertson, Henry B.</term>
+<term xml:id="per.001808">Waters, John</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -90,25 +95,24 @@
 <term>Washington (D.C.)</term>
 </keywords>
 
-
 </textClass>
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001805">
 <persName>Cryer, Turner</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001190">
 <persName>Cryer, Winnie</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001192">
 <persName>Cocke, Elizabeth</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001193">
 <persName>Hoffman, Peter E.</persName>
 </person>
-<person role="attorney_petitioner">
-<persName>May, H.</persName>
+<person role="attorney_petitioner" xml:id="per.001194">
+<persName>May, Henry</persName>
 </person>
 <person role="attorney_defendant">
 <persName/>
@@ -124,7 +128,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>             
+<revisionDesc>      
+<change when="2015-11-09" who="#lkw">added xml:ids</change>        
 <change when="2015-01-12" who="#kln">reviewed, edited</change>
 <change when="2014-11" who="#snc">encoded</change>
 </revisionDesc>

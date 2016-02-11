@@ -9,6 +9,7 @@
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal>
 <respStmt>
 <resp>encoding</resp>
+<name n="Bryant, Samantha M." xml:id="smb">Samantha M. Bryant</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
@@ -51,7 +52,10 @@
 <term/>
 </keywords>
 <keywords scheme="original" n="type">
-<term>Civil</term>
+<term/>
+</keywords>
+<keywords scheme="original" n="claims">
+<term/>
 </keywords>
 <classCode scheme="original">
 <ref type="related.case"/>
@@ -59,6 +63,8 @@
 </textClass>
 </profileDesc>
 <revisionDesc>
+<change when="2016-02-08" who="#kln">removed Importation Violation from claims</change>
+<change when="2016-01-20" who="#smb">added claims</change>
 <change when="2015" who="#kln">encoded</change>
 </revisionDesc>
 </teiHeader>

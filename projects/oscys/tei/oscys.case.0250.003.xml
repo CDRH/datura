@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -74,34 +75,37 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1809-12">December 1809</date></term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">
 <term xml:id="per.000160">Davis, Susan</term>
-<term>McIntire, Samuel</term>
+<term xml:id="per.001605">McIntire, Samuel</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
 <term/>
 </keywords>
 
-
 </textClass>
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001601">
 <persName>Davis, John</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001602">
 <persName>Davis, Mary Ann</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001603">
 <persName>Davis, Teresa</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001604">
 <persName>Wood, Hezekiah</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.000011">
@@ -124,7 +128,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>   
+<revisionDesc>  
+<change when="2015-11-02" who="#lkw">added xml:ids; transcription</change>   
 <change when="2015-03-02" who="#kln">reviewed; edited</change>          
 <change when="2015-02-12" who="#ea">Encoded and transcribed.</change>
 </revisionDesc>
@@ -158,7 +163,7 @@ P. P.</ab>
 recog. with Saml. McIntire<lb/>
 penality $800. contd.</p>
 
-<p><gap extent="one word" reason="illegible"/> the issue aforesaid <del>let a Jury</del> It was ordered that a jury therein appear. thereupon, being being <gap extent="one word" reason="illegible"/> &amp; <unclear reason="illegible">caled</unclear> came, and who being empanneled &amp;c sworn &amp; c.</p>
+<p>for trying the issue aforesaid <del>let a Jury</del> It was ordered that a jury therein appear. thereupon, being  <gap extent="one word" reason="illegible"/> &amp; <unclear reason="illegible">caled</unclear> came, and who being empanneled &amp;c sworn &amp; c.</p>
     
 <p>Decr. 1809</p>
     
@@ -171,7 +176,7 @@ appeal</p>
 
 <p><del>do not prevent the said Petitioners from attending this court from time to time &amp;c.</del></p>
 
-<p>that the said John, Terrissa and Mary ann. Davis are Davis entitled to their freedom being the children of Susan Davis a person free born as the said <del>petitioner</del> John &amp;c. hath above <del>by</del> by their pet alledged, Therefore it is Considered by the Court</p>
+<p>that the said John, Terrissa and Mary ann. Davis are entitled to their freedom being the children of Susan Davis a person free born as the said <del>petitioner</del> John &amp;c. hath above <del>by</del> by their pet alledged, Therefore it is Considered by the Court</p>
 
 </div2>
     

@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -74,6 +75,10 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1847-10">October 1847</date></term>
 </keywords>
@@ -90,10 +95,10 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001648">
 <persName>Cross, Martha</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001649">
 <persName>Linton, Sarah E.</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.000873">
@@ -113,7 +118,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>             
+<revisionDesc>      
+<change when="2015-11-02" who="#lkw">added xml:ids</change>        
 <change when="2015-02-18" who="#kln">reviewed; edited</change>
 <change when="2014-10" who="#snc">encoded</change>
 </revisionDesc>
@@ -136,7 +142,7 @@
 
 <div2 type="body">
 
-<p>The Petition of Martha <del>Ann</del> Cross a coloured person humbly complaining sheweth nto the said Honorable Court that your Petitioner is entitled to her freedom and is unjustly held in bondage by Sarah E Linton who claim your Petitioner as her slave Wherefore your Petitioner prays the said Honorable Court to grant a subpoena to the said Sarah E Linton directed and such relife in the premises as may be according to law</p>
+<p>The Petition of Martha <del>Ann</del> Cross a coloured person humbly complaining sheweth unto the said Honorable Court that your Petitioner is entitled to her freedom and is unjustly held in bondage by Sarah E Linton who claim your Petitioner as her slave Wherefore your Petitioner prays the said Honorable Court to grant a subpoena to the said Sarah E Linton directed and such relief in the premises as may be according to law</p>
 
 <p>John J Dermott atty for Petitioner</p>
 

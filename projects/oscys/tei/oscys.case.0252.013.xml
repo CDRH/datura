@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Stephanie N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -74,14 +75,18 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1857-03">March 1857</date></term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term xml:id="per.000757">Giberson, Gilbert L.</term>
-<term>Mills, William</term>
-<term>Morsell, Benjamin K.</term>
+<!-- <term xml:id="per.000757">Giberson, Gilbert L.</term> -->
+<term xml:id="per.001898">Mills, William</term>
+<term xml:id="per.001621">Morsell, Benjamin K.</term>
 <term xml:id="per.000740">Smith, John A.</term>
 </keywords>
 
@@ -90,15 +95,14 @@
 <term>Washington (D.C.)</term>
 </keywords>
 
-
 </textClass>
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
-<persName>Gardner, Primos</persName>
+<person role="petitioner" xml:id="per.001897">
+<persName>Garner, Primos</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001900">
 <persName>Marryman, Horatio R.</persName>
 </person>
 <person role="attorney_petitioner">
@@ -118,7 +122,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>     
+<revisionDesc> 
+<change when="2015-11-23" who="#lkw">added xml:ids; commented out Giberson</change>    
 <change when="2015-05-22" who="#kln">reviewed; edited</change>         
 <change when="2015-04-13" who="#snc">Encoded and transcribed</change>
 </revisionDesc>

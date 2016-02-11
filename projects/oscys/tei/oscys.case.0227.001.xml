@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -74,6 +75,10 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1831-05">May 1831</date></term>
 </keywords>
@@ -92,10 +97,10 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001782">
 <persName>Thornton, William</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001783">
 <persName>Graham, George, 1770-1830</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.000545">
@@ -115,7 +120,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>         
+<revisionDesc>      
+<change when="2015-11-09" who="#lkw">added xml:ids</change>    
 <change when="2015-01-12" who="#kln">reviewed; edited</change>    
 <change when="2014-11" who="#snc">encoded</change>
 </revisionDesc>
@@ -138,7 +144,7 @@
 
 <div2 type="body">
 
-<p>The Petition of William Thornton humbly sheath; That he was a slave of one George Graham who was a citizen of Virginia &amp; removed to the County of Washington in the District aforesaid to reside about the year 1815 or 1816 leaving your Petitioner a slave in Virginia. That about the year 1820 or 1821 your Petitioner was removed by his master the said Graham from Virginia &amp; brought to reside in the County of Washington aforesaid, and was not registered in the office of the Clerk of said County, by reason whereof he is entitled, as he is advised, to his freedom. &amp; he prays your honors therefore to <gap extent="one word"/> it to him by a Judgement of your Honl Court upon a trial by Jury.</p>
+<p>The Petition of William Thornton humbly sheath; That he was a slave of one George Graham who was a citizen of Virginia &amp; removed to the County of Washington in the District aforesaid to reside about the year 1815 or 1816 leaving your Petitioner a slave in Virginia. That about the year 1820 or 1821 your Petitioner was removed by his master the said Graham from Virginia &amp; brought to reside in the County of Washington aforesaid, and was not registered in the office of the Clerk of said County, by reason whereof he is entitled, as he is advised, to his freedom. &amp; he prays your honors therefore to <gap extent="one or two words" reason="illegible"/> it to him by a Judgement of your Honl Court upon a trial by Jury.</p>
 
 <p>B. L. Lear for Petr.</p>
 

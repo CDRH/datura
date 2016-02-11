@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -74,12 +75,16 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1845-03">March 1845</date></term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Daniel, John H.</term>
+<term xml:id="per.001611">Daniel, John H.</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -90,16 +95,16 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001609">
 <persName>Parker, Polly</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001610">
 <persName>Daniel, Cushing</persName>
 </person>
 <person role="attorney_petitioner">
 <persName/>
 </person>
-<person role="attorney_petitioner" xml:id="per.000753">
+<person role="attorney_defendant" xml:id="per.000753">
 <persName>Wallach, Richard, 1816-1881</persName>
 </person>
 </listPerson>
@@ -114,6 +119,7 @@
 </profileDesc>
         
 <revisionDesc>  
+<change when="2015-11-02" who="#lkw">added xml:ids</change> 
 <change when="2015-08-12" who="#kln">changed Wallach sr to Wallch jr</change>      
 <change when="2015-02-17" who="#kln">reviewed; edited</change>      
 <change when="2014-10" who="#snc">encoded</change>

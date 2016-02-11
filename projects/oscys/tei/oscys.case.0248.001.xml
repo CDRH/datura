@@ -14,6 +14,7 @@
 <resp>transcription and encoding</resp>
 <name n="McCormick, Kylie L." xml:id="klm">Kylie L. McCormick</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -77,6 +78,10 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1853-03">March 1853</date></term>
 </keywords>
@@ -96,13 +101,13 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001878">
 <persName>Johnson, Joseph</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001879">
 <persName>Johnson, Henry</persName>
 </person>
-<person role="attorney_petitioner">
+<person role="attorney_petitioner" xml:id="per.001880">
 <persName>Ingle, Christopher</persName>
 </person>
 <person role="attorney_defendant">
@@ -120,6 +125,7 @@
 </profileDesc>
         
 <revisionDesc>   
+<change when="2015-11-23" who="#lkw">added xml:ids</change>
 <change when="2015-09-18" who="#kln">reviewed; edited</change>            
 <change when="2015-03-11" who="klm">encoded; transcribed</change>
 </revisionDesc>

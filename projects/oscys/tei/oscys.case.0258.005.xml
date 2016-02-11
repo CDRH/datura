@@ -3,7 +3,7 @@
 <teiHeader>
 <fileDesc>
 <titleStmt>
-<title>Walter Thomas &amp; Dennis Thomas v. Alexander Scott. Alexander Scott to J. Porter and John Law</title>
+<title>Walter Thomas &amp; Dennis Thomas v. Alexander Scott. Alexander Scott to James A. Porter and John Law</title>
 <principal n="Guiliano, Jennifer" xml:id="jeg">Jennifer Guiliano</principal>
 <principal n="Muñoz, Trevor" xml:id="tm">Trevor Muñoz</principal>
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal> 
@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -46,7 +47,7 @@
             
 <sourceDesc>
 <bibl>
-<title level="m" type="main">Alexander Scott to J. Porter and John Law</title>
+<title level="m" type="main">Alexander Scott to James A. Porter and John Law</title>
 <date when="1809-12-23">December 23, 1809</date>
 <note type="project">Our transcription is based on a digital image of the original.</note>
 </bibl>
@@ -74,22 +75,27 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1810-06">June 1810</date></term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">
 <term xml:id="per.000045">Balch, Lewis P. W.</term>
-<term>Campbell, John, 1765-1828</term>
+<term xml:id="per.001940">Campbell, John, 1765-1828</term>
 <term xml:id="per.000714">Corcoran, Thomas</term>
 <term xml:id="per.000435">Jones, Walter, 1776-1861</term>
-<term>Key, Philip Barton, 1757-1815</term>
+<term xml:id="per.001495">Key, Philip Barton, 1757-1815</term>
 <term xml:id="per.000023">Law, John</term>
+<term xml:id="per.001941">Meade</term> <!-- added -->
 <term xml:id="per.000044">Morsell, James Sewall</term>
-<term>Newman, Francis</term>
-<term>Pile, Henry</term>
-<term>Porter, J.</term>
-<term>Thomas, Will</term>
+<term xml:id="per.001942">Newman, Francis</term>
+<term xml:id="per.001943">Pile, Henry</term>
+<term xml:id="per.001944">Porter, James A.</term>
+<term xml:id="per.001945">Thomas, Will</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -105,13 +111,13 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001935">
 <persName>Thomas, Dennis</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001936">
 <persName>Thomas, Walter</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001937">
 <persName>Scott, Alexander</persName>
 </person>
 <person role="attorney_petitioner">
@@ -132,6 +138,7 @@
 </profileDesc>
         
 <revisionDesc> 
+<change when="2015-11-30" who="#lkw">added xml:ids; added Meade to people; changed Porter's name to James A.</change>
 <change when="2015-04-02" who="#kln">reviewed; edited</change>                 
 <change when="2015-03-17" who="#ea">Encoded and transcribed.</change>
 </revisionDesc>
@@ -154,7 +161,7 @@
 
 <p>I am sir, your obd. Servt. A Scott</p>
 
-<p><unclear reason="illegible">Jno</unclear> Porter, atty at law<lb/>
+<p>Mr. Porter, atty at law<lb/>
 Washington</p>
 
 </div2>

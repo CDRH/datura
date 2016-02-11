@@ -12,6 +12,7 @@
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="McCormick, Kylie L." xml:id="klm">Kylie L. McCormick</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -75,6 +76,10 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1850-10">October 1850</date></term>
 </keywords>
@@ -89,15 +94,14 @@
 <term>Washington (D.C.)</term>
 </keywords>
 
-
 </textClass>
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001828">
 <persName>Bosy, Lucy</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001829">
 <persName>Fitzhugh, Ann Maria</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.000751">
@@ -118,6 +122,7 @@
 </profileDesc>
         
 <revisionDesc>  
+<change when="2015-11-16" who="#lkw">added xml:ids</change> 
 <change when="2015-02-25" who="#kln">reviewed; edited</change>            
 <change when="2014-10" who="#snc">encoded</change>
 </revisionDesc>

@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -75,27 +76,30 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1851-10">October 1851</date></term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">
 <term xml:id="per.001255">Armistead, Robert</term>
-<term>Bell, Andrew</term>
-<term>Bell, Caroline</term>
-<term xml:id="per.000773">Bell, Daniel</term>
-<term>Bell, George W.</term>
-<term>Bell, Harriet</term>
-<term>Bell, Mary E.</term>
-<term>Butt, Richard</term>
-<term>Naylor, George</term>
+<term xml:id="per.001855">Bell, Andrew</term>
+<term xml:id="per.001856">Bell, Caroline</term>
+<term xml:id="per.001857">Bell, Daniel</term>
+<term xml:id="per.001858">Bell, George W.</term>
+<term xml:id="per.001859">Bell, Harriet</term>
+<term xml:id="per.001860">Bell, Mary E.</term>
+<term xml:id="per.001861">Butt, Richard</term>
+<term xml:id="per.000699">Naylor, George</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
 <term>Washington County (D.C.)</term>
 <term>Washington (D.C.)</term>
 </keywords>
-
 
 </textClass>
             
@@ -116,7 +120,7 @@
 </listPerson>
 
 <listPerson xml:id="oscys.caseid.0248">            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001850">
 <persName>Bell, Eleanora</persName>
 </person>
 <person role="defendant" corresp="per.001254">
@@ -139,7 +143,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>      
+<revisionDesc>     
+<change when="2015-11-17" who="#lkw">added xml:ids</change>  
 <change when="2015-02-09" who="#kln">reviewed; edited</change>       
 <change when="2015-02-05" who="#ea">Encoded and transcribed.</change>
 </revisionDesc>

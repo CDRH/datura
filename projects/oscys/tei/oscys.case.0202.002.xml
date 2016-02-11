@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -74,6 +75,10 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1831-12">December 1831</date></term>
 </keywords>
@@ -91,16 +96,16 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001661">
 <persName>Sam</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001658">
 <persName>Childs, Gabriel</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001659">
 <persName>Childs, Lewis</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001660">
 <persName>Emerson, Hiram</persName>
 </person>
 <person role="attorney_petitioner">
@@ -121,6 +126,7 @@
 </profileDesc>
         
 <revisionDesc>      
+<change when="2015-11-02" who="#lkw">added xml:ids</change>  
 <change when="2015-02-18" who="#kln">reviewed; edited</change>       
 <change when="2014-11" who="#snc">encoded</change>
 </revisionDesc>
@@ -143,7 +149,7 @@
 
 <div2 type="body">
 
-<p>The Petition of Negro Sam humbly sheath unto your honors that he the said, Negro Sam is unlawfully held in slavery by a certain, Lewis Childs, Gabriel Childs and Emerson, that the said Lewis Childs, Gabriel Childs and - Emerson are now about to carry him out of the Jurisdiction of this honorable Court. He therefore prays this Honorable Court to cause the said Lewis Childs, Gabriel Childs and Emerson to come before your Honorable Court to whew cause if any he has why the said petitioner should not bellowed to remain within the jurisdiction aforesaid until the right of your said petitioner to his freedom shall be fully enquired into by this Honorable Court and for such other and further relief in the premises as to your Honors may seem meet &amp; your petitioner &amp;c</p>
+<p>The Petition of Negro Sam humbly sheath unto your honors that he the said, Negro Sam is unlawfully held in slavery by a certain, Lewis Childs, Gabriel Childs and Emerson, that the said Lewis Childs, Gabriel Childs and &#8212; Emerson are now about to carry him out of the Jurisdiction of this honorable Court. He therefore prays this Honorable Court to cause the said Lewis Childs, Gabriel Childs and Emerson to come before your Honorable Court to whew cause if any he has why the said petitioner should not bellowed to remain within the jurisdiction aforesaid until the right of your said petitioner to his freedom shall be fully enquired into by this Honorable Court and for such other and further relief in the premises as to your Honors may seem meet &amp; your petitioner &amp;c</p>
 
 </div2>
 

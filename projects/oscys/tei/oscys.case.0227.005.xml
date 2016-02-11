@@ -11,7 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
-
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -75,14 +75,18 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1831-05">May 1831</date></term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Graham, John</term>
-<term>Ramsay, C.</term>
-<term>Stith, John</term>
+<term xml:id="per.001788">Graham, John</term>
+<term xml:id="per.001789">Ramsay, C.</term>
+<term xml:id="per.001786">Stith, John</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -96,10 +100,10 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001782">
 <persName>Thornton, William</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001783">
 <persName>Graham, George, 1770-1830</persName>
 </person>
 <person role="attorney_petitioner">
@@ -120,6 +124,7 @@
 </profileDesc>
         
 <revisionDesc>    
+<change when="2015-11-09" who="#lkw">added xml:ids; transcription</change> 
 <change when="2015-01-12" who="#kln">reviewed; edited</change>         
 <change when="2014-11" who="#snc">encoded</change>
 </revisionDesc>
@@ -136,7 +141,7 @@
 
 <div2 type="body">
 
-<p>My Brother Mr George Graham being in the Public Employ came to reside in this City in the year 1814. Her family consisted of two very small children He brought with him only one servant a very old woman and nurse to the children. Such other servants as he had occasion for he hired and always boarded until the year 1826. After the Death of my mother, and at the period that my Brother John Graham went to Rio, April 1819, he decided to remove all his negroes as well those in which my Mother had had a life Estate, of which William Thornton was one to Kentucky, where his other people were fixed. The servants being generally in Virginia, directions were given them to assemble at my house. William Thornton was at that time hired to Mr John Stith in Virginia who was to have sent him up, but not coming on the day fixed. My Brother detained the people for several days, but ultimately went off without him. Soon after he had left the City William made his appearance and has remained here ever since. My Brother remained several months in Kentucky and William never did go back to live at Mr
+<p>My Brother Mr George Graham being in the Public Employ came to reside in this City in the year 1814. His family consisted of two very small children. He brought with him only one servant a very old woman and nurse to the children. Such other servants as he had occasion for he hired and always boarded until the year 1826. After the Death of my mother, and at the period that my Brother John Graham went to Rio, April 1819, he decided to remove all his negroes as well those in which my Mother had had a life Estate, of which William Thornton was one to Kentucky, where his other people were fixed. The servants being generally in Virginia, directions were given them to assemble at my house. William Thornton was at that time hired to Mr John Stith in Virginia who was to have sent him up, but not coming on the day fixed. My Brother detained the people for several days, but ultimately went off without him. Soon after he had left the City William made his appearance and has remained here ever since. My Brother remained several months in Kentucky and William never did go back to live at Mr
 
 <pb xml:id="p002" facs="oscys.case.0227.005.002.jpg"/>
 

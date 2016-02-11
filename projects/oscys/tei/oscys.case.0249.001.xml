@@ -14,6 +14,7 @@
 <resp>transcription and encoding</resp>
 <name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -77,15 +78,20 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1822-10">October 1822</date></term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Graeff, John, Jr.</term>
-<term>Rooker, Mary C.</term>
-<term xml:id="pers.000464">Wallach, Richard</term>
-<term>Young, Robert</term>
+<term xml:id="per.001881">Graeff</term><!-- Mrs. -->
+<term xml:id="per.001882">Graeff, John, Jr.</term>
+<term xml:id="per.001883">Rooker, Mary C.</term>
+<term xml:id="per.000464">Wallach, Richard</term>
+<term xml:id="per.001884">Young, Robert</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
@@ -97,15 +103,15 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001885">
 <persName>Charlotte</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001886">
 <persName>Watkins, Tobias</persName>
 </person>
-<person role="attorney_petitioner" xml:id="per.000460">
+<!-- <person role="attorney_petitioner" xml:id="per.000460">
 <persName>Taney, Augustus</persName>
-</person>
+</person> -->
 <person role="attorney_defendant">
 <persName/>
 </person>
@@ -121,6 +127,7 @@
 </profileDesc>
         
 <revisionDesc>  
+<change when="2015-11-23" who="#lkw">added xml:ids; added Mrs. Graeff to people; commented out Taney</change>
 <change when="2015-09-15" who="#kln">reviewed; edited</change>           
 <change when="2015-06-30" who="#ea">Encoded and transcribed.</change>
 </revisionDesc>
@@ -143,7 +150,7 @@
 
 <div2 type="body">
 
-<p>Personally appeared before the Subscriber a Justice of the peace for the County aforesaid, Mary C. Rooker, and made Oath in due form of Law, that Negro Woman Charlotte has for the last twenty two years previous to the marriage of her mistress to Mr John Graeff <unclear reason="illegible">Jr</unclear> resided in Alexandria, and she verily believes that she (Negro Charlotte) never did at any time reside in any other place than Alexandria; and this Deponent further states that her sister (Mrs Grarff) did for the last four years previous to her marriage reside chiefly with her in Alexandria.</p>   
+<p>Personally appeared before the Subscriber a Justice of the peace for the County aforesaid, Mary C. Rooker, and made Oath in due form of Law, that Negro Woman Charlotte has for the last twenty two years previous to the marriage of her mistress to Mr John Graeff <unclear reason="illegible">Jr</unclear> resided in Alexandria, and she verily believes that she (Negro Charlotte) never did at any time reside in any other place than Alexandria; and this Deponent further states that her sister (Mrs Graeff) did for the last four years previous to her marriage reside chiefly with her in Alexandria.</p>   
 
 <p>Given under my hand &amp; Seal this 4th day of November 1822.<lb/>
 Robert Young</p>  

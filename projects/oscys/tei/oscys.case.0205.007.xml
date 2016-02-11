@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -74,24 +75,28 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1835-03">March 1835</date></term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">
-<term>Ashton, Leonard</term> 
-<term>Boone</term>
-<term>Brenton, Samuel</term>
-<term>Constably</term>
+<term xml:id="per.001694">Ashton, Leonard</term> 
+<term xml:id="per.001695">Boone</term>
+<term xml:id="per.001693">Brenton, Samuel</term>
+<!-- <term>Constably</term>  title "constable" not name -->
 <term xml:id="per.000004">Cranch, William, 1769-1855</term>
-<term>Fergusson, William</term>
-<term>Magill, William</term>
-<term>Meade, Fanny</term>
-<term>Meade, James</term>
-<term>Stevenson, John</term> <!-- alt spelling Stephenson -->
-<term>Wallingsford, Amelia</term>
-<term>Wallingsford, Rachael</term>
-<term>Waters</term>
+<term xml:id="per.001696">Fergusson, William</term>
+<term xml:id="per.001697">Magill, William</term>
+<term xml:id="per.001698">Meade, Fanny</term>
+<term xml:id="per.001688">Meade, James</term>
+<term xml:id="per.001692">Stevenson, John</term> <!-- alt spelling Stephenson -->
+<term xml:id="per.001699">Wallingsford, Amelia</term>
+<term xml:id="per.001689">Wallingsford, Rachael</term>
+<term xml:id="per.001700">Waters</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places"> 
@@ -104,19 +109,19 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001683">
 <persName>Allen, Eliza Jane</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001684">
 <persName>Allen, John Davy</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001685">
 <persName>Allen, Julia Maria</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001686">
 <persName>Allen, Sarah Ann</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001687">
 <persName>Wallingsford, Joseph</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.000001">
@@ -137,6 +142,7 @@
 </profileDesc>
         
 <revisionDesc> 
+<change when="2015-11-09" who="#lkw">added xml:ids; transcription</change>  
 <change when="2015-01-12" who="#kln">reviewed; edited</change>            
 <change when="2014-11" who="#snc">encoded</change>
 </revisionDesc>
@@ -171,21 +177,21 @@ the wife of the Defendant and the same who executed said deed, voluntarily left 
 
 <pb xml:id="p003" facs="oscys.case.0205.007.003.jpg"/>
 
-than in Washington City and that she only went backwards and forwards from the one place to the other; that her conduct in so doing gave Defendant great unhappiness and distress of mind; that Defendant, to Witnesses knowledge, often entreated her to return and live with him as a wife ought to do and she always refused so to do; that this state of things produced great unhappiness with Defendant; that Defendant had been married before and had <gap extent="one word" reason="illegible"/> his wife, by whom he had several children; that said Rachael was his second wife and they had no children. That in the year 1827, Defendant came to Washington City to take possession of Petitioners and to carry them home, having heard that they were <del>concealed</del> there, that Witness was with him; that they took Petitioners and when taking them away, said Rachael made oath before two justices of the peace that said Petitioners were her slaves and that the Defendant and Witness were about stealing or kidnapping or taking them away (Witness does not recollect which) and they were arrested and thrown into Prison and released by Chief Judge Cranch of this Court and said Petitioners ordered to be delivered to Defendant as his property, which was done; that said Rachael then offered to Defendant that if he would leave said Petitioners with her to wait on her as her support, that she would agree to take them in place of $120 per year alimony allowed her by Prince Geo. County Court, <del>during the time</del> to be paid during the pendency of a suit she had brought for alimony; that Defendant said he would agree to it, provided she would not harass him any more and would give up the $120 per year, otherwise he wanted said Petitioners to sell to pay the fine, it being his object in coming to the City to get them for that purpose, that said Rachael so
+than in Washington City and that she only went backwards and forwards from the one place to the other; that her conduct in so doing gave Defendant great unhappiness and distress of mind; that Defendant, to Witnesses knowledge, often entreated her to return and live with him as a wife ought to do and she always refused so to do; that this state of things produced great unhappiness with Defendant; that Defendant had been married before and had lost his wife, by whom he had several children; that said Rachael was his second wife and they had no children. That in the year 1827, Defendant came to Washington City to take possession of Petitioners and to carry them home, having heard that they were <del>concealed</del> there, that Witness was with him; that they took Petitioners and when taking them away, said Rachael made oath before two justices of the peace that said Petitioners were her slaves and that the Defendant and Witness were about stealing or kidnapping or taking them away (Witness does not recollect which) and they were arrested and thrown into Prison and released by Chief Judge Cranch of this Court and said Petitioners ordered to be delivered to Defendant as his property, which was done; that said Rachael then offered to Defendant that if he would leave said Petitioners with her to wait on her as her support, that she would agree to take them in place of $120 per year alimony allowed her by Prince Geo. County Court, <del>during the time</del> to be paid during the pendency of a suit she had brought for alimony; that Defendant said he would agree to it, provided she would not harass him any more and would give up the $120 per year, otherwise he wanted said Petitioners to sell to pay the fine, it being his object in coming to the City to get them for that purpose, that said Rachael so
 
 <pb xml:id="p004" facs="oscys.case.0205.007.004.jpg"/>
 
-to agreed and appointed the next day to meet for the purpose of carrying said agreement into effect and <gap extent="one word" reason="illegible"/> to have her lawyer Mr Key there; that witness and Defendant remained and went to the place fixed on and neither said Rachael or Mr Key attended. That the Defendant let said Petitioner go with said Rachael upon the evening, she made said proposition to him, thinking she would faithfully carry it into effect, which she did not, but instead of doing it, hid and concealed said Petitioners so that the Defendant could not find them, but was obliged to return home without them, and she kept them so concealed from that time until she came down to Defendants House when she died; she then brought them with her, but the woman Sarah Ann went off before her mistress died and was never heard of again until retaken by Witness. That after the death of said Rachael, the Witness as agent of Defendant heard Petitioners were in Washington City; that he came here to look for them and after some time and some search he found out where they were; that they are hid and concealed in a House of Saml. Brenton in said City; that He employed several constables to aid him in the taking of them viz, <unclear reason="illegible">Constably</unclear>, Waters, Stephenson and Ashton and that Ashton took the negroes from a room up stairs in Brenton's House and where they were <gap extent="one word" reason="illegible"/> up and that he had to use <gap extent="one word" reason="illegible"/> to get them. That the said Rachael exacted the payment of the amount allowed her by the Court from the Defendant notwithstanding she agreed not to do it, and the said Petitioners were left with her, on that condition alone. That Witness paid $20 himself to her on that account, after that time and that he knows Defendant had two of his negroes, the only two he had sold, for that purpose and to pay her
+to agreed and appointed the next day to meet for the purpose of carrying said agreement into effect and promised to have her lawyer Mr Key there; that witness and Defendant remained and went to the place fixed on and neither said Rachael or Mr Key attended. That the Defendant let said Petitioner go with said Rachael upon the evening, she made said proposition to him, thinking she would faithfully carry it into effect, which she did not, but instead of doing it, hid and concealed said Petitioners so that the Defendant could not find them, but was obliged to return home without them, and she kept them so concealed from that time until she came down to Defendants House when she died; she then brought them with her, but the woman Sarah Ann went off before her mistress died and was never heard of again until retaken by Witness. That after the death of said Rachael, the Witness as agent of Defendant heard Petitioners were in Washington City; that he came here to look for them and after some time and some search he found out where they were; that they are hid and concealed in a House of Saml. Brenton in said City; that He employed several constables to aid him in the taking of them viz, Constables, Waters, Stephenson and Ashton and that Ashton took the negroes from a room up stairs in Brenton's House and where they were <unclear extent="one word" reason="illegible">fastened</unclear> up and that he had to use <unclear extent="one word" reason="illegible">stratejem</unclear> to get them. That the said Rachael exacted the payment of the amount allowed her by the Court from the Defendant notwithstanding she agreed not to do it, and the said Petitioners were left with her, on that condition alone. That Witness paid $20 himself to her on that account, after that time and that he knows Defendant had two of his negroes, the only two he had sold, for that purpose and to pay her
 
 <pb xml:id="p005" facs="oscys.case.0205.007.005.jpg"/>
 
-But does not of his own knowledge know that she recd the proceeds of said negroes sale, but believes she did. That he knows said Rachael claimed said alimony allowed her by the Court to the day of her death and that the Defendant was always much <gap extent="one word" reason="illegible"/> to <gap extent="one word" reason="illegible"/> it. That he <del>he</del> also knowns that said Defendant often <del>said</del> sent said Rachael, meant, meal <unclear reason="illegible">&amp;c</unclear> and gave her other things besides, towards her support. The Petitioners then put interrogatories to the witness, to which he answered 1st that he had no interest directly or indirectly in this cause; that he has had much trouble as the agent of Defendant, and thinks he ought to pay him for his services, but has made no contract with him or <gap extent="one word" reason="illegible"/> and shall leave it to himself. 2ndly that at the time said Rachael left her Husband, <del>she</del> the woman did not live<del>d</del> in his House or on his farm and did not for three years after. 3rd That she does not know any thing of the woman alluded to, that he always understood she was of good character until this report go out and that since then she is regarded as of ill <gap extent="one word" reason="illegible"/> from that circumstance. 4th That he never heard of understood from Mrs Wallingsford that she replied to return to her Husband on account of that woman until towards the latter part of her life, when she told him so.</p>
+But does not of his own knowledge know that she recd the proceeds of said negroes sale, but believes she did. That he knows said Rachael claimed said alimony allowed her by the Court to the day of her death and that the Defendant was always much pushed to <gap extent="one word" reason="illegible"/> it. That he <del>he</del> also knows that said Defendant often <del>said</del> sent said Rachael, meat, meal <unclear reason="illegible">&amp;c</unclear> and gave her other things besides, towards her support. The Petitioners then put interrogatories to the witness, to which he answered 1st that he had no interest directly or indirectly in this cause; that he has had much trouble as the agent of Defendant, and thinks he ought to pay him for his services, but has made no contract with him or demand and shall leave it to himself. 2ndly that at the time said Rachael left her Husband, <del>she</del> the woman did not live<del>d</del> in his House or on his farm and did not for three years after. 3rd That he does not know any thing of the woman alluded to, that he always understood she was of good character until this report got out and that since then she is regarded as of ill <gap extent="one word" reason="illegible"/> from that circumstance. 4th That he never heard or understood from Mrs Wallingsford that she replied to return to her Husband on account of that woman until towards the latter part of her life, when she told him so.</p>
 
-<p>The said Witness being <gap extent="one word" reason="illegible"/> by Defendant, said that when Mr Ashton took sd negroes for Defendant they were put into jail by a Justice of the Peace, because they claimed their freedom and that Witness as agent for Defendant obtained from Judge Cranch a Habeus Corpus and that he decided they are not entitled to their freedom under said Deed from said Rachael, she being a feme coverte at the time and was about ordering them to be discharged and delivered to Defendant as his slaves, when the present suit was brought and <gap extent="one word" reason="illegible"/> as Defendant whilst the 
+<p>The said Witness being again examined by Defendant, said that when Mr Ashton took sd negroes for Defendant they were put into jail by a Justice of the Peace, because they claimed their freedom and that Witness as agent for Defendant obtained from Judge Cranch a Habeas Corpus and that he decided they are not entitled to their freedom under said Deed from said Rachael, she being a feme coverte at the time and was about ordering them to be discharged and delivered to Defendant as his slaves, when the present suit was brought and denied sd Defendant whilst the 
 
 <pb xml:id="p006" facs="oscys.case.0205.007.006.jpg"/>
 
-Judge was deliberately and he refused to order Petitioners to be delivered to Defendant, unless he gave security for their appearance, which not being able to do, they <gap extent="six words" reason="illegible"/>.</p> 
+Judge was deliberating and he refused to order Petitioners to be delivered to Defendant, unless he gave security for their appearance, which not being able to do, they <gap extent="six words" reason="illegible"/>.</p> 
 
 <p>The defendant <del>then</del> also proved by <del>Henry Ash</del> Leonard Ashton a constable, that he arrested the Petitioners as stated by James Meade, and that he found them <gap extent="one word" reason="illegible"/> in a room up the stairs in a House of Mr Brentons, where they are concealed; that he asked permission of a negro woman who was there to open the door, which was refused and he entered the House from the top of a shed, through a window and found the Petitioners concealed there and took them before a justice of the Peace who committed them to jail.</p>
 
@@ -193,9 +199,9 @@ Judge was deliberately and he refused to order Petitioners to be delivered to De
 
 <pb xml:id="p007" facs="oscys.case.0205.007.007.jpg"/>
 
-understood it <gap extent="one word" reason="illegible"/> to the Defendant and said Rachael. That said Rachael left Deponent with his consent and that she often heard Defendant entreat her to return and live with him, whig she Rachael always refused; that the first years of said Rachael's leaving her Husband, she lived <del>amongst</del> in Prince Geo. County amongst her friends and that after some time, she would go to Washington City to see her acquaintances there and would stay a time and then return to Prince George and generally carried Petitioners whenever she went, and during all of said times she occasionally return here to her Husband, but they would <gap extent="one word" reason="illegible"/> and she never staid long, <gap extent="one word" reason="illegible"/> two or three days at a time and <gap extent="one word" reason="illegible"/> not so long. She often went to her Husband to get money and other things and she has known him to give her money and sometimes give her meat and other things. That there was no complaint mad by Mrs Wallingsford about any woman when she left her husband <gap extent="one word" reason="illegible"/> was nearly three years before the woman named came to live on <unclear reason="illegible">Defendants</unclear> <unclear reason="illegible">Land</unclear>, that she then <del>be</del> said she was jealous of that woman, but does not know that she had any cause. That the woman always had an excellent character until Mrs Wallingsford said these things about her.</p>
+understood it from both the Defendant and said Rachael. That said Rachael left Deponent with his consent and that she often heard Defendant entreat her to return and live with him, which she Rachael always refused; that the first years of said Rachael's leaving her Husband, she lived <del>amongst</del> in Prince Geo. County amongst her friends and that after some time, she would go to Washington City to see her acquaintances there and would stay a time and then return to Prince George and generally carried Petitioners whenever she went, and during all of said times she occasionally return here to her Husband, but they would <gap extent="one word" reason="illegible"/> and she never staid long, about two or three days at a time and sometimes not so long. She often went to her Husband to get money and other things and she has known him to give her money and sometimes give her meat and other things. That there was no complaint made by Mrs Wallingsford about any woman when she left her husband and it was nearly three years before the woman named came to live on <unclear reason="illegible">Defendants</unclear> <unclear reason="illegible">Land</unclear>, that she then <del>be</del> said she was jealous of that woman, but does not know that she had any cause. That the woman always had an excellent character until Mrs Wallingsford said these things about her.</p>
 
-<p>To the questions of Petitioners the witness <gap extent="one word" reason="illegible"/> 1st Mrs Wallingsford told her that she would not return to her husband on account of that woman, but she <gap extent="one word" reason="illegible"/> heard any thing against the woman, except from Mrs Wallingford and she was jealous of her % said she was. 2nd That the woman did not live near Defendant, when Mrs Wallingsford left him and did not for years after.</p>
+<p>To the questions of Petitioners the witness answers 1st Mrs Wallingsford told her that she would not return to her husband on account of that woman, but she <unclear reason="illegible">never</unclear> heard any thing against the woman, except from Mrs Wallingford and she was jealous of her &amp; said she was. 2nd That the woman did not live near Defendant, when Mrs Wallingsford left him and did not for years after.</p>
 
 <p>The Defendant also found by Mrs. Fanny Meade, not the wife of the Witness Meade, who had been sworn in the case, but the wife of the deceased brother, the same facts as stated by the 
 
@@ -207,7 +213,7 @@ last witness Mrs Amelia Wallingsford and further that Mrs Rachael Wallingsford, 
 
 <p>The Defendant also proved by Wm <unclear reason="illegible">Magill</unclear> a competent Witness, that in the Spring of 1826, he offered to purchase the Petitioners of Rachael Wallingsford, who said she would sell them for her life, but could not sell or dispose of them for a longer term, as she had no right to them for a longer time, as they were her Husband's the Defendant, after her death. In consequence of which he did not buy them.</p>
 
-<p>The Petitioners then proved by Saml Brenton, that he had known Rachale Wallingsford for 8 or 9 years past and also the Petitioners. That he believed sd Rachael staid with her sister when she came to Washington City. That the greater part of said time she was in Washington City and that during said time, the Petitioner Sarah Ann was in the habit of hiring herself out and to Witnesses knowledge received money for her hire and often bought things at Witnesses store and paid for them. That he saw her going about without concealment</p>
+<p>The Petitioners then proved by Saml Brenton, that he had known Rachael Wallingsford for 8 or 9 years past and also the Petitioners. That he believed sd Rachael staid with her sister when she came to Washington City. That the greater part of said time she was in Washington City and that during said time, the Petitioner Sarah Ann was in the habit of hiring herself out and to Witnesses knowledge received money for her hire and often bought things at Witnesses store and paid for them. That he saw her going about without concealment</p>
 
 <p>The Petitioners also proved by Wm Fergusson, that he knew Rachael Wallingsford
 
@@ -215,9 +221,7 @@ last witness Mrs Amelia Wallingsford and further that Mrs Rachael Wallingsford, 
 
 That he saw her in Washington City and that she was miserably <gap extent="one word" reason="illegible"/> and often in distress and destitute of necessaries. That as <gap extent="one word" reason="illegible"/> of the <gap extent="one word" reason="illegible"/> he often assisted her and often from his own private means. That he has seen the Petitioners two or three times as they passed along.</p>
 
-<p>Petitioners <gap extent="one word" reason="illegible"/>  proved by       Boone</p>
-
-<p>That in the District of Columbia, small children of the age and description of those named in the said Deed of emancipation, can be put out for their <gap extent="one word" reason="illegible"/>  and clothes until the age of maturity.</p>
+<p>Petitioners also  proved by &#160;&#160;  Boone That in the District of Columbia, small children of the age and description of those named in the said Deed of emancipation, can be put out for their victuals and clothes until the age of maturity.</p>
 
 <p>The Petitioners also read in evidence the Petition of Defendant in a certain suit between him and sd Rachael for alimony which Petition is as follows (here insert Petition.</p>
 

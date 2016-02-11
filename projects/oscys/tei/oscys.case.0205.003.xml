@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -74,13 +75,17 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1835-03">March 1835</date></term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">
 <term xml:id="per.000044">Morsell, James Sewall</term>
-<term>Wallingsford, Rachael</term>
+<term xml:id="per.001689">Wallingsford, Rachael</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places"> 
@@ -92,19 +97,19 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001683">
 <persName>Allen, Eliza Jane</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001684">
 <persName>Allen, John Davy</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001685">
 <persName>Allen, Julia Maria</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001686">
 <persName>Allen, Sarah Ann</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001687">
 <persName>Wallingsford, Joseph</persName>
 </person>
 <person role="attorney_petitioner">
@@ -124,7 +129,8 @@
 </particDesc> 
 </profileDesc>
         
-<revisionDesc>             
+<revisionDesc>         
+<change when="2015-11-09" who="#lkw">added xml:ids</change>      
 <change when="2015-01-12" who="#kln">reviewed; edited</change>  
 <change when="2014-11" who="#snc">encoded</change>
 </revisionDesc>

@@ -10,6 +10,7 @@
 <principal n="Thomas, William G., 1964-" xml:id="wgt">William G. Thomas III</principal>
 <respStmt>
 <resp>encoding</resp>
+<name n="Bryant, Samantha M." xml:id="smb">Samantha M. Bryant</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
@@ -52,7 +53,11 @@
 <term/>
 </keywords>
 <keywords scheme="original" n="type">
-<term>Civil</term>
+<term/>
+</keywords>
+<keywords scheme="original" n="claims">
+<term>Manumission</term>
+<term>Property Dispute</term>
 </keywords>
 <classCode scheme="original">
 <ref type="related.case">oscys.caseid.0316</ref>
@@ -60,6 +65,8 @@
 </textClass>
 </profileDesc>
 <revisionDesc>
+<change when="2016-02-05" who="#kln">added Manumission to claims</change>
+<change when="2016-01-22" who="#smb">added claims</change>
 <change when="2015" who="#kln">encoded</change>
 </revisionDesc>
 </teiHeader>

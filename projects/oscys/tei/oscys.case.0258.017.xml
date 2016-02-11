@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Askren, Elizabeth" xml:id="ea">Elizabeth Askren</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -74,14 +75,18 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1810-06">June 1810</date></term>
 </keywords>
     
 <keywords scheme="lcsh" n="people">
 <term xml:id="per.000045">Balch, Lewis P. W.</term>
-<term>Campbell, John</term>
-<term>Hewitt, John</term>
+<term xml:id="per.001940">Campbell, John, 1765-1828</term>
+<term xml:id="per.002010">Hewitt, John</term>
 <term xml:id="per.000435">Jones, Walter, 1776-1861</term>
 <term xml:id="per.000044">Morsell, James Sewall</term>
 </keywords>
@@ -93,18 +98,17 @@
 <term>Alexandria (Va.)</term>
 </keywords>
 
-
 </textClass>
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001935">
 <persName>Thomas, Dennis</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001936">
 <persName>Thomas, Walter</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001937">
 <persName>Scott, Alexander</persName>
 </person>
 <person role="attorney_petitioner">
@@ -125,6 +129,7 @@
 </profileDesc>
         
 <revisionDesc>   
+<change when="2015-11-30" who="#lkw">added xml:ids; transcription</change>
 <change when="2015-04-27" who="#kln">reviewed; edited</change>          
 <change when="2015-03-19" who="#ea">Encoded and transcribed.</change>
 </revisionDesc>
@@ -143,7 +148,7 @@
 
 <p>Sir</p>
      
-<p>I am informed that two of my negroes have assumed the sir name of Thomas and have applied to you to file petitions for their freedom and have produced a record on which they ground their claim. A negroe of that name and perhaps the same family obtained his freedom in the General Court of Maryland but his master an old priest made title or no defence. The Case has since been tried in Charles, St Marys and Prince Georges counties and Alexandria and verdicts uniformly against them. John Campbell Esqr, (in Congress) was the negroes counsel and to him refer for particulars. The fact is that those I own are drunken worthless scoundrels and  intended to send them to a farm to Charles County to prevent which they mean to resort to a suit.</p>
+<p>I am informed that two of my negroes have assumed the sir name of Thomas and have applied to you to file petitions for their freedom and have produced a record on which they ground their claim. A negroe of that name and perhaps the same family obtained his freedom in the General Court of Maryland but his master an old priest made little or no defence. The Case has since been tried in Charles, St Marys and Prince Georges counties and Alexandria and verdicts uniformly against them. John Campbell Esqr, (in Congress) was the negroes counsel and to him refer for particulars. The fact is that those I own are drunken worthless scoundrels and  intended to send them to a farm to Charles County to prevent which they mean to resort to a suit.</p>
 
 <p>I am sir very resply. your obdt servt.<lb/>
 Alexr. Scott</p>

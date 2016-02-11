@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -74,6 +75,10 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1834-03">March 1834</date></term>
 </keywords>
@@ -92,13 +97,13 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001614">
 <persName>Hobbs, Rebecca</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001615">
 <persName>Magruder, Thomas</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001616">
 <persName>Robey, Washington</persName>
 </person>
 <person role="attorney_petitioner">
@@ -119,6 +124,7 @@
 </profileDesc>
         
 <revisionDesc>
+<change when="2015-11-02" who="#lkw">added xml:ids; encoding</change> 
 <change when="2015-01-14" who="#kln">reviewed; edited</change>                       
 <change when="2014-10" who="#snc">encoded</change>
 </revisionDesc>
@@ -141,9 +147,11 @@
 Henry x Miller<lb/>
 mark</p>
 
+<p>(Yellow man living with Mr. Ramsay opposite Browns Tavern)</p>
+
 <p>Witness Chas. McNamee</p>
 
-<p>(Yellow man living with Mr. Ramsay opposite Browns Tavern)</p>
+
 
 </div2>
 </div1>

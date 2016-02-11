@@ -11,6 +11,7 @@
 <resp>transcription and encoding</resp>
 <name n="Camerone, Stephanie N." xml:id="snc">Steph N. Camerone</name>
 <name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
+<name n="Weakly, Laura K." xml:id="lkw">Laura K. Weakly</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -74,6 +75,10 @@
 <term>Civil</term>
 </keywords>
 
+<keywords scheme="original" n="subtype">
+<term>Petition for Freedom</term>
+</keywords>
+
 <keywords scheme="original" n="term">
 <term><date when="1861-05">May 1861</date></term>
 </keywords>
@@ -93,19 +98,19 @@
             
 <particDesc>   
 <listPerson>            
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001891">
 <persName>Lewis, Andrew</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001892">
 <persName>Lewis, James</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001893"><!-- daughter -->
 <persName>Lewis, Margaret</persName>
 </person>
-<person role="petitioner">
+<person role="petitioner" xml:id="per.001894">
 <persName>Lewis, Margaret</persName>
 </person>
-<person role="defendant">
+<person role="defendant" xml:id="per.001895">
 <persName>McLaughlin, Bridget</persName>
 </person>
 <person role="attorney_petitioner" xml:id="per.000751">
@@ -126,6 +131,7 @@
 </profileDesc>
         
 <revisionDesc>           
+<change when="2015-11-23" who="#lkw">added xml:ids</change>
 <change when="2015-10-22" who="#kln">reviewed; edited</change>  
 <change when="2015-10-07" who="#snc">encoded; transcribed</change>
 </revisionDesc>
