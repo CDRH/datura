@@ -96,7 +96,8 @@
 			<xsl:when test="/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@when">
 				<xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@when"/>
 			</xsl:when>
-			<xsl:otherwise>n.d.</xsl:otherwise>
+			<!-- if neither of these matches, do not show anything -->
+			<xsl:otherwise/>
 		</xsl:choose>
 	</xsl:variable>
 	
@@ -288,17 +289,12 @@
 		<!-- date -->
 				
 		<field name="date">
-			<xsl:choose>
-				<xsl:when test="$doc_date = 'n.d.'">
-					<xsl:value-of select="$doc_date"/>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:call-template name="date_standardize">
-						<xsl:with-param name="datebefore"><xsl:value-of select="substring($doc_date,1,10)"/></xsl:with-param>
-					</xsl:call-template>
-					<xsl:text>T00:00:00Z</xsl:text>
-				</xsl:otherwise>
-			</xsl:choose>
+			<xsl:call-template name="date_standardize">
+				<xsl:with-param name="datebefore">
+					<xsl:value-of select="substring($doc_date,1,10)"/>
+				</xsl:with-param>
+			</xsl:call-template>
+			<xsl:text>T00:00:00Z</xsl:text>
 		</field>
 
 		<!-- dateDisplay -->
