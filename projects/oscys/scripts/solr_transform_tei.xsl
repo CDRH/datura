@@ -3,6 +3,17 @@
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:tei="http://www.tei-c.org/ns/1.0"
 	xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+	<!-- ================================================ -->
+	<!--                     IMPORTS                      -->
+	<!-- ================================================ -->
+
+	<xsl:import href="../../../scripts/xslt/cdrh_to_solr/lib/common.xsl"/>
+
+	<!-- ================================================ -->
+	<!--                  OUTPUT FORMAT                   -->
+	<!-- ================================================ -->
+
 	<xsl:output indent="yes" omit-xml-declaration="yes"/>
 	
 	<!-- ================================================ -->
@@ -16,12 +27,6 @@
 	<xsl:param name="project" select="/TEI/teiHeader/fileDesc/publicationStmt/authority[1]"/>
 	<xsl:param name="slug"/><!-- will be lassed in from config.yml -->
 	
-	<!-- ================================================ -->
-	<!--                     INCLUDES                     -->
-	<!-- ================================================ -->
-
-	<xsl:include href="../../../scripts/xslt/cdrh_to_solr/lib/common.xsl"/>
-
 	<!-- ================================================ -->
 	<!--                    VARIABLES                     -->
 	<!-- ================================================ -->
@@ -1382,6 +1387,39 @@
 			</xsl:when>
 			<xsl:otherwise><xsl:value-of select="$s"/></xsl:otherwise>
 		</xsl:choose>
+	</xsl:template>
+
+	<!-- ================================================ -->
+	<!--               COMMON.XSL OVERRIDE                -->
+	<!-- ================================================ -->
+
+	<xsl:template name="extractDate">
+    <xsl:param name="date" />
+    <!--This template converts a date from format YYYY-MM-DD to mm D, YYYY (MM, MM-DD, optional)-->
+    
+    <xsl:variable name="YYYY" select="substring($date,1,4)" />
+    <xsl:variable name="MM" select="substring($date,6,2)" />
+    <xsl:variable name="DD" select="substring($date,9,2)" />
+
+    <xsl:choose>
+        <xsl:when test="matches($date, '([A-Za-z])')"><!-- if date contains a letter, show as is. todo fix date handling -->
+            
+            <xsl:value-of select="$date"/>
+        </xsl:when>
+        <xsl:when test="($DD != '') and ($MM != '') and ($DD != '')">
+            <xsl:call-template name="lookUpMonth"><xsl:with-param name="numValue" select="$MM" /></xsl:call-template><xsl:text> </xsl:text> <xsl:number format="1" value="$DD" />, <xsl:value-of select="$YYYY" />
+        </xsl:when>
+        <xsl:when test="($YYYY != '') and ($MM != '')">
+            <xsl:call-template name="lookUpMonth"><xsl:with-param name="numValue" select="$MM" /></xsl:call-template>, <xsl:value-of select="$YYYY" />
+        </xsl:when>
+        <xsl:when test="($DD != '') and ($MM != '')">
+            <xsl:call-template name="lookUpMonth"><xsl:with-param name="numValue" select="$MM" /></xsl:call-template>, <xsl:value-of select="$YYYY" />
+        </xsl:when>
+        <xsl:when test="($YYYY != '')">
+            <xsl:value-of select="$YYYY" />
+        </xsl:when>
+        <xsl:otherwise/>
+	    </xsl:choose>
 	</xsl:template>
 
 </xsl:stylesheet>
