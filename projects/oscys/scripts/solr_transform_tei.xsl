@@ -606,8 +606,10 @@
 			<field name="jurisdiction_ss"><xsl:value-of select="normalize-space(.)"/></field>
 		</xsl:for-each>
 		
-		<xsl:for-each select="//keywords[@n='claims']/term">
-			<field name="claims_ss" update="add">
+		<!-- Claims -->
+
+		<xsl:for-each select="//keywords[@n='claims']/term/text()">
+			<field name="claims_ss">
 				<xsl:value-of select="normalize-space(.)"/>
 			</field>
 		</xsl:for-each>
