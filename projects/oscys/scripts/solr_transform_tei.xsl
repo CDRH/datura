@@ -299,7 +299,9 @@
 					<xsl:value-of select="substring($doc_date,1,10)"/>
 				</xsl:with-param>
 			</xsl:call-template>
-			<xsl:text>T00:00:00Z</xsl:text>
+			<xsl:if test="not($doc_date = '')">
+				<xsl:text>T00:00:00Z</xsl:text>
+			</xsl:if>
 		</field>
 
 		<!-- dateDisplay -->
@@ -892,12 +894,17 @@
 							<xsl:call-template name="JSON_Formatter">
 								<xsl:with-param name="json_label">
 									<xsl:value-of select="/TEI/teiHeader/fileDesc/titleStmt/title[1]"/>
-									<!-- adding the date to the end of the title -->
-									<xsl:text> (</xsl:text>
-									<xsl:call-template name="extractDate">
-										<xsl:with-param name="date" select="$doc_date"/>
-									</xsl:call-template>
-									<xsl:text>)</xsl:text>
+									<xsl:variable name="rel_doc_date">
+										<xsl:call-template name="extractDate">
+											<xsl:with-param name="date" select="$doc_date"/>
+										</xsl:call-template>
+									</xsl:variable>
+									<xsl:if test="not($rel_doc_date = '')">
+										<!-- adding the date to the end of the title -->
+										<xsl:text> (</xsl:text>
+											<xsl:value-of select="$rel_doc_date"/>
+										<xsl:text>)</xsl:text>
+									</xsl:if>
 								</xsl:with-param>
 								<xsl:with-param name="json_id">
 									<xsl:value-of select="/TEI/@xml:id"/>
