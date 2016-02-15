@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://digitalhumanities.unl.edu/resources/schemas/tei/TEIP5.2.6.0/tei_all.rng" type="xml"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0357.003">
+<?xml version="1.0" encoding="UTF-8"?><?oxygen RNGSchema="http://digitalhumanities.unl.edu/resources/schemas/tei/TEIP5.2.6.0/tei_all.rng" type="xml"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="oscys.case.0357.004">
     
 <teiHeader>
 <fileDesc>
@@ -10,6 +10,7 @@
 <respStmt>
 <resp>transcription and encoding</resp>
 <name n="Camerone, Steph N." xml:id="snc">Steph N. Camerone</name>
+<name n="Nash, Kaci L." xml:id="kln">Kaci L. Nash</name>
 </respStmt>
 <sponsor>University of Nebraska-Lincoln</sponsor>
 <sponsor>University of Maryland</sponsor>
@@ -34,7 +35,7 @@
 <addrLine>cdrh@unl.edu</addrLine>
 </address>
 </distributor>
-<idno type="project">oscys.case.0357.003</idno>
+<idno type="project">oscys.case.0357.004</idno>
 <idno type="case">oscys.caseid.0381</idno>
 
 <availability>
@@ -45,7 +46,7 @@
 
 <sourceDesc>
 <bibl>
-<title level="m" type="main">Request for Injunction</title>
+<title level="m" type="main">Injunction</title>
 <date when="1822-01-18">January 18, 1822</date>
 <note type="project">Our transcription is based on a digital image of the original.</note>
 </bibl>
@@ -66,7 +67,7 @@
 </keywords>
     
 <keywords scheme="original" n="subcategory">
-<term>Summons</term>
+<term>Injunction</term>
 </keywords>
 
 <keywords scheme="original" n="type">
@@ -81,15 +82,16 @@
 <term><date when="1822-04">1822 April</date></term>
 </keywords>
     
-<keywords scheme="lcsh" n="people">  
+<keywords scheme="lcsh" n="people"> 
 <term xml:id="per.000003">Brent, William, 1774-1848</term>
 <term xml:id="per.000004">Cranch, William, 1769-1855</term>
-<term>Legge</term>
+<term>Legge</term> 
 <term xml:id="per.000461">Ringgold, Tench</term>
 </keywords>
 
 <keywords scheme="lcsh" n="places">
-<term/>
+<term>Washington County (D.C.)</term>
+<term>Washington (D.C.)</term>
 </keywords>
 
 </textClass>
@@ -123,6 +125,7 @@
 </profileDesc>
 
 <revisionDesc>
+<change when="2016-02-15" who="#kln">reviewed; edited</change>
 <change when="2015-12-04" who="#snc">transcribed; encoded</change>
 </revisionDesc>
 </teiHeader>
@@ -131,43 +134,45 @@
 
 <body>
            
-<pb xml:id="p001" facs="oscys.case.0357.003.001.jpg"/>
+<pb xml:id="p001" facs="oscys.case.0357.004.001.jpg"/>
                 
 <div1 type="case">
 
 <div2 type="caption">
                 
-<p>Ann Kinchelor appears as defendant</p>
+<p>District of Columbia Washington County Set</p>
+
+<p>The United States of America to &#160; &#160; &#160; Legge &amp; others Greeting.</p>
 
 </div2>
 
 <div2 type="body">
 
-<p>The petition of Negro Daniel sheweth your honors that he is a Petitioner for his freedom against a certain Ballard as appears by the certificate him with exhibited.— your Petitioner shows, that he is now forcibly held by Legge &#38; others who are now about to carry him away from this District &#38; to prevent him from having a trial. Your Petitioner states &#38; can prove that the said Legge &#38; others are now in the act of tying him &#38; <unclear>taking</unclear> him off by free. Legge &#38; others are negro buyers. Your Petitioner therefor prays an injunction to issue to said Legge &#38; others prohibiting them from taking your Petitioner from this county with proper security to guarantee their compliance.</p>
- 
-<p>Jno. Marlborough makes oath to the truth of the facts stated in this petitions</p>
+<p>Whereas Negro Daniel by his petition in writing to the Circuit Court of the District of Columbia for the County of Washington against you the said &#160; &#160; &#160; Legge &amp; others of the District of Columbia and for sundry good causes particularly stated &amp; set form in the said Petition you the said &#160; &#160; &#160; Legge &amp; others and each of you are hereby commanded and Injoined from taking the said Negro Daniel from the County and that you give proper security to gurantee the compliance. Hereof you and each of you are not to fail as you will answer the contrary at your Peril. Witness William Cranch Esq Chief Judge of said Court.</p>
+
+<p>Wm Brent Clk</p>
+
+<p>Issued the 18th January 1822</p>
+
+<p>Key &amp; Dunlop for Petr</p>
                
 </div2>
 
-<pb xml:id="p002" facs="oscys.case.0357.003.002.jpg"/>
+<pb xml:id="p002" facs="oscys.case.0357.004.002.jpg"/>
 
 <div2 type="back">
 
-<p>Let an Injunction issue as prayed<lb/>
-B. Thurston</p>
+<p>390</p>
 
-<p>Col Brent</p>
-<p>18th Jany 1822</p>
+<p>Negro Daniel<lb/>
+vs<lb/>
+&#160; &#160; Legge &amp; others</p>
 
-<p>Ann Kinchelor appears as Deft. pleads that Petr is<lb/>
-<del>W Brent Mash def</del> the<lb/>
-a slave &#38; her property</p>
+<p>To the Marshal</p>
 
-<p>Petr : replies that he is free<lb/>
-grant my issue <unclear extent="one word"/> released</p>
-
-<p>F S Key for Pe<lb/>
-H. Ashton</p>
+<p>Non Est<lb/>
+T Ringgold<lb/>
+Marshal</p>
 
 </div2>
 </div1>
