@@ -163,6 +163,7 @@ Not all these fields will need the "data" field but I am including them all righ
 * **caseidHasNarrative_s**
 * **outcome_ss** - the terms for outcome, i.e. "Verdict for Defendant" - useful for faceting on outcome. 
 * **outcomeData_ss** - includes label, date (from document) and id of source
+* **claims_ss** - information about the claims for freedom, no data, just label
 
 ### OSCYS Documents Fields
 
