@@ -54,9 +54,33 @@ class SolrPoster
     return commit_res
   end
 
+  def post(content, type)
+    url = URI.parse(@url)
+    http = Net::HTTP.new(url.host, url.port)
+    request = Net::HTTP::Post.new(url.request_uri)
+    request.body = content
+    request["Content-Type"] = type
+    return http.request(request)
+  end
+
+  # post_file
+  #  assumes xml file because of historical usage of this script
+  #  TODO refactor?
   def post_file(file_location)
     file = IO.read(file_location)
     return post_xml(file)
+  end
+
+  # post_json
+  #   posts a request with a json body
+  #   params: content "{json: object}"
+  #   returns: a response object that can be used with http
+  def post_json(content)
+    if content.nil? || content.empty?
+      puts "Missing content to send to Solr."
+    else
+      post(content, "application/json")
+    end
   end
 
   # post_xml
@@ -69,12 +93,7 @@ class SolrPoster
       puts "available to be converted to Solr format and that they were transformed."
       return nil
     else
-      url = URI.parse(@url)
-      http = Net::HTTP.new(url.host, url.port)
-      request = Net::HTTP::Post.new(url.request_uri)
-      request.body = content
-      request["Content-Type"] = "application/xml"
-      return http.request(request)
+      post(content, "application/xml")
     end
   end # end post_xml
 end

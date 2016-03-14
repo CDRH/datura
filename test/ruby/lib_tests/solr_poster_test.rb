@@ -22,11 +22,37 @@ RSpec.describe "Solr Poster Test:" do
     end
   end
 
+  describe "post" do
+    it "should have tests written for it but is currently being tested via post_json and post_xml" do
+      skip
+    end
+  end
+
   describe "post_file" do
     it "should return an object" do
       solr = SolrPoster.new(test_solr_url)
       res = solr.post_file(file)
       expect(res.code).to eq("200")
+    end
+  end
+
+  describe "post_json" do
+    solr = nil
+    before(:each) do
+      solr = SolrPoster.new("http://rosie.unl.edu/fake")
+    end
+    context "given good url and content" do
+      it "should return a response object with status 200" do
+        skip
+        # will need to either only run this test through localhost
+        # or get ssl working
+      end
+    end
+    context "given bad url" do
+      it "should return 404" do
+        res = solr.post_json("{'json':'test'}")
+        expect(res.code).to eq("404")
+      end
     end
   end
 

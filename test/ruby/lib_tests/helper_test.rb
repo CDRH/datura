@@ -27,6 +27,42 @@ RSpec.describe "Helper Test:" do
     end
   end  # ends get_directory_files
 
+  describe "get_url" do
+    context "given real url" do
+      it "should return 200" do
+        expect(get_url("http://www.unl.edu/").code).to eq("200")
+      end
+    end
+    context "given fake url" do
+      it "should return error" do
+        expect(get_url("http://rosie.unl.edu/fake_thing").code).to eq("404")
+      end
+    end
+    context "given super messed up url" do
+      it "should throw an error" do
+        begin
+          get_url("fjdfjdakfda")
+          # shouldn't get this far
+          expect(false).to be_truthy
+        rescue
+          expect(true).to be_truthy
+        end
+      end
+    end
+  end  # ends get_url
+
+  describe "get_input" do
+    context "given real input the first time" do
+      it "will return input" do
+        expect(get_input("hello", "msg")).to eq("hello")
+      end
+    end
+    context "given nil input, then real input" do
+      it "will return the second input"
+      # TODO will need to figure out how to fake STDIN
+    end
+  end
+
   describe "regex_files" do
     test_files = ["/path/to/cody.book.001.xml", 
                   "/path/to/cody.book.002.xml", 
