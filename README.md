@@ -46,6 +46,9 @@ Setting up a New Project
 See the developer guide at the bottom of this readme for information about the above requirements
 
 ##### <a name="core"></a> Adding a Core and Schema
+
+The following instructions are for Solr 4.  Solr 5 instructions will be coming shortly.
+
 Navigate in the server where your Solr cores are located.  
 
 Copy our example core (note, tested on Solr v. 4.10.1) from `/solr_example_files/api_projectName_test` to your solr cores folder. Alternately, you can copy existing files and use our schema ([/solr_example_files/api_projectName_test/conf/schema.xml](/solr_example_files/api_projectName_test/conf/schema.xml)) as a starting point. 
