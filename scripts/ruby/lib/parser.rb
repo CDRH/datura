@@ -6,6 +6,10 @@ require 'optparse'
 
 # returns options hash
 
+#####################
+#  post_to_solr.rb  #
+#####################
+
 def post_to_solr_params
   usage = "Usage: ruby post_to_solr.rb [project] -[options]..."
   options = {}  # will hold all the options passed in by user
@@ -98,6 +102,10 @@ def post_to_solr_params
   return options
 end
 
+####################
+#  clear_index.rb  #
+####################
+
 def clear_index_params
   usage = "Usage: ruby clear_index.rb [project] -[options]..."
   options = {}  # will hold all the options passed in by user
@@ -141,7 +149,87 @@ def clear_index_params
   return options
 end # ends clear_index_params
 
-# helpers
+
+########################
+#  create_api_core.rb  #
+########################
+
+def create_core_params
+  usage = "Usage: ruby create_api_core.rb name_of_core"
+  options = {}
+
+  optparse = OptionParser.new do |opts|
+    opts.banner = usage
+
+    opts.on( '-h', '--help', 'What do I do?') do
+      puts opts
+      puts "If you do not put any options, the script will ask you for them"
+      exit
+    end
+  end
+
+  optparse.parse!
+
+  if ARGV.length == 1
+    options["core"] = ARGV[0]
+  elsif ARGV.length > 1
+    puts "You can only have one name for a core"
+    puts usage
+    exit
+  end
+
+  return options
+end
+
+
+######################
+#  manage_schema.rb  #
+######################
+
+def manage_schema_params
+  usage = "Usage: ruby manage_schema.rb name_of_core -o true -j config/api_schema.json"
+  options = {}
+
+  optparse = OptionParser.new do |opts|
+    opts.banner = usage
+
+    opts.on( '-h', '--help', 'How does this work?') do
+      puts opts
+      exit
+    end
+
+    options["json"] = nil
+    opts.on('-j', '--json [filepath]', 'Location of JSON schema file') do |input|
+      options["json"] = input
+    end
+
+
+    options["override"] = false
+    opts.on('-o', '--override [bool]', 'Override existing fields? (t / true)') do |input|
+      if input != "false" && input != "f" && input.length > 0
+        options["override"] = true
+      end
+    end
+
+  end
+
+  optparse.parse!
+
+  if ARGV.length == 1
+    options["core"] = ARGV[0]
+  elsif ARGV.length > 1
+    puts "You can only have one name for a core"
+    puts usage
+    exit
+  end
+
+  return options
+end
+
+
+#######################
+#  parser.rb helpers  #
+#######################
 
 def argv_projects(argv)
   project = nil

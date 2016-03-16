@@ -1,4 +1,5 @@
 require 'fileutils'
+require 'net/http'
 require 'yaml'
 
 # get_directory_files
@@ -17,6 +18,33 @@ def get_directory_files(directory, verbose_flag=false)
   end
 end
 # end get_directory_files
+
+# get_input
+#    gets user input from terminal and won't take
+#    no for an answer
+def get_input(original_input, msg)
+  if original_input.nil?
+    puts "#{msg}: \n"
+    new_input = STDIN.gets.chomp
+    if !new_input.nil? && new_input.length > 0
+      return new_input
+    else
+      # keep bugging the user until they answer or despair
+      puts "Please enter a valid response"
+      get_input(nil, msg)
+    end
+  else
+    return original_input
+  end
+end
+
+# get_url
+#   sends a request to a given url
+def get_url(url)
+  url = URI.parse(URI.escape(url))
+  res = Net::HTTP.get_response(url)
+  return res
+end
 
 # regex_files
 #   looks through a directory's files for those matching the regex
