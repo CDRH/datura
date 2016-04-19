@@ -97,6 +97,7 @@ class Transformer
       else
         puts "ERROR: file #{file_name} not committed to solr (received code #{solr_res.code})"
         puts "HTTP RESPONSE: #{solr_res.inspect}" 
+        puts "HTTP BODY: #{solr_res.body}"
         @solr_failed_files << file_name
         @solr_errors << solr_res.inspect
       end
@@ -175,6 +176,7 @@ class Transformer
             return nil  # no errors
           else
             puts "ERROR: file #{source} not committed to solr (received code #{solr_res.code})"
+            puts "HTTP BODY: #{solr_res.body}"
             puts "HTTP RESPONSE: #{solr_res.inspect}"	
             @solr_failed_files << source
             @solr_errors << solr_res.inspect
