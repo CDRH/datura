@@ -23,6 +23,7 @@ class Transformer
     @transform_only = @options["transform_only"]
     @format = @options["format"]
     @regex = @options["regex"]
+    @threads = @options["threads"]
     @update_time = @options["update_time"] || nil
 
     # xsl parameters
@@ -116,7 +117,7 @@ class Transformer
     files_to_run = regex_files(all_files, @regex)
     # Start an asynchronous process so that it doesn't wait for each
     # file before continuing on
-    filesChunked = files_to_run.each_slice(50).to_a
+    filesChunked = files_to_run.each_slice(@threads).to_a
     filesChunked.each do |files_subset|
       threads = files_subset.each_with_index.map do |file, index|
         Thread.new do
