@@ -39,7 +39,7 @@
     <xsl:template name="normalize_name">
         <xsl:param name="string"/>
         
-        <xsl:variable name="string_lower"><xsl:value-of select="normalize-space(translate(lower-case($string), '“‘&quot;', ''))"/></xsl:variable>
+        <xsl:variable name="string_lower"><xsl:value-of select="normalize-space(translate(lower-case($string), '“‘&quot;&apos;&apos;[]{}()', ''))"/></xsl:variable>
         
         <xsl:choose>
             <xsl:when test="starts-with($string_lower, 'a ')">
