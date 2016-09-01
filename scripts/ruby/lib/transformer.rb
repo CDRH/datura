@@ -172,15 +172,21 @@ class Transformer
         # TODO I do not like that this posting is happening here or that @solr is a thing in the transformer
         if for_solr && !@transform_only
           solr_res = @solr.post_xml(out)
-          if solr_res.code == "200"
-            puts "File #{source} successfully posted to solr (not committed)" if @verbose
-            return nil  # no errors
+          if solr_res
+            if solr_res.code == "200"
+              puts "File #{source} successfully posted to solr (not committed)" if @verbose
+              return nil  # no errors
+            else
+              puts "ERROR: file #{source} not committed to solr (received code #{solr_res.code})"
+              puts "HTTP BODY: #{solr_res.body}"
+              puts "HTTP RESPONSE: #{solr_res.inspect}"	
+              @solr_failed_files << source
+              @solr_errors << solr_res.inspect
+            end
           else
-            puts "ERROR: file #{source} not committed to solr (received code #{solr_res.code})"
-            puts "HTTP BODY: #{solr_res.body}"
-            puts "HTTP RESPONSE: #{solr_res.inspect}"	
+            puts "ERROR: no response from solr!!!"
             @solr_failed_files << source
-            @solr_errors << solr_res.inspect
+            @solr_errors << "No response from solr"
           end
         end
       end
