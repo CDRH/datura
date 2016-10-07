@@ -553,7 +553,7 @@
 <!--              SUPER AND SUB SCRIPT                -->
 <!-- ================================================ -->
 
-<xsl:template match="p[@rend='superscript'] | p[@rend='sup'] | hi[@rend='super']">
+  <xsl:template match="p[@rend='superscript'] | p[@rend='sup'] | hi[@rend='super'] | hi[@rend='superscript']">
   <sup><xsl:apply-templates/></sup>
 </xsl:template>
 
