@@ -264,6 +264,17 @@
     </xsl:otherwise>
   </xsl:choose>
 </xsl:template>
+  
+<!-- ================================================ -->
+<!--                        HI                        -->
+<!-- ================================================ -->
+
+<xsl:template match="hi[@rend]" priority="2">
+  <span>
+    <xsl:attribute name="class"><xsl:value-of select="@rend"/></xsl:attribute>
+    <xsl:apply-templates/>
+  </span>
+</xsl:template>
 
 <!-- ================================================ -->
 <!--                        HIDE                      -->
@@ -302,7 +313,7 @@
   </div>
 </xsl:template>
 
-<xsl:template match="hi[@rend='italic'] | hi[@rend='italics']">
+<xsl:template match="hi[@rend='italic'] | hi[@rend='italics']" priority="1">
   <em>
     <xsl:attribute name="class">
       <xsl:value-of select="name()"/>
@@ -366,7 +377,7 @@
 <!--               MISC -> SPANS OR EMS               -->
 <!-- ================================================ -->
 
-<xsl:template match="hi[@rend='smallcaps'] | hi[@rend='roman']">
+<xsl:template match="hi[@rend='smallcaps'] | hi[@rend='roman']" priority="1">
   <span>
     <xsl:attribute name="class">
       <xsl:value-of select="@rend"/>
@@ -387,7 +398,7 @@
 <xsl:template
   match="byline | docDate | sp | speaker | letter | 
   notesStmt | titlePart | docDate | ab | trailer | 
-  front | lg | l | bibl | dateline | salute | trailer | titlePage | closer | floatingText">
+  front | lg | l | bibl | dateline | salute | trailer | titlePage | closer | floatingText | date">
   <span>
     <xsl:attribute name="class">
       <xsl:value-of select="name()"/>
@@ -445,7 +456,7 @@
 <!--                   POSITIONING                    -->
 <!-- ================================================ -->
 
-<xsl:template match="hi[@rend='right'] | hi[@rend='center']">
+<xsl:template match="hi[@rend='right'] | hi[@rend='center']" priority="1">
   <div>
     <xsl:attribute name="class">
       <xsl:value-of select="@rend"/>
@@ -458,7 +469,7 @@
 <!--                     QUOTES                       -->
 <!-- ================================================ -->
 
-<xsl:template match="hi[@rend='quoted']">
+<xsl:template match="hi[@rend='quoted']" priority="1">
   <xsl:text>"</xsl:text>
   <xsl:apply-templates/>
   <xsl:text>"</xsl:text>
@@ -557,15 +568,27 @@
   <sup><xsl:apply-templates/></sup>
 </xsl:template>
 
-<xsl:template match="hi[@rend='subscript']">
+<xsl:template match="hi[@rend='subscript']" priority="1">
   <sub><xsl:apply-templates/></sub>
 </xsl:template>
 
 <!-- ================================================ -->
 <!--                      TABLES                      -->
 <!-- ================================================ -->
+  
+  <!-- remove heads in table by default, they are not allowed -->
+  <xsl:template match="table/head"></xsl:template>
+  
+  <!-- called from table match -->
+  <xsl:template match="table/head" mode="show"><div class="tei_table_head"><xsl:apply-templates/></div></xsl:template>
 
 <xsl:template match="table">
+  
+  <xsl:for-each select="head">
+    <xsl:apply-templates select="." mode="show"/>
+  </xsl:for-each>
+  
+  
   <xsl:choose>
     <xsl:when test="@rend='handwritten'">
       <table>
@@ -576,7 +599,7 @@
       </table>
     </xsl:when>
     <xsl:otherwise>
-      <table>
+      <table class="table">
         <xsl:apply-templates/>
       </table>
     </xsl:otherwise>
@@ -614,7 +637,7 @@
 <!--                    UNDERLINE                     -->
 <!-- ================================================ -->
 
-<xsl:template match="hi[@rend='underlined'] | hi[@rend='underline']">
+<xsl:template match="hi[@rend='underlined'] | hi[@rend='underline']" priority="1">
   <u><xsl:apply-templates/></u>
 </xsl:template>
 
