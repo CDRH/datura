@@ -346,10 +346,10 @@
     <xsl:variable name="title">
       <xsl:choose>
         <xsl:when test="/TEI/teiHeader/fileDesc/titleStmt/title[@type='main']">
-          <xsl:value-of select="/TEI/teiHeader/fileDesc/titleStmt/title[@type='main'][1]"/>
+          <xsl:value-of select="normalize-space(/TEI/teiHeader/fileDesc/titleStmt/title[@type='main'][1])"/>
         </xsl:when>
         <xsl:otherwise>
-          <xsl:value-of select="/TEI/teiHeader/fileDesc/titleStmt/title[1]"/>
+          <xsl:value-of select="normalize-space(/TEI/teiHeader/fileDesc/titleStmt/title[1])"/>
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
@@ -383,7 +383,7 @@
         <!-- Individual fields -->
         <xsl:for-each select="/TEI/teiHeader/fileDesc/titleStmt/author">
           <field name="creators">
-            <xsl:value-of select="."></xsl:value-of>
+            <xsl:value-of select="normalize-space(.)"></xsl:value-of>
           </field>
         </xsl:for-each>
       </xsl:when>
@@ -413,7 +413,7 @@
   <xsl:template name="publisher">
     <xsl:if test="/TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/publisher[1] and /TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/publisher[1] != ''">
       <field name="publisher">
-        <xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/publisher[1]"></xsl:value-of>
+        <xsl:value-of select="normalize-space(/TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/publisher[1])"></xsl:value-of>
       </field>
     </xsl:if>
   </xsl:template>
@@ -496,7 +496,7 @@
   <xsl:template name="rightsHolder">
     <xsl:if test="/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/repository[1] != ''">
       <field name="rightsHolder">
-        <xsl:value-of select="/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/repository"/>
+        <xsl:value-of select="normalize-space(/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/repository)"/>
       </field>
     </xsl:if>
   </xsl:template>
@@ -529,10 +529,10 @@
   <xsl:template name="recipients">
     <xsl:if test="/TEI/teiHeader/profileDesc/particDesc/person[@role='recipient']/persName != ''">
       <field name="recipient">
-        <xsl:value-of select="/TEI/teiHeader/profileDesc/particDesc/person[@role='recipient']/persName"/>
+        <xsl:value-of select="normalize-space(/TEI/teiHeader/profileDesc/particDesc/person[@role='recipient']/persName)"/>
       </field>
       <field name="recipients">
-        <xsl:value-of select="/TEI/teiHeader/profileDesc/particDesc/person[@role='recipient']/persName"/>
+        <xsl:value-of select="normalize-space(/TEI/teiHeader/profileDesc/particDesc/person[@role='recipient']/persName)"/>
       </field>
     </xsl:if>
   </xsl:template>
@@ -550,7 +550,7 @@
         <xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='category'][1]/term">
           <xsl:if test="normalize-space(.) != ''">
             <field name="category">
-              <xsl:value-of select="."/>
+              <xsl:value-of select="normalize-space(.)"/>
             </field>
           </xsl:if>
         </xsl:for-each>
@@ -567,7 +567,7 @@
     <xsl:for-each select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='subcategory'][1]/term">
       <xsl:if test="normalize-space(.) != ''">
         <field name="subCategory">
-          <xsl:value-of select="."/>
+          <xsl:value-of select="normalize-space(.)"/>
         </field>
       </xsl:if>
     </xsl:for-each>
@@ -580,7 +580,7 @@
       select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='topic']/term">
       <xsl:if test="normalize-space(.) != ''">
         <field name="topic">
-          <xsl:value-of select="."/>
+          <xsl:value-of select="normalize-space(.)"/>
         </field>
       </xsl:if>
     </xsl:for-each>
@@ -593,7 +593,7 @@
       select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='keywords']/term">
       <xsl:if test="normalize-space(.) != ''">
         <field name="keywords">
-          <xsl:value-of select="."/>
+          <xsl:value-of select="normalize-space(.)"/>
         </field>
       </xsl:if>
     </xsl:for-each>
@@ -606,7 +606,7 @@
       select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='people']/term">
       <xsl:if test="normalize-space(.) != ''">
         <field name="people">
-          <xsl:value-of select="."/>
+          <xsl:value-of select="normalize-space(.)"/>
         </field>
       </xsl:if>
     </xsl:for-each>
@@ -619,7 +619,7 @@
       select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='places']/term">
       <xsl:if test="normalize-space(.) != ''">
         <field name="places">
-          <xsl:value-of select="."/>
+          <xsl:value-of select="normalize-space(.)"/>
         </field>
       </xsl:if>
     </xsl:for-each>
@@ -632,7 +632,7 @@
       select="/TEI/teiHeader/profileDesc/textClass/keywords[@n='works']/term">
       <xsl:if test="normalize-space(.) != ''">
         <field name="works">
-          <xsl:value-of select="."/>
+          <xsl:value-of select="normalize-space(.)"/>
         </field>
       </xsl:if>
     </xsl:for-each>
