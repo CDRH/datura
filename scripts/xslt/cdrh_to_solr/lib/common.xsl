@@ -90,7 +90,7 @@
                 <xsl:value-of select="$YYYY" />
             </xsl:when>
             <xsl:otherwise>
-                N.D.
+                <xsl:text>N.D.</xsl:text>
             </xsl:otherwise>
         </xsl:choose>
         
