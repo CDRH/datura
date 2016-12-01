@@ -398,7 +398,8 @@
 <xsl:template
   match="byline | docDate | sp | speaker | letter | 
   notesStmt | titlePart | docDate | ab | trailer | 
-  front | lg | l | bibl | dateline | salute | trailer | titlePage | closer | floatingText | date">
+  front | lg | l | bibl | dateline | salute | trailer | titlePage | closer | floatingText | date
+  | resp | respStmt | name | orgName | label | caption | idno">
   <span>
     <xsl:attribute name="class">
       <xsl:value-of select="name()"/>
@@ -406,20 +407,8 @@
       <xsl:if test="@rend"><xsl:text> </xsl:text><xsl:value-of select="@rend"/></xsl:if>
       <!--<xsl:if test="not(parent::p)"><xsl:text> p</xsl:text></xsl:if>--> <!-- this is breaking some displays but commeting it out might break others. May need more consideration -todo KMD -->
     </xsl:attribute>
-    <xsl:choose>
-      <!-- This is for CWW, check to see if this is done correctly, will it add two handwritten classes? -KMD -->
-      <xsl:when test="@type='handwritten'">
-        <span>
-          <xsl:attribute name="class">
-            <xsl:text>handwritten</xsl:text>
-          </xsl:attribute>
-          <xsl:apply-templates/>
-        </span>
-      </xsl:when>
-      <xsl:otherwise>
+    
         <xsl:apply-templates/>
-      </xsl:otherwise>
-    </xsl:choose>
   </span>
 </xsl:template>
 
@@ -449,7 +438,16 @@
 
   <!-- todo - build a better sheet. Right now, paragraphs could appear in other paragraphs, need to find a way to account for the weirdest encoding -KMD -->
 <xsl:template match="p">
-  <p><xsl:apply-templates/></p>
+  <xsl:choose>
+    <xsl:when test="ancestor::p">
+      <div class="p">
+        <xsl:apply-templates/>
+      </div>
+    </xsl:when>
+    <xsl:otherwise>
+      <p><xsl:apply-templates/></p>
+    </xsl:otherwise>
+  </xsl:choose>
 </xsl:template>
 
 <!-- ================================================ -->
@@ -587,33 +585,35 @@
   <xsl:for-each select="head">
     <xsl:apply-templates select="." mode="show"/>
   </xsl:for-each>
-  
-  
-  <xsl:choose>
-    <xsl:when test="@rend='handwritten'">
-      <table>
-        <xsl:attribute name="class">
-          <xsl:text>handwritten</xsl:text>
-        </xsl:attribute>
-        <xsl:apply-templates/>
-      </table>
-    </xsl:when>
-    <xsl:otherwise>
-      <table class="table">
-        <xsl:apply-templates/>
-      </table>
-    </xsl:otherwise>
-  </xsl:choose>
+  <table>
+    <xsl:attribute name="class">
+      <xsl:value-of select="@rend"/>
+      <xsl:text> tei_table table</xsl:text>
+    </xsl:attribute>
+    <xsl:apply-templates/>
+  </table>
 </xsl:template>
 
 <xsl:template match="row">
   <tr>
+    <xsl:attribute name="class">
+      <xsl:value-of select="@rend"/>
+      <xsl:text> tei_tr</xsl:text>
+    </xsl:attribute>
     <xsl:apply-templates/>
   </tr>
 </xsl:template>
 
 <xsl:template match="cell">
   <td>
+    <xsl:if test="@rows"><xsl:attribute name="rowspan"><xsl:value-of select="@rows"/></xsl:attribute></xsl:if>
+    <xsl:if test="@cols"><xsl:attribute name="colspanspan"><xsl:value-of select="@cols"/></xsl:attribute></xsl:if>
+    <xsl:attribute name="class">
+      <xsl:value-of select="@rend"/>
+      <xsl:text> tei_td</xsl:text>
+      <xsl:if test="@rows"><xsl:text> rowspan_</xsl:text><xsl:value-of select="@rows"/></xsl:if>
+      <xsl:if test="@cols"><xsl:text> colspan_</xsl:text><xsl:value-of select="@cols"/></xsl:if>
+    </xsl:attribute>
     <xsl:apply-templates/>
   </td>
 </xsl:template>

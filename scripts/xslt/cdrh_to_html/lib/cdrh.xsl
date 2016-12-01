@@ -52,12 +52,20 @@
       <xsl:attribute name="class">
         <xsl:value-of select="name()"/>
       </xsl:attribute>
-      <a>
-        <xsl:attribute name="href">
-          <xsl:value-of select="$site_url"/>/doc/<xsl:value-of select="@xml:id"/>
-        </xsl:attribute>
-        <xsl:value-of select="."/>
-      </a>
+      <xsl:choose>
+        <xsl:when test="@xml:id">
+          <a>
+            <xsl:attribute name="href">
+              <xsl:value-of select="$site_url"/>/doc/<xsl:value-of select="@xml:id"/>
+            </xsl:attribute>
+            <xsl:value-of select="."/>
+          </a>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="."/>
+        </xsl:otherwise>
+      </xsl:choose>
+      
     </span>
   </xsl:template>
 
