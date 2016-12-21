@@ -157,42 +157,44 @@
       </xsl:variable>
 
       <span class="hr">&#160;</span>
-      <span>
-        <xsl:attribute name="class">
-          <xsl:text>pageimage</xsl:text>
-        </xsl:attribute>
-        <a>
-          <xsl:attribute name="href">
-            <xsl:value-of select="$fig_location"/>
-            <xsl:text>large/</xsl:text>
-            <xsl:value-of select="$figure_id"/>
-            <xsl:text>.jpg</xsl:text>
+      <xsl:if test="$figure_id != ''">
+        <span>
+          <xsl:attribute name="class">
+            <xsl:text>pageimage</xsl:text>
           </xsl:attribute>
-          <xsl:attribute name="rel">
-            <xsl:text>prettyPhoto[pp_gal]</xsl:text>
-          </xsl:attribute>
-          <xsl:attribute name="title">
-            <xsl:text>&lt;a href="</xsl:text>
-            <xsl:value-of select="$fig_location"/>
-            <xsl:text>large/</xsl:text>
-            <xsl:value-of select="$figure_id"/>
-            <xsl:text>.jpg</xsl:text>
-            <xsl:text>" target="_blank" &gt;open image in new window&lt;/a&gt;</xsl:text>
-          </xsl:attribute>
-          
-          <img>
-            <xsl:attribute name="src">
+          <a>
+            <xsl:attribute name="href">
               <xsl:value-of select="$fig_location"/>
-              <xsl:text>thumbnails/</xsl:text>
+              <xsl:text>large/</xsl:text>
               <xsl:value-of select="$figure_id"/>
               <xsl:text>.jpg</xsl:text>
             </xsl:attribute>
-            <xsl:attribute name="class">
-              <xsl:text>display</xsl:text>&#160;
+            <xsl:attribute name="rel">
+              <xsl:text>prettyPhoto[pp_gal]</xsl:text>
             </xsl:attribute>
-          </img>
-        </a>
-      </span>
+            <xsl:attribute name="title">
+              <xsl:text>&lt;a href="</xsl:text>
+              <xsl:value-of select="$fig_location"/>
+              <xsl:text>large/</xsl:text>
+              <xsl:value-of select="$figure_id"/>
+              <xsl:text>.jpg</xsl:text>
+              <xsl:text>" target="_blank" &gt;open image in new window&lt;/a&gt;</xsl:text>
+            </xsl:attribute>
+            
+            <img>
+              <xsl:attribute name="src">
+                <xsl:value-of select="$fig_location"/>
+                <xsl:text>thumbnails/</xsl:text>
+                <xsl:value-of select="$figure_id"/>
+                <xsl:text>.jpg</xsl:text>
+              </xsl:attribute>
+              <xsl:attribute name="class">
+                <xsl:text>display</xsl:text>&#160;
+              </xsl:attribute>
+            </img>
+          </a>
+        </span>
+      </xsl:if>
     </xsl:if>
   </xsl:template>
   
