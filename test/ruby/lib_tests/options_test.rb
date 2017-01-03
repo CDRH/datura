@@ -21,9 +21,9 @@ describe "initialize" do
     it "should override general config with project config" do
       options = Options.new(params, general_config, project_complex)
       expect(options.all).to be
-      expect(options.all["solr_path"]).to eq("http://different.unl.edu:port/solr/")
-      expect(options.all["tei_xsl"]).to eq("newplace.xsl")
-      expect(options.all["vra_xsl"]).to eq("scripts/xslt/cdrh_to_solr/solr_transform_vra.xsl")
+      expect(options.all["solr_path"]).to eq("http://testserver.unl.edu:8080/solr/")
+      expect(options.all["tei_solr_xsl"]).to eq("scripts/xslt/cdrh_to_solr/solr_transform_tei.xsl")
+      expect(options.all["vra_solr_xsl"]).to eq("scripts/xslt/cdrh_to_solr/solr_transform_vra.xsl")
     end
   end
 end
@@ -43,16 +43,18 @@ describe "read_config" do
   context "given a good file path" do
     it "should read the stuff" do
       config = options_test.read_config("#{general_config}")
-      expect(config["log_old_number"]).to eq(4)
+      expect(config["default"]["log_old_number"]).to eq(4)
     end
   end
 end
 
-describe "remove_environment" do
+describe "remove_environments" do
   context "given new config" do
     it "should remove the production environment and flatten development" do
       new_config = {
-        "a" => "thing",
+        "default" => {
+          "a" => "thing",
+        },
         "development" => {
           "dev" => "true"
         },
@@ -62,7 +64,7 @@ describe "remove_environment" do
         }
       }
       # options_test is preset to development environment
-      output = options_test.remove_environment(new_config)
+      output = options_test.remove_environments(new_config)
       expect(output["development"]).to be_nil
       expect(output["production"]).to be_nil
       expect(output["a"]).to eq("thing")

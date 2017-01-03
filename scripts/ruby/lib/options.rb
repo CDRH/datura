@@ -28,21 +28,27 @@ class Options
   end
   # end read_configs
 
-  def remove_environment(config)
-    to_remove = @environment == "production" ? "development" : "production"
-    config.delete(to_remove)
-    config[@environment].each do |key, value|
-      config[key] = value
+  def remove_environments(config)
+    new_config = {}
+    # put the default settings in at base level
+    if config.has_key?("default")
+      config["default"].each do |key, value|
+        new_config[key] = value
+      end
     end
-    config.delete(@environment)
-    return config
+    if config.has_key?(@environment)
+      config[@environment].each do |key, value|
+        new_config[key] = value
+      end
+    end
+    return new_config
   end
 
   # remove the unneeded environment and put everything at the first level
   # then override general configuration with project specific
   def smash_configs
-    config = remove_environment(@general_config.clone)
-    tempProj = remove_environment(@project_config.clone)
+    config = remove_environments(@general_config)
+    tempProj = remove_environments(@project_config)
     config.merge!(tempProj)  # project will override the general ones here
     return config
   end

@@ -26,11 +26,8 @@ def post_to_solr_params
 
     options["environment"] = "development"
     opts.on( '-e', '--environment [input]', 'Environment (development, production)') do |input|
-      if input == "development" || input == "production"
+      if input && input.length > 0
         options["environment"] = input
-      else
-        puts "Must choose environment of development or production"
-        exit
       end
     end
 
