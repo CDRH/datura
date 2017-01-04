@@ -5,9 +5,9 @@ require_relative '../test_setup.rb'
 params = {"environment" => "development", "project" => "test_data"}
 this_dir = File.dirname(__FILE__)
 fixtures = "#{this_dir}/../fixtures"
-general_config = "#{fixtures}/configs/general.yml"
-project_simple = "#{fixtures}/configs/project_simple.yml"
-project_complex = "#{fixtures}/configs/project_complex.yml"
+general_config = "#{fixtures}/configs/general"
+project_simple = "#{fixtures}/configs/project_simple"
+project_complex = "#{fixtures}/configs/project_complex"
 options_test = Options.new(params, general_config, project_simple)
 
 describe "initialize" do
@@ -30,19 +30,18 @@ end
 
 describe "read_config" do
   context "given a bad file path" do
-    it "should exit the program" do
-      # expect(options_test.read_config("fake.yml")).to raise_exception
+    it "should not exit the program" do
       begin
-        config = options_test.read_config("this/is/a/fake/yml.yml")
-        expect(true).to be_falsey
-      rescue => e
+        options_test.read_config("this/is/a/fake/yml.yml")
         expect(true).to be_truthy
+      rescue
+        expect(true).to be_falsey
       end
     end
   end
   context "given a good file path" do
     it "should read the stuff" do
-      config = options_test.read_config("#{general_config}")
+      config = options_test.read_config("#{general_config}/public.yml")
       expect(config["default"]["log_old_number"]).to eq(4)
     end
   end

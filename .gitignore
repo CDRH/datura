@@ -1,8 +1,7 @@
 **/config.xsl
-# ignore yml files
-**/*.yml
-# except those yml files that are examples
-!**/*.example.yml
+# ignore only config and private yml files
+**/config.yml
+**/private.yml
 
 # ignore all the repositories in the projects directory
 projects/*
@@ -15,4 +14,4 @@ tmp/*
 # ignore logs because there are so many of them!
 logs/*
 
-.DS_Store
+**/.DS_Store

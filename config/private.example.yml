@@ -1,0 +1,17 @@
+default:
+  threads: 5
+
+###################
+#   Development   #
+###################
+
+development:
+  # solr information
+  solr_path: http://rosie.unl.edu:8080/solr/
+
+##################
+#   Production   #
+##################
+production:
+  # solr information
+  solr_path: http://cdrhsearch.unl.edu:8080/solr/

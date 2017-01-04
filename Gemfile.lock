@@ -5,6 +5,7 @@ GEM
     bcp47 (0.3.3)
       i18n
     builder (3.2.2)
+    colorize (0.8.1)
     diff-lcs (1.2.5)
     ebnf (0.3.9)
       rdf (~> 1.1)
@@ -124,6 +125,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  colorize
   linkeddata
   nokogiri
   rspec
+
+BUNDLED WITH
+   1.13.7

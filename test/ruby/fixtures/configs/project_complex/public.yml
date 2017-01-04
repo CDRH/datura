@@ -1,0 +1,21 @@
+development:
+  solr_core: neihardt_test
+  xsl_params:
+    fig_location:
+    file_location: http://server.unl.edu/data/projects/
+    site_url: http://server.unl.edu/neihardt
+    figures: false
+    fw: false
+    pb: false
+    project: neihardt
+    slug: neihardt
+production:
+  solr_core: neihardt
+  xsl_params:
+    fig_location: http://server.unl.edu/data_images/projects/example/figures/
+    file_location: http://server.unl.edu/data/projects/
+    figures: true
+    fw: false
+    pb: false
+    project: neihardt
+    slug: neihardt

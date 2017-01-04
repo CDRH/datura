@@ -14,26 +14,14 @@
 #   each environment, you could copy whichever script override you need into
 #   development and production
 
-default:
-  ##################################################################
-  #   Ignore These Unless If You Really Want to Change Some Logs   #
-  ##################################################################
+###################
+#   Defaults   #
+###################
 
+default:
   log_old_number: 4   # number of log files before beginning to erase
   log_size: 1024000   # size of log file in bytes
   log_level: Logger::WARN  # could change to INFO for more detail
-
-  #################
-  #   Threading   #
-  #################
-
-  # for less powerful servers set this to 5 or 10
-  # more powerful servers can probably handle 40 or 50
-  threads: 20
-
-  ########################
-  #   Script Locations   #
-  ########################
 
   # formats to solr transformation locations
   tei_solr_xsl: scripts/xslt/cdrh_to_solr/solr_transform_tei.xsl
@@ -41,46 +29,43 @@ default:
   dc_solr_xsl: scripts/xslt/cdrh_to_solr/solr_transform_dc.xsl
   csv_solr_ruby: scripts/ruby/csv_to_solr.rb
   # formats to html snippets transformation locations
-  tei_html_xsl: scripts/xslt/cdrh_tei_to_html/tei.p5.xsl
-  vra_html_xsl:
+  tei_html_xsl: scripts/xslt/cdrh_to_html/tei.p5.xsl
+  vra_html_xsl: 
   dc_html_xsl: scripts/xslt/cdrh_dc_to_html/dublin_core_to_html.xsl
   csv_html_ruby: scripts/ruby/csv_to_html.rb
+
+  # NOTE! If you are altering ANY of the variables you must
+  #   copy over ALL of them in that group to the project specific config file
+  variables_html:
+    fig_location: http://cdrhmedia-development.unl.edu/images/project
+    figures: true
+    fw: true
+    pb: true
+  variables_search:
+    file_location: http://server.unl.edu/data/projects/
+    project: Full\ Name\ of\ Project
+    shortname: short_name
 
 ###################
 #   Development   #
 ###################
 
-development:
-  # solr information
-  solr_path: http://server.unl.edu:port/solr/
-  solr_core: name_of_core
-
-  # NOTE! If you are altering ANY of the xsl_params you must
-  #   copy over ALL of them to the project specific config file
-  xsl_params:
-    fig_location: http://server.unl.edu/data_images/projects/example/figures/
-    file_location: http://server.unl.edu/data/projects/
-    figures: true
-    fw: true        # form works (page nums, etc)
-    pb: true        # page breaks
-    project: full_name_of_project
-    slug: short_name_of_project
+# development:
 
 ##################
 #   Production   #
 ##################
 production:
-  # solr information
-  solr_path: http://server.unl.edu:port/solr/
   solr_core: name_of_core
-
+ 
   # NOTE! If you are altering ANY of the xsl_params you must
   #   copy over ALL of them to the project specific config file
-  xsl_params:
-    fig_location: http://server.unl.edu/data_images/projects/example/figures/
-    file_location: http://server.unl.edu/data/projects/
+  variables_html:
+    fig_location: http://cdrhmedia.unl.edu/images/project
     figures: true
-    fw: true        # form works (page nums, etc)
-    pb: true        # page breaks
-    project: full_name_of_project
-    slug: short_name_of_project
+    fw: true
+    pb: true
+  variables_search:
+    file_location: http://server.unl.edu/data/projects/
+    project: Full\ Name\ of\ Project
+    shortname: short_name

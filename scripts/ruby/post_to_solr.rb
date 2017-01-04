@@ -19,7 +19,7 @@ errors["failed_files"] = []         # array of strings with file names that did 
 errors["solr_errors"] = []          # array of errors from solr to display at the end
 
 params = post_to_solr_params      # user supplied parameters via command line
-options = Options.new(params, "#{repo_dir}/config/config.yml", "#{repo_dir}/projects/#{params['project']}/config/config.yml").all
+options = Options.new(params, "#{repo_dir}/config", "#{repo_dir}/projects/#{params['project']}/config").all
 project = options["project"]
 verbose_flag = options["verbose"] == true
 puts "Running with following options #{options}" if verbose_flag
