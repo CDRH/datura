@@ -235,15 +235,15 @@ None of the libraries used in the ruby scripts require gems -- they are all buil
 
 ##### <a name="tests"></a> Running Tests
 
-Tests are located in `test/ruby/lib_tests` currently.  Test fixtures are located at `test/ruby/fixtures` and include things like tei, files that can be "touched" to update their timestamp, and a tmp directory that will be filled and wiped by specific tests.  There are currently only tests for the helper functions, etc, so you would run tests as follows:
+Older tests are located in `test_old/ruby/lib_tests` currently.  Test fixtures are located at `test_old/ruby/fixtures` and include things like tei, files that can be "touched" to update their timestamp, and a tmp directory that will be filled and wiped by specific tests.  There are currently only tests for the helper functions, etc, so you would run tests as follows:
 
 All tests:
 ```
-rspec test/ruby/lib_tests/*
+rspec test_old/ruby/lib_tests/*
 ```
 Specific group of tests (with documentation flag for a different progress reporter)
 ```
-rspec test/ruby/lib_tests/transformer_test.rb --format documentation
+rspec test_old/ruby/lib_tests/transformer_test.rb --format documentation
 ```
 At the end of the test run, you should see something like this:
 ```
