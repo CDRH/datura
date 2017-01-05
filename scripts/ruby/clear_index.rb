@@ -12,7 +12,7 @@ require_relative 'lib/solr_poster.rb'  # posts a string (file) to solr
 this_dir = File.dirname(__FILE__)
 
 # run the parameters through the option parser
-params = clear_index_params
+params = Parser.clear_index_params
 options = Options.new(params, "#{this_dir}/../../config/config.yml", "#{this_dir}/../../projects/#{params['project']}/config/config.yml").all
 
 # verify that the user is really sure about the index they're about to wipe
@@ -35,4 +35,4 @@ if confirm && (confirm == "y" || confirm == "Y" || confirm == "Yes" || confirm =
 else
   puts "exiting"
   exit
-end 
+end

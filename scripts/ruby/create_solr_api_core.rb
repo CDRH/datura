@@ -12,7 +12,7 @@ configset = "api_configs"
 url = "http://localhost:8983/solr/admin/cores?action=CREATE"
 
 # parse incoming options and make sure that they sent in name and configset
-params = create_core_params
+params = Parser.create_core_params
 core = get_input(params["core"], "Core name")
 url += "&name=#{core}&configSet=#{configset}"
 
