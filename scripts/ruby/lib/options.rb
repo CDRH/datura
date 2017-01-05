@@ -4,7 +4,7 @@ require_relative './helpers.rb'
 class Options
   attr_reader :all
 
-  def initialize(params, general_config_path, project_config_path)
+  def initialize params, general_config_path, project_config_path
     @directory = File.dirname(__FILE__)
     @project_dir = params["project"]
     @environment = params["environment"]
@@ -24,10 +24,10 @@ class Options
   end
 
   def read_all_configs general, project
-    @general_config_pub = read_config("#{general}/public.yml")
-    @general_config_priv = read_config("#{general}/private.yml")
-    @project_config_pub = read_config("#{project}/public.yml")
-    @project_config_priv = read_config("#{project}/private.yml")
+    @general_config_pub = read_config "#{general}/public.yml"
+    @general_config_priv = read_config "#{general}/private.yml"
+    @project_config_pub = read_config "#{project}/public.yml"
+    @project_config_priv = read_config "#{project}/private.yml"
     print_message @general_config_pub, "base public"
     print_message @general_config_priv, "base private"
     print_message @project_config_pub, "project public"
@@ -36,7 +36,7 @@ class Options
 
   # read_config
   #   reads in a yml file, throws an error if cannot read
-  def read_config(path)
+  def read_config path
     if File.file?(path)
       begin
         return YAML.load_file(path)
@@ -47,7 +47,7 @@ class Options
   end
   # end read_configs
 
-  def remove_environments(config)
+  def remove_environments config
     new_config = {}
     if config
       # add the default settings
@@ -70,13 +70,13 @@ class Options
   # then override general configuration with project specific
   def smash_configs
     # private overrides public general config
-    a = remove_environments(@general_config_pub)
-    b = remove_environments(@general_config_priv)
+    a = remove_environments @general_config_pub
+    b = remove_environments @general_config_priv
     general = a.merge(b)
 
     # private overrides public project config
-    c = remove_environments(@project_config_pub)
-    d = remove_environments(@project_config_priv)
+    c = remove_environments @project_config_pub
+    d = remove_environments @project_config_priv
     project = c.merge(d)
 
     # project overrides general config
