@@ -1,28 +1,63 @@
 class FileType
 
-  # make the class variables read / writable
-  class << self
-    attr_accessor :script_es
-    attr_accessor :script_html
-    attr_accessor :script_solr
-  end
-
+  # general information about file
   attr_reader :file_location
+  attr_reader :proj_dir
 
-  def initialize location
+  # script locations
+  attr_accessor :script_es
+  attr_accessor :script_html
+  attr_accessor :script_solr
+
+  # output directories
+  attr_accessor :out_es
+  attr_accessor :out_html
+  attr_accessor :out_solr
+
+  def initialize location, project_dir, options
     @file_location = location
+    @options = options
+    # set output directories
+    @out_es = "#{project_dir}/es"
+    @out_html = "#{project_dir}/html-generated"
+    @out_solr = "#{project_dir}/solr"
+    # script locations will need to be set in child classes
   end
 
-  def transform_es
+  def filename ext=true
+    if ext
+      File.basename(@file_location)
+    else
+      File.basename(@file_location, ".*")
+    end
+  end
+
+  def transform_es output=false
     # TODO should there be any default transform behavior at all?
   end
 
   def transform_html
-    # TODO also not sure about this one, because the XSL can't
-    # operate on CSVs and DC / TEI are pretty different
+    # exec_xsl @file_location, @@script_html, @@out_html
   end
 
-  def transform_solr
-    # TODO same as above
+  def transform_solr output=false
+    # this assumes that solr uses XSL transformation
+    # make sure to override behavior in CSV / YML child classes
+    if output
+      exec_xsl @file_location, @script_html, @out_html
+    else
+      exec_xsl @file_location, @script_html
+    end
   end
+
+  private
+
+  # TODO will need to make params string at some point
+  def exec_xsl input, xsl, output=nil, params=nil
+    cmd = "saxon -s:#{input} -xsl:#{xsl}"
+    cmd << " -o:#{output}/#{filename(false)}.txt" if output
+    cmd << " #{params}"
+    puts "using command #{cmd}"
+  end
+
 end

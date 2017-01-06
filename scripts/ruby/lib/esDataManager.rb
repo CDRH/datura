@@ -54,19 +54,33 @@ class EsDataManager
     @log.info(options_msg true)
     puts options_msg @options["verbose"]
 
-    setup_classes
     @files = prepare_files
 
+    batch_process_files
+  end
+
+
+  private
+
+  def batch_process_files
     # in batches
       # transform to json
       # if requested, write json to project files
       # post json to elastic search if requested
       # transform with xsl to html if requested
-    # 
+    #
+    threads = []
+    filesChunked = @files.each_slice(@options["threads"]).to_a
+    filesChunked.each do |files_subset|
+      files_subset.each_with_index.each do |file, index|
+        threads << Thread.new do
+          transform_all_formats file
+        end
+      end
+    end
+    # wait for all the files to process before moving on with the script
+    threads.each { |t| t.join }
   end
-
-
-  private
 
   def get_files
     formats = []
@@ -107,7 +121,7 @@ class EsDataManager
       dirname = File.basename(File.dirname(f))
       type = EsDataManager.format_to_class[dirname]
       if type
-        file_classes << type.new(f)
+        file_classes << type.new(f, @proj_dir, @options)
       else
         msg = "Could not create filetype #{type}"
         puts msg.red
@@ -117,14 +131,14 @@ class EsDataManager
     return file_classes
   end
 
-  def setup_classes
-    # use configuration specified by user to assign the script paths
-    # that will be used by various file types
-    EsDataManager.format_to_class.each do |abbrev, classname|
-      classname.script_es = @options["#{abbrev}_es_xsl"]
-      classname.script_html = @options["#{abbrev}_html_xsl"]
-      classname.script_solr = @options["#{abbrev}_solr_xsl"]
-    end
-    puts FileTei.script_html
+  # TODO make sure that these are only transforming if requested by user
+  def transform_all_formats file
+    es = file.transform_es
+    file.transform_html
+    solr = file.transform_solr true
+      # possibly write to file?
+      # possibly send to elasticsearch
+    # if requested transform HTML and write to file
+    # if requested transform to solr and write to file
   end
 end
