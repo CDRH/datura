@@ -1,4 +1,5 @@
 require 'colorize'
+
 require_relative './helpers.rb'
 
 class Options
@@ -82,4 +83,5 @@ class Options
     # project overrides general config
     return general.merge(project)
   end
+
 end

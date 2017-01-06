@@ -81,9 +81,7 @@ module Parser
 
     # magic
     optparse.parse!
-
     options["project"] = Parser.argv_projects(ARGV)
-    puts "User entered parameters:\n\t #{options}" if options["verbose"]
 
     return options
   end
