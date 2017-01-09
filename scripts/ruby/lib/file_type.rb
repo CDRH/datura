@@ -1,3 +1,5 @@
+require "open3"
+
 class FileType
 
   # general information about file
@@ -37,16 +39,18 @@ class FileType
   end
 
   def transform_html
-    # exec_xsl @file_location, @@script_html, @@out_html
+    # TODO will need to make sure the right params are going through
+    exec_xsl @file_location, @script_html, @out_html
   end
 
   def transform_solr output=false
     # this assumes that solr uses XSL transformation
     # make sure to override behavior in CSV / YML child classes
+    # TODO make sure the right params are going through
     if output
-      exec_xsl @file_location, @script_html, @out_html
+      return exec_xsl @file_location, @script_solr, @out_solr
     else
-      exec_xsl @file_location, @script_html
+      return exec_xsl @file_location, @script_solr
     end
   end
 
@@ -55,9 +59,23 @@ class FileType
   # TODO will need to make params string at some point
   def exec_xsl input, xsl, output=nil, params=nil
     cmd = "saxon -s:#{input} -xsl:#{xsl}"
-    cmd << " -o:#{output}/#{filename(false)}.txt" if output
+    # TODO which way would we rather do this?
+    # cmd << " -o:#{output}/#{filename(false)}.txt" if output
     cmd << " #{params}"
-    puts "using command #{cmd}"
+    cmd << " | tee #{output}/#{filename(false)}.txt" if output
+    puts "using command #{cmd}" if @options["verbose"]
+    Open3.popen3(cmd) do |stdin, stdout, stderr|
+      out = stdout.read
+      err = stderr.read
+      if err.length > 0
+        msg = "There was an error transforming #{filename}: #{err}"
+        puts msg.red
+        # TODO figure out a good way to log this
+      else
+        puts "Successfully transformed #{filename}"
+        return out
+      end
+    end
   end
 
 end

@@ -74,7 +74,7 @@ class EsDataManager
     filesChunked.each do |files_subset|
       files_subset.each_with_index.each do |file, index|
         threads << Thread.new do
-          transform_all_formats file
+          transform_and_post file
         end
       end
     end
@@ -131,13 +131,17 @@ class EsDataManager
     return file_classes
   end
 
-  # TODO make sure that these are only transforming if requested by user
   def transform_all_formats file
     es = file.transform_es
-    file.transform_html
+    html = file.transform_html
     solr = file.transform_solr true
-      # possibly write to file?
-      # possibly send to elasticsearch
+    return [es, html, solr]
+  end
+
+  # TODO make sure that these are only transforming if requested by user
+  def transform_and_post file
+    es, html, solr = transform_all_formats file
+
     # if requested transform HTML and write to file
     # if requested transform to solr and write to file
   end
