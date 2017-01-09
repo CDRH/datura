@@ -36,6 +36,7 @@ class FileType
 
   def transform_es output=false
     # TODO should there be any default transform behavior at all?
+    # each filetype child could have some, but it seems like this won't need it?
   end
 
   def transform_html

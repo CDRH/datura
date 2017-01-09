@@ -31,6 +31,7 @@ class EsDataManager
     # assign locations
     @repo_dir = "#{File.dirname(__FILE__)}/../../.."
     @proj_dir = "#{@repo_dir}/projects/#{@project}"
+    load_project_classes
     # check if project exists
     if File.directory?(@proj_dir)
       @options = Options.new(params, "#{@repo_dir}/config", "#{@proj_dir}/config").all
@@ -47,6 +48,14 @@ class EsDataManager
     # but would not use all of the same parsing options
     # so I'm not sure what the best design would be here
     # (possibly moving some stuff out of the initialization step)
+  end
+
+  # TODO should this happen here or in the FileType specific to each one?
+  # or maybe just all of them get loaded in the generic FileType class??
+  def load_project_classes
+    Dir["#{@proj_dir}/scripts/*.rb"].each do |f|
+      require f
+    end
   end
 
   def run
