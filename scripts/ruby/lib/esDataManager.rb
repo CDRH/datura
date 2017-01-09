@@ -26,6 +26,7 @@ class EsDataManager
   def initialize
     @files = []
     # combine user input and config files
+    # TODO this name is gonna need to change fo sho
     params = Parser.post_to_solr_params
     @project = params["project"]
     # assign locations
@@ -140,10 +141,14 @@ class EsDataManager
     return file_classes
   end
 
+  def should_transform type
+    return @options["transform_type"].nil? || @options["transform_type"] == type
+  end
+
   def transform_all_formats file
-    es = file.transform_es
-    html = file.transform_html
-    solr = file.transform_solr true
+    es = file.transform_es if should_transform("es")
+    html = file.transform_html if should_transform("html")
+    solr = file.transform_solr(true) if should_transform("solr")
     return [es, html, solr]
   end
 

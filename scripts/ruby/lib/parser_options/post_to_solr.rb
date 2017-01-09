@@ -32,11 +32,6 @@ module Parser
         end
       end
 
-      options["solr_or_html"] = nil
-      opts.on('-x', '--html-only', 'Will not generate solr snippets, only html') do
-        options["solr_or_html"] = "html"
-      end
-
       options["commit"] = true
       opts.on('-n', '--no-commit', 'Post files to solr but do not commit') do
         options["commit"] = false
@@ -45,11 +40,6 @@ module Parser
       options["regex"] = nil
       opts.on('-r', '--regex [input]', 'Only post files matching this regex') do |input|
         options["regex"] = input
-      end
-
-      opts.on('-s', '--solr-only', 'Will not generate html snippets') do
-        # if they also entered html only, go ahead and run them both because the user is confused
-        options["solr_or_html"] = options["solr_or_html"] == "html" ? "both" : "solr"
       end
 
       options["transform_only"] = false
@@ -76,6 +66,11 @@ module Parser
       options["verbose"] = false
       opts.on( '-v', '--verbose', 'More messages and stacktraces than ever before!') do
         options["verbose"] = true
+      end
+
+      options["transform_type"] = nil
+      opts.on('-x', '--type [input]', 'The types of transformation (html, solr, es)') do |input|
+        options["transform_type"] = input
       end
     end
 
