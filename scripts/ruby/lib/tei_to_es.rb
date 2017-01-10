@@ -111,4 +111,8 @@ module TeiToEs
     abnormal.gsub!(/^the |^a |^an /, "")
     return abnormal
   end
+
+  def self.squeeze string
+    string.strip.gsub(/\s+/, " ")
+  end
 end
