@@ -12,16 +12,19 @@ class FileTei < FileType
   end
 
   def transform_es output=false
-    puts "values: #{TeiToEs.create_json @file_location}"
+    json = TeiToEs.create_json(self, @options)
+    pretty = pretty_json json
+    puts "values: #{pretty}"
   end
 
   # if there should not be any html transformation taking place
   # then leave this method empty but uncommented to override default behavior
+
+  # if you would like to use the default transformation behavior
+  # then comment or remove both of the following methods!
   def transform_html
-    # puts "transform html #{filename}"
   end
 
   def transform_solr output=false
-    # puts "transform solr #{filename}"
   end
 end

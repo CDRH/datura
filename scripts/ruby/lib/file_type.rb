@@ -1,9 +1,11 @@
+require "json"
 require "open3"
 
 class FileType
 
   # general information about file
   attr_reader :file_location
+  attr_reader :options
   attr_reader :proj_dir
 
   # script locations
@@ -77,6 +79,10 @@ class FileType
         return out
       end
     end
+  end
+
+  def pretty_json json
+    JSON.pretty_generate(json)
   end
 
 end

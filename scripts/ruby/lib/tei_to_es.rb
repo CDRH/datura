@@ -47,7 +47,6 @@ module TeiToEs
     ],
     "source" => "/TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/title[@level='j']",
     "rightsholder" => "/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/repository",
-    "investigators" => "/TEI/teiHeader/fileDesc/titleStmt/principal",
     "recipients" => "/TEI/teiHeader/profileDesc/particDesc/person[@role='recipient']/persName",
     "category" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='category'][1]/term",
     "subcategory" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='subcategory'][1]/term",
@@ -63,15 +62,43 @@ module TeiToEs
   # but those will be very different for the new api schema
   # so I'm just waiting on that for now
 
-  def self.assemble_json xml_file, params
-    @xml = File.open(xml_file) { |f| Nokogiri::XML f }
+  def self.assemble_json file, options
+    @options = options
+    @xml = File.open(file.file_location) { |f| Nokogiri::XML f }
     # TODO is this a good idea?
     @xml.remove_namespaces!
     @json = {}
-    @json["_id"] = id
-    @json["title"] = title
-    @json["title_sort"] = title_sort
+
+    # TODO might put these into methods themselves
+    # so that a project could override only a clump of fields
+    # rather than all?
+    # Note: the above might only matter if ES can't handle nil
+    # values being sent, because otherwise they could just override
+    # the field behavior to be blank
+
+    # elastic search fields
+    @json["_id"] = id file.filename(false)
+    @json["_type"] = "cather"
+
+    # cdrh fields
+    @json["cdrh:id"] = @json["_id"]
+    @json["cdrh:shortname"] = shortname
+    @json["cdrh:project"] = project
+    # @json["cdrh:uri"]
+    # @json["cdrh:uri_data"]
+    # @json["cdrh:uri_html"]
+    @json["cdrh:data_type"] = "tei"
+    # @json["cdrh:fig_location"]
+    # @json["cdrh:image_id"]
+    # @json["cdrh:creator_sort"]
+
+    # dublin core fields and related
+    @json["dc:contributor"] = contributors
+    @json["dc:title"] = title
+    @json["cdrh:title_sort"] = title_sort
+    # @json["dcterms:alternative"]
     @json["date"] = date
+    @json["dc:creator"] = creators
     return @json
   end
 
@@ -79,12 +106,28 @@ module TeiToEs
   # FIELDS #
   ##########
 
-  def self.id
-    "filename"
+  def self.id filename
+    filename
+  end
+
+  def self.creators
+    # TODO this should do something snazzy with the nested structure
+  end
+
+  def self.contributors
+    # TODO
   end
 
   def self.date
     @xml.xpath(@xpaths["date"]).text
+  end
+
+  def self.shortname
+    @options["shortname"]
+  end
+
+  def self.project
+    @options["project_desc"]
   end
 
   def self.title
@@ -96,7 +139,7 @@ module TeiToEs
   end
 
   def self.title_sort
-    normalize_name @json["title"]
+    normalize_name @json["dc:title"]
   end
 
   ###########
@@ -107,9 +150,9 @@ module TeiToEs
   def self.normalize_name abnormal
     # put in lower case
     # remove starting a, an, or the
-    abnormal.downcase!
-    abnormal.gsub!(/^the |^a |^an /, "")
-    return abnormal
+    down = abnormal.downcase
+    normal = down.gsub(/^the |^a |^an /, "")
+    return normal
   end
 
   def self.squeeze string
