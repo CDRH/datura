@@ -1,6 +1,8 @@
 require_relative "../file_type.rb"
 
 class FileTei < FileType
+  # TODO we could include the tei_to_es and other modules directly here
+  # as a mixin, though then we'll need to namespace them or perish
 
   def initialize file_location, proj_dir, options
     super file_location, proj_dir, options
@@ -10,7 +12,6 @@ class FileTei < FileType
   end
 
   def transform_es output=false
-    # puts "xpaths: #{TeiToEs.xpaths}"
     puts "values: #{TeiToEs.create_json @file_location}"
   end
 
