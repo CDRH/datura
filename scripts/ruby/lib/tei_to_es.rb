@@ -1,30 +1,15 @@
 require "nokogiri"
+require_relative "helpers.rb"
 
 # TODO would this whole thing be better as a class instead of a module?
 # originally planning on mixing in generic module with project specific classes
 # but this seems like it's actually working okay, but maybe it could be better???
 
 module TeiToEs
-  def self.json
-    @json
-  end
-
-  def self.json= j
-    @json = j
-  end
 
   # getter for json response object
   def self.create_json xml, params={}
     @json = self.assemble_json xml, params
-  end
-
-  # getter and setter to modify xpaths object
-  def self.xpaths
-    @xpaths
-  end
-
-  def self.xpaths= x
-    @xpaths = x
   end
 
   # These are the default xpaths that are used for projects
@@ -34,6 +19,7 @@ module TeiToEs
   @xpaths = {
     "title_main" => "/TEI/teiHeader/fileDesc/titleStmt/title[@type='main'][1]",
     "title_alt" => "/TEI/teiHeader/fileDesc/titleStmt/title[1]",
+    "category" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='category'][1]/term",
     "creators" => [
       "/TEI/teiHeader/fileDesc/titleStmt/author",
       "//persName[@type = 'author']"
@@ -48,7 +34,6 @@ module TeiToEs
     "source" => "/TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/title[@level='j']",
     "rightsholder" => "/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/repository",
     "recipients" => "/TEI/teiHeader/profileDesc/particDesc/person[@role='recipient']/persName",
-    "category" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='category'][1]/term",
     "subcategory" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='subcategory'][1]/term",
     "topic" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='topic']/term",
     "keywords" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='keywords']/term",
@@ -63,6 +48,7 @@ module TeiToEs
   # so I'm just waiting on that for now
 
   def self.assemble_json file, options
+    @id = file.filename(false)
     @options = options
     @xml = File.open(file.file_location) { |f| Nokogiri::XML f }
     # TODO is this a good idea?
@@ -76,29 +62,107 @@ module TeiToEs
     # values being sent, because otherwise they could just override
     # the field behavior to be blank
 
-    # elastic search fields
-    @json["_id"] = id file.filename(false)
-    @json["_type"] = "cather"
+    ###############
+    # identifiers #
+    ###############
+    @json["_id"] = id
+    @json["_type"] = shortname
+    @json["cdrh:identifier"] = id
+    @json["dc:identifier"] = id_dc
 
-    # cdrh fields
-    @json["cdrh:id"] = @json["_id"]
-    @json["cdrh:shortname"] = shortname
+    ##############
+    # categories #
+    ##############
+    @json["cdrh:category"] = category
+    @json["cdrh:subcategory"] = subcategory
+    @json["cdrh:data_type"] = "tei"
     @json["cdrh:project"] = project
+    @json["cdrh:shortname"] = shortname
+    # @json["dc:subject"]
+
+    #############
+    # locations #
+    #############
+
+    # TODO check, because I'm not sure the schema
+    # lists the urls that we actually want to use
+    # earlywashingtondc.org vs cdrhmedia, etc
     # @json["cdrh:uri"]
     # @json["cdrh:uri_data"]
     # @json["cdrh:uri_html"]
-    @json["cdrh:data_type"] = "tei"
     # @json["cdrh:fig_location"]
     # @json["cdrh:image_id"]
-    # @json["cdrh:creator_sort"]
 
-    # dublin core fields and related
-    @json["dc:contributor"] = contributors
-    @json["dc:title"] = title
+    ###############
+    # description #
+    ###############
     @json["cdrh:title_sort"] = title_sort
+    @json["dc:title"] = title
+    # @json["dc:description"]
+    # @json["cdrh:topics"]
     # @json["dcterms:alternative"]
-    @json["date"] = date
+
+    ##################
+    # other metadata #
+    ##################
+    # @json["dc:format"]
+    # @json["dc:language"]
+    # @json["dc:relation"]
+    # @json["dc:type"]
+    # @json["dcterms:extent"]
+    # @json["dcterms:medium"]
+
+    #########
+    # dates #
+    #########
+    @json["cdrh:date_display"] = date_display
+    @json["dc:date"] = date
+    # @json["cdrh:date_not_before"]
+    # @json["cdrh:date_not_after"]
+
+    ####################
+    # publishing stuff #
+    ####################
+    # @json["cdrh:rights_uri"]
+    # @json["dc:publisher"]
+    # @json["dc:rights"]
+    # @json["dc:source"]
+    # @json["dcterms:rights_holder"]
+
+    ##########
+    # people #
+    ##########
+    # @json["cdrh:creator_sort"]
+    # @json["cdrh:people"]
+    # person is a container field with name, id, role
+    # @json["cdrh:person"]
+    # dc contributor is a container field with name and id and role
+    @json["dc:contributor"] = contributors
+    # dc creator is a container field with name and id
     @json["dc:creator"] = creators
+
+    ###########
+    # spatial #
+    ###########
+    # TODO not sure about the naming convention here?
+    # TODO has place_name, coordinates, id, city, county, country,
+    # region, state, street, postal_code
+    # @json["dcterms:coverage.spatial"]
+
+    ##############
+    # referenced #
+    ##############
+    # @json["cdrh:keywords"]
+    # @json["cdrh:places"]
+    # @json["cdrh:works"]
+
+    #################
+    # text searches #
+    #################
+    # @json["cdrh.annotations"]
+    # @json["cdrh:text"]
+    # @json["dc:abstract"]
+
     return @json
   end
 
@@ -106,8 +170,18 @@ module TeiToEs
   # FIELDS #
   ##########
 
-  def self.id filename
-    filename
+  def self.id
+    @id
+  end
+
+  def self.id_dc
+    # TODO use api path from config or something?
+    "https://cdrhapi.unl.edu/doc/#{@id}"
+  end
+
+  def self.category
+    category = get_text "category"
+    category ? category : "texts"
   end
 
   def self.creators
@@ -119,32 +193,54 @@ module TeiToEs
   end
 
   def self.date
-    Common.date_standardize(@xml.xpath(@xpaths["date"]).text)
+    date = get_text "date"
+    Common.date_standardize(date)
+  end
+
+  def self.date_display
+    date = get_text "date"
+    Common.date_display(date)
   end
 
   def self.shortname
     @options["shortname"]
   end
 
+  def self.subcategory
+    subcategory = get_text "subcategory"
+    subcategory ? subcategory : "texts"
+  end
+
   def self.project
-    @options["project_desc"]
+    @options["project_desc"] || @options["project"]
   end
 
   def self.title
-    title = @xml.xpath(@xpaths["title_main"]).text
+    title = get_text "title_main"
     if !title
-      title = @xml.xpath(@xpaths["title_alt"]).text
+      title = get_text "title_alt"
     end
     return title
   end
 
   def self.title_sort
-    Common.normalize_name @json["dc:title"]
+    t = @json["dc:title"] ? @json["dc:title"] : title
+    Common.normalize_name t
   end
 
   ###########
   # HELPERS #
   ###########
 
-  # see helpers.rb and the Common module for methods imported from common.xsl
+  # see helpers.rb's Common module for methods imported from common.xsl
+
+  # get the value of one of the xpaths listed at the top
+  # Note: if the xpath returns multiple values they will be squished together
+  def self.get_text xpath_name
+    contents = @xml.xpath(@xpaths[xpath_name]).inner_html || ""
+    squeezed = Common.squeeze(contents)
+    converted = Common.convert_tags(squeezed)
+    final = converted && converted.length > 0 ? converted : nil
+    return final
+  end
 end

@@ -3,6 +3,15 @@ require 'net/http'
 require 'yaml'
 
 module Common
+
+  def self.convert_tags text
+    text = text.gsub(/<hi rend=['"]italic['"]>/, "<em>")
+    text = text.gsub(/<\/hi>/, "</em>")
+    # TODO what other things will probably show up?
+    # lists, blockquotes, underlines, etc?
+    return text
+  end
+
   # pass in a date and identify whether it should be before or after
   # in order to fill in dates (ex: 2014 => 2014-12-31)
 
