@@ -2,6 +2,57 @@ require 'fileutils'
 require 'net/http'
 require 'yaml'
 
+module Common
+  # pass in a date and identify whether it should be before or after
+  # in order to fill in dates (ex: 2014 => 2014-12-31)
+
+  def self.date_display date, nd_text="N.D."
+    date_hyphen = Common.date_standardize(date)
+    if date_hyphen
+      y, m, d = date_hyphen.split("-").map { |s| s.to_i }
+      date_obj = Date.new(y, m, d)
+      return date_obj.strftime("%B %-d, %Y")
+    else
+      return nd_text
+    end
+  end
+
+  def self.date_standardize date, before=true
+    return_date = nil
+    if date
+      y, m, d = date.split(/-|\//)
+      if y && y.length == 4
+        # use -1 to indicate that this will be the last possible
+        m_default = before ? "01" : "-1"
+        d_default = before ? "01" : "-1"
+        m = m_default if !m
+        d = d_default if !d
+        # TODO clean this up because man it sucks
+        if Date.valid_date?(y.to_i, m.to_i, d.to_i)
+          date = Date.new(y.to_i, m.to_i, d.to_i)
+          month = date.month.to_s.rjust(2, "0")
+          day = date.day.to_s.rjust(2, "0")
+          return_date = "#{date.year}-#{month}-#{day}"
+        end
+      end
+    end
+    return_date
+  end
+
+  def self.normalize_name abnormal
+    # put in lower case
+    # remove starting a, an, or the
+    down = abnormal.downcase
+    normal = down.gsub(/^the |^a |^an /, "")
+    return normal
+  end
+
+  # replaces normalize-space
+  def self.squeeze string
+    string.strip.gsub(/\s+/, " ")
+  end
+end
+
 # get_directory_files
 #   Note: do not end with /
 #   params: directory (string)

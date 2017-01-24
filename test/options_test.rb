@@ -33,7 +33,7 @@ class Options
   end
 end
 
-class TempTest < Minitest::Test
+class OptionsTest < Minitest::Test
 
   def test_dev_overwriting
     params = { "environment" => "development" }

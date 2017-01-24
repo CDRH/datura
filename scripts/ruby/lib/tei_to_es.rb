@@ -119,7 +119,7 @@ module TeiToEs
   end
 
   def self.date
-    @xml.xpath(@xpaths["date"]).text
+    Common.date_standardize(@xml.xpath(@xpaths["date"]).text)
   end
 
   def self.shortname
@@ -139,23 +139,12 @@ module TeiToEs
   end
 
   def self.title_sort
-    normalize_name @json["dc:title"]
+    Common.normalize_name @json["dc:title"]
   end
 
   ###########
   # HELPERS #
   ###########
 
-  # TODO should these go somewhere else or just stay in this file?
-  def self.normalize_name abnormal
-    # put in lower case
-    # remove starting a, an, or the
-    down = abnormal.downcase
-    normal = down.gsub(/^the |^a |^an /, "")
-    return normal
-  end
-
-  def self.squeeze string
-    string.strip.gsub(/\s+/, " ")
-  end
+  # see helpers.rb and the Common module for methods imported from common.xsl
 end
