@@ -26,6 +26,9 @@ module Common
     end
   end
 
+  # automatically defaults to setting incomplete dates to the earliest
+  # date (2016-07 becomes 2016-07-01) but pass in "false" in order
+  # to set it to the latest available date
   def self.date_standardize date, before=true
     return_date = nil
     if date
