@@ -35,7 +35,7 @@ module TeiToEs
     "keywords" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='keywords']/term",
     # note: language is global attribute xml:lang
     "language" => "//[@lang]",
-    "people" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='people']/term",
+    "person" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='people']/term",
     "places" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='places']/term",
     "publisher" => "/TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/publisher[1]",
     "recipients" => "/TEI/teiHeader/profileDesc/particDesc/person[@role='recipient']/persName",
@@ -193,29 +193,18 @@ module TeiToEs
 
   def self.category
     category = get_text @xpaths["category"]
-    category ? category : "texts"
+    return category.length > 0 ? category : "texts"
   end
 
   # note this does not sort the creators
   def self.creator
-    creators = []
-    @xpaths["creators"].each do |xpath|
-      # TODO this will need to be beefed up if we
-      # get some examples where the creator has an
-      # id attr which we can add, for now going for the
-      # easiest option, which is just to grab the name
-      creator = get_text xpath
-      creators << creator if creator
-    end
-    creators.uniq!
+    creators = get_list @xpaths["creators"]
     return creators.map { |creator| { "name" => creator } }
   end
 
   # returns ; delineated string of alphabetized creators
   def self.creator_sort
-    creators = @json["dc:creator"] || creator
-    sorted = creators.sort
-    return sorted.join("; ")
+    return get_text @xpaths["creators"]
   end
 
   def self.contributors
@@ -231,12 +220,12 @@ module TeiToEs
 
   def self.date before=true
     date = get_text @xpaths["date"]
-    Common.date_standardize(date, before)
+    return Common.date_standardize(date, before)
   end
 
   def self.date_display
     date = get_text @xpaths["date"]
-    Common.date_display(date)
+    return Common.date_display(date)
   end
 
   def self.description
@@ -256,12 +245,7 @@ module TeiToEs
   end
 
   def self.keywords
-    keywords = []
-    eles = @xml.xpath(@xpaths["keywords"])
-    eles.each do |ele|
-      keywords << ele.text
-    end
-    return keywords
+    return get_list @xpaths["keywords"]
   end
 
   def self.language
@@ -273,19 +257,16 @@ module TeiToEs
     # TODO will need some examples of how this will work
     # and put in the xpaths above, also
     # should contain name, id, and role
-    return []
+    []
   end
 
   def self.person_sort
-    people = @json["cdrh:person"] || person
-    list = people.map { |p| p.name }
-    sorted = list.sort
-    return sorted.join("; ")
+    return get_text @xpaths["person"]
   end
 
   def self.places
     # TODO will need to figure out some default behavior for this field
-    return []
+    return get_list @xpaths["places"]
   end
 
   def self.project
@@ -306,7 +287,7 @@ module TeiToEs
 
   def self.rights
     # Note: override by project as needed
-    "Covered by a CC-By License https://creativecommons.org/licenses/by/2.0/"
+    "All Rights Reserved"
   end
 
   def self.rights_holder
@@ -329,7 +310,7 @@ module TeiToEs
 
   def self.subcategory
     subcategory = get_text @xpaths["subcategory"]
-    subcategory ? subcategory : "texts"
+    subcategory.length > 0 ? subcategory : "texts"
   end
 
   def self.text
@@ -381,12 +362,45 @@ module TeiToEs
   # Note: if the xpath returns multiple values they will be squished together
   # TODO should we make it so that this can optionally look for more than one
   # result?
-  def self.get_text xpath
-    contents = @xml.xpath(xpath).inner_html || ""
-    squeezed = Common.squeeze(contents)
-    converted = Common.convert_tags(squeezed)
-    final = converted && converted.length > 0 ? converted : nil
-    return final
+
+  # get_list
+  #   can pass it a string xpath or array of xpaths
+  # returns an array with the html value in xpath
+  def self.get_list xpaths
+    xpaths = xpaths.class == Array ? xpaths : [xpaths]
+    return get_xpaths xpaths
+  end
+
+  # get_text
+  #   can pass it a string xpath or array of xpaths
+  #   can optionally set a delimiter, otherwise ;
+  # returns a STRING
+  # if you want a multivalued result, please refer to get_list
+  def self.get_text xpaths, delimiter=";"
+    # ensure all xpaths are an array before beginning
+    xpaths = xpaths.class == Array ? xpaths : [xpaths]
+    list = get_xpaths xpaths
+    sorted = list.sort
+    return sorted.join("#{delimiter} ")
+  end
+
+  # Note: Recommend that project team do NOT use this method directly
+  # please use get_list or get_text instead
+  def self.get_xpaths xpaths
+    list = []
+    xpaths.each do |xpath|
+      contents = @xml.xpath(xpath)
+      puts "length: #{contents.length}"
+      contents.each do |content|
+        html = content.inner_html || ""
+        squeezed = Common.squeeze(html)
+        converted = Common.convert_tags(squeezed)
+        if converted.length > 0
+          list << converted
+        end
+      end
+    end
+    return list.uniq
   end
 
 end
