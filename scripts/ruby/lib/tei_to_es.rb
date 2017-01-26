@@ -366,9 +366,9 @@ module TeiToEs
   # get_list
   #   can pass it a string xpath or array of xpaths
   # returns an array with the html value in xpath
-  def self.get_list xpaths
+  def self.get_list xpaths, strip_tags=false
     xpaths = xpaths.class == Array ? xpaths : [xpaths]
-    return get_xpaths xpaths
+    return get_xpaths xpaths, strip_tags
   end
 
   # get_text
@@ -376,27 +376,33 @@ module TeiToEs
   #   can optionally set a delimiter, otherwise ;
   # returns a STRING
   # if you want a multivalued result, please refer to get_list
-  def self.get_text xpaths, delimiter=";"
+  def self.get_text xpaths, strip_tags=false, delimiter=";"
     # ensure all xpaths are an array before beginning
     xpaths = xpaths.class == Array ? xpaths : [xpaths]
-    list = get_xpaths xpaths
+    list = get_xpaths xpaths, strip_tags
     sorted = list.sort
     return sorted.join("#{delimiter} ")
   end
 
   # Note: Recommend that project team do NOT use this method directly
-  # please use get_list or get_text instead
-  def self.get_xpaths xpaths
+  #   please use get_list or get_text instead
+  # strip_tags true will take out all tags entirely
+  # strip_tags false will convert tags like <hi> to <em>
+  def self.get_xpaths xpaths, strip_tags=false
     list = []
     xpaths.each do |xpath|
       contents = @xml.xpath(xpath)
-      puts "length: #{contents.length}"
       contents.each do |content|
-        html = content.inner_html || ""
-        squeezed = Common.squeeze(html)
-        converted = Common.convert_tags(squeezed)
-        if converted.length > 0
-          list << converted
+        text = ""
+        if strip_tags
+          text = content.text
+        else
+          converted = Common.convert_tags(content)
+          text = content.inner_html
+        end
+        text = Common.squeeze(text)
+        if text.length > 0
+          list << text
         end
       end
     end
