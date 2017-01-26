@@ -48,4 +48,16 @@ class HelpersTest < Minitest::Test
     assert_equal Common.date_standardize("2016-02", false), "2016-02-29"
   end
 
+  def test_normalize_name
+    assert_equal Common.normalize_name("The Title"), "title"
+    assert_equal Common.normalize_name("Anne of Green Gables"), "anne of green gables"
+    assert_equal Common.normalize_name("A Fancy Party"), "fancy party"
+    assert_equal Common.normalize_name("An Hour"), "hour"
+  end
+
+  def test_squeeze
+    test1 = "<xml>\n<title>Example    </title>\n  </xml>\n"
+    assert_equal Common.squeeze(test1), "<xml> <title>Example </title> </xml>"
+  end
+
 end
