@@ -8,9 +8,31 @@ require_relative "helpers.rb"
 module TeiToEs
 
   # getter for json response object
-  def self.create_json xml, params={}
-    @json = self.assemble_json xml, params
+  def self.create_json file, params={}
+    @file = file
+    @xml = create_xml_object
+    @id = file.filename(false)
+    @options = params
+
+    # create an object that with hold all of the ES documents
+    # and put the "main" one in immediately
+    @json = []
+    @json << assemble_json
+
+    # iterate through any specified sub-doc xpaths and add to json
+    docs = get_docs
+    docs.each do |doc|
+      @json << self.assemble_subdoc_json(doc)
+    end
+    return @json
   end
+
+  # xpaths by which a file should be divided into multiple docs
+  # for example, a personography file divides on "//person"
+  # this system may need to be made far more robust in the near future
+  @subdoc_xpaths = [
+    "//person"
+  ]
 
   # These are the default xpaths that are used for projects
   #  if you require a different xpath, please override the xpath in
@@ -55,13 +77,25 @@ module TeiToEs
   # but those will be very different for the new api schema
   # so I'm just waiting on that for now
 
-  def self.assemble_json file, options
-    @id = file.filename(false)
-    @options = options
-    @xml = File.open(file.file_location) { |f| Nokogiri::XML f }
+  def self.create_xml_object
+    file_xml = File.open(@file.file_location) { |f| Nokogiri::XML f }
     # TODO is this a good idea?
-    @xml.remove_namespaces!
-    @json = {}
+    file_xml.remove_namespaces!
+    return file_xml
+  end
+
+  def self.get_docs
+    # get all of the subdocs based on the xpaths
+    docs = []
+    @subdoc_xpaths.each do |xpath|
+      docs += @xml.xpath(xpath)
+    end
+    return docs
+  end
+
+
+  def self.assemble_json
+    json = {}
 
     # TODO might put these into methods themselves
     # so that a project could override only a clump of fields
@@ -73,20 +107,20 @@ module TeiToEs
     ###############
     # identifiers #
     ###############
-    @json["_id"] = id
-    @json["_type"] = shortname
-    @json["cdrh:identifier"] = id
-    @json["dc:identifier"] = id_dc
+    json["_id"] = id
+    json["_type"] = shortname
+    json["cdrh:identifier"] = id
+    json["dc:identifier"] = id_dc
 
     ##############
     # categories #
     ##############
-    @json["cdrh:category"] = category
-    @json["cdrh:subcategory"] = subcategory
-    @json["cdrh:data_type"] = "tei"
-    @json["cdrh:project"] = project
-    @json["cdrh:shortname"] = shortname
-    # @json["dc:subject"]
+    json["cdrh:category"] = category
+    json["cdrh:subcategory"] = subcategory
+    json["cdrh:data_type"] = "tei"
+    json["cdrh:project"] = project
+    json["cdrh:shortname"] = shortname
+    # json["dc:subject"]
 
     #############
     # locations #
@@ -95,57 +129,57 @@ module TeiToEs
     # TODO check, because I'm not sure the schema
     # lists the urls that we actually want to use
     # earlywashingtondc.org vs cdrhmedia, etc
-    # @json["cdrh:uri"]
-    # @json["cdrh:uri_data"]
-    # @json["cdrh:uri_html"]
-    # @json["cdrh:fig_location"]
-    # @json["cdrh:image_id"]
+    # json["cdrh:uri"]
+    # json["cdrh:uri_data"]
+    # json["cdrh:uri_html"]
+    # json["cdrh:fig_location"]
+    # json["cdrh:image_id"]
 
     ###############
     # description #
     ###############
-    @json["cdrh:title_sort"] = title_sort
-    @json["dc:title"] = title
-    @json["dc:description"] = description
-    # @json["cdrh:topics"]
-    # @json["dcterms:alternative"]
+    json["cdrh:title_sort"] = title_sort
+    json["dc:title"] = title
+    json["dc:description"] = description
+    # json["cdrh:topics"]
+    # json["dcterms:alternative"]
 
     ##################
     # other metadata #
     ##################
-    @json["dc:format"] = format
-    @json["dc:language"] = language
-    # @json["dc:relation"]
-    # @json["dc:type"]
-    # @json["dcterms:extent"]
-    @json["dcterms:medium"] = format
+    json["dc:format"] = format
+    json["dc:language"] = language
+    # json["dc:relation"]
+    # json["dc:type"]
+    # json["dcterms:extent"]
+    json["dcterms:medium"] = format
 
     #########
     # dates #
     #########
-    @json["cdrh:date_display"] = date_display
-    @json["dc:date"] = date
-    @json["cdrh:date_not_before"] = date
-    @json["cdrh:date_not_after"] = date false
+    json["cdrh:date_display"] = date_display
+    json["dc:date"] = date
+    json["cdrh:date_not_before"] = date
+    json["cdrh:date_not_after"] = date false
 
     ####################
     # publishing stuff #
     ####################
-    @json["cdrh:rights_uri"] = rights_uri
-    @json["dc:publisher"] = publisher
-    @json["dc:rights"] = rights
-    @json["dc:source"] = source
-    @json["dcterms:rights_holder"] = rights_holder
+    json["cdrh:rights_uri"] = rights_uri
+    json["dc:publisher"] = publisher
+    json["dc:rights"] = rights
+    json["dc:source"] = source
+    json["dcterms:rights_holder"] = rights_holder
 
     ##########
     # people #
     ##########
-    @json["cdrh:creator_sort"] = creator_sort
-    @json["cdrh:people"] = person_sort
+    json["cdrh:creator_sort"] = creator_sort
+    json["cdrh:people"] = person_sort
     # container fields
-    @json["cdrh:person"] = person
-    @json["dc:contributor"] = contributors
-    @json["dc:creator"] = creator
+    json["cdrh:person"] = person
+    json["dc:contributor"] = contributors
+    json["dc:creator"] = creator
 
     ###########
     # spatial #
@@ -153,25 +187,54 @@ module TeiToEs
     # TODO not sure about the naming convention here?
     # TODO has place_name, coordinates, id, city, county, country,
     # region, state, street, postal_code
-    # @json["dcterms:coverage.spatial"]
+    # json["dcterms:coverage.spatial"]
 
     ##############
     # referenced #
     ##############
-    @json["cdrh:keywords"] = keywords
-    @json["cdrh:places"] = places
-    @json["cdrh:works"] = works
+    json["cdrh:keywords"] = keywords
+    json["cdrh:places"] = places
+    json["cdrh:works"] = works
 
     #################
     # text searches #
     #################
-    @json["cdrh.annotations"] = annotations
-    @json["cdrh:text"] = text
-    # @json["dc:abstract"]
+    json["cdrh.annotations"] = annotations
+    json["cdrh:text"] = text
+    # json["dc:abstract"]
 
     project_specific_fields
 
-    return @json
+    return json
+  end
+
+  # TODO some problems with hurriedly throwing this in here
+  # you can't use the normal fields down below because the majority
+  # of them pull info straight from @xml
+  # this could be mitigated if the xpaths sent use the index of the doc
+  # like blah/person[1]/xpath but that seems like a dangerous
+  # idea to be separating the data and the paths like that
+  # for now, since this is just a proof of concept I'm going
+  # to hardcode stuff, sad day
+  def self.assemble_subdoc_json doc
+    json = {}
+    doc_identifier = doc["id"]
+    id = "#{@id}_#{doc_identifier}"
+    json["_id"] = id
+    json["_type"] = shortname
+    json["cdrh:identifier"] = id
+    # json["dc:identifier"] = "todo"
+
+    json["category"] = "Life"
+    json["subCategory"] = "Personography"
+    json["cdrh:data_type"] = "tei"
+    json["cdrh:project"] = project
+    json["cdrh:shortname"] = shortname
+
+    json["dc:title"] = doc.xpath("./persName[@type='display']").text
+    json["cdrh:title_sort"] = Common.normalize_name(json["dc:title"])
+    # more fields would be contributor, people, description, text, etc
+    return json
   end
 
   ##########
@@ -193,7 +256,7 @@ module TeiToEs
 
   def self.category
     category = get_text @xpaths["category"]
-    return category.length > 0 ? category : "texts"
+    return category.length > 0 ? category : "none"
   end
 
   # note this does not sort the creators
@@ -278,8 +341,8 @@ module TeiToEs
     # Note: customize this per project to include more information
     # to be posted to elasticsearch.  Example:
 
-    # @json["novel_id"] = get_text @xpaths["novel"]
-    # @json["publicity"] = "some message that will always be displayed"
+    # json["novel_id"] = get_text @xpaths["novel"]
+    # json["publicity"] = "some message that will always be displayed"
   end
 
   def self.publisher
@@ -311,7 +374,7 @@ module TeiToEs
 
   def self.subcategory
     subcategory = get_text @xpaths["subcategory"]
-    subcategory.length > 0 ? subcategory : "texts"
+    subcategory.length > 0 ? subcategory : "none"
   end
 
   def self.text
@@ -344,7 +407,7 @@ module TeiToEs
   end
 
   def self.title_sort
-    t = @json["dc:title"] ? @json["dc:title"] : title
+    t = title
     Common.normalize_name t
   end
 
@@ -399,7 +462,7 @@ module TeiToEs
           text = content.text
         else
           converted = Common.convert_tags(content)
-          text = content.inner_html
+          text = converted.inner_html
         end
         text = Common.squeeze(text)
         if text.length > 0
