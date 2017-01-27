@@ -257,7 +257,8 @@ module TeiToEs
     # TODO will need some examples of how this will work
     # and put in the xpaths above, also
     # should contain name, id, and role
-    []
+    eles = @xml.xpath(@xpaths["person"])
+    return eles.map { |p| { "role" => p["role"], "name" => p.text, "id" => nil } }
   end
 
   def self.person_sort
