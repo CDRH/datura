@@ -1,20 +1,43 @@
 require_relative "../file_type.rb"
+require "rest-client"
 
 class FileTei < FileType
   # TODO we could include the tei_to_es and other modules directly here
   # as a mixin, though then we'll need to namespace them or perish
+  attr_reader :es_json
+
 
   def initialize file_location, proj_dir, options
     super file_location, proj_dir, options
-    @script_es = options["tei_es_xsl"]
+    @es_json = nil
     @script_html = options["tei_html_xsl"]
     @script_solr = options["tei_solr_xsl"]
   end
 
+  def post_es
+    json = @es_json || transform_es
+    json.each do |doc|
+      id = doc["cdrh:identifier"]
+      type = doc["cdrh:shortname"]
+      puts "posting #{id}"
+      begin
+        RestClient.put("http://localhost:9200/test1/#{type}/#{id}", doc.to_json, {:content_type => :json } )
+      rescue => e
+        puts "error posting to ES for #{id}: #{e.response}"
+      end
+    end
+    # TODO pull out PUT to ES so VRA / DC / CSV can use it too
+    # but we'll cross that bridge when we get to it in the distant future
+  end
+
+  def print_es
+    json = @es_json || transform_es
+    return pretty_json json
+  end
+
   def transform_es output=false
-    json = TeiToEs.create_json(self, @options)
-    pretty = pretty_json json
-    puts "values: #{pretty}"
+    @es_json = TeiToEs.create_json(self, @options)
+    return @es_json
   end
 
   # if there should not be any html transformation taking place

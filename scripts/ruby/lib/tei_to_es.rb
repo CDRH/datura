@@ -47,7 +47,7 @@ module TeiToEs
   # for example, a personography file divides on "//person"
   # this system may need to be made far more robust in the near future
   @subdoc_xpaths = [
-    "//person"
+    "//listPerson/person"
   ]
 
   # TODO a lot of stuff comes in from the specific params objects
@@ -84,8 +84,8 @@ module TeiToEs
     ###############
     # identifiers #
     ###############
-    json["_id"] = id
-    json["_type"] = shortname
+    # cannot add this manually, have to do it via url
+    # json["_type"] = shortname
     json["cdrh:identifier"] = id
     json["dc:identifier"] = id_dc
 

@@ -146,18 +146,14 @@ class EsDataManager
     return @options["transform_type"].nil? || @options["transform_type"] == type
   end
 
-  def transform_all_formats file
-    es = file.transform_es if should_transform("es")
-    html = file.transform_html if should_transform("html")
-    solr = file.transform_solr(true) if should_transform("solr")
-    return [es, html, solr]
-  end
-
-  # TODO make sure that these are only transforming if requested by user
   def transform_and_post file
-    es, html, solr = transform_all_formats file
-
-    # if requested transform HTML and write to file
-    # if requested transform to solr and write to file
+    if should_transform("es")
+      file.post_es
+      # for debugging:
+      # puts file.print_es
+    end
+    # TODO finish setting up solr and html stuff
+    # file.transform_solr(true) if should_transform("solr")
+    # file.transform_html if should_transform("html")
   end
 end
