@@ -232,9 +232,9 @@ module TeiToEs
   # get_list
   #   can pass it a string xpath or array of xpaths
   # returns an array with the html value in xpath
-  def self.get_list xpaths, strip_tags=false
+  def self.get_list xpaths, keep_tags=false
     xpaths = xpaths.class == Array ? xpaths : [xpaths]
-    return get_xpaths xpaths, strip_tags
+    return get_xpaths xpaths, keep_tags
   end
 
   # get_text
@@ -242,29 +242,30 @@ module TeiToEs
   #   can optionally set a delimiter, otherwise ;
   # returns a STRING
   # if you want a multivalued result, please refer to get_list
-  def self.get_text xpaths, strip_tags=false, delimiter=";"
+  def self.get_text xpaths, keep_tags=false, delimiter=";"
     # ensure all xpaths are an array before beginning
     xpaths = xpaths.class == Array ? xpaths : [xpaths]
-    list = get_xpaths xpaths, strip_tags
+    list = get_xpaths xpaths, keep_tags
     sorted = list.sort
     return sorted.join("#{delimiter} ")
   end
 
   # Note: Recommend that project team do NOT use this method directly
   #   please use get_list or get_text instead
-  # strip_tags true will take out all tags entirely
-  # strip_tags false will convert tags like <hi> to <em>
-  def self.get_xpaths xpaths, strip_tags=false
+  # keep_tags true will convert tags like <hi> to <em>
+  #   use this wisely, as it causes performance issues
+  # keep_tags false removes ALL tags from selected xpath
+  def self.get_xpaths xpaths, keep_tags=false
     list = []
     xpaths.each do |xpath|
       contents = @xml.xpath(xpath)
       contents.each do |content|
         text = ""
-        if strip_tags
-          text = content.text
-        else
+        if keep_tags
           converted = Common.convert_tags(content)
           text = converted.inner_html
+        else
+          text = content.text
         end
         text = Common.squeeze(text)
         if text.length > 0

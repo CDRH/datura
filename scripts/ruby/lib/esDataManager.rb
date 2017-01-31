@@ -82,14 +82,15 @@ class EsDataManager
     threads = []
     filesChunked = @files.each_slice(@options["threads"]).to_a
     filesChunked.each do |files_subset|
-      files_subset.each_with_index.each do |file, index|
-        threads << Thread.new do
+      # sleep 2
+      threads = files_subset.each_with_index.map do |file, index|
+        Thread.new do
           transform_and_post file
         end
       end
+      # wait for all the files to process before moving on with the next chunk
+      threads.each { |t| t.join }
     end
-    # wait for all the files to process before moving on with the script
-    threads.each { |t| t.join }
   end
 
   def get_files

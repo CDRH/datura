@@ -34,11 +34,11 @@ class TeiToEsTest < Minitest::Test
 
   def test_get_list
     # should work with single xpath and strip tags
-    res0 = TeiToEs.get_list("//p", true)
+    res0 = TeiToEs.get_list("//p")
     assert_equal res0.length, 6
     refute res0[0].include?("<hi rend=")
     # should work with multiple xpaths and keep / convert tags
-    res1 = TeiToEs.get_list(["//p", "//revisionDesc/change"])
+    res1 = TeiToEs.get_list(["//p", "//revisionDesc/change"], true)
     assert_equal res1.length, 9
     assert_equal res1[0][0..5], "ALFRED"
     assert res1[0].include?("<em>")
