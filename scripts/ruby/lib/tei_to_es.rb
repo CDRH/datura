@@ -200,8 +200,6 @@ module TeiToEs
     json = {}
     doc_identifier = doc["id"]
     id = "#{@id}_#{doc_identifier}"
-    json["_id"] = id
-    json["_type"] = shortname
     json["cdrh:identifier"] = id
     # json["dc:identifier"] = "todo"
 

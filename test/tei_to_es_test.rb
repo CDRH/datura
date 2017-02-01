@@ -29,7 +29,7 @@ class TeiToEsTest < Minitest::Test
     # should return a json object with a few keys
     # but will be testing values more in project specific test suite
     json = TeiToEs.assemble_json
-    assert_equal json.length, 34
+    assert_equal json.length, 32
   end
 
   def test_get_list

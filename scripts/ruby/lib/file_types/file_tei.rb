@@ -18,10 +18,10 @@ class FileTei < FileType
     json = @es_json || transform_es
     json.each do |doc|
       id = doc["cdrh:identifier"]
-      type = doc["cdrh:shortname"]
+      type = @options["es_type"]
       puts "posting #{id}"
       begin
-        RestClient.put("http://localhost:9200/test1/#{type}/#{id}", doc.to_json, {:content_type => :json } )
+        RestClient.put("#{@options["es_path"]}/#{type}/#{id}", doc.to_json, {:content_type => :json } )
       rescue => e
         puts "error posting to ES for #{id}: #{e.response}"
       end
