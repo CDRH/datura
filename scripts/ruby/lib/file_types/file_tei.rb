@@ -17,7 +17,7 @@ class FileTei < FileType
   def post_es
     json = @es_json || transform_es
     json.each do |doc|
-      id = doc["cdrh:identifier"]
+      id = doc["cdrh-identifier"]
       type = @options["es_type"]
       puts "posting #{id}"
       begin
