@@ -1,0 +1,142 @@
+properties:
+  cdrh-identifier:
+    type: keyword
+  dc-identifier:
+    type: keyword
+  cdrh-shortname:
+    type: keyword
+  cdrh-project:
+    type: keyword
+  cdrh-uri:
+    type: keyword
+  cdrh-uri_data:
+    type: keyword
+  cdrh-uri_html:
+    type: keyword
+  cdrh-data_type:
+    type: keyword
+  cdrh-fig_location:
+    type: keyword
+  cdrh-image_id:
+    type: keyword
+    # TODO copy to text?
+  dc-title:
+    type: keyword
+  cdrh-title_sort:
+    type: keyword
+    # TODO copy to text?
+  dcterms-alternative:
+    type: keyword
+  cdrh-creator_sort:
+    type: keyword
+  dc-creator:
+    type: nested
+    properties:
+      name:
+        # TODO copy into text?
+        type: keyword
+      id:
+        type: keyword
+  dc-subject:
+    type: keyword
+    # TODO not sure yet if for display or search
+  dc-abstract:
+    type: keyword
+    # TODO copy to text?
+  dc-description:
+    type: keyword
+  dc-publisher:
+    type: keyword
+  dc-contributor:
+    type: nested
+    properties:
+      name:
+        type: keyword
+      id:
+        type: keyword
+      role:
+        type: keyword
+  dc-date:
+    type: date
+    format: "yyyy-MM-dd||epoch_millis"
+    # ignore_malformed: true
+  cdrh-date_display:
+    type: keyword
+  cdrh-date_not_before:
+    type: date
+    format: "yyyy-MM-dd||epoch_millis"
+    # ignore_malformed: true
+  cdrh-date_not_after:
+    type: date
+    format: "yyyy-MM-dd||epoch_millis"
+    # ignore_malformed: true
+  dc-type:
+    type: keyword
+  dc-format:
+    type: keyword
+  dcterms-medium:
+    type: keyword
+  dc-extent:
+    type: keyword
+  dc-language:
+    type: keyword
+  dc-relation:
+    type: keyword
+  dc-source:
+    type: keyword
+  dcterms-rights_holder:
+    type: keyword
+  dc-rights:
+    type: keyword
+  cdrh-rights_uri:
+    type: keyword
+  dcterms-coverage-spatial:
+    type: nested
+    properties:
+      place_name:
+        # TODO copy into text?
+        type: keyword
+      coordinates:
+        type: geo_point
+      id:
+        type: keyword
+      city:
+        type: keyword
+      county:
+        type: keyword
+      country:
+        type: keyword
+      region:
+        type: keyword
+      state:
+        type: keyword
+      street:
+        type: keyword
+      postal_code:
+        type: keyword
+  dc-person:
+    type: nested
+    properties:
+      name:
+        # TODO copy into text?
+        type: keyword
+      id:
+        type: keyword
+  cdrh-annotations:
+    type: text
+  cdrh-category:
+    type: keyword
+  cdrh-subcategory:
+    type: keyword
+  cdrh-topics:
+    type: keyword
+  cdrh-keywords:
+    type: keyword
+  cdrh-people:
+    type: keyword
+  cdrh-places:
+    type: keyword
+  cdrh-works:
+    type: keyword
+  cdrh-text:
+    type: text

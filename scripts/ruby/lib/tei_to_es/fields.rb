@@ -37,7 +37,7 @@ module TeiToEs
     @xpaths["contributors"].each do |xpath|
       eles = @xml.xpath(xpath)
       eles.each do |ele|
-        contribs << { "label" => ele.text, "id" => ele["id"], "role" => ele["role"] }
+        contribs << { "name" => ele.text, "id" => ele["id"], "role" => ele["role"] }
       end
     end
     return contribs
@@ -83,7 +83,7 @@ module TeiToEs
     # and put in the xpaths above, also for attributes, etc
     # should contain name, id, and role
     eles = @xml.xpath(@xpaths["person"])
-    return eles.map { |p| { "role" => p["role"], "name" => p.text, "id" => nil } }
+    return eles.map { |p| { "role" => p["role"], "name" => p.text, "id" => "" } }
   end
 
   def self.person_sort
