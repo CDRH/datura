@@ -1,77 +1,29 @@
 CDRH Files central repo
 ======
-This will be the test central repo for CDRH files, including TEI, dublin core, spreadsheets and other files. 
 
-This file will also contain documentation for scripts which will aid in data creation and manipulation. 
+This project supports the population of an API storing data extracted from XML, CSV, YML, and other file types.
 
-##### Overview
-- [The Process](#process_link)
+## The Process
 
-##### Setting Up a New Project
-- [Check Requirements](#req_intro)
-- [Add a Core and Schema](#core)
-- [Configure Directory](#proj_config)
-- [Upload TEI](#tei)
+Projects are added as sub repositories. They may contain data in the following formats: TEI P5, VRA, Dublin Core, CSV, and YML.  The following output formats are supported: HTML, Solr XML, Elasticsearch (ES) JSON.
 
-##### Indexing (Adding) Data to Solr
-- [Running the Script](#post)
-- [Troubleshooting](#trouble_post)
+```
+CSV _____               __  write HTML
+DC      |               |
+TEI     | pull out data |
+VRA     |               |__  post JSON / XML for ES / Solr
+YML_____|
+```
 
-##### Managing Your Solr Data
-- [Management Script](#clear)
-- [Troubleshooting](#trouble_clear)
-
-##### Developer Guide
-- [Setting up Solr / Tomcat](#solr_core)
-- [Apache Directory Permissions](#apache)
-- [Saxon Executable](#saxon)
-- [Ruby / Gems](#ruby)
-- [Running Tests](#tests)
-- [Main Config](#main_config)
+The scripts manage Solr and ES documents by posting to and removing from them. There are also several management scripts for creating indexes, managing the schemas, and deleting indexes.
 
 
-Overview
-------
-This project seeks to create an API for the CDRH's TEI projects.  The information for each project is housed in the projects directory, while scripts to transform the documents and post them to solr are in the scripts directory.  TEI files are transformed into html snippets that can be easily displayed in pages and are also uploaded to a solr core, which can then be queried.
+## Set up Solr Project
 
-Setting up a New Project
-------
-##### <a name="req_intro"></a> Check Requirements
-- Access to solr instance (write / push privileges)
-- Set up project config file with project's solr core name
-- Confirm solr url, xsl locations, in main config file are correct
-- Command line access to saxon xsl transformer
-- Ruby 2.1.3
-- Apache server with exposed webtree
-See the developer guide at the bottom of this readme for information about the above requirements
+Please refer to the instructions in the General wiki for instructions to set up projects which rely on Solr 6 + Cocoon / Rails.
 
-##### <a name="core"></a> Adding a Core and Schema
 
-The following instructions are for Solr 4.  Solr 5 instructions will be coming shortly.
 
-Navigate in the server where your Solr cores are located.  
-
-Copy our example core (note, tested on Solr v. 4.10.1) from `/solr_example_files/api_projectName_test` to your solr cores folder. Alternately, you can copy existing files and use our schema ([/solr_example_files/api_projectName_test/conf/schema.xml](/solr_example_files/api_projectName_test/conf/schema.xml)) as a starting point. 
-
-Name your folder appropriately, add your project name in your /core/projectName/conf/schema.xml file:
-
-`<schema name="api_projectName_test" version="1.5">`
-  
-And add your new project to your solr.xml file. (Note, these instructions will change with subsequent versions of Solr)
-
-Restart Solr, Tomcat, or other web container, and then check your install in the Solr web admin interface to make sure everything is configured correctly.
-
-In case of permission errors, you may have to change group: 
-
-`sudo chown -R tomcat api_projectName_test/`
-
-and add write permissions
-
-`sudo chmod -R g+w api_projectName_test/`
-
-This is why creating the data structure from an existing config may be easier, those commands listed below just in case
-
-`mkdir -p <project_name>/{bin,data,lib,conf/xslt}` and `cp -R <existing_project>/conf/* <project_name>/conf/`
 
 ##### <a name="proj_config"></a> Configure Directory
 You will need to add a directory for your new project in this data repository.  Under projects/, run the following with your own project name subbed in:
