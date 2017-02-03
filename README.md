@@ -97,13 +97,13 @@ Indexing (Adding) Data to Solr
 
 TODO: Add a section explaining how to add an alternate indexing script
 
-If your scripts/ruby/post_to_solr.rb script is executable, then you may run it by simply typing `./scripts/ruby/post_to_solr.rb`.  Otherwise you can manually run it with `ruby scripts/ruby/post_to_solr.rb`.
+If your scripts/ruby/solr_post.rb script is executable, then you may run it by simply typing `./scripts/ruby/solr_post.rb`.  Otherwise you can manually run it with `ruby scripts/ruby/solr_post.rb`.
 
 You should be able to run it from anywhere inside the data repository, but it is recommend that you run it from the root of the directory.
 
 You have several options for running it:
 ```
-Usage: ruby post_to_solr.rb [project] -[options]...
+Usage: ruby solr_post.rb [project] -[options]...
     -h, --help                       Computer, display script options.
     -e, --environment [input]        Environment (test, production)
     -f, --format [input]             Restrict to one format (tei, csv, dublin-core)
@@ -127,19 +127,19 @@ Usage: ruby post_to_solr.rb [project] -[options]...
 
 It should look something like this if you want to post only tei to a production environment for a whitman project:
 ```
-./scripts/ruby/post_to_solr.rb whitman -e production -f tei
+./scripts/ruby/solr_post.rb whitman -e production -f tei
 ```
 You just added two files on Feb 26 but you don't want to rerun everything!
 ```
-./scripts/ruby/post_to_solr.rb neihardt -u 2015-02-26 
+./scripts/ruby/solr_post.rb neihardt -u 2015-02-26
 ```
 You only want to add files related to Buffalo Bill Cody's books (example title: cody.book.001.xml)
 ```
-./scripts/ruby/post_to_solr.rb cody -r book
+./scripts/ruby/solr_post.rb cody -r book
 ```
 You only want to add files with a specific regex (make sure to \ escape regex characters like .*[, etc)
 ```
-./scripts/ruby/post_to_solr.rb cody -r \.book\.00[0-9]\.xml
+./scripts/ruby/solr_post.rb cody -r \.book\.00[0-9]\.xml
 ```
 
 ##### <a name="trouble_post"></a> Troubleshooting
@@ -159,7 +159,7 @@ Managing Your Solr Data
 ##### <a name="clear"></a> Management Script
 "Management" script is a bit misleading, as this script is just meant for straight up deleting things.  It will clear an entire solr core or it will look for specific entries to remove.
 ```
-Usage: ruby clear_index.rb [project] -[options]...
+Usage: ruby solr_clear_index.rb [project] -[options]...
     -h, --help                       Computer, display script options.
     -e, --environment [input]        Environment (test, production)
     -f, --field [input]              The specific field regex is run on
@@ -167,19 +167,19 @@ Usage: ruby clear_index.rb [project] -[options]...
 ```
 If you wanted to clear an entire test solr core, you would say something like this:
 ```
-./scripts/ruby/clear_index.rb whitman
+./scripts/ruby/solr_clear_index.rb whitman
 ```
 You would need to specify production if you really meant business:
 ```
-./scripts/ruby/clear_index.rb whitman -e production
+./scripts/ruby/solr_clear_index.rb whitman -e production
 ```
 You could also search for only a specific id or group of ids to erase
 ```
-./scripts/ruby/clear_index.rb cody -r txt\.001
+./scripts/ruby/solr_clear_index.rb cody -r txt\.001
 ```
 If you want to erase items from the core by a specific field, use the field flag:
 ```
-./scripts/ruby/clear_idex.rb transmississippi -f category -r memorabilia
+./scripts/ruby/solr_clear_idex.rb transmississippi -f category -r memorabilia
 ```
 ##### <a name="trouble_clear"></a> Troubleshooting
 - The config files will need to be filled out correctly for this script to run
@@ -257,8 +257,8 @@ The pending ones are expected, as they just haven't been finished but those test
 The main configuration file resides at `config/config.yml` and can be created by copying the config.example.yml file found in the config directory.  You will need to change the repo_directory path to reflect the location of the project from the root of your file system.  You can probably ignore the logging settings unless if you feel very strongly about the number of files that will be saved.  You will also need to give instructions for the location of your test and production solr instances.  Make sure that you end the solr urls with a /
 
 ##### <a name="executable"></a> Executing the Script
-Assuming that `ruby -v` gives you the correct version of ruby for the ruby scripts, you may run the script with `ruby scripts/ruby/post_to_solr.rb`.  If you would like to run it as a command, however, then you will need to modify the file to be executable, if it has not already been.  post_to_solr.rb and clear_index.rb both have shebangs at the top of them describing the location of Ruby in the filesystem, but if this is incorrect for your system you will need to modify the shebangs to point at your location.  To make the file executable, type the following:
+Assuming that `ruby -v` gives you the correct version of ruby for the ruby scripts, you may run the script with `ruby scripts/ruby/solr_post.rb`.  If you would like to run it as a command, however, then you will need to modify the file to be executable, if it has not already been.  solr_post.rb and clear_index.rb both have shebangs at the top of them describing the location of Ruby in the filesystem, but if this is incorrect for your system you will need to modify the shebangs to point at your location.  To make the file executable, type the following:
 
 ```
-sudo chmod +x scripts/ruby/post_to_solr.rb
+sudo chmod +x scripts/ruby/solr_post.rb
 ```
