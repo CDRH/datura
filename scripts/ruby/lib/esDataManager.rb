@@ -148,12 +148,16 @@ class EsDataManager
 
   def transform_and_post file
     if should_transform("es")
-      file.post_es
-      # for debugging:
-      # puts file.print_es
+      res = file.post_es
+      if res.has_key?("error")
+        @log.error(res["error"])
+      end
     end
     # TODO finish setting up solr and html stuff
     # file.transform_solr(true) if should_transform("solr")
-    # file.transform_html if should_transform("html")
+    res = file.transform_html if should_transform("html")
+    if res.has_key?("error")
+      @log.error(res["error"])
+    end
   end
 end

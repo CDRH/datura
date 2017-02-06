@@ -38,7 +38,8 @@ class FileType
 
   def transform_es output=false
     # TODO should there be any default transform behavior at all?
-    # each filetype child could have some, but it seems like this won't need it?
+    # each filetype child could have some, but it seems like this
+    # won't be able to accommodate dc, vra, tei here alone
   end
 
   def transform_html
@@ -73,10 +74,10 @@ class FileType
       if err.length > 0
         msg = "There was an error transforming #{filename}: #{err}"
         puts msg.red
-        # TODO figure out a good way to log this
+        return { "error" => msg }
       else
         puts "Successfully transformed #{filename}"
-        return out
+        return { "doc" => out }
       end
     end
   end

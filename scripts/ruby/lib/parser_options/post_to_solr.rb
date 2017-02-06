@@ -37,6 +37,11 @@ module Parser
         options["commit"] = false
       end
 
+      options["output"] = false
+      opts.on('-o', '--output', 'Write solr and elasticsearch docs to file') do
+        options["output"] = true
+      end
+
       options["regex"] = nil
       opts.on('-r', '--regex [input]', 'Only post files matching this regex') do |input|
         options["regex"] = input

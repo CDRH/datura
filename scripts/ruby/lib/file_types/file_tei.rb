@@ -15,7 +15,7 @@ class FileTei < FileType
   end
 
   def post_es
-    json = @es_json || transform_es
+    json = @es_json || transform_es(@options["output"])
     json.each do |doc|
       id = doc["cdrh-identifier"]
       type = @options["es_type"]
@@ -36,8 +36,16 @@ class FileTei < FileType
   end
 
   def transform_es output=false
-    @es_json = TeiToEs.create_json(self, @options)
-    return @es_json
+    begin
+      @es_json = TeiToEs.create_json(self, @options)
+      if output
+        filepath = "#{@out_es}/#{self.filename(false)}.json"
+        File.open(filepath, "w") { |f| f.write(self.print_es) }
+      end
+      return { "doc" => @es_json }
+    rescue => e
+      return { "error" => e }
+    end
   end
 
   # if there should not be any html transformation taking place
@@ -45,8 +53,8 @@ class FileTei < FileType
 
   # if you would like to use the default transformation behavior
   # then comment or remove both of the following methods!
-  def transform_html
-  end
+  # def transform_html
+  # end
 
   def transform_solr output=false
   end
