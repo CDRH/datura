@@ -34,7 +34,7 @@ class EsDataManager
     @error_solr = []
     # combine user input and config files
     # TODO this name is gonna need to change fo sho
-    params = Parser.post_to_solr_params
+    params = Parser.post_params
     @project = params["project"]
     # assign locations
     @repo_dir = "#{File.dirname(__FILE__)}/../../.."

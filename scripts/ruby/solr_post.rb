@@ -18,7 +18,7 @@ errors = {}                         # keeper of everything that has gone wrong
 errors["failed_files"] = []         # array of strings with file names that did not post
 errors["solr_errors"] = []          # array of errors from solr to display at the end
 
-params = Parser.post_to_solr_params      # user supplied parameters via command line
+params = Parser.post_params      # user supplied parameters via command line
 options = Options.new(params, "#{repo_dir}/config", "#{repo_dir}/projects/#{params['project']}/config").all
 project = options["project"]
 verbose_flag = options["verbose"] == true

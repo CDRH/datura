@@ -1,6 +1,6 @@
 module Parser
-  def self.post_to_solr_params
-    @usage = "Usage: ruby post_to_solr.rb [project] -[options]..."
+  def self.post_params
+    @usage = "Usage: ruby [type]_post.rb [project] -[options]..."
     options = {}  # will hold all the options passed in by user
 
     optparse = OptionParser.new do |opts|
