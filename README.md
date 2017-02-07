@@ -7,15 +7,63 @@ This project supports the population of an API storing data extracted from XML, 
 
 Projects are added as sub repositories. They may contain data in the following formats: TEI P5, VRA, Dublin Core, CSV, and YML.  The following output formats are supported: HTML, Solr XML, Elasticsearch (ES) JSON.
 
+The files are parsed and formatted into documents appropriate for Solr, Elasticsearch, and HTML snippets, and then these resulting documents are posted to the appropriate locations. There are also several management scripts for creating indexes, managing the schemas, and deleting indexes.
+
+## The Basics
+
+If this is a brand new project, please refer to [[TODO]] these docs on how to set up a project.
+
+To run a basic development environment, give the following a try, subbing in your project name.
+
 ```
-CSV _____               __  write HTML
-DC      |               |
-TEI     | pull out data |
-VRA     |               |__  post JSON / XML for ES / Solr
-YML_____|
+ruby scripts/ruby/post_es.rb <project>
 ```
 
-The scripts manage Solr and ES documents by posting to and removing from them. There are also several management scripts for creating indexes, managing the schemas, and deleting indexes.
+Specify an environment to use. By default the script attempts to run "development"
+
+```
+ruby scripts/ruby/post_es.rb <project> -e production
+```
+
+Run a specific set of files identified by regex.
+
+```ruby
+ruby scripts/ruby/post_es.rb <project> -r "let.*"
+==> cat.let.0001.xml
+==> cat.let.0002.xml
+```
+
+More options:
+
+- processing only specific types of files (TEI vs DC)
+- running files updated since a given time
+- outputting docs sent to Elasticsearch / Solr
+- transforming but not posting files
+- and more!
+
+Check them out by running the "help" flag:
+
+```
+ruby scripts/ruby/post_es.rb -h
+```
+
+## More Documentation for Users and Devs
+
+- Clearing data from an index
+- Updating or adding to a project and the API
+- Understanding the config files
+- Writing and running tests
+
+## More Documentation for Devs
+
+- Installation and requirements to run this repo
+- Setting up a new project
+- Legacy tech and setup
+
+
+
+
+
 
 
 ## Set up Solr Project
@@ -23,76 +71,6 @@ The scripts manage Solr and ES documents by posting to and removing from them. T
 Please refer to the instructions in the General wiki for instructions to set up projects which rely on Solr 6 + Cocoon / Rails.
 
 
-
-
-##### <a name="proj_config"></a> Configure Directory
-You will need to add a directory for your new project in this data repository.  Under projects/, run the following with your own project name subbed in:
-```
-mkdir -p project_name/{config,html-generated,tei}
-```
-You will need to add a config file for your new project in `projects/<project_name>/config/config.yml`.  You can grab an existing project's file from `projects/<other_project>/config/config.yml` or you can grab an example project config file from `data/config/proj_config.example.yml` and rename it.
-
-You'll need to fill in the name of this project's solr core (not the url to it, but simply the core name), as well as any information about the parameters that will be passed into the xslt that are specific to this project.
-- figures
-- fw (form works)
-- pb  (page breaks)
-
-Depending on the data associated with your project, you may also need to create subfolders for vra/, dublin_core/, spreadsheets/ (csv files, etc), and scripts/.
-
-##### <a name="tei"></a> Upload TEI
-
-Assuming that you have p5 tei, you can upload it directly to the server into the `data/projects/project_name/tei` directory with scp, ftp, or whatever you preferred method is for file transfers.  Put any vra or dublin core files into those directories (not into the tei directory).
-
-Indexing (Adding) Data to Solr
-------
-##### <a name="post"></a> Running the Script
-
-TODO: Add a section explaining how to add an alternate indexing script
-
-If your scripts/ruby/solr_post.rb script is executable, then you may run it by simply typing `./scripts/ruby/solr_post.rb`.  Otherwise you can manually run it with `ruby scripts/ruby/solr_post.rb`.
-
-You should be able to run it from anywhere inside the data repository, but it is recommend that you run it from the root of the directory.
-
-You have several options for running it:
-```
-Usage: ruby solr_post.rb [project] -[options]...
-    -h, --help                       Computer, display script options.
-    -e, --environment [input]        Environment (test, production)
-    -f, --format [input]             Restrict to one format (tei, csv, dublin-core)
-    -x, --html-only                  Will not generate solr snippets, only html
-    -n, --no-commit                  Post files to solr but do not commit
-    -r, --regex [input]              Only post files matching this regex
-    -s, --solr-only                  Will not generate html snippets
-    -t, --transform-only             Do not post to solr or erase tmp/
-    -u, --update [2015-01-01T18:24]  Transform and post only new files
-    -v, --verbose                    More messages and stacktraces than ever before!
-```
-- help => displays the above script
-- environment => defaults to test if not specified
-- format => will run everything if not specified. Use if you only want to post new vra files, etc.
-- no-commit => Posts all your files but does not "save." You can then manually commit changes through solr web ui
-- regex => Looks for the tei / vra / dc files matching that regex and posts only those
-- transform-only => Generates html snippets from tei and creates solr ready files in the tmp/ directory, does not post
-- update => Only uploads files that have been changed after given time. Can also accept date (YYYY-MM-DD)
-- verbose => Gives you lots of messages. Recommended if you are experiencing an issue
-
-
-It should look something like this if you want to post only tei to a production environment for a whitman project:
-```
-./scripts/ruby/solr_post.rb whitman -e production -f tei
-```
-You just added two files on Feb 26 but you don't want to rerun everything!
-```
-./scripts/ruby/solr_post.rb neihardt -u 2015-02-26
-```
-You only want to add files related to Buffalo Bill Cody's books (example title: cody.book.001.xml)
-```
-./scripts/ruby/solr_post.rb cody -r book
-```
-You only want to add files with a specific regex (make sure to \ escape regex characters like .*[, etc)
-```
-./scripts/ruby/solr_post.rb cody -r \.book\.00[0-9]\.xml
-```
 
 ##### <a name="trouble_post"></a> Troubleshooting
 
@@ -106,36 +84,6 @@ You only want to add files with a specific regex (make sure to \ escape regex ch
 - if ./command fails to work, try running it with `ruby command` instead, or point at a specific version of ruby before running the command
 
 
-Managing Your Solr Data
-------
-##### <a name="clear"></a> Management Script
-"Management" script is a bit misleading, as this script is just meant for straight up deleting things.  It will clear an entire solr core or it will look for specific entries to remove.
-```
-Usage: ruby solr_clear_index.rb [project] -[options]...
-    -h, --help                       Computer, display script options.
-    -e, --environment [input]        Environment (test, production)
-    -f, --field [input]              The specific field regex is run on
-    -r, --regex [input]              Used as criteria for removing item (books.*, etc)
-```
-If you wanted to clear an entire test solr core, you would say something like this:
-```
-./scripts/ruby/solr_clear_index.rb whitman
-```
-You would need to specify production if you really meant business:
-```
-./scripts/ruby/solr_clear_index.rb whitman -e production
-```
-You could also search for only a specific id or group of ids to erase
-```
-./scripts/ruby/solr_clear_index.rb cody -r txt\.001
-```
-If you want to erase items from the core by a specific field, use the field flag:
-```
-./scripts/ruby/solr_clear_idex.rb transmississippi -f category -r memorabilia
-```
-##### <a name="trouble_clear"></a> Troubleshooting
-- The config files will need to be filled out correctly for this script to run
-- Remember that the -r flag is regex.  Entering something like .* will look for all characters multiple times, not something that literally as ".*" in the title.
 
 Developer Guide
 ------
@@ -185,32 +133,4 @@ Check your version of Ruby by typing `ruby -v`.  This project currently uses rub
 
 None of the libraries used in the ruby scripts require gems -- they are all built into Ruby.  If you want to run tests, however, you will need gems.  You'll need to consult the rvm documentation to see how to install gems for your particular setup (multi-user, single-user, etc), but if you want to just see what happens, run `bundle install`.  If rvm is set up correctly, it will install the rspec testing gem on your system.
 
-##### <a name="tests"></a> Running Tests
 
-Older tests are located in `test_old/ruby/lib_tests` currently.  Test fixtures are located at `test_old/ruby/fixtures` and include things like tei, files that can be "touched" to update their timestamp, and a tmp directory that will be filled and wiped by specific tests.  There are currently only tests for the helper functions, etc, so you would run tests as follows:
-
-All tests:
-```
-rspec test_old/ruby/lib_tests/*
-```
-Specific group of tests (with documentation flag for a different progress reporter)
-```
-rspec test_old/ruby/lib_tests/transformer_test.rb --format documentation
-```
-At the end of the test run, you should see something like this:
-```
-Finished in 6.17 seconds (files took 0.57802 seconds to load)
-47 examples, 0 failures, 9 pending
-```
-The pending ones are expected, as they just haven't been finished but those tests should be written in the future.  Failures are what you want to watch out for!
-
-##### <a name="main_config"></a> Main Config
-
-The main configuration file resides at `config/config.yml` and can be created by copying the config.example.yml file found in the config directory.  You will need to change the repo_directory path to reflect the location of the project from the root of your file system.  You can probably ignore the logging settings unless if you feel very strongly about the number of files that will be saved.  You will also need to give instructions for the location of your test and production solr instances.  Make sure that you end the solr urls with a /
-
-##### <a name="executable"></a> Executing the Script
-Assuming that `ruby -v` gives you the correct version of ruby for the ruby scripts, you may run the script with `ruby scripts/ruby/solr_post.rb`.  If you would like to run it as a command, however, then you will need to modify the file to be executable, if it has not already been.  solr_post.rb and clear_index.rb both have shebangs at the top of them describing the location of Ruby in the filesystem, but if this is incorrect for your system you will need to modify the shebangs to point at your location.  To make the file executable, type the following:
-
-```
-sudo chmod +x scripts/ruby/solr_post.rb
-```

@@ -32,6 +32,6 @@ project_name
 |-- scripts
 |     |-- solr_transform_tei.xsl
 |     |-- tei_to_es.rb
-|     |-- tei.p5.xsl
+|     |-- tei.p5.xsl  # html overrides
 |-- solr
 ```
