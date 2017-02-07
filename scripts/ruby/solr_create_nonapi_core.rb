@@ -28,7 +28,7 @@ def get_input(param, msg)
 end
 
 # parse incoming options and make sure that they sent in name and configset
-params = Parser.create_core_params
+params = Parser.solr_create_core_params
 core = get_input(params["core"], "Core name")
 configset = get_input(params["configset"], "Config set (api_configs, basic_configs)")
 url += "&name=#{core}&configSet=#{configset}"

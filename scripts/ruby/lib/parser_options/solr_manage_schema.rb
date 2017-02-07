@@ -1,6 +1,6 @@
 module Parser
-  def self.manage_solr_schema_params
-    @usage = "Usage: ruby manage_solr_schema.rb name_of_core -o true -j config/api_schema_solr.json"
+  def self.solr_manage_schema_params
+    @usage = "Usage: ruby solr_manage_schema.rb name_of_core -o true -j config/api_schema_solr.json"
     options = {}
 
     optparse = OptionParser.new do |opts|

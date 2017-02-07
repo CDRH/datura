@@ -10,7 +10,7 @@ require_relative 'lib/parser.rb'
 require_relative 'lib/solr_poster.rb'
 
 # parse parameters
-params = Parser.manage_solr_schema_params
+params = Parser.solr_manage_schema_params
 
 # variables
 this_dir = File.dirname(__FILE__)
