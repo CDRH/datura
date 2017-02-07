@@ -113,7 +113,7 @@ class EsDataManager
     msg << "Running script with following options:\n"
     msg << "Project:     #{@options['project']}\n"
     msg << "Environment: #{@options['environment']}\n"
-    msg << "Posting to:  #{@options['es_path']}\n\n"
+    msg << "Posting to:  #{@options['es_path']}/#{@options['es_index']}\n\n"
     msg << "Format:      #{@options['format']}\n" if @options["format"]
     msg << "Regex:       #{@options['regex']}\n" if @options["regex"]
     msg << "Update Time: #{@options['update_time']}\n" if @options["update_time"]

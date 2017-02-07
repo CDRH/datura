@@ -21,7 +21,8 @@ class FileTei < FileType
       type = @options["es_type"]
       puts "posting #{id}"
       begin
-        RestClient.put("#{@options["es_path"]}/#{type}/#{id}", doc.to_json, {:content_type => :json } )
+        path = "#{@options["es_path"]}/#{@options["es_index"]}"
+        RestClient.put("#{path}/#{type}/#{id}", doc.to_json, {:content_type => :json } )
       rescue => e
         puts "error posting to ES for #{id}: #{e.response}"
       end

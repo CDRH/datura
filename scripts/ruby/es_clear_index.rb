@@ -20,9 +20,18 @@ confirm = STDIN.gets.chomp
 
 if confirm && (confirm == "y" || confirm == "Y")
   path = options["es_path"] || "http://localhost:9200"
+  path += "/#{options['es_index']}" if options["es_index"]
   url = ""
   if project == "all"
-    url = "#{path}/_delete_by_query?pretty"
+    puts "Please verify that you want to clear EVERY ENTRY from the ENTIRE INDEX"
+    puts "Type: 'Yes I'm sure'"
+    confirm2 = STDIN.gets.chomp
+    if confirm2 == "Yes I'm sure"
+      url = "#{path}/_delete_by_query?pretty"
+    else
+      puts "You typed '#{confirm2}'. This is incorrect, exiting program"
+      exit
+    end
   else
     url = "#{path}/#{project}/_delete_by_query?pretty"
   end
