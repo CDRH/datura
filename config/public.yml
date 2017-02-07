@@ -36,13 +36,22 @@ default:
 
   # NOTE! If you are altering ANY of the variables you must
   #   copy over ALL of them in that group to the project specific config file
+  variables_es:
+    # none so far
   variables_html:
-    fig_location: http://cdrhmedia-development.unl.edu/images/project
     figures: true
     fw: true
     pb: true
-  variables_search:
-    file_location: http://server.unl.edu/data/projects/
+    site_url:
+    fig_location: http://cdrhmedia-development.unl.edu/images/project
+  # these are for legacy projects only
+  variables_solr:
+    fig_location: http://cdrhmedia-development.unl.edu/images/project
+    file_location: http://cdrhmedia-development.unl.edu/
+    project:
+    slug:
+    site_url:
+
 
 ###################
 #   Development   #

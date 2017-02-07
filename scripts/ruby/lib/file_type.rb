@@ -44,7 +44,7 @@ class FileType
 
   def transform_html
     # TODO will need to make sure the right params are going through
-    exec_xsl @file_location, @script_html, @out_html
+    exec_xsl @file_location, @script_html, @out_html, @options["variables_html"]
   end
 
   def transform_solr output=false
@@ -52,9 +52,9 @@ class FileType
     # make sure to override behavior in CSV / YML child classes
     # TODO make sure the right params are going through
     if output
-      return exec_xsl @file_location, @script_solr, @out_solr
+      return exec_xsl @file_location, @script_solr, @out_solr, @options["variables_solr"]
     else
-      return exec_xsl @file_location, @script_solr
+      return exec_xsl @file_location, @script_solr, nil, @options["variables_solr"]
     end
   end
 
@@ -62,10 +62,11 @@ class FileType
 
   # TODO will need to make params string at some point
   def exec_xsl input, xsl, output=nil, params=nil
+    saxon_params = Common.stringify_params(params)
     cmd = "saxon -s:#{input} -xsl:#{xsl}"
     # TODO which way would we rather do this?
     # cmd << " -o:#{output}/#{filename(false)}.txt" if output
-    cmd << " #{params}"
+    cmd << " #{saxon_params}"
     cmd << " | tee #{output}/#{filename(false)}.txt" if output
     puts "using command #{cmd}" if @options["verbose"]
     Open3.popen3(cmd) do |stdin, stdout, stderr|

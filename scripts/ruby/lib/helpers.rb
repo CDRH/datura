@@ -75,6 +75,16 @@ module Common
     return normal
   end
 
+  # saxon accepts params in following manner
+  #   fw=true pb=true figures=false
+  def self.stringify_params param_hash
+    params = ""
+    if param_hash
+      params = param_hash.map{ |k, v| "#{k}=#{v}" }.join(" ")
+    end
+    return params
+  end
+
   # replaces normalize-space
   def self.squeeze string
     string.strip.gsub(/\s+/, " ")
