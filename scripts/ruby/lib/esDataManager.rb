@@ -181,10 +181,13 @@ class EsDataManager
         @log.error(res["error"])
       end
     end
+
     # TODO finish setting up solr and html stuff
     # file.transform_solr(true) if should_transform("solr")
+    # TODO don't post solr if options["transform-only"] is true
+
     res = file.transform_html if should_transform("html")
-    if res.has_key?("error")
+    if res && res.has_key?("error")
       @error_html << res["error"]
       @log.error(res["error"])
     end

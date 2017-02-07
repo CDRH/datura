@@ -48,7 +48,7 @@ module Parser
       end
 
       options["transform_only"] = false
-      opts.on('-t', '--transform-only', 'Do not post to solr or erase tmp/') do
+      opts.on('-t', '--transform-only', 'Do not post to solr / es') do
         options["transform_only"] = true
       end
 
