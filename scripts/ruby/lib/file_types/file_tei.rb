@@ -15,17 +15,25 @@ class FileTei < FileType
   end
 
   def post_es
-    json = @es_json || transform_es(@options["output"])
-    json.each do |doc|
-      id = doc["cdrh-identifier"]
-      type = @options["es_type"]
-      puts "posting #{id}"
-      begin
-        path = "#{@options["es_path"]}/#{@options["es_index"]}"
-        RestClient.put("#{path}/#{type}/#{id}", doc.to_json, {:content_type => :json } )
-      rescue => e
-        puts "error posting to ES for #{id}: #{e.response}"
+    return_val = nil
+    transformed = @es_json || transform_es(@options["output"])
+    if transformed.has_key?("error")
+      return_val = transformed["error"]
+    else
+      transformed["docs"].each do |doc|
+        id = doc["cdrh-identifier"]
+        type = @options["es_type"]
+        puts "posting #{id}"
+        begin
+          path = "#{@options["es_path"]}/#{@options["es_index"]}"
+          RestClient.put("#{path}/#{type}/#{id}", doc.to_json, {:content_type => :json } )
+        rescue => e
+          msg = "error posting to ES for #{id}: #{e.response}"
+          puts msg
+          return_val = msg
+        end
       end
+      return return_val
     end
     # TODO pull out PUT to ES so VRA / DC / CSV can use it too
     # but we'll cross that bridge when we get to it in the distant future
@@ -43,7 +51,7 @@ class FileTei < FileType
         filepath = "#{@out_es}/#{self.filename(false)}.json"
         File.open(filepath, "w") { |f| f.write(self.print_es) }
       end
-      return { "doc" => @es_json }
+      return { "docs" => @es_json }
     rescue => e
       return { "error" => e }
     end

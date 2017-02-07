@@ -7,8 +7,12 @@ class EsDataManager
   attr_reader :log
   attr_reader :proj_dir
   attr_reader :repo_dir
+  attr_reader :time
 
-  attr_accessor :errors
+  attr_accessor :error_es
+  attr_accessor :error_html
+  attr_accessor :error_solr
+
   attr_accessor :files
   attr_accessor :options
   attr_accessor :project
@@ -25,6 +29,9 @@ class EsDataManager
 
   def initialize
     @files = []
+    @error_es = []
+    @error_html = []
+    @error_solr = []
     # combine user input and config files
     # TODO this name is gonna need to change fo sho
     params = Parser.post_to_solr_params
@@ -60,6 +67,7 @@ class EsDataManager
   end
 
   def run
+    @time = [Time.now]
     # log starting information for user
     @log.info(options_msg true)
     puts options_msg @options["verbose"]
@@ -67,6 +75,7 @@ class EsDataManager
     @files = prepare_files
 
     batch_process_files
+    end_run
   end
 
 
@@ -91,6 +100,24 @@ class EsDataManager
       # wait for all the files to process before moving on with the next chunk
       threads.each { |t| t.join }
     end
+  end
+
+  def end_run
+    # tally errors
+    error_msg = ""
+    error_msg << "#{@error_es.length} ES transform / post error(s)\n"
+    error_msg << "#{@error_html.length} HTML transform error(s)\n"
+    error_msg << "#{@error_solr.length} Solr transform / post error(s)\n"
+    puts error_msg
+    @log.info(error_msg)
+
+    # figure time for running
+    @time << Time.now
+    dur = @time[1] - @time[0]
+    friendly_dur = Time.at(dur).utc.strftime("%H hrs %M mins %S secs")
+    puts "Script finished in #{friendly_dur}".cyan
+    @log.info("Script finished in #{friendly_dur}")
+    @log.close
   end
 
   def get_files
@@ -149,7 +176,8 @@ class EsDataManager
   def transform_and_post file
     if should_transform("es")
       res = file.post_es
-      if res.has_key?("error")
+      if res && res.has_key?("error")
+        @error_es << res["error"]
         @log.error(res["error"])
       end
     end
@@ -157,6 +185,7 @@ class EsDataManager
     # file.transform_solr(true) if should_transform("solr")
     res = file.transform_html if should_transform("html")
     if res.has_key?("error")
+      @error_html << res["error"]
       @log.error(res["error"])
     end
   end
