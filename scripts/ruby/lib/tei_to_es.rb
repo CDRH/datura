@@ -109,7 +109,7 @@ module TeiToEs
     # json["cdrh-uri"]
     # json["cdrh-uri_data"]
     # json["cdrh-uri_html"]
-    # json["cdrh-fig_location"]
+    # json["cdrh-image_location"]
     # json["cdrh-image_id"]
 
     ###############
@@ -203,8 +203,8 @@ module TeiToEs
     json["cdrh-identifier"] = id
     # json["dc-identifier"] = "todo"
 
-    json["category"] = "Life"
-    json["subCategory"] = "Personography"
+    json["cdrh-category"] = "Life"
+    json["cdrh-subcategory"] = "Personography"
     json["cdrh-data_type"] = "tei"
     json["cdrh-project"] = project
     json["cdrh-shortname"] = shortname
