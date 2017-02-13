@@ -180,8 +180,8 @@ module TeiToEs
     json["cdrh-text"] = text
     # json["dc-abstract"]
 
-    project_specific_fields
-
+    json += project_specific_fields
+      puts json
     return json
   end
 
