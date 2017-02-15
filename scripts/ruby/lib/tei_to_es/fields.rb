@@ -105,6 +105,7 @@ module TeiToEs
 
     # json["novel_id"] = get_text @xpaths["novel"]
     # json["publicity"] = "some message that will always be displayed"
+    return {}
   end
 
   def self.publisher
@@ -143,7 +144,7 @@ module TeiToEs
     # handling separate fields in array
     # means no worrying about handling spacing between words
     text = []
-    body = get_text(@xpaths["text"])
+    body = get_text(@xpaths["text"], true)
     text << Common.convert_tags(body)
     text += text_additional
     return text.join(" ")

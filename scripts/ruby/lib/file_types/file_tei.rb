@@ -15,27 +15,21 @@ class FileTei < FileType
   end
 
   def post_es
-    return_val = nil
-    transformed = @es_json || transform_es(@options["output"])
-    if !@options["transform_only"]
-      if transformed.has_key?("error")
-        return_val = transformed["error"]
-      else
-        transformed["docs"].each do |doc|
+    begin
+      transformed = @es_json || transform_es(@options["output"])
+      if !@options["transform_only"]
+        transformed.each do |doc|
           id = doc["cdrh-identifier"]
           type = @options["es_type"]
           puts "posting #{id}"
-          begin
-            path = "#{@options["es_path"]}/#{@options["es_index"]}"
-            RestClient.put("#{path}/#{type}/#{id}", doc.to_json, {:content_type => :json } )
-          rescue => e
-            msg = "error posting to ES for #{id}: #{e.response}"
-            puts msg
-            return_val = msg
-          end
+          path = "#{@options["es_path"]}/#{@options["es_index"]}"
+          puts "PATH: #{path}/#{type}/#{id}" if options["verbose"]
+          RestClient.put("#{path}/#{type}/#{id}", doc.to_json, {:content_type => :json } )
         end
-        return return_val
       end
+      return { "docs" => transformed }
+    rescue => e
+      return { "error" => "Error transforming or posting to ES for #{self.filename(false)}: #{e.inspect}" }
     end
     # TODO pull out PUT to ES so VRA / DC / CSV can use it too
     # but we'll cross that bridge when we get to it in the distant future
@@ -53,9 +47,9 @@ class FileTei < FileType
         filepath = "#{@out_es}/#{self.filename(false)}.json"
         File.open(filepath, "w") { |f| f.write(self.print_es) }
       end
-      return { "docs" => @es_json }
+      return @es_json
     rescue => e
-      return { "error" => e }
+      raise e
     end
   end
 

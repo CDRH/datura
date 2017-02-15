@@ -71,11 +71,14 @@ class EsDataManager
     # log starting information for user
     @log.info(options_msg true)
     puts options_msg @options["verbose"]
+    if options["es_type"]
+      @files = prepare_files
 
-    @files = prepare_files
-
-    batch_process_files
-    end_run
+      batch_process_files
+      end_run
+    else
+      raise "Check project specific config files for missing 'es_type' ".red
+    end
   end
 
 
@@ -178,6 +181,7 @@ class EsDataManager
       res = file.post_es
       if res && res.has_key?("error")
         @error_es << res["error"]
+        puts res["error"].red
         @log.error(res["error"])
       end
     end

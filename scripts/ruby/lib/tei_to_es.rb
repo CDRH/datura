@@ -179,9 +179,9 @@ module TeiToEs
     json["cdrh-annotations"] = annotations
     json["cdrh-text"] = text
     # json["dc-abstract"]
-
-    json += project_specific_fields
-      puts json
+    # puts "json: #{json}"
+    more_fields = project_specific_fields
+    json.merge!(more_fields) if more_fields && !more_fields.empty?
     return json
   end
 
