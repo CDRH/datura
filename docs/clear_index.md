@@ -45,3 +45,13 @@ ruby scripts/ruby/[type]_clear_index.rb transmississippi -f category -r memorabi
 ```
 
 In order for these scripts to execute correctly, you will need to make sure that the configuration files are set up correctly.
+
+## Deleting An Entire Index (Nuclear Option)
+
+If you want to start from scratch and nuke an index, run the following:
+
+```
+./scripts/shell/es_delete_index.sh name_of_index
+```
+
+Be careful, as the above will wipe out all types from an index.  For example, if you run in on the "api" index, you will lose every project ever.
