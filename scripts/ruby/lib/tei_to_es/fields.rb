@@ -163,7 +163,7 @@ module TeiToEs
 
   def self.title
     title = get_text @xpaths["titles"]["main"]
-    if !title
+    if title.empty?
       title = get_text @xpaths["titles"]["alt"]
     end
     return title
