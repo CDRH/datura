@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require 'csv'
 # require 'nokogiri'    # TODO if this gets more complicated then use nokogiri
 

@@ -1,4 +1,4 @@
-#! /usr/local/rvm/rubies/ruby-2.1.3/bin/ruby
+#!/usr/bin/env ruby
 
 #################
 #  Create Core  #
