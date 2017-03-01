@@ -1,35 +1,35 @@
 properties:
-  cdrh-identifier:
+  identifier:
     type: keyword
-  dc-identifier:
+  identifier:
     type: keyword
-  cdrh-shortname:
+  shortname:
     type: keyword
-  cdrh-project:
+  project:
     type: keyword
-  cdrh-uri:
+  uri:
     type: keyword
-  cdrh-uri_data:
+  uri_data:
     type: keyword
-  cdrh-uri_html:
+  uri_html:
     type: keyword
-  cdrh-data_type:
+  data_type:
     type: keyword
-  cdrh-image_location:
+  image_location:
     type: keyword
-  cdrh-image_id:
-    type: keyword
-    # TODO copy to text?
-  dc-title:
-    type: keyword
-  cdrh-title_sort:
+  image_id:
     type: keyword
     # TODO copy to text?
-  dcterms-alternative:
+  title:
     type: keyword
-  cdrh-creator_sort:
+  title_sort:
     type: keyword
-  dc-creator:
+    # TODO copy to text?
+  alternative:
+    type: keyword
+  creator_sort:
+    type: keyword
+  creator:
     type: nested
     properties:
       name:
@@ -37,17 +37,17 @@ properties:
         type: keyword
       id:
         type: keyword
-  dc-subject:
+  subject:
     type: keyword
     # TODO not sure yet if for display or search
-  dc-abstract:
+  abstract:
     type: keyword
     # TODO copy to text?
-  dc-description:
+  description:
     type: keyword
-  dc-publisher:
+  publisher:
     type: keyword
-  dc-contributor:
+  contributor:
     type: nested
     properties:
       name:
@@ -56,41 +56,41 @@ properties:
         type: keyword
       role:
         type: keyword
-  dc-date:
+  date:
     type: date
     format: "yyyy-MM-dd||epoch_millis"
     # ignore_malformed: true
-  cdrh-date_display:
+  date_display:
     type: keyword
-  cdrh-date_not_before:
+  date_not_before:
     type: date
     format: "yyyy-MM-dd||epoch_millis"
     # ignore_malformed: true
-  cdrh-date_not_after:
+  date_not_after:
     type: date
     format: "yyyy-MM-dd||epoch_millis"
     # ignore_malformed: true
-  dc-type:
+  type:
     type: keyword
-  dc-format:
+  format:
     type: keyword
-  dcterms-medium:
+  medium:
     type: keyword
-  dc-extent:
+  extent:
     type: keyword
-  dc-language:
+  language:
     type: keyword
-  dc-relation:
+  relation:
     type: keyword
-  dc-source:
+  source:
     type: keyword
-  dcterms-rights_holder:
+  rights_holder:
     type: keyword
-  dc-rights:
+  rights:
     type: keyword
-  cdrh-rights_uri:
+  rights_uri:
     type: keyword
-  dcterms-coverage-spatial:
+  coverage-spatial:
     type: nested
     properties:
       place_name:
@@ -114,7 +114,7 @@ properties:
         type: keyword
       postal_code:
         type: keyword
-  dc-person:
+  person:
     type: nested
     properties:
       name:
@@ -122,21 +122,21 @@ properties:
         type: keyword
       id:
         type: keyword
-  cdrh-annotations:
+  annotations:
     type: text
-  cdrh-category:
+  category:
     type: keyword
-  cdrh-subcategory:
+  subcategory:
     type: keyword
-  cdrh-topics:
+  topics:
     type: keyword
-  cdrh-keywords:
+  keywords:
     type: keyword
-  cdrh-people:
+  people:
     type: keyword
-  cdrh-places:
+  places:
     type: keyword
-  cdrh-works:
+  works:
     type: keyword
-  cdrh-text:
+  text:
     type: text

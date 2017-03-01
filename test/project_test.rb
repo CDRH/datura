@@ -43,9 +43,9 @@ class ProjectTest < Minitest::Test
         res = tei.transform_es
         assert_equal res.length, file["count"]
         file["matches"].each do |tcase|
-          doc = res.select {|d| d["cdrh-identifier"] == tcase["cdrh-identifier"] }[0]
+          doc = res.select {|d| d["identifier"] == tcase["identifier"] }[0]
           if doc && doc.length > 0
-            assert_equal doc["cdrh-creator_sort"], tcase["cdrh-creator_sort"]
+            assert_equal doc["creator_sort"], tcase["creator_sort"]
           else
             puts "could not find a doc matching test case"
             puts "in test case: #{tcase}"

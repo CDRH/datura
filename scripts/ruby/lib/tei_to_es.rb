@@ -86,18 +86,17 @@ module TeiToEs
     ###############
     # cannot add this manually, have to do it via url
     # json["_type"] = shortname
-    json["cdrh-identifier"] = id
-    json["dc-identifier"] = id_dc
+    json["identifier"] = id
 
     ##############
     # categories #
     ##############
-    json["cdrh-category"] = category
-    json["cdrh-subcategory"] = subcategory
-    json["cdrh-data_type"] = "tei"
-    json["cdrh-project"] = project
-    json["cdrh-shortname"] = shortname
-    # json["dc-subject"]
+    json["category"] = category
+    json["subcategory"] = subcategory
+    json["data_type"] = "tei"
+    json["project"] = project
+    json["shortname"] = shortname
+    # json["subject"]
 
     #############
     # locations #
@@ -106,57 +105,57 @@ module TeiToEs
     # TODO check, because I'm not sure the schema
     # lists the urls that we actually want to use
     # earlywashingtondc.org vs cdrhmedia, etc
-    # json["cdrh-uri"]
-    # json["cdrh-uri_data"]
-    # json["cdrh-uri_html"]
-    # json["cdrh-image_location"]
-    # json["cdrh-image_id"]
+    # json["uri"]
+    # json["uri_data"]
+    # json["uri_html"]
+    # json["image_location"]
+    # json["image_id"]
 
     ###############
     # description #
     ###############
-    json["cdrh-title_sort"] = title_sort
-    json["dc-title"] = title
-    json["dc-description"] = description
-    # json["cdrh-topics"]
-    # json["dcterms-alternative"]
+    json["title_sort"] = title_sort
+    json["title"] = title
+    json["description"] = description
+    # json["topics"]
+    # json["alternative"]
 
     ##################
     # other metadata #
     ##################
-    json["dc-format"] = format
-    json["dc-language"] = language
-    # json["dc-relation"]
-    # json["dc-type"]
-    # json["dcterms-extent"]
-    json["dcterms-medium"] = format
+    json["format"] = format
+    json["language"] = language
+    # json["relation"]
+    # json["type"]
+    # json["extent"]
+    json["medium"] = format
 
     #########
     # dates #
     #########
-    json["cdrh-date_display"] = date_display
-    json["dc-date"] = date
-    json["cdrh-date_not_before"] = date
-    json["cdrh-date_not_after"] = date false
+    json["date_display"] = date_display
+    json["date"] = date
+    json["date_not_before"] = date
+    json["date_not_after"] = date false
 
     ####################
     # publishing stuff #
     ####################
-    json["cdrh-rights_uri"] = rights_uri
-    json["dc-publisher"] = publisher
-    json["dc-rights"] = rights
-    json["dc-source"] = source
-    json["dcterms-rights_holder"] = rights_holder
+    json["rights_uri"] = rights_uri
+    json["publisher"] = publisher
+    json["rights"] = rights
+    json["source"] = source
+    json["rights_holder"] = rights_holder
 
     ##########
     # people #
     ##########
-    json["cdrh-creator_sort"] = creator_sort
-    json["cdrh-people"] = person_sort
+    json["creator_sort"] = creator_sort
+    json["people"] = person_sort
     # container fields
-    json["cdrh-person"] = person
-    json["dc-contributor"] = contributors
-    json["dc-creator"] = creator
+    json["person"] = person
+    json["contributor"] = contributors
+    json["creator"] = creator
 
     ###########
     # spatial #
@@ -164,21 +163,21 @@ module TeiToEs
     # TODO not sure about the naming convention here?
     # TODO has place_name, coordinates, id, city, county, country,
     # region, state, street, postal_code
-    # json["dcterms-coverage.spatial"]
+    # json["coverage.spatial"]
 
     ##############
     # referenced #
     ##############
-    json["cdrh-keywords"] = keywords
-    json["cdrh-places"] = places
-    json["cdrh-works"] = works
+    json["keywords"] = keywords
+    json["places"] = places
+    json["works"] = works
 
     #################
     # text searches #
     #################
-    json["cdrh-annotations"] = annotations
-    json["cdrh-text"] = text
-    # json["dc-abstract"]
+    json["annotations"] = annotations
+    json["text"] = text
+    # json["abstract"]
     # puts "json: #{json}"
     more_fields = project_specific_fields
     json.merge!(more_fields) if more_fields && !more_fields.empty?
@@ -200,17 +199,17 @@ module TeiToEs
     json = {}
     doc_identifier = doc["id"]
     id = "#{@id}_#{doc_identifier}"
-    json["cdrh-identifier"] = id
-    # json["dc-identifier"] = "todo"
+    json["identifier"] = id
+    # json["identifier"] = "todo"
 
-    json["cdrh-category"] = "Life"
-    json["cdrh-subcategory"] = "Personography"
-    json["cdrh-data_type"] = "tei"
-    json["cdrh-project"] = project
-    json["cdrh-shortname"] = shortname
+    json["category"] = "Life"
+    json["subcategory"] = "Personography"
+    json["data_type"] = "tei"
+    json["project"] = project
+    json["shortname"] = shortname
 
-    json["dc-title"] = doc.xpath("./persName[@type='display']").text
-    json["cdrh-title_sort"] = Common.normalize_name(json["dc-title"])
+    json["title"] = doc.xpath("./persName[@type='display']").text
+    json["title_sort"] = Common.normalize_name(json["title"])
     # more fields would be contributor, people, description, text, etc
     return json
   end

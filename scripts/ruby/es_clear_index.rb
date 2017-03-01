@@ -39,7 +39,7 @@ if confirm && (confirm == "y" || confirm == "Y")
 
   data = {}
   if options["regex"]
-    field = options["field"] || "cdrh-identifier"
+    field = options["field"] || "identifier"
     data = {
       "query" => {
         "regexp" => { field => options["regex"] }

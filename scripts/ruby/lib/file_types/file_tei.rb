@@ -19,7 +19,7 @@ class FileTei < FileType
       transformed = @es_json || transform_es(@options["output"])
       if !@options["transform_only"]
         transformed.each do |doc|
-          id = doc["cdrh-identifier"]
+          id = doc["identifier"]
           type = @options["es_type"]
           puts "posting #{id}"
           path = "#{@options["es_path"]}/#{@options["es_index"]}"

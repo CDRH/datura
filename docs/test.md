@@ -13,10 +13,10 @@ At the moment the per-project tests are pretty rudimentary, but you can test thi
   type: tei
   count: 16
   matches:
-    - cdrh-identifier: nei.person_braithwaite.w
-      cdrh-title_sort: Braithwaite, William Stanley, 1878-1962
-    - cdrh-identifier: nei.person_cawein.m
-      cdrh-title_sort: Cawein, Madison Julius, 1865-1914
+    - identifier: nei.person_braithwaite.w
+      title_sort: Braithwaite, William Stanley, 1878-1962
+    - identifier: nei.person_cawein.m
+      title_sort: Cawein, Madison Julius, 1865-1914
 ```
 
 The `filename` and `type` identify the location of the file you wish to test.  `count` should equal the number of docs you expect the file to return. For example, a single Cather letter file may return one doc, but the Neihardt personography file above will return 16 (one for each person and one for the personography file itself).
