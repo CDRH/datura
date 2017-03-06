@@ -99,8 +99,8 @@ Note that this will clear the entire index, though!
 
 If you only want to clear one file or a set of files you can run 
 
-```
-ruby scripts/ruby/es_clear_index.rb cather -r cat.bohlke -e development
+```ruby 
+scripts/ruby/es_clear_index.rb cather -r cat.bohlke -e development
 ```
 
 To clear all files that start with the string provided. For more options, see the [clear_index.md](clear_index.md) doc. 
