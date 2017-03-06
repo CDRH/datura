@@ -1,5 +1,3 @@
-## Xpath
-
 ### substring-before()
 
 Xpath: 
@@ -31,5 +29,3 @@ Ruby
 ```ruby
 ele.text
 ```
-
-## XSLT

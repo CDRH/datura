@@ -109,5 +109,35 @@ To clear all files that start with the string provided. For more options, see th
 
 Your first step, if you have not already, is to read the [Customizing tei_to_es.rb](tei_to_es.rb) document. 
 
+## Setting up a development environment
 
+In order to make the changes mentioned above, you'll need to be able to set up a dev environment that will allow you to easily make changes and see them reflected in generated files. Some thoughts are below. 
+
+First, you'll need to decide on local development vs working on the server. If you want to work on the server, locally mounting the disk is the only way I know of to make it seamless enough. I reccomend using the software [Panic's "Transmit"](https://panic.com/transmit/) to do this - it's an FTP program, but gives you the option to remotely mount a folder and interact as if it existed locally. It's also a good, stable FTP program. 
+
+### Getting everything installed
+
+Alternately, you can set your environmet up locally and run it. A loose description is below, but refer to a dev team member to help you get everything set up in the correct spot. The following instructions are for OSX, if we encounter windows users we'll need to figure it out!
+
+1: Install RVM on your mac. https://rvm.io/
+    - This will allow you to have several different versions of ruby running on your computer and keep up with the version set for our data projects.
+2: Download the data git repo: https://github.com/CDRH/data
+    - currently, this needs to be set to the "es" branch
+3: Download the data_cather repos into data/projects
+4: cd into the data repo from a terminal. When RVM is installed, this will set the correct Ruby version. If you don't have that verison installde, it will prompt you to install the correct version. 
+5: run "bundle install" to install the code needed to run the data repo. 
+
+### Run on your computer
+
+I have modeled my approach on Oxygen's XSLT debugger mode, which looks like this:
+
+![Old Oxygen setup](images/project_cather_old_setup.png)
+
+my new set up looks something like this, and it consists of a text editor with two windows open and a terminal window:
+
+![Example new setup](images/project_cather_new_setup.png)
+
+I make changes in the window with the ruby files, tab over to my terminal window, hit the up key to retreive the last command, and it changes the JSON view so I can check if my changes were correct. Alternately, it may spit out an error. 
+
+![Error message](images/project_cather_error.png)
 
