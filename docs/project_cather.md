@@ -122,7 +122,7 @@ ruby scripts/ruby/es_post.rb data_cather -e development -x es -o -r cat\.j00009 
 - -e = setting the development environemnt (this is the default, so can usually be omitted)
 - -x es = tells the script we're using the elasticsearch scripts
 - -o = tells the script to store output int he "es" folder. these are for debugging only, and won't commit back to the repo. 
-- -r = regex to specify whick file(s) to transform. While I am working through issues, I'll stick to running
+- -r = regex to specify which file(s) to transform. While I am working through issues, I'll stick to running
 
 ## Setting up a development environment
 
