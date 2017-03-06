@@ -33,7 +33,7 @@ cd /var/local/www/data/
 
 ## Pulling Git Updates
 
-If you have made any changes to the XML on your computer, you'll need to pull them to the server. 
+If you have made any changes to files on your computer, you'll need to pull them to the server. 
 
 Change directories to your project folder
 
@@ -55,7 +55,7 @@ git pull
 
 ## Populating the index and generating HTML
 
-In order to populate the TEI you just pulled, change directories back out of the project directory: 
+In order to populate the TEI you just pulled, change directories back to your data directory (here, going up two directories): 
 
 ```
 cd ../..
@@ -79,7 +79,7 @@ The above command only posts the data to the index. If you'd like to run the HTM
 
 ```
 ruby scripts/ruby/es_post.rb data_cather -e development
-```,
+```
 
 In the development version, I plan on using cocoon to generate the HTML, so this should only be necessary for production. 
 
@@ -124,7 +124,7 @@ Alternately, you can set your environmet up locally and run it. A loose descript
 2. Download the data git repo: https://github.com/CDRH/data
     - currently, this needs to be set to the "es" branch
 3. Download the data_cather repos into data/projects
-4. cd into the data repo from a terminal. When RVM is installed, this will set the correct Ruby version. If you don't have that verison installde, it will prompt you to install the correct version. 
+4. cd into the data repo from a terminal. When RVM is installed, this will set the correct Ruby version. If you don't have that verison installed, it will prompt you to install the correct version. 
 5. run "bundle install" to install the code needed to run the data repo. 
 
 ### Run on your computer
