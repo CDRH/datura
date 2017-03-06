@@ -119,13 +119,13 @@ First, you'll need to decide on local development vs working on the server. If y
 
 Alternately, you can set your environmet up locally and run it. A loose description is below, but refer to a dev team member to help you get everything set up in the correct spot. The following instructions are for OSX, if we encounter windows users we'll need to figure it out!
 
-1: Install RVM on your mac. https://rvm.io/
+1. Install RVM on your mac. https://rvm.io/
     - This will allow you to have several different versions of ruby running on your computer and keep up with the version set for our data projects.
-2: Download the data git repo: https://github.com/CDRH/data
+2. Download the data git repo: https://github.com/CDRH/data
     - currently, this needs to be set to the "es" branch
-3: Download the data_cather repos into data/projects
-4: cd into the data repo from a terminal. When RVM is installed, this will set the correct Ruby version. If you don't have that verison installde, it will prompt you to install the correct version. 
-5: run "bundle install" to install the code needed to run the data repo. 
+3. Download the data_cather repos into data/projects
+4. cd into the data repo from a terminal. When RVM is installed, this will set the correct Ruby version. If you don't have that verison installde, it will prompt you to install the correct version. 
+5. run "bundle install" to install the code needed to run the data repo. 
 
 ### Run on your computer
 
