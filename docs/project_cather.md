@@ -107,7 +107,11 @@ To clear all files that start with the string provided. For more options, see th
 
 ## Adding things to/changing the index
 
-Your first step, if you have not already, is to read the [Customizing tei_to_es.rb](tei_to_es.rb) document. 
+Your first step, if you have not already, is to read the [Customizing tei_to_es.rb](tei_to_es.rb) document.
+
+Then you'll need to set up your development environment so you can check your changes. (See next section)
+
+After this is set up, you can add fields to the index
 
 ## Setting up a development environment
 
@@ -140,4 +144,16 @@ my new set up looks something like this, and it consists of a text editor with t
 I make changes in the window with the ruby files, tab over to my terminal window, hit the up key to retreive the last command, and it changes the JSON view so I can check if my changes were correct. Alternately, it may spit out an error. 
 
 ![Error message](images/project_cather_error.png)
+
+The command I use to transform a single file into JSON so I can check my work looks like this: 
+
+```
+ruby scripts/ruby/es_post.rb data_cather -e development -x es -o -r cat\.j00009 -t
+
+```
+
+- -e = setting the development environemnt (this is the default, so can usually be omitted)
+- -x es = tells the script we're using the elasticsearch scripts
+- -o = tells the script to store output int he "es" folder. these are for debugging only, and won't commit back to the repo. 
+- -r = regex to specify whick file(s) to transform. While I am working through issues, I'll stick to running a file at a time, but after a while you may want to omit this and check a bunch of output at once. 
 
