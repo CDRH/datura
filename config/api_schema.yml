@@ -140,3 +140,22 @@ properties:
     type: keyword
   text:
     type: text
+dynamic_templates:
+  - date_fields:
+      match: "*_d"
+      mapping:
+        type: date
+        format: "yyyy-MM-dd||epoch_millis"
+  - integer_fields:
+      match: "*_i"
+      mapping:
+        type: integer
+  - keyword_fields:
+      match: "*_k"
+      mapping:
+        type: keyword
+  - text_fields:
+      match: "*_t"
+      mapping:
+        type: text
+        analyzer: english
