@@ -1,5 +1,9 @@
 ## Customizing tei_to_es.rb
 
+References:
+
+- [Common Ruby Equivalents for Xpath and XSLT](xslt_to_ruby_reference.md) 
+
 In each project, there should be a file in `scripts/tei_to_es.rb`.  It can be used to override xpaths and behavior found in `scripts/ruby/lib/tei_to_es.rb` and can be considered to be taking the place of the old XSLT stylesheets.  Previously, you need to understand XSLT in order to alter these overrides.  Now, instead, you must have an understanding of Ruby.  The following document may be easier to follow if you have a working knowledge of the following in Ruby:
 
 - variables
