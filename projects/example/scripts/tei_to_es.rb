@@ -1,10 +1,14 @@
-module TeiToEs
+class TeiToEs
 
   #### XPATHS ####
   # override default fields and add new xpaths here
   # @xpaths["new_or_old_xpath"] = "/your/path"
 
-  @xpaths["person"] = "/TEI/teiHeader/profileDesc/particDesc/person"
+  def override_xpaths
+    xpaths = {}
+    xpaths["person"] = "/TEI/teiHeader/profileDesc/particDesc/person"
+    return xpaths
+  end
 
   #### FIELDS ####
   # Note: if you wanted to override a default field, it would look
