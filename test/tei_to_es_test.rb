@@ -11,7 +11,7 @@ class TeiToEsTest < Minitest::Test
 
     # TeiToEs.instance_variable_set("@file", @file)
     # # set an xml instance variable
-    # @xml = TeiToEs.create_xml_object
+    # @xml = Common.create_xml_object
     # TeiToEs.instance_variable_set("@xml", @xml)
   end
 

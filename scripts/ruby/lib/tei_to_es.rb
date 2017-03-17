@@ -21,67 +21,37 @@ require_relative "tei_to_es/xpaths.rb"
 #   it as needed. If you are dealing with something particularly complex
 #   you may need to consult with a CDRH dev for help
 
-module TeiToEs
+class TeiToEs
 
-  # getter for json response object
-  def self.create_json file, params={}
-    @file = file
-    @xml = create_xml_object
-    @id = file.filename(false)
-    @options = params
+  attr_reader :json
+  # variables
+  # id, xml, parent_xml, options
 
+  def initialize xml, options={}, parent_xml=nil, filename=nil
+    @xml = xml
+    @options = options
+    @parent_xml = parent_xml
+    @filename = filename
+    @id = get_id
+    @xpaths = xpaths_list
+    create_json
+  end
+
+  # getter for @json response object
+  def create_json
+    @json = {}
     # if anything needs to be done before processing
     # do it here (ex: reading in annotations into memory)
     preprocessing
-
-    # create an object that with hold all of the ES documents
-    # and put the "main" one in immediately
-    @json = []
-    @json << assemble_json
-
-    # iterate through any specified sub-doc xpaths and add to json
-    docs = get_docs
-    docs.each do |doc|
-      @json << self.assemble_subdoc_json(doc)
-    end
-
+    assemble_json
     postprocessing
-
-    return @json
   end
 
-  # xpaths by which a file should be divided into multiple docs
-  # for example, a personography file divides on "//person"
-  # this system may need to be made far more robust in the near future
-  @subdoc_xpaths = [
-    "//listPerson/person"
-  ]
-
-  # TODO a lot of stuff comes in from the specific params objects
-  # but those will be very different for the new api schema
-  # so I'm just waiting on that for now
-
-  def self.create_xml_object file=nil
-    filepath = file || @file.file_location
-    file_xml = File.open(filepath) { |f| Nokogiri::XML f }
-    # TODO is this a good idea?
-    file_xml.remove_namespaces!
-    return file_xml
+  def get_id
+    return @filename
   end
 
-  def self.get_docs
-    # get all of the subdocs based on the xpaths
-    docs = []
-    @subdoc_xpaths.each do |xpath|
-      docs += @xml.xpath(xpath)
-    end
-    return docs
-  end
-
-
-  def self.assemble_json
-    json = {}
-
+  def assemble_json
     # TODO might put these into methods themselves
     # so that a project could override only a clump of fields
     # rather than all?
@@ -93,18 +63,18 @@ module TeiToEs
     # identifiers #
     ###############
     # cannot add this manually, have to do it via url
-    # json["_type"] = shortname
-    json["identifier"] = id
+    # @json["_type"] = shortname
+    @json["identifier"] = @id
 
     ##############
     # categories #
     ##############
-    json["category"] = category
-    json["subcategory"] = subcategory
-    json["data_type"] = "tei"
-    json["project"] = project
-    json["shortname"] = shortname
-    # json["subject"]
+    @json["category"] = category
+    @json["subcategory"] = subcategory
+    @json["data_type"] = "tei"
+    @json["project"] = project
+    @json["shortname"] = shortname
+    # @json["subject"]
 
     #############
     # locations #
@@ -113,57 +83,57 @@ module TeiToEs
     # TODO check, because I'm not sure the schema
     # lists the urls that we actually want to use
     # earlywashingtondc.org vs cdrhmedia, etc
-    # json["uri"]
-    # json["uri_data"]
-    # json["uri_html"]
-    # json["image_location"]
-    # json["image_id"]
+    # @json["uri"]
+    # @json["uri_data"]
+    # @json["uri_html"]
+    # @json["image_location"]
+    # @json["image_id"]
 
     ###############
     # description #
     ###############
-    json["title_sort"] = title_sort
-    json["title"] = title
-    json["description"] = description
-    # json["topics"]
-    # json["alternative"]
+    @json["title_sort"] = title_sort
+    @json["title"] = title
+    @json["description"] = description
+    # @json["topics"]
+    # @json["alternative"]
 
     ##################
     # other metadata #
     ##################
-    json["format"] = format
-    json["language"] = language
-    # json["relation"]
-    # json["type"]
-    # json["extent"]
-    json["medium"] = format
+    @json["format"] = format
+    @json["language"] = language
+    # @json["relation"]
+    # @json["type"]
+    # @json["extent"]
+    @json["medium"] = format
 
     #########
     # dates #
     #########
-    json["date_display"] = date_display
-    json["date"] = date
-    json["date_not_before"] = date
-    json["date_not_after"] = date false
+    @json["date_display"] = date_display
+    @json["date"] = date
+    @json["date_not_before"] = date
+    @json["date_not_after"] = date false
 
     ####################
     # publishing stuff #
     ####################
-    json["rights_uri"] = rights_uri
-    json["publisher"] = publisher
-    json["rights"] = rights
-    json["source"] = source
-    json["rights_holder"] = rights_holder
+    @json["rights_uri"] = rights_uri
+    @json["publisher"] = publisher
+    @json["rights"] = rights
+    @json["source"] = source
+    @json["rights_holder"] = rights_holder
 
     ##########
     # people #
     ##########
-    json["creator_sort"] = creator_sort
-    json["people"] = person_sort
+    @json["creator_sort"] = creator_sort
+    @json["people"] = person_sort
     # container fields
-    json["person"] = person
-    json["contributor"] = contributors
-    json["creator"] = creator
+    @json["person"] = person
+    @json["contributor"] = contributors
+    @json["creator"] = creator
 
     ###########
     # spatial #
@@ -171,57 +141,29 @@ module TeiToEs
     # TODO not sure about the naming convention here?
     # TODO has place_name, coordinates, id, city, county, country,
     # region, state, street, postal_code
-    # json["coverage.spatial"]
+    # @json["coverage.spatial"]
 
     ##############
     # referenced #
     ##############
-    json["keywords"] = keywords
-    json["places"] = places
-    json["works"] = works
+    @json["keywords"] = keywords
+    @json["places"] = places
+    @json["works"] = works
 
     #################
     # text searches #
     #################
-    json["annotations"] = annotations
-    json["text"] = text
-    # json["abstract"]
-    # puts "json: #{json}"
+    @json["annotations"] = annotations
+    @json["text"] = text
+    # @json["abstract"]
     more_fields = project_specific_fields
-    json.merge!(more_fields) if more_fields && !more_fields.empty?
-    return json
+    @json.merge!(more_fields) if more_fields && !more_fields.empty?
+    return @json
   end
 
-  # TODO some problems with hurriedly throwing subdocs in here
-  # you can't use the normal fields down below because the majority
-  # of them pull info straight from @xml
-  # this could be mitigated if the xpaths sent use the index of the doc
-  # like blah/person[1]/xpath but that seems like a dangerous
-  # idea to be separating the data and the paths like that
-  # for now, since this is just a proof of concept I'm going
-  # to hardcode stuff, sad day
-  # possibly all docs could be made into a class and then
-  # subclasses spun off of that to allow modification to behavior
-  # without affecting more docs following after subdocs?
-  def self.assemble_subdoc_json doc
-    json = {}
-    doc_identifier = doc["id"]
-    id = "#{@id}_#{doc_identifier}"
-    json["identifier"] = id
-    # json["identifier"] = "todo"
-
-    json["category"] = "Life"
-    json["subcategory"] = "Personography"
-    json["data_type"] = "tei"
-    json["project"] = project
-    json["shortname"] = shortname
-
-    json["title"] = doc.xpath("./persName[@type='display']").text
-    json["title_sort"] = Common.normalize_name(json["title"])
-    # more fields would be contributor, people, description, text, etc
-    return json
+  def override_xpaths
+    {}
   end
-
 
   ###########
   # HELPERS #
@@ -237,7 +179,7 @@ module TeiToEs
   # get_list
   #   can pass it a string xpath or array of xpaths
   # returns an array with the html value in xpath
-  def self.get_list xpaths, keep_tags=false
+  def get_list xpaths, keep_tags=false
     xpaths = xpaths.class == Array ? xpaths : [xpaths]
     return get_xpaths xpaths, keep_tags
   end
@@ -247,7 +189,7 @@ module TeiToEs
   #   can optionally set a delimiter, otherwise ;
   # returns a STRING
   # if you want a multivalued result, please refer to get_list
-  def self.get_text xpaths, keep_tags=false, delimiter=";"
+  def get_text xpaths, keep_tags=false, delimiter=";"
     # ensure all xpaths are an array before beginning
     xpaths = xpaths.class == Array ? xpaths : [xpaths]
     list = get_xpaths xpaths, keep_tags
@@ -260,7 +202,7 @@ module TeiToEs
   # keep_tags true will convert tags like <hi> to <em>
   #   use this wisely, as it causes performance issues
   # keep_tags false removes ALL tags from selected xpath
-  def self.get_xpaths xpaths, keep_tags=false
+  def get_xpaths xpaths, keep_tags=false
     list = []
     xpaths.each do |xpath|
       contents = @xml.xpath(xpath)
@@ -281,11 +223,11 @@ module TeiToEs
     return list.uniq
   end
 
-  def self.preprocessing
+  def preprocessing
     # copy this in your tei_to_es project file to customize
   end
 
-  def self.postprocessing
+  def postprocessing
     # copy this in your tei_to_es project file to customize
   end
 

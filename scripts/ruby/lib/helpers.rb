@@ -28,6 +28,13 @@ module Common
     return xml
   end
 
+  def self.create_xml_object filepath, remove_ns=true
+    file_xml = File.open(filepath) { |f| Nokogiri::XML f }
+    # TODO is this a good idea?
+    file_xml.remove_namespaces! if remove_ns
+    return file_xml
+  end
+
   # pass in a date and identify whether it should be before or after
   # in order to fill in dates (ex: 2014 => 2014-12-31)
 

@@ -1,38 +1,38 @@
-module TeiToEs
+class TeiToEs
   ##########
   # FIELDS #
   ##########
 
-  def self.id
+  def id
     @id
   end
 
-  def self.id_dc
+  def id_dc
     # TODO use api path from config or something?
     "https://cdrhapi.unl.edu/doc/#{@id}"
   end
 
-  def self.annotations
+  def annotations
     # TODO what should default behavior be?
   end
 
-  def self.category
+  def category
     category = get_text @xpaths["category"]
     return category.length > 0 ? category : "none"
   end
 
   # note this does not sort the creators
-  def self.creator
+  def creator
     creators = get_list @xpaths["creators"]
     return creators.map { |creator| { "name" => creator } }
   end
 
   # returns ; delineated string of alphabetized creators
-  def self.creator_sort
+  def creator_sort
     return get_text @xpaths["creators"]
   end
 
-  def self.contributors
+  def contributors
     contribs = []
     @xpaths["contributors"].each do |xpath|
       eles = @xml.xpath(xpath)
@@ -43,21 +43,21 @@ module TeiToEs
     return contribs
   end
 
-  def self.date before=true
+  def date before=true
     date = get_text @xpaths["date"]
     return Common.date_standardize(date, before)
   end
 
-  def self.date_display
+  def date_display
     date = get_text @xpaths["date"]
     return Common.date_display(date)
   end
 
-  def self.description
+  def description
     # Note: override per project as needed
   end
 
-  def self.format
+  def format
     # iterate through all the formats until the first one matches
     @xpaths["formats"].each do |type, xpath|
       text = get_text xpath
@@ -69,16 +69,16 @@ module TeiToEs
     return nil
   end
 
-  def self.keywords
+  def keywords
     return get_list @xpaths["keywords"]
   end
 
-  def self.language
+  def language
     # TODO need some examples to use
     # look for attribute anywhere in whole text and add to array
   end
 
-  def self.person
+  def person
     # TODO will need some examples of how this will work
     # and put in the xpaths above, also for attributes, etc
     # should contain name, id, and role
@@ -86,20 +86,20 @@ module TeiToEs
     return eles.map { |p| { "role" => p["role"], "name" => p.text, "id" => "" } }
   end
 
-  def self.person_sort
+  def person_sort
     return get_text @xpaths["person"]
   end
 
-  def self.places
+  def places
     # TODO will need to figure out some default behavior for this field
     return get_list @xpaths["places"]
   end
 
-  def self.project
+  def project
     @options["project_desc"] || @options["project"]
   end
 
-  def self.project_specific_fields
+  def project_specific_fields
     # Note: customize this per project to include more information
     # to be posted to elasticsearch.  Example:
 
@@ -108,39 +108,39 @@ module TeiToEs
     return {}
   end
 
-  def self.publisher
+  def publisher
     get_text @xpaths["publisher"]
   end
 
-  def self.rights
+  def rights
     # Note: override by project as needed
     "All Rights Reserved"
   end
 
-  def self.rights_holder
+  def rights_holder
     get_text @xpaths["rights_holder"]
   end
 
-  def self.rights_uri
+  def rights_uri
     # by default projects have no uri associated with them
     # copy this method into project specific tei_to_es.rb
     # to return specific string or xpath as required
   end
 
-  def self.shortname
+  def shortname
     @options["shortname"]
   end
 
-  def self.source
+  def source
     get_text @xpaths["source"]
   end
 
-  def self.subcategory
+  def subcategory
     subcategory = get_text @xpaths["subcategory"]
     subcategory.length > 0 ? subcategory : "none"
   end
 
-  def self.text
+  def text
     # handling separate fields in array
     # means no worrying about handling spacing between words
     text = []
@@ -150,7 +150,7 @@ module TeiToEs
     return text.join(" ")
   end
 
-  def self.text_additional
+  def text_additional
     # Note: Override this per project if you need additional
     # searchable fields or information for projects
     # just make sure you return an array at the end!
@@ -161,7 +161,7 @@ module TeiToEs
     return []
   end
 
-  def self.title
+  def title
     title = get_text @xpaths["titles"]["main"]
     if title.empty?
       title = get_text @xpaths["titles"]["alt"]
@@ -169,12 +169,12 @@ module TeiToEs
     return title
   end
 
-  def self.title_sort
+  def title_sort
     t = title
     Common.normalize_name t
   end
 
-  def self.works
+  def works
     # TODO figure out how this behavior should look
     return []
   end

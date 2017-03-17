@@ -1,3 +1,4 @@
+require_relative "../helpers.rb"
 require_relative "../file_type.rb"
 require "rest-client"
 
@@ -43,8 +44,29 @@ class FileTei < FileType
   end
 
   def transform_es output=false
+    @es_json = []
     begin
-      @es_json = TeiToEs.create_json(self, @options)
+      # read in XML file and split up into subdocuments
+      # this step should be overrideable
+      # match subdocs against classes
+      # create class for each one, create_json
+      # collect results into @es_json here
+
+      # read in XML
+      file_xml = Common.create_xml_object(self.file_location)
+      # match subdocs against classes
+      subdoc_xpaths = {
+        "/TEI" => TeiToEs,
+        "//listPerson/person" => TeiToEsPersonography,
+      }
+
+      subdoc_xpaths.each do |xpath, classname|
+        file_xml.xpath(xpath).each do |subdoc|
+          file_transformer = classname.new(subdoc, @options, file_xml, self.filename(false))
+          @es_json << file_transformer.json
+        end
+      end
+
       if output
         filepath = "#{@out_es}/#{self.filename(false)}.json"
         File.open(filepath, "w") { |f| f.write(self.print_es) }
