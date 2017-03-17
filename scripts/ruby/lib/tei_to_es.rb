@@ -179,9 +179,9 @@ class TeiToEs
   # get_list
   #   can pass it a string xpath or array of xpaths
   # returns an array with the html value in xpath
-  def get_list xpaths, keep_tags=false
+  def get_list xpaths, xml=nil, keep_tags=false
     xpaths = xpaths.class == Array ? xpaths : [xpaths]
-    return get_xpaths xpaths, keep_tags
+    return get_xpaths xpaths, xml, keep_tags
   end
 
   # get_text
@@ -189,10 +189,10 @@ class TeiToEs
   #   can optionally set a delimiter, otherwise ;
   # returns a STRING
   # if you want a multivalued result, please refer to get_list
-  def get_text xpaths, keep_tags=false, delimiter=";"
+  def get_text xpaths, xml=nil, keep_tags=false, delimiter=";"
     # ensure all xpaths are an array before beginning
     xpaths = xpaths.class == Array ? xpaths : [xpaths]
-    list = get_xpaths xpaths, keep_tags
+    list = get_xpaths xpaths, xml, keep_tags
     sorted = list.sort
     return sorted.join("#{delimiter} ")
   end
@@ -202,10 +202,11 @@ class TeiToEs
   # keep_tags true will convert tags like <hi> to <em>
   #   use this wisely, as it causes performance issues
   # keep_tags false removes ALL tags from selected xpath
-  def get_xpaths xpaths, keep_tags=false
+  def get_xpaths xpaths, xml=nil, keep_tags=false
+    doc = xml || @xml
     list = []
     xpaths.each do |xpath|
-      contents = @xml.xpath(xpath)
+      contents = doc.xpath(xpath)
       contents.each do |content|
         text = ""
         if keep_tags
