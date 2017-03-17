@@ -29,7 +29,10 @@ class TeiToEsPersonography < TeiToEs
   end
 
   def person
-    { "role" => nil, "name" => get_text("//persName"), "id" => @id }
+    { "role" => nil,
+      "name" => get_text(@xpaths["titles"]["main"]),
+      "id" => @id
+    }
   end
 
   def subcategory
