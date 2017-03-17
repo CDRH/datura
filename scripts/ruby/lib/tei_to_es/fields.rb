@@ -144,7 +144,7 @@ class TeiToEs
     # handling separate fields in array
     # means no worrying about handling spacing between words
     text = []
-    body = get_text(@xpaths["text"], @xml, true)
+    body = get_text(@xpaths["text"], true)
     text << Common.convert_tags(body)
     text += text_additional
     return text.join(" ")
