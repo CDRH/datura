@@ -43,6 +43,7 @@ class EsDataManager
     # check if project exists
     if File.directory?(@proj_dir)
       @options = Options.new(params, "#{@repo_dir}/config", "#{@proj_dir}/config").all
+      @options["proj_dir"] = @proj_dir
       @log = Logger.new("#{@repo_dir}/logs/#{@project}-#{@options['environment']}.log")
     else
       puts "Could not find project directory named '#{@project}'!".red
@@ -61,6 +62,8 @@ class EsDataManager
   # TODO should this happen here or in the FileType specific to each one?
   # or maybe just all of them get loaded in the generic FileType class??
   def load_project_classes
+    # load project scripts at this point so they will override
+    # any of the default ones (for example: TeiToEs)
     Dir["#{@proj_dir}/scripts/*.rb"].each do |f|
       require f
     end

@@ -24,6 +24,8 @@ class FileTei < FileType
           puts "posting #{id}"
           path = "#{@options["es_path"]}/#{@options["es_index"]}"
           puts "PATH: #{path}/#{type}/#{id}" if options["verbose"]
+          # NOTE: If you need to do partial updates rather than replacement of doc
+          # you will need to add _update at the end of this URL
           RestClient.put("#{path}/#{type}/#{id}", doc.to_json, {:content_type => :json } )
         end
       end

@@ -30,6 +30,10 @@ module TeiToEs
     @id = file.filename(false)
     @options = params
 
+    # if anything needs to be done before processing
+    # do it here (ex: reading in annotations into memory)
+    preprocessing
+
     # create an object that with hold all of the ES documents
     # and put the "main" one in immediately
     @json = []
@@ -40,6 +44,9 @@ module TeiToEs
     docs.each do |doc|
       @json << self.assemble_subdoc_json(doc)
     end
+
+    postprocessing
+
     return @json
   end
 
@@ -54,8 +61,9 @@ module TeiToEs
   # but those will be very different for the new api schema
   # so I'm just waiting on that for now
 
-  def self.create_xml_object
-    file_xml = File.open(@file.file_location) { |f| Nokogiri::XML f }
+  def self.create_xml_object file=nil
+    filepath = file || @file.file_location
+    file_xml = File.open(filepath) { |f| Nokogiri::XML f }
     # TODO is this a good idea?
     file_xml.remove_namespaces!
     return file_xml
@@ -271,6 +279,14 @@ module TeiToEs
       end
     end
     return list.uniq
+  end
+
+  def self.preprocessing
+    # copy this in your tei_to_es project file to customize
+  end
+
+  def self.postprocessing
+    # copy this in your tei_to_es project file to customize
   end
 
 end
