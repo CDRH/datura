@@ -14,7 +14,7 @@ In each project, there should be a file in `scripts/tei_to_es.rb`.  It can be us
 Each project must have a `tei_to_es.rb` file, even if there are no overrides.  At bare minimum, the file should look like the following:
 
 ```
-module TeiToEs
+class TeiToEs
 end
 ```
 
@@ -56,7 +56,14 @@ At `scripts/ruby/lib/tei_to_es/xpaths.rb` you can find a list of all the default
 You would add the following code to your project's `tei_to_es.rb` file:
 
 ```ruby
-@xpaths["publisher"] = "/TEI/teiHeader/fileDesc/publicationStmt/publisher[1]"
+def override_xpaths
+  xpaths = {}
+
+  # your xpaths here
+  xpaths["publisher"] = "/TEI/teiHeader/fileDesc/publicationStmt/publisher[1]"
+
+  return xpaths
+end
 ```
 
 Now your project will use your xpath but otherwise behave the same way as before.  That is, if it was returning a list of publishers previously, it will still attempt to return a list.  In our example, we know there is only `[1]` (the first) publisher being returned, so it's a good idea to specify that again in our override.
@@ -75,19 +82,19 @@ But let's say we need to override something that has several options!  How would
 If we want to ADD to the list:
 
 ```ruby
-@xpaths["creators"] << "//another/xpath/for/project"
+xpaths["creators"] << "//another/xpath/for/project"
 ```
 
 If we want to ONLY have our new xpath in the list, we will have to make sure that it still looks like the array that ruby is expecting, since the old "creators" was an array:
 
 ```ruby
-@xpaths["creators"] = ["//our/new/xpath"]
+xpaths["creators"] = ["//our/new/xpath"]
 ```
 
 If we want to add multiple new xpaths, we can do that, too!
 
 ```ruby
-@xpaths["creators"] = ["new/xpath", "another_xpath", "one_more/xpath"]
+xpaths["creators"] = ["new/xpath", "another_xpath", "one_more/xpath"]
 ```
 
 Since "creators" was already a list of xpaths we should be able to add any number of them!
@@ -107,7 +114,7 @@ If you want to override just one or both of them, it would look like this:
 
 ```ruby
 # overrides only the "alt" title, does not change "main"
-@xpaths["titles"]["alt"] = "/your/new/xpath"
+xpaths["titles"]["alt"] = "/your/new/xpath"
 ```
 
 ### Overriding Fields
@@ -141,11 +148,19 @@ get_text "/TEI/person"
 `get_text` and `get_list` accept a few parameters.
 
 - xpath(s) : a string or array of strings
-- keep_tags : defaults to false, pass in true if you want to convert italics, bold, underline to HTML
+- keep_tags (optional): defaults to false, pass in true if you want to convert italics, bold, underline to HTML
+- xml (optional) : defaults to entire document XML, but you can pass in a different XML object if you like (example: you need to read an annotations file in and get information for your current document)
 
 `get_text` only:
 
-- delimiter : the separator between multiple items for get_text
+- delimiter (optional) : the separator between multiple items for get_text
+
+This looks like the following:
+
+```ruby
+get_list xpaths, [keep_tags], [xml]
+get_text xpaths, [keep_tags], [xml], [delimiter]
+```
 
 By default, `get_text` and `get_list` will strip out XML from the results of the xpath.  If you would like to preserve italics, bold, and underlining, pass in the "keep_tags" parameter to convert them from TEI to HTML:
 
