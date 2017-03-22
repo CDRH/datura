@@ -7,16 +7,13 @@ module Common
 
   # returns a nokogiri xml object
   def self.convert_tags xml
-    if xml.class == String
-      xml = Nokogiri::XML xml
-    end
     # italic(s)
     xml.css("hi[rend^='italic']").each do |ele|
       ele.name = "em"
       ele.delete "rend"
     end
-    # bold
-    xml.css("hi[rend='bold']").each do |ele|
+    # bold (sometimes they include bold as second part of attr)
+    xml.css("hi[rend~='bold']").each do |ele|
       ele.name = "strong"
       ele.delete "rend"
     end
@@ -26,6 +23,13 @@ module Common
       ele.delete "rend"
     end
     return xml
+  end
+
+  # wrap in order to make valid xml
+  def self.convert_tags_in_string text
+    xml = Nokogiri::XML "<xml>#{text}</xml>"
+    converted = convert_tags xml
+    return converted.xpath("//xml").inner_html
   end
 
   def self.create_xml_object filepath, remove_ns=true

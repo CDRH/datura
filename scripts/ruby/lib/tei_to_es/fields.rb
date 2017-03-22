@@ -148,8 +148,10 @@ class TeiToEs
     # handling separate fields in array
     # means no worrying about handling spacing between words
     text = []
-    body = get_text(@xpaths["text"], true)
-    text << Common.convert_tags(body)
+    body = get_text(@xpaths["text"], false)
+    text << body
+    # TODO: do we need to preserve tags like <i> in text? if so, turn get_text to true
+    # text << Common.convert_tags_in_string(body)
     text += text_additional
     return text.join(" ")
   end

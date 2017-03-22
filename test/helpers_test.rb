@@ -25,6 +25,9 @@ class HelpersTest < Minitest::Test
     texts = test5a.xpath("//text")
     test5b = "Text <strong>Portion</strong> 1Text Portion 2"
     assert_equal Common.convert_tags(texts).inner_html, test5b
+
+    test6a = Nokogiri::XML '<xml>leaving to become an assistant editor of <hi rend="italic">The Nation</hi>, and a regular contributor to the <hi rend="italic">Atlantic Monthly</hi> and <hi rend="italic">Harper’s</hi></xml>'
+    assert_equal Common.convert_tags(test6a).inner_html, "<xml>leaving to become an assistant editor of <em>The Nation</em>, and a regular contributor to the <em>Atlantic Monthly</em> and <em>Harper&#x2019;s</em></xml>"
   end
 
   def test_date_display
