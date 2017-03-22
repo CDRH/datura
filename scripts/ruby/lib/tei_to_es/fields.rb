@@ -112,6 +112,10 @@ class TeiToEs
     get_text @xpaths["publisher"]
   end
 
+  def recipients
+    get_list @xpaths["recipients"]
+  end
+
   def rights
     # Note: override by project as needed
     "All Rights Reserved"

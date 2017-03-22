@@ -19,6 +19,12 @@ class HelpersTest < Minitest::Test
     test4a = Nokogiri::XML "<xml><hi rend='underline'>Test</hi> <hi rend='underlined'>Underline</hi></xml>"
     test4b = "<xml><u>Test</u> <u>Underline</u></xml>"
     assert_equal Common.convert_tags(test4a).inner_html, test4b
+
+    # test with multiple blobs
+    test5a = Nokogiri::XML '<xml><text>Text <hi rend="bold">Portion</hi> 1</text><text>Text Portion 2</text></xml>'
+    texts = test5a.xpath("//text")
+    test5b = "Text <strong>Portion</strong> 1Text Portion 2"
+    assert_equal Common.convert_tags(texts).inner_html, test5b
   end
 
   def test_date_display

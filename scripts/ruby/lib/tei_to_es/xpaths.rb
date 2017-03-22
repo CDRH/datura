@@ -13,7 +13,7 @@ class TeiToEs
       "creators" => [
         "/TEI/teiHeader/fileDesc/titleStmt/author",
         "//persName[@type = 'author']",
-        "/TEI/teiHeader/fileDesc/sourceDesc/bible/author"
+        "/TEI/teiHeader/fileDesc/sourceDesc/bibl/author"
       ],
       "date" => "/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@when",
       "formats" => {

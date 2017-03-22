@@ -45,7 +45,9 @@ class ProjectTest < Minitest::Test
         file["matches"].each do |tcase|
           doc = res.select {|d| d["identifier"] == tcase["identifier"] }[0]
           if doc && doc.length > 0
-            assert_equal doc["creator_sort"], tcase["creator_sort"]
+            tcase.each do |key, value|
+              assert_equal value, doc[key], "Problem with #{key}"
+            end
           else
             puts "could not find a doc matching test case"
             puts "in test case: #{tcase}"

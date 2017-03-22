@@ -23,7 +23,7 @@ require_relative "tei_to_es/xpaths.rb"
 
 class TeiToEs
 
-  attr_reader :json
+  attr_reader :json, :xml
   # variables
   # id, xml, parent_xml, options
 
@@ -128,12 +128,13 @@ class TeiToEs
     ##########
     # people #
     ##########
-    @json["creator_sort"] = creator_sort
-    @json["people"] = person_sort
     # container fields
     @json["person"] = person
     @json["contributor"] = contributors
     @json["creator"] = creator
+    # can draw off of container fields
+    @json["creator_sort"] = creator_sort
+    @json["people"] = person_sort
 
     ###########
     # spatial #
