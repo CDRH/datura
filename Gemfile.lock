@@ -7,9 +7,9 @@ GEM
       i18n
     builder (3.2.3)
     colorize (0.8.1)
-    concurrent-ruby (1.0.4)
+    concurrent-ruby (1.0.5)
     diff-lcs (1.3)
-    domain_name (0.5.20161129)
+    domain_name (0.5.20170223)
       unf (>= 0.0.5, < 1.0.0)
     ebnf (1.1.0)
       rdf (~> 2.0)
@@ -23,7 +23,7 @@ GEM
     htmlentities (4.3.4)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
-    i18n (0.7.0)
+    i18n (0.8.1)
     json-ld (2.1.2)
       multi_json (~> 1.12)
       rdf (~> 2.1)
@@ -64,11 +64,11 @@ GEM
     multi_json (1.12.1)
     net-http-persistent (2.9.4)
     netrc (0.11.0)
-    nokogiri (1.7.0.1)
+    nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
     public_suffix (2.0.5)
     rake (12.0.0)
-    rdf (2.2.3)
+    rdf (2.2.5)
       hamster (~> 3.0)
       link_header (~> 0.0, >= 0.0.8)
     rdf-aggregate-repo (2.1.0)
@@ -119,7 +119,7 @@ GEM
       rdf (~> 2.2)
     rdf-xsd (2.1.0)
       rdf (~> 2.1)
-    rest-client (2.0.0)
+    rest-client (2.0.1)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
@@ -136,7 +136,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.5.0)
     rspec-support (3.5.0)
-    sparql (2.1.0)
+    sparql (2.2.0)
       builder (~> 3.2)
       ebnf (~> 1.1)
       rdf (~> 2.1)
@@ -149,7 +149,7 @@ GEM
       rdf (~> 2.0)
     sxp (1.0.0)
       rdf (~> 2.0)
-    tilt (2.0.6)
+    tilt (2.0.7)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.2)
@@ -167,4 +167,4 @@ DEPENDENCIES
   rspec
 
 BUNDLED WITH
-   1.14.3
+   1.14.6
