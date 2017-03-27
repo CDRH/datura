@@ -29,19 +29,33 @@
 <!-- ================================================ -->
 <!--                       ADD                        -->
 <!-- ================================================ -->
-
-<xsl:template match="add">
-  <xsl:choose>
-    <xsl:when test="@place='superlinear' or @place='supralinear'">
-      <sup>
-        <xsl:apply-templates/>
-      </sup>
-    </xsl:when>
-    <xsl:otherwise>
-      <xsl:apply-templates/>
-    </xsl:otherwise>
-  </xsl:choose>
-</xsl:template>
+  
+  <xsl:template match="add">
+    <xsl:choose>
+      <xsl:when test="@place='superlinear' or @place='supralinear'">
+        <sup>
+          <xsl:apply-templates/>
+        </sup>
+      </xsl:when>
+      <xsl:otherwise>
+        <span>
+          <xsl:attribute name="class">
+            <xsl:if test="@*">
+              <xsl:for-each select="@*">
+                <xsl:text>tei_add_</xsl:text>
+                <xsl:value-of select="name()"/>
+                <xsl:text>_</xsl:text>
+                <xsl:value-of select="."/>
+                <xsl:text> </xsl:text>
+              </xsl:for-each>
+            </xsl:if>
+            <xsl:text>tei_add</xsl:text>
+          </xsl:attribute>
+          <xsl:apply-templates/>
+        </span>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
 
 <!-- ================================================ -->
 <!--                       BOLD                       -->
@@ -112,28 +126,29 @@
   </span>
 </xsl:template>
 
-<!-- ================================================ -->
-<!--                      DELETE                      -->
-<!-- ================================================ -->
-
-<xsl:template match="del">
-  <xsl:choose>
-    <xsl:when test="@type='overwrite'">
-      <!-- Don't show overwritten text -->
-    </xsl:when>
-    <xsl:otherwise>
-      <del>
-        <xsl:if test="@reason">
-          <xsl:attribute name="class">
-            <xsl:value-of select="@reason"/>
-          </xsl:attribute>
-        </xsl:if>
-        <xsl:apply-templates/>
-        <!-- <xsl:text>[?]</xsl:text> -->
-      </del>
-    </xsl:otherwise>
-  </xsl:choose>
-</xsl:template>
+  <!-- ================================================ -->
+  <!--                      DELETE                      -->
+  <!-- ================================================ -->
+  
+  <xsl:template match="del">
+    <!-- note, previously I matched on @type='overwrite' or @rend='overwrite' and did not show. Now, instead, I
+    attaches the class tei_del_overwrite, which we can then style with css or hide with javascript. -->
+    
+    <del>
+      <xsl:if test="@*">
+        <xsl:attribute name="class">
+          <xsl:for-each select="@*">
+            <xsl:text>tei_del_</xsl:text>
+            <xsl:value-of select="name()"/>
+            <xsl:text>_</xsl:text>
+            <xsl:value-of select="."/>
+            <xsl:text> </xsl:text>
+          </xsl:for-each>
+        </xsl:attribute>
+      </xsl:if>
+      <xsl:apply-templates/>
+    </del>
+  </xsl:template>
 
 <!-- ================================================ -->
 <!--                  DIV1 and DIV2                   -->
@@ -335,7 +350,6 @@
 <!--                       LINKS                      -->
 <!-- ================================================ -->
 
-
 <xsl:template match="xref[@n]">
   <a href="{@n}">
     <xsl:apply-templates/>
@@ -343,28 +357,29 @@
 </xsl:template>
 
 <!-- ================================================ -->
-<!--                       LINKS                      -->
+<!--                       LISTS                      -->
 <!-- ================================================ -->
+  <!-- need to account for more complicated list structures. For instance, you can have a <p> -->
 
 <xsl:template match="list">
   <xsl:if test="head">
     <div class="tei_list_head"><xsl:apply-templates select="head/node()"/></div>
   </xsl:if>
-  <xsl:choose>
-    <xsl:when test="@type='handwritten'">
-      <ul>
-        <xsl:attribute name="class">
-          <xsl:text>handwritten</xsl:text>
-        </xsl:attribute>
-        <xsl:apply-templates select="item"/>
-      </ul>
-    </xsl:when>
-    <xsl:otherwise>
-      <ul>
-        <xsl:apply-templates select="item"/>
-      </ul>
-    </xsl:otherwise>
-  </xsl:choose>
+    <ul>
+      <xsl:attribute name="class">
+        <xsl:if test="@*">
+          <xsl:for-each select="@*">
+            <xsl:text>tei_list_</xsl:text>
+            <xsl:value-of select="name()"/>
+            <xsl:text>_</xsl:text>
+            <xsl:value-of select="."/>
+            <xsl:text> </xsl:text>
+          </xsl:for-each>
+        </xsl:if>
+        <xsl:text>tei_list</xsl:text>
+      </xsl:attribute>
+      <xsl:apply-templates select="item"/>
+    </ul>
 </xsl:template>
 
 <xsl:template match="item">
@@ -436,10 +451,10 @@
 <!--                    PARAGRAPHS                    -->
 <!-- ================================================ -->
 
-  <!-- todo - build a better sheet. Right now, paragraphs could appear in other paragraphs, need to find a way to account for the weirdest encoding -KMD -->
+  <!-- todo - this could be better, need to do a full evaluation of things that are illegal within a p -KMD -->
 <xsl:template match="p">
   <xsl:choose>
-    <xsl:when test="ancestor::p">
+    <xsl:when test="descendant::list or descendant::p">
       <div class="p">
         <xsl:apply-templates/>
       </div>
@@ -519,12 +534,8 @@
     <xsl:attribute name="rel">
       <xsl:text>tooltip</xsl:text>
     </xsl:attribute>
-    <xsl:attribute name="class">
-      <xsl:text>sic</xsl:text>
-    </xsl:attribute>
-    <xsl:attribute name="title">
-      <xsl:apply-templates select="corr"/>​ 
-    </xsl:attribute>
+    <xsl:attribute name="class"><xsl:text>sic</xsl:text></xsl:attribute>
+    <xsl:attribute name="title"><xsl:apply-templates select="corr"/>​</xsl:attribute>
     <xsl:apply-templates select="sic"/>
   </a>
   </xsl:template>
@@ -637,8 +648,15 @@
 <!--                    UNDERLINE                     -->
 <!-- ================================================ -->
 
-<xsl:template match="hi[@rend='underlined'] | hi[@rend='underline']" priority="1">
-  <u><xsl:apply-templates/></u>
+  <xsl:template match="hi[@rend='underlined'] | hi[@rend='underline'] | emph[@rend='underline']" priority="1">
+  <u>
+    <xsl:attribute name="class">
+      <xsl:text>tei_</xsl:text>
+      <xsl:value-of select="name()"/>
+      <xsl:text>_underline</xsl:text>
+    </xsl:attribute>
+    <xsl:apply-templates/>
+  </u>
 </xsl:template>
 
 
