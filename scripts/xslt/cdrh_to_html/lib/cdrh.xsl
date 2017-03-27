@@ -89,29 +89,7 @@
     TEMPLATES: Param controlled
     =================================================================================== -->
   
-  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    FW (Form Work)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
   
-  <xsl:template match="fw">
-    
-      <xsl:choose>
-        <xsl:when test="ancestor::p">
-          <span class="h6"><xsl:apply-templates/></span>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:if test="not(@type='sub')">
-            <h6>
-              <xsl:attribute name="class">
-                <xsl:value-of select="name()"/>
-              </xsl:attribute>
-              <xsl:apply-templates/>
-            </h6>
-          </xsl:if>
-        </xsl:otherwise>
-      </xsl:choose>
-    
-  </xsl:template>
 
   
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -172,14 +150,17 @@
             <xsl:attribute name="rel">
               <xsl:text>prettyPhoto[pp_gal]</xsl:text>
             </xsl:attribute>
-            <xsl:attribute name="title">
+            <!-- todo This is broken. It is used to create "open in new window" options from pretty 
+              photo popups (http://codyarchive.org/texts/wfc.css00036.html) but right now creates 
+              broken code -kmd -->
+            <!--<xsl:attribute name="title">
               <xsl:text>&lt;a href="</xsl:text>
               <xsl:value-of select="$fig_location"/>
               <xsl:text>large/</xsl:text>
               <xsl:value-of select="$figure_id"/>
               <xsl:text>.jpg</xsl:text>
               <xsl:text>" target="_blank" &gt;open image in new window&lt;/a&gt;</xsl:text>
-            </xsl:attribute>
+            </xsl:attribute>-->
             
             <img>
               <xsl:attribute name="src">

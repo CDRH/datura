@@ -6,6 +6,19 @@
   xpath-default-namespace="http://www.tei-c.org/ns/1.0"
   version="2.0"
   exclude-result-prefixes="xsl tei xs">
+  
+  <!-- this template is used to generate a list of classes that 
+    represent all the attributes and values on a tag for instance, 
+    <fw type="pageNum test" place="top"> would render as "tei_fw_type_pageNum tei_fw_type_test tei_fw_place_top tei_fw" -->
+  <!-- line returns or spaces are passed through to attributes so are removed -->
+  <xsl:template name="add_attributes">
+    <xsl:if test="@*">
+      <xsl:for-each select="@*">
+        <xsl:variable name="att_prefix"><xsl:text>tei_</xsl:text><xsl:value-of select="../name()"/><xsl:text>_</xsl:text><xsl:value-of select="name()"/><xsl:text>_</xsl:text></xsl:variable>
+        <xsl:for-each select="tokenize(.,' ')"><xsl:value-of select="$att_prefix"/><xsl:value-of select="."/><xsl:text> </xsl:text></xsl:for-each>
+      </xsl:for-each>
+    </xsl:if><xsl:text>tei_</xsl:text><xsl:value-of select="name()"/>
+  </xsl:template>
 
 <!-- ================================================ -->
 <!--                   ABBREVIATION                   -->
@@ -40,16 +53,7 @@
       <xsl:otherwise>
         <span>
           <xsl:attribute name="class">
-            <xsl:if test="@*">
-              <xsl:for-each select="@*">
-                <xsl:text>tei_add_</xsl:text>
-                <xsl:value-of select="name()"/>
-                <xsl:text>_</xsl:text>
-                <xsl:value-of select="."/>
-                <xsl:text> </xsl:text>
-              </xsl:for-each>
-            </xsl:if>
-            <xsl:text>tei_add</xsl:text>
+            <xsl:call-template name="add_attributes"/>
           </xsl:attribute>
           <xsl:apply-templates/>
         </span>
@@ -137,13 +141,7 @@
     <del>
       <xsl:if test="@*">
         <xsl:attribute name="class">
-          <xsl:for-each select="@*">
-            <xsl:text>tei_del_</xsl:text>
-            <xsl:value-of select="name()"/>
-            <xsl:text>_</xsl:text>
-            <xsl:value-of select="."/>
-            <xsl:text> </xsl:text>
-          </xsl:for-each>
+          <xsl:call-template name="add_attributes"/>
         </xsl:attribute>
       </xsl:if>
       <xsl:apply-templates/>
@@ -178,6 +176,29 @@
     </xsl:otherwise>
   </xsl:choose>
 </xsl:template>
+  
+  <!-- ================================================ -->
+  <!--                  FORM WORKS                      -->
+  <!-- ================================================ -->
+  
+  <!-- try handling in misc below, uncomment if this does not work out -->
+  <!--<xsl:template match="fw">
+    <xsl:choose>
+      <xsl:when test="ancestor::p">
+        <span class="h6"><xsl:apply-templates/></span>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:if test="not(@type='sub')">
+          <h6>
+            <xsl:attribute name="class">
+              <xsl:value-of select="name()"/>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+          </h6>
+        </xsl:if>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>-->
 
 <!-- ================================================ -->
 <!--                        GAP                       -->
@@ -186,8 +207,7 @@
 <xsl:template match="gap">
   <span>
     <xsl:attribute name="class">
-      <xsl:text>gap </xsl:text>
-      <xsl:value-of select="@reason"/>
+      <xsl:call-template name="add_attributes"/>
     </xsl:attribute>
     <xsl:apply-templates/>
     <xsl:text>[</xsl:text>
@@ -411,19 +431,13 @@
 </xsl:template>
 
 <xsl:template
-  match="byline | docDate | sp | speaker | letter | 
+  match="byline | docDate | sp | speaker | letter | fw |
   notesStmt | titlePart | docDate | ab | trailer | 
-  front | lg | l | bibl | dateline | salute | trailer | titlePage | closer | floatingText | date
-  | resp | respStmt | name | orgName | label | caption | idno">
+  front | lg | l | bibl | dateline | salute | trailer | titlePage | opener | closer | floatingText | date
+  | resp | respStmt | name | orgName | label | caption | idno | signed">
   <span>
-    <xsl:attribute name="class">
-      <xsl:value-of select="name()"/>
-      <xsl:if test="@type"><xsl:text> </xsl:text><xsl:value-of select="@type"/></xsl:if>
-      <xsl:if test="@rend"><xsl:text> </xsl:text><xsl:value-of select="@rend"/></xsl:if>
-      <!--<xsl:if test="not(parent::p)"><xsl:text> p</xsl:text></xsl:if>--> <!-- this is breaking some displays but commeting it out might break others. May need more consideration -todo KMD -->
-    </xsl:attribute>
-    
-        <xsl:apply-templates/>
+    <xsl:attribute name="class"><xsl:call-template name="add_attributes"/></xsl:attribute>
+      <xsl:apply-templates/>
   </span>
 </xsl:template>
 
@@ -544,10 +558,10 @@
 <!--                    SIGNATURE                     -->
 <!-- ================================================ -->
 
-<xsl:template match="//signed">
+<!--<xsl:template match="//signed">
   <br/>
   <xsl:apply-templates/>
-</xsl:template>
+</xsl:template>-->
 
 <!-- ================================================ -->
 <!--                     SPACE                        -->
