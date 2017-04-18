@@ -43,7 +43,8 @@ class FileType
   end
 
   def transform_html
-    # TODO will need to make sure the right params are going through
+    # add html specific variables and shortname as params
+    @options["variables_html"]["shortname"] = @options["shortname"]
     exec_xsl @file_location, @script_html, @out_html, @options["variables_html"]
   end
 
