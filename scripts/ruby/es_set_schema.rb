@@ -2,20 +2,23 @@ require "json"
 require "rest-client"
 require "yaml"
 
+require_relative "lib/options.rb"
 require_relative "lib/parser.rb"
 
-properties = YAML.load_file("config/api_schema.yml")
+this_dir = File.dirname(__FILE__)
+
+params = Parser.es_set_schema_params
+schema = YAML.load_file("config/api_schema.yml")
+options = Options.new(params, "#{this_dir}/../../config", "#{this_dir}/../../projects/#{params['project']}/config").all
 
 begin
-  params = Parser.es_set_schema_params
-  type = params["type"]
-  puts "type: #{type}"
+  idx = options["es_index"]
+  type = options["project"]
 
-  RestClient.put(
-    "localhost:9200/test1/_mapping/#{type}?pretty&update_all_types",
-    properties.to_json,
-    { :content_type => :json }
-  )
+  url = "#{options["es_path"]}/#{idx}/_mapping/#{type}?pretty&update_all_types"
+  puts "environment: #{options["environment"]}"
+  puts "Setting schema: #{url}"
+  RestClient.put(url, schema.to_json, { :content_type => :json })
 rescue => e
   puts "Error: #{e.response}"
 end

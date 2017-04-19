@@ -208,10 +208,8 @@ class EsDataManager
 
     if should_transform "solr"
       if @options["transform_only"]
-        puts "should be transform only"
         res_solr = file.transform_solr(@options["output"])
       else
-        puts "should be in posting"
         res_solr = file.post_solr(@solr_url)
       end
       if res_solr && res_solr.has_key?("error")
