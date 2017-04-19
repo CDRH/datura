@@ -45,6 +45,8 @@ class EsDataManager
       @options = Options.new(params, "#{@repo_dir}/config", "#{@proj_dir}/config").all
       @options["proj_dir"] = @proj_dir
       @log = Logger.new("#{@repo_dir}/logs/#{@project}-#{@options['environment']}.log")
+      @es_url = "#{@options['es_path']}/#{@options['es_index']}"
+      @solr_url = "#{@options['solr_path']}/#{@options['solr_core']}/update"
     else
       puts "Could not find project directory named '#{@project}'!".red
       exit
@@ -126,6 +128,12 @@ class EsDataManager
     @log.close
   end
 
+  def error_with_transform_and_post e, error_obj
+    error_obj << e
+    puts e.red
+    @log.error(e)
+  end
+
   def get_files
     formats = []
     if @options["format"]
@@ -146,7 +154,8 @@ class EsDataManager
     msg << "Running script with following options:\n"
     msg << "Project:     #{@options['project']}\n"
     msg << "Environment: #{@options['environment']}\n"
-    msg << "Posting to:  #{@options['es_path']}/#{@options['es_index']}\n\n"
+    msg << "Posting to:  #{@es_url}\n\n" if should_transform "es"
+    msg << "Posting to:  #{@solr_url}\n\n" if should_transform "solr"
     msg << "Format:      #{@options['format']}\n" if @options["format"]
     msg << "Regex:       #{@options['regex']}\n" if @options["regex"]
     msg << "Update Time: #{@options['update_time']}\n" if @options["update_time"]
@@ -176,27 +185,39 @@ class EsDataManager
   end
 
   def should_transform type
-    return @options["transform_type"].nil? || @options["transform_type"] == type
+    # solr should be specified in order to run, others automatically run if nothing specified
+    if type == "solr"
+      return @options["transform_type"] == type
+    else
+      return @options["transform_type"].nil? || @options["transform_type"] == type
+    end
   end
 
   def transform_and_post file
-    if should_transform("es")
-      res = file.post_es
-      if res && res.has_key?("error")
-        @error_es << res["error"]
-        puts res["error"].red
-        @log.error(res["error"])
+    if should_transform "es"
+      res_es = file.post_es(@es_url)
+      if res_es && res_es.has_key?("error")
+        error_with_transform_and_post res_es["error"], @error_es
       end
     end
 
-    # TODO finish setting up solr and html stuff
-    # file.transform_solr(true) if should_transform("solr")
-    # TODO don't post solr if options["transform-only"] is true
+    res_html = file.transform_html if should_transform "html"
+    if res_html && res_html.has_key?("error")
+      error_with_transform_and_post res_html["error"], @error_html
+    end
 
-    res = file.transform_html if should_transform("html")
-    if res && res.has_key?("error")
-      @error_html << res["error"]
-      @log.error(res["error"])
+    if should_transform "solr"
+      if @options["transform_only"]
+        puts "should be transform only"
+        res_solr = file.transform_solr(@options["output"])
+      else
+        puts "should be in posting"
+        res_solr = file.post_solr(@solr_url)
+      end
+      if res_solr && res_solr.has_key?("error")
+        error_with_transform_and_post res_solr["error"], @error_solr
+      end
     end
   end
+
 end

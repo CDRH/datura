@@ -36,16 +36,65 @@ class FileType
     end
   end
 
-  def transform_es output=false
+  def post_es url=nil
+    url = url || "#{@options["es_path"]}/#{@options["es_index"]}"
+    begin
+      transformed = @es_req || transform_es(@options["output"])
+      if !@options["transform_only"]
+        transformed.each do |doc|
+          id = doc["identifier"]
+          type = @options["es_type"]
+          puts "posting #{id}"
+          puts "PATH: #{url}/#{type}/#{id}" if options["verbose"]
+          # NOTE: If you need to do partial updates rather than replacement of doc
+          # you will need to add _update at the end of this URL
+          RestClient.put("#{url}/#{type}/#{id}", doc.to_json, {:content_type => :json } )
+        end
+      end
+      return { "docs" => transformed }
+    rescue => e
+      return { "error" => "Error transforming or posting to ES for #{self.filename(false)}: #{e.inspect}" }
+    end
+  end
+
+  def post_solr url=nil
+    url = url || "#{@options['solr_path']}/#{@options['solr_core']}/update"
+    begin
+      transformed = @solr_req || transform_solr(@options["output"])
+      solr = SolrPoster.new(url, @options["commit"])
+      # Note: only supporting XML for now since solr is considered "deprecated"
+      # but can extend in the future if necessary
+      res = solr.post_xml(transformed)
+      if res.code == "200"
+        solr.commit_solr
+        return { "docs" => transformed }
+      else
+        return { "error" => "Error posting to Solr for #{self.filename(false)}: #{res.body}" }
+      end
+    rescue => e
+      return { "error" => "Error transforming or posting to Solr for #{self.filename(false)}: #{e.inspect}" }
+    end
+  end
+
+  def print_es
+    json = @es_req || transform_es
+    return pretty_json json
+  end
+
+  def print_solr
+    return @solr_req || transform_solr
+  end
+
+  # def transform_es output=false
     # TODO should there be any default transform behavior at all?
     # each filetype child could have some, but it seems like this
     # won't be able to accommodate dc, vra, tei here alone
-  end
+  # end
 
   def transform_html
     # add html specific variables and shortname as params
     @options["variables_html"]["shortname"] = @options["shortname"]
-    exec_xsl @file_location, @script_html, @out_html, @options["variables_html"]
+    exec_xsl @file_location, @script_html, "html", @out_html, @options["variables_html"]
   end
 
   def transform_solr output=false
@@ -53,22 +102,24 @@ class FileType
     # make sure to override behavior in CSV / YML child classes
     # TODO make sure the right params are going through
     if output
-      return exec_xsl @file_location, @script_solr, @out_solr, @options["variables_solr"]
+      req = exec_xsl @file_location, @script_solr, "xml", @out_solr, @options["variables_solr"]
     else
-      return exec_xsl @file_location, @script_solr, nil, @options["variables_solr"]
+      req = exec_xsl @file_location, @script_solr, "xml", nil, @options["variables_solr"]
     end
+    @solr_req = req["doc"] if req && req.has_key?("doc")
+    return req
   end
 
   private
 
   # TODO will need to make params string at some point
-  def exec_xsl input, xsl, output=nil, params=nil
+  def exec_xsl input, xsl, ext, output=nil, params=nil
     saxon_params = Common.stringify_params(params)
     cmd = "saxon -s:#{input} -xsl:#{xsl}"
     # TODO which way would we rather do this?
-    # cmd << " -o:#{output}/#{filename(false)}.txt" if output
+    # cmd << " -o:#{output}/#{filename(false)}.#{ext}" if output
     cmd << " #{saxon_params}"
-    cmd << " | tee #{output}/#{filename(false)}.txt" if output
+    cmd << " | tee #{output}/#{filename(false)}.#{ext}" if output
     puts "using command #{cmd}" if @options["verbose"]
     Open3.popen3(cmd) do |stdin, stdout, stderr|
       out = stdout.read

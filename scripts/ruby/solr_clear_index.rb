@@ -31,7 +31,7 @@ if confirm && (confirm == "y" || confirm == "Y" || confirm == "Yes" || confirm =
   else
     res = solr.clear_index
   end
-  commit_res = solr.commit_solr
+  solr.commit_solr
 else
   puts "exiting"
   exit
