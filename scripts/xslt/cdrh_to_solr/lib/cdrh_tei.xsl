@@ -24,7 +24,7 @@
   
   <!-- id -->
   <!-- slug -->
-  <!-- project -->
+  <!-- collection -->
   <!-- uri -->
   <!-- uriXML -->
   <!-- uriHTML -->
@@ -124,8 +124,8 @@
         <!-- slug -->
         <xsl:call-template name="slug"/>
         
-        <!-- project -->
-        <xsl:call-template name="project"/>
+        <!-- collection -->
+        <xsl:call-template name="collection"/>
         
         <!-- uri -->
         <xsl:call-template name="uri">
@@ -244,7 +244,7 @@
 
 
         <!-- ==============================
-        Project specific 
+        Collection specific
         ===================================-->
 
         <!-- extra fields -->
@@ -281,11 +281,11 @@
     </field>
   </xsl:template>
 
-  <!-- ========== project ========== -->
+  <!-- ========== collection ========== -->
 
-  <xsl:template name="project">
+  <xsl:template name="collection">
     <field name="project">
-      <xsl:value-of select="$project"/>
+      <xsl:value-of select="$collection"/>
     </field>
   </xsl:template>
 
@@ -661,9 +661,9 @@
   </xsl:template>
 
   <!-- ==================================================================== -->
-  <!--                     PROJECT SPECIFIC FIELDS                          -->
+  <!--                     COLLECTION SPECIFIC FIELDS                       -->
   <!-- ==================================================================== -->
 
-  <xsl:template name="extras"/>  <!-- blank by default, override in specific projects -->
+  <xsl:template name="extras"/>  <!-- blank by default, override in specific collections -->
 
 </xsl:stylesheet>

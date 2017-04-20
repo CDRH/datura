@@ -17,8 +17,8 @@ def main
 
   # run the parameters through the option parser
   params = Parser.clear_index_params
-  options = Options.new(params, "#{this_dir}/../../config", "#{this_dir}/../../projects/#{params['project']}/config").all
-  if params["project"] == "all"
+  options = Options.new(params, "#{this_dir}/../../config", "#{this_dir}/../../collections/#{params['collection']}/config").all
+  if params["collection"] == "all"
     clear_all options
   else
     clear_index options

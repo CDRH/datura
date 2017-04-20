@@ -15,7 +15,7 @@
     PARAMETERS
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
   
-  <!-- Left for project display rules, currently unused -->
+  <!-- Left for collection display rules, currently unused -->
   <xsl:param name="pagetype"></xsl:param>
   <xsl:param name="subpagetype"></xsl:param>
   
@@ -25,7 +25,7 @@
   <xsl:param name="pb">true</xsl:param> <!-- true/false Toggle pb's on and off  -->
   
   <!-- link locations - unsure about how these will work in the "real world" -->
-  <xsl:param name="fig_location"><xsl:text>http://rosie.unl.edu/data_images/projects/cody/figures/</xsl:text></xsl:param> <!-- set figure location  -->
+  <xsl:param name="fig_location"><xsl:text>http://rosie.unl.edu/data_images/collections/cody/figures/</xsl:text></xsl:param> <!-- set figure location  -->
   <!-- delete --><xsl:param name="keyword_link"><xsl:text>../../</xsl:text></xsl:param> <!-- set keyword link location  -->
   
   
@@ -44,8 +44,8 @@
       <h3>Metadata</h3>
       <dl>
         
-        <!-- ___Project___ -->
-        <dt>Project:</dt>
+        <!-- ___collection___ -->
+        <dt>collection:</dt>
         <dd><xsl:value-of select="//publicationStmt/authority[1]"/></dd>
         
         
@@ -477,7 +477,7 @@
     </sup>
   </xsl:template>
   
-  <!-- Handwritten From CWW - move into project file? -->
+  <!-- Handwritten From CWW - move into collection file? -->
   <xsl:template match="seg[@type='handwritten']">
     <span>
       <xsl:attribute name="class">
@@ -568,7 +568,7 @@
     </div>
   </xsl:template>
   
-  <!-- CWW Specific, move into project stylesheet? -->
+  <!-- CWW Specific, move into collection stylesheet? -->
   <xsl:template match="space">
     <span class="teispace">
       <xsl:text>[no handwritten text supplied here]</xsl:text>

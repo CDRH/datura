@@ -54,7 +54,7 @@ class TeiToEs
   end
 
   def description
-    # Note: override per project as needed
+    # Note: override per collection as needed
   end
 
   def format
@@ -95,12 +95,12 @@ class TeiToEs
     return get_list @xpaths["places"]
   end
 
-  def project
-    @options["project_desc"] || @options["project"]
+  def collection
+    @options["collection_desc"] || @options["collection"]
   end
 
-  def project_specific_fields
-    # Note: customize this per project to include more information
+  def collection_specific_fields
+    # Note: customize this per collection to include more information
     # to be posted to elasticsearch.  Example:
 
     # json["novel_id"] = get_text @xpaths["novel"]
@@ -117,7 +117,7 @@ class TeiToEs
   end
 
   def rights
-    # Note: override by project as needed
+    # Note: override by collection as needed
     "All Rights Reserved"
   end
 
@@ -126,8 +126,8 @@ class TeiToEs
   end
 
   def rights_uri
-    # by default projects have no uri associated with them
-    # copy this method into project specific tei_to_es.rb
+    # by default collections have no uri associated with them
+    # copy this method into collection specific tei_to_es.rb
     # to return specific string or xpath as required
   end
 
@@ -157,8 +157,8 @@ class TeiToEs
   end
 
   def text_additional
-    # Note: Override this per project if you need additional
-    # searchable fields or information for projects
+    # Note: Override this per collection if you need additional
+    # searchable fields or information for collections
     # just make sure you return an array at the end!
 
     # text = []

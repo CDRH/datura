@@ -3,10 +3,10 @@
 **/config.yml
 **/private.yml
 
-# ignore all the repositories in the projects directory
-projects/*
+# ignore all the repositories in the collections directory
+collections/*
 # except the example directory
-!projects/example
+!collections/example
 
 # ignore tmp directory even though will need to create it each time
 tmp/*

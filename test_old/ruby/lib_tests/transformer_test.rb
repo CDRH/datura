@@ -7,8 +7,8 @@ this_dir = File.dirname(__FILE__)
 repo_dir = "#{this_dir}/../../../"
 fixtures = "#{this_dir}/../fixtures"
 general_config = "#{fixtures}/configs/general.yml"
-project_simple = "#{fixtures}/configs/project_simple.yml"
-options = Options.new({"environment" => "development", "project" => "test_data"}, general_config, project_simple).all
+collection_simple = "#{fixtures}/configs/collection_simple.yml"
+options = Options.new({"environment" => "development", "collection" => "test_data"}, general_config, collection_simple).all
 solr = SolrPoster.new("http://rosie.unl.edu:8080/solr/jessica_testing/update")
 
 tei = "#{fixtures}/tei.xml"
@@ -56,7 +56,7 @@ RSpec.describe "Transformer Test:" do
     it "should return key=value with spaces between" do
       new_params = @t._stringify_params(options["xsl_params"])
       expect(new_params.length).to be > 0
-      expect(new_params).to eq("fig_location=http://server.unl.edu/data_images/projects/example/figures/ file_location=http://server.unl.edu/data/projects/ figures=true fw=true pb=true project=full_name_of_project slug=short_name_of_project")
+      expect(new_params).to eq("fig_location=http://server.unl.edu/data_images/collections/example/figures/ file_location=http://server.unl.edu/data/collections/ figures=true fw=true pb=true collection=full_name_of_collection slug=short_name_of_collection")
     end
   end
 

@@ -1,12 +1,12 @@
 ## Writing and Running Tests
 
-### Writing Tests for Projects
+### Writing Tests for collections
 
-As you are creating a project, you may want to creates some tests to make sure that tricky documents and edgecases are doing what you think they are doing.
+As you are creating a collection, you may want to creates some tests to make sure that tricky documents and edgecases are doing what you think they are doing.
 
-You can create any number of tests for a project in the `projects/[project]/test` directory with the extension `.yml`, and you can put more than one test in a single file.
+You can create any number of tests for a collection in the `collections/[collection]/test` directory with the extension `.yml`, and you can put more than one test in a single file.
 
-At the moment the per-project tests are pretty rudimentary, but you can test things like the following:
+At the moment the per-collection tests are pretty rudimentary, but you can test things like the following:
 
 ```yaml
 - filename: nei.person.xml

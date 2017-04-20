@@ -12,7 +12,7 @@
 	<xsl:param name="figures"/>
 	<xsl:param name="fw"/>  <!-- form works -->
 	<xsl:param name="pb"/>
-	<xsl:param name="project"/>
+	<xsl:param name="collection"/>
 	<xsl:param name="slug"/>
 
 	<xsl:param name="string"/>  <!-- common.xsl is using, but what is it? -->
@@ -68,10 +68,10 @@
 						<xsl:value-of select="$slug"/>
 					</field>
 					
-					<!-- project -->
+					<!-- collection -->
 					
 					<field name="project">
-						<xsl:value-of select="$project"></xsl:value-of>
+						<xsl:value-of select="$collection"></xsl:value-of>
 					</field>
 					
 					<!-- uri -->
@@ -297,7 +297,7 @@
                                         </field>	
 					
 					<!-- ==============================
-					Project specific 
+					Collection specific
 					===================================-->
 					
 					<!-- datesExact_dts -->

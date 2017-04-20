@@ -529,7 +529,7 @@
 <!--                       SEG                        -->
 <!-- ================================================ -->
 
-<!-- Handwritten From CWW - move into project file? -->
+<!-- Handwritten From CWW - move into collection file? -->
 <xsl:template match="seg[@type='handwritten']">
   <span>
     <xsl:attribute name="class">
@@ -567,7 +567,7 @@
 <!--                     SPACE                        -->
 <!-- ================================================ -->
 
-<!-- CWW Specific, move into project stylesheet? -->
+<!-- CWW Specific, move into collection stylesheet? -->
 <xsl:template match="space">
   <span class="teispace">
     <xsl:text>[no handwritten text supplied here]</xsl:text>

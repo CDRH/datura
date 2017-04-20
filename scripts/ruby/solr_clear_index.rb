@@ -13,11 +13,11 @@ this_dir = File.dirname(__FILE__)
 
 # run the parameters through the option parser
 params = Parser.clear_index_params
-options = Options.new(params, "#{this_dir}/../../config/config.yml", "#{this_dir}/../../projects/#{params['project']}/config/config.yml").all
+options = Options.new(params, "#{this_dir}/../../config/config.yml", "#{this_dir}/../../collections/#{params['collection']}/config/config.yml").all
 
 # verify that the user is really sure about the index they're about to wipe
 puts "Are you sure that you want to remove entries from"
-puts " #{options['project']}'s #{options['environment']} environment?"
+puts " #{options['collection']}'s #{options['environment']} environment?"
 puts "y/N"
 confirm = STDIN.gets.chomp
 if confirm && (confirm == "y" || confirm == "Y" || confirm == "Yes" || confirm == "yes")

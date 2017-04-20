@@ -1,34 +1,34 @@
 CDRH Files central repo
 ======
 
-This project supports the population of an API storing data extracted from XML, CSV, YML, and other file types.
+This collection supports the population of an API storing data extracted from XML, CSV, YML, and other file types.
 
 ## The Process
 
-Projects are added as sub repositories. They may contain data in the following formats: TEI P5, VRA, Dublin Core, CSV, and YML.  The following output formats are supported: HTML, Solr XML, Elasticsearch (ES) JSON.
+Collections are added as sub repositories. They may contain data in the following formats: TEI P5, VRA, Dublin Core, CSV, and YML.  The following output formats are supported: HTML, Solr XML, Elasticsearch (ES) JSON.
 
 The files are parsed and formatted into documents appropriate for Solr, Elasticsearch, and HTML snippets, and then these resulting documents are posted to the appropriate locations. There are also several management scripts for creating indexes, managing the schemas, and deleting indexes.
 
 ## The Basics
 
-If this is a brand new project, please refer to [[TODO]] these docs on how to set up a project.
+If this is a brand new collection, please refer to [[TODO]] these docs on how to set up a collection.
 
-To run a basic development environment, give the following a try, subbing in your project name.
+To run a basic development environment, give the following a try, subbing in your collection name.
 
 ```
-ruby scripts/ruby/post_es.rb <project>
+ruby scripts/ruby/post_es.rb <collection>
 ```
 
 Specify an environment to use. By default the script attempts to run "development"
 
 ```
-ruby scripts/ruby/post_es.rb <project> -e production
+ruby scripts/ruby/post_es.rb <collection> -e production
 ```
 
 Run a specific set of files identified by regex.
 
 ```ruby
-ruby scripts/ruby/post_es.rb <project> -r "let.*"
+ruby scripts/ruby/post_es.rb <collection> -r "let.*"
 ==> cat.let.0001.xml
 ==> cat.let.0002.xml
 ```
@@ -50,14 +50,14 @@ ruby scripts/ruby/post_es.rb -h
 ## More Documentation for Users and Devs
 
 - Clearing data from an index
-- Updating or adding to a project and the API
+- Updating or adding to a collection and the API
 - Understanding the config files
 - Writing and running tests
 
 ## More Documentation for Devs
 
 - Installation and requirements to run this repo
-- Setting up a new project
+- Setting up a new collection
 - Legacy tech and setup
 
 
@@ -66,9 +66,9 @@ ruby scripts/ruby/post_es.rb -h
 
 
 
-## Set up Solr Project
+## Set up Solr Collection
 
-Please refer to the instructions in the General wiki for instructions to set up projects which rely on Solr 6 + Cocoon / Rails.
+Please refer to the instructions in the General wiki for instructions to set up collections which rely on Solr 6 + Cocoon / Rails.
 
 
 
@@ -88,10 +88,10 @@ Please refer to the instructions in the General wiki for instructions to set up 
 Developer Guide
 ------
 ##### <a name="solr_core"></a> Setting up Solr / Tomcat
-If you have access to the CDRH intranet, you can find instructions for setting up solr here:  http://libinfo.unl.edu/cdrh/index.php/Solr_Setup.  Otherwise, please refer to solr's documentation about running it as a tomcat webapp.  An example of the type of schema that the CDRH is using for this project can be found here:  TODO put in a link and a document example
+If you have access to the CDRH intranet, you can find instructions for setting up solr here:  http://libinfo.unl.edu/cdrh/index.php/Solr_Setup.  Otherwise, please refer to solr's documentation about running it as a tomcat webapp.  An example of the type of schema that the CDRH is using for this collection can be found here:  TODO put in a link and a document example
 
 ##### <a name="apache"></a> Apache Directory Permissions
-Assuming that you place this project in your web tree, you will need to take care to protect any sensitive information you place it in that you do not want to be accessible through the browser (copywritten material, drafts, passwords, etc).  To protect the configuration files that contain information about your solr instance, you should put these lines in your main apache configuration file.  If you have an older version of Apache, you may need to specify `Order deny,allow` and `Deny from all` instead of using `Require all denied`.
+Assuming that you place this collection in your web tree, you will need to take care to protect any sensitive information you place it in that you do not want to be accessible through the browser (copywritten material, drafts, passwords, etc).  To protect the configuration files that contain information about your solr instance, you should put these lines in your main apache configuration file.  If you have an older version of Apache, you may need to specify `Order deny,allow` and `Deny from all` instead of using `Require all denied`.
 ```
 #
 # Prevent config.yml files that might be in the webtree from being viewable
@@ -129,7 +129,7 @@ sudo chmod +x name_of_command
 Now you should be able to type your command into the terminal and it will pass all the parameters directly to the real saxon.  This saves you some typing and hardcoding in the long run.
 
 ##### <a name="ruby"></a> Ruby / Gems
-Check your version of Ruby by typing `ruby -v`.  This project currently uses ruby 2.1.3.  If you have a different version installed on your machine, it is recommended to use rvm to use multiple versions of ruby without messing up the good thing you've already got going on.  https://rvm.io/
+Check your version of Ruby by typing `ruby -v`.  This collection currently uses ruby 2.1.3.  If you have a different version installed on your machine, it is recommended to use rvm to use multiple versions of ruby without messing up the good thing you've already got going on.  https://rvm.io/
 
 None of the libraries used in the ruby scripts require gems -- they are all built into Ruby.  If you want to run tests, however, you will need gems.  You'll need to consult the rvm documentation to see how to install gems for your particular setup (multi-user, single-user, etc), but if you want to just see what happens, run `bundle install`.  If rvm is set up correctly, it will install the rspec testing gem on your system.
 

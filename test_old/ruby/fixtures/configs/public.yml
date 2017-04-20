@@ -21,15 +21,15 @@ default:
 development:
 
   # NOTE! If you are altering ANY of the xsl_params you must
-  #   copy over ALL of them to the project specific config file
+  #   copy over ALL of them to the collection specific config file
   xsl_params:
-    fig_location: http://server.unl.edu/data_images/projects/example/figures/
-    file_location: http://server.unl.edu/data/projects/
+    fig_location: http://server.unl.edu/data_images/collections/example/figures/
+    file_location: http://server.unl.edu/data/collections/
     figures: true
     fw: true        # form works (page nums, etc)
     pb: true        # page breaks
-    project: full_name_of_project
-    slug: short_name_of_project
+    collection: full_name_of_collection
+    slug: short_name_of_collection
 
 ##################
 #   Production   #
@@ -38,12 +38,12 @@ production:
   solr_core: name_of_core
  
   # NOTE! If you are altering ANY of the xsl_params you must
-  #   copy over ALL of them to the project specific config file
+  #   copy over ALL of them to the collection specific config file
   xsl_params:
-    fig_location: http://server.unl.edu/data_images/projects/example/figures/
-    file_location: http://server.unl.edu/data/projects/
+    fig_location: http://server.unl.edu/data_images/collections/example/figures/
+    file_location: http://server.unl.edu/data/collections/
     figures: true
     fw: true        # form works (page nums, etc)
     pb: true        # page breaks
-    project: full_name_of_project
-    slug: short_name_of_project
+    collection: full_name_of_collection
+    slug: short_name_of_collection

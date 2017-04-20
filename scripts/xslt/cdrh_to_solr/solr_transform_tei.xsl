@@ -11,7 +11,7 @@
   <xsl:import href="lib/common.xsl"/>
   <xsl:import href="lib/tei_personography.xsl"/>
   <xsl:import href="lib/cdrh_tei.xsl"/>
-  <!-- If this file is living in a projects directory, the paths will be
+  <!-- If this file is living in a collections directory, the paths will be
        ../../../scripts/xslt/cdrh_to_solr/lib/common.xsl -->
 
   <xsl:output indent="yes" omit-xml-declaration="yes"/>
@@ -20,11 +20,11 @@
   <!--                           PARAMETERS                                 -->
   <!-- ==================================================================== -->
 
-  <!-- Defined in project config files -->
+  <!-- Defined in collection config files -->
   <xsl:param name="fig_location"/>  <!-- url for figures -->
   <xsl:param name="file_location"/> <!-- url for tei files -->
-  <xsl:param name="project"/>       <!-- longer name of project -->
-  <xsl:param name="slug"/>          <!-- slug of project -->
+  <xsl:param name="collection"/>       <!-- longer name of collection -->
+  <xsl:param name="slug"/>          <!-- slug of collection -->
   <xsl:param name="site_url"/>
         
 
@@ -32,7 +32,7 @@
   <!--                            OVERRIDES                                 -->
   <!-- ==================================================================== -->
 
-  <!-- Individual projects can override matched templates from the
+  <!-- Individual collections can override matched templates from the
        imported stylesheets above by including new templates here -->
   <!-- Named templates can be overridden if included in matched templates
        here.  You cannot call a named template from directly within the stylesheet tag

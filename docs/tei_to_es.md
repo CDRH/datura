@@ -4,14 +4,14 @@ References:
 
 - [Common Ruby Equivalents for Xpath and XSLT](xslt_to_ruby_reference.md) 
 
-In each project, there should be a file in `scripts/tei_to_es.rb`.  It can be used to override xpaths and behavior found in `scripts/ruby/lib/tei_to_es.rb` and can be considered to be taking the place of the old XSLT stylesheets.  Previously, you need to understand XSLT in order to alter these overrides.  Now, instead, you must have an understanding of Ruby.  The following document may be easier to follow if you have a working knowledge of the following in Ruby:
+In each collection, there should be a file in `scripts/tei_to_es.rb`.  It can be used to override xpaths and behavior found in `scripts/ruby/lib/tei_to_es.rb` and can be considered to be taking the place of the old XSLT stylesheets.  Previously, you need to understand XSLT in order to alter these overrides.  Now, instead, you must have an understanding of Ruby.  The following document may be easier to follow if you have a working knowledge of the following in Ruby:
 
 - variables
 - arrays
 - hashes
 - string methods
 
-Each project must have a `tei_to_es.rb` file, even if there are no overrides.  At bare minimum, the file should look like the following:
+Each collection must have a `tei_to_es.rb` file, even if there are no overrides.  At bare minimum, the file should look like the following:
 
 ```
 class TeiToEs
@@ -43,7 +43,7 @@ I'll go through them in sections.
 
 ### Overriding XPaths
 
-At `scripts/ruby/lib/tei_to_es/xpaths.rb` you can find a list of all the default xpaths being used by the default fields.  If you run your project with no customization, the script will do the best it can with these defaults.  But let's say that your xml file doesn't have the publisher information in the same place as the default.
+At `scripts/ruby/lib/tei_to_es/xpaths.rb` you can find a list of all the default xpaths being used by the default fields.  If you run your collection with no customization, the script will do the best it can with these defaults.  But let's say that your xml file doesn't have the publisher information in the same place as the default.
 
 #### Override XPath Basic
 
@@ -53,7 +53,7 @@ At `scripts/ruby/lib/tei_to_es/xpaths.rb` you can find a list of all the default
 "publisher" => /TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/publisher[1]"
 ```
 
-You would add the following code to your project's `tei_to_es.rb` file:
+You would add the following code to your collection's `tei_to_es.rb` file:
 
 ```ruby
 def override_xpaths
@@ -66,7 +66,7 @@ def override_xpaths
 end
 ```
 
-Now your project will use your xpath but otherwise behave the same way as before.  That is, if it was returning a list of publishers previously, it will still attempt to return a list.  In our example, we know there is only `[1]` (the first) publisher being returned, so it's a good idea to specify that again in our override.
+Now your collection will use your xpath but otherwise behave the same way as before.  That is, if it was returning a list of publishers previously, it will still attempt to return a list.  In our example, we know there is only `[1]` (the first) publisher being returned, so it's a good idea to specify that again in our override.
 
 #### Override XPath List
 
@@ -82,7 +82,7 @@ But let's say we need to override something that has several options!  How would
 If we want to ADD to the list:
 
 ```ruby
-xpaths["creators"] << "//another/xpath/for/project"
+xpaths["creators"] << "//another/xpath/for/collection"
 ```
 
 If we want to ONLY have our new xpath in the list, we will have to make sure that it still looks like the array that ruby is expecting, since the old "creators" was an array:
@@ -196,21 +196,21 @@ Here is a very basic example which changes a hardcoded string response:
 # default version
 
 def self.rights
-  # Note: override by project as needed
+  # Note: override by collection as needed
   "All Rights Reserved"
 end
 
-# project version
+# collection version
 
 def self.rights
-  "For rights information, visit projectname.unl.edu/rights"
+  "For rights information, visit collectionname.unl.edu/rights"
 end
 ```
 
-Oh shoot, but your project actually has information encoded in the TEI document itself which varies from file to file!  Not to worry, you can override the field and use one of your xpaths!
+Oh shoot, but your collection actually has information encoded in the TEI document itself which varies from file to file!  Not to worry, you can override the field and use one of your xpaths!
 
 ```ruby
-# project version
+# collection version
 
 def self.rights
   get_text @xpaths["rights_holder"]

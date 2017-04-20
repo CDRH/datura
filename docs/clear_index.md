@@ -3,14 +3,14 @@
 There are two scripts which can be used to clear documents from indexes.  One is for solr, the other is for elasticsearch.
 
 ```
-ruby scripts/ruby/solr_clear_index.rb [project] -[options]...
-ruby scripts/ruby/es_clear_index.rb [project] -[options]...
+ruby scripts/ruby/solr_clear_index.rb [collection] -[options]...
+ruby scripts/ruby/es_clear_index.rb [collection] -[options]...
 ```
 
 Both of the scripts have the same usage and behavior.
 
 ```
-Usage: ruby [type]_clear_index.rb [project] -[options]...
+Usage: ruby [type]_clear_index.rb [collection] -[options]...
     -h, --help                       Computer, display script options.
     -e, --environment [input]        Environment (test, production)
     -f, --field [input]              The specific field regex is run on
@@ -54,4 +54,4 @@ If you want to start from scratch and nuke an index, run the following:
 ./scripts/shell/es_delete_index.sh name_of_index
 ```
 
-Be careful, as the above will wipe out all types from an index.  For example, if you run in on the "api" index, you will lose every project ever.
+Be careful, as the above will wipe out all types from an index.  For example, if you run in on the "api" index, you will lose every collection ever.

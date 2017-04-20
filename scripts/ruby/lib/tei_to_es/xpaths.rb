@@ -1,7 +1,7 @@
 class TeiToEs
-  # These are the default xpaths that are used for projects
+  # These are the default xpaths that are used for collections
   #  if you require a different xpath, please override the xpath in
-  #  the specific project's TeiToEs file or create a new method
+  #  the specific collection's TeiToEs file or create a new method
   #  in that file which returns a different value
   def xpaths_list
     {

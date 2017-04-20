@@ -9,8 +9,8 @@ class FileTei < FileType
   attr_reader :es_req
 
 
-  def initialize file_location, proj_dir, options
-    super file_location, proj_dir, options
+  def initialize file_location, coll_dir, options
+    super file_location, coll_dir, options
     @es_req = nil
     @script_html = options["tei_html_xsl"]
     @script_solr = options["tei_solr_xsl"]

@@ -3,43 +3,43 @@ require "minitest/autorun"
 require "yaml"
 require_relative "classes.rb"
 
-class ProjectTest < Minitest::Test
+class CollectionTest < Minitest::Test
   # start with empty tests and build them from yml files
   this_file_dir = File.dirname(__FILE__)
   all_tests = {}
-  projects_dir = "#{this_file_dir}/../projects"
+  collections_dir = "#{this_file_dir}/../collections"
 
-  # find and collect all of the project's test ymls
-  projects = Dir.entries(projects_dir)
-  projects.each do |project|
-    test_dir = "#{projects_dir}/#{project}/test"
+  # find and collect all of the collection's test ymls
+  collections = Dir.entries(collections_dir)
+  collections.each do |collection|
+    test_dir = "#{collections_dir}/#{collection}/test"
     if File.directory?(test_dir)
       Dir.glob("#{test_dir}/*.yml").each do |file|
         yml = YAML.load_file(file)
-        if all_tests.has_key?(project)
-          all_tests[project] += yml
+        if all_tests.has_key?(collection)
+          all_tests[collection] += yml
         else
-          all_tests[project] = yml
+          all_tests[collection] = yml
         end
       end
     end
   end
 
-  # create the tests from the projects
-  all_tests.each do |project, files|
+  # create the tests from the collections
+  all_tests.each do |collection, files|
     count = 0
     files.each do |file|
       filename = file["filename"]
 
       # create a minitest dynamically for each file
-      define_method "test_#{project}_#{count}" do
-        path = "#{projects_dir}/#{project}/#{file["type"]}/#{filename}"
+      define_method "test_#{collection}_#{count}" do
+        path = "#{collections_dir}/#{collection}/#{file["type"]}/#{filename}"
         options = {
           "environment" => "test",
-          "project" => project,
-          "es_type" => project,
+          "collection" => collection,
+          "es_type" => collection,
         }
-        tei = FileTei.new(path, "#{projects_dir}/#{project}", options)
+        tei = FileTei.new(path, "#{collections_dir}/#{collection}", options)
         res = tei.transform_es
         assert_equal res.length, file["count"]
         file["matches"].each do |tcase|

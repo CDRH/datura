@@ -7,8 +7,8 @@
   <xsl:param name="date"/>
   <xsl:param name="string"/>
   <xsl:param name="site_location">http://rosie.unl.edu/transmississippi/</xsl:param>
-  <xsl:param name="file_location">http://rosie.unl.edu/data/projects/</xsl:param>
-  <xsl:param name="project" select="/TEI/teiHeader/fileDesc/publicationStmt/authority[1]"></xsl:param>
+  <xsl:param name="file_location">http://rosie.unl.edu/data/collections/</xsl:param>
+  <xsl:param name="collection" select="/TEI/teiHeader/fileDesc/publicationStmt/authority[1]"></xsl:param>
   
   <xsl:include href="lib/common.xsl"/>
   
@@ -16,7 +16,7 @@
     <xsl:variable name="filename" select="tokenize(base-uri(.), '/')[last()]"/>
     <!-- The part of the url after the main document structure and before the filename. 
       Collected so we can link to files, even if they are nested, i.e. whitmanarchive/manuscripts -->
-    <xsl:variable name="slug" select="substring-before(substring-before(substring-after(base-uri(.),'data/projects/'),$filename),'/')"/>
+    <xsl:variable name="slug" select="substring-before(substring-before(substring-after(base-uri(.),'data/collections/'),$filename),'/')"/>
     
     <!-- Split the filename using '\.' -->
     <xsl:variable name="filenamepart" select="substring-before($filename, '.xml')"/>
@@ -24,7 +24,7 @@
     <!-- Set file type, based on containing folder -->
     <!--<xsl:variable name="type">
       <xsl:variable name="path">
-        <xsl:text>data/projects/</xsl:text>
+        <xsl:text>data/collections/</xsl:text>
         <xsl:value-of select="$slug"></xsl:value-of>
         <xsl:text>/</xsl:text>
       </xsl:variable>
@@ -45,7 +45,7 @@
   
   <!-- id -->
   <!-- slug -->
-  <!-- project -->
+  <!-- collection -->
   <!-- uri -->
   <!-- uriXML -->
   <!-- uriHTML -->
@@ -140,10 +140,10 @@
           <xsl:value-of select="$slug"/>
         </field>
         
-        <!-- project -->
+        <!-- collection -->
         
         <field name="project">
-          <xsl:value-of select="$project"/>
+          <xsl:value-of select="$collection"/>
         </field>
         
         <!-- uri -->
@@ -406,7 +406,7 @@
         <!-- recipient -->
         <!-- recipients -->
         
-        <!-- This is currently the way we encode for Neihardt. Other projects may need special rules. 
+        <!-- This is currently the way we encode for Neihardt. Other collections may need special rules.
           Also, the TEI rules for may change.
           Currently, there is only one persName per letter, but that too could change
         -->

@@ -21,8 +21,8 @@
         <!-- slug -->
         <xsl:call-template name="slug"/>
 
-        <!-- project -->
-        <xsl:call-template name="project"/>
+        <!-- collection -->
+        <xsl:call-template name="collection"/>
 
         <!-- uri -->
         <xsl:call-template name="uri">

@@ -5,7 +5,7 @@ require_relative "./requirer.rb"
 
 class EsDataManager
   attr_reader :log
-  attr_reader :proj_dir
+  attr_reader :coll_dir
   attr_reader :repo_dir
   attr_reader :time
 
@@ -15,7 +15,7 @@ class EsDataManager
 
   attr_accessor :files
   attr_accessor :options
-  attr_accessor :project
+  attr_accessor :collection
 
   def self.format_to_class
     {
@@ -35,20 +35,20 @@ class EsDataManager
     # combine user input and config files
     # TODO this name is gonna need to change fo sho
     params = Parser.post_params
-    @project = params["project"]
+    @collection = params["collection"]
     # assign locations
     @repo_dir = "#{File.dirname(__FILE__)}/../../.."
-    @proj_dir = "#{@repo_dir}/projects/#{@project}"
-    load_project_classes
-    # check if project exists
-    if File.directory?(@proj_dir)
-      @options = Options.new(params, "#{@repo_dir}/config", "#{@proj_dir}/config").all
-      @options["proj_dir"] = @proj_dir
-      @log = Logger.new("#{@repo_dir}/logs/#{@project}-#{@options['environment']}.log")
+    @coll_dir = "#{@repo_dir}/collections/#{@collection}"
+    load_collection_classes
+    # check if collection exists
+    if File.directory?(@coll_dir)
+      @options = Options.new(params, "#{@repo_dir}/config", "#{@coll_dir}/config").all
+      @options["coll_dir"] = @coll_dir
+      @log = Logger.new("#{@repo_dir}/logs/#{@collection}-#{@options['environment']}.log")
       @es_url = "#{@options['es_path']}/#{@options['es_index']}"
       @solr_url = "#{@options['solr_path']}/#{@options['solr_core']}/update"
     else
-      puts "Could not find project directory named '#{@project}'!".red
+      puts "Could not find collection directory named '#{@collection}'!".red
       exit
     end
   end
@@ -63,10 +63,10 @@ class EsDataManager
 
   # TODO should this happen here or in the FileType specific to each one?
   # or maybe just all of them get loaded in the generic FileType class??
-  def load_project_classes
-    # load project scripts at this point so they will override
+  def load_collection_classes
+    # load collection scripts at this point so they will override
     # any of the default ones (for example: TeiToEs)
-    Dir["#{@proj_dir}/scripts/*.rb"].each do |f|
+    Dir["#{@coll_dir}/scripts/*.rb"].each do |f|
       require f
     end
   end
@@ -82,7 +82,7 @@ class EsDataManager
       batch_process_files
       end_run
     else
-      raise "Check project specific config files for missing 'es_type' ".red
+      raise "Check collection specific config files for missing 'es_type' ".red
     end
   end
 
@@ -92,7 +92,7 @@ class EsDataManager
   def batch_process_files
     # in batches
       # transform to json
-      # if requested, write json to project files
+      # if requested, write json to collection files
       # post json to elastic search if requested
       # transform with xsl to html if requested
     #
@@ -143,7 +143,7 @@ class EsDataManager
     end
     files = []
     formats.each do |format|
-      found = get_directory_files "#{@proj_dir}/#{format}"
+      found = get_directory_files "#{@coll_dir}/#{format}"
       files += found if found
     end
     return files
@@ -152,7 +152,7 @@ class EsDataManager
   def options_msg all=false
     msg = "Start Time: #{Time.now}\n"
     msg << "Running script with following options:\n"
-    msg << "Project:     #{@options['project']}\n"
+    msg << "collection:     #{@options['collection']}\n"
     msg << "Environment: #{@options['environment']}\n"
     msg << "Posting to:  #{@es_url}\n\n" if should_transform "es"
     msg << "Posting to:  #{@solr_url}\n\n" if should_transform "solr"
@@ -174,7 +174,7 @@ class EsDataManager
       dirname = File.basename(File.dirname(f))
       type = EsDataManager.format_to_class[dirname]
       if type
-        file_classes << type.new(f, @proj_dir, @options)
+        file_classes << type.new(f, @coll_dir, @options)
       else
         msg = "Could not create filetype #{type}"
         puts msg.red

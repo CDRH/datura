@@ -9,11 +9,11 @@ this_dir = File.dirname(__FILE__)
 
 params = Parser.es_set_schema_params
 schema = YAML.load_file("config/api_schema.yml")
-options = Options.new(params, "#{this_dir}/../../config", "#{this_dir}/../../projects/#{params['project']}/config").all
+options = Options.new(params, "#{this_dir}/../../config", "#{this_dir}/../../collections/#{params['collection']}/config").all
 
 begin
   idx = options["es_index"]
-  type = options["project"]
+  type = options["es_type"]
 
   url = "#{options["es_path"]}/#{idx}/_mapping/#{type}?pretty&update_all_types"
   puts "environment: #{options["environment"]}"

@@ -1,6 +1,6 @@
 module Parser
   def self.es_set_schema_params
-    @usage = "Usage: ruby scripts/ruby/es_set_schema.rb project -e environment"
+    @usage = "Usage: ruby scripts/ruby/es_set_schema.rb collection -e environment"
     options = {}
 
     optparse = OptionParser.new do |opts|
@@ -21,7 +21,7 @@ module Parser
     end
 
     optparse.parse!
-    options["project"] = Parser.argv_projects(ARGV)
+    options["collection"] = Parser.argv_collections(ARGV)
     return options
   end
 end

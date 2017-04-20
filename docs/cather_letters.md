@@ -35,10 +35,10 @@ cd /var/local/www/data/
 
 If you have made any changes to files on your computer, you'll need to pull them to the server. 
 
-Change directories to your project folder
+Change directories to your collection folder
 
 ```
-cd projects/cather_letters
+cd collections/cather_letters
 ```
 
 (where cather_letters is the folder containing the data repo you want to update)
@@ -61,7 +61,7 @@ In order to populate the TEI you just pulled, change directories back to your da
 cd ../..
 ```
 
-This will put you back at the data repo folder. From there, you can run the update scripts. Full documentation of running the scripts is found in [update_project.md](update_project.md) and for clearing the index in [clear_index.md](clear_index.md), but I'll spell out a few commands you'll run frequently below.
+This will put you back at the data repo folder. From there, you can run the update scripts. Full documentation of running the scripts is found in [update_collection.md](update_collection.md) and for clearing the index in [clear_index.md](clear_index.md), but I'll spell out a few commands you'll run frequently below.
 
 ### Posting Documents
 
@@ -71,7 +71,7 @@ To post all the documents in one data repo, run:
 ruby scripts/ruby/es_post.rb data_cather -e development -x es
 ```
 
-to find out the options for this script run it with a -h flag. More documentation here: [update_project.md](update_project.md)
+to find out the options for this script run it with a -h flag. More documentation here: [update_collection.md](update_collection.md)
 
 ### Producing HTML
 
@@ -135,10 +135,10 @@ First, you'll need to decide on local development vs working on the server. If y
 Alternately, you can set your environmet up locally and run it. A loose description is below, but refer to a dev team member to help you get everything set up in the correct spot. The following instructions are for OSX, if we encounter windows users we'll need to figure it out!
 
 1. Install RVM on your mac. https://rvm.io/
-    - This will allow you to have several different versions of ruby running on your computer and keep up with the version set for our data projects.
+    - This will allow you to have several different versions of ruby running on your computer and keep up with the version set for our data collections.
 2. Download the data git repo: https://github.com/CDRH/data
     - currently, this needs to be set to the "es" branch
-3. Download the data_cather repos into data/projects
+3. Download the data_cather repos into data/collections
 4. cd into the data repo from a terminal. When RVM is installed, this will set the correct Ruby version. If you don't have that verison installed, it will prompt you to install the correct version. 
 5. run "bundle install" to install the code needed to run the data repo. 
 
@@ -146,14 +146,14 @@ Alternately, you can set your environmet up locally and run it. A loose descript
 
 I have modeled my approach on Oxygen's XSLT debugger mode, which looks like this:
 
-![Old Oxygen setup](images/project_cather_old_setup.png)
+![Old Oxygen setup](images/collection_cather_old_setup.png)
 
 my new set up looks something like this, and it consists of a text editor with two windows open and a terminal window:
 
-![Example new setup](images/project_cather_new_setup.png)
+![Example new setup](images/collection_cather_new_setup.png)
 
 I make changes in the window with the ruby files, tab over to my terminal window, hit the up key to retreive the last command, and it changes the JSON view so I can check if my changes were correct. Alternately, it may spit out an error. 
 
-![Error message](images/project_cather_error.png)
+![Error message](images/collection_cather_error.png)
  a file at a time, but after a while you may want to omit this and check a bunch of output at once. 
 

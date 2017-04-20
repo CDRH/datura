@@ -16,7 +16,7 @@ class Options
         "d" => "general default private"
       }
     }
-    @project_config_pub = {
+    @collection_config_pub = {
       "default" => {
         "b" => "proj default public"
       },
@@ -25,7 +25,7 @@ class Options
         "c" => "proj dev public"
       }
     }
-    @project_config_priv = {
+    @collection_config_priv = {
       "development" => {
         "c" => "proj dev private"
       },

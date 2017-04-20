@@ -1,6 +1,6 @@
 module Parser
   def self.clear_index_params
-    @usage = "Usage: ruby clear_index.rb [project] -[options]..."
+    @usage = "Usage: ruby clear_index.rb [collection] -[options]..."
     options = {}  # will hold all the options passed in by user
 
     optparse = OptionParser.new do |opts|
@@ -34,7 +34,7 @@ module Parser
     # magic
     optparse.parse!
 
-    options["project"] = argv_projects(ARGV)
+    options["collection"] = argv_collections(ARGV)
 
     return options
   end # ends clear_index_params

@@ -6,7 +6,7 @@ class FileType
   # general information about file
   attr_reader :file_location
   attr_reader :options
-  attr_reader :proj_dir
+  attr_reader :coll_dir
 
   # script locations
   attr_accessor :script_es
@@ -18,13 +18,13 @@ class FileType
   attr_accessor :out_html
   attr_accessor :out_solr
 
-  def initialize location, project_dir, options
+  def initialize location, collection_dir, options
     @file_location = location
     @options = options
     # set output directories
-    @out_es = "#{project_dir}/es"
-    @out_html = "#{project_dir}/html-generated"
-    @out_solr = "#{project_dir}/solr"
+    @out_es = "#{collection_dir}/es"
+    @out_html = "#{collection_dir}/html-generated"
+    @out_solr = "#{collection_dir}/solr"
     # script locations will need to be set in child classes
   end
 

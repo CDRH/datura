@@ -1,7 +1,7 @@
-This is the minimal setup for a project:
+This is the minimal setup for a collection:
 
 ```
-project_name
+collection_name
 |-- config
 |      |-- public.yml
 |      |-- private.yml
@@ -14,7 +14,7 @@ project_name
 You may also add the following directories as necessary to hold the data files:
 
 ```
-project_name
+collection_name
 |-- csv
 |-- dc
 |-- tei
@@ -25,7 +25,7 @@ project_name
 Additionally, depending on which formats you are using, you may want the following files and directories:
 
 ```
-project_name
+collection_name
 |-- config
 |     |-- solr_schema.json
 |-- es

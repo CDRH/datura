@@ -9,23 +9,23 @@ Dir["#{File.expand_path(File.dirname(__FILE__))}/parser_options/*.rb"].each {|f|
 #####################
 
 module Parser
-  def self.argv_projects(argv)
-    project = nil
+  def self.argv_collections(argv)
+    collection = nil
     # put this after calling parse! on the incoming option flags
     # or the flags will be picked up as args also
     if argv.length == 0
-      puts "Crisis! Oh no! You must specify a project that you want to post!".red
+      puts "Crisis! Oh no! You must specify a collection that you want to post!".red
       puts @usage
       exit
     elsif argv.length == 1
-      project = argv[0]
+      collection = argv[0]
     else
-      # they entered too many projects! (or something else is terribly wrong)
-      puts "Captain, sensors detect more than one project requested!".red
+      # they entered too many collections! (or something else is terribly wrong)
+      puts "Captain, sensors detect more than one collection requested!".red
       puts @usage
       exit
     end
-    return project
+    return collection
   end
 
   # take a string in utc and create a time object with it

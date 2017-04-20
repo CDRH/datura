@@ -1,10 +1,11 @@
 default:
   threads: 5
   es_path: http://localhost:9200
-  # Note: override es_index as necessary per project / environment
-  # in order to push to API vs project testing index, etc
+  # Note: override es_index as necessary per collection / environment
+  # in order to push to API vs collection testing index, etc
   # this is NOT the "type" of an elasticsearch index
   es_index: test1
+  es_type: collection
 
 ###################
 #   Development   #
