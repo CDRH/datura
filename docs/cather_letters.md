@@ -68,7 +68,7 @@ This will put you back at the data repo folder. From there, you can run the upda
 To post all the documents in one data repo, run: 
 
 ```
-ruby scripts/ruby/es_post.rb data_cather -e development -x es
+ruby scripts/ruby/post.rb data_cather -e development -x es
 ```
 
 to find out the options for this script run it with a -h flag. More documentation here: [update_collection.md](update_collection.md)
@@ -78,7 +78,7 @@ to find out the options for this script run it with a -h flag. More documentatio
 The above command only posts the data to the index. If you'd like to run the HTML in addition, you can remove the -x es
 
 ```
-ruby scripts/ruby/es_post.rb data_cather -e development
+ruby scripts/ruby/post.rb data_cather -e development
 ```
 
 In the development version, I plan on using cocoon to generate the HTML, so this should only be necessary for production. 
@@ -116,7 +116,7 @@ After this is set up, you can add fields to the index.
 The command I use to transform a single file into JSON so I can check my work looks like this: 
 
 ```
-ruby scripts/ruby/es_post.rb data_cather -e development -x es -o -r cat\.j00009 -t
+ruby scripts/ruby/post.rb data_cather -e development -x es -o -r cat\.j00009 -t
 ```
 
 - -e = setting the development environemnt (this is the default, so can usually be omitted)

@@ -107,7 +107,7 @@ class FileType
       req = exec_xsl @file_location, @script_solr, "xml", nil, @options["variables_solr"]
     end
     @solr_req = req["doc"] if req && req.has_key?("doc")
-    return req
+    return req["doc"]
   end
 
   private

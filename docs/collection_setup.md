@@ -43,7 +43,7 @@ Now is the fun part when you get to run your data.  Information about how to run
 # -x es selects elasticsearch only
 # -o requests it to write files so you can inspect the json results
 
-ruby scripts/ruby/es_post.rb name_of_collection -x es -o
+ruby scripts/ruby/post.rb name_of_collection -x es -o
 ```
 
 ### Step 4: Customize the Information

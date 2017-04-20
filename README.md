@@ -16,19 +16,19 @@ If this is a brand new collection, please refer to [[TODO]] these docs on how to
 To run a basic development environment, give the following a try, subbing in your collection name.
 
 ```
-ruby scripts/ruby/post_es.rb <collection>
+ruby scripts/ruby/post.rb <collection>
 ```
 
 Specify an environment to use. By default the script attempts to run "development"
 
 ```
-ruby scripts/ruby/post_es.rb <collection> -e production
+ruby scripts/ruby/post.rb <collection> -e production
 ```
 
 Run a specific set of files identified by regex.
 
 ```ruby
-ruby scripts/ruby/post_es.rb <collection> -r "let.*"
+ruby scripts/ruby/post.rb <collection> -r "let.*"
 ==> cat.let.0001.xml
 ==> cat.let.0002.xml
 ```
@@ -44,7 +44,7 @@ More options:
 Check them out by running the "help" flag:
 
 ```
-ruby scripts/ruby/post_es.rb -h
+ruby scripts/ruby/post.rb -h
 ```
 
 ## More Documentation for Users and Devs
