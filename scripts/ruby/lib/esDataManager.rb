@@ -33,7 +33,6 @@ class EsDataManager
     @error_html = []
     @error_solr = []
     # combine user input and config files
-    # TODO this name is gonna need to change fo sho
     params = Parser.post_params
     @collection = params["collection"]
     # assign locations
@@ -54,16 +53,8 @@ class EsDataManager
     end
   end
 
-  def clear
-    # TODO this would use the same mechanisms to clear out
-    # docs from the index based on field + regex, etc
-    # but would not use all of the same parsing options
-    # so I'm not sure what the best design would be here
-    # (possibly moving some stuff out of the initialization step)
-  end
-
-  # TODO should this happen here or in the FileType specific to each one?
-  # or maybe just all of them get loaded in the generic FileType class??
+  # NOTE: This step is what allows collection specific files to override ANY
+  # of the methods from the scripts/ruby/* files
   def load_collection_classes
     # load collection scripts at this point so they will override
     # any of the default ones (for example: TeiToEs)
@@ -77,30 +68,28 @@ class EsDataManager
     # log starting information for user
     @log.info(options_msg true)
     puts options_msg @options["verbose"]
-    if options["es_type"]
-      @files = prepare_files
 
-      batch_process_files
-      end_run
-    else
-      raise "Check collection specific config files for missing 'es_type' ".red
-    end
+    check_options
+    @files = prepare_files
+    batch_process_files
+    end_run
   end
 
 
   private
 
+  # TODO should this move to Options class?
+  def assert_option opt
+    if !@options.has_key?(opt)
+      puts "Option #{opt} was not found!  Check config files and add #{opt} to continue".red
+      raise "Missing configuration options"
+    end
+  end
+
   def batch_process_files
-    # in batches
-      # transform to json
-      # if requested, write json to collection files
-      # post json to elastic search if requested
-      # transform with xsl to html if requested
-    #
     threads = []
     filesChunked = @files.each_slice(@options["threads"]).to_a
     filesChunked.each do |files_subset|
-      # sleep 2
       threads = files_subset.each_with_index.map do |file, index|
         Thread.new do
           transform_and_post file
@@ -109,6 +98,21 @@ class EsDataManager
       # wait for all the files to process before moving on with the next chunk
       threads.each { |t| t.join }
     end
+  end
+
+  def check_options
+    # verify that everything's all good before moving to per-file level processing
+    if should_transform "es"
+      assert_option "es_path"
+      assert_option "es_index"
+      assert_option "es_type"
+    end
+
+    if should_transform "solr"
+      assert_option "solr_core"
+      assert_option "solr_path"
+    end
+
   end
 
   def end_run
@@ -195,18 +199,24 @@ class EsDataManager
   end
 
   def transform_and_post file
+
+    # elasticsearch
     if should_transform "es"
-      res_es = file.post_es(@es_url)
-      if res_es && res_es.has_key?("error")
-        error_with_transform_and_post res_es["error"], @error_es
+      if @options["transform_only"]
+        res_es = file.transform_es(@options["output"])
+      else
+        res_es = file.post_es(@es_url)
       end
+      # TODO how do we want error handling to work?
     end
 
+    # html
     res_html = file.transform_html if should_transform "html"
     if res_html && res_html.has_key?("error")
       error_with_transform_and_post res_html["error"], @error_html
     end
 
+    # solr
     if should_transform "solr"
       if @options["transform_only"]
         res_solr = file.transform_solr(@options["output"])

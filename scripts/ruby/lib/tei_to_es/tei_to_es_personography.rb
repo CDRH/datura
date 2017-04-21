@@ -1,14 +1,13 @@
 class TeiToEsPersonography < TeiToEs
 
   def override_xpaths
-    xpaths = {
+    return {
       "titles" => {
         "main" => "persName[@type='display']",
         "alt" => "persName"
       },
       "text" => "note"
     }
-    return xpaths
   end
 
   def category
@@ -30,7 +29,8 @@ class TeiToEsPersonography < TeiToEs
   end
 
   def person
-    { "role" => nil,
+    {
+      "role" => nil,
       "name" => get_text(@xpaths["titles"]["main"]),
       "id" => @id
     }

@@ -16,22 +16,24 @@ class FileTei < FileType
     @script_solr = "#{options["repo_dir"]}/#{options["tei_solr_xsl"]}"
   end
 
+  def subdoc_xpaths
+    # match subdocs against classes
+    return {
+      "/TEI" => TeiToEs,
+      "//listPerson/person" => TeiToEsPersonography,
+    }
+  end
+
   def transform_es output=false
     @es_req = []
     begin
       # read in XML file and split up into subdocuments
-      # this step should be overrideable
-      # match subdocs against classes
+      # match subdocs against classes (is overrideable per collection)
       # create class for each one, create_json
       # collect results into @es_req here
 
       # read in XML
       file_xml = Common.create_xml_object(self.file_location)
-      # match subdocs against classes
-      subdoc_xpaths = {
-        "/TEI" => TeiToEs,
-        "//listPerson/person" => TeiToEsPersonography,
-      }
 
       subdoc_xpaths.each do |xpath, classname|
         file_xml.xpath(xpath).each do |subdoc|
