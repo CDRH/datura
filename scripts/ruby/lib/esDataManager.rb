@@ -44,6 +44,7 @@ class EsDataManager
     if File.directory?(@coll_dir)
       @options = Options.new(params, "#{@repo_dir}/config", "#{@coll_dir}/config").all
       @options["coll_dir"] = @coll_dir
+      @options["repo_dir"] = @repo_dir
       @log = Logger.new("#{@repo_dir}/logs/#{@collection}-#{@options['environment']}.log")
       @es_url = "#{@options['es_path']}/#{@options['es_index']}"
       @solr_url = "#{@options['solr_path']}/#{@options['solr_core']}/update"
