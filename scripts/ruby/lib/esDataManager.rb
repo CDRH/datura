@@ -23,7 +23,7 @@ class EsDataManager
       "dc" => FileDc,
       "tei" => FileTei,
       "vra" => FileVra,
-      "yaml" => FileYaml
+      "yml" => FileYml
     }
   end
 

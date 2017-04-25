@@ -1,6 +1,6 @@
 require_relative "../file_type.rb"
 
-class FileYaml < FileType
+class FileYml < FileType
   def transform_es
   end
 

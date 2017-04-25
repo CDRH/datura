@@ -27,12 +27,10 @@ default:
   tei_solr_xsl: scripts/xslt/cdrh_to_solr/solr_transform_tei.xsl
   vra_solr_xsl: scripts/xslt/cdrh_to_solr/solr_transform_vra.xsl
   dc_solr_xsl: scripts/xslt/cdrh_to_solr/solr_transform_dc.xsl
-  csv_solr_ruby: scripts/ruby/csv_to_solr.rb
   # formats to html snippets transformation locations
   tei_html_xsl: scripts/xslt/cdrh_to_html/tei.p5.xsl
   vra_html_xsl: 
   dc_html_xsl: scripts/xslt/cdrh_dc_to_html/dublin_core_to_html.xsl
-  csv_html_ruby: scripts/ruby/csv_to_html.rb
 
   # NOTE! If you are altering ANY of the variables you must
   #   copy over ALL of them in that group to the collection specific config file
