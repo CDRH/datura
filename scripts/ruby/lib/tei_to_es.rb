@@ -1,6 +1,7 @@
 require "nokogiri"
 require_relative "helpers.rb"
 require_relative "tei_to_es/fields.rb"
+require_relative "tei_to_es/request.rb"
 require_relative "tei_to_es/xpaths.rb"
 
 #########################################
@@ -20,6 +21,11 @@ require_relative "tei_to_es/xpaths.rb"
 #   copy paste the field defined in tei_to_es/fields.rb and change
 #   it as needed. If you are dealing with something particularly complex
 #   you may need to consult with a CDRH dev for help
+
+# HOW DO I CUSTOMIZE THE FIELDS BEING SENT TO ELASTICSEARCH?
+#   You will need to look in the tei_to_es/request.rb file, which has
+#   collections of fields being sent to elasticsearch
+#   you can override individual chunks of fields in your collection
 
 class TeiToEs
 
@@ -49,117 +55,6 @@ class TeiToEs
 
   def get_id
     return @filename
-  end
-
-  def assemble_json
-    # TODO might put these into methods themselves
-    # so that a collection could override only a clump of fields
-    # rather than all?
-    # Note: the above might only matter if ES can't handle nil
-    # values being sent, because otherwise they could just override
-    # the field behavior to be blank
-
-    ###############
-    # identifiers #
-    ###############
-    # cannot add this manually, have to do it via url
-    # @json["_type"] = shortname
-    @json["identifier"] = @id
-
-    ##############
-    # categories #
-    ##############
-    @json["category"] = category
-    @json["subcategory"] = subcategory
-    @json["data_type"] = "tei"
-    @json["collection"] = collection
-    @json["shortname"] = shortname
-    # @json["subject"]
-
-    #############
-    # locations #
-    #############
-
-    # TODO check, because I'm not sure the schema
-    # lists the urls that we actually want to use
-    # earlywashingtondc.org vs cdrhmedia, etc
-    # @json["uri"]
-    # @json["uri_data"]
-    # @json["uri_html"]
-    # @json["image_location"]
-    # @json["image_id"]
-
-    ###############
-    # description #
-    ###############
-    @json["title_sort"] = title_sort
-    @json["title"] = title
-    @json["description"] = description
-    # @json["topics"]
-    # @json["alternative"]
-
-    ##################
-    # other metadata #
-    ##################
-    @json["format"] = format
-    @json["language"] = language
-    # @json["relation"]
-    # @json["type"]
-    # @json["extent"]
-    @json["medium"] = format
-
-    #########
-    # dates #
-    #########
-    @json["date_display"] = date_display
-    @json["date"] = date
-    @json["date_not_before"] = date
-    @json["date_not_after"] = date false
-
-    ####################
-    # publishing stuff #
-    ####################
-    @json["rights_uri"] = rights_uri
-    @json["publisher"] = publisher
-    @json["rights"] = rights
-    @json["source"] = source
-    @json["rights_holder"] = rights_holder
-
-    ##########
-    # people #
-    ##########
-    # container fields
-    @json["person"] = person
-    @json["contributor"] = contributors
-    @json["creator"] = creator
-    # can draw off of container fields
-    @json["creator_sort"] = creator_sort
-    @json["people"] = person_sort
-
-    ###########
-    # spatial #
-    ###########
-    # TODO not sure about the naming convention here?
-    # TODO has place_name, coordinates, id, city, county, country,
-    # region, state, street, postal_code
-    # @json["coverage.spatial"]
-
-    ##############
-    # referenced #
-    ##############
-    @json["keywords"] = keywords
-    @json["places"] = places
-    @json["works"] = works
-
-    #################
-    # text searches #
-    #################
-    @json["annotations"] = annotations
-    @json["text"] = text
-    # @json["abstract"]
-    more_fields = collection_specific_fields
-    @json.merge!(more_fields) if more_fields && !more_fields.empty?
-    return @json
   end
 
   def override_xpaths

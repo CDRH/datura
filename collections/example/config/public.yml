@@ -1,6 +1,6 @@
 default:
   shortname: example
-  project_desc: Example Data Repository
+  collection_desc: Example Data Repository
   es_type: example
 
   variables_html:
@@ -8,5 +8,7 @@ default:
     figures: true
     fw: true
     pb: true
-  variables_search:
-    file_location: some/path
+# development:
+  # development overrides here
+# production:
+  # production overrides here

@@ -1,9 +1,11 @@
 class TeiToEsPersonography < TeiToEs
 
-  # this is just an example personography file set up
-  # anything in the default tei_to_es_personography.rb
-  # file can be overridden below, and furthermore anything
-  # in the tei_to_es.rb file can be overridden, also
+  # if not needed in your collection, please remove this file
+  # all the same overrides allowed in tei_to_es.rb are
+  # valid in this file
+
+  # if you need a personography, please know that the majority of your
+  # xpaths will likely need to be overridden
   
   def override_xpaths
     xpaths = {

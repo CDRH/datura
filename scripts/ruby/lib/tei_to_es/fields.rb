@@ -1,4 +1,7 @@
 class TeiToEs
+  # Note to add custom fields, use "assemble_collection_specific" from request.rb
+  # and be sure to either use the _d, _i, _k, or _t to use the correct field type
+
   ##########
   # FIELDS #
   ##########
@@ -97,15 +100,6 @@ class TeiToEs
 
   def collection
     @options["collection_desc"] || @options["collection"]
-  end
-
-  def collection_specific_fields
-    # Note: customize this per collection to include more information
-    # to be posted to elasticsearch.  Example:
-
-    # json["novel_id"] = get_text @xpaths["novel"]
-    # json["publicity"] = "some message that will always be displayed"
-    return {}
   end
 
   def publisher
