@@ -1,7 +1,7 @@
-**/config.xsl
+config.xsl
 # ignore only config and private yml files
-**/config.yml
-**/private.yml
+config.yml
+private.yml
 
 # ignore all the repositories in the collections directory
 collections/*
@@ -15,4 +15,4 @@ tmp/*
 logs/*
 !logs/.keep
 
-**/.DS_Store
+.DS_Store

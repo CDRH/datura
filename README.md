@@ -15,10 +15,10 @@ The files are parsed and formatted into documents appropriate for Solr, Elastics
 
 - Start a new collection
   - [Create collection and add files](docs/1_setup/collection_setup.md)
-  - [Add index and schema](docs/1_setup/prepare_index.md)
   - [Configuration](docs/1_setup/config.md)
+  - [Add index and schema](docs/1_setup/prepare_index.md)
 - Customize collection
-  - [Elasticsearch customization](docs/2_customization/tei_to_es.md)
+  - [TEI to Elasticsearch](docs/2_customization/tei_to_es.md)
   - HTML customization
   - Solr customization
   - [Collection Tests](docs/2_customization/test.md)

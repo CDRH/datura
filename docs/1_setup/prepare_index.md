@@ -26,4 +26,4 @@ ruby scripts/ruby/es_set_schema.rb collection [-e environment]
 
 You may run the above as many times as you wish, as long as you have not already put items in the index which will conflict with the fieldtypes.
 
-[Continue on and add data to your index!](../3_manage/post.md)
+[Now you're ready to customize how the data in your index looks!](../2_customization/tei_to_es.md)

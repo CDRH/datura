@@ -1,19 +1,29 @@
-## Customizing tei_to_es.rb
+## Customizing TEI to Elasticsearch
 
-References:
+** If you are looking to customize another format to Elasticsearch, [documentation will be coming soon](TODO docs) **
+
+** If you would like to customize TEI to HTML or Solr, [documentation will be coming soon](TODO docs) **
+
+
+If you are already familiar with XSLT / XPath, you may be interested in comparing Ruby / Nokogiri equivalents with XSLT behavior.
 
 - [Common Ruby Equivalents for Xpath and XSLT](xslt_to_ruby_reference.md) 
 
-In each collection, there should be a file in `scripts/tei_to_es.rb`.  It can be used to override xpaths and behavior found in `scripts/ruby/lib/tei_to_es.rb` and can be considered to be taking the place of the old XSLT stylesheets.  Previously, you need to understand XSLT in order to alter these overrides.  Now, instead, you must have an understanding of Ruby.  The following document may be easier to follow if you have a working knowledge of the following in Ruby:
+### Overriding in Ruby
+
+The following document may be easier to follow if you have a working knowledge of the following in Ruby:
 
 - variables
 - arrays
 - hashes
 - string methods
+- (optional) classes and inheritance
 
-Each collection must have a `tei_to_es.rb` file, even if there are no overrides.  At bare minimum, the file should look like the following:
+In general, the data repository is set up so that you may override ANYTHING inside a class or module in the `scripts/ruby` (sub)directories by putting it in your collection's script directory.  You need only have the class / module name at the top and the exact name of the method you are overriding and the rest of the original file's contents will not be altered.  This is how we will customize the TEI to Elasticsearch transformation.
 
-```
+If a file does not already exist at `collections/[your_collection]/scripts/tei_to_es.rb`, create one that looks like this:
+
+```ruby
 class TeiToEs
 end
 ```
@@ -21,6 +31,7 @@ end
 There are two types of overrides that you can do in this file:
 
 - xpaths
+- the json being sent to Elasticsearch
 - field behavior
 
 You may also
@@ -28,9 +39,13 @@ You may also
 - add new xpaths
 - add new fields
 - access the @options from the config files
+- read in additional XML files (annotations, references, etc)
 
 I'll go through them in sections.
 
+- [Tools](#tools)
+  - [Variables](#variables)
+  - [Using Nokogiri](#using-nokogiri)
 - [Overriding Xpaths](#overriding-xpaths)
   - [Override XPath Basic](#override-xpath-basic)
   - [Override XPath List](#override-xpath-list)
@@ -40,6 +55,77 @@ I'll go through them in sections.
   - [Override Field Basic](#override-field-basic)
   - [Override Field If Then](#override-field-if-then)
   - [Override Field Nested](#override-field-nested)
+
+### Tools
+
+If you require more flexibility than simply changing some similar xpaths or getting a list of items, the following may interest you.
+
+#### Variables
+
+In the `tei_to_es.rb` file, you have access to a couple variables.
+
+- `@filename`
+- `@id`
+- `@json`
+- `@options`
+- `@parent_xml`
+- `@xml`
+- `@xpaths`
+
+##### @filename
+
+This is the name of the file this (sub)document is pulling from without an extension
+
+##### @id
+
+Often associated with the filename, this is created with the `get_id` method in TeiToEs whose default behavior may be overridden.
+
+##### @json
+
+This is the JSON structure being built to sent to elasticsearch. You may directly manipulate it as you would a traditional hash, but keep in mind that its contents may not be populated yet.  You will need to look at the `scripts/ruby/lib/tei_to_es/request.rb` file to see the conventional json build order.
+
+Typically I would recommend altering this in the `postprocessing` step, if you need to work with the json directly, but every collection is different so feel free to poke around with it and use it directly!
+
+##### @options
+
+The `@options` are created from combining the config files and any parameters you passed into via the command line.  You can see all the options being used by adding `-v` when you post.  This means that anything you add to the config file can be accessed when generating the ES request.  For example, you might add:
+
+```yaml
+# public.yml
+default:
+  copyright_info: Your statement here
+```
+
+```ruby
+# tei_to_es.rb
+def rights
+  @options["copyright_info"]
+end
+```
+
+##### @parent_xml
+
+Just ignore this.
+
+Kidding, kind of.  You will likely only need to work with this if you are using `tei_to_es_personography.rb` or a similarly named file.  [Please see the documentation on subdocuments](TODO docs).
+
+##### @xml
+
+This is your document's XML as a [Nokogiri](https://github.com/sparklemotion/nokogiri) object.  You can use methods like `get_text` which are built into this repository, or you can operate on the object directly [using Nokogiri](#using-nokogiri).
+
+If you really wanted to, you would be able to add / alter the XML itself, if that would somehow help you in your quest.  It will not alter the actual TEI documents on the filesystem unless if you intentionally write to a file, but you will not be able to accidentally do that, so no worries.
+
+##### @xpaths
+
+This is the hash which contains all of the xpaths your document should be using.  Typically you will use it to access either the default xpaths in `scripts/ruby/lib/tei_to_es/xpaths.rb` or any you've overridden / added.
+
+```ruby
+@xpaths["titles"]["main"]
+```
+
+#### Using Nokogiri
+
+There may be times that you can't accomplish everything that you want to do using some of the built in data tools like `get_list` and `get_text`.  For example, if you're selecting a person's name and need to parse attributes, roles, subnodes to build an object.  Then it's time to remember that `@xml` is a [Nokogiri::XML::Element](http://www.rubydoc.info/github/sparklemotion/nokogiri/Nokogiri/XML/Element)
 
 ### Overriding XPaths
 
