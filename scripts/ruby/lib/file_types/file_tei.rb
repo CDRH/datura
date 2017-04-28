@@ -34,7 +34,6 @@ class FileTei < FileType
 
       # read in XML
       file_xml = Common.create_xml_object(self.file_location)
-
       subdoc_xpaths.each do |xpath, classname|
         file_xml.xpath(xpath).each do |subdoc|
           file_transformer = classname.new(subdoc, @options, file_xml, self.filename(false))

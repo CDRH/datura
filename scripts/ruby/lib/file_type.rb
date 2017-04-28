@@ -21,6 +21,9 @@ class FileType
   def initialize location, collection_dir, options
     @file_location = location
     @options = options
+    @options["variables_html"]["collection"] = @options["shortname"]
+    @options["variables_solr"]["collection"] = @options["shortname"]
+
     # set output directories
     @out_es = "#{collection_dir}/es"
     @out_html = "#{collection_dir}/html-generated"
@@ -58,7 +61,7 @@ class FileType
   def post_solr url=nil
     url = url || "#{@options['solr_path']}/#{@options['solr_core']}/update"
     begin
-      transformed = @solr_req || transform_solr(@options["output"])
+      transformed = @solr_req || transform_solr(@options["output"])["docs"]
       solr = SolrPoster.new(url, @options["commit"])
       # Note: only supporting XML for now since solr is considered "deprecated"
       # but can extend in the future if necessary
@@ -91,7 +94,6 @@ class FileType
 
   def transform_html
     # add html specific variables and shortname as params
-    @options["variables_html"]["shortname"] = @options["shortname"]
     exec_xsl @file_location, @script_html, "html", @out_html, @options["variables_html"]
   end
 
@@ -105,7 +107,7 @@ class FileType
       req = exec_xsl @file_location, @script_solr, "xml", nil, @options["variables_solr"]
     end
     @solr_req = req["doc"] if req && req.has_key?("doc")
-    return req["doc"]
+    return { "docs" => req["doc"]}
   end
 
   private
@@ -124,7 +126,6 @@ class FileType
       err = stderr.read
       if err.length > 0
         msg = "There was an error transforming #{filename}: #{err}"
-        puts msg.red
         return { "error" => msg }
       else
         puts "Successfully transformed #{filename}"

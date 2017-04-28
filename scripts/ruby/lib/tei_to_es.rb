@@ -109,7 +109,9 @@ class TeiToEs
           converted = Common.convert_tags(content)
           text = converted.inner_html
         else
-          text = content.text
+          # note: not using content.text because
+          # some tags should be converted to (), [], etc for display
+          text = Common.to_display_text(content)
         end
         text = Common.squeeze(text)
         if text.length > 0

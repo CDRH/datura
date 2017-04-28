@@ -22,6 +22,7 @@ module Common
       ele.name = "u"
       ele.delete "rend"
     end
+    xml = Common.to_display_text(xml)
     return xml
   end
 
@@ -100,6 +101,13 @@ module Common
   def self.squeeze string
     string.strip.gsub(/\s+/, " ")
   end
+
+  def self.to_display_text xml
+    # sub <corr>.*</corr> for [.*]
+    xml.css("corr").each {|e| e.replace("[#{e.text}]") }
+    return xml.text
+  end
+
 end
 
 # get_directory_files
