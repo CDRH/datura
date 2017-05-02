@@ -1,12 +1,15 @@
 # This .gitignore file can be used as an example
 # for new projects
 
-# ignore config files except examples
-**/config.yml
-**/private.yml
+# ignore config files
+config.yml
+private.yml
 
-es/
-html-generated/
-solr/
+# There might be a better way of doing this, but something about
+# gitignoring inside an ignored subdirectory seems to be more finicky than normal
 
-!.keep
+**/es/*
+**/html-generated/*
+**/solr/*
+
+!**/.keep

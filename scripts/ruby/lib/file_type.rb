@@ -25,9 +25,9 @@ class FileType
     @options["variables_solr"]["collection"] = @options["shortname"]
 
     # set output directories
-    @out_es = "#{collection_dir}/es"
-    @out_html = "#{collection_dir}/html-generated"
-    @out_solr = "#{collection_dir}/solr"
+    @out_es = "#{collection_dir}/output/es"
+    @out_html = "#{collection_dir}/output/html-generated"
+    @out_solr = "#{collection_dir}/output/solr"
     # script locations will need to be set in child classes
   end
 
