@@ -32,6 +32,9 @@ default:
   vra_html_xsl: 
   dc_html_xsl: scripts/xslt/cdrh_dc_to_html/dublin_core_to_html.xsl
 
+  # file locations
+  uri_html: https://cdrhmedia-development.unl.edu
+
   # NOTE! If you are altering ANY of the variables you must
   #   copy over ALL of them in that group to the collection specific config file
   variables_es:

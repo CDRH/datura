@@ -174,6 +174,10 @@ class TeiToEs
     Common.normalize_name t
   end
 
+  def uri_html
+    "#{@options["uri_html"]}/#{@id}.html"
+  end
+
   def works
     # TODO figure out how this behavior should look
     return []

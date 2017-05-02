@@ -70,7 +70,7 @@ class TeiToEs
     # earlywashingtondc.org vs cdrhmedia, etc
     # @json["uri"]
     # @json["uri_data"]
-    # @json["uri_html"]
+    @json["uri_html"] = uri_html
     # @json["image_location"]
     # @json["image_id"]
   end
