@@ -142,7 +142,7 @@ class EsDataManager
   def get_files
     formats = []
     if @options["format"]
-      formats = @options["format"]
+      formats = [@options["format"]]
     else
       formats = EsDataManager.format_to_class.keys
     end
