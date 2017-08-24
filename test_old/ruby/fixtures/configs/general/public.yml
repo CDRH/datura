@@ -1,0 +1,49 @@
+default:
+  log_old_number: 4   # number of log files before beginning to erase
+  log_size: 1024000   # size of log file in bytes
+  log_level: Logger::WARN  # could change to INFO for more detail
+
+  # formats to solr transformation locations
+  tei_solr_xsl: scripts/xslt/cdrh_to_solr/solr_transform_tei.xsl
+  vra_solr_xsl: scripts/xslt/cdrh_to_solr/solr_transform_vra.xsl
+  dc_solr_xsl: scripts/xslt/cdrh_to_solr/solr_transform_dc.xsl
+  csv_solr_ruby: scripts/ruby/csv_to_solr.rb
+  # formats to html snippets transformation locations
+  tei_html_xsl: scripts/xslt/cdrh_to_html/tei.p5.xsl
+  vra_html_xsl: 
+  dc_html_xsl: scripts/xslt/cdrh_dc_to_html/dublin_core_to_html.xsl
+  csv_html_ruby: scripts/ruby/csv_to_html.rb
+
+###################
+#   Development   #
+###################
+
+development:
+
+  # NOTE! If you are altering ANY of the xsl_params you must
+  #   copy over ALL of them to the collection specific config file
+  xsl_params:
+    fig_location: http://server.unl.edu/data_images/collections/example/figures/
+    file_location: http://server.unl.edu/data/collections/
+    figures: true
+    fw: true        # form works (page nums, etc)
+    pb: true        # page breaks
+    collection: full_name_of_collection
+    slug: short_name_of_collection
+
+##################
+#   Production   #
+##################
+production:
+  solr_core: name_of_core
+ 
+  # NOTE! If you are altering ANY of the xsl_params you must
+  #   copy over ALL of them to the collection specific config file
+  xsl_params:
+    fig_location: http://server.unl.edu/data_images/collections/example/figures/
+    file_location: http://server.unl.edu/data/collections/
+    figures: true
+    fw: true        # form works (page nums, etc)
+    pb: true        # page breaks
+    collection: full_name_of_collection
+    slug: short_name_of_collection

@@ -1,0 +1,11 @@
+- filename: nei.person.xml
+  type: tei
+  # there are expected to be 16 elasticsearch docs resulting from this file
+  # (most files only have 1, but this is a personography)
+  count: 16
+  matches:
+    - identifier: nei.person_braithwaite.w
+      title_sort: braithwaite, william stanley, 1878-1962
+    - identifier: nei.person_cawein.m
+      title_sort: cawein, madison julius, 1865-1914
+      title: Cawein, Madison Julius, 1865-1914

@@ -1,0 +1,79 @@
+############################################
+#    CONFIGURATION FOR ALL COLLECTIONS     #
+############################################
+
+# Note:  if you make changes to this file you are potentially altering
+#   every collection
+#   It is recommended that you override only those parts that you need in
+#   the collection specific configuration files (collections/name/config/config.yml)
+#   For example, you will need a solr_core name for each collection
+#   You may place the settings under development / production if the environments
+#   differ, but you may put things outside of development / production if the
+#   setting will be the same for both.  The script locations below are applied to
+#   both development and production, but if you need to run a different script for
+#   each environment, you could copy whichever script override you need into
+#   development and production
+
+###################
+#   Defaults   #
+###################
+
+default:
+  log_old_number: 4   # number of log files before beginning to erase
+  log_size: 1024000   # size of log file in bytes
+  log_level: Logger::WARN  # could change to INFO for more detail
+
+  # formats to solr transformation locations
+  tei_solr_xsl: scripts/xslt/cdrh_to_solr/solr_transform_tei.xsl
+  vra_solr_xsl: scripts/xslt/cdrh_to_solr/solr_transform_vra.xsl
+  dc_solr_xsl: scripts/xslt/cdrh_to_solr/solr_transform_dc.xsl
+  # formats to html snippets transformation locations
+  tei_html_xsl: scripts/xslt/cdrh_to_html/tei.p5.xsl
+  vra_html_xsl: scripts/xslt/cdrh_to_html/vra_to_html.xsl
+  dc_html_xsl: scripts/xslt/cdrh_dc_to_html/dublin_core_to_html.xsl
+
+  # file locations
+  uri_html: https://cdrhmedia-development.unl.edu
+
+  # NOTE! If you are altering ANY of the variables you must
+  #   copy over ALL of them in that group to the collection specific config file
+  variables_es:
+    # none so far
+  variables_html:
+    figures: true
+    fw: true
+    pb: true
+    site_url:
+    fig_location: http://cdrhmedia-development.unl.edu/images/collection
+  # these are for legacy collections only
+  variables_solr:
+    fig_location: http://cdrhmedia-development.unl.edu/images/collection
+    file_location: http://cdrhmedia-development.unl.edu/
+    collection:
+    slug:
+    site_url:
+
+
+###################
+#   Development   #
+###################
+
+# development:
+
+##################
+#   Production   #
+##################
+production:
+  solr_core: name_of_core
+ 
+  # NOTE! If you are altering ANY of the xsl_params you must
+  #   copy over ALL of them to the collection specific config file
+  variables_html:
+    fig_location: http://cdrhmedia.unl.edu/images/collection
+    figures: true
+    fw: true
+    pb: true
+  variables_search:
+    file_location: http://server.unl.edu/data/collection/
+    collection: Full\ Name\ of\ Collection
+    shortname: short_name

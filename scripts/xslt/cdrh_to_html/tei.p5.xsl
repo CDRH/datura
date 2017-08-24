@@ -14,7 +14,7 @@
 <xsl:import href="lib/html_formatting.xsl"/>
 <xsl:import href="lib/personography_encyclopedia.xsl"/>
 <xsl:import href="lib/cdrh.xsl"/>
-<!-- If this file is living in a projects directory, the paths will be
+<!-- If this file is living in a collections directory, the paths will be
      ../../../scripts/xslt/cdrh_tei_to_html/lib/html_formatting.xsl -->
 
 <!-- For display in TEI framework, have changed all namespace declarations to http://www.tei-c.org/ns/1.0. If different (e.g. Whitman), will need to change -->
@@ -35,7 +35,7 @@
 <!--                            OVERRIDES                                 -->
 <!-- ==================================================================== -->
 
-<!-- Individual projects can override matched templates from the
+<!-- Individual collections can override matched templates from the
      imported stylesheets above by including new templates here -->
 <!-- Named templates can be overridden if included in matched templates
      here.  You cannot call a named template from directly within the stylesheet tag

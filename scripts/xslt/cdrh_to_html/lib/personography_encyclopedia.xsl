@@ -39,8 +39,8 @@
 
     <!-- this is the same as the above but written to a specific file -->
     <xsl:for-each select="//person">
-      <!-- the filename will start relative to the html-generated (output) directory of a specific project -->
-      <xsl:variable name="filename" select="concat(@xml:id, '.txt')"/>
+      <!-- the filename will start relative to the html-generated (output) directory of a specific collection -->
+      <xsl:variable name="filename" select="concat(@xml:id, '.html')"/>
       <xsl:result-document href="{$filename}">
         <xsl:call-template name="person_info"/>
       </xsl:result-document>
