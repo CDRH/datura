@@ -322,7 +322,7 @@
       <xsl:value-of select="$slug"/>
       <xsl:text>/html-generated/</xsl:text>
       <xsl:value-of select="$id"/>
-      <xsl:text>.txt</xsl:text>
+      <xsl:text>.html</xsl:text>
     </field>
   </xsl:template>
 
