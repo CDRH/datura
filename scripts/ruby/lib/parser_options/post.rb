@@ -73,9 +73,12 @@ module Parser
         options["verbose"] = true
       end
 
-      options["transform_type"] = nil
-      opts.on('-x', '--type [input]', 'The types of transformation (html, solr, es)') do |input|
-        options["transform_type"] = input
+      # default to running only elasticsearch if no params passed through
+      options["transform_types"] = ["es"]
+      opts.on('-x', '--type [input]', 'Transformed output type (es, html, solr), separate with ,') do |input|
+        if input
+          options["transform_types"] = input.split(",")
+        end
       end
     end
 

@@ -190,12 +190,8 @@ class EsDataManager
   end
 
   def should_transform type
-    # solr should be specified in order to run, others automatically run if nothing specified
-    if type == "solr"
-      return @options["transform_type"] == type
-    else
-      return @options["transform_type"].nil? || @options["transform_type"] == type
-    end
+    # adjust default transformation type in params parser
+    return @options["transform_types"].include?(type)
   end
 
   def transform_and_post file
