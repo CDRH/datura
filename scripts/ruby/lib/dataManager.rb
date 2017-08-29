@@ -58,7 +58,7 @@ class DataManager
   def load_collection_classes
     # load collection scripts at this point so they will override
     # any of the default ones (for example: TeiToEs)
-    Dir["#{@coll_dir}/scripts/*.rb"].each do |f|
+    Dir["#{@coll_dir}/scripts/overrides/*.rb"].each do |f|
       require f
     end
   end
