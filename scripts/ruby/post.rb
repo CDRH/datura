@@ -1,4 +1,4 @@
-require_relative "lib/esDataManager.rb"
+require_relative "lib/dataManager.rb"
 
-manager = EsDataManager.new
+manager = DataManager.new
 manager.run

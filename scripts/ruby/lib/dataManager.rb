@@ -3,7 +3,7 @@ require "logger"
 
 require_relative "./requirer.rb"
 
-class EsDataManager
+class DataManager
   attr_reader :log
   attr_reader :coll_dir
   attr_reader :repo_dir
@@ -144,7 +144,7 @@ class EsDataManager
     if @options["format"]
       formats = [@options["format"]]
     else
-      formats = EsDataManager.format_to_class.keys
+      formats = DataManager.format_to_class.keys
     end
     files = []
     formats.each do |format|
@@ -177,7 +177,7 @@ class EsDataManager
     @log.info("After filters (regex, update time), #{filtered.length}/#{files.length} files remaining")
     filtered.each do |f|
       dirname = File.basename(File.dirname(f))
-      type = EsDataManager.format_to_class[dirname]
+      type = DataManager.format_to_class[dirname]
       if type
         file_classes << type.new(f, @coll_dir, @options)
       else
