@@ -24,13 +24,14 @@ default:
   log_level: Logger::WARN  # could change to INFO for more detail
 
   # formats to solr transformation locations
-  tei_solr_xsl: scripts/xslt/cdrh_to_solr/solr_transform_tei.xsl
-  vra_solr_xsl: scripts/xslt/cdrh_to_solr/solr_transform_vra.xsl
   dc_solr_xsl: scripts/xslt/cdrh_to_solr/solr_transform_dc.xsl
+  vra_solr_xsl: scripts/xslt/cdrh_to_solr/solr_transform_vra.xsl
+  tei_solr_xsl: scripts/xslt/cdrh_to_solr/solr_transform_tei.xsl
+
   # formats to html snippets transformation locations
-  tei_html_xsl: scripts/xslt/cdrh_to_html/tei.p5.xsl
-  vra_html_xsl: scripts/xslt/cdrh_to_html/vra_to_html.xsl
   dc_html_xsl: scripts/xslt/cdrh_dc_to_html/dublin_core_to_html.xsl
+  vra_html_xsl: scripts/xslt/cdrh_to_html/vra_to_html.xsl
+  tei_html_xsl: scripts/xslt/cdrh_to_html/tei.p5.xsl
 
   # file locations
   uri_html: https://cdrhmedia-development.unl.edu
