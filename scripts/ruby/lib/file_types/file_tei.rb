@@ -40,7 +40,6 @@ class FileTei < FileType
           @es_req << file_transformer.json
         end
       end
-
       if output
         filepath = "#{@out_es}/#{self.filename(false)}.json"
         File.open(filepath, "w") { |f| f.write(self.print_es) }

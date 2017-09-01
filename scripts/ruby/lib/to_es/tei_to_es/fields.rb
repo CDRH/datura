@@ -1,4 +1,4 @@
-class TeiToEs
+class TeiToEs < XmlToEs
   # Note to add custom fields, use "assemble_collection_specific" from request.rb
   # and be sure to either use the _d, _i, _k, or _t to use the correct field type
 
@@ -20,19 +20,19 @@ class TeiToEs
   end
 
   def category
-    category = get_text @xpaths["category"]
+    category = get_text(@xpaths["category"])
     return category.length > 0 ? category : "none"
   end
 
   # note this does not sort the creators
   def creator
-    creators = get_list @xpaths["creators"]
+    creators = get_list(@xpaths["creators"])
     return creators.map { |creator| { "name" => creator } }
   end
 
   # returns ; delineated string of alphabetized creators
   def creator_sort
-    return get_text @xpaths["creators"]
+    return get_text(@xpaths["creators"])
   end
 
   def contributors
@@ -46,13 +46,13 @@ class TeiToEs
     return contribs
   end
 
-  def date before=true
-    date = get_text @xpaths["date"]
+  def date(before=true)
+    date = get_text(@xpaths["date"])
     return Common.date_standardize(date, before)
   end
 
   def date_display
-    date = get_text @xpaths["date"]
+    date = get_text(@xpaths["date"])
     return Common.date_display(date)
   end
 
@@ -63,7 +63,7 @@ class TeiToEs
   def format
     # iterate through all the formats until the first one matches
     @xpaths["formats"].each do |type, xpath|
-      text = get_text xpath
+      text = get_text(xpath)
       if text
         return type
       end
@@ -73,7 +73,7 @@ class TeiToEs
   end
 
   def keywords
-    return get_list @xpaths["keywords"]
+    return get_list(@xpaths["keywords"])
   end
 
   def language
@@ -90,12 +90,12 @@ class TeiToEs
   end
 
   def person_sort
-    return get_text @xpaths["person"]
+    return get_text(@xpaths["person"])
   end
 
   def places
     # TODO will need to figure out some default behavior for this field
-    return get_list @xpaths["places"]
+    return get_list(@xpaths["places"])
   end
 
   def collection
@@ -103,11 +103,11 @@ class TeiToEs
   end
 
   def publisher
-    get_text @xpaths["publisher"]
+    get_text(@xpaths["publisher"])
   end
 
   def recipients
-    get_list @xpaths["recipients"]
+    get_list(@xpaths["recipients"])
   end
 
   def rights
@@ -116,7 +116,7 @@ class TeiToEs
   end
 
   def rights_holder
-    get_text @xpaths["rights_holder"]
+    get_text(@xpaths["rights_holder"])
   end
 
   def rights_uri
@@ -130,11 +130,11 @@ class TeiToEs
   end
 
   def source
-    get_text @xpaths["source"]
+    get_text(@xpaths["source"])
   end
 
   def subcategory
-    subcategory = get_text @xpaths["subcategory"]
+    subcategory = get_text(@xpaths["subcategory"])
     subcategory.length > 0 ? subcategory : "none"
   end
 
@@ -162,16 +162,16 @@ class TeiToEs
   end
 
   def title
-    title = get_text @xpaths["titles"]["main"]
+    title = get_text(@xpaths["titles"]["main"])
     if title.empty?
-      title = get_text @xpaths["titles"]["alt"]
+      title = get_text(@xpaths["titles"]["alt"])
     end
     return title
   end
 
   def title_sort
     t = title
-    Common.normalize_name t
+    Common.normalize_name(t)
   end
 
   def uri_html

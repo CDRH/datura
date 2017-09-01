@@ -1,4 +1,4 @@
-class TeiToEs
+class TeiToEs < XmlToEs
   # These are the default xpaths that are used for collections
   #  if you require a different xpath, please override the xpath in
   #  the specific collection's TeiToEs file or create a new method
