@@ -36,19 +36,19 @@ class VraToEs < XmlToEs
 
   def contributors
     contrib_list = []
-      contributors = @xml.xpath(@xpaths["contributors"])
-      contributors.each do |ele|
-        contrib_list << {
-          "name" => ele.xpath("name").text,
-          "id" => "",
-          "role" => ele.xpath("role").text
-        }
-      end
+    contributors = @xml.xpath(@xpaths["contributors"])
+    contributors.each do |ele|
+      contrib_list << {
+        "name" => ele.xpath("name").text,
+        "id" => "",
+        "role" => ele.xpath("role").text
+      }
+    end
     return contrib_list
   end
 
   def date(before=true)
-    datestr = get_text(@xpaths["date"])
+    datestr = get_text(@xpaths["dates"]["earliest"])
     # cannot send empty value for date object, set to null
     if datestr.empty?
       return nil
@@ -58,7 +58,7 @@ class VraToEs < XmlToEs
   end
 
   def date_display
-    get_text(@xpaths["dateDisplay"])
+    get_text(@xpaths["dates"]["display"])
   end
 
   def description
