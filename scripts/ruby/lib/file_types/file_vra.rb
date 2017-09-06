@@ -15,32 +15,14 @@ class FileVra < FileType
     }
   end
 
-  def transform_es(output=false)
-    @es_req = []
-    begin
-      file_xml = Common.create_xml_object(self.file_location)
-      subdoc_xpaths.each do |xpath, classname|
-        file_xml.xpath(xpath).each do |subdoc|
-          file_transformer = classname.new(subdoc, @options, file_xml, self.filename(false))
-          @es_req << file_transformer.json
-        end
-      end
-      if output
-        filepath = "#{@out_es}/#{self.filename(false)}.json"
-        File.open(filepath, "w") { |f| f.write(self.print_es) }
-      end
-      return @es_req
-    rescue => e
-      puts "something went wrong transforming #{self.filename}"
-      raise e
-    end
-  end
-
   # if there should not be any html transformation taking place
   # then leave this method empty but uncommented to override default behavior
 
   # if you would like to use the default transformation behavior
   # then comment or remove both of the following methods!
+
+  # def transform_es(output=false)
+  # end
 
   # def transform_html
   # end

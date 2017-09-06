@@ -86,11 +86,26 @@ class FileType
     return @solr_req || transform_solr
   end
 
-  # def transform_es output=false
-    # TODO should there be any default transform behavior at all?
-    # each filetype child could have some, but it seems like this
-    # won't be able to accommodate dc, vra, tei here alone
-  # end
+  def transform_es(output=false)
+    @es_req = []
+    begin
+      file_xml = Common.create_xml_object(self.file_location)
+      subdoc_xpaths.each do |xpath, classname|
+        file_xml.xpath(xpath).each do |subdoc|
+          file_transformer = classname.new(subdoc, @options, file_xml, self.filename(false))
+          @es_req << file_transformer.json
+        end
+      end
+      if output
+        filepath = "#{@out_es}/#{self.filename(false)}.json"
+        File.open(filepath, "w") { |f| f.write(self.print_es) }
+      end
+      return @es_req
+    rescue => e
+      puts "something went wrong transforming #{self.filename}"
+      raise e
+    end
+  end
 
   def transform_html
     # add html specific variables and shortname as params
