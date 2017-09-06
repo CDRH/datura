@@ -1,4 +1,8 @@
-class TeiToEs
+# request creation portion of Xml to ES transformation
+# override for VRA / TEI concerns in [type]_to_es.rb
+# files or in collection specific overrides
+
+class XmlToEs
 
   def assemble_json
     # Note: if your collection does not require a specific field

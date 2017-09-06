@@ -197,30 +197,32 @@ class DataManager
   def transform_and_post file
 
     # elasticsearch
-    if should_transform "es"
+    if should_transform("es")
       if @options["transform_only"]
         res_es = file.transform_es(@options["output"])
       else
         res_es = file.post_es(@es_url)
+        if res_es && res_es.has_key?("error")
+          error_with_transform_and_post(res_es["error"], @error_es)
+        end
       end
-      # TODO how do we want error handling to work?
     end
 
     # html
-    res_html = file.transform_html if should_transform "html"
+    res_html = file.transform_html if should_transform("html")
     if res_html && res_html.has_key?("error")
-      error_with_transform_and_post res_html["error"], @error_html
+      error_with_transform_and_post(res_html["error"], @error_html)
     end
 
     # solr
-    if should_transform "solr"
+    if should_transform("solr")
       if @options["transform_only"]
         res_solr = file.transform_solr(@options["output"])
       else
         res_solr = file.post_solr(@solr_url)
       end
       if res_solr && res_solr.has_key?("error")
-        error_with_transform_and_post res_solr["error"], @error_solr
+        error_with_transform_and_post(res_solr["error"], @error_solr)
       end
     end
   end

@@ -42,7 +42,7 @@ class FileType
   def post_es url=nil
     url = url || "#{@options["es_path"]}/#{@options["es_index"]}"
     begin
-      transformed = @es_req || transform_es(@options["output"])
+      transformed = transform_es(@options["output"])
       transformed.each do |doc|
         id = doc["identifier"]
         type = @options["es_type"]
@@ -54,7 +54,7 @@ class FileType
       end
       return { "docs" => transformed }
     rescue => e
-      return { "error" => "Error transforming or posting to ES for #{self.filename(false)}: #{e.inspect}" }
+      return { "error" => "Error transforming or posting to ES for #{self.filename(false)}: #{e.response}" }
     end
   end
 
