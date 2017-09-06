@@ -29,6 +29,7 @@ class FileVra < FileType
         filepath = "#{@out_es}/#{self.filename(false)}.json"
         File.open(filepath, "w") { |f| f.write(self.print_es) }
       end
+      return @es_req
     rescue => e
       puts "something went wrong transforming #{self.filename}"
       raise e

@@ -28,7 +28,6 @@ require_relative "vra_to_es/xpaths.rb"
 #   you can override individual chunks of fields in your collection
 
 class VraToEs < XmlToEs
-  puts "hi there"
   # Override XmlToEs methods that need to be customized for VRA here
   # rather than in one of the files in vra_to_es/
 end
