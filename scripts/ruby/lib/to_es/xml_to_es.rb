@@ -73,7 +73,7 @@ class XmlToEs
   # returns an array with the html value in xpath
   def get_list(xpaths, keep_tags=false, xml=nil)
     xpath_array = xpaths.class == Array ? xpaths : [xpaths]
-    return get_xpaths xpath_array, keep_tags, xml
+    return get_xpaths(xpath_array, keep_tags, xml)
   end
 
   # get_text
@@ -84,7 +84,7 @@ class XmlToEs
   def get_text(xpaths, keep_tags=false, xml=nil, delimiter=";")
     # ensure all xpaths are an array before beginning
     xpath_array = xpaths.class == Array ? xpaths : [xpaths]
-    list = get_xpaths xpath_array, keep_tags, xml
+    list = get_xpaths(xpath_array, keep_tags, xml)
     sorted = list.sort
     return sorted.join("#{delimiter} ")
   end

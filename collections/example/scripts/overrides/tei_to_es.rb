@@ -44,7 +44,7 @@ class TeiToEs
   # end
 
   # In the below example, the normal "person" behavior is customized
-  def self.person
+  def person
     # TODO will need some examples of how this will work
     # and put in the xpaths above, also for attributes, etc
     # should contain name, id, and role

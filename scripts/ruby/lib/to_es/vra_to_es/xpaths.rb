@@ -7,8 +7,10 @@ class VraToEs < XmlToEs
     {
       "contributors" => "/vra/work/agentSet/agent",
       "creators" => "/vra/work/agentSet/agent",
-      "date" => "/vra/collection[1]/dateSet[1]/date[1]/earliestDate[1]",
-      "dateDisplay" => "/vra/collection[1]/dateSet[1]/display[1]",
+      "dates" => {
+        "earliest" => "/vra/collection[1]/dateSet[1]/date[1]/earliestDate[1]",
+        "display" => "/vra/collection[1]/dateSet[1]/display[1]"
+      },
       "format" => "/vra/collection[1]/techniqueSet[1]/technique[1]",
       "image_id" => "/vra/collection[1]/work[1]/image[1]/@id",
       "keywords" => "/vra/work/subjectSet/subject",

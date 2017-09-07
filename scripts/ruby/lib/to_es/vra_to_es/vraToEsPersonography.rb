@@ -1,4 +1,4 @@
-class TeiToEsPersonography < TeiToEs
+class VraToEsPersonography < TeiToEs
 
   def override_xpaths
     return {

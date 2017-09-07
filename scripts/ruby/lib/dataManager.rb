@@ -67,7 +67,7 @@ class DataManager
     @time = [Time.now]
     # log starting information for user
     @log.info(options_msg true)
-    puts options_msg @options["verbose"]
+    puts options_msg(@options["verbose"])
 
     check_options
     @files = prepare_files
@@ -79,7 +79,7 @@ class DataManager
   private
 
   # TODO should this move to Options class?
-  def assert_option opt
+  def assert_option(opt)
     if !@options.has_key?(opt)
       puts "Option #{opt} was not found!  Check config files and add #{opt} to continue".red
       raise "Missing configuration options"
@@ -92,7 +92,7 @@ class DataManager
     filesChunked.each do |files_subset|
       threads = files_subset.each_with_index.map do |file, index|
         Thread.new do
-          transform_and_post file
+          transform_and_post(file)
         end
       end
       # wait for all the files to process before moving on with the next chunk
@@ -102,15 +102,15 @@ class DataManager
 
   def check_options
     # verify that everything's all good before moving to per-file level processing
-    if should_transform "es"
-      assert_option "es_path"
-      assert_option "es_index"
-      assert_option "es_type"
+    if should_transform("es")
+      assert_option("es_path")
+      assert_option("es_index")
+      assert_option("es_type")
     end
 
-    if should_transform "solr"
-      assert_option "solr_core"
-      assert_option "solr_path"
+    if should_transform("solr")
+      assert_option("solr_core")
+      assert_option("solr_path")
     end
 
   end
@@ -133,7 +133,7 @@ class DataManager
     @log.close
   end
 
-  def error_with_transform_and_post e, error_obj
+  def error_with_transform_and_post(e, error_obj)
     error_obj << e
     puts e.red
     @log.error(e)
@@ -148,19 +148,19 @@ class DataManager
     end
     files = []
     formats.each do |format|
-      found = get_directory_files "#{@coll_dir}/#{format}"
+      found = get_directory_files("#{@coll_dir}/#{format}")
       files += found if found
     end
     return files
   end
 
-  def options_msg all=false
+  def options_msg(all=false)
     msg = "Start Time: #{Time.now}\n"
     msg << "Running script with following options:\n"
     msg << "collection:     #{@options['collection']}\n"
     msg << "Environment: #{@options['environment']}\n"
-    msg << "Posting to:  #{@es_url}\n\n" if should_transform "es"
-    msg << "Posting to:  #{@solr_url}\n\n" if should_transform "solr"
+    msg << "Posting to:  #{@es_url}\n\n" if should_transform("es")
+    msg << "Posting to:  #{@solr_url}\n\n" if should_transform("solr")
     msg << "Format:      #{@options['format']}\n" if @options["format"]
     msg << "Regex:       #{@options['regex']}\n" if @options["regex"]
     msg << "Update Time: #{@options['update_time']}\n" if @options["update_time"]
@@ -170,8 +170,8 @@ class DataManager
 
   def prepare_files
     files = get_files
-    regexed = regex_files files, @options["regex"]
-    filtered = regexed.select { |f| should_update? f, @options["update_time"] }
+    regexed = regex_files(files, @options["regex"])
+    filtered = regexed.select { |f| should_update?(f, @options["update_time"]) }
 
     file_classes = []
     @log.info("After filters (regex, update time), #{filtered.length}/#{files.length} files remaining")
@@ -189,12 +189,12 @@ class DataManager
     return file_classes
   end
 
-  def should_transform type
+  def should_transform(type)
     # adjust default transformation type in params parser
     return @options["transform_types"].include?(type)
   end
 
-  def transform_and_post file
+  def transform_and_post(file)
 
     # elasticsearch
     if should_transform("es")

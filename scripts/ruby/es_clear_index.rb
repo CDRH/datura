@@ -2,10 +2,11 @@ require "json"
 require "rest-client"
 require_relative "lib/requirer.rb"
 
-def confirm_basic options
+def confirm_basic(options, url)
   # verify that the user is really sure about the index they're about to wipe
   puts "Are you sure that you want to remove entries from"
   puts " #{options["shortname"]}'s #{options['environment']} environment?"
+  puts "url: #{url}"
   puts "y/N"
   answer = STDIN.gets.chomp
   # boolean
@@ -19,13 +20,13 @@ def main
   params = Parser.clear_index_params
   options = Options.new(params, "#{this_dir}/../../config", "#{this_dir}/../../collections/#{params['collection']}/config").all
   if params["collection"] == "all"
-    clear_all options
+    clear_all(options)
   else
-    clear_index options
+    clear_index(options)
   end
 end
 
-def build_data options
+def build_data(options)
   if options["regex"]
     field = options["field"] || "identifier"
     return {
@@ -40,7 +41,7 @@ def build_data options
   end
 end
 
-def clear_all options
+def clear_all(options)
   puts "Please verify that you want to clear EVERY ENTRY from the ENTIRE INDEX"
   puts "Type: 'Yes I'm sure'"
   confirm = STDIN.gets.chomp
@@ -53,20 +54,20 @@ def clear_all options
   end
 end
 
-def clear_index options
-  confirmation = confirm_basic options
+def clear_index(options)
+  url = "#{options["es_path"]}/#{options["es_index"]}/#{options["shortname"]}/_delete_by_query?pretty"
+  confirmation = confirm_basic(options, url)
 
   if confirmation
-    url = "#{options["es_path"]}/#{options["es_index"]}/#{options["shortname"]}/_delete_by_query?pretty"
-    data = build_data options
-    post url, data
+    data = build_data(options)
+    post(url, data)
   else
     puts "come back anytime!"
     exit
   end
 end
 
-def post url, data={}
+def post(url, data={})
   begin
     puts "clearing from #{url}: #{data.to_json}"
     res = RestClient.post(url, data.to_json, {:content_type => :json})
