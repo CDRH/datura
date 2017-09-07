@@ -97,7 +97,6 @@
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
   
   <xsl:template match="figure">
-    
       <xsl:choose>
         <!-- Is this specific to everyweek, should it be in here? -KMD -->
         <xsl:when test="@n='flag'"></xsl:when>
@@ -107,7 +106,6 @@
             <xsl:apply-templates/></div>
         </xsl:otherwise>
       </xsl:choose>
-    
   </xsl:template>
   
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -115,7 +113,6 @@
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
   
   <xsl:template match="pb">
-    
       <!-- grab the figure id, first looking in @facs, then @xml:id, and if there is a .jpg, chop it off -->
       <xsl:variable name="figure_id">
         <xsl:variable name="figure_id_full">
@@ -176,7 +173,6 @@
           </a>
         </span>
       </xsl:if>
-    
   </xsl:template>
   
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

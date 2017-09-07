@@ -5,11 +5,11 @@
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     exclude-result-prefixes="xs" version="2.0">
-    
+
     <!-- ========================================================
   Helper Templates
   ==========================================================-->
-    
+
     <xsl:template name="date_standardize">
         <xsl:param name="datebefore"/>
         <xsl:choose>
@@ -35,17 +35,13 @@
             </xsl:when>
             <xsl:otherwise><!-- do nothing because date is not in proper format --></xsl:otherwise>
         </xsl:choose>
-        
-        
-        
     </xsl:template>
-    
-    
+
     <xsl:template name="normalize_name">
         <xsl:param name="string"/>
-        
+
         <xsl:variable name="string_lower"><xsl:value-of select="normalize-space(translate(lower-case($string), '“‘&quot;', ''))"/></xsl:variable>
-        
+
         <xsl:choose>
             <xsl:when test="starts-with($string_lower, 'a ')">
                 <xsl:value-of select="substring-after($string_lower, 'a ')"></xsl:value-of>
@@ -60,16 +56,12 @@
                 <xsl:value-of select="$string_lower"></xsl:value-of>
             </xsl:otherwise>
         </xsl:choose>
-        
-        
     </xsl:template>
-    
-    
+
     <xsl:template name="extractDate">
         <xsl:param name="date" />
         <!--This template converts a date from format YYYY-MM-DD to mm D, YYYY (MM, MM-DD, optional)-->
-        
-        
+
         <xsl:variable name="YYYY" select="substring($date,1,4)" />
         <xsl:variable name="MM" select="substring($date,6,2)" />
         <xsl:variable name="DD" select="substring($date,9,2)" />
@@ -98,9 +90,8 @@
                 N.D.
             </xsl:otherwise>
         </xsl:choose>
-        
     </xsl:template>
-    
+
     <xsl:template name="lookUpMonth">
         <xsl:param name="numValue" />
         <xsl:choose>
