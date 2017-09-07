@@ -10,7 +10,7 @@ class FileTei < FileType
 
 
   def initialize(file_location, coll_dir, options)
-    super file_location, coll_dir, options
+    super(file_location, coll_dir, options)
     @es_req = nil
     @script_html = "#{options["repo_dir"]}/#{options["tei_html_xsl"]}"
     @script_solr = "#{options["repo_dir"]}/#{options["tei_solr_xsl"]}"

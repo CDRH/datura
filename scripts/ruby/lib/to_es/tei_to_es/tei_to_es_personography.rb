@@ -15,12 +15,12 @@ class TeiToEsPersonography < TeiToEs
   end
 
   def creator
-    creators = get_list @xpaths["creators"], false, @parent_xml
+    creators = get_list(@xpaths["creators"], false, @parent_xml)
     return creators.map { |creator| { "name" => creator } }
   end
 
   def creators
-    return get_text @xpaths["creators"], false, @parent_xml
+    return get_text(@xpaths["creators"], false, @parent_xml)
   end
 
   def get_id

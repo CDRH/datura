@@ -3,7 +3,7 @@ require_relative "../file_type.rb"
 
 class FileCsv < FileType
   def initialize(file_location, coll_dir, options)
-    super file_location, coll_dir, options
+    super(file_location, coll_dir, options)
     @csv = read_csv(file_location, options["csv_encoding"])
   end
 
@@ -36,7 +36,7 @@ class FileCsv < FileType
   # I am not sure that this is going to be the best way to set this up
   # but until we have more examples of CSVs that need to be ingested
   # it will have to do! (transmississippi only collection so far)
-  def transform_solr output=false
+  def transform_solr(output=false)
     puts "transforming #{self.filename}"
     solr_doc = Nokogiri::XML("<add></add>")
     @csv.each do |row|

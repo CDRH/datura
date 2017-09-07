@@ -18,7 +18,7 @@ class FileType
   attr_accessor :out_html
   attr_accessor :out_solr
 
-  def initialize location, collection_dir, options
+  def initialize(location, collection_dir, options)
     @file_location = location
     @options = options
     @options["variables_html"]["collection"] = @options["shortname"]
@@ -31,7 +31,7 @@ class FileType
     # script locations will need to be set in child classes
   end
 
-  def filename ext=true
+  def filename(ext=true)
     if ext
       File.basename(@file_location)
     else
@@ -39,7 +39,7 @@ class FileType
     end
   end
 
-  def post_es url=nil
+  def post_es(url=nil)
     url = url || "#{@options["es_path"]}/#{@options["es_index"]}"
     begin
       transformed = transform_es(@options["output"])
@@ -62,7 +62,7 @@ class FileType
     end
   end
 
-  def post_solr url=nil
+  def post_solr(url=nil)
     url = url || "#{@options['solr_path']}/#{@options['solr_core']}/update"
     begin
       transformed = @solr_req || transform_solr(@options["output"])["docs"]
@@ -116,23 +116,23 @@ class FileType
     exec_xsl @file_location, @script_html, "html", @out_html, @options["variables_html"]
   end
 
-  def transform_solr output=false
+  def transform_solr(output=false)
     # this assumes that solr uses XSL transformation
     # make sure to override behavior in CSV / YML child classes
     # TODO make sure the right params are going through
     if output
-      req = exec_xsl @file_location, @script_solr, "xml", @out_solr, @options["variables_solr"]
+      req = exec_xsl(@file_location, @script_solr, "xml", @out_solr, @options["variables_solr"])
     else
-      req = exec_xsl @file_location, @script_solr, "xml", nil, @options["variables_solr"]
+      req = exec_xsl(@file_location, @script_solr, "xml", nil, @options["variables_solr"])
     end
     @solr_req = req["doc"] if req && req.has_key?("doc")
-    return { "docs" => req["doc"]}
+    return { "docs" => req["doc"] }
   end
 
   private
 
-  # TODO will need to make params string at some point
-  def exec_xsl input, xsl, ext, output=nil, params=nil
+  # TODO can remove most of these parameters and grab them from instance variables
+  def exec_xsl(input, xsl, ext, output=nil, params=nil)
     saxon_params = Common.stringify_params(params)
     cmd = "saxon -s:#{input} -xsl:#{xsl}"
     # TODO which way would we rather do this?
@@ -153,7 +153,7 @@ class FileType
     end
   end
 
-  def pretty_json json
+  def pretty_json(json)
     JSON.pretty_generate(json)
   end
 
