@@ -41,9 +41,6 @@ default:
   variables_es:
     # none so far
   variables_html:
-    figures: true
-    fw: true
-    pb: true
     site_url:
     fig_location: http://cdrhmedia-development.unl.edu/images/collection
   # these are for legacy collections only
@@ -71,9 +68,6 @@ production:
   #   copy over ALL of them to the collection specific config file
   variables_html:
     fig_location: http://cdrhmedia.unl.edu/images/collection
-    figures: true
-    fw: true
-    pb: true
   variables_search:
     file_location: http://server.unl.edu/data/collection/
     collection: Full\ Name\ of\ Collection

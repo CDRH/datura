@@ -26,9 +26,6 @@
 <!-- ==================================================================== -->
 
 <xsl:param name="collection"></xsl:param>
-<xsl:param name="figures">true</xsl:param>  <!-- true/false Toggle figures on and off  -->
-<xsl:param name="fw">true</xsl:param>       <!-- true/false Toggle fw's on and off  -->
-<xsl:param name="pb">true</xsl:param>       <!-- true/false Toggle pb's on and off  -->
 <xsl:param name="site_url"/>                <!-- the site url (http://codyarchive.org) -->
 <xsl:param name="fig_location"></xsl:param> <!-- set figure location  -->
 
