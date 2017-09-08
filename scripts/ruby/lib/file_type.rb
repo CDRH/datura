@@ -26,10 +26,11 @@ class FileType
     @options["variables_solr"]["collection"] = @options["solr_core"] || @options["collection"]
 
     # set output directories
-    @out_es = "#{collection_dir}/output/es"
-    @out_html = "#{collection_dir}/output/html-generated"
-    @out_solr = "#{collection_dir}/output/solr"
-    # script locations will need to be set in child classes
+    @out_es = "#{collection_dir}/output/#{@options["environment"]}/es"
+    @out_html = "#{collection_dir}/output/#{@options["environment"]}/html"
+    @out_solr = "#{collection_dir}/output/#{@options["environment"]}/solr"
+    make_dirs(@out_es, @out_html, @out_solr)
+    # script locations set in child classes
   end
 
   def filename(ext=true)
