@@ -1,9 +1,6 @@
-## Customizing TEI to Elasticsearch
+## Customizing XML to Elasticsearch
 
-** If you are looking to customize another format to Elasticsearch, [documentation will be coming soon](TODO docs) **
-
-** If you would like to customize TEI to HTML or Solr, [documentation will be coming soon](TODO docs) **
-
+**NOTE: Currently this repository only accommodates TEI and VRA.  The process to customize them should be nearly identical, so for the purposes of this documentation, we will be working with TEI.**
 
 If you are already familiar with XSLT / XPath, you may be interested in comparing Ruby / Nokogiri equivalents with XSLT behavior.
 
@@ -19,16 +16,16 @@ The following document may be easier to follow if you have a working knowledge o
 - string methods
 - (optional) classes and inheritance
 
-In general, the data repository is set up so that you may override ANYTHING inside a class or module in the `scripts/ruby` (sub)directories by putting it in your collection's script directory.  You need only have the class / module name at the top and the exact name of the method you are overriding and the rest of the original file's contents will not be altered.  This is how we will customize the TEI to Elasticsearch transformation.
+In general, the data repository is set up so that you may override ANYTHING inside a class or module in the `scripts/ruby` (sub)directories by putting it in your collection's script directory.  You need only have the class / module name at the top and the exact name of the method you are overriding and the rest of the original file's contents will not be altered.  This is how we will customize the TEI to Elasticsearch transformation.  If you are customizing a VRA script, just sub that into the filenames and classes below.
 
-If a file does not already exist at `collections/[your_collection]/scripts/tei_to_es.rb`, create one that looks like this:
+If a file does not already exist at `collections/[your_collection]/scripts/overrides/tei_to_es.rb`, create one that looks like this:
 
 ```ruby
 class TeiToEs
 end
 ```
 
-There are two types of overrides that you can do in this file:
+There are several types of overrides that you can do in this class:
 
 - xpaths
 - the json being sent to Elasticsearch
@@ -74,11 +71,11 @@ In the `tei_to_es.rb` file, you have access to a couple variables.
 
 ##### @filename
 
-This is the name of the file this (sub)document is pulling from without an extension
+This is the name of the file this (sub)document is pulling from without an extension.
 
 ##### @id
 
-Often associated with the filename, this is created with the `get_id` method in TeiToEs whose default behavior may be overridden.
+Often associated with the filename, this is created with the `get_id` method in TeiToEs whose default behavior may be overridden.  The @id is generally NOT the filename when you're dealing with subdocuments, like from a personography file.
 
 ##### @json
 
@@ -103,17 +100,21 @@ def rights
 end
 ```
 
+To see the entire list of `@options` available to your collection, run this command:
+
+```
+ruby scripts/ruby/print_options.rb collection_name
+```
+
 ##### @parent_xml
 
-Just ignore this.
-
-Kidding, kind of.  You will likely only need to work with this if you are using `tei_to_es_personography.rb` or a similarly named file.  [Please see the documentation on subdocuments](TODO docs).
+Just ignore this.  This is only relevant if you are working with subdocuments, like from a personography file, encyclopedia, or perhaps if you wanted to split a single file book's chapters into individual search items.  [Please see the documentation on subdocuments TODO docs]().
 
 ##### @xml
 
-This is your document's XML as a [Nokogiri](https://github.com/sparklemotion/nokogiri) object.  You can use methods like `get_text` which are built into this repository, or you can operate on the object directly [using Nokogiri](#using-nokogiri).
+This is your document's XML as a [Nokogiri](https://github.com/sparklemotion/nokogiri) object.  You can use methods like `get_text` which are built into this repository, or you can operate on the object directly.  If so, please refer to the [using Nokogiri](#using-nokogiri) section.
 
-If you really wanted to, you would be able to add / alter the XML itself, if that would somehow help you in your quest.  It will not alter the actual TEI documents on the filesystem unless if you intentionally write to a file, but you will not be able to accidentally do that, so no worries.
+If you really wanted to, you would be able to add / alter the XML itself, if that would somehow help you in your quest.  It will not alter the actual TEI documents on the filesystem unless if you really know what you're doing and intentionally try to alter the original files.  There's no risk of that happening accidentally, so feel free to alter the XML object as preprocessing if you need to!
 
 ##### @xpaths
 
@@ -126,6 +127,8 @@ This is the hash which contains all of the xpaths your document should be using.
 #### Using Nokogiri
 
 There may be times that you can't accomplish everything that you want to do using some of the built in data tools like `get_list` and `get_text`.  For example, if you're selecting a person's name and need to parse attributes, roles, subnodes to build an object.  Then it's time to remember that `@xml` is a [Nokogiri::XML::Element](http://www.rubydoc.info/github/sparklemotion/nokogiri/Nokogiri/XML/Element)
+
+TODO fill out this section more?
 
 ### Overriding XPaths
 
@@ -224,10 +227,10 @@ The following are helpers created to make your life easier:
 ```
 
 ```ruby
-get_list "/TEI/person"
+get_list("/TEI/person")
 #=> ["Jadzia Dax", "Geordi LaForge"]
 
-get_text "/TEI/person"
+get_text("/TEI/person")
 #=> "Jadzia Dax; Geordi LaForge"
 ```
 
@@ -244,8 +247,8 @@ get_text "/TEI/person"
 This looks like the following:
 
 ```ruby
-get_list xpaths, [keep_tags], [xml]
-get_text xpaths, [keep_tags], [xml], [delimiter]
+get_list(xpaths, [keep_tags], [xml])
+get_text(xpaths, [keep_tags], [xml], [delimiter])
 ```
 
 By default, `get_text` and `get_list` will strip out XML from the results of the xpath.  If you would like to preserve italics, bold, and underlining, pass in the "keep_tags" parameter to convert them from TEI to HTML:
@@ -256,17 +259,17 @@ By default, `get_text` and `get_list` will strip out XML from the results of the
 ```
 
 ```ruby
-get_text @xpaths["text"], true
+get_text(@xpaths["text"], true)
 #=> "She wrote the book <em>My 100 Year Old Moth</em>"
 ```
 
 You can also customize the delimiter when `get_text` encounters multiple results (which defaults to using ";")
 
 ```ruby
-get_text "/TEI/person", false, ","
+get_text("/TEI/person", false, ",")
 #=> "Jadzia Dax, Geordi LaForge"
 
-get_text @xpaths["people"], false, " &"
+get_text(@xpaths["people"], false, " &")
 #=> "Jadzia Dax & Geordi LaForge"
 ```
 
@@ -281,14 +284,14 @@ Here is a very basic example which changes a hardcoded string response:
 ```ruby
 # default version
 
-def self.rights
+def rights
   # Note: override by collection as needed
   "All Rights Reserved"
 end
 
 # collection version
 
-def self.rights
+def rights
   "For rights information, visit collectionname.unl.edu/rights"
 end
 ```
@@ -298,8 +301,8 @@ Oh shoot, but your collection actually has information encoded in the TEI docume
 ```ruby
 # collection version
 
-def self.rights
-  get_text @xpaths["rights_holder"]
+def rights
+  get_text(@xpaths["rights_holder"])
 end
 ```
 
@@ -308,10 +311,10 @@ end
 There might be circumstances where what you want to be in a field might depend on the contents of multiple xpaths.  Here is a basic example for checking that type of thing.
 
 ```ruby
-def self.title
-  title = get_text @xpaths["titles"]["main"]
+def title
+  title = get_text(@xpaths["titles"]["main"])
   if title.empty?
-    title = get_text @xpaths["titles"]["alt"]
+    title = get_text(@xpaths["titles"]["alt"])
   end
   return title
 end
@@ -330,7 +333,7 @@ development:
 ```
 
 ```ruby
-def self.somefield
+def somefield
   if @options["display"]
     return "#{@options["uri"]}/#{@id}"
   else
@@ -365,19 +368,19 @@ Fields like creator, contributors, and person fall into this nested category.  T
 
 ```ruby
   # 1
-  def self.contributors
+  def contributors
     # we're ready to start customizing this field
   end
 
   # 2
-  def self.contributors
+  def contributors
     # ultimately there are going to be multiple authors
     # so start with an array
     people = []
   end
 
   # 3
-  def self.contributors
+  def contributors
     people = []
     # @xpaths["contributors"] returns an array of xpaths
     # so iterate through each xpath one by one
@@ -387,7 +390,7 @@ Fields like creator, contributors, and person fall into this nested category.  T
   end
 
   # 4
-  def self.contributors
+  def contributors
     people = []
     @xpaths["contributors"].each do |xpath|
       # for simpler fields, we can usually use get_list
@@ -402,7 +405,7 @@ Fields like creator, contributors, and person fall into this nested category.  T
   end
 
   # 5
-  def self.contributors
+  def contributors
     people = []
     @xpaths["contributors"].each do |xpath|
       eles = @xml.xpath(xpath)
@@ -431,7 +434,7 @@ Armed with that knowledge, plus the notion that we want to return a hash with ke
 
 ```ruby
   # 6
-  def self.contributors
+  def contributors
     people = []
     @xpaths["contributors"].each do |xpath|
       eles = @xml.xpath(xpath)

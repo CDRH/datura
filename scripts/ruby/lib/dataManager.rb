@@ -63,6 +63,12 @@ class DataManager
     end
   end
 
+  def print_options
+    pretty = JSON.pretty_generate(@options)
+    puts "Options: #{pretty}"
+    return pretty
+  end
+
   def run
     @time = [Time.now]
     # log starting information for user

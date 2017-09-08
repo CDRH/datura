@@ -7,12 +7,29 @@ Open up the `config/public.yml` file in your new collection and change the follo
 ```yaml
 default:
   shortname: [collection]
-  collection_desc: [A phrase about your collection]
+  collection_desc: ["A phrase about your collection"]
   es_type: [usually shortname]
   solr_core: [usually shortname]
 ```
 
+To see ALL of the options your collection will be using, you can run the following:
+
+```
+ruby scripts/ruby/print_options.rb collection_name
+```
+
+This will print out all of the arguments and configuration options after they have been smashed together.  If something looks amiss, you may need to override it in the collection config files.
+
+Reasons why you might need to customize more stuff:
+
+- you need a custom XSL script for HTML or Solr
+- you have multiple environments with varying requirements
+- you need to override defaults in `/config/public.yml` or `config/private.yml`
+- your es_type needs to be different on your local machine than on the server
+
 Read on if you would like to understand more about how the configuration files interact, if you need to add anything which should NOT be committed to version control, or if you just want to see some of the more common options.
+
+If you are using Solr, you may need to specify an overriding XSL stylesheet.
 
 Otherwise, continue to [preparing your index](prepare_index.md).
 
@@ -75,17 +92,14 @@ For example, if global public has key `solr_path: dev1.unl.edu` but your collect
 
 `tei_solr_xsl`: XSL which overrides the generic script to convert TEI XML to a solr format.  There are several variations on this theme:
 
-tei_solr_xsl, vra_solr_xsl, dc_solr_xsl
-tei_html_xsl, vra_html_xsl, dc_html_xsl
+tei_solr_xsl, vra_solr_xsl, dc_solr_xsl, csv_solr_xsl
+tei_html_xsl, vra_html_xsl, dc_html_xsl, csv_html_xsl
 
 Note that the above are not required for Elasticsearch, and are in fact only required for XSL specific transformations
 
 ```yaml
 variables_html:
   fig_location:
-  figures:
-  fw:
-  pb:
   site_url:
 variables_solr:
   collection:
@@ -95,16 +109,16 @@ variables_solr:
   slug:
 ```
 
-These are used to pass information into the XSL script.  You may add any additional ones which you would like directly in your collection's configuration file.  Copy them into different environments if you need different URLs for development than production, etc.
+These are used to pass information into the XSL scripts.  You may add any additional ones which you would like directly in your collection's configuration file.  Copy them into different environments if you need different URLs for development than production, etc.
 
 #### private.yml
 
-Things in `private.yml` always override things in `public.yml` and also are not committed to version control. This means two things:
+Things in `private.yml` always override things in `public.yml` and also are NOT committed to version control. This means two things:
 
 - you can keep them out of the public eye
 - easier to run the same environment from two places
 
-Speaking to the first point, you may, for example, not want your solr_path endpoint availabe in github:
+Speaking to the first point, you may, for example, not want your solr_path endpoint available in github:
 
 `solr_path: http://your_server:8080/solr`
 

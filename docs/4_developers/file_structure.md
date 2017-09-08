@@ -5,7 +5,6 @@ collection_name
 |-- config
 |      |-- public.yml
 |      |-- private.yml
-|-- html-generated
 |-- scripts
 |-- test
        |-- *.yml
@@ -35,3 +34,16 @@ collection_name
 |     |-- tei.p5.xsl  # html overrides
 |-- solr
 ```
+
+If you run `html` or specify `-o` (output) as a parameter, the script will build the following directory system
+
+```
+collection_name
+|-- output
+|      |-- environment_name
+|      |           |-- es
+|      |           |-- html
+|      |           |-- solr
+```
+
+Anything in the `html` directory will be tracked by git, so make sure that you commit it when you are done!  Also be aware that on many servers, these directories are open to the web, so keep that in mind if you are going to be working with any files that should remain private in development, etc.

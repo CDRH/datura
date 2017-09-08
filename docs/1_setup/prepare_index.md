@@ -18,12 +18,14 @@ Make sure elasticsearch is installed and running in the location you wish to pus
 ./scripts/shell/es_create_index.sh name_of_index
 ```
 
+**DON'T SKIP THE NEXT STEP!**
+
 Assuming this is successful, now we will need to set up a schema for the `_type` within the index, which will match `es_type` (or the shortname of your collection).  By default this looks at the schema in `config/api_schema.yml`.
 
 ```
 ruby scripts/ruby/es_set_schema.rb collection [-e environment]
 ```
 
-You may run the above as many times as you wish, as long as you have not already put items in the index which will conflict with the fieldtypes.
+You may run the above as many times as you wish, as long as you have not already put items in the index which will conflict with the fieldtypes.  This would happen, for example, if you forgot to set the _type schema and posted.  ES will guess at the correct fieldtypes and doesn't usually get everything right.
 
-[Now you're ready to customize how the data in your index looks!](../2_customization/tei_to_es.md)
+[Now you're ready to customize how the data in your index looks!](../2_customization/all_types.md)
