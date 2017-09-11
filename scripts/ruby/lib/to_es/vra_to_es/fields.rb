@@ -34,6 +34,14 @@ class VraToEs < XmlToEs
     return get_text(@xpaths["creators"])
   end
 
+  def collection
+    @options["es_type"]
+  end
+
+  def collection_desc
+    @options["collection_desc"] || @options["collection"]
+  end
+
   def contributors
     contrib_list = []
     contributors = @xml.xpath(@xpaths["contributors"])
@@ -95,10 +103,6 @@ class VraToEs < XmlToEs
     get_list(@xpaths["places"])
   end
 
-  def collection
-    @options["collection_desc"] || @options["collection"]
-  end
-
   def publisher
     get_list(@xpaths["publisher"])
   end
@@ -120,10 +124,6 @@ class VraToEs < XmlToEs
     # by default collections have no uri associated with them
     # copy this method into collection specific vra_to_es.rb
     # to return specific string or xpath as required
-  end
-
-  def shortname
-    @options["shortname"]
   end
 
   def source

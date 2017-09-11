@@ -68,7 +68,7 @@ production:
   #   copy over ALL of them to the collection specific config file
   variables_html:
     fig_location: http://cdrhmedia.unl.edu/images/collection
-  variables_search:
+    # collection is passed in automatically as the es_type (or solr_core if no type)
+  variables_solr:
     file_location: http://server.unl.edu/data/collection/
-    collection: Full\ Name\ of\ Collection
-    shortname: short_name
+    # collection is passed in automatically as the solr_core

@@ -21,8 +21,9 @@ class FileType
   def initialize(location, collection_dir, options)
     @file_location = location
     @options = options
-    @options["variables_html"]["collection"] = @options["shortname"]
-    @options["variables_solr"]["collection"] = @options["shortname"]
+    # es_type takes preference as collection name
+    @options["variables_html"]["collection"] = @options["es_type"] || @options["solr_core"]
+    @options["variables_solr"]["collection"] = @options["solr_core"] || @options["collection"]
 
     # set output directories
     @out_es = "#{collection_dir}/output/es"
@@ -42,7 +43,7 @@ class FileType
   def post_es(url=nil)
     url = url || "#{@options["es_path"]}/#{@options["es_index"]}"
     begin
-      transformed = transform_es(@options["output"])
+      transformed = transform_es
     rescue => e
       return { "error" => "Error transforming ES for #{self.filename(false)}: #{e}" }
     end
@@ -112,7 +113,6 @@ class FileType
   end
 
   def transform_html
-    # add html specific variables and shortname as params
     exec_xsl(@file_location, @script_html, "html", @out_html, @options["variables_html"])
   end
 

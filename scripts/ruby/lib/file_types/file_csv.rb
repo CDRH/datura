@@ -26,11 +26,11 @@ class FileCsv < FileType
   end
 
   def transform_es
-    puts "currently CSV to ES is not supported"
+    raise "Currently CSV to ES transformation is not supported"
   end
 
   def transform_html
-    puts "currently CSV to HTML is not supported"
+    raise "Currently CSV to HTML transformation is not supported"
   end
 
   # I am not sure that this is going to be the best way to set this up
