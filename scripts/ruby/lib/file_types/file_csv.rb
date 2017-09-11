@@ -36,7 +36,7 @@ class FileCsv < FileType
   # I am not sure that this is going to be the best way to set this up
   # but until we have more examples of CSVs that need to be ingested
   # it will have to do! (transmississippi only collection so far)
-  def transform_solr(output=false)
+  def transform_solr
     puts "transforming #{self.filename}"
     solr_doc = Nokogiri::XML("<add></add>")
     @csv.each do |row|
@@ -49,7 +49,7 @@ class FileCsv < FileType
     end
     # Uncomment to debug
     # puts solr_doc.root.to_xml
-    if output
+    if @options["output"]
       filepath = "#{@out_solr}/#{self.filename(false)}.xml"
       # puts "output #{@out_solr}"
       File.open(filepath, "w") { |f| f.write(solr_doc.root.to_xml) }

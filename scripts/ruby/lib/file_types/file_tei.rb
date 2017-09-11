@@ -30,12 +30,12 @@ class FileTei < FileType
   # if you would like to use the default transformation behavior
   # then comment or remove both of the following methods!
 
-  # def transform_es(output=false)
+  # def transform_es
   # end
 
   # def transform_html
   # end
 
-  # def transform_solr(output=false)
+  # def transform_solr
   # end
 end

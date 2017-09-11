@@ -90,7 +90,7 @@ class FileType
     return @solr_req || transform_solr
   end
 
-  def transform_es(output=false)
+  def transform_es
     @es_req = []
     begin
       file_xml = Common.create_xml_object(self.file_location)
@@ -100,7 +100,7 @@ class FileType
           @es_req << file_transformer.json
         end
       end
-      if output
+      if @options["output"]
         filepath = "#{@out_es}/#{self.filename(false)}.json"
         File.open(filepath, "w") { |f| f.write(self.print_es) }
       end
@@ -113,14 +113,14 @@ class FileType
 
   def transform_html
     # add html specific variables and shortname as params
-    exec_xsl @file_location, @script_html, "html", @out_html, @options["variables_html"]
+    exec_xsl(@file_location, @script_html, "html", @out_html, @options["variables_html"])
   end
 
-  def transform_solr(output=false)
+  def transform_solr
     # this assumes that solr uses XSL transformation
     # make sure to override behavior in CSV / YML child classes
     # TODO make sure the right params are going through
-    if output
+    if @options["output"]
       req = exec_xsl(@file_location, @script_solr, "xml", @out_solr, @options["variables_solr"])
     else
       req = exec_xsl(@file_location, @script_solr, "xml", nil, @options["variables_solr"])
@@ -132,13 +132,13 @@ class FileType
   private
 
   # TODO can remove most of these parameters and grab them from instance variables
-  def exec_xsl(input, xsl, ext, output=nil, params=nil)
+  def exec_xsl(input, xsl, ext, outpath=nil, params=nil)
     saxon_params = Common.stringify_params(params)
     cmd = "saxon -s:#{input} -xsl:#{xsl}"
     # TODO which way would we rather do this?
-    # cmd << " -o:#{output}/#{filename(false)}.#{ext}" if output
+    # cmd << " -o:#{outpath}/#{filename(false)}.#{ext}" if outpath
     cmd << " #{saxon_params}"
-    cmd << " | tee #{output}/#{filename(false)}.#{ext}" if output
+    cmd << " | tee #{outpath}/#{filename(false)}.#{ext}" if outpath
     puts "using command #{cmd}" if @options["verbose"]
     Open3.popen3(cmd) do |stdin, stdout, stderr|
       out = stdout.read
