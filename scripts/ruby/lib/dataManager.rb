@@ -72,8 +72,8 @@ class DataManager
   def run
     @time = [Time.now]
     # log starting information for user
-    @log.info(options_msg true)
-    puts options_msg(@options["verbose"])
+    @log.info(options_msg)
+    puts options_msg
 
     check_options
     @files = prepare_files
@@ -160,7 +160,7 @@ class DataManager
     return files
   end
 
-  def options_msg(all=false)
+  def options_msg
     msg = "Start Time: #{Time.now}\n"
     msg << "Running script with following options:\n"
     msg << "collection:     #{@options['collection']}\n"
@@ -170,7 +170,9 @@ class DataManager
     msg << "Format:      #{@options['format']}\n" if @options["format"]
     msg << "Regex:       #{@options['regex']}\n" if @options["regex"]
     msg << "Update Time: #{@options['update_time']}\n" if @options["update_time"]
-    msg << "All options: #{@options}".light_cyan if all
+    if @options["verbose"]
+      print_options
+    end
     return msg
   end
 
@@ -205,7 +207,7 @@ class DataManager
     # elasticsearch
     if should_transform("es")
       if @options["transform_only"]
-        res_es = file.transform_es(@options["output"])
+        res_es = file.transform_es
       else
         res_es = file.post_es(@es_url)
         if res_es && res_es.has_key?("error")
@@ -223,7 +225,7 @@ class DataManager
     # solr
     if should_transform("solr")
       if @options["transform_only"]
-        res_solr = file.transform_solr(@options["output"])
+        res_solr = file.transform_solr
       else
         res_solr = file.post_solr(@solr_url)
       end
