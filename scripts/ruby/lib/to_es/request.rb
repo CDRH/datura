@@ -38,8 +38,10 @@ class XmlToEs
     @json["category"] = category
     @json["subcategory"] = subcategory
     @json["data_type"] = "tei"
+    # note: collection is typically the es_type
     @json["collection"] = collection
-    @json["shortname"] = shortname
+    # collection_desc is "The Whitman Archive", etc
+    @json["collection_desc"] = collection_desc
     # @json["subject"]
   end
 

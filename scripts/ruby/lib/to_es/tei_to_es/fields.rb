@@ -35,6 +35,14 @@ class TeiToEs < XmlToEs
     return get_text(@xpaths["creators"])
   end
 
+  def collection
+    @options["es_type"]
+  end
+
+  def collection_desc
+    @options["collection_desc"] || @options["es_type"]
+  end
+
   def contributors
     contribs = []
     @xpaths["contributors"].each do |xpath|
@@ -98,10 +106,6 @@ class TeiToEs < XmlToEs
     return get_list(@xpaths["places"])
   end
 
-  def collection
-    @options["collection_desc"] || @options["collection"]
-  end
-
   def publisher
     get_text(@xpaths["publisher"])
   end
@@ -123,10 +127,6 @@ class TeiToEs < XmlToEs
     # by default collections have no uri associated with them
     # copy this method into collection specific tei_to_es.rb
     # to return specific string or xpath as required
-  end
-
-  def shortname
-    @options["shortname"]
   end
 
   def source

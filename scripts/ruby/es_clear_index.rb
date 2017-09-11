@@ -5,7 +5,7 @@ require_relative "lib/requirer.rb"
 def confirm_basic(options, url)
   # verify that the user is really sure about the index they're about to wipe
   puts "Are you sure that you want to remove entries from"
-  puts " #{options["shortname"]}'s #{options['environment']} environment?"
+  puts " #{options["es_type"]}'s #{options['environment']} environment?"
   puts "url: #{url}"
   puts "y/N"
   answer = STDIN.gets.chomp
@@ -55,7 +55,7 @@ def clear_all(options)
 end
 
 def clear_index(options)
-  url = "#{options["es_path"]}/#{options["es_index"]}/#{options["shortname"]}/_delete_by_query?pretty"
+  url = "#{options["es_path"]}/#{options["es_index"]}/#{options["es_type"]}/_delete_by_query?pretty"
   confirmation = confirm_basic(options, url)
 
   if confirmation
