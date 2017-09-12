@@ -207,7 +207,13 @@ class DataManager
     # elasticsearch
     if should_transform("es")
       if @options["transform_only"]
-        res_es = file.transform_es
+        # TODO transformation is not treated the same way here as in
+        # most post methods, so having to use try catch block
+        begin
+          res_es = file.transform_es
+        rescue => e
+          error_with_transform_and_post("#{e}", @error_es)
+        end
       else
         res_es = file.post_es(@es_url)
         if res_es && res_es.has_key?("error")
@@ -217,9 +223,13 @@ class DataManager
     end
 
     # html
-    res_html = file.transform_html if should_transform("html")
-    if res_html && res_html.has_key?("error")
-      error_with_transform_and_post(res_html["error"], @error_html)
+    begin
+      res_html = file.transform_html if should_transform("html")
+      if res_html && res_html.has_key?("error")
+        error_with_transform_and_post(res_html["error"], @error_html)
+      end
+    rescue => e
+      error_with_transform_and_post("#{e}", @error_html)
     end
 
     # solr
