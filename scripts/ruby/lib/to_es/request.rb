@@ -71,11 +71,8 @@ class XmlToEs
   end
 
   def assemble_locations
-    # TODO check, because I'm not sure the schema
-    # lists the urls that we actually want to use
-    # earlywashingtondc.org vs cdrhmedia, etc
-    # @json["uri"]
-    # @json["uri_data"]
+    @json["uri"] = uri
+    @json["uri_data"] = uri_data
     @json["uri_html"] = uri_html
     # @json["image_location"]
     # @json["image_id"]

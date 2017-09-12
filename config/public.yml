@@ -34,7 +34,9 @@ default:
   tei_html_xsl: scripts/xslt/cdrh_to_html/tei.p5.xsl
 
   # file locations
-  uri_html: https://cdrhmedia-development.unl.edu
+  media_base: https://cdrhmedia.unl.edu
+  # default html subpath is [environment]/output/html
+  # override default behavior per collection in tei_to_es, etc
 
   # NOTE! If you are altering ANY of the variables you must
   #   copy over ALL of them in that group to the collection specific config file
@@ -56,7 +58,8 @@ default:
 #   Development   #
 ###################
 
-# development:
+development:
+  media_base: https://cdrhdev1.unl.edu/media
 
 ##################
 #   Production   #
