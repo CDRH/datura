@@ -5,10 +5,8 @@ default:
   solr_core: there_is_no_solr_core
 
   variables_html:
-    fig_location: some/path
-    figures: true
-    fw: true
-    pb: true
+    image_large: 800
+    image_thumb: 150
 # development:
   # development overrides here
 # production:
