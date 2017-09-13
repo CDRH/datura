@@ -34,44 +34,37 @@ default:
   tei_html_xsl: scripts/xslt/cdrh_to_html/tei.p5.xsl
 
   # file locations
+  data_base: https://cdrhmedia.unl.edu
   media_base: https://cdrhmedia.unl.edu
   # default html subpath is [environment]/output/html
   # override default behavior per collection in tei_to_es, etc
 
   # NOTE! If you are altering ANY of the variables you must
   #   copy over ALL of them in that group to the collection specific config file
-  variables_es:
-    # none so far
+  # some variables are passed in automatically to both of the following:
+  #   - collection
+  #   - data_base
+  #   - media_base
+  #   - environment
   variables_html:
     site_url:
-    fig_location: http://cdrhmedia-development.unl.edu/images/collection
-  # these are for legacy collections only
+    image_large: 800
+    image_thumb: 150
+  # solr variables are for legacy collections only
   variables_solr:
-    fig_location: http://cdrhmedia-development.unl.edu/images/collection
-    file_location: http://cdrhmedia-development.unl.edu/
-    collection:
-    slug:
+    slug: example
     site_url:
-
 
 ###################
 #   Development   #
 ###################
 
 development:
-  media_base: https://cdrhdev1.unl.edu/media
+  data_base: https://cdrhdev1.unl.edu/media
+  # media_base:
 
 ##################
 #   Production   #
 ##################
 production:
   solr_core: name_of_core
- 
-  # NOTE! If you are altering ANY of the xsl_params you must
-  #   copy over ALL of them to the collection specific config file
-  variables_html:
-    fig_location: http://cdrhmedia.unl.edu/images/collection
-    # collection is passed in automatically as the es_type (or solr_core if no type)
-  variables_solr:
-    file_location: http://server.unl.edu/data/collection/
-    # collection is passed in automatically as the solr_core

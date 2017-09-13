@@ -25,9 +25,13 @@
 <!--                           PARAMETERS                                 -->
 <!-- ==================================================================== -->
 
-<xsl:param name="collection"></xsl:param>
-<xsl:param name="site_url"/>                <!-- the site url (http://codyarchive.org) -->
-<xsl:param name="fig_location"></xsl:param> <!-- set figure location  -->
+<xsl:param name="collection"/>
+<xsl:param name="data_base"/>
+<xsl:param name="environment">production</xsl:param>
+<xsl:param name="image_large"/>
+<xsl:param name="image_thumb"/>
+<xsl:param name="media_base"/>
+<xsl:param name="site_url"/>
 
 <!-- ==================================================================== -->
 <!--                            OVERRIDES                                 -->

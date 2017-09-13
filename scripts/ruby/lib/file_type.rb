@@ -21,9 +21,7 @@ class FileType
   def initialize(location, collection_dir, options)
     @file_location = location
     @options = options
-    # es_type takes preference as collection name
-    @options["variables_html"]["collection"] = @options["es_type"] || @options["solr_core"]
-    @options["variables_solr"]["collection"] = @options["solr_core"] || @options["collection"]
+    add_xsl_params_options
 
     # set output directories
     @out_es = "#{collection_dir}/output/#{@options["environment"]}/es"
@@ -131,6 +129,17 @@ class FileType
   end
 
   private
+
+  def add_xsl_params_options
+    # add several variables to both params objects, unless if they already have a value
+    html = @options["variables_html"]
+    solr = @options["variables_solr"]
+
+    ["collection", "data_base", "media_base", "environment"].each do |opt|
+      html[opt] = @options[opt] if !html.has_key?(opt)
+      solr[opt] = @options[opt] if !solr.has_key?(opt)
+    end
+  end
 
   # TODO can remove most of these parameters and grab them from instance variables
   def exec_xsl(input, xsl, ext, outpath=nil, params=nil)

@@ -139,30 +139,33 @@
           </xsl:attribute>
           <a>
             <xsl:attribute name="href">
-              <xsl:value-of select="$fig_location"/>
-              <xsl:text>large/</xsl:text>
+              <xsl:value-of select="$media_base"/>
+              <xsl:text>/images/</xsl:text>
+              <xsl:value-of select="$collection"/><xsl:text>/</xsl:text>
+              <xsl:value-of select="$image_large"/><xsl:text>/</xsl:text>
               <xsl:value-of select="$figure_id"/>
               <xsl:text>.jpg</xsl:text>
             </xsl:attribute>
             <xsl:attribute name="rel">
               <xsl:text>prettyPhoto[pp_gal]</xsl:text>
             </xsl:attribute>
-            <!-- todo This is broken. It is used to create "open in new window" options from pretty 
-              photo popups (http://codyarchive.org/texts/wfc.css00036.html) but right now creates 
-              broken code -kmd -->
-            <!--<xsl:attribute name="title">
+            <xsl:attribute name="title">
               <xsl:text>&lt;a href="</xsl:text>
-              <xsl:value-of select="$fig_location"/>
-              <xsl:text>large/</xsl:text>
+              <xsl:value-of select="$media_base"/>
+              <xsl:text>/images/</xsl:text>
+              <xsl:value-of select="$collection"/><xsl:text>/</xsl:text>
+              <xsl:value-of select="$image_large"/><xsl:text>/</xsl:text>
               <xsl:value-of select="$figure_id"/>
               <xsl:text>.jpg</xsl:text>
               <xsl:text>" target="_blank" &gt;open image in new window&lt;/a&gt;</xsl:text>
-            </xsl:attribute>-->
+            </xsl:attribute>
             
             <img>
               <xsl:attribute name="src">
-                <xsl:value-of select="$fig_location"/>
-                <xsl:text>thumbnails/</xsl:text>
+                <xsl:value-of select="$media_base"/>
+                <xsl:text>/images/</xsl:text>
+                <xsl:value-of select="$collection"/><xsl:text>/</xsl:text>
+                <xsl:value-of select="$image_thumb"/><xsl:text>/</xsl:text>
                 <xsl:value-of select="$figure_id"/>
                 <xsl:text>.jpg</xsl:text>
               </xsl:attribute>
@@ -275,52 +278,6 @@
         </a>
       </xsl:otherwise>
     </xsl:choose>
-    
-    <!-- Old rules preserved here - TODO KMD needs to check with Laura to see which need to be kept -->
-    <!--<xsl:choose>
-      <xsl:when test="starts-with(@target, 'n')">
-        <xsl:variable name="n" select="@target"/>
-        <xsl:text> </xsl:text>
-        <a>
-          <xsl:attribute name="id">
-            <xsl:text>ref</xsl:text>
-            <xsl:value-of select="@target"/>
-          </xsl:attribute>
-          <xsl:attribute name="class">
-            <xsl:text>inlinenote</xsl:text>
-          </xsl:attribute>
-          <xsl:attribute name="href">
-            <xsl:text>#note</xsl:text>
-            <xsl:value-of select="@target"/>
-          </xsl:attribute>
-          <xsl:text>[note </xsl:text>
-          <xsl:apply-templates/>
-          <xsl:text>]</xsl:text>
-        </a>
-        <xsl:text> </xsl:text>
-      </xsl:when>
-      <xsl:when test="@type='link'">
-        <a href="{@target}">
-          <xsl:apply-templates/>
-        </a>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:text> </xsl:text>
-        <a href="{@target}" id="{@target}.ref" class="footnote">
-          
-          <xsl:choose>
-            <xsl:when test="descendant::text()">
-              <xsl:apply-templates/>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:value-of select="@n"/>
-            </xsl:otherwise>
-          </xsl:choose>
-          
-        </a>
-        <xsl:text> </xsl:text>
-      </xsl:otherwise>
-    </xsl:choose>-->
   </xsl:template>
   
 </xsl:stylesheet>
