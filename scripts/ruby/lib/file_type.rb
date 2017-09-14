@@ -64,6 +64,10 @@ class FileType
 
   def post_solr(url=nil)
     url = url || "#{@options['solr_path']}/#{@options['solr_core']}/update"
+    transformed = @solr_req || transform_solr(@options["output"])["docs"]
+    if transformed.has_key?("error")
+      return { "error" => "Error transforming to Solr for #{self.filename}: #{req["error"]}" }
+    end
     begin
       transformed = @solr_req || transform_solr["docs"]
       solr = SolrPoster.new(url, @options["commit"])
@@ -74,10 +78,10 @@ class FileType
         solr.commit_solr
         return { "docs" => transformed }
       else
-        return { "error" => "Error posting to Solr for #{self.filename(false)}: #{res.body}" }
+        return { "error" => "Error posting to Solr for #{self.filename}: #{res.body}" }
       end
     rescue => e
-      return { "error" => "Error transforming or posting to Solr for #{self.filename(false)}: #{e.inspect}" }
+      return { "error" => "Error posting to Solr for #{self.filename}: #{e.inspect}" }
     end
   end
 
@@ -116,16 +120,16 @@ class FileType
   end
 
   def transform_solr
+    puts "transforming #{self.filename}"
     # this assumes that solr uses XSL transformation
     # make sure to override behavior in CSV / YML child classes
-    # TODO make sure the right params are going through
     if @options["output"]
       req = exec_xsl(@file_location, @script_solr, "xml", @out_solr, @options["variables_solr"])
     else
       req = exec_xsl(@file_location, @script_solr, "xml", nil, @options["variables_solr"])
     end
-    @solr_req = req["doc"] if req && req.has_key?("doc")
-    return { "docs" => req["doc"] }
+    @solr_req if req && req.has_key?("doc")
+    return req
   end
 
   private

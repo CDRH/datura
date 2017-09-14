@@ -3,7 +3,7 @@
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:dc="http://purl.org/dc/elements/1.1/"
   exclude-result-prefixes="#all">
-  
+
   <!-- ==================================================================== -->
   <!--                               IMPORTS                                -->
   <!-- ==================================================================== -->
@@ -21,12 +21,13 @@
   <!-- ==================================================================== -->
 
   <!-- Defined in collection config files -->
-  <xsl:param name="fig_location"/>  <!-- url for figures -->
-  <xsl:param name="file_location"/> <!-- url for tei files -->
-  <xsl:param name="collection"/>       <!-- longer name of collection -->
-  <xsl:param name="slug"/>          <!-- slug of collection -->
+  <xsl:param name="collection"/>
+  <xsl:param name="data_base"/>
+  <xsl:param name="environment">production</xsl:param>
+  <xsl:param name="media_base"/>
+  <xsl:param name="slug"/>
   <xsl:param name="site_url"/>
-        
+
 
   <!-- ==================================================================== -->
   <!--                            OVERRIDES                                 -->
