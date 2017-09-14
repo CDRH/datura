@@ -66,7 +66,7 @@ class FileType
   def post_solr(url=nil)
     url = url || "#{@options['solr_path']}/#{@options['solr_core']}/update"
     begin
-      transformed = @solr_req || transform_solr(@options["output"])["docs"]
+      transformed = @solr_req || transform_solr["docs"]
       solr = SolrPoster.new(url, @options["commit"])
       # Note: only supporting XML for now since solr is considered "deprecated"
       # but can extend in the future if necessary
