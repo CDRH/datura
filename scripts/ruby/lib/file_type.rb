@@ -64,12 +64,13 @@ class FileType
 
   def post_solr(url=nil)
     url = url || "#{@options['solr_path']}/#{@options['solr_core']}/update"
-    transformed = @solr_req || transform_solr(@options["output"])["docs"]
-    if transformed.has_key?("error")
-      return { "error" => "Error transforming to Solr for #{self.filename}: #{req["error"]}" }
+    transformed = transform_solr["docs"]
+    if transformed.nil?
+      return { "error" => "Something is super wrong with transform for solr" }
+    elsif !transformed.nil? || transformed.has_key?("error")
+      return { "error" => "Error transforming to Solr for #{self.filename}: " }
     end
     begin
-      transformed = @solr_req || transform_solr["docs"]
       solr = SolrPoster.new(url, @options["commit"])
       # Note: only supporting XML for now since solr is considered "deprecated"
       # but can extend in the future if necessary
@@ -86,29 +87,29 @@ class FileType
   end
 
   def print_es
-    json = @es_req || transform_es
-    return pretty_json json
+    json = transform_es
+    return pretty_json(json)
   end
 
   def print_solr
-    return @solr_req || transform_solr
+    return transform_solr
   end
 
   def transform_es
-    @es_req = []
+    es_req = []
     begin
       file_xml = Common.create_xml_object(self.file_location)
       subdoc_xpaths.each do |xpath, classname|
         file_xml.xpath(xpath).each do |subdoc|
           file_transformer = classname.new(subdoc, @options, file_xml, self.filename(false))
-          @es_req << file_transformer.json
+          es_req << file_transformer.json
         end
       end
       if @options["output"]
         filepath = "#{@out_es}/#{self.filename(false)}.json"
-        File.open(filepath, "w") { |f| f.write(self.print_es) }
+        File.open(filepath, "w") { |f| f.write(pretty_json(es_req)) }
       end
-      return @es_req
+      return es_req
     rescue => e
       puts "something went wrong transforming #{self.filename}"
       raise e
