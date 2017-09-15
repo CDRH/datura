@@ -64,20 +64,21 @@ class FileType
 
   def post_solr(url=nil)
     url = url || "#{@options['solr_path']}/#{@options['solr_core']}/update"
-    transformed = transform_solr["docs"]
+    transformed = transform_solr
     if transformed.nil?
       return { "error" => "Something is super wrong with transform for solr" }
-    elsif !transformed.nil? || transformed.has_key?("error")
-      return { "error" => "Error transforming to Solr for #{self.filename}: " }
+    elsif transformed.nil? || transformed.has_key?("error") || !transformed.has_key?("doc")
+      err = transformed.has_key?("error") ? transformed["error"] : "No error message returned"
+      return { "error" => "Error transforming to Solr for #{self.filename}: #{err}" }
     end
     begin
       solr = SolrPoster.new(url, @options["commit"])
       # Note: only supporting XML for now since solr is considered "deprecated"
       # but can extend in the future if necessary
-      res = solr.post_xml(transformed)
+      res = solr.post_xml(transformed["doc"])
       if res.code == "200"
         solr.commit_solr
-        return { "docs" => transformed }
+        return { "docs" => transformed["doc"] }
       else
         return { "error" => "Error posting to Solr for #{self.filename}: #{res.body}" }
       end
@@ -129,7 +130,6 @@ class FileType
     else
       req = exec_xsl(@file_location, @script_solr, "xml", nil, @options["variables_solr"])
     end
-    @solr_req if req && req.has_key?("doc")
     return req
   end
 
