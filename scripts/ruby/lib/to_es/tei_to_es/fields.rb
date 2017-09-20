@@ -174,8 +174,21 @@ class TeiToEs < XmlToEs
     Common.normalize_name(t)
   end
 
+  def uri
+    # override per collection
+    # should point at the live website view of resource
+  end
+
+  def uri_data
+    base = @options["media_base"]
+    subpath = "data/#{@options["collection"]}/tei"
+    return "#{base}/#{subpath}/#{@id}.xml"
+  end
+
   def uri_html
-    "#{@options["uri_html"]}/#{@id}.html"
+    base = @options["media_base"]
+    subpath = "data/#{@options["collection"]}/output/#{@options["environment"]}/html"
+    return "#{base}/#{subpath}/#{@id}.html"
   end
 
   def works

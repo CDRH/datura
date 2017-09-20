@@ -8,6 +8,9 @@ private.yml
 # There might be a better way of doing this, but something about
 # gitignoring inside an ignored subdirectory seems to be more finicky than normal
 
+# leaving html-generated gitignored because only older sites
+# that may have conflicting environment outputs will utilize
+
 **/es/*
 **/html-generated/*
 **/solr/*

@@ -305,8 +305,9 @@
   <xsl:template name="uriXML">
     <xsl:param name="id"/>
     <field name="uriXML">
-      <xsl:value-of select="$file_location"/>
-      <xsl:value-of select="$slug"/>
+      <xsl:value-of select="$data_base"/>
+      <xsl:text>/data/</xsl:text>
+      <xsl:value-of select="$collection"/>
       <xsl:text>/tei/</xsl:text>
       <xsl:value-of select="$id"/>
       <xsl:text>.xml</xsl:text>
@@ -318,9 +319,12 @@
   <xsl:template name="uriHTML">
     <xsl:param name="id"/>
     <field name="uriHTML">
-      <xsl:value-of select="$file_location"/>
-      <xsl:value-of select="$slug"/>
-      <xsl:text>/output/html-generated/</xsl:text>
+      <xsl:value-of select="$data_base"/>
+      <xsl:text>/data/</xsl:text>
+      <xsl:value-of select="$collection"/>
+      <xsl:text>/output/</xsl:text>
+      <xsl:value-of select="$environment"/>
+      <xsl:text>/html/</xsl:text>
       <xsl:value-of select="$id"/>
       <xsl:text>.html</xsl:text>
     </field>
@@ -653,9 +657,10 @@
   <!-- ========== fig_location ========== -->
 
   <xsl:template name="fig_location">
-    <xsl:if test="$fig_location">
+    <xsl:if test="$media_base">
       <field name="fig_location_s">
-        <xsl:value-of select="$fig_location"/>
+        <xsl:value-of select="$media_base"/>
+        <xsl:text>/images</xsl:text>
       </field>
     </xsl:if>
   </xsl:template>

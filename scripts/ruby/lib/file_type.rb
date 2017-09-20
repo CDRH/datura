@@ -21,15 +21,14 @@ class FileType
   def initialize(location, collection_dir, options)
     @file_location = location
     @options = options
-    # es_type takes preference as collection name
-    @options["variables_html"]["collection"] = @options["es_type"] || @options["solr_core"]
-    @options["variables_solr"]["collection"] = @options["solr_core"] || @options["collection"]
+    add_xsl_params_options
 
     # set output directories
-    @out_es = "#{collection_dir}/output/es"
-    @out_html = "#{collection_dir}/output/html-generated"
-    @out_solr = "#{collection_dir}/output/solr"
-    # script locations will need to be set in child classes
+    @out_es = "#{collection_dir}/output/#{@options["environment"]}/es"
+    @out_html = "#{collection_dir}/output/#{@options["environment"]}/html"
+    @out_solr = "#{collection_dir}/output/#{@options["environment"]}/solr"
+    make_dirs(@out_es, @out_html, @out_solr)
+    # script locations set in child classes
   end
 
   def filename(ext=true)
@@ -65,47 +64,53 @@ class FileType
 
   def post_solr(url=nil)
     url = url || "#{@options['solr_path']}/#{@options['solr_core']}/update"
+    transformed = transform_solr
+    if transformed.nil?
+      return { "error" => "Something is super wrong with transform for solr" }
+    elsif transformed.nil? || transformed.has_key?("error") || !transformed.has_key?("doc")
+      err = transformed.has_key?("error") ? transformed["error"] : "No error message returned"
+      return { "error" => "Error transforming to Solr for #{self.filename}: #{err}" }
+    end
     begin
-      transformed = @solr_req || transform_solr["docs"]
       solr = SolrPoster.new(url, @options["commit"])
       # Note: only supporting XML for now since solr is considered "deprecated"
       # but can extend in the future if necessary
-      res = solr.post_xml(transformed)
+      res = solr.post_xml(transformed["doc"])
       if res.code == "200"
         solr.commit_solr
-        return { "docs" => transformed }
+        return { "docs" => transformed["doc"] }
       else
-        return { "error" => "Error posting to Solr for #{self.filename(false)}: #{res.body}" }
+        return { "error" => "Error posting to Solr for #{self.filename}: #{res.body}" }
       end
     rescue => e
-      return { "error" => "Error transforming or posting to Solr for #{self.filename(false)}: #{e.inspect}" }
+      return { "error" => "Error posting to Solr for #{self.filename}: #{e.inspect}" }
     end
   end
 
   def print_es
-    json = @es_req || transform_es
-    return pretty_json json
+    json = transform_es
+    return pretty_json(json)
   end
 
   def print_solr
-    return @solr_req || transform_solr
+    return transform_solr
   end
 
   def transform_es
-    @es_req = []
+    es_req = []
     begin
       file_xml = Common.create_xml_object(self.file_location)
       subdoc_xpaths.each do |xpath, classname|
         file_xml.xpath(xpath).each do |subdoc|
           file_transformer = classname.new(subdoc, @options, file_xml, self.filename(false))
-          @es_req << file_transformer.json
+          es_req << file_transformer.json
         end
       end
       if @options["output"]
         filepath = "#{@out_es}/#{self.filename(false)}.json"
-        File.open(filepath, "w") { |f| f.write(self.print_es) }
+        File.open(filepath, "w") { |f| f.write(pretty_json(es_req)) }
       end
-      return @es_req
+      return es_req
     rescue => e
       puts "something went wrong transforming #{self.filename}"
       raise e
@@ -117,19 +122,29 @@ class FileType
   end
 
   def transform_solr
+    puts "transforming #{self.filename}"
     # this assumes that solr uses XSL transformation
     # make sure to override behavior in CSV / YML child classes
-    # TODO make sure the right params are going through
     if @options["output"]
       req = exec_xsl(@file_location, @script_solr, "xml", @out_solr, @options["variables_solr"])
     else
       req = exec_xsl(@file_location, @script_solr, "xml", nil, @options["variables_solr"])
     end
-    @solr_req = req["doc"] if req && req.has_key?("doc")
-    return { "docs" => req["doc"] }
+    return req
   end
 
   private
+
+  def add_xsl_params_options
+    # add several variables to both params objects, unless if they already have a value
+    html = @options["variables_html"]
+    solr = @options["variables_solr"]
+
+    ["collection", "data_base", "media_base", "environment"].each do |opt|
+      html[opt] = @options[opt] if !html.has_key?(opt)
+      solr[opt] = @options[opt] if !solr.has_key?(opt)
+    end
+  end
 
   # TODO can remove most of these parameters and grab them from instance variables
   def exec_xsl(input, xsl, ext, outpath=nil, params=nil)

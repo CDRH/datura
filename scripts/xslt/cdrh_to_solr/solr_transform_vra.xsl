@@ -21,13 +21,10 @@
 	<!--                           PARAMETERS                                 -->
 	<!-- ==================================================================== -->
 	
-	<!-- Defined in collection config files -->
-	<xsl:param name="fig_location"/>  <!-- url for figures -->
-	<xsl:param name="file_location"/> <!-- url for tei files -->
-	<xsl:param name="figures"/>       <!-- boolean for if figs should be displayed (not for this script, for html script) -->
-	<xsl:param name="fw"/>            <!-- boolean for html not for this script -->
-	<xsl:param name="pb"/>            <!-- boolean for page breaks in html, not this script -->
-	<xsl:param name="collection"/>       <!-- longer name of collection -->
+  <xsl:param name="collection"/>
+  <xsl:param name="data_base"/>
+  <xsl:param name="environment">production</xsl:param>
+  <xsl:param name="media_base"/>
 	<xsl:param name="slug"/>          <!-- slug of collection -->
 	<xsl:param name="site_url"/>
 	

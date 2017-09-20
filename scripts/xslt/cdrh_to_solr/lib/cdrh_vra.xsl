@@ -304,9 +304,10 @@
   <xsl:template name="uriXML">
     <xsl:param name="id"/>
     <field name="uriXML">
-      <xsl:value-of select="$file_location"/>
-      <xsl:value-of select="$slug"/>
-      <xsl:text>/tei/</xsl:text>
+      <xsl:value-of select="$data_base"/>
+      <xsl:text>/data/</xsl:text>
+      <xsl:value-of select="$collection"/>
+      <xsl:text>/vra/</xsl:text>
       <xsl:value-of select="$id"/>
       <xsl:text>.xml</xsl:text>
     </field>
@@ -317,11 +318,14 @@
   <xsl:template name="uriHTML">
     <xsl:param name="id"/>
     <field name="uriHTML">
-      <xsl:value-of select="$file_location"/>
-      <xsl:value-of select="$slug"/>
-      <xsl:text>/html-generated/</xsl:text>
+      <xsl:value-of select="$data_base"/>
+      <xsl:text>/data/</xsl:text>
+      <xsl:value-of select="$collection"/>
+      <xsl:text>/output/html/</xsl:text>
+      <xsl:value-of select="$environment"/>
+      <xsl:text>/</xsl:text>
       <xsl:value-of select="$id"/>
-      <xsl:text>.txt</xsl:text>
+      <xsl:text>.html</xsl:text>
     </field>
   </xsl:template>
 

@@ -154,6 +154,13 @@ def get_url(url)
   return res
 end
 
+# make_dirs
+#   given any number of paths, creates directories / subdirectories
+#   does not wipe content in existing directories
+def make_dirs(*args)
+  FileUtils.mkdir_p(args)
+end
+
 # regex_files
 #   looks through a directory's files for those matching the regex
 #   params: files (array of file names), regex (regular expression)
