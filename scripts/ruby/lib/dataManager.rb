@@ -131,13 +131,13 @@ class DataManager
         res = RestClient.get(url)
         body = res.body
       rescue => e
-        msg += e.to_s.red
+        msg << e.to_s.red
         raise msg
       end
       json = JSON.parse(body)
       if json.nil? || json.empty?
-        msg += "No schema found for #{@options["es_type"]}\n".red
-        msg += "Please check your config file and run the es_set_schema.rb script if necessary"
+        msg << "No schema found for #{@options["es_type"]}\n".red
+        msg << "Please check your config file and run the es_set_schema.rb script if necessary"
         raise msg
       end
     end
