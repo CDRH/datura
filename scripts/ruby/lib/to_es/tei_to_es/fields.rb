@@ -180,13 +180,13 @@ class TeiToEs < XmlToEs
   end
 
   def uri_data
-    base = @options["media_base"]
+    base = @options["data_base"]
     subpath = "data/#{@options["collection"]}/tei"
     return "#{base}/#{subpath}/#{@id}.xml"
   end
 
   def uri_html
-    base = @options["media_base"]
+    base = @options["data_base"]
     subpath = "data/#{@options["collection"]}/output/#{@options["environment"]}/html"
     return "#{base}/#{subpath}/#{@id}.html"
   end
