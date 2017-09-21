@@ -76,6 +76,7 @@ class DataManager
     puts options_msg
 
     check_options
+    check_schema
     @files = prepare_files
     batch_process_files
     end_run
@@ -108,17 +109,38 @@ class DataManager
 
   def check_options
     # verify that everything's all good before moving to per-file level processing
-    if should_transform("es")
+    if should_transform?("es")
       assert_option("es_path")
       assert_option("es_index")
       assert_option("es_type")
     end
 
-    if should_transform("solr")
+    if should_transform?("solr")
       assert_option("solr_core")
       assert_option("solr_path")
     end
+  end
 
+  def check_schema
+    # if ES is requested and not transform only, then check the schema
+    # if there is no schema for this type, shut it all down
+    if should_transform?("es") && !@options["transform_only"]
+      url = "#{@options["es_path"]}/#{@options["es_index"]}/_mapping/#{@options["es_type"]}?pretty"
+      msg = "\nSchema url: #{url}\n"
+      begin
+        res = RestClient.get(url)
+        body = res.body
+      rescue => e
+        msg += e.to_s.red
+        raise msg
+      end
+      json = JSON.parse(body)
+      if json.nil? || json.empty?
+        msg += "No schema found for #{@options["es_type"]}\n".red
+        msg += "Please check your config file and run the es_set_schema.rb script if necessary"
+        raise msg
+      end
+    end
   end
 
   def end_run
@@ -165,8 +187,8 @@ class DataManager
     msg << "Running script with following options:\n"
     msg << "collection:     #{@options['collection']}\n"
     msg << "Environment: #{@options['environment']}\n"
-    msg << "Posting to:  #{@es_url}\n\n" if should_transform("es")
-    msg << "Posting to:  #{@solr_url}\n\n" if should_transform("solr")
+    msg << "Posting to:  #{@es_url}\n\n" if should_transform?("es")
+    msg << "Posting to:  #{@solr_url}\n\n" if should_transform?("solr")
     msg << "Format:      #{@options['format']}\n" if @options["format"]
     msg << "Regex:       #{@options['regex']}\n" if @options["regex"]
     msg << "Update Time: #{@options['update_time']}\n" if @options["update_time"]
@@ -197,7 +219,7 @@ class DataManager
     return file_classes
   end
 
-  def should_transform(type)
+  def should_transform?(type)
     # adjust default transformation type in params parser
     return @options["transform_types"].include?(type)
   end
@@ -205,7 +227,7 @@ class DataManager
   def transform_and_post(file)
 
     # elasticsearch
-    if should_transform("es")
+    if should_transform?("es")
       if @options["transform_only"]
         # TODO transformation is not treated the same way here as in
         # most post methods, so having to use try catch block
@@ -224,7 +246,7 @@ class DataManager
 
     # html
     begin
-      res_html = file.transform_html if should_transform("html")
+      res_html = file.transform_html if should_transform?("html")
       if res_html && res_html.has_key?("error")
         error_with_transform_and_post(res_html["error"], @error_html)
       end
@@ -233,7 +255,7 @@ class DataManager
     end
 
     # solr
-    if should_transform("solr")
+    if should_transform?("solr")
       if @options["transform_only"]
         res_solr = file.transform_solr
       else
