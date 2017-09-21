@@ -304,7 +304,7 @@
 <!--                        HI                        -->
 <!-- ================================================ -->
 
-<xsl:template match="hi[@rend]" priority="2">
+<xsl:template match="hi[@rend]" priority="1">
   <span>
     <xsl:attribute name="class"><xsl:value-of select="@rend"/></xsl:attribute>
     <xsl:apply-templates/>
@@ -348,7 +348,7 @@
   </div>
 </xsl:template>
 
-<xsl:template match="hi[@rend='italic'] | hi[@rend='italics']" priority="1">
+<xsl:template match="hi[@rend='italic'] | hi[@rend='italics']" priority="2">
   <em>
     <xsl:attribute name="class">
       <xsl:value-of select="name()"/>
@@ -423,9 +423,7 @@
 
 <xsl:template match="term | foreign | emph | title[not(@level='a')] | biblScope[@type='volume']">
   <em>
-    <xsl:attribute name="class">
-      <xsl:value-of select="name()"/>
-    </xsl:attribute>
+    <xsl:attribute name="class"><xsl:call-template name="add_attributes"/></xsl:attribute>
     <xsl:apply-templates/>
   </em>
 </xsl:template>
@@ -587,7 +585,7 @@
 <!--              SUPER AND SUB SCRIPT                -->
 <!-- ================================================ -->
 
-  <xsl:template match="p[@rend='superscript'] | p[@rend='sup'] | hi[@rend='super'] | hi[@rend='superscript']">
+ <xsl:template match="p[@rend='superscript'] | p[@rend='sup'] | hi[@rend='super'] | hi[@rend='superscript']" priority="2">
   <sup><xsl:apply-templates/></sup>
 </xsl:template>
 
