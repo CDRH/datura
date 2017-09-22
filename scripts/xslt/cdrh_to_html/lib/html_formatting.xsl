@@ -300,16 +300,37 @@
   </xsl:choose>
 </xsl:template>
   
-<!-- ================================================ -->
-<!--                        HI                        -->
-<!-- ================================================ -->
-
-<xsl:template match="hi[@rend]" priority="2">
-  <span>
-    <xsl:attribute name="class"><xsl:value-of select="@rend"/></xsl:attribute>
-    <xsl:apply-templates/>
-  </span>
-</xsl:template>
+  <!-- ================================================ -->
+  <!--                 HI and ITALICS                   -->
+  <!-- ================================================ -->
+  
+  <!-- may need to overwrite both priority 1 and 2 for consistency -->
+  <xsl:template match="hi[@rend]" priority="1">
+    <span>
+      <xsl:attribute name="class"><xsl:value-of select="@rend"/></xsl:attribute>
+      <xsl:apply-templates/>
+    </span>
+  </xsl:template>
+  
+  <xsl:template match="hi[@rend='italic'] | hi[@rend='italics']" priority="2">
+    <em>
+      <xsl:attribute name="class">
+        <xsl:value-of select="name()"/>
+      </xsl:attribute>
+      <xsl:apply-templates/>
+    </em>
+  </xsl:template>
+  
+  <xsl:template match="ab[@rend='italics'] | p[@rend='italics']">
+    <div>
+      <xsl:attribute name="class">
+        <xsl:value-of select="name()"/>
+      </xsl:attribute>
+      <em>
+        <xsl:apply-templates/>
+      </em>
+    </div>
+  </xsl:template>
 
 <!-- ================================================ -->
 <!--                        HIDE                      -->
@@ -331,30 +352,6 @@
     </xsl:attribute>
     <xsl:text> </xsl:text>
   </div>
-</xsl:template>
-
-<!-- ================================================ -->
-<!--                      ITALICS                     -->
-<!-- ================================================ -->
-
-<xsl:template match="ab[@rend='italics'] | p[@rend='italics']">
-  <div>
-    <xsl:attribute name="class">
-      <xsl:value-of select="name()"/>
-    </xsl:attribute>
-    <em>
-      <xsl:apply-templates/>
-    </em>
-  </div>
-</xsl:template>
-
-<xsl:template match="hi[@rend='italic'] | hi[@rend='italics']" priority="1">
-  <em>
-    <xsl:attribute name="class">
-      <xsl:value-of select="name()"/>
-    </xsl:attribute>
-    <xsl:apply-templates/>
-  </em>
 </xsl:template>
 
 <!-- ================================================ -->
@@ -423,9 +420,7 @@
 
 <xsl:template match="term | foreign | emph | title[not(@level='a')] | biblScope[@type='volume']">
   <em>
-    <xsl:attribute name="class">
-      <xsl:value-of select="name()"/>
-    </xsl:attribute>
+    <xsl:attribute name="class"><xsl:call-template name="add_attributes"/></xsl:attribute>
     <xsl:apply-templates/>
   </em>
 </xsl:template>
@@ -582,18 +577,19 @@
   <strong><xsl:apply-templates/></strong>
 </xsl:template>
 
-
 <!-- ================================================ -->
 <!--              SUPER AND SUB SCRIPT                -->
 <!-- ================================================ -->
 
-  <xsl:template match="p[@rend='superscript'] | p[@rend='sup'] | hi[@rend='super'] | hi[@rend='superscript']">
-  <sup><xsl:apply-templates/></sup>
-</xsl:template>
-
-<xsl:template match="hi[@rend='subscript']" priority="1">
-  <sub><xsl:apply-templates/></sub>
-</xsl:template>
+  <!-- May need to overwrite both priority 1 and 2 for consistency -->
+  
+  <xsl:template match="hi[@rend='subscript']" priority="1">
+    <sub><xsl:apply-templates/></sub>
+  </xsl:template>
+  
+   <xsl:template match="p[@rend='superscript'] | p[@rend='sup'] | hi[@rend='super'] | hi[@rend='superscript']" priority="2">
+    <sup><xsl:apply-templates/></sup>
+  </xsl:template>
 
 <!-- ================================================ -->
 <!--                      TABLES                      -->
