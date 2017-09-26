@@ -37,7 +37,7 @@ properties:
         type: keyword
       id:
         type: keyword
-  subject:
+  subjects:
     type: keyword
     # TODO not sure yet if for display or search
   abstract:
@@ -124,7 +124,7 @@ properties:
         type: keyword
       role:
         type: keyword
-  annotations:
+  annotations_text:
     type: text
   category:
     type: keyword

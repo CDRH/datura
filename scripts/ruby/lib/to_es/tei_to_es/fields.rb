@@ -15,7 +15,7 @@ class TeiToEs < XmlToEs
     "https://cdrhapi.unl.edu/doc/#{@id}"
   end
 
-  def annotations
+  def annotations_text
     # TODO what should default behavior be?
   end
 
@@ -43,7 +43,7 @@ class TeiToEs < XmlToEs
     @options["collection_desc"] || @options["es_type"]
   end
 
-  def contributors
+  def contributor
     contribs = []
     @xpaths["contributors"].each do |xpath|
       eles = @xml.xpath(xpath)
@@ -52,6 +52,10 @@ class TeiToEs < XmlToEs
       end
     end
     return contribs
+  end
+
+  def data_type
+    "tei"
   end
 
   def date(before=true)
@@ -80,6 +84,10 @@ class TeiToEs < XmlToEs
     return nil
   end
 
+  def image_id
+    # TODO only needed for Cody Archive, but put generic rules in here
+  end
+
   def keywords
     return get_list(@xpaths["keywords"])
   end
@@ -89,20 +97,25 @@ class TeiToEs < XmlToEs
     # look for attribute anywhere in whole text and add to array
   end
 
+  def medium
+    # Default behavior is the same as "format" method
+    format
+  end
+
   def person
     # TODO will need some examples of how this will work
     # and put in the xpaths above, also for attributes, etc
     # should contain name, id, and role
     eles = @xml.xpath(@xpaths["person"])
-    return eles.map { |p| { "role" => p["role"], "name" => p.text, "id" => "" } }
+    people = eles.map { |p| { "role" => p["role"], "name" => p.text, "id" => "" } }
+    return people
   end
 
-  def person_sort
-    return get_text(@xpaths["person"])
+  def people
+    @json["person"].map { |p| p["name"] }
   end
 
   def places
-    # TODO will need to figure out some default behavior for this field
     return get_list(@xpaths["places"])
   end
 
@@ -131,6 +144,10 @@ class TeiToEs < XmlToEs
 
   def source
     get_text(@xpaths["source"])
+  end
+
+  def subjects
+    # TODO default behavior?
   end
 
   def subcategory
@@ -174,6 +191,10 @@ class TeiToEs < XmlToEs
     Common.normalize_name(t)
   end
 
+  def topics
+    # TODO default behavior?
+  end
+
   def uri
     # override per collection
     # should point at the live website view of resource
@@ -193,6 +214,5 @@ class TeiToEs < XmlToEs
 
   def works
     # TODO figure out how this behavior should look
-    return []
   end
 end

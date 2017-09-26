@@ -37,12 +37,10 @@ class XmlToEs
   def assemble_categories
     @json["category"] = category
     @json["subcategory"] = subcategory
-    @json["data_type"] = "tei"
-    # note: collection is typically the es_type
+    @json["data_type"] = data_type
     @json["collection"] = collection
-    # collection_desc is "The Whitman Archive", etc
     @json["collection_desc"] = collection_desc
-    # @json["subject"]
+    @json["subjects"] = subjects
   end
 
   def assemble_collection_specific
@@ -55,14 +53,14 @@ class XmlToEs
     @json["date_display"] = date_display
     @json["date"] = date
     @json["date_not_before"] = date
-    @json["date_not_after"] = date false
+    @json["date_not_after"] = date(false)
   end
 
   def assemble_descriptions
     @json["title_sort"] = title_sort
     @json["title"] = title
     @json["description"] = description
-    # @json["topics"]
+    @json["topics"] = topics
     # @json["alternative"]
   end
 
@@ -74,8 +72,7 @@ class XmlToEs
     @json["uri"] = uri
     @json["uri_data"] = uri_data
     @json["uri_html"] = uri_html
-    # @json["image_location"]
-    # @json["image_id"]
+    @json["image_id"] = image_id
   end
 
   def assemble_other_metadata
@@ -84,25 +81,25 @@ class XmlToEs
     # @json["relation"]
     # @json["type"]
     # @json["extent"]
-    @json["medium"] = format
+    @json["medium"] = medium
   end
 
   def assemble_people
     # container fields
     @json["person"] = person
-    @json["contributor"] = contributors
+    @json["contributor"] = contributor
     @json["creator"] = creator
     # can draw off of container fields
     @json["creator_sort"] = creator_sort
-    @json["people"] = person_sort
+    @json["people"] = people
   end
 
   def assemble_publishing
-    @json["rights_uri"] = rights_uri
     @json["publisher"] = publisher
     @json["rights"] = rights
-    @json["source"] = source
+    @json["rights_uri"] = rights_uri
     @json["rights_holder"] = rights_holder
+    @json["source"] = source
   end
 
   def assemble_references
@@ -119,7 +116,7 @@ class XmlToEs
   end
 
   def assemble_text
-    @json["annotations"] = annotations
+    @json["annotations_text"] = annotations_text
     @json["text"] = text
     # @json["abstract"]
   end
