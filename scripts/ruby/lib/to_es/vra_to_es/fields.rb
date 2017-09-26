@@ -15,7 +15,7 @@ class VraToEs < XmlToEs
     "https://cdrhapi.unl.edu/doc/#{@id}"
   end
 
-  def annotations
+  def annotations_text
     # TODO default behavior?
   end
 
@@ -42,7 +42,7 @@ class VraToEs < XmlToEs
     @options["collection_desc"] || @options["collection"]
   end
 
-  def contributors
+  def contributor
     contrib_list = []
     contributors = @xml.xpath(@xpaths["contributors"])
     contributors.each do |ele|
@@ -53,6 +53,10 @@ class VraToEs < XmlToEs
       }
     end
     return contrib_list
+  end
+
+  def data_type
+    "vra"
   end
 
   def date(before=true)
@@ -78,6 +82,10 @@ class VraToEs < XmlToEs
     get_text(@xpaths["format"])
   end
 
+  def image_id
+    # TODO only needed for Cody Archive, but put generic rules in here
+  end
+
   def keywords
     get_list(@xpaths["keywords"])
   end
@@ -85,6 +93,11 @@ class VraToEs < XmlToEs
   def language
     # TODO need some examples to use
     # look for attribute anywhere in whole text and add to array
+  end
+
+  def medium
+    # iterate through all the formats until the first one matches
+    get_text(@xpaths["format"])
   end
 
   def person
@@ -95,8 +108,8 @@ class VraToEs < XmlToEs
     return eles.map { |p| { "role" => p["role"], "name" => p.text, "id" => "" } }
   end
 
-  def person_sort
-    return get_text(@xpaths["person"])
+  def people
+    @json["person"].map { |p| p["name"] }
   end
 
   def places
@@ -134,6 +147,10 @@ class VraToEs < XmlToEs
     # TODO default behavior?
   end
 
+  def subjects
+    # TODO default behavior?
+  end
+
   def text
     # handling separate fields in array
     # means no worrying about handling spacing between words
@@ -163,6 +180,10 @@ class VraToEs < XmlToEs
   def title_sort
     t = title
     Common.normalize_name(t)
+  end
+
+  def topics
+    # TODO default behavior?
   end
 
   def uri

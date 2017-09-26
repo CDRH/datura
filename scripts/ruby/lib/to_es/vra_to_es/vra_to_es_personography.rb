@@ -19,7 +19,7 @@ class VraToEsPersonography < TeiToEs
     return creators.map { |creator| { "name" => creator } }
   end
 
-  def creators
+  def creator_sort
     return get_text(@xpaths["creators"], false, @parent_xml)
   end
 
