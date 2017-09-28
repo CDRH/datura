@@ -84,6 +84,15 @@ properties:
     type: keyword
   source:
     type: keyword
+  recipient:
+    type: nested
+    properties:
+      name:
+        type: keyword
+      id:
+        type: keyword
+      role:
+        type: keyword
   rights_holder:
     type: keyword
   rights:
