@@ -89,6 +89,7 @@ class XmlToEs
     @json["person"] = person
     @json["contributor"] = contributor
     @json["creator"] = creator
+    @json["recipient"] = recipient
     # can draw off of container fields
     @json["creator_sort"] = creator_sort
     @json["people"] = people

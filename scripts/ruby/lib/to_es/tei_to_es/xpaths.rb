@@ -27,7 +27,7 @@ class TeiToEs < XmlToEs
       "person" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='people']/term",
       "places" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='places']/term",
       "publisher" => "/TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/publisher[1]",
-      "recipients" => "/TEI/teiHeader/profileDesc/particDesc/person[@role='recipient']/persName",
+      "recipient" => "/TEI/teiHeader/profileDesc/particDesc/person[@role='recipient']/persName",
       "rights_holder" => "/TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/repository",
       "source" => "/TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/title[@level='j']",
       "subcategory" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='subcategory'][1]/term",

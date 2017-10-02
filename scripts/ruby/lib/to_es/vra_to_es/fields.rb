@@ -120,8 +120,10 @@ class VraToEs < XmlToEs
     get_list(@xpaths["publisher"])
   end
 
-  def recipients
-    # TODO default behavior?
+  def recipient
+    eles = @xml.xpath(@xpaths["recipient"])
+    people = eles.map { |p| { "role" => p["role"], "name" => p.text, "id" => "" } }
+    return people
   end
 
   def rights

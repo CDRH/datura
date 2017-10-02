@@ -123,8 +123,10 @@ class TeiToEs < XmlToEs
     get_text(@xpaths["publisher"])
   end
 
-  def recipients
-    get_list(@xpaths["recipients"])
+  def recipient
+    eles = @xml.xpath(@xpaths["recipient"])
+    people = eles.map { |p| { "role" => "recipient", "name" => p.text, "id" => "" } }
+    return people
   end
 
   def rights
