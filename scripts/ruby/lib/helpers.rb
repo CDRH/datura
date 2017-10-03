@@ -102,8 +102,9 @@ module Common
     string.strip.gsub(/\s+/, " ")
   end
 
-  def self.to_display_text(xml)
+  def self.to_display_text(aXml)
     # sub <corr>.*</corr> for [.*]
+    xml = aXml.dup
     xml.css("corr").each {|e| e.replace("[#{e.text}]") }
     return xml.text
   end

@@ -16,6 +16,7 @@ class VraToEs < XmlToEs
       "keywords" => "/vra/work/subjectSet/subject",
       "place" => "/vra/collection[1]/subjectSet[1]/subject/term[@type='geographicPlace']",
       "publisher" => "/vra/work/agentSet/agent",
+      "recipient" => "/TEI/teiHeader/fileDesc/sourceDesc/bibl/persName[@type='addressee']",
       "text" => "/vra",
       "title" => "//title[@type='descriptive']"
     }.merge(override_xpaths)
