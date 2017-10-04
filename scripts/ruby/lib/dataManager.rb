@@ -1,5 +1,6 @@
 require "colorize"
 require "logger"
+require "yaml"
 
 require_relative "./requirer.rb"
 
@@ -76,7 +77,7 @@ class DataManager
     puts options_msg
 
     check_options
-    check_schema
+    set_schema
     @files = prepare_files
     batch_process_files
     end_run
@@ -118,28 +119,6 @@ class DataManager
     if should_transform?("solr")
       assert_option("solr_core")
       assert_option("solr_path")
-    end
-  end
-
-  def check_schema
-    # if ES is requested and not transform only, then check the schema
-    # if there is no schema for this type, shut it all down
-    if should_transform?("es") && !@options["transform_only"]
-      url = "#{@options["es_path"]}/#{@options["es_index"]}/_mapping/#{@options["es_type"]}?pretty"
-      msg = "\nSchema url: #{url}\n"
-      begin
-        res = RestClient.get(url)
-        body = res.body
-      rescue => e
-        msg << e.to_s.red
-        raise msg
-      end
-      json = JSON.parse(body)
-      if json.nil? || json.empty?
-        msg << "No schema found for #{@options["es_type"]}\n".red
-        msg << "Please check your config file and run the es_set_schema.rb script if necessary"
-        raise msg
-      end
     end
   end
 
@@ -217,6 +196,24 @@ class DataManager
       end
     end
     return file_classes
+  end
+
+  def set_schema
+    # if ES is requested and not transform only, then set the schema
+    # to make sure that any new fields are stored with the correct fieldtype
+    if should_transform?("es") && !@options["transform_only"]
+      schema = YAML.load_file("#{@repo_dir}/#{@options["es_schema_path"]}")
+      path, idx, type = ["es_path", "es_index", "es_type"].map { |i| @options[i] }
+      url = "#{path}/#{idx}/_mapping/#{type}?pretty&update_all_types"
+      begin
+        RestClient.put(url, schema.to_json, { content_type: :json })
+        msg = "Successfully set elasticsearch schema for #{type}"
+        @log.info(msg)
+        puts msg.green
+      rescue => e
+        raise("Something went wrong setting the elasticsearch schema for #{type}:\n#{e.to_s}".red)
+      end
+    end
   end
 
   def should_transform?(type)

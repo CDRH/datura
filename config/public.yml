@@ -23,6 +23,9 @@ default:
   log_size: 1024000   # size of log file in bytes
   log_level: Logger::WARN  # could change to INFO for more detail
 
+  # the path for the elasticsearch schema
+  es_schema_path: config/api_schema.yml
+
   # formats to solr transformation locations
   dc_solr_xsl: scripts/xslt/cdrh_to_solr/solr_transform_dc.xsl
   vra_solr_xsl: scripts/xslt/cdrh_to_solr/solr_transform_vra.xsl
