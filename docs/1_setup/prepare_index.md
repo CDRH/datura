@@ -18,9 +18,7 @@ Make sure elasticsearch is installed and running in the location you wish to pus
 ./scripts/shell/es_create_index.sh name_of_index
 ```
 
-**DON'T SKIP THE NEXT STEP!**
-
-Assuming this is successful, now we will need to set up a schema for the `_type` within the index, which will match `es_type` (or the shortname of your collection).  By default this looks at the schema in `config/api_schema.yml`, but you can customize `es_schema_path` in a collection's config file if it needs a different file.
+Optionally, if you want to manually set your schema and make sure that everything is shipshape, you can run the following command.  Note that the schema is set automatically before posting every time the script is run.
 
 ```
 ruby scripts/ruby/es_set_schema.rb collection [-e environment]

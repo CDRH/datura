@@ -12,13 +12,13 @@ If you want more information about the directory structure and included files, p
 
 Compare the type of data you want to upload to the directory structure.  Remove any existing example files in these directories and add your own content:
 
-- csvs and spreadsheets in `csv`
-- Dublin Core in `dc`
-- TEI XML in `tei`
-- VRA Core in `vra`
-- yaml in `yml`
+- `csv` : csvs (no spreadsheet support at the moment...coming soon!)
+- `dc` : Dublin Core
+- `tei` : TEI XML
+- `vra` : VRA Core
+- `yml` : yaml
 
-Delete any directories you don't plan on using!  You can always add it back later, when you suddenly find a spreadsheet you have to upload!
+Delete any directories you don't plan on using!  You can always add them back later, when you suddenly find a spreadsheet you have to upload!
 
 ### Step 2:  Commit your changes to git and Github
 
