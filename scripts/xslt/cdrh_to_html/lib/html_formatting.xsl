@@ -464,12 +464,16 @@
 <xsl:template match="p">
   <xsl:choose>
     <xsl:when test="descendant::list or descendant::p">
-      <div class="p">
+      <div>
+        <xsl:attribute name="class"><xsl:call-template name="add_attributes"/><xsl:text> p</xsl:text></xsl:attribute>
         <xsl:apply-templates/>
       </div>
     </xsl:when>
     <xsl:otherwise>
-      <p><xsl:apply-templates/></p>
+      <p>
+        <xsl:attribute name="class"><xsl:call-template name="add_attributes"/></xsl:attribute>
+        <xsl:apply-templates/>
+      </p>
     </xsl:otherwise>
   </xsl:choose>
 </xsl:template>
@@ -648,6 +652,8 @@
     <xsl:attribute name="class">
       <xsl:text>unclear </xsl:text>
       <xsl:value-of select="@reason"/>
+      <xsl:text> </xsl:text>
+      <xsl:attribute name="class"><xsl:call-template name="add_attributes"/></xsl:attribute>
     </xsl:attribute>
     <xsl:apply-templates/>
     <xsl:text>[?]</xsl:text>
