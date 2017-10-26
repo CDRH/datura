@@ -1,8 +1,8 @@
 ## Saxon Executable
 
-Install your preferred edition / version of saxon (generally from http://www.saxonica.com - we use the Home Edition) on the server and put it in a memorable place, such as `/var/lib/saxon/saxon9he.jar`, but it does not matter where it is as long as the location is accessible (not your home directory or a restricted directory).
+Install your preferred edition / version of saxon (generally from http://www.saxonica.com - we use the Home Edition) on the server and put it in a memorable place, such as `/var/lib/saxon/saxon9he.jar` (`/usr/local/var/saxon` on mac), but it does not matter where it is as long as the location is accessible (not your home directory or a restricted directory).
 
-Now go to the /usr/bin directory.  You'll be adding a script that essentially acts as an alias to run saxon.  Use a text editor running under sudo / root to create a new file in /usr/bin (/usr/local/bin on mac) and make sure that you name it "saxon".  Add the following code to the file.  Make sure that there are no "echo" lines or anything that would output to stdout in the below script, if you try tinkering with it.
+Now go to the `/usr/bin` directory.  You'll be adding a script that essentially acts as an alias to run saxon.  Use a text editor running under sudo / root to create a new file in `/usr/bin` (`/usr/local/bin` on mac) and make sure that you name it "saxon".  Add the following code to the file.  Make sure that there are no "echo" lines or anything that would output to stdout in the below script, if you try tinkering with it.
 
 ```
 #!/bin/sh
