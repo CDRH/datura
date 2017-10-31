@@ -18,7 +18,7 @@ The files are parsed and formatted into documents appropriate for Solr, Elastics
   - [Configuration](docs/1_setup/config.md)
   - [Add index and schema](docs/1_setup/prepare_index.md)
 - Customize collection
-  - [TEI to Elasticsearch](docs/2_customization/tei_to_es.md)
+  - [TEI to Elasticsearch](docs/2_customization/xml_to_es.md)
   - [CSV to Solr](docs/2_customization/csv_to_solr.md)
   - HTML customization
   - Solr customization
