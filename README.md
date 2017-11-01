@@ -35,7 +35,6 @@ The files are parsed and formatted into documents appropriate for Solr, Elastics
   - [File Structure](docs/4_developers/file_structure.md)
   - [Tests](docs/4_developers/test.md)
 - More
-  - [Cather letters documentation](docs/cather_letters.md)
   - [Troubleshooting](docs/troubleshooting.md)
   - [XSLT to Ruby reference](xslt_to_ruby_reference.md)
 
