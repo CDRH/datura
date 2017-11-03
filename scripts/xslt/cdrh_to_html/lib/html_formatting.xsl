@@ -409,7 +409,7 @@
 <!--               MISC -> SPANS OR EMS               -->
 <!-- ================================================ -->
 
-<xsl:template match="hi[@rend='smallcaps'] | hi[@rend='roman']" priority="1">
+<xsl:template match="hi[@rend='smallcaps'] | hi[@rend='roman']" priority="2">
   <span>
     <xsl:attribute name="class">
       <xsl:value-of select="@rend"/>
@@ -482,7 +482,7 @@
 <!--                   POSITIONING                    -->
 <!-- ================================================ -->
 
-<xsl:template match="hi[@rend='right'] | hi[@rend='center']" priority="1">
+<xsl:template match="hi[@rend='right'] | hi[@rend='center']" priority="2">
   <div>
     <xsl:attribute name="class">
       <xsl:value-of select="@rend"/>
@@ -495,7 +495,7 @@
 <!--                     QUOTES                       -->
 <!-- ================================================ -->
 
-<xsl:template match="hi[@rend='quoted']" priority="1">
+<xsl:template match="hi[@rend='quoted']" priority="2">
   <xsl:text>"</xsl:text>
   <xsl:apply-templates/>
   <xsl:text>"</xsl:text>
@@ -587,7 +587,7 @@
 
   <!-- May need to overwrite both priority 1 and 2 for consistency -->
   
-  <xsl:template match="hi[@rend='subscript']" priority="1">
+  <xsl:template match="hi[@rend='subscript']" priority="2">
     <sub><xsl:apply-templates/></sub>
   </xsl:template>
   
@@ -658,21 +658,6 @@
     <xsl:apply-templates/>
     <xsl:text>[?]</xsl:text>
   </span>
-</xsl:template>
-
-<!-- ================================================ -->
-<!--                    UNDERLINE                     -->
-<!-- ================================================ -->
-
-  <xsl:template match="hi[@rend='underlined'] | hi[@rend='underline'] | emph[@rend='underline']" priority="1">
-  <u>
-    <xsl:attribute name="class">
-      <xsl:text>tei_</xsl:text>
-      <xsl:value-of select="name()"/>
-      <xsl:text>_underline</xsl:text>
-    </xsl:attribute>
-    <xsl:apply-templates/>
-  </u>
 </xsl:template>
 
 
