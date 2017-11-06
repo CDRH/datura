@@ -1,0 +1,4 @@
+## Ruby / Gems
+Check your version of Ruby by typing `ruby -v`.  This collection currently uses ruby 2.1.3.  If you have a different version installed on your machine, it is recommended to install [RVM](https://rvm.io/) to use multiple versions of ruby without messing up the good thing you've already got going on.
+
+None of the libraries used in the ruby scripts require gems -- they are all part of the Ruby Standard Library that ships with ruby.  If you want to run tests, however, you will need gems.  You'll need to consult the RVM documentation to see how to install gems for your particular setup (multi-user, single-user, etc), but if you want to just see what happens, run `bundle install`.  If RVM is set up correctly, it will install the `rspec` testing gem on your system.

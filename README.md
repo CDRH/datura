@@ -30,8 +30,8 @@ The files are parsed and formatted into documents appropriate for Solr, Elastics
 - Developers
   - [Installation](docs/4_developers/installation.md)
   - [Saxon setup](docs/4_developers/saxon.md)
+  - [Ruby / Gems](docs/4_developers/ruby_gems.md)
   - Class organization
-  - [Schema](docs/4_developers/schema.md)
   - [File Structure](docs/4_developers/file_structure.md)
   - [Tests](docs/4_developers/test.md)
 - More
