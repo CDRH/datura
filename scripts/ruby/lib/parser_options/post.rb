@@ -1,6 +1,6 @@
 module Parser
   def self.post_params
-    @usage = "Usage: ruby [type]_post.rb [collection] -[options]..."
+    @usage = "Usage: ruby post.rb [collection] -[options]..."
     options = {}  # will hold all the options passed in by user
 
     optparse = OptionParser.new do |opts|
