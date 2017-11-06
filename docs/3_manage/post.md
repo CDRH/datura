@@ -8,10 +8,10 @@ ruby scripts/ruby/post.rb -h
 
 ### Basic Example
 
-Generally, the script is expecting a collection (the directory name) to be passed in:
+Generally, the script is expecting a collection (the directory name) to be passed in, with options following if desired:
 
 ```
-ruby scripts/ruby/post.rb example
+ruby scripts/ruby/post.rb example [options]
 ```
 
 The above does the following:
