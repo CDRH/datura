@@ -42,6 +42,12 @@ default:
   # default html subpath is [environment]/output/html
   # override default behavior per collection in tei_to_es, etc
 
+  # whitelist files to process
+  # if whitelist_txt specified, then ALL scripts will only allow through
+  # files which exactly match a line of the file
+  # feel free to name the file anything you want as long as it's .txt
+  # whitelist_txt: collections/x/config/allowed_files.txt
+
   # NOTE! If you are altering ANY of the variables you must
   #   copy over ALL of them in that group to the collection specific config file
   # some variables are passed in automatically to both of the following:

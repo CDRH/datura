@@ -26,6 +26,7 @@ The files are parsed and formatted into documents appropriate for Solr, Elastics
 - Manage collection
   - [Post to index](docs/3_manage/post.md)
   - [Clear index](docs/3_manage/clear_index.md)
+  - [Whitelisting](docs/3_manage/whitelisting.md)
   - Remove / destroy index
 - Developers
   - [Installation](docs/4_developers/installation.md)
