@@ -73,8 +73,9 @@ class DataManager
   def run
     @time = [Time.now]
     # log starting information for user
-    @log.info(options_msg)
-    puts options_msg
+    msg = options_msg
+    @log.info(msg)
+    puts msg
 
     check_options
     set_schema
