@@ -1,6 +1,8 @@
+require 'nokogiri'
+
 module CommonXml
 
-  # returns a nokogiri xml object
+  # returns Nokogiri XML object
   def self.convert_tags(xml)
     # italic(s)
     xml.css("hi[rend^='italic']").each do |ele|
@@ -17,11 +19,13 @@ module CommonXml
       ele.name = "u"
       ele.delete "rend"
     end
-    xml = CommonXml.to_display_text(xml)
+    xml = CommonXml.sub_corrections(xml)
     return xml
   end
 
   # wrap in order to make valid xml
+  # for cases where get_text or similar was used
+  # so no longer an XML object, but still need to have tags altered
   def self.convert_tags_in_string(text)
     xml = Nokogiri::XML("<xml>#{text}</xml>")
     converted = convert_tags(xml)
@@ -97,11 +101,16 @@ module CommonXml
     string.strip.gsub(/\s+/, " ")
   end
 
-  def self.to_display_text(aXml)
+  def self.sub_corrections(aXml)
     # sub <corr>.*</corr> for [.*]
     xml = aXml.dup
     xml.css("corr").each {|e| e.replace("[#{e.text}]") }
-    return xml.text
+    xml
+  end
+
+  # returns string object
+  def self.to_display_text(aXml)
+    CommonXml.sub_corrections(aXml).text
   end
 
 end

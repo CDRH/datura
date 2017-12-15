@@ -29,6 +29,20 @@ class CommonXmlTest < Minitest::Test
 
     test6a = Nokogiri::XML '<xml>leaving to become an assistant editor of <hi rend="italic">The Nation</hi>, and a regular contributor to the <hi rend="italic">Atlantic Monthly</hi> and <hi rend="italic">Harper’s</hi></xml>'
     assert_equal CommonXml.convert_tags(test6a).inner_html, "<xml>leaving to become an assistant editor of <em>The Nation</em>, and a regular contributor to the <em>Atlantic Monthly</em> and <em>Harper&#x2019;s</em></xml>"
+
+    # test with substutions for corrections
+    test7a = Nokogiri::XML "<xml><title><hi rend='italics'>Some</hi> title <corr>Title</corr></title></xml>"
+    test7b = "<xml><title>\n<em>Some</em> title [Title]</title></xml>"
+    assert_equal CommonXml.convert_tags(test7a).inner_html, test7b
+  end
+
+  def test_convert_tags_in_string
+    test1a = "This is a bunch of texxt <corr>text</corr>"
+    assert_equal CommonXml.convert_tags_in_string(test1a), "This is a bunch of texxt [text]"
+  end
+
+  def test_create_xml_object
+    # TODO
   end
 
   def test_date_display
@@ -66,8 +80,27 @@ class CommonXmlTest < Minitest::Test
   end
 
   def test_squeeze
+    # ensure that return characters are replaced by spaces, and multispaces squashed
     test1 = "<xml>\n<title>Example    </title>\n  </xml>\n"
     assert_equal CommonXml.squeeze(test1), "<xml> <title>Example </title> </xml>"
+  end
+
+  def test_sub_corrections
+    xml_string = "<xml>Somethng <corr>Something</corr></xml>"
+    xml = Nokogiri::XML xml_string
+    assert_equal CommonXml.sub_corrections(xml).text, "Somethng [Something]"
+    assert_equal xml.inner_html, xml_string
+  end
+
+  def test_to_display_text
+    # test with italics and correction
+    test1a = Nokogiri::XML "<xml><title><hi rend='italics'>Some</hi> title <corr>Title</corr></title></xml>"
+    test1b = "Some title [Title]"
+    assert_equal CommonXml.to_display_text(test1a), test1b
+
+    test2a = Nokogiri::XML "<xml><title>Lots of <stuff>nested</stuff> things <blah>of <more>stuff</more></blah></title></xml>"
+    test2b = "Lots of nested things of stuff"
+    assert_equal CommonXml.to_display_text(test2a), test2b
   end
 
 end
