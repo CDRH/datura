@@ -6,7 +6,7 @@ class TeiToEsTest < Minitest::Test
   def setup
     current_dir = File.expand_path(File.dirname(__FILE__))
     fixture_path = "#{current_dir}/fixtures/nei.news.00001.xml"
-    xml = Common.create_xml_object(fixture_path)
+    xml = CommonXml.create_xml_object(fixture_path)
     @teitoes = TeiToEs.new(xml)
   end
 
