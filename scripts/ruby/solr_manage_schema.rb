@@ -34,8 +34,8 @@ end
 # send GET request for existing schema fields and copyfields
 # curl http://localhost:8983/solr/api_austen/schema/fields?wt=json
 # curl http://localhost:8983/solr/api_austen/schema/copyfields?wt=json
-fields_res = get_url("#{solr_url}/fields?wt=json")
-# cfields_res = get_url("#{solr_url}/copyfields?wt=json")
+fields_res = Helpers.get_url("#{solr_url}/fields?wt=json")
+# cfields_res = Helpers.get_url("#{solr_url}/copyfields?wt=json")
 
 if fields_res.code == "200"
   fields_json = JSON.parse(fields_res.body)

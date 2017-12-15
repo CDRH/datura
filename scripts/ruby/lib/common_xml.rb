@@ -7,17 +7,17 @@ module CommonXml
     # italic(s)
     xml.css("hi[rend^='italic']").each do |ele|
       ele.name = "em"
-      ele.delete "rend"
+      ele.delete("rend")
     end
     # bold (sometimes they include bold as second part of attr)
     xml.css("hi[rend~='bold']").each do |ele|
       ele.name = "strong"
-      ele.delete "rend"
+      ele.delete("rend")
     end
     # underline(d)
     xml.css("hi[rend^='underline']").each do |ele|
       ele.name = "u"
-      ele.delete "rend"
+      ele.delete("rend")
     end
     xml = CommonXml.sub_corrections(xml)
     return xml

@@ -156,7 +156,7 @@ class DataManager
     end
     files = []
     formats.each do |format|
-      found = get_directory_files("#{@coll_dir}/#{format}")
+      found = Helpers.get_directory_files("#{@coll_dir}/#{format}")
       files += found if found
     end
     return files
@@ -184,9 +184,9 @@ class DataManager
     # filter by collection whitelist
     whitelisted = whitelist_files(files)
     # filter by regex
-    regexed = regex_files(whitelisted, @options["regex"])
+    regexed = Helpers.regex_files(whitelisted, @options["regex"])
     # filter by date
-    filtered = regexed.select { |f| should_update?(f, @options["update_time"]) }
+    filtered = regexed.select { |f| Helpers.should_update?(f, @options["update_time"]) }
 
     file_classes = []
     @log.info("After filters (regex, update time), #{filtered.length}/#{files.length} files remaining")
