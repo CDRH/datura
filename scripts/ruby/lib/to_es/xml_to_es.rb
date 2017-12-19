@@ -62,7 +62,7 @@ class XmlToEs
   # HELPERS #
   ###########
 
-  # see helpers.rb's CommonXml module for methods imported from common.xsl
+  # see CommonXml module for methods replicated from common.xsl
 
   # get the value of one of the xpaths listed at the top
   # Note: if the xpath returns multiple values they will be squished together
