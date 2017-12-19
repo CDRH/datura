@@ -39,19 +39,19 @@ class OptionsTest < Minitest::Test
     params = { "environment" => "development" }
     o = Options.new(params, "fake", "fake").all
 
-    assert_equal o["a"], "proj dev public"
-    assert_equal o["b"], "proj default public"
-    assert_equal o["c"], "proj dev private"
-    assert_equal o["d"], "general default private"
-    assert_equal o["environment"], "development"
+    assert_equal "proj dev public", o["a"]
+    assert_equal "proj default public", o["b"]
+    assert_equal "proj dev private", o["c"]
+    assert_equal "general default private", o["d"]
+    assert_equal "development", o["environment"]
   end
 
   def test_default_overwriting
     params = { "environment" => "not_found_config" }
     o = Options.new(params, "fake", "fake").all
 
-    assert_equal o["a"], "general default public"
-    assert_equal o["b"], "proj default public"
+    assert_equal "general default public", o["a"]
+    assert_equal "proj default public", o["b"]
   end
 
 end

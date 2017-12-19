@@ -3,70 +3,73 @@ require "nokogiri"
 require_relative "classes.rb"
 
 class HelpersTest < Minitest::Test
-  def test_convert_tags
-    test1a = Nokogiri::XML "<TEI><body>Some text goes <hi rend='italic'>here</hi></body></TEI>"
-    test1b = "<TEI><body>Some text goes <em>here</em>\n</body></TEI>"
-    assert_equal Common.convert_tags(test1a).inner_html, test1b
 
-    test2a = Nokogiri::XML '<title type="main">Willa Cather to Helen Louise Stevens Stowell, August 31, 1888</title>'
-    test2b = '<title type="main">Willa Cather to Helen Louise Stevens Stowell, August 31, 1888</title>'
-    assert_equal Common.convert_tags(test2a).inner_html, test2b
+  def test_get_directory_files
+    # real directory
+    files = Helpers.get_directory_files("#{File.dirname(__FILE__)}/fixtures")
+    assert_equal 2, files.length
 
-    test3a = Nokogiri::XML '<title><hi rend="bold">Indian Farmer Association</hi> Meeting <hi rend="italics">Poorly Attended</hi></title>'
-    test3b = "<title>\n<strong>Indian Farmer Association</strong> Meeting <em>Poorly Attended</em>\n</title>"
-    assert_equal Common.convert_tags(test3a).inner_html, test3b
-
-    test4a = Nokogiri::XML "<xml><hi rend='underline'>Test</hi> <hi rend='underlined'>Underline</hi></xml>"
-    test4b = "<xml><u>Test</u> <u>Underline</u></xml>"
-    assert_equal Common.convert_tags(test4a).inner_html, test4b
-
-    # test with multiple blobs
-    test5a = Nokogiri::XML '<xml><text>Text <hi rend="bold">Portion</hi> 1</text><text>Text Portion 2</text></xml>'
-    texts = test5a.xpath("//text")
-    test5b = "Text <strong>Portion</strong> 1Text Portion 2"
-    assert_equal Common.convert_tags(texts).inner_html, test5b
-
-    test6a = Nokogiri::XML '<xml>leaving to become an assistant editor of <hi rend="italic">The Nation</hi>, and a regular contributor to the <hi rend="italic">Atlantic Monthly</hi> and <hi rend="italic">Harper’s</hi></xml>'
-    assert_equal Common.convert_tags(test6a).inner_html, "<xml>leaving to become an assistant editor of <em>The Nation</em>, and a regular contributor to the <em>Atlantic Monthly</em> and <em>Harper&#x2019;s</em></xml>"
+    # not a real directory
+    files = Helpers.get_directory_files("/fake")
+    assert_nil files
   end
 
-  def test_date_display
-    # normal dates
-    assert_equal Common.date_display("2016-12-02"), "December 2, 2016"
-    assert_equal Common.date_display("2014-01-31", "no date"), "January 31, 2014"
-    # no date
-    assert_equal Common.date_display(nil), "N.D."
-    assert_equal Common.date_display("20143183", "no date"), "no date"
-    assert_equal Common.date_display(nil, ""), ""
+  def test_get_input
+    # TODO
   end
 
-  def test_date_standardize
-    # missing month and day
-    assert_equal Common.date_standardize("2016"), "2016-01-01"
-    assert_equal Common.date_standardize("2016", false), "2016-12-31"
-    # missing day
-    assert_nil Common.date_standardize("01-12")
-    assert_equal Common.date_standardize("2014-01"), "2014-01-01"
-    assert_equal Common.date_standardize("2014-01", false), "2014-01-31"
-    # complete date
-    assert_equal Common.date_standardize("2014-01-12"), "2014-01-12"
-    # invalid date
-    assert_nil Common.date_standardize("2014-30-31")
-    # February final day
-    assert_equal Common.date_standardize("2015-2", false), "2015-02-28"
-    assert_equal Common.date_standardize("2016-02", false), "2016-02-29"
+  def test_get_url
+    assert_equal "200", Helpers.get_url("https://www.unl.edu/").code
   end
 
-  def test_normalize_name
-    assert_equal Common.normalize_name("The Title"), "title"
-    assert_equal Common.normalize_name("Anne of Green Gables"), "anne of green gables"
-    assert_equal Common.normalize_name("A Fancy Party"), "fancy party"
-    assert_equal Common.normalize_name("An Hour"), "hour"
+  def test_make_dirs
+    # TODO
   end
 
-  def test_squeeze
-    test1 = "<xml>\n<title>Example    </title>\n  </xml>\n"
-    assert_equal Common.squeeze(test1), "<xml> <title>Example </title> </xml>"
+  def test_regex_files
+    test_files = %w[
+      /path/to/cody.book.001.xml
+      /path/to/cody.book.002.xml
+      /path/to/cody.news.001.xml
+      /path/to/transmiss.mem.001.xml
+      /path/to/cat.let0001.xml
+    ]
+
+    # no files
+    files = Helpers.regex_files([], "d")
+    assert_equal 0, files.length
+
+    # return original array when no regex
+    files = Helpers.regex_files(test_files)
+    assert_equal test_files.length, files.length
+
+    # return only cody files
+    files = Helpers.regex_files(test_files, "cody")
+    assert_equal 3, files.length
+
+    # return only books with slightly advanced regex
+    files = Helpers.regex_files(test_files, "book\.0")
+    assert_equal 2, files.length
+
+    # return all news or memorabilia
+    files = Helpers.regex_files(test_files, "news|mem")
+    assert_equal 2, files.length
+
+    # return a specific id
+    files = Helpers.regex_files(test_files, "cat.let0001")
+    assert_equal 1, files.length
+  end
+
+  def test_should_update?
+    hour_ago = Time.now - 60*60
+    test_file = "#{File.dirname(__FILE__)}/fixtures/should_update.txt"
+
+    file = FileUtils.touch(test_file).first
+    assert Helpers.should_update?(file, hour_ago)
+
+    hour_future = Time.now + 60*60
+    file = FileUtils.touch(test_file).first
+    refute Helpers.should_update?(file, hour_future)
   end
 
 end

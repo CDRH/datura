@@ -27,7 +27,7 @@ class FileType
     @out_es = "#{collection_dir}/output/#{@options["environment"]}/es"
     @out_html = "#{collection_dir}/output/#{@options["environment"]}/html"
     @out_solr = "#{collection_dir}/output/#{@options["environment"]}/solr"
-    make_dirs(@out_es, @out_html, @out_solr)
+    Helpers.make_dirs(@out_es, @out_html, @out_solr)
     # script locations set in child classes
   end
 
@@ -99,7 +99,7 @@ class FileType
   def transform_es
     es_req = []
     begin
-      file_xml = Common.create_xml_object(self.file_location)
+      file_xml = CommonXml.create_xml_object(self.file_location)
       subdoc_xpaths.each do |xpath, classname|
         file_xml.xpath(xpath).each do |subdoc|
           file_transformer = classname.new(subdoc, @options, file_xml, self.filename(false))
@@ -148,7 +148,7 @@ class FileType
 
   # TODO can remove most of these parameters and grab them from instance variables
   def exec_xsl(input, xsl, ext, outpath=nil, params=nil)
-    saxon_params = Common.stringify_params(params)
+    saxon_params = CommonXml.stringify_params(params)
     cmd = "saxon -s:#{input} -xsl:#{xsl}"
     # TODO which way would we rather do this?
     # cmd << " -o:#{outpath}/#{filename(false)}.#{ext}" if outpath

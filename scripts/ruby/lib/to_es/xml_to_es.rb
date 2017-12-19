@@ -1,5 +1,6 @@
 require "nokogiri"
 require_relative "../helpers.rb"
+require_relative "../common_xml.rb"
 require_relative "request.rb"
 
 #########################################
@@ -61,7 +62,7 @@ class XmlToEs
   # HELPERS #
   ###########
 
-  # see helpers.rb's Common module for methods imported from common.xsl
+  # see CommonXml module for methods replicated from common.xsl
 
   # get the value of one of the xpaths listed at the top
   # Note: if the xpath returns multiple values they will be squished together
@@ -102,14 +103,14 @@ class XmlToEs
       contents.each do |content|
         text = ""
         if keep_tags
-          converted = Common.convert_tags(content)
+          converted = CommonXml.convert_tags(content)
           text = converted.inner_html
         else
           # note: not using content.text because
           # some tags should be converted to (), [], etc for display
-          text = Common.to_display_text(content)
+          text = CommonXml.to_display_text(content)
         end
-        text = Common.squeeze(text)
+        text = CommonXml.squeeze(text)
         if text.length > 0
           list << text
         end

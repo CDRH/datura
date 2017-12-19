@@ -60,12 +60,12 @@ class TeiToEs < XmlToEs
 
   def date(before=true)
     date = get_text(@xpaths["date"])
-    return Common.date_standardize(date, before)
+    return CommonXml.date_standardize(date, before)
   end
 
   def date_display
     date = get_text(@xpaths["date"])
-    return Common.date_display(date)
+    return CommonXml.date_display(date)
   end
 
   def description
@@ -164,7 +164,7 @@ class TeiToEs < XmlToEs
     body = get_text(@xpaths["text"], false)
     text << body
     # TODO: do we need to preserve tags like <i> in text? if so, turn get_text to true
-    # text << Common.convert_tags_in_string(body)
+    # text << CommonXml.convert_tags_in_string(body)
     text += text_additional
     return text.join(" ")
   end
@@ -190,7 +190,7 @@ class TeiToEs < XmlToEs
 
   def title_sort
     t = title
-    Common.normalize_name(t)
+    CommonXml.normalize_name(t)
   end
 
   def topics

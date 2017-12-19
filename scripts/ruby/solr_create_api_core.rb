@@ -13,10 +13,10 @@ url = "http://localhost:8983/solr/admin/cores?action=CREATE"
 
 # parse incoming options and make sure that they sent in name and configset
 params = Parser.solr_create_core_params
-core = get_input(params["core"], "Core name")
+core = Helpers.get_input(params["core"], "Core name")
 url += "&name=#{core}&configSet=#{configset}"
 
-res = get_url(url)
+res = Helpers.get_url(url)
 if res.code == '200'
   puts "Created core successfully"
   puts res.body

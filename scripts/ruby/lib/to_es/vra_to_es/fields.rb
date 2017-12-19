@@ -159,7 +159,7 @@ class VraToEs < XmlToEs
     text = []
     text << get_text(@xpaths["text"], false)
     # TODO: do we need to preserve tags like <i> in text? if so, turn get_text to true
-    # text << Common.convert_tags_in_string(body)
+    # text << CommonXml.convert_tags_in_string(body)
     text += text_additional
     return text.join(" ")
   end
@@ -181,7 +181,7 @@ class VraToEs < XmlToEs
 
   def title_sort
     t = title
-    Common.normalize_name(t)
+    CommonXml.normalize_name(t)
   end
 
   def topics
