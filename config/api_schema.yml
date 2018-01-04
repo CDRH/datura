@@ -135,6 +135,7 @@ properties:
         type: keyword
   annotations_text:
     type: text
+    analyzer: english
   category:
     type: keyword
   subcategory:
@@ -151,6 +152,7 @@ properties:
     type: keyword
   text:
     type: text
+    analyzer: english
 dynamic_templates:
   - date_fields:
       match: "*_d"
