@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
 NAME=$1
-URL="localhost:9200/_all/_alias/"$NAME
+URL="localhost:9200/_all/_alias/${NAME}"
 
-curl -XDELETE $URL'?pretty'
+curl -XDELETE "${URL}?pretty"
