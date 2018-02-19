@@ -483,12 +483,12 @@
 <!-- ================================================ -->
 
 <xsl:template match="hi[@rend='right'] | hi[@rend='center']" priority="2">
-  <div>
+  <span>
     <xsl:attribute name="class">
       <xsl:value-of select="@rend"/>
     </xsl:attribute>
     <xsl:apply-templates/>
-  </div>
+  </span>
 </xsl:template>
 
 <!-- ================================================ -->
