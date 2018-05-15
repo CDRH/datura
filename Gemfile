@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'colorize'
 gem 'linkeddata'
-gem 'nokogiri'
+gem 'nokogiri', '~> 1.8.1'
 gem 'minitest'
 gem 'rake'
 gem 'rest-client'
