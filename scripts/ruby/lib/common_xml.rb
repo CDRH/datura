@@ -82,8 +82,16 @@ module CommonXml
     # put in lower case
     # remove starting a, an, or the
     down = abnormal.downcase
-    normal = down.gsub(/^the |^a |^an /, "")
-    return normal
+    down.gsub(/^the |^a |^an /, "")
+  end
+
+  # imitates xslt fn:normalize-space
+  # removes leading / trailing whitespace, newlines, repeating whitespace, etc
+  def self.normalize_space(abnormal)
+    if abnormal
+      normal = abnormal.strip.gsub(/\s+/, " ")
+    end
+    normal || abnormal
   end
 
   # saxon accepts params in following manner
@@ -94,11 +102,6 @@ module CommonXml
       params = param_hash.map{ |k, v| "#{k}=#{v}" }.join(" ")
     end
     return params
-  end
-
-  # replaces normalize-space
-  def self.squeeze(string)
-    string.strip.gsub(/\s+/, " ")
   end
 
   def self.sub_corrections(aXml)

@@ -26,7 +26,7 @@ class VraToEs < XmlToEs
   # note this does not sort the creators
   def creator
     creators = get_list(@xpaths["creators"])
-    return creators.map { |creator| { "name" => creator } }
+    return creators.map { |creator| { "name" => CommonXml.normalize_space(creator) } }
   end
 
   # returns ; delineated string of alphabetized creators
@@ -47,9 +47,9 @@ class VraToEs < XmlToEs
     contributors = @xml.xpath(@xpaths["contributors"])
     contributors.each do |ele|
       contrib_list << {
-        "name" => ele.xpath("name").text,
         "id" => "",
-        "role" => ele.xpath("role").text
+        "name" => CommonXml.normalize_space(ele.xpath("name").text),
+        "role" => CommonXml.normalize_space(ele.xpath("role").text)
       }
     end
     return contrib_list
@@ -62,11 +62,7 @@ class VraToEs < XmlToEs
   def date(before=true)
     datestr = get_text(@xpaths["dates"]["earliest"])
     # cannot send empty value for date object, set to null
-    if datestr.empty?
-      return nil
-    else
-      return datestr
-    end
+    datestr.empty? ? nil : datestr
   end
 
   def date_display
@@ -105,11 +101,17 @@ class VraToEs < XmlToEs
     # and put in the xpaths above, also for attributes, etc
     # should contain name, id, and role
     eles = @xml.xpath(@xpaths["person"])
-    return eles.map { |p| { "role" => p["role"], "name" => p.text, "id" => "" } }
+    return eles.map do |p|
+      {
+        "id" => "",
+        "name" => CommonXml.normalize_space(p.text),
+        "role" => CommonXml.normalize_space(p["role"])
+      }
+    end
   end
 
   def people
-    @json["person"].map { |p| p["name"] }
+    @json["person"].map { |p| CommonXml.normalize_space(p["name"]) }
   end
 
   def places
@@ -122,7 +124,13 @@ class VraToEs < XmlToEs
 
   def recipient
     eles = @xml.xpath(@xpaths["recipient"])
-    people = eles.map { |p| { "role" => p["role"], "name" => p.text, "id" => "" } }
+    people = eles.map do |p|
+      {
+        "id" => "",
+        "name" => CommonXml.normalize_space(p.text),
+        "role" => CommonXml.normalize_space(p["role"]),
+      }
+    end
     return people
   end
 
@@ -161,7 +169,7 @@ class VraToEs < XmlToEs
     # TODO: do we need to preserve tags like <i> in text? if so, turn get_text to true
     # text << CommonXml.convert_tags_in_string(body)
     text += text_additional
-    return text.join(" ")
+    return CommonXml.normalize_space(text.join(" "))
   end
 
   def text_additional

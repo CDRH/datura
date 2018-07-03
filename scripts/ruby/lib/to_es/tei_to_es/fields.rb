@@ -21,13 +21,13 @@ class TeiToEs < XmlToEs
 
   def category
     category = get_text(@xpaths["category"])
-    return category.length > 0 ? category : "none"
+    return category.length > 0 ? CommonXml.normalize_space(category) : "none"
   end
 
   # note this does not sort the creators
   def creator
     creators = get_list(@xpaths["creators"])
-    return creators.map { |creator| { "name" => creator } }
+    return creators.map { |creator| { "name" => CommonXml.normalize_space(creator) } }
   end
 
   # returns ; delineated string of alphabetized creators
@@ -48,7 +48,11 @@ class TeiToEs < XmlToEs
     @xpaths["contributors"].each do |xpath|
       eles = @xml.xpath(xpath)
       eles.each do |ele|
-        contribs << { "name" => ele.text, "id" => ele["id"], "role" => ele["role"] }
+        contribs << {
+          "id" => ele["id"],
+          "name" => CommonXml.normalize_space(ele.text),
+          "role" => CommonXml.normalize_space(ele["role"])
+        }
       end
     end
     return contribs
@@ -107,12 +111,18 @@ class TeiToEs < XmlToEs
     # and put in the xpaths above, also for attributes, etc
     # should contain name, id, and role
     eles = @xml.xpath(@xpaths["person"])
-    people = eles.map { |p| { "role" => p["role"], "name" => p.text, "id" => "" } }
+    people = eles.map do |p|
+      {
+        "id" => "",
+        "name" => CommonXml.normalize_space(p.text),
+        "role" => CommonXml.normalize_space(p["role"])
+      }
+    end
     return people
   end
 
   def people
-    @json["person"].map { |p| p["name"] }
+    @json["person"].map { |p| CommonXml.normalize_space(p["name"]) }
   end
 
   def places
@@ -125,7 +135,13 @@ class TeiToEs < XmlToEs
 
   def recipient
     eles = @xml.xpath(@xpaths["recipient"])
-    people = eles.map { |p| { "role" => "recipient", "name" => p.text, "id" => "" } }
+    people = eles.map do |p|
+      {
+        "id" => "",
+        "name" => CommonXml.normalize_space(p.text),
+        "role" => "recipient"
+      }
+    end
     return people
   end
 
@@ -166,7 +182,7 @@ class TeiToEs < XmlToEs
     # TODO: do we need to preserve tags like <i> in text? if so, turn get_text to true
     # text << CommonXml.convert_tags_in_string(body)
     text += text_additional
-    return text.join(" ")
+    return CommonXml.normalize_space(text.join(" "))
   end
 
   def text_additional

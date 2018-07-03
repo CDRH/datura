@@ -79,10 +79,14 @@ class CommonXmlTest < Minitest::Test
     assert_equal "hour", CommonXml.normalize_name("An Hour")
   end
 
-  def test_squeeze
+  def test_normalize_space
     # ensure that return characters are replaced by spaces, and multispaces squashed
-    test1 = "<xml>\n<title>Example    </title>\n  </xml>\n"
-    assert_equal "<xml> <title>Example </title> </xml>", CommonXml.squeeze(test1)
+    test1 = " <xml>\r<title>Example    </title>\n  </xml>\n "
+    assert_equal "<xml> <title>Example </title> </xml>", CommonXml.normalize_space(test1)
+
+    # check that newlines are dead regardless
+    test2 = "<xml>\r<title>Exa\rmple\n</title></xml>"
+    assert_equal "<xml> <title>Exa mple </title></xml>", CommonXml.normalize_space(test2)
   end
 
   def test_sub_corrections

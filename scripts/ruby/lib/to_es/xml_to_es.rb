@@ -110,7 +110,8 @@ class XmlToEs
           # some tags should be converted to (), [], etc for display
           text = CommonXml.to_display_text(content)
         end
-        text = CommonXml.squeeze(text)
+        # remove whitespace of all kinds from the text
+        text = CommonXml.normalize_space(text)
         if text.length > 0
           list << text
         end
