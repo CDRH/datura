@@ -43,13 +43,23 @@ class TeiToEs
   #   your custom code
   # end
 
+  # Use CommonXml.normalize_space() the same way as XSL's normalize-space
+  #   string = " example of   weird stuff"
+  #   CommonXml.normalize_space(string)
+  #   ==> "example of weird stuff"
+
   # In the below example, the normal "person" behavior is customized
   def person
     # TODO will need some examples of how this will work
     # and put in the xpaths above, also for attributes, etc
     # should contain name, id, and role
     eles = @xml.xpath(@xpaths["person"])
-    return eles.map { |p| { "role" => p["role"], "name" => p.text, "id" => nil } }
+    return eles.map do |p|
+      {
+        "id" => "",
+        "name" => CommonXml.normalize_space(p.text),
+        "role" => CommonXml.normalize_space(p["role"])
+      }
   end
 
 end
