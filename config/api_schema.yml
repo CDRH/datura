@@ -80,6 +80,8 @@ properties:
     type: keyword
   language:
     type: keyword
+  languages:
+    type: keyword
   relation:
     type: keyword
   source:
@@ -172,3 +174,16 @@ dynamic_templates:
       mapping:
         type: text
         analyzer: english
+  # language fields are always text fields
+  # but specifying _t_ for clarity
+  # _t_en functionally the same as _t but
+  - text_english:
+      match: "*_t_en"
+      mapping:
+        type: text
+        analyzer: english
+  - text_spanish:
+      match: "*_t_es"
+      mapping:
+        type: text
+        analyzer: spanish

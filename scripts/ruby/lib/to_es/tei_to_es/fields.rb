@@ -68,8 +68,7 @@ class TeiToEs < XmlToEs
   end
 
   def date_display
-    date = get_text(@xpaths["date"])
-    return CommonXml.date_display(date)
+    date = get_text(@xpaths["date_display"])
   end
 
   def description
@@ -89,16 +88,20 @@ class TeiToEs < XmlToEs
   end
 
   def image_id
-    # TODO only needed for Cody Archive, but put generic rules in here
+    images = get_list(@xpaths["image_id"])
+    images[0] if images
   end
 
   def keywords
-    return get_list(@xpaths["keywords"])
+    get_list(@xpaths["keywords"])
   end
 
   def language
-    # TODO need some examples to use
-    # look for attribute anywhere in whole text and add to array
+    get_text(@xpaths["language"])
+  end
+
+  def languages
+    get_list(@xpaths["languages"])
   end
 
   def medium
@@ -210,7 +213,7 @@ class TeiToEs < XmlToEs
   end
 
   def topics
-    # TODO default behavior?
+    get_list(@xpaths["topic"])
   end
 
   def uri
