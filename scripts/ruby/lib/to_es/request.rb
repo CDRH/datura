@@ -78,6 +78,7 @@ class XmlToEs
   def assemble_other_metadata
     @json["format"] = format
     @json["language"] = language
+    @json["languages"] = languages
     # @json["relation"]
     # @json["type"]
     # @json["extent"]

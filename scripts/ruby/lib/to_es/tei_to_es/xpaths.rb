@@ -16,14 +16,18 @@ class TeiToEs < XmlToEs
         "/TEI/teiHeader/fileDesc/sourceDesc/bibl/author"
       ],
       "date" => "/TEI/teiHeader/fileDesc/sourceDesc/bibl/date/@when",
+      # a non normalized date taken directly from the source material ("Dec 9", "Winter 1889")
+      "date_display" => "/TEI/teiHeader/fileDesc/sourceDesc/bibl/date",
       "formats" => {
         "letter" => "/TEI/text/body/div1[@type='letter']",
         "periodical" => "/TEI/teiHeader/fileDesc/sourceDesc/bibl/title[@level='j']",
         "manuscript" => "/TEI/teiHeader/fileDesc/sourceDesc/bibl/title[@level='m']"
       },
+      "image_id" => "/TEI/text//pb/@facs[1]",
       "keywords" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='keywords']/term",
       # note: language is global attribute xml:lang
-      "language" => "//[@lang]",
+      "language" => "(//@lang)[1]",
+      "languages" => "//@lang",
       "person" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='people']/term",
       "places" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='places']/term",
       "publisher" => "/TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/publisher[1]",
