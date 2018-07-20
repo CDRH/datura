@@ -22,12 +22,12 @@ module Parser
 
       # default to no restricted format
       options["format"] = nil
-      opts.on( '-f', '--format [input]', 'Restrict to one format (tei, csv, dublin_core, vra)') do |input|
-        if input == "tei" || input == "csv" || input == "dublin_core" || input == "vra"
+      opts.on( '-f', '--format [input]', 'Restrict to one format (csv, dublin_core, html, tei, vra)') do |input|
+        if %w[csv dublic_core html tei vra].include?(input)
           options["format"] = input
         else
           puts "Format #{input} is not recognized.".red
-          puts "Allowed formats are tei, csv, vra, and dublin_core"
+          puts "Allowed formats are csv, dublic_core, html, tei, and vra"
           exit
         end
       end
