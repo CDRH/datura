@@ -22,6 +22,7 @@ class DataManager
     {
       "csv" => FileCsv,
       "dc" => FileDc,
+      "html" => FileHtml,
       "tei" => FileTei,
       "vra" => FileVra,
       "yml" => FileYml
