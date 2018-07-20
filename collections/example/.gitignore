@@ -15,6 +15,10 @@ private.yml
 **/html-generated/*
 **/solr/*
 
+# If you don't want to commit development html, uncomment this line
+
+# output/development/html/*
+
 !**/.keep
 
 .DS_Store
