@@ -6,7 +6,6 @@
 
   <!-- <xsl:param name="slug"/> -->
 
-
   <xsl:template match="/" exclude-result-prefixes="#all">
 
     <xsl:variable name="filename" select="tokenize(base-uri(.), '/')[last()]"/>
