@@ -5,6 +5,10 @@
   <xsl:output indent="yes" omit-xml-declaration="yes"/>
 
   <!-- <xsl:param name="slug"/> -->
+  <xsl:param name="collection"/>
+  <xsl:param name="data_base"/>
+  <xsl:param name="media_base"/>
+  <xsl:param name="environment"/>
 
   <xsl:template match="/" exclude-result-prefixes="#all">
 
