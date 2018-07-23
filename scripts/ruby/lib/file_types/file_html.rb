@@ -12,15 +12,21 @@ class FileHtml < FileType
     @script_html = "#{options["repo_dir"]}/#{options["html_html_xsl"]}"
   end
 
+  def subdoc_xpaths
+    # Override this method per file type in order to add subdocuments
+    # for example:
+    { "/" => HtmlToEs }
+  end
+
   # if there should not be any html transformation taking place
   # then leave this method empty but uncommented to override default behavior
 
   # if you would like to use the default transformation behavior
   # then comment or remove both of the following methods!
 
-  def transform_es
-    raise "HTML to ES transformation not supported"
-  end
+  # def transform_es
+  #   raise "HTML to ES transformation not supported"
+  # end
 
   # def transform_html
   #   raise "HTML to HTML transformation not supported"

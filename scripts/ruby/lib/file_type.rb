@@ -172,4 +172,13 @@ class FileType
     JSON.pretty_generate(json)
   end
 
+  def subdoc_xpaths
+    # Override this method per file type in order to add subdocuments
+    # for example:
+    # {
+    #   "/TEI" => TeiToEs,
+    #   "//listPerson/person" => TeiToEsPersonography,
+    # }
+  end
+
 end
