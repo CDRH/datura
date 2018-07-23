@@ -45,7 +45,7 @@ class FileCsv < FileType
       end
     end
     if @options["output"]
-      filepath = "#{out_es}/#{self.filename(false)}.xml"
+      filepath = "#{@out_es}/#{self.filename(false)}.xml"
       File.open(filepath, "w") { |f| f.write(pretty_json(es_doc)) }
     end
   end
