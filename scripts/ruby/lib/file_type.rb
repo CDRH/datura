@@ -96,8 +96,9 @@ class FileType
     return transform_solr
   end
 
-  # these rules apply to XML to ES objects (DC / HTML / TEI / VRA)
-  # check specific file_x files for overridden behavior
+  # these rules apply to all XML files (DC / HTML / TEI / VRA)
+  # check specific file_x files for overridden behavior for XML files
+  # transforming into elasticsearch, html, and solr
   def transform_es
     es_req = []
     begin
