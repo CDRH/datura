@@ -16,6 +16,17 @@ class FileCsv < FileType
     })
   end
 
+  # most basic implementation assumes column header is the es field name
+  # operates with no logic on the fields
+  # YOU MUST OVERRIDE FOR CSVS WHICH DO NOT HAVE BESPOKE HEADINGS FOR API
+  def row_to_es(headers, row)
+    doc = {}
+    headers.each do |column|
+      doc[column] = row[column] if row[column]
+    end
+    doc
+  end
+
   # most basic implementation assumes column header is the solr field name
   # operates with no logic on the fields
   def row_to_solr(doc, headers, row)
@@ -26,7 +37,17 @@ class FileCsv < FileType
   end
 
   def transform_es
-    raise "Currently CSV to ES transformation is not supported"
+    puts "transforming #{self.filename}"
+    es_doc = []
+    @csv.each do |row|
+      if !row.header_row?
+        es_doc << row_to_es(@csv.headers, row)
+      end
+    end
+    if @options["output"]
+      filepath = "#{out_es}/#{self.filename(false)}.xml"
+      File.open(filepath, "w") { |f| f.write(pretty_json(es_doc)) }
+    end
   end
 
   def transform_html

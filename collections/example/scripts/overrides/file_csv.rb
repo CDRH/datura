@@ -1,4 +1,22 @@
 class FileCsv
+
+  def row_to_es(headers, row)
+    doc = {}
+    doc["identifier"] = row["id"] if row["id"]
+    doc["category"] = row["category"] if row["category"]
+    doc["subcategory"] = row["sub_category"] if row["sub_category"]
+    doc["data_type"] = "csv"
+    doc["collection"] = @options["collection"]
+    doc["title"] = row["title"] if row["title"]
+    doc["title_sort"] = CommonXml.normalize_name(row["title"]) if row["title"]
+    doc["format"] = row["medium"]
+    doc["places"] = [ row["location"] ]
+    doc["date"] = row["date_normalized"] if row["date_normalized"]
+    doc["date_display"] = row["date"] if row["date"]
+    # TODO this is a proof of concept that would ideally also include things like creator
+    doc
+  end
+
   def row_to_solr(doc, headers, row)
     doc.add_child("<field name='id'>#{row['id']}</field>") if row['id']
     doc.add_child("<field name='title'>#{row['title']}</field>") if row['title']

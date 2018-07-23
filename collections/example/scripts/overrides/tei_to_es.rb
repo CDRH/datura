@@ -60,6 +60,7 @@ class TeiToEs
         "name" => CommonXml.normalize_space(p.text),
         "role" => CommonXml.normalize_space(p["role"])
       }
+    end
   end
 
 end
