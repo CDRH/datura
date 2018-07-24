@@ -48,6 +48,7 @@ class FileCsv < FileType
       filepath = "#{@out_es}/#{self.filename(false)}.xml"
       File.open(filepath, "w") { |f| f.write(pretty_json(es_doc)) }
     end
+    es_doc
   end
 
   def transform_html
