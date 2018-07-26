@@ -55,11 +55,11 @@ class FileType
       # you will need to add _update at the end of this URL
       begin
         RestClient.put("#{url}/#{type}/#{id}", doc.to_json, {:content_type => :json } )
-        return { "docs" => transformed }
       rescue => e
         return { "error" => "Error transforming or posting to ES for #{self.filename(false)}: #{e.response}" }
       end
     end
+    return { "docs" => transformed }
   end
 
   def post_solr(url=nil)

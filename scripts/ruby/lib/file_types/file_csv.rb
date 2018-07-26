@@ -7,6 +7,10 @@ class FileCsv < FileType
     @csv = read_csv(file_location, options["csv_encoding"])
   end
 
+  def present?(item)
+    !item.nil? && !item.empty?
+  end
+
   # override to change encoding
   def read_csv(file_location, encoding="utf-8")
     return CSV.read(file_location, {
@@ -45,7 +49,7 @@ class FileCsv < FileType
       end
     end
     if @options["output"]
-      filepath = "#{@out_es}/#{self.filename(false)}.xml"
+      filepath = "#{@out_es}/#{self.filename(false)}.json"
       File.open(filepath, "w") { |f| f.write(pretty_json(es_doc)) }
     end
     es_doc
