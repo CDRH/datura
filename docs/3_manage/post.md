@@ -45,7 +45,7 @@ Specifies the environment's settings that should be used.  Typically the environ
 Format options include:
 
 - csv
-- dublin_core
+- html
 - tei
 - vra
 

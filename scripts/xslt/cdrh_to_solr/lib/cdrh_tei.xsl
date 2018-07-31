@@ -28,7 +28,7 @@
   <!-- uri -->
   <!-- uriXML -->
   <!-- uriHTML -->
-  <!-- dataType --> <!-- tei, dublin_core, csv, vra_core -->
+  <!-- dataType --> <!-- tei or vra -->
   <!-- image_id -->
   
   

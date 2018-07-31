@@ -5,7 +5,7 @@ This collection supports the population of an API storing data extracted from XM
 
 ## The Process
 
-Collections are added as sub repositories. They may contain data in the following formats: TEI P5, VRA, Dublin Core, CSV, and YML.  The following output formats are supported: HTML, Solr XML, Elasticsearch (ES) JSON.
+Collections are added as sub repositories. They may contain data in the following formats: HTML, TEI P5, VRA, and CSV.  The following output formats are supported: HTML, Solr XML, Elasticsearch (ES) JSON.
 
 The files are parsed and formatted into documents appropriate for Solr, Elasticsearch, and HTML snippets, and then these resulting documents are posted to the appropriate locations. There are also several management scripts for creating indexes, managing the schemas, and deleting indexes.
 

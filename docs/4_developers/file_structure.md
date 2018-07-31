@@ -15,10 +15,9 @@ You may also add the following directories as necessary to hold the data files:
 ```
 collection_name
 |-- csv
-|-- dc
+|-- html
 |-- tei
 |-- vra
-|-- yml
 ```
 
 Additionally, depending on which formats you are using, you may want the following files and directories:

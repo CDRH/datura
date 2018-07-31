@@ -96,7 +96,7 @@ class FileType
     return transform_solr
   end
 
-  # these rules apply to all XML files (DC / HTML / TEI / VRA)
+  # these rules apply to all XML files (HTML / TEI / VRA)
   # check specific file_x files for overridden behavior for XML files
   # transforming into elasticsearch, html, and solr
   def transform_es
@@ -127,7 +127,7 @@ class FileType
   def transform_solr
     puts "transforming #{self.filename}"
     # this assumes that solr uses XSL transformation
-    # make sure to override behavior in CSV / YML child classes
+    # make sure to override behavior in CSV / non-XML child classes
     if @options["output"]
       req = exec_xsl(@file_location, @script_solr, "xml", @out_solr, @options["variables_solr"])
     else
