@@ -23,11 +23,9 @@ class HtmlToEs < XmlToEs
     # category = get_text(@xpaths["category"])
   end
 
-  # note this does not sort the creators
+  # nested field
   def creator
     # TODO
-    # creators = get_list(@xpaths["creators"])
-    # return creators.map { |creator| { "name" => CommonXml.normalize_space(creator) } }
   end
 
   # returns ; delineated string of alphabetized creators
@@ -48,7 +46,6 @@ class HtmlToEs < XmlToEs
   end
 
   def data_type
-    # TODO ?
     "html"
   end
 
@@ -139,8 +136,6 @@ class HtmlToEs < XmlToEs
     text = []
     body = get_text(@xpaths["text"], false)
     text << body
-    # TODO: do we need to preserve tags like <i> in text? if so, turn get_text to true
-    # text << CommonXml.convert_tags_in_string(body)
     text += text_additional
     return CommonXml.normalize_space(text.join(" "))
   end
