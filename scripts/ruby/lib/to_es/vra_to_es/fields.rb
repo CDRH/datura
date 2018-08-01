@@ -91,6 +91,10 @@ class VraToEs < XmlToEs
     # look for attribute anywhere in whole text and add to array
   end
 
+  def languages
+    # TODO
+  end
+
   def medium
     # iterate through all the formats until the first one matches
     get_text(@xpaths["format"])

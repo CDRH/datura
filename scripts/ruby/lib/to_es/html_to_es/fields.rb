@@ -77,6 +77,10 @@ class HtmlToEs < XmlToEs
     # TODO
   end
 
+  def languages
+    # TODO
+  end
+
   def medium
     # Default behavior is the same as "format" method
     format
