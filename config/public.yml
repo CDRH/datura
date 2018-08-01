@@ -27,12 +27,10 @@ default:
   es_schema_path: config/api_schema.yml
 
   # formats to solr transformation locations
-  dc_solr_xsl: scripts/xslt/cdrh_to_solr/solr_transform_dc.xsl
   tei_solr_xsl: scripts/xslt/cdrh_to_solr/solr_transform_tei.xsl
   vra_solr_xsl: scripts/xslt/cdrh_to_solr/solr_transform_vra.xsl
 
   # formats to html snippets transformation locations
-  dc_html_xsl: scripts/xslt/cdrh_dc_to_html/dublin_core_to_html.xsl
   html_html_xsl: scripts/xslt/html_to_html/html.xsl
   tei_html_xsl: scripts/xslt/cdrh_to_html/tei.p5.xsl
   vra_html_xsl: scripts/xslt/cdrh_to_html/vra_to_html.xsl

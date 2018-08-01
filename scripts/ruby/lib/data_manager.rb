@@ -21,11 +21,9 @@ class DataManager
   def self.format_to_class
     {
       "csv" => FileCsv,
-      "dc" => FileDc,
       "html" => FileHtml,
       "tei" => FileTei,
-      "vra" => FileVra,
-      "yml" => FileYml
+      "vra" => FileVra
     }
   end
 
