@@ -7,6 +7,27 @@ class FileCsv < FileType
     @csv = read_csv(file_location, options["csv_encoding"])
   end
 
+  def build_html_from_csv
+    @csv.each_with_index do |row, index|
+      next if row.header_row?
+      # Note: if overriding this function, it's recommended to use
+      # a more specific identifier for each row of the CSV
+      # but since this is a generic version, simply using the current iteration number
+      id = index
+      # using XML instead of HTML for simplicity's sake
+      builder = Nokogiri::XML::Builder.new do |xml|
+        xml.div(class: "main_content") {
+          xml.ul {
+            @csv.headers.each do |header|
+              xml.li("#{header}: #{row[header]}")
+            end
+          }
+        }
+      end
+      write_html_to_file(builder, index)
+    end
+  end
+
   def present?(item)
     !item.nil? && !item.empty?
   end
@@ -56,7 +77,11 @@ class FileCsv < FileType
   end
 
   def transform_html
-    raise "Currently CSV to HTML transformation is not supported"
+    puts "transforming #{self.filename} to HTML subdocuments"
+    build_html_from_csv
+    # transform_html method is expected to send back a hash
+    # but already wrote to filesystem so just sending back empty
+    {}
   end
 
   # I am not sure that this is going to be the best way to set this up
@@ -81,5 +106,11 @@ class FileCsv < FileType
       File.open(filepath, "w") { |f| f.write(solr_doc.root.to_xml) }
     end
     return { "docs" => solr_doc.root.to_xml }
+  end
+
+  def write_html_to_file(builder, index)
+    filepath = "#{@out_html}/#{index}.html"
+    puts "writing to #{filepath}" if @options["verbose"]
+    File.open(filepath, "w") { |f| f.write(builder.to_xml) }
   end
 end
