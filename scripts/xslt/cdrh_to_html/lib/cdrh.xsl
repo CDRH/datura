@@ -122,8 +122,8 @@
           </xsl:choose>
         </xsl:variable>
         <xsl:choose>
-          <xsl:when test="contains($figure_id_full,'.jpg')">
-            <xsl:value-of select="substring-before($figure_id_full,'.jpg')"/>
+          <xsl:when test="ends-with($figure_id_full,'.jpg') or ends-with($figure_id_full,'.jpeg')">
+            <xsl:value-of select="substring-before($figure_id_full,'.jp')"/>
           </xsl:when>
           <xsl:otherwise>
             <xsl:value-of select="$figure_id_full"/>
@@ -140,11 +140,15 @@
           <a>
             <xsl:attribute name="href">
               <xsl:value-of select="$media_base"/>
-              <xsl:text>/images/</xsl:text>
-              <xsl:value-of select="$collection"/><xsl:text>/</xsl:text>
-              <xsl:value-of select="$image_large"/><xsl:text>/</xsl:text>
+              <xsl:text>/iiif/2/</xsl:text>
+              <xsl:value-of select="$collection"/>
+              <xsl:text>%2F</xsl:text>
               <xsl:value-of select="$figure_id"/>
-              <xsl:text>.jpg</xsl:text>
+              <xsl:text>.jpg/full/!</xsl:text>
+              <xsl:value-of select="$image_large"/>
+              <xsl:text>,</xsl:text>
+              <xsl:value-of select="$image_large"/>
+              <xsl:text>/0/default.jpg</xsl:text>
             </xsl:attribute>
             <xsl:attribute name="rel">
               <xsl:text>prettyPhoto[pp_gal]</xsl:text>
@@ -152,22 +156,30 @@
             <xsl:attribute name="title">
               <xsl:text>&lt;a href="</xsl:text>
               <xsl:value-of select="$media_base"/>
-              <xsl:text>/images/</xsl:text>
-              <xsl:value-of select="$collection"/><xsl:text>/</xsl:text>
-              <xsl:value-of select="$image_large"/><xsl:text>/</xsl:text>
+              <xsl:text>/iiif/2/</xsl:text>
+              <xsl:value-of select="$collection"/>
+              <xsl:text>%252F</xsl:text><!-- %2F Must be double encoded or it comes out as / -->
               <xsl:value-of select="$figure_id"/>
-              <xsl:text>.jpg</xsl:text>
+              <xsl:text>.jpg/full/!</xsl:text>
+              <xsl:value-of select="$image_large"/>
+              <xsl:text>,</xsl:text>
+              <xsl:value-of select="$image_large"/>
+              <xsl:text>/0/default.jpg</xsl:text>
               <xsl:text>" target="_blank" &gt;open image in new window&lt;/a&gt;</xsl:text>
             </xsl:attribute>
             
             <img>
               <xsl:attribute name="src">
                 <xsl:value-of select="$media_base"/>
-                <xsl:text>/images/</xsl:text>
-                <xsl:value-of select="$collection"/><xsl:text>/</xsl:text>
-                <xsl:value-of select="$image_thumb"/><xsl:text>/</xsl:text>
+                <xsl:text>/iiif/2/</xsl:text>
+                <xsl:value-of select="$collection"/>
+                <xsl:text>%2F</xsl:text>
                 <xsl:value-of select="$figure_id"/>
-                <xsl:text>.jpg</xsl:text>
+                <xsl:text>.jpg/full/!</xsl:text>
+                <xsl:value-of select="$image_thumb"/>
+                <xsl:text>,</xsl:text>
+                <xsl:value-of select="$image_thumb"/>
+                <xsl:text>/0/default.jpg</xsl:text>
               </xsl:attribute>
               <xsl:attribute name="class">
                 <xsl:text>display</xsl:text>&#160;
