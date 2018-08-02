@@ -76,15 +76,13 @@ class TeiToEs < XmlToEs
   end
 
   def format
+    matched_format = nil
     # iterate through all the formats until the first one matches
     @xpaths["formats"].each do |type, xpath|
       text = get_text(xpath)
-      if text
-        return type
-      end
+      matched_format = type if text && text.length > 0
     end
-    # if no format, should we pick a default value?
-    return nil
+    matched_format
   end
 
   def image_id

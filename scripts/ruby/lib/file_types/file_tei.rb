@@ -19,7 +19,7 @@ class FileTei < FileType
     # match subdocs against classes
     return {
       "/TEI" => TeiToEs,
-      "//listPerson/person" => TeiToEsPersonography,
+      # "//listPerson/person" => TeiToEsPersonography,
     }
   end
 
