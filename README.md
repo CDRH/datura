@@ -3,4 +3,6 @@ CDRH Data Repository
 
 This collection supports the population of an API storing data extracted from XML, CSV, YML, and other file types.
 
-**CDRH Data Repository Documentation can be found [in our documentation repository](https://github.com/CDRH/sneezewort) ([https://github.com/CDRH/sneezewort](https://github.com/CDRH/sneezewort)).**
+**CDRH Data Repository Documentation can be found [in our documentation repository](https://github.com/CDRH/api/blob/master/docs/api/README.md)**
+
+**Documentation for entire publishing system can be found here: ([https://github.com/CDRH/sneezewort](https://github.com/CDRH/sneezewort))**
