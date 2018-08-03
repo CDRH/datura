@@ -144,7 +144,7 @@ class VraToEs < XmlToEs
   end
 
   def rights_holder
-    # TODO: default behavior?
+    get_text(@xpaths["rights_holder"])
   end
 
   def rights_uri
