@@ -111,6 +111,38 @@
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Page breaks and page images
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+  <xsl:template name="url_builder">
+    <xsl:param name="figure_id_local"/> 
+    <xsl:param name="image_size_local"/>
+    <xsl:value-of select="$media_base"/>
+    <xsl:text>/iiif/2/</xsl:text>
+    <xsl:value-of select="$collection"/>
+    <xsl:text>%2F</xsl:text>
+    <xsl:value-of select="$figure_id_local"/>
+    <xsl:text>.jpg/full/!</xsl:text>
+    <xsl:value-of select="$image_size_local"/>
+    <xsl:text>,</xsl:text>
+    <xsl:value-of select="$image_size_local"/>
+    <xsl:text>/0/default.jpg</xsl:text>
+  </xsl:template>
+
+  <!-- needed because of the "open in a new window" link which is pulled 
+       from the title attribute on a photo using pretty photo -->
+  <xsl:template name="url_builder_escaped">
+    <xsl:param name="figure_id_local"/> 
+    <xsl:param name="image_size_local"/>
+    <xsl:value-of select="$media_base"/>
+    <xsl:text>/iiif/2/</xsl:text>
+    <xsl:value-of select="$collection"/>
+    <xsl:text>%252F</xsl:text><!-- %2F Must be double encoded or it comes out as / -->
+    <xsl:value-of select="$figure_id_local"/>
+    <xsl:text>.jpg/full/!</xsl:text>
+    <xsl:value-of select="$image_size_local"/>
+    <xsl:text>,</xsl:text>
+    <xsl:value-of select="$image_size_local"/>
+    <xsl:text>/0/default.jpg</xsl:text>
+  </xsl:template>
   
   <xsl:template match="pb">
       <!-- grab the figure id, first looking in @facs, then @xml:id, and if there is a .jpg, chop it off -->
@@ -139,50 +171,31 @@
           </xsl:attribute>
           <a>
             <xsl:attribute name="href">
-              <xsl:value-of select="$media_base"/>
-              <xsl:text>/iiif/2/</xsl:text>
-              <xsl:value-of select="$collection"/>
-              <xsl:text>%2F</xsl:text>
-              <xsl:value-of select="$figure_id"/>
-              <xsl:text>.jpg/full/!</xsl:text>
-              <xsl:value-of select="$image_large"/>
-              <xsl:text>,</xsl:text>
-              <xsl:value-of select="$image_large"/>
-              <xsl:text>/0/default.jpg</xsl:text>
+              <xsl:call-template name="url_builder">
+                <xsl:with-param name="figure_id_local" select="$figure_id"/>  
+                <xsl:with-param name="image_size_local" select="$image_large"></xsl:with-param>   
+              </xsl:call-template>
             </xsl:attribute>
             <xsl:attribute name="rel">
               <xsl:text>prettyPhoto[pp_gal]</xsl:text>
             </xsl:attribute>
             <xsl:attribute name="title">
-              <xsl:text>&lt;a href="</xsl:text>
-              <xsl:value-of select="$media_base"/>
-              <xsl:text>/iiif/2/</xsl:text>
-              <xsl:value-of select="$collection"/>
-              <xsl:text>%252F</xsl:text><!-- %2F Must be double encoded or it comes out as / -->
-              <xsl:value-of select="$figure_id"/>
-              <xsl:text>.jpg/full/!</xsl:text>
-              <xsl:value-of select="$image_large"/>
-              <xsl:text>,</xsl:text>
-              <xsl:value-of select="$image_large"/>
-              <xsl:text>/0/default.jpg</xsl:text>
+              <xsl:call-template name="url_builder_escaped">
+                <xsl:with-param name="figure_id_local" select="$figure_id"/>  
+                <xsl:with-param name="image_size_local" select="$image_large"></xsl:with-param>   
+              </xsl:call-template>
               <xsl:text>" target="_blank" &gt;open image in new window&lt;/a&gt;</xsl:text>
             </xsl:attribute>
             
             <img>
               <xsl:attribute name="src">
-                <xsl:value-of select="$media_base"/>
-                <xsl:text>/iiif/2/</xsl:text>
-                <xsl:value-of select="$collection"/>
-                <xsl:text>%2F</xsl:text>
-                <xsl:value-of select="$figure_id"/>
-                <xsl:text>.jpg/full/!</xsl:text>
-                <xsl:value-of select="$image_thumb"/>
-                <xsl:text>,</xsl:text>
-                <xsl:value-of select="$image_thumb"/>
-                <xsl:text>/0/default.jpg</xsl:text>
+                <xsl:call-template name="url_builder">
+                  <xsl:with-param name="figure_id_local" select="$figure_id"/> 
+                  <xsl:with-param name="image_size_local" select="$image_thumb"></xsl:with-param>   
+                </xsl:call-template>
               </xsl:attribute>
               <xsl:attribute name="class">
-                <xsl:text>display</xsl:text>&#160;
+                <xsl:text>display&#160;</xsl:text>
               </xsl:attribute>
             </img>
           </a>
