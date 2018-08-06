@@ -213,7 +213,7 @@ class VraToEs < XmlToEs
 
   def uri_html
     base = @options["data_base"]
-    subpath = "data/#{@options["collection"]}/output/html"
+    subpath = "data/#{@options["collection"]}/output/#{@options["environment"]}/html"
     return "#{base}/#{subpath}/#{@id}.html"
   end
 
