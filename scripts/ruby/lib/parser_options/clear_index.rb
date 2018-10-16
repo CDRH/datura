@@ -34,7 +34,7 @@ module Parser
     # magic
     optparse.parse!
 
-    options["collection"] = argv_collections(ARGV)
+    options["collection_dir"] = argv_collection_dir(ARGV)
 
     return options
   end # ends clear_index_params

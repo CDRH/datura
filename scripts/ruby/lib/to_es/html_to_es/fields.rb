@@ -34,11 +34,11 @@ class HtmlToEs < XmlToEs
   end
 
   def collection
-    @options["es_type"]
+    @options["collection"]
   end
 
   def collection_desc
-    @options["collection_desc"] || @options["es_type"]
+    @options["collection_desc"] || @options["collection"]
   end
 
   def contributor

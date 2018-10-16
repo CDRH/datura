@@ -7,13 +7,15 @@ class Options
 
   def initialize(params, general_config_path, collection_config_path)
     @directory = File.dirname(__FILE__)
-    @collection_dir = params["collection"]
+    @collection_dir = params["collection_dir"]
     @environment = params["environment"]
 
     # read and store raw config files
     read_all_configs(general_config_path, collection_config_path)
     # make a smushed version that overrides like this: general < collection < user specified
     @all = smash_configs.merge!(params)
+    # if collection is not specifically set in the configs, then default to the directory name
+    @all["collection"] = params["collection_dir"] if !@all.key?("collection")
   end
 
   def print_message(variable, name)
@@ -52,13 +54,13 @@ class Options
     new_config = {}
     if config
       # add the default settings
-      if config.has_key?("default")
+      if config.key?("default")
         config["default"].each do |key, value|
           new_config[key] = value
         end
       end
       # add the environment settings and override default as needed
-      if config.has_key?(@environment)
+      if config.key?(@environment)
         config[@environment].each do |key, value|
           new_config[key] = value
         end

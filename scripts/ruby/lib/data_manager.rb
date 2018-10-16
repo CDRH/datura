@@ -34,21 +34,20 @@ class DataManager
     @error_solr = []
     # combine user input and config files
     params = Parser.post_params
-    @collection = params["collection"]
     # assign locations
     @repo_dir = "#{File.dirname(__FILE__)}/../../.."
-    @coll_dir = "#{@repo_dir}/collections/#{@collection}"
+    @coll_dir = "#{@repo_dir}/collections/#{params["collection_dir"]}"
     load_collection_classes
     # check if collection exists
     if File.directory?(@coll_dir)
       @options = Options.new(params, "#{@repo_dir}/config", "#{@coll_dir}/config").all
       @options["coll_dir"] = @coll_dir
       @options["repo_dir"] = @repo_dir
-      @log = Logger.new("#{@repo_dir}/logs/#{@collection}-#{@options['environment']}.log")
+      @log = Logger.new("#{@repo_dir}/logs/#{@options["collection"]}-#{@options['environment']}.log")
       @es_url = "#{@options['es_path']}/#{@options['es_index']}"
       @solr_url = "#{@options['solr_path']}/#{@options['solr_core']}/update"
     else
-      puts "Could not find collection directory named '#{@collection}'!".red
+      puts "Could not find collection directory named '#{params["collection_dir"]}'!".red
       exit
     end
   end
@@ -113,7 +112,7 @@ class DataManager
     if should_transform?("es")
       assert_option("es_path")
       assert_option("es_index")
-      assert_option("es_type")
+      assert_option("collection")
     end
 
     if should_transform?("solr")
@@ -164,14 +163,15 @@ class DataManager
   def options_msg
     msg = "Start Time: #{Time.now}\n"
     msg << "Running script with following options:\n"
-    msg << "collection:     #{@options['collection']}\n"
-    msg << "Environment: #{@options['environment']}\n"
-    msg << "Posting to:  #{@es_url}\n\n" if should_transform?("es")
-    msg << "Posting to:  #{@solr_url}\n\n" if should_transform?("solr")
-    msg << "Format:      #{@options['format']}\n" if @options["format"]
-    msg << "Regex:       #{@options['regex']}\n" if @options["regex"]
-    msg << "Whitelist:   #{@options['whitelist_txt']}\n" if @options["whitelist_txt"]
-    msg << "Update Time: #{@options['update_time']}\n" if @options["update_time"]
+    msg << "collection directory: #{@coll_dir}\n"
+    msg << "collection:           #{@options['collection']}\n"
+    msg << "Environment:          #{@options['environment']}\n"
+    msg << "Posting to:           #{@es_url}\n\n" if should_transform?("es")
+    msg << "Posting to:           #{@solr_url}\n\n" if should_transform?("solr")
+    msg << "Format:               #{@options['format']}\n" if @options["format"]
+    msg << "Regex:                #{@options['regex']}\n" if @options["regex"]
+    msg << "Whitelist:            #{@options['whitelist_txt']}\n" if @options["whitelist_txt"]
+    msg << "Update Time:          #{@options['update_time']}\n" if @options["update_time"]
     if @options["verbose"]
       print_options
     end
@@ -208,15 +208,15 @@ class DataManager
     # to make sure that any new fields are stored with the correct fieldtype
     if should_transform?("es") && !@options["transform_only"]
       schema = YAML.load_file("#{@repo_dir}/#{@options["es_schema_path"]}")
-      path, idx, type = ["es_path", "es_index", "es_type"].map { |i| @options[i] }
-      url = "#{path}/#{idx}/_mapping/#{type}?pretty&update_all_types"
+      path, idx = ["es_path", "es_index"].map { |i| @options[i] }
+      url = "#{path}/#{idx}/_mapping/_doc?pretty"
       begin
         RestClient.put(url, schema.to_json, { content_type: :json })
-        msg = "Successfully set elasticsearch schema for #{type}"
+        msg = "Successfully set elasticsearch schema for index #{idx} _doc"
         @log.info(msg)
         puts msg.green
       rescue => e
-        raise("Something went wrong setting the elasticsearch schema for #{type}:\n#{e.to_s}".red)
+        raise("Something went wrong setting the elasticsearch schema for index #{idx} _doc:\n#{e.to_s}".red)
       end
     end
   end

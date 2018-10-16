@@ -35,7 +35,7 @@ class VraToEs < XmlToEs
   end
 
   def collection
-    @options["es_type"]
+    @options["collection"]
   end
 
   def collection_desc
