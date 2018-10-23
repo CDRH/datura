@@ -180,6 +180,7 @@
               <xsl:text>prettyPhoto[pp_gal]</xsl:text>
             </xsl:attribute>
             <xsl:attribute name="title">
+              <xsl:text>&lt;a href=&#34;</xsl:text>
               <xsl:call-template name="url_builder_escaped">
                 <xsl:with-param name="figure_id_local" select="$figure_id"/>  
                 <xsl:with-param name="image_size_local" select="$image_large"></xsl:with-param>   
