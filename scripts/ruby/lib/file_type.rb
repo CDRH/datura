@@ -46,18 +46,22 @@ class FileType
     rescue => e
       return { "error" => "Error transforming ES for #{self.filename(false)}: #{e}" }
     end
-    transformed.each do |doc|
-      id = doc["identifier"]
-      type = @options["es_type"]
-      puts "posting #{id}"
-      puts "PATH: #{url}/#{type}/#{id}" if options["verbose"]
-      # NOTE: If you need to do partial updates rather than replacement of doc
-      # you will need to add _update at the end of this URL
-      begin
-        RestClient.put("#{url}/#{type}/#{id}", doc.to_json, {:content_type => :json } )
-      rescue => e
-        return { "error" => "Error transforming or posting to ES for #{self.filename(false)}: #{e.response}" }
+    if transformed && transformed.length > 0
+      transformed.each do |doc|
+        id = doc["identifier"]
+        type = @options["es_type"]
+        puts "posting #{id}"
+        puts "PATH: #{url}/#{type}/#{id}" if options["verbose"]
+        # NOTE: If you need to do partial updates rather than replacement of doc
+        # you will need to add _update at the end of this URL
+        begin
+          RestClient.put("#{url}/#{type}/#{id}", doc.to_json, {:content_type => :json } )
+        rescue => e
+          return { "error" => "Error transforming or posting to ES for #{self.filename(false)}: #{e.response}" }
+        end
       end
+    else
+      return { "error" => "No file was transformed" }
     end
     return { "docs" => transformed }
   end
@@ -104,9 +108,14 @@ class FileType
     begin
       file_xml = CommonXml.create_xml_object(self.file_location)
       subdoc_xpaths.each do |xpath, classname|
-        file_xml.xpath(xpath).each do |subdoc|
-          file_transformer = classname.new(subdoc, @options, file_xml, self.filename(false))
-          es_req << file_transformer.json
+        xpaths = file_xml.xpath(xpath)
+        if xpaths && xpaths.length > 0
+          xpaths.each do |subdoc|
+            file_transformer = classname.new(subdoc, @options, file_xml, self.filename(false))
+            es_req << file_transformer.json
+          end
+        else
+          raise "No possible xpaths found for file #{self.filename}, check if XML is valid"
         end
       end
       if @options["output"]
