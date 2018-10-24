@@ -1,14 +1,18 @@
-class FileCsv
+class FileCsvHoldPlease
 
   def row_to_es(headers, row)
     doc = {}
+    doc["text"] = ""
     doc["identifier"] = row["id"] if row["id"]
     doc["category"] = row["category"] if row["category"]
     doc["subcategory"] = row["sub_category"] if row["sub_category"]
     doc["data_type"] = "csv"
     doc["collection"] = @options["collection"]
-    doc["title"] = row["title"] if row["title"]
-    doc["title_sort"] = CommonXml.normalize_name(row["title"]) if row["title"]
+    if row["title"]
+      doc["title"] = row["title"]
+      doc["text"] << " #{row["title"]}"
+      doc["title_sort"] = CommonXml.normalize_name(row["title"])
+    end
     doc["format"] = row["medium"]
     doc["places"] = [ row["location"] ]
     doc["date"] = row["date_normalized"] if row["date_normalized"]

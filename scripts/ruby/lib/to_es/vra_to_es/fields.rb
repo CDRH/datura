@@ -181,10 +181,8 @@ class VraToEs < XmlToEs
     # searchable fields or information for collections
     # just make sure you return an array at the end!
 
-    # text = []
-    # text << your_new_fields_and_stuff
-    # return text
-    return []
+    text = []
+    text << title
   end
 
   def title
