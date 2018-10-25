@@ -1,4 +1,4 @@
-class FileCsvHoldPlease
+class FileCsv
 
   def row_to_es(headers, row)
     doc = {}
