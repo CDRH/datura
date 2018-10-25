@@ -107,15 +107,16 @@ class FileType
     es_req = []
     begin
       file_xml = CommonXml.create_xml_object(self.file_location)
+      # check if any xpaths hit before continuing
+      results = file_xml.xpath(*subdoc_xpaths.keys)
+      if results.length == 0
+        raise "No possible xpaths found fo file #{self.filename}, check if XML is valid or customize 'subdoc_xpaths' method"
+      end
       subdoc_xpaths.each do |xpath, classname|
-        xpaths = file_xml.xpath(xpath)
-        if xpaths && xpaths.length > 0
-          xpaths.each do |subdoc|
-            file_transformer = classname.new(subdoc, @options, file_xml, self.filename(false))
-            es_req << file_transformer.json
-          end
-        else
-          raise "No possible xpaths found for file #{self.filename}, check if XML is valid"
+        subdocs = file_xml.xpath(xpath)
+        subdocs.each do |subdoc|
+          file_transformer = classname.new(subdoc, @options, file_xml, self.filename(false))
+          es_req << file_transformer.json
         end
       end
       if @options["output"]

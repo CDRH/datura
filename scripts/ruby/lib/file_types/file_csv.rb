@@ -49,6 +49,9 @@ class FileCsv < FileType
     headers.each do |column|
       doc[column] = row[column] if row[column]
     end
+    if doc.key?("text") && doc.key?("title")
+      doc["text"] << " #{doc["title"]}"
+    end
     doc
   end
 
