@@ -54,7 +54,7 @@ def clear_all(options)
   puts "Type: 'Yes I'm sure'"
   confirm = STDIN.gets.chomp
   if confirm == "Yes I'm sure"
-    url = "#{options["es_path"]}/#{options["es_index"]}/_doc/_delete_by_query?pretty"
+    url = "#{options["es_path"]}/#{options["es_index"]}/_doc/_delete_by_query?pretty=true"
     post url, { "query" => { "match_all" => {} } }
   else
     puts "You typed '#{confirm}'. This is incorrect, exiting program"
@@ -63,7 +63,7 @@ def clear_all(options)
 end
 
 def clear_index(options)
-  url = "#{options["es_path"]}/#{options["es_index"]}/_doc/_delete_by_query?pretty"
+  url = "#{options["es_path"]}/#{options["es_index"]}/_doc/_delete_by_query?pretty=true"
   confirmation = confirm_basic(options, url)
 
   if confirmation

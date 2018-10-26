@@ -209,7 +209,7 @@ class DataManager
     if should_transform?("es") && !@options["transform_only"]
       schema = YAML.load_file("#{@repo_dir}/#{@options["es_schema_path"]}")
       path, idx = ["es_path", "es_index"].map { |i| @options[i] }
-      url = "#{path}/#{idx}/_mapping/_doc?pretty"
+      url = "#{path}/#{idx}/_mapping/_doc?pretty=true"
       begin
         RestClient.put(url, schema.to_json, { content_type: :json })
         msg = "Successfully set elasticsearch schema for index #{idx} _doc"

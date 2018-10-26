@@ -13,7 +13,7 @@ options = Options.new(params, "#{this_dir}/../../config", "#{this_dir}/../../col
 begin
   idx = options["es_index"]
 
-  url = "#{options["es_path"]}/#{idx}/_mapping/_doc?pretty"
+  url = "#{options["es_path"]}/#{idx}/_mapping/_doc?pretty=true"
   puts "environment: #{options["environment"]}"
   res = RestClient.get(url)
   puts res.body
