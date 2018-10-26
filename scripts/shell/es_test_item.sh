@@ -2,11 +2,13 @@
 # POST
 #  path to elasticsearch (localhost:9200)
 #  index name (test_)
-#  collection name / _type (type1)
 #  id of item (1)
 #  put in JSON for item
 
-curl -XPOST 'localhost:9200/test/type1/1?pretty'  -d'
+# DO NOT RUN THIS AGAINST ANY INDEXES YOU CARE ABOUT
+# IT WILL CREATE A NEW KEYWORD FIELD MAPPING
+
+curl -XPOST 'localhost:9200/test/_doc/1?pretty=true' -H 'Content-Type: application/json' -d'
 {
     "stuff": "something"
 }

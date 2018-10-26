@@ -84,7 +84,7 @@ module Parser
 
     # magic
     optparse.parse!
-    options["collection"] = Parser.argv_collections(ARGV)
+    options["collection_dir"] = Parser.argv_collection_dir(ARGV)
 
     return options
   end

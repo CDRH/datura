@@ -49,13 +49,12 @@ class FileType
     if transformed && transformed.length > 0
       transformed.each do |doc|
         id = doc["identifier"]
-        type = @options["es_type"]
         puts "posting #{id}"
-        puts "PATH: #{url}/#{type}/#{id}" if options["verbose"]
+        puts "PATH: #{url}/_doc/#{id}" if options["verbose"]
         # NOTE: If you need to do partial updates rather than replacement of doc
         # you will need to add _update at the end of this URL
         begin
-          RestClient.put("#{url}/#{type}/#{id}", doc.to_json, {:content_type => :json } )
+          RestClient.put("#{url}/_doc/#{id}", doc.to_json, {:content_type => :json } )
         rescue => e
           return { "error" => "Error transforming or posting to ES for #{self.filename(false)}: #{e.response}" }
         end

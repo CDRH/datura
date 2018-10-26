@@ -23,7 +23,7 @@ class TeiToEs < XmlToEs
         "periodical" => "/TEI/teiHeader/fileDesc/sourceDesc/bibl/title[@level='j']",
         "manuscript" => "/TEI/teiHeader/fileDesc/sourceDesc/bibl/title[@level='m']"
       },
-      "image_id" => "/TEI/text//pb/@facs[1]",
+      "image_id" => "/TEI/text//pb/@facs",
       "keywords" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='keywords']/term",
       # note: language is global attribute xml:lang
       "language" => "(//@lang)[1]",

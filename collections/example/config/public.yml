@@ -1,7 +1,8 @@
 default:
   shortname: example
+  # the directory name will be used if collection is omitted here
+  collection: example
   collection_desc: Example Data Repository
-  es_type: example
   solr_core: there_is_no_solr_core
 
   variables_html:

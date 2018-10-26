@@ -41,7 +41,6 @@ require_relative "classes.rb"
 #           options = {
 #             "environment" => "test",
 #             "collection" => collection,
-#             "es_type" => collection,
 #           }
 #           tei = FileTei.new(path, "#{collections_dir}/#{collection}", options)
 #           res = tei.transform_es
