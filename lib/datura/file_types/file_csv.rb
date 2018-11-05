@@ -2,8 +2,8 @@ require "csv"
 require_relative "../file_type.rb"
 
 class FileCsv < FileType
-  def initialize(file_location, coll_dir, options)
-    super(file_location, coll_dir, options)
+  def initialize(file_location, options)
+    super(file_location, options)
     @csv = read_csv(file_location, options["csv_encoding"])
   end
 

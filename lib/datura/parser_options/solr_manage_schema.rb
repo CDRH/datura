@@ -1,4 +1,4 @@
-module Parser
+module Datura::Parser
   def self.solr_manage_schema_params
     @usage = "Usage: ruby solr_manage_schema.rb name_of_core -o true -j config/api_schema_solr.json"
     options = {}

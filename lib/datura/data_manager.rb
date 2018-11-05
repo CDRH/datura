@@ -4,10 +4,8 @@ require "yaml"
 
 require_relative "./requirer.rb"
 
-class DataManager
+class Datura::DataManager
   attr_reader :log
-  attr_reader :coll_dir
-  attr_reader :repo_dir
   attr_reader :time
 
   attr_accessor :error_es
@@ -29,27 +27,24 @@ class DataManager
 
   def initialize
     @files = []
+
+    # error tallies
     @error_es = []
     @error_html = []
     @error_solr = []
+
     # combine user input and config files
-    params = Parser.post_params
-    # assign locations
-    @repo_dir = "#{File.dirname(__FILE__)}/../../.."
-    @coll_dir = "#{@repo_dir}/collections/#{params["collection_dir"]}"
+    params = Datura::Parser.post_params
+    @options = Datura::Options.new(params).all
+
+    # load xslt defaults, ruby overrides, and set up logging
+    prepare_xslt
     load_collection_classes
-    # check if collection exists
-    if File.directory?(@coll_dir)
-      @options = Options.new(params, "#{@repo_dir}/config", "#{@coll_dir}/config").all
-      @options["coll_dir"] = @coll_dir
-      @options["repo_dir"] = @repo_dir
-      @log = Logger.new("#{@repo_dir}/logs/#{@options["collection"]}-#{@options['environment']}.log")
-      @es_url = "#{@options['es_path']}/#{@options['es_index']}"
-      @solr_url = "#{@options['solr_path']}/#{@options['solr_core']}/update"
-    else
-      puts "Could not find collection directory named '#{params["collection_dir"]}'!".red
-      exit
-    end
+    set_up_logger
+
+    # set up posting URLs
+    @es_url = File.join(options["es_path"], options["es_index"])
+    @solr_url = File.join(options["solr_path"], options["solr_core"], "update")
   end
 
   # NOTE: This step is what allows collection specific files to override ANY
@@ -57,7 +52,8 @@ class DataManager
   def load_collection_classes
     # load collection scripts at this point so they will override
     # any of the default ones (for example: TeiToEs)
-    Dir["#{@coll_dir}/scripts/overrides/*.rb"].each do |f|
+    path = File.join(@options["collection_dir"], "scripts", "overrides", "*.rb")
+    Dir[path].each do |f|
       require f
     end
   end
@@ -150,11 +146,11 @@ class DataManager
     if @options["format"]
       formats = [@options["format"]]
     else
-      formats = DataManager.format_to_class.keys
+      formats = Datura::DataManager.format_to_class.keys
     end
     files = []
     formats.each do |format|
-      found = Helpers.get_directory_files("#{@coll_dir}/#{format}")
+      found = Datura::Helpers.get_directory_files(File.join(@options["collection_dir"], format))
       files += found if found
     end
     return files
@@ -163,7 +159,6 @@ class DataManager
   def options_msg
     msg = "Start Time: #{Time.now}\n"
     msg << "Running script with following options:\n"
-    msg << "collection directory: #{@coll_dir}\n"
     msg << "collection:           #{@options['collection']}\n"
     msg << "Environment:          #{@options['environment']}\n"
     msg << "Posting to:           #{@es_url}\n\n" if should_transform?("es")
@@ -183,17 +178,17 @@ class DataManager
     # filter by collection whitelist
     whitelisted = whitelist_files(files)
     # filter by regex
-    regexed = Helpers.regex_files(whitelisted, @options["regex"])
+    regexed = Datura::Helpers.regex_files(whitelisted, @options["regex"])
     # filter by date
-    filtered = regexed.select { |f| Helpers.should_update?(f, @options["update_time"]) }
+    filtered = regexed.select { |f| Datura::Helpers.should_update?(f, @options["update_time"]) }
 
     file_classes = []
     @log.info("After filters (regex, update time), #{filtered.length}/#{files.length} files remaining")
     filtered.each do |f|
       dirname = File.basename(File.dirname(f))
-      type = DataManager.format_to_class[dirname]
+      type = Datura::DataManager.format_to_class[dirname]
       if type
-        file_classes << type.new(f, @coll_dir, @options)
+        file_classes << type.new(f, @options)
       else
         msg = "Could not create filetype #{type}"
         puts msg.red
@@ -203,11 +198,28 @@ class DataManager
     return file_classes
   end
 
+    def prepare_xslt
+    # check modification date of gemfile.lock against the hidden script files
+    # if gemfile newer, copy the xslt over into the hidden files
+    gflock = File.join(@options["collection_dir"], "Gemfile.lock")
+    xslt = File.join(@options["collection_dir"], "scripts", ".xslt")
+    datura_xslt = File.join(@options["datura_dir"], "lib", "xslt")
+    dest = File.join(@options["collection_dir"], "scripts", ".xslt")
+
+    t1 = File.mtime(gflock) if File.exist?(gflock)
+    t2 = File.mtime(xslt) if File.exist?(xslt)
+
+    if !t1 || !t2 || t1 > t2
+      puts "Copying datura XSLT default scripts into collection"
+      FileUtils.cp_r(datura_xslt, dest)
+    end
+  end
+
   def set_schema
     # if ES is requested and not transform only, then set the schema
     # to make sure that any new fields are stored with the correct fieldtype
     if should_transform?("es") && !@options["transform_only"]
-      schema = YAML.load_file("#{@repo_dir}/#{@options["es_schema_path"]}")
+      schema = YAML.load_file(File.join(@options["datura_dir"], "lib", @options["es_schema_path"]))
       path, idx = ["es_path", "es_index"].map { |i| @options[i] }
       url = "#{path}/#{idx}/_mapping/_doc?pretty=true"
       begin
@@ -219,6 +231,13 @@ class DataManager
         raise("Something went wrong setting the elasticsearch schema for index #{idx} _doc:\n#{e.to_s}".red)
       end
     end
+  end
+
+  def set_up_logger
+    # make directory if one does not already exist
+    log_dir = File.join(@options["collection_dir"], "logs")
+    FileUtils.mkdir(log_dir) if !File.directory?(log_dir)
+    @log = Logger.new(File.join(log_dir, "#{@options["environment"]}.log"))
   end
 
   def should_transform?(type)

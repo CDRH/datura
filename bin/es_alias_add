@@ -1,11 +1,11 @@
 #!/usr/bin/env ruby
 
+require "datura"
+
 require "json"
 require "rest-client"
 
-require_relative "lib/parser.rb"
-
-params = Parser.es_alias_add
+params = Datura::Parser.es_alias_add
 # Note: hardcoded path
 es_path = "localhost:9200"
 

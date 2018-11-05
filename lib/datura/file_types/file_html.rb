@@ -7,9 +7,10 @@ class FileHtml < FileType
   attr_reader :es_req
 
 
-  def initialize(file_location, coll_dir, options)
-    super(file_location, coll_dir, options)
-    @script_html = "#{options["repo_dir"]}/#{options["html_html_xsl"]}"
+  def initialize(file_location, options)
+    super(file_location, options)
+    # TODO these paths no longer work now that override xsl is not inside of the data repo, fix during xslt sweep
+    @script_html = File.join(options["collection_dir"], options["html_html_xsl"])
   end
 
   def subdoc_xpaths

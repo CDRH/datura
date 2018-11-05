@@ -1,6 +1,6 @@
-module Parser
+module Datura::Parser
   def self.es_set_schema_params
-    @usage = "Usage: ruby scripts/ruby/es_set_schema.rb collection -e environment"
+    @usage = "Usage: es_set_schema -e environment"
     options = {}
 
     optparse = OptionParser.new do |opts|
@@ -21,7 +21,6 @@ module Parser
     end
 
     optparse.parse!
-    options["collection_dir"] = Parser.argv_collection_dir(ARGV)
-    return options
+    options
   end
 end

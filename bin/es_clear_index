@@ -1,6 +1,9 @@
+#!/usr/bin/env ruby
+
+require "datura"
+
 require "json"
 require "rest-client"
-require_relative "lib/requirer.rb"
 
 def confirm_basic(options, url)
   # verify that the user is really sure about the index they're about to wipe
@@ -14,12 +17,11 @@ def confirm_basic(options, url)
 end
 
 def main
-  this_dir = File.dirname(__FILE__)
 
   # run the parameters through the option parser
-  params = Parser.clear_index_params
-  options = Options.new(params, "#{this_dir}/../../config", "#{this_dir}/../../collections/#{params['collection_dir']}/config").all
-  if params["collection_dir"] == "all"
+  params = Datura::Parser.clear_index_params
+  options = Datura::Options.new(params).all
+  if options["collection"] == "all"
     clear_all(options)
   else
     clear_index(options)

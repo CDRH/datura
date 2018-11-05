@@ -2,20 +2,26 @@ require 'colorize'
 
 require_relative './helpers.rb'
 
-class Options
+class Datura::Options
   attr_reader :all
 
-  def initialize(params, general_config_path, collection_config_path)
-    @directory = File.dirname(__FILE__)
-    @collection_dir = params["collection_dir"]
+  def initialize(params)
     @environment = params["environment"]
+    # paths to the collection and gem directories
+    collection_dir = Dir.getwd
+    datura_dir = File.join(File.dirname(__FILE__), "..", "..")
+    # path to the gem's config files
+    general_config_path = File.join(datura_dir, "lib", "config")
 
     # read and store raw config files
-    read_all_configs(general_config_path, collection_config_path)
+    read_all_configs(general_config_path, File.join(collection_dir, "config"))
     # make a smushed version that overrides like this: general < collection < user specified
     @all = smash_configs.merge!(params)
     # if collection is not specifically set in the configs, then default to the directory name
-    @all["collection"] = params["collection_dir"] if !@all.key?("collection")
+    @all["collection"] = File.basename(collection_dir) if !@all.key?("collection")
+    # include the collection and datura gem directories in the options
+    @all["collection_dir"] = collection_dir
+    @all["datura_dir"] = datura_dir
   end
 
   def print_message(variable, name)

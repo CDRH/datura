@@ -6,7 +6,6 @@ class FileType
   # general information about file
   attr_reader :file_location
   attr_reader :options
-  attr_reader :coll_dir
 
   # script locations
   attr_accessor :script_es
@@ -18,16 +17,17 @@ class FileType
   attr_accessor :out_html
   attr_accessor :out_solr
 
-  def initialize(location, collection_dir, options)
+  def initialize(location, options)
     @file_location = location
     @options = options
     add_xsl_params_options
 
     # set output directories
-    @out_es = "#{collection_dir}/output/#{@options["environment"]}/es"
-    @out_html = "#{collection_dir}/output/#{@options["environment"]}/html"
-    @out_solr = "#{collection_dir}/output/#{@options["environment"]}/solr"
-    Helpers.make_dirs(@out_es, @out_html, @out_solr)
+    output = File.join(@options["collection_dir"], "output", @options["environment"])
+    @out_es = File.join(output, "es")
+    @out_html = File.join(output, "html")
+    @out_solr = File.join(output, "solr")
+    Datura::Helpers.make_dirs(@out_es, @out_html, @out_solr)
     # script locations set in child classes
   end
 

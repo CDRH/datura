@@ -8,7 +8,7 @@ Dir["#{File.expand_path(File.dirname(__FILE__))}/parser_options/*.rb"].each {|f|
 #  post_to_solr.rb  #
 #####################
 
-module Parser
+module Datura::Parser
   def self.argv_collection_dir(argv)
     collection_dir = nil
     # put this after calling parse! on the incoming option flags

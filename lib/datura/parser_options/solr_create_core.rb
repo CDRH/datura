@@ -1,4 +1,4 @@
-module Parser
+module Datura::Parser
   def self.solr_create_core_params
     @usage = "Usage: ruby solr_create_api_core.rb name_of_core"
     options = {}

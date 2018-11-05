@@ -1,6 +1,6 @@
-module Parser
+module Datura::Parser
   def self.post_params
-    @usage = "Usage: ruby post.rb [collection] -[options]..."
+    @usage = "Usage: post -[options]..."
     options = {}  # will hold all the options passed in by user
 
     optparse = OptionParser.new do |opts|
@@ -84,7 +84,6 @@ module Parser
 
     # magic
     optparse.parse!
-    options["collection_dir"] = Parser.argv_collection_dir(ARGV)
 
     return options
   end

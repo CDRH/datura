@@ -1,6 +1,6 @@
-module Parser
+module Datura::Parser
   def self.es_alias_add
-    @usage = "Usage: ruby scripts/ruby/es_alias_add.rb -a alias -i index"
+    @usage = "Usage: es_alias_add -a alias -i index"
     options = {}
 
     optparse = OptionParser.new do |opts|

@@ -1,6 +1,6 @@
-module Parser
+module Datura::Parser
   def self.clear_index_params
-    @usage = "Usage: ruby clear_index.rb [collection] -[options]..."
+    @usage = "Usage: clear_index -[options]..."
     options = {}  # will hold all the options passed in by user
 
     optparse = OptionParser.new do |opts|
@@ -34,8 +34,6 @@ module Parser
     # magic
     optparse.parse!
 
-    options["collection_dir"] = argv_collection_dir(ARGV)
-
-    return options
+    options
   end # ends clear_index_params
 end

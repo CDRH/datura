@@ -2,10 +2,11 @@ require_relative "../file_type.rb"
 
 class FileVra < FileType
 
-  def initialize(file_location, coll_dir, options)
-    super(file_location, coll_dir, options)
-    @script_html = "#{options["repo_dir"]}/#{options["vra_html_xsl"]}"
-    @script_solr = "#{options["repo_dir"]}/#{options["vra_solr_xsl"]}"
+  def initialize(file_location, options)
+    super(file_location, options)
+    # TODO these paths no longer work now that override xsl is not inside of the data repo, fix during xslt sweep
+    @script_html = File.join(options["collection_dir"], options["vra_html_xsl"])
+    @script_solr = File.join(options["collection_dir"], options["vra_solr_xsl"])
   end
 
   def subdoc_xpaths

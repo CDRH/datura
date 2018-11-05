@@ -3,7 +3,7 @@ require 'net/http'
 require 'nokogiri'
 require 'yaml'
 
-module Helpers
+module Datura::Helpers
 
   # get_directory_files
   #   Note: do not end with /
