@@ -55,7 +55,7 @@ class TeiToEs < XmlToEs
         }
       end
     end
-    return contribs
+    contribs.uniq
   end
 
   def data_type
