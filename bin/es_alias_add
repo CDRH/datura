@@ -6,12 +6,11 @@ require "json"
 require "rest-client"
 
 params = Datura::Parser.es_alias_add
-# Note: hardcoded path
-es_path = "localhost:9200"
+options = Datura::Options.new(params).all
 
-ali = params["alias"]
-idx = params["index"]
-url = "#{es_path}/_aliases"
+ali = options["alias"]
+idx = options["index"]
+url = File.join(options["es_path"], "_aliases")
 
 data = {
   actions: [
@@ -24,7 +23,7 @@ begin
   res = RestClient.post(url, data.to_json, { content_type: :json })
   puts "Results of setting alias #{ali} to index #{idx}"
   puts res
-  list = JSON.parse(RestClient.get("#{url}"))
+  list = JSON.parse(RestClient.get(url))
   puts "\nAll aliases: #{JSON.pretty_generate(list)}"
 rescue => e
   puts "Error: #{e.response}"

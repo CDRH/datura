@@ -36,11 +36,13 @@ Gem::Specification.new do |spec|
   # spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.executables   = [
     "es_alias_add",
+    "es_alias_delete",
     "es_alias_list",
     "es_clear_index",
     "es_get_schema",
     "es_set_schema",
-    "post"
+    "post",
+    "print_options"
   ]
   spec.require_paths = ["lib"]
 

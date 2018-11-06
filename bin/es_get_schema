@@ -10,12 +10,11 @@ params = Datura::Parser.es_set_schema_params
 options = Datura::Options.new(params).all
 
 begin
-  idx = options["es_index"]
-
-  url = "#{options["es_path"]}/#{idx}/_mapping/_doc?pretty=true"
-  puts "environment: #{options["environment"]}"
+  url = File.join(options["es_path"], options["es_index"], "_mapping", "_doc?pretty=true")
   res = RestClient.get(url)
   puts res.body
+  puts "environment: #{options["environment"]}"
+  puts "url: #{url}"
 rescue => e
   puts "Error: #{e.response}"
 end
