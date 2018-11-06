@@ -34,11 +34,9 @@ class Datura::Options
 
   def read_all_configs(general, collection)
     @general_config_pub = read_config("#{general}/public.yml")
-    @general_config_priv = read_config("#{general}/private.yml")
     @collection_config_pub = read_config("#{collection}/public.yml")
     @collection_config_priv = read_config("#{collection}/private.yml")
     print_message(@general_config_pub, "base public")
-    print_message(@general_config_priv, "base private")
     print_message(@collection_config_pub, "collection public")
     print_message(@collection_config_priv, "collection private")
   end

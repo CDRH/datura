@@ -2,54 +2,68 @@
 #    CONFIGURATION FOR ALL COLLECTIONS     #
 ############################################
 
-# Note:  if you make changes to this file you are potentially altering
-#   every collection
+# Note:  be very careful when editing this file as it will affect all collections
+#   using this version of the datura gem without specific overrides
+#
 #   It is recommended that you override only those parts that you need in
-#   the collection specific configuration files (collections/name/config/config.yml)
-#   For example, you will need a solr_core name for each collection
-#   You may place the settings under development / production if the environments
-#   differ, but you may put things outside of development / production if the
-#   setting will be the same for both.  The script locations below are applied to
-#   both development and production, but if you need to run a different script for
-#   each environment, you could copy whichever script override you need into
-#   development and production
+#   the collection specific configuration files:
+#   (config/public.yml and config/private.yml)
+
 
 ###################
-#   Defaults   #
+#     Defaults    #
 ###################
 
 default:
-  log_old_number: 4   # number of log files before beginning to erase
-  log_size: 1024000   # size of log file in bytes
-  log_level: Logger::WARN  # could change to INFO for more detail
 
-  # the path for the elasticsearch schema
-  es_schema_path: config/api_schema.yml
+  # SCRIPT POWER
+  # recommend this be increased in private.yml
+  # on more powerful systems to improve runtime
+  threads: 5
 
-  # formats to solr transformation locations
-  tei_solr_xsl: scripts/.xslt/cdrh_to_solr/solr_transform_tei.xsl
-  vra_solr_xsl: scripts/.xslt/cdrh_to_solr/solr_transform_vra.xsl
+  # LOGGING
+  log_old_number: 4           # number of log files before beginning to erase
+  log_size: 1024000           # size of log file in bytes
+  log_level: Logger::WARN     # change to INFO for more detail
 
-  # formats to html snippets transformation locations
-  html_html_xsl: scripts/.xslt/html_to_html/html.xsl
-  tei_html_xsl: scripts/.xslt/cdrh_to_html/tei.p5.xsl
-  vra_html_xsl: scripts/.xslt/cdrh_to_html/vra_to_html.xsl
+  # SCHEMA LOCATION
+  # misleadingly, this is not currently overrideable per collection
+  # TODO make overrideable in es_set_schema and post
+  # or perhaps remove it from this config since it is not collection-specific
+  # in any sense of the word, except if working with an entirely separate ES index
+  es_schema_path: lib/config/api_schema.yml
 
-  # file locations
-  data_base: https://cdrhmedia.unl.edu
-  media_base: https://cdrhmedia.unl.edu
-  # default html subpath is [environment]/output/html
-  # override default behavior per collection in tei_to_es, etc
+  # RESOURCE LOCATIONS
+  data_base: https://cdrhmedia.unl.edu      # xml, csv, html snippets, etc
+  media_base: https://cdrhmedia.unl.edu     # images, audio, video
+  es_index: override_to_set_index           # elasticsearch index name
+  es_path: http://localhost:9200            # elasticsearch path (recommend override)
+  solr_core: override_to_set_core           # solr core name
+  solr_path: http://localhost:8983/solr     # solr path (recommend override)
 
-  # whitelist files to process
-  # if whitelist_txt specified, then ALL scripts will only allow through
+  # OUTPUT LOCATION
+  # default is [environment]/output/[file_type]
+  # override behavior by overriding ruby code in file_type.rb or subclasses
+
+  # INCLUDE SPECIFIC FILES (EXCLUDE NON SPECIFIED)
+  # if specified, then ALL scripts will only process
   # files which exactly match a line of the file
   # feel free to name the file anything you want as long as it's .txt
   # whitelist_txt: collections/x/config/allowed_files.txt
 
+  # XSLT SCRIPT LOCATIONS
+  # to solr
+  tei_solr_xsl: scripts/.xslt/cdrh_to_solr/solr_transform_tei.xsl
+  vra_solr_xsl: scripts/.xslt/cdrh_to_solr/solr_transform_vra.xsl
+  # to html
+  html_html_xsl: scripts/.xslt/html_to_html/html.xsl
+  tei_html_xsl: scripts/.xslt/cdrh_to_html/tei.p5.xsl
+  vra_html_xsl: scripts/.xslt/cdrh_to_html/vra_to_html.xsl
+
+  # XSLT PARAMETERS
   # NOTE! If you are altering ANY of the variables you must
   #   copy over ALL of them in that group to the collection specific config file
-  # some variables are passed in automatically to both of the following:
+  # variables passed in automatically to both of the following:
   #   - collection
   #   - data_base
   #   - media_base
@@ -61,7 +75,7 @@ default:
   # solr variables are for legacy collections only
   variables_solr:
     slug: example
-    site_url:
+    site_url: https://override_site_url.unl.edu
 
 ###################
 #   Development   #
@@ -69,10 +83,8 @@ default:
 
 development:
   data_base: https://cdrhdev1.unl.edu/media
-  # media_base:
 
 ##################
 #   Production   #
 ##################
-production:
-  solr_core: name_of_core
+# production:
