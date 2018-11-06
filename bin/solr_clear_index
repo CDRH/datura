@@ -1,26 +1,17 @@
 #!/usr/bin/env ruby
 
-##################
-#  Manage Index  #
-##################
+require "datura"
 
-require_relative 'lib/options.rb'      # configuration functions
-require_relative 'lib/helpers.rb'      # helper functions
-require_relative 'lib/parser.rb'       # parses script flags
-require_relative 'lib/solr_poster.rb'  # posts a string (file) to solr
-
-this_dir = File.dirname(__FILE__)
-
-# run the parameters through the option parser
-params = Parser.clear_index_params
-options = Options.new(params, "#{this_dir}/../../config", "#{this_dir}/../../collections/#{params['collection']}/config").all
-url = "#{options["solr_path"]}/#{options["solr_core"]}/update"
+params = Datura::Parser.clear_index_params
+options = Datura::Options.new(params).all
+url = File.join(options["solr_path"], options["solr_core"], "update")
 
 # verify that the user is really sure about the index they're about to wipe
 puts "Are you sure that you want to remove entries from"
 puts " #{options['collection']}'s #{options['environment']} environment?"
 puts "(#{url})"
 puts "y/N"
+
 confirm = STDIN.gets.chomp
 if confirm && (confirm == "y" || confirm == "Y" || confirm == "Yes" || confirm == "yes")
   # create a new solr object

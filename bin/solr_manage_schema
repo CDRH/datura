@@ -1,26 +1,19 @@
 #!/usr/bin/env ruby
 
-##################
-#  Manage Schema  #
-##################
-
-require 'json'
-require_relative 'lib/helpers.rb'
-require_relative 'lib/parser.rb'
-require_relative 'lib/solr_poster.rb'
+require "datura"
+require "json"
 
 # parse parameters
-params = Parser.solr_manage_schema_params
-
+params = Datura::Parser.solr_manage_schema_params
+options = Datura::Options.new(params).all
 # variables
-this_dir = File.dirname(__FILE__)
-solr_url = "http://localhost:8983/solr/#{params['core']}/schema"
-json_path = File.expand_path(File.join(this_dir, "../../#{params["json"]}"))
+solr_url = File.join(options["solr_path"], options["solr_core"], "schema")
+json_path = File.join(options["collection_dir"], "#{options["json"]}")
 
 puts "You are changing the schema for... "
-puts "Core: #{params['core']}"
+puts "Core: #{options["solr_core"]}"
 puts "With JSON file: #{json_path}"
-puts "Override set to: #{params['override']}" 
+puts "Override set to: #{options["override"]}" 
 
 def handle_res(res)
   solr_errors = JSON.parse(res.body)["errors"]
@@ -34,7 +27,7 @@ end
 # send GET request for existing schema fields and copyfields
 # curl http://localhost:8983/solr/api_austen/schema/fields?wt=json
 # curl http://localhost:8983/solr/api_austen/schema/copyfields?wt=json
-fields_res = Helpers.get_url("#{solr_url}/fields?wt=json")
+fields_res = Datura::Helpers.get_url("#{solr_url}/fields?wt=json")
 # cfields_res = Helpers.get_url("#{solr_url}/copyfields?wt=json")
 
 if fields_res.code == "200"
@@ -48,7 +41,7 @@ if fields_res.code == "200"
   schema["fields"].each do |field|
     update_data = nil
     if existing_fields.include?(field["name"])
-      if params["override"]
+      if options["override"]
         puts "Overriding existing field in core #{field['name']}"
         update_data = "{ 'replace-field': #{field.to_json} }"
       else
@@ -75,7 +68,7 @@ if fields_res.code == "200"
     end
   end
 else
-  puts "Something went wrong with a request to #{params['core']}!"
+  puts "Something went wrong with a request to #{options['solr_core']}!"
   puts "Code: #{fields_res.code}"
   puts fields_res.body
 end

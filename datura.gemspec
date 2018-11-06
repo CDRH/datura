@@ -42,7 +42,9 @@ Gem::Specification.new do |spec|
     "es_get_schema",
     "es_set_schema",
     "post",
-    "print_options"
+    "print_options",
+    "solr_clear_index",
+    "solr_create_api_core"
   ]
   spec.require_paths = ["lib"]
 
