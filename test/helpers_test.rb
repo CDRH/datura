@@ -1,16 +1,15 @@
-require "minitest/autorun"
+require "test_helper"
 require "nokogiri"
-require_relative "classes.rb"
 
-class HelpersTest < Minitest::Test
+class Datura::HelpersTest < Minitest::Test
 
   def test_get_directory_files
     # real directory
-    files = Helpers.get_directory_files("#{File.dirname(__FILE__)}/fixtures")
+    files = Datura::Helpers.get_directory_files("#{File.dirname(__FILE__)}/fixtures")
     assert_equal 2, files.length
 
     # not a real directory
-    files = Helpers.get_directory_files("/fake")
+    files = Datura::Helpers.get_directory_files("/fake")
     assert_nil files
   end
 
@@ -19,7 +18,7 @@ class HelpersTest < Minitest::Test
   end
 
   def test_get_url
-    assert_equal "200", Helpers.get_url("https://www.unl.edu/").code
+    assert_equal "200", Datura::Helpers.get_url("https://www.unl.edu/").code
   end
 
   def test_make_dirs
@@ -36,27 +35,27 @@ class HelpersTest < Minitest::Test
     ]
 
     # no files
-    files = Helpers.regex_files([], "d")
+    files = Datura::Helpers.regex_files([], "d")
     assert_equal 0, files.length
 
     # return original array when no regex
-    files = Helpers.regex_files(test_files)
+    files = Datura::Helpers.regex_files(test_files)
     assert_equal test_files.length, files.length
 
     # return only cody files
-    files = Helpers.regex_files(test_files, "cody")
+    files = Datura::Helpers.regex_files(test_files, "cody")
     assert_equal 3, files.length
 
     # return only books with slightly advanced regex
-    files = Helpers.regex_files(test_files, "book\.0")
+    files = Datura::Helpers.regex_files(test_files, "book\.0")
     assert_equal 2, files.length
 
     # return all news or memorabilia
-    files = Helpers.regex_files(test_files, "news|mem")
+    files = Datura::Helpers.regex_files(test_files, "news|mem")
     assert_equal 2, files.length
 
     # return a specific id
-    files = Helpers.regex_files(test_files, "cat.let0001")
+    files = Datura::Helpers.regex_files(test_files, "cat.let0001")
     assert_equal 1, files.length
   end
 
@@ -65,11 +64,11 @@ class HelpersTest < Minitest::Test
     test_file = "#{File.dirname(__FILE__)}/fixtures/should_update.txt"
 
     file = FileUtils.touch(test_file).first
-    assert Helpers.should_update?(file, hour_ago)
+    assert Datura::Helpers.should_update?(file, hour_ago)
 
     hour_future = Time.now + 60*60
     file = FileUtils.touch(test_file).first
-    refute Helpers.should_update?(file, hour_future)
+    refute Datura::Helpers.should_update?(file, hour_future)
   end
 
 end
