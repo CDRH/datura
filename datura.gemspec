@@ -35,6 +35,8 @@ Gem::Specification.new do |spec|
   spec.bindir        = "bin"
   # spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.executables   = [
+    "admin_es_create_index",
+    "admin_es_delete_index",
     "es_alias_add",
     "es_alias_delete",
     "es_alias_list",
