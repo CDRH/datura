@@ -11,11 +11,14 @@
 <!--                             IMPORTS                                  -->
 <!-- ==================================================================== -->
 
-<xsl:import href="lib/html_formatting.xsl"/>
+<xsl:import href="lib/formatting.xsl"/>
 <xsl:import href="lib/personography_encyclopedia.xsl"/>
 <xsl:import href="lib/cdrh.xsl"/>
-<!-- If this file is living in a collections directory, the paths will be
-     ../../../scripts/xslt/cdrh_tei_to_html/lib/html_formatting.xsl -->
+
+<!-- To override, copy this file into your collection's script directory
+    and change the above paths to:
+    "../../.xslt/tei_to_html/lib/formatting.xsl"
+ -->
 
 <!-- For display in TEI framework, have changed all namespace declarations to http://www.tei-c.org/ns/1.0. If different (e.g. Whitman), will need to change -->
 <xsl:output method="xml" indent="yes" encoding="UTF-8" omit-xml-declaration="yes"/>

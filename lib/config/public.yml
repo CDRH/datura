@@ -53,12 +53,12 @@ default:
 
   # XSLT SCRIPT LOCATIONS
   # to solr
-  tei_solr_xsl: scripts/.xslt/cdrh_to_solr/solr_transform_tei.xsl
-  vra_solr_xsl: scripts/.xslt/cdrh_to_solr/solr_transform_vra.xsl
+  tei_solr_xsl: scripts/.xslt/tei_to_solr/tei_to_solr.xsl
+  vra_solr_xsl: scripts/.xslt/vra_to_solr/vra_to_solr.xsl
   # to html
-  html_html_xsl: scripts/.xslt/html_to_html/html.xsl
-  tei_html_xsl: scripts/.xslt/cdrh_to_html/tei.p5.xsl
-  vra_html_xsl: scripts/.xslt/cdrh_to_html/vra_to_html.xsl
+  html_html_xsl: scripts/.xslt/html_to_html/html_to_html.xsl
+  tei_html_xsl: scripts/.xslt/tei_to_html/tei_to_html.xsl
+  vra_html_xsl: scripts/.xslt/vra_to_html/vra_to_html.xsl
 
   # XSLT PARAMETERS
   # NOTE! If you are altering ANY of the variables you must

@@ -13,8 +13,10 @@
 
 <!-- <xsl:import href="some_vra_file.xsl"/> -->
 
-<!-- If this file is living in a collections directory, the paths will be
-     ../../../scripts/xslt/cdrh_tei_to_html/lib/html_formatting.xsl -->
+  <!-- To override, copy this file into your collection's script directory
+      and change the above paths to:
+      "../../.xslt/vra_to_html/etc.xsl"
+  -->
 
 <!-- For display in TEI framework, have changed all namespace declarations to http://www.tei-c.org/ns/1.0. If different (e.g. Whitman), will need to change -->
 <xsl:output method="xml" indent="yes" encoding="UTF-8" omit-xml-declaration="yes"/>

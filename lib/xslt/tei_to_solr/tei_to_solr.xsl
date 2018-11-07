@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"
   xpath-default-namespace="http://www.tei-c.org/ns/1.0"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -8,11 +9,14 @@
   <!--                               IMPORTS                                -->
   <!-- ==================================================================== -->
 
-  <xsl:import href="lib/common.xsl"/>
-  <xsl:import href="lib/tei_personography.xsl"/>
-  <xsl:import href="lib/cdrh_tei.xsl"/>
-  <!-- If this file is living in a collections directory, the paths will be
-       ../../../scripts/xslt/cdrh_to_solr/lib/common.xsl -->
+  <xsl:import href="../common.xsl"/>
+  <xsl:import href="lib/personography.xsl"/>
+  <xsl:import href="lib/fields.xsl"/>
+
+  <!-- To override, copy this file into your collection's script directory
+      and change the above paths to:
+      "../../.xslt/tei_to_solr/lib/fields.xsl"
+  -->
 
   <xsl:output indent="yes" omit-xml-declaration="yes"/>
 

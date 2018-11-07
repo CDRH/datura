@@ -10,10 +10,13 @@
 	<!--                               IMPORTS                                -->
 	<!-- ==================================================================== -->
 	
-	<xsl:import href="lib/common.xsl"/>
-	<xsl:import href="lib/cdrh_vra.xsl"/>
-	<!-- If this file is living in a collections directory, the paths will be
-       ../../../scripts/xslt/cdrh_to_solr/lib/common.xsl -->
+	<xsl:import href="../common.xsl"/>
+	<xsl:import href="lib/fields.xsl"/>
+
+  <!-- To override, copy this file into your collection's script directory
+      and change the above paths to:
+      "../../.xslt/vra_to_solr/lib/fields.xsl"
+  -->
 
 	<xsl:output indent="yes" omit-xml-declaration="yes"/>
 	
