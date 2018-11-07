@@ -36,7 +36,7 @@ class Datura::Options
     @general_config_pub = read_config("#{general}/public.yml")
     @collection_config_pub = read_config("#{collection}/public.yml")
     @collection_config_priv = read_config("#{collection}/private.yml")
-    print_message(@general_config_pub, "base public")
+    print_message(@general_config_pub, "datura default")
     print_message(@collection_config_pub, "collection public")
     print_message(@collection_config_priv, "collection private")
   end
@@ -77,9 +77,7 @@ class Datura::Options
   # then override general configuration with collection specific
   def smash_configs
     # private overrides public general config
-    a = remove_environments(@general_config_pub)
-    b = remove_environments(@general_config_priv)
-    general = a.merge(b)
+    general = remove_environments(@general_config_pub)
 
     # private overrides public collection config
     c = remove_environments(@collection_config_pub)
