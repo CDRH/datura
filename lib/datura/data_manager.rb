@@ -202,12 +202,11 @@ class Datura::DataManager
     # check modification date of gemfile.lock against the hidden script files
     # if gemfile newer, copy the xslt over into the hidden files
     gflock = File.join(@options["collection_dir"], "Gemfile.lock")
-    xslt = File.join(@options["collection_dir"], "scripts", ".xslt")
-    datura_xslt = File.join(@options["datura_dir"], "lib", "xslt")
+    datura_xslt = File.join(@options["datura_dir"], "lib", "xslt/.")
     dest = File.join(@options["collection_dir"], "scripts", ".xslt")
 
     t1 = File.mtime(gflock) if File.exist?(gflock)
-    t2 = File.mtime(xslt) if File.exist?(xslt)
+    t2 = File.mtime(dest) if File.exist?(dest)
 
     if !t1 || !t2 || t1 > t2
       puts "Copying datura XSLT default scripts into collection"
