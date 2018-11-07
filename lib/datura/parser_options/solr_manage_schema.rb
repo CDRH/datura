@@ -11,6 +11,11 @@ module Datura::Parser
         exit
       end
 
+      options["environment"] = "development"
+      opts.on('-e', '--environment [input]', 'Environment') do |input|
+        options["environment"] = input
+      end
+
       options["json"] = nil
       opts.on('-j', '--json [filepath]', 'Location of JSON schema file') do |input|
         options["json"] = input

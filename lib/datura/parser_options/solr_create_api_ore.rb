@@ -11,6 +11,11 @@ module Datura::Parser
         puts "If you do not put any options, the script will ask you for them"
         exit
       end
+
+      options["environment"] = "development"
+      opts.on('-e', '--environment [input]', 'Environment') do |input|
+        options["environment"] = input
+      end
     end
 
     optparse.parse!
