@@ -81,6 +81,25 @@ class Datura::DataManager
 
   private
 
+  def allowed_files(all_files)
+    files = []
+    if @options["allowed_files"]
+      # read in the file with allowed ids
+      begin
+        ids = File.readlines(@options["allowed_files"]).map(&:strip)
+      rescue => e
+        raise "Encountered an error while reading in the allowed ids.\nUnable to continue: #{e}".red
+      end
+        # if item in all_files does not match the desired list, remove it
+        files = all_files.select do |file|
+          ids.include?(File.basename(file, ".*"))
+        end
+    else
+      files = all_files
+    end
+    files
+  end
+
   # TODO should this move to Options class?
   def assert_option(opt)
     if !@options.has_key?(opt)
@@ -165,7 +184,7 @@ class Datura::DataManager
     msg << "Posting to:           #{@solr_url}\n\n" if should_transform?("solr")
     msg << "Format:               #{@options['format']}\n" if @options["format"]
     msg << "Regex:                #{@options['regex']}\n" if @options["regex"]
-    msg << "Whitelist:            #{@options['whitelist_txt']}\n" if @options["whitelist_txt"]
+    msg << "Allowed Files:        #{@options['allowed_files']}\n" if @options["allowed_files"]
     msg << "Update Time:          #{@options['update_time']}\n" if @options["update_time"]
     if @options["verbose"]
       print_options
@@ -175,10 +194,10 @@ class Datura::DataManager
 
   def prepare_files
     files = get_files
-    # filter by collection whitelist
-    whitelisted = whitelist_files(files)
+    # filter by collection list of allowed files
+    allowed = allowed_files(files)
     # filter by regex
-    regexed = Datura::Helpers.regex_files(whitelisted, @options["regex"])
+    regexed = Datura::Helpers.regex_files(allowed, @options["regex"])
     # filter by date
     filtered = regexed.select { |f| Datura::Helpers.should_update?(f, @options["update_time"]) }
 
@@ -285,26 +304,6 @@ class Datura::DataManager
         error_with_transform_and_post(res_solr["error"], @error_solr)
       end
     end
-  end
-
-  def whitelist_files(all_files)
-    desired_list = @options["whitelist_txt"]
-    files = []
-    if desired_list
-      # read in the file with whitelisted ids
-      begin
-        ids = File.readlines(desired_list).map(&:strip)
-      rescue => e
-        raise "Encountered an error while reading in the whitelisted ids.\nUnable to continue: #{e}".red
-      end
-        # if item in all_files does not match the desired list, remove it
-        files = all_files.select do |file|
-          ids.include?(File.basename(file, ".*"))
-        end
-    else
-      files = all_files
-    end
-    files
   end
 
 end
