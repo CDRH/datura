@@ -169,7 +169,7 @@ class Datura::DataManager
     end
     files = []
     formats.each do |format|
-      found = Datura::Helpers.get_directory_files(File.join(@options["collection_dir"], format))
+      found = Datura::Helpers.get_directory_files(File.join(@options["collection_dir"], "source", format))
       files += found if found
     end
     return files

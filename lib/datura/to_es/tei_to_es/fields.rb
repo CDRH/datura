@@ -220,7 +220,7 @@ class TeiToEs < XmlToEs
 
   def uri_data
     base = @options["data_base"]
-    subpath = "data/#{@options["collection"]}/tei"
+    subpath = "data/#{@options["collection"]}/source/tei"
     return "#{base}/#{subpath}/#{@id}.xml"
   end
 

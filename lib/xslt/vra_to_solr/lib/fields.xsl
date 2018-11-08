@@ -308,7 +308,7 @@
       <xsl:value-of select="$data_base"/>
       <xsl:text>/data/</xsl:text>
       <xsl:value-of select="$collection"/>
-      <xsl:text>/vra/</xsl:text>
+      <xsl:text>/source/vra/</xsl:text>
       <xsl:value-of select="$id"/>
       <xsl:text>.xml</xsl:text>
     </field>

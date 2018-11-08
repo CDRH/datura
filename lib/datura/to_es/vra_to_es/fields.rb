@@ -205,7 +205,7 @@ class VraToEs < XmlToEs
 
   def uri_data
     base = @options["data_base"]
-    subpath = "data/#{@options["collection"]}/vra"
+    subpath = "data/#{@options["collection"]}/source/vra"
     return "#{base}/#{subpath}/#{@id}.xml"
   end
 
