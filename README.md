@@ -1,35 +1,51 @@
 # Datura
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/datura`. To experiment with that code, run `bin/console` for an interactive prompt.
+Welcome to this temporary documentation for Datura, a gem dedicated to transforming and posting data sources from CDRH projects.  This gem is intended to be used with a "data repository" containing TEI, VRA, CSVs, and more.
 
-TODO: Delete this and the text above, and describe your gem
+## Local Development
 
-## Installation
 
-Add this line to your application's Gemfile:
+Add this to your data repo's Gemfile:
 
-```ruby
-gem 'datura'
+```
+source 'https://rubygems.org'
+
+gemspec path: '/path/to/local/datura/repo'
 ```
 
-And then execute:
+Then in your repo you can run:
 
-    $ bundle
+```
+bundle install
+```
 
-Or install it yourself as:
+And if that doesn't seem like it's working, run this from the datura gem:
 
-    $ gem install datura
+```
+bundle exec rake install
+```
 
-## Usage
+then from the data repo:
 
-TODO: Write usage instructions here
+```
+gem install --local path/to/local/datura/pkg/datura-0.1.0.gem
+```
 
-## Development
+Test it out by running the `about` command to view all your options:
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+```
+about
+```
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+To set up a brand new data repo run:
 
-## Contributing
+```
+setup
+```
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/datura.
+## Tests
+
+```
+bundle install
+rake test
+```
