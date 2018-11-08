@@ -237,7 +237,7 @@ class Datura::DataManager
     # if ES is requested and not transform only, then set the schema
     # to make sure that any new fields are stored with the correct fieldtype
     if should_transform?("es") && !@options["transform_only"]
-      schema = YAML.load_file(File.join(@options["datura_dir"], "lib", @options["es_schema_path"]))
+      schema = YAML.load_file(File.join(@options["datura_dir"], @options["es_schema_path"]))
       path, idx = ["es_path", "es_index"].map { |i| @options[i] }
       url = "#{path}/#{idx}/_mapping/_doc?pretty=true"
       begin

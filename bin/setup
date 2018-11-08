@@ -1,0 +1,106 @@
+#!/usr/bin/env ruby
+
+require "colorize"
+
+coll = Dir.getwd
+
+puts "Caution: this script is intended for NEW data repositories.".red
+puts "You must manually update old data repos to use datura.\n"
+
+# CONFIG
+
+puts "Adding public and private configs"
+puts "-- Review private.yml and make changes as needed".green
+
+FileUtils.mkdir_p(File.join(coll, "config"))
+File.open(File.join(coll, "config", "private.yml"), "w") do |file|
+  text = <<TEXT
+# this file is not version controlled
+# please include sensitive information and computer specific settings in this file
+# and put all other widely applicable settings in the public.yml file
+
+default:
+  # number of files processed at the same time, increase for more powerful computers
+  threads: 5
+development:
+  es_path: https://edit_private_config/elastic
+  es_index: edit_private_config
+# production:
+
+TEXT
+  file.write(text)
+end
+
+File.open(File.join(coll, "config", "public.yml"), "w") do |file|
+  text = <<TEXT
+# please refer to the datura documentation for a full list of configurable settings
+# any custom settings you create here will be accessible in instances of classes
+# like FileTei and TeiToEs ( @options["setting_name"] )
+# you may also create new environments
+
+# please put any sensitive information or computer specific settings in private.yml!
+
+default:
+  data_base: https://cdrhmedia.unl.edu  (do not include /data/ in path)
+  media_base: https://cdrhmedia.unl.edu
+
+  # refer to the documentation for details about overriding the XSL
+  # html_html_xsl:
+  # tei_html_xsl: scripts/xslt/tei.xsl
+  # vra_html_xsl:
+
+  variables_html:
+    site_url: override_in_public
+    image_large: 800
+    image_thumb: 150
+
+development:
+  es_index: edit_public_config
+  es_path: https://edit_public_config/elastic
+
+# production:
+  # limit processed files by adding allowed ids on newlines in a file
+  # allowed_files: config/allowed.txt
+
+TEXT
+  file.write(text)
+end
+
+# Note: ignore logs which will create their own directory
+
+# Note: ignore output which will create their own directory and subdirectories
+
+# SCRIPTS
+
+puts "-- Place XSLT and Ruby overrides in scripts/overrides"
+FileUtils.mkdir_p(File.join(coll, "scripts", "overrides"))
+FileUtils.touch(File.join(coll, "scripts", "overrides", ".keep"))
+
+# SOURCE
+
+puts "-- Place all data (annotations, authority files, csv, tei, vra) in sources"
+puts "-- Place all invalid data in sources/drafts"
+
+src = File.join(coll, "source")
+FileUtils.mkdir_p(File.join(src, "tei"))
+FileUtils.mkdir_p(File.join(src, "drafts", "tei"))
+FileUtils.touch(File.join(src, "tei", ".keep"))
+FileUtils.touch(File.join(src, "drafts", "tei", ".keep"))
+
+# GITIGNORE
+
+File.open(File.join(coll, ".gitignore"), "w") do |file|
+  text = <<TEXT
+.DS_Store
+config/private.yml
+/logs/*
+
+# scripts/.xslt is populated based on version of datura gem
+/scripts/.xslt/*
+
+/output/*
+# increase specificity of this path if you wish to only track generated html
+!/output/production/
+TEXT
+  file.write(text)
+end

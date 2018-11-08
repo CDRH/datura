@@ -35,6 +35,7 @@ Gem::Specification.new do |spec|
   spec.bindir        = "bin"
   # spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.executables   = [
+    "about",
     "admin_es_create_index",
     "admin_es_delete_index",
     "es_alias_add",
@@ -45,6 +46,7 @@ Gem::Specification.new do |spec|
     "es_set_schema",
     "post",
     "print_options",
+    "setup",
     "solr_clear_index",
     "solr_create_api_core",
     "solr_manage_schema"
