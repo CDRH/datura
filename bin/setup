@@ -41,6 +41,9 @@ File.open(File.join(coll, "config", "public.yml"), "w") do |file|
 # please put any sensitive information or computer specific settings in private.yml!
 
 default:
+  # please fill in the name of your collection here
+  # collection:
+
   data_base: https://cdrhmedia.unl.edu  (do not include /data/ in path)
   media_base: https://cdrhmedia.unl.edu
 
