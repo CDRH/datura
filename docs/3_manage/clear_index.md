@@ -9,8 +9,7 @@ es_clear_index -[options]...
 
 Both of the scripts have the same usage and behavior.
 
-```
-Usage: ruby [type]_clear_index.rb [collection] -[options]...
+```(type)_clear_index -[options]...
     -h, --help                       Computer, display script options.
     -e, --environment [input]        Environment (test, production)
     -f, --field [input]              The specific field regex is run on
@@ -22,26 +21,26 @@ By default, the scripts will run on the "development" environment unless otherwi
 In general, you can't clear the entire development index across projects particularly easily.  The following will operate only over the specific collection in the configuration environment:
 
 ```
-[type]_clear_index
+(type)_clear_index
 ```
 
 Specify a different environment:
 
 ```
-[type]_clear_index -e production
-[type]_clear_index -e api_dev
+(type)_clear_index -e production
+(type)_clear_index -e api_dev
 ```
 
 You can also search for a specific or group of ids to remove
 
 ```
-[type]_clear_index -r txt\.001
+(type)_clear_index -r txt\.001
 ```
 
 You can remove entries by field + regex
 
 ```
-[type]_clear_index -f category -r memorabilia
+(type)_clear_index -f category -r memorabilia
 ```
 
 In order for these scripts to execute correctly, you will need to make sure that the configuration files are set up correctly.

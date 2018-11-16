@@ -1,6 +1,6 @@
 module Datura::Parser
   def self.clear_index_params
-    @usage = "Usage: [solr_]clear_index -[options]..."
+    @usage = "Usage: (solr_)clear_index -[options]..."
     options = {}  # will hold all the options passed in by user
 
     optparse = OptionParser.new do |opts|
