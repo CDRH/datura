@@ -5,7 +5,7 @@ require "datura"
 require "json"
 require "rest-client"
 
-params = Datura::Parser.es_alias_add
+params = Datura::Parser.es_alias_delete
 options = Datura::Options.new(params).all
 url = File.join(options["es_path"], options["index"], "_alias", options["alias"])
 

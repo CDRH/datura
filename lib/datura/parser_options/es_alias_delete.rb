@@ -1,6 +1,6 @@
 module Datura::Parser
   def self.es_alias_delete
-    @usage = "Usage: es_alias_delete -a alias -i index"
+    @usage = "Usage: es_alias_delete -a alias -i index -e environment"
     options = {}
 
     optparse = OptionParser.new do |opts|
@@ -18,6 +18,13 @@ module Datura::Parser
         else
           puts "Must specify an alias with -a flag"
           exit
+        end
+      end
+
+      options["environment"] = "development"
+      opts.on( '-e', '--environment [input]', 'Environment (development, production)') do |input|
+        if input && input.length > 0
+          options["environment"] = input
         end
       end
 
