@@ -25,7 +25,9 @@ default:
 development:
   es_path: https://edit_private_config/elastic
   es_index: edit_private_config
-# production:
+production:
+  es_path: https://edit_private_config/elastic
+  es_index: edit_private_config
 
 TEXT
   file.write(text)
@@ -60,6 +62,7 @@ default:
 development:
   es_index: edit_public_config
   es_path: https://edit_public_config/elastic
+  data_base: https://override_public
 
 # production:
   # limit processed files by adding allowed ids on newlines in a file
