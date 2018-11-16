@@ -27,7 +27,6 @@ class Datura::DataManager
 
   def initialize
     @files = []
-
     # error tallies
     @error_es = []
     @error_html = []
@@ -255,7 +254,13 @@ class Datura::DataManager
     # make directory if one does not already exist
     log_dir = File.join(@options["collection_dir"], "logs")
     FileUtils.mkdir(log_dir) if !File.directory?(log_dir)
-    @log = Logger.new(File.join(log_dir, "#{@options["environment"]}.log"))
+    file = File.join(log_dir, "#{@options["environment"]}.log")
+    @log = Logger.new(
+      file,
+      @options["log_old_number"],
+      @options["log_size"],
+      level: Object.const_get(@options["log_level"])
+    )
   end
 
   def should_transform?(type)

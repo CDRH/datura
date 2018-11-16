@@ -22,9 +22,9 @@ default:
   threads: 5
 
   # LOGGING
-  log_old_number: 4           # number of log files before beginning to erase
+  log_old_number: 1           # number of log files before beginning to erase
   log_size: 1024000           # size of log file in bytes
-  log_level: Logger::WARN     # change to INFO for more detail
+  log_level: Logger::INFO     # change to INFO for more detail
 
   # SCHEMA LOCATION
   # misleadingly, this is not currently overrideable per collection
