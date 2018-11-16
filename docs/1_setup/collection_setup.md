@@ -8,7 +8,7 @@ Install datura, then run:
 setup
 ```
 
-This will create several directories, a .gitignore file, and a configuration file for your project.
+This will create several directories, a .gitignore file, and a configuration file for your collection.
 
 ### Step 2:  Add your documents
 
@@ -32,7 +32,7 @@ The `source/drafts` directory should be organized similarly for clarity's sake, 
 
 ### Step 3:  Commit your changes to git and Github
 
-The data repository's `.gitignore` file is set up to make sure that files in tei, dc, etc, are being tracked, as well as the generated HTML (by environment), but any additional generated files are not.  `git init` to create a new repository, add your files, and push to a remote!
+The collection's `.gitignore` file is set up to make sure that files in tei, dc, etc, are being tracked, as well as the generated HTML (by environment), but any additional generated files are not.  `git init` to create a new repository, add your files, and push to a remote!
 
 Use [GitHub's instructions (external link)](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/) instructions, if you are not sure how to add a new repository.  You can change the address to look somewhere besides GitHub if you like.
 

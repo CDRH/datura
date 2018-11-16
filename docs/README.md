@@ -1,9 +1,9 @@
 [Back to documentation page for entire system](../../README.md)
 
-CDRH Data Repository
+Datura
 ======
 
-[CDRH Data Repository](https://github.com/CDRH/data)
+[Datura Collection Management Scripts](https://github.com/CDRH/data)
 
 This collection supports the population of an API storing data extracted from XML, CSV, YML, and other file types.
 

@@ -18,7 +18,7 @@ Both of the scripts have the same usage and behavior.
 
 By default, the scripts will run on the "development" environment unless otherwise directed.  **Be very careful when running these scripts -- if you are clearing the production API site, you may be bringing down dozens of sites across the CDRH at once!!**
 
-In general, you can't clear the entire development index across projects particularly easily.  The following will operate only over the specific collection in the configuration environment:
+In general, you can't clear the entire development index across collections particularly easily.  The following will operate only over the specific collection in the configuration environment:
 
 ```
 (type)_clear_index

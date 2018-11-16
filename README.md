@@ -1,6 +1,6 @@
 # Datura
 
-Welcome to this temporary documentation for Datura, a gem dedicated to transforming and posting data sources from CDRH projects.  This gem is intended to be used with a "data repository" containing TEI, VRA, CSVs, and more.
+Welcome to this temporary documentation for Datura, a gem dedicated to transforming and posting data sources from CDRH projects.  This gem is intended to be used with a collection containing TEI, VRA, CSVs, and more.
 
 ## Install
 
@@ -16,7 +16,7 @@ Next, install saxon as a system wide executable. [Saxon setup documentation](doc
 ## Local Development
 
 
-Add this to your data repo's Gemfile:
+Add this to your collection's Gemfile:
 
 ```
 source 'https://rubygems.org'
@@ -36,7 +36,7 @@ And if that doesn't seem like it's working, run this from the datura gem:
 bundle exec rake install
 ```
 
-then from the data repo:
+then from the collection:
 
 ```
 gem install --local path/to/local/datura/pkg/datura-0.1.0.gem
@@ -50,7 +50,7 @@ Test it out by running the `about` command to view all your options:
 about
 ```
 
-To set up a brand new data repo run:
+To set up a brand new collection run:
 
 ```
 setup

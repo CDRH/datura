@@ -4,8 +4,8 @@ require "colorize"
 
 coll = Dir.getwd
 
-puts "Caution: this script is intended for NEW data repositories.".red
-puts "You must manually update old data repos to use datura.\n"
+puts "Caution: this script is intended for NEW data collections.".red
+puts "You must manually update old collections to use datura.\n"
 
 # CONFIG
 
