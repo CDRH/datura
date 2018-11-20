@@ -1,6 +1,5 @@
-require "minitest/autorun"
+require "test_helper"
 require "nokogiri"
-require_relative "classes.rb"
 
 class TeiToEsTest < Minitest::Test
   def setup

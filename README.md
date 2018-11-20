@@ -1,8 +1,66 @@
-CDRH Data Repository
-======
+# Datura
 
-This collection supports the population of an API storing data extracted from XML, CSV, YML, and other file types.
+Welcome to this temporary documentation for Datura, a gem dedicated to transforming and posting data sources from CDRH projects.  This gem is intended to be used with a collection containing TEI, VRA, CSVs, and more.
 
-**CDRH Data Repository Documentation can be found [in our documentation repository](https://github.com/CDRH/sneezewort/blob/master/docs/data/README.md)**
+## Install
 
-**Documentation for entire publishing system can be found here: ([https://github.com/CDRH/sneezewort](https://github.com/CDRH/sneezewort))**
+
+Gemfile:
+
+```
+gem "datura", git: "https://github.com/CDRH/data.git", branch: "datura"
+```
+
+Next, install saxon as a system wide executable. [Saxon setup documentation](docs/4_developers/saxon.md).
+
+## Local Development
+
+
+Add this to your collection's Gemfile:
+
+```
+source 'https://rubygems.org'
+
+gemspec path: '/path/to/local/datura/repo'
+```
+
+Then in your repo you can run:
+
+```
+bundle install
+```
+
+And if that doesn't seem like it's working, run this from the datura gem:
+
+```
+bundle exec rake install
+```
+
+then from the collection:
+
+```
+gem install --local path/to/local/datura/pkg/datura-0.1.0.gem
+```
+
+## First Steps
+
+Test it out by running the `about` command to view all your options:
+
+```
+about
+```
+
+To set up a brand new collection run:
+
+```
+setup
+```
+
+Refer to the [documentation](docs) to learn more about how to configure your collection and about each of the scripts.
+
+## Tests
+
+```
+bundle install
+rake test
+```

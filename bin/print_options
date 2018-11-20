@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require "datura"
+
+manager = Datura::DataManager.new
+manager.print_options

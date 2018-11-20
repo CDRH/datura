@@ -1,12 +1,6 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'colorize'
-gem 'linkeddata'
-gem 'nokogiri', '~> 1.8.1'
-gem 'minitest'
-gem 'rake'
-gem 'rest-client'
+git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
-# we will be phasing out rspec tests in the future
-# in favor of minitest
-gem 'rspec'
+# Specify your gem's dependencies in datura.gemspec
+gemspec

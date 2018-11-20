@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+require "datura"
+
+require "json"
+require "rest-client"
+require "yaml"
+
+params = Datura::Parser.es_set_schema_params
+options = Datura::Options.new(params).all
+path = File.join(options["datura_dir"], options["es_schema_path"])
+schema = YAML.load_file(path)
+
+begin
+  idx = options["es_index"]
+
+  url = File.join(options["es_path"], options["es_index"], "_mapping", "_doc?pretty=true")
+  puts "environment: #{options["environment"]}"
+  puts "Setting schema: #{url}"
+  RestClient.put(url, schema.to_json, { :content_type => :json })
+rescue => e
+  puts "Error: #{e.response}"
+end
