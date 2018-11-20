@@ -101,8 +101,8 @@ File.open(File.join(coll, ".gitignore"), "w") do |file|
 config/private.yml
 /logs/*
 
-# scripts/.xslt is populated based on version of datura gem
-/scripts/.xslt/*
+# scripts/.xslt-datura is populated by the datura gem and should not be tracked / edited
+/scripts/.xslt-datura/*
 
 /output/*
 # increase specificity of this path if you wish to only track generated html

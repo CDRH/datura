@@ -15,7 +15,7 @@
 
   <!-- To override, copy this file into your collection's script directory
       and change the above paths to:
-      "../../.xslt/tei_to_solr/lib/fields.xsl"
+      "../../.xslt-datura/tei_to_solr/lib/fields.xsl"
   -->
 
   <xsl:output indent="yes" omit-xml-declaration="yes"/>

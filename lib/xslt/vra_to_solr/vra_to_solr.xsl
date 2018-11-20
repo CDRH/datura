@@ -16,7 +16,7 @@
 
   <!-- To override, copy this file into your collection's script directory
       and change the above paths to:
-      "../../.xslt/vra_to_solr/lib/fields.xsl"
+      "../../.xslt-datura/vra_to_solr/lib/fields.xsl"
   -->
 
 	<xsl:output indent="yes" omit-xml-declaration="yes"/>

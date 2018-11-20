@@ -15,7 +15,7 @@
 
   <!-- To override, copy this file into your collection's script directory
       and change the above paths to:
-      "../../.xslt/vra_to_html/etc.xsl"
+      "../../.xslt-datura/vra_to_html/etc.xsl"
   -->
 
 <!-- For display in TEI framework, have changed all namespace declarations to http://www.tei-c.org/ns/1.0. If different (e.g. Whitman), will need to change -->
