@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require "datura"
+
+require "json"
+require "rest-client"
+
+options = Datura::Options.new({}).all
+url = File.join(options["es_path"], "_aliases")
+
+res = JSON.parse(RestClient.get(url))
+puts JSON.pretty_generate(res)

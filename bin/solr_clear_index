@@ -1,0 +1,30 @@
+#!/usr/bin/env ruby
+
+require "datura"
+
+params = Datura::Parser.clear_index_params
+options = Datura::Options.new(params).all
+url = File.join(options["solr_path"], options["solr_core"], "update")
+
+# verify that the user is really sure about the index they're about to wipe
+puts "Are you sure that you want to remove entries from"
+puts " #{options['collection']}'s #{options['environment']} environment?"
+puts "(#{url})"
+puts "y/N"
+
+confirm = STDIN.gets.chomp
+if confirm && (confirm == "y" || confirm == "Y" || confirm == "Yes" || confirm == "yes")
+  # create a new solr object
+  solr = SolrPoster.new(url)
+  puts "Clearing index at #{solr.url}"
+  if !options["regex"].nil?
+    field = options["field"].nil? ? "id" : options["field"]
+    res = solr.clear_index_by_regex(field, options["regex"])
+  else
+    res = solr.clear_index
+  end
+  solr.commit_solr
+else
+  puts "exiting"
+  exit
+end

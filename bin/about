@@ -1,0 +1,52 @@
+#!/usr/bin/env ruby
+
+require "colorize"
+
+# NOTE:  Currently hand selected list of commands in order to scare people off some of them
+# but could be automatically produced instead if preferred
+
+puts <<TEXT
+
+DATURA
+======
+
+Please run these commands with -h or --help for individual instructions.
+
+TEXT
+
+puts "Post and Clear".green
+puts "==============".green
+puts <<TEXT
+
+  post......................add documents to API and generate HTML
+  es_clear_index............clear entire elasticsearch index or specific documents (DANGER)
+  solr_clear_index..........clear entire solr index or specific documents (DANGER)
+
+TEXT
+
+puts "Information".green
+puts "===========".green
+
+puts <<TEXT
+
+  es_alias_list.............list all elasticsearch indexes
+  es_get_schema.............view elasticsearch field mappings
+  print_options.............view the current configuration for specified post params
+
+TEXT
+
+puts "Admin Only".red
+puts "==========".red
+
+puts <<TEXT
+
+  admin_es_create_index.....create an elasticsearch index
+  admin_es_delete_index.....delete an elasticsearch index
+  es_alias_add..............add an elasticsearch alias
+  es_alias_delete...........delete an elasticsearch alias
+  es_set_schema.............set / add to elasticsearch field mappings
+  setup.....................prepares directory structure and config files for new collection
+  solr_create_api_core......creates a solr API index if configset is on server
+  solr_manage_schema........set / add / alter solr field mappings
+
+TEXT

@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+
+require "datura"
+
+params = Datura::Parser.solr_create_api_core_params
+options = Datura::Options.new(params).all
+
+# leaving api_configs hardcoded because solr api cores are legacy projects
+# and this configset should not be changing or be under development
+configset = "api_configs"
+url = File.join(options["solr_path"], "admin", "cores?action=CREATE")
+
+# parse incoming options and make sure that they sent in name
+core = Datura::Helpers.get_input(options["core"], "Core name")
+url += "&name=#{core}&configSet=#{configset}"
+
+res = Datura::Helpers.get_url(url)
+if res.code == '200'
+  puts "Created core successfully"
+  puts res.body
+else
+  puts "There was a problem with your request"
+  puts "Code: #{res.code}"
+  puts res.body
+end
+
+
+
+

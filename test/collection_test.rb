@@ -1,7 +1,7 @@
+require "test_helper"
+
 require "logger"
-require "minitest/autorun"
 require "yaml"
-require_relative "classes.rb"
 
 # commented out until we decide how we want to test collection transformation
 # in the future
