@@ -6,6 +6,12 @@
 A system Saxon JAR is used with scripting via a [Bash executable](#bash-executable)
 
 ## Install System JAR
+
+Here is a reference for the Saxon version that various CDRH servers are using:
+
+- whitman: 9.7.0.2J
+- cdrh and cather: 9.6.0.4J
+
 ```bash
 # Make directory named for the version:
 sudo mkdir /usr/local/share/saxon-(version)
