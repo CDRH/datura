@@ -33,7 +33,7 @@ module CommonXml
   end
 
   def self.create_xml_object(filepath, remove_ns=true)
-    file_xml = File.open(filepath) { |f| Nokogiri::XML f }
+    file_xml = File.open(filepath) { |f| Nokogiri::XML(f, &:noblanks) }
     # TODO is this a good idea?
     file_xml.remove_namespaces! if remove_ns
     return file_xml
