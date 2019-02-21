@@ -63,12 +63,20 @@ class TeiToEs < XmlToEs
   end
 
   def date(before=true)
-    date = get_text(@xpaths["date"])
-    return CommonXml.date_standardize(date, before)
+    datestr = get_text(@xpaths["date"])
+    return CommonXml.date_standardize(datestr, before)
   end
 
   def date_display
     date = get_text(@xpaths["date_display"])
+  end
+
+  def date_not_after
+    date(false)
+  end
+
+  def date_not_before
+    date(true)
   end
 
   def description

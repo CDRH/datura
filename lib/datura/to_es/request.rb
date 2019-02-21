@@ -52,8 +52,8 @@ class XmlToEs
   def assemble_dates
     @json["date_display"] = date_display
     @json["date"] = date
-    @json["date_not_before"] = date
-    @json["date_not_after"] = date(false)
+    @json["date_not_before"] = date_not_before
+    @json["date_not_after"] = date_not_after
   end
 
   def assemble_descriptions
