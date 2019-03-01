@@ -61,12 +61,19 @@ class VraToEs < XmlToEs
 
   def date(before=true)
     datestr = get_text(@xpaths["dates"]["earliest"])
-    # cannot send empty value for date object, set to null
-    datestr.empty? ? nil : datestr
+    CommonXml.date_standardize(datestr, before)
   end
 
   def date_display
     get_text(@xpaths["dates"]["display"])
+  end
+
+  def date_not_after
+    date(false)
+  end
+
+  def date_not_before
+    date(true)
   end
 
   def description

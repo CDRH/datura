@@ -104,9 +104,12 @@ config/private.yml
 # scripts/.xslt-datura is populated by the datura gem and should not be tracked / edited
 /scripts/.xslt-datura/*
 
+# ignore all output types except for production html
 /output/*
-# increase specificity of this path if you wish to only track generated html
-!/output/production/
+!/output/production
+/output/production/*
+!/output/production/html
+
 TEXT
   file.write(text)
 end

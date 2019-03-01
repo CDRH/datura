@@ -73,7 +73,10 @@ class Datura::DataManager
     check_options
     set_schema
     @files = prepare_files
+
+    pre_batch_processing
     batch_process_files
+    post_batch_processing
     end_run
   end
 
@@ -189,6 +192,18 @@ class Datura::DataManager
       print_options
     end
     return msg
+  end
+
+  # override this step in project specific files
+  # to manipulate the files and transformations
+  # after transform and posting has taken place
+  def post_batch_processing
+  end
+
+  # override this step in project specific files
+  # to manipulate the files before they are transformed
+  def pre_batch_processing
+    # can access @files array
   end
 
   def prepare_files
