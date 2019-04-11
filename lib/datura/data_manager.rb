@@ -241,7 +241,7 @@ class Datura::DataManager
     return file_classes
   end
 
-    def prepare_xslt
+  def prepare_xslt
     # check modification date of gemfile.lock against the hidden script files
     # if gemfile newer, copy the xslt over into the hidden files
     gflock = File.join(@options["collection_dir"], "Gemfile.lock")

@@ -3,9 +3,9 @@ require_relative "html_to_es/fields.rb"
 require_relative "html_to_es/request.rb"
 require_relative "html_to_es/xpaths.rb"
 
-###########################################################
-# NOTE:  DO NOT EDIT html_to_ES FILES IN SCRIPTS DIRECTORY #
-###########################################################
+##########################################################
+# NOTE:  DO NOT EDIT HTML_TO_ES FILES IN TO_ES DIRECTORY #
+##########################################################
 
 #   (unless you are a CDRH dev and then you may do so very cautiously)
 #   this file provides defaults for ALL of the collections included
@@ -28,6 +28,6 @@ require_relative "html_to_es/xpaths.rb"
 #   you can override individual chunks of fields in your collection
 
 class HtmlToEs < XmlToEs
-  # Override XmlToEs methods that need to be customized for TEI here
+  # Override XmlToEs methods that need to be customized for HTML here
   # rather than in one of the files in html_to_es/
 end
