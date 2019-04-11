@@ -48,6 +48,7 @@ Format options include:
 - html
 - tei
 - vra
+- webs
 
 If you do not select any, all the formats found will be executed.
 

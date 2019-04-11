@@ -21,7 +21,8 @@ class Datura::DataManager
       "csv" => FileCsv,
       "html" => FileHtml,
       "tei" => FileTei,
-      "vra" => FileVra
+      "vra" => FileVra,
+      "webs" => FileWebs
     }
   end
 
@@ -72,6 +73,7 @@ class Datura::DataManager
 
     check_options
     set_schema
+    pre_file_preparation
     @files = prepare_files
 
     pre_batch_processing
@@ -204,6 +206,14 @@ class Datura::DataManager
   # to manipulate the files before they are transformed
   def pre_batch_processing
     # can access @files array
+  end
+
+  # override this step in project specific files to
+  # manipulate directory contents, files, etc, before
+  # this script begins to read files of various formats
+  # for example: scrape content from a website and add
+  # to the source/webs directory
+  def pre_file_preparation
   end
 
   def prepare_files

@@ -1,6 +1,6 @@
 ## Customizing XML to Elasticsearch
 
-**NOTE: Currently this repository only accommodates TEI and VRA.  The process to customize them should be nearly identical, so for the purposes of this documentation, we will be working with TEI.**
+**NOTE: Currently this repository only accommodates HTML, TEI, webs (web scraped HTML), and VRA.  The process to customize them should be nearly identical, so for the purposes of this documentation, we will be working with TEI.**
 
 If you are already familiar with XSLT / XPath, you may be interested in comparing Ruby / Nokogiri equivalents with XSLT behavior.
 

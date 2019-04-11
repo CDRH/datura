@@ -30,7 +30,7 @@ Then in your repo you can run:
 bundle install
 ```
 
-And if that doesn't seem like it's working, run this from the datura gem:
+If for some reason that is not working, you can instead run the following each time you make a change in datura:
 
 ```
 bundle exec rake install
@@ -44,16 +44,16 @@ gem install --local path/to/local/datura/pkg/datura-0.1.0.gem
 
 ## First Steps
 
-Test it out by running the `about` command to view all your options:
+Test it out by running the `about` command to view all your options (`bundle exec` may not be necessary, but it is recommended):
 
 ```
-about
+bundle exec about
 ```
 
 To set up a brand new collection run:
 
 ```
-setup
+bundle exec setup
 ```
 
 Refer to the [documentation](docs) to learn more about how to configure your collection and about each of the scripts.
