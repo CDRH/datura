@@ -10,6 +10,8 @@ require_relative "to_es/html_to_es.rb"
 require_relative "to_es/tei_to_es.rb"
 require_relative "to_es/tei_to_es/tei_to_es_personography.rb"
 
+require_relative "to_es/webs_to_es.rb"
+
 require_relative "to_es/vra_to_es.rb"
 require_relative "to_es/vra_to_es/vra_to_es_personography.rb"
 

@@ -1,7 +1,7 @@
-class HtmlToEs < XmlToEs
+class WebsToEs < XmlToEs
   # These are the default xpaths that are used for collections
   #  if you require a different xpath, please override the xpath in
-  #  the specific collection's HtmlToEs file or create a new method
+  #  the specific collection's WebsToEs file or create a new method
   #  in that file which returns a different value
   def xpaths_list
     {
