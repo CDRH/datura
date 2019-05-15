@@ -70,7 +70,7 @@ class FileType
     transformed = transform_solr
     if transformed.nil?
       return { "error" => "Something is super wrong with transform for solr" }
-    elsif transformed.nil? || transformed.has_key?("error") || !transformed.has_key?("doc")
+    elsif transformed.has_key?("error") || !transformed.has_key?("doc")
       err = transformed.has_key?("error") ? transformed["error"] : "No error message returned"
       return { "error" => "Error transforming to Solr for #{self.filename}: #{err}" }
     end
