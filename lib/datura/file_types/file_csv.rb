@@ -105,10 +105,9 @@ class FileCsv < FileType
     # puts solr_doc.root.to_xml
     if @options["output"]
       filepath = "#{@out_solr}/#{self.filename(false)}.xml"
-      # puts "output #{@out_solr}"
       File.open(filepath, "w") { |f| f.write(solr_doc.root.to_xml) }
     end
-    return { "docs" => solr_doc.root.to_xml }
+    return { "doc" => solr_doc.root.to_xml }
   end
 
   def write_html_to_file(builder, index)

@@ -22,12 +22,12 @@ module Datura::Parser
 
       # default to no restricted format
       options["format"] = nil
-      opts.on( '-f', '--format [input]', 'Restrict to one format (csv, html, tei, vra)') do |input|
-        if %w[csv html tei vra].include?(input)
+      opts.on( '-f', '--format [input]', 'Restrict to one format (csv, html, tei, vra, webs)') do |input|
+        if %w[csv html tei vra webs].include?(input)
           options["format"] = input
         else
           puts "Format #{input} is not recognized.".red
-          puts "Allowed formats are csv, html, tei, and vra"
+          puts "Allowed formats are csv, html, tei, vra, and webs (web-scraped html)"
           exit
         end
       end
@@ -53,13 +53,14 @@ module Datura::Parser
       end
 
       options["update_time"] = nil
-      opts.on('-u', '--update [2015-01-01T18:24]', 'Transform and post only new files') do |input|
-        if !input
-          puts "Please specify date (req) and time (opt): 2015-01-01T18:24".light_yellow
+      opts.on('-u', '--update ["today", 2015-01-01T18:24]', 'Transform and post only new files') do |input|
+        if !input || (input != "today" && !input[/\d{4}-\d{1,2}-\d{1,2}(?:T\d{1,2}:\d{2})?/])
+          puts "Please specify when files were added".light_yellow
+          puts "'today', date (2015-01-01), or date and time (2015-01-01T18:24)".light_yellow
           exit
         else
           # TODO should verify that this is a correct date and turn it into a time object
-          datetime = Parser.timify(input)
+          datetime = timify(input)
           if datetime.nil?
             exit
           else

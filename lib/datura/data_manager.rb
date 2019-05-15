@@ -21,7 +21,8 @@ class Datura::DataManager
       "csv" => FileCsv,
       "html" => FileHtml,
       "tei" => FileTei,
-      "vra" => FileVra
+      "vra" => FileVra,
+      "webs" => FileWebs
     }
   end
 
@@ -72,6 +73,7 @@ class Datura::DataManager
 
     check_options
     set_schema
+    pre_file_preparation
     @files = prepare_files
 
     pre_batch_processing
@@ -206,6 +208,14 @@ class Datura::DataManager
     # can access @files array
   end
 
+  # override this step in project specific files to
+  # manipulate directory contents, files, etc, before
+  # this script begins to read files of various formats
+  # for example: scrape content from a website and add
+  # to the source/webs directory
+  def pre_file_preparation
+  end
+
   def prepare_files
     files = get_files
     # filter by collection list of allowed files
@@ -231,7 +241,7 @@ class Datura::DataManager
     return file_classes
   end
 
-    def prepare_xslt
+  def prepare_xslt
     # check modification date of gemfile.lock against the hidden script files
     # if gemfile newer, copy the xslt over into the hidden files
     gflock = File.join(@options["collection_dir"], "Gemfile.lock")

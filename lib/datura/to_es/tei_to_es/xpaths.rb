@@ -26,8 +26,8 @@ class TeiToEs < XmlToEs
       "image_id" => "/TEI/text//pb/@facs",
       "keywords" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='keywords']/term",
       # note: language is global attribute xml:lang
-      "language" => "(//@lang)[1]",
-      "languages" => "//@lang",
+      "language" => "(//body/div1/@lang)[1]",
+      "languages" => "//body/div1/@lang",
       "person" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='people']/term",
       "places" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='places']/term",
       "publisher" => "/TEI/teiHeader/fileDesc/sourceDesc/bibl[1]/publisher[1]",
