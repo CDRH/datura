@@ -39,7 +39,7 @@ bundle exec rake install
 then from the collection:
 
 ```
-gem install --local path/to/local/datura/pkg/datura-0.1.0.gem
+gem install --local path/to/local/datura/pkg/datura-0.1.2.gem
 ```
 
 ## First Steps

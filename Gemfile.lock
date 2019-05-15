@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    datura (0.1.1)
+    datura (0.1.2)
       colorize (~> 0.8.1)
       nokogiri (~> 1.8.1)
       rest-client (~> 2.0.2)
@@ -35,10 +35,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.16)
+  bundler (>= 1.16.0, < 3.0)
   datura!
   minitest (~> 5.0)
   rake (~> 10.0)
 
 BUNDLED WITH
-   1.16.6
+   1.17.3
