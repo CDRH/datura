@@ -9,9 +9,9 @@ This collection supports the population of an API storing data extracted from XM
 
 ## The Process
 
-Collections are added as sub repositories. They may contain data in the following formats: HTML, TEI P5, VRA, and CSV.  The following output formats are supported: HTML, Solr XML, Elasticsearch (ES) JSON.
+Collections are added as sub repositories. They may contain data in the following formats: HTML, TEI P5, VRA, and CSV.  The following output formats are supported: HTML, IIIF Presentation Manifest JSON, Solr XML, Elasticsearch (ES) JSON.
 
-The files are parsed and formatted into documents appropriate for Solr, Elasticsearch, and HTML snippets, and then these resulting documents are posted to the appropriate locations. There are also several management scripts for creating indexes, managing the schemas, and deleting indexes.
+The files are parsed and formatted into documents appropriate for Solr, IIIF, Elasticsearch, and HTML snippets, and then these resulting documents are posted to the appropriate locations. There are also several management scripts for creating indexes, managing the schemas, and deleting indexes.
 
 ## Documentation
 
@@ -24,6 +24,7 @@ The files are parsed and formatted into documents appropriate for Solr, Elastics
 - Customize collection
   - [TEI to Elasticsearch](2_customization/xml_to_es.md)
   - [CSV to Solr](2_customization/csv_to_solr.md)
+  - [IIIF Manifest Customization](2_customization/iiif.md)
   - HTML customization
   - Solr customization
   - [Collection Tests](2_customization/test.md)

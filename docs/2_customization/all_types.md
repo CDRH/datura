@@ -10,3 +10,7 @@ There are a number of ways you can customize the transformations.  Please refer 
 ### To Solr / HTML
 
 - Pending docs TODO
+
+### To IIIF
+
+- [Presentation Manifest](#iiif.md)
