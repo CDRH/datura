@@ -9,7 +9,7 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 Changelog up to date
 
-## [v0.1.3] - 2019-08-21 - IIIF Manifests
+## [v0.1.3](https://github.com/CDRH/datura/compare/v0.1.2...v0.1.3) - 2019-08-21 - IIIF Manifests
 
 ### Added
 - IIIF output format and documentation
@@ -22,7 +22,7 @@ Changelog up to date
 - pkg builds of gem
 - outdated comment line
 
-## [v0.1.2] - 2019-05-15 - Web scraping support, post by update time fix
+## [v0.1.2](https://github.com/CDRH/datura/compare/v0.1.1...v0.1.2) - 2019-05-15 - Web scraping support, post by update time fix
 
 ### Added
 - `webs` format for minimal support of web scraping by specific apps
@@ -31,7 +31,7 @@ Changelog up to date
 ### Changed
 - `--update` flag fixed
 
-## [v0.1.1] - 2019-03-01 - Pre and post file transformation hooks
+## [v0.1.1](https://github.com/CDRH/datura/compare/v0.1.0...v0.1.1) - 2019-03-01 - Pre and post file transformation hooks
 
 ### Added
 - ability to manipulate files before and after transformation
@@ -39,7 +39,7 @@ Changelog up to date
 ### Changed
 - accomodates ruby 2.6.x
 
-## [v0.1.0] - 2018-11-21 - Datura Gem Launch
+## [v0.1.0](https://github.com/CDRH/datura/compare/data_old...v0.1.0) - 2018-11-21 - Datura Gem Launch
 
 ### Added
 - creates the datura gem
