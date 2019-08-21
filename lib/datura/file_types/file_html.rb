@@ -33,6 +33,10 @@ class FileHtml < FileType
   #   raise "HTML to HTML transformation not supported"
   # end
 
+  def transform_iiif
+    raise "HTML to IIIF is not yet generalized, please override on a per project basis"
+  end
+
   def transform_solr
     raise "HTML to Solr transformation not supported"
   end

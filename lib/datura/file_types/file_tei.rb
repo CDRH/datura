@@ -11,7 +11,6 @@ class FileTei < FileType
 
   def initialize(file_location, options)
     super(file_location, options)
-    # TODO these paths no longer work now that override xsl is not inside of the data repo, fix during xslt sweep
     @script_html = File.join(options["collection_dir"], options["tei_html_xsl"])
     @script_solr = File.join(options["collection_dir"], options["tei_solr_xsl"])
   end
@@ -35,6 +34,10 @@ class FileTei < FileType
 
   # def transform_html
   # end
+
+  def transform_iiif
+    raise "TEI to IIIF is not yet generalized, please override on a per project basis"
+  end
 
   # def transform_solr
   # end

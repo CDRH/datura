@@ -29,6 +29,10 @@ class FileVra < FileType
   # def transform_html
   # end
 
+  def transform_iiif
+    raise "VRA to IIIF is not yet generalized, please override on a per project basis"
+  end
+
   # def transform_solr
   # end
 end

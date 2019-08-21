@@ -20,6 +20,10 @@ class FileWebs < FileType
     raise "Web scraped HTML to HTML transformation is not supported"
   end
 
+  def transform_iiif
+    raise "Web scraped HTML to IIIF is not yet generalized, please override on a per project basis"
+  end
+
   def transform_solr
     raise "Web scraped HTML to Solr transformation not supported"
   end
