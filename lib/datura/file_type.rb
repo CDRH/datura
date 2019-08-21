@@ -10,11 +10,13 @@ class FileType
   # script locations
   attr_accessor :script_es
   attr_accessor :script_html
+  attr_accessor :script_iiif
   attr_accessor :script_solr
 
   # output directories
   attr_accessor :out_es
   attr_accessor :out_html
+  attr_accessor :out_iiif
   attr_accessor :out_solr
 
   def initialize(location, options)
@@ -26,8 +28,9 @@ class FileType
     output = File.join(@options["collection_dir"], "output", @options["environment"])
     @out_es = File.join(output, "es")
     @out_html = File.join(output, "html")
+    @out_iiif = File.join(output, "iiif")
     @out_solr = File.join(output, "solr")
-    Datura::Helpers.make_dirs(@out_es, @out_html, @out_solr)
+    Datura::Helpers.make_dirs(@out_es, @out_html, @out_iiif, @out_solr)
     # script locations set in child classes
   end
 
@@ -133,8 +136,12 @@ class FileType
     exec_xsl(@file_location, @script_html, "html", @out_html, @options["variables_html"])
   end
 
+  def transform_iiif
+    raise "iiif from requested formats (#{transform_types.join(", ")}) is not currently implemented"
+  end
+
   def transform_solr
-    puts "transforming #{self.filename}"
+    puts "transforming #{self.filename} into solr request"
     # this assumes that solr uses XSL transformation
     # make sure to override behavior in CSV / non-XML child classes
     if @options["output"]

@@ -79,6 +79,10 @@ class FileCsv < FileType
     es_doc
   end
 
+  def transform_iiif
+    raise "CSV to IIIF is not yet generalized, please override on a per project basis"
+  end
+
   def transform_html
     puts "transforming #{self.filename} to HTML subdocuments"
     build_html_from_csv
