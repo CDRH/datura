@@ -146,7 +146,7 @@
     <xsl:text>/0/default.jpg</xsl:text>
   </xsl:template>
   
-  <xsl:template match="pb">
+  <xsl:template match="pb"> 
       <!-- grab the figure id from @facs, and if there is a .jpg, chop it off
           note: I previously also looked at xml:id for figure ID, but that's 
           incorrect -->
