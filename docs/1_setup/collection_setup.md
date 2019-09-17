@@ -27,9 +27,6 @@ Please organize any files you have for this collection in subdirectories in `sou
 
 The `source/drafts` directory should be organized similarly for clarity's sake, but since no scripts pull information from it, feel free to organize it however makes the most sense for your collection!
 
-
-```
-
 ### Step 3:  Commit your changes to git and Github
 
 The collection's `.gitignore` file is set up to make sure that files in tei, dc, etc, are being tracked, as well as the generated HTML (by environment), but any additional generated files are not.  `git init` to create a new repository, add your files, and push to a remote!

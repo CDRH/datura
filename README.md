@@ -42,6 +42,8 @@ then from the collection:
 gem install --local path/to/local/datura/pkg/datura-0.1.2.gem
 ```
 
+Note: You may need to delete your `scripts/.xslt-datura` folder as well.
+
 ## First Steps
 
 Test it out by running the `about` command to view all your options (`bundle exec` may not be necessary, but it is recommended):
