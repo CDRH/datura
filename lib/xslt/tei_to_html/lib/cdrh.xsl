@@ -147,13 +147,12 @@
   </xsl:template>
   
   <xsl:template match="pb">
-      <!-- grab the figure id, first looking in @facs, then @xml:id, and if there is a .jpg, chop it off -->
+      <!-- grab the figure id from @facs, and if there is a .jpg, chop it off
+          note: I previously also looked at xml:id for figure ID, but that's 
+          incorrect -->
       <xsl:variable name="figure_id">
         <xsl:variable name="figure_id_full">
-          <xsl:choose>
-            <xsl:when test="@facs"><xsl:value-of select="@facs"></xsl:value-of></xsl:when>
-            <xsl:when test="@xml:id"><xsl:value-of select="@xml:id"></xsl:value-of></xsl:when>
-          </xsl:choose>
+          <xsl:value-of select="normalize-space(@facs)"></xsl:value-of>
         </xsl:variable>
         <xsl:choose>
           <xsl:when test="ends-with($figure_id_full,'.jpg') or ends-with($figure_id_full,'.jpeg')">
