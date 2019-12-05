@@ -24,7 +24,7 @@ Copy the Saxon JAR file (e.g. `saxon9he.jar`) from another server with `scp` or 
 
 or
 
-Download Saxon-HE from [Saxonica Open Source](http://saxonica.com/download/opensource.xml)
+Download Saxon-HE from [Saxonica Open Source](https://sourceforge.net/projects/saxon/files/Saxon-HE/)
 
 
 ## Bash Executable
