@@ -36,7 +36,7 @@ If for some reason that is not working, you can instead run the following each t
 bundle exec rake install
 ```
 
-then from the collection:
+then from the collection (sub in the correct version):
 
 ```
 gem install --local path/to/local/datura/pkg/datura-0.1.2.gem
