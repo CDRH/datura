@@ -6,7 +6,11 @@ require_relative "./../elasticsearch.rb"
 module Datura::Elasticsearch::Alias
 
   def self.add
+<<<<<<< HEAD
     params = Datura::Parser.es_alias
+=======
+    params = Datura::Parser.es_alias_add
+>>>>>>> 01ed9e56d (moves code out of bin elasticsearch files and into module)
     options = Datura::Options.new(params).all
 
     ali = options["alias"]
@@ -32,7 +36,7 @@ module Datura::Elasticsearch::Alias
   end
 
   def self.delete
-    params = Datura::Parser.es_alias
+    params = Datura::Parser.es_alias_add
     options = Datura::Options.new(params).all
 
     ali = options["alias"]
@@ -49,7 +53,7 @@ module Datura::Elasticsearch::Alias
     options = Datura::Options.new({}).all
 
     res = RestClient.get(File.join(options["es_path"], "_aliases"))
-    puts JSON.pretty_generate(JSON.parse(res))
+    JSON.pretty_generate(JSON.parse(res))
   end
 
 end
