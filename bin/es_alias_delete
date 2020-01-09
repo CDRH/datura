@@ -2,12 +2,8 @@
 
 require "datura"
 
-require "json"
-require "rest-client"
-
-params = Datura::Parser.es_alias_delete
-options = Datura::Options.new(params).all
-url = File.join(options["es_path"], options["index"], "_alias", options["alias"])
-
-res = JSON.parse(RestClient.delete(url))
-puts JSON.pretty_generate(res)
+begin
+  puts Datura::Elasticsearch::Alias.delete
+rescue => e
+  puts e
+end

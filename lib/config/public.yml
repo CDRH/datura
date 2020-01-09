@@ -26,12 +26,18 @@ default:
   log_size: 32768000          # size of log file in bytes
   log_level: Logger::INFO     # available levels: UNKNOWN, FATAL, ERROR, WARN, INFO, DEBUG
 
-  # SCHEMA LOCATION
-  # misleadingly, this is not currently overrideable per collection
-  # TODO make overrideable in es_set_schema and post
-  # or perhaps remove it from this config since it is not collection-specific
-  # in any sense of the word, except if working with an entirely separate ES index
-  es_schema_path: lib/config/api_schema.yml
+  # ELASTICSEARCH SCHEMA CONFIGURATION
+  # if es_schema_override is false, datura is base directory
+  # if es_schema_override is true, then host data repo is the base directory
+  # it is NOT recommended to set es_schema_override to true!
+  #   if you need something outside of your data repo's directory, consider
+  #   overridding the es_schema_path method in options.rb
+  es_schema_override: false
+  # path from base directory to schemas
+  es_schema_path: lib/config/es_api_schemas
+  # current version of the API (powered by Elasticsearch)
+  # this setting determines which of the schemas will be used
+  api_version: "override with value like '1.0' or '2.0'"
 
   # RESOURCE LOCATIONS
   data_base: https://cdrhmedia.unl.edu      # xml, csv, html snippets, etc
