@@ -2,18 +2,10 @@
 
 require "datura"
 
-params = Datura::Parser.es_create_delete_index
-options = Datura::Options.new(params).all
-
-put_url = File.join(options["es_path"], "#{options["es_index"]}?pretty=true")
-get_url = File.join(options["es_path"], "_cat", "indices?v&pretty=true")
-
 begin
-  # TODO if we want to add any default settings to the new index,
-  # we can do that with the payload and then use rest-client again instead of exec
-  # however, rest-client appears to require a payload and won't allow simple "PUT" with none
-  puts "Creating new ES index: #{put_url}"
-  exec("curl -XPUT #{put_url}")
+  es = Datura::Elasticsearch::Index.new
+  es.create
+  es.set_schema
 rescue => e
-  puts "Error: #{e.inspect}"
+  puts e
 end

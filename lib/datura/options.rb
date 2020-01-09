@@ -22,6 +22,24 @@ class Datura::Options
     # include the collection and datura gem directories in the options
     @all["collection_dir"] = collection_dir
     @all["datura_dir"] = datura_dir
+
+    other_configuration
+  end
+
+  def es_schema_path
+    internal_path = File.join(@all["es_schema_path"], "#{@all["api_version"]}.yml")
+    if @all["es_schema_override"]
+      File.join(@all["collection_dir"], internal_path)
+    else
+      File.join(@all["datura_dir"], internal_path)
+    end
+  end
+
+  # after all options have been flattened, create customization by
+  # combining the set options, etc
+  def other_configuration
+    # put together the elasticsearch schema path
+    @all["es_schema"] = es_schema_path
   end
 
   def print_message(variable, name)

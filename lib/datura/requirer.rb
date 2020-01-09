@@ -19,3 +19,5 @@ require_relative "to_es/vra_to_es/vra_to_es_personography.rb"
 
 # file types
 Dir["#{current_dir}/file_types/*.rb"].each {|f| require f }
+# elasticsearch files
+Dir["#{current_dir}/elasticsearch/*.rb"].each {|f| require f }
