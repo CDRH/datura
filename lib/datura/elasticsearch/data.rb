@@ -7,7 +7,7 @@ module Datura::Elasticsearch::Data
 
   def self.clear
     # run the parameters through the option parser
-    params = Datura::Parser.clear_index_params
+    params = Datura::Parser.clear_index
     options = Datura::Options.new(params).all
     if options["collection"] == "all"
       self.clear_all(options)

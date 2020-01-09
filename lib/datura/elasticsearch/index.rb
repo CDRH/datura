@@ -7,7 +7,7 @@ require_relative "./../elasticsearch.rb"
 class Datura::Elasticsearch::Index
   
   def initialize
-    params = Datura::Parser.es_create_delete_index
+    params = Datura::Parser.es_index
     @options = Datura::Options.new(params).all
 
     @base_url = File.join(@options["es_path"], @options["es_index"])
