@@ -1,6 +1,6 @@
 module Datura::Parser
-  def self.es_create_delete_index
-    @usage = "Usage: admin_es_(create|delete)_index -e environment"
+  def self.es_index
+    @usage = "Usage: (command) -e environment"
     options = {}  # will hold all the options passed in by user
 
     optparse = OptionParser.new do |opts|

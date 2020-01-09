@@ -6,7 +6,7 @@ require_relative "./../elasticsearch.rb"
 module Datura::Elasticsearch::Alias
 
   def self.add
-    params = Datura::Parser.es_alias_add
+    params = Datura::Parser.es_alias
     options = Datura::Options.new(params).all
 
     ali = options["alias"]
@@ -32,7 +32,7 @@ module Datura::Elasticsearch::Alias
   end
 
   def self.delete
-    params = Datura::Parser.es_alias_add
+    params = Datura::Parser.es_alias
     options = Datura::Options.new(params).all
 
     ali = options["alias"]
