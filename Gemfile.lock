@@ -13,7 +13,12 @@ GEM
     colorize (0.8.1)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
+<<<<<<< HEAD
     http-cookie (1.0.5)
+=======
+    http-accept (1.7.0)
+    http-cookie (1.0.3)
+>>>>>>> 4d02bee88 (updates gems and fixes test suite)
       domain_name (~> 0.5)
     mime-types (3.4.1)
       mime-types-data (~> 3.2015)
@@ -26,8 +31,8 @@ GEM
       racc (~> 1.4)
     racc (1.6.0)
     rake (13.0.6)
-    rest-client (2.0.2)
-      http-cookie (>= 1.0.2, < 2.0)
+    rest-client (2.1.0)
+      http-accept (>= 1.7.0, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
     unf (0.1.4)
