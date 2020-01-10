@@ -17,6 +17,8 @@ class Datura::DataManager
   attr_accessor :options
   attr_accessor :collection
 
+  attr_accessor :es_schema_mapping
+
   def self.format_to_class
     classes = {
       "csv" => FileCsv,
@@ -49,6 +51,9 @@ class Datura::DataManager
     # set up posting URLs
     @es_url = File.join(options["es_path"], options["es_index"])
     @solr_url = File.join(options["solr_path"], options["solr_core"], "update")
+
+    # retrieve the specified elasticsearch index's schema
+    set_schema_mappings
   end
 
   # NOTE: This step is what allows collection specific files to override ANY
@@ -76,7 +81,7 @@ class Datura::DataManager
     puts msg
 
     check_options
-    set_schema
+    get_schema_mappings
     pre_file_preparation
     @files = prepare_files
 
@@ -135,6 +140,11 @@ class Datura::DataManager
     if should_transform?("es")
       assert_option("es_path")
       assert_option("es_index")
+      # options used to obtain the mappings
+      assert_option("es_schema_override")
+      assert_option("es_schema_path")
+      assert_option("api_version")
+
       assert_option("collection")
     end
 
@@ -262,22 +272,19 @@ class Datura::DataManager
     end
   end
 
-  def set_schema
-    # if ES is requested and not transform only, then set the schema
-    # to make sure that any new fields are stored with the correct fieldtype
+  # NOTE plural method name in order to accommodate other platforms
+  # we may be checking in the future
+  def set_schema_mappings
+    # only get the elasticsearch mapping if it is needed for post request
     if should_transform?("es") && !@options["transform_only"]
-      schema = YAML.load_file(File.join(@options["datura_dir"], @options["es_schema_path"]))
-      path, idx = ["es_path", "es_index"].map { |i| @options[i] }
-      url = "#{path}/#{idx}/_mapping/_doc?pretty=true"
       begin
-        RestClient.put(url, schema.to_json, { content_type: :json })
-        msg = "Successfully set elasticsearch schema for index #{idx} _doc"
-        @log.info(msg)
-        puts msg.green
+        es = Datura::Elasticsearch::Index.new(@options)
+        @es_schema_mapping = es.get_schema_mapping
       rescue => e
-        raise("Something went wrong setting the elasticsearch schema for index #{idx} _doc:\n#{e.to_s}".red)
+        raise "Unable to get the elasticsearch schema: #{e}"
       end
     end
+
   end
 
   def set_up_logger

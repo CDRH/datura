@@ -1,10 +1,6 @@
 require_relative './helpers.rb'
 require_relative './options.rb'
 
-require "json"
-require "rest-client"
-require "yaml"
-
 module Datura::Elasticsearch
 
   # clear data from the index (leaves index schema intact)
