@@ -17,11 +17,6 @@ class Datura::DataManager
   attr_accessor :options
   attr_accessor :collection
 
-<<<<<<< HEAD
-=======
-  attr_accessor :es_schema_mapping
->>>>>>> 9c7eded0a (in progress working on validator for es fields))
-
   def self.format_to_class
     classes = {
       "csv" => FileCsv,
