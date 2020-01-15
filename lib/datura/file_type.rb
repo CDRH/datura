@@ -49,30 +49,36 @@ class FileType
     CommonXml.create_xml_object(self.file_location)
   end
 
-  def post_es(url=nil)
-    url = url || "#{@options["es_path"]}/#{@options["es_index"]}"
+  def post_es(es)
+    error = nil
     begin
       transformed = transform_es
     rescue => e
-      return { "error" => "Error transforming ES for #{self.filename(false)}: #{e}" }
+      "Error transforming ES for #{self.filename(false)}: #{e}"
     end
     if transformed && transformed.length > 0
       transformed.each do |doc|
         id = doc["identifier"]
-        puts "posting #{id}"
-        puts "PATH: #{url}/_doc/#{id}" if options["verbose"]
-        # NOTE: If you need to do partial updates rather than replacement of doc
-        # you will need to add _update at the end of this URL
-        begin
-          RestClient.put("#{url}/_doc/#{id}", doc.to_json, {:content_type => :json } )
-        rescue => e
-          return { "error" => "Error transforming or posting to ES for #{self.filename(false)}: #{e.response}" }
+        # before a document is posted, we need to make sure that the fields validate against the schema
+        if es.valid_document?(doc)
+
+          puts "posting #{id}"
+          puts "PATH: #{es.index_url}/_doc/#{id}" if options["verbose"]
+          # NOTE: If you need to do partial updates rather than replacement of doc
+          # you will need to add _update at the end of this URL
+          begin
+            RestClient.put("#{es.index_url}/_doc/#{id}", doc.to_json, {:content_type => :json } )
+          rescue => e
+            "Error transforming or posting to ES for #{self.filename(false)}: #{e.response}"
+          end
+        else
+          error = "Document #{id} did not validate against the elasticsearch schema"
         end
       end
     else
-      return { "error" => "No file was transformed" }
+      error = "No file was transformed"
     end
-    return { "docs" => transformed }
+    error ? { "error" => error } : { "docs" => transformed}
   end
 
   def post_solr(url=nil)
