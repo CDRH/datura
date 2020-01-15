@@ -7,10 +7,11 @@ require_relative "./../elasticsearch.rb"
 class Datura::Elasticsearch::Index
   
   attr_reader :schema_mapping
+  attr_reader :index_url
 
   # if options are passed in, then commandline arguments
   # do not need to be parsed
-  def initialize(options = nil)
+  def initialize(options = nil, schema_mapping: false)
     if !options
       params = Datura::Parser.es_index
       @options = Datura::Options.new(params).all
@@ -18,21 +19,23 @@ class Datura::Elasticsearch::Index
       @options = options
     end
 
-    @base_url = File.join(@options["es_path"], @options["es_index"])
-    @mapping_url = File.join(@base_url, "_mapping", "_doc?pretty=true")
-    @index_url = "#{@base_url}?pretty=true"
+    @index_url = File.join(@options["es_path"], @options["es_index"])
+    @pretty_url = "#{@index_url}?pretty=true"
+    @mapping_url = File.join(@index_url, "_mapping", "_doc?pretty=true")
 
     # yaml settings (if exist) and mappings
     @requested_schema = YAML.load_file(@options["es_schema"])
-    @schema_mapping = nil
+    # if requested, grab the mapping currently associated with this index
+    # otherwise wait until after the requested schema is loaded
+    get_schema_mapping if schema_mapping
   end
 
   def create
     json = @requested_schema["settings"].to_json
-    puts "Creating ES index for API version #{@options["api_version"]}: #{@index_url}"
+    puts "Creating ES index for API version #{@options["api_version"]}: #{@pretty_url}"
 
     if json && json != "null"
-      RestClient.put(@index_url, json, { content_type: :json }) { |res, req, result|
+      RestClient.put(@pretty_url, json, { content_type: :json }) { |res, req, result|
         if result.code == "200"
           puts res
         else
@@ -40,7 +43,7 @@ class Datura::Elasticsearch::Index
         end
       }
     else
-      RestClient.put(@index_url, nil) { |res, req, result|
+      RestClient.put(@pretty_url, nil) { |res, req, result|
         if result.code == "200"
           puts res
         else
@@ -51,9 +54,9 @@ class Datura::Elasticsearch::Index
   end
 
   def delete
-    puts "Deleting #{@options["es_index"]} via url #{@index_url}"
+    puts "Deleting #{@options["es_index"]} via url #{@pretty_url}"
 
-    RestClient.delete(@index_url) { |res, req, result|
+    RestClient.delete(@pretty_url) { |res, req, result|
       if result.code != "200"
         raise "#{result.code} error deleting Elasticsearch index: #{res}"
       end
@@ -72,17 +75,26 @@ class Datura::Elasticsearch::Index
 
   def get_schema_mapping
     # if mapping has not already been set, get the schema and manipulate
-    if !@schema_mapping
+    if @schema_mapping.nil?
+      @schema_mapping = {}
+      @schema_mapping["dynamic"] = nil
+
       schema = get_schema[@options["es_index"]]
-      @schema_mapping["fields"] = schema["mappings"]["properties"].keys
-      @schema_mapping["dynamic"] = []
-      schema["mappings"]["dynamic_templates"].each do |field_type, info|
-        es_match = info["match"].sub("*", ".*")
-        regex = /^#{es_match}$/
-        @schema_mapping["dynamic"] << info["match"]
+      @schema_mapping["fields"] = schema["mappings"]["_doc"]["properties"].keys
+
+      regex_pieces = []
+      schema["mappings"]["_doc"]["dynamic_templates"].each do |template|
+        mapping = template.map { |k,v| v["match"] }.first
+        # dynamic fields are listed like *_k and will need
+        # to be converted to ^.*_k$, then combined into a mega-regex
+        es_match = mapping.sub("*", ".*")
+        regex = "^#{es_match}$"
+        regex_pieces << regex
       end
-      # dynamic fields are listed like *_k and will need
-      # to be converted to /_k$/ instead
+      if !regex_pieces.empty?
+        regex_joined = regex_pieces.join("|")
+        @schema_mapping["dynamic"] = /#{regex_joined}/
+      end
     end
     @schema_mapping
   end
@@ -98,6 +110,23 @@ class Datura::Elasticsearch::Index
         raise "#{result.code} error setting Elasticsearch schema: #{res}"
       end
     }
+  end
+
+  # doc: ruby hash corresponding with Elasticsearch document JSON
+  def valid_document?(doc)
+    get_schema_mapping if @schema_mapping.nil?
+    fields = @schema_mapping["fields"]
+    dynamic = @schema_mapping["dynamic"]
+    # NOTE: validation only checking the names of fields
+    # against the schema, NOT the contents of fields
+    # since Elasticsearch itself will know if you are sending it
+    # text instead of a date field, etc
+
+    valid = doc.keys.all? do |doc_field|
+      # check if exact match for a field or if it matches dynamic field mapping
+      fields.include?(doc_field) || doc_field.match(dynamic)
+    end
+    valid
   end
 
 end
