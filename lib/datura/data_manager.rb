@@ -17,7 +17,6 @@ class Datura::DataManager
   attr_accessor :options
   attr_accessor :collection
 
-  attr_accessor :es_schema_mapping
 
   def self.format_to_class
     {
@@ -45,13 +44,6 @@ class Datura::DataManager
     prepare_xslt
     load_collection_classes
     set_up_logger
-
-    # set up posting URLs
-    @es_url = File.join(options["es_path"], options["es_index"])
-    @solr_url = File.join(options["solr_path"], options["solr_core"], "update")
-
-    # retrieve the specified elasticsearch index's schema
-    set_schema_mappings
   end
 
   # NOTE: This step is what allows collection specific files to override ANY
@@ -79,7 +71,7 @@ class Datura::DataManager
     puts msg
 
     check_options
-    get_schema_mappings
+    set_up_services
     pre_file_preparation
     @files = prepare_files
 
@@ -113,7 +105,7 @@ class Datura::DataManager
 
   # TODO should this move to Options class?
   def assert_option(opt)
-    if !@options.has_key?(opt)
+    if !@options.key?(opt)
       puts "Option #{opt} was not found!  Check config files and add #{opt} to continue".red
       raise "Missing configuration options"
     end
@@ -135,7 +127,7 @@ class Datura::DataManager
 
   def check_options
     # verify that everything's all good before moving to per-file level processing
-    if should_transform?("es")
+    if should_post?("es")
       assert_option("es_path")
       assert_option("es_index")
       # options used to obtain the mappings
@@ -146,7 +138,7 @@ class Datura::DataManager
       assert_option("collection")
     end
 
-    if should_transform?("solr")
+    if should_post?("solr")
       assert_option("solr_core")
       assert_option("solr_path")
     end
@@ -197,8 +189,8 @@ class Datura::DataManager
     msg << "Running script with following options:\n"
     msg << "collection:           #{@options['collection']}\n"
     msg << "Environment:          #{@options['environment']}\n"
-    msg << "Posting to:           #{@es_url}\n\n" if should_transform?("es")
-    msg << "Posting to:           #{@solr_url}\n\n" if should_transform?("solr")
+    msg << "Posting to:           #{@es.index_url}\n\n" if should_post?("es")
+    msg << "Posting to:           #{@solr_url}\n\n" if should_post?("solr")
     msg << "Format:               #{@options['format']}\n" if @options["format"]
     msg << "Regex:                #{@options['regex']}\n" if @options["regex"]
     msg << "Allowed Files:        #{@options['allowed_files']}\n" if @options["allowed_files"]
@@ -270,21 +262,6 @@ class Datura::DataManager
     end
   end
 
-  # NOTE plural method name in order to accommodate other platforms
-  # we may be checking in the future
-  def set_schema_mappings
-    # only get the elasticsearch mapping if it is needed for post request
-    if should_transform?("es") && !@options["transform_only"]
-      begin
-        es = Datura::Elasticsearch::Index.new(@options)
-        @es_schema_mapping = es.get_schema_mapping
-      rescue => e
-        raise "Unable to get the elasticsearch schema: #{e}"
-      end
-    end
-
-  end
-
   def set_up_logger
     # make directory if one does not already exist
     log_dir = File.join(@options["collection_dir"], "logs")
@@ -296,6 +273,22 @@ class Datura::DataManager
       @options["log_size"],
       level: Object.const_get(@options["log_level"])
     )
+  end
+
+  def set_up_services
+    if should_post?("es")
+      # set up elasticsearch instance
+      @es = Datura::Elasticsearch::Index.new(@options, schema_mapping: true)
+    end
+
+    if should_post?("solr")
+      # set up posting URLs
+      @solr_url = File.join(options["solr_path"], options["solr_core"], "update")
+    end
+  end
+
+  def should_post?(type)
+    should_transform?(type) && !@options["transform_only"]
   end
 
   def should_transform?(type)
@@ -316,7 +309,7 @@ class Datura::DataManager
           error_with_transform_and_post("#{e}", @error_es)
         end
       else
-        res_es = file.post_es(@es_url)
+        res_es = file.post_es(@es)
         if res_es && res_es.has_key?("error")
           error_with_transform_and_post(res_es["error"], @error_es)
         end
