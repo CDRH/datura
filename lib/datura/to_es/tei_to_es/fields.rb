@@ -68,7 +68,7 @@ class TeiToEs < XmlToEs
   end
 
   def date_display
-    date = get_text(@xpaths["date_display"])
+    get_text(@xpaths["date_display"])
   end
 
   def date_not_after
