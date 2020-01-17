@@ -6,7 +6,7 @@ class Datura::HelpersTest < Minitest::Test
   def test_get_directory_files
     # real directory
     files = Datura::Helpers.get_directory_files("#{File.dirname(__FILE__)}/fixtures")
-    assert_equal 2, files.length
+    assert_equal 3, files.length
 
     # not a real directory
     files = Datura::Helpers.get_directory_files("/fake")

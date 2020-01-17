@@ -38,6 +38,8 @@ default:
   # current version of the API (powered by Elasticsearch)
   # this setting determines which of the schemas will be used
   api_version: "override with value like '1.0' or '2.0'"
+  # NOTE: es_schema option is set later as combination of above
+  # es_schema_override, es_schema_path, and api_version
 
   # RESOURCE LOCATIONS
   data_base: https://cdrhmedia.unl.edu      # xml, csv, html snippets, etc
