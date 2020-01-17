@@ -259,6 +259,10 @@ mappings:
         mapping:
           type: keyword
           normalizer: keyword_normalized
+    - nested_fields:
+        match: "*_n"
+        mapping:
+          type: nested
     - text_fields:
         match: "*_t"
         mapping:

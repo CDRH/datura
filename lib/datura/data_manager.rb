@@ -68,12 +68,13 @@ class Datura::DataManager
   def run
     @time = [Time.now]
     # log starting information for user
+    check_options
+    set_up_services
+
     msg = options_msg
     @log.info(msg)
     puts msg
 
-    check_options
-    set_up_services
     pre_file_preparation
     @files = prepare_files
 

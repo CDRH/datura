@@ -75,15 +75,25 @@ class Datura::Elasticsearch::Index
 
   def get_schema_mapping
     # if mapping has not already been set, get the schema and manipulate
-    if @schema_mapping.nil?
-      @schema_mapping = {}
-      @schema_mapping["dynamic"] = nil
+    if !defined?(@schema_mapping)
+      @schema_mapping = {
+        "dyanmic" => nil,  # /regex|regex/
+        "fields" => [],    # [ fields ]
+        "nested" => {}     # { field: [ nested_fields ] }
+      }
 
       schema = get_schema[@options["es_index"]]
-      @schema_mapping["fields"] = schema["mappings"]["_doc"]["properties"].keys
+      doc = schema["mappings"]["_doc"]
+
+      doc["properties"].each do |field, value|
+        @schema_mapping["fields"] << field
+        if value["type"] == "nested"
+          @schema_mapping["nested"][field] = value["properties"].keys
+        end
+      end
 
       regex_pieces = []
-      schema["mappings"]["_doc"]["dynamic_templates"].each do |template|
+      doc["dynamic_templates"].each do |template|
         mapping = template.map { |k,v| v["match"] }.first
         # dynamic fields are listed like *_k and will need
         # to be converted to ^.*_k$, then combined into a mega-regex
@@ -114,19 +124,43 @@ class Datura::Elasticsearch::Index
 
   # doc: ruby hash corresponding with Elasticsearch document JSON
   def valid_document?(doc)
-    get_schema_mapping if @schema_mapping.nil?
-    fields = @schema_mapping["fields"]
-    dynamic = @schema_mapping["dynamic"]
+    get_schema_mapping if !defined?(@schema_mapping)
     # NOTE: validation only checking the names of fields
     # against the schema, NOT the contents of fields
-    # since Elasticsearch itself will know if you are sending it
-    # text instead of a date field, etc
+    # Elasticsearch itself checks that you are sending date
+    # formats to date fields, etc
 
-    valid = doc.keys.all? do |doc_field|
-      # check if exact match for a field or if it matches dynamic field mapping
-      fields.include?(doc_field) || doc_field.match(dynamic)
+    doc.all? do |field, value|
+      if valid_field?(field)
+        # great, the field is valid, now check if it is a parent
+        nested = Array(value).map do |nested|
+          if nested.class == Hash
+            nested.keys.all? { |k| valid_field?(k, field) }
+          end
+        end
+        # if the array is empty, ignore it, otherwise find out if any
+        # nested fields failed the validate
+        nested.compact.all? { |t| t }
+      else
+        false
+      end
     end
-    valid
+  end
+
+  # if a field, including those inside nested fields,
+  # matches a top level field mapping or a dynamic field,
+  # they are good to go
+  # further, if this is a nested field, they may check
+  # to see if the specific nesting mapping validates them
+  def valid_field?(field, parent=nil)
+    @schema_mapping["fields"].include?(field) ||
+      field.match(@schema_mapping["dynamic"]) ||
+      valid_nested_field?(field, parent)
+  end
+
+  def valid_nested_field?(field, parent)
+    parent_mapping = @schema_mapping["nested"][parent]
+    parent_mapping.include?(field) if parent_mapping
   end
 
 end
