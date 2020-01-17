@@ -69,7 +69,7 @@ class FileType
           begin
             RestClient.put("#{es.index_url}/_doc/#{id}", doc.to_json, {:content_type => :json } )
           rescue => e
-            "Error transforming or posting to ES for #{self.filename(false)}: #{e.response}"
+            error = "Error transforming or posting to ES for #{self.filename(false)}: #{e.response}"
           end
         else
           error = "Document #{id} did not validate against the elasticsearch schema"
