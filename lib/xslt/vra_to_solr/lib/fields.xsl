@@ -499,7 +499,9 @@
   <!-- ========== text ========== -->
 
   <xsl:template name="text">
-    <xsl:value-of select="/vra"/>
+    <field name="text">
+      <xsl:value-of select="/vra"/>
+    </field>
   </xsl:template>
 
   <!-- ========== fig_location ========== -->
