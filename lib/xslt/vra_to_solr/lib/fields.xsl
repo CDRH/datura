@@ -222,7 +222,7 @@
         <xsl:call-template name="subCategory"/>        
         
         <!-- topic -->
-        <!--<xsl:call-template name="topic"/>-->
+        <xsl:call-template name="topic"/>
         
         <!-- keywords -->
         <!--<xsl:call-template name="keywords"/>-->
@@ -467,7 +467,11 @@
   <!-- ========== topic ========== -->
 
   <xsl:template name="topic">
-    <!-- not yet handling topic  -->
+    <xsl:if test="/vra/work/subjectSet/display/text()">
+      <field name="topic">
+        <xsl:value-of select="/vra/work/subjectSet/display"/>
+      </field>
+    </xsl:if>
   </xsl:template>
 
   <!-- ========== keywords ========== -->
