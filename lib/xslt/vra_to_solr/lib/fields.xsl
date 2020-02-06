@@ -182,6 +182,7 @@
         <!-- extent -->
         
         <!-- language -->
+        <xsl:call-template name="language"/>
         <!-- relation -->
         <!-- coverage -->
         <!-- source -->
@@ -228,7 +229,7 @@
         <!--<xsl:call-template name="keywords"/>-->
         
         <!-- people -->
-        <!--<xsl:call-template name="people"/>-->
+        <xsl:call-template name="people"/>
         
         <!-- places -->
         <xsl:call-template name="places"/>
@@ -403,6 +404,11 @@
     <field name="format">
        <xsl:value-of select="/vra/collection[1]/techniqueSet[1]/technique[1]"></xsl:value-of>
     </field>
+  </xsl:template>
+
+  <!-- ========== language ========== -->
+  <xsl:template name="language">
+    <!-- not yet handling language -->
   </xsl:template>
 
   <!-- ========== source ========== -->
