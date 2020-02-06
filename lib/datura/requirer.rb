@@ -5,6 +5,8 @@ require_relative "parser.rb"
 
 current_dir = File.expand_path(File.dirname(__FILE__))
 
+require_relative "to_es/csv_to_es.rb"
+
 require_relative "to_es/html_to_es.rb"
 
 require_relative "to_es/tei_to_es.rb"

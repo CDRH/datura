@@ -41,18 +41,14 @@ class FileCsv < FileType
     })
   end
 
-  # most basic implementation assumes column header is the es field name
-  # operates with no logic on the fields
-  # YOU MUST OVERRIDE FOR CSVS WHICH DO NOT HAVE BESPOKE HEADINGS FOR API
+  # NOTE previously this blindly took column headings and tried
+  # to send them to Elasticsearch, but this will make a mess of
+  # our index mapping, so instead prefer to only push specific fields
+  # leaving "headers" in method arguments for backwards compatibility
+  #
+  # override as necessary per project
   def row_to_es(headers, row)
-    doc = {}
-    headers.each do |column|
-      doc[column] = row[column] if row[column]
-    end
-    if doc.key?("text") && doc.key?("title")
-      doc["text"] << " #{doc["title"]}"
-    end
-    doc
+    CsvToEs.new(row, options, @csv, self.filename(false)).json
   end
 
   # most basic implementation assumes column header is the solr field name
