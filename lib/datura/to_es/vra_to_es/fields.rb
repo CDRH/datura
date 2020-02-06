@@ -26,7 +26,7 @@ class VraToEs < XmlToEs
   # note this does not sort the creators
   def creator
     creators = get_list(@xpaths["creators"])
-    return creators.map { |creator| { "name" => CommonXml.normalize_space(creator) } }
+    return creators.map { |creator| { "name" => Datura::Helpers.normalize_space(creator) } }
   end
 
   # returns ; delineated string of alphabetized creators
@@ -48,8 +48,8 @@ class VraToEs < XmlToEs
     contributors.each do |ele|
       contrib_list << {
         "id" => "",
-        "name" => CommonXml.normalize_space(ele.xpath("name").text),
-        "role" => CommonXml.normalize_space(ele.xpath("role").text)
+        "name" => Datura::Helpers.normalize_space(ele.xpath("name").text),
+        "role" => Datura::Helpers.normalize_space(ele.xpath("role").text)
       }
     end
     return contrib_list
@@ -61,7 +61,7 @@ class VraToEs < XmlToEs
 
   def date(before=true)
     datestr = get_text(@xpaths["dates"]["earliest"])
-    CommonXml.date_standardize(datestr, before)
+    Datura::Helpers.date_standardize(datestr, before)
   end
 
   def date_display
@@ -115,14 +115,14 @@ class VraToEs < XmlToEs
     return eles.map do |p|
       {
         "id" => "",
-        "name" => CommonXml.normalize_space(p.text),
-        "role" => CommonXml.normalize_space(p["role"])
+        "name" => Datura::Helpers.normalize_space(p.text),
+        "role" => Datura::Helpers.normalize_space(p["role"])
       }
     end
   end
 
   def people
-    @json["person"].map { |p| CommonXml.normalize_space(p["name"]) }
+    @json["person"].map { |p| Datura::Helpers.normalize_space(p["name"]) }
   end
 
   def places
@@ -138,8 +138,8 @@ class VraToEs < XmlToEs
     people = eles.map do |p|
       {
         "id" => "",
-        "name" => CommonXml.normalize_space(p.text),
-        "role" => CommonXml.normalize_space(p["role"]),
+        "name" => Datura::Helpers.normalize_space(p.text),
+        "role" => Datura::Helpers.normalize_space(p["role"]),
       }
     end
     return people
@@ -175,12 +175,12 @@ class VraToEs < XmlToEs
   def text
     # handling separate fields in array
     # means no worrying about handling spacing between words
-    text = []
-    text << get_text(@xpaths["text"], false)
+    text_all = []
+    text_all << get_text(@xpaths["text"], false)
     # TODO: do we need to preserve tags like <i> in text? if so, turn get_text to true
-    # text << CommonXml.convert_tags_in_string(body)
-    text += text_additional
-    return CommonXml.normalize_space(text.join(" "))
+    # text_all << CommonXml.convert_tags_in_string(body)
+    text_all += text_additional
+    Datura::Helpers.normalize_space(text_all.join(" "))
   end
 
   def text_additional
@@ -188,8 +188,7 @@ class VraToEs < XmlToEs
     # searchable fields or information for collections
     # just make sure you return an array at the end!
 
-    text = []
-    text << title
+    [ title ]
   end
 
   def title
@@ -198,7 +197,7 @@ class VraToEs < XmlToEs
 
   def title_sort
     t = title
-    CommonXml.normalize_name(t)
+    Datura::Helpers.normalize_name(t)
   end
 
   def topics

@@ -111,7 +111,7 @@ class XmlToEs
           text = CommonXml.to_display_text(content)
         end
         # remove whitespace of all kinds from the text
-        text = CommonXml.normalize_space(text)
+        text = Datura::Helpers.normalize_space(text)
         if text.length > 0
           list << text
         end

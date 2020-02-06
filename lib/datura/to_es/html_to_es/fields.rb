@@ -137,20 +137,18 @@ class HtmlToEs < XmlToEs
   def text
     # handling separate fields in array
     # means no worrying about handling spacing between words
-    text = []
+    text_all = []
     body = get_text(@xpaths["text"], false)
-    text << body
-    text += text_additional
-    return CommonXml.normalize_space(text.join(" "))
+    text_all << body
+    text_all += text_additional
+    Datura::Helpers.normalize_space(text_all.join(" "))
   end
 
   def text_additional
     # Note: Override this per collection if you need additional
     # searchable fields or information for collections
     # just make sure you return an array at the end!
-
-    text = []
-    text << title
+    [ title ]
   end
 
   def title
@@ -158,8 +156,7 @@ class HtmlToEs < XmlToEs
   end
 
   def title_sort
-    t = title
-    CommonXml.normalize_name(t)
+    Datura::Helpers.normalize_name(title)
   end
 
   def topics
@@ -172,9 +169,7 @@ class HtmlToEs < XmlToEs
   end
 
   def uri_data
-    base = @options["data_base"]
-    subpath = "data/#{@options["collection"]}/tei"
-    "#{base}/#{subpath}/#{@id}.xml"
+    # TODO per repository
   end
 
   def uri_html

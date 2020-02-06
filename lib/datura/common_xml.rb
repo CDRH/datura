@@ -39,59 +39,24 @@ module CommonXml
     return file_xml
   end
 
-  # pass in a date and identify whether it should be before or after
-  # in order to fill in dates (ex: 2014 => 2014-12-31)
-
+  # deprecated method
   def self.date_display(date, nd_text="N.D.")
-    date_hyphen = CommonXml.date_standardize(date)
-    if date_hyphen
-      y, m, d = date_hyphen.split("-").map { |s| s.to_i }
-      date_obj = Date.new(y, m, d)
-      return date_obj.strftime("%B %-d, %Y")
-    else
-      return nd_text
-    end
+    Datura::Helpers.date_display(date, nd_text)
   end
 
-  # automatically defaults to setting incomplete dates to the earliest
-  # date (2016-07 becomes 2016-07-01) but pass in "false" in order
-  # to set it to the latest available date
+  # deprecated method
   def self.date_standardize(date, before=true)
-    return_date = nil
-    if date
-      y, m, d = date.split(/-|\//)
-      if y && y.length == 4
-        # use -1 to indicate that this will be the last possible
-        m_default = before ? "01" : "-1"
-        d_default = before ? "01" : "-1"
-        m = m_default if !m
-        d = d_default if !d
-        # TODO clean this up because man it sucks
-        if Date.valid_date?(y.to_i, m.to_i, d.to_i)
-          date = Date.new(y.to_i, m.to_i, d.to_i)
-          month = date.month.to_s.rjust(2, "0")
-          day = date.day.to_s.rjust(2, "0")
-          return_date = "#{date.year}-#{month}-#{day}"
-        end
-      end
-    end
-    return_date
+    Datura::Helpers.date_standardize(date, before)
   end
 
+  # deprecated method
   def self.normalize_name(abnormal)
-    # put in lower case
-    # remove starting a, an, or the
-    down = abnormal.downcase
-    down.gsub(/^the |^a |^an /, "")
+    Datura::Helpers.normalize_name(abnormal)
   end
 
-  # imitates xslt fn:normalize-space
-  # removes leading / trailing whitespace, newlines, repeating whitespace, etc
+  # deprecated method
   def self.normalize_space(abnormal)
-    if abnormal
-      normal = abnormal.strip.gsub(/\s+/, " ")
-    end
-    normal || abnormal
+    Datura::Helpers.normalize_space(abnormal)
   end
 
   # saxon accepts params in following manner
@@ -114,6 +79,15 @@ module CommonXml
   # returns string object
   def self.to_display_text(aXml)
     CommonXml.sub_corrections(aXml).text
+  end
+
+  # TODO remove in 2021
+  class << self
+    extend Gem::Deprecate
+    deprecate :date_display, :"Datura::Helpers.normalize_space", 2021, 1
+    deprecate :date_standardize, :"Datura::Helpers.normalize_space", 2021, 1
+    deprecate :normalize_name, :"Datura::Helpers.normalize_space", 2021, 1
+    deprecate :normalize_space, :"Datura::Helpers.normalize_space", 2021, 1
   end
 
 end

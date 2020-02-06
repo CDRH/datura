@@ -21,13 +21,13 @@ class TeiToEs < XmlToEs
 
   def category
     category = get_text(@xpaths["category"])
-    return category.length > 0 ? CommonXml.normalize_space(category) : "none"
+    return category.length > 0 ? Datura::Helpers.normalize_space(category) : "none"
   end
 
   # note this does not sort the creators
   def creator
     creators = get_list(@xpaths["creators"])
-    return creators.map { |creator| { "name" => CommonXml.normalize_space(creator) } }
+    return creators.map { |creator| { "name" => Datura::Helpers.normalize_space(creator) } }
   end
 
   # returns ; delineated string of alphabetized creators
@@ -50,8 +50,8 @@ class TeiToEs < XmlToEs
       eles.each do |ele|
         contribs << {
           "id" => ele["id"],
-          "name" => CommonXml.normalize_space(ele.text),
-          "role" => CommonXml.normalize_space(ele["role"])
+          "name" => Datura::Helpers.normalize_space(ele.text),
+          "role" => Datura::Helpers.normalize_space(ele["role"])
         }
       end
     end
@@ -64,7 +64,7 @@ class TeiToEs < XmlToEs
 
   def date(before=true)
     datestr = get_text(@xpaths["date"])
-    return CommonXml.date_standardize(datestr, before)
+    return Datura::Helpers.date_standardize(datestr, before)
   end
 
   def date_display
@@ -124,15 +124,15 @@ class TeiToEs < XmlToEs
     people = eles.map do |p|
       {
         "id" => "",
-        "name" => CommonXml.normalize_space(p.text),
-        "role" => CommonXml.normalize_space(p["role"])
+        "name" => Datura::Helpers.normalize_space(p.text),
+        "role" => Datura::Helpers.normalize_space(p["role"])
       }
     end
     return people
   end
 
   def people
-    @json["person"].map { |p| CommonXml.normalize_space(p["name"]) }
+    @json["person"].map { |p| Datura::Helpers.normalize_space(p["name"]) }
   end
 
   def places
@@ -148,7 +148,7 @@ class TeiToEs < XmlToEs
     people = eles.map do |p|
       {
         "id" => "",
-        "name" => CommonXml.normalize_space(p.text),
+        "name" => Datura::Helpers.normalize_space(p.text),
         "role" => "recipient"
       }
     end
@@ -186,13 +186,13 @@ class TeiToEs < XmlToEs
   def text
     # handling separate fields in array
     # means no worrying about handling spacing between words
-    text = []
+    text_all = []
     body = get_text(@xpaths["text"], false)
-    text << body
+    text_all << body
     # TODO: do we need to preserve tags like <i> in text? if so, turn get_text to true
-    # text << CommonXml.convert_tags_in_string(body)
-    text += text_additional
-    return CommonXml.normalize_space(text.join(" "))
+    # text_all << CommonXml.convert_tags_in_string(body)
+    text_all += text_additional
+    Datura::Helpers.normalize_space(text_all.join(" "))
   end
 
   def text_additional
@@ -200,8 +200,7 @@ class TeiToEs < XmlToEs
     # searchable fields or information for collections
     # just make sure you return an array at the end!
 
-    text = []
-    text << title
+    [ title ]
   end
 
   def title
@@ -214,7 +213,7 @@ class TeiToEs < XmlToEs
 
   def title_sort
     t = title
-    CommonXml.normalize_name(t)
+    Datura::Helpers.normalize_name(t)
   end
 
   def topics
