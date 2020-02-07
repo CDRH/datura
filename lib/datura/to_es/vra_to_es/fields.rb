@@ -26,12 +26,12 @@ class VraToEs < XmlToEs
   # note this does not sort the creators
   def creator
     creators = get_list(@xpaths["creators"])
-    return creators.map { |creator| { "name" => Datura::Helpers.normalize_space(creator) } }
+    creators.map { |c| { "name" => Datura::Helpers.normalize_space(c) } }
   end
 
   # returns ; delineated string of alphabetized creators
   def creator_sort
-    return get_text(@xpaths["creators"])
+    get_text(@xpaths["creators"])
   end
 
   def collection
@@ -52,7 +52,7 @@ class VraToEs < XmlToEs
         "role" => Datura::Helpers.normalize_space(ele.xpath("role").text)
       }
     end
-    return contrib_list
+    contrib_list
   end
 
   def data_type
@@ -112,7 +112,7 @@ class VraToEs < XmlToEs
     # and put in the xpaths above, also for attributes, etc
     # should contain name, id, and role
     eles = @xml.xpath(@xpaths["person"])
-    return eles.map do |p|
+    eles.map do |p|
       {
         "id" => "",
         "name" => Datura::Helpers.normalize_space(p.text),
@@ -135,14 +135,13 @@ class VraToEs < XmlToEs
 
   def recipient
     eles = @xml.xpath(@xpaths["recipient"])
-    people = eles.map do |p|
+    eles.map do |p|
       {
         "id" => "",
         "name" => Datura::Helpers.normalize_space(p.text),
         "role" => Datura::Helpers.normalize_space(p["role"]),
       }
     end
-    return people
   end
 
   def rights
@@ -196,8 +195,7 @@ class VraToEs < XmlToEs
   end
 
   def title_sort
-    t = title
-    Datura::Helpers.normalize_name(t)
+    Datura::Helpers.normalize_name(title)
   end
 
   def topics
@@ -212,13 +210,13 @@ class VraToEs < XmlToEs
   def uri_data
     base = @options["data_base"]
     subpath = "data/#{@options["collection"]}/source/vra"
-    return "#{base}/#{subpath}/#{@id}.xml"
+    "#{base}/#{subpath}/#{@id}.xml"
   end
 
   def uri_html
     base = @options["data_base"]
     subpath = "data/#{@options["collection"]}/output/#{@options["environment"]}/html"
-    return "#{base}/#{subpath}/#{@id}.html"
+    "#{base}/#{subpath}/#{@id}.html"
   end
 
   def works

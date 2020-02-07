@@ -34,7 +34,7 @@ class FileCsv < FileType
 
   # override to change encoding
   def read_csv(file_location, encoding="utf-8")
-    return CSV.read(file_location, {
+    CSV.read(file_location, {
       encoding: encoding,
       headers: true,
       return_headers: true
@@ -57,7 +57,7 @@ class FileCsv < FileType
     headers.each do |column|
       doc.add_child("<field name='#{column}'>#{row[column]}</field>") if row[column]
     end
-    return doc
+    doc
   end
 
   def transform_es
@@ -107,7 +107,7 @@ class FileCsv < FileType
       filepath = "#{@out_solr}/#{self.filename(false)}.xml"
       File.open(filepath, "w") { |f| f.write(solr_doc.root.to_xml) }
     end
-    return { "doc" => solr_doc.root.to_xml }
+    { "doc" => solr_doc.root.to_xml }
   end
 
   def write_html_to_file(builder, index)

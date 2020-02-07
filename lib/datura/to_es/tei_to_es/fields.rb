@@ -20,19 +20,19 @@ class TeiToEs < XmlToEs
   end
 
   def category
-    category = get_text(@xpaths["category"])
-    return category.length > 0 ? Datura::Helpers.normalize_space(category) : "none"
+    cat = get_text(@xpaths["category"])
+    cat.length > 0 ? Datura::Helpers.normalize_space(cat) : "none"
   end
 
   # note this does not sort the creators
   def creator
     creators = get_list(@xpaths["creators"])
-    return creators.map { |creator| { "name" => Datura::Helpers.normalize_space(creator) } }
+    creators.map { |c| { "name" => Datura::Helpers.normalize_space(c) } }
   end
 
   # returns ; delineated string of alphabetized creators
   def creator_sort
-    return get_text(@xpaths["creators"])
+    get_text(@xpaths["creators"])
   end
 
   def collection
@@ -64,11 +64,11 @@ class TeiToEs < XmlToEs
 
   def date(before=true)
     datestr = get_text(@xpaths["date"])
-    return Datura::Helpers.date_standardize(datestr, before)
+    Datura::Helpers.date_standardize(datestr, before)
   end
 
   def date_display
-    date = get_text(@xpaths["date_display"])
+    get_text(@xpaths["date_display"])
   end
 
   def date_not_after
@@ -121,14 +121,13 @@ class TeiToEs < XmlToEs
     # and put in the xpaths above, also for attributes, etc
     # should contain name, id, and role
     eles = @xml.xpath(@xpaths["person"])
-    people = eles.map do |p|
+    eles.map do |p|
       {
         "id" => "",
         "name" => Datura::Helpers.normalize_space(p.text),
         "role" => Datura::Helpers.normalize_space(p["role"])
       }
     end
-    return people
   end
 
   def people
@@ -136,7 +135,7 @@ class TeiToEs < XmlToEs
   end
 
   def places
-    return get_list(@xpaths["places"])
+    get_list(@xpaths["places"])
   end
 
   def publisher
@@ -145,14 +144,13 @@ class TeiToEs < XmlToEs
 
   def recipient
     eles = @xml.xpath(@xpaths["recipient"])
-    people = eles.map do |p|
+    eles.map do |p|
       {
         "id" => "",
         "name" => Datura::Helpers.normalize_space(p.text),
         "role" => "recipient"
       }
     end
-    return people
   end
 
   def rights
@@ -179,8 +177,8 @@ class TeiToEs < XmlToEs
   end
 
   def subcategory
-    subcategory = get_text(@xpaths["subcategory"])
-    subcategory.length > 0 ? subcategory : "none"
+    subcat = get_text(@xpaths["subcategory"])
+    subcat.length > 0 ? subcat : "none"
   end
 
   def text
@@ -204,16 +202,15 @@ class TeiToEs < XmlToEs
   end
 
   def title
-    title = get_text(@xpaths["titles"]["main"])
-    if title.empty?
-      title = get_text(@xpaths["titles"]["alt"])
+    title_disp = get_text(@xpaths["titles"]["main"])
+    if title_disp.empty?
+      title_disp = get_text(@xpaths["titles"]["alt"])
     end
-    return title
+    title_disp
   end
 
   def title_sort
-    t = title
-    Datura::Helpers.normalize_name(t)
+    Datura::Helpers.normalize_name(title)
   end
 
   def topics
@@ -228,13 +225,13 @@ class TeiToEs < XmlToEs
   def uri_data
     base = @options["data_base"]
     subpath = "data/#{@options["collection"]}/source/tei"
-    return "#{base}/#{subpath}/#{@id}.xml"
+    "#{base}/#{subpath}/#{@id}.xml"
   end
 
   def uri_html
     base = @options["data_base"]
     subpath = "data/#{@options["collection"]}/output/#{@options["environment"]}/html"
-    return "#{base}/#{subpath}/#{@id}.html"
+    "#{base}/#{subpath}/#{@id}.html"
   end
 
   def works

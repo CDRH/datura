@@ -20,7 +20,7 @@ module CommonXml
       ele.delete("rend")
     end
     xml = CommonXml.sub_corrections(xml)
-    return xml
+    xml
   end
 
   # wrap in order to make valid xml
@@ -29,14 +29,14 @@ module CommonXml
   def self.convert_tags_in_string(text)
     xml = Nokogiri::XML("<xml>#{text}</xml>")
     converted = convert_tags(xml)
-    return converted.xpath("//xml").inner_html
+    converted.xpath("//xml").inner_html
   end
 
   def self.create_xml_object(filepath, remove_ns=true)
     file_xml = File.open(filepath) { |f| Nokogiri::XML(f, &:noblanks) }
     # TODO is this a good idea?
     file_xml.remove_namespaces! if remove_ns
-    return file_xml
+    file_xml
   end
 
   # deprecated method
@@ -66,7 +66,7 @@ module CommonXml
     if param_hash
       params = param_hash.map{ |k, v| "#{k}=#{v}" }.join(" ")
     end
-    return params
+    params
   end
 
   def self.sub_corrections(aXml)

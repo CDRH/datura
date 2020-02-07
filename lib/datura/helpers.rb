@@ -54,10 +54,10 @@ module Datura::Helpers
     exists = File.directory?(directory)
     if exists
       files = Dir["#{directory}/*"]  # grab all the files inside that directory
-      return files
+      files
     else
       puts "Unable to find a directory at #{directory}" if verbose_flag
-      return nil
+      nil
     end
   end
   # end get_directory_files
@@ -70,14 +70,14 @@ module Datura::Helpers
       puts "#{msg}: \n"
       new_input = STDIN.gets.chomp
       if !new_input.nil? && new_input.length > 0
-        return new_input
+        new_input
       else
         # keep bugging the user until they answer or despair
         puts "Please enter a valid response"
         get_input(nil, msg)
       end
     else
-      return original_input
+      original_input
     end
   end
 
@@ -136,11 +136,11 @@ module Datura::Helpers
   def self.should_update?(file, since_date=nil)
     if since_date.nil?
       # if there is no specified date, then update everything
-      return true
+      true
     else
       # if a file has been updated since a time specified by user
       file_date = File.mtime(file)
-      return file_date > since_date
+      file_date > since_date
     end
   end
 

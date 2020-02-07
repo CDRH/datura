@@ -51,7 +51,7 @@ class XmlToEs
   end
 
   def get_id
-    return @filename
+    @filename
   end
 
   def override_xpaths
@@ -74,7 +74,7 @@ class XmlToEs
   # returns an array with the html value in xpath
   def get_list(xpaths, keep_tags=false, xml=nil)
     xpath_array = xpaths.class == Array ? xpaths : [xpaths]
-    return get_xpaths(xpath_array, keep_tags, xml)
+    get_xpaths(xpath_array, keep_tags, xml)
   end
 
   # get_text
@@ -87,7 +87,7 @@ class XmlToEs
     xpath_array = xpaths.class == Array ? xpaths : [xpaths]
     list = get_xpaths(xpath_array, keep_tags, xml)
     sorted = list.sort
-    return sorted.join("#{delimiter} ")
+    sorted.join("#{delimiter} ")
   end
 
   # Note: Recommend that collection team do NOT use this method directly
@@ -117,7 +117,7 @@ class XmlToEs
         end
       end
     end
-    return list.uniq
+    list.uniq
   end
 
   def preprocessing

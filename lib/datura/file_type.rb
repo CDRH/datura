@@ -95,11 +95,11 @@ class FileType
 
   def print_es
     json = transform_es
-    return pretty_json(json)
+    pretty_json(json)
   end
 
   def print_solr
-    return transform_solr
+    transform_solr
   end
 
   # these rules apply to all XML files (HTML / TEI / VRA)
@@ -149,7 +149,7 @@ class FileType
     else
       req = exec_xsl(@file_location, @script_solr, "xml", nil, @options["variables_solr"])
     end
-    return req
+    req
   end
 
   private

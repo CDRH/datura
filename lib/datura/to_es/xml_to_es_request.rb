@@ -27,7 +27,7 @@ class XmlToEs
     assemble_text
     assemble_collection_specific
 
-    return @json
+    @json
   end
 
   ##############

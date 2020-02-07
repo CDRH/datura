@@ -86,6 +86,6 @@ module Datura::Parser
     # magic
     optparse.parse!
 
-    return options
+    options
   end
 end

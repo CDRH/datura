@@ -32,6 +32,6 @@ module Datura::Parser
 
     optparse.parse!
 
-    return options
+    options
   end
 end
