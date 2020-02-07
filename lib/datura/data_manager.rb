@@ -18,13 +18,15 @@ class Datura::DataManager
   attr_accessor :collection
 
   def self.format_to_class
-    {
+    classes = {
       "csv" => FileCsv,
       "html" => FileHtml,
       "tei" => FileTei,
       "vra" => FileVra,
       "webs" => FileWebs
     }
+    classes.default = FileCustom
+    classes
   end
 
   def initialize
