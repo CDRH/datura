@@ -17,6 +17,7 @@ Changelog up to date
 ### Changed
 - Upgraded Ruby version to 2.7.0, updated gems
 - VRA to Solr field "text" fixed to post correctly
+- VRA to Solr field "people" and "language" made overridable
 - Updated URL to Saxon HE software
 
 ## [v0.1.4](https://github.com/CDRH/datura/compare/v0.1.3...v0.1.4) - 2019-09-17 - PB Update
