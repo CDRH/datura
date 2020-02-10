@@ -1,7 +1,7 @@
-class WebsToEs < XmlToEs
-
+class CustomToEs
+  include EsRequest
   # please refer to generic es_request.rb file
-  # and override methods specific to TEI transformation here
+  # and override the JSON being sent to elasticsearch here, if needed
   # project specific overrides should go in the COLLECTION's overrides!
 
 end

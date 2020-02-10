@@ -5,19 +5,11 @@ require_relative "parser.rb"
 
 current_dir = File.expand_path(File.dirname(__FILE__))
 
-require_relative "to_es/csv_to_es.rb"
+require_relative "to_es/es_request.rb"
 
-require_relative "to_es/html_to_es.rb"
-
-require_relative "to_es/tei_to_es.rb"
-require_relative "to_es/tei_to_es/tei_to_es_personography.rb"
-
-require_relative "to_es/webs_to_es.rb"
-
-require_relative "to_es/vra_to_es.rb"
-require_relative "to_es/vra_to_es/vra_to_es_personography.rb"
-
-# Dir["#{current_dir}/tei_to_es/*.rb"].each {|f| require f }
+# x_to_es classes
+Dir["#{current_dir}/to_es/*.rb"].each { |f| require f }
+Dir["#{current_dir}/to_es/**/*.rb"].each { |f| require f }
 
 # file types
-Dir["#{current_dir}/file_types/*.rb"].each {|f| require f }
+Dir["#{current_dir}/file_types/*.rb"].each { |f| require f }
