@@ -8,8 +8,8 @@ class FileCustom < FileType
 
   def initialize(file_location, options)
     super(file_location, options)
-    @format = get_format(file_location)
-    @file = read_file(file_location)
+    @format = get_format
+    @file = read_file
   end
 
   def build_es_documents
@@ -33,15 +33,15 @@ class FileCustom < FileType
     docs.compact
   end
 
-  def get_format(file_location)
+  def get_format
     # assumes that the format is in the directory structure
-    File.dirname(file_location).split("/").last
+    File.dirname(@file_location).split("/").last
   end
 
   # NOTE: you will likely need to override this method
   # depending on the format in question
-  def read_file(file_location)
-    File.read(file_location)
+  def read_file
+    File.read(@file_location)
   end
 
   def subdocs
