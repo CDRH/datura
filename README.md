@@ -2,6 +2,9 @@
 
 Welcome to this temporary documentation for Datura, a gem dedicated to transforming and posting data sources from CDRH projects.  This gem is intended to be used with a collection containing TEI, VRA, CSVs, and more.
 
+Looking for information about how to post documents? Check out the
+[documentation for posting](/docs/3_manage/post.md).
+
 ## Install
 
 
