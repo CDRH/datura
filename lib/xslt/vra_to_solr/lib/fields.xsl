@@ -182,6 +182,7 @@
         <!-- extent -->
         
         <!-- language -->
+        <xsl:call-template name="language"/>
         <!-- relation -->
         <!-- coverage -->
         <!-- source -->
@@ -222,13 +223,13 @@
         <xsl:call-template name="subCategory"/>        
         
         <!-- topic -->
-        <!--<xsl:call-template name="topic"/>-->
+        <xsl:call-template name="topic"/>
         
         <!-- keywords -->
         <!--<xsl:call-template name="keywords"/>-->
         
         <!-- people -->
-        <!--<xsl:call-template name="people"/>-->
+        <xsl:call-template name="people"/>
         
         <!-- places -->
         <xsl:call-template name="places"/>
@@ -405,6 +406,11 @@
     </field>
   </xsl:template>
 
+  <!-- ========== language ========== -->
+  <xsl:template name="language">
+    <!-- not yet handling language -->
+  </xsl:template>
+
   <!-- ========== source ========== -->
 
   <xsl:template name="source">
@@ -467,7 +473,11 @@
   <!-- ========== topic ========== -->
 
   <xsl:template name="topic">
-    <!-- not yet handling topic  -->
+    <xsl:if test="/vra/work/subjectSet/display/text()">
+      <field name="topic">
+        <xsl:value-of select="/vra/work/subjectSet/display"/>
+      </field>
+    </xsl:if>
   </xsl:template>
 
   <!-- ========== keywords ========== -->
@@ -499,7 +509,9 @@
   <!-- ========== text ========== -->
 
   <xsl:template name="text">
-    <xsl:value-of select="/vra"/>
+    <field name="text">
+      <xsl:value-of select="/vra"/>
+    </field>
   </xsl:template>
 
   <!-- ========== fig_location ========== -->

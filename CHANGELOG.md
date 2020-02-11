@@ -9,6 +9,22 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 Changelog up to date
 
+## [v0.1.5](https://github.com/CDRH/datura/compare/v0.1.4...v0.1.5) - 2020-02-03 - VRA to Solr
+
+### Added
+- VRA to Solr field "topic" set up with basic functionality
+
+### Changed
+- Upgraded Ruby version to 2.7.0, updated gems
+- VRA to Solr field "text" fixed to post correctly
+- VRA to Solr field "people" and "language" made overridable
+- Updated URL to Saxon HE software
+
+## [v0.1.4](https://github.com/CDRH/datura/compare/v0.1.3...v0.1.4) - 2019-09-17 - PB Update
+
+### Changed
+- Removed match on `pb/@xml:id` for tei-to-html
+
 ## [v0.1.3](https://github.com/CDRH/datura/compare/v0.1.2...v0.1.3) - 2019-08-21 - IIIF Manifests
 
 ### Added

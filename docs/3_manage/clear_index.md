@@ -45,7 +45,7 @@ You can remove entries by field + regex
 
 In order for these scripts to execute correctly, you will need to make sure that the configuration files are set up correctly.
 
-## Clearing the Entier Index
+## Clearing the Entire Index
 
 If you must, you can set the collection to "all" in order to wipe everything regardless of the collection running the command.
 
