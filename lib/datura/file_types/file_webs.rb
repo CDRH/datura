@@ -10,6 +10,10 @@ class FileWebs < FileType
     super(file_location, options)
   end
 
+  def parse_markup_lang_file
+    CommonXml.create_html_object(self.file_location)
+  end
+
   def subdoc_xpaths
     { "/" => WebsToEs }
   end

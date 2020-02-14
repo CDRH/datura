@@ -32,11 +32,17 @@ module CommonXml
     return converted.xpath("//xml").inner_html
   end
 
+  def self.create_html_object(filepath, remove_ns=true)
+    file_html = File.open(filepath) { |f| Nokogiri::HTML(f, &:noblanks) }
+    file_html.remove_namespaces! if remove_ns
+    file_html
+  end
+
   def self.create_xml_object(filepath, remove_ns=true)
     file_xml = File.open(filepath) { |f| Nokogiri::XML(f, &:noblanks) }
     # TODO is this a good idea?
     file_xml.remove_namespaces! if remove_ns
-    return file_xml
+    file_xml
   end
 
   # pass in a date and identify whether it should be before or after

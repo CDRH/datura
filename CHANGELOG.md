@@ -9,6 +9,13 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 Changelog up to date
 
+## [v0.1.6](https://github.com/CDRH/datura/compare/v0.1.5...v0.1.6) - 2020-02-11 - WEBS HTML Object
+
+### Changed
+- FileType elasticsearch transform now has swappable component when reading
+XML-type files. Webscraping script altered to manipulate HTML instead of
+XML object type
+
 ## [v0.1.5](https://github.com/CDRH/datura/compare/v0.1.4...v0.1.5) - 2020-02-03 - VRA to Solr
 
 ### Added
