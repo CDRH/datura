@@ -32,10 +32,21 @@ code!
 
 ## Reading Your Format and Prepping for Launch
 
+Just a note before we begin to clarify some of the variables that you may come
+across while you're setting up your custom format:
+
+- `@file_location` -- the fullpath to the specific file being processed
+  - `/var/local/www/data/collections/source/[custom_format]/test.json`
+- `@filename` -- the specific file without a path
+  - `test.json`
+- `self.filename()` -- method specific to FileType and subclasses to get the filename
+- `@file` -- very generically named, `@file` is the version of your file that has been read in by Ruby
+  - override the `read_file` method to make `@file` into an XML / JSON / YAML / etc object as needed by your custom class (see below)
+
 ### read_file
 
 In [file_custom.rb](/lib/datura/file_types/file_custom.rb), Datura reads in a
-file as text and makes a new CustomToEs object from it. You may wish to
+file as text and makes a new CustomToEs object from it, which is stored as `@file`. You may wish to
 override the following to accommodate your format:
 
 ```
