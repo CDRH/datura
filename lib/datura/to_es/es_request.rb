@@ -1,8 +1,14 @@
-# request creation portion of Xml to ES transformation
-# override for VRA / TEI concerns in [type]_to_es.rb
-# files or in collection specific overrides
+# assemble_json sets up the JSON structure that will be
+# used to create elasticsearch documents. However, the JSON
+# structure depend on subclasses to define methods like
+# "category" and "subcategory" to populate the JSON.
+#
+# This module itself is not standalone, but by putting
+# the JSON structure in a common place, those classes
+# including it do not each need to redefine the JSON
+# request structure
 
-class XmlToEs
+module EsRequest
 
   def assemble_json
     # Note: if your collection does not require a specific field
@@ -27,7 +33,7 @@ class XmlToEs
     assemble_text
     assemble_collection_specific
 
-    return @json
+    @json
   end
 
   ##############

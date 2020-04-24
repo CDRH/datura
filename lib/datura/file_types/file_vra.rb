@@ -11,7 +11,7 @@ class FileVra < FileType
 
   def subdoc_xpaths
     # planning ahead on this one, but not necessary at the moment
-    return {
+    {
       "/vra" => VraToEs,
       "//listPerson/person" => VraToEsPersonography
     }

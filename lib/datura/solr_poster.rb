@@ -23,7 +23,7 @@ class SolrPoster
     else
       puts "Unable to clear index!"
     end
-    return res
+    res
   end
 
   def clear_index_by_regex(field, regex)
@@ -37,7 +37,7 @@ class SolrPoster
     else
       puts "Unable to clear files from index!"
     end
-    return res
+    res
   end
 
   # returns an error or nil
@@ -49,7 +49,7 @@ class SolrPoster
         puts "UNABLE TO COMMIT YOUR CHANGES TO SOLR. Please commit manually"
       end
     end
-    return commit_res
+    commit_res
   end
 
   def post(content, type)
@@ -60,7 +60,7 @@ class SolrPoster
     request = Net::HTTP::Post.new(url.request_uri)
     request.body = content
     request["Content-Type"] = type
-    return http.request(request)
+    http.request(request)
   end
 
   # post_file
@@ -68,7 +68,7 @@ class SolrPoster
   #  TODO refactor?
   def post_file(file_location)
     file = IO.read(file_location)
-    return post_xml(file)
+    post_xml(file)
   end
 
   # post_json
@@ -91,7 +91,7 @@ class SolrPoster
     if content.nil? || content.empty?
       puts "Missing content to index to Solr. Please check that files are"
       puts "available to be converted to Solr format and that they were transformed."
-      return nil
+      nil
     else
       post(content, "application/xml")
     end

@@ -44,50 +44,6 @@ class CommonXmlTest < Minitest::Test
     # TODO
   end
 
-  def test_date_display
-    # normal dates
-    assert_equal "December 2, 2016", CommonXml.date_display("2016-12-02")
-    assert_equal "January 31, 2014", CommonXml.date_display("2014-01-31", "no date")
-    # no date
-    assert_equal "N.D.", CommonXml.date_display(nil)
-    assert_equal "no date", CommonXml.date_display("20143183", "no date")
-    assert_equal "", CommonXml.date_display(nil, "")
-  end
-
-  def test_date_standardize
-    # missing month and day
-    assert_equal "2016-01-01", CommonXml.date_standardize("2016")
-    assert_equal "2016-12-31", CommonXml.date_standardize("2016", false)
-    # missing day
-    assert_nil CommonXml.date_standardize("01-12")
-    assert_equal "2014-01-01", CommonXml.date_standardize("2014-01")
-    assert_equal "2014-01-31", CommonXml.date_standardize("2014-01", false)
-    # complete date
-    assert_equal "2014-01-12", CommonXml.date_standardize("2014-01-12")
-    # invalid date
-    assert_nil CommonXml.date_standardize("2014-30-31")
-    # February final day
-    assert_equal "2015-02-28", CommonXml.date_standardize("2015-2", false)
-    assert_equal "2016-02-29", CommonXml.date_standardize("2016-02", false)
-  end
-
-  def test_normalize_name
-    assert_equal "title", CommonXml.normalize_name("The Title")
-    assert_equal "anne of green gables", CommonXml.normalize_name("Anne of Green Gables")
-    assert_equal "fancy party", CommonXml.normalize_name("A Fancy Party")
-    assert_equal "hour", CommonXml.normalize_name("An Hour")
-  end
-
-  def test_normalize_space
-    # ensure that return characters are replaced by spaces, and multispaces squashed
-    test1 = " <xml>\r<title>Example    </title>\n  </xml>\n "
-    assert_equal "<xml> <title>Example </title> </xml>", CommonXml.normalize_space(test1)
-
-    # check that newlines are dead regardless
-    test2 = "<xml>\r<title>Exa\rmple\n</title></xml>"
-    assert_equal "<xml> <title>Exa mple </title></xml>", CommonXml.normalize_space(test2)
-  end
-
   def test_sub_corrections
     xml_string = "<xml>Somethng <corr>Something</corr></xml>"
     xml = Nokogiri::XML xml_string
