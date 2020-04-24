@@ -1,17 +1,15 @@
-class HtmlToEs < XmlToEs
+class CsvToEs
   # Note to add custom fields, use "assemble_collection_specific" from request.rb
   # and be sure to either use the _d, _i, _k, or _t to use the correct field type
 
   ##########
   # FIELDS #
   ##########
-
   def id
     @id
   end
 
   def id_dc
-    # TODO use api path from config or something?
     "https://cdrhapi.unl.edu/doc/#{@id}"
   end
 
@@ -20,7 +18,7 @@ class HtmlToEs < XmlToEs
   end
 
   def category
-    # category = get_text(@xpaths["category"])
+    @row["category"]
   end
 
   # nested field
@@ -30,7 +28,7 @@ class HtmlToEs < XmlToEs
 
   # returns ; delineated string of alphabetized creators
   def creator_sort
-    # get_text(@xpaths["creators"])
+    # TODO
   end
 
   def collection
@@ -46,15 +44,23 @@ class HtmlToEs < XmlToEs
   end
 
   def data_type
-    "html"
+    "csv"
   end
 
   def date(before=true)
-    # TODO
+    Datura::Helpers.date_standardize(@row["date"], before)
   end
 
   def date_display
-    # TODO
+    Datura::Helpers.date_display(date)
+  end
+
+  def date_not_after
+    date(false)
+  end
+
+  def date_not_before
+    date(true)
   end
 
   def description
@@ -62,7 +68,7 @@ class HtmlToEs < XmlToEs
   end
 
   def format
-    # TODO
+    @row["format"]
   end
 
   def image_id
@@ -70,7 +76,7 @@ class HtmlToEs < XmlToEs
   end
 
   def keywords
-    get_list(@xpaths["keywords"])
+    # TODO
   end
 
   def language
@@ -95,11 +101,11 @@ class HtmlToEs < XmlToEs
   end
 
   def places
-    # get_list(@xpaths["places"])
+    # TODO
   end
 
   def publisher
-    # get_text(@xpaths["publisher"])
+    # TODO
   end
 
   def recipient
@@ -112,55 +118,49 @@ class HtmlToEs < XmlToEs
   end
 
   def rights_holder
-    # get_text(@xpaths["rights_holder"])
+    # TODO
   end
 
   def rights_uri
-    # by default collections have no uri associated with them
-    # copy this method into collection specific tei_to_es.rb
-    # to return specific string or xpath as required
+    # TODO
   end
 
   def source
-    # get_text(@xpaths["source"])
+    @row["source"]
   end
 
   def subjects
-    # TODO default behavior?
+    # TODO
   end
 
   def subcategory
-    # subcategory = get_text(@xpaths["subcategory"])
-    # subcategory.length > 0 ? subcategory : "none"
+    @row["subcategory"]
   end
 
+  # text is generally going to be pulled from
   def text
-    # handling separate fields in array
-    # means no worrying about handling spacing between words
-    text_all = []
-    body = get_text(@xpaths["text"], false)
-    text_all << body
+    text_all = [ @row["text"] ]
+
     text_all += text_additional
+    text_all = text_all.compact
     Datura::Helpers.normalize_space(text_all.join(" "))
   end
 
+  # override and add by collection as needed
   def text_additional
-    # Note: Override this per collection if you need additional
-    # searchable fields or information for collections
-    # just make sure you return an array at the end!
     [ title ]
   end
 
   def title
-    get_text(@xpaths["titles"])
+    @row["title"]
   end
 
   def title_sort
-    Datura::Helpers.normalize_name(title)
+    Datura::Helpers.normalize_name(title) if title
   end
 
   def topics
-    # TODO
+    @row["topics"]
   end
 
   def uri
@@ -169,7 +169,9 @@ class HtmlToEs < XmlToEs
   end
 
   def uri_data
-    # TODO per repository
+    base = @options["data_base"]
+    subpath = "data/#{@options["collection"]}/source/csv"
+    "#{base}/#{subpath}/#{@filename}.csv"
   end
 
   def uri_html
@@ -179,6 +181,7 @@ class HtmlToEs < XmlToEs
   end
 
   def works
-    # TODO
+    @row["works"]
   end
+
 end

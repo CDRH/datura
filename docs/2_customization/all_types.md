@@ -5,11 +5,13 @@ There are a number of ways you can customize the transformations.  Please refer 
 ### To Elasticsearch
 
 - [XML based (HTML / TEI / VRA / webs (Web Scraped HTML))](xml_to_es.md)
-- [CSV](csv_to_es.md)
+- CSV (Pending)
+- [Custom Formats](custom_to_es.md) (those which Datura does not support but which a collection may need)
 
 ### To Solr / HTML
 
-- Pending docs TODO
+- Pending docs for most formats TODO
+- [CSV](csv_to_solr.md)
 
 ### To IIIF
 

@@ -20,19 +20,19 @@ class TeiToEs < XmlToEs
   end
 
   def category
-    category = get_text(@xpaths["category"])
-    return category.length > 0 ? CommonXml.normalize_space(category) : "none"
+    cat = get_text(@xpaths["category"])
+    cat.length > 0 ? Datura::Helpers.normalize_space(cat) : "none"
   end
 
   # note this does not sort the creators
   def creator
     creators = get_list(@xpaths["creators"])
-    return creators.map { |creator| { "name" => CommonXml.normalize_space(creator) } }
+    creators.map { |c| { "name" => Datura::Helpers.normalize_space(c) } }
   end
 
   # returns ; delineated string of alphabetized creators
   def creator_sort
-    return get_text(@xpaths["creators"])
+    get_text(@xpaths["creators"])
   end
 
   def collection
@@ -50,8 +50,8 @@ class TeiToEs < XmlToEs
       eles.each do |ele|
         contribs << {
           "id" => ele["id"],
-          "name" => CommonXml.normalize_space(ele.text),
-          "role" => CommonXml.normalize_space(ele["role"])
+          "name" => Datura::Helpers.normalize_space(ele.text),
+          "role" => Datura::Helpers.normalize_space(ele["role"])
         }
       end
     end
@@ -64,11 +64,11 @@ class TeiToEs < XmlToEs
 
   def date(before=true)
     datestr = get_text(@xpaths["date"])
-    return CommonXml.date_standardize(datestr, before)
+    Datura::Helpers.date_standardize(datestr, before)
   end
 
   def date_display
-    date = get_text(@xpaths["date_display"])
+    get_text(@xpaths["date_display"])
   end
 
   def date_not_after
@@ -121,22 +121,21 @@ class TeiToEs < XmlToEs
     # and put in the xpaths above, also for attributes, etc
     # should contain name, id, and role
     eles = @xml.xpath(@xpaths["person"])
-    people = eles.map do |p|
+    eles.map do |p|
       {
         "id" => "",
-        "name" => CommonXml.normalize_space(p.text),
-        "role" => CommonXml.normalize_space(p["role"])
+        "name" => Datura::Helpers.normalize_space(p.text),
+        "role" => Datura::Helpers.normalize_space(p["role"])
       }
     end
-    return people
   end
 
   def people
-    @json["person"].map { |p| CommonXml.normalize_space(p["name"]) }
+    @json["person"].map { |p| Datura::Helpers.normalize_space(p["name"]) }
   end
 
   def places
-    return get_list(@xpaths["places"])
+    get_list(@xpaths["places"])
   end
 
   def publisher
@@ -145,14 +144,13 @@ class TeiToEs < XmlToEs
 
   def recipient
     eles = @xml.xpath(@xpaths["recipient"])
-    people = eles.map do |p|
+    eles.map do |p|
       {
         "id" => "",
-        "name" => CommonXml.normalize_space(p.text),
+        "name" => Datura::Helpers.normalize_space(p.text),
         "role" => "recipient"
       }
     end
-    return people
   end
 
   def rights
@@ -179,20 +177,20 @@ class TeiToEs < XmlToEs
   end
 
   def subcategory
-    subcategory = get_text(@xpaths["subcategory"])
-    subcategory.length > 0 ? subcategory : "none"
+    subcat = get_text(@xpaths["subcategory"])
+    subcat.length > 0 ? subcat : "none"
   end
 
   def text
     # handling separate fields in array
     # means no worrying about handling spacing between words
-    text = []
+    text_all = []
     body = get_text(@xpaths["text"], false)
-    text << body
+    text_all << body
     # TODO: do we need to preserve tags like <i> in text? if so, turn get_text to true
-    # text << CommonXml.convert_tags_in_string(body)
-    text += text_additional
-    return CommonXml.normalize_space(text.join(" "))
+    # text_all << CommonXml.convert_tags_in_string(body)
+    text_all += text_additional
+    Datura::Helpers.normalize_space(text_all.join(" "))
   end
 
   def text_additional
@@ -200,21 +198,19 @@ class TeiToEs < XmlToEs
     # searchable fields or information for collections
     # just make sure you return an array at the end!
 
-    text = []
-    text << title
+    [ title ]
   end
 
   def title
-    title = get_text(@xpaths["titles"]["main"])
-    if title.empty?
-      title = get_text(@xpaths["titles"]["alt"])
+    title_disp = get_text(@xpaths["titles"]["main"])
+    if title_disp.empty?
+      title_disp = get_text(@xpaths["titles"]["alt"])
     end
-    return title
+    title_disp
   end
 
   def title_sort
-    t = title
-    CommonXml.normalize_name(t)
+    Datura::Helpers.normalize_name(title)
   end
 
   def topics
@@ -229,13 +225,13 @@ class TeiToEs < XmlToEs
   def uri_data
     base = @options["data_base"]
     subpath = "data/#{@options["collection"]}/source/tei"
-    return "#{base}/#{subpath}/#{@id}.xml"
+    "#{base}/#{subpath}/#{@id}.xml"
   end
 
   def uri_html
     base = @options["data_base"]
     subpath = "data/#{@options["collection"]}/output/#{@options["environment"]}/html"
-    return "#{base}/#{subpath}/#{@id}.html"
+    "#{base}/#{subpath}/#{@id}.html"
   end
 
   def works

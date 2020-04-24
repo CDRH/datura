@@ -149,7 +149,7 @@ class WebsToEs < XmlToEs
     body = get_text(@xpaths["text"], false)
     text << body
     text += text_additional
-    return CommonXml.normalize_space(text.join(" "))
+    return Datura::Helpers.normalize_space(text.join(" "))
   end
 
   def text_additional
@@ -167,7 +167,7 @@ class WebsToEs < XmlToEs
 
   def title_sort
     t = title
-    CommonXml.normalize_name(t)
+    Datura::Helpers.normalize_name(t)
   end
 
   def topics

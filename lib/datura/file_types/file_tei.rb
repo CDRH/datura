@@ -17,7 +17,7 @@ class FileTei < FileType
 
   def subdoc_xpaths
     # match subdocs against classes
-    return {
+    {
       "/TEI" => TeiToEs,
       # "//listPerson/person" => TeiToEsPersonography,
     }

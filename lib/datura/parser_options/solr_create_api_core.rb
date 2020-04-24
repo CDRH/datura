@@ -28,6 +28,6 @@ module Datura::Parser
       exit
     end
 
-    return options
+    options
   end
 end
