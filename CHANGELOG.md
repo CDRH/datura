@@ -9,12 +9,21 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 Changelog up to date
 
-## [v0.1.6](https://github.com/CDRH/datura/compare/v0.1.5...v0.1.6) - 2020-02-11 - WEBS HTML Object
+## [v0.1.6](https://github.com/CDRH/datura/compare/v0.1.5...v0.1.6) - 2020-04-24 - Improvements to CSV, WEBS transformers and adds Custom transformer
+
+### Added
+- CsvToEs class added which imitates style of other XToEs classes for easier overriding / maintenance
+- Custom formats now supported, although no functionality provided since the type of format cannot be predicted
+- Adds documentation for custom format setup
 
 ### Changed
+- CSV to ES transformation no longer accepts default column names, but instead looks for columns matching ES fields to use
 - FileType elasticsearch transform now has swappable component when reading
 XML-type files. Webscraping script altered to manipulate HTML instead of
 XML object type
+
+### Removed
+- CSV to ES transformation used to automatically assume columns as ES fields, this functionality has been removed
 
 ## [v0.1.5](https://github.com/CDRH/datura/compare/v0.1.4...v0.1.5) - 2020-02-03 - VRA to Solr
 
