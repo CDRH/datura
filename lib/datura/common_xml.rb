@@ -90,9 +90,9 @@ module CommonXml
   # TODO remove in 2021
   class << self
     extend Gem::Deprecate
-    deprecate :date_display, :"Datura::Helpers.normalize_space", 2021, 1
-    deprecate :date_standardize, :"Datura::Helpers.normalize_space", 2021, 1
-    deprecate :normalize_name, :"Datura::Helpers.normalize_space", 2021, 1
+    deprecate :date_display, :"Datura::Helpers.date_display", 2021, 1
+    deprecate :date_standardize, :"Datura::Helpers.date_standardize", 2021, 1
+    deprecate :normalize_name, :"Datura::Helpers.normalize_name", 2021, 1
     deprecate :normalize_space, :"Datura::Helpers.normalize_space", 2021, 1
   end
 
