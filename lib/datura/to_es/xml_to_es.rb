@@ -115,28 +115,25 @@ class XmlToEs
   def get_xpaths(xpaths, keep_tags: false, xml: nil)
     doc = xml || @xml
     list = []
-    xpaths.each do |xpath|
-      # nil and empty string xpaths are invalid
-      if xpath && xpath.length > 0
-        contents = doc.xpath(xpath)
-        contents.each do |content|
-          text = ""
-          if keep_tags
-            converted = CommonXml.convert_tags(content)
-            text = converted.inner_html
-          else
-            # note: not using content.text because
-            # some tags should be converted to (), [], etc for display
-            text = CommonXml.to_display_text(content)
-          end
-          # remove whitespace of all kinds from the text
-          text = Datura::Helpers.normalize_space(text)
-          if text.length > 0
-            list << text
-          end
-        end
+
+    contents = get_elements(xpaths, xml: doc)
+    contents.each do |content|
+      text = ""
+      if keep_tags
+        converted = CommonXml.convert_tags(content)
+        text = converted.inner_html
+      else
+        # note: not using content.text because
+        # some tags should be converted to (), [], etc for display
+        text = CommonXml.to_display_text(content)
+      end
+      # remove whitespace of all kinds from the text
+      text = Datura::Helpers.normalize_space(text)
+      if text.length > 0
+        list << text
       end
     end
+
     list.uniq
   end
 
