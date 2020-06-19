@@ -7,6 +7,7 @@ class XmlToEsTest < Minitest::Test
   end
 
   def test_get_elements
+    # test one xpath
     res = @neihardt.get_elements("//handNote")
     assert_equal Nokogiri::XML::NodeSet, res.class
 
@@ -18,6 +19,19 @@ class XmlToEsTest < Minitest::Test
     assert_equal "Media: type", res.first.text
     assert_equal "Media: type", @neihardt.get_text("p", xml: res.first)
     assert_equal 1, res.first.xpath("p").length
+
+    # test array of xpaths
+    res = @neihardt.get_elements([ "//handNote", "//keywords" ])
+    assert_equal 9, res.length
+    assert_equal "Correspondence", @neihardt.get_text("term", xml: res[2])
+
+    # test list of xpaths
+    res = @neihardt.get_elements("//handNote", "//keywords")
+    assert_equal 9, res.length
+
+    # test when no results of xpaths
+    res = @neihardt.get_elements("//fake/path")
+    assert_equal 0, res.length
   end
 
   def test_get_list

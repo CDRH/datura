@@ -33,16 +33,14 @@ class VraToEs < XmlToEs
   end
 
   def contributor
-    contrib_list = []
-    contributors = @xml.xpath(@xpaths["contributors"])
-    contributors.each do |ele|
-      contrib_list << {
+    contrib_list = get_elements(@xpaths["contributor"]).map do |ele|
+      {
         "id" => "",
-        "name" => Datura::Helpers.normalize_space(ele.xpath("name").text),
-        "role" => Datura::Helpers.normalize_space(ele.xpath("role").text)
+        "name" => get_text("name", xml: ele),
+        "role" => get_text("role", xml: ele)
       }
     end
-    contrib_list
+    contrib_list.uniq
   end
 
   def data_type
@@ -109,17 +107,14 @@ class VraToEs < XmlToEs
   end
 
   def person
-    # TODO will need some examples of how this will work
-    # and put in the xpaths above, also for attributes, etc
-    # should contain name, id, and role
-    eles = @xml.xpath(@xpaths["person"])
-    eles.map do |p|
+    eles = get_elements(@xpaths["person"]).map do |p|
       {
-        "id" => "",
+        "id" => p["id"],
         "name" => Datura::Helpers.normalize_space(p.text),
         "role" => Datura::Helpers.normalize_space(p["role"])
       }
     end
+    eles.uniq
   end
 
   def places
@@ -131,7 +126,7 @@ class VraToEs < XmlToEs
   end
 
   def recipient
-    eles = @xml.xpath(@xpaths["recipient"])
+    eles = get_elements(@xpaths["recipient"])
     eles.map do |p|
       {
         "id" => "",

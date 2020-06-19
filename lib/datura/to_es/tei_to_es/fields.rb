@@ -32,16 +32,12 @@ class TeiToEs < XmlToEs
   end
 
   def contributor
-    contribs = []
-    @xpaths["contributor"].each do |xpath|
-      eles = @xml.xpath(xpath)
-      eles.each do |ele|
-        contribs << {
-          "id" => ele["id"],
-          "name" => Datura::Helpers.normalize_space(ele.text),
-          "role" => Datura::Helpers.normalize_space(ele["role"])
-        }
-      end
+    contribs = get_elements(@xpaths["contributor"]).map do |ele|
+      {
+        "id" => ele["id"],
+        "name" => Datura::Helpers.normalize_space(ele.text),
+        "role" => Datura::Helpers.normalize_space(ele["role"])
+      }
     end
     contribs.uniq
   end
@@ -112,17 +108,14 @@ class TeiToEs < XmlToEs
   end
 
   def person
-    # TODO will need some examples of how this will work
-    # and put in the xpaths above, also for attributes, etc
-    # should contain name, id, and role
-    eles = @xml.xpath(@xpaths["person"])
-    eles.map do |p|
+    eles = get_elements(@xpaths["person"]).map do |p|
       {
         "id" => p["id"],
         "name" => Datura::Helpers.normalize_space(p.text),
         "role" => Datura::Helpers.normalize_space(p["role"])
       }
     end
+    eles.uniq
   end
 
   def places

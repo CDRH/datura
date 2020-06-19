@@ -65,6 +65,23 @@ class XmlToEs
 
   # see CommonXml module for methods replicated from common.xsl
 
+  # get_elements
+  #   returns a nodeset for the requested xpaths
+  #   typically this would be used in the event that refinable results are
+  #     needed (for example: creators with id and role) than can be obtained
+  #     from get_list or get_text
+  def get_elements(*xpaths, xml: nil)
+    doc = xml || @xml
+
+    # if an array was passed through instead of a string or list of strings,
+    # it is now nested in an array and we need to excavate it
+    if xpaths.length == 1 && xpaths.first.class == Array
+      xpaths = xpaths.first
+    end
+
+    doc.xpath(*xpaths) || []
+  end
+
   # get the value of one of the xpaths listed at the top
   # Note: if the xpath returns multiple values they will be squished together
   # TODO should we make it so that this can optionally look for more than one
