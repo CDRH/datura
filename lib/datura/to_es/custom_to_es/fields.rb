@@ -53,6 +53,9 @@ class CustomToEs
   def description
   end
 
+  def extent
+  end
+
   def format
   end
 
