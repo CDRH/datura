@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?> <?oxygen RNGSchema="http://www.whitmanarchive.org/downloads/wwa.rng" type="xml"?>
+<?oxygen SCHSchema="http://www.whitmanarchive.org/downloads/whitmanarchive_rules.sch"?>
+<TEI xmlns="http://www.whitmanarchive.org/namespace" xml:id="med.00314">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="m" type="main">Walt Whitman to a Soldier, late 1865 (?)</title>
+            <title level="m" type="sub">a machine readable transcription</title>
+            <author>Walt Whitman</author>
+            <editor>Edwin Haviland Miller</editor>
+            <editor>Ted Genoways</editor>
+            <respStmt>
+               <resp>Transcription and encoding</resp>
+               <persName xml:id="el">Elizabeth Lorang</persName>
+               <persName xml:id="vs">Vanessa Steinroetter</persName>
+
+               <persName xml:id="ao">Alyssa Olson</persName>
+               <persName xml:id="nhg">Nicole Gray</persName>
+            </respStmt>
+            <sponsor>Center for Digital Research in the Humanities, University of Nebraska-Lincoln</sponsor>
+            <sponsor>University of Iowa</sponsor>
+            <funder>National Historical Publications and Records Commission</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>
+               <date>2008</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <idno>med.00314</idno>
+            <distributor>The Walt Whitman Archive</distributor>
+            <address>
+               <addrLine>Center for Digital Research in the Humanities</addrLine>
+               <addrLine>319 Love Library</addrLine>
+               <addrLine>University of Nebraska-Lincoln</addrLine>
+               <addrLine>P.O. Box 884100</addrLine>
+               <addrLine>Lincoln, NE 68588-4100</addrLine>
+            </address>
+            <availability>
+               <p>Copyright © 2008 by Ed Folsom and Kenneth M. Price, all rights reserved. Items in the Archive may be shared in accordance with the Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms, in any medium, requires express written consent from the editors and advance notification of the publisher, Center for Digital Research in the Humanities. Permission to reproduce the graphic images in this archive has been granted by the owners of the originals for this publication only.</p>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author>Walt Whitman</author>
+                  <editor>Edwin Haviland Miller</editor>
+                  <title xml:id="ehm">The Correspondence</title>
+                  <imprint>
+                     <pubPlace>New York</pubPlace>
+                     <publisher>New York University Press</publisher>
+                     <date notBefore="1961" notAfter="1977">1961&#8211;1977</date>
+                     <biblScope type="volume">1</biblScope>
+                     <biblScope type="page">270-271</biblScope>
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <bibl>
+               <author>Walt Whitman</author>
+               <title>Walt Whitman to a Soldier, late 1865 (?)</title>
+               <date cert="low" notBefore="1865-07-01" notAfter="1865-12-31">late 1865 (?)</date>
+               <orgName xml:id="med">Location of original letter manuscript is unknown.</orgName>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <person role="sender">
+               <persName key="Whitman, Walt">Walt Whitman</persName>
+            </person>
+            <person role="recipient">
+               <persName key="Soldier">Soldier</persName>
+            </person>
+         </particDesc>
+      </profileDesc>
+      <revisionDesc>
+         <change who="#nhg" when="2014-09-22">added more specific date range</change>
+<change who="#el" when="2014-08-15">added schematron declaration</change>
+         <change who="#el" when="2013-11-22">converted to P5</change>
+         <change who="#vs" when="2009-08-31">proofread and edited annotations</change>
+         <change who="#vs" when="2008-10-14">added main TEI markup</change>
+         <change who="#el" when="2008-07-30">added TEI header structure w/o IDs and titles; added minimal TEI markup</change>
+         <change who="#ao" when="2008-07-29">pulled transcription from Primary Source Media</change>
+      </revisionDesc>
+   </teiHeader>
+   <text type="letter">
+      <body>
+         
+            <p>. . . Blue coats are getting quite scarce in Washington. I envy you the fresh country air, healthy influences, and, I doubt not, the fine scenery and quiet. I am in that part of the office where pardons are attended to. There is a stream of rebels passing in all the time to be pardoned. All of the Confederates who are worth more than $20,000 in property have to have a special pardon, and all who have been officers of the rank of Brigadier-General and upwards the same. There are some real characters among them, and you know I have a fancy for anything out of the ordinary. A good many women come up to Washington to look after pardons. All are dressed in deep black. Then there are bushels of applications arriving by every mail. When they are recommended by the Provisional Government or by some well known Union men they get them. There are 3,000 or 4,000 waiting for the President's signature now. He is not in any hurry to sign them.</p>
+         
+      </body>
+   </text>
+</TEI>
