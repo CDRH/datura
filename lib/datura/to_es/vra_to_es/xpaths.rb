@@ -5,20 +5,37 @@ class VraToEs < XmlToEs
   #  in that file which returns a different value
   def xpaths_list
     {
-      "contributors" => "/vra/work/agentSet/agent",
-      "creators" => "/vra/work/agentSet/agent",
-      "dates" => {
-        "earliest" => "/vra/collection[1]/dateSet[1]/date[1]/earliestDate[1]",
-        "display" => "/vra/collection[1]/dateSet[1]/display[1]"
-      },
+      # "alternative" => "",
+      # "annotations_text" => "",
+      "contributor" => "/vra/work/agentSet/agent",
+      "creator" => "/vra/work/agentSet/agent",
+      # "data_type" => "",
+      "date" => "//dateSet[1]/date",
+      "date_display" => "//dateSet[1]/display[1]",
+      "date_not_after" => "//dataSet[1]/date[1]/latestDate",
+      "date_not_before" => "//dateSet[1]/date[1]/earliestDate[1]",
+      # "description" => "",
+      # "extent" => "",
       "format" => "/vra/collection[1]/techniqueSet[1]/technique[1]",
+      # "language" => "",
+      # "languages" => "",
       "image_id" => "/vra/collection[1]/work[1]/image[1]/@id",
       "keywords" => "/vra/work/subjectSet/subject",
-      "place" => "/vra/collection[1]/subjectSet[1]/subject/term[@type='geographicPlace']",
+      # "medium" => "",
+      "places" => "/vra/collection[1]/subjectSet[1]/subject/term[@type='geographicPlace']",
       "publisher" => "/vra/work/agentSet/agent",
+      # "recipient" => "",
+      # "relation" => "",
+      # "rights" => "",
       "rights_holder" => "/vra/work/image/rightsSet/rights/rightsHolder",
+      # "rights_uri" => "",
+      # "source" => "",
+      # "subjects" = > "",
       "text" => "/vra",
-      "title" => "//title[@type='descriptive']"
+      "title" => "//title[@type='descriptive']",
+      # "topics" => "",
+      # "type" => "",
+      # "works" => "",
     }.merge(override_xpaths)
   end
 end

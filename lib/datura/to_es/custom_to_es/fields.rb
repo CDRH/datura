@@ -5,30 +5,18 @@ class CustomToEs
   ##########
   # FIELDS #
   ##########
-  def id
-    @id
-  end
 
-  def id_dc
-    "https://cdrhapi.unl.edu/doc/#{@id}"
+  def alternative
   end
 
   def annotations_text
-    # TODO what should default behavior be?
   end
 
   def category
-    # TODO
   end
 
   # nested field
   def creator
-    # TODO
-  end
-
-  # returns ; delineated string of alphabetized creators
-  def creator_sort
-    # TODO
   end
 
   def collection
@@ -40,7 +28,6 @@ class CustomToEs
   end
 
   def contributor
-    # TODO
   end
 
   def data_type
@@ -48,7 +35,6 @@ class CustomToEs
   end
 
   def date(before=true)
-    # TODO
     # Datura::Helpers.date_standardize(??, before)
   end
 
@@ -65,77 +51,60 @@ class CustomToEs
   end
 
   def description
-    # Note: override per collection as needed
   end
 
   def format
-    # TODO
   end
 
   def image_id
-    # TODO
   end
 
   def keywords
-    # TODO
   end
 
   def language
-    # TODO
   end
 
   def languages
-    # TODO
   end
 
   def medium
-    # Default behavior is the same as "format" method
-    format
   end
 
   def person
-    # TODO
   end
 
   def people
-    # TODO
   end
 
   def places
-    # TODO
   end
 
   def publisher
-    # TODO
   end
 
   def recipient
-    # TODO
+  end
+
+  def relation
   end
 
   def rights
-    # Note: override by collection as needed
-    "All Rights Reserved"
   end
 
   def rights_holder
-    # TODO
   end
 
   def rights_uri
-    # TODO
   end
 
   def source
-    # TODO
   end
 
   def subjects
-    # TODO
   end
 
   def subcategory
-    # TODO
   end
 
   # text is generally going to be pulled from
@@ -151,7 +120,6 @@ class CustomToEs
   end
 
   def title
-    # TODO
   end
 
   def title_sort
@@ -159,28 +127,45 @@ class CustomToEs
   end
 
   def topics
-    # TODO
+  end
+
+  def type
   end
 
   def uri
-    # override per collection
-    # should point at the live website view of resource
+    if @options["site_url"]
+      File.join(
+        @options["site_url"],
+        "item",
+        @id
+      )
+    end
   end
 
   def uri_data
-    base = @options["data_base"]
-    subpath = "data/#{@options["collection"]}/source/#{@file_type}"
-    "#{base}/#{subpath}/#{@filename}"
+    File.join(
+      @options["data_base"],
+      "data",
+      @options["collection"],
+      "source",
+      @file_type,
+      @filename
+    )
   end
 
   def uri_html
-    base = @options["data_base"]
-    subpath = "data/#{@options["collection"]}/output/#{@options["environment"]}/html"
-    "#{base}/#{subpath}/#{@id}.html"
+    File.join(
+      @options["data_base"],
+      "data",
+      @options["collection"],
+      "output",
+      @options["environment"],
+      "html",
+      "#{@id}.html"
+    )
   end
 
   def works
-    # TODO
   end
 
 end

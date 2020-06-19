@@ -6,33 +6,21 @@ class TeiToEs < XmlToEs
   # FIELDS #
   ##########
 
-  def id
-    @id
-  end
-
-  def id_dc
-    # TODO use api path from config or something?
-    "https://cdrhapi.unl.edu/doc/#{@id}"
+  def alternative
+    get_text(@xpaths["alternative"])
   end
 
   def annotations_text
-    # TODO what should default behavior be?
+    get_text(@xpaths["annotations_text"])
   end
 
   def category
-    cat = get_text(@xpaths["category"])
-    cat.length > 0 ? Datura::Helpers.normalize_space(cat) : "none"
+    get_text(@xpaths["category"])
   end
 
-  # note this does not sort the creators
   def creator
-    creators = get_list(@xpaths["creators"])
+    creators = get_list(@xpaths["creator"])
     creators.map { |c| { "name" => Datura::Helpers.normalize_space(c) } }
-  end
-
-  # returns ; delineated string of alphabetized creators
-  def creator_sort
-    get_text(@xpaths["creators"])
   end
 
   def collection
@@ -45,7 +33,7 @@ class TeiToEs < XmlToEs
 
   def contributor
     contribs = []
-    @xpaths["contributors"].each do |xpath|
+    @xpaths["contributor"].each do |xpath|
       eles = @xml.xpath(xpath)
       eles.each do |ele|
         contribs << {
@@ -72,31 +60,38 @@ class TeiToEs < XmlToEs
   end
 
   def date_not_after
-    date(false)
+    datestr = get_text(@xpaths["date_not_after"])
+    if datestr
+      Datura::Helpers.date_standardize(datestr, false)
+    else
+      date(false)
+    end
   end
 
   def date_not_before
-    date(true)
+    datestr = get_text(@xpaths["date_not_before"])
+    if datestr
+      Datura::Helpers.date_standardize(datestr, true)
+    else
+      date(true)
+    end
   end
 
   def description
-    # Note: override per collection as needed
+    get_text(@xpaths["description"])
+  end
+
+  def extent
+    get_text(@xpaths["extent"])
   end
 
   def format
-    matched_format = nil
-    # iterate through all the formats until the first one matches
-    @xpaths["formats"].each do |type, xpath|
-      text = get_text(xpath)
-      matched_format = type if text && text.length > 0
-    end
-    matched_format
+    get_list(@xpaths["format"]).first
   end
 
   def image_id
     # Note: don't pull full path because will be pulled by IIIF
-    images = get_list(@xpaths["image_id"])
-    images[0] if images
+    get_list(@xpaths["image_id"]).first
   end
 
   def keywords
@@ -104,7 +99,8 @@ class TeiToEs < XmlToEs
   end
 
   def language
-    get_text(@xpaths["language"])
+    # uses the first language discovered in the document
+    get_list(@xpaths["language"]).first
   end
 
   def languages
@@ -112,8 +108,7 @@ class TeiToEs < XmlToEs
   end
 
   def medium
-    # Default behavior is the same as "format" method
-    format
+    get_text(@xpaths["medium"])
   end
 
   def person
@@ -123,15 +118,11 @@ class TeiToEs < XmlToEs
     eles = @xml.xpath(@xpaths["person"])
     eles.map do |p|
       {
-        "id" => "",
+        "id" => p["id"],
         "name" => Datura::Helpers.normalize_space(p.text),
         "role" => Datura::Helpers.normalize_space(p["role"])
       }
     end
-  end
-
-  def people
-    @json["person"].map { |p| Datura::Helpers.normalize_space(p["name"]) }
   end
 
   def places
@@ -146,16 +137,19 @@ class TeiToEs < XmlToEs
     eles = @xml.xpath(@xpaths["recipient"])
     eles.map do |p|
       {
-        "id" => "",
+        "id" => p["id"],
         "name" => Datura::Helpers.normalize_space(p.text),
         "role" => "recipient"
       }
     end
   end
 
+  def relation
+    get_list(@xpaths["relation"])
+  end
+
   def rights
-    # Note: override by collection as needed
-    "All Rights Reserved"
+    get_text(@xpaths["rights"])
   end
 
   def rights_holder
@@ -163,29 +157,35 @@ class TeiToEs < XmlToEs
   end
 
   def rights_uri
-    # by default collections have no uri associated with them
-    # copy this method into collection specific tei_to_es.rb
-    # to return specific string or xpath as required
+    get_text(@xpaths["rights_uri"])
   end
 
+  # NOTE source is a complicated field built from many xpaths
+  #   author, title, publisher, pubplace, date,
+  #   collection, repository, idno
   def source
-    get_text(@xpaths["source"])
+    src = @xpaths["source"]
+    src_fields = {}
+    src.each do |field, xpath|
+      src_fields[field] = get_text(xpath)
+    end
+
+    source_to_s(src_fields)
   end
 
   def subjects
-    # TODO default behavior?
+    get_list(@xpaths["subjects"])
   end
 
   def subcategory
-    subcat = get_text(@xpaths["subcategory"])
-    subcat.length > 0 ? subcat : "none"
+    get_text(@xpaths["subcategory"])
   end
 
   def text
     # handling separate fields in array
     # means no worrying about handling spacing between words
     text_all = []
-    body = get_text(@xpaths["text"], false)
+    body = get_text(@xpaths["text"], keep_tags: false)
     text_all << body
     # TODO: do we need to preserve tags like <i> in text? if so, turn get_text to true
     # text_all << CommonXml.convert_tags_in_string(body)
@@ -197,16 +197,14 @@ class TeiToEs < XmlToEs
     # Note: Override this per collection if you need additional
     # searchable fields or information for collections
     # just make sure you return an array at the end!
-
-    [ title ]
+    [
+      title,
+      get_text(@xpaths["text_additional"])
+    ]
   end
 
   def title
-    title_disp = get_text(@xpaths["titles"]["main"])
-    if title_disp.empty?
-      title_disp = get_text(@xpaths["titles"]["alt"])
-    end
-    title_disp
+    get_text(@xpaths["title"])
   end
 
   def title_sort
@@ -214,27 +212,59 @@ class TeiToEs < XmlToEs
   end
 
   def topics
-    get_list(@xpaths["topic"])
+    get_list(@xpaths["topics"])
+  end
+
+  def type
+    t = get_text(@xpaths["type"])
+    t || "text"
   end
 
   def uri
-    # override per collection
-    # should point at the live website view of resource
+    File.join(@options["site_url"], "item", @id)
   end
 
   def uri_data
-    base = @options["data_base"]
-    subpath = "data/#{@options["collection"]}/source/tei"
-    "#{base}/#{subpath}/#{@id}.xml"
+    File.join(
+      @options["data_base"],
+      "data",
+      @options["collection"],
+      "source/tei",
+      "#{@id}.xml"
+    )
   end
 
   def uri_html
-    base = @options["data_base"]
-    subpath = "data/#{@options["collection"]}/output/#{@options["environment"]}/html"
-    "#{base}/#{subpath}/#{@id}.html"
+    File.join(
+      @options["data_base"],
+      "data",
+      @options["collection"],
+      "output",
+      @options["environment"],
+      "html",
+      "#{@id}.html"
+    )
   end
 
   def works
-    # TODO figure out how this behavior should look
+    get_list(@xpaths["works"])
   end
+
+  protected
+
+  # default behavior is simply to comma delineate fields
+  # but you may override if you need additional behavior
+  # such as <em>title</em>, (date), etc
+  def source_to_s(f)
+    #   author, title, publisher, pubplace, date,
+    #   collection, repository, idno
+    source_order = [
+      f["author"], f["title"], f["publisher"], f["pubplace"], f["date"],
+      f["collection"], f["repository"], f["idno"]
+    ]
+    source_order
+      .reject! { |value| value.nil? || value.strip.empty? }
+      .join(", ")
+  end
+
 end

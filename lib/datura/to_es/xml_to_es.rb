@@ -51,6 +51,7 @@ class XmlToEs
   end
 
   def get_id
+    # no extension
     @filename
   end
 
@@ -72,9 +73,10 @@ class XmlToEs
   # get_list
   #   can pass it a string xpath or array of xpaths
   # returns an array with the html value in xpath
-  def get_list(xpaths, keep_tags=false, xml=nil)
-    xpath_array = xpaths.class == Array ? xpaths : [xpaths]
-    get_xpaths(xpath_array, keep_tags, xml)
+  def get_list(xpaths, keep_tags: false, xml: nil, sort: false)
+    xpath_array = Array(xpaths)
+    list = get_xpaths(xpath_array, keep_tags: keep_tags, xml: xml)
+    sort ? list.sort : list
   end
 
   # get_text
@@ -82,12 +84,10 @@ class XmlToEs
   #   can optionally set a delimiter, otherwise ;
   # returns a STRING
   # if you want a multivalued result, please refer to get_list
-  def get_text(xpaths, keep_tags=false, xml=nil, delimiter=";")
+  def get_text(xpaths, keep_tags: false, xml: nil, delimiter: ";", sort: false)
     # ensure all xpaths are an array before beginning
-    xpath_array = xpaths.class == Array ? xpaths : [xpaths]
-    list = get_xpaths(xpath_array, keep_tags, xml)
-    sorted = list.sort
-    sorted.join("#{delimiter} ")
+    list = get_list(xpaths, keep_tags: keep_tags, xml: xml, sort: sort)
+    list.join("#{delimiter} ")
   end
 
   # Note: Recommend that collection team do NOT use this method directly
@@ -95,25 +95,28 @@ class XmlToEs
   # keep_tags true will convert tags like <hi> to <em>
   #   use this wisely, as it causes performance issues
   # keep_tags false removes ALL tags from selected xpath
-  def get_xpaths(xpaths, keep_tags=false, xml=nil)
+  def get_xpaths(xpaths, keep_tags: false, xml: nil)
     doc = xml || @xml
     list = []
     xpaths.each do |xpath|
-      contents = doc.xpath(xpath)
-      contents.each do |content|
-        text = ""
-        if keep_tags
-          converted = CommonXml.convert_tags(content)
-          text = converted.inner_html
-        else
-          # note: not using content.text because
-          # some tags should be converted to (), [], etc for display
-          text = CommonXml.to_display_text(content)
-        end
-        # remove whitespace of all kinds from the text
-        text = Datura::Helpers.normalize_space(text)
-        if text.length > 0
-          list << text
+      # nil and empty string xpaths are invalid
+      if xpath && xpath.length > 0
+        contents = doc.xpath(xpath)
+        contents.each do |content|
+          text = ""
+          if keep_tags
+            converted = CommonXml.convert_tags(content)
+            text = converted.inner_html
+          else
+            # note: not using content.text because
+            # some tags should be converted to (), [], etc for display
+            text = CommonXml.to_display_text(content)
+          end
+          # remove whitespace of all kinds from the text
+          text = Datura::Helpers.normalize_space(text)
+          if text.length > 0
+            list << text
+          end
         end
       end
     end

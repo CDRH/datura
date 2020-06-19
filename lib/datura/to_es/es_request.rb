@@ -56,18 +56,18 @@ module EsRequest
   end
 
   def assemble_dates
-    @json["date_display"] = date_display
     @json["date"] = date
-    @json["date_not_before"] = date_not_before
     @json["date_not_after"] = date_not_after
+    @json["date_not_before"] = date_not_before
+    @json["date_display"] = date_display
   end
 
   def assemble_descriptions
-    @json["title_sort"] = title_sort
-    @json["title"] = title
+    @json["alternative"] = alternative
     @json["description"] = description
+    @json["title"] = title
+    @json["title_sort"] = title_sort
     @json["topics"] = topics
-    # @json["alternative"]
   end
 
   def assemble_identifiers
@@ -85,9 +85,9 @@ module EsRequest
     @json["format"] = format
     @json["language"] = language
     @json["languages"] = languages
-    # @json["relation"]
-    # @json["type"]
-    # @json["extent"]
+    @json["relation"] = relation
+    @json["type"] = type
+    @json["extent"] = extent
     @json["medium"] = medium
   end
 
@@ -97,9 +97,6 @@ module EsRequest
     @json["contributor"] = contributor
     @json["creator"] = creator
     @json["recipient"] = recipient
-    # can draw off of container fields
-    @json["creator_sort"] = creator_sort
-    @json["people"] = people
   end
 
   def assemble_publishing

@@ -9,12 +9,12 @@ class CsvToEs
     @id
   end
 
-  def id_dc
-    "https://cdrhapi.unl.edu/doc/#{@id}"
+  def alternative
+    @row["alternative"]
   end
 
   def annotations_text
-    # TODO what should default behavior be?
+    @row["annotations_text"]
   end
 
   def category
@@ -23,12 +23,11 @@ class CsvToEs
 
   # nested field
   def creator
-    # TODO
-  end
-
-  # returns ; delineated string of alphabetized creators
-  def creator_sort
-    # TODO
+    if @row["creator"]
+      @row["creator"].split("; ").map do |p|
+        { "name" => p }
+      end
+    end
   end
 
   def collection
@@ -40,7 +39,11 @@ class CsvToEs
   end
 
   def contributor
-    # TODO
+    if @row["contributor"]
+      @row["contributor"].split("; ").map do |p|
+        { "name" => p }
+      end
+    end
   end
 
   def data_type
@@ -56,15 +59,27 @@ class CsvToEs
   end
 
   def date_not_after
-    date(false)
+    if @row["date_not_after"]
+      Datura::Helpers.date_standardize(@row["date_not_after"], false)
+    else
+      date(false)
+    end
   end
 
   def date_not_before
-    date(true)
+    if @row["date_not_before"]
+      Datura::Helpers.date_standardize(@row["date_not_before"], true)
+    else
+      date(true)
+    end
   end
 
   def description
-    # Note: override per collection as needed
+    @row["description"]
+  end
+
+  def extent
+    @row["extent"]
   end
 
   def format
@@ -72,57 +87,69 @@ class CsvToEs
   end
 
   def image_id
-    # TODO
+    @row["image_id"]
   end
 
   def keywords
-    # TODO
+    if @row["keywords"]
+      @row["keywords"].split("; ")
+    end
   end
 
   def language
-    # TODO
+    @row["language"]
   end
 
   def languages
-    # TODO
+    if @row["languages"]
+      @row["languages"].split("; ")
+    end
   end
 
   def medium
-    # Default behavior is the same as "format" method
-    format
+    @row["medium"]
   end
 
   def person
-    # TODO
-  end
-
-  def people
-    # TODO
+    if @row["person"]
+      @row["person"].split("; ").map do |p|
+        { "name" => p }
+      end
+    end
   end
 
   def places
-    # TODO
+    if @row["places"]
+      @row["places"].split("; ")
+    end
   end
 
   def publisher
-    # TODO
+    @row["publisher"]
   end
 
   def recipient
-    # TODO
+    if @row["recipient"]
+      @row["recipient"].split("; ").map do |p|
+        { "name" => p }
+      end
+    end
+  end
+
+  def relation
+    @row["relation"]
   end
 
   def rights
-    # Note: override by collection as needed
-    "All Rights Reserved"
+    @row["rights"]
   end
 
   def rights_holder
-    # TODO
+    @row["rights_holder"]
   end
 
   def rights_uri
-    # TODO
+    @row["rights_uri"]
   end
 
   def source
@@ -130,7 +157,9 @@ class CsvToEs
   end
 
   def subjects
-    # TODO
+    if @row["subjects"]
+      @row["subjects"].split("; ")
+    end
   end
 
   def subcategory
@@ -160,28 +189,49 @@ class CsvToEs
   end
 
   def topics
-    @row["topics"]
+    if @row["topics"]
+      @row["topics"].split("; ")
+    end
+  end
+
+  def type
+    @row["type"]
   end
 
   def uri
-    # override per collection
-    # should point at the live website view of resource
+    File.join(
+      @options["site_url"],
+      "item",
+      @id
+    )
   end
 
   def uri_data
-    base = @options["data_base"]
-    subpath = "data/#{@options["collection"]}/source/csv"
-    "#{base}/#{subpath}/#{@filename}.csv"
+    File.join(
+      @options["data_base"],
+      "data",
+      @options["collection"],
+      "source/csv",
+      "#{@filename}.csv"
+    )
   end
 
   def uri_html
-    base = @options["data_base"]
-    subpath = "data/#{@options["collection"]}/output/#{@options["environment"]}/html"
-    "#{base}/#{subpath}/#{@id}.html"
+    File.join(
+      @options["data_base"],
+      "data",
+      @options["collection"],
+      "output",
+      @options["environment"],
+      "html",
+      "#{@id}.html"
+    )
   end
 
   def works
-    @row["works"]
+    if @row["works"]
+      @row["works"].split("; ")
+    end
   end
 
 end
