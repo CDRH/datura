@@ -7,7 +7,21 @@ and this project adheres to [Semantic
 Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-Changelog up to date
+
+### Added
+- Fields (and therefore methods) for ES JSON, such as extent, alternative, etc
+- Methods to xToES format fields to accommodate default behavior
+- ES JSON `uri` now populated using default Orchid item path
+- Tests and fixtures for all supported formats except CustomToEs
+- `get_elements` returns nodeset given xpath arguments
+
+### Changed
+- Keyword arguments for `get_text`, `get_list`, and `get_xpaths`
+  - This is a breaking change which will require adding keywords such as
+    xml and keep_tags
+- XPaths for VRA and TEI to Elasticsearch
+- Default behavior for CsvToEs for some fields
+- Documentation updated
 
 ## [v0.1.6](https://github.com/CDRH/datura/compare/v0.1.5...v0.1.6) - 2020-04-24 - Improvements to CSV, WEBS transformers and adds Custom transformer
 
