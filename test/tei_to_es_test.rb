@@ -13,26 +13,6 @@ class TeiToEsTest < Minitest::Test
     assert_equal "nei.j4c.12.52", json["identifier"]
   end
 
-  def test_get_list
-    # should work with single xpath and strip tags
-    res0 = @neihardt.get_list("//p")
-    assert_equal res0.length, 5
-    # should work with multiple xpaths
-    res1 = @neihardt.get_list(["//p", "//revisionDesc/change"])
-    assert_equal 9, res1.length
-  end
-
-  def test_get_text
-    # test stripping tags
-    text = "I could almost make a living from lecture engagements that are offered me."
-    res = @neihardt.get_text("//postscript/p", keep_tags: false, xml: @neihardt.xml)
-    assert_equal text, res
-    # test keeping tags
-    text = "I could almost make a living from lecture engagements that are <u>offered me.</u>"
-    res = @neihardt.get_text("//postscript/p", keep_tags: true, xml: @neihardt.xml)
-    assert_equal text, res
-  end
-
   def test_fields
     cody = @cody.assemble_json
     neihardt = @neihardt.assemble_json
@@ -44,6 +24,14 @@ class TeiToEsTest < Minitest::Test
 
     creator = [{"name"=>"Neihardt, John Gneisenau, 1881-1973"}]
     assert_equal creator, neihardt["creator"]
+
+    contributor = [{"id"=>"lkw", "name"=>"Weakly, Laura K.", "role"=>nil},
+      {"id"=>"swa", "name"=>"Adrales, Samantha W.", "role"=>nil},
+      {"id"=>"az", "name"=>"Zeljkovic, Arman", "role"=>nil},
+      {"id"=>"ep", "name"=>"Pedigo, Erin", "role"=>nil},
+      {"id"=>nil, "name"=>"Gossin, Pamela", "role"=>nil}
+    ]
+    assert_equal contributor, neihardt["contributor"]
 
     # date
     # whitman date is nil with given xpath
