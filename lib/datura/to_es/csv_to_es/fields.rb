@@ -59,7 +59,7 @@ class CsvToEs
   end
 
   def date_not_after
-    if @row["date_not_after"]
+    if @row["date_not_after"] && !@row["date_not_after"].empty?
       Datura::Helpers.date_standardize(@row["date_not_after"], false)
     else
       date(false)
@@ -67,7 +67,7 @@ class CsvToEs
   end
 
   def date_not_before
-    if @row["date_not_before"]
+    if @row["date_not_before"] && !@row["date_not_before"].empty?
       Datura::Helpers.date_standardize(@row["date_not_before"], true)
     else
       date(true)

@@ -7,12 +7,15 @@ class HtmlToEs < XmlToEs
   ##########
 
   def alternative
+    get_text(@xpaths["alternative"])
   end
 
   def annotations_text
+    get_text(@xpaths["annotations_text"])
   end
 
   def category
+    get_text(@xpaths["category"])
   end
 
   # nested field
@@ -35,27 +38,48 @@ class HtmlToEs < XmlToEs
   end
 
   def date(before=true)
+    datestr = get_list(@xpaths["date"]).first
+    if datestr
+      Datura::Helpers.date_standardize(datestr, true)
+    end
   end
 
   def date_display
+    get_text(@xpaths["date_display"])
   end
 
   def date_not_after
+    datestr = get_text(@xpaths["date_not_after"])
+    if datestr && !datestr.empty?
+      Datura::Helpers.date_standardize(datestr, false)
+    else
+      date(false)
+    end
   end
 
   def date_not_before
+    datestr = get_text(@xpaths["date_not_before"])
+    if datestr && !datestr.empty?
+      Datura::Helpers.date_standardize(datestr, true)
+    else
+      date(true)
+    end
   end
 
   def description
+    get_text(@xpaths["description"])
   end
 
   def extent
+    get_text(@xpaths["extent"])
   end
 
   def format
+    get_text(@xpaths["format"])
   end
 
   def image_id
+    get_list(@xpaths["image_id"]).first
   end
 
   def keywords
@@ -71,56 +95,68 @@ class HtmlToEs < XmlToEs
   end
 
   def medium
+    get_text(@xpaths["medium"])
   end
 
   def person
   end
 
   def places
+    get_list(@xpaths["places"])
   end
 
   def publisher
+    get_text(@xpaths["publisher"])
   end
 
   def recipient
   end
 
   def relation
+    get_text(@xpaths["relation"])
   end
 
   def rights
+    get_text(@xpaths["rights"])
   end
 
   def rights_holder
+    get_text(@xpaths["rights_holder"])
   end
 
   def rights_uri
+    get_text(@xpaths["rights_uri"])
   end
 
   def source
+    get_text(@xpaths["source"])
   end
 
   def subjects
+    get_list(@xpaths["subjects"])
   end
 
   def subcategory
+    get_text(@xpaths["subcategory"])
   end
 
   def text
     # handling separate fields in array
     # means no worrying about handling spacing between words
-    text_all = []
-    body = get_text(@xpaths["text"], keep_tags: false)
-    text_all << body
-    text_all += text_additional
-    Datura::Helpers.normalize_space(text_all.join(" "))
+    text = []
+    body = get_text(@xpaths["text"])
+    text << body
+    text += text_additional
+    Datura::Helpers.normalize_space(text.join(" "))
   end
 
   def text_additional
     # Note: Override this per collection if you need additional
     # searchable fields or information for collections
     # just make sure you return an array at the end!
-    [ title ]
+
+    text = []
+    text << title
   end
 
   def title
@@ -132,20 +168,31 @@ class HtmlToEs < XmlToEs
   end
 
   def topics
+    get_list(@xpaths["topics"])
   end
 
   def type
+    get_text(@xpaths["type"])
   end
 
   def uri
-    File.join(
-      @options["site_url"],
-      "item",
-      @id
-    )
+    if @options["site_url"]
+      File.join(
+        @options["site_url"],
+        "item",
+        @id
+      )
+    end
   end
 
   def uri_data
+    File.join(
+      @options["data_base"],
+      "data",
+      @options["collection"],
+      "html",
+      "#{@id}.html"
+    )
   end
 
   def uri_html
@@ -161,5 +208,7 @@ class HtmlToEs < XmlToEs
   end
 
   def works
+    get_list(@xpaths["works"])
   end
+
 end

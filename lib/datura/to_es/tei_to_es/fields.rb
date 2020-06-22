@@ -47,7 +47,7 @@ class TeiToEs < XmlToEs
   end
 
   def date(before=true)
-    datestr = get_text(@xpaths["date"])
+    datestr = get_list(@xpaths["date"]).first
     Datura::Helpers.date_standardize(datestr, before)
   end
 
@@ -57,7 +57,7 @@ class TeiToEs < XmlToEs
 
   def date_not_after
     datestr = get_text(@xpaths["date_not_after"])
-    if datestr
+    if datestr && !datestr.empty?
       Datura::Helpers.date_standardize(datestr, false)
     else
       date(false)
@@ -66,7 +66,7 @@ class TeiToEs < XmlToEs
 
   def date_not_before
     datestr = get_text(@xpaths["date_not_before"])
-    if datestr
+    if datestr && !datestr.empty?
       Datura::Helpers.date_standardize(datestr, true)
     else
       date(true)

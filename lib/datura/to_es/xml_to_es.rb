@@ -119,6 +119,7 @@ class XmlToEs
     contents = get_elements(xpaths, xml: doc)
     contents.each do |content|
       text = ""
+
       if keep_tags
         converted = CommonXml.convert_tags(content)
         text = converted.inner_html
