@@ -468,10 +468,11 @@
     </em>
   </xsl:template>
 
-  <xsl:template match="
+  <xsl:template
+    match="
       byline | docDate | sp | speaker | letter | fw |
       notesStmt | titlePart | docDate | ab | trailer |
-      front | lg | l | bibl | dateline | salute | trailer | 
+      front | lg | l | bibl | dateline | salute | trailer |
       titlePage | opener | closer | floatingText | date
       | resp | respStmt | name | orgName | label | caption | idno | signed">
     <span>
