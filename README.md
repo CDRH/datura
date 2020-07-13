@@ -7,7 +7,7 @@ Looking for information about how to post documents? Check out the
 
 ## Install / Set Up Data Repo
 
-Check that Ruby is installed, preferably 2.7.x or up.
+Check that Ruby is installed, preferably 2.7.x or up. If you are using RVM, see the RVM section below. 
 
 If your project already has a Gemfile, add the `gem "datura"` line. If not, create a new directory and add a file named `Gemfile` (no extension).
 
@@ -30,6 +30,21 @@ bundle exec setup
 ```
 
 The last step should add files and some basic directories. Have a look at the [setup instructions](/docs/1_setup/collection_setup.md) to learn how to add your files and start working with the data!
+
+### RVM
+
+[RVM](https://rvm.io/), or the Ruby Version Manager, is a handy way to manage multiple Ruby and Rails versions. Install RVM using instructions on the site, then add the following to your new Rails application, making sure to change the values for the Ruby version and app name:
+
+```bash
+echo 'ruby-x.x.x' > (app_name)/.ruby-version
+echo '(app name)' > (app_name)/.ruby-gemset
+cd (app name)
+bundle install
+```
+
+CDRH Convention is to use the Datura version as the base for the gemset name, i.e.:
+
+`v0.1.5` = `datura_015` in .ruby-gemset
 
 ## Local Development
 
