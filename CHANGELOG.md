@@ -22,6 +22,7 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 - XPaths for VRA and TEI to Elasticsearch
 - Default behavior for CsvToEs for some fields
 - Documentation updated
+- Changed Install instructions to include RVM and gemset naming conventions
 
 ## [v0.1.6](https://github.com/CDRH/datura/compare/v0.1.5...v0.1.6) - 2020-04-24 - Improvements to CSV, WEBS transformers and adds Custom transformer
 
