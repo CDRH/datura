@@ -6,10 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic
 Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [v0.2.0-beta](https://github.com/CDRH/datura/compare/v0.1.6...v0.2.0-beta) - 2020-08-17 - Altering field and xpath behavior, adds get_elements
 
 ### Added
-- Fields (and therefore methods) for ES JSON, such as extent, alternative, etc
+- Fields (and therefore methods) for ES JSON, such as extent, alternative, spatial, etc
 - Methods to xToES format fields to accommodate default behavior
 - ES JSON `uri` now populated using default Orchid item path
 - Tests and fixtures for all supported formats except CustomToEs
@@ -23,6 +23,10 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 - Default behavior for CsvToEs for some fields
 - Documentation updated
 - Changed Install instructions to include RVM and gemset naming conventions
+- API field `coverage_spatial` is now just `spatial`
+
+### Deprecated
+- `coverage_spatial` API fields
 
 ## [v0.1.6](https://github.com/CDRH/datura/compare/v0.1.5...v0.1.6) - 2020-04-24 - Improvements to CSV, WEBS transformers and adds Custom transformer
 
