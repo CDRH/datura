@@ -30,6 +30,7 @@ class HtmlToEs < XmlToEs
     @options["collection_desc"] || @options["collection"]
   end
 
+  # nested field
   def contributor
   end
 
@@ -98,6 +99,7 @@ class HtmlToEs < XmlToEs
     get_text(@xpaths["medium"])
   end
 
+  # nested field
   def person
   end
 
@@ -109,6 +111,7 @@ class HtmlToEs < XmlToEs
     get_text(@xpaths["publisher"])
   end
 
+  # nested field
   def recipient
   end
 
@@ -130,6 +133,10 @@ class HtmlToEs < XmlToEs
 
   def source
     get_text(@xpaths["source"])
+  end
+
+  # nested field
+  def spatial
   end
 
   def subjects

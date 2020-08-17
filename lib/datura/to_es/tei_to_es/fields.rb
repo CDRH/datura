@@ -18,6 +18,7 @@ class TeiToEs < XmlToEs
     get_text(@xpaths["category"])
   end
 
+  # nested field
   def creator
     creators = get_list(@xpaths["creator"])
     creators.map { |c| { "name" => Datura::Helpers.normalize_space(c) } }
@@ -31,6 +32,7 @@ class TeiToEs < XmlToEs
     @options["collection_desc"] || @options["collection"]
   end
 
+  # nested field
   def contributor
     contribs = get_elements(@xpaths["contributor"]).map do |ele|
       {
@@ -107,6 +109,7 @@ class TeiToEs < XmlToEs
     get_text(@xpaths["medium"])
   end
 
+  # nested field
   def person
     eles = get_elements(@xpaths["person"]).map do |p|
       {
@@ -126,6 +129,7 @@ class TeiToEs < XmlToEs
     get_text(@xpaths["publisher"])
   end
 
+  # nested field
   def recipient
     eles = @xml.xpath(@xpaths["recipient"])
     eles.map do |p|
@@ -164,6 +168,10 @@ class TeiToEs < XmlToEs
     end
 
     source_to_s(src_fields)
+  end
+
+  # nested field
+  def spatial
   end
 
   def subjects

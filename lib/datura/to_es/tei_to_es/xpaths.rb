@@ -117,6 +117,8 @@ class TeiToEs < XmlToEs
         "repository" => "//sourceDesc/msDesc/msIdentifier/repository",
       },
 
+      # "spatial" => "",
+
       "subcategory" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='subcategory'][1]/term",
 
       # "subjects" => "",

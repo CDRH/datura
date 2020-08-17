@@ -18,7 +18,7 @@ class VraToEs < XmlToEs
     get_text(@xpaths["category"])
   end
 
-  # note this does not sort the creators
+  # nested field
   def creator
     creators = get_list(@xpaths["creators"])
     creators.map { |c| { "name" => Datura::Helpers.normalize_space(c) } }
@@ -32,6 +32,7 @@ class VraToEs < XmlToEs
     @options["collection_desc"] || @options["collection"]
   end
 
+  # nested field
   def contributor
     contrib_list = get_elements(@xpaths["contributor"]).map do |ele|
       {
@@ -106,6 +107,7 @@ class VraToEs < XmlToEs
     get_text(@xpaths["medium"])
   end
 
+  # nested field
   def person
     eles = get_elements(@xpaths["person"]).map do |p|
       {
@@ -125,6 +127,7 @@ class VraToEs < XmlToEs
     get_text(@xpaths["publisher"])
   end
 
+  # nested field
   def recipient
     eles = get_elements(@xpaths["recipient"])
     eles.map do |p|
@@ -153,6 +156,10 @@ class VraToEs < XmlToEs
 
   def source
     get_text(@xpaths["source"])
+  end
+
+  # nested field
+  def spatial
   end
 
   def subcategory

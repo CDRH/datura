@@ -27,6 +27,7 @@ class CustomToEs
     @options["collection_desc"] || @options["collection"]
   end
 
+  # nested field
   def contributor
   end
 
@@ -74,10 +75,8 @@ class CustomToEs
   def medium
   end
 
+  # nested field
   def person
-  end
-
-  def people
   end
 
   def places
@@ -86,6 +85,7 @@ class CustomToEs
   def publisher
   end
 
+  # nested field
   def recipient
   end
 
@@ -102,6 +102,10 @@ class CustomToEs
   end
 
   def source
+  end
+
+  # nested field
+  def spatial
   end
 
   def subjects

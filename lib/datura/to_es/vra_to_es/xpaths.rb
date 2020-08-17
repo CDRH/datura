@@ -30,6 +30,7 @@ class VraToEs < XmlToEs
       "rights_holder" => "/vra/work/image/rightsSet/rights/rightsHolder",
       # "rights_uri" => "",
       # "source" => "",
+      # "spatial" => "",
       # "subjects" = > "",
       "text" => "/inscriptionSet/inscription/text",
       "title" => "//title[@type='descriptive']",

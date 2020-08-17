@@ -114,10 +114,7 @@ module EsRequest
   end
 
   def assemble_spatial
-    # TODO not sure about the naming convention here?
-    # TODO has place_name, coordinates, id, city, county, country,
-    # region, state, street, postal_code
-    # @json["coverage.spatial"]
+    @json["spatial"] = spatial
   end
 
   def assemble_text

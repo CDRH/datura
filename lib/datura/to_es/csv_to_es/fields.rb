@@ -38,6 +38,7 @@ class CsvToEs
     @options["collection_desc"] || @options["collection"]
   end
 
+  # nested field
   def contributor
     if @row["contributor"]
       @row["contributor"].split("; ").map do |p|
@@ -110,6 +111,7 @@ class CsvToEs
     @row["medium"]
   end
 
+  # nested field
   def person
     if @row["person"]
       @row["person"].split("; ").map do |p|
@@ -128,6 +130,7 @@ class CsvToEs
     @row["publisher"]
   end
 
+  # nested field
   def recipient
     if @row["recipient"]
       @row["recipient"].split("; ").map do |p|
@@ -154,6 +157,10 @@ class CsvToEs
 
   def source
     @row["source"]
+  end
+
+  # nested field
+  def spatial
   end
 
   def subjects

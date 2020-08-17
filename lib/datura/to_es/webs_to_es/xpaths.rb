@@ -33,6 +33,7 @@ class WebsToEs < XmlToEs
       # "rights_holder" => "",
       # "rights_uri" => "",
       # "source" => "",
+      # "spatial" => "",
       # "subcategory" => "",
       # "subjects" => "",
       "text" => "//body",
