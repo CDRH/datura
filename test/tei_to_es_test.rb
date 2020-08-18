@@ -9,7 +9,7 @@ class TeiToEsTest < Minitest::Test
 
   def test_assemble_json
     json = @neihardt.assemble_json
-    assert_equal 41, json.length
+    assert_equal 42, json.length
     assert_equal "nei.j4c.12.52", json["identifier"]
   end
 

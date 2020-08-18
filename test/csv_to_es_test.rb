@@ -12,11 +12,11 @@ class CsvToEsTest < Minitest::Test
 
   def test_assemble_json
     json = @test1.assemble_json
-    assert_equal 41, json.length
+    assert_equal 42, json.length
     assert_equal "test.001", json["identifier"]
 
     json = @test2.assemble_json
-    assert_equal 41, json.length
+    assert_equal 42, json.length
     assert_equal "test.002", json["identifier"]
   end
 

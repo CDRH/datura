@@ -7,7 +7,7 @@ class VraToEsTest < Minitest::Test
 
   def test_assemble_json
     json = @cody.assemble_json
-    assert_equal 41, json.length
+    assert_equal 42, json.length
     assert_equal "wfc.img.pc.0001", json["identifier"]
   end
 
