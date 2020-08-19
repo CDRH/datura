@@ -36,9 +36,9 @@ class TeiToEs < XmlToEs
   def contributor
     contribs = get_elements(@xpaths["contributor"]).map do |ele|
       {
-        "id" => ele["id"],
-        "name" => Datura::Helpers.normalize_space(ele.text),
-        "role" => Datura::Helpers.normalize_space(ele["role"])
+        "id" => get_text("@id", xml: ele),
+        "name" => get_text(".", xml: ele),
+        "role" => get_text("@role", xml: ele)
       }
     end
     contribs.uniq
@@ -113,9 +113,9 @@ class TeiToEs < XmlToEs
   def person
     eles = get_elements(@xpaths["person"]).map do |p|
       {
-        "id" => p["id"],
-        "name" => Datura::Helpers.normalize_space(p.text),
-        "role" => Datura::Helpers.normalize_space(p["role"])
+        "id" => get_text("@id", xml: p),
+        "name" => get_text(".", xml: p),
+        "role" => get_text("@role", xml: p)
       }
     end
     eles.uniq

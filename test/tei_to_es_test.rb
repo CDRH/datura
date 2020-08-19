@@ -25,11 +25,11 @@ class TeiToEsTest < Minitest::Test
     creator = [{"name"=>"Neihardt, John Gneisenau, 1881-1973"}]
     assert_equal creator, neihardt["creator"]
 
-    contributor = [{"id"=>"lkw", "name"=>"Weakly, Laura K.", "role"=>nil},
-      {"id"=>"swa", "name"=>"Adrales, Samantha W.", "role"=>nil},
-      {"id"=>"az", "name"=>"Zeljkovic, Arman", "role"=>nil},
-      {"id"=>"ep", "name"=>"Pedigo, Erin", "role"=>nil},
-      {"id"=>nil, "name"=>"Gossin, Pamela", "role"=>nil}
+    contributor = [{"id"=>"lkw", "name"=>"Weakly, Laura K.", "role"=>""},
+      {"id"=>"swa", "name"=>"Adrales, Samantha W.", "role"=>""},
+      {"id"=>"az", "name"=>"Zeljkovic, Arman", "role"=>""},
+      {"id"=>"ep", "name"=>"Pedigo, Erin", "role"=>""},
+      {"id"=>"", "name"=>"Gossin, Pamela", "role"=>""}
     ]
     assert_equal contributor, neihardt["contributor"]
 

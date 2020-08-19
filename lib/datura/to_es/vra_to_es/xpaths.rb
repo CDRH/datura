@@ -22,6 +22,10 @@ class VraToEs < XmlToEs
       "image_id" => "/vra/collection[1]/work[1]/image[1]/@id",
       "keywords" => "/vra/work/subjectSet/subject",
       "medium" => "//materialSet/display",
+      "person" => [
+        "/vra/work/agentSet/agent",
+        "//subjectSet/subject/term[@type='personalName']"
+      ],
       "places" => "/vra/collection[1]/subjectSet[1]/subject/term[@type='geographicPlace']",
       "publisher" => "/vra/work/agentSet/agent",
       # "recipient" => "",

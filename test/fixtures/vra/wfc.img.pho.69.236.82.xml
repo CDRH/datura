@@ -2,22 +2,22 @@
 <?xml-model href="http://digitalhumanities.unl.edu/resources/schemas/vra/vra4.0.42-tei/vra-tei-strict.xsd"?>
 <vra xmlns="http://www.vraweb.org/vracore4.htm"
      xmlns:tei="http://www.tei-c.org/ns/1.0">
-   <work id="wfc.img.pc.0001">
+   <work id="wfc.img.pho.69.236.82">
       <agentSet>
-         <display/>
+         <display>Käsebier, Gertrude, 1852-1934</display>
          <agent>
-            <name/>
+            <name>Käsebier, Gertrude, 1852-1934</name>
             <dates/>
-            <role/>
+            <role>photographer</role>
          </agent>
       </agentSet>
       <dateSet>
-         <display>1904</display>
+         <display>circa 1898</display>
          <date/>
       </dateSet>
       <descriptionSet>
          <description source="BBCW">
-            <tei:p>Native American man wearing traditional regalia. Printed text reads: Weiners, LTD. Copyrighted by Barnum &amp; Bailey, LTD. Published for Buffalo Bill's Wild West, Great Britain, 1904.</tei:p>
+            <tei:p/>
          </description>
       </descriptionSet>
       <inscriptionSet>
@@ -31,7 +31,7 @@
          </location>
       </locationSet>
       <materialSet>
-         <display>Image</display>
+         <display>photograph</display>
          <notes/>
          <material/>
       </materialSet>
@@ -42,41 +42,44 @@
          <measurements type="height" unit="in"/>
       </measurementsSet>
       <relationSet>
-         <relation/>
+        <display>Audio commentary of "Willie Spotted Horse"</display>
+        <relation type="relatedTo" href="multimedia/wfc.aud.69.236.82"/>
       </relationSet>
       <rightsSet>
          <rights>
-            <rightsHolder>McCracken Research Library, Buffalo Bill Center of the West</rightsHolder>
+            <rightsHolder>Smithsonian Institution</rightsHolder>
             <text/>
          </rights>
       </rightsSet>
       <sourceSet>
-        <display>McCracken Research Library, Buffalo Bill Center of the West</display>
+        <display>Photographic History Collection, National Museum of American History, Smithsonian Institution 69.236.82, 2004-57866</display>
          <source>
-            <name type="electronic"
-                  href="http://centerofthewest.org/research/rights-reproductions/"/>
+            <name type="electronic" href="http://americanhistory.si.edu"/>
          </source>
       </sourceSet>
       <subjectSet>
-<display>Lakota Performers; Buffalo Bill's Wild West in Britain</display>
+<display>Lakota Performers</display>
          <subject>
-            <term>Lakota Performers</term>
+            <term type="personalName">Spotted Horse, Willie</term>
          </subject>
          <subject>
-            <term>American Indians</term>
+            <term/>
          </subject>
          <subject>
-            <term>Headgear</term>
+            <term/>
+         </subject>
+         <subject>
+            <term/>
          </subject>
       </subjectSet>
       <techniqueSet>
          <technique/>
       </techniqueSet>
       <titleSet>
-         <title xml:lang="English">Native American man wearing traditional regalia</title>
+         <title xml:lang="English">Willie Spotted Horse</title>
       </titleSet>
       <worktypeSet>
-         <worktype>Image</worktype>
+         <worktype>photograph</worktype>
       </worktypeSet>
       <image>
          <agentSet>
@@ -94,11 +97,11 @@
             </description>
          </descriptionSet>
          <relationSet>
-            <relation type="imageOf" relids="wfc.img.pc.0001"/>
+            <relation type="imageOf" relids="wfc.img.pho.69.236.82"/>
          </relationSet>
          <rightsSet>
             <rights>
-               <rightsHolder>McCracken Research Library, Buffalo Bill Center of the West</rightsHolder>
+               <rightsHolder>Photographic History Collection, National Museum of American History, Smithsonian Institution 69.236.82, 2004-57866</rightsHolder>
                <text/>
             </rights>
          </rightsSet>

@@ -109,12 +109,23 @@ class VraToEs < XmlToEs
 
   # nested field
   def person
+    # xpaths return very simple "subject" and more involved "agent"
     eles = get_elements(@xpaths["person"]).map do |p|
-      {
-        "id" => p["id"],
-        "name" => Datura::Helpers.normalize_space(p.text),
-        "role" => Datura::Helpers.normalize_space(p["role"])
-      }
+      # subject element
+      if get_text("@type", xml: p) == "personalName"
+        {
+          id: nil,
+          name: get_text(".", xml: p),
+          role: nil
+        }
+      # agent element
+      else
+        {
+          id: nil,
+          name: get_text("name", xml: p),
+          role: get_text("role", xml: p)
+        }
+      end
     end
     eles.uniq
   end
@@ -133,8 +144,8 @@ class VraToEs < XmlToEs
     eles.map do |p|
       {
         "id" => "",
-        "name" => Datura::Helpers.normalize_space(p.text),
-        "role" => Datura::Helpers.normalize_space(p["role"]),
+        "name" => get_text(".", xml: p),
+        "role" => get_text("@role", xml: p)
       }
     end
   end
