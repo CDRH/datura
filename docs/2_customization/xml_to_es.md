@@ -321,10 +321,18 @@ You can use `get_elements` to access additional attributes and information from 
 people = get_elements("/TEI/person")
 #=> <person dept="science"Jadzia Dax</person>, <person dept="engineering">Geordi LaForge</person>
 
+# using nokogiri directly
 people.each do |p|
-  puts p.text     # use .text or get_text("/", xml: p)
-  puts p["dept"]  # fancy way to grab immediate attribute
+  puts p.text
+  puts p["dept"]
 end
+
+# using datura methods
+people.each do |p|
+  puts get_text(".", xml: p)
+  puts get_text("@dept", xml: p)
+end
+
 #=> Jadzia Dax
 #=> science
 #=> Geordi LaForge
@@ -389,7 +397,7 @@ def somefield
 end
 ```
 
-Note for devs:  You may also access the raw `@xml` object, `@id`, and `@file`.  `@file` is an instance of FileTei which inherits from FileType, so feel free to use available attributes / methods related to that class.
+Note for devs:  You may also access the raw `@xml` object, `@id`, and `@file`.  `@file` is an instance of FileTei which inherits from [FileType](/lib/datura/file_type.rb), so feel free to use available attributes / methods related to that class.
 
 #### Override Field Nested
 
@@ -438,12 +446,11 @@ Fields like creator, contributor, and person fall into this nested category.  Th
   # 4
   def contributor
     # with each contributor element, we can grab the "id" and "role"
-    # attributes with ["id"] and the text with .text
     contribs = get_elements(@xpaths["contributor"]).map do |ele|
       {
-        "id" => ele["id"],
-        "name" => Datura::Helpers.normalize_space(ele.text),
-        "role" => Datura::Helpers.normalize_space(ele["role"])
+        "id" => get_text("@id", xml: ele),
+        "name" => get_text(".", xml: ele),
+        "role" => get_text("@role", xml: ele)
       }
     end
   end
@@ -452,9 +459,9 @@ Fields like creator, contributor, and person fall into this nested category.  Th
   def contributor
     contribs = get_elements(@xpaths["contributor"]).map do |ele|
       {
-        "id" => ele["id"],
-        "name" => Datura::Helpers.normalize_space(ele.text),
-        "role" => Datura::Helpers.normalize_space(ele["role"])
+        "id" => get_text("@id", xml: ele),
+        "name" => get_text(".", xml: ele),
+        "role" => get_text("@role", xml: ele)
       }
     end
     # finally, we take our list of contributors and crush down any
