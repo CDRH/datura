@@ -6,6 +6,25 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic
 Versioning](https://semver.org/spec/v2.0.0.html).
 
+<!-- Template - Please preserve this order of sections
+## [Unreleased] - Brief description
+[Unreleased]: https://github.com/open-oni/open-oni/compare/v#.#.#...dev
+
+### Fixed
+
+### Added
+
+### Changed
+
+### Removed
+
+### Migration
+
+### Deprecated
+
+### Security
+-->
+
 ## [v0.2.0-beta](https://github.com/CDRH/datura/compare/v0.1.6...v0.2.0-beta) - 2020-08-17 - Altering field and xpath behavior, adds get_elements
 
 ### Added
@@ -14,19 +33,21 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 - ES JSON `uri` now populated using default Orchid item path
 - Tests and fixtures for all supported formats except CustomToEs
 - `get_elements` returns nodeset given xpath arguments
+- `spatial` nested fields `spatial.type` and `spatial.title`
 
 ### Changed
-- Keyword arguments for `get_text`, `get_list`, and `get_xpaths`
-  - This is a breaking change which will require adding keywords such as
-    xml and keep_tags
+- Arguments for `get_text`, `get_list`, and `get_xpaths`
 - XPaths for VRA and TEI to Elasticsearch
 - Default behavior for CsvToEs for some fields
 - Documentation updated
 - Changed Install instructions to include RVM and gemset naming conventions
 - API field `coverage_spatial` is now just `spatial`
 
-### Deprecated
-- `coverage_spatial` API fields
+### Migration
+- Change `coverage_spatial` nested field to `spatial`
+- `get_text`, `get_list`, and `get_xpaths` require changing arguments to keyword (like `xml` and `keep_tags`)
+- Recommend checking xpaths and behavior of fields after updating to this version, as some defaults have changed
+- Possible to refactor previous FileCsv overrides to use new CsvToEs abilities, but not necessary
 
 ## [v0.1.6](https://github.com/CDRH/datura/compare/v0.1.5...v0.1.6) - 2020-04-24 - Improvements to CSV, WEBS transformers and adds Custom transformer
 
