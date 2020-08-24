@@ -8,7 +8,7 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 
 <!-- Template - Please preserve this order of sections
 ## [Unreleased] - Brief description
-[Unreleased]: https://github.com/open-oni/open-oni/compare/v#.#.#...dev
+[Unreleased]: https://github.com/CDRH/datura/compare/v#.#.#...dev
 
 ### Fixed
 
