@@ -101,16 +101,21 @@ properties:
     type: keyword
   rights_uri:
     type: keyword
-  coverage-spatial:
+  spatial:
     type: nested
     properties:
+      id:
+        type: keyword
+      # display title for entire location
+      title:
+        type: keyword
+      type:
+        type: keyword
+      # specific name of building, park, mountain, etc
       place_name:
-        # TODO copy into text?
         type: keyword
       coordinates:
         type: geo_point
-      id:
-        type: keyword
       city:
         type: keyword
       county:

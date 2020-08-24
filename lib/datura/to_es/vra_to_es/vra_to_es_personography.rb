@@ -2,25 +2,22 @@ class VraToEsPersonography < TeiToEs
 
   def override_xpaths
     {
-      "titles" => {
-        "main" => "persName[@type='display']",
-        "alt" => "persName"
-      },
+      "title" => "persName[@type='display']",
       "text" => "note"
     }
   end
 
   def category
-    "Life"
+    "Personography"
   end
 
   def creator
-    creators = get_list(@xpaths["creators"], false, @parent_xml)
+    creators = get_list(@xpaths["creators"], xml: @parent_xml)
     creators.map { |c| { "name" => c } }
   end
 
   def creator_sort
-    get_text(@xpaths["creators"], false, @parent_xml)
+    get_text(@xpaths["creators"], xml: @parent_xml)
   end
 
   def get_id
@@ -31,7 +28,7 @@ class VraToEsPersonography < TeiToEs
   def person
     {
       "role" => nil,
-      "name" => get_text(@xpaths["titles"]["main"]),
+      "name" => get_text(@xpaths["title"]),
       "id" => @id
     }
   end

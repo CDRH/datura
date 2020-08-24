@@ -121,14 +121,15 @@ If you really wanted to, you would be able to add / alter the XML itself, if tha
 This is the hash which contains all of the xpaths your document should be using.  Typically you will use it to access either the default xpaths in `scripts/ruby/lib/tei_to_es/xpaths.rb` or any you've overridden / added.
 
 ```ruby
-@xpaths["titles"]["main"]
+@xpaths["title"]
 ```
 
 #### Using Nokogiri
 
-There may be times that you can't accomplish everything that you want to do using some of the built in data tools like `get_list` and `get_text`.  For example, if you're selecting a person's name and need to parse attributes, roles, subnodes to build an object.  Then it's time to remember that `@xml` is a [Nokogiri::XML::Element](http://www.rubydoc.info/github/sparklemotion/nokogiri/Nokogiri/XML/Element)
+There may be times that you can't accomplish everything that you want to do using some of the built in tools provided by datura. For example, if you're selecting a person's name and need to parse the parent node's attributes to build an object.  Then it's time to remember that `@xml` is a [Nokogiri::XML::Element](http://www.rubydoc.info/github/sparklemotion/nokogiri/Nokogiri/XML/Element)
 
-TODO fill out this section more?
+For the most part, however, you should be able to accomplish your goals using
+the methods in [Getting XPath Contents](#getting-xpath-contents).
 
 ### Overriding XPaths
 
@@ -146,12 +147,26 @@ You would add the following code to your collection's `tei_to_es.rb` file:
 
 ```ruby
 def override_xpaths
+  # create an empty container for your overrides
   xpaths = {}
-
-  # your xpaths here
+  # add the publisher xpath
   xpaths["publisher"] = "/TEI/teiHeader/fileDesc/publicationStmt/publisher[1]"
 
-  return xpaths
+  # the last line should always be your new xpaths
+  xpaths
+end
+```
+
+You may also define your xpaths like this, which is a bit simpler. However,
+using this system may make it more difficult to override fields such as
+`source` with nested xpaths. This is a case where it will be helpful if you
+understand Ruby syntax for Hashes!
+
+```ruby
+def override_xpaths
+  {
+    "publisher" => "/TEI/teiHeader/fileDesc/publicationStmt/publisher[1]"
+  }
 end
 ```
 
@@ -162,48 +177,56 @@ Now your collection will use your xpath but otherwise behave the same way as bef
 But let's say we need to override something that has several options!  How would we change this?
 
 ```ruby
-"creators" => [
-  "/TEI/teiHeader/fileDesc/titleStmt/author",
-  "//persName[@type = 'author']"
-],
-```
-
-If we want to ADD to the list:
-
-```ruby
-xpaths["creators"] << "//another/xpath/for/collection"
-```
-
-If we want to ONLY have our new xpath in the list, we will have to make sure that it still looks like the array that ruby is expecting, since the old "creators" was an array:
-
-```ruby
-xpaths["creators"] = ["//our/new/xpath"]
-```
-
-If we want to add multiple new xpaths, we can do that, too!
-
-```ruby
-xpaths["creators"] = ["new/xpath", "another_xpath", "one_more/xpath"]
-```
-
-Since "creators" was already a list of xpaths we should be able to add any number of them!
-
-#### Override XPath Hash
-
-Another type of complicated xpath is demonstrated by "formats" and "titles".
-
-```ruby
-"titles" => {
-  "main" => "/TEI/teiHeader/fileDesc/titleStmt/title[@type='main'][1]",
-  "alt" => "/TEI/teiHeader/fileDesc/titleStmt/title[1]"
+{
+  "creator" => [
+    "/TEI/teiHeader/fileDesc/titleStmt/author",
+    "//persName[@type = 'author']",
+    "/TEI/teiHeader/fileDesc/sourceDesc/bibl/author",
+    "/TEI/teiHeader/fileDesc/sourceDesc/biblStruct/monogr/author",
+    "//correspDesc/correspAction[@type='sentBy']/persName"
+  ],
 }
 ```
 
-If you want to override just one or both of them, it would look like this:
+Well, if you don't need all those options, you can just entirely redefine it:
 
 ```ruby
-# overrides only the "alt" title, does not change "main"
-xpaths["titles"]["alt"] = "/your/new/xpath"
+{
+  "creator" => "//our/new/xpath"
+}
+```
+
+You can also add a whole list of xpaths, possibly including some of the
+xpaths that will otherwise be overridden:
+
+```ruby
+{
+  "creator" => [
+    "//persName[@type='author']",
+    "//our/new/xpath",
+  ]
+}
+```
+
+#### Override XPath Hash
+
+Another type of complicated xpath is demonstrated by the `source` field. Assuming
+that you only need to change a few values in source, you may want to only alter
+them, but you are, of course, able to overwrite the entire source hash if desired.
+
+```ruby
+xpaths = {}
+# overwrite ALLLLL the source fields
+xpaths["source"] = {
+  # field => xpath
+}
+
+# overwrite just some of the fields
+xpaths["source"]["author"] = "new/xpath"
+xpaths["source"]["title"] = "new/xpath"
+}
+
+xpaths
 ```
 
 ### Overriding Fields
@@ -215,14 +238,17 @@ Datura's `lib/datura/to_es/tei_to_es/fields.rb` has a list of functions which ge
 The following are helpers created to make your life easier:
 
 - get_text
+  - grab the text of one or many xpaths
 - get_list
+  - create a list of text from one or many xpaths
+- get_elements
+  - get the xml elements from one or many xpaths
 
-`get_text` will take one or many xpaths and condense their contents into a string.  `get_list` will return an array of their contents.  Here is an example of how they can be used:
-
+Here's how they might be used:
 ```xml
 <TEI>
-  <person>Jadzia Dax</person>
-  <person>Geordi LaForge</person>
+  <person dept="science">Jadzia Dax</person>
+  <person dept="engineering">Geordi LaForge</person>
 </TEI>
 ```
 
@@ -232,23 +258,39 @@ get_list("/TEI/person")
 
 get_text("/TEI/person")
 #=> "Jadzia Dax; Geordi LaForge"
+
+get_element('/TEI/person')
+#=> <person dept="science"Jadzia Dax</person>, <person dept="engineering">Geordi LaForge</person>
 ```
 
-`get_text` and `get_list` accept a few parameters.
+By default, all of the above methods operate on the `@xml` object, which is
+typically the specific TEI file. However, you may ask them to operate on a different
+file or sub-set with the `xml` keyword. This may be helpful if you are working
+with other documents, such as authority files, or if you are working within
+elements in your TEI document, such as pages or personography entries.
 
-- xpath(s) : a string or array of strings
+```
+# let's say that you need to pull in a title from an authority file
+# named `@works`:
+
+work_id = get_text("/ref/@id")
+get_text("//works/work[@id='#{work_id}'']", xml: @works)
+```
+
+`get_text` and `get_list`  parameters:
+
 - keep_tags (optional): defaults to false, pass in true if you want to convert italics, bold, underline to HTML
-- xml (optional) : defaults to entire document XML, but you can pass in a different XML object if you like (example: you need to read an annotations file in and get information for your current document)
+- xml (optional) : defaults to entire document XML, or pass in your own XML object
 
 `get_text` only:
 
-- delimiter (optional) : the separator between multiple items for get_text
+- delimiter (optional) : defaults to ";", the separator between multiple items
 
 This looks like the following:
 
 ```ruby
-get_list(xpaths, [keep_tags], [xml])
-get_text(xpaths, [keep_tags], [xml], [delimiter])
+get_list(xpaths, keep_tags: [keep_tags], xml: [xml])
+get_text(xpaths, keep_tags: [keep_tags], xml: [xml], delimiter: [delimiter])
 ```
 
 By default, `get_text` and `get_list` will strip out XML from the results of the xpath.  If you would like to preserve italics, bold, and underlining, pass in the "keep_tags" parameter to convert them from TEI to HTML:
@@ -259,18 +301,42 @@ By default, `get_text` and `get_list` will strip out XML from the results of the
 ```
 
 ```ruby
-get_text(@xpaths["text"], true)
+get_text(@xpaths["text"], keep_tags: true)
 #=> "She wrote the book <em>My 100 Year Old Moth</em>"
 ```
 
 You can also customize the delimiter when `get_text` encounters multiple results (which defaults to using ";")
 
 ```ruby
-get_text("/TEI/person", false, ",")
+get_text("/TEI/person", delimiter: ",")
 #=> "Jadzia Dax, Geordi LaForge"
 
-get_text(@xpaths["people"], false, " &")
+get_text(@xpaths["people"], delimiter: " &")
 #=> "Jadzia Dax & Geordi LaForge"
+```
+
+You can use `get_elements` to access additional attributes and information from xpaths.
+
+```ruby
+people = get_elements("/TEI/person")
+#=> <person dept="science"Jadzia Dax</person>, <person dept="engineering">Geordi LaForge</person>
+
+# using nokogiri directly
+people.each do |p|
+  puts p.text
+  puts p["dept"]
+end
+
+# using datura methods
+people.each do |p|
+  puts get_text(".", xml: p)
+  puts get_text("@dept", xml: p)
+end
+
+#=> Jadzia Dax
+#=> science
+#=> Geordi LaForge
+#=> engineering
 ```
 
 Now that you know how to set xpaths and get their values, let's move to the part where you override field behavior.
@@ -279,14 +345,13 @@ Now that you know how to set xpaths and get their values, let's move to the part
 
 You can override any of the fields found in datura's `/lib/datura/to_es/tei_to_es/fields.rb` by copying them into your `tei_to_es.rb` file and changing what they return.
 
-Here is a very basic example which changes a hardcoded string response:
+Here is a very basic example which changes to a hardcoded string response:
 
 ```ruby
 # default version
 
 def rights
-  # Note: override by collection as needed
-  "All Rights Reserved"
+  get_text(@xpaths["rights"])
 end
 
 # collection version
@@ -296,33 +361,23 @@ def rights
 end
 ```
 
-Oh shoot, but your collection actually has information encoded in the TEI document itself which varies from file to file!  Not to worry, you can override the field and use one of your xpaths!
+Oh shoot, but your collection actually has information encoded in the TEI document itself which varies from file to file!  Not to worry, you can override the field AND use one of your xpaths!
 
 ```ruby
 # collection version
 
 def rights
-  get_text(@xpaths["rights_holder"])
+  if (file has some criteria)
+    get_text(@xpaths["rights"])
+  else
+    "CC 4.0 License"
+  end
 end
 ```
 
 #### Override Field If Then
 
-There might be circumstances where what you want to be in a field might depend on the contents of multiple xpaths.  Here is a basic example for checking that type of thing.
-
-```ruby
-def title
-  title = get_text(@xpaths["titles"]["main"])
-  if title.empty?
-    title = get_text(@xpaths["titles"]["alt"])
-  end
-  return title
-end
-```
-
-In the above example, the results for the main title's xpath are saved to "title."  If the results are empty, then instead title is assigned the value of the "alt" title.  You could also add a few lines of code to default to "No title" or similar if neither the main nor the alt return results.
-
-You could also check one of the `@options` from the config file to determine what to return.  You may find `@id` useful as well. What follows is a rather contrived example, but you may find it useful.
+There might be circumstances where what you want to be in a field might depend on the contents of multiple xpaths or options, etc.
 
 ```yaml
 default:
@@ -335,14 +390,14 @@ development:
 ```ruby
 def somefield
   if @options["display"]
-    return "#{@options["uri"]}/#{@id}"
+    "#{@options["uri"]}/#{@id}"
   else
-    return "Site unavailable"
+    "Site unavailable"
   end
 end
 ```
 
-Note for devs:  You may also access the raw `@xml` object, `@id`, and `@file`.  `@file` is an instance of FileTei which inherits from FileType, so feel free to use methods and information related to those classes.
+Note for devs:  You may also access the raw `@xml` object, `@id`, and `@file`.  `@file` is an instance of FileTei which inherits from [FileType](/lib/datura/file_type.rb), so feel free to use available attributes / methods related to that class.
 
 #### Override Field Nested
 
@@ -364,88 +419,57 @@ This is the most difficult type of override you'll likely encounter.  Some of el
 ]
 ```
 
-Fields like creator, contributors, and person fall into this nested category.  The following will walk you through how one of these fields is built, using one of the more complicated versions.
+Fields like creator, contributor, and person fall into this nested category.  The following will walk you through how one of these fields is built, using one of the more complicated versions.
 
 ```ruby
   # 1
-  def contributors
+  def contributor
     # we're ready to start customizing this field
   end
 
   # 2
-  def contributors
-    # ultimately there are going to be multiple authors
-    # so start with an array
-    people = []
+  def contributor
+    # let's start by grabbing whatever we've got at the xpath
+    contribs = get_elements(@xpaths["contributor"])
   end
 
   # 3
-  def contributors
-    people = []
-    # @xpaths["contributors"] returns an array of xpaths
-    # so iterate through each xpath one by one
-    @xpaths["contributors"].each do |xpath|
+  def contributor
+    # we need to do something with each contributor in order to pull
+    # out information like identifier and role, so we add `.map` to iterate
+
+    contribs = get_elements(@xpaths["contributor"]).map do |ele|
 
     end
   end
 
   # 4
-  def contributors
-    people = []
-    @xpaths["contributors"].each do |xpath|
-      # for simpler fields, we can usually use get_list
-      # to get the contents of multiple xpaths and results
-      # but in this case, we have to call the .xpath method
-      # directly on the main @xml object because we want
-      # to get an XML object we can work with, not just a string
-      # since this is a nested field and we need more info
-      # (eles == elements)
-      eles = @xml.xpath(xpath)
+  def contributor
+    # with each contributor element, we can grab the "id" and "role"
+    contribs = get_elements(@xpaths["contributor"]).map do |ele|
+      {
+        "id" => get_text("@id", xml: ele),
+        "name" => get_text(".", xml: ele),
+        "role" => get_text("@role", xml: ele)
+      }
     end
   end
 
   # 5
-  def contributors
-    people = []
-    @xpaths["contributors"].each do |xpath|
-      eles = @xml.xpath(xpath)
-      eles.each do |ele|
-        # iterate through all of the XML elements returned
-        # so we can begin to manipulate a single one!
-      end
+  def contributor
+    contribs = get_elements(@xpaths["contributor"]).map do |ele|
+      {
+        "id" => get_text("@id", xml: ele),
+        "name" => get_text(".", xml: ele),
+        "role" => get_text("@role", xml: ele)
+      }
     end
+    # finally, we take our list of contributors and crush down any
+    # that are not unique. We don't need one person's name showing up 3 times,
+    # after all!
+    contribs.uniq
   end
 ```
 
-Okay, now for the fun part!  We are finally ready to work with an element.  Let's say it looks something like this:
-
-```xml
-<persName xml:id="cat.0182" role="Encoder">Weakly, Laura</persName>
-```
-
-In order to get at the attributes and contents, we can use the following:
-
-```ruby
-ele.text #=> text contents
-ele["id"] #=> attribute value
-```
-
-Armed with that knowledge, plus the notion that we want to return a hash with keys "name", "id", and "role", the whole thing now looks like this:
-
-```ruby
-  # 6
-  def contributors
-    people = []
-    @xpaths["contributors"].each do |xpath|
-      eles = @xml.xpath(xpath)
-      eles.each do |ele|
-        # push the hash you're creating onto the people array
-        people << { "name" => ele.text, "id" => ele["id"], "role" => ele["role"] }
-      end
-    end
-    # return the array at the bottom of the method!
-    return people
-  end
-```
-
-As mentioned previously, this is likely the most difficult of the types of overrides you may need to do, so hopefully the majority of your field requirements are much less complicated!
+Hopefully the majority of your field requirements are much less complicated than
+needing to recreate / imitate these nested fields!
