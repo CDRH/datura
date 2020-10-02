@@ -25,6 +25,14 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 ### Security
 -->
 
+## [Unreleased](https://github.com/CDRH/datura/compare/v0.2.0-beta...dev)
+
+### Added
+- minor test for Datura::Helpers.date_standardize
+
+### Changed
+- data_standardize now relies on strftime instead of manual zero padding for month, day
+
 ## [v0.2.0-beta](https://github.com/CDRH/datura/compare/v0.1.6...v0.2.0-beta) - 2020-08-17 - Altering field and xpath behavior, adds get_elements
 
 ### Added
