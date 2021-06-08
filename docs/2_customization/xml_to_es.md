@@ -4,7 +4,7 @@
 
 If you are already familiar with XSLT / XPath, you may be interested in comparing Ruby / Nokogiri equivalents with XSLT behavior.
 
-- [Common Ruby Equivalents for Xpath and XSLT](xslt_to_ruby_reference.md)
+- [Common Ruby Equivalents for Xpath and XSLT](../xslt_to_ruby_reference.md)
 
 ### Overriding in Ruby
 
