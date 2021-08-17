@@ -34,6 +34,12 @@ class FileType
     # script locations set in child classes
   end
 
+  def debug_info(error)
+    if options["verbose"]
+      puts "Backtrace: " << error.backtrace.join("\n  ")
+    end
+  end
+
   def filename(ext=true)
     if ext
       File.basename(@file_location)
@@ -54,6 +60,7 @@ class FileType
     begin
       transformed = transform_es
     rescue => e
+      debug_info(e)
       return { "error" => "Error transforming ES for #{self.filename(false)}: #{e}" }
     end
     if transformed && transformed.length > 0
@@ -66,7 +73,9 @@ class FileType
         begin
           RestClient.put("#{url}/_doc/#{id}", doc.to_json, {:content_type => :json } )
         rescue => e
-          return { "error" => "Error transforming or posting to ES for #{self.filename(false)}: #{e.response}" }
+          debug_info(e)
+          puts "Erroneous document ID: #{id}"
+          return { "error" => "Error transforming or posting to ES for #{self.filename(false)}: #{e.message}" }
         end
       end
     else
@@ -96,7 +105,8 @@ class FileType
         return { "error" => "Error posting to Solr for #{self.filename}: #{res.body}" }
       end
     rescue => e
-      return { "error" => "Error posting to Solr for #{self.filename}: #{e.inspect}" }
+      debug_info(e)
+      return { "error" => "Error posting to Solr for #{self.filename}: #{e.message}" }
     end
   end
 
@@ -134,8 +144,8 @@ class FileType
       end
       return es_req
     rescue => e
-      puts "something went wrong transforming #{self.filename}"
-      raise e
+      debug_info(e)
+      puts "Something went wrong transforming #{self.filename}: #{e.message}"
     end
   end
 
