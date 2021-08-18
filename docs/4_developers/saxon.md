@@ -56,6 +56,8 @@ If you locate your Saxon JAR somewhere other than `/usr/local/share/saxon/saxon9
 
 Now you and others may run `saxon (arguments)` from anywhere on your system to save typing and run Saxon within scripts.
 
+If you get an error about locating a Java Runtime, this is probably because macOS no longer comes installed with a Java Runtime Environment. Download the latest stable version of the open-source Java Development Kit from https://jdk.java.net/.
+
 
 ## Reference
 - Download / Support Info: http://saxonica.com/download/opensource.xml
