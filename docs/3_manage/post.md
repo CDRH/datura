@@ -104,6 +104,8 @@ Outputs more information about the script running.  Can be useful for debugging.
 
 *Default setting: es*
 
+Specifies the search index or format you are posting to (the html format will create local files)
+
 - es
 - solr
 - html
