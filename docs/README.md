@@ -27,7 +27,7 @@ The files are parsed and formatted into documents appropriate for Solr, IIIF, El
   - [IIIF Manifest Customization](2_customization/iiif.md)
   - HTML customization
   - Solr customization
-  - [Collection Tests](2_customization/test.md)
+  - Collection Tests
 - Manage collection
   - [Post to index](3_manage/post.md)
   - [Clear index](3_manage/clear_index.md)
