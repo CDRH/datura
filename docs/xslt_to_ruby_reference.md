@@ -106,7 +106,7 @@ authors = @xml.xpath("//author")
 authors.each do |author|
   lastname = author.get_text("persName/lastName")
   role = author["role"]
-  puts "#{lastname} the #{editor}"
+  puts "#{lastname} the #{role}"
 end
 ```
 
