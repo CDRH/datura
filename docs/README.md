@@ -31,7 +31,7 @@ The files are parsed and formatted into documents appropriate for Solr, IIIF, El
 - Manage collection
   - [Post to index](3_manage/post.md)
   - [Clear index](3_manage/clear_index.md)
-  - [Whitelisting](2_customization/whitelisting.md)
+  - Whitelisting
   - Remove / destroy index
 - Developers
   - [Installation](4_developers/installation.md)
