@@ -26,6 +26,7 @@ or
 
 Download Saxon-HE from [Saxonica Open Source](https://sourceforge.net/projects/saxon/files/Saxon-HE/)
 
+Find saxon9he.jar and move it to usr/local/share/saxon-(version) (make sure to have the Finder show hidden files, if you are on a Mac).
 
 ## Bash Executable
 This bash executable passes its arguments through to and runs the Saxon JAR
@@ -56,7 +57,7 @@ If you locate your Saxon JAR somewhere other than `/usr/local/share/saxon/saxon9
 
 Now you and others may run `saxon (arguments)` from anywhere on your system to save typing and run Saxon within scripts.
 
-If you get an error about locating a Java Runtime, this is probably because macOS no longer comes installed with a Java Runtime Environment. Download the latest stable version of the open-source Java Development Kit from https://jdk.java.net/.
+If you get an error about locating a Java Runtime, this is probably because macOS no longer comes installed with a Java Runtime Environment. Run `brew install java`.
 
 
 ## Reference
