@@ -37,7 +37,7 @@ default:
   es_schema_path: lib/config/es_api_schemas
   # current version of the API (powered by Elasticsearch)
   # this setting determines which of the schemas will be used
-  api_version: "override with value like '1.0' or '2.0'"
+  api_version: "1.0"
   # NOTE: es_schema option is set later as combination of above
   # es_schema_override, es_schema_path, and api_version
 
@@ -67,6 +67,7 @@ default:
   html_html_xsl: scripts/.xslt-datura/html_to_html/html_to_html.xsl
   tei_html_xsl: scripts/.xslt-datura/tei_to_html/tei_to_html.xsl
   vra_html_xsl: scripts/.xslt-datura/vra_to_html/vra_to_html.xsl
+  ead_html_xsl: scripts/.xslt-datura/ead_to_html/ead_to_html.xsl
 
   # XSLT PARAMETERS
   # NOTE! If you are altering ANY of the variables you must
