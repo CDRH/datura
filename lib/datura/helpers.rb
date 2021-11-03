@@ -10,6 +10,38 @@ module Datura::Helpers
   #   params: directory (string)
   #   returns: returns array of all files found ([] if none),
   #     returns nil if no directory by that name exists
+  def self.date_display(date, nd_text="N.D.")
+    date_hyphen = self.date_standardize(date)
+    if date_hyphen
+      y, m, d = date_hyphen.split("-").map { |s| s.to_i }
+      date_obj = Date.new(y, m, d)
+      date_obj.strftime("%B %-d, %Y")
+    else
+      nd_text
+    end
+  end
+
+  # date_standardize
+  #   automatically defaults to setting incomplete dates to the earliest
+  #   date (2016-07 becomes 2016-07-01) but pass in "false" in order
+  #   to set it to the latest available date
+  def self.date_standardize(date, before=true)
+    if date
+      y, m, d = date.split(/-|\//)
+      if y && y.length == 4
+        # use -1 to indicate that this will be the last possible
+        m_default = before ? "01" : "-1"
+        d_default = before ? "01" : "-1"
+        m = m_default if !m
+        d = d_default if !d
+        if Date.valid_date?(y.to_i, m.to_i, d.to_i)
+          date = Date.new(y.to_i, m.to_i, d.to_i)
+          date.strftime("%Y-%m-%d")
+        end
+      end
+    end
+  end
+  
   def self.get_directory_files(directory, verbose_flag=false)
     exists = File.directory?(directory)
     if exists
