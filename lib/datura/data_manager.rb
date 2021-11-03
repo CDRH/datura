@@ -1,7 +1,7 @@
 require "colorize"
 require "logger"
 require "yaml"
-
+require "byebug"
 require_relative "./requirer.rb"
 
 class Datura::DataManager
@@ -21,6 +21,7 @@ class Datura::DataManager
   def self.format_to_class
     {
       "csv" => FileCsv,
+      "ead" => FileEad,
       "html" => FileHtml,
       "tei" => FileTei,
       "vra" => FileVra,
@@ -75,7 +76,6 @@ class Datura::DataManager
 
     pre_file_preparation
     @files = prepare_files
-
     pre_batch_processing
     batch_process_files
     post_batch_processing
@@ -298,7 +298,6 @@ class Datura::DataManager
   end
 
   def transform_and_post(file)
-
     # elasticsearch
     if should_transform?("es")
       if @options["transform_only"]
