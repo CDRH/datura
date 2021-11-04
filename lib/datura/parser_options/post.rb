@@ -22,12 +22,12 @@ module Datura::Parser
 
       # default to no restricted format
       options["format"] = nil
-      opts.on( '-f', '--format [input]', 'Restrict to one format (csv, html, tei, vra, webs)') do |input|
-        if %w[csv html tei vra webs].include?(input)
+      opts.on( '-f', '--format [input]', 'Restrict to one format (csv, ead, html, tei, vra, webs)') do |input|
+        if %w[csv ead html tei vra webs].include?(input)
           options["format"] = input
         else
           puts "Format #{input} is not recognized.".red
-          puts "Allowed formats are csv, html, tei, vra, and webs (web-scraped html)"
+          puts "Allowed formats are csv, ead, html, tei, vra, and webs (web-scraped html)"
           exit
         end
       end
