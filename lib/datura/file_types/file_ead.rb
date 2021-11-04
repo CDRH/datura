@@ -11,7 +11,8 @@ class FileEad < FileType
 
   def initialize(file_location, options)
     super(file_location, options)
-    @script_html = File.join(options["collection_dir"], options["ead_html_xsl"]) # There needs to be an xsl file to transform into html
+    @script_html = File.join(options["collection_dir"], options["ead_html_xsl"])
+    # There needs to be an xsl file to transform into html
     # I don't think we need solr at this point)
     # @script_solr = File.join(options["collection_dir"], options["tei_solr_xsl"])
   end
@@ -19,7 +20,7 @@ class FileEad < FileType
   def subdoc_xpaths
     # match subdocs against classes
     return {
-      "/EAD" => EadToEs,
+      "/ead" => EadToEs,
       # "//dsc/c01" => EadToEsItems,
     }
   end
