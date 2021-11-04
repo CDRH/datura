@@ -23,9 +23,9 @@ class FileType
     @file_location = location
     @options = options
     add_xsl_params_options
-
     # set output directories
     output = File.join(@options["collection_dir"], "output", @options["environment"])
+    
     @out_es = File.join(output, "es")
     @out_html = File.join(output, "html")
     @out_iiif = File.join(output, "iiif")
@@ -127,10 +127,12 @@ class FileType
       if results.length == 0
         raise "No possible xpaths found fo file #{self.filename}, check if XML is valid or customize 'subdoc_xpaths' method"
       end
+      
       subdoc_xpaths.each do |xpath, classname|
         subdocs = file_xml.xpath(xpath)
         subdocs.each do |subdoc|
           file_transformer = classname.new(subdoc, @options, file_xml, self.filename(false))
+          
           es_req << file_transformer.json
         end
       end
@@ -141,6 +143,7 @@ class FileType
       return es_req
     rescue => e
       puts "something went wrong transforming #{self.filename}"
+      puts e
       raise e
     end
   end
