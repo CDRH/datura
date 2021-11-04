@@ -11,7 +11,7 @@ class EadToEs < XmlToEs
         #   "/TEI/teiHeader/revisionDesc/change/name",
         #   "/TEI/teiHeader/fileDesc/titleStmt/editor"
         # ],
-        "creators" => ["/ead/archdesc/did/origination/persname", "/ead/eadheader/filedesc/titlestmt/creator"]
+        "creators" => ["/ead/archdesc/did/origination/persname", "/ead/eadheader/filedesc/titlestmt/creator"],
         "date" => "/ead/eadheader/filedesc/publicationstmt/date",
         "description" => "/ead/archdesc/scopecontent/p",
         # a non normalized date taken directly from the source material ("Dec 9", "Winter 1889")
@@ -31,8 +31,10 @@ class EadToEs < XmlToEs
         "rights" => "/ead/archdesc/descgrp/accessrestrict/p",
         "rights_holder" => "ead/archdesc/did/repository/corpname",
         "source" => "/ead/archdesc/descgrp/prefercite/p",
-        "subjects" => "/ead/archdesc/controlaccess/*[not(name()="head")]"],
+        "subjects" => "/ead/archdesc/controlaccess/*[not(name()='head')]",
         # "subcategory" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='subcategory'][1]/term",
         "titles" => "ead/archdesc/did/unittitle",
         "text" => "/ead/eadheader/filedesc/titlestmt/*",
-      }
+      }.merge(override_xpaths)
+    end
+  end
