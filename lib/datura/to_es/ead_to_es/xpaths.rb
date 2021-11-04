@@ -5,7 +5,7 @@ class EadToEs < XmlToEs
   #  in that file which returns a different value
   def xpaths_list
       {
-        # "abstract" => "/ead/archdesc/did/abstract"
+        "abstract" => "/ead/archdesc/did/abstract",
         # "category" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='category'][1]/term",
         # "contributors" => [
         #   "/TEI/teiHeader/revisionDesc/change/name",
@@ -27,13 +27,13 @@ class EadToEs < XmlToEs
         # "places" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='places']/term",
         "publisher" => "/ead/eadheader/filedesc/publicationstmt/publisher",
         # "recipient" => "/TEI/teiHeader/profileDesc/particDesc/person[@role='recipient']/persName",
-        "repository_contact" => "/ead/archdesc/did/repository/addresses",
+        "repository_contact" => "/ead/archdesc/did/repository/address/*",
         "rights" => "/ead/archdesc/descgrp/accessrestrict/p",
-        "rights_holder" => "ead/archdesc/did/repository/corpname",
+        "rights_holder" => "/ead/archdesc/did/repository/corpname",
         "source" => "/ead/archdesc/descgrp/prefercite/p",
         "subjects" => "/ead/archdesc/controlaccess/*[not(name()='head')]",
         # "subcategory" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='subcategory'][1]/term",
-        "titles" => "ead/archdesc/did/unittitle",
+        "title" => "/ead/archdesc/did/unittitle",
         "text" => "/ead/eadheader/filedesc/titlestmt/*",
       }.merge(override_xpaths)
     end
