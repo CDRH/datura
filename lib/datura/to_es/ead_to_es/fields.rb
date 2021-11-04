@@ -15,6 +15,10 @@ class EadToEs < XmlToEs
   #   "https://cdrhapi.unl.edu/doc/#{@id}"
   # end
 
+  def abstract
+    get_text(@xpaths["abstract"])
+  end
+
   def annotations_text
     # TODO what should default behavior be?
   end
