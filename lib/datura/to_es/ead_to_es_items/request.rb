@@ -1,4 +1,4 @@
-class EadToEsItems < XmlToEs
+class EadToEsItems < EadToEs
 
   # please refer to generic xml to es request file, request.rb
   # and override methods specific to TEI transformation here
