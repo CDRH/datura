@@ -1,4 +1,4 @@
-class EadToEsItems < XmlToEs
+class EadToEsItems < EadToEs
   # Note to add custom fields, use "assemble_collection_specific" from request.rb
   # and be sure to either use the _d, _i, _k, or _t to use the correct field type
 
@@ -15,14 +15,14 @@ class EadToEsItems < XmlToEs
   #   "https://cdrhapi.unl.edu/doc/#{@id}"
   # end
 
-  # def annotations_text
-  #   # TODO what should default behavior be?
-  # end
+  def annotations_text
+    # TODO what should default behavior be?
+  end
 
-  # def category
-  #   category = get_text(@xpaths["category"])
-  #   return category.length > 0 ? CommonXml.normalize_space(category) : "none"
-  # end
+  def category
+    # category = get_text(@xpaths["category"])
+    # return category.length > 0 ? CommonXml.normalize_space(category) : "none"
+  end
 
   # note this does not sort the creators
   def creator
@@ -36,30 +36,30 @@ class EadToEsItems < XmlToEs
   end
 
   def collection
-    "manuscripts"
+    # "manuscripts"
   end
 
   def collection_desc
-    @options["collection_desc"] || @options["collection"]
+    # @options["collection_desc"] || @options["collection"]
   end
 
-  # def contributor
-  #   contribs = []
-  #   @xpaths["contributors"].each do |xpath|
-  #     eles = @xml.xpath(xpath)
-  #     eles.each do |ele|
-  #       contribs << {
-  #         "id" => ele["id"],
-  #         "name" => CommonXml.normalize_space(ele.text),
-  #         "role" => CommonXml.normalize_space(ele["role"])
-  #       }
-  #     end
-  #   end
-  #   contribs.uniq
-  # end
+  def contributor
+    # contribs = []
+    # @xpaths["contributors"].each do |xpath|
+    #   eles = @xml.xpath(xpath)
+    #   eles.each do |ele|
+    #     contribs << {
+    #       "id" => ele["id"],
+    #       "name" => CommonXml.normalize_space(ele.text),
+    #       "role" => CommonXml.normalize_space(ele["role"])
+    #     }
+    #   end
+    # end
+    # contribs.uniq
+  end
 
   def data_type
-    "ead"
+    "ead_item"
   end
 
   def date(before=true)
@@ -80,23 +80,31 @@ class EadToEsItems < XmlToEs
   end
 
   def description
-    # Note: override per collection as needed
+    get_text(@xpaths["description"])
   end
 
   def format
-    matched_format = nil
-    # iterate through all the formats until the first one matches
-    @xpaths["formats"].each do |type, xpath|
-      text = get_text(xpath)
-      matched_format = type if text && text.length > 0
+    # matched_format = nil
+    # # iterate through all the formats until the first one matches
+    # @xpaths["formats"].each do |type, xpath|
+    #   text = get_text(xpath)
+    #   matched_format = type if text && text.length > 0
+    # end
+    # matched_format
+  end
+  def get_id
+    # doc = id
+    doc = get_text(@xpaths["identifier"])
+    if doc == ""
+      byebug
     end
-    matched_format
+    return "#{@filename}_#{doc}"
   end
 
   def image_id
-    # Note: don't pull full path because will be pulled by IIIF
-    images = get_list(@xpaths["image_id"])
-    images[0] if images
+    # # Note: don't pull full path because will be pulled by IIIF
+    # images = get_list(@xpaths["image_id"])
+    # images[0] if images
   end
 
   def keywords
@@ -120,19 +128,19 @@ class EadToEsItems < XmlToEs
     # TODO will need some examples of how this will work
     # and put in the xpaths above, also for attributes, etc
     # should contain name, id, and role
-    eles = @xml.xpath(@xpaths["person"])
-    people = eles.map do |p|
-      {
-        "id" => "",
-        "name" => CommonXml.normalize_space(p.text),
-        "role" => CommonXml.normalize_space(p["role"])
-      }
-    end
-    return people
+    # eles = @xml.xpath(@xpaths["person"])
+    # people = eles.map do |p|
+    #   {
+    #     "id" => "",
+    #     "name" => CommonXml.normalize_space(p.text),
+    #     "role" => CommonXml.normalize_space(p["role"])
+    #   }
+    # end
+    # return people
   end
 
   def people
-    @json["person"].map { |p| CommonXml.normalize_space(p["name"]) }
+    # @json["person"].map { |p| CommonXml.normalize_space(p["name"]) }
   end
 
   def places
@@ -144,20 +152,20 @@ class EadToEsItems < XmlToEs
   end
 
   def recipient
-    eles = @xml.xpath(@xpaths["recipient"])
-    people = eles.map do |p|
-      {
-        "id" => "",
-        "name" => CommonXml.normalize_space(p.text),
-        "role" => "recipient"
-      }
-    end
-    return people
+    # eles = @xml.xpath(@xpaths["recipient"])
+    # people = eles.map do |p|
+    #   {
+    #     "id" => "",
+    #     "name" => CommonXml.normalize_space(p.text),
+    #     "role" => "recipient"
+    #   }
+    # end
+    # return people
   end
 
   def rights
     # Note: override by collection as needed
-    "All Rights Reserved"
+    get_text(@xpaths["rights"])
   end
 
   def rights_holder
@@ -205,11 +213,7 @@ class EadToEsItems < XmlToEs
   end
 
   def title
-    title = get_text(@xpaths["titles"]["main"])
-    if title.empty?
-      title = get_text(@xpaths["titles"]["alt"])
-    end
-    return title
+    title = get_text(@xpaths["titles"])
   end
 
   def title_sort
