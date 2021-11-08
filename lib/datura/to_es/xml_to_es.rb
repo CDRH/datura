@@ -34,9 +34,8 @@ class XmlToEs
     @options = options
     @parent_xml = parent_xml
     @filename = filename
-    @id = get_id
     @xpaths = xpaths_list
-
+    @id = get_id
     create_json
   end
 
