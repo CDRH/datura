@@ -21,7 +21,7 @@ class FileEad < FileType
     # match subdocs against classes
     return {
       "/ead" => EadToEs,
-      # "//dsc/c01" => EadToEsItems,
+      "//*[@level='item']" => EadToEsItems,
     }
   end
 
