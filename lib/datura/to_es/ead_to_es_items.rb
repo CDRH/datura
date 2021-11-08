@@ -1,4 +1,4 @@
-require_relative "xml_to_es.rb"
+require_relative "ead_to_es.rb"
 require_relative "ead_to_es_items/fields.rb"
 require_relative "ead_to_es_items/request.rb"
 require_relative "ead_to_es_items/xpaths.rb"
@@ -27,10 +27,7 @@ require_relative "ead_to_es_items/xpaths.rb"
 #   collections of fields being sent to elasticsearch
 #   you can override individual chunks of fields in your collection
 
-class EadToEsItems < XmlToEs
+class EadToEsItems < EadToEs
   # Override XmlToEs methods that need to be customized for EAD here
   # rather than in one of the files in ead_to_es/
-  def get_id
-    @id
-  end
 end
