@@ -39,6 +39,7 @@ The files are parsed and formatted into documents appropriate for Solr, IIIF, El
   - [Ruby / Gems](4_developers/ruby_gems.md)
   - Class organization
   - [Tests](4_developers/test.md)
+  - [Add new formats to Datura](4_developers/new_formats.md)
 - More
   - [Troubleshooting](troubleshooting.md)
   - [XSLT to Ruby reference](xslt_to_ruby_reference.md)
