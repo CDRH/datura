@@ -63,6 +63,7 @@ class FileType
           begin
             RestClient.put("#{es.index_url}/_doc/#{id}", doc.to_json, {:content_type => :json } )
           rescue => e
+            # byebug
             error = "Error transforming or posting to ES for #{self.filename(false)}: #{e.response}"
           end
         else
@@ -126,7 +127,6 @@ class FileType
         subdocs = file_xml.xpath(xpath)
         subdocs.each do |subdoc|
           file_transformer = classname.new(subdoc, @options, file_xml, self.filename(false))
-          
           es_req << file_transformer.json
         end
       end
@@ -138,6 +138,7 @@ class FileType
     rescue => e
       puts "something went wrong transforming #{self.filename}"
       puts e
+      puts e.backtrace
       raise e
     end
   end
