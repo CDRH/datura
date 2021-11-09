@@ -20,15 +20,13 @@ class EadToEsItems < EadToEs
   end
 
   def category
-    # category = get_text(@xpaths["category"])
-    # return category.length > 0 ? CommonXml.normalize_space(category) : "none"
   end
 
   # note this does not sort the creators
-  def creator
-    creators = get_list(@xpaths["creators"])
-    return creators.map { |creator| { "name" => CommonXml.normalize_space(creator) } }
-  end
+  # def creator
+  #   creators = get_list(@xpaths["creators"])
+  #   return creators.map { |creator| { "name" => CommonXml.normalize_space(creator) } }
+  # end
 
   # returns ; delineated string of alphabetized creators
   def creator_sort
@@ -36,7 +34,7 @@ class EadToEsItems < EadToEs
   end
 
   def collection
-    # "manuscripts"
+    "whitman-finding_aid_manuscripts"
   end
 
   def collection_desc
@@ -68,7 +66,12 @@ class EadToEsItems < EadToEs
   end
 
   def date_display
-    get_text(@xpaths["date_display"])
+    if get_text(@xpaths["date_display"]) == ""
+      return get_text(@xpaths["date"])
+    else
+      return get_text(@xpaths["date_display"])
+    end
+
   end
 
   def date_not_after
@@ -83,20 +86,20 @@ class EadToEsItems < EadToEs
     get_text(@xpaths["description"])
   end
 
-  def format
-    # matched_format = nil
-    # # iterate through all the formats until the first one matches
-    # @xpaths["formats"].each do |type, xpath|
-    #   text = get_text(xpath)
-    #   matched_format = type if text && text.length > 0
-    # end
-    # matched_format
+  def extent
+    get_text(@xpaths["extent"])
   end
+
+  def format
+    get_text(@xpaths["format"])
+  end
+
   def get_id
     # doc = id
     doc = get_text(@xpaths["identifier"])
     if doc == ""
-      byebug
+      title = get_text(@xpaths["file"])
+      return "#{@filename}_#{title}"
     end
     return "#{@filename}_#{doc}"
   end
@@ -213,7 +216,7 @@ class EadToEsItems < EadToEs
   end
 
   def title
-    title = get_text(@xpaths["titles"])
+    title = get_text(@xpaths["title"])
   end
 
   def title_sort
@@ -223,6 +226,10 @@ class EadToEsItems < EadToEs
 
   def topics
     get_list(@xpaths["topic"])
+  end
+
+  def type
+    get_text(@xpaths["type"])
   end
 
   def uri
