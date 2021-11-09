@@ -66,7 +66,6 @@ class Datura::Elasticsearch::Index
   def get_schema
     RestClient.get(@mapping_url) { |res, req, result|
       if result.code == "200"
-        puts "res is #{res}, req is #{req}, result is #{result}"
         JSON.parse(res)
       else
         raise "#{result.code} error getting Elasticsearch schema: #{res}"
@@ -84,9 +83,7 @@ class Datura::Elasticsearch::Index
       }
 
       schema = get_schema[@options["es_index"]]
-      byebug
       doc = schema["mappings"]["_doc"]
-      puts doc
       doc["properties"].each do |field, value|
         @schema_mapping["fields"] << field
         if value["type"] == "nested"
