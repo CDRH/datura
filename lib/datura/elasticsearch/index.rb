@@ -83,8 +83,9 @@ class Datura::Elasticsearch::Index
       }
 
       schema = get_schema[@options["es_index"]]
+      puts schema
       doc = schema["mappings"]["_doc"]
-
+      puts doc
       doc["properties"].each do |field, value|
         @schema_mapping["fields"] << field
         if value["type"] == "nested"
