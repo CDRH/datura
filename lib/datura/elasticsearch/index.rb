@@ -83,7 +83,9 @@ class Datura::Elasticsearch::Index
       }
 
       schema = get_schema[@options["es_index"]]
-      puts schema
+      if schema == nil || schema == ""
+        puts "schema is nil!"
+      end
       doc = schema["mappings"]["_doc"]
       puts doc
       doc["properties"].each do |field, value|
