@@ -18,7 +18,7 @@ class EadToEsItems < EadToEs
         # "date_display" => "/TEI/teiHeader/fileDesc/sourceDesc/bibl/date",
         "extent" => "did/physdesc/extent",
         "format" => "did/physdesc/physfacet",
-        "image_url" => "dao/@href",
+        "image_url" => "did/dao/@href",
         # "image_id" => "/TEI/text//pb/@facs",
         # "keywords" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='keywords']/term",
         # note: language is global attribute xml:lang
