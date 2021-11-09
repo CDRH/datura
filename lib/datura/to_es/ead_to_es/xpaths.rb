@@ -35,6 +35,7 @@ class EadToEs < XmlToEs
         # "subcategory" => "/TEI/teiHeader/profileDesc/textClass/keywords[@n='subcategory'][1]/term",
         "title" => "/ead/archdesc/did/unittitle",
         "text" => "/ead/eadheader/filedesc/titlestmt/*",
+        "items" => "//*[@level='item']/did/unitid[@type='WWA']"
       }.merge(override_xpaths)
     end
   end
