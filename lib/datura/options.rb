@@ -88,7 +88,7 @@ class Datura::Options
         end
       end
     end
-    return new_config
+    new_config
   end
 
   # remove the unneeded environment and put everything at the first level
@@ -103,7 +103,7 @@ class Datura::Options
     collection = c.merge(d)
 
     # collection overrides general config
-    return general.merge(collection)
+    general.merge(collection)
   end
 
 end

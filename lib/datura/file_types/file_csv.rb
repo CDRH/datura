@@ -33,25 +33,21 @@ class FileCsv < FileType
 
   # override to change encoding
   def read_csv(file_location, encoding="utf-8")
-    return CSV.read(file_location, {
+    CSV.read(file_location, {
       encoding: encoding,
       headers: true,
       return_headers: true
     })
   end
 
-  # most basic implementation assumes column header is the es field name
-  # operates with no logic on the fields
-  # YOU MUST OVERRIDE FOR CSVS WHICH DO NOT HAVE BESPOKE HEADINGS FOR API
+  # NOTE previously this blindly took column headings and tried
+  # to send them to Elasticsearch, but this will make a mess of
+  # our index mapping, so instead prefer to only push specific fields
+  # leaving "headers" in method arguments for backwards compatibility
+  #
+  # override as necessary per project
   def row_to_es(headers, row)
-    doc = {}
-    headers.each do |column|
-      doc[column] = row[column] if row[column]
-    end
-    if doc.key?("text") && doc.key?("title")
-      doc["text"] << " #{doc["title"]}"
-    end
-    doc
+    CsvToEs.new(row, options, @csv, self.filename(false)).json
   end
 
   # most basic implementation assumes column header is the solr field name
@@ -60,7 +56,7 @@ class FileCsv < FileType
     headers.each do |column|
       doc.add_child("<field name='#{column}'>#{row[column]}</field>") if row[column]
     end
-    return doc
+    doc
   end
 
   def transform_es
@@ -110,7 +106,7 @@ class FileCsv < FileType
       filepath = "#{@out_solr}/#{self.filename(false)}.xml"
       File.open(filepath, "w") { |f| f.write(solr_doc.root.to_xml) }
     end
-    return { "doc" => solr_doc.root.to_xml }
+    { "doc" => solr_doc.root.to_xml }
   end
 
   def write_html_to_file(builder, index)

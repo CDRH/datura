@@ -1,8 +1,14 @@
-# request creation portion of Xml to ES transformation
-# override for VRA / TEI concerns in [type]_to_es.rb
-# files or in collection specific overrides
+# assemble_json sets up the JSON structure that will be
+# used to create elasticsearch documents. However, the JSON
+# structure depend on subclasses to define methods like
+# "category" and "subcategory" to populate the JSON.
+#
+# This module itself is not standalone, but by putting
+# the JSON structure in a common place, those classes
+# including it do not each need to redefine the JSON
+# request structure
 
-class XmlToEs
+module EsRequest
 
   def assemble_json
     # Note: if your collection does not require a specific field
@@ -27,7 +33,7 @@ class XmlToEs
     assemble_text
     assemble_collection_specific
 
-    return @json
+    @json
   end
 
   ##############
@@ -50,18 +56,18 @@ class XmlToEs
   end
 
   def assemble_dates
-    @json["date_display"] = date_display
     @json["date"] = date
-    @json["date_not_before"] = date_not_before
     @json["date_not_after"] = date_not_after
+    @json["date_not_before"] = date_not_before
+    @json["date_display"] = date_display
   end
 
   def assemble_descriptions
-    @json["title_sort"] = title_sort
-    @json["title"] = title
+    @json["alternative"] = alternative
     @json["description"] = description
+    @json["title"] = title
+    @json["title_sort"] = title_sort
     @json["topics"] = topics
-    # @json["alternative"]
   end
 
   def assemble_identifiers
@@ -79,9 +85,9 @@ class XmlToEs
     @json["format"] = format
     @json["language"] = language
     @json["languages"] = languages
-    # @json["relation"]
-    # @json["type"]
-    # @json["extent"]
+    @json["relation"] = relation
+    @json["type"] = type
+    @json["extent"] = extent
     @json["medium"] = medium
   end
 
@@ -91,9 +97,6 @@ class XmlToEs
     @json["contributor"] = contributor
     @json["creator"] = creator
     @json["recipient"] = recipient
-    # can draw off of container fields
-    @json["creator_sort"] = creator_sort
-    @json["people"] = people
   end
 
   def assemble_publishing
@@ -111,10 +114,7 @@ class XmlToEs
   end
 
   def assemble_spatial
-    # TODO not sure about the naming convention here?
-    # TODO has place_name, coordinates, id, city, county, country,
-    # region, state, street, postal_code
-    # @json["coverage.spatial"]
+    @json["spatial"] = spatial
   end
 
   def assemble_text

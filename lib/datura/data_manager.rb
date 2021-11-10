@@ -19,7 +19,7 @@ class Datura::DataManager
 
 
   def self.format_to_class
-    {
+    classes = {
       "csv" => FileCsv,
       "ead" => FileEad,
       "html" => FileHtml,
@@ -27,6 +27,8 @@ class Datura::DataManager
       "vra" => FileVra,
       "webs" => FileWebs
     }
+    classes.default = FileCustom
+    classes
   end
 
   def initialize
@@ -61,7 +63,7 @@ class Datura::DataManager
   def print_options
     pretty = JSON.pretty_generate(@options)
     puts "Options: #{pretty}"
-    return pretty
+    pretty
   end
 
   def run
@@ -182,7 +184,7 @@ class Datura::DataManager
       found = Datura::Helpers.get_directory_files(File.join(@options["collection_dir"], "source", format))
       files += found if found
     end
-    return files
+    files
   end
 
   def options_msg
@@ -199,7 +201,7 @@ class Datura::DataManager
     if @options["verbose"]
       print_options
     end
-    return msg
+    msg
   end
 
   # override this step in project specific files
@@ -244,7 +246,7 @@ class Datura::DataManager
         @log.error(msg)
       end
     end
-    return file_classes
+    file_classes
   end
 
   def prepare_xslt
@@ -294,7 +296,7 @@ class Datura::DataManager
 
   def should_transform?(type)
     # adjust default transformation type in params parser
-    return @options["transform_types"].include?(type)
+    @options["transform_types"].include?(type)
   end
 
   def transform_and_post(file)

@@ -6,8 +6,83 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic
 Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
-Changelog up to date
+<!-- Template - Please preserve this order of sections
+## [Unreleased] - Brief description
+[Unreleased]: https://github.com/CDRH/datura/compare/v#.#.#...dev
+
+### Fixed
+
+### Added
+
+### Changed
+
+### Removed
+
+### Migration
+
+### Deprecated
+
+### Security
+-->
+
+## [Unreleased](https://github.com/CDRH/datura/compare/v0.2.0-beta...dev)
+
+### Added
+- minor test for Datura::Helpers.date_standardize
+
+### Changed
+- data_standardize now relies on strftime instead of manual zero padding for month, day
+
+## [v0.2.0-beta](https://github.com/CDRH/datura/compare/v0.1.6...v0.2.0-beta) - 2020-08-17 - Altering field and xpath behavior, adds get_elements
+
+### Added
+- Fields (and therefore methods) for ES JSON, such as extent, alternative, spatial, etc
+- Methods to xToES format fields to accommodate default behavior
+- ES JSON `uri` now populated using default Orchid item path
+- Tests and fixtures for all supported formats except CustomToEs
+- `get_elements` returns nodeset given xpath arguments
+- `spatial` nested fields `spatial.type` and `spatial.title`
+
+### Changed
+- Arguments for `get_text`, `get_list`, and `get_xpaths`
+- XPaths for VRA and TEI to Elasticsearch
+- Default behavior for CsvToEs for some fields
+- Documentation updated
+- Changed Install instructions to include RVM and gemset naming conventions
+- API field `coverage_spatial` is now just `spatial`
+
+### Migration
+- Change `coverage_spatial` nested field to `spatial`
+- `get_text`, `get_list`, and `get_xpaths` require changing arguments to keyword (like `xml` and `keep_tags`)
+- Recommend checking xpaths and behavior of fields after updating to this version, as some defaults have changed
+- Possible to refactor previous FileCsv overrides to use new CsvToEs abilities, but not necessary
+
+## [v0.1.6](https://github.com/CDRH/datura/compare/v0.1.5...v0.1.6) - 2020-04-24 - Improvements to CSV, WEBS transformers and adds Custom transformer
+
+### Added
+- CsvToEs class added which imitates style of other XToEs classes for easier overriding / maintenance
+- Custom formats now supported, although no functionality provided since the type of format cannot be predicted
+- Adds documentation for custom format setup
+
+### Changed
+- CSV to ES transformation no longer accepts default column names, but instead looks for columns matching ES fields to use
+- FileType elasticsearch transform now has swappable component when reading
+XML-type files. Webscraping script altered to manipulate HTML instead of
+XML object type
+
+### Removed
+- CSV to ES transformation used to automatically assume columns as ES fields, this functionality has been removed
+
+## [v0.1.5](https://github.com/CDRH/datura/compare/v0.1.4...v0.1.5) - 2020-02-03 - VRA to Solr
+
+### Added
+- VRA to Solr field "topic" set up with basic functionality
+
+### Changed
+- Upgraded Ruby version to 2.7.0, updated gems
+- VRA to Solr field "text" fixed to post correctly
+- VRA to Solr field "people" and "language" made overridable
+- Updated URL to Saxon HE software
 
 ## [v0.1.4](https://github.com/CDRH/datura/compare/v0.1.3...v0.1.4) - 2019-09-17 - PB Update
 

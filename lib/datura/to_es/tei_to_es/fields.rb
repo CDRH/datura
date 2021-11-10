@@ -6,33 +6,22 @@ class TeiToEs < XmlToEs
   # FIELDS #
   ##########
 
-  def id
-    @id
-  end
-
-  def id_dc
-    # TODO use api path from config or something?
-    "https://cdrhapi.unl.edu/doc/#{@id}"
+  def alternative
+    get_text(@xpaths["alternative"])
   end
 
   def annotations_text
-    # TODO what should default behavior be?
+    get_text(@xpaths["annotations_text"])
   end
 
   def category
-    category = get_text(@xpaths["category"])
-    return category.length > 0 ? CommonXml.normalize_space(category) : "none"
+    get_text(@xpaths["category"])
   end
 
-  # note this does not sort the creators
+  # nested field
   def creator
-    creators = get_list(@xpaths["creators"])
-    return creators.map { |creator| { "name" => CommonXml.normalize_space(creator) } }
-  end
-
-  # returns ; delineated string of alphabetized creators
-  def creator_sort
-    return get_text(@xpaths["creators"])
+    creators = get_list(@xpaths["creator"])
+    creators.map { |c| { "name" => Datura::Helpers.normalize_space(c) } }
   end
 
   def collection
@@ -43,17 +32,14 @@ class TeiToEs < XmlToEs
     @options["collection_desc"] || @options["collection"]
   end
 
+  # nested field
   def contributor
-    contribs = []
-    @xpaths["contributors"].each do |xpath|
-      eles = @xml.xpath(xpath)
-      eles.each do |ele|
-        contribs << {
-          "id" => ele["id"],
-          "name" => CommonXml.normalize_space(ele.text),
-          "role" => CommonXml.normalize_space(ele["role"])
-        }
-      end
+    contribs = get_elements(@xpaths["contributor"]).map do |ele|
+      {
+        "id" => get_text("@id", xml: ele),
+        "name" => get_text(".", xml: ele),
+        "role" => get_text("@role", xml: ele)
+      }
     end
     contribs.uniq
   end
@@ -63,8 +49,8 @@ class TeiToEs < XmlToEs
   end
 
   def date(before=true)
-    datestr = get_text(@xpaths["date"])
-    return CommonXml.date_standardize(datestr, before)
+    datestr = get_list(@xpaths["date"]).first
+    Datura::Helpers.date_standardize(datestr, before)
   end
 
   def date_display
@@ -72,31 +58,38 @@ class TeiToEs < XmlToEs
   end
 
   def date_not_after
-    date(false)
+    datestr = get_text(@xpaths["date_not_after"])
+    if datestr && !datestr.empty?
+      Datura::Helpers.date_standardize(datestr, false)
+    else
+      date(false)
+    end
   end
 
   def date_not_before
-    date(true)
+    datestr = get_text(@xpaths["date_not_before"])
+    if datestr && !datestr.empty?
+      Datura::Helpers.date_standardize(datestr, true)
+    else
+      date(true)
+    end
   end
 
   def description
-    # Note: override per collection as needed
+    get_text(@xpaths["description"])
+  end
+
+  def extent
+    get_text(@xpaths["extent"])
   end
 
   def format
-    matched_format = nil
-    # iterate through all the formats until the first one matches
-    @xpaths["formats"].each do |type, xpath|
-      text = get_text(xpath)
-      matched_format = type if text && text.length > 0
-    end
-    matched_format
+    get_list(@xpaths["format"]).first
   end
 
   def image_id
     # Note: don't pull full path because will be pulled by IIIF
-    images = get_list(@xpaths["image_id"])
-    images[0] if images
+    get_list(@xpaths["image_id"]).first
   end
 
   def keywords
@@ -104,7 +97,8 @@ class TeiToEs < XmlToEs
   end
 
   def language
-    get_text(@xpaths["language"])
+    # uses the first language discovered in the document
+    get_list(@xpaths["language"]).first
   end
 
   def languages
@@ -112,52 +106,47 @@ class TeiToEs < XmlToEs
   end
 
   def medium
-    # Default behavior is the same as "format" method
-    format
+    get_text(@xpaths["medium"])
   end
 
+  # nested field
   def person
-    # TODO will need some examples of how this will work
-    # and put in the xpaths above, also for attributes, etc
-    # should contain name, id, and role
-    eles = @xml.xpath(@xpaths["person"])
-    people = eles.map do |p|
+    eles = get_elements(@xpaths["person"]).map do |p|
       {
-        "id" => "",
-        "name" => CommonXml.normalize_space(p.text),
-        "role" => CommonXml.normalize_space(p["role"])
+        "id" => get_text("@id", xml: p),
+        "name" => get_text(".", xml: p),
+        "role" => get_text("@role", xml: p)
       }
     end
-    return people
-  end
-
-  def people
-    @json["person"].map { |p| CommonXml.normalize_space(p["name"]) }
+    eles.uniq
   end
 
   def places
-    return get_list(@xpaths["places"])
+    get_list(@xpaths["places"])
   end
 
   def publisher
     get_text(@xpaths["publisher"])
   end
 
+  # nested field
   def recipient
     eles = @xml.xpath(@xpaths["recipient"])
-    people = eles.map do |p|
+    eles.map do |p|
       {
-        "id" => "",
-        "name" => CommonXml.normalize_space(p.text),
+        "id" => p["id"],
+        "name" => Datura::Helpers.normalize_space(p.text),
         "role" => "recipient"
       }
     end
-    return people
+  end
+
+  def relation
+    get_list(@xpaths["relation"])
   end
 
   def rights
-    # Note: override by collection as needed
-    "All Rights Reserved"
+    get_text(@xpaths["rights"])
   end
 
   def rights_holder
@@ -165,80 +154,118 @@ class TeiToEs < XmlToEs
   end
 
   def rights_uri
-    # by default collections have no uri associated with them
-    # copy this method into collection specific tei_to_es.rb
-    # to return specific string or xpath as required
+    get_text(@xpaths["rights_uri"])
   end
 
+  # NOTE source is a complicated field built from many xpaths
+  #   author, title, publisher, pubplace, date,
+  #   collection, repository, idno
   def source
-    get_text(@xpaths["source"])
+    src = @xpaths["source"]
+    src_fields = {}
+    src.each do |field, xpath|
+      src_fields[field] = get_text(xpath)
+    end
+
+    source_to_s(src_fields)
+  end
+
+  # nested field
+  def spatial
   end
 
   def subjects
-    # TODO default behavior?
+    get_list(@xpaths["subjects"])
   end
 
   def subcategory
-    subcategory = get_text(@xpaths["subcategory"])
-    subcategory.length > 0 ? subcategory : "none"
+    get_text(@xpaths["subcategory"])
   end
 
   def text
     # handling separate fields in array
     # means no worrying about handling spacing between words
-    text = []
-    body = get_text(@xpaths["text"], false)
-    text << body
+    text_all = []
+    body = get_text(@xpaths["text"], keep_tags: false)
+    text_all << body
     # TODO: do we need to preserve tags like <i> in text? if so, turn get_text to true
-    # text << CommonXml.convert_tags_in_string(body)
-    text += text_additional
-    return CommonXml.normalize_space(text.join(" "))
+    # text_all << CommonXml.convert_tags_in_string(body)
+    text_all += text_additional
+    Datura::Helpers.normalize_space(text_all.join(" "))
   end
 
   def text_additional
     # Note: Override this per collection if you need additional
     # searchable fields or information for collections
     # just make sure you return an array at the end!
-
-    text = []
-    text << title
+    [
+      title,
+      get_text(@xpaths["text_additional"])
+    ]
   end
 
   def title
-    title = get_text(@xpaths["titles"]["main"])
-    if title.empty?
-      title = get_text(@xpaths["titles"]["alt"])
-    end
-    return title
+    get_text(@xpaths["title"])
   end
 
   def title_sort
-    t = title
-    CommonXml.normalize_name(t)
+    Datura::Helpers.normalize_name(title)
   end
 
   def topics
-    get_list(@xpaths["topic"])
+    get_list(@xpaths["topics"])
+  end
+
+  def type
+    t = get_text(@xpaths["type"])
+    t || "text"
   end
 
   def uri
-    # override per collection
-    # should point at the live website view of resource
+    File.join(@options["site_url"], "item", @id)
   end
 
   def uri_data
-    base = @options["data_base"]
-    subpath = "data/#{@options["collection"]}/source/tei"
-    return "#{base}/#{subpath}/#{@id}.xml"
+    File.join(
+      @options["data_base"],
+      "data",
+      @options["collection"],
+      "source/tei",
+      "#{@id}.xml"
+    )
   end
 
   def uri_html
-    base = @options["data_base"]
-    subpath = "data/#{@options["collection"]}/output/#{@options["environment"]}/html"
-    return "#{base}/#{subpath}/#{@id}.html"
+    File.join(
+      @options["data_base"],
+      "data",
+      @options["collection"],
+      "output",
+      @options["environment"],
+      "html",
+      "#{@id}.html"
+    )
   end
 
   def works
-    # TODO figure out how this behavior should look
+    get_list(@xpaths["works"])
   end
+
+  protected
+
+  # default behavior is simply to comma delineate fields
+  # but you may override if you need additional behavior
+  # such as <em>title</em>, (date), etc
+  def source_to_s(f)
+    #   author, title, publisher, pubplace, date,
+    #   collection, repository, idno
+    source_order = [
+      f["author"], f["title"], f["publisher"], f["pubplace"], f["date"],
+      f["collection"], f["repository"], f["idno"]
+    ]
+    source_order
+      .reject! { |value| value.nil? || value.strip.empty? }
+      .join(", ")
+  end
+
 end

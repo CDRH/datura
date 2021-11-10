@@ -1,17 +1,50 @@
 # Datura
 
-Welcome to this temporary documentation for Datura, a gem dedicated to transforming and posting data sources from CDRH projects.  This gem is intended to be used with a collection containing TEI, VRA, CSVs, and more.
+Welcome to the documentation for Datura, a gem dedicated to transforming and posting data sources from CDRH projects.  This gem is intended to be used with a collection containing TEI, VRA, CSVs, and more.
 
-## Install
+Looking for information about how to post documents? Check out the
+[documentation for posting](/docs/3_manage/post.md).
 
+## Install / Set Up Data Repo
 
-Gemfile:
+Check that Ruby is installed, preferably 2.7.x or up. If you are using RVM, see the RVM section below. 
+
+If your project already has a Gemfile, add the `gem "datura"` line. If not, create a new directory and add a file named `Gemfile` (no extension).
 
 ```
-gem "datura", git: "https://github.com/CDRH/data.git", branch: "datura"
+source "https://rubygems.org"
+
+# fill in the latest available release for the tag
+gem "datura", git: "https://github.com/CDRH/datura.git", tag: "v0.0.0"
 ```
 
-Next, install saxon as a system wide executable. [Saxon setup documentation](docs/4_developers/saxon.md).
+If this is the first datura repository on your machine, install saxon as a system wide executable. [Saxon setup documentation](docs/4_developers/saxon.md).
+
+Then, in the directory with the Gemfile, run the following:
+
+```
+gem install bundler
+bundle install
+
+bundle exec setup
+```
+
+The last step should add files and some basic directories. Have a look at the [setup instructions](/docs/1_setup/collection_setup.md) to learn how to add your files and start working with the data!
+
+### RVM
+
+[RVM](https://rvm.io/), or the Ruby Version Manager, is a handy way to manage multiple Ruby and Rails versions. Install RVM using instructions on the site, then add the following to your new Rails application, making sure to change the values for the Ruby version and app name:
+
+```bash
+echo 'ruby-x.x.x' > (app_name)/.ruby-version
+echo '(app name)' > (app_name)/.ruby-gemset
+cd (app name)
+bundle install
+```
+
+CDRH Convention is to use the Datura version as the base for the gemset name, i.e.:
+
+`v0.1.5` = `datura_015` in .ruby-gemset
 
 ## Local Development
 
@@ -28,21 +61,17 @@ Then in your repo you can run:
 
 ```
 bundle install
+# create the gem package if the above doesn't work
+gem install --local path/to/local/datura/pkg/datura-0.x.x.gem
 ```
 
-If for some reason that is not working, you can instead run the following each time you make a change in datura:
+You will need to recreate your gem package for some changes you make in Datura. From the DATURA directory, NOT your data repo directory, run:
 
 ```
 bundle exec rake install
 ```
 
-then from the collection (sub in the correct version):
-
-```
-gem install --local path/to/local/datura/pkg/datura-0.1.2.gem
-```
-
-Note: You may need to delete your `scripts/.xslt-datura` folder as well.
+Note: You may also need to delete your `scripts/.xslt-datura` folder if you are making changes to the default Datura scripts.
 
 ## First Steps
 

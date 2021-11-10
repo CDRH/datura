@@ -42,9 +42,15 @@ class FileType
     end
   end
 
-  # expecting an instance of Datura::Elasticsearch::Index
-  def post_es(es)
-    error = nil
+  # typically assumed to be an XML file, parsed as XML
+  # but in some cases (for example, web scraping) this needs
+  # to be overridden to parse HTML instead
+  def parse_markup_lang_file
+    CommonXml.create_xml_object(self.file_location)
+  end
+
+  def post_es(url=nil)
+    url = url || "#{@options["es_path"]}/#{@options["es_index"]}"
     begin
       transformed = transform_es
     rescue => e
@@ -103,11 +109,11 @@ class FileType
 
   def print_es
     json = transform_es
-    return pretty_json(json)
+    pretty_json(json)
   end
 
   def print_solr
-    return transform_solr
+    transform_solr
   end
 
   # these rules apply to all XML files (HTML / TEI / VRA)
@@ -116,7 +122,7 @@ class FileType
   def transform_es
     es_req = []
     begin
-      file_xml = CommonXml.create_xml_object(self.file_location)
+      file_xml = parse_markup_lang_file
       # check if any xpaths hit before continuing
       results = file_xml.xpath(*subdoc_xpaths.keys)
       if results.length == 0
@@ -160,7 +166,7 @@ class FileType
     else
       req = exec_xsl(@file_location, @script_solr, "xml", nil, @options["variables_solr"])
     end
-    return req
+    req
   end
 
   private

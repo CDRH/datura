@@ -6,32 +6,22 @@ class VraToEs < XmlToEs
   # FIELDS #
   ##########
 
-  def id
-    @id
-  end
-
-  def id_dc
-    # TODO use api path from config or something?
-    "https://cdrhapi.unl.edu/doc/#{@id}"
+  def alternative
+    get_text(@xpaths["alternative"])
   end
 
   def annotations_text
-    # TODO default behavior?
+    get_text(@xpaths["annotations_text"])
   end
 
   def category
-    # TODO default behavior?
+    get_text(@xpaths["category"])
   end
 
-  # note this does not sort the creators
+  # nested field
   def creator
     creators = get_list(@xpaths["creators"])
-    return creators.map { |creator| { "name" => CommonXml.normalize_space(creator) } }
-  end
-
-  # returns ; delineated string of alphabetized creators
-  def creator_sort
-    return get_text(@xpaths["creators"])
+    creators.map { |c| { "name" => Datura::Helpers.normalize_space(c) } }
   end
 
   def collection
@@ -42,17 +32,16 @@ class VraToEs < XmlToEs
     @options["collection_desc"] || @options["collection"]
   end
 
+  # nested field
   def contributor
-    contrib_list = []
-    contributors = @xml.xpath(@xpaths["contributors"])
-    contributors.each do |ele|
-      contrib_list << {
+    contrib_list = get_elements(@xpaths["contributor"]).map do |ele|
+      {
         "id" => "",
-        "name" => CommonXml.normalize_space(ele.xpath("name").text),
-        "role" => CommonXml.normalize_space(ele.xpath("role").text)
+        "name" => get_text("name", xml: ele),
+        "role" => get_text("role", xml: ele)
       }
     end
-    return contrib_list
+    contrib_list.uniq
   end
 
   def data_type
@@ -60,33 +49,46 @@ class VraToEs < XmlToEs
   end
 
   def date(before=true)
-    datestr = get_text(@xpaths["dates"]["earliest"])
-    CommonXml.date_standardize(datestr, before)
+    datestr = get_list(@xpaths["date"]).first
+    Datura::Helpers.date_standardize(datestr, before)
   end
 
   def date_display
-    get_text(@xpaths["dates"]["display"])
+    get_text(@xpaths["date_display"])
   end
 
   def date_not_after
-    date(false)
+    datestr = get_text(@xpaths["date_not_after"])
+    if datestr && !datestr.empty?
+      Datura::Helpers.date_standardize(datestr, false)
+    else
+      date(false)
+    end
   end
 
   def date_not_before
-    date(true)
+    datestr = get_text(@xpaths["date_not_before"])
+    if datestr && !datestr.empty?
+      Datura::Helpers.date_standardize(datestr, true)
+    else
+      date(true)
+    end
   end
 
   def description
-    # Note: override per collection as needed
+    get_text(@xpaths["description"])
+  end
+
+  def extent
+    get_text(@xpaths["extent"])
   end
 
   def format
-    # iterate through all the formats until the first one matches
     get_text(@xpaths["format"])
   end
 
   def image_id
-    # TODO only needed for Cody Archive, but put generic rules in here
+    get_list(@xpaths["image_id"]).first
   end
 
   def keywords
@@ -94,35 +96,38 @@ class VraToEs < XmlToEs
   end
 
   def language
-    # TODO need some examples to use
-    # look for attribute anywhere in whole text and add to array
+    get_text(@xpaths["language"])
   end
 
   def languages
-    # TODO
+    get_list(@xpaths["languages"])
   end
 
   def medium
-    # iterate through all the formats until the first one matches
-    get_text(@xpaths["format"])
+    get_text(@xpaths["medium"])
   end
 
+  # nested field
   def person
-    # TODO will need some examples of how this will work
-    # and put in the xpaths above, also for attributes, etc
-    # should contain name, id, and role
-    eles = @xml.xpath(@xpaths["person"])
-    return eles.map do |p|
-      {
-        "id" => "",
-        "name" => CommonXml.normalize_space(p.text),
-        "role" => CommonXml.normalize_space(p["role"])
-      }
+    # xpaths return very simple "subject" and more involved "agent"
+    eles = get_elements(@xpaths["person"]).map do |p|
+      # subject element
+      if get_text("@type", xml: p) == "personalName"
+        {
+          id: nil,
+          name: get_text(".", xml: p),
+          role: nil
+        }
+      # agent element
+      else
+        {
+          id: nil,
+          name: get_text("name", xml: p),
+          role: get_text("role", xml: p)
+        }
+      end
     end
-  end
-
-  def people
-    @json["person"].map { |p| CommonXml.normalize_space(p["name"]) }
+    eles.uniq
   end
 
   def places
@@ -130,24 +135,26 @@ class VraToEs < XmlToEs
   end
 
   def publisher
-    get_list(@xpaths["publisher"])
+    get_text(@xpaths["publisher"])
   end
 
+  # nested field
   def recipient
-    eles = @xml.xpath(@xpaths["recipient"])
-    people = eles.map do |p|
+    eles = get_elements(@xpaths["recipient"])
+    eles.map do |p|
       {
         "id" => "",
-        "name" => CommonXml.normalize_space(p.text),
-        "role" => CommonXml.normalize_space(p["role"]),
+        "name" => get_text(".", xml: p),
+        "role" => get_text("@role", xml: p)
       }
     end
-    return people
+  end
+
+  def relation
   end
 
   def rights
-    # Note: override by collection as needed
-    "All Rights Reserved"
+    get_text(@xpaths["rights"])
   end
 
   def rights_holder
@@ -155,32 +162,34 @@ class VraToEs < XmlToEs
   end
 
   def rights_uri
-    # by default collections have no uri associated with them
-    # copy this method into collection specific vra_to_es.rb
-    # to return specific string or xpath as required
+    get_text(@xpaths["rights_uri"])
   end
 
   def source
-    # TODO default behavior?
+    get_text(@xpaths["source"])
+  end
+
+  # nested field
+  def spatial
   end
 
   def subcategory
-    # TODO default behavior?
+    get_text(@xpaths["subcategory"])
   end
 
   def subjects
-    # TODO default behavior?
+    get_list(@xpaths["subjects"])
   end
 
   def text
     # handling separate fields in array
     # means no worrying about handling spacing between words
-    text = []
-    text << get_text(@xpaths["text"], false)
+    text_all = []
+    text_all << get_text(@xpaths["text"])
     # TODO: do we need to preserve tags like <i> in text? if so, turn get_text to true
-    # text << CommonXml.convert_tags_in_string(body)
-    text += text_additional
-    return CommonXml.normalize_space(text.join(" "))
+    # text_all << CommonXml.convert_tags_in_string(body)
+    text_all += text_additional
+    Datura::Helpers.normalize_space(text_all.join(" "))
   end
 
   def text_additional
@@ -188,8 +197,7 @@ class VraToEs < XmlToEs
     # searchable fields or information for collections
     # just make sure you return an array at the end!
 
-    text = []
-    text << title
+    [ title ]
   end
 
   def title
@@ -197,32 +205,50 @@ class VraToEs < XmlToEs
   end
 
   def title_sort
-    t = title
-    CommonXml.normalize_name(t)
+    Datura::Helpers.normalize_name(title)
   end
 
   def topics
-    # TODO default behavior?
+    get_list(@xpaths["topics"])
+  end
+
+  def type
+    get_text(@xpaths["type"])
   end
 
   def uri
-    # override per collection
-    # should point at the live website view of resource
+    if @options["site_url"]
+      File.join(
+        @options["site_url"],
+        "item",
+        @id
+      )
+    end
   end
 
   def uri_data
-    base = @options["data_base"]
-    subpath = "data/#{@options["collection"]}/source/vra"
-    return "#{base}/#{subpath}/#{@id}.xml"
+    File.join(
+      @options["data_base"],
+      "data",
+      @options["collection"],
+      "source/vra",
+      "#{@id}.xml"
+    )
   end
 
   def uri_html
-    base = @options["data_base"]
-    subpath = "data/#{@options["collection"]}/output/#{@options["environment"]}/html"
-    return "#{base}/#{subpath}/#{@id}.html"
+    File.join(
+      @options["data_base"],
+      "data",
+      @options["collection"],
+      "output",
+      @options["environment"],
+      "html",
+      "#{@id}.html"
+    )
   end
 
   def works
-    # TODO default behavior?
+    get_list(@xpaths["works"])
   end
 end

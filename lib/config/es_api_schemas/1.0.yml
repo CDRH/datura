@@ -1,191 +1,196 @@
 # compatible with Apium v1.0
 mappings:
   properties:
-    identifier:
-      type: keyword
-    identifier:
-      type: keyword
-    collection:
-      type: keyword
-    collection_desc:
-      type: keyword
-    uri:
-      type: keyword
-    uri_data:
-      type: keyword
-    uri_html:
-      type: keyword
-    data_type:
-      type: keyword
-    image_location:
-      type: keyword
-    image_id:
-      type: keyword
-      # TODO copy to text?
-    title:
-      type: keyword
-    title_sort:
-      type: keyword
-      # TODO copy to text?
-    alternative:
-      type: keyword
-    creator_sort:
-      type: keyword
-    creator:
-      type: nested
-      properties:
-        name:
-          # TODO copy into text?
-          type: keyword
-        id:
-          type: keyword
-    subjects:
-      type: keyword
-      # TODO not sure yet if for display or search
-    abstract:
-      type: keyword
-      # TODO copy to text?
-    description:
-      type: keyword
-    publisher:
-      type: keyword
-    contributor:
-      type: nested
-      properties:
-        name:
-          type: keyword
-        id:
-          type: keyword
-        role:
-          type: keyword
-    date:
-      type: date
-      format: "yyyy-MM-dd||epoch_millis"
-      # ignore_malformed: true
-    date_display:
-      type: keyword
-    date_not_before:
-      type: date
-      format: "yyyy-MM-dd||epoch_millis"
-      # ignore_malformed: true
-    date_not_after:
-      type: date
-      format: "yyyy-MM-dd||epoch_millis"
-      # ignore_malformed: true
-    type:
-      type: keyword
-    format:
-      type: keyword
-    medium:
-      type: keyword
-    extent:
-      type: keyword
-    language:
-      type: keyword
-    languages:
-      type: keyword
-    relation:
-      type: keyword
-    source:
-      type: keyword
-    recipient:
-      type: nested
-      properties:
-        name:
-          type: keyword
-        id:
-          type: keyword
-        role:
-          type: keyword
-    rights_holder:
-      type: keyword
-    rights:
-      type: keyword
-    rights_uri:
-      type: keyword
-    coverage-spatial:
-      type: nested
-      properties:
-        place_name:
-          # TODO copy into text?
-          type: keyword
-        coordinates:
-          type: geo_point
-        id:
-          type: keyword
-        city:
-          type: keyword
-        county:
-          type: keyword
-        country:
-          type: keyword
-        region:
-          type: keyword
-        state:
-          type: keyword
-        street:
-          type: keyword
-        postal_code:
-          type: keyword
-    person:
-      type: nested
-      properties:
-        name:
-          # TODO copy into text?
-          type: keyword
-        id:
-          type: keyword
-        role:
-          type: keyword
-    annotations_text:
-      type: text
-      analyzer: english
-    category:
-      type: keyword
-    subcategory:
-      type: keyword
-    topics:
-      type: keyword
-    keywords:
-      type: keyword
-    people:
-      type: keyword
-    places:
-      type: keyword
-    works:
-      type: keyword
-    text:
-      type: text
-      analyzer: english
-  dynamic_templates:
-    - date_fields:
-        match: "*_d"
-        mapping:
-          type: date
-          format: "yyyy-MM-dd||epoch_millis"
-    - integer_fields:
-        match: "*_i"
-        mapping:
-          type: integer
-    - keyword_fields:
-        match: "*_k"
-        mapping:
-          type: keyword
-    - text_fields:
-        match: "*_t"
-        mapping:
-          type: text
-          analyzer: english
-    # language fields are always text fields
-    # but specifying _t_ for clarity
-    # _t_en functionally the same as _t
-    - text_english:
-        match: "*_t_en"
-        mapping:
-          type: text
-          analyzer: english
-    - text_spanish:
-        match: "*_t_es"
-        mapping:
-          type: text
-          analyzer: spanish
+  identifier:
+    type: keyword
+  identifier:
+    type: keyword
+  collection:
+    type: keyword
+  collection_desc:
+    type: keyword
+  uri:
+    type: keyword
+  uri_data:
+    type: keyword
+  uri_html:
+    type: keyword
+  data_type:
+    type: keyword
+  image_location:
+    type: keyword
+  image_id:
+    type: keyword
+    # TODO copy to text?
+  title:
+    type: keyword
+  title_sort:
+    type: keyword
+    # TODO copy to text?
+  alternative:
+    type: keyword
+  creator_sort:
+    type: keyword
+  creator:
+    type: nested
+    properties:
+      name:
+        # TODO copy into text?
+        type: keyword
+      id:
+        type: keyword
+  subjects:
+    type: keyword
+    # TODO not sure yet if for display or search
+  abstract:
+    type: keyword
+    # TODO copy to text?
+  description:
+    type: keyword
+  publisher:
+    type: keyword
+  contributor:
+    type: nested
+    properties:
+      name:
+        type: keyword
+      id:
+        type: keyword
+      role:
+        type: keyword
+  date:
+    type: date
+    format: "yyyy-MM-dd||epoch_millis"
+    # ignore_malformed: true
+  date_display:
+    type: keyword
+  date_not_before:
+    type: date
+    format: "yyyy-MM-dd||epoch_millis"
+    # ignore_malformed: true
+  date_not_after:
+    type: date
+    format: "yyyy-MM-dd||epoch_millis"
+    # ignore_malformed: true
+  type:
+    type: keyword
+  format:
+    type: keyword
+  medium:
+    type: keyword
+  extent:
+    type: keyword
+  language:
+    type: keyword
+  languages:
+    type: keyword
+  relation:
+    type: keyword
+  source:
+    type: keyword
+  recipient:
+    type: nested
+    properties:
+      name:
+        type: keyword
+      id:
+        type: keyword
+      role:
+        type: keyword
+  rights_holder:
+    type: keyword
+  rights:
+    type: keyword
+  rights_uri:
+    type: keyword
+  spatial:
+    type: nested
+    properties:
+      id:
+        type: keyword
+      # display title for entire location
+      title:
+        type: keyword
+      type:
+        type: keyword
+      # specific name of building, park, mountain, etc
+      place_name:
+        type: keyword
+      coordinates:
+        type: geo_point
+      city:
+        type: keyword
+      county:
+        type: keyword
+      country:
+        type: keyword
+      region:
+        type: keyword
+      state:
+        type: keyword
+      street:
+        type: keyword
+      postal_code:
+        type: keyword
+  person:
+    type: nested
+    properties:
+      name:
+        # TODO copy into text?
+        type: keyword
+      id:
+        type: keyword
+      role:
+        type: keyword
+  annotations_text:
+    type: text
+    analyzer: english
+  category:
+    type: keyword
+  subcategory:
+    type: keyword
+  topics:
+    type: keyword
+  keywords:
+    type: keyword
+  people:
+    type: keyword
+  places:
+    type: keyword
+  works:
+    type: keyword
+  text:
+    type: text
+    analyzer: english
+dynamic_templates:
+  - date_fields:
+      match: "*_d"
+      mapping:
+        type: date
+        format: "yyyy-MM-dd||epoch_millis"
+  - integer_fields:
+      match: "*_i"
+      mapping:
+        type: integer
+  - keyword_fields:
+      match: "*_k"
+      mapping:
+        type: keyword
+  - text_fields:
+      match: "*_t"
+      mapping:
+        type: text
+        analyzer: english
+  # language fields are always text fields
+  # but specifying _t_ for clarity
+  # _t_en functionally the same as _t
+  - text_english:
+      match: "*_t_en"
+      mapping:
+        type: text
+        analyzer: english
+  - text_spanish:
+      match: "*_t_es"
+      mapping:
+        type: text
+        analyzer: spanish

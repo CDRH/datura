@@ -25,7 +25,7 @@ module Datura::Parser
       puts @usage
       exit
     end
-    return collection_dir
+    collection_dir
   end
 
   # take a string in utc and create a time object with it

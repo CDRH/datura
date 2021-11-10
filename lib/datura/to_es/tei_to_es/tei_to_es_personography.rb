@@ -1,7 +1,7 @@
 class TeiToEsPersonography < TeiToEs
 
   def override_xpaths
-    return {
+    {
       "titles" => {
         "main" => "persName[@type='display']",
         "alt" => "persName"
@@ -16,16 +16,16 @@ class TeiToEsPersonography < TeiToEs
 
   def creator
     creators = get_list(@xpaths["creators"], false, @parent_xml)
-    return creators.map { |creator| { "name" => creator } }
+    creators.map { |c| { "name" => c } }
   end
 
   def creators
-    return get_text(@xpaths["creators"], false, @parent_xml)
+    get_text(@xpaths["creators"], false, @parent_xml)
   end
 
   def get_id
     person = @xml["id"]
-    return "#{@filename}_#{person}"
+    "#{@filename}_#{person}"
   end
 
   def person

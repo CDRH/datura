@@ -3,10 +3,39 @@ require "nokogiri"
 
 class Datura::HelpersTest < Minitest::Test
 
+  def test_date_display
+    # normal dates
+    assert_equal "December 2, 2016", Datura::Helpers.date_display("2016-12-02")
+    assert_equal "January 31, 2014", Datura::Helpers.date_display("2014-01-31", "no date")
+    # no date
+    assert_equal "N.D.", Datura::Helpers.date_display(nil)
+    assert_equal "no date", Datura::Helpers.date_display("20143183", "no date")
+    assert_equal "", Datura::Helpers.date_display(nil, "")
+  end
+
+  def test_date_standardize
+    # missing month and day
+    assert_equal "2016-01-01", Datura::Helpers.date_standardize("2016")
+    assert_equal "2016-12-31", Datura::Helpers.date_standardize("2016", false)
+    # missing day
+    assert_nil Datura::Helpers.date_standardize("01-12")
+    assert_equal "2014-01-01", Datura::Helpers.date_standardize("2014-01")
+    assert_equal "2014-01-31", Datura::Helpers.date_standardize("2014-01", false)
+    # complete date
+    assert_equal "2014-01-12", Datura::Helpers.date_standardize("2014-01-12")
+    # day / month zero padded
+    assert_equal "2020-08-02", Datura::Helpers.date_standardize("2020-8-2")
+    # invalid date
+    assert_nil Datura::Helpers.date_standardize("2014-30-31")
+    # February final day
+    assert_equal "2015-02-28", Datura::Helpers.date_standardize("2015-2", false)
+    assert_equal "2016-02-29", Datura::Helpers.date_standardize("2016-02", false)
+  end
+
   def test_get_directory_files
     # real directory
     files = Datura::Helpers.get_directory_files("#{File.dirname(__FILE__)}/fixtures")
-    assert_equal 3, files.length
+    assert_equal 6, files.length
 
     # not a real directory
     files = Datura::Helpers.get_directory_files("/fake")
@@ -23,6 +52,23 @@ class Datura::HelpersTest < Minitest::Test
 
   def test_make_dirs
     # TODO
+  end
+
+  def test_normalize_name
+    assert_equal "title", Datura::Helpers.normalize_name("The Title")
+    assert_equal "anne of green gables", Datura::Helpers.normalize_name("Anne of Green Gables")
+    assert_equal "fancy party", Datura::Helpers.normalize_name("A Fancy Party")
+    assert_equal "hour", Datura::Helpers.normalize_name("An Hour")
+  end
+
+  def test_normalize_space
+    # ensure that return characters are replaced by spaces, and multispaces squashed
+    test1 = " <xml>\r<title>Example    </title>\n  </xml>\n "
+    assert_equal "<xml> <title>Example </title> </xml>", Datura::Helpers.normalize_space(test1)
+
+    # check that newlines are dead regardless
+    test2 = "<xml>\r<title>Exa\rmple\n</title></xml>"
+    assert_equal "<xml> <title>Exa mple </title></xml>", Datura::Helpers.normalize_space(test2)
   end
 
   def test_regex_files
