@@ -191,6 +191,9 @@ class EadToEsItems < EadToEs
     get_text(@xpaths["source"])
   end
 
+  def spatial
+  end
+
   def subjects
     # TODO default behavior?
   end
