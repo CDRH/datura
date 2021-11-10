@@ -49,8 +49,9 @@ class FileType
     CommonXml.create_xml_object(self.file_location)
   end
 
-  def post_es(url=nil)
-    url = url || "#{@options["es_path"]}/#{@options["es_index"]}"
+  # expecting an instance of Datura::Elasticsearch::Index
+  def post_es(es)
+    error = nil
     begin
       transformed = transform_es
     rescue => e
