@@ -207,7 +207,7 @@ class EadToEsItems < EadToEs
     # handling separate fields in array
     # means no worrying about handling spacing between words
     text = []
-    body = get_text(@xpaths["text"], false)
+    body = get_text(@xpaths["text"])
     text << body
     # TODO: do we need to preserve tags like <i> in text? if so, turn get_text to true
     # text << CommonXml.convert_tags_in_string(body)
