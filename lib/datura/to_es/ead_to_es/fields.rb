@@ -183,6 +183,9 @@ class EadToEs < XmlToEs
     get_text(@xpaths["source"])
   end
 
+  def spatial
+  end
+
   def subjects
     get_list(@xpaths["subjects"])
   end
