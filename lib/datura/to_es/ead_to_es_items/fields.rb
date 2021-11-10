@@ -15,6 +15,9 @@ class EadToEsItems < EadToEs
   #   "https://cdrhapi.unl.edu/doc/#{@id}"
   # end
 
+  def alternative
+  end
+
   def annotations_text
     # TODO what should default behavior be?
   end
