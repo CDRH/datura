@@ -169,6 +169,9 @@ class EadToEsItems < EadToEs
     # return people
   end
 
+  def relation
+  end
+
   def rights
     # Note: override by collection as needed
     get_text(@xpaths["rights"])
