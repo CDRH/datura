@@ -49,6 +49,7 @@ class FileType
     CommonXml.create_xml_object(self.file_location)
   end
 
+  # expecting an instance of Datura::Elasticsearch::Index
   def post_es(es)
     error = nil
     begin
