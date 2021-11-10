@@ -19,6 +19,9 @@ class EadToEs < XmlToEs
     get_text(@xpaths["abstract"])
   end
 
+  def alternative
+  end
+
   def annotations_text
     # TODO what should default behavior be?
   end
