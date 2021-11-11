@@ -33,7 +33,7 @@ class EadToEs < XmlToEs
   def creator
     creators = get_list(@xpaths["creators"])
     if creators
-      return creators.map { |creator| { "name" => CommonXml.normalize_space(creator) } }
+      return creators.map { |creator| { "name" => Datura::Helpers.normalize_space(creator) } }
     end
   end
 
@@ -71,7 +71,7 @@ class EadToEs < XmlToEs
 
   def date(before=true)
     datestr = get_text(@xpaths["date"])
-    return CommonXml.date_standardize(datestr, before)
+    return Datura::Helpers.date_standardize(datestr, before)
   end
 
   def date_display
@@ -225,7 +225,7 @@ class EadToEs < XmlToEs
 
   def title_sort
     t = title
-    CommonXml.normalize_name(t)
+    Datura::Helpers.normalize_name(t)
   end
 
   def type
