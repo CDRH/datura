@@ -220,12 +220,11 @@ class EadToEs < XmlToEs
   # end
 
   def title
-    get_text(@xpaths["title"])
+    get_list(@xpaths["title"])
   end
 
   def title_sort
-    t = title
-    Datura::Helpers.normalize_name(t)
+    Datura::Helpers.normalize_name(title)
   end
 
   def type
