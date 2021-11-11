@@ -225,12 +225,11 @@ class EadToEsItems < EadToEs
   end
 
   def title
-    title = get_text(@xpaths["title"])
+    get_text(@xpaths["title"])[0]
   end
 
   def title_sort
-    t = title
-    Datura::Helpers.normalize_name(t)
+    Datura::Helpers.normalize_name(title)
   end
 
   def topics
