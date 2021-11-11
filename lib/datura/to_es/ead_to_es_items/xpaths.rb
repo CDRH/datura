@@ -7,13 +7,14 @@ class EadToEsItems < EadToEs
       {
         "abstract" => "did/abstract",
         "date" => "did/unitdate",
+        "date_display" => "did/unitdate",
         "description" => "scopecontent/p",
         "extent" => "did/physdesc/extent",
         "format" => "did/physdesc/physfacet",
         "image_url" => "did/dao/@href",
         "identifier" => "did/unitid",
         "repository_id" => "did/unitid[@type='repository']",
-        "title" => "did/unittitle",
+        "title" => "did/unittitle/title",
         "type" => "did/physdesc/genreform",
       }.merge(override_xpaths)
   end
