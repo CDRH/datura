@@ -37,7 +37,6 @@ class EadToEsItems < EadToEs
   end
 
   def collection
-    "whitman-finding_aid_manuscripts"
   end
 
   def collection_desc
