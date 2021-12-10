@@ -26,10 +26,10 @@ class EadToEsItems < EadToEs
   end
 
   # note this does not sort the creators
-  # def creator
-  #   creators = get_list(@xpaths["creators"])
-  #   return creators.map { |creator| { "name" => CommonXml.normalize_space(creator) } }
-  # end
+  def creator
+    creators = get_list(@xpaths["creators"])
+    return creators.map { |creator| { "name" => CommonXml.normalize_space(creator) } }
+  end
 
   # returns ; delineated string of alphabetized creators
   def creator_sort
