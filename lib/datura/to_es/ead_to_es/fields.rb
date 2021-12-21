@@ -31,7 +31,7 @@ class EadToEs < XmlToEs
 
   # note this does not sort the creators
   def creator
-    creators = get_list(@xpaths["creators"])
+    creators = get_list(@xpaths["creator"])
     if creators
       return creators.map { |creator| { "name" => Datura::Helpers.normalize_space(creator) } }
     end

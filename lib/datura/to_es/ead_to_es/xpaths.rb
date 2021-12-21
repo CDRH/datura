@@ -6,7 +6,7 @@ class EadToEs < XmlToEs
   def xpaths_list
       {
         "abstract" => "/ead/archdesc/did/abstract",
-        "creators" => ["/ead/archdesc/did/origination/persname", "/ead/eadheader/filedesc/titlestmt/creator"],
+        "creator" => ["/ead/archdesc/did/origination/persname", "/ead/eadheader/filedesc/titlestmt/creator"],
         "date" => "/ead/eadheader/filedesc/publicationstmt/date",
         "description" => "/ead/archdesc/scopecontent/p",
         "formats" => "/ead/archdesc/did/physdesc/genreform",
