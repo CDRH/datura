@@ -29,9 +29,17 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 - minor test for Datura::Helpers.date_standardize
+- documentation for web scraping
+- documentation for CsvToEs (transforming CSV files and posting to elasticsearch)
+- instructions for installing Javascript Runtime files for Saxon
 
 ### Changed
 - data_standardize now relies on strftime instead of manual zero padding for month, day
+- minor corrections to documentation
+- XPath: "text" is now ingested as an array and will be displayed delimitted by spaces
+
+### Migration
+- check to make sure "text" xpath is doing desired behavior
 
 ## [v0.2.0-beta](https://github.com/CDRH/datura/compare/v0.1.6...v0.2.0-beta) - 2020-08-17 - Altering field and xpath behavior, adds get_elements
 
