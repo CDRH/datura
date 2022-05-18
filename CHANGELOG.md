@@ -34,7 +34,7 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 - instructions for installing Javascript Runtime files for Saxon
 
 ### Changed
-- data_standardize now relies on strftime instead of manual zero padding for month, day
+- date_standardize now relies on strftime instead of manual zero padding for month, day
 - minor corrections to documentation
 - XPath: "text" is now ingested as an array and will be displayed delimitted by spaces
 
