@@ -98,12 +98,11 @@ class Datura::Elasticsearch::Index
         # dynamic fields are listed like *_k and will need
         # to be converted to ^.*_k$, then combined into a mega-regex
         es_match = mapping.sub("*", ".*")
-        regex = "^#{es_match}$"
-        regex_pieces << regex
+        regex_pieces << es_match
       end
       if !regex_pieces.empty?
         regex_joined = regex_pieces.join("|")
-        @schema_mapping["dynamic"] = /#{regex_joined}/
+        @schema_mapping["dynamic"] = /^(?:#{regex_joined})$/
       end
     end
     @schema_mapping
