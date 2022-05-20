@@ -132,14 +132,18 @@ class Datura::Elasticsearch::Index
     doc.all? do |field, value|
       if valid_field?(field)
         # great, the field is valid, now check if it is a parent
-        nested = Array(value).map do |nested|
+        Array(value).each do |nested|
           if nested.class == Hash
-            nested.keys.all? { |k| valid_field?(k, field) }
+            if nested.keys.all? { |k| valid_field?(k, field) }
+              next
+            else
+              # if one of the nested hashes fails, it 
+              return false
+            end
           end
         end
-        # if the array is empty, ignore it, otherwise find out if any
-        # nested fields failed the validate
-        nested.compact.all? { |t| t }
+        # all nested fields passed, so it is valid
+        true
       else
         false
       end
