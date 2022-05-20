@@ -49,7 +49,7 @@ module Datura::Elasticsearch::Alias
     options = Datura::Options.new({}).all
 
     res = RestClient.get(File.join(options["es_path"], "_aliases"))
-    JSON.pretty_generate(JSON.parse(res))
+    puts JSON.pretty_generate(JSON.parse(res))
   end
 
 end
