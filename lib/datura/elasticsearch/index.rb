@@ -123,7 +123,7 @@ class Datura::Elasticsearch::Index
 
   # doc: ruby hash corresponding with Elasticsearch document JSON
   def valid_document?(doc)
-    get_schema_mapping if !defined?(@schema_mapping)
+    get_schema_mapping
     # NOTE: validation only checking the names of fields
     # against the schema, NOT the contents of fields
     # Elasticsearch itself checks that you are sending date
