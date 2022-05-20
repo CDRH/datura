@@ -3,7 +3,7 @@
 require "datura"
 
 begin
-  puts Datura::Elasticsearch::Alias.delete
+  Datura::Elasticsearch::Alias.delete
 rescue => e
   puts e
 end

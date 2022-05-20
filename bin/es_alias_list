@@ -2,4 +2,4 @@
 
 require "datura"
 
-puts Datura::Elasticsearch::Alias.list
+Datura::Elasticsearch::Alias.list
