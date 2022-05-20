@@ -1,4 +1,4 @@
-require "test_helper"
+require_relative "test_helper"
 
 # override the Options class method so that we
 # can test without real config files
