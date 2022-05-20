@@ -66,7 +66,7 @@ class Datura::Elasticsearch::Index
   def get_schema
     RestClient.get(@mapping_url) { |res, req, result|
       if result.code == "200"
-        puts JSON.parse(res)
+        JSON.parse(res)
       else
         raise "#{result.code} error getting Elasticsearch schema: #{res}"
       end
