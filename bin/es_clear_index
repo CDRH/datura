@@ -3,7 +3,7 @@
 require "datura"
 
 begin
-  Datura::Elasticsearch::Data.clear
+  Datura::Elasticsearch::Index.clear
 rescue => e
   puts e
 end
