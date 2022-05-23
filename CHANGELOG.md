@@ -32,6 +32,7 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 - documentation for web scraping
 - documentation for CsvToEs (transforming CSV files and posting to elasticsearch)
 - instructions for installing Javascript Runtime files for Saxon
+- EAD-to-ES transformation
 
 ### Changed
 - date_standardize now relies on strftime instead of manual zero padding for month, day
