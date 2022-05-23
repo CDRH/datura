@@ -50,6 +50,8 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 - Tests and fixtures for all supported formats except CustomToEs
 - `get_elements` returns nodeset given xpath arguments
 - `spatial` nested fields `spatial.type` and `spatial.title`
+- Versioning system to support multiple elasticsearch schemas
+- Validator to check against the elasticsearch copy
 
 ### Changed
 - Arguments for `get_text`, `get_list`, and `get_xpaths`
@@ -58,12 +60,14 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 - Documentation updated
 - Changed Install instructions to include RVM and gemset naming conventions
 - API field `coverage_spatial` is now just `spatial`
+- refactored executables into modules and classes
 
 ### Migration
 - Change `coverage_spatial` nested field to `spatial`
 - `get_text`, `get_list`, and `get_xpaths` require changing arguments to keyword (like `xml` and `keep_tags`)
 - Recommend checking xpaths and behavior of fields after updating to this version, as some defaults have changed
 - Possible to refactor previous FileCsv overrides to use new CsvToEs abilities, but not necessary
+- Config files should specify `api_version` as 1.0 or 2.0
 
 ## [v0.1.6](https://github.com/CDRH/datura/compare/v0.1.5...v0.1.6) - 2020-04-24 - Improvements to CSV, WEBS transformers and adds Custom transformer
 
