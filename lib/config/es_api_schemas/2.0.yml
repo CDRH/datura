@@ -171,7 +171,7 @@ mappings:
     rights_uri:
       type: keyword
       normalizer: keyword_normalized
-    coverage-spatial:
+    spatial:
       type: nested
       properties:
         place_name:
