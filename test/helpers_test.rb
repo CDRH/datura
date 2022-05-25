@@ -23,6 +23,8 @@ class Datura::HelpersTest < Minitest::Test
     assert_equal "2014-01-31", Datura::Helpers.date_standardize("2014-01", false)
     # complete date
     assert_equal "2014-01-12", Datura::Helpers.date_standardize("2014-01-12")
+    # day / month zero padded
+    assert_equal "2020-08-02", Datura::Helpers.date_standardize("2020-8-2")
     # invalid date
     assert_nil Datura::Helpers.date_standardize("2014-30-31")
     # February final day
@@ -33,7 +35,7 @@ class Datura::HelpersTest < Minitest::Test
   def test_get_directory_files
     # real directory
     files = Datura::Helpers.get_directory_files("#{File.dirname(__FILE__)}/fixtures")
-    assert_equal 2, files.length
+    assert_equal 6, files.length
 
     # not a real directory
     files = Datura::Helpers.get_directory_files("/fake")

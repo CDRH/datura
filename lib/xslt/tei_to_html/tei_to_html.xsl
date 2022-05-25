@@ -13,7 +13,6 @@
 
 <xsl:import href="lib/formatting.xsl"/>
 <xsl:import href="lib/personography_encyclopedia.xsl"/>
-<xsl:import href="lib/cdrh.xsl"/>
 
 <!-- To override, copy this file into your collection's script directory
     and change the above paths to:

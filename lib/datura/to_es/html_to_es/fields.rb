@@ -6,31 +6,20 @@ class HtmlToEs < XmlToEs
   # FIELDS #
   ##########
 
-  def id
-    @id
-  end
-
-  def id_dc
-    # TODO use api path from config or something?
-    "https://cdrhapi.unl.edu/doc/#{@id}"
+  def alternative
+    get_text(@xpaths["alternative"])
   end
 
   def annotations_text
-    # TODO what should default behavior be?
+    get_text(@xpaths["annotations_text"])
   end
 
   def category
-    # category = get_text(@xpaths["category"])
+    get_text(@xpaths["category"])
   end
 
   # nested field
   def creator
-    # TODO
-  end
-
-  # returns ; delineated string of alphabetized creators
-  def creator_sort
-    # get_text(@xpaths["creators"])
   end
 
   def collection
@@ -41,8 +30,8 @@ class HtmlToEs < XmlToEs
     @options["collection_desc"] || @options["collection"]
   end
 
+  # nested field
   def contributor
-    # TODO
   end
 
   def data_type
@@ -50,23 +39,48 @@ class HtmlToEs < XmlToEs
   end
 
   def date(before=true)
-    # TODO
+    datestr = get_list(@xpaths["date"]).first
+    if datestr
+      Datura::Helpers.date_standardize(datestr, true)
+    end
   end
 
   def date_display
-    # TODO
+    get_text(@xpaths["date_display"])
+  end
+
+  def date_not_after
+    datestr = get_text(@xpaths["date_not_after"])
+    if datestr && !datestr.empty?
+      Datura::Helpers.date_standardize(datestr, false)
+    else
+      date(false)
+    end
+  end
+
+  def date_not_before
+    datestr = get_text(@xpaths["date_not_before"])
+    if datestr && !datestr.empty?
+      Datura::Helpers.date_standardize(datestr, true)
+    else
+      date(true)
+    end
   end
 
   def description
-    # Note: override per collection as needed
+    get_text(@xpaths["description"])
+  end
+
+  def extent
+    get_text(@xpaths["extent"])
   end
 
   def format
-    # TODO
+    get_text(@xpaths["format"])
   end
 
   def image_id
-    # TODO
+    get_list(@xpaths["image_id"]).first
   end
 
   def keywords
@@ -74,85 +88,86 @@ class HtmlToEs < XmlToEs
   end
 
   def language
-    # TODO
+    get_text(@xpaths["language"])
   end
 
   def languages
-    # TODO
+    get_list(@xpaths["languages"])
   end
 
   def medium
-    # Default behavior is the same as "format" method
-    format
+    get_text(@xpaths["medium"])
   end
 
+  # nested field
   def person
-    # TODO
-  end
-
-  def people
-    # TODO
   end
 
   def places
-    # get_list(@xpaths["places"])
+    get_list(@xpaths["places"])
   end
 
   def publisher
-    # get_text(@xpaths["publisher"])
+    get_text(@xpaths["publisher"])
   end
 
+  # nested field
   def recipient
-    # TODO
+  end
+
+  def relation
+    get_text(@xpaths["relation"])
   end
 
   def rights
-    # Note: override by collection as needed
-    "All Rights Reserved"
+    get_text(@xpaths["rights"])
   end
 
   def rights_holder
-    # get_text(@xpaths["rights_holder"])
+    get_text(@xpaths["rights_holder"])
   end
 
   def rights_uri
-    # by default collections have no uri associated with them
-    # copy this method into collection specific tei_to_es.rb
-    # to return specific string or xpath as required
+    get_text(@xpaths["rights_uri"])
   end
 
   def source
-    # get_text(@xpaths["source"])
+    get_text(@xpaths["source"])
+  end
+
+  # nested field
+  def spatial
   end
 
   def subjects
-    # TODO default behavior?
+    get_list(@xpaths["subjects"])
   end
 
   def subcategory
-    # subcategory = get_text(@xpaths["subcategory"])
-    # subcategory.length > 0 ? subcategory : "none"
+    get_text(@xpaths["subcategory"])
   end
 
   def text
     # handling separate fields in array
     # means no worrying about handling spacing between words
-    text_all = []
-    body = get_text(@xpaths["text"], false)
-    text_all << body
-    text_all += text_additional
-    Datura::Helpers.normalize_space(text_all.join(" "))
+    text = []
+    body = get_text(@xpaths["text"])
+    text << body
+    text += text_additional
+    Datura::Helpers.normalize_space(text.join(" "))
   end
 
   def text_additional
     # Note: Override this per collection if you need additional
     # searchable fields or information for collections
     # just make sure you return an array at the end!
-    [ title ]
+
+    text = []
+    text << title
   end
 
   def title
-    get_text(@xpaths["titles"])
+    get_text(@xpaths["title"])
   end
 
   def title_sort
@@ -160,25 +175,47 @@ class HtmlToEs < XmlToEs
   end
 
   def topics
-    # TODO
+    get_list(@xpaths["topics"])
+  end
+
+  def type
+    get_text(@xpaths["type"])
   end
 
   def uri
-    # override per collection
-    # should point at the live website view of resource
+    if @options["site_url"]
+      File.join(
+        @options["site_url"],
+        "item",
+        @id
+      )
+    end
   end
 
   def uri_data
-    # TODO per repository
+    File.join(
+      @options["data_base"],
+      "data",
+      @options["collection"],
+      "html",
+      "#{@id}.html"
+    )
   end
 
   def uri_html
-    base = @options["data_base"]
-    subpath = "data/#{@options["collection"]}/output/#{@options["environment"]}/html"
-    "#{base}/#{subpath}/#{@id}.html"
+    File.join(
+      @options["data_base"],
+      "data",
+      @options["collection"],
+      "output",
+      @options["environment"],
+      "html",
+      "#{@id}.html"
+    )
   end
 
   def works
-    # TODO
+    get_list(@xpaths["works"])
   end
+
 end
