@@ -30,6 +30,7 @@ module EsRequest
     assemble_people
     assemble_spatial
     assemble_references
+    assemble_rdf
     assemble_text
     assemble_collection_specific
 
@@ -117,10 +118,16 @@ module EsRequest
     @json["spatial"] = spatial
   end
 
+  def assemble_rdf
+    @json["rdf"] = rdf
+  end
+
   def assemble_text
     @json["annotations_text"] = annotations_text
     @json["text"] = text
     # @json["abstract"]
   end
+
+  
 
 end
