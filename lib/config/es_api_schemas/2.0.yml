@@ -150,6 +150,27 @@ mappings:
     source:
       type: keyword
       normalizer: keyword_normalized
+    rdf:
+      type: nested
+      properties:
+        type:
+          type: keyword
+          normalizer: keyword_normalized
+        subject:
+          type: keyword
+          normalizer: keyword_normalized
+        predicate:
+          type: keyword
+          normalizer: keyword_normalized
+        object:
+          type: keyword
+          normalizer: keyword_normalized
+        source:
+          type: keyword
+          normalizer: keyword_normalized
+        note:
+          type: keyword  
+          normalizer: keyword_normalized
     recipient:
       type: nested
       properties:

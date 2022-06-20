@@ -88,6 +88,21 @@ mappings:
       type: keyword
     source:
       type: keyword
+    rdf:
+      type: nested
+      properties:
+        type:
+          type: keyword
+        subject:
+          type: keyword
+        predicate:
+          type: keyword
+        object:
+          type: keyword
+        source:
+          type: keyword
+        note:
+          type: keyword
     recipient:
       type: nested
       properties:
