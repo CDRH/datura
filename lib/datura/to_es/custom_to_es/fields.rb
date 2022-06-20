@@ -86,6 +86,10 @@ class CustomToEs
   end
 
   # nested field
+  def rdf
+  end
+
+  # nested field
   def recipient
   end
 

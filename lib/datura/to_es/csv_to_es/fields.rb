@@ -139,6 +139,10 @@ class CsvToEs
     end
   end
 
+  # nested field
+  def rdf
+  end
+
   def relation
     @row["relation"]
   end

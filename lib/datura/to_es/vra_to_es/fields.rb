@@ -139,6 +139,10 @@ class VraToEs < XmlToEs
   end
 
   # nested field
+  def rdf
+  end
+
+  # nested field
   def recipient
     eles = get_elements(@xpaths["recipient"])
     eles.map do |p|
