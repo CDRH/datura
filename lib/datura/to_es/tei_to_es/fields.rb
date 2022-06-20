@@ -130,6 +130,10 @@ class TeiToEs < XmlToEs
   end
 
   # nested field
+  def rdf
+  end
+
+  # nested field
   def recipient
     eles = @xml.xpath(@xpaths["recipient"])
     eles.map do |p|

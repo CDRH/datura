@@ -112,6 +112,10 @@ class WebsToEs < XmlToEs
   end
 
   # nested field
+  def rdf
+  end
+
+  # nested field
   def recipient
   end
 

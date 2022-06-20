@@ -112,6 +112,10 @@ class HtmlToEs < XmlToEs
   end
 
   # nested field
+  def rdf
+  end
+
+  # nested field
   def recipient
   end
 
