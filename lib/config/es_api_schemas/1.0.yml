@@ -121,6 +121,9 @@ mappings:
     spatial:
       type: nested
       properties:
+        # display title for entire location
+        title:
+          type: keyword
         place_name:
           # TODO copy into text?
           type: keyword
