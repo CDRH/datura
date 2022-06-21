@@ -195,6 +195,10 @@ mappings:
     spatial:
       type: nested
       properties:
+        # display title for entire location
+        title:
+          type: keyword
+          normalizer: keyword_normalized
         place_name:
           # TODO copy into text?
           type: keyword
