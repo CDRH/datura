@@ -56,13 +56,10 @@ class Datura::DataManager
   def load_collection_classes
     # load collection scripts at this point so they will override
     # any of the default ones (for example: TeiToEs)
-    puts !(defined?(byebug))
-
     path = File.join(@options["collection_dir"], "scripts", "overrides", "*.rb")
     Dir[path].each do |f|
       puts "requiring" + f
       require f
-      puts defined?(byebug)
     end
   end
 
