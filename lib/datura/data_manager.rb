@@ -3,7 +3,7 @@ require "logger"
 require "yaml"
 
 require_relative "./requirer.rb"
-
+require "byebug"
 class Datura::DataManager
   attr_reader :log
   attr_reader :time
@@ -45,7 +45,6 @@ class Datura::DataManager
     prepare_xslt
     load_collection_classes
     set_up_logger
-
     # set up posting URLs
     @es_url = File.join(options["es_path"], options["es_index"])
     @solr_url = File.join(options["solr_path"], options["solr_core"], "update")
@@ -56,6 +55,7 @@ class Datura::DataManager
   def load_collection_classes
     # load collection scripts at this point so they will override
     # any of the default ones (for example: TeiToEs)
+
     path = File.join(@options["collection_dir"], "scripts", "overrides", "*.rb")
     Dir[path].each do |f|
       require f
