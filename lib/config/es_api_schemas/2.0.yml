@@ -37,39 +37,45 @@ mappings:
     identifier:
       type: keyword
       normalizer: keyword_normalized
-    collection:
+    cdrhCollection:
       type: keyword
       normalizer: keyword_normalized
-    collection_desc:
+    cdrhCollectionDesc:
       type: keyword
       normalizer: keyword_normalized
-    uri:
+    cdrhUri:
       type: keyword
       normalizer: keyword_normalized
-    uri_data:
+    cdrhUriData:
       type: keyword
       normalizer: keyword_normalized
-    uri_html:
+    cdrhUriHtml:
       type: keyword
       normalizer: keyword_normalized
-    data_type:
+    cdrhDataType:
       type: keyword
       normalizer: keyword_normalized
-    image_location:
+    cdrhFigLocation:
       type: keyword
       normalizer: keyword_normalized
-    image_id:
+    # image_location: TODO how is this field handled? is it same as above?
+    #   type: keyword
+    #   normalizer: keyword_normalized
+    cdrhCoverImage:
       type: keyword
       normalizer: keyword_normalized
       # TODO copy to text?
-    title:
+    dcTitle:
       type: keyword
       normalizer: keyword_normalized
     title_sort:
       type: keyword
       normalizer: keyword_normalized
       # TODO copy to text?
-    alternative:
+    dctermsAlternative:
+      type: keyword
+      normalizer: keyword_normalized
+    cdrhDateUpdated:
       type: keyword
       normalizer: keyword_normalized
     creator_sort:
@@ -85,15 +91,15 @@ mappings:
         id:
           type: keyword
           normalizer: keyword_normalized
-    subjects:
+    dctermsSubjects:
       type: keyword
       normalizer: keyword_normalized
       # TODO not sure yet if for display or search
-    abstract:
+    dctermsAbstract:
       type: keyword
       normalizer: keyword_normalized
       # TODO copy to text?
-    description:
+    dctermsDescription:
       type: keyword
       normalizer: keyword_normalized
     publisher:
@@ -111,7 +117,7 @@ mappings:
         role:
           type: keyword
           normalizer: keyword_normalized
-    date:
+    date_sort:
       type: date
       format: "yyyy-MM-dd||epoch_millis"
       # ignore_malformed: true
@@ -144,10 +150,10 @@ mappings:
     languages:
       type: keyword
       normalizer: keyword_normalized
-    relation:
+    dctermsRelation:
       type: keyword
       normalizer: keyword_normalized
-    source:
+    dctermsSource:
       type: keyword
       normalizer: keyword_normalized
     rdf:
@@ -228,6 +234,21 @@ mappings:
           normalizer: keyword_normalized
         postal_code:
           type: keyword
+          normalizer: keyword_normalized        
+        township:
+          type: keyword
+          normalizer: keyword_normalized        
+        note:
+          type: keyword
+          normalizer: keyword_normalized
+        role:
+          type: keyword
+          normalizer: keyword_normalized
+        description:
+          type: keyword
+          normalizer: keyword_normalized
+        type:
+          type: keyword
           normalizer: keyword_normalized
     person:
       type: nested
@@ -245,27 +266,90 @@ mappings:
     annotations_text:
       type: text
       analyzer: english
-    category:
+    cdrhCategory1:
       type: keyword
       normalizer: keyword_normalized
-    subcategory:
+    cdrhCategory2:
       type: keyword
       normalizer: keyword_normalized
-    topics:
+    cdrhCategory3:
       type: keyword
       normalizer: keyword_normalized
-    keywords:
+    cdrhCategory4:
+      type: keyword
+      normalizer: keyword_normalized
+    cdrhCategory5:
+      type: keyword
+      normalizer: keyword_normalized
+    cdrhNotes:
+      type: keyword
+      normalizer: keyword_normalized
+    cdrhTopics:
+      type: keyword
+      normalizer: keyword_normalized
+    cdrhKeywords1:
+      type: keyword
+      normalizer: keyword_normalized
+    cdrhKeywords2:
+      type: keyword
+      normalizer: keyword_normalized
+    cdrhKeywords3:
+      type: keyword
+      normalizer: keyword_normalized
+    cdrhKeywords4:
       type: keyword
       normalizer: keyword_normalized
     people:
       type: keyword
       normalizer: keyword_normalized
-    places:
-      type: keyword
-      normalizer: keyword_normalized
+    # places: #DEPRECATED
+    #   type: keyword
+    #   normalizer: keyword_normalized
     works:
       type: keyword
       normalizer: keyword_normalized
+    citation:
+      type: nested
+      properties:
+        role:
+          type: keyword
+          normalizer: keyword_normalized
+        date:
+          type: date
+          format: "yyyy-MM-dd||epoch_millis"
+        publisher:
+          type: keyword
+          normalizer: keyword_normalized
+        issue:
+          type: keyword
+          normalizer: keyword_normalized
+        page_begin:
+          type: keyword
+          normalizer: keyword_normalized
+        page_end:
+          type: keyword
+          normalizer: keyword_normalized
+        section:
+          type: keyword
+          normalizer: keyword_normalized
+        volume:
+          type: keyword
+          normalizer: keyword_normalized
+        place:
+          type: keyword
+          normalizer: keyword_normalized
+        title_a:
+          type: keyword
+          normalizer: keyword_normalized
+        title_m:
+          type: keyword
+          normalizer: keyword_normalized
+        title_j:
+          type: keyword
+          normalizer: keyword_normalized
+    date_created:
+      type: date
+      format: "yyyy-MM-dd||epoch_millis"
     text:
       type: text
       analyzer: english
