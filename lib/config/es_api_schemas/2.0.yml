@@ -37,72 +37,60 @@ mappings:
     identifier:
       type: keyword
       normalizer: keyword_normalized
-    cdrhCollection:
+    collection:
       type: keyword
       normalizer: keyword_normalized
-    cdrhCollectionDesc:
+    collection_desc:
       type: keyword
       normalizer: keyword_normalized
-    cdrhUri:
+    uri:
       type: keyword
       normalizer: keyword_normalized
-    cdrhUriData:
+    uri_data:
       type: keyword
       normalizer: keyword_normalized
-    cdrhUriHtml:
+    uri_html:
       type: keyword
       normalizer: keyword_normalized
-    cdrhDataType:
+    data_type:
       type: keyword
       normalizer: keyword_normalized
-    cdrhFigLocation:
+    fig_location:
       type: keyword
       normalizer: keyword_normalized
-    # image_location: TODO how is this field handled? is it same as above?
-    #   type: keyword
-    #   normalizer: keyword_normalized
-    cdrhCoverImage:
+    cover_image:
       type: keyword
       normalizer: keyword_normalized
-      # TODO copy to text?
-    dcTitle:
+    title:
+      # TODO copy to text
       type: keyword
       normalizer: keyword_normalized
     title_sort:
       type: keyword
       normalizer: keyword_normalized
-      # TODO copy to text?
-    dctermsAlternative:
+    alternative:
+      # TODO copy to text
       type: keyword
       normalizer: keyword_normalized
-    cdrhDateUpdated:
+    date_updated:
+      type: date
+      format: "yyyy-MM-dd||epoch_millis"
+    category1:
       type: keyword
       normalizer: keyword_normalized
-    creator_sort:
+    category2:
       type: keyword
       normalizer: keyword_normalized
-    creator:
-      type: nested
-      properties:
-        name:
-          # TODO copy into text?
-          type: keyword
-          normalizer: keyword_normalized
-        id:
-          type: keyword
-          normalizer: keyword_normalized
-    dctermsSubjects:
+    category3:
       type: keyword
       normalizer: keyword_normalized
-      # TODO not sure yet if for display or search
-    dctermsAbstract:
+    category4:
       type: keyword
       normalizer: keyword_normalized
-      # TODO copy to text?
-    dctermsDescription:
+    category5:
       type: keyword
       normalizer: keyword_normalized
-    publisher:
+    notes:
       type: keyword
       normalizer: keyword_normalized
     contributor:
@@ -117,67 +105,7 @@ mappings:
         role:
           type: keyword
           normalizer: keyword_normalized
-    date_sort:
-      type: date
-      format: "yyyy-MM-dd||epoch_millis"
-      # ignore_malformed: true
-    date_display:
-      type: keyword
-      normalizer: keyword_normalized
-    date_not_before:
-      type: date
-      format: "yyyy-MM-dd||epoch_millis"
-      # ignore_malformed: true
-    date_not_after:
-      type: date
-      format: "yyyy-MM-dd||epoch_millis"
-      # ignore_malformed: true
-    type:
-      type: keyword
-      normalizer: keyword_normalized
-    format:
-      type: keyword
-      normalizer: keyword_normalized
-    medium:
-      type: keyword
-      normalizer: keyword_normalized
-    extent:
-      type: keyword
-      normalizer: keyword_normalized
-    language:
-      type: keyword
-      normalizer: keyword_normalized
-    languages:
-      type: keyword
-      normalizer: keyword_normalized
-    dctermsRelation:
-      type: keyword
-      normalizer: keyword_normalized
-    dctermsSource:
-      type: keyword
-      normalizer: keyword_normalized
-    rdf:
-      type: nested
-      properties:
-        type:
-          type: keyword
-          normalizer: keyword_normalized
-        subject:
-          type: keyword
-          normalizer: keyword_normalized
-        predicate:
-          type: keyword
-          normalizer: keyword_normalized
-        object:
-          type: keyword
-          normalizer: keyword_normalized
-        source:
-          type: keyword
-          normalizer: keyword_normalized
-        note:
-          type: keyword  
-          normalizer: keyword_normalized
-    recipient:
+    creator:
       type: nested
       properties:
         name:
@@ -186,132 +114,13 @@ mappings:
         id:
           type: keyword
           normalizer: keyword_normalized
-        role:
-          type: keyword
-          normalizer: keyword_normalized
-    rights_holder:
-      type: keyword
-      normalizer: keyword_normalized
-    rights:
-      type: keyword
-      normalizer: keyword_normalized
-    rights_uri:
-      type: keyword
-      normalizer: keyword_normalized
-    spatial:
-      type: nested
-      properties:
-        # display title for entire location
-        title:
-          type: keyword
-          normalizer: keyword_normalized
-        place_name:
-          # TODO copy into text?
-          type: keyword
-          normalizer: keyword_normalized
-        coordinates:
-          type: geo_point
-        id:
-          type: keyword
-          normalizer: keyword_normalized
-        city:
-          type: keyword
-          normalizer: keyword_normalized
-        county:
-          type: keyword
-          normalizer: keyword_normalized
-        country:
-          type: keyword
-          normalizer: keyword_normalized
-        region:
-          type: keyword
-          normalizer: keyword_normalized
-        state:
-          type: keyword
-          normalizer: keyword_normalized
-        street:
-          type: keyword
-          normalizer: keyword_normalized
-        postal_code:
-          type: keyword
-          normalizer: keyword_normalized        
-        township:
-          type: keyword
-          normalizer: keyword_normalized        
-        note:
-          type: keyword
-          normalizer: keyword_normalized
-        role:
-          type: keyword
-          normalizer: keyword_normalized
-        description:
-          type: keyword
-          normalizer: keyword_normalized
-        type:
-          type: keyword
-          normalizer: keyword_normalized
-    person:
-      type: nested
-      properties:
-        name:
-          # TODO copy into text?
-          type: keyword
-          normalizer: keyword_normalized
-        id:
-          type: keyword
-          normalizer: keyword_normalized
-        role:
-          type: keyword
-          normalizer: keyword_normalized
-    annotations_text:
-      type: text
-      analyzer: english
-    cdrhCategory1:
-      type: keyword
-      normalizer: keyword_normalized
-    cdrhCategory2:
-      type: keyword
-      normalizer: keyword_normalized
-    cdrhCategory3:
-      type: keyword
-      normalizer: keyword_normalized
-    cdrhCategory4:
-      type: keyword
-      normalizer: keyword_normalized
-    cdrhCategory5:
-      type: keyword
-      normalizer: keyword_normalized
-    cdrhNotes:
-      type: keyword
-      normalizer: keyword_normalized
-    cdrhTopics:
-      type: keyword
-      normalizer: keyword_normalized
-    cdrhKeywords1:
-      type: keyword
-      normalizer: keyword_normalized
-    cdrhKeywords2:
-      type: keyword
-      normalizer: keyword_normalized
-    cdrhKeywords3:
-      type: keyword
-      normalizer: keyword_normalized
-    cdrhKeywords4:
-      type: keyword
-      normalizer: keyword_normalized
-    people:
-      type: keyword
-      normalizer: keyword_normalized
-    # places: #DEPRECATED
-    #   type: keyword
-    #   normalizer: keyword_normalized
-    works:
-      type: keyword
-      normalizer: keyword_normalized
     citation:
       type: nested
       properties:
         role:
+          type: keyword
+          normalizer: keyword_normalized
+        id:
           type: keyword
           normalizer: keyword_normalized
         date:
@@ -347,9 +156,258 @@ mappings:
         title_j:
           type: keyword
           normalizer: keyword_normalized
-    date_created:
+    date:
       type: date
       format: "yyyy-MM-dd||epoch_millis"
+      # ignore_malformed: true
+    date_display:
+      type: keyword
+      normalizer: keyword_normalized
+    date_not_before:
+      type: date
+      format: "yyyy-MM-dd||epoch_millis"
+      # ignore_malformed: true
+    date_not_after:
+      type: date
+      format: "yyyy-MM-dd||epoch_millis"
+      # ignore_malformed: true
+    format:
+      type: keyword
+      normalizer: keyword_normalized
+    medium:
+      type: keyword
+      normalizer: keyword_normalized
+    extent:
+      type: keyword
+      normalizer: keyword_normalized
+    language:
+      type: keyword
+      normalizer: keyword_normalized
+    rights_holder:
+      type: keyword
+      normalizer: keyword_normalized
+    rights:
+      type: keyword
+      normalizer: keyword_normalized
+    rights_uri:
+      type: keyword
+      normalizer: keyword_normalized
+    subjects:
+      type: keyword
+      normalizer: keyword_normalized
+      # TODO not sure yet if for display or search
+    abstract:
+      type: keyword
+      normalizer: keyword_normalized
+      # TODO copy to text?
+    description:
+      type: text
+      analyzer: english
+    type:
+      type: keyword
+      normalizer: keyword_normalized
+    topics:
+      type: keyword
+      normalizer: keyword_normalized
+    keywords1:
+      type: keyword
+      normalizer: keyword_normalized
+    keywords2:
+      type: keyword
+      normalizer: keyword_normalized
+    keywords3:
+      type: keyword
+      normalizer: keyword_normalized
+    keywords4:
+      type: keyword
+      normalizer: keyword_normalized
+    relation:
+      type: keyword
+      normalizer: keyword_normalized
+    source:
+      type: keyword
+      normalizer: keyword_normalized
+    has_part:
+      type: keyword
+      normalizer: keyword_normalized
+    is_part_of:
+      type: keyword
+      normalizer: keyword_normalized
+    # recipient: #DELETED
+    #   type: nested
+    #   properties:
+    #     name:
+    #       type: keyword
+    #       normalizer: keyword_normalized
+    #     id:
+    #       type: keyword
+    #       normalizer: keyword_normalized
+    #     role:
+    #       type: keyword
+    #       normalizer: keyword_normalized
+    spatial:
+      type: nested
+      properties:
+        role:
+          type: keyword
+          normalizer: keyword_normalized
+        name:
+          # display title for entire location
+          type: keyword
+          normalizer: keyword_normalized
+        description:
+          type: text
+          analyzer: english
+        type:
+          type: keyword
+          normalizer: keyword_normalized
+        short_name:
+          # TODO copy into text?
+          type: keyword
+          normalizer: keyword_normalized
+        coordinates:
+          type: geo_point
+        id:
+          type: keyword
+          normalizer: keyword_normalized
+        city:
+          type: keyword
+          normalizer: keyword_normalized
+        township:
+          type: keyword
+          normalizer: keyword_normalized
+        county:
+          type: keyword
+          normalizer: keyword_normalized
+        country:
+          type: keyword
+          normalizer: keyword_normalized
+        region:
+          type: keyword
+          normalizer: keyword_normalized
+        state:
+          type: keyword
+          normalizer: keyword_normalized
+        street:
+          type: keyword
+          normalizer: keyword_normalized
+        postal_code:
+          type: keyword
+          normalizer: keyword_normalized    
+        note:
+          type: keyword
+          normalizer: keyword_normalized
+    places: #DEPRECATED
+      type: keyword
+      normalizer: keyword_normalized
+    person:
+      type: nested
+      properties:
+        name:
+          type: keyword
+          normalizer: keyword_normalized
+        id:
+          type: keyword
+          normalizer: keyword_normalized
+        role:
+          type: keyword
+          normalizer: keyword_normalized
+        note:
+          type: keyword
+          normalizer: keyword_normalized
+        order:
+          type: keyword
+          normalizer: keyword_normalized
+        birth_date:
+          type: keyword
+          normalizer: keyword_normalized
+        death_date:
+          type: keyword
+          normalizer: keyword_normalized
+        age_category:
+          type: keyword
+          normalizer: keyword_normalized
+        name_last:
+          type: keyword
+          normalizer: keyword_normalized
+        name_given:
+          type: keyword
+          normalizer: keyword_normalized
+        name_alternate:
+          type: keyword
+          normalizer: keyword_normalized
+        race:
+          type: keyword
+          normalizer: keyword_normalized
+        sex:
+          type: keyword
+          normalizer: keyword_normalized
+        gender:
+          type: keyword
+          normalizer: keyword_normalized
+        nationality:
+          type: keyword
+          normalizer: keyword_normalized
+        trait1:
+          type: keyword
+          normalizer: keyword_normalized
+        trait2:
+          type: keyword
+          normalizer: keyword_normalized
+    event:
+      type: nested
+      properties:
+        type:
+          type: keyword
+          normalizer: keyword_normalized
+        agent:
+          type: keyword
+          normalizer: keyword_normalized
+        factor:
+          type: keyword
+          normalizer: keyword_normalized
+        product:
+          type: keyword
+          normalizer: keyword_normalized
+        date_begin:
+          type: keyword
+          normalizer: keyword_normalized
+        date_end:
+          type: keyword
+          normalizer: keyword_normalized
+        trait1:
+          type: keyword
+          normalizer: keyword_normalized
+        trait2:
+          type: keyword
+          normalizer: keyword_normalized
+        notes:
+          type: keyword
+          normalizer: keyword_normalized
+    rdf:
+      type: nested
+      properties:
+        type:
+          type: keyword
+          normalizer: keyword_normalized
+        subject:
+          type: keyword
+          normalizer: keyword_normalized
+        predicate:
+          type: keyword
+          normalizer: keyword_normalized
+        object:
+          type: keyword
+          normalizer: keyword_normalized
+        source:
+          type: keyword
+          normalizer: keyword_normalized
+        note:
+          type: keyword  
+          normalizer: keyword_normalized
+    annotations_text:
+      type: text
+      analyzer: english
     text:
       type: text
       analyzer: english
