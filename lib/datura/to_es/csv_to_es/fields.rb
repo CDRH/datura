@@ -274,6 +274,9 @@ class CsvToEs
   def citation
   end
 
+  def abstract
+  end
+
   def keywords2
   end
 

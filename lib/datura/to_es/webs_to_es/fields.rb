@@ -253,6 +253,10 @@ class WebsToEs < XmlToEs
     # nested
   end
 
+  def abstract
+    get_text(@xpaths["abstract"])
+  end
+
   def keywords2
     get_text(@xpaths["keywords2"])
   end
