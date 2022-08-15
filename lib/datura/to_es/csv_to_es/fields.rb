@@ -5,6 +5,8 @@ class CsvToEs
   ##########
   # FIELDS #
   ##########
+  # beginning with fields from API 1.0, including those that are unchanged in 2.0
+
   def id
     @id
   end
@@ -139,10 +141,6 @@ class CsvToEs
     end
   end
 
-  # nested field
-  def rdf
-  end
-
   def relation
     @row["relation"]
   end
@@ -243,6 +241,61 @@ class CsvToEs
     if @row["works"]
       @row["works"].split("; ")
     end
+  end
+
+  # new/moved fields for API 2.0
+
+  def cover_image
+    @row["image_id"]
+  end
+
+  def date_updated
+  end
+
+  def category2
+    @row["subcategory"]
+  end
+
+  def category3
+  end
+
+  def category4
+  end
+
+  def category5
+  end
+
+  def notes
+  end
+
+  def citation
+  end
+
+  def keywords2
+  end
+
+  def keywords3
+  end
+
+  def keywords4
+  end
+
+  def has_part
+  end
+
+  def is_part_of
+  end
+
+  def previous_item
+  end
+
+  def next_item
+  end
+
+  def event
+  end
+  
+  def rdf
   end
 
 end

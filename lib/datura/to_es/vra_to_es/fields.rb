@@ -255,4 +255,74 @@ class VraToEs < XmlToEs
   def works
     get_list(@xpaths["works"])
   end
+
+  # new/moved fields for API 2.0
+
+  def cover_image
+    get_list(@xpaths["image_id"]).first
+  end
+
+  def date_updated
+    get_list(@xpaths["date_updated"])
+  end
+
+  def category2
+    get_list(@xpaths["subcategory"])
+  end
+
+  def category3
+    get_text(@xpaths["category3"])
+  end
+
+  def category4
+    get_text(@xpaths["category4"])
+  end
+
+  def category5
+    get_text(@xpaths["category5"])
+  end
+
+  def notes
+    get_text(@xpaths["notes"])
+  end
+
+  def citation
+    # nested
+  end
+
+  def keywords2
+    get_text(@xpaths["keywords2"])
+  end
+
+  def keywords3
+    get_text(@xpaths["keywords3"])
+  end
+
+  def keywords4
+    get_text(@xpaths["keywords4"])
+  end
+
+  def has_part
+    # nested
+  end
+
+  def is_part_of
+    # nested
+  end
+
+  def previous_item
+    # nested
+  end
+
+  def next_item
+    # nested
+  end
+
+  def event
+    # nested
+  end
+  
+  def rdf
+    # nested
+  end
 end
