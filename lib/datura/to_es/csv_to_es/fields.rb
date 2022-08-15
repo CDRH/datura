@@ -252,6 +252,9 @@ class CsvToEs
   def date_updated
   end
 
+  def fig_location
+  end
+
   def category2
     @row["subcategory"]
   end
