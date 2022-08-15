@@ -225,6 +225,10 @@ class WebsToEs < XmlToEs
     get_list(@xpaths["date_updated"])
   end
 
+  def fig_location
+    get_list(@xpaths["fig_location"])
+  end
+
   def category2
     get_list(@xpaths["subcategory"])
   end
