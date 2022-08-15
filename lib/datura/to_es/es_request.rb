@@ -139,7 +139,7 @@ module EsRequest
   def assemble_rdf_1
     @json["rdf"] = rdf
   end
-  
+
   def assemble_identifiers_2
     @json["identifier"] = @id # does this still work?
     @json["collection"] = collection
@@ -199,8 +199,8 @@ module EsRequest
     @json["source"] = source
     @json["has_part"] = has_part
     @json["is_part_of"] = is_part_of
-    @json["previous"] = previous
-    @json["next"] = next
+    @json["previous_item"] = previous_item
+    @json["next_item"] = next_item
   end
 
   def assemble_additional_2
