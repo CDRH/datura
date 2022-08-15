@@ -42,7 +42,6 @@ module EsRequest
     assemble_spatial_1
     assemble_references_1
     assemble_rdf_1
-    assemble_text_1
   end
 
   def assemble_json_2
@@ -53,7 +52,6 @@ module EsRequest
     assemble_metadata_interpretive_2
     assemble_relations_2
     assemble_additional_2
-    assemble_text_2
   end
 
   ##############
