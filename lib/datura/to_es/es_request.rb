@@ -178,6 +178,8 @@ module EsRequest
     @json["rights_holder"] = rights_holder
     @json["rights"] = rights
     @json["rights_uri"] = rights_uri
+    @json["container_box"] = container_box
+    @json["container_folder"] = container_folder
   end
 
   def assemble_metadata_interpretive_2
