@@ -50,6 +50,12 @@ class EadToEs < XmlToEs
     @options["collection_desc"] || @options["collection"]
   end
 
+  def container_box
+  end
+
+  def container_folder
+  end
+
   def contributor
     # contribs = []
     # @xpaths["contributors"].each do |xpath|
