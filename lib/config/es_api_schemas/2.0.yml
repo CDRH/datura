@@ -192,6 +192,12 @@ mappings:
     rights_uri:
       type: keyword
       normalizer: keyword_normalized
+    container_box:
+      type: keyword
+      normalizer: keyword_normalized
+    container_field:
+      type: keyword
+      normalizer: keyword_normalized
     subjects:
       type: keyword
       normalizer: keyword_normalized
@@ -334,6 +340,9 @@ mappings:
           type: keyword
           normalizer: keyword_normalized
         name_alternate:
+          type: keyword
+          normalizer: keyword_normalized
+        name_previous:
           type: keyword
           normalizer: keyword_normalized
         race:
