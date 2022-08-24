@@ -73,7 +73,6 @@ class Datura::DataManager
   end
 
   def run
-    byebug
     @time = [Time.now]
     # log starting information for user
     check_options
