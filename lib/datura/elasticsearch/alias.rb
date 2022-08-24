@@ -6,11 +6,7 @@ require_relative "./../elasticsearch.rb"
 module Datura::Elasticsearch::Alias
 
   def self.add
-<<<<<<< HEAD
-    params = Datura::Parser.es_alias
-=======
     params = Datura::Parser.es_alias_add
->>>>>>> 01ed9e56d (moves code out of bin elasticsearch files and into module)
     options = Datura::Options.new(params).all
 
     ali = options["alias"]
