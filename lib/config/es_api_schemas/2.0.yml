@@ -236,13 +236,13 @@ mappings:
     has_part:
       type: nested
       properties: 
-        role: keyword
+        role:
           type: keyword
           normalizer: keyword_normalized
-        id: keyword
+        id:
           type: keyword
           normalizer: keyword_normalized
-        title: keyword
+        title:
           type: keyword
           normalizer: keyword_normalized
         order:
@@ -250,13 +250,13 @@ mappings:
     is_part_of:
       type: nested
       properties: 
-        role: keyword
+        role:
           type: keyword
           normalizer: keyword_normalized
-        id: keyword
+        id:
           type: keyword
           normalizer: keyword_normalized
-        title: keyword
+        title:
           type: keyword
           normalizer: keyword_normalized
         order:
@@ -264,10 +264,10 @@ mappings:
     previous_item:
       type: nested
       properties: 
-        role: keyword
+        role:
           type: keyword
           normalizer: keyword_normalized
-        id: keyword
+        id:
           type: keyword
           normalizer: keyword_normalized
         title: keyword
@@ -278,13 +278,13 @@ mappings:
     next_item:
       type: nested
       properties: 
-        role: keyword
+        role:
           type: keyword
           normalizer: keyword_normalized
-        id: keyword
+        id:
           type: keyword
           normalizer: keyword_normalized
-        title: keyword
+        title:
           type: keyword
           normalizer: keyword_normalized
         order:
