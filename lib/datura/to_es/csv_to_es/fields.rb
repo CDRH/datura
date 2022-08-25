@@ -39,6 +39,12 @@ class CsvToEs
   def collection_desc
     @options["collection_desc"] || @options["collection"]
   end
+  
+  def container_box
+  end
+
+  def container_folder
+  end
 
   # nested field
   def contributor

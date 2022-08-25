@@ -245,6 +245,12 @@ class WebsToEs < XmlToEs
     get_text(@xpaths["category5"])
   end
 
+  def container_box
+  end
+
+  def container_folder
+  end
+
   def notes
     get_text(@xpaths["notes"])
   end
