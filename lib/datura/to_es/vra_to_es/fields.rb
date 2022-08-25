@@ -294,6 +294,12 @@ class VraToEs < XmlToEs
     # nested
   end
 
+  def container_box
+  end
+
+  def container_folder
+  end
+
   def abstract
     get_text(@xpaths["abstract"])
   end
