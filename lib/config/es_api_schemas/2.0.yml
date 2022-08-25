@@ -75,7 +75,7 @@ mappings:
     date_updated:
       type: date
       format: "yyyy-MM-dd||epoch_millis"
-    category1:
+    category:
       type: keyword
       normalizer: keyword_normalized
     category2:
@@ -234,11 +234,61 @@ mappings:
       type: keyword
       normalizer: keyword_normalized
     has_part:
-      type: keyword
-      normalizer: keyword_normalized
+      type: nested
+      properties: 
+        role: keyword
+          type: keyword
+          normalizer: keyword_normalized
+        id: keyword
+          type: keyword
+          normalizer: keyword_normalized
+        title: keyword
+          type: keyword
+          normalizer: keyword_normalized
+        order:
+          type: integer
     is_part_of:
-      type: keyword
-      normalizer: keyword_normalized
+      type: nested
+      properties: 
+        role: keyword
+          type: keyword
+          normalizer: keyword_normalized
+        id: keyword
+          type: keyword
+          normalizer: keyword_normalized
+        title: keyword
+          type: keyword
+          normalizer: keyword_normalized
+        order:
+          type: integer
+    previous_item:
+      type: nested
+      properties: 
+        role: keyword
+          type: keyword
+          normalizer: keyword_normalized
+        id: keyword
+          type: keyword
+          normalizer: keyword_normalized
+        title: keyword
+          type: keyword
+          normalizer: keyword_normalized
+        order:
+          type: integer
+    next_item:
+      type: nested
+      properties: 
+        role: keyword
+          type: keyword
+          normalizer: keyword_normalized
+        id: keyword
+          type: keyword
+          normalizer: keyword_normalized
+        title: keyword
+          type: keyword
+          normalizer: keyword_normalized
+        order:
+          type: integer
     # recipient: #DELETED
     #   type: nested
     #   properties:
@@ -322,14 +372,13 @@ mappings:
           type: keyword
           normalizer: keyword_normalized
         order:
-          type: keyword
-          normalizer: keyword_normalized
+          type: integer
         birth_date:
-          type: keyword
-          normalizer: keyword_normalized
+          type: date
+          format: "yyyy-MM-dd||epoch_millis"
         death_date:
-          type: keyword
-          normalizer: keyword_normalized
+          type: date
+          format: "yyyy-MM-dd||epoch_millis"
         age_category:
           type: keyword
           normalizer: keyword_normalized
@@ -379,11 +428,11 @@ mappings:
           type: keyword
           normalizer: keyword_normalized
         date_begin:
-          type: keyword
-          normalizer: keyword_normalized
+          type: date
+          format: "yyyy-MM-dd||epoch_millis"
         date_end:
-          type: keyword
-          normalizer: keyword_normalized
+          type: date
+          format: "yyyy-MM-dd||epoch_millis"
         trait1:
           type: keyword
           normalizer: keyword_normalized
