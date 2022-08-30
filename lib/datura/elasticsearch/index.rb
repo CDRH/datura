@@ -136,7 +136,7 @@ class Datura::Elasticsearch::Index
             if nested.keys.all? { |k| valid_field?(k, field) }
               next
             else
-              # if one of the nested hashes fails, it 
+              # if one of the nested hashes fails, it is invalid
               return false
             end
           end
@@ -144,6 +144,7 @@ class Datura::Elasticsearch::Index
         # all nested fields passed, so it is valid
         true
       else
+        puts "Field '#{field}' is invalid"
         false
       end
     end
