@@ -70,7 +70,6 @@ class FileType
           begin
             RestClient.put("#{es.index_url}/_doc/#{id}", doc.to_json, {:content_type => :json } )
           rescue => e
-            # byebug
             error = "Error transforming or posting to ES for #{self.filename(false)}: #{e.response}"
           end
         else
@@ -127,7 +126,7 @@ class FileType
       # check if any xpaths hit before continuing
       results = file_xml.xpath(*subdoc_xpaths.keys)
       if results.length == 0
-        raise "No possible xpaths found fo file #{self.filename}, check if XML is valid or customize 'subdoc_xpaths' method"
+        raise "No possible xpaths found for file #{self.filename}, check if XML is valid or customize 'subdoc_xpaths' method"
       end
       
       subdoc_xpaths.each do |xpath, classname|
