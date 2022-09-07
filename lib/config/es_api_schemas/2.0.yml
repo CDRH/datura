@@ -126,13 +126,16 @@ mappings:
         date:
           type: date
           format: "yyyy-MM-dd||epoch_millis"
+        title:
+          type: keyword
+          normalizer: keyword_normalized
         publisher:
           type: keyword
           normalizer: keyword_normalized
         issue:
           type: keyword
           normalizer: keyword_normalized
-        page_begin:
+        page_start:
           type: keyword
           normalizer: keyword_normalized
         page_end:
