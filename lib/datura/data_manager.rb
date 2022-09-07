@@ -3,7 +3,7 @@ require "logger"
 require "yaml"
 require "byebug"
 require_relative "./requirer.rb"
-require "byebug"
+
 class Datura::DataManager
   attr_reader :log
   attr_reader :time
@@ -78,7 +78,6 @@ class Datura::DataManager
     msg = options_msg
     @log.info(msg)
     puts msg
-
     pre_file_preparation
     @files = prepare_files
     pre_batch_processing
