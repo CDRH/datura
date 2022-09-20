@@ -213,7 +213,9 @@ class TeiToEs < XmlToEs
   end
 
   def title_sort
-    Datura::Helpers.normalize_name(title)
+    if title
+      Datura::Helpers.normalize_name(title)
+    end
   end
 
   def topics

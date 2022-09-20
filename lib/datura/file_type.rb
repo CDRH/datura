@@ -128,7 +128,6 @@ class FileType
       if results.length == 0
         raise "No possible xpaths found for file #{self.filename}, check if XML is valid or customize 'subdoc_xpaths' method"
       end
-      
       subdoc_xpaths.each do |xpath, classname|
         subdocs = file_xml.xpath(xpath)
         subdocs.each do |subdoc|
