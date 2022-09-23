@@ -92,6 +92,9 @@ class XmlToEs
   def get_list(xpaths, keep_tags: false, xml: nil, sort: false)
     xpath_array = Array(xpaths)
     list = get_xpaths(xpath_array, keep_tags: keep_tags, xml: xml)
+    if !list || list.empty?
+      return nil
+    end
     sort ? list.sort : list
   end
 
@@ -103,6 +106,9 @@ class XmlToEs
   def get_text(xpaths, keep_tags: false, xml: nil, delimiter: ";", sort: false)
     # ensure all xpaths are an array before beginning
     list = get_list(xpaths, keep_tags: keep_tags, xml: xml, sort: sort)
+    if !list || list.empty?
+      return nil
+    end
     list.join("#{delimiter} ")
   end
 
