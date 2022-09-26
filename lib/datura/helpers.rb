@@ -134,7 +134,7 @@ module Datura::Helpers
   #   removes leading / trailing whitespace, newlines, repeating whitespace, etc
   def self.normalize_space(abnormal)
     if abnormal
-      normal = abnormal.strip.gsub(/\s+/, " ")
+      normal = abnormal.encode!('UTF-8', 'UTF-8', :invalid => :replace).strip.gsub(/\s+/, " ")
     end
     normal || abnormal
   end
