@@ -90,7 +90,7 @@ class TeiToEs < XmlToEs
   end
 
   def format
-    if get_list(@xpaths["image_id"])
+    if get_list(@xpaths["format"])
       get_list(@xpaths["format"]).first
     end
   end
@@ -108,7 +108,7 @@ class TeiToEs < XmlToEs
 
   def language
     # uses the first language discovered in the document
-    if get_list(@xpaths["image_id"])
+    if get_list(@xpaths["language"])
       get_list(@xpaths["language"]).first
     end
   end
