@@ -49,8 +49,14 @@ class TeiToEs < XmlToEs
   end
 
   def date(before=true)
-    datestr = get_list(@xpaths["date"]).first
-    Datura::Helpers.date_standardize(datestr, before)
+    if get_list(@xpaths["date"])
+      datestr = get_list(@xpaths["date"]).first
+    else
+      datestr = nil
+    end
+    if datestr && !datestr.empty?
+      Datura::Helpers.date_standardize(datestr, false)
+    end
   end
 
   def date_display
@@ -84,12 +90,16 @@ class TeiToEs < XmlToEs
   end
 
   def format
-    get_list(@xpaths["format"]).first
+    if get_list(@xpaths["image_id"])
+      get_list(@xpaths["format"]).first
+    end
   end
 
   def image_id
     # Note: don't pull full path because will be pulled by IIIF
-    get_list(@xpaths["image_id"]).first
+    if get_list(@xpaths["image_id"])
+      get_list(@xpaths["image_id"]).first
+    end
   end
 
   def keywords
@@ -98,7 +108,9 @@ class TeiToEs < XmlToEs
 
   def language
     # uses the first language discovered in the document
-    get_list(@xpaths["language"]).first
+    if get_list(@xpaths["image_id"])
+      get_list(@xpaths["language"]).first
+    end
   end
 
   def languages
@@ -260,7 +272,9 @@ class TeiToEs < XmlToEs
   # new/moved fields for API 2.0
 
   def cover_image
-    get_list(@xpaths["image_id"]).first
+    if get_list(@xpaths["image_id"])
+      get_list(@xpaths["image_id"]).first
+    end
   end
 
   def date_updated
@@ -357,5 +371,6 @@ class TeiToEs < XmlToEs
       .reject! { |value| value.nil? || value.strip.empty? }
       .join(", ")
   end
+  
 
 end
