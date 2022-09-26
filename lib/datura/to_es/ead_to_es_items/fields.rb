@@ -28,7 +28,9 @@ class EadToEsItems < EadToEs
   # note this does not sort the creators
   def creator
     creators = get_list(@xpaths["creators"])
-    return creators.map { |creator| { "name" => CommonXml.normalize_space(creator) } }
+    if creators
+      return creators.map { |creator| { "name" => CommonXml.normalize_space(creator) } }
+    end
   end
 
   # returns ; delineated string of alphabetized creators
@@ -65,7 +67,9 @@ class EadToEsItems < EadToEs
 
   def date(before=true)
     datestr = get_text(@xpaths["date"])
-    return Datura::Helpers.date_standardize(datestr, before)
+    if datestr
+      return Datura::Helpers.date_standardize(datestr, before)
+    end
   end
 
   def date_display
