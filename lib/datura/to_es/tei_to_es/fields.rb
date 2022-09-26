@@ -21,7 +21,9 @@ class TeiToEs < XmlToEs
   # nested field
   def creator
     creators = get_list(@xpaths["creator"])
-    creators.map { |c| { "name" => Datura::Helpers.normalize_space(c) } }
+    if creators
+      creators.map { |c| { "name" => Datura::Helpers.normalize_space(c) } }
+    end
   end
 
   def collection
