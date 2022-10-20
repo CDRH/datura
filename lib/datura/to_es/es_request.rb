@@ -206,7 +206,7 @@ module EsRequest
   def assemble_additional_2
     @json["spatial"] = spatial
     @json["places"] = places
-    @json["person"] = person
+    @json["person"] = Array(person)
     @json["event"] = event
     @json["rdf"] = rdf
   end
