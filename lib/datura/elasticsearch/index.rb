@@ -21,7 +21,7 @@ class Datura::Elasticsearch::Index
 
     @index_url = File.join(@options["es_path"], @options["es_index"])
     @pretty_url = "#{@index_url}?pretty=true"
-    @mapping_url = File.join(@index_url, "_mapping", "_doc?pretty=true")
+    @mapping_url = File.join(@index_url, "_mapping?pretty=true")
 
     # yaml settings (if exist) and mappings
     @requested_schema = YAML.load_file(@options["es_schema"])
@@ -33,7 +33,6 @@ class Datura::Elasticsearch::Index
   def create
     json = @requested_schema["settings"].to_json
     puts "Creating ES index for API version #{@options["api_version"]}: #{@pretty_url}"
-
     if json && json != "null"
       RestClient.put(@pretty_url, json, { content_type: :json }) { |res, req, result|
         if result.code == "200"
@@ -77,13 +76,13 @@ class Datura::Elasticsearch::Index
     # if mapping has not already been set, get the schema and manipulate
     if !defined?(@schema_mapping)
       @schema_mapping = {
-        "dyanmic" => nil,  # /regex|regex/
+        "dynamic" => nil,  # /regex|regex/
         "fields" => [],    # [ fields ]
         "nested" => {}     # { field: [ nested_fields ] }
       }
 
       schema = get_schema[@options["es_index"]]
-      doc = schema["mappings"]["_doc"]
+      doc = schema["mappings"]
       doc["properties"].each do |field, value|
         @schema_mapping["fields"] << field
         if value["type"] == "nested"
