@@ -1,37 +1,38 @@
 # compatible with Apium v2.0
 settings:
-  analysis:
-    char_filter:
-      escapes:
-        type: mapping
-        mappings:
-          - "<em> => "
-          - "</em> => "
-          - "<u> => "
-          - "</u> => "
-          - "<strong> => "
-          - "</strong> => "
-          - "- => "
-          - "& => "
-          - ": => "
-          - "; => "
-          - ", => "
-          - ". => "
-          - "$ => "
-          - "@ => "
-          - "~ => "
-          - "\" => "
-          - "' => "
-          - "[ => "
-          - "] => "
-    normalizer:
-      keyword_normalized:
-        type: custom
-        char_filter:
-          - escapes
-        filter:
-          - asciifolding
-          - lowercase
+  settings:
+    analysis:
+      char_filter:
+        escapes:
+          type: mapping
+          mappings:
+            - "<em> => "
+            - "</em> => "
+            - "<u> => "
+            - "</u> => "
+            - "<strong> => "
+            - "</strong> => "
+            - "- => "
+            - "& => "
+            - ": => "
+            - "; => "
+            - ", => "
+            - ". => "
+            - "$ => "
+            - "@ => "
+            - "~ => "
+            - "\" => "
+            - "' => "
+            - "[ => "
+            - "] => "
+      normalizer:
+        keyword_normalized:
+          type: custom
+          char_filter:
+            - escapes
+          filter:
+            - asciifolding
+            - lowercase
 mappings:
   properties:
     identifier:
