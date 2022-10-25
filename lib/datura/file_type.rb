@@ -30,6 +30,7 @@ class FileType
     @out_html = File.join(output, "html")
     @out_iiif = File.join(output, "iiif")
     @out_solr = File.join(output, "solr")
+    @auth_header = Datura::Helpers.construct_auth_header(options)
     Datura::Helpers.make_dirs(@out_es, @out_html, @out_iiif, @out_solr)
     # script locations set in child classes
   end
@@ -68,7 +69,9 @@ class FileType
           # NOTE: If you need to do partial updates rather than replacement of doc
           # you will need to add _update at the end of this URL
           begin
-            RestClient.put("#{es.index_url}/_doc/#{id}", doc.to_json, {:content_type => :json } )
+            puts @auth_header
+            byebug
+            RestClient.put("#{es.index_url}/_doc/#{id}", doc.to_json, @auth_header.merge({:content_type => :json }) )
           rescue => e
             error = "Error transforming or posting to ES for #{self.filename(false)}: #{e}"
           end
