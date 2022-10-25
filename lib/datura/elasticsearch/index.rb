@@ -1,6 +1,7 @@
 require "json"
 require "rest-client"
 require "yaml"
+require "base64"
 
 require_relative "./../elasticsearch.rb"
 
@@ -25,6 +26,7 @@ class Datura::Elasticsearch::Index
 
     # yaml settings (if exist) and mappings
     @requested_schema = YAML.load_file(@options["es_schema"])
+    @auth_header = Datura::Helpers.construct_auth_header(@options)
     # if requested, grab the mapping currently associated with this index
     # otherwise wait until after the requested schema is loaded
     get_schema_mapping if schema_mapping
@@ -34,7 +36,7 @@ class Datura::Elasticsearch::Index
     json = @requested_schema["settings"].to_json
     puts "Creating ES index for API version #{@options["api_version"]}: #{@pretty_url}"
     if json && json != "null"
-      RestClient.put(@pretty_url, json, { content_type: :json }) { |res, req, result|
+      RestClient.put(@pretty_url, json, @auth_header.merge({ content_type: :json })) { |res, req, result|
         if result.code == "200"
           puts res
         else
@@ -42,7 +44,7 @@ class Datura::Elasticsearch::Index
         end
       }
     else
-      RestClient.put(@pretty_url, nil) { |res, req, result|
+      RestClient.put(@pretty_url, nil, @auth_header) { |res, req, result|
         if result.code == "200"
           puts res
         else
@@ -55,7 +57,7 @@ class Datura::Elasticsearch::Index
   def delete
     puts "Deleting #{@options["es_index"]} via url #{@pretty_url}"
 
-    RestClient.delete(@pretty_url) { |res, req, result|
+    RestClient.delete(@pretty_url, @auth_header) { |res, req, result|
       if result.code != "200"
         raise "#{result.code} error deleting Elasticsearch index: #{res}"
       end
@@ -63,7 +65,7 @@ class Datura::Elasticsearch::Index
   end
 
   def get_schema
-    RestClient.get(@mapping_url) { |res, req, result|
+    RestClient.get(@mapping_url, @auth_header) { |res, req, result|
       if result.code == "200"
         JSON.parse(res)
       else
@@ -110,7 +112,7 @@ class Datura::Elasticsearch::Index
     json = @requested_schema["mappings"].to_json
 
     puts "Setting schema: #{@mapping_url}"
-    RestClient.put(@mapping_url, json, { content_type: :json }) { |res, req, result|
+    RestClient.put(@mapping_url, json, @auth_header.merge({ content_type: :json })) { |res, req, result|
       if result.code == "200"
         puts res
       else
@@ -206,8 +208,9 @@ class Datura::Elasticsearch::Index
     confirm = STDIN.gets.chomp
     if confirm == "Yes I'm sure"
       url = File.join(options["es_path"], options["es_index"], "_doc", "_delete_by_query?pretty=true")
+      auth_header = Datura::Helpers.construct_auth_header(options)
       json = { "query" => { "match_all" => {} } }
-      RestClient.post(url, json.to_json, { content_type: :json }) { |res, req, result|
+      RestClient.post(url, json.to_json, auth_header.merge({ content_type: :json })) { |res, req, result|
         if result.code == "200"
           puts res
         else
@@ -226,7 +229,8 @@ class Datura::Elasticsearch::Index
 
     if confirmation
       data = self.build_clear_data(options)
-      RestClient.post(url, data.to_json, { content_type: :json }) { |res, req, result|
+      auth_header = Datura::Helpers.construct_auth_header(options)
+      RestClient.post(url, data.to_json, auth_header.merge({content_type: :json })) { |res, req, result|
         if result.code == "200"
           puts res
         else
