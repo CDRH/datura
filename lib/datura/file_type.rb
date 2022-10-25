@@ -69,8 +69,6 @@ class FileType
           # NOTE: If you need to do partial updates rather than replacement of doc
           # you will need to add _update at the end of this URL
           begin
-            puts @auth_header
-            byebug
             RestClient.put("#{es.index_url}/_doc/#{id}", doc.to_json, @auth_header.merge({:content_type => :json }) )
           rescue => e
             error = "Error transforming or posting to ES for #{self.filename(false)}: #{e}"
