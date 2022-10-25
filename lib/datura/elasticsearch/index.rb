@@ -93,12 +93,14 @@ class Datura::Elasticsearch::Index
       end
 
       regex_pieces = []
-      doc["dynamic_templates"].each do |template|
-        mapping = template.map { |k,v| v["match"] }.first
-        # dynamic fields are listed like *_k and will need
-        # to be converted to ^.*_k$, then combined into a mega-regex
-        es_match = mapping.sub("*", ".*")
-        regex_pieces << es_match
+      if doc["dynamic_templates"]
+        doc["dynamic_templates"].each do |template|
+          mapping = template.map { |k,v| v["match"] }.first
+          # dynamic fields are listed like *_k and will need
+          # to be converted to ^.*_k$, then combined into a mega-regex
+          es_match = mapping.sub("*", ".*")
+          regex_pieces << es_match
+        end
       end
       if !regex_pieces.empty?
         regex_joined = regex_pieces.join("|")
@@ -231,7 +233,7 @@ class Datura::Elasticsearch::Index
       data = self.build_clear_data(options)
       auth_header = Datura::Helpers.construct_auth_header(options)
       RestClient.post(url, data.to_json, auth_header.merge({content_type: :json })) { |res, req, result|
-        if result.code == "200"
+        if result.code == "200" || result.code == "201"
           puts res
         else
           raise "#{result.code} error when clearing index: #{res}"
