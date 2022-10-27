@@ -53,7 +53,7 @@ Gem::Specification.new do |spec|
   ]
   spec.require_paths = ["lib"]
 
-  spec.required_ruby_version = "~> 3.0"
+  spec.required_ruby_version = "~> 3.1"
   spec.add_runtime_dependency "colorize", "~> 0.8.1"
   spec.add_runtime_dependency "nokogiri", "~> 1.10"
   spec.add_runtime_dependency "rest-client", "~> 2.1"
