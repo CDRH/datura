@@ -137,6 +137,7 @@ class Datura::Elasticsearch::Index
               next
             else
               # if one of the nested hashes fails, it is invalid
+              puts "Nested field '#{field}' is invalid"
               return false
             end
           end
