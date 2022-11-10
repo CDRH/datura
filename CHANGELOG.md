@@ -38,6 +38,7 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 ```
 api_version: '2.0'
 ```
+See new schema (2.0) documentation [here](https://github.com/CDRH/datura/docs/schema_v2.md)
 - schema validation with API version 2.0, invalidly constructed documents will not post
 - authentication with Elasticesarch 8.5; add the following to `public.yml` or `private.yml` in the data repo:
 ```
@@ -45,7 +46,7 @@ api_version: '2.0'
   es_password: ********
 ```
 - field overrides for new fields in the new API schema
-- Functionality to transform EAD files and post them to elasticsearch
+- functionality to transform EAD files and post them to elasticsearch
 
 ### Changed
 - update ruby to 3.1.2
@@ -58,7 +59,7 @@ api_version: '2.0'
 
 ### Migration
 - check to make sure "text" xpath is doing desired behavior
-- use Elasticsearch 8.5 or higher and add authentication as described above if security is enabled
+- use Elasticsearch 8.5 or higher and add authentication as described above if security is enabled. See [dev docs instructions](https://github.com/CDRH/cdrh_dev_docs/blob/update_elasticsearch_documentation/publishing/2_basic_requirements.md#downloading-elasticsearch).
 - upgrade data repos to Ruby 3.1.2
 - add api version to config as described above
 - make sure fields are consistent with the api schema, many have been renamed or changed in format
