@@ -20,8 +20,10 @@ class VraToEs < XmlToEs
 
   # nested field
   def creator
-    creators = get_list(@xpaths["creators"])
-    creators.map { |c| { "name" => Datura::Helpers.normalize_space(c) } }
+    creators = get_list(@xpaths["creator"])
+    if creators
+      creators.map { |c| { "name" => Datura::Helpers.normalize_space(c) } }
+    end
   end
 
   def collection
