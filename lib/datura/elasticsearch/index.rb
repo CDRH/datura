@@ -209,7 +209,7 @@ class Datura::Elasticsearch::Index
     puts "Type: 'Yes I'm sure'"
     confirm = STDIN.gets.chomp
     if confirm == "Yes I'm sure"
-      url = File.join(options["es_path"], options["es_index"], "_doc", "_delete_by_query?pretty=true")
+      url = File.join(options["es_path"], options["es_index"], "_delete_by_query?pretty=true")
       auth_header = Datura::Helpers.construct_auth_header(options)
       json = { "query" => { "match_all" => {} } }
       RestClient.post(url, json.to_json, auth_header.merge({ content_type: :json })) { |res, req, result|
@@ -226,7 +226,7 @@ class Datura::Elasticsearch::Index
   end
 
   def self.clear_index(options)
-    url = File.join(options["es_path"], options["es_index"], "_doc", "_delete_by_query?pretty=true")
+    url = File.join(options["es_path"], options["es_index"], "_delete_by_query?pretty=true")
     confirmation = self.confirm_clear(options, url)
 
     if confirmation
