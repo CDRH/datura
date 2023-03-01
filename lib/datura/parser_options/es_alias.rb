@@ -1,6 +1,6 @@
 module Datura::Parser
-  def self.es_alias_add
-    @usage = "Usage: es_alias_add -a alias -i index -e environment"
+  def self.es_alias
+    @usage = "Usage: (command) -a alias -i index -e environment"
     options = {}
 
     optparse = OptionParser.new do |opts|

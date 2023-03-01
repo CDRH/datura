@@ -1,5 +1,5 @@
 module Datura::Parser
-  def self.clear_index_params
+  def self.clear_index
     @usage = "Usage: (es|solr)_clear_index -[options]..."
     options = {}  # will hold all the options passed in by user
 

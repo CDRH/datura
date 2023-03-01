@@ -7,7 +7,7 @@ Looking for information about how to post documents? Check out the
 
 ## Install / Set Up Data Repo
 
-Check that Ruby is installed, preferably 2.7.x or up. If you are using RVM, see the RVM section below. 
+Check that Ruby is installed, preferably 3.1.2 or up. If you are using RVM, see the RVM section below. 
 
 If your project already has a Gemfile, add the `gem "datura"` line. If not, create a new directory and add a file named `Gemfile` (no extension).
 

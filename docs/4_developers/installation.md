@@ -6,7 +6,7 @@ TODO
 
 ### Elasticsearch
 
-TODO
+See installation instructions [here](https://github.com/CDRH/cdrh_dev_docs/blob/update_elasticsearch_documentation/publishing/2_basic_requirements.md#downloading-elasticsearch).
 
 ### Apache Permissions
 

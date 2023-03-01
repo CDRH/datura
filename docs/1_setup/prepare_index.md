@@ -13,7 +13,7 @@ You will need to make sure that somewhere, the following are being set in your p
 
 ### Step 2: Prepare Elasticsearch Index
 
-Make sure elasticsearch is installed and running in the location you wish to push to.  If there is already an index you will be using, take note of its name and skip this step.  If you want to add an index, run this command with a specified environment:
+Make sure elasticsearch is installed and running in the location you wish to push to.  If there is already an index you will be using, take note of its name and skip this step. (Note that each index must be dedicated to data on one version of the API schema)  If you want to add an index, run this command with a specified environment:
 
 ```
 admin_es_create_index -e development
