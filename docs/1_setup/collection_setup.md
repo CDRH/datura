@@ -2,7 +2,11 @@
 
 ### Step 1:  Create a new collection directory
 
-Install datura, then run:
+Install datura by creating a new directory with a `Gemfile` with
+`gem "datura", git: 'https://github.com/CDRH/datura', branch: "dev"` 
+Make a file `.ruby-version` with the ruby version required by Datura (currently 3.1.2).
+Run `bundle install` and make sure Datura install successfulle.
+Then run:
 
 ```
 setup

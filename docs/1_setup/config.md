@@ -7,12 +7,13 @@ Open up the `config/public.yml` file in your new collection and add or change th
 ```yaml
 default:
   collection:
-  es_index
-  es_path
-  es_user
-  es_password
+  es_index:
+  es_path:
+  es_user:
+  es_password:
+  api_version:
 ```
-(The options es_user and es_password are needed if you are using a secured Elasticsearch index.)
+(The options es_user and es_password are needed if you are using a secured Elasticsearch index.) api_version is required with the new API schema, please specify "2.0", or "1.0" if using with a legacy repository that uses the old fields.
 
 If there are any settings which must be different based on the local environment (your computer vs the server), place these in `config/private.yml`.
 
