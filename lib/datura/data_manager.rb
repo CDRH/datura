@@ -24,7 +24,8 @@ class Datura::DataManager
       "html" => FileHtml,
       "tei" => FileTei,
       "vra" => FileVra,
-      "webs" => FileWebs
+      "webs" => FileWebs,
+      "pdf" => FilePdf
     }
     classes.default = FileCustom
     classes
