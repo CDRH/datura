@@ -182,7 +182,7 @@ class PdfToEs
   # text is generally going to be pulled from
   def text
     text_all = []
-    reader.pages.each do |page|
+    @pdf.pages.each do |page|
       text_all << page.text
     end
     text_all += text_additional

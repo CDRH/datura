@@ -40,7 +40,7 @@ class PdfToEs
   end
 
   def get_id
-    filename.delete_suffix(".pdf")
+    @filename.delete_suffix(".pdf")
   end
 
   def preprocessing
