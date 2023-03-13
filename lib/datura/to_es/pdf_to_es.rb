@@ -44,10 +44,10 @@ class PdfToEs
   end
 
   def preprocessing
-    # copy this in your csv_to_es collection file to customize
+    # copy this in your pdf_to_es collection file to customize
   end
 
   def postprocessing
-    # copy this in your csv_to_es collection file to customize
+    # copy this in your pdf_to_es collection file to customize
   end
 end
