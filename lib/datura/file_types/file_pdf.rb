@@ -62,7 +62,7 @@ class FilePdf < FileType
 
   def transform_html
     puts "transforming #{self.filename} to HTML subdocuments"
-    build_html_from_csv
+    build_html_from_pdf
     # transform_html method is expected to send back a hash
     # but already wrote to filesystem so just sending back empty
     {}
