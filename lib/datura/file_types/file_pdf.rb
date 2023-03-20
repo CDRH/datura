@@ -61,11 +61,11 @@ class FilePdf < FileType
   end
 
   def transform_html
-    puts "transforming #{self.filename} to HTML subdocuments"
-    build_html_from_pdf
-    # transform_html method is expected to send back a hash
-    # but already wrote to filesystem so just sending back empty
-    {}
+    puts "transforming #{self.filename} to HTML subdocuments (not implemented yet)"
+    # build_html_from_pdf
+    # # transform_html method is expected to send back a hash
+    # # but already wrote to filesystem so just sending back empty
+    # {}
   end
 
   # I am not sure that this is going to be the best way to set this up
