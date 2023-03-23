@@ -19,9 +19,13 @@ GEM
     mime-types (3.4.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2022.0105)
+    mini_portile2 (2.8.0)
     minitest (5.16.3)
     netrc (0.11.0)
-    nokogiri (1.13.8-x86_64-darwin)
+    nokogiri (1.13.9)
+      mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
+    nokogiri (1.13.9-x86_64-darwin)
       racc (~> 1.4)
     racc (1.6.0)
     rake (13.0.6)
@@ -35,6 +39,7 @@ GEM
     unf_ext (0.0.8.2)
 
 PLATFORMS
+  ruby
   x86_64-darwin-20
 
 DEPENDENCIES
@@ -45,4 +50,4 @@ DEPENDENCIES
   rake (~> 13.0)
 
 BUNDLED WITH
-   2.2.26
+   2.2.33

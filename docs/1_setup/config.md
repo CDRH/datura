@@ -9,7 +9,10 @@ default:
   collection:
   es_index
   es_path
+  es_user
+  es_password
 ```
+(The options es_user and es_password are needed if you are using a secured Elasticsearch index.)
 
 If there are any settings which must be different based on the local environment (your computer vs the server), place these in `config/private.yml`.
 
@@ -118,6 +121,8 @@ Some stuff commonly in `private.yml`:
 - `threads: 5` (5 recommended for PC, 50 for powerful servers)
 - `es_path: http://localhost:9200`
 - `es_index: some_index`
+- `es_user: elastic` (if you want to use security on your local elasticsearch instance)
+- `es_password: ******`
 - `solr_path: http://localhost:8983/solr`
 - `solr_core: collection_name`
 
