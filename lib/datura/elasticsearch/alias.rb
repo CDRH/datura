@@ -20,7 +20,7 @@ module Datura::Elasticsearch::Alias
         { add: { alias: ali, index: idx } }
       ]
     }
-    RestClient.post(base_url, data.to_json, { content_type: :json }) { |res, req, result|
+    RestClient.post(base_url, data.to_json, @auth_header.merge({ content_type: :json })) { |res, req, result|
       if result.code == "200"
         puts res
         puts "Successfully added alias #{ali}. Current alias list:"
@@ -40,7 +40,7 @@ module Datura::Elasticsearch::Alias
 
     url = File.join(options["es_path"], idx, "_alias", ali)
 
-    res = JSON.parse(RestClient.delete(url))
+    res = JSON.parse(RestClient.delete(url, @auth_header))
     puts JSON.pretty_generate(res)
     list
   end
@@ -48,7 +48,7 @@ module Datura::Elasticsearch::Alias
   def self.list
     options = Datura::Options.new({}).all
 
-    res = RestClient.get(File.join(options["es_path"], "_aliases"))
+    res = RestClient.get(File.join(options["es_path"], "_aliases"), )
     JSON.pretty_generate(JSON.parse(res))
   end
 

@@ -171,4 +171,10 @@ module Datura::Helpers
     end
   end
 
+  def self.construct_auth_header(options)
+    username = options["es_user"]
+    password = options["es_password"]
+    { "Authorization" => "Basic #{Base64::encode64("#{username}:#{password}")}" }
+  end
+
 end

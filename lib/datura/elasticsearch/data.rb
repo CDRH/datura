@@ -47,7 +47,7 @@ module Datura::Elasticsearch::Data
     if confirm == "Yes I'm sure"
       url = File.join(options["es_path"], options["es_index"], "_doc", "_delete_by_query?pretty=true")
       json = { "query" => { "match_all" => {} } }
-      RestClient.post(url, json.to_json, { content_type: :json }) { |res, req, result|
+      RestClient.post(url, json.to_json, @auth_header.merge({ content_type: :json })) { |res, req, result|
         if result.code == "200"
           puts res
         else
@@ -66,7 +66,7 @@ module Datura::Elasticsearch::Data
 
     if confirmation
       data = self.build_clear_data(options)
-      RestClient.post(url, data.to_json, { content_type: :json }) { |res, req, result|
+      RestClient.post(url, data.to_json, @auth_header.merge({ content_type: :json })) { |res, req, result|
         if result.code == "200"
           puts res
         else
