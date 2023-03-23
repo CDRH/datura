@@ -25,7 +25,8 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 ### Security
 -->
 
-## [Unreleased](https://github.com/CDRH/datura/compare/v0.2.0-beta...dev)
+## [v0.2.0] - Ingest documentation, text spacing, and date_standardize
+[v0.2.0]: https://github.com/CDRH/datura/compare/v0.2.0-beta...v0.2.0
 
 ### Added
 - minor test for Datura::Helpers.date_standardize

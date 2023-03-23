@@ -9,6 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = [
                          "Center for Digital Research in the Humanities",
                          "Karin Dalziel",
+                         "Will Dewey",
                          "Jessica Dussault",
                          "Gregory Tunink"
                        ]
