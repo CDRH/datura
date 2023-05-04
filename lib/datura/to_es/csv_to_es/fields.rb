@@ -292,6 +292,9 @@ class CsvToEs
   def keywords4
   end
 
+  def keywords5
+  end
+
   def has_part
   end
 
@@ -308,6 +311,12 @@ class CsvToEs
   end
   
   def rdf
+  end
+
+  def has_source
+  end
+
+  def has_relation
   end
 
 end

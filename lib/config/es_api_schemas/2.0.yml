@@ -231,12 +231,38 @@ mappings:
     keywords4:
       type: keyword
       normalizer: keyword_normalized
+    keywords5:
+      type: keyword
+      normalizer: keyword_normalized
     relation:
       type: keyword
       normalizer: keyword_normalized
-    source:
-      type: keyword
-      normalizer: keyword_normalized
+    has_source:
+      type: nested
+      properties:
+        type: keyword
+          normalizer: keyword_normalized
+        id:
+          type: keyword
+          normalizer: keyword_normalized
+        title:
+          type: keyword
+          normalizer: keyword_normalized
+        order:
+          type: integer
+    has_relation:
+      type: nested
+      properties:
+        type: keyword
+          normalizer: keyword_normalized
+        id:
+          type: keyword
+          normalizer: keyword_normalized
+        title:
+          type: keyword
+          normalizer: keyword_normalized
+        order:
+          type: integer
     has_part:
       type: nested
       properties: 
@@ -357,6 +383,21 @@ mappings:
         note:
           type: keyword
           normalizer: keyword_normalized
+        trait1:
+          type: keyword
+          normalizer: keyword_normalized
+        trait2:
+          type: keyword
+          normalizer: keyword_normalized
+        trait3:
+          type: keyword
+          normalizer: keyword_normalized
+        trait4:
+          type: keyword
+          normalizer: keyword_normalized
+        trait5:
+          type: keyword
+          normalize: keyword_normalized
     places: #DEPRECATED
       type: keyword
       normalizer: keyword_normalized
@@ -416,6 +457,15 @@ mappings:
         trait2:
           type: keyword
           normalizer: keyword_normalized
+        trait3:
+          type: keyword
+          normalizer: keyword_normalized
+        trait4:
+          type: keyword
+          normalizer: keyword_normalized
+        trait5:
+          type: keyword
+          normalizer: keyword_normalized
     event:
       type: nested
       properties:
@@ -441,6 +491,15 @@ mappings:
           type: keyword
           normalizer: keyword_normalized
         trait2:
+          type: keyword
+          normalizer: keyword_normalized
+        trait3:
+          type: keyword
+          normalizer: keyword_normalized
+        trait4:
+          type: keyword
+          normalizer: keyword_normalized
+        trait5:
           type: keyword
           normalizer: keyword_normalized
         notes:

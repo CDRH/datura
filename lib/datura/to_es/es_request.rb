@@ -192,11 +192,12 @@ module EsRequest
     @json["keywords2"] = keywords2
     @json["keywords3"] = keywords3
     @json["keywords4"] = keywords4
+    @json["keywords5"] = keywords5
   end
 
   def assemble_relations_2
-    @json["relation"] = relation
-    @json["source"] = source
+    @json["has_relation"] = has_relation
+    @json["has_source"] = has_source
     @json["has_part"] = has_part
     @json["is_part_of"] = is_part_of
     @json["previous_item"] = previous_item
