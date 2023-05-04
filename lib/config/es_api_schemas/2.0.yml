@@ -240,7 +240,8 @@ mappings:
     has_source:
       type: nested
       properties:
-        type: keyword
+        role: 
+          type: keyword
           normalizer: keyword_normalized
         id:
           type: keyword
@@ -253,7 +254,8 @@ mappings:
     has_relation:
       type: nested
       properties:
-        type: keyword
+        role:
+          type: keyword
           normalizer: keyword_normalized
         id:
           type: keyword
@@ -397,7 +399,7 @@ mappings:
           normalizer: keyword_normalized
         trait5:
           type: keyword
-          normalize: keyword_normalized
+          normalizer: keyword_normalized
     places: #DEPRECATED
       type: keyword
       normalizer: keyword_normalized
