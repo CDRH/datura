@@ -316,4 +316,7 @@ class PdfToEs
   def has_relation
   end
 
+  def has_source
+  end
+
 end
