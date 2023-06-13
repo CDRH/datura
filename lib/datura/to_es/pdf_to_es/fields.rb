@@ -313,4 +313,7 @@ class PdfToEs
   def rdf
   end
 
+  def has_relation
+  end
+
 end
