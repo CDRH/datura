@@ -127,7 +127,7 @@ class TeiToEs < XmlToEs
 
       # NOTE this xpath will often catch notes, back, etc which a project may wish to
       # exclude if they are using the annotations_text field for editorial comments
-      "text" => "//text//text()",
+      "text" => ["//text//text()", "//note[@type='project']"],
 
       "title" => "/TEI/teiHeader/fileDesc/titleStmt/title[1]",
 
