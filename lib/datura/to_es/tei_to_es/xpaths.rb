@@ -72,6 +72,8 @@ class TeiToEs < XmlToEs
 
       # "medium" => "",
 
+      "notes" => "//note[@type='project']",
+
       # NOTE: if you would like to associate a role you may need the parent element
       # such as correspAction[@type='deliveredTo'], etc
       "person" => [
