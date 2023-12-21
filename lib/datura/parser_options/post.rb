@@ -22,12 +22,12 @@ module Datura::Parser
 
       # default to no restricted format
       options["format"] = nil
-      opts.on( '-f', '--format [input]', 'Supported formats (csv, html, tei, vra, webs)') do |input|
+      opts.on( '-f', '--format [input]', 'Supported formats (csv, html, pdf, tei, vra, webs)') do |input|
         if %w[authority annotations].include?(input)
           puts "'authority' and 'annotations' are invalid formats".red
           puts "Please select a supported format or rename your custom format"
           exit
-        elsif !%w[csv html tei vra webs].include?(input)
+        elsif !%w[csv html pdf tei vra webs].include?(input)
           puts "Caution: Requested custom format #{input}.".red
           puts "See FileCustom class for implementation instructions"
         end

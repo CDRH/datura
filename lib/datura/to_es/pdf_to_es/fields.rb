@@ -1,4 +1,4 @@
-class CsvToEs
+class PdfToEs
   # Note to add custom fields, use "assemble_collection_specific" from request.rb
   # and be sure to either use the _d, _i, _k, or _t to use the correct field type
 
@@ -8,28 +8,28 @@ class CsvToEs
   # beginning with fields from API 1.0, including those that are unchanged in 2.0
 
   def id
-    @id
+    get_id
   end
 
   def alternative
-    @row["alternative"]
+    # @row["alternative"]
   end
 
   def annotations_text
-    @row["annotations_text"]
+    # @row["annotations_text"]
   end
 
   def category
-    @row["category"]
+    # @row["category"]
   end
 
   # nested field
   def creator
-    if @row["creator"]
-      @row["creator"].split("; ").map do |p|
-        { "name" => p }
-      end
-    end
+    # if @row["creator"]
+    #   @row["creator"].split("; ").map do |p|
+    #     { "name" => p }
+    #   end
+    # end
   end
 
   def collection
@@ -48,123 +48,123 @@ class CsvToEs
 
   # nested field
   def contributor
-    if @row["contributor"]
-      @row["contributor"].split("; ").map do |p|
-        { "name" => p }
-      end
-    end
+    # if @row["contributor"]
+    #   @row["contributor"].split("; ").map do |p|
+    #     { "name" => p }
+    #   end
+    # end
   end
 
   def data_type
-    "csv"
+    "pdf"
   end
 
   def date(before=true)
-    Datura::Helpers.date_standardize(@row["date"], before)
+    # Datura::Helpers.date_standardize(@row["date"], before)
   end
 
   def date_display
-    Datura::Helpers.date_display(date)
+    # Datura::Helpers.date_display(date)
   end
 
   def date_not_after
-    if @row["date_not_after"] && !@row["date_not_after"].empty?
-      Datura::Helpers.date_standardize(@row["date_not_after"], false)
-    else
-      date(false)
-    end
+    # if @row["date_not_after"] && !@row["date_not_after"].empty?
+    #   Datura::Helpers.date_standardize(@row["date_not_after"], false)
+    # else
+    #   date(false)
+    # end
   end
 
   def date_not_before
-    if @row["date_not_before"] && !@row["date_not_before"].empty?
-      Datura::Helpers.date_standardize(@row["date_not_before"], true)
-    else
-      date(true)
-    end
+    # if @row["date_not_before"] && !@row["date_not_before"].empty?
+    #   Datura::Helpers.date_standardize(@row["date_not_before"], true)
+    # else
+    #   date(true)
+    # end
   end
 
   def description
-    @row["description"]
+    # @row["description"]
   end
 
   def extent
-    @row["extent"]
+    # @row["extent"]
   end
 
   def format
-    @row["format"]
+    # @row["format"]
   end
 
   def image_id
-    @row["image_id"]
+    # @row["image_id"]
   end
 
   def keywords
-    if @row["keywords"]
-      @row["keywords"].split("; ")
-    end
+    # if @row["keywords"]
+    #   @row["keywords"].split("; ")
+    # end
   end
 
   def language
-    @row["language"]
+    # @row["language"]
   end
 
   def languages
-    if @row["languages"]
-      @row["languages"].split("; ")
-    end
+    # if @row["languages"]
+    #   @row["languages"].split("; ")
+    # end
   end
 
   def medium
-    @row["medium"]
+    # @row["medium"]
   end
 
   # nested field
   def person
-    if @row["person"]
-      @row["person"].split("; ").map do |p|
-        { "name" => p }
-      end
-    end
+    # if @row["person"]
+    #   @row["person"].split("; ").map do |p|
+    #     { "name" => p }
+    #   end
+    # end
   end
 
   def places
-    if @row["places"]
-      @row["places"].split("; ")
-    end
+    # if @row["places"]
+    #   @row["places"].split("; ")
+    # end
   end
 
   def publisher
-    @row["publisher"]
+    # @row["publisher"]
   end
 
   # nested field
   def recipient
-    if @row["recipient"]
-      @row["recipient"].split("; ").map do |p|
-        { "name" => p }
-      end
-    end
+    # if @row["recipient"]
+    #   @row["recipient"].split("; ").map do |p|
+    #     { "name" => p }
+    #   end
+    # end
   end
 
   def relation
-    @row["relation"]
+    # @row["relation"]
   end
 
   def rights
-    @row["rights"]
+    # @row["rights"]
   end
 
   def rights_holder
-    @row["rights_holder"]
+    # @row["rights_holder"]
   end
 
   def rights_uri
-    @row["rights_uri"]
+    # @row["rights_uri"]
   end
 
   def source
-    @row["source"]
+    # @row["source"]
   end
 
   # nested field
@@ -172,9 +172,7 @@ class CsvToEs
   end
 
   def subjects
-    if @row["subjects"]
-      @row["subjects"].split("; ")
-    end
+
   end
 
   def subcategory
@@ -183,11 +181,13 @@ class CsvToEs
 
   # text is generally going to be pulled from
   def text
-    text_all = [ @row["text"] ]
-
+    text_all = []
+    @pdf.pages.each do |page|
+      text_all << page.text
+    end
     text_all += text_additional
     text_all = text_all.compact
-    Datura::Helpers.normalize_space(text_all.join(" "))
+    Datura::Helpers.normalize_space(text_all.join(" "))[0..999999]
   end
 
   # override and add by collection as needed
@@ -196,7 +196,7 @@ class CsvToEs
   end
 
   def title
-    @row["title"]
+    @filename.delete_suffix(".pdf")
   end
 
   def title_sort
@@ -204,13 +204,13 @@ class CsvToEs
   end
 
   def topics
-    if @row["topics"]
-      @row["topics"].split("; ")
-    end
+    # if @row["topics"]
+    #   @row["topics"].split("; ")
+    # end
   end
 
   def type
-    @row["type"]
+    # @row["type"]
   end
 
   def uri
@@ -226,8 +226,8 @@ class CsvToEs
       @options["data_base"],
       "data",
       @options["collection"],
-      "source/csv",
-      "#{@filename}.csv"
+      "source/pdf",
+      "#{@filename}.pdf"
     )
   end
 
@@ -244,15 +244,15 @@ class CsvToEs
   end
 
   def works
-    if @row["works"]
-      @row["works"].split("; ")
-    end
+    # if @row["works"]
+    #   @row["works"].split("; ")
+    # end
   end
 
   # new/moved fields for API 2.0
 
   def cover_image
-    @row["image_id"]
+    # @row["image_id"]
   end
 
   def date_updated
@@ -262,7 +262,7 @@ class CsvToEs
   end
 
   def category2
-    @row["subcategory"]
+    # @row["subcategory"]
   end
 
   def category3
@@ -313,10 +313,10 @@ class CsvToEs
   def rdf
   end
 
-  def has_source
+  def has_relation
   end
 
-  def has_relation
+  def has_source
   end
 
 end

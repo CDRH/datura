@@ -278,6 +278,10 @@ class HtmlToEs < XmlToEs
     get_text(@xpaths["keywords4"])
   end
 
+  def keywords4
+    get_text(@xpaths["keywords5"])
+  end
+
   def has_part
     # nested
   end
@@ -299,6 +303,14 @@ class HtmlToEs < XmlToEs
   end
   
   def rdf
+    # nested
+  end
+
+  def has_source
+    # nested
+  end
+
+  def has_relation
     # nested
   end
 

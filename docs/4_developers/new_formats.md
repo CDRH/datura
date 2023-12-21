@@ -36,7 +36,7 @@ In the `config/public.yml` file you need to add a link to the xsl scripts for th
 ```
 
 ## Datura overrides and new files
-You will need to create a `file_format.rb` (i.e. `file_ead.rb`) file in `lib/datura/file_types`. Copy from a similar file type (file_tei.rb is a good model for XML=based formats) and make any necessary changes for the file format. In particular the `subdoc_xpaths` should be modified to get the correct XPath for the files you want to transform:
+You will need to create a `file_format.rb` (i.e. `file_ead.rb`) file in `lib/datura/file_types`. Copy from a similar file type (file_tei.rb is a good model for XML-based formats) and make any necessary changes for the file format. Make sure to change the class name to reflect the new file format. In particular, in the case of an XML-based format, the `subdoc_xpaths` should be modified to get the correct XPath for the files you want to transform:
 ```
 def subdoc_xpaths
     # match subdocs against classes
@@ -46,7 +46,7 @@ def subdoc_xpaths
   end
 ```
 
-In the `/lib/datura/to_es` folder you also need to make a format_to_es.rb file, i.e. `ead_to_es.rb` and also a folder with fields.rb, request.rb, and xpaths.rb overrides
+In the `/lib/datura/to_es` folder you also need to make a format_to_es.rb file, i.e. `ead_to_es.rb` and also a folder with fields.rb, request.rb, and (for XML-based formats) xpaths.rb overrides
 Be sure to require all the necessary files at the top (and create them in the proper folder).
 ```
 require_relative "xml_to_es.rb"
@@ -59,11 +59,11 @@ require_relative "ead_to_es/xpaths.rb"
 class EadToEs < XmlToEs
 end
 ```
-The new files you have added must to be required in `lib/datura/requirer.rb`. Add the following to make sure they get picked up:
+The new files you have added must to be required in `lib/datura/requirer.rb`. This should happen automatically, but if not add the following to make sure they get picked up:
 ```
 require_relative "to_es/ead_to_es.rb"
 ```
-All code in these files should be within the same class, inheriting from XmlToEs.
+All code in these files should be within the same class. If the format is based on XML, it should inherit from XmlToEs.
 ```
 class EadToEs < XmlToEs
 end

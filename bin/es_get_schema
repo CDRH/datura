@@ -4,7 +4,7 @@ require "datura"
 
 begin
   es = Datura::Elasticsearch::Index.new
-  puts es.get_schema
+  puts JSON.pretty_generate(es.get_schema)
 rescue => e
   puts e
 end
