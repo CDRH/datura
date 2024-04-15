@@ -319,4 +319,7 @@ class PdfToEs
   def has_source
   end
 
+  def uri_html
+  end
+
 end
