@@ -39,7 +39,7 @@ class EadToEsItems < EadToEs
   end
 
   def collection
-    "whitman-finding_aid_manuscripts"
+    "#{@options["collection"]}_items"
   end
 
   def collection_desc
