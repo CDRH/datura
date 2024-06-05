@@ -116,16 +116,16 @@ class VraToEs < XmlToEs
       # subject element
       if get_text("@type", xml: p) == "personalName"
         {
-          id: nil,
-          name: get_text(".", xml: p),
-          role: nil
+          "id" => nil,
+          "name" => get_text(".", xml: p),
+          "role" => nil
         }
       # agent element
       else
         {
-          id: nil,
-          name: get_text("name", xml: p),
-          role: get_text("role", xml: p)
+          "id" => nil,
+          "name" =>  get_text("name", xml: p),
+          "role" => get_text("role", xml: p)
         }
       end
     end
