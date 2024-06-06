@@ -14,7 +14,7 @@ schema = YAML.load_file(path)
 begin
   idx = options["es_index"]
 
-  url = File.join(options["es_path"], options["es_index"], "_mapping", "_doc?pretty=true")
+  url = File.join(options["es_path"], options["es_index"], "_mapping", "?pretty=true")
   puts "environment: #{options["environment"]}"
   puts "Setting schema: #{url}"
   RestClient.put(url, schema.to_json, { :content_type => :json })

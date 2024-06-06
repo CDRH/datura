@@ -9,8 +9,6 @@ You will need to make sure that somewhere, the following are being set in your p
 - es_path
 - es_index
 
-`es_type` used to be required for elasticsearch, but since elasticsearch 6 the type is always `_doc` by default, and you need not worry about it!
-
 ### Step 2: Prepare Elasticsearch Index
 
 Make sure elasticsearch is installed and running in the location you wish to push to.  If there is already an index you will be using, take note of its name and skip this step.  If you want to add an index, run this command with a specified environment:

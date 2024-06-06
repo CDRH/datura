@@ -268,14 +268,14 @@ class Datura::DataManager
     if should_transform?("es") && !@options["transform_only"]
       schema = YAML.load_file(File.join(@options["datura_dir"], @options["es_schema_path"]))
       path, idx = ["es_path", "es_index"].map { |i| @options[i] }
-      url = "#{path}/#{idx}/_mapping/_doc?pretty=true"
+      url = "#{path}/#{idx}/_mapping?pretty=true"
       begin
         RestClient.put(url, schema.to_json, { content_type: :json })
-        msg = "Successfully set elasticsearch schema for index #{idx} _doc"
+        msg = "Successfully set elasticsearch schema for index #{idx}"
         @log.info(msg)
         puts msg.green
       rescue => e
-        raise("Something went wrong setting the elasticsearch schema for index #{idx} _doc:\n#{e.to_s}".red)
+        raise("Something went wrong setting the elasticsearch schema for index #{idx}:\n#{e.to_s}".red)
       end
     end
   end
