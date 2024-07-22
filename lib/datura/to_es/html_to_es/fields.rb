@@ -278,7 +278,7 @@ class HtmlToEs < XmlToEs
     get_text(@xpaths["keywords4"])
   end
 
-  def keywords4
+  def keywords5
     get_text(@xpaths["keywords5"])
   end
 
