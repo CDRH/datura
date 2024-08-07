@@ -104,9 +104,11 @@ class EadToEsItems < EadToEs
   def get_id
     # doc = id
     doc = get_text(@xpaths["identifier"])
-    if doc == ""
+    if !doc
       title = get_text(@xpaths["file"])
-      return "#{@filename}_#{title}"
+      if title
+        return "#{@filename}_#{title}"
+      end
     end
     return "#{@filename}_#{doc}"
   end
@@ -203,8 +205,8 @@ class EadToEsItems < EadToEs
   end
 
   def subcategory
-    subcategory = get_text(@xpaths["subcategory"])
-    subcategory.length > 0 ? subcategory : "none"
+    # subcategory = get_text(@xpaths["subcategory"])
+    # subcategory.length > 0 ? subcategory : "none"
   end
 
   def text
@@ -212,7 +214,9 @@ class EadToEsItems < EadToEs
     # means no worrying about handling spacing between words
     text = []
     body = get_text(@xpaths["text"])
-    text << body
+    if body
+      text << body
+    end
     # TODO: do we need to preserve tags like <i> in text? if so, turn get_text to true
     # text << CommonXml.convert_tags_in_string(body)
     text += text_additional

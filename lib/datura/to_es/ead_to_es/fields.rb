@@ -77,7 +77,9 @@ class EadToEs < XmlToEs
 
   def date(before=true)
     datestr = get_text(@xpaths["date"])
-    return Datura::Helpers.date_standardize(datestr, before)
+    if datestr
+      return Datura::Helpers.date_standardize(datestr, before)
+    end
   end
 
   def date_display
@@ -210,7 +212,9 @@ class EadToEs < XmlToEs
     text = []
     @xpaths.keys.each do |xpath| 
       body = get_text(@xpaths[xpath])
-      text << body
+      if body
+        text << body
+      end
     end
     text
     # TODO: do we need to preserve tags like <i> in text? if so, turn get_text to true

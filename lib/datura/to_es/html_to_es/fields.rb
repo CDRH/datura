@@ -152,7 +152,9 @@ class HtmlToEs < XmlToEs
     # means no worrying about handling spacing between words
     text = []
     body = get_text(@xpaths["text"])
-    text << body
+    if body
+      text << body
+    end
     text += text_additional
     Datura::Helpers.normalize_space(text.join(" "))
   end
