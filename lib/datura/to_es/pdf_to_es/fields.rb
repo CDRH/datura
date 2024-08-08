@@ -187,7 +187,7 @@ class PdfToEs
     end
     text_all += text_additional
     text_all = text_all.compact
-    Datura::Helpers.normalize_space(text_all.join(" "))[0..999999]
+    Datura::Helpers.normalize_space(text_all.join(" "))[0..@options["text_limit"]]
   end
 
   # override and add by collection as needed

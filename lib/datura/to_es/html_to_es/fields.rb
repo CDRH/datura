@@ -156,7 +156,7 @@ class HtmlToEs < XmlToEs
       text << body
     end
     text += text_additional
-    Datura::Helpers.normalize_space(text.join(" "))
+    Datura::Helpers.normalize_space(text.join(" "))[0..@options["text_limit"]]
   end
 
   def text_additional

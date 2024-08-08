@@ -220,7 +220,7 @@ class EadToEsItems < EadToEs
     # TODO: do we need to preserve tags like <i> in text? if so, turn get_text to true
     # text << CommonXml.convert_tags_in_string(body)
     text += text_additional
-    return Datura::Helpers.normalize_space(text.join(" "))
+    return Datura::Helpers.normalize_space(text.join(" "))[0..@options["text_limit"]]
   end
 
   def text_additional

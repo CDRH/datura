@@ -211,7 +211,7 @@ class TeiToEs < XmlToEs
     # TODO: do we need to preserve tags like <i> in text? if so, turn get_text to true
     # text_all << CommonXml.convert_tags_in_string(body)
     text_all += text_additional
-    Datura::Helpers.normalize_space(text_all.join(" "))
+    Datura::Helpers.normalize_space(text_all.join(" "))[0..@options["text_limit"]]
   end
 
   def text_additional
