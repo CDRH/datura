@@ -34,12 +34,12 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 - documentation for adding new ingest formats to Datura
 - byebug gem for debugging
 - instructions for installing Javascript Runtime files for Saxon
-- API schema can either be 1.0 or 2.0 (which includes nested fields); 1.0 will be run by default unless 2.0 is specified. Add the following to `public.yml` or `private.yml` in the data repo:
+- API schema can either be the original 1.0 or the newly updated 2.0 (which includes new fields including nested fields); 1.0 will be run by default unless 2.0 is specified. Add the following to `public.yml` or `private.yml` in the data repo:
 ```
 api_version: '2.0'
 ```
 See new schema (2.0) documentation [here](https://github.com/CDRH/datura/docs/schema_v2.md)
-- schema validation with API version 2.0, invalidly constructed documents will not post
+- schema validation with API version 2.0: invalidly constructed documents will not post
 - authentication with Elasticesarch 8.5; add the following to `public.yml` or `private.yml` in the data repo:
 ```
   es_user: username
@@ -47,24 +47,32 @@ See new schema (2.0) documentation [here](https://github.com/CDRH/datura/docs/sc
 ```
 - field overrides for new fields in the new API schema
 - functionality to transform EAD files and post them to elasticsearch
+- functionality to transform PDF files (including text and metadata) and post them to elasticsearch
+- limiting `text` field to a specific limit: `text_field` in `public.yml` or `private.yml`
+- configuration options related to Elasticsearch, including `text_limit`  and `es_schema_override` and `es_schema_path` to change the location of the Elasticsearch schema
+- more detailed errors including a stack trace
 
 ### Changed
 - update ruby to 3.1.2
 - date_standardize now relies on strftime instead of manual zero padding for month, day
 - minor corrections to documentation
 - XPath: "text" is now ingested as an array and will be displayed delimitted by spaces
+- "text" field now includes "notes" XPath
+- refactored posting script (`Datura.run`)
 - refactored command line methods into elasticsearch library
 - refactored and moved date_standardize and date_display helper methods
-- Nokogiri methods `get_text` and `get_list` on TEI now return nil rather than empty strings or arrays if there are no matches
+- Nokogiri methods `get_text` and `get_list` on TEI now return nil rather than empty strings or arrays if there are no matches. fields have been changed to check for these nil values
 
 ### Migration
 - check to make sure "text" xpath is doing desired behavior
 - use Elasticsearch 8.5 or higher and add authentication as described above if security is enabled. See [dev docs instructions](https://github.com/CDRH/cdrh_dev_docs/blob/update_elasticsearch_documentation/publishing/2_basic_requirements.md#downloading-elasticsearch).
 - upgrade data repos to Ruby 3.1.2
+- 
 - add api version to config as described above
 - make sure fields are consistent with the api schema, many have been renamed or changed in format
-- add nil checks with get_text and get_list methods
+- add nil checks with get_text and get_list methods as needed
 - add EadToES overrides if ingesting EAD files
+- add `byebug` and `pdf-reader` to Gemfile in repos based on Datura
 - if overriding the `read_csv` method in `lib/datura/file_type.rb`, the hash must be prefixed with ** (`**{}`).
 
 ## [v0.2.0-beta](https://github.com/CDRH/datura/compare/v0.1.6...v0.2.0-beta) - 2020-08-17 - Altering field and xpath behavior, adds get_elements
