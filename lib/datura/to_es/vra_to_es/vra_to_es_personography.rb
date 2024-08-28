@@ -13,7 +13,9 @@ class VraToEsPersonography < TeiToEs
 
   def creator
     creators = get_list(@xpaths["creators"], xml: @parent_xml)
-    creators.map { |c| { "name" => c } }
+    if creators
+      creators.map { |c| { "name" => c } }
+    end
   end
 
   def creator_sort

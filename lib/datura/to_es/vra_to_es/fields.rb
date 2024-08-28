@@ -52,7 +52,9 @@ class VraToEs < XmlToEs
 
   def date(before=true)
     datestr = get_list(@xpaths["date"]).first
-    Datura::Helpers.date_standardize(datestr, before)
+    if datestr
+      Datura::Helpers.date_standardize(datestr, before)
+    end
   end
 
   def date_display
@@ -116,16 +118,16 @@ class VraToEs < XmlToEs
       # subject element
       if get_text("@type", xml: p) == "personalName"
         {
-          id: nil,
-          name: get_text(".", xml: p),
-          role: nil
+          "id" => nil,
+          "name" => get_text(".", xml: p),
+          "role" => nil
         }
       # agent element
       else
         {
-          id: nil,
-          name: get_text("name", xml: p),
-          role: get_text("role", xml: p)
+          "id" => nil,
+          "name" =>  get_text("name", xml: p),
+          "role" => get_text("role", xml: p)
         }
       end
     end
@@ -191,11 +193,13 @@ class VraToEs < XmlToEs
     # handling separate fields in array
     # means no worrying about handling spacing between words
     text_all = []
-    text_all << get_text(@xpaths["text"])
+    if get_text(@xpaths["text"])
+      text_all << get_text(@xpaths["text"])
+    end
     # TODO: do we need to preserve tags like <i> in text? if so, turn get_text to true
     # text_all << CommonXml.convert_tags_in_string(body)
     text_all += text_additional
-    Datura::Helpers.normalize_space(text_all.join(" "))
+    Datura::Helpers.normalize_space(text_all.join(" "))[0..@options["text_limit"]]
   end
 
   def text_additional
