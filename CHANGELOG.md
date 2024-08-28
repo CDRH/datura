@@ -48,8 +48,8 @@ See new schema (2.0) documentation [here](https://github.com/CDRH/datura/docs/sc
 - field overrides for new fields in the new API schema
 - functionality to transform EAD files and post them to elasticsearch
 - functionality to transform PDF files (including text and metadata) and post them to elasticsearch
-- limiting `text` field to a specific limit: `text_field` in `public.yml` or `private.yml`
-- configuration options related to Elasticsearch, including `text_limit`  and `es_schema_override` and `es_schema_path` to change the location of the Elasticsearch schema
+- limiting `text` field to a specific limit: `text_limit` in `public.yml` or `private.yml`
+- configuration options related to Elasticsearch, including `es_schema_override` and `es_schema_path` to change the location of the Elasticsearch schema
 - more detailed errors including a stack trace
 
 ### Changed
