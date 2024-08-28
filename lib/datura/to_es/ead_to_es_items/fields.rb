@@ -205,8 +205,8 @@ class EadToEsItems < EadToEs
   end
 
   def subcategory
-    # subcategory = get_text(@xpaths["subcategory"])
-    # subcategory.length > 0 ? subcategory : "none"
+    subcategory = get_text(@xpaths["subcategory"])
+    subcategory.length > 0 ? subcategory : "none"
   end
 
   def text
