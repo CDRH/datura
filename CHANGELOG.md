@@ -25,7 +25,7 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 ### Security
 -->
 
-## [1.0.0](https://github.com/CDRH/datura/compare/v0.2.0-beta...dev)
+## [Unreleased](https://github.com/CDRH/datura/compare/v0.2.0-beta...dev)
 
 ### Added
 - minor test for Datura::Helpers.date_standardize
