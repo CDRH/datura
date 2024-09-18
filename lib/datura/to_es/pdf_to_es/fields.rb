@@ -231,18 +231,6 @@ class PdfToEs
     )
   end
 
-  def uri_html
-    File.join(
-      @options["data_base"],
-      "data",
-      @options["collection"],
-      "output",
-      @options["environment"],
-      "html",
-      "#{@id}.html"
-    )
-  end
-
   def works
     # if @row["works"]
     #   @row["works"].split("; ")
