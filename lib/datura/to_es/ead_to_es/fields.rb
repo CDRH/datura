@@ -94,9 +94,6 @@ class EadToEs < XmlToEs
     date(true)
   end
 
-  def date_updated
-  end
-
   def description
     get_text(@xpaths["description"])
   end
@@ -307,16 +304,6 @@ class EadToEs < XmlToEs
 
   def citation
     # nested
-  end
-
-  def container_box
-  end
-
-  def container_folder
-  end
-
-  def abstract
-    get_text(@xpaths["abstract"])
   end
 
   def keywords2

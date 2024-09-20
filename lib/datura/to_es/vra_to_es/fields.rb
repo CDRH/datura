@@ -51,7 +51,9 @@ class VraToEs < XmlToEs
   end
 
   def date(before=true)
-    datestr = get_list(@xpaths["date"]).first
+    if get_list(@xpaths["date"])
+      datestr = get_list(@xpaths["date"]).first
+    end
     if datestr
       Datura::Helpers.date_standardize(datestr, before)
     end
@@ -215,7 +217,9 @@ class VraToEs < XmlToEs
   end
 
   def title_sort
-    Datura::Helpers.normalize_name(title)
+    if title
+      Datura::Helpers.normalize_name(title)
+    end
   end
 
   def topics
@@ -265,7 +269,9 @@ class VraToEs < XmlToEs
   # new/moved fields for API 2.0
 
   def cover_image
-    get_list(@xpaths["image_id"]).first
+    if get_list(@xpaths["image_id"])
+      get_list(@xpaths["image_id"]).first
+    end
   end
 
   def date_updated
@@ -343,10 +349,6 @@ class VraToEs < XmlToEs
   end
 
   def event
-    # nested
-  end
-  
-  def rdf
     # nested
   end
 
