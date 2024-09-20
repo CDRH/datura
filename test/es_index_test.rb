@@ -14,13 +14,12 @@ class Datura::ElasticsearchIndexTest < Minitest::Test
 
   # stub in get_schema so that we can test get_schema_mapping without
   # worrying about integration with actual index
-
   class Datura::Elasticsearch::Index
     def get_schema
-      raw = File.read(
-        File.join(
-          File.expand_path(File.dirname(__FILE__)),
-          "fixtures/es_mapping_2.0.json"
+     raw = File.read(
+       File.join(
+         File.expand_path(File.dirname(__FILE__)),
+         "fixtures/es_mapping_2.0.json"
         )
       )
       JSON.parse(raw)
@@ -44,9 +43,9 @@ class Datura::ElasticsearchIndexTest < Minitest::Test
     es = Datura::Elasticsearch::Index.new(@@options)
     es.get_schema_mapping
     assert es.schema_mapping["fields"]
-    assert_equal 46, es.schema_mapping["fields"].length
+    assert_equal 60, es.schema_mapping["fields"].length
     assert_equal(
-      /^.*_d$|^.*_i$|^.*_k$|^.*_n$|^.*_t$|^.*_t_en$|^.*_t_es$/,
+      /^(?:.*_d|.*_i|.*_k|.*_n|.*_t|.*_t_en|.*_t_es)$/,
       es.schema_mapping["dynamic"]
     )
   end
@@ -76,7 +75,7 @@ class Datura::ElasticsearchIndexTest < Minitest::Test
     assert es.valid_document?({
       "creator" => [
         {
-          "subcategory" => "a",
+          "category2" => "a",
           "data_type" => "a",
           "keyword_k" => "a"
         }
