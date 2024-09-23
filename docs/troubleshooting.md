@@ -27,3 +27,10 @@ If you type `saxon` into the command line and hit enter, does it find the comman
 ### Tests
 
 Run the tests, is everything passing?  If something is failing there, then you may be able to determine if a recent commit has broken something, or narrow down the problem further.
+
+### Common errors
+
+- `Incorrect HTTP method` and/or `405 error`: Check to make sure that you are using the correct version of Elasticsearch that goes with the repository, and the correct version of the API schema. The new version of Datura with the 2.0 API schema must use ES8 or higher.
+- JSON parsing error. These frequently occur in repositories that use CSV data that is pulled from Airtable. Python scripts creating the CSV spreadsheets often introduce single quotes into fields, which is not legal JSON and not parsable by Ruby's JSON module. Methods must be used in the python scripts to make these fields legal JSON, such as `json.dumps`.
+- `Something went wrong setting the elasticsearch schema for index cdrhapi _doc:
+400 Bad Request` This indicates that the wrong version of Elasticsearch is running. Start the correct version for your repo, or else change the index name

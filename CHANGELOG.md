@@ -7,7 +7,7 @@ and this project adheres to [Semantic
 Versioning](https://semver.org/spec/v2.0.0.html).
 
 <!-- Template - Please preserve this order of sections
-## [Unreleased] - Brief description
+## [Unreleased] - Brief description TBD before next release
 [Unreleased]: https://github.com/CDRH/datura/compare/v#.#.#...dev
 
 ### Fixed
@@ -25,7 +25,25 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 ### Security
 -->
 
-## [Unreleased](https://github.com/CDRH/datura/compare/v0.2.0-beta...dev)
+## [Unreleased] - Brief description TBD before next release
+[Unreleased]: https://github.com/CDRH/datura/compare/v0.2.0...dev
+
+### Fixed
+
+### Added
+
+### Changed
+
+### Removed
+
+### Migration
+
+### Deprecated
+
+### Security
+
+## [v0.2.0] - Ingest documentation, text spacing, and date_standardize
+[v0.2.0]: https://github.com/CDRH/datura/compare/v0.2.0-beta...v0.2.0
 
 ### Added
 - minor test for Datura::Helpers.date_standardize
