@@ -61,7 +61,7 @@ See new schema (2.0) documentation [here](https://github.com/CDRH/datura/blob/ma
 
 ### Migration
 - check to make sure "text" xpath is doing desired behavior
-- use Elasticsearch 8.5 or higher and add authentication as described above if security is enabled. Add the following to `public.yml` or `private.yml` in the data repo:
+- use Elasticsearch 8.5 or higher and add authentication if security is enabled. Add the following to `public.yml` or `private.yml` in the data repo:
 ```
   es_user: username
   es_password: ********
