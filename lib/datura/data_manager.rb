@@ -1,7 +1,7 @@
 require "colorize"
 require "logger"
 require "yaml"
-
+require "byebug"
 require_relative "./requirer.rb"
 
 class Datura::DataManager
@@ -20,10 +20,12 @@ class Datura::DataManager
   def self.format_to_class
     classes = {
       "csv" => FileCsv,
+      "ead" => FileEad,
       "html" => FileHtml,
       "tei" => FileTei,
       "vra" => FileVra,
-      "webs" => FileWebs
+      "webs" => FileWebs,
+      "pdf" => FilePdf
     }
     classes.default = FileCustom
     classes
@@ -45,7 +47,6 @@ class Datura::DataManager
     prepare_xslt
     load_collection_classes
     set_up_logger
-
     # set up posting URLs
     @es_url = File.join(options["es_path"], options["es_index"])
     @solr_url = File.join(options["solr_path"], options["solr_core"], "update")
@@ -58,6 +59,7 @@ class Datura::DataManager
     # any of the default ones (for example: TeiToEs)
     path = File.join(@options["collection_dir"], "scripts", "overrides", "*.rb")
     Dir[path].each do |f|
+      puts "requiring" + f
       require f
     end
   end
@@ -71,15 +73,14 @@ class Datura::DataManager
   def run
     @time = [Time.now]
     # log starting information for user
+    check_options
+    set_up_services
+
     msg = options_msg
     @log.info(msg)
     puts msg
-
-    check_options
-    set_schema
     pre_file_preparation
     @files = prepare_files
-
     pre_batch_processing
     batch_process_files
     post_batch_processing
@@ -110,7 +111,7 @@ class Datura::DataManager
 
   # TODO should this move to Options class?
   def assert_option(opt)
-    if !@options.has_key?(opt)
+    if !@options.key?(opt)
       puts "Option #{opt} was not found!  Check config files and add #{opt} to continue".red
       raise "Missing configuration options"
     end
@@ -132,13 +133,18 @@ class Datura::DataManager
 
   def check_options
     # verify that everything's all good before moving to per-file level processing
-    if should_transform?("es")
+    if should_post?("es")
       assert_option("es_path")
       assert_option("es_index")
+      # options used to obtain the mappings
+      assert_option("es_schema_override")
+      assert_option("es_schema_path")
+      assert_option("api_version")
+
       assert_option("collection")
     end
 
-    if should_transform?("solr")
+    if should_post?("solr")
       assert_option("solr_core")
       assert_option("solr_path")
     end
@@ -189,8 +195,8 @@ class Datura::DataManager
     msg << "Running script with following options:\n"
     msg << "collection:           #{@options['collection']}\n"
     msg << "Environment:          #{@options['environment']}\n"
-    msg << "Posting to:           #{@es_url}\n\n" if should_transform?("es")
-    msg << "Posting to:           #{@solr_url}\n\n" if should_transform?("solr")
+    msg << "Posting to:           #{@es.index_url}\n\n" if should_post?("es")
+    msg << "Posting to:           #{@solr_url}\n\n" if should_post?("solr")
     msg << "Format:               #{@options['format']}\n" if @options["format"]
     msg << "Regex:                #{@options['regex']}\n" if @options["regex"]
     msg << "Allowed Files:        #{@options['allowed_files']}\n" if @options["allowed_files"]
@@ -262,24 +268,6 @@ class Datura::DataManager
     end
   end
 
-  def set_schema
-    # if ES is requested and not transform only, then set the schema
-    # to make sure that any new fields are stored with the correct fieldtype
-    if should_transform?("es") && !@options["transform_only"]
-      schema = YAML.load_file(File.join(@options["datura_dir"], @options["es_schema_path"]))
-      path, idx = ["es_path", "es_index"].map { |i| @options[i] }
-      url = "#{path}/#{idx}/_mapping/_doc?pretty=true"
-      begin
-        RestClient.put(url, schema.to_json, { content_type: :json })
-        msg = "Successfully set elasticsearch schema for index #{idx} _doc"
-        @log.info(msg)
-        puts msg.green
-      rescue => e
-        raise("Something went wrong setting the elasticsearch schema for index #{idx} _doc:\n#{e.to_s}".red)
-      end
-    end
-  end
-
   def set_up_logger
     # make directory if one does not already exist
     log_dir = File.join(@options["collection_dir"], "logs")
@@ -293,13 +281,28 @@ class Datura::DataManager
     )
   end
 
+  def set_up_services
+    if should_post?("es")
+      # set up elasticsearch instance
+      @es = Datura::Elasticsearch::Index.new(@options, schema_mapping: true)
+    end
+
+    if should_post?("solr")
+      # set up posting URLs
+      @solr_url = File.join(options["solr_path"], options["solr_core"], "update")
+    end
+  end
+
+  def should_post?(type)
+    should_transform?(type) && !@options["transform_only"]
+  end
+
   def should_transform?(type)
     # adjust default transformation type in params parser
     @options["transform_types"].include?(type)
   end
 
   def transform_and_post(file)
-
     # elasticsearch
     if should_transform?("es")
       if @options["transform_only"]
@@ -311,7 +314,7 @@ class Datura::DataManager
           error_with_transform_and_post("#{e}", @error_es)
         end
       else
-        res_es = file.post_es(@es_url)
+        res_es = file.post_es(@es)
         if res_es && res_es.has_key?("error")
           error_with_transform_and_post(res_es["error"], @error_es)
         end

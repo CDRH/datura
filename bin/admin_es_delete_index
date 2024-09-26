@@ -1,15 +1,10 @@
 #!/usr/bin/env ruby
 
 require "datura"
-require "rest-client"
-
-params = Datura::Parser.es_create_delete_index
-options = Datura::Options.new(params).all
-
-url = File.join(options["es_path"], "#{options["es_index"]}?pretty=true")
 
 begin
-  puts JSON.parse(RestClient.delete(url))
+  es = Datura::Elasticsearch::Index.new
+  es.delete
 rescue => e
-  puts "Error with request, check that index exists before deleting: #{e}"
+  puts e
 end

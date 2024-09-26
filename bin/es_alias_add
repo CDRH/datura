@@ -2,29 +2,8 @@
 
 require "datura"
 
-require "json"
-require "rest-client"
-
-params = Datura::Parser.es_alias_add
-options = Datura::Options.new(params).all
-
-ali = options["alias"]
-idx = options["index"]
-url = File.join(options["es_path"], "_aliases")
-
-data = {
-  actions: [
-    { remove: { alias: ali, index: "_all" } },
-    { add: { alias: ali, index: idx } }
-  ]
-}
-
 begin
-  res = RestClient.post(url, data.to_json, { content_type: :json })
-  puts "Results of setting alias #{ali} to index #{idx}"
-  puts res
-  list = JSON.parse(RestClient.get(url))
-  puts "\nAll aliases: #{JSON.pretty_generate(list)}"
+  Datura::Elasticsearch::Alias.add
 rescue => e
-  puts "Error: #{e.response}"
+  puts e
 end

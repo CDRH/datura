@@ -12,4 +12,6 @@ Dir["#{current_dir}/to_es/*.rb"].each { |f| require f }
 Dir["#{current_dir}/to_es/**/*.rb"].each { |f| require f }
 
 # file types
-Dir["#{current_dir}/file_types/*.rb"].each { |f| require f }
+Dir["#{current_dir}/file_types/*.rb"].each {|f| require f }
+# elasticsearch files
+Dir["#{current_dir}/elasticsearch/*.rb"].each {|f| require f }

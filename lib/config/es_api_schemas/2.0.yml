@@ -1,0 +1,573 @@
+# compatible with Apium v2.0
+settings:
+  settings:
+    analysis:
+      char_filter:
+        escapes:
+          type: mapping
+          mappings:
+            - "<em> => "
+            - "</em> => "
+            - "<u> => "
+            - "</u> => "
+            - "<strong> => "
+            - "</strong> => "
+            - "- => "
+            - "& => "
+            - ": => "
+            - "; => "
+            - ", => "
+            - ". => "
+            - "$ => "
+            - "@ => "
+            - "~ => "
+            - "\" => "
+            - "' => "
+            - "[ => "
+            - "] => "
+      normalizer:
+        keyword_normalized:
+          type: custom
+          char_filter:
+            - escapes
+          filter:
+            - asciifolding
+            - lowercase
+mappings:
+  properties:
+    identifier:
+      type: keyword
+      normalizer: keyword_normalized
+    collection:
+      type: keyword
+      normalizer: keyword_normalized
+    collection_desc:
+      type: keyword
+      normalizer: keyword_normalized
+    uri:
+      type: keyword
+      normalizer: keyword_normalized
+    uri_data:
+      type: keyword
+      normalizer: keyword_normalized
+    uri_html:
+      type: keyword
+      normalizer: keyword_normalized
+    data_type:
+      type: keyword
+      normalizer: keyword_normalized
+    fig_location:
+      type: keyword
+      normalizer: keyword_normalized
+    cover_image:
+      type: keyword
+      normalizer: keyword_normalized
+    title:
+      # TODO copy to text
+      type: keyword
+      normalizer: keyword_normalized
+    title_sort:
+      type: keyword
+      normalizer: keyword_normalized
+    alternative:
+      # TODO copy to text
+      type: keyword
+      normalizer: keyword_normalized
+    date_updated:
+      type: date
+      format: "yyyy-MM-dd||epoch_millis"
+    category:
+      type: keyword
+      normalizer: keyword_normalized
+    category2:
+      type: keyword
+      normalizer: keyword_normalized
+    category3:
+      type: keyword
+      normalizer: keyword_normalized
+    category4:
+      type: keyword
+      normalizer: keyword_normalized
+    category5:
+      type: keyword
+      normalizer: keyword_normalized
+    notes:
+      type: keyword
+      normalizer: keyword_normalized
+    contributor:
+      type: nested
+      properties:
+        name:
+          type: keyword
+          normalizer: keyword_normalized
+        id:
+          type: keyword
+          normalizer: keyword_normalized
+        role:
+          type: keyword
+          normalizer: keyword_normalized
+    creator:
+      type: nested
+      properties:
+        name:
+          type: keyword
+          normalizer: keyword_normalized
+        id:
+          type: keyword
+          normalizer: keyword_normalized
+    citation:
+      type: nested
+      properties:
+        role:
+          type: keyword
+          normalizer: keyword_normalized
+        id:
+          type: keyword
+          normalizer: keyword_normalized
+        date:
+          type: date
+          format: "yyyy-MM-dd||epoch_millis"
+        title:
+          type: keyword
+          normalizer: keyword_normalized
+        publisher:
+          type: keyword
+          normalizer: keyword_normalized
+        issue:
+          type: keyword
+          normalizer: keyword_normalized
+        page_start:
+          type: keyword
+          normalizer: keyword_normalized
+        page_end:
+          type: keyword
+          normalizer: keyword_normalized
+        section:
+          type: keyword
+          normalizer: keyword_normalized
+        volume:
+          type: keyword
+          normalizer: keyword_normalized
+        place:
+          type: keyword
+          normalizer: keyword_normalized
+        title_a:
+          type: keyword
+          normalizer: keyword_normalized
+        title_m:
+          type: keyword
+          normalizer: keyword_normalized
+        title_j:
+          type: keyword
+          normalizer: keyword_normalized
+    date:
+      type: date
+      format: "yyyy-MM-dd||epoch_millis"
+      # ignore_malformed: true
+    date_display:
+      type: keyword
+      normalizer: keyword_normalized
+    date_not_before:
+      type: date
+      format: "yyyy-MM-dd||epoch_millis"
+      # ignore_malformed: true
+    date_not_after:
+      type: date
+      format: "yyyy-MM-dd||epoch_millis"
+      # ignore_malformed: true
+    format:
+      type: keyword
+      normalizer: keyword_normalized
+    medium:
+      type: keyword
+      normalizer: keyword_normalized
+    extent:
+      type: keyword
+      normalizer: keyword_normalized
+    language:
+      type: keyword
+      normalizer: keyword_normalized
+    rights_holder:
+      type: keyword
+      normalizer: keyword_normalized
+    rights:
+      type: keyword
+      normalizer: keyword_normalized
+    rights_uri:
+      type: keyword
+      normalizer: keyword_normalized
+    container_box:
+      type: keyword
+      normalizer: keyword_normalized
+    container_folder:
+      type: keyword
+      normalizer: keyword_normalized
+    subjects:
+      type: keyword
+      normalizer: keyword_normalized
+      # TODO not sure yet if for display or search
+    abstract:
+      type: keyword
+      normalizer: keyword_normalized
+      # TODO copy to text?
+    description:
+      type: text
+      analyzer: english
+    type:
+      type: keyword
+      normalizer: keyword_normalized
+    topics:
+      type: keyword
+      normalizer: keyword_normalized
+    keywords:
+      type: keyword
+      normalizer: keyword_normalized
+    keywords2:
+      type: keyword
+      normalizer: keyword_normalized
+    keywords3:
+      type: keyword
+      normalizer: keyword_normalized
+    keywords4:
+      type: keyword
+      normalizer: keyword_normalized
+    keywords5:
+      type: keyword
+      normalizer: keyword_normalized
+    relation:
+      type: keyword
+      normalizer: keyword_normalized
+    has_source:
+      type: nested
+      properties:
+        role: 
+          type: keyword
+          normalizer: keyword_normalized
+        id:
+          type: keyword
+          normalizer: keyword_normalized
+        title:
+          type: keyword
+          normalizer: keyword_normalized
+        order:
+          type: integer
+    has_relation:
+      type: nested
+      properties:
+        role:
+          type: keyword
+          normalizer: keyword_normalized
+        id:
+          type: keyword
+          normalizer: keyword_normalized
+        title:
+          type: keyword
+          normalizer: keyword_normalized
+        order:
+          type: integer
+    has_part:
+      type: nested
+      properties: 
+        role:
+          type: keyword
+          normalizer: keyword_normalized
+        id:
+          type: keyword
+          normalizer: keyword_normalized
+        title:
+          type: keyword
+          normalizer: keyword_normalized
+        order:
+          type: integer
+    is_part_of:
+      type: nested
+      properties: 
+        role:
+          type: keyword
+          normalizer: keyword_normalized
+        id:
+          type: keyword
+          normalizer: keyword_normalized
+        title:
+          type: keyword
+          normalizer: keyword_normalized
+        order:
+          type: integer
+    previous_item:
+      type: nested
+      properties: 
+        role:
+          type: keyword
+          normalizer: keyword_normalized
+        id:
+          type: keyword
+          normalizer: keyword_normalized
+        title:
+          type: keyword
+          normalizer: keyword_normalized
+        order:
+          type: integer
+    next_item:
+      type: nested
+      properties: 
+        role:
+          type: keyword
+          normalizer: keyword_normalized
+        id:
+          type: keyword
+          normalizer: keyword_normalized
+        title:
+          type: keyword
+          normalizer: keyword_normalized
+        order:
+          type: integer
+    # recipient: #DELETED
+    #   type: nested
+    #   properties:
+    #     name:
+    #       type: keyword
+    #       normalizer: keyword_normalized
+    #     id:
+    #       type: keyword
+    #       normalizer: keyword_normalized
+    #     role:
+    #       type: keyword
+    #       normalizer: keyword_normalized
+    spatial:
+      type: nested
+      properties:
+        role:
+          type: keyword
+          normalizer: keyword_normalized
+        name:
+          # display title for entire location
+          type: keyword
+          normalizer: keyword_normalized
+        description:
+          type: text
+          analyzer: english
+        type:
+          type: keyword
+          normalizer: keyword_normalized
+        short_name:
+          # TODO copy into text?
+          type: keyword
+          normalizer: keyword_normalized
+        coordinates:
+          type: geo_point
+        id:
+          type: keyword
+          normalizer: keyword_normalized
+        city:
+          type: keyword
+          normalizer: keyword_normalized
+        township:
+          type: keyword
+          normalizer: keyword_normalized
+        county:
+          type: keyword
+          normalizer: keyword_normalized
+        country:
+          type: keyword
+          normalizer: keyword_normalized
+        region:
+          type: keyword
+          normalizer: keyword_normalized
+        state:
+          type: keyword
+          normalizer: keyword_normalized
+        street:
+          type: keyword
+          normalizer: keyword_normalized
+        postal_code:
+          type: keyword
+          normalizer: keyword_normalized    
+        note:
+          type: keyword
+          normalizer: keyword_normalized
+        trait1:
+          type: keyword
+          normalizer: keyword_normalized
+        trait2:
+          type: keyword
+          normalizer: keyword_normalized
+        trait3:
+          type: keyword
+          normalizer: keyword_normalized
+        trait4:
+          type: keyword
+          normalizer: keyword_normalized
+        trait5:
+          type: keyword
+          normalizer: keyword_normalized
+    places: #DEPRECATED
+      type: keyword
+      normalizer: keyword_normalized
+    person:
+      type: nested
+      properties:
+        name:
+          type: keyword
+          normalizer: keyword_normalized
+        id:
+          type: keyword
+          normalizer: keyword_normalized
+        role:
+          type: keyword
+          normalizer: keyword_normalized
+        note:
+          type: keyword
+          normalizer: keyword_normalized
+        order:
+          type: integer
+        birth_date:
+          type: date
+          format: "yyyy-MM-dd||epoch_millis"
+        death_date:
+          type: date
+          format: "yyyy-MM-dd||epoch_millis"
+        age_category:
+          type: keyword
+          normalizer: keyword_normalized
+        name_last:
+          type: keyword
+          normalizer: keyword_normalized
+        name_given:
+          type: keyword
+          normalizer: keyword_normalized
+        name_alternate:
+          type: keyword
+          normalizer: keyword_normalized
+        name_previous:
+          type: keyword
+          normalizer: keyword_normalized
+        race:
+          type: keyword
+          normalizer: keyword_normalized
+        sex:
+          type: keyword
+          normalizer: keyword_normalized
+        gender:
+          type: keyword
+          normalizer: keyword_normalized
+        nationality:
+          type: keyword
+          normalizer: keyword_normalized
+        trait1:
+          type: keyword
+          normalizer: keyword_normalized
+        trait2:
+          type: keyword
+          normalizer: keyword_normalized
+        trait3:
+          type: keyword
+          normalizer: keyword_normalized
+        trait4:
+          type: keyword
+          normalizer: keyword_normalized
+        trait5:
+          type: keyword
+          normalizer: keyword_normalized
+    event:
+      type: nested
+      properties:
+        type:
+          type: keyword
+          normalizer: keyword_normalized
+        agent:
+          type: keyword
+          normalizer: keyword_normalized
+        factor:
+          type: keyword
+          normalizer: keyword_normalized
+        product:
+          type: keyword
+          normalizer: keyword_normalized
+        date_begin:
+          type: date
+          format: "yyyy-MM-dd||epoch_millis"
+        date_end:
+          type: date
+          format: "yyyy-MM-dd||epoch_millis"
+        trait1:
+          type: keyword
+          normalizer: keyword_normalized
+        trait2:
+          type: keyword
+          normalizer: keyword_normalized
+        trait3:
+          type: keyword
+          normalizer: keyword_normalized
+        trait4:
+          type: keyword
+          normalizer: keyword_normalized
+        trait5:
+          type: keyword
+          normalizer: keyword_normalized
+        notes:
+          type: keyword
+          normalizer: keyword_normalized
+    rdf:
+      type: nested
+      properties:
+        type:
+          type: keyword
+          normalizer: keyword_normalized
+        subject:
+          type: keyword
+          normalizer: keyword_normalized
+        predicate:
+          type: keyword
+          normalizer: keyword_normalized
+        object:
+          type: keyword
+          normalizer: keyword_normalized
+        source:
+          type: keyword
+          normalizer: keyword_normalized
+        note:
+          type: keyword  
+          normalizer: keyword_normalized
+    annotations_text:
+      type: text
+      analyzer: english
+    text:
+      type: text
+      analyzer: english
+  dynamic_templates:
+    - date_fields:
+        match: "*_d"
+        mapping:
+          type: date
+          format: "yyyy-MM-dd||epoch_millis"
+    - integer_fields:
+        match: "*_i"
+        mapping:
+          type: integer
+    - keyword_fields:
+        match: "*_k"
+        mapping:
+          type: keyword
+          normalizer: keyword_normalized
+    - nested_fields:
+        match: "*_n"
+        mapping:
+          type: nested
+    - text_fields:
+        match: "*_t"
+        mapping:
+          type: text
+          analyzer: english
+    # language fields are always text fields
+    # but specifying _t_ for clarity
+    # _t_en functionally the same as _t
+    - text_english:
+        match: "*_t_en"
+        mapping:
+          type: text
+          analyzer: english
+    - text_spanish:
+        match: "*_t_es"
+        mapping:
+          type: text
+          analyzer: spanish

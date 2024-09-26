@@ -1,4 +1,5 @@
-require "test_helper"
+require_relative "test_helper"
+require "nokogiri"
 
 class TeiToEsTest < Minitest::Test
   def setup

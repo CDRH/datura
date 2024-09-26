@@ -9,37 +9,46 @@
 #   the collection specific configuration files:
 #   (config/public.yml and config/private.yml)
 
-
 ###################
 #     Defaults    #
 ###################
 
 default:
-
   # SCRIPT POWER
   # recommend this be increased in private.yml
   # on more powerful systems to improve runtime
   threads: 5
 
   # LOGGING
-  log_old_number: 1           # number of log files before beginning to erase
-  log_size: 32768000          # size of log file in bytes
-  log_level: Logger::INFO     # available levels: UNKNOWN, FATAL, ERROR, WARN, INFO, DEBUG
+  log_old_number: 1 # number of log files before beginning to erase
+  log_size: 32768000 # size of log file in bytes
+  log_level: Logger::INFO # available levels: UNKNOWN, FATAL, ERROR, WARN, INFO, DEBUG
 
-  # SCHEMA LOCATION
-  # misleadingly, this is not currently overrideable per collection
-  # TODO make overrideable in es_set_schema and post
-  # or perhaps remove it from this config since it is not collection-specific
-  # in any sense of the word, except if working with an entirely separate ES index
-  es_schema_path: lib/config/api_schema.yml
+  # ELASTICSEARCH SCHEMA CONFIGURATION
+  # if es_schema_override is false, datura is base directory
+  # if es_schema_override is true, then host data repo is the base directory
+  # it is NOT recommended to set es_schema_override to true!
+  #   if you need something outside of your data repo's directory, consider
+  #   overridding the es_schema_path method in options.rb
+  es_schema_override: false
+  # path from base directory to schemas
+  es_schema_path: lib/config/es_api_schemas
+  # current version of the API (powered by Elasticsearch)
+  # this setting determines which of the schemas will be used
+  api_version: "1.0"
+  # NOTE: es_schema option is set later as combination of above
+  # es_schema_override, es_schema_path, and api_version
+  # ES currently has a limited character size for keyword fields of 1000000
+  # exceeding this limit (generally in text field) will cause errors when searching
+  text_limit: 900000
 
   # RESOURCE LOCATIONS
-  data_base: https://cdrhmedia.unl.edu      # xml, csv, html snippets, etc
-  media_base: https://cdrhmedia.unl.edu     # images, audio, video
-  es_index: override_to_set_index           # elasticsearch index name
-  es_path: http://localhost:9200            # elasticsearch path (recommend override)
-  solr_core: override_to_set_core           # solr core name
-  solr_path: http://localhost:8983/solr     # solr path (recommend override)
+  data_base: https://cdrhmedia.unl.edu # xml, csv, html snippets, etc
+  media_base: https://cdrhmedia.unl.edu # images, audio, video
+  es_index: override_to_set_index # elasticsearch index name
+  es_path: http://localhost:9200 # elasticsearch path (recommend override)
+  solr_core: override_to_set_core # solr core name
+  solr_path: http://localhost:8983/solr # solr path (recommend override)
 
   # OUTPUT LOCATION
   # default is [environment]/output/[file_type]
@@ -59,6 +68,7 @@ default:
   html_html_xsl: scripts/.xslt-datura/html_to_html/html_to_html.xsl
   tei_html_xsl: scripts/.xslt-datura/tei_to_html/tei_to_html.xsl
   vra_html_xsl: scripts/.xslt-datura/vra_to_html/vra_to_html.xsl
+  ead_html_xsl: scripts/.xslt-datura/ead_to_html/ead_to_html.xsl
 
   # XSLT PARAMETERS
   # NOTE! If you are altering ANY of the variables you must
@@ -83,7 +93,6 @@ default:
 
 development:
   data_base: https://cdrhdev1.unl.edu/media
-
 ##################
 #   Production   #
 ##################

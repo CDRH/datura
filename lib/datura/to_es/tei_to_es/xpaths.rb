@@ -72,6 +72,8 @@ class TeiToEs < XmlToEs
 
       # "medium" => "",
 
+      "notes" => "//note[@type='project']",
+
       # NOTE: if you would like to associate a role you may need the parent element
       # such as correspAction[@type='deliveredTo'], etc
       "person" => [
@@ -125,7 +127,7 @@ class TeiToEs < XmlToEs
 
       # NOTE this xpath will often catch notes, back, etc which a project may wish to
       # exclude if they are using the annotations_text field for editorial comments
-      "text" => "//text//text()",
+      "text" => ["//text//text()", "//note[@type='project']"],
 
       "title" => "/TEI/teiHeader/fileDesc/titleStmt/title[1]",
 

@@ -16,7 +16,9 @@ class TeiToEsPersonography < TeiToEs
 
   def creator
     creators = get_list(@xpaths["creators"], false, @parent_xml)
-    creators.map { |c| { "name" => c } }
+    if creators
+      creators.map { |c| { "name" => c } }
+    end
   end
 
   def creators

@@ -2,7 +2,7 @@
 
 require "datura"
 
-params = Datura::Parser.clear_index_params
+params = Datura::Parser.clear_index
 options = Datura::Options.new(params).all
 url = File.join(options["solr_path"], options["solr_core"], "update")
 

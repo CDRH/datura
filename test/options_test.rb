@@ -1,4 +1,4 @@
-require "test_helper"
+require_relative "test_helper"
 
 # override the Options class method so that we
 # can test without real config files
@@ -6,7 +6,9 @@ class Datura::Options
   def read_all_configs fake1, fake2
     @general_config_pub = {
       "default" => {
-        "a" => "general default public"
+        "a" => "general default public",
+        "es_schema_path" => "lib/config",
+        "api_version" => "2.0"
       }
     }
     @collection_config_pub = {

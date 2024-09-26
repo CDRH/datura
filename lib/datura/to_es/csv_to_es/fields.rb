@@ -5,6 +5,8 @@ class CsvToEs
   ##########
   # FIELDS #
   ##########
+  # beginning with fields from API 1.0, including those that are unchanged in 2.0
+
   def id
     @id
   end
@@ -36,6 +38,12 @@ class CsvToEs
 
   def collection_desc
     @options["collection_desc"] || @options["collection"]
+  end
+  
+  def container_box
+  end
+
+  def container_folder
   end
 
   # nested field
@@ -179,7 +187,7 @@ class CsvToEs
 
     text_all += text_additional
     text_all = text_all.compact
-    Datura::Helpers.normalize_space(text_all.join(" "))
+    Datura::Helpers.normalize_space(text_all.join(" "))[0..@options["text_limit"]]
   end
 
   # override and add by collection as needed
@@ -239,6 +247,76 @@ class CsvToEs
     if @row["works"]
       @row["works"].split("; ")
     end
+  end
+
+  # new/moved fields for API 2.0
+
+  def cover_image
+    @row["image_id"]
+  end
+
+  def date_updated
+  end
+
+  def fig_location
+  end
+
+  def category2
+    @row["subcategory"]
+  end
+
+  def category3
+  end
+
+  def category4
+  end
+
+  def category5
+  end
+
+  def notes
+  end
+
+  def citation
+  end
+
+  def abstract
+  end
+
+  def keywords2
+  end
+
+  def keywords3
+  end
+
+  def keywords4
+  end
+
+  def keywords5
+  end
+
+  def has_part
+  end
+
+  def is_part_of
+  end
+
+  def previous_item
+  end
+
+  def next_item
+  end
+
+  def event
+  end
+  
+  def rdf
+  end
+
+  def has_source
+  end
+
+  def has_relation
   end
 
 end

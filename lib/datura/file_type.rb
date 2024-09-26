@@ -23,13 +23,14 @@ class FileType
     @file_location = location
     @options = options
     add_xsl_params_options
-
     # set output directories
     output = File.join(@options["collection_dir"], "output", @options["environment"])
+    
     @out_es = File.join(output, "es")
     @out_html = File.join(output, "html")
     @out_iiif = File.join(output, "iiif")
     @out_solr = File.join(output, "solr")
+    @auth_header = Datura::Helpers.construct_auth_header(options)
     Datura::Helpers.make_dirs(@out_es, @out_html, @out_iiif, @out_solr)
     # script locations set in child classes
   end
@@ -49,30 +50,37 @@ class FileType
     CommonXml.create_xml_object(self.file_location)
   end
 
-  def post_es(url=nil)
-    url = url || "#{@options["es_path"]}/#{@options["es_index"]}"
+  # expecting an instance of Datura::Elasticsearch::Index
+  def post_es(es)
+    error = nil
     begin
       transformed = transform_es
     rescue => e
-      return { "error" => "Error transforming ES for #{self.filename(false)}: #{e}" }
+      return { "error" => "Error transforming ES for #{self.filename(false)}: #{e.full_message}" }
     end
     if transformed && transformed.length > 0
       transformed.each do |doc|
         id = doc["identifier"]
-        puts "posting #{id}"
-        puts "PATH: #{url}/_doc/#{id}" if options["verbose"]
-        # NOTE: If you need to do partial updates rather than replacement of doc
-        # you will need to add _update at the end of this URL
-        begin
-          RestClient.put("#{url}/_doc/#{id}", doc.to_json, {:content_type => :json } )
-        rescue => e
-          return { "error" => "Error transforming or posting to ES for #{self.filename(false)}: #{e.response}" }
+        # before a document is posted, we need to make sure that the fields validate against the schema
+        if es.valid_document?(doc)
+
+          puts "posting #{id}"
+          puts "PATH: #{es.index_url}/_doc/#{id}" if options["verbose"]
+          # NOTE: If you need to do partial updates rather than replacement of doc
+          # you will need to add _update at the end of this URL
+          begin
+            RestClient.put("#{es.index_url}/_doc/#{id}", doc.to_json, @auth_header.merge({:content_type => :json }) )
+          rescue => e
+            error = "Error transforming or posting to ES for #{self.filename(false)}: #{e}"
+          end
+        else
+          error = "Document #{id} did not validate against the elasticsearch schema"
         end
       end
     else
-      return { "error" => "No file was transformed" }
+      error = "No file was transformed"
     end
-    return { "docs" => transformed }
+    error ? { "error" => error } : { "docs" => transformed}
   end
 
   def post_solr(url=nil)
@@ -119,7 +127,7 @@ class FileType
       # check if any xpaths hit before continuing
       results = file_xml.xpath(*subdoc_xpaths.keys)
       if results.length == 0
-        raise "No possible xpaths found fo file #{self.filename}, check if XML is valid or customize 'subdoc_xpaths' method"
+        raise "No possible xpaths found for file #{self.filename}, check if XML is valid or customize 'subdoc_xpaths' method"
       end
       subdoc_xpaths.each do |xpath, classname|
         subdocs = file_xml.xpath(xpath)
@@ -135,6 +143,8 @@ class FileType
       return es_req
     rescue => e
       puts "something went wrong transforming #{self.filename}"
+      puts e
+      puts e.backtrace
       raise e
     end
   end

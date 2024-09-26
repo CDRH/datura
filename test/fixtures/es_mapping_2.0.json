@@ -1,0 +1,345 @@
+{
+  "fake_index" : {
+    "mappings" : {
+      "_doc" : {
+        "dynamic_templates" : [
+          {
+            "date_fields" : {
+              "match" : "*_d",
+              "mapping" : {
+                "format" : "yyyy-MM-dd||epoch_millis",
+                "type" : "date"
+              }
+            }
+          },
+          {
+            "integer_fields" : {
+              "match" : "*_i",
+              "mapping" : {
+                "type" : "integer"
+              }
+            }
+          },
+          {
+            "keyword_fields" : {
+              "match" : "*_k",
+              "mapping" : {
+                "normalizer" : "keyword_normalized",
+                "type" : "keyword"
+              }
+            }
+          },
+          {
+            "nested_fields" : {
+              "match" : "*_n",
+              "mapping" : {
+                "type" : "nested"
+              }
+            }
+          },
+          {
+            "text_fields" : {
+              "match" : "*_t",
+              "mapping" : {
+                "analyzer" : "english",
+                "type" : "text"
+              }
+            }
+          },
+          {
+            "text_english" : {
+              "match" : "*_t_en",
+              "mapping" : {
+                "analyzer" : "english",
+                "type" : "text"
+              }
+            }
+          },
+          {
+            "text_spanish" : {
+              "match" : "*_t_es",
+              "mapping" : {
+                "analyzer" : "spanish",
+                "type" : "text"
+              }
+            }
+          }
+        ],
+        "properties" : {
+          "abstract" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "alternative" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "annotations_text" : {
+            "type" : "text",
+            "analyzer" : "english"
+          },
+          "category" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "collection" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "collection_desc" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "contributor" : {
+            "type" : "nested",
+            "properties" : {
+              "id" : {
+                "type" : "keyword",
+                "normalizer" : "keyword_normalized"
+              },
+              "name" : {
+                "type" : "keyword",
+                "normalizer" : "keyword_normalized"
+              },
+              "role" : {
+                "type" : "keyword",
+                "normalizer" : "keyword_normalized"
+              }
+            }
+          },
+          "coverage-spatial" : {
+            "type" : "nested",
+            "properties" : {
+              "city" : {
+                "type" : "keyword",
+                "normalizer" : "keyword_normalized"
+              },
+              "coordinates" : {
+                "type" : "geo_point"
+              },
+              "country" : {
+                "type" : "keyword",
+                "normalizer" : "keyword_normalized"
+              },
+              "county" : {
+                "type" : "keyword",
+                "normalizer" : "keyword_normalized"
+              },
+              "id" : {
+                "type" : "keyword",
+                "normalizer" : "keyword_normalized"
+              },
+              "place_name" : {
+                "type" : "keyword",
+                "normalizer" : "keyword_normalized"
+              },
+              "postal_code" : {
+                "type" : "keyword",
+                "normalizer" : "keyword_normalized"
+              },
+              "region" : {
+                "type" : "keyword",
+                "normalizer" : "keyword_normalized"
+              },
+              "state" : {
+                "type" : "keyword",
+                "normalizer" : "keyword_normalized"
+              },
+              "street" : {
+                "type" : "keyword",
+                "normalizer" : "keyword_normalized"
+              }
+            }
+          },
+          "creator" : {
+            "type" : "nested",
+            "properties" : {
+              "id" : {
+                "type" : "keyword",
+                "normalizer" : "keyword_normalized"
+              },
+              "name" : {
+                "type" : "keyword",
+                "normalizer" : "keyword_normalized"
+              }
+            }
+          },
+          "creator_sort" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "data_type" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "date" : {
+            "type" : "date",
+            "format" : "yyyy-MM-dd||epoch_millis"
+          },
+          "date_display" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "date_not_after" : {
+            "type" : "date",
+            "format" : "yyyy-MM-dd||epoch_millis"
+          },
+          "date_not_before" : {
+            "type" : "date",
+            "format" : "yyyy-MM-dd||epoch_millis"
+          },
+          "description" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "extent" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "format" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "identifier" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "image_id" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "image_location" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "keywords" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "language" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "languages" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "medium" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "people" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "person" : {
+            "type" : "nested",
+            "properties" : {
+              "id" : {
+                "type" : "keyword",
+                "normalizer" : "keyword_normalized"
+              },
+              "name" : {
+                "type" : "keyword",
+                "normalizer" : "keyword_normalized"
+              },
+              "role" : {
+                "type" : "keyword",
+                "normalizer" : "keyword_normalized"
+              }
+            }
+          },
+          "places" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "publisher" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "recipient" : {
+            "type" : "nested",
+            "properties" : {
+              "id" : {
+                "type" : "keyword",
+                "normalizer" : "keyword_normalized"
+              },
+              "name" : {
+                "type" : "keyword",
+                "normalizer" : "keyword_normalized"
+              },
+              "role" : {
+                "type" : "keyword",
+                "normalizer" : "keyword_normalized"
+              }
+            }
+          },
+          "relation" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "rights" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "rights_holder" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "rights_uri" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "source" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "subcategory" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "subjects" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "text" : {
+            "type" : "text",
+            "analyzer" : "english"
+          },
+          "title" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "title_sort" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "topics" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "type" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "uri" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "uri_data" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "uri_html" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          },
+          "works" : {
+            "type" : "keyword",
+            "normalizer" : "keyword_normalized"
+          }
+        }
+      }
+    }
+  }
+}

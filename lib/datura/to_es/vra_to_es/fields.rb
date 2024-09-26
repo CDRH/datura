@@ -20,8 +20,10 @@ class VraToEs < XmlToEs
 
   # nested field
   def creator
-    creators = get_list(@xpaths["creators"])
-    creators.map { |c| { "name" => Datura::Helpers.normalize_space(c) } }
+    creators = get_list(@xpaths["creator"])
+    if creators
+      creators.map { |c| { "name" => Datura::Helpers.normalize_space(c) } }
+    end
   end
 
   def collection
@@ -50,7 +52,9 @@ class VraToEs < XmlToEs
 
   def date(before=true)
     datestr = get_list(@xpaths["date"]).first
-    Datura::Helpers.date_standardize(datestr, before)
+    if datestr
+      Datura::Helpers.date_standardize(datestr, before)
+    end
   end
 
   def date_display
@@ -114,16 +118,16 @@ class VraToEs < XmlToEs
       # subject element
       if get_text("@type", xml: p) == "personalName"
         {
-          id: nil,
-          name: get_text(".", xml: p),
-          role: nil
+          "id" => nil,
+          "name" => get_text(".", xml: p),
+          "role" => nil
         }
       # agent element
       else
         {
-          id: nil,
-          name: get_text("name", xml: p),
-          role: get_text("role", xml: p)
+          "id" => nil,
+          "name" =>  get_text("name", xml: p),
+          "role" => get_text("role", xml: p)
         }
       end
     end
@@ -136,6 +140,10 @@ class VraToEs < XmlToEs
 
   def publisher
     get_text(@xpaths["publisher"])
+  end
+
+  # nested field
+  def rdf
   end
 
   # nested field
@@ -185,11 +193,13 @@ class VraToEs < XmlToEs
     # handling separate fields in array
     # means no worrying about handling spacing between words
     text_all = []
-    text_all << get_text(@xpaths["text"])
+    if get_text(@xpaths["text"])
+      text_all << get_text(@xpaths["text"])
+    end
     # TODO: do we need to preserve tags like <i> in text? if so, turn get_text to true
     # text_all << CommonXml.convert_tags_in_string(body)
     text_all += text_additional
-    Datura::Helpers.normalize_space(text_all.join(" "))
+    Datura::Helpers.normalize_space(text_all.join(" "))[0..@options["text_limit"]]
   end
 
   def text_additional
@@ -250,5 +260,101 @@ class VraToEs < XmlToEs
 
   def works
     get_list(@xpaths["works"])
+  end
+
+  # new/moved fields for API 2.0
+
+  def cover_image
+    get_list(@xpaths["image_id"]).first
+  end
+
+  def date_updated
+    get_list(@xpaths["date_updated"])
+  end
+
+  def fig_location
+    get_list(@xpaths["fig_location"])
+  end
+
+  def category2
+    get_list(@xpaths["subcategory"])
+  end
+
+  def category3
+    get_text(@xpaths["category3"])
+  end
+
+  def category4
+    get_text(@xpaths["category4"])
+  end
+
+  def category5
+    get_text(@xpaths["category5"])
+  end
+
+  def notes
+    get_text(@xpaths["notes"])
+  end
+
+  def citation
+    # nested
+  end
+
+  def container_box
+  end
+
+  def container_folder
+  end
+
+  def abstract
+    get_text(@xpaths["abstract"])
+  end
+
+  def keywords2
+    get_text(@xpaths["keywords2"])
+  end
+
+  def keywords3
+    get_text(@xpaths["keywords3"])
+  end
+
+  def keywords4
+    get_text(@xpaths["keywords4"])
+  end
+
+  def keywords5
+    get_text(@xpaths["keywords5"])
+  end
+
+  def has_part
+    # nested
+  end
+
+  def is_part_of
+    # nested
+  end
+
+  def previous_item
+    # nested
+  end
+
+  def next_item
+    # nested
+  end
+
+  def event
+    # nested
+  end
+  
+  def rdf
+    # nested
+  end
+
+  def has_source
+    # nested
+  end
+
+  def has_relation
+    # nested
   end
 end

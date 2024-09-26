@@ -39,7 +39,11 @@ class WebsToEs < XmlToEs
   end
 
   def date(before=true)
-    datestr = get_list(@xpaths["date"]).first
+    if get_list(@xpaths["date"])
+      datestr = get_list(@xpaths["date"]).first
+    else
+      datestr = nil
+    end    
     if datestr
       Datura::Helpers.date_standardize(datestr, true)
     end
@@ -80,7 +84,9 @@ class WebsToEs < XmlToEs
   end
 
   def image_id
-    get_list(@xpaths["image_id"]).first
+    if get_list(@xpaths["image_id"])
+      get_list(@xpaths["image_id"]).first
+    end
   end
 
   def keywords
@@ -109,6 +115,10 @@ class WebsToEs < XmlToEs
 
   def publisher
     get_text(@xpaths["publisher"])
+  end
+
+  # nested field
+  def rdf
   end
 
   # nested field
@@ -152,9 +162,11 @@ class WebsToEs < XmlToEs
     # means no worrying about handling spacing between words
     text = []
     body = get_text(@xpaths["text"])
-    text << body
+    if body
+      text << body
+    end
     text += text_additional
-    Datura::Helpers.normalize_space(text.join(" "))
+    Datura::Helpers.normalize_space(text.join(" "))[0..@options["text_limit"]]
   end
 
   def text_additional
@@ -209,5 +221,103 @@ class WebsToEs < XmlToEs
 
   def works
     get_list(@xpaths["works"])
+  end
+
+  # new/moved fields for API 2.0
+
+  def cover_image
+    if get_list(@xpaths["image_id"])
+      get_list(@xpaths["image_id"]).first
+    end
+  end
+
+  def date_updated
+    get_list(@xpaths["date_updated"])
+  end
+
+  def fig_location
+    get_list(@xpaths["fig_location"])
+  end
+
+  def category2
+    get_list(@xpaths["subcategory"])
+  end
+
+  def category3
+    get_text(@xpaths["category3"])
+  end
+
+  def category4
+    get_text(@xpaths["category4"])
+  end
+
+  def category5
+    get_text(@xpaths["category5"])
+  end
+
+  def container_box
+  end
+
+  def container_folder
+  end
+
+  def notes
+    get_text(@xpaths["notes"])
+  end
+
+  def citation
+    # nested
+  end
+
+  def abstract
+    get_text(@xpaths["abstract"])
+  end
+
+  def keywords2
+    get_text(@xpaths["keywords2"])
+  end
+
+  def keywords3
+    get_text(@xpaths["keywords3"])
+  end
+
+  def keywords4
+    get_text(@xpaths["keywords4"])
+  end
+
+  def keywords5
+    get_text(@xpaths["keywords5"])
+  end
+
+  def has_part
+    # nested
+  end
+
+  def is_part_of
+    # nested
+  end
+
+  def previous_item
+    # nested
+  end
+
+  def next_item
+    # nested
+  end
+
+  def event
+    # nested
+  end
+  
+  def rdf
+    # nested
+  end
+
+  def has_source
+    # nested
+  end
+
+  def has_relation
+    # nested
   end
 end

@@ -13,7 +13,6 @@ class FileCsv < FileType
       # Note: if overriding this function, it's recommended to use
       # a more specific identifier for each row of the CSV
       # but since this is a generic version, simply using the current iteration number
-      id = index
       # using XML instead of HTML for simplicity's sake
       builder = Nokogiri::XML::Builder.new do |xml|
         xml.div(class: "main_content") {
@@ -34,7 +33,7 @@ class FileCsv < FileType
 
   # override to change encoding
   def read_csv(file_location, encoding="utf-8")
-    CSV.read(file_location, {
+    CSV.read(file_location, **{
       encoding: encoding,
       headers: true,
       return_headers: true
