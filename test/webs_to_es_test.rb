@@ -7,7 +7,7 @@ class WebsToEsTest < Minitest::Test
 
   def test_assemble_json
     json = @test.assemble_json
-    assert_equal 42, json.length
+    assert_equal 58, json.length
     assert_equal "testing", json["identifier"]
   end
 

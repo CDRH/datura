@@ -308,10 +308,6 @@ class WebsToEs < XmlToEs
   def event
     # nested
   end
-  
-  def rdf
-    # nested
-  end
 
   def has_source
     # nested

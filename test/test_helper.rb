@@ -7,7 +7,8 @@ $options = {
   "collection" => "test_collection",
   "data_base" => "cdrhtest.unl.edu/media",
   "environment" => "test",
-  "site_url" => "cdrhtest.unl.edu"
+  "site_url" => "cdrhtest.unl.edu",
+  "api_version" => "2.0"
 }
 
 current_dir = File.expand_path(File.dirname(__FILE__))
