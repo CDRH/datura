@@ -234,9 +234,6 @@ mappings:
     keywords5:
       type: keyword
       normalizer: keyword_normalized
-    relation:
-      type: keyword
-      normalizer: keyword_normalized
     has_source:
       type: nested
       properties:
