@@ -88,7 +88,7 @@ class XmlToEs
 
   # get_list
   #   can pass it a string xpath or array of xpaths
-  # returns an array with the html value in xpath
+  # returns an array with the html value in xpath or, if no match found, nil
   def get_list(xpaths, keep_tags: false, xml: nil, sort: false)
     xpath_array = Array(xpaths)
     list = get_xpaths(xpath_array, keep_tags: keep_tags, xml: xml)
@@ -101,7 +101,7 @@ class XmlToEs
   # get_text
   #   can pass it a string xpath or array of xpaths
   #   can optionally set a delimiter, otherwise ;
-  # returns a STRING
+  # returns a STRING or, if no match found, nil
   # if you want a multivalued result, please refer to get_list
   def get_text(xpaths, keep_tags: false, xml: nil, delimiter: ";", sort: false)
     # ensure all xpaths are an array before beginning
