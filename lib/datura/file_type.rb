@@ -60,6 +60,11 @@ class FileType
     end
     if transformed && transformed.length > 0
       transformed.each do |doc|
+        if !doc["identifier"] || !doc["title"]
+          puts "skipping item without id or title"
+          puts "check line " + doc.values.join(" ")
+          next
+        end
         id = doc["identifier"]
         # before a document is posted, we need to make sure that the fields validate against the schema
         if es.valid_document?(doc)
