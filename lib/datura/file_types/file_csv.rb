@@ -66,7 +66,14 @@ class FileCsv < FileType
 
     @csv.each do |row|
       if !row.header_row?
-        es_doc << row_to_es(@csv.headers, row)
+        row_to_es = row_to_es(@csv.headers, row)
+        if !row_to_es["id"].to_s.empty? || !row_to_es["title"].to_s.empty?
+          es_doc << row_to_es
+        else
+          puts "skipping item without id or title".red
+          puts "check line ".red + doc.values.join("; ").strip.red
+          next
+        end
       end
     end
     if @options["output"]
