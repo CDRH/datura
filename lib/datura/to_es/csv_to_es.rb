@@ -41,7 +41,7 @@ class CsvToEs
   end
 
   def get_id
-    @row["id"] || @row["identifier"] || nil
+    @row["id"] || @row["identifier"] || ""
   end
 
   def preprocessing

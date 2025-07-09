@@ -214,11 +214,13 @@ class CsvToEs
   end
 
   def uri
-    File.join(
-      @options["site_url"],
-      "item",
-      @id
-    )
+    if @id
+      File.join(
+        @options["site_url"],
+        "item",
+        @id
+      )
+    end
   end
 
   def uri_data
@@ -232,15 +234,17 @@ class CsvToEs
   end
 
   def uri_html
-    File.join(
-      @options["data_base"],
-      "data",
-      @options["collection"],
-      "output",
-      @options["environment"],
-      "html",
-      "#{@id}.html"
-    )
+    if @id
+      File.join(
+        @options["data_base"],
+        "data",
+        @options["collection"],
+        "output",
+        @options["environment"],
+        "html",
+        "#{@id}.html"
+      )
+    end
   end
 
   def works
