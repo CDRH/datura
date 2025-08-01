@@ -37,9 +37,9 @@ class FileCsv < FileType
       encoding: encoding,
       headers: true,
       return_headers: true,
-      :header_converters=> lambda {|f| f.strip},
-    :converters=> lambda {|f| f ? f.strip : nil}
-      })
+      header_converters: lambda {|f| f.strip},
+      converters: lambda {|f| f ? f.strip : nil}
+    })
   end
   # NOTE previously this blindly took column headings and tried
   # to send them to Elasticsearch, but this will make a mess of
