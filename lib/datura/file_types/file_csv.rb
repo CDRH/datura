@@ -36,10 +36,11 @@ class FileCsv < FileType
     CSV.read(file_location, **{
       encoding: encoding,
       headers: true,
-      return_headers: true
+      return_headers: true,
+      header_converters: lambda {|f| f.strip},
+      converters: lambda {|f| f ? f.strip : nil}
     })
   end
-
   # NOTE previously this blindly took column headings and tried
   # to send them to Elasticsearch, but this will make a mess of
   # our index mapping, so instead prefer to only push specific fields
@@ -62,9 +63,17 @@ class FileCsv < FileType
   def transform_es
     puts "transforming #{self.filename}"
     es_doc = []
+
     @csv.each do |row|
       if !row.header_row?
-        es_doc << row_to_es(@csv.headers, row)
+        row_to_es = row_to_es(@csv.headers, row)
+        if !row_to_es["identifier"].to_s.empty? && !row_to_es["title"].to_s.empty?
+          es_doc << row_to_es
+        else
+          puts "skipping item without id or title".red
+          puts "check line ".red + row.to_s.strip[0..400].red
+          next
+        end
       end
     end
     if @options["output"]
