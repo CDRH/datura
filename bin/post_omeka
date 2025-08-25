@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require "datura"
+ARGV.replace(["-x", "es", "-o", "--t"])
+
+#post with options to output to JSON file
+manager = Datura::DataManager.new
+manager.run
+
+#run posting script into Omeka S
+system("python3 scripts/omeka_s_ingest/json_to_omeka.py")
