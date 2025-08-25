@@ -8,4 +8,8 @@ manager = Datura::DataManager.new
 manager.run
 
 #run posting script into Omeka S
-system("python3 scripts/omeka_s_ingest/json_to_omeka.py")
+if File.exist?("scripts/omeka_s_ingest/json_to_omeka.py")
+    system("python3 scripts/omeka_s_ingest/json_to_omeka.py")
+else
+    puts("Omeka script not found at scripts/omeka_s_ingest/json_to_omeka.py").red
+end
