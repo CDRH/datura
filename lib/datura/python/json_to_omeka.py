@@ -1,5 +1,4 @@
-#import necessary modules, including csv and omeka, and the fields
-import csv
+#import necessary modules, including omeka, and the fields
 import omeka
 import api_fields
 

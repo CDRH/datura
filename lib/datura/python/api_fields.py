@@ -2,7 +2,6 @@ import json
 import re
 import omeka
 from datetime import datetime
-from bs4 import BeautifulSoup
 
 # TODO comvert to standard CDRH API for Omeka S
 # def build_item_dict(row, existing_item):
