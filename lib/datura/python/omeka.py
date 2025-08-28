@@ -1,24 +1,29 @@
 import os
 from pathlib import Path
-from dotenv import load_dotenv
 import json
-env_path = Path('.')/'.env'
-load_dotenv(dotenv_path=env_path)
 from omeka_s_tools.api import OmekaAPIClient
 import math
-omeka = os.getenv('OMEKA_SERVER')
-omeka_auth = OmekaAPIClient(
-    api_url = os.getenv('OMEKA_SERVER'),
-    key_identity=os.getenv('KEY_IDENTITY'),                        
-    key_credential=os.getenv('KEY_CREDENTIAL')                        
-)
+import yaml
+
+def get_dir(relative_path):
+    cwd = Path.cwd()
+    return (cwd / relative_path).resolve()
+
+def get_config(path):
+    with open(path) as stream:
+        try:
+            contents = yaml.safe_load(stream)
+            breakpoint()
+            return(contents['default'])
+        except yaml.YAMLError as exc:
+            print(exc)
 
 def reset():
-    omeka = os.getenv('OMEKA_SERVER')
+    omeka = config['omeka_server']
     omeka_auth = OmekaAPIClient(
-        api_url = os.getenv('OMEKA_SERVER'),
-        key_identity=os.getenv('KEY_IDENTITY'),                        
-        key_credential=os.getenv('KEY_CREDENTIAL')                        
+        api_url = config['omeka_server'],
+        key_identity = config['key_identity'],                        
+        key_credential = config['key_credential']                        
     )
 
 def item_sets():
@@ -76,6 +81,13 @@ def add_media_to_item(item_id, media_file, payload={}, template_id=None, class_i
     data = omeka_auth.process_response(response)
     return data
 
-def get_dir(relative_path):
-    cwd = Path.cwd()
-    return (cwd / relative_path).resolve()
+conf_path = get_dir("config/private.yml")
+config = get_config(conf_path)
+
+omeka = config['omeka_server']
+
+omeka_auth = OmekaAPIClient(
+    api_url = config['omeka_server'],
+    key_identity = config['key_identity'],                        
+    key_credential = config['key_credential']                        
+)
