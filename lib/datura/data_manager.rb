@@ -11,6 +11,7 @@ class Datura::DataManager
   attr_accessor :error_es
   attr_accessor :error_html
   attr_accessor :error_iiif
+  attr_accessor :error_json
   attr_accessor :error_solr
 
   attr_accessor :files
@@ -37,6 +38,7 @@ class Datura::DataManager
     @error_es = []
     @error_html = []
     @error_iiif = []
+    @error_json = []
     @error_solr = []
 
     # combine user input and config files
@@ -156,6 +158,7 @@ class Datura::DataManager
     error_msg << "#{@error_es.length} ES transform / post error(s)\n"
     error_msg << "#{@error_html.length} HTML transform error(s)\n"
     error_msg << "#{@error_iiif.length} IIIF Manifest transform error(s)\n"
+    error_msg << "#{@error_json.length} JSON transform error(s)\n"
     error_msg << "#{@error_solr.length} Solr transform / post error(s)\n"
     puts error_msg
     @log.info(error_msg)
@@ -339,6 +342,25 @@ class Datura::DataManager
       end
     rescue => e
       error_with_transform_and_post("#{e}", @error_iiif)
+    end
+
+    # json
+    if should_transform?("json")
+      if @options["transform_only"]
+        # TODO transformation is not treated the same way here as in
+        # most post methods, so having to use try catch block
+        begin
+          res_json = file.transform_json
+        rescue => e
+          error_with_transform_and_post("#{e}", @error_json)
+        end
+      # remove this once above is working, json will be posted to omeka s with separate scripts
+      else
+        res_json = file.post_es(@es)
+        if res_json && res_json.has_key?("error")
+          error_with_transform_and_post(res_json["error"], @error_json)
+        end
+      end
     end
 
     # solr

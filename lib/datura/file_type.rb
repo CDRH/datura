@@ -11,12 +11,14 @@ class FileType
   attr_accessor :script_es
   attr_accessor :script_html
   attr_accessor :script_iiif
+  attr_accessor :script_json
   attr_accessor :script_solr
 
   # output directories
   attr_accessor :out_es
   attr_accessor :out_html
   attr_accessor :out_iiif
+  attr_accessor :out_json
   attr_accessor :out_solr
 
   def initialize(location, options)
@@ -29,9 +31,10 @@ class FileType
     @out_es = File.join(output, "es")
     @out_html = File.join(output, "html")
     @out_iiif = File.join(output, "iiif")
+    @out_json = File.join(output, "json")
     @out_solr = File.join(output, "solr")
     @auth_header = Datura::Helpers.construct_auth_header(options)
-    Datura::Helpers.make_dirs(@out_es, @out_html, @out_iiif, @out_solr)
+    Datura::Helpers.make_dirs(@out_es, @out_html, @out_iiif, @out_json, @out_solr)
     # script locations set in child classes
   end
 
@@ -160,6 +163,35 @@ class FileType
 
   def transform_iiif
     raise "iiif from requested formats (#{transform_types.join(", ")}) is not currently implemented"
+  end
+
+  def transform_json
+    json_req = []
+    begin
+      file_xml = parse_markup_lang_file
+      # check if any xpaths hit before continuing
+      results = file_xml.xpath(*subdoc_xpaths_json.keys)
+      if results.length == 0
+        raise "No possible xpaths found for file #{self.filename}, check if XML is valid or customize 'subdoc_xpaths_json' method"
+      end
+      subdoc_xpaths_json.each do |xpath, classname|
+        subdocs = file_xml.xpath(xpath)
+        subdocs.each do |subdoc|
+          file_transformer = classname.new(subdoc, @options, file_xml, self.filename(false))
+          json_req << file_transformer.json
+        end
+      end
+      if @options["output"]
+        filepath = "#{@out_json}/#{self.filename(false)}.json"
+        File.open(filepath, "w") { |f| f.write(pretty_json(json_req)) }
+      end
+      return json_req
+    rescue => e
+      puts "something went wrong transforming #{self.filename}"
+      puts e
+      puts e.backtrace
+      raise e
+    end
   end
 
   def transform_solr

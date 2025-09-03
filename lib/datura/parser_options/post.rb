@@ -78,7 +78,7 @@ module Datura::Parser
 
       # default to running only elasticsearch if no params passed through
       options["transform_types"] = ["es"]
-      opts.on('-x', '--type [input]', 'Transformed output type (es, html, iiif, solr), separate with ,') do |input|
+      opts.on('-x', '--type [input]', 'Transformed output type (es, html, iiif, json, solr), separate with ,') do |input|
         if input
           options["transform_types"] = input.split(",")
         end

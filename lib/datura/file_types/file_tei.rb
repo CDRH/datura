@@ -23,6 +23,13 @@ class FileTei < FileType
     }
   end
 
+  def subdoc_xpaths_json
+    # match subdocs against classes for non-es json
+    {
+      "/TEI" => TeiToJson,
+    }
+  end
+
   # if there should not be any html transformation taking place
   # then leave this method empty but uncommented to override default behavior
 
