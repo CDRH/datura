@@ -347,18 +347,12 @@ class Datura::DataManager
     # json
     if should_transform?("json")
       if @options["transform_only"]
-        # TODO transformation is not treated the same way here as in
-        # most post methods, so having to use try catch block
+        # TODO we may want to take out the transform_only requirement 
+        # and make this the default post for json
         begin
           res_json = file.transform_json
         rescue => e
           error_with_transform_and_post("#{e}", @error_json)
-        end
-      # remove this once above is working, json will be posted to omeka s with separate scripts
-      else
-        res_json = file.post_es(@es)
-        if res_json && res_json.has_key?("error")
-          error_with_transform_and_post(res_json["error"], @error_json)
         end
       end
     end
