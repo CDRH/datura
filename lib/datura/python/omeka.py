@@ -13,7 +13,6 @@ def get_config(path):
     with open(path) as stream:
         try:
             contents = yaml.safe_load(stream)
-            breakpoint()
             return(contents['default'])
         except yaml.YAMLError as exc:
             print(exc)
@@ -91,3 +90,4 @@ omeka_auth = OmekaAPIClient(
     key_identity = config['key_identity'],                        
     key_credential = config['key_credential']                        
 )
+template_number = config["resource_template"]
