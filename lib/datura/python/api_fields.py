@@ -3,46 +3,53 @@ import re
 import omeka
 from datetime import datetime
 
-# TODO comvert to standard CDRH API for Omeka S
-# def build_item_dict(row, existing_item):
-#     #in the news people only
-#     try:
-#         built_item = existing_item if existing_item else {}
-#         #new_item['schema:name'][0]['@value'] = "value" is how you update
-#         #TODO need to separate out Index and In the News more
-#         update_item_value(built_item, "dcterms:title", row["Name Built"])
-#         update_item_value(built_item, "dcterms:identifier", row["In the News Unique ID"])
-#         update_item_value(built_item, "dcterms:description", row["Biography"])
-#         update_item_value(built_item, "foaf:givenName", row["Name given"])
-#         update_item_value(built_item, "foaf:lastName", row["Name last"])
-#         try:
-#             #make sure date can be parsed in the correct format, will throw exception if not
-#             date = datetime.strptime(row["Date birth"], '%Y-%m-%d')
-#             if date:
-#                 update_item_value(built_item, "dcterms:date", row["Date birth"], datatype="numeric:timestamp")
-#         except:
-#             print(row["Date birth"] + " is not a valid date")
-#             pass
-#         update_item_value(built_item, "dcterms:bibliographicCitation", row["Bio Sources (MLA)"])
-#         update_item_value(built_item, "dcterms:spatial", location(row["birth_spatial.city"]))
-#         update_item_value(built_item, "dcterms:coverage", location(row["nationality-region"]))
-#         #omitting 
-#         # names = get_matching_names_from_markdown(row, "related-people")
-#         # if names:
-#         #     update_item_value(built_item, "dcterms:relation", names)
-#         lat = json.loads(row["Latitude (from Place of birth)"])[0]
-#         lon = json.loads(row["Longitude (from Place of birth)"])[0]
-#         if lat and lon:
-#             update_item_value(built_item, "geo:lat_long", f"{lat}, {lon}")
-#         update_item_value(built_item, "bibo:section", "people")
-#         #get count of associated news items
-#         update_item_value(built_item, "curation:number", row["Number of linked News Items"])
-#         return built_item
-#     except ValueError:
-#         breakpoint()
+# TODO convert to standard CDRH API for Omeka S
+def build_item_dict(json, existing_item):
+    try:
+        built_item = existing_item if existing_item else {}
+        #new_item['schema:name'][0]['@value'] = "value" is how you update
+        update_item_value(built_item, "dcterms:title", json["title"])
+        update_item_value(built_item, "dcterms:identifier", json["identifier"])
+        update_item_value(built_item, "dh:category", json["category"])
+        update_item_value(built_item, "dh:category2", json["category2"])
+        if json["creator"]:
+            creator_names = [creator['name'] for creator in json["creator"] if 'name' in creator]
+            update_item_value(built_item, "dcterms:creator", creator_names)
+        if json["contributor"]:
+            contributor_names = [contributor['name'] for contributor in json["contributor"] if 'name' in contributor]
+            update_item_value(built_item, "dcterms:contributor", contributor_names)
+        try:
+            #make sure date can be parsed in the correct format, will throw exception if not
+            if json["date"]:
+                date = datetime.strptime(json["date"], '%Y-%m-%d')
+                update_item_value(built_item, "dcterms:date", date, datatype="numeric:timestamp")
+        except:
+            print(f"{json["date"]} is not a valid date")
+            pass
+        #TODO will date_display be included?
+        #TODO will cover_image be included? May not be relevant to Omeka S
+        update_item_value(built_item, "dcterms:description", json["description"])
+        update_item_value(built_item, "dcterms:format", json["format"])
+        #TODO better as a linked record?
+        if json["has_relation"]:
+            relation_ids = [relation['id'] for relation in json["has_relation"] if 'name' in relation]
+            update_item_value(built_item, "dcterms:relation", relation_ids)
+        #TODO populate spatial field/"coverage"
+        if json["citation"] and json["citation"]["publisher"]:
+            update_item_value(built_item, "tei:publisher", json["citation"]["publisher"])
+        update_item_value(built_item, "dcterms:rightsHolder", json["rights_holder"])
+        if json["has_source"] and json["has_source"]["title"]:
+            update_item_value(built_item, "tei:biblTitle", json["has_source"]["title"])
+        update_item_value(built_item, "dcterms:subject", json["subjects"])
+        update_item_value(built_item, "dh:topic", json["title"])
+        #update_item_value()
+        return built_item
+    except ValueError:
+        breakpoint()
 
-# TODO change item linking for JSON and new API
-# def link_item(row, existing_item):
+#TODO change item linking for JSON and new API
+def link_item(row, existing_item):
+    pass
 #     cdrh_news_ids = get_matching_ids_from_markdown(row, "news item roles")
 #     if cdrh_news_ids:
 #         link_item_record(existing_item, "foaf:isPrimaryTopicOf", cdrh_news_ids)
@@ -71,17 +78,6 @@ from datetime import datetime
 #     return existing_item
 #     # need to get matching item TODO add conditional logic for blank entries
 #     # update_item_value(built_item, "foaf:maker", row["University Omeka ID (from [universities]) (from educations [join])"])
-
-# def spatial(row):
-#     places = []
-#     if row["nationality-region"]:
-#         places.append({ "region" : json.loads(row["nationality-region"])[0], "type": "nationality" })
-#     if row["birth_spatial.country"]:
-#       birthplace = { "country" : json.loads(row["birth_spatial.country"])[0], "type": "birth place" }
-#       if row["birth_spatial.city"]:
-#         birthplace["city"] = json.loads(row["birth_spatial.city"])[0]
-#       places.append(birthplace)
-#     return places
 
 
 def prepare_item(row, existing_item = None):
