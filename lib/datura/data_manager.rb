@@ -346,14 +346,15 @@ class Datura::DataManager
 
     # json
     if should_transform?("json")
-      if @options["transform_only"]
-        # TODO we may want to take out the transform_only requirement 
-        # and make this the default post for json
+      if @options["output"]
         begin
           res_json = file.transform_json
+          puts "Successfully transformed file to JSON"
         rescue => e
           error_with_transform_and_post("#{e}", @error_json)
         end
+      else
+        puts "Please add the -o flag to output JSON"
       end
     end
 
