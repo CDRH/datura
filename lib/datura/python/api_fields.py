@@ -10,14 +10,20 @@ def build_item_dict(json, existing_item):
         #new_item['schema:name'][0]['@value'] = "value" is how you update
         update_item_value(built_item, "dcterms:title", json["title"])
         update_item_value(built_item, "dcterms:identifier", json["identifier"])
+        update_item_value(built_item, "dh:collection", json["collection"])
         update_item_value(built_item, "dh:category", json["category"])
         update_item_value(built_item, "dh:category2", json["category2"])
+        #uri_data
+        update_item_value(built_item, "dh:uri_data", json["data_uri"])
+        #type
+        update_item_value(built_item, "dcterms:type", json["type"])
         if json["creator"]:
             creator_names = [creator['name'] for creator in json["creator"] if 'name' in creator]
             update_item_value(built_item, "dcterms:creator", creator_names)
         if json["contributor"]:
             contributor_names = [contributor['name'] for contributor in json["contributor"] if 'name' in contributor]
             update_item_value(built_item, "dcterms:contributor", contributor_names)
+        #TODO try ingesting without parsing the date again, should not be necessary
         try:
             #make sure date can be parsed in the correct format, will throw exception if not
             if json["date"]:
@@ -26,22 +32,116 @@ def build_item_dict(json, existing_item):
         except:
             print(f"{json["date"]} is not a valid date")
             pass
-        #TODO will date_display be included?
-        #TODO will cover_image be included? May not be relevant to Omeka S
         update_item_value(built_item, "dcterms:description", json["description"])
         update_item_value(built_item, "dcterms:format", json["format"])
         #TODO better as a linked record?
         if json["has_relation"]:
             relation_ids = [relation['id'] for relation in json["has_relation"] if 'name' in relation]
             update_item_value(built_item, "dcterms:relation", relation_ids)
-        #TODO populate spatial field/"coverage"
+        #TODO is citation always single-valued? if array might need to add code to deal with that
         if json["citation"] and json["citation"]["publisher"]:
-            update_item_value(built_item, "tei:publisher", json["citation"]["publisher"])
+            update_item_value(built_item, "dcterms:publisher", json["citation"]["publisher"])
+        #citation.id
+        if json["citation"] and json["citation"]["id"]:
+            update_item_value(built_item, "dh:biblID", json["citation"]["id"])
+        #citation.date TODO will also use dcterms:date
+        #citation.title
+        if json["citation"] and json["citation"]["title"]:
+            update_item_value(built_item, "tei:biblTitle", json["citation"]["title"])
+        #citation.pubplace
+        if json["citation"] and json["citation"]["place"]:
+            update_item_value(built_item, "tei:biblPubPlace", json["citation"]["pubplace"])
+        #citation.issue
+        if json["citation"] and json["citation"]["issue"]:
+            update_item_value(built_item, "bibo:issue", json["citation"]["issue"])
+        if json["citation"] and json["citation"]["page_start"]:
+            update_item_value(built_item, "bibo:pageStart", json["citation"]["page_start"])
+        if json["citation"] and json["citation"]["page_end"]:
+            update_item_value(built_item, "bibo:pageEnd", json["citation"]["page_end"])
+        if json["citation"] and json["citation"]["section"]:
+            update_item_value(built_item, "bibo:section", json["citation"]["section"])
+        if json["citation"] and json["citation"]["volume"]:
+            update_item_value(built_item, "bibo:volume", json["citation"]["volume"])        
+        #citation.title variants
+        if json["citation"] and json["citation"]["title_a"]:
+            update_item_value(built_item, "tei:biblTitleA", json["citation"]["title_a"])
+        if json["citation"] and json["citation"]["title_m"]:
+            update_item_value(built_item, "tei:biblTitleM", json["citation"]["title_m"])
+        if json["citation"] and json["citation"]["title_j"]:
+            update_item_value(built_item, "tei:biblTitleJ", json["citation"]["title_j"])
         update_item_value(built_item, "dcterms:rightsHolder", json["rights_holder"])
+        update_item_value(built_item, "dcterms:license", json["rights"])
+        #update_item_value(built_item, "dcterms:license", json["rights_uri"])
         if json["has_source"] and json["has_source"]["title"]:
             update_item_value(built_item, "tei:biblTitle", json["has_source"]["title"])
         update_item_value(built_item, "dcterms:subject", json["subjects"])
-        update_item_value(built_item, "dh:topic", json["title"])
+        update_item_value(built_item, "dh:topic", json["topics"])
+        #category3
+        update_item_value(built_item, "dh:category3", json["category3"])
+        #category4
+        update_item_value(built_item, "dh:category4", json["category4"])
+        #category5
+        update_item_value(built_item, "dh:category5", json["category5"])
+        #note
+        update_item_value(built_item, "dh:note", json["notes"])
+        #abstract
+        update_item_value(built_item, "dcterms:abstract", json["abstract"])
+        #keyword
+        update_item_value(built_item, "dh:keyword", json["keywords"])
+        #keyword2
+        update_item_value(built_item, "dh:keyword2", json["keyword2"])
+        #keyword3
+        update_item_value(built_item, "dh:keyword3", json["keyword3"])
+        #keyword4
+        update_item_value(built_item, "dh:keyword4", json["keyword4"])
+        update_item_value(built_item, "dh:keyword5", json["keyword5"])
+        #source id (has_source.id) TODO is this single-valued? also may conflict with citation
+        # if json["has_source"] and json["has_source"]["id"]:
+        #     update_item_value(built_item, "tei:sourceID", json["has_source"]["id"])
+        if json["has_source"] and json["has_source"]["title"]:
+            update_item_value(built_item, "dcterms:source", json["has_source"]["title"])
+        #has_part
+        if json["has_part"] and json["has_part"]["id"]:
+            part_ids = [part['id'] for part in json["has_part"]]
+            update_item_value(built_item, "dcterms:hasPart", part_ids)
+        #is_part_of
+        if json["is_part_of"] and json["is_part_of"]["id"]:
+            update_item_value(built_item, "dcterms:isPartOf", json["is_part_of"]["id"])
+        #previous
+        if json["previous"] and json["previous"]["id"]:
+            update_item_value(built_item, "dh:orderPrev", json["previous"]["id"])
+        #next
+        if json["next"] and json["next"]["id"]:
+            update_item_value(built_item, "dh:orderNext", json["next"]["id"])
+        #medium
+        update_item_value(built_item, "dcterms:medium", json["medium"])
+        #extent
+        update_item_value(built_item, "dcterms:extent", json["extent"])
+        #language
+        update_item_value(built_item, "dcterms:language", json["language"])
+        #container_box
+        update_item_value(built_item, "dh:box", json["container_box"])
+        #container_folder
+        update_item_value(built_item, "dh:folder", json["container_folder"])
+
+        ##TODO fields not in TEI schema yet, and fields with no corresponding CDRH API field
+        #person
+        #spatial
+        #event
+        #correspondence
+        #editor
+        #date created
+        #sponsor
+        #funder
+        #addr line
+        #license
+        #distributor
+        #authority
+        #file notes
+        #annotations_text
+        update_item_value(built_item, "dh:annotationsText", json["annotations_text"])
+        #text_field
+        update_item_value(built_item, "dh:itemText", json["text"])
         #update_item_value()
         return built_item
     except ValueError:
