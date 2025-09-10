@@ -8,7 +8,7 @@ It is possible to run this script with the other command line options (for insta
 
 ### Setting up a virtual environemnt
 
-In your collection repo, first exit any virtual environemt you may be in (this may be indicated by  `(.venv)` or similar before your command prompt). If you have not previously created a virtual environment, type `python3 -m venv .venv`. The environment will be installed in the `.venv` folder in the root of the collection repo. To enter the virtual environment once it has been created, run `python3 source .venv/bin/activate`. Then run `pip3 install -r requirements.txt` to install the dependencies. These two steps are necessary to get the `post_omeka` script to run. 
+In your collection repo, first exit any virtual environemt you may be in (this may be indicated by  `(.venv)` or similar before your command prompt). If you have not previously created a virtual environment, type `python3 -m venv .venv`. The environment will be installed in the `.venv` folder in the root of the collection repo. To enter the virtual environment once it has been created, run `source .venv/bin/activate`. Then run `pip3 install -r requirements.txt` to install the dependencies. These two steps are necessary to get the `post_omeka` script to run. 
 
 If running the script results in an error that a dependency is missing (i.e. `ModuleNotFound`) run `pip3 install [dependency]`. (It may be necessary to do an Internet search to determine the name of the package, which is not always named the same as the imported file) Then you can run `pip3 freeze > requirements.txt`, update the file in Datura, and commit it on.
 
