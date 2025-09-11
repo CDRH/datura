@@ -14,7 +14,7 @@ def build_item_dict(json, existing_item):
         update_item_value(built_item, "dh:category", json["category"])
         update_item_value(built_item, "dh:category2", json["category2"])
         #uri_data
-        update_item_value(built_item, "dh:uri_data", json["data_uri"])
+        update_item_value(built_item, "dh:uriData", json["uri_data"])
         #type
         update_item_value(built_item, "dcterms:type", json["type"])
         if json["creator"]:
@@ -89,12 +89,12 @@ def build_item_dict(json, existing_item):
         #keyword
         update_item_value(built_item, "dh:keyword", json["keywords"])
         #keyword2
-        update_item_value(built_item, "dh:keyword2", json["keyword2"])
+        update_item_value(built_item, "dh:keyword2", json["keywords2"])
         #keyword3
-        update_item_value(built_item, "dh:keyword3", json["keyword3"])
+        update_item_value(built_item, "dh:keyword3", json["keywords3"])
         #keyword4
-        update_item_value(built_item, "dh:keyword4", json["keyword4"])
-        update_item_value(built_item, "dh:keyword5", json["keyword5"])
+        update_item_value(built_item, "dh:keyword4", json["keywords4"])
+        update_item_value(built_item, "dh:keyword5", json["keywords5"])
         #source id (has_source.id) TODO is this single-valued? also may conflict with citation
         # if json["has_source"] and json["has_source"]["id"]:
         #     update_item_value(built_item, "tei:sourceID", json["has_source"]["id"])
@@ -108,11 +108,11 @@ def build_item_dict(json, existing_item):
         if json["is_part_of"] and json["is_part_of"]["id"]:
             update_item_value(built_item, "dcterms:isPartOf", json["is_part_of"]["id"])
         #previous
-        if json["previous"] and json["previous"]["id"]:
-            update_item_value(built_item, "dh:orderPrev", json["previous"]["id"])
+        if json["previous_item"] and json["previous_item"]["id"]:
+            update_item_value(built_item, "dh:orderPrev", json["previous_item"]["id"])
         #next
-        if json["next"] and json["next"]["id"]:
-            update_item_value(built_item, "dh:orderNext", json["next"]["id"])
+        if json["next_item"] and json["next_item"]["id"]:
+            update_item_value(built_item, "dh:orderNext", json["next_item"]["id"])
         #medium
         update_item_value(built_item, "dcterms:medium", json["medium"])
         #extent
