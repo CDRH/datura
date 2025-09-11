@@ -2,7 +2,7 @@
 
 require "datura"
 require "byebug"
-ARGV.unshift(["-x", "es", "-o", "-t"])
+ARGV.unshift("-x", "es", "-o", "-t")
 
 #post with options to output to JSON file
 manager = Datura::DataManager.new
