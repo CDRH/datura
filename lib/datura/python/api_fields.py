@@ -3,11 +3,11 @@ import re
 import omeka
 from datetime import datetime
 
-# TODO convert to standard CDRH API for Omeka S
 def build_item_dict(json, existing_item):
+    """Takes in JSON with CDRH API fields and an existing API item from Omeka S in format. 
+    Returns Omeka API item (in JSON format) updated with values from new CDHR schema for Omeka."""
     try:
         built_item = existing_item if existing_item else {}
-        #new_item['schema:name'][0]['@value'] = "value" is how you update
         update_item_value(built_item, "dcterms:title", json["title"])
         update_item_value(built_item, "dcterms:identifier", json["identifier"])
         update_item_value(built_item, "dh:collection", json["collection"])
@@ -202,6 +202,11 @@ def get_json_value(row, name):
         return row[name]
     
 def update_item_value(item, key, value, datatype="literal"):
+    """
+    takes in JSON representation of API item, the field name, the value to add or update, and a datatype (defaults to "literal")
+    value may be in string format or list. Should be able to modify existing values and update new ones. (Note that there are still issues with updating fields
+    returns the JSON hash with the updated value
+    """
     if type(value) == str:
         if key in item:
             item[key][0]['@value'] = value
