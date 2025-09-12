@@ -39,41 +39,64 @@ def build_item_dict(json, existing_item):
             relation_ids = [relation['id'] for relation in json["has_relation"] if 'name' in relation]
             update_item_value(built_item, "dcterms:relation", relation_ids)
         #TODO is citation always single-valued? if array might need to add code to deal with that
-        if json["citation"] and json["citation"]["publisher"]:
+        try:
             update_item_value(built_item, "dcterms:publisher", json["citation"]["publisher"])
+        except:
+            pass
         #citation.id
-        if json["citation"] and json["citation"]["id"]:
+        try:
+            #not working, currently
             update_item_value(built_item, "dh:biblID", json["citation"]["id"])
+        except:
+            pass
         #citation.date TODO will also use dcterms:date
         #citation.title
-        if json["citation"] and json["citation"]["title"]:
+        try:
             update_item_value(built_item, "tei:biblTitle", json["citation"]["title"])
+        except:
+            pass
         #citation.pubplace
-        if json["citation"] and json["citation"]["place"]:
+        try:
             update_item_value(built_item, "tei:biblPubPlace", json["citation"]["pubplace"])
+        except:
+            pass
         #citation.issue
-        if json["citation"] and json["citation"]["issue"]:
+        try:
             update_item_value(built_item, "bibo:issue", json["citation"]["issue"])
-        if json["citation"] and json["citation"]["page_start"]:
+        except:
+            pass
+        try:
             update_item_value(built_item, "bibo:pageStart", json["citation"]["page_start"])
-        if json["citation"] and json["citation"]["page_end"]:
+        except:
+            pass
+        try:
             update_item_value(built_item, "bibo:pageEnd", json["citation"]["page_end"])
-        if json["citation"] and json["citation"]["section"]:
+        except:
+            pass
+        try:
             update_item_value(built_item, "bibo:section", json["citation"]["section"])
-        if json["citation"] and json["citation"]["volume"]:
-            update_item_value(built_item, "bibo:volume", json["citation"]["volume"])        
+        except:
+            pass
+        try:
+            update_item_value(built_item, "bibo:volume", json["citation"]["volume"])  
+        except:
+            pass      
         #citation.title variants
-        if json["citation"] and json["citation"]["title_a"]:
+        try:
             update_item_value(built_item, "tei:biblTitleA", json["citation"]["title_a"])
-        if json["citation"] and json["citation"]["title_m"]:
+        except:
+            pass
+        try:
             update_item_value(built_item, "tei:biblTitleM", json["citation"]["title_m"])
-        if json["citation"] and json["citation"]["title_j"]:
+        except:
+            pass
+        try:
             update_item_value(built_item, "tei:biblTitleJ", json["citation"]["title_j"])
+        except:
+            pass
         update_item_value(built_item, "dcterms:rightsHolder", json["rights_holder"])
         update_item_value(built_item, "dcterms:license", json["rights"])
         #update_item_value(built_item, "dcterms:license", json["rights_uri"])
-        if json["has_source"] and json["has_source"]["title"]:
-            update_item_value(built_item, "tei:biblTitle", json["has_source"]["title"])
         update_item_value(built_item, "dcterms:subject", json["subjects"])
         update_item_value(built_item, "dh:topic", json["topics"])
         #category3
@@ -98,21 +121,31 @@ def build_item_dict(json, existing_item):
         #source id (has_source.id) TODO is this single-valued? also may conflict with citation
         # if json["has_source"] and json["has_source"]["id"]:
         #     update_item_value(built_item, "tei:sourceID", json["has_source"]["id"])
-        if json["has_source"] and json["has_source"]["title"]:
+        try:
             update_item_value(built_item, "dcterms:source", json["has_source"]["title"])
+        except:
+            pass
         #has_part
-        if json["has_part"] and json["has_part"]["id"]:
+        try:
             part_ids = [part['id'] for part in json["has_part"]]
             update_item_value(built_item, "dcterms:hasPart", part_ids)
+        except:
+            pass
         #is_part_of
-        if json["is_part_of"] and json["is_part_of"]["id"]:
+        try:
             update_item_value(built_item, "dcterms:isPartOf", json["is_part_of"]["id"])
+        except:
+            pass
         #previous
-        if json["previous_item"] and json["previous_item"]["id"]:
+        try:
             update_item_value(built_item, "dh:orderPrev", json["previous_item"]["id"])
+        except:
+            pass
         #next
-        if json["next_item"] and json["next_item"]["id"]:
+        try:
             update_item_value(built_item, "dh:orderNext", json["next_item"]["id"])
+        except:
+            pass
         #medium
         update_item_value(built_item, "dcterms:medium", json["medium"])
         #extent
