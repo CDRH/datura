@@ -23,15 +23,7 @@ def build_item_dict(json, existing_item):
         if json["contributor"]:
             contributor_names = [contributor['name'] for contributor in json["contributor"] if 'name' in contributor]
             update_item_value(built_item, "dcterms:contributor", contributor_names)
-        #TODO try ingesting without parsing the date again, should not be necessary
-        try:
-            #make sure date can be parsed in the correct format, will throw exception if not
-            if json["date"]:
-                date = datetime.strptime(json["date"], '%Y-%m-%d')
-                update_item_value(built_item, "dcterms:date", date, datatype="numeric:timestamp")
-        except:
-            print(f"{json["date"]} is not a valid date")
-            pass
+        update_item_value(built_item, "dcterms:date", json["date"], datatype="numeric:timestamp")
         update_item_value(built_item, "dcterms:description", json["description"])
         update_item_value(built_item, "dcterms:format", json["format"])
         #TODO better as a linked record?
