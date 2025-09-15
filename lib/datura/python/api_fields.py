@@ -154,6 +154,16 @@ def build_item_dict(json, existing_item):
         #spatial
         #event
         #correspondence
+        update_item_value(built_item, "tei:correspSentName", json["correspSentName_omeka_s"])
+        update_item_value(built_item, "tei:correspSentPlace", json["correspSentPlace_omeka_s"], datatype="geography")
+        #TODO convert to datatype="numeric:timestamp"?
+        update_item_value(built_item, "tei:correspSentDate", json["correspSentDate_omeka_s"])
+        update_item_value(built_item, "tei:correspDeliveredName", json["correspDeliveredName_omeka_s"])
+        update_item_value(built_item, "tei:correspDeliveredPlace", json["correspDeliveredPlace_omeka_s"])
+        #TODO convert to datatype="numeric:timestamp"?
+        update_item_value(built_item, "tei:correspDeliveredDate", json["correspDeliveredDate_omeka_s"], datatype="numeric:timestamp")
+        update_item_value(built_item, "tei:correspNext", json["correspNext_omeka_s"])
+        update_item_value(built_item, "tei:correspPrev", json["correspPrev_omeka_s"])
         #editor
         #date created
         #sponsor
@@ -161,8 +171,11 @@ def build_item_dict(json, existing_item):
         #addr line
         #license
         #distributor
+        update_item_value(built_item, "tei:distributor", json["distributor_omeka_s"])
         #authority
+        update_item_value(built_item, "tei:authority", json["authority_omeka_s"])
         #file notes
+        update_item_value(built_item, "tei:biblNote", json["biblNote_omeka_s"])
         #annotations_text
         update_item_value(built_item, "dh:annotationsText", json["annotations_text"])
         #text_field
