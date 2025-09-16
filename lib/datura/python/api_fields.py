@@ -155,9 +155,9 @@ def build_item_dict(json, existing_item):
         #event
         #correspondence
         update_item_value(built_item, "tei:correspSentName", json["correspSentName_omeka_s"])
-        update_item_value(built_item, "tei:correspSentPlace", json["correspSentPlace_omeka_s"], datatype="geography")
+        update_item_value(built_item, "tei:correspSentPlace", json["correspSentPlace_omeka_s"])
         #TODO convert to datatype="numeric:timestamp"?
-        update_item_value(built_item, "tei:correspSentDate", json["correspSentDate_omeka_s"])
+        update_item_value(built_item, "tei:correspSentDate", json["correspSentDate_omeka_s"], datatype="numeric:timestamp")
         update_item_value(built_item, "tei:correspDeliveredName", json["correspDeliveredName_omeka_s"])
         update_item_value(built_item, "tei:correspDeliveredPlace", json["correspDeliveredPlace_omeka_s"])
         #TODO convert to datatype="numeric:timestamp"?
