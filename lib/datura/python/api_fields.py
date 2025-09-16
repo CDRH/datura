@@ -151,7 +151,13 @@ def build_item_dict(json, existing_item):
 
         ##TODO fields not in TEI schema yet, and fields with no corresponding CDRH API field
         #person
+        if json["person"]:
+            person_names = [person['name'] for person in json["person"] if 'name' in person]
+            update_item_value(built_item, "foaf:name", person_names)
         #spatial
+        if json["spatial"]:
+            place_names = [place['short_name'] for place in json["spatial"] if 'short_name' in place]
+            update_item_value(built_item, "dh:spatial_short_name", place_names)
         #event
         #correspondence
         update_item_value(built_item, "tei:correspSentName", json["correspSentName_omeka_s"])
