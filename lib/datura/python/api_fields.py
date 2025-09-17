@@ -117,27 +117,27 @@ def build_item_dict(json, existing_item):
             update_item_value(built_item, "dcterms:source", json["has_source"]["title"])
         except:
             pass
-        #has_part
-        try:
-            part_ids = [part['id'] for part in json["has_part"]]
-            update_item_value(built_item, "dcterms:hasPart", part_ids)
-        except:
-            pass
-        #is_part_of
-        try:
-            update_item_value(built_item, "dcterms:isPartOf", json["is_part_of"]["id"])
-        except:
-            pass
-        #previous
-        try:
-            update_item_value(built_item, "dh:orderPrev", json["previous_item"]["id"])
-        except:
-            pass
-        #next
-        try:
-            update_item_value(built_item, "dh:orderNext", json["next_item"]["id"])
-        except:
-            pass
+        # #has_part
+        # try:
+        #     part_ids = [part['id'] for part in json["has_part"]]
+        #     update_item_value(built_item, "dcterms:hasPart", part_ids)
+        # except:
+        #     pass
+        # #is_part_of
+        # try:
+        #     update_item_value(built_item, "dcterms:isPartOf", json["is_part_of"]["id"])
+        # except:
+        #     pass
+        # #previous
+        # try:
+        #     update_item_value(built_item, "dh:orderPrev", json["previous_item"]["id"])
+        # except:
+        #     pass
+        # #next
+        # try:
+        #     update_item_value(built_item, "dh:orderNext", json["next_item"]["id"])
+        # except:
+        #     pass
         #medium
         update_item_value(built_item, "dcterms:medium", json["medium"])
         #extent
@@ -168,8 +168,8 @@ def build_item_dict(json, existing_item):
         update_item_value(built_item, "tei:correspDeliveredPlace", json["correspDeliveredPlace_omeka_s"])
         #TODO convert to datatype="numeric:timestamp"?
         update_item_value(built_item, "tei:correspDeliveredDate", json["correspDeliveredDate_omeka_s"], datatype="numeric:timestamp")
-        update_item_value(built_item, "tei:correspNext", json["correspNext_omeka_s"])
-        update_item_value(built_item, "tei:correspPrev", json["correspPrev_omeka_s"])
+        # update_item_value(built_item, "tei:correspNext", json["correspNext_omeka_s"])
+        # update_item_value(built_item, "tei:correspPrev", json["correspPrev_omeka_s"])
         #editor
         #date created
         #sponsor
@@ -192,34 +192,31 @@ def build_item_dict(json, existing_item):
         breakpoint()
 
 #TODO change item linking for JSON and new API
-def link_item(row, existing_item):
-    pass
-#     cdrh_news_ids = get_matching_ids_from_markdown(row, "news item roles")
-#     if cdrh_news_ids:
-#         link_item_record(existing_item, "foaf:isPrimaryTopicOf", cdrh_news_ids)
-#     cdrh_event_ids = get_matching_ids_from_markdown(row, "events")
-#     if cdrh_event_ids:
-#         link_item_record(existing_item, "dcterms:isReferencedBy", cdrh_event_ids)
-#     cdrh_work_ids = get_matching_ids_from_markdown(row, "work roles")
-#     if cdrh_work_ids:
-#         link_item_record(existing_item, "foaf:made", cdrh_work_ids)
-#     cdrh_person_ids = get_matching_ids_from_markdown(row, "related-people")
-#     if cdrh_person_ids:
-#         link_item_record(existing_item, "dcterms:relation", cdrh_person_ids)
-#     cdrh_commentary_ids = get_matching_ids_from_markdown(row, "commentaries_relation")
-#     if cdrh_commentary_ids:
-#         link_item_record(existing_item, "foaf:depiction", cdrh_commentary_ids)
-#     if row["Unique ID"]:
-#           link_item_record(existing_item, "dcterms:references", [row["Unique ID"]])
-#     if row["University Omeka ID"]:
-#         link_item_record(existing_item, "foaf:maker", json.loads(row["University Omeka ID"]), filter_property="o:id")
-#     if row["Place of Birth Omeka ID"]:
-#         #look up place name
-#         link_item_record(existing_item, "geo:location", json.loads(row["Place of Birth Omeka ID"]), filter_property="o:id")
-#     item_set_id = get_ids_from_tags("[\"Poets in the News\"]")
-#     existing_item["o:item_set"] = item_set_id
-#     link_item_record(existing_item, "dcterms:type", item_set_id, item_set=True)
-#     return existing_item
+def link_item(json_item, existing_item):
+    #has_part
+    try:
+        part_ids = [part['id'] for part in json_item["has_part"]]
+        link_item_record(existing_item, "dcterms:hasPart", part_ids)
+    except:
+        pass
+    #is_part_of
+    try:
+        link_item_record(existing_item, "dcterms:isPartOf", json_item["is_part_of"]["id"])
+    except:
+        pass
+    #previous
+    try:
+        link_item_record(existing_item, "dh:orderPrev", json_item["previous_item"]["id"])
+    except:
+        pass
+    #next
+    try:
+        link_item_record(existing_item, "dh:orderNext", json_item["next_item"]["id"])
+    except:
+        pass
+    link_item_record(existing_item, "tei:correspNext", json_item["correspNext_omeka_s"])
+    link_item_record(existing_item, "tei:correspPrev", json_item["correspPrev_omeka_s"])
+    return existing_item
 #     # need to get matching item TODO add conditional logic for blank entries
 #     # update_item_value(built_item, "foaf:maker", row["University Omeka ID (from [universities]) (from educations [join])"])
 
@@ -281,12 +278,12 @@ def update_item_value(item, key, value, datatype="literal"):
                     item[key][i]['@value'] = v
                 # otherwise, prepare value and append it
                 except IndexError:
-                    prop_id = omeka.omeka.get_property_id(key)
+                    prop_id = omeka.omeka_auth.get_property_id(key)
                     prop_value = {
                         "value": v,
                         "type": type
                     }
-                    formatted = omeka.omeka.prepare_property_value(prop_value, prop_id)
+                    formatted = omeka.omeka_auth.prepare_property_value(prop_value, prop_id)
                     item[key].append(formatted)
     return item
 
@@ -355,18 +352,20 @@ def get_matching_names_from_markdown(row, field):
             
 
 def get_omeka_ids(lookup_values, filter_property):
-    #lookup_values are usually a list of cdrh_ids, but may be another value
     omeka_ids = []
+    #lookup_values are usually a list of cdrh_ids, but may be another value
+    lookup_values = [lookup_values] if not isinstance(lookup_values, list) else lookup_values
     for lookup_value in lookup_values:
-        if lookup_value == '':
+        if not lookup_value or lookup_value == '':
             continue
         if filter_property == "o:id":
             omeka_ids.append(int(lookup_value))
         else:
-            match = omeka.omeka.filter_items_by_property(filter_property = filter_property, filter_value = lookup_value)
+            match = omeka.omeka_auth.filter_items_by_property(filter_property = filter_property, filter_value = lookup_value)
             if match["total_results"] >= 1:
                 if match["total_results"] > 1:
                     print(f"warning: multiple matches for {lookup_value}, taking first match")
+                    breakpoint()
                 omeka_id = match['results'][0]["o:id"]
                 omeka_ids.append(omeka_id)
             else:
@@ -379,7 +378,7 @@ def link_item_record(item, key, values, item_set=False, filter_property = "dcter
     omeka_ids = values if item_set else get_omeka_ids(values, filter_property)
     #dedupe
     omeka_ids = list(dict.fromkeys(omeka_ids))
-    prop_id = omeka.omeka.get_property_id(key)
+    prop_id = omeka.omeka_auth.get_property_id(key)
     #if not key in item:
     #changing to always clear items
     item[key] = []
@@ -403,7 +402,7 @@ def link_item_record(item, key, values, item_set=False, filter_property = "dcter
                 "type": resource_type,
                 "value": omeka_id
             }
-            formatted = omeka.omeka.prepare_property_value(prop_value, prop_id)
+            formatted = omeka.omeka_auth.prepare_property_value(prop_value, prop_id)
             #different format for item sets, plugin doesn't do it automatically
             if item_set:
                 formatted['@id'] = f'{omeka.omeka_auth.api_url}/item_sets/{omeka_id}'
