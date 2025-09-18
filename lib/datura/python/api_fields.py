@@ -156,18 +156,40 @@ def build_item_dict(json, existing_item):
             update_item_value(built_item, "foaf:name", person_names)
         #spatial
         if json["spatial"]:
-            place_names = [place['short_name'] for place in json["spatial"] if 'short_name' in place]
-            update_item_value(built_item, "dh:spatial_short_name", place_names)
+            places = json["spatial"] if isinstance(json["spatial"], list) else [json["spatial"]]
+            try:
+                place_names = [place['short_name'] for place in places if 'short_name' in place]
+                update_item_value(built_item, "dh:spatial_short_name", place_names)
+            except:
+                pass
         #event
         #correspondence
-        update_item_value(built_item, "tei:correspSentName", json["correspSentName_omeka_s"])
-        update_item_value(built_item, "tei:correspSentPlace", json["correspSentPlace_omeka_s"])
+        try:
+            update_item_value(built_item, "tei:correspSentName", json["correspSentName_omeka_s"])
+        except:
+            pass
+        try:
+            update_item_value(built_item, "tei:correspSentPlace", json["correspSentPlace_omeka_s"])
+        except:
+            pass
         #TODO convert to datatype="numeric:timestamp"?
-        update_item_value(built_item, "tei:correspSentDate", json["correspSentDate_omeka_s"], datatype="numeric:timestamp")
-        update_item_value(built_item, "tei:correspDeliveredName", json["correspDeliveredName_omeka_s"])
-        update_item_value(built_item, "tei:correspDeliveredPlace", json["correspDeliveredPlace_omeka_s"])
+        try:
+            update_item_value(built_item, "tei:correspSentDate", json["correspSentDate_omeka_s"], datatype="numeric:timestamp")
+        except:
+            pass
+        try:
+            update_item_value(built_item, "tei:correspDeliveredName", json["correspDeliveredName_omeka_s"])
+        except:
+            pass
+        try:
+            update_item_value(built_item, "tei:correspDeliveredPlace", json["correspDeliveredPlace_omeka_s"])
+        except:
+            pass
         #TODO convert to datatype="numeric:timestamp"?
-        update_item_value(built_item, "tei:correspDeliveredDate", json["correspDeliveredDate_omeka_s"], datatype="numeric:timestamp")
+        try:
+            update_item_value(built_item, "tei:correspDeliveredDate", json["correspDeliveredDate_omeka_s"], datatype="numeric:timestamp")
+        except:
+            pass
         # update_item_value(built_item, "tei:correspNext", json["correspNext_omeka_s"])
         # update_item_value(built_item, "tei:correspPrev", json["correspPrev_omeka_s"])
         #editor
@@ -177,11 +199,20 @@ def build_item_dict(json, existing_item):
         #addr line
         #license
         #distributor
-        update_item_value(built_item, "tei:distributor", json["distributor_omeka_s"])
+        try:
+            update_item_value(built_item, "tei:distributor", json["distributor_omeka_s"])
+        except:
+            pass
         #authority
-        update_item_value(built_item, "tei:authority", json["authority_omeka_s"])
+        try:
+            update_item_value(built_item, "tei:authority", json["authority_omeka_s"])
+        except:
+            pass
         #file notes
-        update_item_value(built_item, "tei:biblNote", json["biblNote_omeka_s"])
+        try:
+            update_item_value(built_item, "tei:biblNote", json["biblNote_omeka_s"])
+        except:
+            pass
         #annotations_text
         update_item_value(built_item, "dh:annotationsText", json["annotations_text"])
         #text_field
@@ -214,8 +245,14 @@ def link_item(json_item, existing_item):
         link_item_record(existing_item, "dh:orderNext", json_item["next_item"]["id"])
     except:
         pass
-    link_item_record(existing_item, "tei:correspNext", json_item["correspNext_omeka_s"])
-    link_item_record(existing_item, "tei:correspPrev", json_item["correspPrev_omeka_s"])
+    try:
+        link_item_record(existing_item, "tei:correspNext", json_item["correspNext_omeka_s"])
+    except:
+        pass
+    try:
+        link_item_record(existing_item, "tei:correspPrev", json_item["correspPrev_omeka_s"])
+    except:
+        pass
     return existing_item
 #     # need to get matching item TODO add conditional logic for blank entries
 #     # update_item_value(built_item, "foaf:maker", row["University Omeka ID (from [universities]) (from educations [join])"])
