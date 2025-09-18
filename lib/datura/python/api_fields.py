@@ -224,6 +224,7 @@ def build_item_dict(json, existing_item):
 
 #TODO change item linking for JSON and new API
 def link_item(json_item, existing_item):
+
     #has_part
     try:
         part_ids = [part['id'] for part in json_item["has_part"]]
@@ -233,6 +234,11 @@ def link_item(json_item, existing_item):
     #is_part_of
     try:
         link_item_record(existing_item, "dcterms:isPartOf", json_item["is_part_of"]["id"])
+    except:
+        pass
+    #has_relation
+    try:
+        link_item_record(existing_item, "dcterms:relation", json_item["has_relation"]["id"])
     except:
         pass
     #previous
