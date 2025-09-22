@@ -15,6 +15,8 @@ for path in pathlist:
     with open(filename) as jsonfile:
         json_items = json.load(jsonfile)
         for json_item in json_items:
+            if not json_item["identifier"]:
+                continue
             matching_items = omeka.omeka_auth.filter_items_by_property(filter_property = "dcterms:identifier", filter_value = json_item["identifier"])
             if matching_items:
                 if matching_items["total_results"] == 1:
