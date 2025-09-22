@@ -57,14 +57,14 @@ def add_media_to_item(item_id, media_file, payload={}, template_id=None, class_i
     # Make sure path is a Path object
     path = Path(media_file)
     if isinstance(payload, str):
-        payload = omeka.omeka.prepare_item_payload({'dcterms:title': [payload]})
+        payload = omeka.omeka_auth.prepare_item_payload({'dcterms:title': [payload]})
     if template_id:
-        payload['o:resource_template'] = omeka.omeka.format_resource_id(template_id, 'resource_templates')
+        payload['o:resource_template'] = omeka.omeka_auth.format_resource_id(template_id, 'resource_templates')
         if not class_id:
-            template = omeka.omeka.get_resource_by_id(template_id, 'resource_templates')
+            template = omeka.omeka_auth.get_resource_by_id(template_id, 'resource_templates')
             class_id = template['o:resource_class']['o:id']
     if class_id:
-        payload['o:resource_class'] = omeka.omeka.format_resource_id(class_id, 'resource_classes')
+        payload['o:resource_class'] = omeka.omeka_auth.format_resource_id(class_id, 'resource_classes')
     #add option to change ingester
     ingester = payload["o:ingester"] if payload["o:ingester"] else "upload"
     file_data = {
@@ -76,7 +76,7 @@ def add_media_to_item(item_id, media_file, payload={}, template_id=None, class_i
     payload.update(file_data)
     files[f'file[0]'] = path.read_bytes()
     files['data'] = (None, json.dumps(payload), 'application/json')
-    response = omeka_auth.s.post(f'{omeka.api_url}/media', files=files, params=omeka_auth.params)
+    response = omeka_auth.s.post(f'{omeka_auth.api_url}/media', files=files, params=omeka_auth.params)
     data = omeka_auth.process_response(response)
     return data
 
