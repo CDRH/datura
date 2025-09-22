@@ -29,14 +29,13 @@ for path in pathlist:
                 else:
                     print("no matching items for " + json_item["identifier"] + ", skipping")
                     continue
-                # if len(matching_item["o:media"]) >= 1:
-                #     #delete existing media items
-                #     # TODO add attached media item
-                #     for media_item in matching_item["o:media"]:
-                #         try:
-                #             omeka.omeka_auth.delete_resource(media_item["o:id"], "media")
-                #         except:
-                #             print("error deleting media item")
+                if len(matching_item["o:media"]) >= 1:
+                    #delete existing media items
+                    for media_item in matching_item["o:media"]:
+                        try:
+                            omeka.omeka_auth.delete_resource(media_item["o:id"], "media")
+                        except:
+                            print("error deleting media item")
                 #get desired path
                 file_path = f"{html_dir}/{json_item["identifier"]}.html"
                 # get data from html
