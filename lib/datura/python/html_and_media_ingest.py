@@ -7,6 +7,7 @@ import json
 #look for the output folder: /output/development/es
 json_dir = omeka.get_dir("output/development/es")
 pathlist = list(Path(json_dir).glob('**/*.json'))
+html_dir = omeka.get_dir("output/development/html")
 
 #iterate through each file
 for path in pathlist:
@@ -32,8 +33,8 @@ for path in pathlist:
                 #             omeka.omeka_auth.delete_resource(media_item["o:id"], "media")
                 #         except:
                 #             print("error deleting media item")
-                # get desired path
-                file_path = f"source/html/{row["identifier"]}.html"
+                #get desired path
+                file_path = f"{html_dir}/{json_item["identifier"]}.html"
                 # get data from html
                 with open(file_path, "r") as file:
                     html_content = file.read()
