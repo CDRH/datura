@@ -3,6 +3,8 @@ import omeka
 import markdown # may not be necessary
 from pathlib import Path
 import json
+import sys
+import traceback
 
 #look for the output folder: /output/development/es
 json_dir = omeka.get_dir("output/development/es")
