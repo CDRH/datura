@@ -1,6 +1,6 @@
 ## DRAFT instructions for posting data into Omeka API
 
-This is a work in progress and the `post_omeka` script currently does not work to post to the API
+This script is a work in progress.
 
 Running the `post_omeka` script will run the Datura scripts to generate a JSON file with all the API fields (this is what is normally sent to Elasticsearch when you run `post`). This first step is equivalent to running to running `post -x es -o -t` It then sends the generated to the Omeka Python scripts.
 
