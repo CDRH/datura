@@ -33,58 +33,58 @@ def build_item_dict(json, existing_item):
         #TODO is citation always single-valued? if array might need to add code to deal with that
         try:
             update_item_value(built_item, "dcterms:publisher", json["citation"]["publisher"])
-        except:
+        except Exception:
             pass
         #citation.id
         try:
             #not working, currently
             update_item_value(built_item, "dh:biblID", json["citation"]["id"])
-        except:
+        except Exception:
             pass
         #citation.date TODO will also use dcterms:date
         #citation.title
         try:
             update_item_value(built_item, "tei:biblTitle", json["citation"]["title"])
-        except:
+        except Exception:
             pass
         #citation.pubplace
         try:
             update_item_value(built_item, "tei:biblPubPlace", json["citation"]["pubplace"])
-        except:
+        except Exception:
             pass
         #citation.issue
         try:
             update_item_value(built_item, "bibo:issue", json["citation"]["issue"])
-        except:
+        except Exception:
             pass
         try:
             update_item_value(built_item, "bibo:pageStart", json["citation"]["page_start"])
-        except:
+        except Exception:
             pass
         try:
             update_item_value(built_item, "bibo:pageEnd", json["citation"]["page_end"])
-        except:
+        except Exception:
             pass
         try:
             update_item_value(built_item, "bibo:section", json["citation"]["section"])
-        except:
+        except Exception:
             pass
         try:
             update_item_value(built_item, "bibo:volume", json["citation"]["volume"])  
-        except:
+        except Exception:
             pass      
         #citation.title variants
         try:
             update_item_value(built_item, "tei:biblTitleA", json["citation"]["title_a"])
-        except:
+        except Exception:
             pass
         try:
             update_item_value(built_item, "tei:biblTitleM", json["citation"]["title_m"])
-        except:
+        except Exception:
             pass
         try:
             update_item_value(built_item, "tei:biblTitleJ", json["citation"]["title_j"])
-        except:
+        except Exception:
             pass
         update_item_value(built_item, "dcterms:rightsHolder", json["rights_holder"])
         update_item_value(built_item, "dcterms:license", json["rights"])
@@ -115,28 +115,28 @@ def build_item_dict(json, existing_item):
         #     update_item_value(built_item, "tei:sourceID", json["has_source"]["id"])
         try:
             update_item_value(built_item, "dcterms:source", json["has_source"]["title"])
-        except:
+        except Exception:
             pass
         # #has_part
         # try:
         #     part_ids = [part['id'] for part in json["has_part"]]
         #     update_item_value(built_item, "dcterms:hasPart", part_ids)
-        # except:
+        # except Exception:
         #     pass
         # #is_part_of
         # try:
         #     update_item_value(built_item, "dcterms:isPartOf", json["is_part_of"]["id"])
-        # except:
+        # except Exception:
         #     pass
         # #previous
         # try:
         #     update_item_value(built_item, "dh:orderPrev", json["previous_item"]["id"])
-        # except:
+        # except Exception:
         #     pass
         # #next
         # try:
         #     update_item_value(built_item, "dh:orderNext", json["next_item"]["id"])
-        # except:
+        # except Exception:
         #     pass
         #medium
         update_item_value(built_item, "dcterms:medium", json["medium"])
@@ -160,35 +160,35 @@ def build_item_dict(json, existing_item):
             try:
                 place_names = [place['short_name'] for place in places if 'short_name' in place]
                 update_item_value(built_item, "dh:spatial_short_name", place_names)
-            except:
+            except Exception:
                 pass
         #event
         #correspondence
         try:
             update_item_value(built_item, "tei:correspSentName", json["correspSentName_omeka_s"])
-        except:
+        except Exception:
             pass
         try:
             update_item_value(built_item, "tei:correspSentPlace", json["correspSentPlace_omeka_s"])
-        except:
+        except Exception:
             pass
         #TODO convert to datatype="numeric:timestamp"?
         try:
             update_item_value(built_item, "tei:correspSentDate", json["correspSentDate_omeka_s"], datatype="numeric:timestamp")
-        except:
+        except Exception:
             pass
         try:
             update_item_value(built_item, "tei:correspDeliveredName", json["correspDeliveredName_omeka_s"])
-        except:
+        except Exception:
             pass
         try:
             update_item_value(built_item, "tei:correspDeliveredPlace", json["correspDeliveredPlace_omeka_s"])
-        except:
+        except Exception:
             pass
         #TODO convert to datatype="numeric:timestamp"?
         try:
-            update_item_value(built_item, "tei:correspDeliveredDate", json["correspDeliveredDate_omeka_s"], datatype="numeric:timestamp")
-        except:
+            update_item_value(built_item, "tei:correspDeliveredDate", json["correspDeliveredDate_omeka_s"])
+        except Exception:
             pass
         # update_item_value(built_item, "tei:correspNext", json["correspNext_omeka_s"])
         # update_item_value(built_item, "tei:correspPrev", json["correspPrev_omeka_s"])
@@ -201,17 +201,17 @@ def build_item_dict(json, existing_item):
         #distributor
         try:
             update_item_value(built_item, "tei:distributor", json["distributor_omeka_s"])
-        except:
+        except Exception:
             pass
         #authority
         try:
             update_item_value(built_item, "tei:authority", json["authority_omeka_s"])
-        except:
+        except Exception:
             pass
         #file notes
         try:
             update_item_value(built_item, "tei:biblNote", json["biblNote_omeka_s"])
-        except:
+        except Exception:
             pass
         #annotations_text
         update_item_value(built_item, "dh:annotationsText", json["annotations_text"])
@@ -229,35 +229,35 @@ def link_item(json_item, existing_item):
     try:
         part_ids = [part['id'] for part in json_item["has_part"]]
         link_item_record(existing_item, "dcterms:hasPart", part_ids)
-    except:
+    except Exception:
         pass
     #is_part_of
     try:
         link_item_record(existing_item, "dcterms:isPartOf", json_item["is_part_of"]["id"])
-    except:
+    except Exception:
         pass
     #has_relation
     try:
         link_item_record(existing_item, "dcterms:relation", json_item["has_relation"]["id"])
-    except:
+    except Exception:
         pass
     #previous
     try:
         link_item_record(existing_item, "dh:orderPrev", json_item["previous_item"]["id"])
-    except:
+    except Exception:
         pass
     #next
     try:
         link_item_record(existing_item, "dh:orderNext", json_item["next_item"]["id"])
-    except:
+    except Exception:
         pass
     try:
         link_item_record(existing_item, "tei:correspNext", json_item["correspNext_omeka_s"])
-    except:
+    except Exception:
         pass
     try:
         link_item_record(existing_item, "tei:correspPrev", json_item["correspPrev_omeka_s"])
-    except:
+    except Exception:
         pass
     return existing_item
 #     # need to get matching item TODO add conditional logic for blank entries
