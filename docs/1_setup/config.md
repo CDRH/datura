@@ -6,15 +6,17 @@ Open up the `config/public.yml` file in your new collection and add or change th
 
 ```yaml
 default:
+  api_version: "2.0"
   collection:
-  es_index
-  es_path
-  es_user
-  es_password
+  es_index:
+  es_path:
 ```
-(The options es_user and es_password are needed if you are using a secured Elasticsearch index.)
+
+api_version is required with the new API schema, please specify "2.0", or "1.0" if using with a legacy repository that uses the old fields.
 
 If there are any settings which must be different based on the local environment (your computer vs the server), place these in `config/private.yml`.
+
+The options `es_user` and `es_password` are needed if you are using a secured Elasticsearch index, but should only be added to `config/private.yml` files.
 
 To see all the options for a specific environment, run:
 
@@ -118,7 +120,11 @@ Also, you may want to run something on localhost from your computer, but point i
 
 Some stuff commonly in `private.yml`:
 
-- `threads: 5` (5 recommended for PC, 50 for powerful servers)
+- `threads: 2`
+  - 2 for most CDRH servers so on-demand processing not slowed down
+  - 5 for most work desktops/laptops
+    - Guide to find your CPU core count: https://www.techbloat.com/how-many-cores-does-my-cpu-have-a-guide-for-all-os.html
+      - For fastest processing, tru using all but one or two available cores
 - `es_path: http://localhost:9200`
 - `es_index: some_index`
 - `es_user: elastic` (if you want to use security on your local elasticsearch instance)
