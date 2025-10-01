@@ -227,7 +227,7 @@ class HtmlToEs < XmlToEs
   # new/moved fields for API 2.0
 
   def cover_image
-    if @xpaths["image_id"]
+    if @xpaths["image_id"] && get_list(@xpaths["image_id"])
       get_list(@xpaths["image_id"]).first
     end
   end
