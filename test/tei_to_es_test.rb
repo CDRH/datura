@@ -40,18 +40,17 @@ class TeiToEsTest < Minitest::Test
     assert_equal "late 1865 (?)", whitman["date_display"]
     assert_equal "1865-12-31", whitman["date_not_after"]
     assert_equal "1865-07-01", whitman["date_not_before"]
-    # source
-    # note that source has been replaced by has_source 
-    source = {"title"=>"Track and stable talk, Aberdeen, South Dakota, 1888-02-24"}
-    assert_equal source, cody["has_source"]
+    # has_source
+    has_source = {"title"=>"Track and stable talk, Aberdeen, South Dakota, 1888-02-24"}
+    assert_equal has_source, cody["has_source"]
 
-    source = {"title"=>"Neihardt, John Gneisenau, 1881-1973, Letter from John G. Neihardt to Julius T. House, 1927-11-05"}
-    assert_equal source, neihardt["has_source"]
+    has_source = {"title"=>"Neihardt, John Gneisenau, 1881-1973, Letter from John G. Neihardt to Julius T. House, 1927-11-05"}
+    assert_equal has_source, neihardt["has_source"]
 
     # # NOTE: this document does have publisher information in the biblStruct and will
     # # need to override the default xpaths to obtain that information for the source field
-    source = {"title"=>"Walt Whitman, Walt Whitman to a Soldier, late 1865 (?)"}
-    assert_equal source, whitman["has_source"]
+    has_source = {"title"=>"Walt Whitman, Walt Whitman to a Soldier, late 1865 (?)"}
+    assert_equal has_source, whitman["has_source"]
 
   end
 end
