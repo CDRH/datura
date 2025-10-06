@@ -5,10 +5,10 @@ import api_fields
 import copy
 import json
 from pathlib import Path
+#needed for debugging purposes
 import sys
 import traceback
 
-        
 #look for the output folder: /output/development/es
 json_dir = omeka.get_dir("output/development/es")
 pathlist = list(Path(json_dir).glob('**/*.json'))
@@ -32,7 +32,10 @@ for path in pathlist:
                     item_to_update = copy.deepcopy(matching_items["results"][0])
                     updated_item = api_fields.prepare_item(json_item, item_to_update)
                     if updated_item:
-                        omeka.omeka_auth.update_resource(updated_item, "items")
+                        try:
+                            omeka.omeka_auth.update_resource(updated_item, "items")
+                        except Exception as err:
+                            breakpoint()
                 elif matching_items["total_results"] == 0:
                     new_item = api_fields.prepare_item(json_item)
                     
@@ -41,7 +44,10 @@ for path in pathlist:
                         payload = omeka.omeka_auth.prepare_item_payload_using_template(new_item, template_number)
                         # add item set TODO how can this be done conditionally, with environments or user-provided options?
                         item_set_id = 56611 # id for SOH-Development, will remove hard coding later
-                        omeka.omeka_auth.add_item(payload, template_id=template_number, item_set_id=item_set_id)
+                        try:
+                            omeka.omeka_auth.add_item(payload, template_id=template_number, item_set_id=item_set_id)
+                        except Exception:
+                            breakpoint()
                     else:
                         print(f"error preparingg item {json_item["identifier"]}")
                 #if multiple matches, warn but don't ingest
@@ -67,7 +73,8 @@ for path in pathlist:
                 linked_item = api_fields.link_records(json_item, item_to_link)
                 try:
                     omeka.omeka_auth.update_resource(linked_item, "items")
-                except:
+                except Exception as err:
+                    print str(err)
                     print(f"Error updating item {item_id}")
                     pass
             else:
