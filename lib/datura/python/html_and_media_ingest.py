@@ -38,8 +38,12 @@ for path in pathlist:
                         try:
                             print("deleting media item " + str(media_item["o:id"]))
                             omeka.omeka_auth.delete_resource(media_item["o:id"], "media")
-                        except:
-                            print("error deleting media item")
+                        except HTTPError as err:
+                            if err.response.status_code == 500:
+                                continue
+                            else:
+                                print("error deleting media item: " + str(err))
+                                raise
                 ## IIIF THUMBNAIL INGEST
                 # note that thumbnail ingest should be done first so that thumbnails are designated primary_media
 
