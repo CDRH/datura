@@ -325,7 +325,7 @@ def update_item_value(item, key, value, datatype="literal"):
                     prop_id = omeka.omeka_auth.get_property_id(key)
                     prop_value = {
                         "value": v,
-                        "type": type
+                        "type": datatype
                     }
                     formatted = omeka.omeka_auth.prepare_property_value(prop_value, prop_id)
                     item[key].append(formatted)
