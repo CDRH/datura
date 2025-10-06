@@ -23,6 +23,8 @@ class TeiToEs < XmlToEs
     creators = get_list(@xpaths["creator"])
     if creators
       creators.map { |c| { "name" => Datura::Helpers.normalize_space(c) } }
+    else
+      []
     end
   end
 
@@ -359,12 +361,11 @@ class TeiToEs < XmlToEs
     # nested
   end
   
-  def rdf
-    # nested
-  end
-
   def has_source
     # nested
+    {
+      "title" => source
+    }
   end
 
   def has_relation

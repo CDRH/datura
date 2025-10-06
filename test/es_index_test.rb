@@ -12,11 +12,19 @@ class Datura::ElasticsearchIndexTest < Minitest::Test
     )
   }
 
-  # stub in get_schema so that we can test get_schema_mapping without
-  # worrying about integration with actual index
+  # Stub get_schema instance method by storing the original, undefining,
+  # and redefining it before each test is performed to avoi
+  # method redefined warnings and use fixture data JSON rather than
+  # relying on a real request to an Elasticsearch index
+  attr_accessor :orig_get_schema
 
-  class Datura::Elasticsearch::Index
-    def get_schema
+  def setup
+    super
+
+    self.orig_get_schema = Datura::Elasticsearch::Index.instance_method(:get_schema)
+
+    Datura::Elasticsearch::Index.send(:undef_method, :get_schema)
+    Datura::Elasticsearch::Index.define_method(:get_schema) do
       raw = File.read(
         File.join(
           File.expand_path(File.dirname(__FILE__)),
@@ -25,6 +33,15 @@ class Datura::ElasticsearchIndexTest < Minitest::Test
       )
       JSON.parse(raw)
     end
+  end
+
+  # Undefine and restore the original get_schema instance method
+  # after each test is performed to avoid method redefined warnings
+  def teardown
+    super
+
+    Datura::Elasticsearch::Index.send(:undef_method, :get_schema)
+    Datura::Elasticsearch::Index.define_method(:get_schema, orig_get_schema)
   end
 
   def test_initialize
@@ -44,9 +61,9 @@ class Datura::ElasticsearchIndexTest < Minitest::Test
     es = Datura::Elasticsearch::Index.new(@@options)
     es.get_schema_mapping
     assert es.schema_mapping["fields"]
-    assert_equal 46, es.schema_mapping["fields"].length
+    assert_equal 60, es.schema_mapping["fields"].length
     assert_equal(
-      /^.*_d$|^.*_i$|^.*_k$|^.*_n$|^.*_t$|^.*_t_en$|^.*_t_es$/,
+      /^(?:.*_d|.*_i|.*_k|.*_n|.*_t|.*_t_en|.*_t_es)$/,
       es.schema_mapping["dynamic"]
     )
   end
@@ -76,7 +93,7 @@ class Datura::ElasticsearchIndexTest < Minitest::Test
     assert es.valid_document?({
       "creator" => [
         {
-          "subcategory" => "a",
+          "category2" => "a",
           "data_type" => "a",
           "keyword_k" => "a"
         }
@@ -90,6 +107,10 @@ class Datura::ElasticsearchIndexTest < Minitest::Test
     assert es.valid_document?({ "new_field_t" => "a" })
     assert es.valid_document?({ "new_field_t_en" => "a" })
     assert es.valid_document?({ "new_field_t_es" => "a" })
+
+    # Suppress invalid field warnings for following tests
+    orig_stdout = $stdout.clone
+    $stdout.reopen File.new('/dev/null', 'w')
 
     # test failures of basic and dynamic fields
     refute es.valid_document?({ "bad_field" => "a" })
@@ -125,6 +146,9 @@ class Datura::ElasticsearchIndexTest < Minitest::Test
       "keyword_k" => "a",
       "bad_field" => "a"
     })
+
+    # Restore stdout after tests with invalid field warnings
+    $stdout.reopen orig_stdout
   end
 
 end

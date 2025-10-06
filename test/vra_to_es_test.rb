@@ -7,7 +7,7 @@ class VraToEsTest < Minitest::Test
 
   def test_assemble_json
     json = @cody.assemble_json
-    assert_equal 42, json.length
+    assert_equal 58, json.length
     assert_equal "wfc.img.pho.69.236.82", json["identifier"]
   end
 
@@ -22,8 +22,8 @@ class VraToEsTest < Minitest::Test
     assert_equal keywords, json["keywords"]
 
     people = [
-      {id: nil, name: "Käsebier, Gertrude, 1852-1934", role: "photographer"},
-      {id: nil, name: "Spotted Horse, Willie", role: nil}
+      {"id" => nil, "name" => "Käsebier, Gertrude, 1852-1934", "role" => "photographer"},
+      {"id" => nil, "name" => "Spotted Horse, Willie", "role" => nil}
     ]
     assert_equal people, json["person"]
   end

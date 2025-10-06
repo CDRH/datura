@@ -10,7 +10,7 @@ class TeiToEsTest < Minitest::Test
 
   def test_assemble_json
     json = @neihardt.assemble_json
-    assert_equal 42, json.length
+    assert_equal 58, json.length
     assert_equal "nei.j4c.12.52", json["identifier"]
   end
 
@@ -26,11 +26,11 @@ class TeiToEsTest < Minitest::Test
     creator = [{"name"=>"Neihardt, John Gneisenau, 1881-1973"}]
     assert_equal creator, neihardt["creator"]
 
-    contributor = [{"id"=>"lkw", "name"=>"Weakly, Laura K.", "role"=>""},
-      {"id"=>"swa", "name"=>"Adrales, Samantha W.", "role"=>""},
-      {"id"=>"az", "name"=>"Zeljkovic, Arman", "role"=>""},
-      {"id"=>"ep", "name"=>"Pedigo, Erin", "role"=>""},
-      {"id"=>"", "name"=>"Gossin, Pamela", "role"=>""}
+    contributor = [{"id"=>"lkw", "name"=>"Weakly, Laura K.", "role"=>nil},
+      {"id"=>"swa", "name"=>"Adrales, Samantha W.", "role"=>nil},
+      {"id"=>"az", "name"=>"Zeljkovic, Arman", "role"=>nil},
+      {"id"=>"ep", "name"=>"Pedigo, Erin", "role"=>nil},
+      {"id"=>nil, "name"=>"Gossin, Pamela", "role"=>nil}
     ]
     assert_equal contributor, neihardt["contributor"]
 
@@ -40,18 +40,17 @@ class TeiToEsTest < Minitest::Test
     assert_equal "late 1865 (?)", whitman["date_display"]
     assert_equal "1865-12-31", whitman["date_not_after"]
     assert_equal "1865-07-01", whitman["date_not_before"]
+    # has_source
+    has_source = {"title"=>"Track and stable talk, Aberdeen, South Dakota, 1888-02-24"}
+    assert_equal has_source, cody["has_source"]
 
-    # source
-    source = "Track and stable talk, Aberdeen, South Dakota, 1888-02-24"
-    assert_equal source, cody["source"]
+    has_source = {"title"=>"Neihardt, John Gneisenau, 1881-1973, Letter from John G. Neihardt to Julius T. House, 1927-11-05"}
+    assert_equal has_source, neihardt["has_source"]
 
-    source = "Neihardt, John Gneisenau, 1881-1973, Letter from John G. Neihardt to Julius T. House, 1927-11-05"
-    assert_equal source, neihardt["source"]
-
-    # NOTE: this document does have publisher information in the biblStruct and will
-    # need to override the default xpaths to obtain that information for the source field
-    source = "Walt Whitman, Walt Whitman to a Soldier, late 1865 (?)"
-    assert_equal source, whitman["source"]
+    # # NOTE: this document does have publisher information in the biblStruct and will
+    # # need to override the default xpaths to obtain that information for the source field
+    has_source = {"title"=>"Walt Whitman, Walt Whitman to a Soldier, late 1865 (?)"}
+    assert_equal has_source, whitman["has_source"]
 
   end
 end
