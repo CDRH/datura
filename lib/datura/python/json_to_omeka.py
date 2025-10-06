@@ -74,7 +74,7 @@ for path in pathlist:
                 try:
                     omeka.omeka_auth.update_resource(linked_item, "items")
                 except Exception as err:
-                    print str(err)
+                    print(str(err))
                     print(f"Error updating item {item_id}")
                     pass
             else:
