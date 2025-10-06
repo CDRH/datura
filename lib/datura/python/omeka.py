@@ -1,9 +1,11 @@
-import os
 from pathlib import Path
 import json
 from omeka_s_tools.api import OmekaAPIClient
 import math
 import yaml
+#needed for debugging purposes
+import traceback
+import os
 
 def get_dir(relative_path):
     cwd = Path.cwd()

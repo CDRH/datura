@@ -4,9 +4,9 @@ import api_fields
 
 import copy
 import json
-import markdown
-import os
 from pathlib import Path
+import sys
+import traceback
 
         
 #look for the output folder: /output/development/es

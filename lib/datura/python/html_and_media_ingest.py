@@ -1,12 +1,15 @@
-import csv
 import omeka
-import markdown # may not be necessary
 from pathlib import Path
 import json
+# not used, but needed for debugging
 import sys
 import traceback
+import urllib.request
+from requests.exceptions import HTTPError
+from copy import deepcopy
 
 #look for the output folder: /output/development/es
+#TODO add options for different environments
 json_dir = omeka.get_dir("output/development/es")
 pathlist = list(Path(json_dir).glob('**/*.json'))
 html_dir = omeka.get_dir("output/development/html")
@@ -30,9 +33,9 @@ for path in pathlist:
                     print("no matching items for " + json_item["identifier"] + ", skipping")
                     continue
                 if len(matching_item["o:media"]) >= 1:
-                    #delete existing media items
                     for media_item in matching_item["o:media"]:
                         try:
+                            print("deleting media item " + str(media_item["o:id"]))
                             omeka.omeka_auth.delete_resource(media_item["o:id"], "media")
                         except:
                             print("error deleting media item")
