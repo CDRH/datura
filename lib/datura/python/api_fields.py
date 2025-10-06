@@ -305,6 +305,7 @@ def update_item_value(item, key, value, datatype="literal"):
     elif type(value) == list:
         # make sure values are unique
         value = list(set(value))
+        value = [v for v in value if v is not None] # remove None values
         if key not in item:
             item[key] = []
             for v in value:
