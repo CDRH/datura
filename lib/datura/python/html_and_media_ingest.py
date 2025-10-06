@@ -13,6 +13,7 @@ from copy import deepcopy
 json_dir = omeka.get_dir("output/development/es")
 pathlist = list(Path(json_dir).glob('**/*.json'))
 html_dir = omeka.get_dir("output/development/html")
+iiif_dir = omeka.get_dir("output/development/iiif")
 
 #iterate through each file
 for path in pathlist:
@@ -39,20 +40,62 @@ for path in pathlist:
                             omeka.omeka_auth.delete_resource(media_item["o:id"], "media")
                         except:
                             print("error deleting media item")
+                ## IIIF THUMBNAIL INGEST
+                # note that thumbnail ingest should be done first so that thumbnails are designated primary_media
+
+                collection_name = json_item["collection"]
+                cover_image = json_item["cover_image"]
+                if not cover_image:
+                    continue
+                # download thumbnail from iiif server
+                thumbnail_remote = f"{omeka.config['iiif_server']}/iiif/2/{collection_name}%2F{cover_image}.jpg/full/!200,200/0/default.jpg"
+                thumbnail_local = f"{iiif_dir}/{collection_name}%2F{cover_image}.jpg"
+                try:
+                    print("posting html for matching_ite,["o]")
+                    with open (thumbnail_local, "wb") as thumb_file:
+                        thumb_file.write(urllib.request.urlopen(thumbnail_remote).read())
+                except Exception as err:
+                    print(err)
+                    print(f"error downloading thumbnail for {json_item['identifier']}, omitting")
+                    continue
+                # attach thumbnail to api item
+                try:
+                    with open(thumbnail_local, "rb") as thumb_file:
+                        thumb_data = thumb_file.read()
+                        media_payload = {
+                            "o:is_public": True,
+                            "data": {
+                                "upload": thumbnail_local
+                            },
+                            "o:ingester": "upload"
+                        }
+                    try:
+                        new_media = omeka.add_media_to_item(matching_item["o:id"], thumbnail_local, payload=media_payload)
+                    except Exception as err:
+                        print(err)
+                        print(f"error adding image file for {json_item['identifier']}, omitting")
+                except FileNotFoundError:
+                    print(f"file {thumbnail_local} not found, skipping thumbnail")
+                
+                ## HTML INGEST
+
                 #get desired path
                 file_path = f"{html_dir}/{json_item["identifier"]}.html"
                 # get data from html
-                with open(file_path, "r") as file:
-                    html_content = file.read()
-                media_payload = {
-                    "o:is_public": True,
-                    "data": {
-                        "html": html_content
-                    },
-                    "o:ingester": "html"
-                }
                 try:
-                    omeka.add_media_to_item(matching_item["o:id"], file_path, payload=media_payload)
-                except Exception as err:
-                    print(err)
-                    print(f"error adding html file for {json_item['identifier']}, omitting")
+                    with open(file_path, "r") as file:
+                        html_content = file.read()
+                    media_payload = {
+                        "o:is_public": True,
+                        "data": {
+                            "html": html_content
+                        },
+                        "o:ingester": "html"
+                    }
+                    try:
+                        omeka.add_media_to_item(matching_item["o:id"], file_path, payload=media_payload)
+                    except Exception as err:
+                        print(err)
+                        print(f"error adding html file for {json_item['identifier']}, omitting")
+                except FileNotFoundError:
+                    print(f"file {file_path} not found, skipping item")
