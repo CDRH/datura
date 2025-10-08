@@ -4,7 +4,7 @@ import json
 # not used, but needed for debugging
 import sys
 import traceback
-import urllib.request
+import requests
 from requests.exceptions import HTTPError
 from copy import deepcopy
 
@@ -56,8 +56,10 @@ for path in pathlist:
                 thumbnail_local = f"{iiif_dir}/{collection_name}%2F{cover_image}.jpg"
                 try:
                     print("posting html for matching_ite,["o]")
+                    response = requests.get(thumbnail_remote)
+                    response.raise_for_status()
                     with open (thumbnail_local, "wb") as thumb_file:
-                        thumb_file.write(urllib.request.urlopen(thumbnail_remote).read())
+                        thumb_file.write(response.content)
                 except Exception as err:
                     print(err)
                     print(f"error downloading thumbnail for {json_item['identifier']}, omitting")
