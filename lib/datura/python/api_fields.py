@@ -296,12 +296,7 @@ def update_item_value(item, key, value, datatype="literal"):
             item[key][0]['@value'] = value
         else: 
             #add the key
-            item[key] = [ 
-                {
-                    "value": value,
-                    "type": datatype
-                }
-            ]
+            item = add_formatted_value(item, key, value, datatype)
     elif type(value) == list:
         # make sure values are unique
         value = list(set(value))
@@ -309,12 +304,7 @@ def update_item_value(item, key, value, datatype="literal"):
         if key not in item:
             item[key] = []
             for v in value:
-                item[key].append(
-                    { 
-                        "value": v,
-                        "type": datatype 
-                    }
-                )
+                item = add_formatted_value(item, key, v, datatype)
         else:
             for i, v in enumerate(value):
                 # replace value at the given index, if it exists
@@ -322,16 +312,25 @@ def update_item_value(item, key, value, datatype="literal"):
                     item[key][i]['@value'] = v
                 # otherwise, prepare value and append it
                 except IndexError:
-                    prop_id = omeka.omeka_auth.get_property_id(key)
-                    prop_value = {
-                        "value": v,
-                        "type": datatype
-                    }
-                    formatted = omeka.omeka_auth.prepare_property_value(prop_value, prop_id)
-                    item[key].append(formatted)
+                    item = add_formatted_value(item, key, v, datatype)
     return item
 
-
+def add_formatted_value(item, key, value, datatype):
+    # takes in item, key, value, and datatype, returns item with key set or added to value, and formatted in the format Omeka S
+    # expects as
+    # used when adding a new value that is not already in the Omeka JSON, so that Omeka will properly update the value
+    # this comes up
+    prop_id = omeka.omeka_auth.get_property_id(key)
+    prop_value = {
+        "value": value,
+        "type": datatype
+    }
+    formatted = omeka.omeka_auth.prepare_property_value(prop_value, prop_id)
+    if key in item and type(item[key]) == list:
+        item[key].append(formatted)
+    else:
+        item[key] = [formatted]
+    return item
 
 def get_matching_ids_from_markdown(row, field):
     # takes in an array of strings in markdown format, which include CDRH IDs
