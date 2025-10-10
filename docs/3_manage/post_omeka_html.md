@@ -1,6 +1,6 @@
 ## DRAFT instructions for attaching media to the Omeka S API
 
-This script should be run after running `post_omeka.md`, as it needs the Omeka S API to be populated. Make sure that you have the usual folders for html and iiif output under output/environment. The script generates html through Datura's usual process (i.e. post -x html), and then deletes existing media, and attaches the html file and uploads a thumbnail image
+This script should be run after running `post_omeka.md`, as it needs the Omeka S API to be populated. Make sure that you have the usual Datura folders for html and iiif output under output/environment. The script generates html through Datura's usual process (i.e. post -x html), and then deletes existing media, and attaches the thumbnail image and then the html item. It is intentionally structured in this order
 
 The media payload, set in html_and_media_ingest.py, must be structed in a specific way to add items. It is different in the case of html and iiif images.
 
@@ -40,8 +40,9 @@ For a file upload (i.e. to upload):
 - `json_dir`, `html_id`, and `iiif_dir` are set within the script and correspond to the standard Datura output folders.
 - `iiif_server` should be set within the config/private.yml to the base url of the IIIF server.
 
-### Error you might run into when posting IIIF
-Sometimes it will return error code 422 (unprocessable) or error code 500. These error messages can be investigated in the Omeka S logs found on the admin page. Check them against the Omeka S source code found in GitHub. (Note that the base Omeka code, powering the website, is in PHP).
-- It expects a full URL, not a local file path, in "o:source" which is set when you
+### Error you might run into
+Sometimes it will return error code 422 (unprocessable content) or error code 500. These error messages can be investigated in the Omeka S logs found on the admin page. Check them against the Omeka S source code found in GitHub. (Note that the base Omeka code, powering the website, is in PHP).
+- It expects a full URL, not a local file path, in "o:source" which is set when you post media items.
 - A malformed URL may cause error that are unable to connect. Make sure that it includes slashes in the proper places
 - Internal SQL errors are likely also caused by sending bad data, not corresponding to formats set above
+- There is a known issue where Omeka throws an errors when deleting media items and unlinking them 
