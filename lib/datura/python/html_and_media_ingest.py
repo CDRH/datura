@@ -23,7 +23,8 @@ for path in pathlist:
         for json_item in json_items:
             if not json_item["identifier"]:
                 continue
-            matching_items = omeka.omeka_auth.filter_items_by_property(filter_property = "dcterms:identifier", filter_value = json_item["identifier"])
+            item_set_id = omeka.get_item_set()
+            matching_items = omeka.omeka_auth.filter_items_by_property(filter_property = "dcterms:identifier", filter_value = json_item["identifier"], item_set_id=item_set_id)
             if matching_items:
                 if matching_items["total_results"] == 1:
                     matching_item = matching_items["results"][0]
