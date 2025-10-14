@@ -100,6 +100,56 @@ def add_media_to_item(item_id, media_file, payload={}, template_id=None, class_i
     data = omeka_auth.process_response(response)
     return data
 
+def prepare_item_payload_using_template(terms, template_id):
+    '''
+    Prepare an item payload, checking the supplied terms and values against the specified template.
+    Note:
+    * terms that are not in the template will generate a warning and be dropped from the payload
+    * data types that don't match the template definitions will generate a warning and the term will be dropped from the payload
+    * if no data type is supplied, a type that conforms with the template definition will be used
+
+    Parameters:
+    * `terms`: a dict of terms, values, and (optionally) data types
+    * `template_id`: Omeka's internal numeric identifier for the template
+
+    Returns:
+    * the payload dict
+    '''
+    template_properties = omeka_auth.get_template_properties(template_id)
+    payload = {}
+    for term, values in terms.items():
+        if term in template_properties:
+            property_details = template_properties[term]
+            payload[term] = []
+            for value in values:
+                if not isinstance(value, dict):
+                    value = {'value': value}
+                # The supplied data type doesn't match the template
+                if 'type' in value and value['type'] not in property_details['type']:
+                    print(f'Data type "{value["type"]}" for term "{term}" not allowed by template')
+                    break
+                elif 'type' not in value:
+                    # Use default datatype from template if none is supplied
+                    if len(property_details['type']) == 1:
+                        value['type'] = property_details['type'][0]
+                    # Use literal if allowed by template and data type not supplied
+                    elif 'literal' in property_details['type']:
+                        value['type'] = 'literal'
+                    # Don't know what data type to use
+                    else:
+                        print(f'Specify data type for term "{term}"')
+                        break
+                if "property_id" in value:
+                    #don't format values that have already been formatted
+                    payload[term].append(value)
+                else:
+                    # Add a value formatted according to the data type
+                    payload[term].append(omeka_auth.prepare_property_value(value, property_details['property_id']))
+        # The supplied term is not in the template
+        else:
+            print(f'Term {term} not in template')
+    return payload
+
 conf_path = get_dir("config/private.yml")
 config = get_config(conf_path)
 dev_config = get_config(conf_path, "development")
