@@ -24,7 +24,8 @@ for path in pathlist:
             if not json_item["identifier"]:
                 print("skipping item without identifier")
                 continue
-            matching_items = omeka.omeka_auth.filter_items_by_property(filter_property = "dcterms:identifier", filter_value = json_item["identifier"])
+            item_set_id = omeka.get_item_set()
+            matching_items = omeka.omeka_auth.filter_items_by_property(filter_property = "dcterms:identifier", filter_value = json_item["identifier"], item_set_id=item_set_id)
             if matching_items:
                 #if item exists, update item
                 if matching_items["total_results"] == 1:
@@ -40,10 +41,11 @@ for path in pathlist:
                     new_item = api_fields.prepare_item(json_item)
                     
                     if new_item:
-                        print(f"creating item {new_item['dcterms:identifier'][0]["value"]}")
-                        payload = omeka.omeka_auth.prepare_item_payload_using_template(new_item, template_number)
-                        # add item set TODO how can this be done conditionally, with environments or user-provided options?
-                        item_set_id = 56611 # id for SOH-Development, will remove hard coding later
+                        try:
+                            print(f"creating item {new_item['dcterms:identifier'][0]["@value"]}")
+                        except KeyError as err:
+                            breakpoint()
+                        payload = omeka.prepare_item_payload_using_template(new_item, template_number)
                         try:
                             omeka.omeka_auth.add_item(payload, template_id=template_number, item_set_id=item_set_id)
                         except Exception:
@@ -64,7 +66,7 @@ for path in pathlist:
             if not json_item["identifier"]:
                 print("skipping item without identifier")
                 continue
-            matching_items = omeka.omeka_auth.filter_items_by_property(filter_property = "dcterms:identifier", filter_value = json_item["identifier"])
+            matching_items = omeka.omeka_auth.filter_items_by_property(filter_property = "dcterms:identifier", filter_value = json_item["identifier"], item_set_id=item_set_id)
             if matching_items and matching_items["total_results"] == 1:
                 #if item exists, update item with linked records
                 item_id = matching_items["results"][0]["dcterms:identifier"][0]["@value"]
