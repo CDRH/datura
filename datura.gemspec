@@ -46,6 +46,8 @@ Gem::Specification.new do |spec|
     "es_get_schema",
     "es_set_schema",
     "post",
+    "post_omeka",
+    "post_omeka_html",
     "print_options",
     "setup",
     "solr_clear_index",

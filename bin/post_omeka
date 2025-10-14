@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+require "datura"
+require "byebug"
+ARGV.unshift("-x", "es", "-o", "-t")
+
+#post with options to output to JSON file
+environment = ARGV[ARGV.index('-e') + 1] if ARGV.include?('-e')
+manager = Datura::DataManager.new
+manager.run
+datura_dir = File.join(File.dirname(__FILE__), "..")
+# path to the gem's config files
+python_script_path = File.join(datura_dir, "lib", "datura", "python", "json_to_omeka.py")
+#run posting script into Omeka S
+if File.exist?("#{python_script_path}")
+    if environment
+        system("python3 #{python_script_path} -e #{environment}")
+    else
+        system("python3 #{python_script_path}")
+    end
+else
+    puts("Omeka script not found at #{python_script_path}".red)
+end
