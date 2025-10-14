@@ -3,6 +3,8 @@ import json
 from omeka_s_tools.api import OmekaAPIClient
 import math
 import yaml
+import argparse
+
 #needed for debugging purposes
 import traceback
 import os
@@ -11,11 +13,11 @@ def get_dir(relative_path):
     cwd = Path.cwd()
     return (cwd / relative_path).resolve()
 
-def get_config(path):
+def get_config(path, env='default'):
     with open(path) as stream:
         try:
             contents = yaml.safe_load(stream)
-            return(contents['default'])
+            return(contents[env])
         except yaml.YAMLError as exc:
             print(exc)
 
@@ -33,6 +35,22 @@ def item_sets():
     for i in range(pages):
         item_sets += omeka.get_resources("item_sets", page=i)["results"]
     return item_sets
+
+def get_item_set():
+    env = get_environment()
+    match env:
+        #better to specify in config?
+        case "production":
+            prod_config["item_set"]
+        case "development":
+            dev_config["item_set"]
+
+def get_environment():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-e', '--environment', required=False, default="development")
+    args = parser.parse_args()
+    environment = args.environment
+    return environment
 
 def add_media_to_item(item_id, media_file, payload={}, template_id=None, class_id=None):
     # copied from the module to modify with different ingester
@@ -84,6 +102,8 @@ def add_media_to_item(item_id, media_file, payload={}, template_id=None, class_i
 
 conf_path = get_dir("config/private.yml")
 config = get_config(conf_path)
+dev_config = get_config(conf_path, "development")
+prod_config = get_config(conf_path, "production")
 
 omeka = config['omeka_server']
 
