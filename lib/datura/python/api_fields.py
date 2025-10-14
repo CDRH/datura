@@ -394,7 +394,8 @@ def get_matching_names_from_markdown(row, field):
     
             
 
-def get_omeka_ids(lookup_values, filter_property):
+def get_omeka_ids(lookup_values, filter_property, item_set_id = None):
+    item_set_id = omeka.get_item_set()
     omeka_ids = []
     #lookup_values are usually a list of cdrh_ids, but may be another value
     lookup_values = [lookup_values] if not isinstance(lookup_values, list) else lookup_values
@@ -404,7 +405,7 @@ def get_omeka_ids(lookup_values, filter_property):
         if filter_property == "o:id":
             omeka_ids.append(int(lookup_value))
         else:
-            match = omeka.omeka_auth.filter_items_by_property(filter_property = filter_property, filter_value = lookup_value)
+            match = omeka.omeka_auth.filter_items_by_property(filter_property = filter_property, filter_value = lookup_value, item_set_id=item_set_id)
             if match["total_results"] >= 1:
                 if match["total_results"] > 1:
                     print(f"warning: multiple matches for {lookup_value}, taking first match")
