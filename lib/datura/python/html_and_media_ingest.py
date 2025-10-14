@@ -56,7 +56,7 @@ for path in pathlist:
                 thumbnail_remote = f"{omeka.config['iiif_server']}/iiif/2/{collection_name}%2F{cover_image}.jpg/full/!200,200/0/default.jpg"
                 thumbnail_local = f"{iiif_dir}/{collection_name}%2F{cover_image}.jpg"
                 try:
-                    print(f"posting thumbnail for #{json_item["identifier"]}")
+                    print(f"posting thumbnail for {json_item["identifier"]}")
                     response = requests.get(thumbnail_remote)
                     response.raise_for_status()
                     with open (thumbnail_local, "wb") as thumb_file:

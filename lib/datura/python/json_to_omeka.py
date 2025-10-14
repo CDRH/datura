@@ -51,7 +51,7 @@ for path in pathlist:
                         except Exception:
                             breakpoint()
                     else:
-                        print(f"error preparingg item {json_item["identifier"]}")
+                        print(f"error preparing item {json_item["identifier"]}")
                 #if multiple matches, warn but don't ingest
                 else:
                     print(f"multiple matches for {json_item['identifier']}, please check Omeka admin site")
