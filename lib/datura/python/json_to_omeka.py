@@ -12,6 +12,7 @@ import traceback
 #look for the output folder: /output/development/es
 json_dir = omeka.get_dir("output/development/es")
 pathlist = list(Path(json_dir).glob('**/*.json'))
+item_set_id = omeka.get_item_set()
 
 #iterate through each file
 for path in pathlist:
@@ -24,7 +25,6 @@ for path in pathlist:
             if not json_item["identifier"]:
                 print("skipping item without identifier")
                 continue
-            item_set_id = omeka.get_item_set()
             matching_items = omeka.omeka_auth.filter_items_by_property(filter_property = "dcterms:identifier", filter_value = json_item["identifier"], item_set_id=item_set_id)
             if matching_items:
                 #if item exists, update item
