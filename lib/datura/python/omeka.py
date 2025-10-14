@@ -39,11 +39,11 @@ def item_sets():
 def get_item_set():
     env = get_environment()
     match env:
-        #better to specify in config?
         case "production":
-            prod_config["item_set"]
+            item_set = prod_config["item_set"]
         case "development":
-            dev_config["item_set"]
+            item_set = dev_config["item_set"]
+    return item_set
 
 def get_environment():
     parser = argparse.ArgumentParser()
