@@ -29,12 +29,28 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 [Unreleased]: https://github.com/CDRH/datura/compare/v0.2.0...dev
 
 ### Fixed
+- Items (including CSV rows) without a title or ID will be skipped during ingest, and `nil` will not be assigned to the ID field
+- URLs for CSVs will not be generated without an API
+- CSVs are read in a standardized way, with whitespeace removed from headers and fields, and missing fields (but not headers) replaced with nil
+- Checking for nil xpaths in HTMLToEs and VRAToES fields
 
 ### Added
+- Documentation on setup, including bash commands to run to prepare a new repo to use with bundler and rvm.
+- Documentation about config for new API, including API version and threads
+- default override for `has_source` (with the `title` subfield equal to the `source` field)
 
 ### Changed
+- Tests now mock up the new schema, test some of the new fields and should pass with the new schema. There are also teardown and setup methods so that warnings about methods being redefined are suppressed
+- simplified `date_standardize` helper method
+- TEI `creator` field will return an empty array
+- upgraded Ruby to 3.1.7
 
 ### Removed
+- default override for `rdf` field for VRAToES and WebsToES
+- `date_updated`, `container_box`, `container_folder`, and `abstract` in EADToES, which are longer in schema
+- `date_display` helper method
+- table outlining the new schema (replaced with link to spreadsheet)
+- `relation` field from schema and overrides (redundant to  `has_relation`)
 
 ### Migration
 
