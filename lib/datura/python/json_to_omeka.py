@@ -5,14 +5,17 @@ import api_fields
 import copy
 import json
 from pathlib import Path
-#needed for debugging purposes
+#needed for debugging purposes and path
 import sys
 import traceback
+import os
 
 #look for the output folder: /output/development/es
 json_dir = omeka.get_dir("output/development/es")
 pathlist = list(Path(json_dir).glob('**/*.json'))
 item_set_id = omeka.get_item_set()
+#enables importing of overrides
+sys.path.append(os.path.join(os.getcwd(), "scripts/overrides"))
 
 #iterate through each file
 for path in pathlist:

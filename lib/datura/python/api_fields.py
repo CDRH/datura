@@ -2,222 +2,72 @@ import json
 import re
 import omeka
 from datetime import datetime
+from field_definitions import get_fields
 
 def build_item_dict(json, existing_item):
     """Takes in JSON with CDRH API fields and an existing API item from Omeka S in format. 
     Returns Omeka API item (in JSON format) updated with values from new CDHR schema for Omeka."""
     try:
+        fields = get_fields()
         built_item = existing_item if existing_item else {}
-        update_item_value(built_item, "dcterms:title", json["title"])
-        update_item_value(built_item, "dcterms:identifier", json["identifier"])
-        update_item_value(built_item, "dh:collection", json["collection"])
-        update_item_value(built_item, "dh:category", json["category"])
-        update_item_value(built_item, "dh:category2", json["category2"])
-        #uri_data
-        update_item_value(built_item, "dh:uriData", json["uri_data"])
-        #type
-        update_item_value(built_item, "dcterms:type", json["type"])
-        if json["creator"]:
-            creator_names = [creator['name'] for creator in json["creator"] if 'name' in creator]
-            update_item_value(built_item, "dcterms:creator", creator_names)
-        if json["contributor"]:
-            contributor_names = [contributor['name'] for contributor in json["contributor"] if 'name' in contributor]
-            update_item_value(built_item, "dcterms:contributor", contributor_names)
-        update_item_value(built_item, "dcterms:date", json["date"])
-        update_item_value(built_item, "dcterms:description", json["description"])
-        update_item_value(built_item, "dcterms:format", json["format"])
-        #TODO better as a linked record?
-        if json["has_relation"]:
-            relation_ids = [relation['id'] for relation in json["has_relation"] if 'name' in relation]
-            update_item_value(built_item, "dcterms:relation", relation_ids)
-        #TODO is citation always single-valued? if array might need to add code to deal with that
-        try:
-            update_item_value(built_item, "dcterms:publisher", json["citation"]["publisher"])
-        except Exception:
-            pass
-        #citation.id
-        try:
-            #not working, currently
-            update_item_value(built_item, "dh:biblID", json["citation"]["id"])
-        except Exception:
-            pass
-        #citation.date TODO will also use dcterms:date
-        #citation.title
-        try:
-            update_item_value(built_item, "tei:biblTitle", json["citation"]["title"])
-        except Exception:
-            pass
-        #citation.pubplace
-        try:
-            update_item_value(built_item, "tei:biblPubPlace", json["citation"]["pubplace"])
-        except Exception:
-            pass
-        #citation.issue
-        try:
-            update_item_value(built_item, "bibo:issue", json["citation"]["issue"])
-        except Exception:
-            pass
-        try:
-            update_item_value(built_item, "bibo:pageStart", json["citation"]["page_start"])
-        except Exception:
-            pass
-        try:
-            update_item_value(built_item, "bibo:pageEnd", json["citation"]["page_end"])
-        except Exception:
-            pass
-        try:
-            update_item_value(built_item, "bibo:section", json["citation"]["section"])
-        except Exception:
-            pass
-        try:
-            update_item_value(built_item, "bibo:volume", json["citation"]["volume"])  
-        except Exception:
-            pass      
-        #citation.title variants
-        try:
-            update_item_value(built_item, "tei:biblTitleA", json["citation"]["title_a"])
-        except Exception:
-            pass
-        try:
-            update_item_value(built_item, "tei:biblTitleM", json["citation"]["title_m"])
-        except Exception:
-            pass
-        try:
-            update_item_value(built_item, "tei:biblTitleJ", json["citation"]["title_j"])
-        except Exception:
-            pass
-        update_item_value(built_item, "dcterms:rightsHolder", json["rights_holder"])
-        update_item_value(built_item, "dcterms:license", json["rights"])
-        #update_item_value(built_item, "dcterms:license", json["rights_uri"])
-        update_item_value(built_item, "dcterms:subject", json["subjects"])
-        update_item_value(built_item, "dh:topic", json["topics"])
-        #category3
-        update_item_value(built_item, "dh:category3", json["category3"])
-        #category4
-        update_item_value(built_item, "dh:category4", json["category4"])
-        #category5
-        update_item_value(built_item, "dh:category5", json["category5"])
-        #note
-        update_item_value(built_item, "dh:note", json["notes"])
-        #abstract
-        update_item_value(built_item, "dcterms:abstract", json["abstract"])
-        #keyword
-        update_item_value(built_item, "dh:keyword", json["keywords"])
-        #keyword2
-        update_item_value(built_item, "dh:keyword2", json["keywords2"])
-        #keyword3
-        update_item_value(built_item, "dh:keyword3", json["keywords3"])
-        #keyword4
-        update_item_value(built_item, "dh:keyword4", json["keywords4"])
-        update_item_value(built_item, "dh:keyword5", json["keywords5"])
-        #source id (has_source.id) TODO is this single-valued? also may conflict with citation
-        # if json["has_source"] and json["has_source"]["id"]:
-        #     update_item_value(built_item, "tei:sourceID", json["has_source"]["id"])
-        try:
-            update_item_value(built_item, "dcterms:source", json["has_source"]["title"])
-        except Exception:
-            pass
-        # #has_part
-        # try:
-        #     part_ids = [part['id'] for part in json["has_part"]]
-        #     update_item_value(built_item, "dcterms:hasPart", part_ids)
-        # except Exception:
-        #     pass
-        # #is_part_of
-        # try:
-        #     update_item_value(built_item, "dcterms:isPartOf", json["is_part_of"]["id"])
-        # except Exception:
-        #     pass
-        # #previous
-        # try:
-        #     update_item_value(built_item, "dh:orderPrev", json["previous_item"]["id"])
-        # except Exception:
-        #     pass
-        # #next
-        # try:
-        #     update_item_value(built_item, "dh:orderNext", json["next_item"]["id"])
-        # except Exception:
-        #     pass
-        #medium
-        update_item_value(built_item, "dcterms:medium", json["medium"])
-        #extent
-        update_item_value(built_item, "dcterms:extent", json["extent"])
-        #language
-        update_item_value(built_item, "dcterms:language", json["language"])
-        #container_box
-        update_item_value(built_item, "dh:box", json["container_box"])
-        #container_folder
-        update_item_value(built_item, "dh:folder", json["container_folder"])
-
-        ##TODO fields not in TEI schema yet, and fields with no corresponding CDRH API field
-        #person
-        if json["person"]:
-            person_names = [person['name'] for person in json["person"] if 'name' in person]
-            update_item_value(built_item, "foaf:name", person_names)
-        #spatial
-        if json["spatial"]:
-            places = json["spatial"] if isinstance(json["spatial"], list) else [json["spatial"]]
-            try:
-                place_names = [place['short_name'] for place in places if 'short_name' in place]
-                update_item_value(built_item, "dh:spatial_short_name", place_names)
-            except Exception:
-                pass
-        #event
-        #correspondence
-        try:
-            update_item_value(built_item, "tei:correspSentName", json["correspSentName_omeka_s"])
-        except Exception:
-            pass
-        try:
-            update_item_value(built_item, "tei:correspSentPlace", json["correspSentPlace_omeka_s"])
-        except Exception:
-            pass
-        #TODO convert to datatype="numeric:timestamp"?
-        try:
-            update_item_value(built_item, "tei:correspSentDate", json["correspSentDate_omeka_s"])
-        except Exception:
-            pass
-        try:
-            update_item_value(built_item, "tei:correspDeliveredName", json["correspDeliveredName_omeka_s"])
-        except Exception:
-            pass
-        try:
-            update_item_value(built_item, "tei:correspDeliveredPlace", json["correspDeliveredPlace_omeka_s"])
-        except Exception:
-            pass
-        #TODO convert to datatype="numeric:timestamp"?
-        try:
-            update_item_value(built_item, "tei:correspDeliveredDate", json["correspDeliveredDate_omeka_s"])
-        except Exception:
-            pass
-        # update_item_value(built_item, "tei:correspNext", json["correspNext_omeka_s"])
-        # update_item_value(built_item, "tei:correspPrev", json["correspPrev_omeka_s"])
-        #editor
-        #date created
-        #sponsor
-        #funder
-        #addr line
-        #license
-        #distributor
-        try:
-            update_item_value(built_item, "tei:distributor", json["distributor_omeka_s"])
-        except Exception:
-            pass
-        #authority
-        try:
-            update_item_value(built_item, "tei:authority", json["authority_omeka_s"])
-        except Exception:
-            pass
-        #file notes
-        try:
-            update_item_value(built_item, "tei:biblNote", json["biblNote_omeka_s"])
-        except Exception:
-            pass
-        #annotations_text
-        update_item_value(built_item, "dh:annotationsText", json["annotations_text"])
-        #text_field
-        update_item_value(built_item, "dh:itemText", json["text"])
-        #update_item_value()
+        update_item_value(built_item, "dcterms:title", fields.title(json))
+        update_item_value(built_item, "dcterms:identifier", fields.identifier(json))
+        update_item_value(built_item, "dh:collection", fields.collection(json))
+        update_item_value(built_item, "dh:category", fields.category(json))
+        update_item_value(built_item, "dh:category2", fields.category2(json))
+        update_item_value(built_item, "dh:uriData", fields.uriData(json))
+        update_item_value(built_item, "dcterms:type", fields.dcterms_type(json))
+        update_item_value(built_item, "dcterms:creator", fields.creator(json))
+        update_item_value(built_item, "dcterms:contributor", fields.contributor(json))
+        update_item_value(built_item, "dcterms:date", fields.date(json))
+        update_item_value(built_item, "dcterms:description", fields.description(json))
+        update_item_value(built_item, "dcterms:format", fields.dcterms_format(json))
+        update_item_value(built_item, "dcterms:relation", fields.relation(json))
+        update_item_value(built_item, "dcterms:publisher", fields.publisher(json))
+        update_item_value(built_item, "dh:biblID", fields.biblID(json))
+        update_item_value(built_item, "tei:biblTitle", fields.biblTitle(json))
+        update_item_value(built_item, "tei:biblPubPlace", fields.biblPubPlace(json))
+        update_item_value(built_item, "bibo:issue", fields.issue(json))
+        update_item_value(built_item, "bibo:pageStart", fields.pageStart(json))
+        update_item_value(built_item, "bibo:pageEnd", fields.pageEnd(json))
+        update_item_value(built_item, "bibo:section", fields.section(json))
+        update_item_value(built_item, "bibo:volume", fields.volume(json))
+        update_item_value(built_item, "tei:biblTitleA", fields.biblTitleA(json))
+        update_item_value(built_item, "tei:biblTitleM", fields.biblTitleM(json))
+        update_item_value(built_item, "tei:biblTitleJ", fields.biblTitleJ(json))
+        update_item_value(built_item, "dcterms:rightsHolder", fields.rightsHolder(json))
+        update_item_value(built_item, "dcterms:license", fields.license(json))
+        update_item_value(built_item, "dcterms:subject", fields.subject(json))
+        update_item_value(built_item, "dh:topic", fields.topic(json))
+        update_item_value(built_item, "dh:category3", fields.category3(json))
+        update_item_value(built_item, "dh:category4", fields.category4(json))
+        update_item_value(built_item, "dh:category5", fields.category5(json))
+        update_item_value(built_item, "dh:note", fields.note(json))
+        update_item_value(built_item, "dcterms:abstract", fields.abstract(json))
+        update_item_value(built_item, "dh:keyword", fields.keyword(json))
+        update_item_value(built_item, "dh:keyword2", fields.keyword2(json))
+        update_item_value(built_item, "dh:keyword3", fields.keyword3(json))
+        update_item_value(built_item, "dh:keyword4", fields.keyword4(json))
+        update_item_value(built_item, "dh:keyword5", fields.keyword5(json))
+        update_item_value(built_item, "dcterms:source", fields.source(json))
+        update_item_value(built_item, "dcterms:medium", fields.medium(json))
+        update_item_value(built_item, "dcterms:extent", fields.extent(json))
+        update_item_value(built_item, "dcterms:language", fields.language(json))
+        update_item_value(built_item, "dh:box", fields.box(json))
+        update_item_value(built_item, "dh:folder", fields.folder(json))
+        update_item_value(built_item, "foaf:name", fields.name(json))
+        update_item_value(built_item, "dh:spatial_short_name", fields.spatial_short_name(json))
+        update_item_value(built_item, "tei:correspSentName", fields.correspSentName(json))
+        update_item_value(built_item, "tei:correspSentPlace", fields.correspSentPlace(json))
+        update_item_value(built_item, "tei:correspSentDate", fields.correspSentDate(json))
+        update_item_value(built_item, "tei:correspDeliveredName", fields.correspDeliveredName(json))
+        update_item_value(built_item, "tei:correspDeliveredPlace", fields.correspDeliveredPlace(json))
+        update_item_value(built_item, "tei:correspDeliveredDate", fields.correspDeliveredDate(json))
+        update_item_value(built_item, "tei:distributor", fields.distributor(json))
+        update_item_value(built_item, "tei:authority", fields.authority(json))
+        update_item_value(built_item, "tei:biblNote", fields.biblNote(json))
+        update_item_value(built_item, "dh:annotationsText", fields.annotationsText(json))
+        update_item_value(built_item, "dh:itemText", fields.itemText(json))
         return built_item
     except ValueError:
         breakpoint()
