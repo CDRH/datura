@@ -10,7 +10,7 @@ import sys
 import traceback
 import os
 
-#look for the output folder: /output/development/es
+#look for the output folder: /output/development/es and get all items
 json_dir = omeka.get_dir("output/development/es")
 pathlist = list(Path(json_dir).glob('**/*.json'))
 item_set_id = omeka.get_item_set()
@@ -49,6 +49,7 @@ for path in pathlist:
                         except KeyError as err:
                             breakpoint()
                         payload = omeka.prepare_item_payload_using_template(new_item, template_number)
+                        # add item set
                         try:
                             omeka.omeka_auth.add_item(payload, template_id=template_number, item_set_id=item_set_id)
                         except Exception:
