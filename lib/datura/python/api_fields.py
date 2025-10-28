@@ -141,29 +141,16 @@ def update_item_value(item, key, value, datatype="literal"):
     value may be in string format or list. Should be able to modify existing values and update new ones. (Note that there are still issues with updating fields
     returns the JSON hash with the updated value
     """
+    #clear the existing values of the key, or initialize it if it is new
+    item[key] = []
     if type(value) == str:
-        if key in item:
-            item[key][0]['@value'] = value
-        else: 
-            #add the key
-            item = add_formatted_value(item, key, value, datatype)
+        item = add_formatted_value(item, key, value, datatype)
     elif type(value) == list:
         # make sure values are unique
         value = list(set(value))
-        value = [v for v in value if v is not None] # remove None values
-        if key not in item:
-            item[key] = []
-            for v in value:
-                item = add_formatted_value(item, key, v, datatype)
-        else:
-            for i, v in enumerate(value):
-                # replace value at the given index, if it exists
-                try:
-                    item[key][i]['@value'] = v
-                # otherwise, prepare value and append it
-                except IndexError:
-                    item = add_formatted_value(item, key, v, datatype)
-    return item
+        value = [v for v in value if v is not None] # remove None values for v in value:
+        for v in value:
+            item = add_formatted_value(item, key, v, datatype)
 
 def add_formatted_value(item, key, value, datatype):
     # takes in item, key, value, and datatype, returns item with key set or added to value, and formatted in the format Omeka S
