@@ -127,10 +127,8 @@ class FieldDefinitions:
         return json.get("keywords5", None)
     
     def source(self, json):
-        try:
-            return json.get("has_source") and json.get("has_source").get("title")
-        except AttributeError as err:
-            breakpoint()
+        return json.get("has_source") and json.get("has_source", {}).get("title")
+
         
     def medium(self, json):
         return json.get("medium", None)
