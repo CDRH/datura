@@ -1,3 +1,6 @@
+import sys
+import os
+
 class FieldDefinitions:
     #these are the default field definitions, which may be overridden in specific projects
     def title(self, json):
