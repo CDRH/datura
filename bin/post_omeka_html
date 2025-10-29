@@ -6,8 +6,11 @@ ARGV.unshift("-x", "html")
 
 #post with options to output to JSON file
 environment = ARGV[ARGV.index('-e') + 1] if ARGV.include?('-e')
-manager = Datura::DataManager.new
-manager.run
+#skip generation step with option -s
+if !ARGV.include?('-s')
+    manager = Datura::DataManager.new
+    manager.run
+end
 
 datura_dir = File.join(File.dirname(__FILE__), "..")
 # path to the gem's config files
