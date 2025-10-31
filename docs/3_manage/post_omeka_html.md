@@ -1,6 +1,8 @@
 ## DRAFT instructions for attaching media to the Omeka S API
 
-This script should be run after running `post_omeka.md`, as it needs the Omeka S API to be populated. Make sure that you have the usual Datura folders for html and iiif output under output/environment. The script generates html through Datura's usual process (i.e. post -x html), and then deletes existing media, and attaches the thumbnail image and then the html item. It is intentionally structured in this order
+This script should be run after running `post_omeka.md`, as it needs the Omeka S API to be populated. Make sure that you have the usual Datura folders for html and iiif output under output/environment. The script generates html through Datura's usual process (i.e. post -x html), and then deletes existing media, and attaches the thumbnail image and then the html item. It is intentionally structured in this order so that the image will be designated as primary media.
+
+Use the `-s` option to skip the generation step and only post to Omeka S (requires that you have already generated the needed docs).
 
 The media payload, set in html_and_media_ingest.py, must be structed in a specific way to add items. It is different in the case of html and iiif images.
 

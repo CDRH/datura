@@ -4,6 +4,8 @@ Running the `post_omeka` script will run the Datura scripts to generate a JSON f
 
 It is possible to run this script with the other command line options (for instance `-f` to filter by file type and `-r` and filter by regex), but it is not recommended to override the default options such as `-x es`.
 
+Use the `-s` option to skip the generation step and only post to Omeka S (requires that you have already generated the needed docs).
+
 ### Setting up a virtual environemnt
 
 In your collection repo, first exit any virtual environemt you may be in (this may be indicated by  `(.venv)` or similar before your command prompt). If you have not previously created a virtual environment, type `python3 -m venv .venv`. The environment will be installed in the `.venv` folder in the root of the collection repo. To enter the virtual environment once it has been created, run `source .venv/bin/activate`. Then run `pip3 install -r requirements.txt` to install the dependencies. These two steps are necessary to get the `post_omeka` script to run. 
@@ -24,12 +26,26 @@ The `key_identity` and `key_credential` fields will come from your API key which
 Make sure that config is pointing to the right resource template for the data you want to ingest. It is designed to use the CDRH schema, so look on Omeka to determine the correct template number.
 It may also be necessary to specify an item set for your items, for instance to specify the environment. Currently, the number corresponding to the item set (which can be found on the Omeka site) is hard coded into `json_to_omeka.py`, and can be changed there. In the near future this is likely to be moved into config/private.yml with options to post by environment.
 
-### setting up api_fields.py
-Fields you want to ingest can be added to the `build_item_dict` method, each field being specified by the `update_item_value` method. The first argument `item` is always the Omeka S item, the second `key` is the ontology label for the field in the Omeka S schema, the third `value` is the field in the Elasticsearch-based API. Optionally, you can pass in the argument `datatype="[datatype]"`; if you do not specify it, it will be set to "literal".  Fields can be given either an array or single value; Omeka S does not use nested fields in the same way as Elasticsearch does. The `build_item_dict` is also the place for any processing to get the values into the right format or do any customization. Modifying this script in Datura will change it for all repos ingesting into Omeka S.
-Fields that reference another item should be added to `link_item`. `link_item_record` works in the same way as `update_item_value` but the value of the ES field must be a CDRH ID. `link_item_record` searches the Omeka S API for an item that matches the id in `dcterms:identifier` and then adds a link on the Omeka S item. Linking of items happens in `json_to_omeka.py` after posting/updating items, in order to ensure that the items are in the API before trying to link them togehter.
 
-### Overriding the Python scripts
-TODO
+### API fields and overrides
+
+The basic definition `field_definitions.py` file. Each field is specified by a different method corresponding to the desired field, all of which are called in `api_fields.py`. (For `update_item_value()`, the second argument corresponds to the field in the resource template, and the third to the method in `field_defintions.py`) Optionally, you can pass in the argument `datatype="[datatype]"` to `update_item_value()`. If you do not specify it, it will be set to "literal". This must match the Omeka resource template you are using.
+
+To override the field definitions. Create a file `omeka_overrides.rb` in the `scripts/overrides` file of the project directory, and add the following code: 
+
+```
+from field_definitions import FieldDefinitions
+
+class CustomFields(FieldDefinitions):
+
+    def sample_field(self, json):
+        sample_field = json.get("sample_field", '') + " test"
+        return title
+```
+
+Each overriden method needs to take the arguments `self` (a Python placeholder for a class instance) and `json` (representing the generated JSON) and to match the methods defined on `field_definitions.py`. First retrieve the value from the Elasticsearch `json`, then do any manipulations you want before returning the desired value. The return value must be either an list or single value; Omeka S does not use nested fields in the same way as Elasticsearch does.  See `field_definitions.py` for examples of how to retrieve single and nested values and return lists and single values.
+
+Fields that reference another item should be added to `link_item` in `api_fields.py`. `link_item_record` works in the same way as `update_item_value` but the value of the ES field must be a CDRH ID. `link_item_record` searches the Omeka S API for an item that matches the id in `dcterms:identifier` and then adds a link on the Omeka S item. Linking of items happens in `json_to_omeka.py` after posting/updating items, in order to ensure that the items are in the API before trying to link them together.
 
 ## errors that may come up when you post
 
