@@ -113,3 +113,5 @@ Specifies the search index or format you are posting to (the html format will cr
 You may chain these together with a comma:
 
 `post -x es,html`
+
+Note that when updating local files with the `-t -o` options or the `-x html` option, it may be necessary to delete files before posting again, in order for changes to take effect.
