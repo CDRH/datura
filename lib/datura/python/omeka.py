@@ -152,6 +152,45 @@ def prepare_item_payload_using_template(terms, template_id):
             print(f'Term {term} not in template')
     return payload
 
+def prepare_property_value(self, value, property_id, label = ""):
+    '''
+    Formats a property value according to its datatype as expected by Omeka.
+    The formatted value can be used in a payload to create a new item.
+
+    Parameters:
+    * `value` - a dict containing a `value` and (optionally) a `type`
+    * `property_id` - the numeric identifier of the property
+    * `label` - a text label for the URI if `type` is "uri"
+
+    Note that is no `type` is supplied, 'literal' will be used by default.
+
+    Returns:
+    * a dict with values for `property_id`, `type`, and either `@id` or `@value`.
+    '''
+    if not isinstance(value, dict):
+        value = {'value': value}
+
+    try:
+        data_type = value['type']
+    except KeyError:
+        data_type = 'literal'
+
+    property_value = {
+        'property_id': property_id,
+        'type': data_type
+    }
+
+    if data_type == 'resource:item':
+        property_value['@id'] = f'{self.api_url}/items/{value["value"]}'
+        property_value['value_resource_id'] = value['value']
+        property_value['value_resource_name'] = 'items'
+    elif data_type == 'uri':
+        property_value['@id'] = value['value']
+        property_value["o:label"] = label
+    else:
+        property_value['@value'] = value['value']
+    return property_value
+
 conf_path = get_dir("config/private.yml")
 config = get_config(conf_path)
 dev_config = get_config(conf_path, "development")

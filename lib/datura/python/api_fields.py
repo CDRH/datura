@@ -152,7 +152,7 @@ def update_item_value(item, key, value, datatype="literal"):
         for v in value:
             item = add_formatted_value(item, key, v, datatype)
 
-def add_formatted_value(item, key, value, datatype):
+def add_formatted_value(item, key, value, datatype, label=""):
     # takes in item, key, value, and datatype, returns item with key set or added to value, and formatted in the format Omeka S
     # expects as
     # used when adding a new value that is not already in the Omeka JSON, so that Omeka will properly update the value
@@ -162,7 +162,7 @@ def add_formatted_value(item, key, value, datatype):
         "value": value,
         "type": datatype
     }
-    formatted = omeka.omeka_auth.prepare_property_value(prop_value, prop_id)
+    formatted = omeka.omeka_auth.prepare_property_value(prop_value, prop_id, label)
     if key in item and type(item[key]) == list:
         item[key].append(formatted)
     else:
