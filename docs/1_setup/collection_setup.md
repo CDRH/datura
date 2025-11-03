@@ -7,7 +7,7 @@ export COLLNAME="collection-name"
 mkdir ${COLLNAME}
 cd ${COLLNAME}
 
-echo 'gem "datura", git: 'https://github.com/CDRH/datura', branch: "dev"' > Gemfile
+echo 'gem "datura", git: "https://github.com/CDRH/datura", branch: "dev"' > Gemfile
 echo '3.1.2' > .ruby-version
 echo "${COLLNAME}" > .ruby-gemset
 bundle install
