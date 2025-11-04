@@ -191,10 +191,3 @@ class CustomFields(FieldDefinitions):
     
     def itemText(self, json):
         return json.get("text", None)
-    
-def get_fields():
-    try:
-        from omeka_overrides import CustomFields
-        return CustomFields()
-    except ImportError:
-        return FieldDefinitions()
