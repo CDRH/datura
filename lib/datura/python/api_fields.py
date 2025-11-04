@@ -162,7 +162,7 @@ def add_formatted_value(item, key, value, datatype, label=""):
         "value": value,
         "type": datatype
     }
-    formatted = omeka.omeka_auth.prepare_property_value(prop_value, prop_id, label)
+    formatted = omeka.prepare_property_value(prop_value, prop_id, label)
     if key in item and type(item[key]) == list:
         item[key].append(formatted)
     else:
