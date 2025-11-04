@@ -152,7 +152,7 @@ def prepare_item_payload_using_template(terms, template_id):
             print(f'Term {term} not in template')
     return payload
 
-def prepare_property_value(self, value, property_id, label = ""):
+def prepare_property_value(value, property_id, label = ""):
     '''
     Formats a property value according to its datatype as expected by Omeka.
     The formatted value can be used in a payload to create a new item.
