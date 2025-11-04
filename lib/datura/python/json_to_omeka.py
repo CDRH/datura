@@ -36,7 +36,7 @@ def post_items():
                         update_existing_item(json_item, matching_items)
                     #add new item if item does not exist
                     elif matching_items["total_results"] == 0:
-                        add_new_item(json_item)
+                        add_new_item(json_item, template_number)
                     #if multiple matches, warn but don't ingest
                     else:
                         print(f"multiple matches for {json_item['identifier']}, please check Omeka admin site")
@@ -73,7 +73,7 @@ def link_item(json_item, matching_items):
         breakpoint()
         pass
 
-def add_new_item(json_item):
+def add_new_item(json_item, template_number):
     new_item = api_fields.prepare_item(json_item)
     if new_item:
         try:
