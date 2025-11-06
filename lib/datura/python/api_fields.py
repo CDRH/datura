@@ -110,9 +110,6 @@ def link_item(json_item, existing_item):
     except Exception:
         pass
     return existing_item
-#     # need to get matching item TODO add conditional logic for blank entries
-#     # update_item_value(built_item, "foaf:maker", row["University Omeka ID (from [universities]) (from educations [join])"])
-
 
 def prepare_item(row, existing_item = None):
     item_dict = build_item_dict(row, existing_item)
@@ -148,13 +145,13 @@ def update_item_value(item, key, value, datatype="literal"):
     elif type(value) == list:
         # make sure values are unique
         value = list(set(value))
-        value = [v for v in value if v is not None] # remove None values for v in value:
+        value = [v for v in value if v is not None] # remove None values from values
         for v in value:
             item = add_formatted_value(item, key, v, datatype)
 
 def add_formatted_value(item, key, value, datatype, label=""):
     # takes in item, key, value, and datatype, returns item with key set or added to value, and formatted in the format Omeka S
-    # expects as
+    # expects as indicated in the template
     # used when adding a new value that is not already in the Omeka JSON, so that Omeka will properly update the value
     # this comes up
     prop_id = omeka.omeka_auth.get_property_id(key)
