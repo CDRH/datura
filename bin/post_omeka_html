@@ -6,22 +6,32 @@ ARGV.unshift("-x", "html")
 
 #post with options to output to JSON file
 environment = ARGV[ARGV.index('-e') + 1] if ARGV.include?('-e')
-#skip generation step with option -s
+if ARGV.include?("-m")
+    #this argument is for python, it will cause errors if passed to the Datura ruby scripts
+    #it will skip deleting and regenerating media for Omeka S
+    ARGV.delete("-m")
+    media_skip = true
+end
+#skip html and json generation step with option -s
 if !ARGV.include?('-s')
     manager = Datura::DataManager.new
     manager.run
 end
+
 
 datura_dir = File.join(File.dirname(__FILE__), "..")
 # path to the gem's config files
 python_script_path = File.join(datura_dir, "lib", "datura", "python", "html_and_media_ingest.py")
 #run posting script into Omeka S
 if File.exist?("#{python_script_path}")
+    command = "python3 #{python_script_path}"
     if environment
-        system("python3 #{python_script_path} -e #{environment}")
-    else
-        system("python3 #{python_script_path}")
+        command += " -e #{environment}"
     end
+    if media_skip
+        command += " -m"
+    end
+    system(command)
 else
     puts("Omeka script not found at #{python_script_path}".red)
 end

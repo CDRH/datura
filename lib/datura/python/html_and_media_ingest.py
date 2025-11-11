@@ -105,6 +105,7 @@ for path in pathlist:
             if matching_items:
                 if matching_items["total_results"] == 1:
                     matching_item = matching_items["results"][0]
+                    media_count = len(matching_item["o:media"])
                 elif matching_items["total_results"] > 1:
                     print("multiple items found for " + json_item["identifier"] + ", check admin site")
                     continue
@@ -112,14 +113,20 @@ for path in pathlist:
                     print("no matching items for " + json_item["identifier"] + ", skipping")
                     continue
                 #check for existing media items, to avoid duplicates
-                delete_media_items(matching_item)
+                #skip with -m flag
+                if not(omeka.args.media_skip and media_count >=2):
+                    delete_media_items(matching_item)
 
-                ## IIIF THUMBNAIL INGEST
-                # note that thumbnail ingest should be done first so that thumbnails are designated primary_media
-                ingest_thumbnail(json_item, matching_item)
-                
-                ## HTML INGEST
-                ingest_html(json_item, matching_item)
+                    ## IIIF THUMBNAIL INGEST
+                    #if -m flag, ingest only if not already present
+                    # note that thumbnail ingest should be done first so that thumbnails are designated primary_media
+                    ingest_thumbnail(json_item, matching_item)
+                    
+                    ## HTML INGEST
+                    #if -m flag, ingest only if not already present
+                    ingest_html(json_item, matching_item)
 
-                ##TODO add other media ingest as needed
+                    ##TODO add other media ingest as needed
+                else:
+                    print("skipping media for " + json_item["identifier"] + ", already ingested.")
 

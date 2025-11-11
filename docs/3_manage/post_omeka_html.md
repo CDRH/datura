@@ -4,6 +4,8 @@ This script should be run after running `post_omeka.md`, as it needs the Omeka S
 
 Use the `-s` option to skip the generation step and only post to Omeka S (requires that you have already generated the needed docs).
 
+Use the `-m` option to skip the step of deleting and regenerating for media items that have already been ingested. (It will only do this if both the image and html are uploaded already).
+
 The media payload, set in html_and_media_ingest.py, must be structed in a specific way to add items. It is different in the case of html and iiif images.
 
 For an html field:

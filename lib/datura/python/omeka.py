@@ -48,9 +48,7 @@ def get_item_set():
     return item_set
 
 def get_environment():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-e', '--environment', required=False, default="development")
-    args = parser.parse_args()
+
     environment = args.environment
     return environment
 
@@ -203,4 +201,9 @@ omeka_auth = OmekaAPIClient(
     key_identity = config['key_identity'],                        
     key_credential = config['key_credential']                        
 )
+parser = argparse.ArgumentParser()
+parser.add_argument('-e', '--environment', required=False, default="development")
+parser.add_argument('-m', '--media-skip', action='store_true',
+                    help='Only ingest media not already ingested')
+args = parser.parse_args()
 template_number = config["resource_template"]
