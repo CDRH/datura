@@ -24,7 +24,7 @@ def get_config(path, env='default'):
             print(exc)
 
 def reset():
-    omeka = config['omeka_server']
+    omeka = OmekaAPIClient(config['omeka_server'])
     omeka_auth = OmekaAPIClient(
         api_url = config['omeka_server'],
         key_identity = config['key_identity'],                        
@@ -194,8 +194,7 @@ config = get_config(conf_path)
 dev_config = get_config(conf_path, "development")
 prod_config = get_config(conf_path, "production")
 
-omeka = config['omeka_server']
-
+omeka = OmekaAPIClient(config['omeka_server'])
 omeka_auth = OmekaAPIClient(
     api_url = config['omeka_server'],
     key_identity = config['key_identity'],                        
