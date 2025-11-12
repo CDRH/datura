@@ -1,12 +1,14 @@
 ## Instructions for attaching media to the Omeka S API
 
-This script should be run after running `post_omeka.md`, as it needs the Omeka S API to be populated. Make sure that you have the usual Datura folders for html and iiif output under output/environment. The script generates html through Datura's usual process (i.e. post -x html), and then deletes existing media, and attaches the thumbnail image and then the html item. It is intentionally structured in this order so that the image will be designated as primary media.
+This script should be run after running `post_omeka.md`, as it works with items that are already in the Omeka S API Make sure that you have the usual Datura folders for html and iiif output under output/[environment]/[format]. The script generates html through Datura's usual XSLT generation process (i.e. `post -x html`), and deletes existing media, downloads thumnails from the iiif server, and attaches the thumbnail image and then the html item. It is intentionally structured in this order so that the image will be designated by Omeka as primary media so that it can be designated as the thumbnail.
 
 Use the `-s` option to skip the generation step and only post to Omeka S (requires that you have already generated the needed docs).
 
 Use the `-m` option to skip the step of deleting and regenerating for media items that have already been ingested. (It will only do this if both the image and html are uploaded already).
 
-You can specify the environment with `-e [environment]` but you must set an `item_set` with the desired environment in config/private.yml. See 
+You can specify the environment with `-e [environment]` but you must set an `item_set` with the desired environment in config/private.yml. See [post_omeka instructions](docs/3_manage/post_omeka.md) for instructions. 
+
+Instructions for setting up the python enviroment can be found at [post_omeka instructions](docs/3_manage/post_omeka.md).
 
 ### Config
 
@@ -63,8 +65,9 @@ For a file upload (i.e. to upload):
 
 
 ### Error you might run into (for developers)
-Sometimes it will return error code 422 (unprocessable content) or error code 500. These error messages can be investigated in the Omeka S logs found on the admin page. Check them against the Omeka S source code found in GitHub. (Note that the base Omeka code, powering the website, is in PHP).
-- It expects a full URL, not a local file path, in "o:source" which is set when you post media items.
-- A malformed URL may cause error that are unable to connect. Make sure that it includes slashes in the proper places
-- Internal SQL errors are likely also caused by sending bad data, not corresponding to formats set above
-- There is a known issue where Omeka throws an errors when deleting media items and unlinking them 
+Sometimes running the script will return error code 422 (unprocessable content) or error code 500. These error messages can be investigated in the Omeka S logs found on the admin page. To investigate the errors, you can check the stack traces in these logs against the Omeka S source code found in GitHub. (Note that the base Omeka code, powering the website, is in PHP).
+- The ingested expects a full URL, not a local file path, in "o:source", which is set when you post media items.
+- A malformed URL may cause an error that the script is unable to connect to a server. Make sure that it includes slashes in the proper places.
+- Internal SQL errors are likely also caused by sending bad data, not corresponding to the designated format.
+- There is a known issue where Omeka S raises an error when deleting media items and unlinking them, even though the action is performed successfully.
+- Forbidden (403) errors may indicate that API credentials are missing or incorrect
