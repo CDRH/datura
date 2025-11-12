@@ -6,6 +6,8 @@ It is possible to run `post_omeka` with Datura's other command line options (for
 
 Use the `-s` option to skip the generation step and only post to Omeka S (requires that you have already generated the needed documents).
 
+You can specify the environment with `-e [environment]` but you must set an `item_set` with the desired environment in config/private.yml. See below.
+
 ### Setting up a virtual environemnt
 
 In your collection repo, first exit any virtual environemt that is currently enabled (this may be indicated by  `(.venv)` or similar text before your command prompt). If you have not previously created a virtual environment, type `python3 -m venv .venv`. The environment will be installed in the `.venv` folder in the root of the collection repo. This folder should not be committed. To enter the virtual environment once it has been created, run `source .venv/bin/activate`. Then run `pip3 install -r requirements.txt` to install the dependencies. These two steps are necessary to get the `post_omeka` script to run.
