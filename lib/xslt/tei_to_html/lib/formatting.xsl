@@ -620,13 +620,10 @@
             <xsl:text>prettyPhoto[pp_gal]</xsl:text>
           </xsl:attribute>
           <xsl:attribute name="title">
-            <xsl:text>&lt;a href=&#34;</xsl:text>
-            <xsl:call-template name="url_builder_escaped">
-              <xsl:with-param name="figure_id_local" select="$figure_id"/>
-              <xsl:with-param name="image_size_local" select="$image_large"/>
-              <xsl:with-param name="iiif_path_local" select="$collection"/>
-            </xsl:call-template>
-            <xsl:text>" target="_blank" &gt;open image in new window&lt;/a&gt;</xsl:text>
+            <xsl:text>Open larger image of text that follows</xsl:text>
+          </xsl:attribute>
+          <xsl:attribute name="target">
+            <xsl:text>_blank</xsl:text>
           </xsl:attribute>
 
           <img>
@@ -639,6 +636,10 @@
             </xsl:attribute>
             <xsl:attribute name="class">
               <xsl:text>display&#160;</xsl:text>
+            </xsl:attribute>
+            <xsl:attribute name="alt" />
+            <xsl:attribute name="role">
+              <xsl:text>presentation</xsl:text>
             </xsl:attribute>
           </img>
         </a>
