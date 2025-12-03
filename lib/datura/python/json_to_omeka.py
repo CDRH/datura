@@ -57,7 +57,7 @@ def link_items():
                     link_item(json_item, matching_items)
                 else:
                     #if multiple matches or item not found, display warning
-                    print(f"skipping {json_item["identifier"]}, item not properly ingested")
+                    print(f"skipping {json_item['identifier']}, item not properly ingested")
 
 def link_item(json_item, matching_items):
     item_id = matching_items["results"][0]["dcterms:identifier"][0]["@value"]
