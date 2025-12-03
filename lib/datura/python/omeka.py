@@ -40,11 +40,12 @@ def item_sets():
 
 def get_item_set():
     env = get_environment()
-    match env:
-        case "production":
-            item_set = prod_config["item_set"]
-        case "development":
-            item_set = dev_config["item_set"]
+    if env =="production":
+        item_set = prod_config["item_set"]
+    elif env== "development":
+        item_set = dev_config["item_set"]
+    else:
+        item_set == None
     return item_set
 
 def get_environment():
