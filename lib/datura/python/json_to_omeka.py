@@ -77,7 +77,7 @@ def add_new_item(json_item, template_number):
     new_item = api_fields.prepare_item(json_item)
     if new_item:
         try:
-            print(f"creating item {new_item['dcterms:identifier'][0]["@value"]}")
+            print(f"creating item {new_item['dcterms:identifier'][0]['@value']}")
         except KeyError as err:
             print(err)
             breakpoint()
@@ -89,10 +89,10 @@ def add_new_item(json_item, template_number):
             print(err)
             breakpoint()
     else:
-        print(f"error preparing item {json_item["identifier"]}")
+        print(f"error preparing item {json_item['identifier']}")
 
 def update_existing_item(json_item, matching_items):
-    print(f"updating item {matching_items["results"][0]["dcterms:identifier"][0]["@value"]}")
+    print(f"updating item {matching_items['results'][0]['dcterms:identifier'][0]['@value']}")
     item_to_update = copy.deepcopy(matching_items["results"][0])
     updated_item = api_fields.prepare_item(json_item, item_to_update)
     if updated_item:

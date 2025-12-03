@@ -41,7 +41,7 @@ def ingest_thumbnail(json_item, matching_item):
     thumbnail_remote = f"{omeka.config['iiif_server']}/iiif/2/{collection_name}%2F{cover_image}.jpg/full/!200,200/0/default.jpg"
     thumbnail_local = f"{iiif_dir}/{collection_name}%2F{cover_image}.jpg"
     try:
-        print(f"downloading thumbnail for {json_item["identifier"]}")
+        print(f"downloading thumbnail for {json_item['identifier']}")
         response = requests.get(thumbnail_remote)
         response.raise_for_status()
         with open (thumbnail_local, "wb") as thumb_file:
@@ -60,7 +60,7 @@ def ingest_thumbnail(json_item, matching_item):
                 },
                 "o:ingester": "upload"
             }
-        print(f"posting thumbnail for {json_item["identifier"]}")
+        print(f"posting thumbnail for {json_item['identifier']}")
         try:
             omeka.add_media_to_item(matching_item["o:id"], thumbnail_local, payload=media_payload)
         except Exception as err:
@@ -71,7 +71,7 @@ def ingest_thumbnail(json_item, matching_item):
 
 def ingest_html(json_item, matching_item):
     #get desired path
-    file_path = f"{html_dir}/{json_item["identifier"]}.html"
+    file_path = f"{html_dir}/{json_item['identifier']}.html"
     # get data from html
     try:
         with open(file_path, "r") as file:
@@ -83,7 +83,7 @@ def ingest_html(json_item, matching_item):
             },
             "o:ingester": "html"
         }
-        print(f"posting html for {json_item["identifier"]}")
+        print(f"posting html for {json_item['identifier']}")
         try:
             omeka.add_media_to_item(matching_item["o:id"], file_path, payload=media_payload)
         except Exception as err:
