@@ -26,7 +26,24 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 -->
 
 ## [Unreleased] - Brief description TBD before next release
-[Unreleased]: https://github.com/CDRH/datura/compare/v0.2.0...dev
+[Unreleased]: https://github.com/CDRH/datura/compare/v1.0.0...dev
+
+### Fixed
+
+### Added
+
+### Changed
+
+### Removed
+
+### Migration
+
+### Deprecated
+
+### Security
+
+## [v1.0.0] - API v2, CSV standardization, docs, tests, Ruby 3.1.7
+[v1.0.0]: https://github.com/CDRH/datura/compare/v0.2.0...v1.0.0
 
 ### Fixed
 - Items (including CSV rows) without a title or ID will be skipped during ingest, and `nil` will not be assigned to the ID field
@@ -51,12 +68,6 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 - `date_display` helper method
 - table outlining the new schema (replaced with link to spreadsheet)
 - `relation` field from schema and overrides (redundant to  `has_relation`)
-
-### Migration
-
-### Deprecated
-
-### Security
 
 ## [v0.2.0] - Ingest documentation, text spacing, and date_standardize
 [v0.2.0]: https://github.com/CDRH/datura/compare/v0.2.0-beta...v0.2.0
