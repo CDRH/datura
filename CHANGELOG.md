@@ -26,7 +26,7 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 -->
 
 ## [Unreleased] - Brief description TBD before next release
-[Unreleased]: https://github.com/CDRH/datura/compare/v1.0.0...dev
+[Unreleased]: https://github.com/CDRH/datura/compare/v1.0.1...dev
 
 ### Fixed
 
@@ -41,6 +41,14 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 ### Deprecated
 
 ### Security
+
+## [v1.0.1] - Accessibility XSLT
+[v1.0.1]: https://github.com/CDRH/datura/compare/v1.0.0...v1.0.1
+
+### Changed
+- Change page thumbnail alt and link title attribute
+  - Change title attribute for links to open page scan images
+  - Add empty alt="" to page scan images
 
 ## [v1.0.0] - API v2, CSV standardization, docs, tests, Ruby 3.1.7
 [v1.0.0]: https://github.com/CDRH/datura/compare/v0.2.0...v1.0.0
