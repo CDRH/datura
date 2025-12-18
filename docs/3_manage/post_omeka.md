@@ -29,13 +29,15 @@ Make sure that config is pointing to the right `resource_template` for the data 
 
 ## Instructions for posting data into Omeka API
 
-Running the `post_omeka` script will run the Datura scripts to generate a JSON file with all the CDRH API fields and values (this is what is normally sent to Elasticsearch when you run `post`). This first step is equivalent to running `post -x es -o -t`. It then sends the generated JSON to the Python scripts to be ingested into Omeka S.
+See (omeka setup instructions)[../1_setup/omeka_setup.md] for how to prepare your repo and activate a virtual environment
 
-It is possible to run `post_omeka` with Datura's other command line options (for instance `-f` to filter by file type and `-r` and filter by regex), but it is not recommended to override the default options such as `-x es`.
+Running the `post_omeka` script will first run the Datura scripts to generate JSON files with the standard fields and values of the CDRH API (this is what is normally sent to Elasticsearch when you run `post`). This first step is equivalent to running `post -x es -o -t`. It then sends the generated JSON to the Python scripts to be ingested into Omeka S.
 
-Use the `-s` option to skip the generation step and only post to Omeka S (requires that you have already generated the needed documents).
+Use the `-s` option to skip the generation step and only post to Omeka S (requires that you have already generated the needed documents by running `post_omeka` normally).
 
-You can specify the environment with `-e [environment]` but you must set an `item_set` with the desired environment in config/private.yml.
+It is possible to run `post_omeka` with Datura's other command line options as described in [post.md] (for instance `-f` to filter by file type and `-r` and filter by regex), but it is not recommended to override the default options such as `-x es`
+
+You can specify the environment with `-e [environment]` but you must set an `item_set` with the desired environment in config/private.yml. See (omeka setup instructions)[../1_setup/omeka_setup.md] for more details.
 
 To get the latest improvements to the datura scripts, make sure the Gemfile specifies the correct branch for the Omeka S scripts (currently `gem "datura", git: "https://github.com/CDRH/datura.git", branch: "omeka_posting_generalized"`), and run `bundle update datura`
 

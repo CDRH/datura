@@ -1,6 +1,6 @@
 ## Instructions for attaching media to the Omeka S API
 
-This script should be run after running `post_omeka.md`, as it works with items that are already in the Omeka S API Make sure that you have the usual Datura folders for html and iiif output under output/[environment]/[format]. The script generates html through Datura's usual XSLT generation process (i.e. `post -x html`), and deletes existing media, downloads thumnails from the iiif server, and attaches the thumbnail image and then the html item. It is intentionally structured in this order so that the image will be designated by Omeka as primary media so that it can be designated as the thumbnail.
+This script should be run after running (post_omeka)[post_omeka.md], as it works with items that are already in the Omeka S API Make sure that you have the usual Datura folders for html and iiif output under output/[environment]/[format]. The script generates html through Datura's usual XSLT generation process (i.e. `post -x html`), and deletes existing media, downloads thumnails from the iiif server, and attaches the thumbnail image and then the html item. It is intentionally structured in this order so that the image will be designated by Omeka as primary media so that it can be designated as the thumbnail.
 
 Use the `-s` option to skip the generation step and only post to Omeka S (requires that you have already generated the needed docs).
 
@@ -8,25 +8,7 @@ Use the `-m` option to skip the step of deleting and regenerating for media item
 
 You can specify the environment with `-e [environment]` but you must set an `item_set` with the desired environment in config/private.yml. See [post_omeka instructions](docs/3_manage/post_omeka.md) for instructions. 
 
-Instructions for setting up the python enviroment can be found at [post_omeka instructions](docs/3_manage/post_omeka.md).
-
-### Config
-
-- `iiif_server` should be set within the config/private.yml to the base url of the IIIF server.
-- `item_set` should be set within `config/private.yml` under the necessary environment (usually `development` or `production`):
-```yaml
-default:
-    omeka_server: servername.unl.edu/path/to/api
-    key_identity: *****
-    key_credential: *****
-    resource_template: ##
-    iiif_server: servername.unl.edu
-development:
-    item_set: ##
-production:
-    item_set: ##
-```
-- (for developers) `json_dir`, `html_id`, and `iiif_dir` are set within the script and correspond to the standard Datura output folders.
+Instructions for setting up the python enviroment can be found in (omeka setup instructions)[../1_setup/omeka_setup.md].
 
 ### Media ingesters (for developers)
 
