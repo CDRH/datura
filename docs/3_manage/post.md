@@ -6,6 +6,8 @@ The `post.rb` script can be used for any format -> any backend and HTML generati
 post -h
 ```
 
+Make sure you run `post` at the root of the collection directory (i.e. `/var/local/www/collections/stories_humanity`), not from any of its subfolders (i.e. `/var/local/www/collections/stories_humanity/source/tei`), otherwise it will not be able to locate the proper files.
+
 ### Basic Example
 
 Generally, the script is expecting a collection (the directory name) to be passed in, with options following if desired:
@@ -115,6 +117,11 @@ You may chain these together with a comma:
 `post -x es,html`
 
 Note that when updating local files with the `-t -o` options or the `-x html` option, it may be necessary to delete files before posting again, in order for changes to take effect.
+
+### Troubleshooting
+
+If `post` does not work, try running `bundle install` and if you get `can't find gem datura (>= 0.a) with executable post` try prefixing the command with `bundle exec`, i.e. `bundle exec post`.
+If you get an error when you run `bundle install`, try running the suggested commands, or contact a server adminsitration, especially for permission errors. (For server admins: Common reasons are permission problems with the gemset, or users not being in the proper. See documentation on server permissions).
 
 ### Posting to Omeka
 
