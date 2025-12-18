@@ -16,7 +16,7 @@ Both of the scripts have the same usage and behavior.
     -r, --regex [input]              Used as criteria for removing item (books.*, etc)
 ```
 
-By default, the scripts will run on the "development" environment unless otherwise directed.  **Be very careful when running these scripts -- if you are clearing the production API site, you may be bringing down dozens of sites across the CDRH at once!!**
+By default, the scripts will run on the "development" environment unless otherwise directed.  **Be very careful when running these scripts -- if you are clearing the production API site, you may be bringing down dozens of sites across the CDRH at once!!** Please ensure that the `collection` is correctly specified in config and not shared with other sites, and be sepecially careful if setting `collection: all` to clear all indexes. 
 
 In general, you can't clear the entire development index across collections particularly easily.  The following will operate only over the specific collection in the configuration environment:
 
@@ -31,6 +31,10 @@ Specify a different environment:
 (es|solr)_clear_index -e api_dev
 ```
 
+In order for these scripts to execute correctly, you will need to make sure that the configuration files are set up correctly.
+
+## Clearing specific items
+
 You can also search for a specific or group of ids to remove
 
 ```
@@ -42,8 +46,9 @@ You can remove entries by field + regex
 ```
 (es|solr)_clear_index -f category -r memorabilia
 ```
+See https://regex101.com or similar for how to use regex.
 
-In order for these scripts to execute correctly, you will need to make sure that the configuration files are set up correctly.
+It is only possible at this point to limit individual (usually XML) files in this way. It is not possible to limit spreadsheet line entries.
 
 ## Clearing the Entire Index
 
