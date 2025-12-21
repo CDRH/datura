@@ -35,6 +35,7 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 ### Changed
 
 ### Removed
+- Removing deprecated CommonXml methods which should be updated now
 
 ### Migration
 

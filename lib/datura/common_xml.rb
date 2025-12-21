@@ -45,26 +45,6 @@ module CommonXml
     file_xml
   end
 
-  # deprecated method
-  def self.date_display(date, nd_text="N.D.")
-    Datura::Helpers.date_display(date, nd_text)
-  end
-
-  # deprecated method
-  def self.date_standardize(date, before=true)
-    Datura::Helpers.date_standardize(date, before)
-  end
-
-  # deprecated method
-  def self.normalize_name(abnormal)
-    Datura::Helpers.normalize_name(abnormal)
-  end
-
-  # deprecated method
-  def self.normalize_space(abnormal)
-    Datura::Helpers.normalize_space(abnormal)
-  end
-
   # saxon accepts params in following manner
   #   fw=true pb=true figures=false
   def self.stringify_params(param_hash)
@@ -85,15 +65,6 @@ module CommonXml
   # returns string object
   def self.to_display_text(aXml)
     CommonXml.sub_corrections(aXml).text
-  end
-
-  # TODO remove in 2021
-  class << self
-    extend Gem::Deprecate
-    deprecate :date_display, :"Datura::Helpers.date_display", 2021, 1
-    deprecate :date_standardize, :"Datura::Helpers.date_standardize", 2021, 1
-    deprecate :normalize_name, :"Datura::Helpers.normalize_name", 2021, 1
-    deprecate :normalize_space, :"Datura::Helpers.normalize_space", 2021, 1
   end
 
 end
