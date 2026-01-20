@@ -19,7 +19,7 @@ def build_item_dict(json, existing_item):
         update_item_value(built_item, "dcterms:type", fields.dcterms_type(json))
         update_item_value(built_item, "dcterms:creator", fields.creator(json))
         update_item_value(built_item, "dcterms:contributor", fields.contributor(json))
-        update_item_value(built_item, "dcterms:date", fields.date(json))
+        update_item_value(built_item, "dcterms:date", fields.date(json), "numeric:timestamp")
         update_item_value(built_item, "dcterms:description", fields.description(json))
         update_item_value(built_item, "dcterms:format", fields.dcterms_format(json))
         update_item_value(built_item, "dcterms:relation", fields.relation(json))
