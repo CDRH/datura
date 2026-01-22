@@ -1,5 +1,6 @@
 import sys
 import os
+from datetime import date
 
 class FieldDefinitions:
     #these are the default field definitions, which may be overridden in specific projects
@@ -35,6 +36,14 @@ class FieldDefinitions:
     
     def date(self, json):
         return json.get("date", None)
+    
+    def dateYear(self, json):
+        date_to_parse = json.get("date", None)
+        year = date.strptime("%Y-%m-%d").year
+        return year
+    
+    def dateDisplay(self, json):
+        return json.get("date_display", None)
     
     def description(self, json):
         return json.get("description", None)
