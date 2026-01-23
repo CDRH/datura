@@ -1,6 +1,6 @@
 import sys
 import os
-from datetime import date
+from datetime import datetime
 
 class FieldDefinitions:
     #these are the default field definitions, which may be overridden in specific projects
@@ -39,7 +39,7 @@ class FieldDefinitions:
     
     def dateYear(self, json):
         date_to_parse = json.get("date", None)
-        year = date.strptime("%Y-%m-%d").year
+        year = datetime.strptime(date_to_parse, "%Y-%m-%d").year
         return year
     
     def dateDisplay(self, json):
