@@ -39,8 +39,9 @@ class FieldDefinitions:
     
     def dateYear(self, json):
         date_to_parse = json.get("date", None)
-        year = datetime.strptime(date_to_parse, "%Y-%m-%d").year
-        return year
+        if date_to_parse:
+            year = datetime.strptime(date_to_parse, "%Y-%m-%d").year
+            return year
     
     def dateDisplay(self, json):
         return json.get("date_display", None)
