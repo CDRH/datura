@@ -142,7 +142,7 @@ def update_item_value(item, key, value, datatype="literal"):
     """
     #clear the existing values of the key, or initialize it if it is new
     item[key] = []
-    if type(value) == str:
+    if type(value) in [str, int, float]:
         item = add_formatted_value(item, key, value, datatype)
     elif type(value) == list:
         # make sure values are unique
@@ -223,8 +223,6 @@ def get_matching_names_from_markdown(row, field):
             return names
     else:
         return []
-    
-            
 
 def get_omeka_ids(lookup_values, filter_property, item_set_id = None):
     item_set_id = omeka.get_item_set()
