@@ -156,6 +156,9 @@ def add_formatted_value(item, key, value, datatype, label=""):
     # expects as indicated in the template
     # used when adding a new value that is not already in the Omeka JSON, so that Omeka will properly update the value
     # this comes up
+    # literal values should be str
+    if datatype == "literal":
+        value = str(value)
     prop_id = omeka.omeka_auth.get_property_id(key)
     prop_value = {
         "value": value,
