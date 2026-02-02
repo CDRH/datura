@@ -6,6 +6,7 @@ ARGV.unshift("-x", "es", "-o", "-t")
 
 #post with options to output to JSON file
 environment = ARGV[ARGV.index('-e') + 1] if ARGV.include?('-e')
+regex = ARGV[ARGV.index('-r') + 1] if ARGV.include?('-r')
 #skip generation step with option -s
 if !ARGV.include?('-s')
     manager = Datura::DataManager.new
@@ -16,11 +17,14 @@ datura_dir = File.join(File.dirname(__FILE__), "..")
 python_script_path = File.join(datura_dir, "lib", "datura", "python", "json_to_omeka.py")
 #run posting script into Omeka S
 if File.exist?("#{python_script_path}")
+    command = "python3 #{python_script_path}"
     if environment
-        system("python3 #{python_script_path} -e #{environment}")
-    else
-        system("python3 #{python_script_path}")
+        command += " -e #{environment}"
     end
+    if regex
+        command += " -r #{regex}"
+    end
+    system(command)
 else
     puts("Omeka script not found at #{python_script_path}".red)
 end

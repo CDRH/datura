@@ -9,15 +9,10 @@ from pathlib import Path
 import sys
 import traceback
 import os
+import re
 
-#look for the output folder: /output/development/es and get all items
-json_dir = omeka.get_dir("output/development/es")
-pathlist = list(Path(json_dir).glob('**/*.json'))
-item_set_id = omeka.get_item_set()
-#enables importing of overrides
-sys.path.append(os.path.join(os.getcwd(), "scripts/overrides"))
 
-def post_items():
+def post_items(pathlist):
     #iterate through each file
     for path in pathlist:
         filename = str(path)
@@ -26,9 +21,13 @@ def post_items():
             # TODO change template_number to actual number, account for other schemas is necessary
             template_number = omeka.template_number
             for json_item in json_items:
-                if not json_item["identifier"]:
-                    print("skipping item without identifier")
-                    continue
+                try:
+                    if not json_item["identifier"]:
+                        breakpoint()
+                        print("skipping item without identifier")
+                        continue
+                except TypeError as e:
+                    breakpoint()
                 matching_items = omeka.omeka_auth.filter_items_by_property(filter_property = "dcterms:identifier", filter_value = json_item["identifier"], item_set_id=item_set_id)
                 if matching_items:
                     #if item exists, update item
@@ -41,7 +40,7 @@ def post_items():
                     else:
                         print(f"multiple matches for {json_item['identifier']}, please check Omeka admin site")
 
-def link_items():
+def link_items(pathlist):
     #go through tables again to link records
     for path in pathlist:
         filename = str(path)
@@ -102,9 +101,21 @@ def update_existing_item(json_item, matching_items):
             print(err)
             breakpoint()
 
+def filter_items(regex, pathlist):
+    reg = re.compile(regex)
+    return [p for p in pathlist if reg.search(str(p))]
 
-post_items()
+#look for the output folder: /output/development/es and get all items
+json_dir = omeka.get_dir("output/development/es")
+regex = omeka.get_regex()
+pathlist = list(Path(json_dir).glob('**/*.json'))
+if regex:
+    pathlist = filter_items(regex, pathlist)
+item_set_id = omeka.get_item_set()
+#enables importing of overrides
+sys.path.append(os.path.join(os.getcwd(), "scripts/overrides"))
+post_items(pathlist)
 #need to query the API again at this point so that records can be linked    
 omeka.reset()
-link_items()
+link_items(pathlist)
 

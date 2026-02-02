@@ -49,9 +49,12 @@ def get_item_set():
     return item_set
 
 def get_environment():
-
     environment = args.environment
     return environment
+
+def get_regex():
+    regex = args.regex
+    return regex
 
 def add_media_to_item(item_id, media_file, payload={}, template_id=None, class_id=None):
     # copied from the module to modify with different ingester
@@ -205,5 +208,6 @@ parser = argparse.ArgumentParser()
 parser.add_argument('-e', '--environment', required=False, default="development")
 parser.add_argument('-m', '--media-skip', action='store_true',
                     help='Only ingest media not already ingested')
+parser.add_argument('-r', '--regex', required=False, help = "Filter files with regex")
 args = parser.parse_args()
 template_number = config["resource_template"]
