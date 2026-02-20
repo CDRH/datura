@@ -15,7 +15,7 @@ def build_item_dict(json, existing_item):
         update_item_value(built_item, "dh:collection", fields.collection(json))
         update_item_value(built_item, "dh:category", fields.category(json))
         update_item_value(built_item, "dh:category2", fields.category2(json))
-        update_item_value(built_item, "dh:uriData", fields.uriData(json))
+        update_item_value(built_item, "dh:uriData", fields.uriData(json), "uri")
         update_item_value(built_item, "dcterms:type", fields.dcterms_type(json))
         update_item_value(built_item, "dcterms:creator", fields.creator(json))
         update_item_value(built_item, "dcterms:contributor", fields.contributor(json))
