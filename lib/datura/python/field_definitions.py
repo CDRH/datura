@@ -201,7 +201,10 @@ class FieldDefinitions:
         return json.get("annotations_text", None)
     
     def itemText(self, json):
-        return json.get("text", None)
+        text = json.get("text", None)
+        if json.get("data_type"):
+            text += (" " + self.identifier(json))
+        return text
     
 def get_fields():
     try:
