@@ -163,13 +163,12 @@ class FieldDefinitions:
         return person_names
     
     def spatial_short_name(self, json):
-        places = [json["spatial"]] if isinstance(json["spatial"], dict) else json["spatial"]
-        if places:
-            try:
-                place_names = [place['short_name'] for place in places or [] if 'short_name' in place]
-            except:
-                breakpoint()
-            return place_names
+        spatial = json.get("spatial")
+        if not spatial:
+            return []
+        places = [spatial] if isinstance(spatial, dict) else spatial
+        short_names = [place['short_name'] for place in places if 'short_name' in place]
+        return short_names
         
     def correspSentName(self, json):
         return json.get("correspSentName_omeka_s", None)
