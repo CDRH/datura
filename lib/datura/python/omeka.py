@@ -188,7 +188,10 @@ def prepare_property_value(value, property_id, label = ""):
         property_value['value_resource_name'] = 'items'
     elif data_type == 'uri':
         property_value['@id'] = value['value']
-        property_value["o:label"] = label
+        if label == "":
+            property_value["o:label"] = value["value"].split("/")[-1]
+        else:
+            property_value["o:label"] = label
     else:
         property_value['@value'] = value['value']
     return property_value
