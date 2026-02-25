@@ -1,6 +1,7 @@
 import sys
 import os
 from datetime import datetime
+import omeka
 
 class FieldDefinitions:
     #these are the default field definitions, which may be overridden in specific projects
@@ -20,7 +21,12 @@ class FieldDefinitions:
         return json.get("category2", None)
     
     def uriData(self, json):
-        return json.get("uri_data", None)
+        uri_data = json.get("uri_data", None)
+        if uri_data:
+            filename = uri_data.split("/")[-1]
+            repo_name = omeka.repo_name
+            new_uri_data = f"https://github.com/CDRH/{repo_name}/blob/dev/source/tei/{filename}"
+            return new_uri_data
     
     def dcterms_type(self, json):
         #note that "type" is a builtin function in Python
@@ -147,7 +153,6 @@ class FieldDefinitions:
     
     def source(self, json):
         return json.get("has_source") and json.get("has_source", {}).get("title")
-
         
     def medium(self, json):
         return json.get("medium", None)
