@@ -100,7 +100,7 @@ def add_media_to_item(item_id, media_file, payload={}, template_id=None, class_i
     payload.update(file_data)
     files[f'file[0]'] = path.read_bytes()
     files['data'] = (None, json.dumps(payload), 'application/json')
-    response = omeka_auth.s.post(f'{omeka_auth.api_url}/media', files=files, params=omeka_auth.params)
+    response = omeka_auth.s.post(f'{omeka_auth.api_url}/media', files=files, params=omeka_auth.credentials)
     data = omeka_auth.process_response(response)
     return data
 
