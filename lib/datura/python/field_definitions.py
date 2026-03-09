@@ -24,8 +24,8 @@ class FieldDefinitions:
         uri_data = json.get("uri_data", None)
         if uri_data:
             filename = uri_data.split("/")[-1]
-            repo_name = omeka.repo_name
-            new_uri_data = f"https://github.com/CDRH/{repo_name}/blob/dev/source/tei/{filename}"
+            omeka_data_base = omeka.omeka_data_base
+            new_uri_data = f"{omeka_data_base}/{filename}"
             return new_uri_data
     
     def dcterms_type(self, json):

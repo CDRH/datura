@@ -214,4 +214,4 @@ parser.add_argument('-m', '--media-skip', action='store_true',
 parser.add_argument('-r', '--regex', required=False, help = "Filter files with regex")
 args = parser.parse_args()
 template_number = config["resource_template"]
-repo_name = config["repo_name"]
+omeka_data_base = config["omeka_data_base"]
