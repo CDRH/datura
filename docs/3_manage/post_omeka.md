@@ -23,7 +23,7 @@ default:
     key_identity: *****
     key_credential: *****
     resource_template: ##
-    repo_name: name_of_repo_on_github
+    omeka_data_base: desired/base/url/for/tei/files
 development:
     item_set: ##
 production
@@ -31,7 +31,7 @@ production
 ```
 The `key_identity` and `key_credential` fields should correspond to the generated API key credentials. which you can generate on your Omeka S user page (click "Edit user" and then the API key). Make sure to copy the credentials down right away after generating the key.
 Make sure that config is pointing to the right `resource_template` for the data you want to ingest. See the Omeka instance.
-`repo_name` is necessary to designate a github repo for links to the TEI data documents. This takes the form of `https://github.com/CDRH/{repo_name}/blob/dev/source/tei/{filename}`Make sure you have the right repo to make this a valid url.
+`omeka_data_base` is necessary to indicate the URL to the TEI data documents. It should have a format like `https://github.com/CDRH/[repo_name]/blob/[env]/source/tei` or specify a similar relative path. The Omeka script adds the filename at the end. Make sure you have the right repo to make this a valid url.
 The scripts are designed to use the CDRH schema, so look on Omeka to determine the correct template number.
 Item sets should be specified by environment in private.yml in order to categorize items by environment on Omeka S. Not all projects have environments and specifying an item set is not necessary to post.
 
