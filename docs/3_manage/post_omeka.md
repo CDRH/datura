@@ -22,6 +22,7 @@ default:
     omeka_server: servername.unl.edu/path/to/api
     key_identity: *****
     key_credential: *****
+    iiif_server: servername.unl.edu
     resource_template: ##
     omeka_data_base: desired/base/url/for/tei/files
 development:

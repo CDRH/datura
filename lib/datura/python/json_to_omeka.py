@@ -83,7 +83,7 @@ def add_new_item(json_item, template_number):
         payload = omeka.prepare_item_payload_using_template(new_item, template_number)
         # add item set
         try:
-            omeka.omeka_auth.add_item(payload, template_id=template_number, item_set_id=item_set_id)
+            omeka.omeka_auth.add_item(payload, template_id=template_number, item_set_id=item_set_id, is_public=is_public)
         except Exception as err:
             print(err)
             breakpoint()
@@ -112,6 +112,7 @@ pathlist = list(Path(json_dir).glob('**/*.json'))
 if regex:
     pathlist = filter_items(regex, pathlist)
 item_set_id = omeka.get_item_set()
+is_public = True if omeka.get_environment() == "production" else False
 #enables importing of overrides
 sys.path.append(os.path.join(os.getcwd(), "scripts/overrides"))
 post_items(pathlist)
