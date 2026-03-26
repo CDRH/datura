@@ -34,7 +34,7 @@ def ingest_thumbnail(json_item, matching_item):
     # note that thumbnail ingest should be done first so that thumbnails are designated primary_media
 
     collection_name = json_item["collection"]
-    cover_image = json_item["cover_image"]
+    cover_image = json_item.get("cover_image", None)
     if not cover_image:
         return
     # download thumbnail from iiif server
