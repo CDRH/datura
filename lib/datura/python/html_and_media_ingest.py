@@ -56,7 +56,8 @@ def ingest_thumbnail(json_item, matching_item):
             media_payload = {
                 "o:is_public": True,
                 "data": {
-                    "upload": thumbnail_local
+                    "upload": thumbnail_local,
+                    "dcterms:title": omeka.prepare_property_value(json_item["title"], omeka.omeka_auth.get_property_id("dcterms:title"))
                 },
                 "o:ingester": "upload"
             }
