@@ -9,8 +9,6 @@ from pathlib import Path
 import sys
 import traceback
 import os
-import re
-
 
 def post_items(pathlist):
     #iterate through each file
@@ -101,16 +99,12 @@ def update_existing_item(json_item, matching_items):
             print(err)
             breakpoint()
 
-def filter_items(regex, pathlist):
-    reg = re.compile(regex)
-    return [p for p in pathlist if reg.search(str(p))]
-
 #look for the output folder: /output/development/es and get all items
 json_dir = omeka.get_dir("output/development/es")
 regex = omeka.get_regex()
 pathlist = list(Path(json_dir).glob('**/*.json'))
 if regex:
-    pathlist = filter_items(regex, pathlist)
+    pathlist = omeka.filter_items(regex, pathlist)
 item_set_id = omeka.get_item_set()
 is_public = True if omeka.get_environment() == "production" else False
 #enables importing of overrides
