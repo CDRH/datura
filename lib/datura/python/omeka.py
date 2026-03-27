@@ -4,6 +4,7 @@ from omeka_s_tools.api import OmekaAPIClient
 import math
 import yaml
 import argparse
+import re
 
 #needed for debugging purposes
 import traceback
@@ -95,7 +96,7 @@ def add_media_to_item(item_id, media_file, payload={}, template_id=None, class_i
         'o:ingester': ingester,
         'file_index': '0',
         'o:source': path.name,
-        'o:item': {'o:id': item_id},
+        'o:item': {'o:id': item_id}
     }
     payload.update(file_data)
     files[f'file[0]'] = path.read_bytes()
@@ -195,6 +196,11 @@ def prepare_property_value(value, property_id, label = ""):
     else:
         property_value['@value'] = value['value']
     return property_value
+
+
+def filter_items(regex, pathlist):
+    reg = re.compile(regex)
+    return [p for p in pathlist if reg.search(str(p))]
 
 conf_path = get_dir("config/private.yml")
 config = get_config(conf_path)

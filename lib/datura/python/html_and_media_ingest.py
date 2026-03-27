@@ -11,6 +11,9 @@ from copy import deepcopy
 #look for the output folder: /output/development/*
 json_dir = omeka.get_dir("output/development/es")
 pathlist = list(Path(json_dir).glob('**/*.json'))
+regex = omeka.get_regex()
+if regex:
+    pathlist = omeka.filter_items(regex, pathlist)
 html_dir = omeka.get_dir("output/development/html")
 iiif_dir = omeka.get_dir("output/development/iiif")
 

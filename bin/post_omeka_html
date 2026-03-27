@@ -6,6 +6,7 @@ ARGV.unshift("-x", "html")
 
 #post with options to output to JSON file
 environment = ARGV[ARGV.index('-e') + 1] if ARGV.include?('-e')
+regex = ARGV[ARGV.index('-r') + 1] if ARGV.include?('-r')
 if ARGV.include?("-m")
     #this argument is for python, it will cause errors if passed to the Datura ruby scripts
     #it will skip deleting and regenerating media for Omeka S
@@ -27,6 +28,9 @@ if File.exist?("#{python_script_path}")
     command = "python3 #{python_script_path}"
     if environment
         command += " -e #{environment}"
+    end
+    if regex
+        command += " -r #{regex}"
     end
     if media_skip
         command += " -m"
