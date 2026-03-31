@@ -1,14 +1,4 @@
-## Instructions for posting data into Omeka API
-
-Running the `post_omeka` script will run the Datura scripts to generate a JSON file with all the CDRH API fields and values (this is what is normally sent to Elasticsearch when you run `post`). This first step is equivalent to running `post -x es -o -t`. It then sends the generated JSON to the Python scripts to be ingested into Omeka S.
-
-It is possible to run `post_omeka` with Datura's other command line options (for instance `-f` to filter by file type and `-r` and filter by regex), but it is not recommended to override the default options such as `-x es`.
-
-Use the `-s` option to skip the generation step and only post to Omeka S (requires that you have already generated the needed documents).
-
-You can specify the environment with `-e [environment]` but you must set an `item_set` with the desired environment in config/private.yml. See below.
-
-### Python dependencies and virtual environemnt
+### Setting up dependencies and virtual environemnt
 
 In your collection repo, first exit any virtual environemt that is currently enabled (this may be indicated by `(.venv)` or similar text before your command prompt). If you have not previously created a virtual environment, type `python3 -m venv .venv`. The environment will be installed in the `.venv` folder in the root of the collection repo. This folder should not be committed. To enter the virtual environment once it has been created, run `source .venv/bin/activate`. Then run `pip3 install -r requirements.txt` to install the dependencies. These two steps are necessary to get the `post_omeka` script to run.
 
@@ -35,6 +25,19 @@ Make sure that config is pointing to the right `resource_template` for the data 
 `omeka_data_base` is necessary to indicate the URL to the TEI data documents. It should have a format like `https://github.com/CDRH/[repo_name]/blob/[env]/source/tei` or specify a similar relative path. The Omeka script adds the filename at the end. Make sure you have the right repo to make this a valid url.
 The scripts are designed to use the CDRH schema, so look on Omeka to determine the correct template number.
 Item sets should be specified by environment in private.yml in order to categorize items by environment on Omeka S. Not all projects have environments and specifying an item set is not necessary to post.
+
+## Instructions for posting data into Omeka API
+
+Running the `post_omeka` script will run the Datura scripts to generate a JSON file with all the CDRH API fields and values (this is what is normally sent to Elasticsearch when you run `post`). This first step is equivalent to running `post -x es -o -t`. It then sends the generated JSON to the Python scripts to be ingested into Omeka S.
+
+It is possible to run `post_omeka` with Datura's other command line options (for instance `-f` to filter by file type and `-r` and filter by regex), but it is not recommended to override the default options such as `-x es`.
+
+Use the `-s` option to skip the generation step and only post to Omeka S (requires that you have already generated the needed documents).
+
+You can specify the environment with `-e [environment]` but you must set an `item_set` with the desired environment in config/private.yml.
+
+To get the latest improvements to the datura scripts, make sure the Gemfile specifies the correct branch for the Omeka S scripts (currently `gem "datura", git: "https://github.com/CDRH/datura.git", branch: "omeka_posting_generalized"`), and run `bundle update datura`
+
 
 ### API fields and overrides (for developers)
 
