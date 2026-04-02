@@ -585,6 +585,21 @@
   </xsl:template>
 
   <xsl:template match="pb">
+    <!-- grab the item title for alt text if it exists; otherwise use a generic term -->
+    <xsl:variable name="img_alt_title">
+      <xsl:choose>
+        <xsl:when test="preceding::titleStmt/title[1]">
+          <xsl:value-of select="preceding::titleStmt/title[1]"/>
+        </xsl:when>
+        <xsl:otherwise>item</xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    
+    <!-- determine what number image this is for alt text -->
+    <xsl:variable name="img_alt_num">
+      <xsl:value-of select="count(preceding::pb) + 1"/>
+    </xsl:variable>
+     
     <!-- grab the figure id from @facs, and if there is a .jpg, chop it off
           note: I previously also looked at xml:id for figure ID, but that's 
           incorrect -->
@@ -637,7 +652,7 @@
             <xsl:attribute name="class">
               <xsl:text>display&#160;</xsl:text>
             </xsl:attribute>
-            <xsl:attribute name="alt" />
+            <xsl:attribute name="alt"><xsl:text>Image </xsl:text><xsl:value-of select="$img_alt_num"/><xsl:text> of </xsl:text><xsl:value-of select="$img_alt_title"/></xsl:attribute>
             <xsl:attribute name="role">
               <xsl:text>presentation</xsl:text>
             </xsl:attribute>
