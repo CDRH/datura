@@ -66,7 +66,7 @@ class FieldDefinitions:
         return json.get("format", None)
     
     def relation(self, json):
-        relation_ids = [relation['id'] for relation in json.get("has_relation") or [] if 'name' in relation]
+        relation_ids = [relation['id'] for relation in json.get("has_relation") or [] if 'id' in relation]
         return relation_ids
         
     #citation fields
