@@ -2,13 +2,42 @@
 
 require "datura"
 require "byebug"
-ARGV.unshift("-x", "es", "-o", "-t")
+require "optparse"
 
-#post with options to output to JSON file
-environment = ARGV[ARGV.index('-e') + 1] if ARGV.include?('-e')
-regex = ARGV[ARGV.index('-r') + 1] if ARGV.include?('-r')
+@usage = "Usage: post_omeka -[options]..."
+
+
+generate_es = true
+options = {}
+optparse = OptionParser.new do |opts|
+    # Set a banner
+    opts.banner = @usage
+    opts.on('-s', '--skip', 'skip generation step and just post to Omeka') do
+        generate_es = false
+    end
+
+    opts.on('-e', '--environment [input]', 'environment (development, production)') do |input|
+        if input && input.length > 0
+            options["environment"] = input
+        end
+    end
+
+    opts.on('-r', '--regex [input]', 'only generate and post files matching this regex') do |input|
+        if input && input.length > 0
+            options["regex"] = input
+        end
+    end
+
+    opts.on('-[!-~]', '-[!-~] [input]', 'arguments for the main Datura script') do |name, value|
+        #does nothing, this is a placeholder to catch all arguments not needed now and pass them along to the main script
+    end
+end
+#parse, but do not consume, command line arguments (the usual parse! would consume them)
+optparse.parse(ARGV)
+# 
+ARGV.unshift("-x", "es", "-o", "-t")
 #skip generation step with option -s
-if !ARGV.include?('-s')
+if generate_es
     manager = Datura::DataManager.new
     manager.run
 end
