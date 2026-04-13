@@ -46,14 +46,14 @@ datura_dir = File.join(File.dirname(__FILE__), "..")
 python_script_path = File.join(datura_dir, "lib", "datura", "python", "json_to_omeka.py")
 #run posting script into Omeka S
 if File.exist?("#{python_script_path}")
-    command = "python3 #{python_script_path}"
-    if environment
-        command += " -e #{environment}"
+    command = ["python3", python_script_path]
+    if options["environment"]
+        command.append("-e", options["environment"])
     end
-    if regex
-        command += " -r #{regex}"
+    if options["regex"]
+        command.append("-r", options["regex"])
     end
-    system(command)
+    system(*command)
 else
     puts("Omeka script not found at #{python_script_path}".red)
 end
