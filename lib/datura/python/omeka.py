@@ -41,9 +41,9 @@ def item_sets():
 
 def get_item_set():
     env = get_environment()
-    if env =="production":
+    if env == "production":
         item_set = prod_config["item_set"]
-    elif env== "development":
+    elif env == "development":
         item_set = dev_config["item_set"]
     else:
         item_set == None
@@ -210,8 +210,8 @@ prod_config = get_config(conf_path, "production")
 omeka = OmekaAPIClient(config['omeka_server'])
 omeka_auth = OmekaAPIClient(
     api_url = config['omeka_server'],
-    key_identity = config['key_identity'],                        
-    key_credential = config['key_credential']                        
+    key_identity = config['key_identity'],                     
+    key_credential = config['key_credential']                    
 )
 parser = argparse.ArgumentParser()
 parser.add_argument('-e', '--environment', required=False, default="development")
