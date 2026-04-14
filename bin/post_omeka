@@ -34,7 +34,7 @@ optparse = OptionParser.new do |opts|
 end
 #parse, but do not consume, command line arguments (the usual parse! would consume them)
 optparse.parse(ARGV)
-# 
+#add options to output a json file instead of posting it to Elasticsearch
 ARGV.unshift("-x", "es", "-o", "-t")
 #skip generation step with option -s
 if generate_es
