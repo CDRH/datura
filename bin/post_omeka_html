@@ -2,40 +2,65 @@
 
 require "datura"
 require "byebug"
-ARGV.unshift("-x", "html")
 
-#post with options to output to JSON file
-environment = ARGV[ARGV.index('-e') + 1] if ARGV.include?('-e')
-regex = ARGV[ARGV.index('-r') + 1] if ARGV.include?('-r')
-if ARGV.include?("-m")
-    #this argument is for python, it will cause errors if passed to the Datura ruby scripts
-    #it will skip deleting and regenerating media for Omeka S
-    ARGV.delete("-m")
-    media_skip = true
+generate_es = true
+options = {}
+optparse = OptionParser.new do |opts|
+    # Set a banner
+    opts.banner = @usage
+    opts.on('-s', '--skip', 'skip generation step and just post to Omeka') do
+        generate_es = false
+    end
+
+    opts.on('-m', '--media_skip', 'skip deleting and regenerating media') do
+        options["media_skip"] = true
+        byebug
+    end
+
+    opts.on('-e', '--environment [input]', 'environment (development, production)') do |input|
+        if input && input.length > 0
+            options["environment"] = input
+        end
+    end
+
+    opts.on('-r', '--regex [input]', 'only generate and post files matching this regex') do |input|
+        if input && input.length > 0
+            options["regex"] = input
+        end
+    end
+
+    opts.on('-[!-~]', '-[!-~] [input]', 'arguments for the main Datura script') do |name, value|
+        #does nothing, this is a placeholder to catch all arguments not needed now and pass them along to the main script
+    end
 end
-#skip html and json generation step with option -s
-if !ARGV.include?('-s')
+#parse, but do not consume, command line arguments (the usual parse! would consume them)
+optparse.parse(ARGV)
+#remove option not used in the main script
+ARGV.delete("-m")
+#add option to generate html
+ARGV.unshift("-x", "html")
+#skip generation step with option -s
+if generate_es
     manager = Datura::DataManager.new
     manager.run
 end
-
 
 datura_dir = File.join(File.dirname(__FILE__), "..")
 # path to the gem's config files
 python_script_path = File.join(datura_dir, "lib", "datura", "python", "html_and_media_ingest.py")
 #run posting script into Omeka S
 if File.exist?("#{python_script_path}")
-    command = "python3 #{python_script_path}"
-    if environment
-        command += " -e #{environment}"
+    command = ["python3", python_script_path]
+    if options["environment"]
+        command.append("-e", options["environment"])
     end
-    if regex
-        command += " -r #{regex}"
+    if options["regex"]
+        command.append("-r", options["regex"])
     end
-    if media_skip
-        command += " -m"
+    if options["media_skip"]
+        command.append("-m")
     end
-    system(command)
+    system(*command)
 else
     puts("Omeka script not found at #{python_script_path}".red)
 end
