@@ -2,6 +2,7 @@
 
 require "datura"
 require "byebug"
+require "shellwords"
 
 generate_es = true
 options = {}
@@ -52,10 +53,10 @@ python_script_path = File.join(datura_dir, "lib", "datura", "python", "html_and_
 if File.exist?("#{python_script_path}")
     command = ["python3", python_script_path]
     if options["environment"]
-        command.append("-e", options["environment"])
+        command.append("-e", Shellwords.escape(options["environment"]))
     end
     if options["regex"]
-        command.append("-r", options["regex"])
+        command.append("-r", Shellwords.escape(options["regex"]))
     end
     if options["media_skip"]
         command.append("-m")

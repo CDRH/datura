@@ -3,6 +3,7 @@
 require "datura"
 require "byebug"
 require "optparse"
+require "shellwords"
 
 @usage = "Usage: post_omeka -[options]..."
 
@@ -48,10 +49,10 @@ python_script_path = File.join(datura_dir, "lib", "datura", "python", "json_to_o
 if File.exist?("#{python_script_path}")
     command = ["python3", python_script_path]
     if options["environment"]
-        command.append("-e", options["environment"])
+        command.append("-e", Shellwords.escape(options["environment"]))
     end
     if options["regex"]
-        command.append("-r", options["regex"])
+        command.append("-r", Shellwords.escape(options["regex"]))
     end
     system(*command)
 else
