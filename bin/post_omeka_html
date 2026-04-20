@@ -15,7 +15,6 @@ optparse = OptionParser.new do |opts|
 
     opts.on('-m', '--media_skip', 'skip deleting and regenerating media') do
         options["media_skip"] = true
-        byebug
     end
 
     opts.on('-e', '--environment [input]', 'environment (development, production)') do |input|
