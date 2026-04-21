@@ -1,0 +1,66 @@
+#!/usr/bin/env ruby
+
+require "datura"
+require "byebug"
+require "shellwords"
+
+generate_es = true
+options = {}
+optparse = OptionParser.new do |opts|
+    # Set a banner
+    opts.banner = @usage
+    opts.on('-s', '--skip', 'skip generation step and just post to Omeka') do
+        generate_es = false
+    end
+
+    opts.on('-m', '--media_skip', 'skip deleting and regenerating media') do
+        options["media_skip"] = true
+    end
+
+    opts.on('-e', '--environment [input]', 'environment (development, production)') do |input|
+        if input && input.length > 0
+            options["environment"] = input
+        end
+    end
+
+    opts.on('-r', '--regex [input]', 'only generate and post files matching this regex') do |input|
+        if input && input.length > 0
+            options["regex"] = input
+        end
+    end
+
+    opts.on('-[!-~]', '-[!-~] [input]', 'arguments for the main Datura script') do |name, value|
+        #does nothing, this is a placeholder to catch all arguments not needed now and pass them along to the main script
+    end
+end
+#parse, but do not consume, command line arguments (the usual parse! would consume them)
+optparse.parse(ARGV)
+#remove option not used in the main script
+ARGV.delete("-m")
+#add option to generate html
+ARGV.unshift("-x", "html")
+#skip generation step with option -s
+if generate_es
+    manager = Datura::DataManager.new
+    manager.run
+end
+
+datura_dir = File.join(File.dirname(__FILE__), "..")
+# path to the gem's config files
+python_script_path = File.join(datura_dir, "lib", "datura", "python", "html_and_media_ingest.py")
+#run posting script into Omeka S
+if File.exist?("#{python_script_path}")
+    command = ["python3", python_script_path]
+    if options["environment"]
+        command.append("-e", Shellwords.escape(options["environment"]))
+    end
+    if options["regex"]
+        command.append("-r", Shellwords.escape(options["regex"]))
+    end
+    if options["media_skip"]
+        command.append("-m")
+    end
+    system(*command)
+else
+    puts("Omeka script not found at #{python_script_path}".red)
+end

@@ -3,6 +3,8 @@
 require "colorize"
 require 'fileutils'
 
+datura = File.join(File.dirname(__FILE__), "..")
+
 coll = Dir.getwd
 
 puts "Caution: this script is intended for NEW data collections.".red
@@ -79,9 +81,11 @@ end
 
 # SCRIPTS
 
-puts "-- Place XSLT and Ruby overrides in scripts/overrides"
+puts "-- Place XSLT, Ruby, and Python overrides in scripts/overrides"
 FileUtils.mkdir_p(File.join(coll, "scripts", "overrides"))
 FileUtils.touch(File.join(coll, "scripts", "overrides", ".keep"))
+FileUtils.cp(File.join(datura, "lib", "datura", "python", "omeka_overrides_example.py"), File.join(coll, "scripts", "overrides", "omeka_overrides_example.py"))
+
 
 # SOURCE
 
@@ -93,6 +97,7 @@ FileUtils.mkdir_p(File.join(src, "tei"))
 FileUtils.mkdir_p(File.join(src, "drafts", "tei"))
 FileUtils.touch(File.join(src, "tei", ".keep"))
 FileUtils.touch(File.join(src, "drafts", "tei", ".keep"))
+
 
 # GITIGNORE
 
@@ -110,6 +115,8 @@ config/private.yml
 !/output/production
 /output/production/*
 !/output/production/html
+
+scripts/overrides/omeka_overrides_example.py
 
 TEXT
   file.write(text)

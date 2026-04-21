@@ -1,0 +1,98 @@
+### Setting up dependencies and virtual environemnt
+
+In your collection repo, if any virtual environemt is currently enabled (this may be indicated by `(.venv)` or similar text before your command prompt), use the `deactivate` command to exit. If you have not previously created a virtual environment, type `python3 -m venv .venv`. The environment will be installed in the `.venv` folder in the root of the collection repo. This folder should not be committed. To enter the virtual environment once it has been created, run `source .venv/bin/activate`. Then run `pip3 install -r requirements.txt` to install the dependencies. These two steps are necessary to get the `post_omeka` script to run.
+
+If running the script results in an error that a dependency is missing (i.e. `ModuleNotFound`) run `pip3 install [dependency]`. (It may be necessary to do an Internet search to determine the name of the needed package, which may differ between the `import` statement and the `pip3 install` command; e.g. `import dotenv` but `pip3 install python-dotenv`). After installing all necessary dependencies, you can run `pip3 freeze > requirements.txt`, and commit the requirements.txt file within the data repo.
+
+### Config
+
+The following settings should be placed in config/private.yml (in addition to the config that is already included for Datura):
+
+```
+default:
+    omeka_server: servername.unl.edu/path/to/api
+    key_identity: *****
+    key_credential: *****
+    iiif_server: servername.unl.edu
+    resource_template: ##
+    omeka_data_base: desired/base/url/for/tei/files
+development:
+    item_set: ##
+production
+    item_set: ##
+```
+
+The `key_identity` and `key_credential` fields should correspond to the generated API key credentials. which you can generate on your Omeka S user page (click "Edit user" and then the API key). Make sure to copy the credentials down right away after generating the key.
+Make sure that config is pointing to the right `resource_template` for the data you want to ingest. Append `admin/resource-template` to the base Omeka site URL, and click on the resource template for the data schema (most CDRH sites use `CDRH schema`). The id of the resource template is found at the end of the url.
+`omeka_data_base` is necessary to indicate the URL to the TEI data documents. It should have a format like `https://github.com/CDRH/[repo_name]/blob/[env]/source/tei` or specify a similar relative path. The Omeka script adds the filename at the end. Make sure you have the right repo to make this a valid url.
+`item_set` should be specified by environment in private.yml in order to categorize items by environment on Omeka S. The proper item_set id can be found in Omeka if you append `admin/item-set` to the base Omeka site URL. Look for `Environment--Development` or something similar; the id will appear at the end of the URL if you click the link. Not all projects have environments and specifying an item set is not necessary to post.
+
+## Instructions for posting data into Omeka API
+
+Running the `post_omeka` script will run the Datura scripts to generate a JSON file with all the CDRH API fields and values (this is what is normally sent to Elasticsearch when you run `post`). This first step is equivalent to running `post -x es -o -t`. It then sends the generated JSON to the Python scripts to be ingested into Omeka S.
+
+It is possible to run `post_omeka` with Datura's other command line options (for instance `-f` to filter by file type and `-r` and filter by regex), but it is not recommended to override the default options such as `-x es`.
+
+Use the `-s` option to skip the generation step and only post to Omeka S (requires that you have already generated the needed documents).
+
+You can specify the environment with `-e [environment]` but you must set an `item_set` with the desired environment in config/private.yml.
+
+To get the latest improvements to the datura scripts, make sure the Gemfile specifies the correct branch for the Omeka S scripts (currently `gem "datura", git: "https://github.com/CDRH/datura.git", branch: "omeka_posting_generalized"`), and run `bundle update datura`
+
+### API fields and overrides (for developers)
+
+Each Omeka field is updated by the method [api_fields.py](../../../lib/datura/python/api_fields.py) to compile the Omeka S JSON. This method takes the form `update_item_value(item, key, value, datatype="literal")`, the first argumment is the json hash with the API data, the second argument corresponds to the field in the resource template, and the third is the return value the corresponding function of `field_definitions.py`. Optionally, you can pass in the datatype, as the fourth argument. The default definitions of Omeka fields are in [field_definitions.py](../../../lib/datura/python/field_definitions.py). The Omeka API fields defined here must correspond with the Omeka resource template you are using, and the return value should be compatible with the data type.If you do not specify it, it will be set to "literal". For example `update_item_value(built_item, "dcterms:date", fields.date(json), "numeric:timestamp")`.
+
+To override the field definitions, copy the file [omeka_overrides_example.py](../../../lib/datura/python/omeka_overrides_example.py) to [omeka_overrides.rb](../../../lib/datura/python/omeka_overrides.py) in the `scripts/overrides` file of the project directory. Then override each method as needed, using the existing definitions in `field_definitions.py` as examples. For an example, see https://github.com/CDRH/data_stories_humanity/blob/omeka_s_ingest/scripts/python/omeka_overrides.py (not currently field).
+
+Each overriden method needs to take the arguments `self` (a Python placeholder for a class instance) and `json` (representing the generated JSON) and to match the methods defined on `field_definitions.py`. (The same goes for adding new methods to `field_definitions.py`.)
+For instance:
+
+```
+    def folder(self, json):
+        return json.get("container_folder", None)
+
+    def name(self, json):
+        person_names = [person['name'] for person in json.get("person") or [] if  'name' in person]
+        return person_names
+```
+
+First retrieve the value from the Elasticsearch `json` (keeping in mind that it is sometimes nil), then do any manipulations needed before returning the desired value. The return value must be either an list or single value. For single values, usually this will be the same as the value in the JSON. But Unlike the Elasticsearch-based API, it is not possible to ingest nested fields into Omeka S, so they must be reduced into array form. See [field_definitions.py](../../../lib/datura/python/field_definitions.py)for examples of how to retrieve single and nested values from the JSON, manipulate them and return the proper values for Omeka S.
+
+Any new fields that link to the id of another item should be added to the `link_item` in [api_fields.py](../../../lib/datura/python/api_fields.py). `link_item_record` works in the same way as `update_item_value` but the value of the ES field must be a CDRH ID.
+
+```
+    try:
+        part_ids = [part['id'] for part in json_item["has_part"]]
+        link_item_record(existing_item, "dcterms:hasPart", part_ids)
+    except Exception:
+        pass
+```
+
+`link_item_record` searches the Omeka S API for an item that matches the CDRH ID in `dcterms:identifier` and then adds a link on the Omeka S item. Note that item linking in [json_to_omeka.py](../../../lib/datura/python/json_to_omeka.py) only happens after all items have been posted or updated, in order to ensure that all items are in the API before trying to link them together.
+
+## errors that may come up when you post (mostly for developers)
+
+### notes on debugging
+
+The standard way to debug Python scripts is with `breakpoint()`, equivalent to `byebug` in Ruby. Execution will pause and then you can check the contents of variables and try snippets of code from the prompt. Sometimes putting a debugger within an except clause (especially within a loop) makes it difficult to break out of the script and halt execution even if you type `quit`. CTRL-C sometimes works in these cases. If CTRL-C also fails to halt the script, try running `os._exit(0)` (this is the reason for `import os` in some of the scripts, and if you get an error that the module is not found, then `import os` should be run from the debugger prompt first). For more details on a particular error, look at the error message which is printed in some of the except clauses, check online documentation to see if this error message has additional methods (depending on the error), or use `traceback.print_exc()` to print out the full stack trace. In the case of errors in the HTTP reponse, it may be necessary to look in the logs on the Omeka site.
+
+### 500 error
+
+Look in the error log on the Omeka site. This may indicate a configuration problem with Omeka or its modules (this is one cause of a SQL-related error). Sometimes it indicates that data is not in the format expected by Omeka.
+
+### Data type not allowed in template
+
+Check your script in api_fields.py to make sure you are passing the right data types, as specified in the resource template you are using. The default data type is "literal". If the resource template changes you must change the data types in your script, too.
+
+### Term not in template
+
+Make sure that the resource template has the fields you want, and that you are only including Omeka fields that match the resource template.
+
+### 405 error: method not allowed
+
+This error occurs because the server is not configured to allow the necessary HTML request (POST to add a new item, PUT to update, DELETE to delete). Contact a system administrator.
+
+### 404 not found
+
+Ensure that your script is pointing to the right instance of Omeka S. This may come up in cases where it is trying to link to an item that doesn't currently exist.
