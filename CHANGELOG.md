@@ -25,23 +25,24 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 ### Security
 -->
 
-## [Unreleased] - Brief description TBD before next release
-[Unreleased]: https://github.com/CDRH/datura/compare/v1.0.1...dev
-
-### Fixed
+## [v1.1.0] - Omeka S Posting
+[v1.1.0]: https://github.com/CDRH/datura/compare/v1.0.1...v1.1.0
 
 ### Added
-
-### Changed
+- Posting to Omeka S now supported with Python scripts
+  - Documentation updated with Omeka setup instructions
+    (Python virtual environment and config file), how to override fields,
+    and how to post items with `post_omeka` and media with `post_omeka_html`
+    including troubleshooting tips
+- Warnings to ensure `post` is run from collection repo root directory
+  and clearing an index doesn't affect multiple websites
+- Troubleshooting tips for running `post`
+- Link to https://regex101.com for assistance with regex filtering
+- Code formatting on more filenames & commands,
+  and syntax highlighting on code blocks
 
 ### Removed
 - Removing deprecated CommonXml methods which should be updated now
-
-### Migration
-
-### Deprecated
-
-### Security
 
 ## [v1.0.1] - Accessibility XSLT
 [v1.0.1]: https://github.com/CDRH/datura/compare/v1.0.0...v1.0.1
