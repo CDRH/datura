@@ -49,6 +49,13 @@ module Datura::Parser
         options["regex"] = input
       end
 
+      options["csv_rows"] = nil
+      opts.on('-c', '--csv-rows INPUT',
+              'Only process CSV rows whose identifier (id/identifier column) matches this regex.',
+              'Examples: --csv-rows nca_001  --csv-rows ^nca_00[1-3]  --csv-rows nca_001|nca_007') do |input|
+        options["csv_rows"] = input
+      end
+
       options["transform_only"] = false
       opts.on('-t', '--transform-only', 'Do not post to solr / es') do
         options["transform_only"] = true
