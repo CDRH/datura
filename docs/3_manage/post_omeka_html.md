@@ -8,7 +8,9 @@ Use the `-m` option to skip the step of deleting and regenerating for media item
 
 You can specify the environment with `-e [environment]` but you must set an `item_set` with the desired environment in config/private.yml. See [post_omeka instructions](docs/3_manage/post_omeka.md) for instructions. 
 
-Instructions for setting up the python enviroment can be found in (omeka setup instructions)[../1_setup/omeka_setup.md].
+Instructions for setting up the Python virtual enviroment and config can be found in (omeka setup instructions)[../1_setup/omeka_setup.md].
+
+For information on how to override field definitions, see [Omeka Overrides](../2_customization/omeka_overrides.md).
 
 ### Media ingesters (for developers)
 

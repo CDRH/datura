@@ -1,35 +1,6 @@
-### Setting up dependencies and virtual environemnt
-
-In your collection repo, if any virtual environemt is currently enabled (this may be indicated by `(.venv)` or similar text before your command prompt), use the `deactivate` command to exit. If you have not previously created a virtual environment, type `python3 -m venv .venv`. The environment will be installed in the `.venv` folder in the root of the collection repo. This folder should not be committed. To enter the virtual environment once it has been created, run `source .venv/bin/activate`. Then run `pip3 install -r requirements.txt` to install the dependencies. These two steps are necessary to get the `post_omeka` script to run.
-
-If running the script results in an error that a dependency is missing (i.e. `ModuleNotFound`) run `pip3 install [dependency]`. (It may be necessary to do an Internet search to determine the name of the needed package, which may differ between the `import` statement and the `pip3 install` command; e.g. `import dotenv` but `pip3 install python-dotenv`). After installing all necessary dependencies, you can run `pip3 freeze > requirements.txt`, and commit the requirements.txt file within the data repo.
-
-### Config
-
-The following settings should be placed in config/private.yml (in addition to the config that is already included for Datura):
-
-```
-default:
-    omeka_server: servername.unl.edu/path/to/api
-    key_identity: *****
-    key_credential: *****
-    iiif_server: servername.unl.edu
-    resource_template: ##
-    omeka_data_base: desired/base/url/for/tei/files
-development:
-    item_set: ##
-production
-    item_set: ##
-```
-
-The `key_identity` and `key_credential` fields should correspond to the generated API key credentials. which you can generate on your Omeka S user page (click "Edit user" and then the API key). Make sure to copy the credentials down right away after generating the key.
-Make sure that config is pointing to the right `resource_template` for the data you want to ingest. Append `admin/resource-template` to the base Omeka site URL, and click on the resource template for the data schema (most CDRH sites use `CDRH schema`). The id of the resource template is found at the end of the url.
-`omeka_data_base` is necessary to indicate the URL to the TEI data documents. It should have a format like `https://github.com/CDRH/[repo_name]/blob/[env]/source/tei` or specify a similar relative path. The Omeka script adds the filename at the end. Make sure you have the right repo to make this a valid url.
-`item_set` should be specified by environment in private.yml in order to categorize items by environment on Omeka S. The proper item_set id can be found in Omeka if you append `admin/item-set` to the base Omeka site URL. Look for `Environment--Development` or something similar; the id will appear at the end of the URL if you click the link. Not all projects have environments and specifying an item set is not necessary to post.
-
 ## Instructions for posting data into Omeka API
 
-See (omeka setup instructions)[../1_setup/omeka_setup.md] for how to prepare your repo and activate a virtual environment
+See (omeka setup instructions)[../1_setup/omeka_setup.md] for how to prepare your repo, config, and activate the Python virtual environment.
 
 Running the `post_omeka` script will first run the Datura scripts to generate JSON files with the standard fields and values of the CDRH API (this is what is normally sent to Elasticsearch when you run `post`). This first step is equivalent to running `post -x es -o -t`. It then sends the generated JSON to the Python scripts to be ingested into Omeka S.
 
@@ -37,41 +8,9 @@ Use the `-s` option to skip the generation step and only post to Omeka S (requir
 
 It is possible to run `post_omeka` with Datura's other command line options as described in [post.md] (for instance `-f` to filter by file type and `-r` and filter by regex), but it is not recommended to override the default options such as `-x es`
 
-You can specify the environment with `-e [environment]` but you must set an `item_set` with the desired environment in config/private.yml. See (omeka setup instructions)[../1_setup/omeka_setup.md] for more details.
+You can specify the environment with `-e [environment]` but you must set an `item_set` with the desired environment in `config/private.yml.` See (omeka setup instructions)[../1_setup/omeka_setup.md] for more details.
 
-To get the latest improvements to the datura scripts, make sure the Gemfile specifies the correct branch for the Omeka S scripts (currently `gem "datura", git: "https://github.com/CDRH/datura.git", branch: "omeka_posting_generalized"`), and run `bundle update datura`
-
-### API fields and overrides (for developers)
-
-Each Omeka field is updated by the method [api_fields.py](../../../lib/datura/python/api_fields.py) to compile the Omeka S JSON. This method takes the form `update_item_value(item, key, value, datatype="literal")`, the first argumment is the json hash with the API data, the second argument corresponds to the field in the resource template, and the third is the return value the corresponding function of `field_definitions.py`. Optionally, you can pass in the datatype, as the fourth argument. The default definitions of Omeka fields are in [field_definitions.py](../../../lib/datura/python/field_definitions.py). The Omeka API fields defined here must correspond with the Omeka resource template you are using, and the return value should be compatible with the data type.If you do not specify it, it will be set to "literal". For example `update_item_value(built_item, "dcterms:date", fields.date(json), "numeric:timestamp")`.
-
-To override the field definitions, copy the file [omeka_overrides_example.py](../../../lib/datura/python/omeka_overrides_example.py) to [omeka_overrides.rb](../../../lib/datura/python/omeka_overrides.py) in the `scripts/overrides` file of the project directory. Then override each method as needed, using the existing definitions in `field_definitions.py` as examples. For an example, see https://github.com/CDRH/data_stories_humanity/blob/omeka_s_ingest/scripts/python/omeka_overrides.py (not currently field).
-
-Each overriden method needs to take the arguments `self` (a Python placeholder for a class instance) and `json` (representing the generated JSON) and to match the methods defined on `field_definitions.py`. (The same goes for adding new methods to `field_definitions.py`.)
-For instance:
-
-```
-    def folder(self, json):
-        return json.get("container_folder", None)
-
-    def name(self, json):
-        person_names = [person['name'] for person in json.get("person") or [] if  'name' in person]
-        return person_names
-```
-
-First retrieve the value from the Elasticsearch `json` (keeping in mind that it is sometimes nil), then do any manipulations needed before returning the desired value. The return value must be either an list or single value. For single values, usually this will be the same as the value in the JSON. But Unlike the Elasticsearch-based API, it is not possible to ingest nested fields into Omeka S, so they must be reduced into array form. See [field_definitions.py](../../../lib/datura/python/field_definitions.py)for examples of how to retrieve single and nested values from the JSON, manipulate them and return the proper values for Omeka S.
-
-Any new fields that link to the id of another item should be added to the `link_item` in [api_fields.py](../../../lib/datura/python/api_fields.py). `link_item_record` works in the same way as `update_item_value` but the value of the ES field must be a CDRH ID.
-
-```
-    try:
-        part_ids = [part['id'] for part in json_item["has_part"]]
-        link_item_record(existing_item, "dcterms:hasPart", part_ids)
-    except Exception:
-        pass
-```
-
-`link_item_record` searches the Omeka S API for an item that matches the CDRH ID in `dcterms:identifier` and then adds a link on the Omeka S item. Note that item linking in [json_to_omeka.py](../../../lib/datura/python/json_to_omeka.py) only happens after all items have been posted or updated, in order to ensure that all items are in the API before trying to link them together.
+For information on how to override field definitions, see [Omeka Overrides](../2_customization/omeka_overrides.md).
 
 ## errors that may come up when you post (mostly for developers)
 

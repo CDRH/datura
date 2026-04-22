@@ -2,14 +2,36 @@
 
 ### Standard definitions of fields
 
-The standard definitions of Omeka API fields are in the `field_definitions.py` file, located in the Datura repo at [../../lib/datura/python/field_definitions.py]. The definitions here must match the Omeka resource template you are using, including the data type. Each field is specified by a corresponding method, all of which are called in [../../lib/datura/python/api_fields.py] by the method `update_item_value()`. to compile the Omeka S JSON. For `update_item_value()`, the first argument is the JSON hash that represents the items, the second argument corresponds to the field name in the resource template, and the third is the field value, returned by a corresponding method from [../../lib/datura/python/field_definitions.py], which returns the contents of the field. Optionally, `update_item_value()` specifies the datatype with `datatype="[datatype]"` as the fourth argument. If you do not specify the datatype, it will be set to "literal".
+Each Omeka field is updated by the method in [api_fields.py](../../../lib/datura/python/api_fields.py) to compile the Omeka S JSON. This method takes the form `update_item_value(item, key, value, datatype="literal")`, the first argumment is the json hash with the API data, the second argument corresponds to the field in the resource template, and the third is the return value the corresponding function of `field_definitions.py`. Optionally, you can pass in the datatype, as the fourth argument. The default definitions of Omeka fields are in [field_definitions.py](../../../lib/datura/python/field_definitions.py). The Omeka API fields defined here must correspond with the Omeka resource template you are using, and the return value should be compatible with the data type.If you do not specify it, it will be set to "literal". For example `update_item_value(built_item, "dcterms:date", fields.date(json), "numeric:timestamp")`.
 
 ### Overriding fields
 
-To override the field definitions, copy the file `omeka_overrides_example.rb` to `omeka_overrides.rb` in the `scripts/overrides` file of the project directory. Then edit each field as needed. (If it was not originally copied into your ata repo, you can also copy it from the base Datura repo).
+To override the field definitions, copy the file [omeka_overrides_example.py](../../../lib/datura/python/omeka_overrides_example.py) to [omeka_overrides.rb](../../../lib/datura/python/omeka_overrides.py) in the `scripts/overrides` file of the project directory. Then override each method as needed, using the existing definitions in `field_definitions.py` as examples. For an example, see https://github.com/CDRH/data_stories_humanity/blob/omeka_s_ingest/scripts/python/omeka_overrides.py (not currently field).
 
-Each overriden method needs to take the arguments `self` (a Python placeholder for an instance of the class) and `json` (for the JSON that represents the API item) and to have the same title as the method from [../../lib/datura/python/field_definitions.py]. First retrieve necessary values from the Elasticsearch `json`, then do any manipulations you want before returning the desired value. The return value, which will be posted into the API, must be either an list or single value. Unlike the Elasticsearch-based API, it is not possible to ingest nested fields directly into Omeka S.  See [../../lib/datura/python/field_definitions.py] for examples of how to retrieve single and nested values from the JSON, manipulate them, and return lists and single values in the proper format for Omeka S.
+Each overriden method needs to take the arguments `self` (a Python placeholder for a class instance) and `json` (representing the generated JSON) and to match the methods defined on `field_definitions.py`. (The same goes for adding new methods to `field_definitions.py`.)
+For instance:
+
+```python
+    def folder(self, json):
+        return json.get("container_folder", None)
+
+    def name(self, json):
+        person_names = [person['name'] for person in json.get("person") or [] if  'name' in person]
+        return person_names
+```
+
+First retrieve the value from the Elasticsearch `json` (keeping in mind that it is sometimes nil), then do any manipulations needed before returning the desired value. The return value must be either an list or single value. For single values, usually this will be the same as the value in the JSON. But Unlike the Elasticsearch-based API, it is not possible to ingest nested fields into Omeka S, so they must be reduced into array form. See [field_definitions.py](../../../lib/datura/python/field_definitions.py)for examples of how to retrieve single and nested values from the JSON, manipulate them and return the proper values for Omeka S.
 
 ### Linking items
 
-Fields that reference another item should be added to `link_item` in [../../lib/datura/python/api_fields.py]. The method `link_item_record` works in the same way as `update_item_value` but the third argument for the field value must be a CDRH ID. `link_item_record` searches the Omeka S API for an item that matches the ID in `dcterms:identifier` and then adds a link on the Omeka S item. Linking of items happens in [../../lib/datura/python/json_to_omeka.py] after posting/updating items, in order to ensure that the items are in the API before trying to link them together.
+Any new fields that link to the id of another item should be added to the `link_item` in [api_fields.py](../../../lib/datura/python/api_fields.py). `link_item_record` works in the same way as `update_item_value` but the value of the ES field must be a CDRH ID.
+
+```python
+    try:
+        part_ids = [part['id'] for part in json_item["has_part"]]
+        link_item_record(existing_item, "dcterms:hasPart", part_ids)
+    except Exception:
+        pass
+```
+
+`link_item_record` searches the Omeka S API for an item that matches the CDRH ID in `dcterms:identifier` and then adds a link on the Omeka S item. Note that item linking in [json_to_omeka.py](../../../lib/datura/python/json_to_omeka.py) only happens after all items have been posted or updated, in order to ensure that all items are in the API before trying to link them together.
