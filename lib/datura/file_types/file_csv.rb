@@ -64,16 +64,22 @@ class FileCsv < FileType
     puts "transforming #{self.filename}"
     es_doc = []
 
+    row_filter = build_csv_row_filter
+    if row_filter
+      puts "csv_rows filter active: only processing rows matching /#{@options["csv_rows"]}/".cyan
+    end
+
     @csv.each do |row|
-      if !row.header_row?
-        row_to_es = row_to_es(@csv.headers, row)
-        if !row_to_es["identifier"].to_s.empty? && !row_to_es["title"].to_s.empty?
-          es_doc << row_to_es
-        else
-          puts "skipping item without id or title".red
-          puts "check line ".red + row.to_s.strip[0..400].red
-          next
-        end
+      next if row.header_row?
+      next if row_filter && !row_matches_filter?(row, row_filter)
+
+      row_to_es = row_to_es(@csv.headers, row)
+      if !row_to_es["identifier"].to_s.empty? && !row_to_es["title"].to_s.empty?
+        es_doc << row_to_es
+      else
+        puts "skipping item without id or title".red
+        puts "check line ".red + row.to_s.strip[0..400].red
+        next
       end
     end
     if @options["output"]
@@ -122,5 +128,24 @@ class FileCsv < FileType
     filepath = "#{@out_html}/#{index}.html"
     puts "writing to #{filepath}" if @options["verbose"]
     File.open(filepath, "w") { |f| f.write(builder.to_xml) }
+  end
+
+  private
+
+  def build_csv_row_filter
+    return nil unless @options["csv_rows"]
+
+    begin
+      Regexp.new(@options["csv_rows"])
+    rescue RegexpError => e
+      puts "Warning: --csv-rows value '#{@options["csv_rows"]}' is not a valid regex: #{e.message}".red
+      puts "Proceeding without row filter — all rows will be processed.".yellow
+      nil
+    end
+  end
+
+  def row_matches_filter?(row, filter)
+    id = row["id"] || row["identifier"] || row["Identifier"] || ""
+    !!filter.match(id)
   end
 end
