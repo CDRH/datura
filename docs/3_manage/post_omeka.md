@@ -12,7 +12,7 @@ You can specify the environment with `-e [environment]` but you must set an `ite
 
 For information on how to override field definitions, see [Omeka Overrides](../2_customization/omeka_overrides.md).
 
-## errors that may come up when you post (mostly for developers)
+## Troubleshooting
 
 ### notes on debugging
 

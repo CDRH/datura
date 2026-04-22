@@ -50,7 +50,7 @@ For a file upload (i.e. to upload):
   `o:source`, set in the `add_media_to_item` in omeka.py, either corersponds to the filename or to the remote path if the ingester requires a remote URL.
 
 
-### Error you might run into (for developers)
+## Troubleshooting
 Sometimes running the script will return error code 422 (unprocessable content) or error code 500. These error messages can be investigated in the Omeka S logs found on the admin page. To investigate the errors, you can check the stack traces in these logs against the Omeka S source code found in GitHub. (Note that the base Omeka code, powering the website, is in PHP).
 - The ingester expects a full URL, not a local file path, in `o:source`, which is set when you post media items.
 - A malformed URL may cause an error that the script is unable to connect to a server. Make sure that it includes slashes in the proper places.
