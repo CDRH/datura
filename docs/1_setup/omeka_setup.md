@@ -12,8 +12,9 @@ If running the script results in an error that a dependency is missing (i.e. `Mo
 
 ### Config for Omeka S posting
 
-The following settings should be placed in config/private.yml (in addition to the config that is already included for Datura):
-```
+The following settings should be placed in `config/private.yml` (in addition to the config that is already included for Datura):
+
+```yaml
 default:
     omeka_server: servername.unl.edu/path/to/api
     key_identity: *****

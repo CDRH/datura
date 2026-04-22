@@ -2,14 +2,15 @@
 
 There are two scripts which can be used to clear documents from indexes.  One is for solr, the other is for elasticsearch.
 
-```
+```bash
 solr_clear_index -[options]...
 es_clear_index -[options]...
 ```
 
 Both of the scripts have the same usage and behavior.
 
-```(es|solr)_clear_index -[options]...
+```bash
+(es|solr)_clear_index -[options]...
     -h, --help                       Computer, display script options.
     -e, --environment [input]        Environment (test, production)
     -f, --field [input]              The specific field regex is run on
@@ -20,13 +21,13 @@ By default, the scripts will run on the "development" environment unless otherwi
 
 In general, you can't clear the entire development index across collections particularly easily.  The following will operate only over the specific collection in the configuration environment:
 
-```
+```bash
 (es|solr)_clear_index
 ```
 
 Specify a different environment:
 
-```
+```bash
 (es|solr)_clear_index -e production
 (es|solr)_clear_index -e api_dev
 ```
@@ -37,13 +38,13 @@ In order for these scripts to execute correctly, you will need to make sure that
 
 You can also search for a specific or group of ids to remove
 
-```
+```bash
 (es|solr)_clear_index -r txt\.001
 ```
 
 You can remove entries by field + regex
 
-```
+```bash
 (es|solr)_clear_index -f category -r memorabilia
 ```
 See https://regex101.com or similar for how to use regex.
@@ -58,7 +59,7 @@ If you must, you can set the collection to "all" in order to wipe everything reg
 
 If you want to start from scratch and nuke an index, run the following:
 
-```
+```bash
 admin_es_delete_index
 ```
 

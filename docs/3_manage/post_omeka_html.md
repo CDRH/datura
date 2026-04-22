@@ -1,6 +1,6 @@
 ## Instructions for attaching media to the Omeka S API
 
-This script should be run after running (post_omeka)[post_omeka.md], as it works with items that are already in the Omeka S API Make sure that you have the usual Datura folders for html and iiif output under output/[environment]/[format]. The script generates html through Datura's usual XSLT generation process (i.e. `post -x html`), and deletes existing media, downloads thumnails from the iiif server, and attaches the thumbnail image and then the html item. It is intentionally structured in this order so that the image will be designated by Omeka as primary media so that it can be designated as the thumbnail.
+This script should be run after running (post_omeka)[post_omeka.md], as it works with items that are already in the Omeka S API. Make sure that you have the usual Datura folders for html and iiif output under `output/[environment]/[format]`. The script generates html through Datura's usual XSLT generation process (i.e. `post -x html`), and deletes existing media, downloads thumbnails from the iiif server, and attaches the thumbnail image and then the html item. It is intentionally structured in this order so that the image will be designated by Omeka as primary media so that it can be designated as the thumbnail.
 
 Use the `-s` option to skip the generation step and only post to Omeka S (requires that you have already generated the needed docs).
 
@@ -14,7 +14,7 @@ For information on how to override field definitions, see [Omeka Overrides](../2
 
 ### Media ingesters (for developers)
 
-The media payload, set in html_and_media_ingest.py, must be structured in a specific way to add items. It is different in the case of html and iiif images.
+The media payload, set in `html_and_media_ingest.py`, must be structured in a specific way to add items. It is different in the case of html and iiif images.
 
 For an html field:
 ```json
