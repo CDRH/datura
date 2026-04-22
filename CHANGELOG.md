@@ -25,6 +25,23 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 ### Security
 -->
 
+## [Unreleased] - Brief description TBD before next release
+[Unreleased]: https://github.com/CDRH/datura/compare/v1.1.0...dev
+
+### Fixed
+
+### Added
+
+### Changed
+
+### Removed
+
+### Migration
+
+### Deprecated
+
+### Security
+
 ## [v1.1.0] - Omeka S Posting
 [v1.1.0]: https://github.com/CDRH/datura/compare/v1.0.1...v1.1.0
 
