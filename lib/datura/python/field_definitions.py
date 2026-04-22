@@ -219,6 +219,8 @@ class FieldDefinitions:
     
 def get_fields():
     try:
+        #make sure it can override from the right directly
+        sys.path.insert(0, './scripts/python')
         from omeka_overrides import CustomFields
         return CustomFields()
     except ImportError:
