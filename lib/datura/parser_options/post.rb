@@ -50,7 +50,7 @@ module Datura::Parser
       end
 
       options["csv_rows"] = nil
-      opts.on('-c', '--csv-rows INPUT',
+      opts.on('-c', '--csv-rows [input]',
               'Only process CSV rows whose identifier (id/identifier column) matches this regex.',
               'Examples: --csv-rows nca_001  --csv-rows ^nca_00[1-3]  --csv-rows nca_001|nca_007') do |input|
         options["csv_rows"] = input
