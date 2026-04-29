@@ -264,7 +264,13 @@ class Datura::DataManager
 
     if !t1 || !t2 || t1 > t2
       puts "Copying datura XSLT default scripts into collection"
-      FileUtils.cp_r(datura_xslt, dest)
+      begin
+        FileUtils.cp_r(datura_xslt, dest)
+      rescue Errno::ENOENT => e
+        raise "Could not copy XSLT scripts into the collection. " \
+            "Confirm you are running this command from the root of the collection repository, " \
+            "not from a subdirectory."
+      end
     end
   end
 
