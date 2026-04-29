@@ -35,6 +35,12 @@ class FileType
     # script locations set in child classes
   end
 
+  def debug_info(error)
+    if options["verbose"]
+      puts "Backtrace: " << error.backtrace.join("\n ")
+    end
+  end
+
   def filename(ext=true)
     if ext
       File.basename(@file_location)
@@ -56,6 +62,7 @@ class FileType
     begin
       transformed = transform_es
     rescue => e
+      debug_info(e)
       return { "error" => "Error transforming ES for #{self.filename(false)}: #{e.full_message}" }
     end
     if transformed && transformed.length > 0
@@ -76,7 +83,9 @@ class FileType
           begin
             RestClient.put("#{es.index_url}/_doc/#{id}", doc.to_json, @auth_header.merge({:content_type => :json }) )
           rescue => e
-            error = "Error transforming or posting to ES for #{self.filename(false)}: #{e}"
+            debug_info(e)
+            puts "Erroneous document ID: #{id}"
+            error = "Error transforming or posting to ES for #{self.filename(false)}: #{e.message}"
           end
         else
           error = "Document #{id} did not validate against the elasticsearch schema"
@@ -109,7 +118,8 @@ class FileType
         return { "error" => "Error posting to Solr for #{self.filename}: #{res.body}" }
       end
     rescue => e
-      return { "error" => "Error posting to Solr for #{self.filename}: #{e.inspect}" }
+      debug_info(e)
+      return { "error" => "Error posting to Solr for #{self.filename}: #{e.message}" }
     end
   end
 
@@ -147,7 +157,7 @@ class FileType
       end
       return es_req
     rescue => e
-      puts "something went wrong transforming #{self.filename}"
+      puts "something went wrong transforming #{self.filename}: #{e.message}"
       puts e
       puts e.backtrace
       raise e
