@@ -160,6 +160,22 @@ class Datura::DataManager
     puts error_msg
     @log.info(error_msg)
 
+    all_errors = {
+      "ES" => @error_es,
+      "HTML" => @error_html,
+      "IIIF" => @error_iiif,
+      "Solr" => @error_solr
+    }.reject { |_, v| v.empty? }
+
+    if all_errors.any?
+      puts "\n--- Error details ---".red
+      all_errors.each do |type, errors|
+        errors.each { |e| puts "[#{type}] #{e}".red }
+      end
+      puts "---------------------".red
+      @log.error("Error details: #{all_errors.inspect}")
+    end
+
     # figure time for running
     @time << Time.now
     dur = @time[1] - @time[0]
