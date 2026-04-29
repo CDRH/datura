@@ -84,7 +84,6 @@ class FileType
             RestClient.put("#{es.index_url}/_doc/#{id}", doc.to_json, @auth_header.merge({:content_type => :json }) )
           rescue => e
             debug_info(e)
-            puts "Erroneous document ID: #{id}"
             error = "Error transforming or posting to ES for #{self.filename(false)}: #{e.message}"
           end
         else
