@@ -160,9 +160,6 @@ class FileType
       end
       return es_req
     rescue => e
-      puts "something went wrong transforming #{self.filename}: #{e.message}"
-      puts e
-      puts e.backtrace
       raise e
     end
   end
