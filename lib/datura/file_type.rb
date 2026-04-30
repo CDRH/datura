@@ -82,6 +82,10 @@ class FileType
           # you will need to add _update at the end of this URL
           begin
             RestClient.put("#{es.index_url}/_doc/#{id}", doc.to_json, @auth_header.merge({:content_type => :json }) )
+          rescue Errno::ECONNREFUSED, SocketError, Errno::ETIMEDOUT => e
+            error = "Could not connect to ElasticSearch at #{es.index_url}. " \
+                    "Confirm you have specified the correct environment " \
+                    "(currently: #{@options['environment']}. Use -e to specify an environment."
           rescue => e
             debug_info(e)
             error = "Error transforming or posting to ES for #{self.filename(false)}: #{e.message}"
