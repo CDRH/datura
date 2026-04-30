@@ -189,23 +189,32 @@ class FileType
 
   # TODO can remove most of these parameters and grab them from instance variables
   def exec_xsl(input, xsl, ext, outpath=nil, params=nil)
-    saxon_params = CommonXml.stringify_params(params)
-    cmd = "saxon -s:#{input} -xsl:#{xsl}"
-    # TODO which way would we rather do this?
-    # cmd << " -o:#{outpath}/#{filename(false)}.#{ext}" if outpath
-    cmd << " #{saxon_params}"
-    cmd << " | tee #{outpath}/#{filename(false)}.#{ext}" if outpath
-    puts "using command #{cmd}" if @options["verbose"]
-    Open3.popen3(cmd) do |stdin, stdout, stderr|
-      out = stdout.read
-      err = stderr.read
-      if err.length > 0
-        msg = "There was an error transforming #{filename}: #{err}"
-        return { "error" => msg }
-      else
-        puts "Successfully transformed #{filename}"
-        return { "doc" => out }
+    # build the python script path
+    python_script = File.join(
+      @options["datura_dir"], "lib", "datura", "python", "xslt_transform.py"
+    )
+    # initialize the command as an array, then apppend xslt params
+    cmd = ["python3", python_script, "--input", input, "--xsl", xsl]
+    if params
+      params.each do |k, v|
+        cmd += ["--param", "#{k}=#{v}"]
       end
+    end
+    # append output path
+    if outpath
+      cmd += ["--output", "#{outpath}/#{filename(false)}.#{ext}"]
+    end
+    puts "using command #{cmd.inspect}" if @options["verbose"]
+    # run the command
+    out, err, status = Open3.capture3(*cmd)
+    
+    # check for errors
+    if !status.success? || err.length > 0
+      msg = "There was an error transforming #{filename}: #{err}"
+      return { "error" => msg }
+    else
+      puts "Successfully transformed #{filename}"
+      return { "doc" => out }
     end
   end
 
