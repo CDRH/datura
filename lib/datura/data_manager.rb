@@ -211,7 +211,7 @@ class Datura::DataManager
     msg << "Running script with following options:\n"
     msg << "collection:           #{@options['collection']}\n"
     msg << "Environment:          #{@options['environment']}\n"
-    msg << "Posting to:           #{@es.index_url}\n\n" if should_post?("es")
+    msg << "Posting to:           #{@es.index_url}\n\n" if should_post?("es") && @es
     msg << "Posting to:           #{@solr_url}\n\n" if should_post?("solr")
     msg << "Format:               #{@options['format']}\n" if @options["format"]
     msg << "Regex:                #{@options['regex']}\n" if @options["regex"]
@@ -305,8 +305,16 @@ class Datura::DataManager
 
   def set_up_services
     if should_post?("es")
-      # set up elasticsearch instance
-      @es = Datura::Elasticsearch::Index.new(@options, schema_mapping: true)
+      begin
+        # set up elasticsearch instance
+        @es = Datura::Elasticsearch::Index.new(@options, schema_mapping: true)
+      rescue Errno::ECONNREFUSED, SocketError, Errno::ETIMEDOUT => e
+        msg = "Could not connect to Elasticsearch at #{File.join(@options['es_path'], @options['es_index'])}. " \
+            "Confirm you have specified the correct environment " \
+            "(currently: #{@options['environment']}). Use -e to specify an environment."
+        error_with_transform_and_post(msg, @error_es)
+        @es = nil
+      end
     end
 
     if should_post?("solr")
@@ -326,21 +334,19 @@ class Datura::DataManager
 
   def transform_and_post(file)
     # elasticsearch
-    if should_transform?("es")
-      if @options["transform_only"]
-        # TODO transformation is not treated the same way here as in
-        # most post methods, so having to use try catch block
-        begin
+    begin
+      if should_transform?("es")
+        if @options["transform_only"]
           res_es = file.transform_es
-        rescue => e
-          error_with_transform_and_post("#{e}", @error_es)
-        end
-      else
-        res_es = file.post_es(@es)
-        if res_es && res_es.has_key?("error")
-          error_with_transform_and_post(res_es["error"], @error_es)
+        elsif @es
+          res_es = file.post_es(@es)
+          if res_es && res_es.has_key?("error")
+            error_with_transform_and_post(res_es["error"], @error_es)
+          end
         end
       end
+    rescue => e
+      error_with_transform_and_post("#{e}", @error_es)
     end
 
     # html
