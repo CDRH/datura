@@ -210,10 +210,13 @@ class FileType
       out = stdout.read
       err = stderr.read
       if err.length > 0
-        # Extract meaningful lines from Saxon's stderr for user display
-        key_lines = err.lines.select { |l| l.match?(/^Error|SXXP|XPST|XTTE|XTSE|XSLT|Fatal/) }
-        key_lines = err.lines.first(1) if key_lines.empty?
-        msg = "Error transforming #{filename}: \n " + key_lines.map{ |l| l.strip + "..."}.join("\n ")
+        # Extract meaningful lines from Saxon's stderr for user display  
+        lines = err.lines
+        match_indices = lines.each_index.select { |i| lines[i].match?(/^Error|SXXP|XPST|XTTE|XTSE|XSLT|Fatal/) }                                                                                
+        wanted_indices = match_indices.flat_map { |i| [i, i + 1] }.uniq.select { |i| i < lines.length }
+        key_lines = wanted_indices.map { |i| lines[i] }                                                                                                                                         
+        key_lines = lines.first(2) if key_lines.empty?                                                                                                                                        
+        msg = "Error transforming #{filename}: {\n " + key_lines.map { |l| l.strip }.join("\n ")
         msg += "\n  (full Saxon output logged)" if err.lines.length > key_lines.length
         return { "error" => msg, "full_error" => err }
       else
