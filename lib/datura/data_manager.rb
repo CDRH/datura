@@ -109,7 +109,6 @@ class Datura::DataManager
     files
   end
 
-  # TODO should this move to Options class?
   def assert_option(opt)
     if !@options.key?(opt)
       puts "Option #{opt} was not found!  Check config files and add #{opt} to continue".red
