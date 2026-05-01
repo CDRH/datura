@@ -25,7 +25,7 @@ class Datura::Elasticsearch::Index
     @mapping_url = File.join(@index_url, "_mapping?pretty=true")
 
     # yaml settings (if exist) and mappings
-    @requested_schema = YAML.load_file(@options["es_schema"])
+    @requested_schema = YAML.safe_load(File.read(@options["es_schema"]), permitted_classes: [Symbol])
     @auth_header = Datura::Helpers.construct_auth_header(@options)
     # if requested, grab the mapping currently associated with this index
     # otherwise wait until after the requested schema is loaded
