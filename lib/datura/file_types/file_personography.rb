@@ -72,27 +72,6 @@ class FilePersonography < FileTei
     end
   end
 
-  # Overrides the default transform_html to use Saxon's -o: flag instead of
-  # piping to tee. This is necessary because xsl:result-document hrefs in the
-  # personography XSLT are relative paths — Saxon resolves them relative to the
-  # -o: output file's directory, which ensures individual per-person HTML files
-  # land in @out_html alongside the combined file.
-  #
-  # To suppress the combined single-file HTML output entirely, remove the -o:
-  # flag from the command (or add this override to a project override file and
-  # omit that line).
-  def transform_html
-    params = CommonXml.stringify_params(@options["variables_html"])
-    outfile = File.join(@out_html, "#{self.filename(false)}.html")
-    cmd = "saxon -s:#{@file_location} -xsl:#{@script_html} -o:#{outfile} #{params}"
-    puts "using command #{cmd}" if @options["verbose"]
-    Open3.popen3(cmd) do |stdin, stdout, stderr|
-      err = stderr.read
-      return { "error" => err } if err && !err.empty?
-      { "doc" => stdout.read }
-    end
-  end
-
   def transform_iiif
     raise "Personography to IIIF is not implemented"
   end
