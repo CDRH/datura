@@ -189,20 +189,22 @@ class FileType
 
   # TODO can remove most of these parameters and grab them from instance variables
   def exec_xsl(input, xsl, ext, outpath=nil, params=nil)
-    saxon_params = CommonXml.stringify_params(params)
-    cmd = "saxon -s:#{input} -xsl:#{xsl}"
-    # TODO which way would we rather do this?
-    # cmd << " -o:#{outpath}/#{filename(false)}.#{ext}" if outpath
-    cmd << " #{saxon_params}"
-    cmd << " | tee #{outpath}/#{filename(false)}.#{ext}" if outpath
+    # build array out of params hash
+    saxon_params = CommonXml.arrayify_params(params)
+    args = ["saxon","-s:#{input}", "-xsl:#{xsl}"] + saxon_params
     puts "using command #{cmd}" if @options["verbose"]
-    Open3.popen3(cmd) do |stdin, stdout, stderr|
+    Open3.popen3(*args) do |stdin, stdout, stderr|
       out = stdout.read
       err = stderr.read
       if err.length > 0
         msg = "There was an error transforming #{filename}: #{err}"
         return { "error" => msg }
       else
+        # change previous tee handling to Ruby write
+        # TODO: we may want to consider binwrite instead to avoid any possible encoding issues
+        if outpath
+          File.write("#{outpath}/#{filename(false)}.#{ext}", out)
+        end
         puts "Successfully transformed #{filename}"
         return { "doc" => out }
       end
