@@ -282,7 +282,7 @@ class Datura::DataManager
       puts "Copying datura XSLT default scripts into collection"
       begin
         FileUtils.cp_r(datura_xslt, dest)
-      rescue Errno::ENOENT => e
+      rescue Errno::ENOENT
         raise "Could not copy XSLT scripts into the collection. " \
             "Confirm you are running this command from the root of the collection repository, " \
             "not from a subdirectory."
@@ -308,7 +308,7 @@ class Datura::DataManager
       begin
         # set up elasticsearch instance
         @es = Datura::Elasticsearch::Index.new(@options, schema_mapping: true)
-      rescue Errno::ECONNREFUSED, SocketError, Errno::ETIMEDOUT => e
+      rescue Errno::ECONNREFUSED, SocketError, Errno::ETIMEDOUT
         msg = "Could not connect to Elasticsearch at #{File.join(@options['es_path'], @options['es_index'])}. " \
             "Confirm you have specified the correct environment " \
             "(currently: #{@options['environment']}). Use -e to specify an environment."
