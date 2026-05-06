@@ -45,16 +45,6 @@ module CommonXml
     file_xml
   end
 
-  # saxon accepts params in following manner
-  #   fw=true pb=true figures=false
-  def self.stringify_params(param_hash)
-    params = ""
-    if param_hash
-      params = param_hash.map{ |k, v| "#{k}=#{v}" }.join(" ")
-    end
-    params
-  end
-
   def self.sub_corrections(aXml)
     # sub <corr>.*</corr> for [.*]
     xml = aXml.dup
