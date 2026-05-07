@@ -213,7 +213,7 @@ class FieldDefinitions:
     
     def itemText(self, json):
         text = json.get("text", None)
-        if json.get("data_type"):
+        if text and json.get("data_type"):
             text += (" " + self.identifier(json))
         return text
     
