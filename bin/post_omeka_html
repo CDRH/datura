@@ -39,9 +39,11 @@ optparse.parse(ARGV)
 ARGV.delete("-m")
 #add option to generate html
 ARGV.unshift("-x", "html")
+#create and validate DataManager before conditional run
+manager = Datura::DataManager.new
+manager.check_omeka_options #exit with clear error if any key is missing
 #skip generation step with option -s
 if generate_es
-    manager = Datura::DataManager.new
     manager.run
 end
 
