@@ -80,6 +80,9 @@ def ingest_html(json_item, matching_item):
     try:
         with open(file_path, "r") as file:
             html_content = file.read()
+        if not html_content.strip():
+            print(f"HTML file for {json_item['identifier']} is empty, skipping")
+            return
         media_payload = {
             "o:is_public": True,
             "data": {
