@@ -1,5 +1,6 @@
 import json
 import re
+import sys
 import omeka
 from datetime import datetime
 from field_definitions import get_fields
