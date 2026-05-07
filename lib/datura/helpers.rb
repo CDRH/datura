@@ -142,6 +142,12 @@ module Datura::Helpers
   def self.construct_auth_header(options)
     username = options["es_user"]
     password = options["es_password"]
+
+    if (username || password) && options["es_path"]&.start_with?("http://")
+      warn "[SECURITY WARNING] ES credentials are set but es_path uses unencrypted HTTP. " \
+           "Credentials will be transmitted in cleartext. Use HTTPS in production."
+    end
+
     { "Authorization" => "Basic #{Base64::encode64("#{username}:#{password}")}" }
   end
 
