@@ -64,6 +64,13 @@ class Datura::DataManager
     end
   end
 
+  def check_omeka_options
+    %w[omeka_server key_identity key_credential iiif_server
+       resource_template omeka_data_base item_set].each do |opt|
+      assert_option(opt)
+    end
+  end
+
   def print_options
     pretty = JSON.pretty_generate(@options)
     puts "Options: #{pretty}"
