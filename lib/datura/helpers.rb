@@ -74,8 +74,13 @@ module Datura::Helpers
   # get_url
   #   sends a request to a given url
   def self.get_url(url)
-    url = URI.parse(url)
-    Net::HTTP.get_response(url)
+    uri = URI.parse(url)
+    http = Net::HTTP.new(uri.host, uri.port)
+    if uri.scheme == "https"
+      http.use_ssl = true
+      http.verify_mode = OpenSSL::SSL::VERIFY_PEER
+    end
+    http.request(Net::HTTP::Get.new(uri.request_uri))
   end
 
   # make_dirs
