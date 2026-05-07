@@ -1,7 +1,6 @@
 require "colorize"
 require "logger"
 require "yaml"
-require "byebug"
 require_relative "./requirer.rb"
 
 class Datura::DataManager
