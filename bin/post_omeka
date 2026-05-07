@@ -37,9 +37,11 @@ end
 optparse.parse(ARGV)
 #add options to output a json file instead of posting it to Elasticsearch
 ARGV.unshift("-x", "es", "-o", "-t")
+#create and validate DataManager before conditional run
+manager = Datura::DataManager.new
+manager.check_omeka_options #exit with clear error if any key is missing
 #skip generation step with option -s
 if generate_es
-    manager = Datura::DataManager.new
     manager.run
 end
 datura_dir = File.join(File.dirname(__FILE__), "..")
