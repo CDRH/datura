@@ -25,6 +25,7 @@ def get_config(path, env='default'):
             print(exc)
 
 def reset():
+    # TODO: this function is currently broken; local variables do not overwrite module-level globals
     omeka = OmekaAPIClient(config['omeka_server'])
     omeka_auth = OmekaAPIClient(
         api_url = config['omeka_server'],
