@@ -68,7 +68,7 @@ def link_item(json_item, matching_items):
         omeka.omeka_auth.update_resource(linked_item, "items")
     except Exception as err:
         print(str(err))
-        traceback.print_exc
+        traceback.print_exc()
         print(f"Error updating item {item_id}")
         #breakpoint()
         pass
