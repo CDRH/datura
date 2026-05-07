@@ -46,7 +46,7 @@ def get_item_set():
     elif env == "development":
         item_set = dev_config["item_set"]
     else:
-        item_set == None
+        item_set = None
     return item_set
 
 def get_environment():
