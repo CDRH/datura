@@ -1,10 +1,32 @@
 import sys
 import os
 from datetime import datetime
-import omeka
 
 class FieldDefinitions:
-    #these are the default field definitions, which may be overridden in specific projects
+    """
+    Default field extraction patterns for the Omeka S ingestion pipeline.
+
+    Each method receives the raw JSON item dict (a single record from the
+    Datura-generated ES output file) and returns the value to be posted for
+    that Omeka property, or None if the field is absent.
+
+    To override any method for a specific collection, copy
+    omeka_overrides_example.py to scripts/python/omeka_overrides.py in the
+    collection repository and subclass FieldDefinitions there. The get_fields()
+    factory below will load the override class automatically.
+    """
+
+    def __init__(self, omeka_data_base=""):
+        """
+        Parameters:
+        * omeka_data_base - base URL used to construct media URIs in uriData().
+                            Passed in from OmekaContext.omeka_data_base.
+                            Defaults to "" (empty string) so that instantiation
+                            without arguments is safe in tests.
+        """
+        # Stored as a private attribute and accessed only by uriData().
+        self._omeka_data_base = omeka_data_base
+
     def title(self, json):
         return json.get("title", None)
     
@@ -23,9 +45,12 @@ class FieldDefinitions:
     def uriData(self, json):
         uri_data = json.get("uri_data", None)
         if uri_data:
+            # Strip the original path and reconstruct the URI under the
+            # collection's configured media base URL. The base URL comes
+            # from the constructor rather than a global so this class can
+            # be instantiated safely in tests without a live config file.
             filename = uri_data.split("/")[-1]
-            omeka_data_base = omeka.omeka_data_base
-            new_uri_data = f"{omeka_data_base}/{filename}"
+            new_uri_data = "{}/{}".format(self._omeka_data_base, filename)
             return new_uri_data
     
     def dcterms_type(self, json):
@@ -68,9 +93,6 @@ class FieldDefinitions:
     def relation(self, json):
         relation_ids = [relation['id'] for relation in json.get("has_relation") or [] if 'id' in relation]
         return relation_ids
-        
-    #citation fields
-    #TODO is citation always single-valued? if array might need to add code to deal with that
     
     def publisher(self, json):
         return (json.get("citation") or {}).get("publisher", None)
@@ -217,11 +239,30 @@ class FieldDefinitions:
             text += (" " + self.identifier(json))
         return text
     
-def get_fields():
+def get_fields(omeka_data_base=""):
+    """
+    Return the appropriate FieldDefinitions instance for this collection.
+
+    Attempts to import CustomFields from scripts/python/omeka_overrides.py
+    in the collection directory. If that file does not exist, falls back to
+    the default FieldDefinitions class.
+
+    Parameters:
+    * omeka_data_base - passed through to the FieldDefinitions constructor
+                        so that uriData() can build correct media URIs.
+                        Callers should pass ctx.omeka_data_base.
+
+    Returns a FieldDefinitions instance (or a CustomFields subclass of it).
+    """
     try:
-        #make sure it can override from the right directly
+        # Insert at position 0 so the collection's scripts/python directory
+        # takes precedence over any system-installed omeka_overrides module.
         sys.path.insert(0, './scripts/python')
         from omeka_overrides import CustomFields
-        return CustomFields()
+        # CustomFields inherits __init__ from FieldDefinitions, so
+        # omeka_data_base is passed through automatically. Override __init__
+        # in CustomFields only if you need additional constructor logic.
+        return CustomFields(omeka_data_base=omeka_data_base)
     except ImportError:
-        return FieldDefinitions()
+        # No collection-specific overrides found; use the defaults.
+        return FieldDefinitions(omeka_data_base=omeka_data_base)
