@@ -5,8 +5,10 @@ Utility functions for the Omeka S ingestion pipeline.
 
 """
 
+from datetime import datetime
 from pathlib import Path
 import json
+import os
 import re
 
 
@@ -252,3 +254,54 @@ def filter_items(regex, pathlist):
     """
     reg = re.compile(regex)
     return [p for p in pathlist if reg.search(str(p))]
+
+def filter_items(regex, pathlist):
+    """
+    Filter a list of file paths to those matching a regex pattern.
+
+    Used by both entrypoint scripts to restrict processing to a subset of
+    files when the -r / --regex flag is passed on the command line.
+
+    Parameters:
+    * regex    - regex pattern string, compiled with re.compile()
+    * pathlist - iterable of pathlib.Path or string paths to filter
+
+    Returns a list containing only the paths whose string representation
+    matches the pattern.
+    """
+    reg = re.compile(regex)
+    return [p for p in pathlist if reg.search(str(p))]
+
+
+def filter_items_by_date(update_time, pathlist):
+    """
+    Filter a list of output JSON file paths to those whose corresponding source
+    file has a modification time at or after update_time.
+
+    Source files are expected at source/<format>/<identifier>.<ext> relative to
+    the collection root (cwd), matching the Datura convention where the output
+    JSON stem equals the source filename stem (e.g. source/tei/abc123.xml ->
+    output/development/es/abc123.json). Items with no locatable source file are
+    included unconditionally so they are not silently dropped.
+
+    Parameters:
+    * update_time - datetime object; only items with source mtime >= this are kept
+    * pathlist    - iterable of pathlib.Path or string paths to filter
+    """
+    source_base = Path.cwd() / "source"
+    result = []
+    for p in pathlist:
+        identifier = Path(str(p)).stem
+        source_files = list(source_base.glob("*/{}.*".format(identifier)))
+        if not source_files:
+            logger.debug(
+                "No source file found for %r; including without date filter", identifier
+            )
+            result.append(p)
+            continue
+        source_mtime = max(
+            datetime.fromtimestamp(os.path.getmtime(str(sf))) for sf in source_files
+        )
+        if source_mtime >= update_time:
+            result.append(p)
+    return result

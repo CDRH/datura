@@ -46,7 +46,7 @@ from omeka_context import (
     OmekaMultipleMatchesError,
     configure_logging,
 )
-from omeka import filter_items, prepare_item_payload_using_template
+from omeka import filter_items, filter_items_by_date, prepare_item_payload_using_template
 
 # Module-level logger.  Records from this module appear as "json_to_omeka"
 # in log output so they can be filtered independently from other modules.
@@ -86,6 +86,16 @@ def _parse_args():
             "Optional regex pattern to restrict processing to matching "
             "file paths.  Example: -r 'abc123' processes only files whose "
             "path contains 'abc123'."
+        ),
+    )
+    parser.add_argument(
+        "-u", "--update",
+        default=None,
+        dest="update_time",
+        help=(
+            "Only process items whose source file was modified at or after "
+            "this date/time.  Accepts 'today', a date (2015-01-01), or "
+            "date-time (2015-01-01T18:24)."
         ),
     )
     parser.add_argument(
@@ -411,6 +421,8 @@ def main():
 
     if ctx.regex:
         pathlist = filter_items(ctx.regex, pathlist)
+    if ctx.update_time:
+        pathlist = filter_items_by_date(ctx.update_time, pathlist)
 
     logger.info(
         "Found %d JSON file(s) in %s (environment=%r)",

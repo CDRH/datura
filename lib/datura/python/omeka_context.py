@@ -7,6 +7,7 @@ Central context object and exception hierarchy for the Omeka S ingestion pipelin
 
 import logging
 import sys
+from datetime import date, datetime
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -126,6 +127,37 @@ class OmekaMediaError(OmekaError):
 
 
 # ---------------------------------------------------------------------------
+# Date parsing
+# ---------------------------------------------------------------------------
+
+def parse_update_time(s):
+    """
+    Parse a -u / --update date string into a datetime object.
+
+    Accepts the same formats as the Ruby Datura -u flag:
+    * "today"            - midnight of the current local date
+    * "2015-01-01"       - date only
+    * "2015-01-01T18:24" - date and time
+
+    Raises OmekaConfigError with a descriptive message if the string does not
+    match any expected format.
+    """
+    if s == "today":
+        d = date.today()
+        return datetime(d.year, d.month, d.day)
+    for fmt in ("%Y-%m-%dT%H:%M", "%Y-%m-%d"):
+        try:
+            return datetime.strptime(s, fmt)
+        except ValueError:
+            continue
+    raise OmekaConfigError(
+        "Invalid --update value {!r}. "
+        "Expected 'today', a date (2015-01-01), or date-time (2015-01-01T18:24)."
+        .format(s)
+    )
+
+
+# ---------------------------------------------------------------------------
 # Context
 # ---------------------------------------------------------------------------
 
@@ -159,6 +191,7 @@ class OmekaContext:
                  Expected attributes:
                    .environment  str   "development" or "production"
                    .regex        str   optional file-filter pattern, or None
+                   .update_time  str   optional date/time string for -u filter, or None
                    .media_skip   bool  skip re-ingesting existing media
                                        (html_and_media_ingest only; absent on
                                        json_to_omeka args, defaults to False)
@@ -187,6 +220,7 @@ class OmekaContext:
             )
             env_config = {}
 
+        raw_update = getattr(args, "update_time", None)
         return cls(
             config=default_config,
             env_config=env_config,
@@ -195,6 +229,7 @@ class OmekaContext:
             # every flag (e.g. json_to_omeka.py has no --media-skip).
             regex=getattr(args, "regex", None),
             media_skip=getattr(args, "media_skip", False),
+            update_time=parse_update_time(raw_update) if raw_update else None,
         )
 
     @staticmethod
@@ -236,7 +271,7 @@ class OmekaContext:
 
         return contents[env]
 
-    def __init__(self, config, env_config, environment, regex, media_skip):
+    def __init__(self, config, env_config, environment, regex, media_skip, update_time=None)):
         """
         Initialise the context. Prefer OmekaContext.from_args() over calling
         this constructor directly except in tests.
@@ -252,6 +287,9 @@ class OmekaContext:
                         None means process all files in the output directory
         * media_skip  - if True, items that already have 2+ media objects
                         (thumbnail + HTML) are skipped during media ingest
+        * update_time - optional datetime; if set, only items whose source file
+                        mtime >= this value are processed (mirrors the -u flag
+                        from the main Datura post command)
         """
         # ---- Validate required config keys --------------------------------
         # Validate up front so that failures are immediate and descriptive.
@@ -276,6 +314,7 @@ class OmekaContext:
         self.environment = environment
         self.regex = regex
         self.media_skip = media_skip
+        self.update_time = update_time
 
         # ---- Config values ------------------------------------------------
         self.template_number = config["resource_template"]
