@@ -103,6 +103,12 @@ class FileCsv < FileType
 
   def transform_html
     puts "transforming #{self.filename} to HTML subdocuments"
+    # Build and apply the identifier filter, if --csv-rows was passed
+    row_filter = build_csv_row_filter
+    if row_filter
+      puts "csv_rows filter active: only processing rows matching /#{@options["csv_rows"]}/".cyan
+    end
+    build_html_from_csv(row_filter)
     build_html_from_csv
     # transform_html method is expected to send back a hash
     # but already wrote to filesystem so just sending back empty
