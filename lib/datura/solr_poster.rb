@@ -53,12 +53,11 @@ class SolrPoster
   end
 
   def post(content, type)
-    url = URI.parse(@url)
-    http = Net::HTTP.new(url.host, url.port)
+    uri = URI.parse(@url)
+    http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = @url.start_with?("https")
-    http.verify_mode = OpenSSL::SSL::VERIFY_PEER
     http.open_timeout = 10
-    request = Net::HTTP::Post.new(url.request_uri)
+    request = Net::HTTP::Post.new(uri.request_uri)
     request.body = content
     request["Content-Type"] = type
     http.request(request)

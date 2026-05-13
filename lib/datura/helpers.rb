@@ -78,7 +78,6 @@ module Datura::Helpers
     http = Net::HTTP.new(uri.host, uri.port)
     if uri.scheme == "https"
       http.use_ssl = true
-      http.verify_mode = OpenSSL::SSL::VERIFY_PEER
     end
     http.request(Net::HTTP::Get.new(uri.request_uri))
   end
