@@ -120,14 +120,20 @@ class FileCsv < FileType
   # it will have to do! (transmississippi only collection so far)
   def transform_solr
     puts "transforming #{self.filename}"
+    # Build and apply the identifier filter, if --csv-rows was passed
+    row_filter = build_csv_row_filter
+    if row_filter
+      puts "csv_rows filter active: only processing rows matching /#{@options["csv_rows"]}/".cyan
+    end
     solr_doc = Nokogiri::XML("<add></add>")
     @csv.each do |row|
-      if !row.header_row?
-        doc = Nokogiri::XML::Node.new("doc", solr_doc)
-        # row_to_solr should return an XML::Node object with children
-        doc = row_to_solr(doc, @csv.headers, row)
-        solr_doc.at_css("add").add_child(doc)
-      end
+      next if row.header_row?
+      # Skip rows that don't match the identifier filter (if one is active)
+      next if row_filter && !row_matches_filter?(row, row_filter)
+      doc = Nokogiri::XML::Node.new("doc", solr_doc)
+      # row_to_solr should return an XML::Node object with children
+      doc = row_to_solr(doc, @csv.headers, row)
+      solr_doc.at_css("add").add_child(doc)
     end
     # Uncomment to debug
     # puts solr_doc.root.to_xml
