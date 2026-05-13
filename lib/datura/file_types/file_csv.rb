@@ -65,11 +65,7 @@ class FileCsv < FileType
   # operates with no logic on the fields
   def row_to_solr(doc, headers, row)
     headers.each do |column|
-      next unless row[column]
-      field = Nokogiri::XML::Node.new("field", doc)
-      field["name"] = column
-      field.content = row[column]
-      doc.add_child(field)
+      doc.add_child("<field name='#{column}'>#{row[column]}</field>") if row[column]
     end
     doc
   end
