@@ -249,6 +249,11 @@ class Datura::DataManager
     allowed = allowed_files(files)
     # filter by regex
     regexed = Datura::Helpers.regex_files(allowed, @options["regex"])
+    if @options["regex"] && regexed.empty?
+      msg = "No files matched regex: #{@options['regex']}"
+      puts msg.yellow
+      @log.warn(msg)
+    end
     # filter by date
     filtered = regexed.select { |f| Datura::Helpers.should_update?(f, @options["update_time"]) }
 
