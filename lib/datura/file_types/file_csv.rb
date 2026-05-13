@@ -7,9 +7,13 @@ class FileCsv < FileType
     @csv = read_csv(file_location, options["csv_encoding"])
   end
 
-  def build_html_from_csv
+  # row_filter is an optional regexp; when present, only rows whose identifier
+  # matches the pattern are converted to HTML. Pass nil to process all rows.
+  def build_html_from_csv(row_filter = nil)
     @csv.each_with_index do |row, index|
       next if row.header_row?
+      # Skip rows that don't match the identifier filter (if one is active)
+      next if row_filter && !row_matches_filter?(row, row_filter)
       # Note: if overriding this function, it's recommended to use
       # a more specific identifier for each row of the CSV
       # but since this is a generic version, simply using the current iteration number
