@@ -16,6 +16,10 @@ def post_items(pathlist):
         filename = str(path)
         with open(filename) as jsonfile:
             json_items = json.load(jsonfile)
+            # Apply --csv-rows identifier filter if provided.
+            csv_rows = omeka.get_csv_rows()
+            if csv_rows:
+                json_items = omeka.filter_items_by_identifier(csv_rows, json_items)
             # TODO change template_number to actual number, account for other schemas is necessary
             template_number = omeka.template_number
             for json_item in json_items:
@@ -44,6 +48,11 @@ def link_items(pathlist):
         filename = str(path)
         with open(filename) as jsonfile:
             json_items = json.load(jsonfile)
+            # Apply the same --csv-rows filter used in post_items so that only
+            # the targeted rows are linked
+            csv_rows = omeka.get_csv_rows()
+            if csv_rows:
+                json_items = omeka.filter_items_by_identifier(csv_rows, json_items)
             for json_item in json_items:
                 if not json_item["identifier"]:
                     print("skipping item without identifier")
