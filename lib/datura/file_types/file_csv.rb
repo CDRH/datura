@@ -7,9 +7,15 @@ class FileCsv < FileType
     @csv = read_csv(file_location, options["csv_encoding"])
   end
 
-  # row_filter is an optional regexp; when present, only rows whose identifier
-  # matches the pattern are converted to HTML. Pass nil to process all rows.
-  def build_html_from_csv(row_filter = nil)
+  # Builds one HTML file per CSV row. Respects the --csv-rows filter option:
+  # if @options["csv_rows"] is set, only rows with identifier matching that
+  # regex are written. Note: if overriding this method in a collection, call
+  # build_csv_row_filter / row_matches_filter? to preserve filter behavior.
+  def build_html_from_csv
+    row_filter = build_csv_row_filter
+    if row_filter
+      puts "csv_rows filter active: only processing rows matching /#{@options["csv_rows"]}/".cyan
+    end
     @csv.each_with_index do |row, index|
       next if row.header_row?
       # Skip rows that don't match the identifier filter (if one is active)
@@ -103,12 +109,7 @@ class FileCsv < FileType
 
   def transform_html
     puts "transforming #{self.filename} to HTML subdocuments"
-    # Build and apply the identifier filter, if --csv-rows was passed
-    row_filter = build_csv_row_filter
-    if row_filter
-      puts "csv_rows filter active: only processing rows matching /#{@options["csv_rows"]}/".cyan
-    end
-    build_html_from_csv(row_filter)
+    # build_html_from_csv handles the --csv-rows filter internally
     build_html_from_csv
     # transform_html method is expected to send back a hash
     # but already wrote to filesystem so just sending back empty
