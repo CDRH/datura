@@ -35,6 +35,12 @@ class FileType
     # script locations set in child classes
   end
 
+  def debug_info(error)
+    if options["verbose"]
+      puts "Backtrace: " << error.backtrace.join("\n ")
+    end
+  end
+
   def filename(ext=true)
     if ext
       File.basename(@file_location)
@@ -56,6 +62,7 @@ class FileType
     begin
       transformed = transform_es
     rescue => e
+      debug_info(e)
       return { "error" => "Error transforming ES for #{self.filename(false)}: #{e.full_message}" }
     end
     if transformed && transformed.length > 0
@@ -75,8 +82,13 @@ class FileType
           # you will need to add _update at the end of this URL
           begin
             RestClient.put("#{es.index_url}/_doc/#{id}", doc.to_json, @auth_header.merge({:content_type => :json }) )
+          rescue Errno::ECONNREFUSED, SocketError, Errno::ETIMEDOUT => e
+            error = "Could not connect to ElasticSearch at #{es.index_url}. " \
+                    "Confirm you have specified the correct environment " \
+                    "(currently: #{@options['environment']}. Use -e to specify an environment."
           rescue => e
-            error = "Error transforming or posting to ES for #{self.filename(false)}: #{e}"
+            debug_info(e)
+            error = "Error transforming or posting to ES for #{self.filename(false)}: #{e.message}"
           end
         else
           error = "Document #{id} did not validate against the elasticsearch schema"
@@ -109,7 +121,8 @@ class FileType
         return { "error" => "Error posting to Solr for #{self.filename}: #{res.body}" }
       end
     rescue => e
-      return { "error" => "Error posting to Solr for #{self.filename}: #{e.inspect}" }
+      debug_info(e)
+      return { "error" => "Error posting to Solr for #{self.filename}: #{e.message}" }
     end
   end
 
@@ -147,9 +160,6 @@ class FileType
       end
       return es_req
     rescue => e
-      puts "something went wrong transforming #{self.filename}"
-      puts e
-      puts e.backtrace
       raise e
     end
   end
@@ -197,8 +207,15 @@ class FileType
       out = stdout.read
       err = stderr.read
       if err.length > 0
-        msg = "There was an error transforming #{filename}: #{err}"
-        return { "error" => msg }
+        # Extract meaningful lines from Saxon's stderr for user display  
+        lines = err.lines
+        match_indices = lines.each_index.select { |i| lines[i].match?(/^Error|SXXP|XPST|XTTE|XTSE|XSLT|Fatal/) }                                                                                
+        wanted_indices = match_indices.flat_map { |i| [i, i + 1] }.uniq.select { |i| i < lines.length }
+        key_lines = wanted_indices.map { |i| lines[i] }                                                                                                                                         
+        key_lines = lines.first(2) if key_lines.empty?                                                                                                                                        
+        msg = "Error transforming #{filename}: {\n " + key_lines.map { |l| l.strip }.join("\n ")
+        msg += "\n  (full Saxon output logged)" if err.lines.length > key_lines.length
+        return { "error" => msg, "full_error" => err }
       else
         # change previous tee handling to Ruby write
         # TODO: we may want to consider binwrite instead to avoid any possible encoding issues
