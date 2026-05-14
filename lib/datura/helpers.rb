@@ -76,9 +76,7 @@ module Datura::Helpers
   def self.get_url(url)
     uri = URI.parse(url)
     http = Net::HTTP.new(uri.host, uri.port)
-    if uri.scheme == "https"
-      http.use_ssl = true
-    end
+    http.use_ssl = true if uri.scheme == "https"
     http.request(Net::HTTP::Get.new(uri.request_uri))
   end
 
