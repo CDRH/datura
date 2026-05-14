@@ -22,6 +22,7 @@ class Datura::DataManager
       "csv" => FileCsv,
       "ead" => FileEad,
       "html" => FileHtml,
+      "personography" => FilePersonography,
       "tei" => FileTei,
       "vra" => FileVra,
       "webs" => FileWebs,
