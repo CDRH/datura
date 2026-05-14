@@ -36,7 +36,7 @@ Displays usage and list of options
 
 Transforms / posts only csv lines whose identifier (id/identifier column) matches a specific regular expression.
 
-Examples: `post -c foo_001 (exact), foo_ (prefix), 'foo_00[1-3]' (range), 'foo_\d' (use digit character)`
+Examples: `post -c cat_001 (exact), cat_ (prefix), 'cat_00[1-3]' (range), 'cat_\d' (use digit character)`
 
 ```bash
 -e, --environment [input]
