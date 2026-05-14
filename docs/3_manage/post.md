@@ -29,6 +29,14 @@ The above does the following:
 Displays usage and list of options
 
 ```
+-c, --csv-rows [input]
+```
+
+Transforms / posts only csv lines whose identifier (id/identifier column) matches a specific regular expression.
+
+Examples: `post -c foo_001 (exact), foo_ (prefix), 'foo_00[1-3]' (range), 'foo_\d' (use digit character)`
+
+```
 -e, --environment [input]
 ```
 
