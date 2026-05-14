@@ -200,9 +200,10 @@ class FileType
         cmd += ["--param", "#{k}=#{v}"]
       end
     end
-    # append output path
+    # append output path and base output URI for xsl:result-document secondary outputs if configured
     if outpath
       cmd += ["--output", "#{outpath}/#{filename(false)}.#{ext}"]
+      cmd += ["--base-output-uri", outpath]
     end
     puts "using command #{cmd.inspect}" if @options["verbose"]
     # run the command
