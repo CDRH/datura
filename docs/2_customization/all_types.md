@@ -16,3 +16,7 @@ There are a number of ways you can customize the transformations.  Please refer 
 ### To IIIF
 
 - [Presentation Manifest](#iiif.md)
+
+### To Omeka
+
+- [Omeka S API overrides](omeka_overrides.md)

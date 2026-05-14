@@ -213,12 +213,14 @@ class FieldDefinitions:
     
     def itemText(self, json):
         text = json.get("text", None)
-        if json.get("data_type"):
+        if text and json.get("data_type"):
             text += (" " + self.identifier(json))
         return text
     
 def get_fields():
     try:
+        #make sure it can override from the right directly
+        sys.path.insert(0, './scripts/python')
         from omeka_overrides import CustomFields
         return CustomFields()
     except ImportError:

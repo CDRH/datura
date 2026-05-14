@@ -40,6 +40,10 @@ The collection's `.gitignore` file is set up to make sure that files in tei, dc,
 
 Use [GitHub's instructions (external link)](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/) instructions, if you are not sure how to add a new repository.  You can change the address to look somewhere besides GitHub if you like.
 
+### Omeka setup (optional)
+
+For directions on how to set up the repo for posting into Omeka, see [Omeka setup](omeka_setup.md).
+
 ### What's next?
 
 [Looks like it's time to configure your new collection!](config.md)
