@@ -54,8 +54,23 @@ def get_environment():
     return environment
 
 def get_regex():
-    regex = args.regex
-    return regex
+    # Return the --regex string, or None if not set.
+    return args.regex
+
+def get_csv_rows():
+    # Return the --csv-rows regex string, or None if not set.
+    return args.csv_rows
+
+def filter_items_by_identifier(csv_rows_regex, json_items):
+    '''Filter a list of JSON item dicts to only those whose identifier matches csv_rows_regex.
+
+    Used by the Omeka posting scripts to apply the same --csv-rows filter that
+    the Ruby layer applies during ES/HTML/Solr generation. Because CSV input
+    produces a single multi-item JSON array (unlike TEI/VRA), filtering must
+    happen here as well.
+    '''
+    reg = re.compile(csv_rows_regex)
+    return [item for item in json_items if reg.search(item.get("identifier", ""))]
 
 def add_media_to_item(item_id, media_file, payload={}, template_id=None, class_id=None):
     # copied from the module to modify with different ingester
@@ -218,6 +233,8 @@ parser.add_argument('-e', '--environment', required=False, default="development"
 parser.add_argument('-m', '--media-skip', action='store_true',
                     help='Only ingest media not already ingested')
 parser.add_argument('-r', '--regex', required=False, help = "Filter files with regex")
+parser.add_argument('-c', '--csv-rows', required=False,
+                    help='Only process CSV items whose identifier matches this regex')
 args = parser.parse_args()
 template_number = config["resource_template"]
 omeka_data_base = config["omeka_data_base"]
