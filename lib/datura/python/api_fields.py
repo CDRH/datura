@@ -71,8 +71,9 @@ def build_item_dict(json, existing_item):
         update_item_value(built_item, "dh:annotationsText", fields.annotationsText(json))
         update_item_value(built_item, "dh:itemText", fields.itemText(json))
         return built_item
-    except ValueError:
-        breakpoint()
+    except ValueError as e:
+        print(f"Error: {e}", file=sys.stderr)
+        
 
 #TODO change item linking for JSON and new API
 def link_item(json_item, existing_item):
@@ -242,7 +243,6 @@ def get_omeka_ids(lookup_values, filter_property, item_set_id = None):
             if match["total_results"] >= 1:
                 if match["total_results"] > 1:
                     print(f"warning: multiple matches for {lookup_value}, taking first match")
-                    breakpoint()
                 omeka_id = match['results'][0]["o:id"]
                 omeka_ids.append(omeka_id)
             else:
