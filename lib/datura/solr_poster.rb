@@ -13,8 +13,6 @@ class SolrPoster
     end
   end
 
-  # TODO this is very similar to the below _by_regex function
-  # so could stick them together later
   def clear_index
     del_str = "<delete><query>*:*</query></delete>"
     res = post_xml(del_str)
@@ -65,7 +63,6 @@ class SolrPoster
 
   # post_file
   #  assumes xml file because of historical usage of this script
-  #  TODO refactor?
   def post_file(file_location)
     file = IO.read(file_location)
     post_xml(file)
