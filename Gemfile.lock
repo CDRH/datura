@@ -2,9 +2,8 @@ PATH
   remote: .
   specs:
     datura (1.1.0)
-      byebug (~> 11.0)
-      colorize (~> 0.8.1)
-      nokogiri (~> 1.10)
+      colorize (~> 1.0)
+      nokogiri (~> 1.18)
       pdf-reader (~> 2.12)
       rest-client (~> 2.1)
 
@@ -15,7 +14,7 @@ GEM
     afm (0.2.2)
     bigdecimal (3.3.1)
     byebug (11.1.3)
-    colorize (0.8.1)
+    colorize (1.1.0)
     domain_name (0.6.20240107)
     hashery (2.1.2)
     http-accept (1.7.0)
@@ -26,11 +25,9 @@ GEM
       logger
       mime-types-data (~> 3.2025, >= 3.2025.0507)
     mime-types-data (3.2026.0414)
-    mini_portile2 (2.8.9)
     minitest (5.27.0)
     netrc (0.11.0)
-    nokogiri (1.18.10)
-      mini_portile2 (~> 2.8.2)
+    nokogiri (1.18.10-arm64-darwin)
       racc (~> 1.4)
     nokogiri (1.18.10-x86_64-darwin)
       racc (~> 1.4)
@@ -52,11 +49,12 @@ GEM
       bigdecimal (~> 3.1)
 
 PLATFORMS
-  ruby
+  arm64-darwin-24
   x86_64-darwin-20
 
 DEPENDENCIES
-  bundler (>= 1.16.0, < 3.0)
+  bundler (>= 2.0, < 5.0)
+  byebug (~> 11.0)
   datura!
   minitest (~> 5.0)
   rake (~> 13.0)
