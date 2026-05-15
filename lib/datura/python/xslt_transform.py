@@ -11,8 +11,8 @@ def parse_args():
     parser.add_argument("--input",  required=True,  help="Path to source XML file")
     parser.add_argument("--xsl",    required=True,  help="Path to XSL stylesheet")
     parser.add_argument("--output", required=False, help="Path to write output file")
-    parser.add_argument("--param",  action="append", default=[], metavar="KEY=VALUE",
-                        help="XSL parameter (repeatable)")
+    parser.add_argument("--param",  action="append", default=[], nargs=2, metavar=("KEY", "VALUE"),
+                        help="XSL parameter as separate key and value (repeatable)")
     parser.add_argument("--base-output-uri", required=False, dest="base_output_uri",
                         help="Base URI for xsl:result-document secondary outputs (file:// URI or directory path)")
     # parse sys.argv, validate args, return namespace object with attributes
@@ -26,11 +26,8 @@ def run_transform(input_path, xsl_path, params, output_path=None, base_output_ur
     with saxonche.PySaxonProcessor(license=False) as proc:
         # create XSLT 3.0 processor
         xslt_proc = proc.new_xslt30_processor()
-        # iterate list of kv strings
-        for kv in params:
-            if "=" not in kv:
-                raise ValueError(f"Invalid param format (expected KEY=VALUE): {kv!r}")
-            key, value = kv.split("=", 1)
+        # iterate list of [key, value] pairs
+        for key, value in params:
             xslt_proc.set_parameter(key, proc.make_string_value(value))
         # parse and compile xsl file into executable
         executable = xslt_proc.compile_stylesheet(stylesheet_file=xsl_path)

@@ -197,12 +197,12 @@ class FileType
     cmd = ["python3", python_script, "--input", input, "--xsl", xsl]
     if params
       params.each do |k, v|
-        cmd += ["--param", "#{k}=#{v}"]
+        cmd += ["--param", k.to_s, v.to_s]
       end
     end
     # append output path and base output URI for xsl:result-document secondary outputs if configured
     if outpath
-      cmd += ["--output", "#{outpath}/#{filename(false)}.#{ext}"]
+      cmd += ["--output", File.join(outpath, filename(false) + "." + ext)]
       cmd += ["--base-output-uri", outpath]
     end
     puts "using command #{cmd.inspect}" if @options["verbose"]
