@@ -3,6 +3,14 @@ import argparse
 import sys
 from pathlib import Path
 
+try:
+    import saxonche
+# this should now be redundant with the addition of check_xslt_dependency to data_manager.rb
+# but I am leaving it here for now as a backstop and in case we decide to return to this approach 
+# (the downside is that it will print an error for every call)
+except ImportError as e:
+    print(f"XSLT transformation error: {e}", file=sys.stderr)
+    sys.exit(1)
 
 def parse_args():
     # create the parser
@@ -20,8 +28,6 @@ def parse_args():
 
 
 def run_transform(input_path, xsl_path, params, output_path=None, base_output_uri=None):
-    # import here rather than at top so error is raised at call time with clear traceback if saxonche isn't installed
-    import saxonche
     # create Saxon processor using Home Edition tier
     with saxonche.PySaxonProcessor(license=False) as proc:
         # create XSLT 3.0 processor
