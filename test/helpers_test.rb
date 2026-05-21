@@ -105,6 +105,41 @@ class Datura::HelpersTest < Minitest::Test
     assert_equal 1, files.length
   end
 
+  def test_resume_files
+    test_files = %w[
+      /path/to/cody.book.002.xml
+      /path/to/cat.let0001.xml
+      /path/to/cody.book.001.xml
+      /path/to/transmiss.mem.001.xml
+      /path/to/cody.news.001.xml
+    ]
+
+    # exact match on one file: returns that file and all alphabetically after it
+    # alphabetical order: cat.let0001, cody.book.001, cody.book.002, cody.news.001, transmiss.mem.001
+    files = Datura::Helpers.resume_files(test_files, "cody\.book\.002")
+    basenames = files.map { |f| File.basename(f, ".*") }
+    assert_equal %w[cody.book.002 cody.news.001 transmiss.mem.001], basenames
+
+    # match on first file alphabetically: returns all files
+    files = Datura::Helpers.resume_files(test_files, "cat\.let0001")
+    assert_equal 5, files.length
+
+    # match on last file: returns only that file
+    files = Datura::Helpers.resume_files(test_files, "transmiss\.mem\.001")
+    assert_equal 1, files.length
+    assert_equal "transmiss.mem.001", File.basename(files.first, ".*")
+
+    # no match: exits with error
+    assert_raises(SystemExit) do
+      Datura::Helpers.resume_files(test_files, "zzz_no_such_file")
+    end
+
+    # multiple matches: exits with error
+    assert_raises(SystemExit) do
+      Datura::Helpers.resume_files(test_files, "cody")
+    end
+  end
+
   def test_should_update?
     hour_ago = Time.now - 60*60
     test_file = "#{File.dirname(__FILE__)}/fixtures/should_update.txt"
