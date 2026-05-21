@@ -130,7 +130,7 @@ def prepare_item_payload_using_template(ctx, terms, template_id):
         if term not in template_properties:
             # Terms outside the template are intentionally dropped — each
             # collection defines which fields are relevant to its template.
-            print('Term {} not in template'.format(term))
+            logger.warning("Term %r not in template; skipping", term)
             continue
 
         property_details = template_properties[term]
@@ -143,9 +143,9 @@ def prepare_item_payload_using_template(ctx, terms, template_id):
 
             # Validate the supplied data type against the template's allowed types.
             if 'type' in value and value['type'] not in property_details['type']:
-                print(
-                    'Data type "{}" for term "{}" not allowed by template'
-                    .format(value['type'], term)
+                logger.warning(
+                    "Data type %r for term %r not allowed by template; skipping value",
+                    value['type'], term
                 )
                 break
 
@@ -159,7 +159,7 @@ def prepare_item_payload_using_template(ctx, terms, template_id):
                     value['type'] = 'literal'
                 else:
                     # Cannot determine a type; skip this value.
-                    print('Specify data type for term "{}"'.format(term))
+                    logger.warning("Cannot determine data type for term %r; skipping value",term)
                     break
 
             if "property_id" in value:
