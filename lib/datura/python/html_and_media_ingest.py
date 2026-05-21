@@ -278,7 +278,7 @@ def ingest_html(ctx, json_item, matching_item, html_dir):
     file_path = html_dir / "{}.html".format(identifier)
 
     try:
-        with open(file_path, "r") as file:
+        with open(file_path, "r", encoding="utf-8") as file:
             html_content = file.read()
     except FileNotFoundError:
         # A missing HTML file is common for items that have no text
