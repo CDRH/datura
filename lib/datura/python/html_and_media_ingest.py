@@ -207,7 +207,7 @@ def ingest_thumbnail(ctx, json_item, matching_item, iiif_dir):
     # --- Download ---
     try:
         logger.info("Downloading thumbnail for %r", identifier)
-        response = requests.get(thumbnail_remote)
+        response = requests.get(thumbnail_remote, timeout=30)
         response.raise_for_status()
         with open(thumbnail_local, "wb") as thumb_file:
             thumb_file.write(response.content)
