@@ -220,11 +220,13 @@ def prepare_property_value(value, property_id, label=""):
     }
 
     if data_type == 'resource:item':
-        # BUG: `self` is not defined here. This is dead code for current callers.
-        # Use ctx.client.prepare_property_value() for resource:item values.
-        property_value['@id'] = '{}/items/{}'.format(self.api_url, value['value'])  # noqa: F821
-        property_value['value_resource_id'] = value['value']
-        property_value['value_resource_name'] = 'items'
+        # This branch is intentionally not implemented in this standalone function.
+        # Use ctx.client.prepare_property_value() for resource:item values instead —
+        # the library version has access to the API URL via the client instance.
+        raise NotImplementedError(
+            "resource:item values must use ctx.client.prepare_property_value(); "
+            "see link_item_record() in api_fields.py"
+        )
     elif data_type == 'uri':
         property_value['@id'] = value['value']
         # Fall back to the last URI segment when no explicit label is given.
