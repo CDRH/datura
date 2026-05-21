@@ -247,7 +247,11 @@ def get_json_value(row, name):
     if len(row[name]) > 0:
         if row[name].startswith('["'):
             # Deserialise a JSON-encoded array.
-            return json.loads(row[name])
+            try:
+                return json.loads(row[name])
+            except json.JSONDecodeError:
+                logger.warning("Could not parse JSON value for field %r: %r", name, row[name])
+                return row[name]
         elif ";;;" in row[name]:
             # Split a semicolon-delimited multi-value string.
             return row[name].split(";;;")
