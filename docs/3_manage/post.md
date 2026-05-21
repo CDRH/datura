@@ -79,6 +79,16 @@ Transforms / posts only files matching a specific regular expression.  DO NOT in
 Example: `post -r let0001`
 
 ```bash
+-R, --resume [input]
+```
+
+Resume posting from (and including) the file matching this regex. Files are sorted alphabetically before the resume point is located. The regex must match exactly one file or the script will exit with an error. Can be combined with `-r` to resume within a filtered set.
+
+Example: `post -R let0050` (post all files from `let0050` onward)
+
+Example: `post -r let -R let0050` (post all `let` files from `let0050` onward)
+
+```bash
 -t, --transform-only
 ```
 
