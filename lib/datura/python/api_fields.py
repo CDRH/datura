@@ -285,9 +285,8 @@ def update_item_value(ctx, item, key, value, datatype="literal"):
     if type(value) in [str, int, float]:
         item = add_formatted_value(ctx, item, key, value, datatype)
     elif type(value) == list:
-        # Deduplicate and remove None entries before iterating.
-        value = list(set(value))
-        value = [v for v in value if v is not None]
+        # Deduplicate (preserving insertion order) and remove None entries.
+        value = list(dict.fromkeys(v for v in value if v is not None))
         for v in value:
             item = add_formatted_value(ctx, item, key, v, datatype)
 
