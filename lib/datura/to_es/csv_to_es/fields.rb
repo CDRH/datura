@@ -196,7 +196,7 @@ class CsvToEs
   end
 
   def title
-    @row["title"]
+    @row["title"] || @row["Title"]
   end
 
   def title_sort
