@@ -8,9 +8,11 @@ Utility functions for the Omeka S ingestion pipeline.
 from datetime import datetime
 from pathlib import Path
 import json
+import logging
 import os
 import re
 
+logger = logging.getLogger(__name__)
 
 def add_media_to_item(ctx, item_id, media_file, payload=None, template_id=None, class_id=None):
     """
