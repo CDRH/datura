@@ -49,6 +49,11 @@ module Datura::Parser
         options["regex"] = input
       end
 
+      options["resume"] = nil
+      opts.on('-R', '--resume [input]', 'Resume posting from (and including) the file matching this regex') do |input|
+        options["resume"] = input
+      end
+
       options["transform_only"] = false
       opts.on('-t', '--transform-only', 'Do not post to solr / es') do
         options["transform_only"] = true
