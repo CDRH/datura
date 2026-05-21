@@ -178,7 +178,7 @@ class FieldDefinitions:
         return json.get("keywords5", None)
     
     def source(self, json):
-        return json.get("has_source") and json.get("has_source", {}).get("title")
+        return (json.get("has_source") or {}).get("title")
         
     def medium(self, json):
         return json.get("medium", None)
