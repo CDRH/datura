@@ -121,6 +121,30 @@ module Datura::Helpers
     array
   end
 
+  # resume_files
+  #   sorts files alphabetically and returns all files from the first file
+  #   matching the resume regex onward (inclusive). Exits with an error if
+  #   the regex matches zero or more than one file.
+  #   params: files (array of file paths), regex (string)
+  #   returns: array
+  def self.resume_files(files, regex)
+    sorted = files.sort_by { |f| File.basename(f, ".*") }
+    exp = Regexp.new(regex)
+    matches = sorted.select { |f| exp.match(File.basename(f, ".*")) }
+
+    if matches.empty?
+      puts "ERROR: --resume regex '#{regex}' matched no files. Exiting.".red
+      exit 1
+    elsif matches.length > 1
+      names = matches.map { |f| File.basename(f, ".*") }.join(", ")
+      puts "ERROR: --resume regex '#{regex}' matched #{matches.length} files (#{names}). Refine your regex to match exactly one file. Exiting.".red
+      exit 1
+    end
+
+    resume_index = sorted.index(matches.first)
+    sorted[resume_index..]
+  end
+
   # should_update?
   #   determines if a user has changed a file since specified date
   #   params: file (string path), since_date (Time format or nil)
