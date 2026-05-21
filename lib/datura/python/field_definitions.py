@@ -27,6 +27,10 @@ class FieldDefinitions:
         # Stored as a private attribute and accessed only by uriData().
         self._omeka_data_base = omeka_data_base
 
+    def _get_citation(self, json):
+        """Return the citation sub-dict, or {} if absent or null."""
+        return json.get("citation") or {}
+
     def title(self, json):
         return json.get("title", None)
     
@@ -95,41 +99,41 @@ class FieldDefinitions:
         return relation_ids
     
     def publisher(self, json):
-        return (json.get("citation") or {}).get("publisher", None)
+        return self._get_citation(json).get("publisher", None)
         
     def biblID(self, json):
         #note: this field is not yet implemented in the schema
-        return (json.get("citation") or {}).get("id", None)
+        return self._get_citation(json).get("id", None)
         
     def biblTitle(self, json):
-        return (json.get("citation") or {}).get("title", None)
+        return self._get_citation(json).get("title", None)
         
     def biblPubPlace(self, json):
-        return (json.get("citation") or {}).get("pubplace", None)
+        return self._get_citation(json).get("pubplace", None)
         
     def issue(self, json):
-        return (json.get("citation") or {}).get("issue", None)
+        return self._get_citation(json).get("issue", None)
         
     def pageStart(self, json):
-        return (json.get("citation") or {}).get("page_start", None)
+        return self._get_citation(json).get("page_start", None)
         
     def pageEnd(self, json):
-        return (json.get("citation") or {}).get("page_end", None)
+        return self._get_citation(json).get("page_end", None)
         
     def section(self, json):
-        return (json.get("citation") or {}).get("section", None)
+        return self._get_citation(json).get("section", None)
         
     def volume(self, json):
-        return (json.get("citation") or {}).get("volume", None)
+        return self._get_citation(json).get("volume", None)
         
     def biblTitleA(self, json):
-        return (json.get("citation") or {}).get("title_a", None)
+        return self._get_citation(json).get("title_a", None)
         
     def biblTitleM(self, json):
-        return (json.get("citation") or {}).get("title_m", None)
+        return self._get_citation(json).get("title_m", None)
     
     def biblTitleJ(self, json):
-        return (json.get("citation") or {}).get("title_j", None)
+        return self._get_citation(json).get("title_j", None)
         
     def rightsHolder(self, json):
         return json.get("rights_holder", None)
