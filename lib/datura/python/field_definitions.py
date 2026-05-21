@@ -81,8 +81,10 @@ class FieldDefinitions:
     def dateYear(self, json):
         date_to_parse = json.get("date", None)
         if date_to_parse:
-            year = datetime.strptime(date_to_parse, "%Y-%m-%d").year
-            return year
+            try:
+                return datetime.strptime(date_to_parse, "%Y-%m-%d").year
+            except ValueError:
+                return None
     
     def dateDisplay(self, json):
         return json.get("date_display", None)
