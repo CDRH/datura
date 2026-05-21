@@ -271,7 +271,7 @@ class OmekaContext:
 
         return contents[env]
 
-    def __init__(self, config, env_config, environment, regex, media_skip, update_time=None)):
+    def __init__(self, config, env_config, environment, regex, media_skip, update_time=None):
         """
         Initialise the context. Prefer OmekaContext.from_args() over calling
         this constructor directly except in tests.
