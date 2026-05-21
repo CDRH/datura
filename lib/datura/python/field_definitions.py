@@ -240,7 +240,9 @@ class FieldDefinitions:
     def itemText(self, json):
         text = json.get("text", None)
         if text and json.get("data_type"):
-            text += (" " + self.identifier(json))
+            identifier = self.identifier(json)
+            if identifier:
+                text += (" " + identifier)
         return text
     
 def get_fields(omeka_data_base=""):
