@@ -286,9 +286,9 @@ def update_item_value(ctx, item, key, value, datatype="literal"):
     # carried forward when the source data no longer has a value for this field.
     item[key] = []
 
-    if type(value) in [str, int, float]:
+    if isinstance(value, (str, int, float)):
         item = add_formatted_value(ctx, item, key, value, datatype)
-    elif type(value) == list:
+    elif isinstance(value, list):
         # Deduplicate (preserving insertion order) and remove None entries.
         value = list(dict.fromkeys(v for v in value if v is not None))
         for v in value:
