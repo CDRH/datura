@@ -398,13 +398,13 @@ def get_matching_names_from_markdown(row, field):
                 name_match = re.search(r"\[(.*?)\]", markdown_values)
                 id_match = re.search(r"\]\((.*)\)", markdown_values)
                 # Only collect the name if there is no associated identifier.
-                if name_match and not id_match.group(1):
+                if name_match and (not id_match or not id_match.group(1)):
                     names.append(name_match.group(1))
             else:
                 for value in markdown_values:
                     name_match = re.search(r"\[(.*?)\]", value)
                     id_match = re.search(r"\]\((.*)\)", value)
-                    if name_match and not id_match.group(1):
+                    if name_match and (not id_match or not id_match.group(1)):
                         names.append(name_match.group(1))
         return names
     else:
