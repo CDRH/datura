@@ -257,23 +257,6 @@ def filter_items(regex, pathlist):
     reg = re.compile(regex)
     return [p for p in pathlist if reg.search(str(p))]
 
-def filter_items(regex, pathlist):
-    """
-    Filter a list of file paths to those matching a regex pattern.
-
-    Used by both entrypoint scripts to restrict processing to a subset of
-    files when the -r / --regex flag is passed on the command line.
-
-    Parameters:
-    * regex    - regex pattern string, compiled with re.compile()
-    * pathlist - iterable of pathlib.Path or string paths to filter
-
-    Returns a list containing only the paths whose string representation
-    matches the pattern.
-    """
-    reg = re.compile(regex)
-    return [p for p in pathlist if reg.search(str(p))]
-
 
 def filter_items_by_date(update_time, pathlist):
     """
