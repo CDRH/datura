@@ -16,16 +16,20 @@ def post_items(pathlist):
         filename = str(path)
         with open(filename) as jsonfile:
             json_items = json.load(jsonfile)
+            # Apply --csv-rows identifier filter if provided.
+            csv_rows = omeka.get_csv_rows()
+            if csv_rows:
+                json_items = omeka.filter_items_by_identifier(csv_rows, json_items)
             # TODO change template_number to actual number, account for other schemas is necessary
             template_number = omeka.template_number
             for json_item in json_items:
                 try:
                     if not json_item["identifier"]:
-                        breakpoint()
                         print("skipping item without identifier")
                         continue
                 except TypeError as e:
-                    breakpoint()
+                    print(f"Error: {e}", file=sys.stderr)
+
                 matching_items = omeka.omeka_auth.filter_items_by_property(filter_property = "dcterms:identifier", filter_value = json_item["identifier"], item_set_id=item_set_id)
                 if matching_items:
                     #if item exists, update item
@@ -44,6 +48,11 @@ def link_items(pathlist):
         filename = str(path)
         with open(filename) as jsonfile:
             json_items = json.load(jsonfile)
+            # Apply the same --csv-rows filter used in post_items so that only
+            # the targeted rows are linked
+            csv_rows = omeka.get_csv_rows()
+            if csv_rows:
+                json_items = omeka.filter_items_by_identifier(csv_rows, json_items)
             for json_item in json_items:
                 if not json_item["identifier"]:
                     print("skipping item without identifier")
@@ -67,7 +76,6 @@ def link_item(json_item, matching_items):
         print(str(err))
         traceback.print_exc
         print(f"Error updating item {item_id}")
-        breakpoint()
         pass
 
 def add_new_item(json_item, template_number):
@@ -77,14 +85,12 @@ def add_new_item(json_item, template_number):
             print(f"creating item {new_item['dcterms:identifier'][0]['@value']}")
         except KeyError as err:
             print(err)
-            breakpoint()
         payload = omeka.prepare_item_payload_using_template(new_item, template_number)
         # add item set
         try:
             omeka.omeka_auth.add_item(payload, template_id=template_number, item_set_id=item_set_id, is_public=is_public)
         except Exception as err:
             print(err)
-            breakpoint()
     else:
         print(f"error preparing item {json_item['identifier']}")
 
@@ -97,7 +103,6 @@ def update_existing_item(json_item, matching_items):
             omeka.omeka_auth.update_resource(updated_item, "items")
         except Exception as err:
             print(err)
-            breakpoint()
 
 #look for the output folder: /output/development/es and get all items
 json_dir = omeka.get_dir("output/development/es")

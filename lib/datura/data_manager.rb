@@ -160,6 +160,22 @@ class Datura::DataManager
     puts error_msg
     @log.info(error_msg)
 
+    all_errors = {
+      "ES" => @error_es,
+      "HTML" => @error_html,
+      "IIIF" => @error_iiif,
+      "Solr" => @error_solr
+    }.reject { |_, v| v.empty? }
+
+    if all_errors.any?
+      puts "\n--- Error details ---".red
+      all_errors.each do |type, errors|
+        errors.each { |e| puts "[#{type}] #{e}".red }
+      end
+      puts "---------------------".red
+      @log.error("Error details: #{all_errors.inspect}")
+    end
+
     # figure time for running
     @time << Time.now
     dur = @time[1] - @time[0]
@@ -195,7 +211,7 @@ class Datura::DataManager
     msg << "Running script with following options:\n"
     msg << "collection:           #{@options['collection']}\n"
     msg << "Environment:          #{@options['environment']}\n"
-    msg << "Posting to:           #{@es.index_url}\n\n" if should_post?("es")
+    msg << "Posting to:           #{@es.index_url}\n\n" if should_post?("es") && @es
     msg << "Posting to:           #{@solr_url}\n\n" if should_post?("solr")
     msg << "Format:               #{@options['format']}\n" if @options["format"]
     msg << "Regex:                #{@options['regex']}\n" if @options["regex"]
@@ -233,6 +249,11 @@ class Datura::DataManager
     allowed = allowed_files(files)
     # filter by regex
     regexed = Datura::Helpers.regex_files(allowed, @options["regex"])
+    if @options["regex"] && regexed.empty?
+      msg = "No files matched regex: #{@options['regex']}"
+      puts msg.yellow
+      @log.warn(msg)
+    end
     # filter by date
     filtered = regexed.select { |f| Datura::Helpers.should_update?(f, @options["update_time"]) }
 
@@ -264,7 +285,13 @@ class Datura::DataManager
 
     if !t1 || !t2 || t1 > t2
       puts "Copying datura XSLT default scripts into collection"
-      FileUtils.cp_r(datura_xslt, dest)
+      begin
+        FileUtils.cp_r(datura_xslt, dest)
+      rescue Errno::ENOENT
+        raise "Could not copy XSLT scripts into the collection. " \
+            "Confirm you are running this command from the root of the collection repository, " \
+            "not from a subdirectory."
+      end
     end
   end
 
@@ -291,8 +318,16 @@ class Datura::DataManager
 
   def set_up_services
     if should_post?("es")
-      # set up elasticsearch instance
-      @es = Datura::Elasticsearch::Index.new(@options, schema_mapping: true)
+      begin
+        # set up elasticsearch instance
+        @es = Datura::Elasticsearch::Index.new(@options, schema_mapping: true)
+      rescue Errno::ECONNREFUSED, SocketError, Errno::ETIMEDOUT
+        msg = "Could not connect to Elasticsearch at #{File.join(@options['es_path'], @options['es_index'])}. " \
+            "Confirm you have specified the correct environment " \
+            "(currently: #{@options['environment']}). Use -e to specify an environment."
+        error_with_transform_and_post(msg, @error_es)
+        @es = nil
+      end
     end
 
     if should_post?("solr")
@@ -316,21 +351,19 @@ class Datura::DataManager
 
   def transform_and_post(file)
     # elasticsearch
-    if should_transform?("es")
-      if @options["transform_only"]
-        # TODO transformation is not treated the same way here as in
-        # most post methods, so having to use try catch block
-        begin
+    begin
+      if should_transform?("es")
+        if @options["transform_only"]
           res_es = file.transform_es
-        rescue => e
-          error_with_transform_and_post("#{e}", @error_es)
-        end
-      else
-        res_es = file.post_es(@es)
-        if res_es && res_es.has_key?("error")
-          error_with_transform_and_post(res_es["error"], @error_es)
+        elsif @es
+          res_es = file.post_es(@es)
+          if res_es && res_es.has_key?("error")
+            error_with_transform_and_post(res_es["error"], @error_es)
+          end
         end
       end
+    rescue => e
+      error_with_transform_and_post("#{e}", @error_es)
     end
 
     # html

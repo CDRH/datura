@@ -64,7 +64,7 @@ class Datura::Options
   def read_config(path)
     if File.file?(path)
       begin
-        return YAML.load_file(path)
+        return YAML.safe_load_file(path, permitted_classes: [Symbol])
       rescue Exception => e
         puts "There was an error reading config file #{path}: #{e.message}"
       end

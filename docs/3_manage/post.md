@@ -31,6 +31,14 @@ The above does the following:
 Displays usage and list of options
 
 ```bash
+-c, --csv-rows [input]
+```
+
+Transforms / posts only csv lines whose identifier (id/identifier column) matches a specific regular expression.
+
+Examples: `post -c cat_001 (exact), cat_ (prefix), 'cat_00[1-3]' (range), 'cat_\d' (use digit character)`
+
+```bash
 -e, --environment [input]
 ```
 
