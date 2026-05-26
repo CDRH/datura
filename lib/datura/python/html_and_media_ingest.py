@@ -36,13 +36,13 @@ def ingest_thumbnail(json_item, matching_item):
     ## IIIF THUMBNAIL INGEST
     # note that thumbnail ingest should be done first so that thumbnails are designated primary_media
 
-    collection_name = json_item["collection"]
+    iiif_collection = omeka.config.get("iiif_collection", None) or json_item.get("collection", None)
     cover_image = json_item.get("cover_image", None)
     if not cover_image:
         return
     # download thumbnail from iiif server
-    thumbnail_remote = f"{omeka.config['iiif_server']}/iiif/2/{collection_name}%2F{cover_image}.jpg/full/!200,200/0/default.jpg"
-    thumbnail_local = f"{iiif_dir}/{collection_name}%2F{cover_image}.jpg"
+    thumbnail_remote = f"{omeka.config['iiif_server']}/iiif/2/{iiif_collection}%2F{cover_image}.jpg/full/!200,200/0/default.jpg"
+    thumbnail_local = f"{iiif_dir}/{iiif_collection}%2F{cover_image}.jpg"
     try:
         print(f"downloading thumbnail for {json_item['identifier']}")
         response = requests.get(thumbnail_remote)
