@@ -22,11 +22,13 @@ default:
     resource_template: ##
     omeka_data_base: desired/base/url/for/tei/files
     iiif_server: servername.unl.edu
+    iiif_collection: collection%2Fpath
 development:
     item_set: ##
 production
     item_set: ##
 ```
+`iiif_collection` is used when the IIIF URL follows a different pattern from `[collection]%2Fimagename.jpg` For instances, some images in Willa Cather Archive are under `cather%2Fpage_images%2Fimagename.jpg`, so the `iiif_collection` name would be. If you not specify this value, it will default to the `collection` specified in the Elasticsearch API items.
 
 - (for developers) `json_dir`, `html_id`, and `iiif_dir` are set within the script and correspond to the standard Datura output folders.
 
