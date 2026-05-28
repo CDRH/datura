@@ -321,6 +321,8 @@ class OmekaContext:
         self.omeka_data_base = config["omeka_data_base"]
         # iiif_server is optional — not all collections ingest thumbnails.
         self.iiif_server = config.get("iiif_server", "")
+        # iiif_collection is optional — not all collections have different iiif collection names.
+        self.iiif_collection = config.get("iiif_collection", "")
 
         # Keep the environment-specific dict for the item_set_id property.
         self._env_config = env_config
