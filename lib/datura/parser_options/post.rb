@@ -39,6 +39,12 @@ module Datura::Parser
         options["commit"] = false
       end
 
+      options["csv_rows"] = nil
+      opts.on('-c', '--csv-rows [input]',
+              'Only process CSV rows whose identifier (id/identifier column) matches this regex.') do |input|
+        options["csv_rows"] = input
+      end
+
       options["output"] = false
       opts.on('-o', '--output', 'Write solr and elasticsearch docs to file') do
         options["output"] = true
