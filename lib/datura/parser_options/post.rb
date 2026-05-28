@@ -50,7 +50,7 @@ module Datura::Parser
         options["output"] = true
       end
 
-      options["proceed"] = nil
+      options["proceed"] = false
       opts.on('-p', '--proceed [input]', 'Proceed with posting from (and including) the file matching this regex') do |input|
         options["proceed"] = input
       end

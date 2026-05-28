@@ -287,7 +287,7 @@ class Datura::DataManager
       @log.warn(msg)
     end
     # prcoeed from (and including) a specific file
-    proceeded = if @options["resume"]
+    proceeded = if @options["proceed"]
       Datura::Helpers.proceed_files(regexed, @options["proceed"])
     else
       regexed
