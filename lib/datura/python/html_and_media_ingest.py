@@ -181,7 +181,7 @@ def ingest_thumbnail(ctx, json_item, matching_item, iiif_dir):
     * iiif_dir      - pathlib.Path pointing to the local IIIF output directory
                       where the downloaded thumbnail is cached temporarily
     """
-    collection_name = json_item.get("collection", "")
+    collection_name = ctx.iiif_collection if ctx.iiif_collection else json_item.get("collection", "")
     cover_image = json_item.get("cover_image")
     identifier = json_item.get("identifier", "unknown")
 
