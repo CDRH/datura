@@ -103,9 +103,14 @@ class Datura::HelpersTest < Minitest::Test
     # return a specific id
     files = Datura::Helpers.regex_files(test_files, "cat.let0001")
     assert_equal 1, files.length
+
+    # invalid regex: exits with error
+    assert_raises(SystemExit) do
+      Datura::Helpers.regex_files(test_files, "[unclosed")
+    end
   end
 
-  def test_resume_files
+  def test_proceed_files
     test_files = %w[
       /path/to/cody.book.002.xml
       /path/to/cat.let0001.xml
@@ -116,27 +121,32 @@ class Datura::HelpersTest < Minitest::Test
 
     # exact match on one file: returns that file and all alphabetically after it
     # alphabetical order: cat.let0001, cody.book.001, cody.book.002, cody.news.001, transmiss.mem.001
-    files = Datura::Helpers.resume_files(test_files, "cody\.book\.002")
+    files = Datura::Helpers.proceed_files(test_files, "cody\.book\.002")
     basenames = files.map { |f| File.basename(f, ".*") }
     assert_equal %w[cody.book.002 cody.news.001 transmiss.mem.001], basenames
 
     # match on first file alphabetically: returns all files
-    files = Datura::Helpers.resume_files(test_files, "cat\.let0001")
+    files = Datura::Helpers.proceed_files(test_files, "cat\.let0001")
     assert_equal 5, files.length
 
     # match on last file: returns only that file
-    files = Datura::Helpers.resume_files(test_files, "transmiss\.mem\.001")
+    files = Datura::Helpers.proceed_files(test_files, "transmiss\.mem\.001")
     assert_equal 1, files.length
     assert_equal "transmiss.mem.001", File.basename(files.first, ".*")
 
     # no match: exits with error
     assert_raises(SystemExit) do
-      Datura::Helpers.resume_files(test_files, "zzz_no_such_file")
+      Datura::Helpers.proceed_files(test_files, "zzz_no_such_file")
     end
 
     # multiple matches: exits with error
     assert_raises(SystemExit) do
-      Datura::Helpers.resume_files(test_files, "cody")
+      Datura::Helpers.proceed_files(test_files, "cody")
+    end
+
+    # invalid regex: exits with error
+    assert_raises(SystemExit) do
+      Datura::Helpers.proceed_files(test_files, "[unclosed")
     end
   end
 

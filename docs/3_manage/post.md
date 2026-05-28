@@ -79,22 +79,22 @@ Solr specific, this will post documents but will not "commit" them to the index.
 Outputs transformed files to a collection's `output/[environment]/[type]`. This is useful for debugging and inspection purposes.
 
 ```bash
+-p, --proceed [input]
+```
+
+Proceed with posting from (and including) the file matching this regex. Files are sorted alphabetically before the proceed point is located. The regex must match exactly one file or the script will exit with an error. Can be combined with `-r` to proceed within a filtered set.
+
+Example: `post -R let0050` (post all files from `let0050` onward)
+
+Example: `post -r let -R let0050` (post all `let` files from `let0050` onward)
+
+```bash
 -r, --regex [input]
 ```
 
 Transforms / posts only files matching a specific regular expression.  DO NOT include the file extension.
 
 Example: `post -r let0001`
-
-```bash
--R, --resume [input]
-```
-
-Resume posting from (and including) the file matching this regex. Files are sorted alphabetically before the resume point is located. The regex must match exactly one file or the script will exit with an error. Can be combined with `-r` to resume within a filtered set.
-
-Example: `post -R let0050` (post all files from `let0050` onward)
-
-Example: `post -r let -R let0050` (post all `let` files from `let0050` onward)
 
 ```bash
 -t, --transform-only

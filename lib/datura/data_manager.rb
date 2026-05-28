@@ -254,14 +254,14 @@ class Datura::DataManager
       puts msg.yellow
       @log.warn(msg)
     end
-    # resume from (and including) a specific file
-    resumed = if @options["resume"]
-      Datura::Helpers.resume_files(regexed, @options["resume"])
+    # prcoeed from (and including) a specific file
+    proceeded = if @options["resume"]
+      Datura::Helpers.proceeded_files(regexed, @options["proceed"])
     else
       regexed
     end
     # filter by date
-    filtered = resumed.select { |f| Datura::Helpers.should_update?(f, @options["update_time"]) }
+    filtered = proceeded.select { |f| Datura::Helpers.should_update?(f, @options["update_time"]) }
 
     file_classes = []
     @log.info("After filters (regex, update time), #{filtered.length}/#{files.length} files remaining")

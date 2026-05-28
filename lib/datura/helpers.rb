@@ -111,7 +111,7 @@ module Datura::Helpers
   def self.regex_files(files, regex=nil)
     array = files.nil? ? [] : files
     if !files.nil? && !regex.nil?
-      exp = Regexp.new(regex)
+      exp = validate_regex(regex, "--regex")
       array = files.select do |file|
         file_name = File.basename(file, ".*")
         match = exp.match(file_name)
@@ -121,28 +121,28 @@ module Datura::Helpers
     array
   end
 
-  # resume_files
+  # proceed_files
   #   sorts files alphabetically and returns all files from the first file
-  #   matching the resume regex onward (inclusive). Exits with an error if
+  #   matching the proceed regex onward (inclusive). Exits with an error if
   #   the regex matches zero or more than one file.
   #   params: files (array of file paths), regex (string)
   #   returns: array
-  def self.resume_files(files, regex)
+  def self.proceed_files(files, regex)
     sorted = files.sort_by { |f| File.basename(f, ".*") }
-    exp = Regexp.new(regex)
+    exp = validate_regex(regex, "--proceed")
     matches = sorted.select { |f| exp.match(File.basename(f, ".*")) }
 
     if matches.empty?
-      puts "ERROR: --resume regex '#{regex}' matched no files. Exiting.".red
+      puts "ERROR: --proceed regex '#{regex}' matched no files. Exiting.".red
       exit 1
     elsif matches.length > 1
       names = matches.map { |f| File.basename(f, ".*") }.join(", ")
-      puts "ERROR: --resume regex '#{regex}' matched #{matches.length} files (#{names}). Refine your regex to match exactly one file. Exiting.".red
+      puts "ERROR: --proceed regex '#{regex}' matched #{matches.length} files (#{names}). Refine your regex to match exactly one file. Exiting.".red
       exit 1
     end
 
-    resume_index = sorted.index(matches.first)
-    sorted[resume_index..]
+    proceed_index = sorted.index(matches.first)
+    sorted[proceed_index..]
   end
 
   # should_update?
@@ -158,6 +158,17 @@ module Datura::Helpers
       file_date = File.mtime(file)
       file_date > since_date
     end
+  end
+
+  # validate_regex
+  #   compiles a regex string; prints a readable error and exits if invalid
+  #   params: regex (string), flag (string, e.g. "--regex" or "--proceed")
+  #   returns: Regexp
+  def self.validate_regex(regex, flag)
+    Regexp.new(regex)
+  rescue RegexpError => e
+    puts "ERROR: Invalid regex for #{flag} '#{regex}': #{e.message}".red
+    exit 1
   end
 
   def self.construct_auth_header(options)

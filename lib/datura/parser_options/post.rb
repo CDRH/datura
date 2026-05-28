@@ -44,11 +44,17 @@ module Datura::Parser
         options["output"] = true
       end
 
+      options["proceed"] = nil
+      opts.on('-p', '--proceed [input]', 'Proceed with posting from (and including) the file matching this regex') do |input|
+        options["proceed"] = input
+      end
+
       options["regex"] = nil
       opts.on('-r', '--regex [input]', 'Only post files matching this regex') do |input|
         options["regex"] = input
       end
 
+<<<<<<< HEAD
       options["resume"] = nil
       opts.on('-R', '--resume [input]', 'Resume posting from (and including) the file matching this regex') do |input|
         options["resume"] = input
@@ -59,6 +65,8 @@ module Datura::Parser
         options["csv_rows"] = input
       end
 
+=======
+>>>>>>> 1da6adb2d (rename resume as proceed, with -p flag, to avoid confusion)
       options["transform_only"] = false
       opts.on('-t', '--transform-only', 'Do not post to solr / es') do
         options["transform_only"] = true
