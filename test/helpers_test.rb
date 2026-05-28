@@ -150,6 +150,39 @@ class Datura::HelpersTest < Minitest::Test
     end
   end
 
+  def test_checkpoint_helpers
+    Dir.mktmpdir do |tmpdir|
+      opts = {
+        "collection_dir" => tmpdir,
+        "environment" => "test"
+      }
+      log_dir = File.join(tmpdir, "logs")
+      FileUtils.mkdir_p(log_dir)
+      expected_path = File.join(log_dir, "proceed_test")
+
+      assert_equal expected_path, Datura::Helpers.checkpoint_path(opts)
+
+      # returns nil when file does not exist
+      assert_nil Datura::Helpers.read_checkpoint(opts)
+
+      # creates file with correct content
+      Datura::Helpers.write_checkpoint("let0050", opts)
+      assert File.exist?(expected_path)
+      assert_equal "let0050", File.read(expected_path).strip
+
+      # returns the stored basename
+      assert_equal "let0050", Datura::Helpers.read_checkpoint(opts)
+
+      # overwrites on second write
+      Datura::Helpers.write_checkpoint("let0100", opts)
+      assert_equal "let0100", Datura::Helpers.read_checkpoint(opts)
+
+      # returns nil for empty/whitespace file
+      File.write(expected_path, "   \n")
+      assert_nil Datura::Helpers.read_checkpoint(opts)
+    end
+  end
+
   def test_should_update?
     hour_ago = Time.now - 60*60
     test_file = "#{File.dirname(__FILE__)}/fixtures/should_update.txt"

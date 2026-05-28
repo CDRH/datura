@@ -145,6 +145,34 @@ module Datura::Helpers
     sorted[proceed_index..]
   end
 
+  # checkpoint_path
+  #   returns the full path to the proceed checkpoint file
+  #   params: options (hash with "collection_dir" and "environment" keys)
+  #   returns: string
+  def self.checkpoint_path(options)
+    File.join(options["collection_dir"], "logs", "proceed_#{options["environment"]}")
+  end
+
+  # read_checkpoint
+  #   reads the proceed checkpoint file and returns its contents
+  #   params: options (hash)
+  #   returns: string (basename without extension) or nil if file missing/empty
+  def self.read_checkpoint(options)
+    path = checkpoint_path(options)
+    return nil unless File.exist?(path)
+    content = File.read(path).strip
+    content.empty? ? nil : content
+  end
+
+  # write_checkpoint
+  #   writes the basename of the last posted file to the checkpoint file
+  #   params: basename (string, filename without extension), options (hash)
+  #   returns: nil
+  def self.write_checkpoint(basename, options)
+    path = checkpoint_path(options)
+    File.write(path, "#{basename}\n")
+  end
+
   # should_update?
   #   determines if a user has changed a file since specified date
   #   params: file (string path), since_date (Time format or nil)

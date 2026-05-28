@@ -88,6 +88,16 @@ Example: `post -R let0050` (post all files from `let0050` onward)
 
 Example: `post -r let -R let0050` (post all `let` files from `let0050` onward)
 
+**Checkpoint file**: After each batch of files is posted (not in `--transform-only` mode), Datura writes the last posted filename to `logs/proceed_{environment}` in your collection directory. Add `logs/proceed_*` to your collection's `.gitignore` to avoid committing this file.
+
+**Interactive resume**: When `-p` is given with no value (`post -p`), Datura reads the checkpoint file and prompts:
+
+```
+Continue from <filename>? (y/n):
+```
+
+Enter `y` to resume posting from that file, or `n` to exit. If no checkpoint file exists yet, the script exits with an error directing you to run `post` at least once first.
+
 ```bash
 -r, --regex [input]
 ```
