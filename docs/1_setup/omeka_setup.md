@@ -28,7 +28,7 @@ development:
 production
     item_set: ##
 ```
-`iiif_collection` is used when the IIIF URL follows a different pattern from `[collection]%2Fimagename.jpg` For instances, some images in Willa Cather Archive are under `cather%2Fpage_images%2Fimagename.jpg`, so the `iiif_collection` name would be. If you not specify this value, it will default to the `collection` specified in the Elasticsearch API items.
+`iiif_collection` is used when the IIIF URL follows a different pattern from `[collection]%2Fimagename.jpg` For instances, some images in Willa Cather Archive are under `cather%2Fpage_images%2Fimagename.jpg`, so the `iiif_collection` name would be `cather%2Fpage_images`. If you not specify this value, it will default to the `collection` specified in the Elasticsearch API items.
 
 - (for developers) `json_dir`, `html_id`, and `iiif_dir` are set within the script and correspond to the standard Datura output folders.
 
