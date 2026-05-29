@@ -253,11 +253,11 @@ def filter_items(regex, pathlist):
     * regex    - regex pattern string, compiled with re.compile()
     * pathlist - iterable of pathlib.Path or string paths to filter
 
-    Returns a list containing only the paths whose string representation
-    matches the pattern.
+    Returns a list containing only the paths whose stem (identifier, without
+    extension or directory components) matches the pattern.
     """
     reg = re.compile(regex)
-    return [p for p in pathlist if reg.search(str(p))]
+    return [p for p in pathlist if reg.search(p.stem)]
 
 
 def filter_items_by_date(update_time, pathlist):
