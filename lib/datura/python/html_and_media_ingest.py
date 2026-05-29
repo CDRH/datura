@@ -27,6 +27,7 @@ wrapper passes -e, -r, and -m arguments from its own CLI.
 import argparse
 import json
 import logging
+import os
 import sys
 from pathlib import Path
 
@@ -190,19 +191,30 @@ def ingest_thumbnail(ctx, json_item, matching_item, iiif_dir):
         logger.debug("No cover_image for %r; skipping thumbnail ingest", identifier)
         return
 
+    # Parse any existing extension from the cover_image name. Image identifiers
+    # often contain dots that are not extensions (e.g. loc.00001, ccda.let00001),
+    # so only treat the suffix as an extension if it is a known image format.
+    _KNOWN_IMAGE_EXTS = {".jpg", ".jpeg", ".png"}
+    _stem, _ext = os.path.splitext(cover_image)
+    if _ext.lower() in _KNOWN_IMAGE_EXTS:
+        stem, image_ext = _stem, _ext
+    else:
+        stem, image_ext = cover_image, ".jpg"
+
     # Construct the IIIF Image API URL for the thumbnail.
     # The !200,200 size specifier requests a thumbnail that fits within a
     # 200×200 bounding box while preserving aspect ratio.
     thumbnail_remote = (
-        "{}/iiif/2/{collection}%2F{image}.jpg/full/!200,200/0/default.jpg".format(
+        "{}/iiif/2/{collection}%2F{image}{ext}/full/!200,200/0/default.jpg".format(
             ctx.iiif_server,
             collection=collection_name,
-            image=cover_image,
+            image=stem,
+            ext=image_ext,
         )
     )
     # Cache the thumbnail locally using the same URL-encoded filename so that
     # re-runs can be inspected on disk if needed.
-    thumbnail_local = iiif_dir / "{}%2F{}.jpg".format(collection_name, cover_image)
+    thumbnail_local = iiif_dir / "{}%2F{}{}".format(collection_name, stem, image_ext)
 
     # --- Download ---
     try:
