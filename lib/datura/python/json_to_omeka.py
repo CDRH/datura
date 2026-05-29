@@ -45,6 +45,7 @@ from omeka_context import (
     OmekaItemNotFoundError,
     OmekaMultipleMatchesError,
     configure_logging,
+    finish_run,
 )
 from omeka import filter_items, filter_items_by_date, prepare_item_payload_using_template
 
@@ -104,6 +105,12 @@ def _parse_args():
         choices=["DEBUG", "INFO", "WARNING", "ERROR"],
         dest="log_level",
         help="Set the logging verbosity (default: INFO).",
+    )
+    parser.add_argument(
+        "--error-file",
+        dest="error_file",
+        default=None,
+        help="If provided, write the integer error count to this file before exiting.",
     )
     return parser.parse_args()
 
@@ -400,6 +407,7 @@ def main():
         0 if all items succeeded.
     """
     args = _parse_args()
+    start_time = time.time()
 
     # Configure root logger first so that even OmekaContext initialisation
     # errors are captured at the correct level.
@@ -449,12 +457,7 @@ def main():
     logger.info("Starting pass 2: record linking")
     link_items(ctx, pathlist)
 
-    # Print a consolidated summary of all per-item errors encountered during
-    # the run.  Exits 0 if no errors; exits 1 if any item failed.  The Ruby
-    # caller (bin/post_omeka) checks the exit code to determine whether the
-    # run completed cleanly.
-    ctx.report_errors()
-    sys.exit(1 if ctx._errors else 0)
+    finish_run(ctx, args, start_time)
 
 
 if __name__ == "__main__":

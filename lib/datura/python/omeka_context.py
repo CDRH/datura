@@ -7,6 +7,7 @@ Central context object and exception hierarchy for the Omeka S ingestion pipelin
 
 import logging
 import sys
+import time
 from datetime import date, datetime
 from pathlib import Path
 from typing import Dict, List, Optional
@@ -490,3 +491,25 @@ class OmekaContext:
                 logger.warning("  %s", err)
         else:
             logger.info("Run completed successfully with no errors.")
+
+def finish_run(ctx, args, start_time):
+    """
+    Report errors, write count to --error-file if provided, print timing, and exit.
+
+    Called at the end of each Omeka entrypoint script's main() function.
+    Exits 0 on success, 1 if any errors were recorded.
+
+    Parameters:
+    * ctx        - OmekaContext whose _errors list is inspected
+    * args       - argparse.Namespace; checked for optional error_file attribute
+    * start_time - float from time.time() captured at the top of main()
+    """
+    ctx.report_errors()
+    if getattr(args, "error_file", None):
+        with open(args.error_file, "w") as f:
+            f.write(str(len(ctx._errors)))
+    elapsed = int(time.time() - start_time)
+    hours, rem = divmod(elapsed, 3600)
+    mins, secs = divmod(rem, 60)
+    print("Script finished in {:02d} hrs {:02d} mins {:02d} secs".format(hours, mins, secs))
+    sys.exit(1 if ctx._errors else 0)

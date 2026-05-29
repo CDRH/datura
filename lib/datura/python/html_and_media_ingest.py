@@ -43,6 +43,7 @@ from omeka_context import (
     OmekaMultipleMatchesError,
     OmekaItemNotFoundError,
     configure_logging,
+    finish_run,
 )
 
 # Module-level logger.  Records from this module appear as
@@ -108,6 +109,12 @@ def _parse_args():
         choices=["DEBUG", "INFO", "WARNING", "ERROR"],
         dest="log_level",
         help="Set the logging verbosity (default: INFO).",
+    )
+    parser.add_argument(
+        "--error-file",
+        dest="error_file",
+        default=None,
+        help="If provided, write the integer error count to this file before exiting.",
     )
     return parser.parse_args()
 
@@ -432,6 +439,7 @@ def main():
     7. Report errors; exit 1 if any failures, 0 if clean.
     """
     args = _parse_args()
+    start_time = time.time()
     configure_logging(args.log_level)
 
     # OmekaConfigError propagates here as a fatal error — missing or broken
@@ -462,8 +470,7 @@ def main():
 
     process_items(ctx, pathlist, html_dir, iiif_dir)
 
-    ctx.report_errors()
-    sys.exit(1 if ctx._errors else 0)
+    finish_run(ctx, args, start_time)
 
 
 if __name__ == "__main__":
