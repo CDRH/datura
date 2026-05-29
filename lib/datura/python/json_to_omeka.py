@@ -122,7 +122,7 @@ def post_items(ctx, pathlist):
     * Items that return multiple Omeka matches are skipped with a warning
       (duplicate identifiers indicate a data integrity problem that must be
       resolved in the Omeka admin UI before the item can be re-posted).
-    * Items whose identifier field is falsy are skipped silently.
+    * Items whose identifier field is falsy are skipped with a warning.
 
     Per-item errors (API failures, malformed payload) are recorded via
     ctx.record_error() and do NOT halt the run.  Fatal errors (wrong
@@ -145,8 +145,7 @@ def post_items(ctx, pathlist):
             identifier = json_item.get("identifier")
             if not identifier:
                 # Records without an identifier cannot be matched or created.
-                # This is expected for some document types; log at DEBUG only.
-                logger.debug("Skipping item without identifier in %s", filename)
+                logger.warning("Skipping item without identifier in %s", filename)
                 continue
 
             try:

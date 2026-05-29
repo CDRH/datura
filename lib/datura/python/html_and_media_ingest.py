@@ -358,7 +358,7 @@ def process_items(ctx, pathlist, html_dir, iiif_dir):
         for json_item in json_items:
             identifier = json_item.get("identifier")
             if not identifier:
-                logger.debug("Skipping item without identifier in %s", filename)
+                logger.warning("Skipping item without identifier in %s", filename)
                 continue
 
             # --- Look up the item in Omeka ---
