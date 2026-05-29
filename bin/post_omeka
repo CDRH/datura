@@ -34,6 +34,9 @@ optparse = OptionParser.new do |opts|
 end
 #parse, but do not consume, command line arguments (the usual parse! would consume them)
 optparse.parse(ARGV)
+#remove options not used in the main script
+ARGV.delete("-s")
+ARGV.delete("--skip")
 #add options to output a json file instead of posting it to Elasticsearch
 ARGV.unshift("-x", "es", "-o", "-t")
 #create DataManager before conditional run

@@ -34,8 +34,11 @@ optparse = OptionParser.new do |opts|
 end
 #parse, but do not consume, command line arguments (the usual parse! would consume them)
 optparse.parse(ARGV)
-#remove option not used in the main script
+#remove options not used in the main script
 ARGV.delete("-m")
+ARGV.delete("--media_skip")
+ARGV.delete("-s")
+ARGV.delete("--skip")
 #add option to generate html
 ARGV.unshift("-x", "html")
 #create DataManager before conditional run
