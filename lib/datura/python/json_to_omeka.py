@@ -19,9 +19,9 @@ The script runs in two sequential passes:
     before they can be linked to one another.
 
 Usage (from collection root directory):
-    python3 json_to_omeka.py -e development
+    python3 json_to_omeka.py            # defaults to development
     python3 json_to_omeka.py -e production -r "some_pattern"
-    python3 json_to_omeka.py -e development --log-level DEBUG
+    python3 json_to_omeka.py --log-level DEBUG
 
 The script is invoked by bin/post_omeka in the Datura gem.  The Ruby wrapper
 passes -e and -r arguments from its own CLI.  No changes to bin/post_omeka
@@ -62,7 +62,7 @@ def _parse_args():
     Parse command-line arguments for the JSON-to-Omeka entrypoint.
 
     Returns an argparse.Namespace with:
-    * environment - "development" or "production"
+    * environment - "development" or "production" (default: "development")
     * regex       - optional file-filter pattern string, or None
     * log_level   - logging level string, default "INFO"
 
@@ -76,8 +76,8 @@ def _parse_args():
     )
     parser.add_argument(
         "-e", "--environment",
-        required=True,
-        help="Target environment: 'development' or 'production'.",
+        default="development",
+        help="Target environment: 'development' or 'production' (default: development).",
     )
     parser.add_argument(
         "-r", "--regex",

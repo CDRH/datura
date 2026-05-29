@@ -16,7 +16,7 @@ optparse = OptionParser.new do |opts|
         generate_es = false
     end
 
-    opts.on('-e', '--environment [input]', 'environment (development, production)') do |input|
+    opts.on('-e', '--environment [input]', 'environment (default: development, or production)') do |input|
         if input && input.length > 0
             options["environment"] = input
         end

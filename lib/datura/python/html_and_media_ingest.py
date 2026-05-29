@@ -15,10 +15,10 @@ For each JSON record this script:
    as an HTML media object.
 
 Usage (from collection root directory):
-    python3 html_and_media_ingest.py -e development
+    python3 html_and_media_ingest.py            # defaults to development
     python3 html_and_media_ingest.py -e production -r "some_pattern"
-    python3 html_and_media_ingest.py -e development -m   # skip items that already have media
-    python3 html_and_media_ingest.py -e development --log-level DEBUG
+    python3 html_and_media_ingest.py -m         # skip items that already have media
+    python3 html_and_media_ingest.py --log-level DEBUG
 
 The script is invoked by bin/post_omeka_html in the Datura gem.  The Ruby
 wrapper passes -e, -r, and -m arguments from its own CLI.
@@ -58,7 +58,7 @@ def _parse_args():
     Parse command-line arguments for the HTML/media ingest entrypoint.
 
     Returns an argparse.Namespace with:
-    * environment  - "development" or "production"
+    * environment  - "development" or "production" (default: "development")
     * regex        - optional file-filter pattern string, or None
     * media_skip   - bool; True skips items that already have 2+ media objects
     * log_level    - logging level string, default "INFO"
@@ -68,8 +68,8 @@ def _parse_args():
     )
     parser.add_argument(
         "-e", "--environment",
-        required=True,
-        help="Target environment: 'development' or 'production'.",
+        default="development",
+        help="Target environment: 'development' or 'production' (default: development).",
     )
     parser.add_argument(
         "-r", "--regex",

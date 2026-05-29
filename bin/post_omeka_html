@@ -16,7 +16,7 @@ optparse = OptionParser.new do |opts|
         options["media_skip"] = true
     end
 
-    opts.on('-e', '--environment [input]', 'environment (development, production)') do |input|
+    opts.on('-e', '--environment [input]', 'environment (default: development, or production)') do |input|
         if input && input.length > 0
             options["environment"] = input
         end
