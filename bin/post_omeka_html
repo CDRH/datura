@@ -1,8 +1,6 @@
 #!/usr/bin/env ruby
 
 require "datura"
-require "shellwords"
-require "tempfile"
 
 generate_es = true
 options = {}
@@ -53,29 +51,4 @@ datura_dir = File.join(File.dirname(__FILE__), "..")
 # path to the gem's config files
 python_script_path = File.join(datura_dir, "lib", "datura", "python", "html_and_media_ingest.py")
 #run posting script into Omeka S
-if File.exist?("#{python_script_path}")
-    error_file = Tempfile.new(["omeka_errors", ".txt"])
-    error_file_path = error_file.path
-    error_file.close
-    command = ["python3", python_script_path]
-    if options["environment"]
-        command.append("-e", Shellwords.escape(options["environment"]))
-    end
-    if options["regex"]
-        command.append("-r", Shellwords.escape(options["regex"]))
-    end
-    if options["media_skip"]
-        command.append("-m")
-    end
-    command.append("--error-file", error_file_path)
-    system(*command)
-    omeka_errors = begin
-        Integer(File.read(error_file_path).strip)
-    rescue
-        0
-    end
-    File.unlink(error_file_path) rescue nil
-    puts "#{omeka_errors} Omeka posting error(s)"
-else
-    puts("Omeka script not found at #{python_script_path}".red)
-end
+Datura::Helpers.run_omeka_script(python_script_path, options)

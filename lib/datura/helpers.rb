@@ -1,6 +1,8 @@
 require 'fileutils'
 require 'net/http'
 require 'nokogiri'
+require 'shellwords'
+require 'tempfile'
 require 'yaml'
 
 module Datura::Helpers
@@ -138,6 +140,40 @@ module Datura::Helpers
     username = options["es_user"]
     password = options["es_password"]
     { "Authorization" => "Basic #{Base64::encode64("#{username}:#{password}")}" }
+  end
+
+  def self.run_omeka_script(script_path, options)
+    '''
+    Build and run a Python Omeka posting script, then print an error summary.
+
+    Handles tempfile creation for the error count handoff, common CLI flag
+    forwarding (-e, -r, -m), and the "N Omeka posting error(s)" output line.
+    Called by bin/post_omeka and bin/post_omeka_html.
+
+    Parameters:
+    * script_path - absolute path to the Python script to run
+    * options     - hash of parsed CLI options ("environment", "regex", "media_skip")
+    '''
+    unless File.exist?(script_path)
+      puts "Omeka script not found at #{script_path}".red
+      return
+    end
+    error_file = Tempfile.new(["omeka_errors", ".txt"])
+    error_file_path = error_file.path
+    error_file.close
+    command = ["python3", script_path]
+    command.append("-e", Shellwords.escape(options["environment"])) if options["environment"]
+    command.append("-r", Shellwords.escape(options["regex"])) if options["regex"]
+    command.append("-m") if options["media_skip"]
+    command.append("--error-file", error_file_path)
+    system(*command)
+    omeka_errors = begin
+      Integer(File.read(error_file_path).strip)
+    rescue
+      0
+    end
+    File.unlink(error_file_path) rescue nil
+    puts "#{omeka_errors} Omeka posting error(s)"
   end
 
 end
