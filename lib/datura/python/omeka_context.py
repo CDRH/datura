@@ -73,6 +73,29 @@ class OmekaConfigError(OmekaError):
     exits immediately rather than attempting to continue.
     """
 
+class OmekaAuthError(OmekaConfigError):
+    """
+    Raised when the Omeka S API returns 401 Unauthorized.
+
+    This is always fatal: if credentials are wrong every API call will fail,
+    so the process exits immediately rather than accumulating per-item failures.
+
+    Common causes:
+    - key_identity or key_credential is wrong or has been revoked
+    - The Omeka S instance URL points to the wrong server
+    """
+
+
+def _is_unauthorized(err):
+    """Return True if err is an HTTP 401 response error from the requests library."""
+    try:
+        from requests.exceptions import HTTPError
+        return isinstance(err, HTTPError) and getattr(
+            getattr(err, "response", None), "status_code", None
+        ) == 401
+    except ImportError:
+        return False
+
 
 class OmekaAPIError(OmekaError):
     """
@@ -485,6 +508,13 @@ class OmekaContext:
         Parameters:
         * err - an OmekaError (or subclass) instance describing the failure
         """
+        cause = getattr(err, "cause", None)
+        if _is_unauthorized(cause):
+            raise OmekaAuthError(
+                "Omeka S returned 401 Unauthorized. "
+                "Check that key_identity and key_credential in config/private.yml are correct. "
+                "You may also need to be logged onto the VPN."
+            ) from cause
         logger.error(str(err))
         self._errors.append(err)
 

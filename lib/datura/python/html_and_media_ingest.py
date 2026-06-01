@@ -39,6 +39,8 @@ import omeka
 from omeka import add_media_to_item, filter_items, filter_items_by_date, filter_items_by_format
 from omeka_context import (
     OmekaAPIError,
+    OmekaAuthError,
+    OmekaConfigError,
     OmekaContext,
     OmekaMediaError,
     OmekaMultipleMatchesError,
@@ -153,7 +155,13 @@ def delete_media_items(ctx, matching_item):
             logger.info("Deleting media item %s", media_id)
             ctx.client.delete_resource(media_id, "media")
         except HTTPError as err:
-            if err.response.status_code == 500:
+            if err.response.status_code == 401:
+                raise OmekaAuthError(
+                    "Omeka S returned 401 Unauthorized. "
+                    "Check that key_identity and key_credential in config/private.yml are correct. "
+                    "You may also need to be logged onto the VPN."
+                ) from err
+            elif err.response.status_code == 500:
                 # 500 on DELETE is treated as "already gone" by convention.
                 # Log at DEBUG so it does not clutter normal output.
                 logger.debug(
@@ -487,4 +495,8 @@ if __name__ == "__main__":
         main()
     except KeyboardInterrupt:
         print("\nInterrupted. Exiting.")
+        sys.exit(1)
+    except OmekaConfigError as err:
+        logger.debug("Fatal configuration error:", exc_info=True)
+        print("ERROR: {}".format(err), file=sys.stderr)
         sys.exit(1)

@@ -42,6 +42,7 @@ import api_fields
 import omeka
 from omeka_context import (
     OmekaAPIError,
+    OmekaConfigError,
     OmekaContext,
     OmekaItemNotFoundError,
     OmekaMultipleMatchesError,
@@ -474,4 +475,8 @@ if __name__ == "__main__":
         main()
     except KeyboardInterrupt:
         print("\nInterrupted. Exiting.")
+        sys.exit(1)
+    except OmekaConfigError as err:
+        logger.debug("Fatal configuration error:", exc_info=True)
+        print("ERROR: {}".format(err), file=sys.stderr)
         sys.exit(1)
