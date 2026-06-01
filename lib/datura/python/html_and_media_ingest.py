@@ -36,7 +36,7 @@ import requests
 from requests.exceptions import HTTPError
 
 import omeka
-from omeka import add_media_to_item, filter_items, filter_items_by_date
+from omeka import add_media_to_item, filter_items, filter_items_by_date, filter_items_by_format
 from omeka_context import (
     OmekaAPIError,
     OmekaContext,
@@ -73,6 +73,12 @@ def _parse_args():
         "-e", "--environment",
         default="development",
         help="Target environment: 'development' or 'production' (default: development).",
+    )
+    parser.add_argument(
+        "-f", "--format",
+        default=None,
+        dest="format_filter",
+        help="Only post files of this format (tei, csv, vra, ead, html, pdf, webs).",
     )
     parser.add_argument(
         "-r", "--regex",
@@ -456,6 +462,8 @@ def main():
 
     pathlist = list(Path(json_dir).glob("**/*.json"))
 
+    if ctx.format_filter:
+        pathlist = filter_items_by_format(ctx.format_filter, pathlist)
     if ctx.regex:
         pathlist = filter_items(ctx.regex, pathlist)
     if ctx.update_time:

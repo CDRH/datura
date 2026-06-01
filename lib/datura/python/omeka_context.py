@@ -231,6 +231,7 @@ class OmekaContext:
             regex=getattr(args, "regex", None),
             media_skip=getattr(args, "media_skip", False),
             update_time=parse_update_time(raw_update) if raw_update else None,
+            format_filter=getattr(args, "format_filter", None),
         )
 
     @staticmethod
@@ -272,7 +273,7 @@ class OmekaContext:
 
         return contents[env]
 
-    def __init__(self, config, env_config, environment, regex, media_skip, update_time=None):
+    def __init__(self, config, env_config, environment, regex, media_skip, update_time=None, format_filter=None):
         """
         Initialise the context. Prefer OmekaContext.from_args() over calling
         this constructor directly except in tests.
@@ -316,6 +317,7 @@ class OmekaContext:
         self.regex = regex
         self.media_skip = media_skip
         self.update_time = update_time
+        self.format_filter = format_filter
 
         # ---- Config values ------------------------------------------------
         self.template_number = config["resource_template"]

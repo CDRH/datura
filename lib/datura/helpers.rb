@@ -164,6 +164,7 @@ module Datura::Helpers
     command = ["python3", script_path]
     command.append("-e", Shellwords.escape(options["environment"])) if options["environment"]
     command.append("-r", Shellwords.escape(options["regex"])) if options["regex"]
+    command.append("-f", Shellwords.escape(options["format"])) if options["format"]
     command.append("-m") if options["media_skip"]
     command.append("--error-file", error_file_path)
     system(*command)

@@ -20,6 +20,12 @@ optparse = OptionParser.new do |opts|
             options["environment"] = input
         end
     end
+    
+    opts.on('-f', '--format [input]', 'only post files of this format (tei, csv, vra, ead, html, pdf, webs)') do |input|
+        if input && input.length > 0
+            options["format"] = input
+        end
+    end
 
     opts.on('-r', '--regex [input]', 'only generate and post files matching this regex') do |input|
         if input && input.length > 0

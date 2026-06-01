@@ -292,3 +292,30 @@ def filter_items_by_date(update_time, pathlist):
         if source_mtime >= update_time:
             result.append(p)
     return result
+
+
+
+def filter_items_by_format(format_type, pathlist):
+    """
+    Filter a list of output JSON file paths to those whose source file lives
+    in the source/<format_type>/ directory.
+
+    Mirrors the Ruby DataManager convention: source files for a given format
+    are stored under source/<format>/ (e.g. source/csv/, source/tei/). A JSON
+    output file belongs to that format if and only if a corresponding source
+    file exists at source/<format_type>/<stem>.*.
+
+    Files with no match in source/<format_type>/ are excluded. This correctly
+    drops stale JSON left in the output directory from earlier runs of a
+    different format.
+
+    Parameters:
+    * format_type - string, e.g. "tei" or "csv"
+    * pathlist    - iterable of pathlib.Path or string paths to filter
+    """
+    source_dir = Path.cwd() / "source" / format_type
+    result = []
+    for p in pathlist:
+        if list(source_dir.glob("{}.*".format(Path(p).stem))):
+            result.append(p)
+    return result

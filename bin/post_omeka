@@ -20,13 +20,19 @@ optparse = OptionParser.new do |opts|
             options["environment"] = input
         end
     end
+    
+    opts.on('-f', '--format [input]', 'only post files of this format (tei, csv, vra, ead, html, pdf, webs)') do |input|
+        if input && input.length > 0
+            options["format"] = input
+        end
+    end
 
     opts.on('-r', '--regex [input]', 'only generate and post files matching this regex') do |input|
         if input && input.length > 0
             options["regex"] = input
         end
     end
-
+    
     opts.on('-[!-~]', '-[!-~] [input]', 'arguments for the main Datura script') do |name, value|
         #does nothing, this is a placeholder to catch all arguments not needed now and pass them along to the main script
     end

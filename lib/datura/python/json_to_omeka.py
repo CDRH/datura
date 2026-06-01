@@ -48,7 +48,7 @@ from omeka_context import (
     configure_logging,
     finish_run,
 )
-from omeka import filter_items, filter_items_by_date, prepare_item_payload_using_template
+from omeka import filter_items, filter_items_by_date, filter_items_by_format, prepare_item_payload_using_template
 
 # Module-level logger.  Records from this module appear as "json_to_omeka"
 # in log output so they can be filtered independently from other modules.
@@ -80,6 +80,12 @@ def _parse_args():
         "-e", "--environment",
         default="development",
         help="Target environment: 'development' or 'production' (default: development).",
+    )
+    parser.add_argument(
+        "-f", "--format",
+        default=None,
+        dest="format_filter",
+        help="Only post files of this format (tei, csv, vra, ead, html, pdf, webs).",
     )
     parser.add_argument(
         "-r", "--regex",
@@ -427,6 +433,8 @@ def main():
     json_dir = ctx.resolve_path("output/{}/es".format(ctx.environment))
     pathlist = list(Path(json_dir).glob("**/*.json"))
 
+    if ctx.format_filter:
+        pathlist = filter_items_by_format(ctx.format_filter, pathlist)
     if ctx.regex:
         pathlist = filter_items(ctx.regex, pathlist)
     if ctx.update_time:
