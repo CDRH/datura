@@ -312,6 +312,18 @@ class OmekaContext:
                     .format(key)
                 )
 
+        # ---- Validate environment-specific item_set ---------------------------
+        if "item_set" not in env_config:
+            raise OmekaConfigError(
+                "Missing 'item_set' for environment {!r} in config/private.yml.\n"
+                "Add the item set ID for this environment before running. Example:\n\n"
+                "  {}:\n"
+                "    item_set: 123\n\n"
+                "To find your item set ID, log into the Omeka S admin and navigate "
+                "to Items > Item Sets."
+                .format(environment, environment)
+            )
+
         # ---- Runtime flags ------------------------------------------------
         self.environment = environment
         self.regex = regex
