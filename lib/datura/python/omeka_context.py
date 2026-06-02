@@ -24,25 +24,46 @@ logger = logging.getLogger(__name__)
 # Logging setup
 # ---------------------------------------------------------------------------
 
+# --- Colored console handler ---
+CYAN = "\033[36m"
+GREEN = "\033[32m"
+RED = "\033[31m"
+RED2 = "\033[1;31m"
+YELLOW = "\033[33m"
+RESET = "\033[0m"
+
+class ColoredConsoleHandler(logging.StreamHandler):
+    COLORS = {
+        logging.DEBUG:    CYAN,
+        logging.INFO:     GREEN,
+        logging.WARNING:  YELLOW,
+        logging.ERROR:    RED,
+        logging.CRITICAL: RED2,
+    }
+    RESET = RESET
+    def emit(self, record):
+        color = self.COLORS.get(record.levelno, self.RESET)
+        record.msg = f"{color}{record.msg}{self.RESET}"
+        super().emit(record)
+
 def configure_logging(level="INFO"):
-    """
-    Configure the root logger for the pipeline.
+    numeric_level = getattr(logging, level.upper(), logging.INFO)
 
-    Should be called once at the very start of each entrypoint script before
-    any other work begins. Subsequent calls are safe but have no additional
-    effect — Python's logging.basicConfig() is a no-op if handlers are already
-    attached to the root logger.
+    # File handler — verbose
+    file_handler = logging.FileHandler("logs/python.log")
+    file_handler.setFormatter(logging.Formatter("%(asctime)s [%(levelname)s] %(name)s: %(message)s"))
+    file_handler.setLevel(logging.DEBUG)  # always save everything
 
-    Parameters:
-    * level - logging level string: "DEBUG", "INFO", "WARNING", or "ERROR".
-              Defaults to "INFO". Use "DEBUG" to trace individual API calls
-              and property ID cache hits/misses.
-    """
-    logging.basicConfig(
-        format="%(asctime)s %(levelname)-8s %(name)s: %(message)s",
-        level=getattr(logging, level.upper(), logging.INFO),
-    )
+    # Console handler — colored, respects the requested level
+    console_handler = ColoredConsoleHandler()
+    console_handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)-8s %(name)s: %(message)s"))
+    console_handler.setLevel(numeric_level)
 
+    # Root logger
+    root = logging.getLogger()
+    root.setLevel(logging.DEBUG)  # let handlers decide what to filter
+    root.addHandler(file_handler)
+    root.addHandler(console_handler)
 
 # ---------------------------------------------------------------------------
 # Exception hierarchy
@@ -174,10 +195,11 @@ def parse_update_time(s):
             return datetime.strptime(s, fmt)
         except ValueError:
             continue
-    raise OmekaConfigError(
+    raise OmekaConfigError(RED + 
         "Invalid --update value {!r}. "
         "Expected 'today', a date (2015-01-01), or date-time (2015-01-01T18:24)."
         .format(s)
+        + RESET
     )
 
 
@@ -276,22 +298,25 @@ class OmekaContext:
             with open(path) as f:
                 contents = yaml.safe_load(f)
         except FileNotFoundError:
-            raise OmekaConfigError(
+            raise OmekaConfigError(RED + 
                 "Config file not found: {}. "
                 "Ensure config/private.yml exists in the collection directory "
                 "and that you are running the script from the collection root."
                 .format(path)
+                + RESET
             )
         except yaml.YAMLError as exc:
-            raise OmekaConfigError(
+            raise OmekaConfigError(RED + 
                 "Could not parse YAML in {}: {}".format(path, exc)
+                + RESET
             )
 
         if env not in contents:
-            raise OmekaConfigError(
+            raise OmekaConfigError(RED + 
                 "Environment section {!r} not found in {}. "
                 "Available sections: {}"
                 .format(env, path, list(contents.keys()))
+                + RESET
             )
 
         return contents[env]
@@ -329,15 +354,16 @@ class OmekaContext:
         ]
         for key in required_keys:
             if key not in config:
-                raise OmekaConfigError(
+                raise OmekaConfigError(RED + 
                     "Missing required config key {!r}. "
                     "Check the 'default' section of config/private.yml."
                     .format(key)
+                    + RESET
                 )
 
         # ---- Validate environment-specific item_set ---------------------------
         if "item_set" not in env_config:
-            raise OmekaConfigError(
+            raise OmekaConfigError(RED + 
                 "Missing 'item_set' for environment {!r} in config/private.yml.\n"
                 "Add the item set ID for this environment before running. Example:\n\n"
                 "  {}:\n"
@@ -345,6 +371,7 @@ class OmekaContext:
                 "To find your item set ID, log into the Omeka S admin and navigate "
                 "to Items > Item Sets."
                 .format(environment, environment)
+                + RESET
             )
 
         # ---- Runtime flags ------------------------------------------------
@@ -510,10 +537,11 @@ class OmekaContext:
         """
         cause = getattr(err, "cause", None)
         if _is_unauthorized(cause):
-            raise OmekaAuthError(
+            raise OmekaAuthError(RED + 
                 "Omeka S returned 401 Unauthorized. "
                 "Check that key_identity and key_credential in config/private.yml are correct. "
                 "You may also need to be logged onto the VPN."
+                + RESET
             ) from cause
         logger.error(str(err))
         self._errors.append(err)
@@ -555,5 +583,5 @@ def finish_run(ctx, args, start_time):
     elapsed = int(time.time() - start_time)
     hours, rem = divmod(elapsed, 3600)
     mins, secs = divmod(rem, 60)
-    print("Script finished in {:02d} hrs {:02d} mins {:02d} secs".format(hours, mins, secs))
+    print(f"{CYAN}Script finished in {hours:02d} hrs {mins:02d} mins {secs:02d} secs{RESET}")
     sys.exit(1 if ctx._errors else 0)
