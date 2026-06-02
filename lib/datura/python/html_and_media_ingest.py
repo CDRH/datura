@@ -36,7 +36,7 @@ import requests
 from requests.exceptions import HTTPError
 
 import omeka
-from omeka import add_media_to_item, filter_items, filter_items_by_date, filter_items_by_format
+from omeka import filter_items, filter_items_by_date, filter_items_by_format
 from omeka_context import (
     OmekaAPIError,
     OmekaAuthError,
@@ -261,7 +261,7 @@ def ingest_thumbnail(ctx, json_item, matching_item, iiif_dir):
             "o:is_public": ctx.is_public,
             "data": {
                 "upload": str(thumbnail_local),
-                "dcterms:title": omeka.prepare_property_value(
+                "dcterms:title": ctx.client.prepare_property_value(
                     json_item.get("title", ""),
                     ctx.get_property_id("dcterms:title"),
                 ),
@@ -269,7 +269,7 @@ def ingest_thumbnail(ctx, json_item, matching_item, iiif_dir):
             "o:ingester": "upload",
         }
         logger.info("Posting thumbnail for %r", identifier)
-        add_media_to_item(ctx, matching_item["o:id"], thumbnail_local, payload=media_payload)
+        ctx.client.add_media_to_item(matching_item["o:id"], thumbnail_local, payload=media_payload)
     except FileNotFoundError:
         # The download step wrote the file, but something removed it between
         # download and upload.  Unlikely in practice but handled explicitly
@@ -342,7 +342,7 @@ def ingest_html(ctx, json_item, matching_item, html_dir):
 
     try:
         logger.info("Posting HTML for %r", identifier)
-        add_media_to_item(ctx, matching_item["o:id"], file_path, payload=media_payload)
+        ctx.client.add_media_to_item(matching_item["o:id"], file_path, payload=media_payload)
     except Exception as err:
         ctx.record_error(
             OmekaMediaError(

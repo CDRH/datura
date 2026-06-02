@@ -327,10 +327,7 @@ def add_formatted_value(ctx, item, key, value, datatype, label=""):
         "value": value,
         "type": datatype,
     }
-    # Use the custom prepare_property_value from omeka.py, which supports the
-    # label parameter for URI types. For resource:item links, use
-    # ctx.client.prepare_property_value() instead (see link_item_record).
-    formatted = omeka.prepare_property_value(prop_value, prop_id, label)
+    formatted = ctx.client.prepare_property_value(prop_value, prop_id, label)
 
     if key in item and type(item[key]) == list:
         item[key].append(formatted)
@@ -518,9 +515,6 @@ def link_item_record(ctx, item, key, values, item_set=False, filter_property="dc
                 "type": resource_type,
                 "value": omeka_id,
             }
-            # Use the library's prepare_property_value (via ctx.client) for
-            # resource links, not the custom omeka.py version — the library
-            # version correctly handles the value_resource_id field.
             formatted = ctx.client.prepare_property_value(prop_value, prop_id)
 
             if item_set:

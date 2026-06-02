@@ -7,100 +7,11 @@ Utility functions for the Omeka S ingestion pipeline.
 
 from datetime import datetime
 from pathlib import Path
-import json
 import logging
 import os
 import re
 
 logger = logging.getLogger(__name__)
-
-def add_media_to_item(ctx, item_id, media_file, payload=None, template_id=None, class_id=None):
-    """
-    Upload a media file and associate it with an existing Omeka S item.
-
-    This is a modified version of the omeka-s-tools library method. The key
-    difference is that the ingester type ("upload", "html", etc.) is read from
-    payload["o:ingester"] rather than always defaulting to "upload". This allows
-    the same function to handle both binary file uploads and the HTML ingester,
-    which reads content from payload["data"]["html"] instead of a file.
-
-    Parameters:
-    * ctx         - OmekaContext providing the authenticated API client
-    * item_id     - numeric Omeka ID of the item this media should attach to
-    * media_file  - path to the media file as a string or pathlib.Path.
-                    For the HTML ingester, this is the path to the .html file,
-                    although the Omeka API reads content from payload["data"]["html"]
-                    rather than the uploaded bytes.
-    * payload     - dict of metadata for the media object. Must contain
-                    "o:ingester" (e.g. "upload" or "html") and any additional
-                    metadata fields. Defaults to an empty dict.
-    * template_id - optional numeric Omeka resource template ID to attach
-                    to the media object (rarely needed for media).
-    * class_id    - optional numeric Omeka resource class ID. If template_id
-                    is given and class_id is not, the class is inferred from
-                    the template automatically.
-
-    Returns the Omeka JSON-LD representation of the newly created media object.
-    """
-    if payload is None:
-        payload = {}
-
-    files = {}
-
-    # Legacy dict-style call: {"path": ..., "title": ...}
-    # Preserved for backwards compatibility with any callers using the older
-    # interface from the omeka-s-tools library.
-    if isinstance(media_file, dict):
-        path = media_file['path']
-        payload = media_file['title']
-
-    # Normalise the path to a pathlib.Path regardless of input type.
-    path = Path(media_file)
-
-    # If a bare string title was passed as the payload, wrap it in the
-    # standard item payload format expected by the API.
-    if isinstance(payload, str):
-        payload = ctx.client.prepare_item_payload({'dcterms:title': [payload]})
-
-    # Attach resource template metadata if requested.
-    if template_id:
-        payload['o:resource_template'] = ctx.client.format_resource_id(
-            template_id, 'resource_templates'
-        )
-        if not class_id:
-            # Infer the resource class from the template when not supplied.
-            template = ctx.client.get_resource_by_id(template_id, 'resource_templates')
-            class_id = template['o:resource_class']['o:id']
-    if class_id:
-        payload['o:resource_class'] = ctx.client.format_resource_id(
-            class_id, 'resource_classes'
-        )
-
-    # Use the ingester declared in the payload, falling back to "upload".
-    # Using .get() guards against a missing key
-    ingester = payload.get("o:ingester") or "upload"
-
-    # Core fields required by Omeka S for any media POST.
-    file_data = {
-        'o:ingester': ingester,
-        'file_index': '0',       # index into the files[] multipart array
-        'o:source': path.name,   # original filename, shown in Omeka admin
-        'o:item': {'o:id': item_id},
-    }
-    payload.update(file_data)
-
-    # Read the raw file bytes and attach them as file[0] in the multipart body.
-    # For the HTML ingester, Omeka reads content from payload["data"]["html"]
-    # and ignores the file bytes, but including them does not cause errors.
-    files['file[0]'] = path.read_bytes()
-    files['data'] = (None, json.dumps(payload), 'application/json')
-
-    response = ctx.client.s.post(
-        '{}/media'.format(ctx.client.api_url),
-        files=files,
-        params=ctx.client.credentials,
-    )
-    return ctx.client.process_response(response)
 
 
 def prepare_item_payload_using_template(ctx, terms, template_id):
@@ -175,72 +86,6 @@ def prepare_item_payload_using_template(ctx, terms, template_id):
                 )
 
     return payload
-
-
-def prepare_property_value(value, property_id, label=""):
-    """
-    Format a single property value in the structure expected by Omeka S.
-
-    This is a custom version of the omeka-s-tools library method, extended to
-    support an optional text label for URI-type values. It is used in
-    api_fields.add_formatted_value() for all standard property formatting.
-
-    Parameters:
-    * value       - a string, int, float, or dict. Non-dict values are
-                    automatically wrapped: {"value": <value>}. Dicts may
-                    include a "type" key; if absent, "literal" is used.
-    * property_id - numeric Omeka property ID for this term
-    * label       - display label for URI values. If omitted, the last path
-                    segment of the URI is used as the label.
-
-    Returns a dict formatted for inclusion in an Omeka S item payload.
-
-    NOTE: The "resource:item" branch contains a reference to `self.api_url`
-    which is a pre-existing copy-paste bug from the library source (this is a
-    standalone function, not a method, so `self` is undefined). This branch
-    is not reached by any current pipeline caller — all values are "literal"
-    or "uri" — so the bug has been left in place with this comment rather than
-    silently changing potentially-load-bearing code during a refactor.
-    If you need resource:item linking, use ctx.client.prepare_property_value()
-    (the library version) instead.
-    """
-    # Wrap bare scalars so the rest of the function can assume a dict.
-    if not isinstance(value, dict):
-        value = {'value': value}
-
-    # Default to "literal" when no explicit type is provided.
-    try:
-        data_type = value['type']
-    except KeyError:
-        data_type = 'literal'
-
-    property_value = {
-        'property_id': property_id,
-        'type': data_type,
-    }
-
-    if data_type == 'resource:item':
-        # This branch is intentionally not implemented in this standalone function.
-        # Use ctx.client.prepare_property_value() for resource:item values instead —
-        # the library version has access to the API URL via the client instance.
-        raise NotImplementedError(
-            "resource:item values must use ctx.client.prepare_property_value(); "
-            "see link_item_record() in api_fields.py"
-        )
-    elif data_type == 'uri':
-        property_value['@id'] = value['value']
-        # Fall back to the last URI segment when no explicit label is given.
-        if label == "":
-            property_value["o:label"] = value["value"].split("/")[-1]
-        else:
-            property_value["o:label"] = label
-    else:
-        # "literal", "numeric:timestamp", and any other types store the
-        # value under the "@value" key.
-        property_value['@value'] = value['value']
-
-    return property_value
-
 
 def filter_items(regex, pathlist):
     """
