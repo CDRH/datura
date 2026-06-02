@@ -6,7 +6,7 @@ Each Omeka field is updated by the method in [api_fields.py](../../../lib/datura
 
 ### Overriding fields
 
-To override the field definitions, copy the file [omeka_overrides_example.py](../../../lib/datura/python/omeka_overrides_example.py) to [omeka_overrides.rb](../../../lib/datura/python/omeka_overrides.py) in the `scripts/overrides` file of the project directory. Then override each method as needed, using the existing definitions in `field_definitions.py` as examples. For an example, see https://github.com/CDRH/data_stories_humanity/blob/omeka_s_ingest/scripts/python/omeka_overrides.py (not currently field).
+To override the field definitions, copy the file [omeka_overrides_example.py](../../../lib/datura/python/omeka_overrides_example.py) to [omeka_overrides.py](../../../lib/datura/python/omeka_overrides.py) in the `scripts/overrides` file of the project directory. Then override each method as needed, using the existing definitions in `field_definitions.py` as examples. For an example, see https://github.com/CDRH/data_stories_humanity/blob/omeka_s_ingest/scripts/python/omeka_overrides.py (not currently field).
 
 Each overriden method needs to take the arguments `self` (a Python placeholder for a class instance) and `json` (representing the generated JSON) and to match the methods defined on `field_definitions.py`. (The same goes for adding new methods to `field_definitions.py`.)
 For instance:
