@@ -266,9 +266,13 @@ class OmekaContext:
             )
             env_config = {}
 
+        # Merge so that environment-specific values override defaults, giving
+        # collections the ability to override any default key (e.g.
+        # resource_template, omeka_data_base) on a per-environment basis.
+        env_config = {**default_config, **env_config}
+
         raw_update = getattr(args, "update_time", None)
         return cls(
-            config=default_config,
             env_config=env_config,
             environment=args.environment,
             # getattr with a default handles entrypoints that don't define
@@ -321,17 +325,17 @@ class OmekaContext:
 
         return contents[env]
 
-    def __init__(self, config, env_config, environment, regex, media_skip, update_time=None, format_filter=None):
+    def __init__(self, env_config, environment, regex, media_skip, update_time=None, format_filter=None):
         """
         Initialise the context. Prefer OmekaContext.from_args() over calling
         this constructor directly except in tests.
 
         Parameters:
-        * config      - dict from the "default" section of private.yml;
-                        must contain omeka_server, key_identity, key_credential,
-                        resource_template, and omeka_data_base
-        * env_config  - dict from the environment-specific section; used to
-                        look up item_set
+        * env_config  - merged dict: the "default" section of private.yml
+                        overlaid with the environment-specific section so that
+                        per-environment values take precedence over defaults.
+                        Must contain omeka_server, key_identity, key_credential,
+                        resource_template, omeka_data_base, and item_set.
         * environment - "development" or "production"
         * regex       - optional regex string to filter input file paths;
                         None means process all files in the output directory
@@ -353,11 +357,11 @@ class OmekaContext:
             "omeka_data_base",
         ]
         for key in required_keys:
-            if key not in config:
+            if key not in env_config:
                 raise OmekaConfigError(RED + 
                     "Missing required config key {!r}. "
-                    "Check the 'default' section of config/private.yml."
-                    .format(key)
+                    "Check the 'default' or {!r} section of config/private.yml."
+                    .format(key, environment)
                     + RESET
                 )
 
@@ -382,22 +386,22 @@ class OmekaContext:
         self.format_filter = format_filter
 
         # ---- Config values ------------------------------------------------
-        self.template_number = config["resource_template"]
-        self.omeka_data_base = config["omeka_data_base"]
+        self.template_number = env_config["resource_template"]
+        self.omeka_data_base = env_config["omeka_data_base"]
         # iiif_server is optional — not all collections ingest thumbnails.
-        self.iiif_server = config.get("iiif_server", "")
+        self.iiif_server = env_config.get("iiif_server", "")
         # iiif_collection is optional — not all collections have different iiif collection names.
-        self.iiif_collection = config.get("iiif_collection", "")
+        self.iiif_collection = env_config.get("iiif_collection", "")
 
-        # Keep the environment-specific dict for the item_set_id property.
+        # Keep the merged config dict for the item_set_id property.
         self._env_config = env_config
 
         # ---- Credentials (stored for reset_client) ------------------------
         # Stored privately so that credential strings are not accidentally
         # printed, logged, or serialised through the public interface.
-        self._api_url = config["omeka_server"]
-        self._key_identity = config["key_identity"]
-        self._key_credential = config["key_credential"]
+        self._api_url = env_config["omeka_server"]
+        self._key_identity = env_config["key_identity"]
+        self._key_credential = env_config["key_credential"]
 
         # ---- API client ---------------------------------------------------
         # Single authenticated client used for all API operations.
