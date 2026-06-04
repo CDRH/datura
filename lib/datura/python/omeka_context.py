@@ -6,6 +6,7 @@ Central context object and exception hierarchy for the Omeka S ingestion pipelin
 """
 
 import logging
+from logging.handlers import RotatingFileHandler
 import sys
 import time
 from datetime import date, datetime
@@ -50,7 +51,9 @@ def configure_logging(level="INFO"):
     numeric_level = getattr(logging, level.upper(), logging.INFO)
 
     # File handler — verbose
-    file_handler = logging.FileHandler("logs/python.log")
+    file_handler = RotatingFileHandler(
+        "logs/python.log", maxBytes=5 * 1024 * 1024, backupCount=3
+    )
     file_handler.setFormatter(logging.Formatter("%(asctime)s [%(levelname)s] %(name)s: %(message)s"))
     file_handler.setLevel(logging.DEBUG)  # always save everything
 
