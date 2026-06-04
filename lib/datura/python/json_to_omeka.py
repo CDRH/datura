@@ -444,7 +444,7 @@ def main():
     logger.info(
         "Found %d JSON file(s) in %s (environment=%r)",
         len(pathlist),
-        json_dir,
+        "output/{}/es".format(ctx.environment),
         ctx.environment,
     )
 
