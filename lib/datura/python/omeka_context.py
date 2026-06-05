@@ -7,6 +7,7 @@ Central context object and exception hierarchy for the Omeka S ingestion pipelin
 
 import logging
 from logging.handlers import RotatingFileHandler
+import os
 import sys
 import time
 from datetime import date, datetime
@@ -49,6 +50,8 @@ class ColoredConsoleHandler(logging.StreamHandler):
 
 def configure_logging(level="INFO"):
     numeric_level = getattr(logging, level.upper(), logging.INFO)
+    
+    os.makedirs("logs", exist_ok=True) 
 
     # File handler — verbose
     file_handler = RotatingFileHandler(
