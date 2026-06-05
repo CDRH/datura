@@ -327,7 +327,7 @@ def add_formatted_value(ctx, item, key, value, datatype, label=""):
     }
     formatted = ctx.client.prepare_property_value(prop_value, prop_id, label)
 
-    if key in item and type(item[key]) == list:
+    if key in item and isinstance(item[key],list):
         item[key].append(formatted)
     else:
         item[key] = [formatted]
@@ -353,7 +353,7 @@ def get_matching_ids_from_markdown(row, field):
         markdown_values = sorted(get_json_value(row, field))
         ids = []
         if markdown_values:
-            if type(markdown_values) == str:
+            if isinstance(markdown_values,str):
                 match = re.search(r"\]\((.*)\)", markdown_values)
                 if match:
                     ids.append(match.group(1))
@@ -392,7 +392,7 @@ def get_matching_names_from_markdown(row, field):
         markdown_values = get_json_value(row, field)
         names = []
         if markdown_values:
-            if type(markdown_values) == str:
+            if isinstance(markdown_values,str):
                 name_match = re.search(r"\[(.*?)\]", markdown_values)
                 id_match = re.search(r"\]\((.*)\)", markdown_values)
                 # Only collect the name if there is no associated identifier.
