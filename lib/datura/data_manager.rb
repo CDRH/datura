@@ -129,10 +129,10 @@ class Datura::DataManager
       end
       # wait for all the files to process before moving on with the next chunk
       threads.each { |t| t.join }
-    # save checkpoint after chunk completes (not in transform-only mode)
-    unless @options["transform_only"]
-      Datura::Helpers.write_checkpoint(files_subset.last.filename(false), @options)
-    end
+      # save checkpoint after chunk completes (not in transform-only mode)
+      unless @options["transform_only"]
+        Datura::Helpers.write_checkpoint(files_subset.last.filename(false), @options)
+      end
     end
   end
 
@@ -286,7 +286,7 @@ class Datura::DataManager
       puts msg.yellow
       @log.warn(msg)
     end
-    # prcoeed from (and including) a specific file
+    # proceed from (and including) a specific file
     proceeded = if @options["proceed"]
       Datura::Helpers.proceed_files(regexed, @options["proceed"])
     else
