@@ -273,7 +273,7 @@ def get_fields(omeka_data_base=""):
         # CustomFields inherits __init__ from FieldDefinitions, so
         # omeka_data_base is passed through automatically. Override __init__
         # in CustomFields only if you need additional constructor logic.
-        logger.info("Omeka overrides found at %s; custom field mappings will be applied.", "scripts/python/omeka_overrides.py")
+        logger.warning("Omeka overrides found at %s; custom field mappings will be applied.", "scripts/python/omeka_overrides.py")
         return CustomFields(omeka_data_base=omeka_data_base)
     except ImportError:
         # No collection-specific overrides found; use the defaults.
