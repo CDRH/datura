@@ -33,6 +33,8 @@ To enter the virtual environment once it has been created, run
 source .venv/bin/activate
 ```
 
+You should now see a `(.venv)` at the front of the command line prompt. You will need to activate this environment every time you post to Omeka S.
+
 ### Step 3: Install Python dependencies
 
 Next, confirm you have a `requirements.txt` file in the root directory of your collection. If you are working with an existing repository, you may need to copy this over from Datura. Then, to install the dependencies, run: 
@@ -42,7 +44,7 @@ pip3 install packaging
 pip3 install -r requirements.txt
 ```
 
-The `packaging` library will need to be installed separately so the `omeka_s_tools` installation (part of the `requirements.txt` list) will work. 
+The `packaging` library will need to be installed separately so the `omeka_s_tools` installation (part of the `requirements.txt` list) will install correctly. 
 
 ### Step 4: Set up config for Omeka S posting
 
@@ -65,7 +67,7 @@ production:
 
 All values not listed as optional are required for the omeka scripts to run. 
 
-- (for developers) `json_dir`, `html_id`, and `iiif_dir` are set within the script and correspond to the standard Datura output folders.
+- (for developers) `json_dir`, `html_id`, and `iiif_dir` are set within the Omeka S scripts and correspond to the standard Datura output folders.
 
 The `key_identity` and `key_credential` fields should correspond to the generated API key credentials. which you can generate on your Omeka S user page (click "Edit user" and then the API key). Make sure to copy the credentials down right away after generating the key.
 
