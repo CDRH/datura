@@ -1,6 +1,6 @@
 ## Set up for Omeka S posting
 
-### Step 1: Setting up a data repository for Omeka
+### Step 1: Set up a data repository for Omeka
 
 #### If you would like to create a new repository
 
@@ -8,13 +8,30 @@ Follow [the steps](https://github.com/CDRH/datura/blob/dev/docs/1_setup/collecti
 
 #### If you are working with an existing data repository
 
-In your Gemfile, make sure that Datura is on the right branch for Omeka posting. This functionality should be included in any recent release. Change `.ruby-gemset` to `datura-omeka` or something similar if this is not the version of Datura you usually use. Run `cd .` and then `bundle install`. If you plan to create overrides for any Omeka fields, you can copy the `lib/datura/python/omeka_overrides_example.py` in the Datura library (at `/lib/datura/python/`) to your repository as `[collection-directory]/scripts/python/omeka_overrides.py`.
+In your Gemfile, make sure that Datura is on the right branch for Omeka posting. This functionality should be included in any recent release. Change `.ruby-gemset` to `datura-omeka` or something similar if this is not the version of Datura you usually use. Run:
+
+```bash
+cd . 
+bundle install
+``` 
+
+If you plan to create overrides for any Omeka fields, you can copy the `lib/datura/python/omeka_overrides_example.py` in the Datura library (at `/lib/datura/python/`) to your repository as `[collection-directory]/scripts/python/omeka_overrides.py`.
 
 ### Step 2: Enable a virtual environment
 
-In your collection repo, first exit any virtual environment if one is currently enabled (this may be indicated by `(.venv)` or similar text before your command prompt) with `deactivate`. If you have not previously created a virtual environment, type `python3 -m venv .venv`. The environment will be installed in the `.venv` folder in the root of the collection repo. This folder should not be committed. If you are working in a newly created repo, it should already be added to the `.gitignore` file. If you are working with an existing data repository, you may have to add the `.venv` directory to `.gitignore`. 
+In your collection repo, first exit any virtual environment if one is currently enabled (this may be indicated by `(.venv)` or similar text before your command prompt) with `deactivate`. If you have not previously created a virtual environment, run: 
 
-To enter the virtual environment once it has been created, run `source .venv/bin/activate`. 
+```bash
+python3 -m venv .venv 
+```
+
+The environment will be installed in the `.venv` folder in the root of the collection repo. This folder should not be committed. If you are working in a newly created repo, it should already be added to the `.gitignore` file. If you are working with an existing data repository, you may have to add the `.venv` directory to `.gitignore`. 
+
+To enter the virtual environment once it has been created, run 
+
+```bash
+source .venv/bin/activate
+```
 
 ### Step 3: Install Python dependencies
 
