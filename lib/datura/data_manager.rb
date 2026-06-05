@@ -130,7 +130,7 @@ class Datura::DataManager
       # wait for all the files to process before moving on with the next chunk
       threads.each { |t| t.join }
       # save checkpoint after chunk completes (not in transform-only mode)
-      unless @options["transform_only"]
+      unless @options["transform_only"] || files_subset.last == @files.last
         Datura::Helpers.write_checkpoint(files_subset.last.filename(false), @options)
       end
     end
