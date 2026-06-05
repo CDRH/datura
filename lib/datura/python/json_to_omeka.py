@@ -406,12 +406,10 @@ def main():
        error message if the config is missing or malformed (OmekaConfigError).
     4. Discover JSON files under output/<environment>/es/.
     5. Apply regex filter if -r was passed.
-    6. Add scripts/python to sys.path so that collection-specific
-       omeka_overrides.py can be imported by field_definitions.get_fields().
-    7. Run pass 1 (post_items).
-    8. Reset the API client between passes for a clean connection.
-    9. Run pass 2 (link_items).
-    10. Print run summary; exit 1 if any per-item errors were recorded,
+    6. Run pass 1 (post_items).
+    7. Reset the API client between passes for a clean connection.
+    8. Run pass 2 (link_items).
+    9. Print run summary; exit 1 if any per-item errors were recorded,
         0 if all items succeeded.
     """
     args = _parse_args()
@@ -447,10 +445,6 @@ def main():
         "output/{}/es".format(ctx.environment),
         ctx.environment,
     )
-
-    # Make the collection's scripts/python directory importable so that
-    # field_definitions.get_fields() can find omeka_overrides.py if present.
-    sys.path.append(os.path.join(os.getcwd(), "scripts/python"))
 
     # --- Pass 1: create / update items ---
     logger.info("Starting pass 1: item posting")

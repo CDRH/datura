@@ -21,7 +21,6 @@ import sys
 
 import omeka
 from datetime import datetime
-from field_definitions import get_fields
 
 # Module-level logger so that log records from this module are identifiable
 # by name in the output stream.
@@ -48,11 +47,10 @@ def build_item_dict(ctx, json_item, existing_item):
     unexpected way.
     """
     try:
-        # Load the collection-specific field definitions, falling back to the
-        # defaults if no omeka_overrides.py exists in scripts/python/.
-        # Pass omeka_data_base so that uriData() can construct media URIs
-        # without needing a global.
-        fields = get_fields(omeka_data_base=ctx.omeka_data_base)
+        # Load the collection-specific field definitions once during OmekaContext
+        # initialization (collection-specific CustomFields subclass if omeka_overrides.py 
+        # is present in scripts/python, otherwise the defaultFieldDefinitions). 
+        fields = ctx.fields
 
         # Start from the existing Omeka item dict when updating, or an empty
         # dict when creating. update_item_value() clears each key before

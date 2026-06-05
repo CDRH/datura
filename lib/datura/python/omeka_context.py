@@ -9,6 +9,8 @@ import logging
 from logging.handlers import RotatingFileHandler
 import os
 import sys
+
+from field_definitions import get_fields
 import time
 from datetime import date, datetime
 from pathlib import Path
@@ -432,6 +434,13 @@ class OmekaContext:
         # Non-fatal per-item errors are appended here rather than aborting the
         # run. report_errors() logs a consolidated summary at the end.
         self._errors = []  # type: List[OmekaError]
+
+        # ---- Field definitions --------------------------------------------
+        # Load collection-specific field mappings once here. get_fields() returns 
+        # a CustomFields subclass if scripts/python/omeka_overrides.py is present; 
+        # otherwise the default FieldDefinitions instance.
+        self.fields = get_fields(omeka_data_base=self.omeka_data_base)
+
 
     # -----------------------------------------------------------------------
     # Properties
