@@ -2,7 +2,7 @@
 
 See (omeka setup instructions)[../1_setup/omeka_setup.md] for how to prepare and configure your data repository and activate the Python virtual environment.
 
-Running the `post_omeka` script will first run the Datura scripts to generate JSON files with the standard fields and values of the CDRH API (this is what is normally sent to Elasticsearch when you run `post`). This first step is equivalent to running `post -x es -o -t`. It then sends the generated JSON to the Python scripts to be ingested into Omeka S.
+Running the `post_omeka` script will first run the Datura scripts to generate JSON files with the standard fields and values of the CDRH API (this is what is normally sent to ElasticSearch when you run `post`). This first step is equivalent to running `post -x es -o -t`. It then sends the generated JSON to the Python scripts to be ingested into Omeka S.
 
 Use the `-s` option to skip the generation step and only post to Omeka S (requires that you have already generated the needed documents by running `post_omeka` normally).
 
@@ -16,7 +16,7 @@ For information on how to override field definitions, see [Omeka Overrides](../2
 
 ### Notes on debugging
 
-The standard way to debug Python scripts is with `breakpoint()`, equivalent to `byebug` in Ruby. Execution will pause and then you can check the contents of variables and try snippets of code from the prompt. Sometimes putting a debugger within an except clause (especially within a loop) makes it difficult to break out of the script and halt execution even if you type `quit`. CTRL-C sometimes works in these cases. If CTRL-C also fails to halt the script, try running `os._exit(0)` (this is the reason for `import os` in some of the scripts, and if you get an error that the module is not found, then `import os` should be run from the debugger prompt first). For more details on a particular error, look at the error message which is printed in some of the except clauses, check online documentation to see if this error message has additional methods (depending on the error), or use `traceback.print_exc()` to print out the full stack trace. You can also check the logs at `/logs/python.log`. In the case of errors in the HTTP reponse, it may be necessary to look in the logs on the Omeka site.
+The standard way to debug Python scripts is with `breakpoint()`, equivalent to `byebug` in Ruby. Execution will pause and then you can check the contents of variables and try snippets of code from the prompt. Sometimes putting a debugger within an except clause (especially within a loop) makes it difficult to break out of the script and halt execution even if you type `quit`. `CTRL-C` sometimes works in these cases. If `CTRL-C` also fails to halt the script, try running `os._exit(0)` (this is the reason for `import os` in some of the scripts, and if you get an error that the module is not found, then `import os` should be run from the debugger prompt first). For more details on a particular error, look at the error message which is printed in some of the except clauses, check online documentation to see if this error message has additional methods (depending on the error), or use `traceback.print_exc()` to print out the full stack trace. You can also check the logs at `/logs/python.log`. In the case of errors in the HTTP reponse, it may be necessary to look in the logs on the Omeka site.
 
 ### 500 error
 
