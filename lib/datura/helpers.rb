@@ -122,13 +122,17 @@ module Datura::Helpers
   end
 
   # proceed_files
-  #   sorts files alphabetically and returns all files from the first file
-  #   matching the proceed regex onward (inclusive). Exits with an error if
-  #   the regex matches zero or more than one file.
+  #   returns all files from the first file matching the proceed regex onward (inclusive),
+  #   preserving directory order and sorting alphabetically within each directory.
+  #   Exits with an error if the regex matches zero or more than one file.
   #   params: files (array of file paths), regex (string)
   #   returns: array
   def self.proceed_files(files, regex)
-    sorted = files.sort_by { |f| File.basename(f, ".*") }
+    # Preserve directory order from input list; sort alphabetically within each directory
+    dir_order = files.map { |f| File.dirname(f) }.uniq
+    sorted = dir_order.flat_map do |dir|
+      files.select { |f| File.dirname(f) == dir }.sort_by { |f| File.basename(f, ".*") }
+    end
     exp = validate_regex(regex, "--proceed")
     matches = sorted.select { |f| exp.match(File.basename(f, ".*")) }
 

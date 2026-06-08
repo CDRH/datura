@@ -134,18 +134,10 @@ class Datura::DataManager
     end
     # clear checkpoint if all files in the source directories were posted (not a filtered subset)
     unless @files.empty?
-      last_overall = if @options["proceed"]
-        # proceed_files sorts all files alphabetically across directories
-        Datura::DataManager.format_to_class.keys.flat_map { |fmt|
-          Datura::Helpers.get_directory_files(File.join(@options["collection_dir"], "source", fmt)) || []
-        }.map { |f| File.basename(f, ".*") }.sort.last
-      else
-        # normal run processes files in format_to_class.keys directory order
-        Datura::DataManager.format_to_class.keys.filter_map { |fmt|
-          found = Datura::Helpers.get_directory_files(File.join(@options["collection_dir"], "source", fmt))
-          found&.map { |f| File.basename(f, ".*") }&.sort&.last
-        }.last
-      end
+     last_overall = Datura::DataManager.format_to_class.keys.filter_map { |fmt|
+        found = Datura::Helpers.get_directory_files(File.join(@options["collection_dir"], "source", fmt))
+        found&.map { |f| File.basename(f, ".*") }&.sort&.last
+      }.last
       Datura::Helpers.clear_checkpoint(@options) if @files.last.filename(false) == last_overall
     end
   end
