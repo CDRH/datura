@@ -55,6 +55,14 @@ Format options include:
 If you do not select any, all the formats found will be executed.
 
 ```bash
+-j, --json-output
+```
+
+*Default setting: false*
+
+Omeka specific, this writes Omeka S item payloads to `output/<environment>/omeka/` instead of posting to the API. This is useful for debugging and inspection purposes.
+
+```bash
 -m, --no-media
 ```
 

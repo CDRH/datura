@@ -89,6 +89,19 @@ def _parse_args():
         help="Only post files of this format (tei, csv, vra, ead, html, pdf, webs).",
     )
     parser.add_argument(
+        "-j", "--json-output",
+        action="store_true",
+        dest="json_output",
+        default=False,
+        help=(
+            "Write Omeka S item payloads to output/<environment>/omeka/ instead "
+            "of posting to the API.  No items are created or updated in Omeka. "
+            "An API connection is still required for property ID lookups and "
+            "template validation.  The link pass is skipped because no live "
+            "Omeka item IDs are available."
+        ),
+    )
+    parser.add_argument(
         "-r", "--regex",
         default=None,
         help=(
@@ -127,7 +140,7 @@ def _parse_args():
 # Pass 1: item creation / update
 # ---------------------------------------------------------------------------
 
-def post_items(ctx, pathlist):
+def post_items(ctx, pathlist, json_output_dir=None):
     """
     First pass: create or update Omeka items for every JSON record.
 
@@ -144,8 +157,10 @@ def post_items(ctx, pathlist):
     credentials, missing config) raise exceptions that propagate to main().
 
     Parameters:
-    * ctx      - OmekaContext providing API client, config, and error log
-    * pathlist - list of pathlib.Path objects pointing to ES JSON files
+    * ctx             - OmekaContext providing API client, config, and error log
+    * pathlist        - list of pathlib.Path objects pointing to ES JSON files
+    * json_output_dir - optional Path; when set, write Omeka S item payloads to
+                        this directory instead of posting to the API
     """
     for path in pathlist:
         filename = str(path)
@@ -161,6 +176,21 @@ def post_items(ctx, pathlist):
             if not identifier:
                 # Records without an identifier cannot be matched or created.
                 logger.warning("Skipping item without identifier in %s", filename)
+                continue
+
+            if json_output_dir is not None:
+                # JSON output mode: build the payload and write it to disk
+                # rather than to the Omeka API.
+                new_item = api_fields.prepare_item(ctx, json_item)
+                if not new_item:
+                    logger.warning("Could not prepare payload for %r; skipping", identifier)
+                    continue
+                payload = prepare_item_payload_using_template(ctx, new_item, template_number)
+                out_path = json_output_dir / "{}.json".format(identifier)
+                relative_path = "output/{}/{}.json".format(ctx.environment, identifier)
+                logger.info("Writing Omeka payload for %r to %s", identifier, relative_path)
+                with open(out_path, "w") as f:
+                    json.dump(payload, f, indent=2)
                 continue
 
             try:
@@ -445,6 +475,19 @@ def main():
         "output/{}/es".format(ctx.environment),
         ctx.environment,
     )
+
+    # --- JSON output mode (-j / --json-output) ---
+    if args.json_output:
+        relative_dir = "output/{}/omeka".format(ctx.environment)
+        omeka_out_dir = ctx.resolve_path(relative_dir)
+        Path(omeka_out_dir).mkdir(parents=True, exist_ok=True)
+        logger.info(
+            "JSON output mode: writing Omeka S payloads to %s (API will not be called)",
+            relative_dir,
+        )
+        post_items(ctx, pathlist, json_output_dir=Path(omeka_out_dir))
+        finish_run(ctx, args, start_time)
+        return
 
     # --- Pass 1: create / update items ---
     logger.info("Starting pass 1: item posting")

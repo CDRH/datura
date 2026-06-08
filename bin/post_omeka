@@ -27,6 +27,10 @@ optparse = OptionParser.new do |opts|
         end
     end
 
+    opts.on('-j', '--json-output', 'write Omeka S item payloads to output/<environment>/omeka/ instead of posting to the API (API connection still required for property ID lookups)') do
+        options["json_output"] = true
+    end
+
     opts.on('-r', '--regex [input]', 'only generate and post files matching this regex') do |input|
         if input && input.length > 0
             options["regex"] = input
@@ -42,6 +46,8 @@ optparse.parse(ARGV)
 #remove options not used in the main script
 ARGV.delete("-s")
 ARGV.delete("--skip")
+ARGV.delete("-j")
+ARGV.delete("--json-output")
 #add options to output a json file instead of posting it to Elasticsearch
 ARGV.unshift("-x", "es", "-o", "-t")
 #create DataManager before conditional run
