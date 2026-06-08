@@ -173,6 +173,15 @@ module Datura::Helpers
     File.write(path, "#{basename}\n")
   end
 
+  # clear_checkpoint
+  #   writes empty content to the checkpoint file, signaling no resume point
+  #   params: options (hash)
+  #   returns: nil
+  def self.clear_checkpoint(options)
+    path = checkpoint_path(options)
+    File.write(path, "")
+  end
+
   # should_update?
   #   determines if a user has changed a file since specified date
   #   params: file (string path), since_date (Time format or nil)
