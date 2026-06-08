@@ -55,6 +55,13 @@ Format options include:
 If you do not select any, all the formats found will be executed.
 
 ```bash
+-m, --no-media
+```
+
+Omeka specific, this will skip the step of deleting and regenerating media if both HTML and cover image are present in Omeka S. 
+
+
+```bash
 -n, --no-commit
 ```
 
@@ -77,6 +84,12 @@ Outputs transformed files to a collection's `output/[environment]/[type]`. This 
 Transforms / posts only files matching a specific regular expression.  DO NOT include the file extension.
 
 Example: `post -r let0001`
+
+```bash
+-s, --skip
+```
+
+Omeka specific, this skips the JSON or HTML generation step and only posts to Omeka S (it can be used with both `post_omeka` and `post_omeka_html`).
 
 ```bash
 -t, --transform-only
@@ -127,4 +140,4 @@ If you get an error when you run `bundle install`, try running the suggested com
 
 ### Posting to Omeka
 
-For posting to Omeka, see [post_omeka.md] and [post_omeka_html.md]
+For posting to Omeka, see [post_omeka.md](post_omeka.md) and [post_omeka_html.md](post_omeka_html.md)
