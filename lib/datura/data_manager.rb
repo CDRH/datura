@@ -1,7 +1,7 @@
 require "colorize"
 require "logger"
 require "yaml"
-require "byebug"
+
 require_relative "./requirer.rb"
 
 class Datura::DataManager
@@ -129,10 +129,24 @@ class Datura::DataManager
       end
       # wait for all the files to process before moving on with the next chunk
       threads.each { |t| t.join }
-      # save checkpoint after chunk completes (not in transform-only mode)
-      unless @options["transform_only"] || files_subset.last == @files.last
-        Datura::Helpers.write_checkpoint(files_subset.last.filename(false), @options)
+      # save checkpoint after chunk completes
+      Datura::Helpers.write_checkpoint(files_subset.last.filename(false), @options)
+    end
+    # clear checkpoint if all files in the source directories were posted (not a filtered subset)
+    unless @files.empty?
+      last_overall = if @options["proceed"]
+        # proceed_files sorts all files alphabetically across directories
+        Datura::DataManager.format_to_class.keys.flat_map { |fmt|
+          Datura::Helpers.get_directory_files(File.join(@options["collection_dir"], "source", fmt)) || []
+        }.map { |f| File.basename(f, ".*") }.sort.last
+      else
+        # normal run processes files in format_to_class.keys directory order
+        Datura::DataManager.format_to_class.keys.filter_map { |fmt|
+          found = Datura::Helpers.get_directory_files(File.join(@options["collection_dir"], "source", fmt))
+          found&.map { |f| File.basename(f, ".*") }&.sort&.last
+        }.last
       end
+      Datura::Helpers.clear_checkpoint(@options) if @files.last.filename(false) == last_overall
     end
   end
 
