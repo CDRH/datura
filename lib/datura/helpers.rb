@@ -111,7 +111,7 @@ module Datura::Helpers
   def self.regex_files(files, regex=nil)
     array = files.nil? ? [] : files
     if !files.nil? && !regex.nil?
-      exp = Regexp.new(regex)
+      exp = validate_regex(regex, "--regex")
       array = files.select do |file|
         file_name = File.basename(file, ".*")
         match = exp.match(file_name)
@@ -119,6 +119,70 @@ module Datura::Helpers
       end
     end
     array
+  end
+
+  # proceed_files
+  #   returns all files from the first file matching the proceed regex onward (inclusive),
+  #   preserving directory order and sorting alphabetically within each directory.
+  #   Exits with an error if the regex matches zero or more than one file.
+  #   params: files (array of file paths), regex (string)
+  #   returns: array
+  def self.proceed_files(files, regex)
+    # Preserve directory order from input list; sort alphabetically within each directory
+    sorted = files.group_by { |f| File.dirname(f) }
+                  .sort_by { |dir, _| dir }
+                  .flat_map { |_, fs| fs.sort_by { |f| File.basename(f, ".*") } }
+    exp = validate_regex(regex, "--proceed")
+    matches = sorted.select { |f| exp.match(File.basename(f, ".*")) }
+
+    if matches.empty?
+      puts "ERROR: --proceed regex '#{regex}' matched no files. Exiting.".red
+      exit 1
+    elsif matches.length > 1
+      names = matches.map { |f| File.basename(f, ".*") }.join(", ")
+      puts "ERROR: --proceed regex '#{regex}' matched #{matches.length} files (#{names}). Refine your regex to match exactly one file. Exiting.".red
+      exit 1
+    end
+
+    proceed_index = sorted.index(matches.first)
+    sorted[proceed_index..]
+  end
+
+  # checkpoint_path
+  #   returns the full path to the proceed checkpoint file
+  #   params: options (hash with "collection_dir" and "environment" keys)
+  #   returns: string
+  def self.checkpoint_path(options)
+    File.join(options["collection_dir"], "logs", "proceed_#{options["environment"]}")
+  end
+
+  # read_checkpoint
+  #   reads the proceed checkpoint file and returns its contents
+  #   params: options (hash)
+  #   returns: string (basename without extension) or nil if file missing/empty
+  def self.read_checkpoint(options)
+    path = checkpoint_path(options)
+    return nil unless File.exist?(path)
+    content = File.read(path).strip
+    content.empty? ? nil : content
+  end
+
+  # write_checkpoint
+  #   writes the basename of the last posted file to the checkpoint file
+  #   params: basename (string, filename without extension), options (hash)
+  #   returns: nil
+  def self.write_checkpoint(basename, options)
+    path = checkpoint_path(options)
+    File.write(path, "#{basename}\n")
+  end
+
+  # clear_checkpoint
+  #   writes empty content to the checkpoint file, signaling no resume point
+  #   params: options (hash)
+  #   returns: nil
+  def self.clear_checkpoint(options)
+    path = checkpoint_path(options)
+    File.write(path, "")
   end
 
   # should_update?
@@ -134,6 +198,17 @@ module Datura::Helpers
       file_date = File.mtime(file)
       file_date > since_date
     end
+  end
+
+  # validate_regex
+  #   compiles a regex string; prints a readable error and exits if invalid
+  #   params: regex (string), flag (string, e.g. "--regex" or "--proceed")
+  #   returns: Regexp
+  def self.validate_regex(regex, flag)
+    Regexp.new(regex)
+  rescue RegexpError => e
+    puts "ERROR: Invalid regex for #{flag} '#{regex}': #{e.message}".red
+    exit 1
   end
 
   def self.construct_auth_header(options)

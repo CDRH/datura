@@ -1,7 +1,7 @@
 require "colorize"
 require "logger"
 require "yaml"
-require "byebug"
+
 require_relative "./requirer.rb"
 
 class Datura::DataManager
@@ -80,6 +80,7 @@ class Datura::DataManager
     @log.info(msg)
     puts msg
     pre_file_preparation
+    handle_proceed_prompt
     @files = prepare_files
     pre_batch_processing
     batch_process_files
@@ -128,6 +129,16 @@ class Datura::DataManager
       end
       # wait for all the files to process before moving on with the next chunk
       threads.each { |t| t.join }
+      # save checkpoint after chunk completes
+      Datura::Helpers.write_checkpoint(files_subset.last.filename(false), @options)
+    end
+    # clear checkpoint if all files in the source directories were posted (not a filtered subset)
+    unless @files.empty?
+      last_overall = Datura::DataManager.format_to_class.keys.filter_map { |fmt|
+        found = Datura::Helpers.get_directory_files(File.join(@options["collection_dir"], "source", fmt))
+        found&.map { |f| File.basename(f, ".*") }&.sort&.last
+      }.last
+      Datura::Helpers.clear_checkpoint(@options) if @files.last.filename(false) == last_overall
     end
   end
 
@@ -206,6 +217,33 @@ class Datura::DataManager
     files
   end
 
+  def handle_proceed_prompt
+    # Only act when -p was given with no value (proceed is nil, not false)
+    return unless @options["proceed"].nil?
+
+    checkpoint = Datura::Helpers.read_checkpoint(@options)
+    if checkpoint.nil?
+      path = Datura::Helpers.checkpoint_path(@options)
+      msg = "ERROR: --proceed given with no value but no checkpoint file found at #{path}. Run post at least once without -p to create a checkpoint.".red
+      puts msg
+      @log.error(msg)
+      exit 1
+    end
+
+    print "Continue from #{checkpoint}? (y/n): "
+    STDOUT.flush
+    response = STDIN.gets&.chomp&.downcase || ""
+    if response == "y"
+      @options["proceed"] = checkpoint
+      msg = "Resuming from checkpoint: #{checkpoint}"
+      puts msg
+      @log.info(msg)
+    else
+      puts "Exiting."
+      exit 0
+    end
+  end
+
   def options_msg
     msg = "Start Time: #{Time.now}\n"
     msg << "Running script with following options:\n"
@@ -254,8 +292,14 @@ class Datura::DataManager
       puts msg.yellow
       @log.warn(msg)
     end
+    # proceed from (and including) a specific file
+    proceeded = if @options["proceed"]
+      Datura::Helpers.proceed_files(regexed, @options["proceed"])
+    else
+      regexed
+    end
     # filter by date
-    filtered = regexed.select { |f| Datura::Helpers.should_update?(f, @options["update_time"]) }
+    filtered = proceeded.select { |f| Datura::Helpers.should_update?(f, @options["update_time"]) }
 
     file_classes = []
     @log.info("After filters (regex, update time), #{filtered.length}/#{files.length} files remaining")
