@@ -352,6 +352,14 @@ class Datura::DataManager
     )
   end
 
+  def check_xslt_dependency
+    _, err, status = Open3.capture3("python3", "-c", "import saxonche")
+    unless status.success?
+      puts "saxonche Python module is not installed. Install it with: pip install saxonche\n#{err}".red
+      exit
+    end
+  end
+
   def set_up_services
     if should_post?("es")
       begin
@@ -369,6 +377,10 @@ class Datura::DataManager
     if should_post?("solr")
       # set up posting URLs
       @solr_url = File.join(options["solr_path"], options["solr_core"], "update")
+    end
+
+    if should_transform?("html") || should_transform?("solr")
+      check_xslt_dependency
     end
   end
 

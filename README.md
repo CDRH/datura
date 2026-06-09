@@ -18,9 +18,9 @@ source "https://rubygems.org"
 gem "datura", git: "https://github.com/CDRH/datura.git", tag: "v0.0.0"
 ```
 
-If this is the first datura repository on your machine, install saxon as a system wide executable. [Saxon setup documentation](docs/4_developers/saxon.md).
+If this is the first datura repository on your machine, you will need to install Python 3 and `saxonche`. `saxonche` is included in `requirements.txt`, so you can install it by following the Omeka setup [instructions](/docs/1_setup/omeka_setup.md#enabling-a-virtual-environment) for installing Python dependencies. 
 
-Then, in the directory with the Gemfile, run the following:
+After that, in the directory with the Gemfile, run the following:
 
 ```
 gem install bundler

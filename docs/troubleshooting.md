@@ -22,7 +22,7 @@ Do you have the correct permissions to run all of the files?  Check that the TEI
 
 ### XSLT
 
-If you type `saxon` into the command line and hit enter, does it find the command?  Saxon will need to be able to run from the command line.  See the [saxon docs](saxon.md) for setup information.
+Check that Python 3 is available and `saxonche` has been installed (`pip3 install -r requirements.txt`). 
 
 ### Tests
 

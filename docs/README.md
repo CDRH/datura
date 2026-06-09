@@ -35,7 +35,6 @@ The files are parsed and formatted into documents appropriate for Solr, IIIF, El
   - Remove / destroy index
 - Developers
   - [Installation](4_developers/installation.md)
-  - [Saxon setup](4_developers/saxon.md)
   - [Ruby / Gems](4_developers/ruby_gems.md)
   - Class organization
   - [Tests](4_developers/test.md)

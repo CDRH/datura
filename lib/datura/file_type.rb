@@ -197,34 +197,34 @@ class FileType
     end
   end
 
-  # TODO can remove most of these parameters and grab them from instance variables
   def exec_xsl(input, xsl, ext, outpath=nil, params=nil)
-    # build array out of params hash
-    saxon_params = CommonXml.arrayify_params(params)
-    args = ["saxon","-s:#{input}", "-xsl:#{xsl}"] + saxon_params
-    puts "using command #{cmd}" if @options["verbose"]
-    Open3.popen3(*args) do |stdin, stdout, stderr|
-      out = stdout.read
-      err = stderr.read
-      if err.length > 0
-        # Extract meaningful lines from Saxon's stderr for user display  
-        lines = err.lines
-        match_indices = lines.each_index.select { |i| lines[i].match?(/^Error|SXXP|XPST|XTTE|XTSE|XSLT|Fatal/) }                                                                                
-        wanted_indices = match_indices.flat_map { |i| [i, i + 1] }.uniq.select { |i| i < lines.length }
-        key_lines = wanted_indices.map { |i| lines[i] }                                                                                                                                         
-        key_lines = lines.first(2) if key_lines.empty?                                                                                                                                        
-        msg = "Error transforming #{filename}: {\n " + key_lines.map { |l| l.strip }.join("\n ")
-        msg += "\n  (full Saxon output logged)" if err.lines.length > key_lines.length
-        return { "error" => msg, "full_error" => err }
-      else
-        # change previous tee handling to Ruby write
-        # TODO: we may want to consider binwrite instead to avoid any possible encoding issues
-        if outpath
-          File.write("#{outpath}/#{filename(false)}.#{ext}", out)
-        end
-        puts "Successfully transformed #{filename}"
-        return { "doc" => out }
+    # build the python script path
+    python_script = File.join(
+      @options["datura_dir"], "lib", "datura", "python", "xslt_transform.py"
+    )
+    # initialize the command as an array, then apppend xslt params
+    cmd = ["python3", python_script, "--input", input, "--xsl", xsl]
+    if params
+      params.each do |k, v|
+        cmd += ["--param", k.to_s, v.to_s]
       end
+    end
+    # append output path and base output URI for xsl:result-document secondary outputs if configured
+    if outpath
+      cmd += ["--output", File.join(outpath, filename(false) + "." + ext)]
+      cmd += ["--base-output-uri", outpath]
+    end
+    puts "using command #{cmd.inspect}" if @options["verbose"]
+    # run the command
+    out, err, status = Open3.capture3(*cmd)
+    
+    # check for errors
+    if !status.success? || err.length > 0
+      msg = "There was an error transforming #{filename}: #{err}"
+      return { "error" => msg }
+    else
+      puts "Successfully transformed #{filename}"
+      return { "doc" => out }
     end
   end
 

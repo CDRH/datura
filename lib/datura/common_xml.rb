@@ -45,6 +45,8 @@ module CommonXml
     file_xml
   end
 
+  # TODO: this method is deprecated with switch to saxonche
+  # but leaving it in place until testing is complete
   # saxon accepts params in following manner
   #   fw=true pb=true figures=false
   def self.arrayify_params(param_hash)
