@@ -129,10 +129,9 @@ module Datura::Helpers
   #   returns: array
   def self.proceed_files(files, regex)
     # Preserve directory order from input list; sort alphabetically within each directory
-    dir_order = files.map { |f| File.dirname(f) }.uniq
-    sorted = dir_order.flat_map do |dir|
-      files.select { |f| File.dirname(f) == dir }.sort_by { |f| File.basename(f, ".*") }
-    end
+    sorted = files.group_by { |f| File.dirname(f) }
+              .sort_by { |dir, _| dir }
+              .flat_map { |_, fs| fs.sort_by { |f| File.basename(f, ".*") } }
     exp = validate_regex(regex, "--proceed")
     matches = sorted.select { |f| exp.match(File.basename(f, ".*")) }
 
