@@ -44,7 +44,7 @@ pip3 install packaging
 pip3 install -r requirements.txt
 ```
 
-The `packaging` library will need to be installed separately so the `omeka_s_tools` installation (part of the `requirements.txt` list) will install correctly. 
+The `packaging` library will need to be installed separately so the `omeka_s_tools` installation (part of the `requirements.txt` list) will install correctly. If installation fails, `pip` may need to be upgraded (the error message should advise this).
 
 ### Step 4: Set up config for Omeka S posting
 
