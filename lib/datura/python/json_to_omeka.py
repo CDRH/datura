@@ -35,7 +35,6 @@ import logging
 import os
 import sys
 import time
-import traceback
 from pathlib import Path
 
 import api_fields
