@@ -226,39 +226,6 @@ def link_records(ctx, row, existing_item):
     return link_item(ctx, row, existing_item)
 
 
-def get_json_value(row, name):
-    """
-    Extract a value from a CSV-derived row dict, handling multiple encodings.
-
-    Datura serialises multi-valued fields from CSV in two ways:
-    - JSON array strings: '["value1", "value2"]'
-    - Semicolon-delimited strings: 'value1;;;value2'
-
-    Single values are returned as-is. Empty strings return the empty string.
-
-    Parameters:
-    * row  - dict representing one CSV row
-    * name - the field name to extract
-
-    Returns a string, list of strings, or empty string.
-    """
-    if len(row[name]) > 0:
-        if row[name].startswith('["'):
-            # Deserialise a JSON-encoded array.
-            try:
-                return json.loads(row[name])
-            except json.JSONDecodeError:
-                logger.warning("Could not parse JSON value for field %r: %r", name, row[name])
-                return row[name]
-        elif ";;;" in row[name]:
-            # Split a semicolon-delimited multi-value string.
-            return row[name].split(";;;")
-        else:
-            return row[name]
-    else:
-        return row[name]
-
-
 def update_item_value(ctx, item, key, value, datatype="literal"):
     """
     Set or replace a property on an Omeka item dict.
@@ -333,81 +300,6 @@ def add_formatted_value(ctx, item, key, value, datatype, label=""):
         item[key] = [formatted]
 
     return item
-
-
-def get_matching_ids_from_markdown(row, field):
-    """
-    Extract CDRH identifier strings from a field containing markdown-formatted links.
-
-    Markdown link format: [Display Name](identifier)
-    This function extracts only the identifier (the part in parentheses).
-
-    Parameters:
-    * row   - dict representing one Datura JSON item
-    * field - the field name containing markdown link strings
-
-    Returns a list of identifier strings, or an empty list if the field is
-    absent or contains no valid links.
-    """
-    if row[field]:
-        markdown_values = sorted(get_json_value(row, field))
-        ids = []
-        if markdown_values:
-            if isinstance(markdown_values,str):
-                match = re.search(r"\]\((.*)\)", markdown_values)
-                if match:
-                    ids.append(match.group(1))
-            else:
-                for value in markdown_values:
-                    match = re.search(r"\]\((.*)\)", value)
-                    if match:
-                        ids.append(match.group(1))
-                if len(ids) > 1:
-                    # Remove empty strings that may result from links with no
-                    # destination (e.g. "[Name]()").
-                    ids = list(filter(None, ids))
-        return ids
-    else:
-        return []
-
-
-def get_matching_names_from_markdown(row, field):
-    """
-    Extract display names from a field containing markdown-formatted links,
-    filtering out names that have a corresponding identifier.
-
-    Markdown link format: [Display Name](identifier)
-    This function extracts only the display name (the part in brackets), but
-    skips entries where an identifier is also present, since those items can
-    be resolved by ID via get_matching_ids_from_markdown.
-
-    Parameters:
-    * row   - dict representing one Datura JSON item
-    * field - the field name containing markdown link strings
-
-    Returns a list of display name strings, or an empty list if the field is
-    absent or all entries have identifiers.
-    """
-    if row[field]:
-        markdown_values = get_json_value(row, field)
-        names = []
-        if markdown_values:
-            if isinstance(markdown_values,str):
-                name_match = re.search(r"\[(.*?)\]", markdown_values)
-                id_match = re.search(r"\]\((.*)\)", markdown_values)
-                # Only collect the name if there is no associated identifier.
-                if name_match and (not id_match or not id_match.group(1)):
-                    names.append(name_match.group(1))
-            else:
-                for value in markdown_values:
-                    name_match = re.search(r"\[(.*?)\]", value)
-                    id_match = re.search(r"\]\((.*)\)", value)
-                    if name_match and (not id_match or not id_match.group(1)):
-                        names.append(name_match.group(1))
-        return names
-    else:
-        return []
-
 
 def get_omeka_ids(ctx, lookup_values, filter_property):
     """
