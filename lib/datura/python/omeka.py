@@ -58,7 +58,7 @@ def prepare_item_payload_using_template(ctx, terms, template_id):
                     "Data type %r for term %r not allowed by template; skipping value",
                     value['type'], term
                 )
-                break
+                continue
 
             if 'type' not in value:
                 # Infer a data type from the template definition.
@@ -71,7 +71,7 @@ def prepare_item_payload_using_template(ctx, terms, template_id):
                 else:
                     # Cannot determine a type; skip this value.
                     logger.warning("Cannot determine data type for term %r; skipping value",term)
-                    break
+                    continue
 
             if "property_id" in value:
                 # Value was already formatted by a prior call; append as-is to
