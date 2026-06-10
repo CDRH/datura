@@ -121,10 +121,15 @@ def filter_items_by_date(update_time, pathlist):
     * pathlist    - iterable of pathlib.Path or string paths to filter
     """
     source_base = Path.cwd() / "source"
+    # Build index once: stem -> list of source paths
+    source_index = {}
+    for sf in source_base.glob("*/*.*"):
+        source_index.setdefault(sf.stem, []).append(sf)
+
     result = []
     for p in pathlist:
-        identifier = Path(str(p)).stem
-        source_files = list(source_base.glob("*/{}.*".format(identifier)))
+        identifier = Path(p).stem
+        source_files = source_index.get(identifier, [])
         if not source_files:
             logger.debug(
                 "No source file found for %r; including without date filter", identifier
@@ -132,12 +137,11 @@ def filter_items_by_date(update_time, pathlist):
             result.append(p)
             continue
         source_mtime = max(
-            datetime.fromtimestamp(os.path.getmtime(str(sf))) for sf in source_files
+            datetime.fromtimestamp(sf.stat().st_mtime) for sf in source_files
         )
         if source_mtime >= update_time:
             result.append(p)
     return result
-
 
 
 def filter_items_by_format(format_type, pathlist):
@@ -159,8 +163,6 @@ def filter_items_by_format(format_type, pathlist):
     * pathlist    - iterable of pathlib.Path or string paths to filter
     """
     source_dir = Path.cwd() / "source" / format_type
-    result = []
-    for p in pathlist:
-        if list(source_dir.glob("{}.*".format(Path(p).stem))):
-            result.append(p)
-    return result
+    # Build the set of stems once instead of globbing per item
+    source_stems = {sf.stem for sf in source_dir.glob("*")}
+    return [p for p in pathlist if Path(p).stem in source_stems]
