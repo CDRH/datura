@@ -584,20 +584,18 @@ class OmekaContext:
 
 def finish_run(ctx, args, start_time):
     """
-    Report errors, write count to --error-file if provided, print timing, and exit.
+    Report errors, print error count and timing, and exit.
 
     Called at the end of each Omeka entrypoint script's main() function.
     Exits 0 on success, 1 if any errors were recorded.
 
     Parameters:
     * ctx        - OmekaContext whose _errors list is inspected
-    * args       - argparse.Namespace; checked for optional error_file attribute
+    * args       - argparse.Namespace (unused; kept for call-site compatibility)
     * start_time - float from time.time() captured at the top of main()
     """
     ctx.report_errors()
-    if getattr(args, "error_file", None):
-        with open(args.error_file, "w") as f:
-            f.write(str(len(ctx._errors)))
+    print(f"{len(ctx._errors)} Omeka posting error(s)")
     elapsed = int(time.time() - start_time)
     hours, rem = divmod(elapsed, 3600)
     mins, secs = divmod(rem, 60)

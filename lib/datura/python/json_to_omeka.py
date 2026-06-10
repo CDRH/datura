@@ -126,12 +126,6 @@ def _parse_args():
         dest="log_level",
         help="Set the logging verbosity (default: INFO).",
     )
-    parser.add_argument(
-        "--error-file",
-        dest="error_file",
-        default=None,
-        help="If provided, write the integer error count to this file before exiting.",
-    )
     return parser.parse_args()
 
 
