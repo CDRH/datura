@@ -171,6 +171,11 @@ def post_items(ctx, pathlist, json_output_dir=None):
                 logger.warning("Skipping item without identifier in %s", filename)
                 continue
 
+            title = json_item.get("title")
+            if not title:
+                logger.warning("Skipping item without title in %s", filename)
+                continue
+
             if json_output_dir is not None:
                 # JSON output mode: build the payload and write it to disk
                 # rather than to the Omeka API.
@@ -337,6 +342,11 @@ def link_items(ctx, pathlist):
             identifier = json_item.get("identifier")
             if not identifier:
                 logger.debug("Skipping item without identifier in %s", filename)
+                continue
+
+            title = json_item.get("title")
+            if not title:
+                logger.warning("Skipping item without title in %s", filename)
                 continue
 
             try:

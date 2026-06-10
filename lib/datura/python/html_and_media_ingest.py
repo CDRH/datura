@@ -377,6 +377,11 @@ def process_items(ctx, pathlist, html_dir, iiif_dir):
                 logger.warning("Skipping item without identifier in %s", filename)
                 continue
 
+            title = json_item.get("title")
+            if not title:
+                logger.warning("Skipping item without title in %s", filename)
+                continue
+
             # --- Look up the item in Omeka ---
             try:
                 matching_items = ctx.client.filter_items_by_property(
