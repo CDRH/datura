@@ -355,8 +355,7 @@ class OmekaContext:
         """
         # ---- Validate required config keys --------------------------------
         # Validate up front so that failures are immediate and descriptive.
-        # A missing key surfaced here gives a clear error message; the same
-        # key missing inside a loop gives an opaque KeyError mid-run.
+        # Checks for all keys so user is alerted to any missing key at the outset.
         required_keys = [
             "omeka_server",
             "key_identity",
@@ -364,14 +363,14 @@ class OmekaContext:
             "resource_template",
             "omeka_data_base",
         ]
-        for key in required_keys:
-            if key not in env_config:
-                raise OmekaConfigError(RED + 
-                    "Missing required config key {!r}. "
-                    "Check the 'default' or {!r} section of config/private.yml."
-                    .format(key, environment)
-                    + RESET
-                )
+        missing_keys = [key for key in required_keys if key not in env_config]
+        if missing_keys:
+            raise OmekaConfigError(RED + 
+                "Missing required config key(s): {}. "
+                "Check the 'default' or {!r} section of config/private.yml."
+                .format(missing_keys, environment)
+                + RESET
+            )
 
         # ---- Validate environment-specific item_set ---------------------------
         if "item_set" not in env_config:
