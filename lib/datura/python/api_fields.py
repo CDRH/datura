@@ -394,26 +394,19 @@ def link_item_record(ctx, item, key, values, item_set=False, filter_property="dc
     resource_type = "resource:itemset" if item_set else "resource:item"
 
     for omeka_id in omeka_ids:
-        # Guard against duplicate links — check whether this Omeka ID is
-        # already present in the list before appending.
-        already_linked = (
-            item[key] and
-            omeka_id in [v.get("value_resource_id") for v in item[key]]
-        )
-        if not already_linked:
-            prop_value = {
-                "type": resource_type,
-                "value": omeka_id,
-            }
-            formatted = ctx.client.prepare_property_value(prop_value, prop_id)
+        prop_value = {
+            "type": resource_type,
+            "value": omeka_id,
+        }
+        formatted = ctx.client.prepare_property_value(prop_value, prop_id)
 
-            if item_set:
-                # The item-sets plugin requires these extra fields in addition
-                # to what prepare_property_value generates.
-                formatted['@id'] = '{}/item_sets/{}'.format(ctx.client.api_url, omeka_id)
-                formatted['value_resource_id'] = omeka_id
-                formatted['value_resource_name'] = 'item_sets'
+        if item_set:
+            # The item-sets plugin requires these extra fields in addition
+            # to what prepare_property_value generates.
+            formatted['@id'] = '{}/item_sets/{}'.format(ctx.client.api_url, omeka_id)
+            formatted['value_resource_id'] = omeka_id
+            formatted['value_resource_name'] = 'item_sets'
 
-            item[key].append(formatted)
+        item[key].append(formatted)
 
     return item
