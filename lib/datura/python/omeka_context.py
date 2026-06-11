@@ -147,27 +147,7 @@ class OmekaAPIError(OmekaError):
         super().__init__(
             "{} failed for {!r}: {}".format(operation, identifier, cause)
         )
-
-
-class OmekaItemNotFoundError(OmekaError):
-    """
-    Raised when an item lookup returns zero results but exactly one was expected.
-
-    Typical causes:
-    - An item was not ingested during the posting pass before the linking pass ran
-    - An identifier was changed between runs, leaving the old Omeka record orphaned
-    """
-
-
-class OmekaMultipleMatchesError(OmekaError):
-    """
-    Raised when an item lookup returns more than one result for a given identifier.
-
-    Identifiers should be unique within an item set. Multiple matches indicate a
-    data integrity problem that must be resolved in the Omeka admin UI before the
-    affected item can be updated automatically.
-    """
-
+        
 
 class OmekaMediaError(OmekaError):
     """

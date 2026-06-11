@@ -43,8 +43,6 @@ from omeka_context import (
     OmekaConfigError,
     OmekaContext,
     OmekaMediaError,
-    OmekaMultipleMatchesError,
-    OmekaItemNotFoundError,
     configure_logging,
     finish_run,
 )
