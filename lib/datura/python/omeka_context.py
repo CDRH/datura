@@ -420,12 +420,10 @@ class OmekaContext:
     def item_set_id(self):
         # type: () -> Optional[int]
         """
-        The Omeka item set ID for the current environment, or None.
+        The Omeka item set ID for the current environment.
 
         Stored in the environment-specific config section so that development
-        and production ingests target different item sets. Returns None if no
-        item_set key is present (e.g. running locally without a complete
-        private.yml, or using an environment that has no item_set configured).
+        and production ingests can target different item sets. 
         """
         return self._env_config.get("item_set")
 
