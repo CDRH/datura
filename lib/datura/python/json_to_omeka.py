@@ -37,16 +37,29 @@ import sys
 import time
 from pathlib import Path
 
-import api_fields
-import omeka
-from omeka_context import (
-    OmekaAPIError,
-    OmekaConfigError,
-    OmekaContext,
-    configure_logging,
-    finish_run,
-)
-from omeka import filter_items, filter_items_by_date, filter_items_by_format, prepare_item_payload_using_template
+class OmekaSetupError(Exception):
+    """Raised when a required import is unavailable, e.g. venv not activated."""
+
+try:
+    import api_fields
+    import omeka
+    from omeka_context import (
+        OmekaAPIError,
+        OmekaConfigError,
+        OmekaContext,
+        configure_logging,
+        finish_run,
+    )
+    from omeka import filter_items, filter_items_by_date, filter_items_by_format, prepare_item_payload_using_template
+except ModuleNotFoundError as err:
+    raise SystemExit(
+        "\033[31m"
+        "ERROR: {}\n"
+        "A required Python package could not be found. "
+        "You may need to ensure the virtual environment is activated before running this script.\n"
+        "You may also need to be connected to the VPN."
+        "\033[0m".format(err)
+    ) from err
 
 # Module-level logger.  Records from this module appear as "json_to_omeka"
 # in log output so they can be filtered independently from other modules.

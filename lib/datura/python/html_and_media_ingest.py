@@ -32,20 +32,30 @@ import sys
 import time
 from pathlib import Path
 
-import requests
-from requests.exceptions import HTTPError
+try:
+    import requests
+    from requests.exceptions import HTTPError
 
-import omeka
-from omeka import filter_items, filter_items_by_date, filter_items_by_format
-from omeka_context import (
-    OmekaAPIError,
-    OmekaAuthError,
-    OmekaConfigError,
-    OmekaContext,
-    OmekaMediaError,
-    configure_logging,
-    finish_run,
-)
+    import omeka
+    from omeka import filter_items, filter_items_by_date, filter_items_by_format
+    from omeka_context import (
+        OmekaAPIError,
+        OmekaAuthError,
+        OmekaConfigError,
+        OmekaContext,
+        OmekaMediaError,
+        configure_logging,
+        finish_run,
+    )
+except ModuleNotFoundError as err:
+    raise SystemExit(
+        "\033[31m"
+        "ERROR: {}\n"
+        "A required Python package could not be found. "
+        "You may need to ensure the virtual environment is activated before running this script.\n"
+        "You may also need to be connected to the VPN."
+        "\033[0m".format(err)
+    ) from err
 
 # Module-level logger.  Records from this module appear as
 # "html_and_media_ingest" in log output.
