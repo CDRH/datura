@@ -52,7 +52,6 @@ ARGV.delete("--json-output")
 ARGV.unshift("-x", "es", "-o", "-t")
 #create DataManager before conditional run
 manager = Datura::DataManager.new
-#skip generation step with option -s
 if generate_es
     manager.run
 end
