@@ -149,9 +149,9 @@ def delete_media_items(ctx, matching_item):
             logger.info("Deleting media item %s", media_id)
             ctx.client.delete_resource(media_id, "media")
         except HTTPError as err:
-            if err.response.status_code == 401:
+            if err.response.status_code == 401 or err.response.status_code == 403:
                 raise OmekaAuthError(
-                    "Omeka S returned 401 Unauthorized. "
+                    "Omeka S returned 401 Unauthorized or 403 Forbidden. "
                     "Check that key_identity and key_credential in config/private.yml are correct. "
                     "You may also need to be logged onto the VPN."
                 ) from err

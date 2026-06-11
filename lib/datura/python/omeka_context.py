@@ -104,7 +104,7 @@ class OmekaConfigError(OmekaError):
 
 class OmekaAuthError(OmekaConfigError):
     """
-    Raised when the Omeka S API returns 401 Unauthorized.
+    Raised when the Omeka S API returns 401 Unauthorized or 403 Forbidden.
 
     This is always fatal: if credentials are wrong every API call will fail,
     so the process exits immediately rather than accumulating per-item failures.
@@ -116,12 +116,12 @@ class OmekaAuthError(OmekaConfigError):
 
 
 def _is_unauthorized(err):
-    """Return True if err is an HTTP 401 response error from the requests library."""
+    """Return True if err is an HTTP 401 or 403 response error from the requests library."""
     try:
         from requests.exceptions import HTTPError
         return isinstance(err, HTTPError) and getattr(
             getattr(err, "response", None), "status_code", None
-        ) == 401
+        ) in {401, 403}
     except ImportError:
         return False
 
@@ -556,7 +556,7 @@ class OmekaContext:
         cause = getattr(err, "cause", None)
         if _is_unauthorized(cause):
             raise OmekaAuthError(RED + 
-                "Omeka S returned 401 Unauthorized. "
+                "Omeka S returned 401 Unauthorized or 403 Forbidden. "
                 "Check that key_identity and key_credential in config/private.yml are correct. "
                 "You may also need to be logged onto the VPN."
                 + RESET
