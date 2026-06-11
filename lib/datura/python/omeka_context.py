@@ -32,7 +32,7 @@ logger = logging.getLogger(__name__)
 CYAN = "\033[36m"
 GREEN = "\033[32m"
 RED = "\033[31m"
-RED2 = "\033[1;31m"
+BRIGHTRED = "\033[1;31m"
 YELLOW = "\033[33m"
 RESET = "\033[0m"
 
@@ -42,7 +42,7 @@ class ColoredConsoleHandler(logging.StreamHandler):
         logging.INFO:     GREEN,
         logging.WARNING:  YELLOW,
         logging.ERROR:    RED,
-        logging.CRITICAL: RED2,
+        logging.CRITICAL: BRIGHTRED,
     }
     RESET = RESET
     def emit(self, record):
@@ -60,9 +60,9 @@ def configure_logging(level="INFO"):
         "logs/python.log", maxBytes=5 * 1024 * 1024, backupCount=3
     )
     file_handler.setFormatter(logging.Formatter("%(asctime)s [%(levelname)s] %(name)s: %(message)s"))
-    file_handler.setLevel(logging.DEBUG)  # always save everything
+    file_handler.setLevel(logging.DEBUG)  # always save everything to logs
 
-    # Console handler — colored, respects the requested level
+    # Console handler — respects the requested level
     console_handler = ColoredConsoleHandler()
     console_handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)-8s %(name)s: %(message)s"))
     console_handler.setLevel(numeric_level)

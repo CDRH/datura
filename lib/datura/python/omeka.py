@@ -18,7 +18,7 @@ def prepare_item_payload_using_template(ctx, terms, template_id):
     """
     Build an item payload, validating terms and values against a resource template.
 
-    Behaviour:
+    Behavior:
     - Terms not present in the template are logged and dropped from the payload.
     - Values whose data type does not match the template definition are dropped.
     - If no data type is supplied for a value, the template default is used,
@@ -163,6 +163,6 @@ def filter_items_by_format(format_type, pathlist):
     * pathlist    - iterable of pathlib.Path or string paths to filter
     """
     source_dir = Path.cwd() / "source" / format_type
-    # Build the set of stems once instead of globbing per item
+    # Build the set of stems once
     source_stems = {sf.stem for sf in source_dir.glob("*")}
     return [p for p in pathlist if Path(p).stem in source_stems]

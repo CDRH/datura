@@ -49,7 +49,7 @@ def build_item_dict(ctx, json_item, existing_item):
     try:
         # Load the collection-specific field definitions once during OmekaContext
         # initialization (collection-specific CustomFields subclass if omeka_overrides.py 
-        # is present in scripts/python, otherwise the defaultFieldDefinitions). 
+        # is present in scripts/python, otherwise the default FieldDefinitions). 
         fields = ctx.fields
 
         # Start from the existing Omeka item dict when updating, or an empty
@@ -204,7 +204,6 @@ def prepare_item(ctx, row, existing_item=None):
 
     Returns the built item dict, or raises ValueError if field extraction fails.
     """
-    # TODO: add conditional logic here for items that need a different template
     return build_item_dict(ctx, row, existing_item)
 
 
@@ -222,7 +221,6 @@ def link_records(ctx, row, existing_item):
 
     Returns the updated item dict.
     """
-    # TODO: add conditional logic here if different relationship schemas are needed
     return link_item(ctx, row, existing_item)
 
 

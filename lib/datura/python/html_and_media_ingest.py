@@ -20,7 +20,7 @@ Usage (from collection root directory):
     python3 html_and_media_ingest.py -m         # skip items that already have media
     python3 html_and_media_ingest.py --log-level DEBUG
 
-The script is invoked by bin/post_omeka_html in the Datura gem.  The Ruby
+The script is invoked by bin/post_omeka_html in the Datura gem. The Ruby
 wrapper passes -e, -r, and -m arguments from its own CLI.
 """
 
@@ -57,7 +57,7 @@ except ModuleNotFoundError as err:
         "\033[0m".format(err)
     ) from err
 
-# Module-level logger.  Records from this module appear as
+# Module-level logger. Records from this module appear as
 # "html_and_media_ingest" in log output.
 logger = logging.getLogger(__name__)
 
@@ -274,7 +274,7 @@ def ingest_thumbnail(ctx, json_item, matching_item, iiif_dir):
         ctx.client.add_media_to_item(matching_item["o:id"], thumbnail_local, payload=media_payload)
     except FileNotFoundError:
         # The download step wrote the file, but something removed it between
-        # download and upload.  Unlikely in practice but handled explicitly
+        # download and upload. Unlikely in practice but handled explicitly
         # so the error message is clear.
         logger.warning(
             "Thumbnail file %s not found at upload time; skipping",
@@ -294,15 +294,12 @@ def ingest_html(ctx, json_item, matching_item, html_dir):
 
     The HTML ingester reads content from payload["data"]["html"] rather than
     from the uploaded file bytes; the file is opened only to read its content
-    into memory.  The Omeka S "html" ingester stores the markup directly in
+    into memory. The Omeka S "html" ingester stores the markup directly in
     the database, making it searchable and renderable within Omeka.
 
     Skips silently if:
     * The .html file does not exist at html_dir/<identifier>.html.
     * The file exists but is empty or contains only whitespace.
-      (An empty HTML file would create a blank media object in Omeka; this
-      guard prevents that.  The root cause — an XSLT transform producing empty
-      output — should be investigated in the Datura XSLT/transform layer.)
 
     Parameters:
     * ctx           - OmekaContext
@@ -318,14 +315,12 @@ def ingest_html(ctx, json_item, matching_item, html_dir):
             html_content = file.read()
     except FileNotFoundError:
         # A missing HTML file is common for items that have no text
-        # representation (e.g. pure image records).  Log at INFO so operators
+        # representation (e.g. pure image records). Log at INFO so users
         # can see which items were skipped without it being alarming.
         logger.info("HTML file %s not found; skipping", file_path)
         return
 
-    # Guard against empty or whitespace-only files.  An empty POST would
-    # create a blank HTML media object in Omeka, which is both incorrect and
-    # misleading when viewing the item in the admin UI.
+    # Guard against empty or whitespace-only files.
     if not html_content.strip():
         logger.warning(
             "HTML file for %r is empty; skipping.  "
@@ -435,7 +430,7 @@ def process_items(ctx, pathlist, html_dir, iiif_dir):
                 continue
 
             # --- Media pipeline ---
-            # Delete first, then re-upload.  Order matters: thumbnail must be
+            # Delete first, then re-upload. Order matters: thumbnail must be
             # uploaded before HTML so that Omeka designates the image as
             # primary_media.
             delete_media_items(ctx, matching_item)

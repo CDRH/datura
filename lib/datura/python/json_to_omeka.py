@@ -1,7 +1,7 @@
 """
 json_to_omeka.py
 
-Entrypoint script: reads Datura-generated Elasticsearch JSON files and posts
+Entrypoint script: reads Datura-generated ElasticSearch JSON files and posts
 each item to an Omeka S instance.
 
 The script runs in two sequential passes:
@@ -36,9 +36,6 @@ import os
 import sys
 import time
 from pathlib import Path
-
-class OmekaSetupError(Exception):
-    """Raised when a required import is unavailable, e.g. venv not activated."""
 
 try:
     import api_fields
@@ -101,9 +98,9 @@ def _parse_args():
         default=False,
         help=(
             "Write Omeka S item payloads to output/<environment>/omeka/ instead "
-            "of posting to the API.  No items are created or updated in Omeka. "
+            "of posting to the API. No items are created or updated in Omeka. "
             "An API connection is still required for property ID lookups and "
-            "template validation.  The link pass is skipped because no live "
+            "template validation. The link pass is skipped because no live "
             "Omeka item IDs are available."
         ),
     )
@@ -112,7 +109,7 @@ def _parse_args():
         default=None,
         help=(
             "Optional regex pattern to restrict processing to matching "
-            "file paths.  Example: -r 'abc123' processes only files whose "
+            "file paths. Example: -r 'abc123' processes only files whose "
             "path contains 'abc123'."
         ),
     )
@@ -122,7 +119,7 @@ def _parse_args():
         dest="update_time",
         help=(
             "Only process items whose source file was modified at or after "
-            "this date/time.  Accepts 'today', a date (2015-01-01), or "
+            "this date/time. Accepts 'today', a date (2015-01-01), or "
             "date-time (2015-01-01T18:24)."
         ),
     )
@@ -144,7 +141,7 @@ def post_items(ctx, pathlist, json_output_dir=None):
     """
     First pass: create or update Omeka items for every JSON record.
 
-    Iterates over all JSON files in pathlist.  For each record:
+    Iterates over all JSON files in pathlist. For each record:
     * Items whose identifier already exists in Omeka are updated in place.
     * Items not yet in Omeka are created from scratch.
     * Items that return multiple Omeka matches are skipped with a warning
@@ -153,7 +150,7 @@ def post_items(ctx, pathlist, json_output_dir=None):
     * Items whose identifier field is falsy are skipped with a warning.
 
     Per-item errors (API failures, malformed payload) are recorded via
-    ctx.record_error() and do NOT halt the run.  Fatal errors (wrong
+    ctx.record_error() and do NOT halt the run. Fatal errors (wrong
     credentials, missing config) raise exceptions that propagate to main().
 
     Parameters:
@@ -239,7 +236,7 @@ def add_new_item(ctx, json_item, template_number):
     Build the Omeka payload for a new item and POST it to the API.
 
     Calls api_fields.prepare_item() to extract and format each field from
-    the Datura JSON record.  If preparation produces no payload (e.g. all
+    the Datura JSON record. If preparation produces no payload (e.g. all
     fields were absent), the item is skipped with a warning rather than
     POSTing an empty object.
 
@@ -255,7 +252,7 @@ def add_new_item(ctx, json_item, template_number):
         logger.warning("Could not prepare payload for %r; skipping", identifier)
         return
 
-    # Log the identifier we are about to create.  Use .get() with a default
+    # Log the identifier we are about to create. Use .get() with a default
     # rather than direct dict access so a missing dcterms:identifier key
     # does not raise KeyError and halt the run.
     title_val = (
@@ -324,12 +321,12 @@ def link_items(ctx, pathlist):
     """
     Second pass: populate relational fields between Omeka items.
 
-    Re-reads the same JSON files processed in pass 1.  For each record,
+    Re-reads the same JSON files processed in pass 1. For each record,
     resolves the Omeka item IDs of related items (has_part, has_source, etc.)
     and PATCHes the item with link values.
 
     A separate pass is necessary because linked items must already exist in
-    Omeka before they can be referenced.  Running this pass after all items
+    Omeka before they can be referenced. Running this pass after all items
     have been created (or updated) in pass 1 guarantees that the target items
     are present.
 
@@ -442,7 +439,7 @@ def main():
     2. Configure the root logger (before any other work so all output is
        captured at the right level).
     3. Build OmekaContext — loads config/private.yml, validates required keys,
-       initialises the authenticated API client.  Exits with a descriptive
+       initialises the authenticated API client. Exits with a descriptive
        error message if the config is missing or malformed (OmekaConfigError).
     4. Discover JSON files under output/<environment>/es/.
     5. Apply regex filter if -r was passed.
@@ -461,8 +458,8 @@ def main():
 
     # OmekaContext.from_args() raises OmekaConfigError (a subclass of
     # OmekaError) if config/private.yml is missing, unparseable, or missing
-    # a required key.  Let this propagate to the top level — configuration
-    # errors are fatal and should produce a clear traceback for the operator.
+    # a required key. Let this propagate to the top level — configuration
+    # errors are fatal and should produce a clear traceback.
     ctx = OmekaContext.from_args(args)
 
     # Resolve the ES output directory for the requested environment.
@@ -503,9 +500,9 @@ def main():
     logger.info("Starting pass 1: item posting")
     post_items(ctx, pathlist)
 
-    # Reset the API client between passes.  ctx.reset_client() re-instantiates
+    # Reset the API client between passes. ctx.reset_client() re-instantiates
     # OmekaAPIClient with the same credentials, giving a fresh connection for
-    # the second round of requests.  The property ID cache is preserved because
+    # the second round of requests. The property ID cache is preserved because
     # term-to-ID mappings do not change between passes.
     logger.info("Pass 1 complete. Resetting API client for pass 2.")
     ctx.reset_client()
