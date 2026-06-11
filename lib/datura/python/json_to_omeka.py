@@ -79,10 +79,6 @@ def _parse_args():
     * regex       - optional file-filter pattern string, or None
     * log_level   - logging level string, default "INFO"
 
-    Note: this entrypoint has no --media-skip flag.  That flag belongs only
-    to html_and_media_ingest.py, which handles media re-ingestion.
-    getattr(args, "media_skip", False) in OmekaContext.from_args() handles
-    its absence gracefully.
     """
     parser = argparse.ArgumentParser(
         description="Post Datura ES JSON output to an Omeka S instance."
