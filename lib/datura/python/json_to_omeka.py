@@ -161,6 +161,7 @@ def post_items(ctx, pathlist, json_output_dir=None):
     """
     for path in pathlist:
         filename = str(path)
+        rel = path.relative_to(Path.cwd())
         with open(filename) as jsonfile:
             json_items = json.load(jsonfile)
 
@@ -172,12 +173,12 @@ def post_items(ctx, pathlist, json_output_dir=None):
             identifier = json_item.get("identifier")
             if not identifier:
                 # Records without an identifier cannot be matched or created.
-                logger.warning("Skipping item without identifier in %s", filename)
+                logger.warning("Skipping item without identifier in %s", rel)
                 continue
 
             title = json_item.get("title")
             if not title:
-                logger.warning("Skipping item without title in %s", filename)
+                logger.warning("Skipping item without title in %s", rel)
                 continue
 
             if json_output_dir is not None:
@@ -339,18 +340,19 @@ def link_items(ctx, pathlist):
     """
     for path in pathlist:
         filename = str(path)
+        rel = path.relative_to(Path.cwd())
         with open(filename) as jsonfile:
             json_items = json.load(jsonfile)
 
         for json_item in json_items:
             identifier = json_item.get("identifier")
             if not identifier:
-                logger.debug("Skipping item without identifier in %s", filename)
+                logger.debug("Skipping item without identifier in %s", rel)
                 continue
 
             title = json_item.get("title")
             if not title:
-                logger.warning("Skipping item without title in %s", filename)
+                logger.warning("Skipping item without title in %s", rel)
                 continue
 
             try:

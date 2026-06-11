@@ -371,18 +371,19 @@ def process_items(ctx, pathlist, html_dir, iiif_dir):
     """
     for path in pathlist:
         filename = str(path)
+        rel = path.relative_to(Path.cwd())
         with open(filename) as jsonfile:
             json_items = json.load(jsonfile)
 
         for json_item in json_items:
             identifier = json_item.get("identifier")
             if not identifier:
-                logger.warning("Skipping item without identifier in %s", filename)
+                logger.warning("Skipping item without identifier in %s", rel)
                 continue
 
             title = json_item.get("title")
             if not title:
-                logger.warning("Skipping item without title in %s", filename)
+                logger.warning("Skipping item without title in %s", rel)
                 continue
 
             # --- Look up the item in Omeka ---
