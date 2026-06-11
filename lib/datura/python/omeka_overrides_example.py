@@ -28,3 +28,13 @@ class CustomFields(FieldDefinitions):
     # def dateDisplay(self, json):
     #     raw = json.get("date_display", None)
     #     return raw.strip() if raw else None
+
+    # Pattern 5: date display fix for -01-01
+    # dates are automatically converted by Datura to yyyy-01-01 if month and date are missing
+    # use the below to convert such dates back to yyyy for Omeka S (since it is allowed by the date parser)
+    # def date(self, json):
+    #     date_to_parse = json.get("date", None)
+    #     if date_to_parse and "-01-01" in date_to_parse:
+    #         return datetime.strptime(date_to_parse, "%Y-%m-%d").year
+    #     else:
+    #         return date_to_parse

@@ -52,9 +52,7 @@ class FieldDefinitions:
         uri_data = json.get("uri_data", None)
         if uri_data:
             # Strip the original path and reconstruct the URI under the
-            # collection's configured media base URL. The base URL comes
-            # from the constructor rather than a global so this class can
-            # be instantiated safely in tests without a live config file.
+            # collection's configured media base URL. 
             filename = uri_data.split("/")[-1]
             new_uri_data = "{}/{}".format(self._omeka_data_base, filename)
             return new_uri_data
@@ -71,16 +69,11 @@ class FieldDefinitions:
         contributor_names = [contributor['name'] for contributor in json.get("contributor") or [] if 'name' in contributor]
         return contributor_names
     
+    # NOTE: use Pattern 5 in omeka_overrides if automatic conversion of dates with year or month only to yyyy-01-01
+    # back to yyyy for Omeka is desired
     def date(self, json):
         date_to_parse = json.get("date", None)
         return date_to_parse
-        # Uncomment the below and remove the above line if this fix is needed
-        # if date_to_parse and "-01-01" in date_to_parse:
-        #     #dates are automatically converted by Datura to yyyy-01-01 if month and date are missing
-        #     #convert such dates back to yyyy for Omeka S (since it is allowed by the date parser)
-        #     return datetime.strptime(date_to_parse, "%Y-%m-%d").year
-        # else:
-        #     return date_to_parse
     
     def dateYear(self, json):
         date_to_parse = json.get("date", None)
