@@ -242,17 +242,8 @@ class OmekaContext:
 
         # Load the environment-specific section (primarily contains item_set).
         # If the section is absent (e.g. an unrecognised environment name was
-        # passed), log a warning and fall back to an empty dict — item_set_id
-        # will be None and the run will proceed without filtering by item set.
-        try:
-            env_config = cls._load_config(conf_path, env=args.environment)
-        except OmekaConfigError:
-            logger.warning(
-                "No config section found for environment %r; "
-                "item_set will be None and items will not be scoped to a set.",
-                args.environment,
-            )
-            env_config = {}
+        # passed), raise an error and exit.
+        env_config = cls._load_config(conf_path, env=args.environment)
 
         # Merge so that environment-specific values override defaults, giving
         # collections the ability to override any default key (e.g.
