@@ -482,7 +482,7 @@ def main():
     logger.info(
         "Found %d JSON file(s) in %s (environment=%r, media_skip=%s)",
         len(pathlist),
-        json_dir,
+        "output/{}/es".format(ctx.environment),
         ctx.environment,
         ctx.media_skip,
     )
