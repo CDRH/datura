@@ -23,7 +23,7 @@ Usage (from collection root directory):
 The script is invoked by bin/post_omeka_html in the Datura gem. The Ruby
 wrapper passes -e, -r, and -m arguments from its own CLI.
 
-Collection-specific overrides: copy html_and_media_ingest_example.py to
+Collection-specific overrides: copy examples/html_and_media_ingest_example.py to
 scripts/python/html_and_media_ingest.py and define only the methods you need
 to change. MediaIngest is available in that file's scope automatically.
 """

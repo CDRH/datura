@@ -26,6 +26,9 @@ Usage (from collection root directory):
 The script is invoked by bin/post_omeka in the Datura gem.  The Ruby wrapper
 passes -e and -r arguments from its own CLI.  No changes to bin/post_omeka
 are required to support the --log-level flag (it defaults to INFO).
+
+Collection-specific pass hooks: copy examples/json_to_omeka_example.py to
+scripts/python/json_to_omeka.py and define only the hook methods you need.
 """
 
 import argparse

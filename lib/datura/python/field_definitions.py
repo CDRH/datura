@@ -13,7 +13,7 @@ class FieldDefinitions:
     that Omeka property, or None if the field is absent.
 
     To override any method for a specific collection, copy
-    omeka_overrides_example.py to scripts/python/omeka_overrides.py in the
+    examples/omeka_overrides_example.py to scripts/python/omeka_overrides.py in the
     collection repository and subclass FieldDefinitions there. The get_fields()
     factory below will load the override class automatically.
     """

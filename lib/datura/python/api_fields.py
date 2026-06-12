@@ -13,7 +13,7 @@ All methods that need API access or configuration receive a ctx (OmekaContext)
 parameter. The property ID cache on ctx (ctx.get_property_id()) means each Omeka
 term is looked up only once per run rather than once per field per item.
 
-Collection-specific overrides: copy api_fields_example.py to
+Collection-specific overrides: copy examples/api_fields_example.py to
 scripts/python/api_fields.py and define only the methods you need to change.
 ApiFields is available in that file's scope automatically (no import needed).
 """

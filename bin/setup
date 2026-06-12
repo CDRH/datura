@@ -84,7 +84,7 @@ end
 puts "-- Place XSLT, Ruby, and Python overrides in scripts/overrides"
 FileUtils.mkdir_p(File.join(coll, "scripts", "overrides"))
 FileUtils.touch(File.join(coll, "scripts", "overrides", ".keep"))
-FileUtils.cp(File.join(datura, "lib", "datura", "python", "omeka_overrides_example.py"), File.join(coll, "scripts", "overrides", "omeka_overrides_example.py"))
+FileUtils.cp(File.join(datura, "lib", "datura", "python", "examples", "omeka_overrides_example.py"), File.join(coll, "scripts", "overrides", "omeka_overrides_example.py"))
 
 
 # SOURCE

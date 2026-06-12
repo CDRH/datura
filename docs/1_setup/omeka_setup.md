@@ -15,7 +15,7 @@ cd .
 bundle install
 ``` 
 
-If you plan to create overrides for any Omeka fields, you can copy the `lib/datura/python/omeka_overrides_example.py` in the Datura library (at `/lib/datura/python/`) to your repository as `[collection-directory]/scripts/python/omeka_overrides.py`.
+If you plan to create overrides for any Omeka fields, you can copy the `lib/datura/python/examples/omeka_overrides_example.py` in the Datura library (at `/lib/datura/python/examples`) to your repository as `[collection-directory]/scripts/python/omeka_overrides.py`.
 
 ### Step 2: Enable a virtual environment
 
