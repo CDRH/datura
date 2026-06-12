@@ -73,7 +73,7 @@ class ApiFields:
             # writing, so stale values from the existing item are replaced.
             built_item = existing_item if existing_item else {}
 
-                        self.update_item_value(ctx, built_item, "dcterms:title",             fields.title(json_item))
+            self.update_item_value(ctx, built_item, "dcterms:title",             fields.title(json_item))
             self.update_item_value(ctx, built_item, "dcterms:identifier",        fields.identifier(json_item))
             self.update_item_value(ctx, built_item, "dh:collection",             fields.collection(json_item))
             self.update_item_value(ctx, built_item, "dh:category",               fields.category(json_item))
@@ -281,12 +281,11 @@ class ApiFields:
                 if dedup_key not in seen:
                     seen[dedup_key] = v
             for v in seen.values():
-                display = v.get("name")
+                display = v.get("name") if isinstance(v,dict) else v
                 if display is None: 
                     continue
                 else:
-                    display = v.get("name")
-                item = self.add_formatted_value(ctx, item, key, display, datatype)
+                    item = self.add_formatted_value(ctx, item, key, display, datatype)
 
 
     def add_formatted_value(self, ctx, item, key, value, datatype, label=""):
@@ -330,13 +329,13 @@ class ApiFields:
 
         return item
 
-    def get_omeka_ids(self, ctx, lookup_values, filter_property):
+    def get_omeka_ids(self, ctx, lookup_values, filter_property, item_set_id="ctx_default"):
         """
         Resolve a list of lookup values to Omeka numeric item IDs.
 
-        For each lookup value, queries the Omeka API to find the matching item
-        within the configured item set. Used during the linking pass to convert
-        CDRH identifiers into the Omeka IDs required for resource:item links.
+        For each lookup value, queries the Omeka API to find the matching item. 
+        Used during the linking pass to convert CDRH identifiers into the Omeka IDs 
+        required for resource:item links.
 
         Parameters:
         * ctx            - OmekaContext providing the API client and item_set_id
@@ -345,11 +344,19 @@ class ApiFields:
                            when filter_property is "o:id"
         * filter_property - the Omeka property to match against, e.g.
                             "dcterms:identifier" or "o:id"
+        * item_set_id    - restricts the search to a specific Omeka item set.
+                           Defaults to ctx.item_set_id (the current collection).
+                           Pass None to search across all item sets — useful when
+                           the target items (e.g. a personography) live in a
+                           separate item set from the collection being ingested.
 
         Returns a list of integer Omeka item IDs for all successfully resolved values.
         Logs a warning for values that cannot be resolved.
         """
         omeka_ids = []
+
+        # Resolve the sentinel to ctx.item_set_id so existing callers are unaffected.
+        resolved_item_set_id = ctx.item_set_id if item_set_id == "ctx_default" else item_set_id
 
         # Normalise a single value to a list for uniform iteration.
         lookup_values = [lookup_values] if not isinstance(lookup_values, list) else lookup_values
@@ -367,7 +374,7 @@ class ApiFields:
                 match = ctx.client.filter_items_by_property(
                     filter_property=filter_property,
                     filter_value=lookup_value,
-                    item_set_id=ctx.item_set_id,
+                    item_set_id=resolved_item_set_id,
                 )
                 if match["total_results"] >= 1:
                     if match["total_results"] > 1:
