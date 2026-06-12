@@ -22,9 +22,14 @@ Usage (from collection root directory):
 
 The script is invoked by bin/post_omeka_html in the Datura gem. The Ruby
 wrapper passes -e, -r, and -m arguments from its own CLI.
+
+Collection-specific overrides: copy html_and_media_ingest_example.py to
+scripts/python/html_and_media_ingest.py and define only the methods you need
+to change. MediaIngest is available in that file's scope automatically.
 """
 
 import argparse
+import importlib.util
 import json
 import logging
 import os
@@ -131,312 +136,360 @@ def _parse_args():
 
 
 # ---------------------------------------------------------------------------
-# Media operations
+# Media ingest class
 # ---------------------------------------------------------------------------
 
-def delete_media_items(ctx, matching_item):
+class MediaIngest:
     """
-    Delete all media objects currently attached to an Omeka item.
+    Encapsulates all media attachment logic for a single pipeline run.
 
-    Called before re-uploading thumbnail and HTML so that the item does not
-    accumulate duplicate media objects across repeated script runs.
-
-    HTTP 500 responses from the delete endpoint are treated as non-fatal —
-    the Omeka S API occasionally returns 500 for media items that have already
-    been removed in a prior step or that reference missing files on disk.
-    All other HTTP errors are recorded as OmekaMediaError and processing
-    continues with the next media object.
-
-    Parameters:
-    * ctx           - OmekaContext providing the authenticated API client
-    * matching_item - dict: the Omeka item JSON-LD object whose media to delete
+    Instantiate once via get_media_ingest() (which returns either this class or
+    a collection-specific CustomMediaIngest subclass) and call process_items()
+    from main(). All other methods are internal helpers that subclasses may
+    override to change specific behaviors.
     """
-    for media_item in matching_item.get("o:media", []):
-        media_id = media_item["o:id"]
-        try:
-            logger.info("Deleting media item %s", media_id)
-            ctx.client.delete_resource(media_id, "media")
-        except HTTPError as err:
-            if err.response.status_code == 401 or err.response.status_code == 403:
-                raise OmekaAuthError(
-                    "Omeka S returned 401 Unauthorized or 403 Forbidden. "
-                    "Check that key_identity and key_credential in config/private.yml are correct. "
-                    "You may also need to be logged onto the VPN."
-                ) from err
-            elif err.response.status_code == 500:
-                # 500 on DELETE is treated as "already gone" by convention.
-                # Log at DEBUG so it does not clutter normal output.
-                logger.debug(
-                    "HTTP 500 deleting media %s (may already be absent); continuing",
-                    media_id,
-                )
-            else:
-                ctx.record_error(
-                    OmekaMediaError(
-                        "HTTP {} deleting media {}: {}".format(
-                            err.response.status_code, media_id, err
+
+    def delete_media_items(self, ctx, matching_item):
+        """
+        Delete all media objects currently attached to an Omeka item.
+
+        Called before re-uploading thumbnail and HTML so that the item does not
+        accumulate duplicate media objects across repeated script runs.
+
+        HTTP 500 responses from the delete endpoint are treated as non-fatal —
+        the Omeka S API occasionally returns 500 for media items that have already
+        been removed in a prior step or that reference missing files on disk.
+        All other HTTP errors are recorded as OmekaMediaError and processing
+        continues with the next media object.
+
+        Parameters:
+        * ctx           - OmekaContext providing the authenticated API client
+        * matching_item - dict: the Omeka item JSON-LD object whose media to delete
+        """
+        for media_item in matching_item.get("o:media", []):
+            media_id = media_item["o:id"]
+            try:
+                logger.info("Deleting media item %s", media_id)
+                ctx.client.delete_resource(media_id, "media")
+            except HTTPError as err:
+                if err.response.status_code == 401 or err.response.status_code == 403:
+                    raise OmekaAuthError(
+                        "Omeka S returned 401 Unauthorized or 403 Forbidden. "
+                        "Check that key_identity and key_credential in config/private.yml are correct. "
+                        "You may also need to be logged onto the VPN."
+                    ) from err
+                elif err.response.status_code == 500:
+                    # 500 on DELETE is treated as "already gone" by convention.
+                    # Log at DEBUG so it does not clutter normal output.
+                    logger.debug(
+                        "HTTP 500 deleting media %s (may already be absent); continuing",
+                        media_id,
+                    )
+                else:
+                    ctx.record_error(
+                        OmekaMediaError(
+                            "HTTP {} deleting media {}: {}".format(
+                                err.response.status_code, media_id, err
+                            )
                         )
                     )
+            except Exception as err:
+                ctx.record_error(
+                    OmekaMediaError("Unexpected error deleting media {}: {}".format(media_id, err))
                 )
+
+
+    def ingest_thumbnail(self, ctx, json_item, matching_item, iiif_dir):
+        """
+        Download a IIIF thumbnail and upload it to Omeka as the item's primary media.
+
+        Thumbnail ingest is performed before HTML ingest so that Omeka designates
+        the image as the item's primary_media (Omeka S uses the first media object
+        as the primary).
+
+        If the source JSON record has no cover_image field, the function returns
+        immediately — not all items have thumbnails.
+
+        If the thumbnail cannot be downloaded (network error, 4xx/5xx from the
+        IIIF server) or if the upload to Omeka fails, the failure is logged and
+        the function returns — the HTML ingest still proceeds.
+
+        Parameters:
+        * ctx           - OmekaContext (provides iiif_server, client, item_set_id)
+        * json_item     - dict: one record from a Datura ES JSON file
+        * matching_item - dict: the Omeka item to attach the thumbnail to
+        * iiif_dir      - pathlib.Path pointing to the local IIIF output directory
+                          where the downloaded thumbnail is cached temporarily
+        """
+        collection_name = ctx.iiif_collection if ctx.iiif_collection else json_item.get("collection", "")
+        cover_image = json_item.get("cover_image")
+        identifier = json_item.get("identifier", "unknown")
+
+        if not cover_image:
+            # No thumbnail configured for this item — nothing to do.
+            logger.debug("No cover_image for %r; skipping thumbnail ingest", identifier)
+            return
+
+        # Parse any existing extension from the cover_image name. Image identifiers
+        # often contain dots that are not extensions (e.g. loc.00001, ccda.let00001),
+        # so only treat the suffix as an extension if it is a known image format.
+        _KNOWN_IMAGE_EXTS = {".jpg", ".jpeg", ".png"}
+        _stem, _ext = os.path.splitext(cover_image)
+        if _ext.lower() in _KNOWN_IMAGE_EXTS:
+            stem, image_ext = _stem, _ext
+        else:
+            stem, image_ext = cover_image, ".jpg"
+
+        # Construct the IIIF Image API URL for the thumbnail.
+        # The !200,200 size specifier requests a thumbnail that fits within a
+        # 200x200 bounding box while preserving aspect ratio.
+        thumbnail_remote = (
+            "{}/iiif/2/{collection}%2F{image}{ext}/full/!200,200/0/default.jpg".format(
+                ctx.iiif_server,
+                collection=collection_name,
+                image=stem,
+                ext=image_ext,
+            )
+        )
+        # Cache the thumbnail locally using the same URL-encoded filename so that
+        # re-runs can be inspected on disk if needed.
+        thumbnail_local = iiif_dir / "{}%2F{}{}".format(collection_name, stem, image_ext)
+
+        # --- Download ---
+        try:
+            logger.info("Downloading thumbnail for %r", identifier)
+            response = requests.get(thumbnail_remote, timeout=30)
+            response.raise_for_status()
+            with open(thumbnail_local, "wb") as thumb_file:
+                thumb_file.write(response.content)
+        except Exception as err:
+            logger.warning(
+                "Could not download thumbnail for %r: %s; skipping thumbnail ingest",
+                identifier,
+                err,
+            )
+            return
+
+        # --- Upload ---
+        # The title property ID is fetched via the cache so repeated calls for
+        # the same term do not make redundant API requests.
+        try:
+            media_payload = {
+                "o:is_public": ctx.is_public,
+                "data": {
+                    "upload": str(thumbnail_local),
+                    "dcterms:title": ctx.client.prepare_property_value(
+                        json_item.get("title", ""),
+                        ctx.get_property_id("dcterms:title"),
+                    ),
+                },
+                "o:ingester": "upload",
+            }
+            logger.info("Posting thumbnail for %r", identifier)
+            ctx.client.add_media_to_item(matching_item["o:id"], thumbnail_local, payload=media_payload)
+        except FileNotFoundError:
+            # The download step wrote the file, but something removed it between
+            # download and upload. Unlikely in practice but handled explicitly
+            # so the error message is clear.
+            logger.warning(
+                "Thumbnail file %s not found at upload time; skipping",
+                thumbnail_local,
+            )
         except Exception as err:
             ctx.record_error(
-                OmekaMediaError("Unexpected error deleting media {}: {}".format(media_id, err))
+                OmekaMediaError(
+                    "Error posting thumbnail for {!r}: {}".format(identifier, err)
+                )
             )
 
 
-def ingest_thumbnail(ctx, json_item, matching_item, iiif_dir):
-    """
-    Download a IIIF thumbnail and upload it to Omeka as the item's primary media.
+    def ingest_html(self, ctx, json_item, matching_item, html_dir):
+        """
+        Read a pre-rendered HTML file and upload it to Omeka as an HTML media object.
 
-    Thumbnail ingest is performed before HTML ingest so that Omeka designates
-    the image as the item's primary_media (Omeka S uses the first media object
-    as the primary).
+        The HTML ingester reads content from payload["data"]["html"] rather than
+        from the uploaded file bytes; the file is opened only to read its content
+        into memory. The Omeka S "html" ingester stores the markup directly in
+        the database, making it searchable and renderable within Omeka.
 
-    If the source JSON record has no cover_image field, the function returns
-    immediately — not all items have thumbnails.
+        Skips silently if:
+        * The .html file does not exist at html_dir/<identifier>.html.
+        * The file exists but is empty or contains only whitespace.
 
-    If the thumbnail cannot be downloaded (network error, 4xx/5xx from the
-    IIIF server) or if the upload to Omeka fails, the failure is logged and
-    the function returns — the HTML ingest still proceeds.
+        Parameters:
+        * ctx           - OmekaContext
+        * json_item     - dict: one record from a Datura ES JSON file
+        * matching_item - dict: the Omeka item to attach the HTML to
+        * html_dir      - pathlib.Path pointing to the HTML output directory
+        """
+        identifier = json_item.get("identifier", "unknown")
+        file_path = html_dir / "{}.html".format(identifier)
 
-    Parameters:
-    * ctx           - OmekaContext (provides iiif_server, client, item_set_id)
-    * json_item     - dict: one record from a Datura ES JSON file
-    * matching_item - dict: the Omeka item to attach the thumbnail to
-    * iiif_dir      - pathlib.Path pointing to the local IIIF output directory
-                      where the downloaded thumbnail is cached temporarily
-    """
-    collection_name = ctx.iiif_collection if ctx.iiif_collection else json_item.get("collection", "")
-    cover_image = json_item.get("cover_image")
-    identifier = json_item.get("identifier", "unknown")
+        try:
+            with open(file_path, "r", encoding="utf-8") as file:
+                html_content = file.read()
+        except FileNotFoundError:
+            # A missing HTML file is common for items that have no text
+            # representation (e.g. pure image records). Log at INFO so users
+            # can see which items were skipped without it being alarming.
+            logger.info("HTML file %s not found; skipping", file_path)
+            return
 
-    if not cover_image:
-        # No thumbnail configured for this item — nothing to do.
-        logger.debug("No cover_image for %r; skipping thumbnail ingest", identifier)
-        return
+        # Guard against empty or whitespace-only files.
+        if not html_content.strip():
+            logger.warning(
+                "HTML file for %r is empty; skipping.  "
+                "Check whether the XSLT transform produced output for this item.",
+                identifier,
+            )
+            return
 
-    # Parse any existing extension from the cover_image name. Image identifiers
-    # often contain dots that are not extensions (e.g. loc.00001, ccda.let00001),
-    # so only treat the suffix as an extension if it is a known image format.
-    _KNOWN_IMAGE_EXTS = {".jpg", ".jpeg", ".png"}
-    _stem, _ext = os.path.splitext(cover_image)
-    if _ext.lower() in _KNOWN_IMAGE_EXTS:
-        stem, image_ext = _stem, _ext
-    else:
-        stem, image_ext = cover_image, ".jpg"
-
-    # Construct the IIIF Image API URL for the thumbnail.
-    # The !200,200 size specifier requests a thumbnail that fits within a
-    # 200×200 bounding box while preserving aspect ratio.
-    thumbnail_remote = (
-        "{}/iiif/2/{collection}%2F{image}{ext}/full/!200,200/0/default.jpg".format(
-            ctx.iiif_server,
-            collection=collection_name,
-            image=stem,
-            ext=image_ext,
-        )
-    )
-    # Cache the thumbnail locally using the same URL-encoded filename so that
-    # re-runs can be inspected on disk if needed.
-    thumbnail_local = iiif_dir / "{}%2F{}{}".format(collection_name, stem, image_ext)
-
-    # --- Download ---
-    try:
-        logger.info("Downloading thumbnail for %r", identifier)
-        response = requests.get(thumbnail_remote, timeout=30)
-        response.raise_for_status()
-        with open(thumbnail_local, "wb") as thumb_file:
-            thumb_file.write(response.content)
-    except Exception as err:
-        logger.warning(
-            "Could not download thumbnail for %r: %s; skipping thumbnail ingest",
-            identifier,
-            err,
-        )
-        return
-
-    # --- Upload ---
-    # The title property ID is fetched via the cache so repeated calls for
-    # the same term do not make redundant API requests.
-    try:
         media_payload = {
             "o:is_public": ctx.is_public,
             "data": {
-                "upload": str(thumbnail_local),
-                "dcterms:title": ctx.client.prepare_property_value(
-                    json_item.get("title", ""),
-                    ctx.get_property_id("dcterms:title"),
-                ),
+                "html": html_content,
             },
-            "o:ingester": "upload",
+            "o:ingester": "html",
         }
-        logger.info("Posting thumbnail for %r", identifier)
-        ctx.client.add_media_to_item(matching_item["o:id"], thumbnail_local, payload=media_payload)
-    except FileNotFoundError:
-        # The download step wrote the file, but something removed it between
-        # download and upload. Unlikely in practice but handled explicitly
-        # so the error message is clear.
-        logger.warning(
-            "Thumbnail file %s not found at upload time; skipping",
-            thumbnail_local,
-        )
-    except Exception as err:
-        ctx.record_error(
-            OmekaMediaError(
-                "Error posting thumbnail for {!r}: {}".format(identifier, err)
+
+        try:
+            logger.info("Posting HTML for %r", identifier)
+            ctx.client.add_media_to_item(matching_item["o:id"], file_path, payload=media_payload)
+        except Exception as err:
+            ctx.record_error(
+                OmekaMediaError(
+                    "Error posting HTML for {!r}: {}".format(identifier, err)
+                )
             )
+
+    def process_items(self, ctx, pathlist, html_dir, iiif_dir):
+        """
+        For each JSON record, look up the Omeka item and ingest its media.
+
+        Logic:
+        * Skip items with no identifier (cannot look up in Omeka).
+        * Skip items with 0 or >1 Omeka matches (not posted / data integrity issue).
+        * If --media-skip is set and the item already has 2+ media objects
+          (thumbnail + HTML), skip re-ingestion to avoid unnecessary deletions.
+        * Otherwise: delete existing media, ingest thumbnail, ingest HTML.
+
+        Parameters:
+        * ctx      - OmekaContext
+        * pathlist - list of pathlib.Path objects for ES JSON files
+        * html_dir - pathlib.Path to output/<env>/html/
+        * iiif_dir - pathlib.Path to output/<env>/iiif/
+        """
+        for path in pathlist:
+            filename = str(path)
+            rel = path.relative_to(Path.cwd())
+            with open(filename) as jsonfile:
+                json_items = json.load(jsonfile)
+
+            for json_item in json_items:
+                identifier = json_item.get("identifier")
+                if not identifier:
+                    logger.warning("Skipping item without identifier in %s", rel)
+                    continue
+
+                title = json_item.get("title")
+                if not title:
+                    logger.warning("Skipping item without title in %s", rel)
+                    continue
+
+                # --- Look up the item in Omeka ---
+                try:
+                    matching_items = ctx.client.filter_items_by_property(
+                        filter_property="dcterms:identifier",
+                        filter_value=identifier,
+                        item_set_id=ctx.item_set_id,
+                    )
+                except Exception as err:
+                    ctx.record_error(OmekaAPIError(identifier, "filter_items (media)", err))
+                    continue
+
+                if not matching_items:
+                    logger.warning(
+                        "Unexpected empty response from filter_items for %r; skipping",
+                        identifier,
+                    )
+                    continue
+
+                total = matching_items.get("total_results", 0)
+                if total == 0:
+                    logger.warning("No Omeka item found for %r; skipping media ingest", identifier)
+                    continue
+                if total > 1:
+                    logger.warning(
+                        "Multiple Omeka items (%d) found for %r; check admin site and skip",
+                        total,
+                        identifier,
+                    )
+                    continue
+
+                matching_item = matching_items["results"][0]
+                media_count = len(matching_item.get("o:media", []))
+
+                # --media-skip: if the item already has 2+ media objects
+                # (thumbnail + HTML), assume it was already fully ingested and
+                # skip it to avoid redundant deletion and re-upload.
+                if ctx.media_skip and media_count >= 2:
+                    logger.info(
+                        "Skipping media for %r: already has %d media object(s)",
+                        identifier,
+                        media_count,
+                    )
+                    continue
+
+                # --- Media pipeline ---
+                # Delete first, then re-upload. Order matters: thumbnail must be
+                # uploaded before HTML so that Omeka designates the image as
+                # primary_media.
+                self.delete_media_items(ctx, matching_item)
+                self.ingest_thumbnail(ctx, json_item, matching_item, iiif_dir)
+                self.ingest_html(ctx, json_item, matching_item, html_dir)
+
+
+def get_media_ingest():
+    """
+    Return the appropriate MediaIngest instance for this collection.
+
+    Checks for scripts/python/html_and_media_ingest.py in the collection
+    directory. If found, loads it by explicit filesystem path (bypassing
+    sys.modules to avoid a naming collision with this module), injects the
+    MediaIngest base class into its namespace, and returns a
+    CustomMediaIngest instance. Falls back to the default MediaIngest if
+    the override file is absent.
+
+    The collection file should define only the methods it wants to override:
+
+        class CustomMediaIngest(MediaIngest):
+            def ingest_thumbnail(self, ctx, json_item, matching_item, iiif_dir):
+                # custom IIIF URL construction or thumbnail size
+                ...
+
+    MediaIngest is available in the collection file's scope automatically —
+    no import statement is needed.
+    """
+    override_path = Path("./scripts/python/html_and_media_ingest.py")
+    if override_path.exists():
+        # Load by explicit path with a distinct internal module name so that
+        # Python's import cache (sys.modules["html_and_media_ingest"] pointing
+        # to this datura module) is not consulted.
+        spec = importlib.util.spec_from_file_location(
+            "collection_html_and_media_ingest", str(override_path)
         )
-
-
-def ingest_html(ctx, json_item, matching_item, html_dir):
-    """
-    Read a pre-rendered HTML file and upload it to Omeka as an HTML media object.
-
-    The HTML ingester reads content from payload["data"]["html"] rather than
-    from the uploaded file bytes; the file is opened only to read its content
-    into memory. The Omeka S "html" ingester stores the markup directly in
-    the database, making it searchable and renderable within Omeka.
-
-    Skips silently if:
-    * The .html file does not exist at html_dir/<identifier>.html.
-    * The file exists but is empty or contains only whitespace.
-
-    Parameters:
-    * ctx           - OmekaContext
-    * json_item     - dict: one record from a Datura ES JSON file
-    * matching_item - dict: the Omeka item to attach the HTML to
-    * html_dir      - pathlib.Path pointing to the HTML output directory
-    """
-    identifier = json_item.get("identifier", "unknown")
-    file_path = html_dir / "{}.html".format(identifier)
-
-    try:
-        with open(file_path, "r", encoding="utf-8") as file:
-            html_content = file.read()
-    except FileNotFoundError:
-        # A missing HTML file is common for items that have no text
-        # representation (e.g. pure image records). Log at INFO so users
-        # can see which items were skipped without it being alarming.
-        logger.info("HTML file %s not found; skipping", file_path)
-        return
-
-    # Guard against empty or whitespace-only files.
-    if not html_content.strip():
+        mod = importlib.util.module_from_spec(spec)
+        # Inject the base class so the collection file can write
+        # `class CustomMediaIngest(MediaIngest):` without any import.
+        mod.MediaIngest = MediaIngest
+        spec.loader.exec_module(mod)
         logger.warning(
-            "HTML file for %r is empty; skipping.  "
-            "Check whether the XSLT transform produced output for this item.",
-            identifier,
+            "html_and_media_ingest override found at "
+            "scripts/python/html_and_media_ingest.py; "
+            "custom media ingest logic will be applied."
         )
-        return
-
-    media_payload = {
-        "o:is_public": ctx.is_public,
-        "data": {
-            "html": html_content,
-        },
-        "o:ingester": "html",
-    }
-
-    try:
-        logger.info("Posting HTML for %r", identifier)
-        ctx.client.add_media_to_item(matching_item["o:id"], file_path, payload=media_payload)
-    except Exception as err:
-        ctx.record_error(
-            OmekaMediaError(
-                "Error posting HTML for {!r}: {}".format(identifier, err)
-            )
-        )
-
-
-# ---------------------------------------------------------------------------
-# Main processing loop
-# ---------------------------------------------------------------------------
-
-def process_items(ctx, pathlist, html_dir, iiif_dir):
-    """
-    For each JSON record, look up the Omeka item and ingest its media.
-
-    Logic:
-    * Skip items with no identifier (cannot look up in Omeka).
-    * Skip items with 0 or >1 Omeka matches (not posted / data integrity issue).
-    * If --media-skip is set and the item already has 2+ media objects
-      (thumbnail + HTML), skip re-ingestion to avoid unnecessary deletions.
-    * Otherwise: delete existing media, ingest thumbnail, ingest HTML.
-
-    Parameters:
-    * ctx      - OmekaContext
-    * pathlist - list of pathlib.Path objects for ES JSON files
-    * html_dir - pathlib.Path to output/<env>/html/
-    * iiif_dir - pathlib.Path to output/<env>/iiif/
-    """
-    for path in pathlist:
-        filename = str(path)
-        rel = path.relative_to(Path.cwd())
-        with open(filename) as jsonfile:
-            json_items = json.load(jsonfile)
-
-        for json_item in json_items:
-            identifier = json_item.get("identifier")
-            if not identifier:
-                logger.warning("Skipping item without identifier in %s", rel)
-                continue
-
-            title = json_item.get("title")
-            if not title:
-                logger.warning("Skipping item without title in %s", rel)
-                continue
-
-            # --- Look up the item in Omeka ---
-            try:
-                matching_items = ctx.client.filter_items_by_property(
-                    filter_property="dcterms:identifier",
-                    filter_value=identifier,
-                    item_set_id=ctx.item_set_id,
-                )
-            except Exception as err:
-                ctx.record_error(OmekaAPIError(identifier, "filter_items (media)", err))
-                continue
-
-            if not matching_items:
-                logger.warning(
-                    "Unexpected empty response from filter_items for %r; skipping",
-                    identifier,
-                )
-                continue
-
-            total = matching_items.get("total_results", 0)
-            if total == 0:
-                logger.warning("No Omeka item found for %r; skipping media ingest", identifier)
-                continue
-            if total > 1:
-                logger.warning(
-                    "Multiple Omeka items (%d) found for %r; check admin site and skip",
-                    total,
-                    identifier,
-                )
-                continue
-
-            matching_item = matching_items["results"][0]
-            media_count = len(matching_item.get("o:media", []))
-
-            # --media-skip: if the item already has 2+ media objects
-            # (thumbnail + HTML), assume it was already fully ingested and
-            # skip it to avoid redundant deletion and re-upload.
-            if ctx.media_skip and media_count >= 2:
-                logger.info(
-                    "Skipping media for %r: already has %d media object(s)",
-                    identifier,
-                    media_count,
-                )
-                continue
-
-            # --- Media pipeline ---
-            # Delete first, then re-upload. Order matters: thumbnail must be
-            # uploaded before HTML so that Omeka designates the image as
-            # primary_media.
-            delete_media_items(ctx, matching_item)
-            ingest_thumbnail(ctx, json_item, matching_item, iiif_dir)
-            ingest_html(ctx, json_item, matching_item, html_dir)
+        return mod.CustomMediaIngest()
+    return MediaIngest()
 
 
 # ---------------------------------------------------------------------------
@@ -451,10 +504,11 @@ def main():
     1. Parse CLI arguments.
     2. Configure root logger.
     3. Build OmekaContext (loads config, validates keys, creates API client).
-    4. Resolve output directories for the requested environment.
-    5. Discover JSON files; apply regex filter if -r was passed.
-    6. Run media ingest for all items.
-    7. Report errors; exit 1 if any failures, 0 if clean.
+    4. Load MediaIngest instance (collection-specific or default).
+    5. Resolve output directories for the requested environment.
+    6. Discover JSON files; apply filters if passed.
+    7. Run media ingest for all items.
+    8. Report errors; exit 1 if any failures, 0 if clean.
     """
     args = _parse_args()
     start_time = time.time()
@@ -463,6 +517,9 @@ def main():
     # OmekaConfigError propagates here as a fatal error — missing or broken
     # config means no API access is possible.
     ctx = OmekaContext.from_args(args)
+
+    # Load collection-specific media ingest logic (or default).
+    media_ingest = get_media_ingest()
 
     # Resolve all three environment-specific directories using the requested
     # environment so that -e production reads from output/production/ rather
@@ -488,7 +545,7 @@ def main():
         ctx.media_skip,
     )
 
-    process_items(ctx, pathlist, html_dir, iiif_dir)
+    media_ingest.process_items(ctx, pathlist, html_dir, iiif_dir)
 
     finish_run(ctx, args, start_time)
 
