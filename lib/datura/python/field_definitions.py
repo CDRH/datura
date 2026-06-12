@@ -62,12 +62,16 @@ class FieldDefinitions:
         return json.get("type", None)
     
     def creator(self, json):
-        creator_names = [creator['name'] for creator in json.get("creator") or [] if 'name' in creator]
-        return creator_names
+        # Return dicts with name+id so the dedup in api_fields preserves
+        # entries that share a name but have different ids.
+        return [{"name": c["name"], "id": c.get("id", "")}
+                for c in json.get("creator") or [] if "name" in c]
     
     def contributor(self, json):
-        contributor_names = [contributor['name'] for contributor in json.get("contributor") or [] if 'name' in contributor]
-        return contributor_names
+        # Return dicts with name+id so the dedup in api_fields preserves
+        # entries that share a name but have different ids.
+        return [{"name": c["name"], "id": c.get("id", "")}
+                for c in json.get("contributor") or [] if "name" in c]
     
     # NOTE: use Pattern 5 in omeka_overrides if automatic conversion of dates with year or month only to yyyy-01-01
     # back to yyyy for Omeka is desired
@@ -196,8 +200,10 @@ class FieldDefinitions:
         return json.get("container_folder", None)
     
     def name(self, json):
-        person_names = [person['name'] for person in json.get("person") or [] if  'name' in person]
-        return person_names
+        # Return dicts with name+id so the dedup in api_fields preserves
+        # entries that share a name but have different ids.
+        return [{"name": person["name"], "id": person.get("id", "")}
+                for person in json.get("person") or [] if "name" in person]
     
     def spatial_short_name(self, json):
         spatial = json.get("spatial")
