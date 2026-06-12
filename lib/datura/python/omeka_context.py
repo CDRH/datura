@@ -10,6 +10,7 @@ from logging.handlers import RotatingFileHandler
 import os
 import sys
 
+from api_fields import get_api_fields
 from field_definitions import get_fields
 import time
 from datetime import date, datetime
@@ -410,6 +411,12 @@ class OmekaContext:
         # a CustomFields subclass if scripts/python/omeka_overrides.py is present; 
         # otherwise the default FieldDefinitions instance.
         self.fields = get_fields(omeka_data_base=self.omeka_data_base)
+
+        # ---- API field assembly --------------------------------------------
+        # Load collection-specific API field logic once here. get_api_fields()
+        # returns a CustomApiFields subclass if scripts/python/api_fields.py is
+        # present; otherwise the default ApiFields instance.
+        self.api_fields = get_api_fields()
 
 
     # -----------------------------------------------------------------------

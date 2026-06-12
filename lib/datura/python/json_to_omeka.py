@@ -38,7 +38,6 @@ import time
 from pathlib import Path
 
 try:
-    import api_fields
     import omeka
     from omeka_context import (
         OmekaAPIError,
@@ -184,7 +183,7 @@ def post_items(ctx, pathlist, json_output_dir=None):
             if json_output_dir is not None:
                 # JSON output mode: build the payload and write it to disk
                 # rather than to the Omeka API.
-                new_item = api_fields.prepare_item(ctx, json_item)
+                new_item = ctx.api_fields.prepare_item(ctx, json_item)
                 if not new_item:
                     logger.warning("Could not prepare payload for %r; skipping", identifier)
                     continue
@@ -236,7 +235,7 @@ def add_new_item(ctx, json_item, template_number):
     """
     Build the Omeka payload for a new item and POST it to the API.
 
-    Calls api_fields.prepare_item() to extract and format each field from
+    Calls ctx.api_fields.prepare_item() to extract and format each field from
     the Datura JSON record. If preparation produces no payload (e.g. all
     fields were absent), the item is skipped with a warning rather than
     POSTing an empty object.
@@ -248,7 +247,7 @@ def add_new_item(ctx, json_item, template_number):
     """
     identifier = json_item.get("identifier", "unknown")
 
-    new_item = api_fields.prepare_item(ctx, json_item)
+    new_item = ctx.api_fields.prepare_item(ctx, json_item)
     if not new_item:
         logger.warning("Could not prepare payload for %r; skipping", identifier)
         return
@@ -303,7 +302,7 @@ def update_existing_item(ctx, json_item, matching_items):
     # Deep-copy to avoid mutating the dict returned by the API client; the
     # original might be referenced elsewhere (e.g. in link_items).
     item_to_update = copy.deepcopy(matching_items["results"][0])
-    updated_item = api_fields.prepare_item(ctx, json_item, item_to_update)
+    updated_item = ctx.api_fields.prepare_item(ctx, json_item, item_to_update)
     if not updated_item:
         logger.warning("Could not prepare update payload for %r; skipping", identifier)
         return
@@ -390,7 +389,7 @@ def _link_item(ctx, json_item, matching_items):
     """
     Resolve and attach relational fields for a single Omeka item.
 
-    Extracts the Omeka item from matching_items, calls api_fields.link_records()
+    Extracts the Omeka item from matching_items, calls ctx.api_fields.link_records()
     to populate relation fields, and PATCHes the result back to the API.
 
     Named with a leading underscore to signal that it is an internal helper
@@ -409,12 +408,12 @@ def _link_item(ctx, json_item, matching_items):
     )
     logger.info("Linking records for %r", item_id)
 
-    # Deep-copy so that api_fields.link_records() can modify the item dict
+    # Deep-copy so that ctx.api_fields.link_records() can modify the item dict
     # without affecting the in-memory copy used elsewhere in this pass.
     item_to_link = copy.deepcopy(matching_items["results"][0])
 
     try:
-        linked_item = api_fields.link_records(ctx, json_item, item_to_link)
+        linked_item = ctx.api_fields.link_records(ctx, json_item, item_to_link)
     except Exception as err:
         ctx.record_error(OmekaAPIError(item_id, "link_records", err))
         return

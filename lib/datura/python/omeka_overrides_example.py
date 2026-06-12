@@ -1,4 +1,10 @@
-#copy this file to omeka_overrides.py in your scripts/python directory. Edit the return values as needed
+# Copy this file to scripts/python/omeka_overrides.py in your collection.
+# This file is for overriding individual FIELD EXTRACTION methods (how values
+# are pulled from the Datura ES JSON and returned for each Omeka property).
+#
+# To override the API field ASSEMBLY logic (how values are built, deduplicated,
+# formatted, or linked in Omeka), copy api_fields_example.py to
+# scripts/python/api_fields.py instead.
 
 from field_definitions import FieldDefinitions
 
