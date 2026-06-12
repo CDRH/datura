@@ -30,6 +30,7 @@ are required to support the --log-level flag (it defaults to INFO).
 
 import argparse
 import copy
+import importlib.util
 import json
 import logging
 import os
@@ -428,6 +429,76 @@ def _link_item(ctx, json_item, matching_items):
 
 
 # ---------------------------------------------------------------------------
+# Pass hooks
+# ---------------------------------------------------------------------------
+
+class PostOmeka:
+    """
+    Provides lifecycle hooks around the two posting passes in json_to_omeka.py.
+
+    All methods are no-ops by default. Collections that need side effects at
+    pass boundaries — extra logging, external notifications, pre-pass validation,
+    post-pass cleanup — subclass this and override only the methods they need.
+
+    Instantiate via get_post_omeka(), which returns a CustomPostOmeka subclass
+    if scripts/python/json_to_omeka.py is present, otherwise this base class.
+    """
+
+    def pre_post_items(self, ctx, pathlist):
+        """Called immediately before pass 1 (item creation/update)."""
+        pass
+
+    def post_post_items(self, ctx, pathlist):
+        """Called immediately after pass 1 completes."""
+        pass
+
+    def pre_link_items(self, ctx, pathlist):
+        """Called immediately before pass 2 (record linking)."""
+        pass
+
+    def post_link_items(self, ctx, pathlist):
+        """Called immediately after pass 2 completes."""
+        pass
+
+
+def get_post_omeka():
+    """
+    Return the appropriate PostOmeka instance for this collection.
+
+    Checks for scripts/python/json_to_omeka.py in the collection directory.
+    If found, loads it by explicit filesystem path (bypassing sys.modules —
+    this datura file runs as __main__ so there is no sys.modules collision,
+    but the explicit-path approach is used for consistency with the other
+    override factories). Injects the PostOmeka base class into the loaded
+    module's namespace and returns a CustomPostOmeka instance. Falls back
+    to the default PostOmeka if the override file is absent.
+
+    The collection file should define only the hook methods it needs:
+
+        class CustomPostOmeka(PostOmeka):
+            def pre_post_items(self, ctx, pathlist):
+                logger.info("Starting pass 1 with %d files", len(pathlist))
+
+    PostOmeka is available in the collection file's scope automatically —
+    no import statement is needed.
+    """
+    override_path = Path("./scripts/python/json_to_omeka.py")
+    if override_path.exists():
+        spec = importlib.util.spec_from_file_location(
+            "collection_json_to_omeka", str(override_path)
+        )
+        mod = importlib.util.module_from_spec(spec)
+        mod.PostOmeka = PostOmeka
+        spec.loader.exec_module(mod)
+        logger.warning(
+            "json_to_omeka override found at scripts/python/json_to_omeka.py; "
+            "custom pass hooks will be applied."
+        )
+        return mod.CustomPostOmeka()
+    return PostOmeka()
+
+
+# ---------------------------------------------------------------------------
 # Entrypoint
 # ---------------------------------------------------------------------------
 
@@ -462,6 +533,9 @@ def main():
     # a required key. Let this propagate to the top level — configuration
     # errors are fatal and should produce a clear traceback.
     ctx = OmekaContext.from_args(args)
+
+    # Load collection-specific pass hooks (or default no-ops).
+    post_omeka = get_post_omeka()
 
     # Resolve the ES output directory for the requested environment.
     # ctx.resolve_path() returns an absolute Path relative to cwd (the
@@ -499,7 +573,9 @@ def main():
 
     # --- Pass 1: create / update items ---
     logger.info("Starting pass 1: item posting")
+    post_omeka.pre_post_items(ctx, pathlist)
     post_items(ctx, pathlist)
+    post_omeka.post_post_items(ctx, pathlist)
 
     # Reset the API client between passes. ctx.reset_client() re-instantiates
     # OmekaAPIClient with the same credentials, giving a fresh connection for
@@ -510,7 +586,9 @@ def main():
 
     # --- Pass 2: link related items ---
     logger.info("Starting pass 2: record linking")
+    post_omeka.pre_link_items(ctx, pathlist)
     link_items(ctx, pathlist)
+    post_omeka.post_link_items(ctx, pathlist)
 
     finish_run(ctx, args, start_time)
 
