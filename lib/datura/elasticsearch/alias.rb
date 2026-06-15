@@ -19,9 +19,10 @@ module Datura::Elasticsearch::Alias
         { add: { alias: ali, index: idx } }
       ]
     }
+    auth = Datura::Helpers.construct_auth_header(options)
     response = Datura::Helpers.es_http_request("POST", base_url,
       body: data.to_json,
-      headers: (@auth_header || {}).merge("Content-Type" => "application/json"))
+      headers: auth.merge("Content-Type" => "application/json"))
     if response.code == "200"
       puts response.body
       puts "Successfully added alias #{ali}. Current alias list:"
@@ -40,8 +41,9 @@ module Datura::Elasticsearch::Alias
 
     url = File.join(options["es_path"], idx, "_alias", ali)
 
+    auth = Datura::Helpers.construct_auth_header(options)
     response = Datura::Helpers.es_http_request("DELETE", url,
-      headers: @auth_header || {})
+      headers: auth)
     puts JSON.pretty_generate(JSON.parse(response.body))
     list
   end
