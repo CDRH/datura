@@ -159,7 +159,7 @@ module Datura::Helpers
       "POST"   => Net::HTTP::Post,
       "DELETE" => Net::HTTP::Delete
     }.fetch(method.upcase)
-    req = request_class.new(uri.request_uri)
+    req = req_class.new(uri.request_uri)
     headers.each { |k, v| req[k.to_s] = v }
     req.body = body if body
 
