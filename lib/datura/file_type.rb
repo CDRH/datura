@@ -1,6 +1,5 @@
 require "json"
 require "open3"
-require "rest-client"
 
 class FileType
 
@@ -82,7 +81,10 @@ class FileType
           # NOTE: If you need to do partial updates rather than replacement of doc
           # you will need to add _update at the end of this URL
           begin
-            RestClient.put("#{es.index_url}/_doc/#{id}", doc.to_json, @auth_header.merge({:content_type => :json }) )
+            response = Datura::Helpers.es_http_request("PUT", "#{es.index_url}/_doc/#{id}",
+              body: doc.to_json,
+              headers: @auth_header.merge("Content-Type" => "application/json"))
+            raise "#{response.code} error posting to Elasticsearch: #{response.body}" unless response.code.start_with?("2")
           rescue Errno::ECONNREFUSED, SocketError, Errno::ETIMEDOUT => e
             error = "Could not connect to ElasticSearch at #{es.index_url}. " \
                     "Confirm you have specified the correct environment " \

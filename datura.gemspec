@@ -59,7 +59,6 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = "~> 3.1"
   spec.add_runtime_dependency "colorize", "~> 1.1"
   spec.add_runtime_dependency "nokogiri", "~> 1.18"
-  spec.add_runtime_dependency "rest-client", "~> 2.1"
   spec.add_runtime_dependency "pdf-reader", "~> 2.15"
   spec.add_development_dependency "byebug", "~> 11.0"
   # leaving this constraint as-is to avoid possible conflicts with 

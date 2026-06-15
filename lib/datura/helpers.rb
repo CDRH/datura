@@ -2,6 +2,7 @@ require 'fileutils'
 require 'net/http'
 require 'nokogiri'
 require 'yaml'
+require 'uri'
 
 module Datura::Helpers
 
@@ -145,7 +146,24 @@ module Datura::Helpers
            "Credentials will be transmitted in cleartext. Use HTTPS in production."
     end
 
-    { "Authorization" => "Basic #{Base64::encode64("#{username}:#{password}")}" }
+    { "Authorization" => "Basic #{Base64::strict_encode64("#{username}:#{password}")}" }
+  end
+
+  def self.es_http_request(method, url, body: nil, headers: {})
+    uri = URI.parse(url)
+    http = Net::HTTP.new(uri.host, uri.port)
+    http.use_ssl = (uri.scheme == "https")
+    req_class = {
+      "GET"    => Net::HTTP::Get,
+      "PUT"    => Net::HTTP::Put,
+      "POST"   => Net::HTTP::Post,
+      "DELETE" => Net::HTTP::Delete
+    }.fetch(method.upcase)
+    req = request_class.new(uri.request_uri)
+    headers.each { |k, v| req[k.to_s] = v }
+    req.body = body if body
+
+    http.request(req)
   end
 
 end
