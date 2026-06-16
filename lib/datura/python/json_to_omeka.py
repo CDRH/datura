@@ -23,7 +23,7 @@ Usage (from collection root directory):
     python3 json_to_omeka.py -e production -r "some_pattern"
     python3 json_to_omeka.py --log-level DEBUG
 
-The script is invoked by bin/post_omeka in the Datura gem.  The Ruby wrapper
+The script is invoked by bin/post_omeka in the Datura gem. The Ruby wrapper
 passes -e and -r arguments from its own CLI.  No changes to bin/post_omeka
 are required to support the --log-level flag (it defaults to INFO).
 
@@ -475,12 +475,6 @@ def get_post_omeka():
     override factories). Injects the PostOmeka base class into the loaded
     module's namespace and returns a CustomPostOmeka instance. Falls back
     to the default PostOmeka if the override file is absent.
-
-    The collection file should define only the hook methods it needs:
-
-        class CustomPostOmeka(PostOmeka):
-            def pre_post_items(self, ctx, pathlist):
-                logger.info("Starting pass 1 with %d files", len(pathlist))
 
     PostOmeka is available in the collection file's scope automatically —
     no import statement is needed.

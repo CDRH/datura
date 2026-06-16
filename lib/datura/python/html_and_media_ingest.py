@@ -459,14 +459,7 @@ def get_media_ingest():
     MediaIngest base class into its namespace, and returns a
     CustomMediaIngest instance. Falls back to the default MediaIngest if
     the override file is absent.
-
-    The collection file should define only the methods it wants to override:
-
-        class CustomMediaIngest(MediaIngest):
-            def ingest_thumbnail(self, ctx, json_item, matching_item, iiif_dir):
-                # custom IIIF URL construction or thumbnail size
-                ...
-
+    
     MediaIngest is available in the collection file's scope automatically —
     no import statement is needed.
     """

@@ -38,9 +38,9 @@ class ApiFields:
 
     Instantiate once via get_api_fields() (which returns either this class or a
     collection-specific CustomApiFields subclass) and store on OmekaContext as
-    ctx.api_fields.  json_to_omeka.py calls only prepare_item() and
+    ctx.api_fields. json_to_omeka.py calls only prepare_item() and
     link_records(); all other methods are internal helpers that subclasses may
-    override to change specific behaviours.
+    override to change specific behaviors.
     """
 
     def build_item_dict(self, ctx, json_item, existing_item):
@@ -456,13 +456,6 @@ def get_api_fields():
     collision with this module), injects the ApiFields base class into its
     namespace, and returns a CustomApiFields instance. Falls back to the default
     ApiFields if the override file is absent.
-
-    The collection file should define only the methods it wants to override:
-
-        class CustomApiFields(ApiFields):
-            def update_item_value(self, ctx, item, key, value, datatype="literal"):
-                # custom deduplication or formatting logic
-                ...
 
     ApiFields is available in the collection file's scope automatically — no
     import statement is needed.

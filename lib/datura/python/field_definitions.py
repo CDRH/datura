@@ -58,7 +58,7 @@ class FieldDefinitions:
             return new_uri_data
     
     def dcterms_type(self, json):
-        #note that "type" is a builtin function in Python
+        #note that "type" is a built-in function in Python
         return json.get("type", None)
     
     def creator(self, json):
@@ -73,8 +73,8 @@ class FieldDefinitions:
         return [{"name": c["name"], "id": c.get("id", "")}
                 for c in json.get("contributor") or [] if "name" in c]
     
-    # NOTE: use Pattern 5 in omeka_overrides if automatic conversion of dates with year or month only to yyyy-01-01
-    # back to yyyy for Omeka is desired
+    # NOTE: use Pattern 5 in omeka_overrides if automatic conversion of dates with year 
+    # or month only to yyyy-01-01 back to yyyy for Omeka is desired
     def date(self, json):
         date_to_parse = json.get("date", None)
         return date_to_parse
@@ -94,7 +94,7 @@ class FieldDefinitions:
         return json.get("description", None)
     
     def dcterms_format(self, json):
-        #note that "format" is a builtin function in Python
+        #note that "format" is a built-in function in Python
         return json.get("format", None)
     
     def relation(self, json):
@@ -106,7 +106,6 @@ class FieldDefinitions:
         return self._get_citation(json).get("publisher", None)
         
     def biblID(self, json):
-        #note: this field is not yet implemented in the schema
         return self._get_citation(json).get("id", None)
         
     def biblTitle(self, json):
