@@ -27,8 +27,8 @@ GEM
     mime-types-data (3.2026.0414)
     minitest (5.27.0)
     netrc (0.11.0)
-    nokogiri (1.18.10-arm64-darwin)
-      racc (~> 1.4)
+    nokogiri (1.18.10)
+      mini_portile2 (~> 2.8.2)
     nokogiri (1.18.10-x86_64-darwin)
       racc (~> 1.4)
     pdf-reader (2.15.1)
@@ -49,12 +49,11 @@ GEM
       bigdecimal (~> 3.1)
 
 PLATFORMS
-  arm64-darwin-24
+  ruby
   x86_64-darwin-20
 
 DEPENDENCIES
   bundler (>= 2.0, < 5.0)
-  byebug (~> 11.0)
   datura!
   minitest (~> 5.0)
   rake (~> 13.0)
