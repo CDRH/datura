@@ -27,18 +27,19 @@ from datetime import datetime
 logger = logging.getLogger(__name__)
 
 
-def build_item_dict(ctx, json_item, existing_item):
+def prepare_item(ctx, row, existing_item=None):
     """
-    Map a Datura JSON item to an Omeka S item dict, populating all configured
-    property fields.
+    Build a complete Omeka item dict from a Datura JSON record.
 
-    Iterates over the ~70 field definitions in FieldDefinitions (or a
-    collection-specific CustomFields subclass), extracts each value from the
-    JSON item, and calls update_item_value() to format and attach it.
+    Iterates over the field manifest declared on ctx.fields, where each entry
+    specifies an Omeka property term, the extractor method name to call on
+    ctx.fields, and the Omeka datatype. The manifest is defined by
+    FieldDefinitions.field_manifest and may be extended by a collection's
+    CustomFields subclass to add collection-specific properties.
 
     Parameters:
     * ctx           - OmekaContext providing config and the property ID cache
-    * json_item     - dict representing one record from the Datura ES output
+    * row           - raw JSON item dict from the Datura ES output
     * existing_item - existing Omeka item dict to update in-place, or None
                       when creating a new item (an empty dict is used instead)
 
@@ -47,88 +48,17 @@ def build_item_dict(ctx, json_item, existing_item):
     unexpected way.
     """
     try:
-        # Load the collection-specific field definitions once during OmekaContext
-        # initialization (collection-specific CustomFields subclass if omeka_overrides.py 
-        # is present in scripts/python, otherwise the default FieldDefinitions). 
-        fields = ctx.fields
-
-        # Start from the existing Omeka item dict when updating, or an empty
-        # dict when creating. update_item_value() clears each key before
-        # writing, so stale values from the existing item are replaced.
         built_item = existing_item if existing_item else {}
-
-        update_item_value(ctx, built_item, "dcterms:title",             fields.title(json_item))
-        update_item_value(ctx, built_item, "dcterms:identifier",        fields.identifier(json_item))
-        update_item_value(ctx, built_item, "dh:collection",             fields.collection(json_item))
-        update_item_value(ctx, built_item, "dh:category",               fields.category(json_item))
-        update_item_value(ctx, built_item, "dh:category2",              fields.category2(json_item))
-        update_item_value(ctx, built_item, "dh:uriData",                fields.uriData(json_item), "uri")
-        update_item_value(ctx, built_item, "dcterms:type",              fields.dcterms_type(json_item))
-        update_item_value(ctx, built_item, "dcterms:creator",           fields.creator(json_item))
-        update_item_value(ctx, built_item, "dcterms:contributor",       fields.contributor(json_item))
-        update_item_value(ctx, built_item, "dcterms:date",              fields.date(json_item), "numeric:timestamp")
-        update_item_value(ctx, built_item, "dh:dateDisplay",            fields.dateDisplay(json_item))
-        update_item_value(ctx, built_item, "dh:dateYear",               fields.dateYear(json_item))
-        update_item_value(ctx, built_item, "dcterms:description",       fields.description(json_item))
-        update_item_value(ctx, built_item, "dcterms:format",            fields.dcterms_format(json_item))
-        update_item_value(ctx, built_item, "dcterms:relation",          fields.relation(json_item))
-        update_item_value(ctx, built_item, "dcterms:publisher",         fields.publisher(json_item))
-        update_item_value(ctx, built_item, "dh:biblID",                 fields.biblID(json_item))
-        update_item_value(ctx, built_item, "tei:biblTitle",             fields.biblTitle(json_item))
-        update_item_value(ctx, built_item, "tei:biblPubPlace",          fields.biblPubPlace(json_item))
-        update_item_value(ctx, built_item, "bibo:issue",                fields.issue(json_item))
-        update_item_value(ctx, built_item, "bibo:pageStart",            fields.pageStart(json_item))
-        update_item_value(ctx, built_item, "bibo:pageEnd",              fields.pageEnd(json_item))
-        update_item_value(ctx, built_item, "bibo:section",              fields.section(json_item))
-        update_item_value(ctx, built_item, "bibo:volume",               fields.volume(json_item))
-        update_item_value(ctx, built_item, "tei:biblTitleA",            fields.biblTitleA(json_item))
-        update_item_value(ctx, built_item, "tei:biblTitleM",            fields.biblTitleM(json_item))
-        update_item_value(ctx, built_item, "tei:biblTitleJ",            fields.biblTitleJ(json_item))
-        update_item_value(ctx, built_item, "dcterms:rightsHolder",      fields.rightsHolder(json_item))
-        update_item_value(ctx, built_item, "dcterms:license",           fields.license(json_item))
-        update_item_value(ctx, built_item, "dcterms:subject",           fields.subject(json_item))
-        update_item_value(ctx, built_item, "dh:topic",                  fields.topic(json_item))
-        update_item_value(ctx, built_item, "dh:category3",              fields.category3(json_item))
-        update_item_value(ctx, built_item, "dh:category4",              fields.category4(json_item))
-        update_item_value(ctx, built_item, "dh:category5",              fields.category5(json_item))
-        update_item_value(ctx, built_item, "dh:note",                   fields.note(json_item))
-        update_item_value(ctx, built_item, "dcterms:abstract",          fields.abstract(json_item))
-        update_item_value(ctx, built_item, "dh:keyword",                fields.keyword(json_item))
-        update_item_value(ctx, built_item, "dh:keyword2",               fields.keyword2(json_item))
-        update_item_value(ctx, built_item, "dh:keyword3",               fields.keyword3(json_item))
-        update_item_value(ctx, built_item, "dh:keyword4",               fields.keyword4(json_item))
-        update_item_value(ctx, built_item, "dh:keyword5",               fields.keyword5(json_item))
-        update_item_value(ctx, built_item, "dcterms:source",            fields.source(json_item))
-        update_item_value(ctx, built_item, "dcterms:medium",            fields.medium(json_item))
-        update_item_value(ctx, built_item, "dcterms:extent",            fields.extent(json_item))
-        update_item_value(ctx, built_item, "dcterms:language",          fields.language(json_item))
-        update_item_value(ctx, built_item, "dh:box",                    fields.box(json_item))
-        update_item_value(ctx, built_item, "dh:folder",                 fields.folder(json_item))
-        update_item_value(ctx, built_item, "foaf:name",                 fields.name(json_item))
-        update_item_value(ctx, built_item, "dh:spatial_short_name",     fields.spatial_short_name(json_item))
-        update_item_value(ctx, built_item, "tei:correspSentName",       fields.correspSentName(json_item))
-        update_item_value(ctx, built_item, "tei:correspSentPlace",      fields.correspSentPlace(json_item))
-        update_item_value(ctx, built_item, "tei:correspSentDate",       fields.correspSentDate(json_item), "numeric:timestamp")
-        update_item_value(ctx, built_item, "tei:correspDeliveredName",  fields.correspDeliveredName(json_item))
-        update_item_value(ctx, built_item, "tei:correspDeliveredPlace", fields.correspDeliveredPlace(json_item))
-        update_item_value(ctx, built_item, "tei:correspDeliveredDate",  fields.correspDeliveredDate(json_item), "numeric:timestamp")
-        update_item_value(ctx, built_item, "tei:distributor",           fields.distributor(json_item))
-        update_item_value(ctx, built_item, "tei:authority",             fields.authority(json_item))
-        update_item_value(ctx, built_item, "tei:biblNote",              fields.biblNote(json_item))
-        update_item_value(ctx, built_item, "dh:annotationsText",        fields.annotationsText(json_item))
-        update_item_value(ctx, built_item, "dh:itemText",               fields.itemText(json_item))
-
+        for omeka_term, method_name, datatype in ctx.fields.field_manifest():
+            value = getattr(ctx.fields, method_name)(row)
+            update_item_value(ctx, built_item, omeka_term, value, datatype)
         return built_item
-
     except ValueError as e:
-        # A ValueError here means a field definition returned an unexpected
-        # type or structure. Log it and re-raise so the caller can record the
-        # error and skip this item.
         logger.error("ValueError building item dict: %s", e)
         raise
 
 
-def link_item(ctx, json_item, existing_item):
+def link_records(ctx, row, existing_item):
     """
     Resolve inter-item relationships for a single item and attach them to the
     existing Omeka item dict.
@@ -138,90 +68,65 @@ def link_item(ctx, json_item, existing_item):
     items — these are caught as KeyError or TypeError and logged at DEBUG level
     so they do not pollute the run log. Genuine API failures in
     link_item_record() will surface as exceptions and should be caught by the
-    caller (link_item in json_to_omeka.py).
+    caller in json_to_omeka.py.
 
     Parameters:
     * ctx           - OmekaContext providing the API client and item_set_id
-    * json_item     - raw JSON item dict from the Datura ES output
+    * row           - raw JSON item dict from the Datura ES output
     * existing_item - the current Omeka item dict, deepcopied by the caller
 
     Returns the updated existing_item dict with relationship fields populated.
+
+    To extend this function with additional linking logic (e.g. linking person
+    names to separate Omeka person-items), override link_records in
+    scripts/python/fieldoverrides.py, import and call this default first:
+
+        from api_fields import link_records as default_link_records
+
+        def link_records(ctx, row, existing_item):
+            existing_item = default_link_records(ctx, row, existing_item)
+            # ... collection-specific linking logic
+            return existing_item
     """
-    # Each relationship field is optional; most items will not have all of
-    # them. Missing fields generate a DEBUG log entry, not a warning.
+    identifier = row.get("identifier")
 
     try:
-        part_ids = [part['id'] for part in json_item["has_part"]]
+        part_ids = [part['id'] for part in row["has_part"]]
         link_item_record(ctx, existing_item, "dcterms:hasPart", part_ids)
     except (KeyError, TypeError) as e:
-        logger.debug("No has_part data for %s: %s", json_item.get("identifier"), e)
+        logger.debug("No has_part data for %s: %s", identifier, e)
 
     try:
-        link_item_record(ctx, existing_item, "dcterms:isPartOf", json_item["is_part_of"]["id"])
+        link_item_record(ctx, existing_item, "dcterms:isPartOf", row["is_part_of"]["id"])
     except (KeyError, TypeError) as e:
-        logger.debug("No is_part_of data for %s: %s", json_item.get("identifier"), e)
+        logger.debug("No is_part_of data for %s: %s", identifier, e)
 
     try:
-        link_item_record(ctx, existing_item, "dcterms:relation", json_item["has_relation"]["id"])
+        link_item_record(ctx, existing_item, "dcterms:relation", row["has_relation"]["id"])
     except (KeyError, TypeError) as e:
-        logger.debug("No has_relation data for %s: %s", json_item.get("identifier"), e)
+        logger.debug("No has_relation data for %s: %s", identifier, e)
 
     try:
-        link_item_record(ctx, existing_item, "dh:orderPrev", json_item["previous_item"]["id"])
+        link_item_record(ctx, existing_item, "dh:orderPrev", row["previous_item"]["id"])
     except (KeyError, TypeError) as e:
-        logger.debug("No previous_item data for %s: %s", json_item.get("identifier"), e)
+        logger.debug("No previous_item data for %s: %s", identifier, e)
 
     try:
-        link_item_record(ctx, existing_item, "dh:orderNext", json_item["next_item"]["id"])
+        link_item_record(ctx, existing_item, "dh:orderNext", row["next_item"]["id"])
     except (KeyError, TypeError) as e:
-        logger.debug("No next_item data for %s: %s", json_item.get("identifier"), e)
+        logger.debug("No next_item data for %s: %s", identifier, e)
 
     try:
-        link_item_record(ctx, existing_item, "tei:correspNext", json_item["correspNext_omeka_s"])
+        link_item_record(ctx, existing_item, "tei:correspNext", row["correspNext_omeka_s"])
     except (KeyError, TypeError) as e:
-        logger.debug("No correspNext_omeka_s data for %s: %s", json_item.get("identifier"), e)
+        logger.debug("No correspNext_omeka_s data for %s: %s", identifier, e)
 
     try:
-        link_item_record(ctx, existing_item, "tei:correspPrev", json_item["correspPrev_omeka_s"])
+        link_item_record(ctx, existing_item, "tei:correspPrev", row["correspPrev_omeka_s"])
     except (KeyError, TypeError) as e:
-        logger.debug("No correspPrev_omeka_s data for %s: %s", json_item.get("identifier"), e)
+        logger.debug("No correspPrev_omeka_s data for %s: %s", identifier, e)
 
     return existing_item
-
-
-def prepare_item(ctx, row, existing_item=None):
-    """
-    Build a complete Omeka item dict from a Datura JSON record.
-
-    Thin wrapper around build_item_dict() that provides the standard entry
-    point used by json_to_omeka.py for both new item creation and updates.
-
-    Parameters:
-    * ctx           - OmekaContext
-    * row           - raw JSON item dict from the Datura ES output
-    * existing_item - existing Omeka item dict when updating, or None when
-                      creating a new item
-
-    Returns the built item dict, or raises ValueError if field extraction fails.
-    """
-    return build_item_dict(ctx, row, existing_item)
-
-
-def link_records(ctx, row, existing_item):
-    """
-    Resolve and attach all relationship fields for a single item.
-
-    Thin wrapper around link_item() that provides the standard entry point
-    used by json_to_omeka.py during the linking pass.
-
-    Parameters:
-    * ctx           - OmekaContext
-    * row           - raw JSON item dict from the Datura ES output
-    * existing_item - the current Omeka item dict (deepcopied by the caller)
-
-    Returns the updated item dict.
-    """
-    return link_item(ctx, row, existing_item)
 
 
 def update_item_value(ctx, item, key, value, datatype="literal"):
