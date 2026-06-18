@@ -1,8 +1,6 @@
 require_relative "../helpers.rb"
 require_relative "../file_type.rb"
 
-require "rest-client"
-
 class FileWebs < FileType
   attr_reader :es_req
 

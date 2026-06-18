@@ -1,7 +1,6 @@
 require_relative "../helpers.rb"
 require_relative "../file_type.rb"
 require_relative "../solr_poster.rb"
-require "rest-client"
 
 class FileHtml < FileType
   attr_reader :es_req

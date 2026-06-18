@@ -72,7 +72,6 @@ module Datura::Parser
           puts "'today', date (2015-01-01), or date and time (2015-01-01T18:24)".light_yellow
           exit
         else
-          # TODO should verify that this is a correct date and turn it into a time object
           datetime = timify(input)
           if datetime.nil?
             exit

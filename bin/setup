@@ -25,12 +25,23 @@ File.open(File.join(coll, "config", "private.yml"), "w") do |file|
 default:
   # number of files processed at the same time, increase for more powerful computers
   threads: 5
+
+  # Omeka S posting (required only if using post_omeka / post_omeka_html)
+  # omeka_server: servername.unl.edu/path/to/api
+  # key_identity: your_api_key_identity
+  # key_credential: your_api_key_credential
+  # resource_template: 1
+  # omeka_data_base: path/to/tei
+  # iiif_server: servername.unl.edu  # optional, only needed for media ingest
+  # iiif_collection: collection_name # optional, only needed for media ingest
 development:
   es_path: https://edit_private_config/elastic
   es_index: edit_private_config
+  # item_set: 123
 production:
   es_path: https://edit_private_config/elastic
   es_index: edit_private_config
+  # item_set: 456
 
 TEXT
   file.write(text)
@@ -81,11 +92,16 @@ end
 
 # SCRIPTS
 
-puts "-- Place XSLT, Ruby, and Python overrides in scripts/overrides"
+puts "-- Place XSLT and Ruby overrides in scripts/overrides"
 FileUtils.mkdir_p(File.join(coll, "scripts", "overrides"))
 FileUtils.touch(File.join(coll, "scripts", "overrides", ".keep"))
-FileUtils.cp(File.join(datura, "lib", "datura", "python", "omeka_overrides_example.py"), File.join(coll, "scripts", "overrides", "omeka_overrides_example.py"))
 
+puts "-- Place Python overrides in scripts/python"
+FileUtils.mkdir_p(File.join(coll, "scripts", "python"))
+FileUtils.cp(File.join(datura, "lib", "datura", "python", "omeka_overrides_example.py"), File.join(coll, "scripts", "python", "omeka_overrides_example.py"))
+
+puts "-- Copying requirements.txt for Python/Omeka pipeline".green
+FileUtils.cp(File.join(datura, "requirements.txt"), File.join(coll, "requirements.txt"))
 
 # SOURCE
 
@@ -104,6 +120,7 @@ FileUtils.touch(File.join(src, "drafts", "tei", ".keep"))
 File.open(File.join(coll, ".gitignore"), "w") do |file|
   text = <<TEXT
 .DS_Store
+.venv/
 config/private.yml
 /logs/*
 
@@ -116,8 +133,16 @@ config/private.yml
 /output/production/*
 !/output/production/html
 
-scripts/overrides/omeka_overrides_example.py
+scripts/python/omeka_overrides_example.py
 
 TEXT
   file.write(text)
 end
+
+
+puts "\nOmeka / Python pipeline (if needed):".yellow
+puts "-- Create a virtual environment: python3 -m venv .venv".green
+puts "-- Activate it: source .venv/bin/activate".green
+puts "-- Install dependencies: pip3 install -r requirements.txt".green
+puts "-- Uncomment and fill in the Omeka S keys in config/private.yml".green
+puts "-- Copy scripts/python/omeka_overrides_example.py to scripts/python/omeka_overrides.py and customize".green
