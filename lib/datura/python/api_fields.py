@@ -177,8 +177,7 @@ def add_formatted_value(ctx, item, key, value, datatype, label=""):
     if datatype == "literal":
         value = str(value)
 
-    # Look up the property ID via the cache — avoids one API round-trip per
-    # field per item across the entire run.
+    # Look up the property ID via the cache.
     prop_id = ctx.get_property_id(key)
 
     prop_value = {

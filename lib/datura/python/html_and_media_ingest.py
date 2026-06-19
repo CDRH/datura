@@ -240,8 +240,8 @@ def ingest_thumbnail(ctx, json_item, matching_item, iiif_dir):
     as the primary).
 
     URL construction is delegated to build_thumbnail_url(), which can be
-    overridden independently in scripts/python/process_overrides.py.
-
+    overridden independently. 
+    
     If build_thumbnail_url() returns None (no cover_image on the item), or if
     the download or upload fails, the function returns — the HTML ingest still
     proceeds.
