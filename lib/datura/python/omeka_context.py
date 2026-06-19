@@ -5,6 +5,7 @@ Central context object and exception hierarchy for the Omeka S ingestion pipelin
 
 """
 
+import importlib.util
 import logging
 from logging.handlers import RotatingFileHandler
 import os
@@ -407,9 +408,58 @@ class OmekaContext:
 
         # ---- Field definitions --------------------------------------------
         # Load collection-specific field mappings once here. get_fields() returns 
-        # a CustomFields subclass if scripts/python/omeka_overrides.py is present; 
+        # a CustomFields subclass if scripts/python/field_overrides.py is present; 
         # otherwise the default FieldDefinitions instance.
         self.fields = get_fields(omeka_data_base=self.omeka_data_base)
+
+        # ---- Process function overrides -----------------------------------
+        # Load collection-specific replacements for four pipeline functions:
+        #   link_records, update_item_value, link_item_record  (api_fields.py)
+        #   build_thumbnail_url                     (html_and_media_ingest.py)
+        #
+        # Each attribute is None when no override is present; call sites
+        # resolve the default via:  (ctx._fn_X or module.X)(ctx, ...)
+        #
+        # importlib.util is used to load the file by explicit path so that
+        # sys.path is not mutated and the module is not cached in sys.modules,
+        # keeping each context init independent.
+        self._fn_link_records = None
+        self._fn_update_item_value = None
+        self._fn_link_item_record = None
+        self._fn_build_thumbnail_url = None
+
+        _process_override_path = Path.cwd() / "scripts" / "python" / "process_overrides.py"
+        if _process_override_path.exists():
+            try:
+                _spec = importlib.util.spec_from_file_location(
+                    "process_overrides", _process_override_path
+                )
+                _po = importlib.util.module_from_spec(_spec)
+                _spec.loader.exec_module(_po)
+                self._fn_link_records        = getattr(_po, "link_records", None)
+                self._fn_update_item_value   = getattr(_po, "update_item_value", None)
+                self._fn_link_item_record    = getattr(_po, "link_item_record", None)
+                self._fn_build_thumbnail_url = getattr(_po, "build_thumbnail_url", None)
+                _active = [
+                    n for n, f in [
+                        ("link_records",        self._fn_link_records),
+                        ("update_item_value",   self._fn_update_item_value),
+                        ("link_item_record",    self._fn_link_item_record),
+                        ("build_thumbnail_url", self._fn_build_thumbnail_url),
+                    ] if f is not None
+                ]
+                if _active:
+                    logger.warning(
+                        "Process overrides found at %s; active overrides: %s",
+                        _process_override_path,
+                        _active,
+                    )
+            except Exception as e:
+                raise OmekaConfigError(
+                    "Failed to load process overrides from {}: {}".format(
+                        _process_override_path, e
+                    )
+                ) from e
 
 
     # -----------------------------------------------------------------------

@@ -49,9 +49,10 @@ def prepare_item(ctx, row, existing_item=None):
     """
     try:
         built_item = existing_item if existing_item else {}
+        _update = ctx._fn_update_item_value or update_item_value
         for omeka_term, method_name, datatype in ctx.fields.field_manifest():
             value = getattr(ctx.fields, method_name)(row)
-            update_item_value(ctx, built_item, omeka_term, value, datatype)
+            _update(ctx, built_item, omeka_term, value, datatype)
         return built_item
     except ValueError as e:
         logger.error("ValueError building item dict: %s", e)
@@ -79,40 +80,41 @@ def link_records(ctx, row, existing_item):
 
     """
     identifier = row.get("identifier")
+    _link = ctx._fn_link_item_record or link_item_record
 
     try:
         part_ids = [part['id'] for part in row["has_part"]]
-        link_item_record(ctx, existing_item, "dcterms:hasPart", part_ids)
+        _link(ctx, existing_item, "dcterms:hasPart", part_ids)
     except (KeyError, TypeError) as e:
         logger.debug("No has_part data for %s: %s", identifier, e)
 
     try:
-        link_item_record(ctx, existing_item, "dcterms:isPartOf", row["is_part_of"]["id"])
+        _link(ctx, existing_item, "dcterms:isPartOf", row["is_part_of"]["id"])
     except (KeyError, TypeError) as e:
         logger.debug("No is_part_of data for %s: %s", identifier, e)
 
     try:
-        link_item_record(ctx, existing_item, "dcterms:relation", row["has_relation"]["id"])
+        _link(ctx, existing_item, "dcterms:relation", row["has_relation"]["id"])
     except (KeyError, TypeError) as e:
         logger.debug("No has_relation data for %s: %s", identifier, e)
 
     try:
-        link_item_record(ctx, existing_item, "dh:orderPrev", row["previous_item"]["id"])
+        _link(ctx, existing_item, "dh:orderPrev", row["previous_item"]["id"])
     except (KeyError, TypeError) as e:
         logger.debug("No previous_item data for %s: %s", identifier, e)
 
     try:
-        link_item_record(ctx, existing_item, "dh:orderNext", row["next_item"]["id"])
+        _link(ctx, existing_item, "dh:orderNext", row["next_item"]["id"])
     except (KeyError, TypeError) as e:
         logger.debug("No next_item data for %s: %s", identifier, e)
 
     try:
-        link_item_record(ctx, existing_item, "tei:correspNext", row["correspNext_omeka_s"])
+        _link(ctx, existing_item, "tei:correspNext", row["correspNext_omeka_s"])
     except (KeyError, TypeError) as e:
         logger.debug("No correspNext_omeka_s data for %s: %s", identifier, e)
 
     try:
-        link_item_record(ctx, existing_item, "tei:correspPrev", row["correspPrev_omeka_s"])
+        _link(ctx, existing_item, "tei:correspPrev", row["correspPrev_omeka_s"])
     except (KeyError, TypeError) as e:
         logger.debug("No correspPrev_omeka_s data for %s: %s", identifier, e)
 

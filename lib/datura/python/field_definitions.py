@@ -1,6 +1,7 @@
+import importlib.util
 import logging
-import sys
 from datetime import datetime
+from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
@@ -328,9 +329,10 @@ def get_fields(omeka_data_base=""):
     """
     Return the appropriate FieldDefinitions instance for this collection.
 
-    Attempts to import CustomFields from scripts/python/omeka_overrides.py
-    in the collection directory. If that file does not exist, falls back to
-    the default FieldDefinitions class.
+    Looks for a CustomFields class in scripts/python/field_overrides.py in
+    the collection directory (resolved from the current working directory).
+    If that file does not exist, falls back to the default FieldDefinitions
+    class. If the file exists but cannot be loaded, raises RuntimeError.
 
     Parameters:
     * omeka_data_base - passed through to the FieldDefinitions constructor
@@ -339,16 +341,29 @@ def get_fields(omeka_data_base=""):
 
     Returns a FieldDefinitions instance (or a CustomFields subclass of it).
     """
-    try:
-        # Insert at position 0 so the collection's scripts/python directory
-        # takes precedence over any system-installed omeka_overrides module.
-        sys.path.insert(0, './scripts/python')
-        from omeka_overrides import CustomFields
-        # CustomFields inherits __init__ from FieldDefinitions, so
-        # omeka_data_base is passed through automatically. Override __init__
-        # in CustomFields only if you need additional constructor logic.
-        logger.warning("Omeka overrides found at %s; custom field mappings will be applied.", "scripts/python/omeka_overrides.py")
-        return CustomFields(omeka_data_base=omeka_data_base)
-    except ImportError:
-        # No collection-specific overrides found; use the defaults.
+    override_path = Path.cwd() / "scripts" / "python" / "field_overrides.py"
+    if not override_path.exists():
         return FieldDefinitions(omeka_data_base=omeka_data_base)
+
+    try:
+        spec = importlib.util.spec_from_file_location("field_overrides", override_path)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+    except Exception as e:
+        raise RuntimeError(
+            "Failed to load field overrides from {}: {}".format(override_path, e)
+        ) from e
+
+    CustomFields = getattr(module, "CustomFields", None)
+    if CustomFields is None:
+        # File exists but defines no CustomFields class — use defaults.
+        return FieldDefinitions(omeka_data_base=omeka_data_base)
+
+    # CustomFields inherits __init__ from FieldDefinitions, so
+    # omeka_data_base is passed through automatically. Override __init__
+    # in CustomFields only if you need additional constructor logic.
+    logger.warning(
+        "Field overrides found at %s; custom field mappings will be applied.",
+        override_path,
+    )
+    return CustomFields(omeka_data_base=omeka_data_base)

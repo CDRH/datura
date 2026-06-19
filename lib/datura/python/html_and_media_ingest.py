@@ -255,7 +255,8 @@ def ingest_thumbnail(ctx, json_item, matching_item, iiif_dir):
     """
     identifier = json_item.get("identifier", "unknown")
 
-    result = build_thumbnail_url(ctx, json_item)
+    _build_thumbnail_url = ctx._fn_build_thumbnail_url or build_thumbnail_url
+    result = _build_thumbnail_url(ctx, json_item)
     if result is None:
         # No thumbnail for this item — nothing to do.
         logger.debug("No cover_image for %r; skipping thumbnail ingest", identifier)
