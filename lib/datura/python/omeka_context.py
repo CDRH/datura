@@ -59,7 +59,7 @@ def configure_logging(level="INFO"):
     file_handler = RotatingFileHandler(
         "logs/python.log", maxBytes=5 * 1024 * 1024, backupCount=3
     )
-    file_handler.setFormatter(logging.Formatter("%(asctime)s [%(levelname)s] %(name)s: %(message)s"))
+    file_handler.setFormatter(logging.Formatter("%(asctime)s [%(levelname)-8s] %(name)s: %(message)s"))
     file_handler.setLevel(logging.DEBUG)  # always save everything to logs
 
     # Console handler — respects the requested level
