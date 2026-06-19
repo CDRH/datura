@@ -467,11 +467,10 @@ class OmekaContext:
 
     def reset_client(self):
         """
-        Re-instantiate the authenticated API client with a fresh connection.
-
-        Called in json_to_omeka.py between the item-posting pass and the
-        item-linking pass to obtain a clean session before the second round
-        of API requests.
+        Re-instantiate the authenticated API client with a fresh connection
+        to clear its HTTP response cache. (Otherwise Pass 2 would return the 
+        stale responses from GET requests in Pass 1, per the OmekaAPIClient's 
+        requests_cache session wrapper.)
 
         The property ID cache is intentionally preserved: term-to-ID mappings
         do not change between passes, so clearing and re-fetching them would

@@ -449,7 +449,8 @@ def main():
     4. Discover JSON files under output/<environment>/es/.
     5. Apply regex filter if -r was passed.
     6. Run pass 1 (post_items).
-    7. Reset the API client between passes for a clean connection.
+    7. Reset the API client between passes for a clean connection (see 
+       ctx.reset_client() docstring for why this is required).
     8. Run pass 2 (link_items).
     9. Print run summary; exit 1 if any per-item errors were recorded,
         0 if all items succeeded.
