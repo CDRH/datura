@@ -195,8 +195,6 @@ def build_thumbnail_url(ctx, json_item):
     * ctx       - OmekaContext (provides iiif_server, iiif_collection)
     * json_item - dict: one record from a Datura ES JSON file
 
-    To override URL construction for a collection (e.g. a different IIIF path
-    convention), define build_thumbnail_url in scripts/python/process_overrides.py.
     """
 
     collection_name = ctx.iiif_collection if ctx.iiif_collection else json_item.get("collection", "")

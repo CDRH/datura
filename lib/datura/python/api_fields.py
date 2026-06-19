@@ -77,16 +77,6 @@ def link_records(ctx, row, existing_item):
 
     Returns the updated existing_item dict with relationship fields populated.
 
-    To extend this function with additional linking logic (e.g. linking person
-    names to separate Omeka person-items), override link_records in
-    scripts/python/fieldoverrides.py, import and call this default first:
-
-        from api_fields import link_records as default_link_records
-
-        def link_records(ctx, row, existing_item):
-            existing_item = default_link_records(ctx, row, existing_item)
-            # ... collection-specific linking logic
-            return existing_item
     """
     identifier = row.get("identifier")
 
