@@ -223,10 +223,12 @@ class OmekaContext:
         Parameters:
         * args - argparse.Namespace produced by an entrypoint's _parse_args().
                  Expected attributes:
-                   .environment  str   "development" or "production"
-                   .regex        str   optional file-filter pattern, or None
-                   .update_time  str   optional date/time string for -u filter, or None
-                   .media_skip   bool  skip re-ingesting existing media
+                   .environment     str   "development" or "production"
+                   .format_filter   str   optional format string for -f (directory-based) 
+                                       filter, or None
+                   .regex           str   optional file-filter pattern, or None
+                   .update_time     str   optional date/time string for -u filter, or None
+                   .media_skip      bool  skip re-ingesting existing media
                                        (html_and_media_ingest only; absent on
                                        json_to_omeka args, defaults to False)
 
@@ -310,19 +312,21 @@ class OmekaContext:
         this constructor directly except in tests.
 
         Parameters:
-        * env_config  - merged dict: the "default" section of private.yml
-                        overlaid with the environment-specific section so that
-                        per-environment values take precedence over defaults.
-                        Must contain omeka_server, key_identity, key_credential,
-                        resource_template, omeka_data_base, and item_set.
-        * environment - "development" or "production"
-        * regex       - optional regex string to filter input file paths;
-                        None means process all files in the output directory
-        * media_skip  - if True, items that already have 2+ media objects
-                        (thumbnail + HTML) are skipped during media ingest
-        * update_time - optional datetime; if set, only items whose source file
-                        mtime >= this value are processed (mirrors the -u flag
-                        from the main Datura post command)
+        * env_config    - merged dict: the "default" section of private.yml
+                          overlaid with the environment-specific section so that
+                          per-environment values take precedence over defaults.
+                          Must contain omeka_server, key_identity, key_credential,
+                          resource_template, omeka_data_base, and item_set.
+        * environment   - "development" or "production"
+        * format_filter - optional format string to filter files by format (directory); 
+                          None means process all files in the output directory
+        * regex         - optional regex string to filter input file paths;
+                          None means process all files in the output directory
+        * media_skip    - if True, items that already have 2+ media objects
+                          (thumbnail + HTML) are skipped during media ingest
+        * update_time   - optional datetime; if set, only items whose source file
+                          mtime >= this value are processed (mirrors the -u flag
+                          from the main Datura post command)
         """
         # ---- Validate required config keys --------------------------------
         # Validate up front so that failures are immediate and descriptive.
