@@ -71,10 +71,12 @@ def _parse_args():
     Parse command-line arguments for the HTML/media ingest entrypoint.
 
     Returns an argparse.Namespace with:
-    * environment  - "development" or "production" (default: "development")
-    * regex        - optional file-filter pattern string, or None
-    * media_skip   - bool; True skips items that already have 2+ media objects
-    * log_level    - logging level string, default "INFO"
+    * environment   - "development" or "production" (default: "development")
+    * format_filter - optional format string for -f (directory-based) filter, or None
+    * regex         - optional file-filter pattern string, or None
+    * update_time   - optional date/time string for -u filter, or None
+    * media_skip    - bool; True skips items that already have 2+ media objects
+    * log_level     - logging level string, default "INFO"
     """
     parser = argparse.ArgumentParser(
         description="Attach HTML and IIIF thumbnail media to existing Omeka S items."

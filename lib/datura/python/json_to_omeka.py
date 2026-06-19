@@ -72,9 +72,12 @@ def _parse_args():
     Parse command-line arguments for the JSON-to-Omeka entrypoint.
 
     Returns an argparse.Namespace with:
-    * environment - "development" or "production" (default: "development")
-    * regex       - optional file-filter pattern string, or None
-    * log_level   - logging level string, default "INFO"
+    * environment   - "development" or "production" (default: "development")
+    * format_filter - optional format string for -f (directory-based) filter, or None
+    * json_output   - bool; True skips post to Omeka API and instead writes data to files as JSON
+    * regex         - optional file-filter pattern string, or None
+    * update_time   - optional date/time string for -u filter, or None
+    * log_level     - logging level string, default "INFO"
 
     """
     parser = argparse.ArgumentParser(
