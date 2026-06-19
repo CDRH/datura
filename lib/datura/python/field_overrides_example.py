@@ -1,4 +1,4 @@
-#copy this file to omeka_overrides.py in your scripts/python directory. Edit the return values as needed
+#copy this file to field_overrides.py in your scripts/python directory. Edit the return values as needed
 
 from field_definitions import FieldDefinitions
 
