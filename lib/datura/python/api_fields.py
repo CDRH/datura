@@ -252,10 +252,24 @@ def update_item_value(ctx, item, key, value, datatype="literal"):
     if isinstance(value, (str, int, float)):
         item = add_formatted_value(ctx, item, key, value, datatype)
     elif isinstance(value, list):
-        # Deduplicate (preserving insertion order) and remove None entries.
-        value = list(dict.fromkeys(v for v in value if v is not None))
+        # List entries may be strings or dicts (e.g. contributor returns
+        # [{"name": "...", "id": "..."}]). For dicts, the dedup key compares 
+        # based on id when id is present or creates a sorted tuple of all 
+        # items so that two dicts are only considered duplicates when every 
+        # key-value pair matches.
+        seen = {}
         for v in value:
-            item = add_formatted_value(ctx, item, key, v, datatype)
+            if v is None:
+                continue
+            dedup_key = v.get("id") or tuple(sorted(v.items())) if isinstance(v,dict) else v
+            if dedup_key not in seen:
+                seen[dedup_key] = v
+        for v in seen.values():
+            display = v.get("name") if isinstance(v,dict) else v
+            if display is None: 
+                continue
+            else:
+                item = add_formatted_value(ctx, item, key, display, datatype)
 
 
 def add_formatted_value(ctx, item, key, value, datatype, label=""):
