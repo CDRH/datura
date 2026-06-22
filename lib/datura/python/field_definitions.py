@@ -212,33 +212,6 @@ class FieldDefinitions:
         places = [spatial] if isinstance(spatial, dict) else spatial
         short_names = [place['short_name'] for place in places if 'short_name' in place]
         return short_names
-        
-    def correspSentName(self, json):
-        return json.get("correspSentName_omeka_s", None)
-    
-    def correspSentPlace(self, json):
-        return json.get("correspSentPlace_omeka_s", None)
-    
-    def correspSentDate(self, json):
-        return json.get("correspSentDate_omeka_s", None)
-    
-    def correspDeliveredName(self, json):
-        return json.get("correspDeliveredName_omeka_s", None)
-    
-    def correspDeliveredPlace(self, json):
-        return json.get("correspDeliveredPlace_omeka_s", None)
-    
-    def correspDeliveredDate(self, json):
-        return json.get("correspDeliveredDate_omeka_s", None)
-    
-    def distributor(self, json):
-        return json.get("distributor_omeka_s", None)
-    
-    def authority(self, json):
-        return json.get("authority_omeka_s", None)
-    
-    def biblNote(self, json):
-        return json.get("biblNote_omeka_s", None)
     
     def annotationsText(self, json):
         return json.get("annotations_text", None)
