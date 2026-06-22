@@ -351,7 +351,7 @@ def get_fields(omeka_data_base=""):
         spec.loader.exec_module(module)
     except Exception as e:
         raise RuntimeError(
-            "Failed to load field overrides from {}: {}".format(override_path, e)
+            f"Failed to load field overrides from {override_path}: {e}"
         ) from e
 
     CustomFields = getattr(module, "CustomFields", None)

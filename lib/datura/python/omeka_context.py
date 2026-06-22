@@ -456,9 +456,7 @@ class OmekaContext:
                     )
             except Exception as e:
                 raise OmekaConfigError(
-                    "Failed to load process overrides from {}: {}".format(
-                        _process_override_path, e
-                    )
+                    f"Failed to load process overrides from {_process_override_path}: {e}"
                 ) from e
 
 
