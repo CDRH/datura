@@ -313,13 +313,13 @@ def add_formatted_value(ctx, item, key, value, datatype, label=""):
 
     return item
 
-def get_omeka_ids(ctx, lookup_values, filter_property):
+def get_omeka_ids(ctx, lookup_values, filter_property, item_set_id="ctx_default"):
     """
     Resolve a list of lookup values to Omeka numeric item IDs.
 
-    For each lookup value, queries the Omeka API to find the matching item
-    within the configured item set. Used during the linking pass to convert
-    CDRH identifiers into the Omeka IDs required for resource:item links.
+    For each lookup value, queries the Omeka API to find the matching item. 
+    Used during the linking pass to convert CDRH identifiers into the Omeka IDs 
+    required for resource:item links.
 
     Parameters:
     * ctx            - OmekaContext providing the API client and item_set_id
@@ -328,11 +328,19 @@ def get_omeka_ids(ctx, lookup_values, filter_property):
                        when filter_property is "o:id"
     * filter_property - the Omeka property to match against, e.g.
                         "dcterms:identifier" or "o:id"
+    * item_set_id    - restricts the search to a specific Omeka item set.
+                       Defaults to ctx.item_set_id (the current collection).
+                       Pass None to search across all item sets — useful when
+                       the target items (e.g. a personography) live in a
+                       separate item set from the collection being ingested.
 
     Returns a list of integer Omeka item IDs for all successfully resolved values.
     Logs a warning for values that cannot be resolved.
     """
     omeka_ids = []
+
+    # Resolve the sentinel to ctx.item_set_id so existing callers are unaffected.
+    resolved_item_set_id = ctx.item_set_id if item_set_id == "ctx_default" else item_set_id
 
     # Normalise a single value to a list for uniform iteration.
     lookup_values = [lookup_values] if not isinstance(lookup_values, list) else lookup_values
@@ -350,7 +358,7 @@ def get_omeka_ids(ctx, lookup_values, filter_property):
             match = ctx.client.filter_items_by_property(
                 filter_property=filter_property,
                 filter_value=lookup_value,
-                item_set_id=ctx.item_set_id,
+                item_set_id=resolved_item_set_id,
             )
             if match["total_results"] >= 1:
                 if match["total_results"] > 1:
