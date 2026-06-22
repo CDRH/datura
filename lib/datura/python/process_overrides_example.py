@@ -19,7 +19,7 @@
 #     cover_image = json_item.get("cover_image")
 #     if not cover_image:
 #         return None
-#     remote = f"{ctx.iiif_server}/iiif/3/{collection}/{cover_image}/full/200,/0/default.jpg"
+#     remote = f"{ctx.iiif_server}/iiif/2/{collection}%2F{cover_image}/full/!150,150/0/default.jpg"
 #     local_name = f"{collection}_{cover_image}"
 #     return remote, local_name
 
