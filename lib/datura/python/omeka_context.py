@@ -59,7 +59,7 @@ def configure_logging(level="INFO"):
     file_handler = RotatingFileHandler(
         "logs/python.log", maxBytes=5 * 1024 * 1024, backupCount=3
     )
-    file_handler.setFormatter(logging.Formatter("%(asctime)s [%(levelname)s] %(name)s: %(message)s"))
+    file_handler.setFormatter(logging.Formatter("%(asctime)s [%(levelname)-8s] %(name)s: %(message)s"))
     file_handler.setLevel(logging.DEBUG)  # always save everything to logs
 
     # Console handler — respects the requested level
@@ -145,7 +145,7 @@ class OmekaAPIError(OmekaError):
         self.operation = operation
         self.cause = cause
         super().__init__(
-            "{} failed for {!r}: {}".format(operation, identifier, cause)
+            f"{operation} failed for {identifier!r}: {cause}"
         )
         
 
@@ -183,11 +183,9 @@ def parse_update_time(s):
             return datetime.strptime(s, fmt)
         except ValueError:
             continue
-    raise OmekaConfigError(RED + 
-        "Invalid --update value {!r}. "
-        "Expected 'today', a date (2015-01-01), or date-time (2015-01-01T18:24)."
-        .format(s)
-        + RESET
+    raise OmekaConfigError(
+        f"{RED}Invalid --update value {s!r}. "
+        f"Expected 'today', a date (2015-01-01), or date-time (2015-01-01T18:24).{RESET}"
     )
 
 
@@ -223,10 +221,12 @@ class OmekaContext:
         Parameters:
         * args - argparse.Namespace produced by an entrypoint's _parse_args().
                  Expected attributes:
-                   .environment  str   "development" or "production"
-                   .regex        str   optional file-filter pattern, or None
-                   .update_time  str   optional date/time string for -u filter, or None
-                   .media_skip   bool  skip re-ingesting existing media
+                   .environment     str   "development" or "production"
+                   .format_filter   str   optional format string for -f (directory-based) 
+                                       filter, or None
+                   .regex           str   optional file-filter pattern, or None
+                   .update_time     str   optional date/time string for -u filter, or None
+                   .media_skip      bool  skip re-ingesting existing media
                                        (html_and_media_ingest only; absent on
                                        json_to_omeka args, defaults to False)
 
@@ -281,25 +281,20 @@ class OmekaContext:
             with open(path) as f:
                 contents = yaml.safe_load(f)
         except FileNotFoundError:
-            raise OmekaConfigError(RED + 
-                "Config file not found: {}. "
+            raise OmekaConfigError( 
+                f"{RED}Config file not found: {path}. "
                 "Ensure config/private.yml exists in the collection directory "
-                "and that you are running the script from the collection root."
-                .format(path)
-                + RESET
+                f"and that you are running the script from the collection root.{RESET}"
             )
         except yaml.YAMLError as exc:
-            raise OmekaConfigError(RED + 
-                "Could not parse YAML in {}: {}".format(path, exc)
-                + RESET
+            raise OmekaConfigError(
+                f"{RED}Could not parse YAML in {path}: {exc}{RESET}"
             )
 
         if env not in contents:
             raise OmekaConfigError(RED + 
-                "Environment section {!r} not found in {}. "
-                "Available sections: {}"
-                .format(env, path, list(contents.keys()))
-                + RESET
+                f"{RED}Environment section {env!r} not found in {path}. "
+                f"Available sections: {list(contents.keys())}{RESET}"
             )
 
         return contents[env]
@@ -310,19 +305,21 @@ class OmekaContext:
         this constructor directly except in tests.
 
         Parameters:
-        * env_config  - merged dict: the "default" section of private.yml
-                        overlaid with the environment-specific section so that
-                        per-environment values take precedence over defaults.
-                        Must contain omeka_server, key_identity, key_credential,
-                        resource_template, omeka_data_base, and item_set.
-        * environment - "development" or "production"
-        * regex       - optional regex string to filter input file paths;
-                        None means process all files in the output directory
-        * media_skip  - if True, items that already have 2+ media objects
-                        (thumbnail + HTML) are skipped during media ingest
-        * update_time - optional datetime; if set, only items whose source file
-                        mtime >= this value are processed (mirrors the -u flag
-                        from the main Datura post command)
+        * env_config    - merged dict: the "default" section of private.yml
+                          overlaid with the environment-specific section so that
+                          per-environment values take precedence over defaults.
+                          Must contain omeka_server, key_identity, key_credential,
+                          resource_template, omeka_data_base, and item_set.
+        * environment   - "development" or "production"
+        * format_filter - optional format string to filter files by format (directory); 
+                          None means process all files in the output directory
+        * regex         - optional regex string to filter input file paths;
+                          None means process all files in the output directory
+        * media_skip    - if True, items that already have 2+ media objects
+                          (thumbnail + HTML) are skipped during media ingest
+        * update_time   - optional datetime; if set, only items whose source file
+                          mtime >= this value are processed (mirrors the -u flag
+                          from the main Datura post command)
         """
         # ---- Validate required config keys --------------------------------
         # Validate up front so that failures are immediate and descriptive.
@@ -336,24 +333,20 @@ class OmekaContext:
         ]
         missing_keys = [key for key in required_keys if key not in env_config]
         if missing_keys:
-            raise OmekaConfigError(RED + 
-                "Missing required config key(s): {}. "
-                "Check the 'default' or {!r} section of config/private.yml."
-                .format(missing_keys, environment)
-                + RESET
+            raise OmekaConfigError(
+                f"{RED}Missing required config key(s): {missing_keys}. "
+                f"Check the 'default' or {environment!r} section of config/private.yml.{RESET}"
             )
 
         # ---- Validate environment-specific item_set ---------------------------
         if "item_set" not in env_config:
-            raise OmekaConfigError(RED + 
-                "Missing 'item_set' for environment {!r} in config/private.yml.\n"
+            raise OmekaConfigError(
+                f"{RED}Missing 'item_set' for environment {environment!r} in config/private.yml.\n"
                 "Add the item set ID for this environment before running. Example:\n\n"
-                "  {}:\n"
+                f"  {environment}:\n"
                 "    item_set: 123\n\n"
                 "To find your item set ID, log into the Omeka S admin and navigate "
-                "to Items > Item Sets."
-                .format(environment, environment)
-                + RESET
+                f"to Items > Item Sets.{RESET}"
             )
 
         # ---- Runtime flags ------------------------------------------------
@@ -463,11 +456,10 @@ class OmekaContext:
 
     def reset_client(self):
         """
-        Re-instantiate the authenticated API client with a fresh connection.
-
-        Called in json_to_omeka.py between the item-posting pass and the
-        item-linking pass to obtain a clean session before the second round
-        of API requests.
+        Re-instantiate the authenticated API client with a fresh connection
+        to clear its HTTP response cache. (Otherwise Pass 2 would return the 
+        stale responses from GET requests in Pass 1, per the OmekaAPIClient's 
+        requests_cache session wrapper.)
 
         The property ID cache is intentionally preserved: term-to-ID mappings
         do not change between passes, so clearing and re-fetching them would
@@ -490,7 +482,7 @@ class OmekaContext:
         Resolve a path relative to the current working directory (collection root).
         Callers interpolate the environment into the path template:
 
-            json_dir = ctx.resolve_path("output/{}/es".format(ctx.environment))
+            json_dir = ctx.resolve_path(f"output/{ctx.environment}/es")
 
         This ensures that passing -e production reads from output/production/
         rather than always using output/development/.

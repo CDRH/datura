@@ -49,12 +49,10 @@ try:
     )
 except ModuleNotFoundError as err:
     raise SystemExit(
-        "\033[31m"
-        "ERROR: {}\n"
+        f"\033[31m ERROR: {err}\n"
         "A required Python package could not be found. "
         "You may need to ensure the virtual environment is activated before running this script.\n"
-        "You may also need to be connected to the VPN."
-        "\033[0m".format(err)
+        "You may also need to be connected to the VPN.\033[0m"
     ) from err
 
 # Module-level logger. Records from this module appear as
@@ -71,10 +69,12 @@ def _parse_args():
     Parse command-line arguments for the HTML/media ingest entrypoint.
 
     Returns an argparse.Namespace with:
-    * environment  - "development" or "production" (default: "development")
-    * regex        - optional file-filter pattern string, or None
-    * media_skip   - bool; True skips items that already have 2+ media objects
-    * log_level    - logging level string, default "INFO"
+    * environment   - "development" or "production" (default: "development")
+    * format_filter - optional format string for -f (directory-based) filter, or None
+    * regex         - optional file-filter pattern string, or None
+    * update_time   - optional date/time string for -u filter, or None
+    * media_skip    - bool; True skips items that already have 2+ media objects
+    * log_level     - logging level string, default "INFO"
     """
     parser = argparse.ArgumentParser(
         description="Attach HTML and IIIF thumbnail media to existing Omeka S items."
@@ -172,15 +172,11 @@ def delete_media_items(ctx, matching_item):
                 )
             else:
                 ctx.record_error(
-                    OmekaMediaError(
-                        "HTTP {} deleting media {}: {}".format(
-                            err.response.status_code, media_id, err
-                        )
-                    )
+                    OmekaMediaError(f"HTTP {err.response.status_code} deleting media {media_id}: {err}")
                 )
         except Exception as err:
             ctx.record_error(
-                OmekaMediaError("Unexpected error deleting media {}: {}".format(media_id, err))
+                OmekaMediaError(f"Unexpected error deleting media {media_id}: {err}")
             )
 
 def build_thumbnail_url(ctx, json_item):
@@ -217,16 +213,11 @@ def build_thumbnail_url(ctx, json_item):
     # The !200,200 size specifier requests a thumbnail that fits within a
     # 200×200 bounding box while preserving aspect ratio.
     remote = (
-        "{}/iiif/2/{collection}%2F{image}{ext}/full/!200,200/0/default.jpg".format(
-            ctx.iiif_server,
-            collection=collection_name,
-            image=stem,
-            ext=image_ext,
-        )
+        f"{ctx.iiif_server}/iiif/2/{collection_name}%2F{stem}{image_ext}/full/!200,200/0/default.jpg"
     )
     # Cache the thumbnail locally using the same URL-encoded filename so that
     # re-runs can be inspected on disk if needed.
-    local_name = "{}%2F{}{}".format(collection_name, stem, image_ext)
+    local_name = f"{collection_name}%2F{stem}{image_ext}"
 
     return remote, local_name
 
@@ -307,7 +298,7 @@ def ingest_thumbnail(ctx, json_item, matching_item, iiif_dir):
     except Exception as err:
         ctx.record_error(
             OmekaMediaError(
-                "Error posting thumbnail for {!r}: {}".format(identifier, err)
+                f"Error posting thumbnail for {identifier!r}: {err}"
             )
         )
 
@@ -332,7 +323,7 @@ def ingest_html(ctx, json_item, matching_item, html_dir):
     * html_dir      - pathlib.Path pointing to the HTML output directory
     """
     identifier = json_item.get("identifier", "unknown")
-    file_path = html_dir / "{}.html".format(identifier)
+    file_path = html_dir / f"{identifier}.html"
 
     try:
         with open(file_path, "r", encoding="utf-8") as file:
@@ -367,7 +358,7 @@ def ingest_html(ctx, json_item, matching_item, html_dir):
     except Exception as err:
         ctx.record_error(
             OmekaMediaError(
-                "Error posting HTML for {!r}: {}".format(identifier, err)
+                f"Error posting HTML for {identifier!r}: {err}"
             )
         )
 
@@ -511,9 +502,9 @@ def main():
     # Resolve all three environment-specific directories using the requested
     # environment so that -e production reads from output/production/ rather
     # than always defaulting to output/development/.
-    json_dir  = ctx.resolve_path("output/{}/es".format(ctx.environment))
-    html_dir  = ctx.resolve_path("output/{}/html".format(ctx.environment))
-    iiif_dir  = ctx.resolve_path("output/{}/iiif".format(ctx.environment))
+    json_dir  = ctx.resolve_path(f"output/{ctx.environment}/es")
+    html_dir  = ctx.resolve_path(f"output/{ctx.environment}/html")
+    iiif_dir  = ctx.resolve_path(f"output/{ctx.environment}/iiif")
 
     pathlist = list(Path(json_dir).glob("**/*.json"))
 
@@ -527,7 +518,7 @@ def main():
     logger.info(
         "Found %d JSON file(s) in %s (environment=%r, media_skip=%s)",
         len(pathlist),
-        "output/{}/es".format(ctx.environment),
+        f"output/{ctx.environment}/es",
         ctx.environment,
         ctx.media_skip,
     )
@@ -545,5 +536,5 @@ if __name__ == "__main__":
         sys.exit(1)
     except OmekaConfigError as err:
         logger.debug("Fatal configuration error:", exc_info=True)
-        print("ERROR: {}".format(err), file=sys.stderr)
+        print(f"ERROR: {err}", file=sys.stderr)
         sys.exit(1)
