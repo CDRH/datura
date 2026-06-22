@@ -50,12 +50,10 @@ try:
     from omeka import filter_items, filter_items_by_date, filter_items_by_format, prepare_item_payload_using_template
 except ModuleNotFoundError as err:
     raise SystemExit(
-        "\033[31m"
-        "ERROR: {}\n"
+        f"\033[31m ERROR: {err}\n"
         "A required Python package could not be found. "
         "You may need to ensure the virtual environment is activated before running this script.\n"
-        "You may also need to be connected to the VPN."
-        "\033[0m".format(err)
+        "You may also need to be connected to the VPN.\033[0m"
     ) from err
 
 # Module-level logger.  Records from this module appear as "json_to_omeka"
@@ -192,8 +190,8 @@ def post_items(ctx, pathlist, json_output_dir=None):
                     logger.warning("Could not prepare payload for %r; skipping", identifier)
                     continue
                 payload = prepare_item_payload_using_template(ctx, new_item, template_number)
-                out_path = json_output_dir / "{}.json".format(identifier)
-                relative_path = "output/{}/{}.json".format(ctx.environment, identifier)
+                out_path = json_output_dir / f"{identifier}.json"
+                relative_path = f"output/{ctx.environment}/{identifier}.json"
                 logger.info("Writing Omeka payload for %r to %s", identifier, relative_path)
                 with open(out_path, "w") as f:
                     json.dump(payload, f, indent=2)
@@ -472,7 +470,7 @@ def main():
     # ctx.resolve_path() returns an absolute Path relative to cwd (the
     # collection root), so passing -e production reads from output/production/
     # rather than always defaulting to output/development/.
-    json_dir = ctx.resolve_path("output/{}/es".format(ctx.environment))
+    json_dir = ctx.resolve_path(f"output/{ctx.environment}/es")
     pathlist = list(Path(json_dir).glob("**/*.json"))
 
     if ctx.format_filter:
@@ -485,13 +483,13 @@ def main():
     logger.info(
         "Found %d JSON file(s) in %s (environment=%r)",
         len(pathlist),
-        "output/{}/es".format(ctx.environment),
+        f"output/{ctx.environment}/es",
         ctx.environment,
     )
 
     # --- JSON output mode (-j / --json-output) ---
     if args.json_output:
-        relative_dir = "output/{}/omeka".format(ctx.environment)
+        relative_dir = f"output/{ctx.environment}/omeka"
         omeka_out_dir = ctx.resolve_path(relative_dir)
         Path(omeka_out_dir).mkdir(parents=True, exist_ok=True)
         logger.info(
@@ -528,5 +526,5 @@ if __name__ == "__main__":
         sys.exit(1)
     except OmekaConfigError as err:
         logger.debug("Fatal configuration error:", exc_info=True)
-        print("ERROR: {}".format(err), file=sys.stderr)
+        print(f"ERROR: {err}", file=sys.stderr)
         sys.exit(1)

@@ -401,9 +401,9 @@ def link_item_record(ctx, item, key, values, item_set=False, filter_property="dc
         if item_set:
             # The item-sets plugin requires these extra fields in addition
             # to what prepare_property_value generates.
-            formatted['@id'] = '{}/item_sets/{}'.format(ctx.client.api_url, omeka_id)
-            formatted['value_resource_id'] = omeka_id
-            formatted['value_resource_name'] = 'item_sets'
+            formatted["@id"] = f"{ctx.client.api_url}/item_sets/{omeka_id}"
+            formatted["value_resource_id"] = omeka_id
+            formatted["value_resource_name"] = "item_sets"
 
         item[key].append(formatted)
 

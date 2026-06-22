@@ -54,7 +54,7 @@ class FieldDefinitions:
             # Strip the original path and reconstruct the URI under the
             # collection's configured media base URL. 
             filename = uri_data.split("/")[-1]
-            new_uri_data = "{}/{}".format(self._omeka_data_base, filename)
+            new_uri_data = f"{self._omeka_data_base}/{filename}"
             return new_uri_data
     
     def dcterms_type(self, json):

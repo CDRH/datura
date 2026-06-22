@@ -145,7 +145,7 @@ class OmekaAPIError(OmekaError):
         self.operation = operation
         self.cause = cause
         super().__init__(
-            "{} failed for {!r}: {}".format(operation, identifier, cause)
+            f"{operation} failed for {identifier!r}: {cause}"
         )
         
 
@@ -183,11 +183,9 @@ def parse_update_time(s):
             return datetime.strptime(s, fmt)
         except ValueError:
             continue
-    raise OmekaConfigError(RED + 
-        "Invalid --update value {!r}. "
-        "Expected 'today', a date (2015-01-01), or date-time (2015-01-01T18:24)."
-        .format(s)
-        + RESET
+    raise OmekaConfigError(
+        f"{RED}Invalid --update value {s!r}. "
+        f"Expected 'today', a date (2015-01-01), or date-time (2015-01-01T18:24).{RESET}"
     )
 
 
@@ -283,25 +281,20 @@ class OmekaContext:
             with open(path) as f:
                 contents = yaml.safe_load(f)
         except FileNotFoundError:
-            raise OmekaConfigError(RED + 
-                "Config file not found: {}. "
+            raise OmekaConfigError( 
+                f"{RED}Config file not found: {path}. "
                 "Ensure config/private.yml exists in the collection directory "
-                "and that you are running the script from the collection root."
-                .format(path)
-                + RESET
+                f"and that you are running the script from the collection root.{RESET}"
             )
         except yaml.YAMLError as exc:
-            raise OmekaConfigError(RED + 
-                "Could not parse YAML in {}: {}".format(path, exc)
-                + RESET
+            raise OmekaConfigError(
+                f"{RED}Could not parse YAML in {path}: {exc}{RESET}"
             )
 
         if env not in contents:
             raise OmekaConfigError(RED + 
-                "Environment section {!r} not found in {}. "
-                "Available sections: {}"
-                .format(env, path, list(contents.keys()))
-                + RESET
+                f"{RED}Environment section {env!r} not found in {path}. "
+                f"Available sections: {list(contents.keys())}{RESET}"
             )
 
         return contents[env]
@@ -340,24 +333,20 @@ class OmekaContext:
         ]
         missing_keys = [key for key in required_keys if key not in env_config]
         if missing_keys:
-            raise OmekaConfigError(RED + 
-                "Missing required config key(s): {}. "
-                "Check the 'default' or {!r} section of config/private.yml."
-                .format(missing_keys, environment)
-                + RESET
+            raise OmekaConfigError(
+                f"{RED}Missing required config key(s): {missing_keys}. "
+                f"Check the 'default' or {environment!r} section of config/private.yml.{RESET}"
             )
 
         # ---- Validate environment-specific item_set ---------------------------
         if "item_set" not in env_config:
-            raise OmekaConfigError(RED + 
-                "Missing 'item_set' for environment {!r} in config/private.yml.\n"
+            raise OmekaConfigError(
+                f"{RED}Missing 'item_set' for environment {environment!r} in config/private.yml.\n"
                 "Add the item set ID for this environment before running. Example:\n\n"
-                "  {}:\n"
+                f"  {environment}:\n"
                 "    item_set: 123\n\n"
                 "To find your item set ID, log into the Omeka S admin and navigate "
-                "to Items > Item Sets."
-                .format(environment, environment)
-                + RESET
+                f"to Items > Item Sets.{RESET}"
             )
 
         # ---- Runtime flags ------------------------------------------------
@@ -493,7 +482,7 @@ class OmekaContext:
         Resolve a path relative to the current working directory (collection root).
         Callers interpolate the environment into the path template:
 
-            json_dir = ctx.resolve_path("output/{}/es".format(ctx.environment))
+            json_dir = ctx.resolve_path(f"output/{ctx.environment}/es")
 
         This ensures that passing -e production reads from output/production/
         rather than always using output/development/.
