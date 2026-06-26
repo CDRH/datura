@@ -11,8 +11,10 @@ options = {}
 optparse = OptionParser.new do |opts|
     # Set a banner
     opts.banner = @usage
-    opts.on('-s', '--skip', 'skip generation step and just post to Omeka') do
-        generate_es = false
+    opts.on('-c', '--csv-rows [input]', 'only process CSV rows matching this identifier regex') do |input|
+        if input && input.length > 0
+            options["csv_rows"] = input
+        end
     end
 
     opts.on('-e', '--environment [input]', 'environment (default: development, or production)') do |input|
@@ -37,10 +39,8 @@ optparse = OptionParser.new do |opts|
         end
     end
 
-    opts.on('-c', '--csv-rows [input]', 'only process CSV rows matching this identifier regex') do |input|
-        if input && input.length > 0
-            options["csv_rows"] = input
-        end
+    opts.on('-s', '--skip', 'skip generation step and just post to Omeka') do
+        generate_es = false
     end
 
     opts.on('-[!-~]', '-[!-~] [input]', 'arguments for the main Datura script') do |name, value|
