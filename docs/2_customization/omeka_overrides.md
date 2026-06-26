@@ -2,13 +2,13 @@
 
 ### Standard definitions of fields
 
-Each Omeka field is updated by the method in [api_fields.py](../../../lib/datura/python/api_fields.py) to compile the Omeka S JSON. This method takes the form `update_item_value(item, key, value, datatype="literal")`, the first argumment is the json hash with the API data, the second argument corresponds to the field in the resource template, and the third is the return value the corresponding function of `field_definitions.py`. Optionally, you can pass in the datatype, as the fourth argument. The default definitions of Omeka fields are in [field_definitions.py](../../../lib/datura/python/field_definitions.py). The Omeka API fields defined here must correspond with the Omeka resource template you are using, and the return value should be compatible with the data type.If you do not specify it, it will be set to "literal". For example `update_item_value(built_item, "dcterms:date", fields.date(json), "numeric:timestamp")`.
+Each Omeka field is updated by the method in [api_fields.py](../../../lib/datura/python/api_fields.py) to compile the Omeka S JSON. This method takes the form `update_item_value(ctx, item, key, value, datatype="literal")`. The first argument is the context parameter (providing access to config values, OmekaAPIClient, and property ID cache), the second argument is the json hash with the API data, the third argument corresponds to the field in the resource template, and the fourth is the return value of the corresponding function of `field_definitions.py`. Optionally, you can pass in the datatype, as the fifth argument. The default definitions of Omeka fields are in [field_definitions.py](../../../lib/datura/python/field_definitions.py). The Omeka API fields defined here must correspond with the Omeka resource template you are using, and the return value should be compatible with the data type. If you do not specify it, it will be set to "literal". For example `update_item_value(ctx, built_item, "dcterms:date", fields.date(json), "numeric:timestamp")`.
 
 ### Overriding fields
 
-To override the field definitions, copy the file [omeka_overrides_example.py](../../../lib/datura/python/omeka_overrides_example.py) to [omeka_overrides.rb](../../../lib/datura/python/omeka_overrides.py) in the `scripts/overrides` file of the project directory. Then override each method as needed, using the existing definitions in `field_definitions.py` as examples. For an example, see https://github.com/CDRH/data_stories_humanity/blob/omeka_s_ingest/scripts/python/omeka_overrides.py (not currently field).
+To override the field definitions, copy the file [omeka_overrides_example.py](../../../lib/datura/python/omeka_overrides_example.py) to [omeka_overrides.py](../../../lib/datura/python/omeka_overrides.py) in the `scripts/python` file of the project directory. Then override each method as needed, using the commented patterns in the example overrides file as a guide. 
 
-Each overriden method needs to take the arguments `self` (a Python placeholder for a class instance) and `json` (representing the generated JSON) and to match the methods defined on `field_definitions.py`. (The same goes for adding new methods to `field_definitions.py`.)
+Each overridden method needs to take the arguments `self` (a Python placeholder for a class instance) and `json` (representing the generated JSON) and to match the methods defined in `field_definitions.py`. (The same goes for adding new methods to `field_definitions.py`.)
 For instance:
 
 ```python
@@ -20,7 +20,7 @@ For instance:
         return person_names
 ```
 
-First retrieve the value from the Elasticsearch `json` (keeping in mind that it is sometimes nil), then do any manipulations needed before returning the desired value. The return value must be either an list or single value. For single values, usually this will be the same as the value in the JSON. But Unlike the Elasticsearch-based API, it is not possible to ingest nested fields into Omeka S, so they must be reduced into array form. See [field_definitions.py](../../../lib/datura/python/field_definitions.py)for examples of how to retrieve single and nested values from the JSON, manipulate them and return the proper values for Omeka S.
+First retrieve the value from the Elasticsearch `json` (keeping in mind that it is sometimes nil), then do any manipulations needed before returning the desired value. The return value must be either an list or single value. For single values, usually this will be the same as the value in the JSON. But unlike the ElasticSearch-based API, it is not possible to ingest nested fields into Omeka S, so they must be reduced into array form. See [field_definitions.py](../../../lib/datura/python/field_definitions.py)for examples of how to retrieve single and nested values from the JSON, manipulate them and return the proper values for Omeka S.
 
 ### Linking items
 
@@ -29,7 +29,7 @@ Any new fields that link to the id of another item should be added to the `link_
 ```python
     try:
         part_ids = [part['id'] for part in json_item["has_part"]]
-        link_item_record(existing_item, "dcterms:hasPart", part_ids)
+        link_item_record(ctx, existing_item, "dcterms:hasPart", part_ids)
     except Exception:
         pass
 ```

@@ -63,6 +63,21 @@ Format options include:
 If you do not select any, all the formats found will be executed.
 
 ```bash
+-j, --json-output
+```
+
+*Default setting: false*
+
+Omeka specific, this writes Omeka S item payloads to `output/<environment>/omeka/` instead of posting to the API. This is useful for debugging and inspection purposes.
+
+```bash
+-m, --no-media
+```
+
+Omeka specific, this will skip the step of deleting and regenerating media if both HTML and cover image are present in Omeka S. 
+
+
+```bash
 -n, --no-commit
 ```
 
@@ -105,6 +120,12 @@ Enter `y` to resume posting from that file, or `n` to exit. If no checkpoint fil
 Transforms / posts only files matching a specific regular expression.  DO NOT include the file extension.
 
 Example: `post -r let0001`
+
+```bash
+-s, --skip
+```
+
+Omeka specific, this skips the JSON or HTML generation step and only posts to Omeka S (it can be used with both `post_omeka` and `post_omeka_html`).
 
 ```bash
 -t, --transform-only
@@ -155,4 +176,4 @@ If you get an error when you run `bundle install`, try running the suggested com
 
 ### Posting to Omeka
 
-For posting to Omeka, see [post_omeka.md] and [post_omeka_html.md]
+For posting to Omeka, see [post_omeka.md](post_omeka.md) and [post_omeka_html.md](post_omeka_html.md)

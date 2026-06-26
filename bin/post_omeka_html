@@ -1,8 +1,6 @@
 #!/usr/bin/env ruby
 
 require "datura"
-require "byebug"
-require "shellwords"
 
 generate_es = true
 options = {}
@@ -17,9 +15,15 @@ optparse = OptionParser.new do |opts|
         options["media_skip"] = true
     end
 
-    opts.on('-e', '--environment [input]', 'environment (development, production)') do |input|
+    opts.on('-e', '--environment [input]', 'environment (default: development, or production)') do |input|
         if input && input.length > 0
             options["environment"] = input
+        end
+    end
+    
+    opts.on('-f', '--format [input]', 'only post files of this format (tei, csv, vra, ead, html, pdf, webs)') do |input|
+        if input && input.length > 0
+            options["format"] = input
         end
     end
 
@@ -41,13 +45,17 @@ optparse = OptionParser.new do |opts|
 end
 #parse, but do not consume, command line arguments (the usual parse! would consume them)
 optparse.parse(ARGV)
-#remove option not used in the main script
+#remove options not used in the main script
 ARGV.delete("-m")
+ARGV.delete("--media_skip")
+ARGV.delete("-s")
+ARGV.delete("--skip")
 #add option to generate html
 ARGV.unshift("-x", "html")
+#create DataManager before conditional run
+manager = Datura::DataManager.new
 #skip generation step with option -s
 if generate_es
-    manager = Datura::DataManager.new
     manager.run
 end
 
@@ -55,21 +63,4 @@ datura_dir = File.join(File.dirname(__FILE__), "..")
 # path to the gem's config files
 python_script_path = File.join(datura_dir, "lib", "datura", "python", "html_and_media_ingest.py")
 #run posting script into Omeka S
-if File.exist?("#{python_script_path}")
-    command = ["python3", python_script_path]
-    if options["environment"]
-        command.append("-e", Shellwords.escape(options["environment"]))
-    end
-    if options["regex"]
-        command.append("-r", Shellwords.escape(options["regex"]))
-    end
-    if options["csv_rows"]
-        command.append("-c", Shellwords.escape(options["csv_rows"]))
-    end
-    if options["media_skip"]
-        command.append("-m")
-    end
-    system(*command)
-else
-    puts("Omeka script not found at #{python_script_path}".red)
-end
+Datura::Helpers.run_omeka_script(python_script_path, options)

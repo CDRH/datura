@@ -1,285 +1,328 @@
+"""
+api_fields.py
+
+Transforms a single Datura-generated JSON item into the format expected by the
+Omeka S REST API, and resolves inter-item relationships (links) by looking up
+CDRH identifiers in the live Omeka instance.
+
+The two primary entry points called by json_to_omeka.py are:
+  prepare_item(ctx, json_item, existing_item)  — build or update item metadata
+  link_records(ctx, json_item, existing_item)  — resolve and attach relationships
+
+All functions that need API access or configuration now receive a ctx
+(OmekaContext) parameter. The property ID cache on ctx (ctx.get_property_id()) 
+means each Omeka term is looked up only once per run rather than once per field per item.
+"""
+
 import json
+import logging
 import re
+import sys
+
 import omeka
 from datetime import datetime
-from field_definitions import get_fields
 
-def build_item_dict(json, existing_item):
-    """Takes in JSON with CDRH API fields and an existing API item from Omeka S in format. 
-    Returns Omeka API item (in JSON format) updated with values from new CDHR schema for Omeka."""
+# Module-level logger so that log records from this module are identifiable
+# by name in the output stream.
+logger = logging.getLogger(__name__)
+
+
+def prepare_item(ctx, json_item, existing_item=None):
+    """
+    Build a complete Omeka item dict from a Datura JSON record.
+
+    Iterates over the field manifest declared on ctx.fields, where each entry
+    specifies an Omeka property term, the extractor method name to call on
+    ctx.fields, and the Omeka datatype. The manifest is defined by
+    FieldDefinitions.field_manifest and may be extended by a collection's
+    CustomFields subclass to add collection-specific properties.
+
+    Parameters:
+    * ctx           - OmekaContext providing config and the property ID cache
+    * json_item     - raw JSON item dict from the Datura ES output
+    * existing_item - existing Omeka item dict to update in-place, or None
+                      when creating a new item (an empty dict is used instead)
+
+    Returns the built or updated item dict, ready for payload preparation.
+    Raises ValueError (caught by the caller) if field extraction fails in an
+    unexpected way.
+    """
     try:
-        fields = get_fields()
         built_item = existing_item if existing_item else {}
-        update_item_value(built_item, "dcterms:title", fields.title(json))
-        update_item_value(built_item, "dcterms:identifier", fields.identifier(json))
-        update_item_value(built_item, "dh:collection", fields.collection(json))
-        update_item_value(built_item, "dh:category", fields.category(json))
-        update_item_value(built_item, "dh:category2", fields.category2(json))
-        update_item_value(built_item, "dh:uriData", fields.uriData(json), "uri")
-        update_item_value(built_item, "dcterms:type", fields.dcterms_type(json))
-        update_item_value(built_item, "dcterms:creator", fields.creator(json))
-        update_item_value(built_item, "dcterms:contributor", fields.contributor(json))
-        update_item_value(built_item, "dcterms:date", fields.date(json), "numeric:timestamp")
-        update_item_value(built_item, "dh:dateDisplay", fields.dateDisplay(json))
-        update_item_value(built_item, "dh:dateYear", fields.dateYear(json))
-        update_item_value(built_item, "dcterms:description", fields.description(json))
-        update_item_value(built_item, "dcterms:format", fields.dcterms_format(json))
-        update_item_value(built_item, "dcterms:relation", fields.relation(json))
-        update_item_value(built_item, "dcterms:publisher", fields.publisher(json))
-        update_item_value(built_item, "dh:biblID", fields.biblID(json))
-        update_item_value(built_item, "tei:biblTitle", fields.biblTitle(json))
-        update_item_value(built_item, "tei:biblPubPlace", fields.biblPubPlace(json))
-        update_item_value(built_item, "bibo:issue", fields.issue(json))
-        update_item_value(built_item, "bibo:pageStart", fields.pageStart(json))
-        update_item_value(built_item, "bibo:pageEnd", fields.pageEnd(json))
-        update_item_value(built_item, "bibo:section", fields.section(json))
-        update_item_value(built_item, "bibo:volume", fields.volume(json))
-        update_item_value(built_item, "tei:biblTitleA", fields.biblTitleA(json))
-        update_item_value(built_item, "tei:biblTitleM", fields.biblTitleM(json))
-        update_item_value(built_item, "tei:biblTitleJ", fields.biblTitleJ(json))
-        update_item_value(built_item, "dcterms:rightsHolder", fields.rightsHolder(json))
-        update_item_value(built_item, "dcterms:license", fields.license(json))
-        update_item_value(built_item, "dcterms:subject", fields.subject(json))
-        update_item_value(built_item, "dh:topic", fields.topic(json))
-        update_item_value(built_item, "dh:category3", fields.category3(json))
-        update_item_value(built_item, "dh:category4", fields.category4(json))
-        update_item_value(built_item, "dh:category5", fields.category5(json))
-        update_item_value(built_item, "dh:note", fields.note(json))
-        update_item_value(built_item, "dcterms:abstract", fields.abstract(json))
-        update_item_value(built_item, "dh:keyword", fields.keyword(json))
-        update_item_value(built_item, "dh:keyword2", fields.keyword2(json))
-        update_item_value(built_item, "dh:keyword3", fields.keyword3(json))
-        update_item_value(built_item, "dh:keyword4", fields.keyword4(json))
-        update_item_value(built_item, "dh:keyword5", fields.keyword5(json))
-        update_item_value(built_item, "dcterms:source", fields.source(json))
-        update_item_value(built_item, "dcterms:medium", fields.medium(json))
-        update_item_value(built_item, "dcterms:extent", fields.extent(json))
-        update_item_value(built_item, "dcterms:language", fields.language(json))
-        update_item_value(built_item, "dh:box", fields.box(json))
-        update_item_value(built_item, "dh:folder", fields.folder(json))
-        update_item_value(built_item, "foaf:name", fields.name(json))
-        update_item_value(built_item, "dh:spatial_short_name", fields.spatial_short_name(json))
-        update_item_value(built_item, "tei:correspSentName", fields.correspSentName(json))
-        update_item_value(built_item, "tei:correspSentPlace", fields.correspSentPlace(json))
-        update_item_value(built_item, "tei:correspSentDate", fields.correspSentDate(json), "numeric:timestamp")
-        update_item_value(built_item, "tei:correspDeliveredName", fields.correspDeliveredName(json))
-        update_item_value(built_item, "tei:correspDeliveredPlace", fields.correspDeliveredPlace(json))
-        update_item_value(built_item, "tei:correspDeliveredDate", fields.correspDeliveredDate(json), "numeric:timestamp")
-        update_item_value(built_item, "tei:distributor", fields.distributor(json))
-        update_item_value(built_item, "tei:authority", fields.authority(json))
-        update_item_value(built_item, "tei:biblNote", fields.biblNote(json))
-        update_item_value(built_item, "dh:annotationsText", fields.annotationsText(json))
-        update_item_value(built_item, "dh:itemText", fields.itemText(json))
+        _update = ctx._fn_update_item_value or update_item_value
+        for omeka_term, method_name, datatype in ctx.fields.field_manifest():
+            value = getattr(ctx.fields, method_name)(json_item)
+            _update(ctx, built_item, omeka_term, value, datatype)
         return built_item
     except ValueError as e:
-        print(f"Error: {e}", file=sys.stderr)
-        
+        logger.error("ValueError building item dict: %s", e)
+        raise
 
-#TODO change item linking for JSON and new API
-def link_item(json_item, existing_item):
 
-    #has_part
+def link_records(ctx, json_item, existing_item):
+    """
+    Resolve inter-item relationships for a single item and attach them to the
+    existing Omeka item dict.
+
+    Each relationship type (has_part, is_part_of, etc.) is handled in its own
+    try/except block. A missing or None field in the JSON is expected for most
+    items — these are caught as KeyError or TypeError and logged at DEBUG level
+    so they do not pollute the run log. Genuine API failures in
+    link_item_record() will surface as exceptions and should be caught by the
+    caller in json_to_omeka.py.
+
+    Parameters:
+    * ctx           - OmekaContext providing the API client and item_set_id
+    * json_item     - raw JSON item dict from the Datura ES output
+    * existing_item - the current Omeka item dict, deepcopied by the caller
+
+    Returns the updated existing_item dict with relationship fields populated.
+
+    """
+    identifier = json_item.get("identifier")
+    _link = ctx._fn_link_item_record or link_item_record
+
     try:
         part_ids = [part['id'] for part in json_item["has_part"]]
-        link_item_record(existing_item, "dcterms:hasPart", part_ids)
-    except Exception:
-        pass
-    #is_part_of
+        _link(ctx, existing_item, "dcterms:hasPart", part_ids)
+    except (KeyError, TypeError) as e:
+        logger.debug("No has_part data for %s: %s", identifier, e)
+
     try:
-        link_item_record(existing_item, "dcterms:isPartOf", json_item["is_part_of"]["id"])
-    except Exception:
-        pass
-    #has_relation
+        _link(ctx, existing_item, "dcterms:isPartOf", json_item["is_part_of"]["id"])
+    except (KeyError, TypeError) as e:
+        logger.debug("No is_part_of data for %s: %s", identifier, e)
+
     try:
-        link_item_record(existing_item, "dcterms:relation", json_item["has_relation"]["id"])
-    except Exception:
-        pass
-    #previous
+        _link(ctx, existing_item, "dcterms:relation", json_item["has_relation"]["id"])
+    except (KeyError, TypeError) as e:
+        logger.debug("No has_relation data for %s: %s", identifier, e)
+
     try:
-        link_item_record(existing_item, "dh:orderPrev", json_item["previous_item"]["id"])
-    except Exception:
-        pass
-    #next
+        _link(ctx, existing_item, "dh:orderPrev", json_item["previous_item"]["id"])
+    except (KeyError, TypeError) as e:
+        logger.debug("No previous_item data for %s: %s", identifier, e)
+
     try:
-        link_item_record(existing_item, "dh:orderNext", json_item["next_item"]["id"])
-    except Exception:
-        pass
+        _link(ctx, existing_item, "dh:orderNext", json_item["next_item"]["id"])
+    except (KeyError, TypeError) as e:
+        logger.debug("No next_item data for %s: %s", identifier, e)
+
     try:
-        link_item_record(existing_item, "tei:correspNext", json_item["correspNext_omeka_s"])
-    except Exception:
-        pass
+        _link(ctx, existing_item, "tei:correspNext", json_item["correspNext_omeka_s"])
+    except (KeyError, TypeError) as e:
+        logger.debug("No correspNext_omeka_s data for %s: %s", identifier, e)
+
     try:
-        link_item_record(existing_item, "tei:correspPrev", json_item["correspPrev_omeka_s"])
-    except Exception:
-        pass
+        _link(ctx, existing_item, "tei:correspPrev", json_item["correspPrev_omeka_s"])
+    except (KeyError, TypeError) as e:
+        logger.debug("No correspPrev_omeka_s data for %s: %s", identifier, e)
+
     return existing_item
 
-def prepare_item(row, existing_item = None):
-    item_dict = build_item_dict(row, existing_item)
-    # TODO add conditional logic for different templates?
-    return item_dict
 
-def link_records(row, existing_item):
-    item_dict = link_item(row, existing_item)
-    # TODO add conditional logic?
-    return item_dict
+def update_item_value(ctx, item, key, value, datatype="literal"):
+    """
+    Set or replace a property on an Omeka item dict.
 
-def get_json_value(row, name):
-    if len(row[name]) > 0:
-        if row[name].startswith('["'):
-            return json.loads(row[name])
-        elif ";;;" in row[name]:
-            return row[name].split(";;;")
-        else:
-            return row[name]
-    else:
-        return row[name]
-    
-def update_item_value(item, key, value, datatype="literal"):
+    Clears the existing value list for the key (if any) and writes the new
+    value(s). This ensures that re-running the ingest for an existing item
+    replaces stale values rather than appending duplicates.
+
+    If value is None or an empty list, the key is initialised to [] and no
+    formatted values are added — this effectively clears the field in Omeka
+    when the item is PUT back.
+
+    Parameters:
+    * ctx      - OmekaContext (passed through to add_formatted_value)
+    * item     - the Omeka item dict being built
+    * key      - Omeka property term string, e.g. "dcterms:title"
+    * value    - the value to set; may be a string, int, float, or list.
+                 None and empty list are treated as "no value".
+    * datatype - Omeka data type string (default "literal"). Use
+                 "uri" for URLs or "numeric:timestamp" for dates.
     """
-    takes in JSON representation of API item, the field name, the value to add or update, and a datatype (defaults to "literal")
-    value may be in string format or list. Should be able to modify existing values and update new ones. (Note that there are still issues with updating fields
-    returns the JSON hash with the updated value
-    """
-    #clear the existing values of the key, or initialize it if it is new
+    # Always reset the key so that old values from a prior ingest are not
+    # carried forward when the source data no longer has a value for this field.
     item[key] = []
-    if type(value) in [str, int, float]:
-        item = add_formatted_value(item, key, value, datatype)
-    elif type(value) == list:
-        # make sure values are unique
-        value = list(set(value))
-        value = [v for v in value if v is not None] # remove None values from values
-        for v in value:
-            item = add_formatted_value(item, key, v, datatype)
 
-def add_formatted_value(item, key, value, datatype, label=""):
-    # takes in item, key, value, and datatype, returns item with key set or added to value, and formatted in the format Omeka S
-    # expects as indicated in the template
-    # used when adding a new value that is not already in the Omeka JSON, so that Omeka will properly update the value
-    # this comes up
-    # literal values should be str
+    if isinstance(value, (str, int, float)):
+        item = add_formatted_value(ctx, item, key, value, datatype)
+    elif isinstance(value, list):
+        # List entries may be strings or dicts (e.g. contributor returns
+        # [{"name": "...", "id": "..."}]). For dicts, the dedup key compares 
+        # based on id when id is present or creates a sorted tuple of all 
+        # items so that two dicts are only considered duplicates when every 
+        # key-value pair matches.
+        seen = {}
+        for v in value:
+            if v is None:
+                continue
+            dedup_key = v.get("id") or tuple(sorted(v.items())) if isinstance(v,dict) else v
+            if dedup_key not in seen:
+                seen[dedup_key] = v
+        for v in seen.values():
+            display = v.get("name") if isinstance(v,dict) else v
+            if display is None: 
+                continue
+            else:
+                item = add_formatted_value(ctx, item, key, display, datatype)
+
+
+def add_formatted_value(ctx, item, key, value, datatype, label=""):
+    """
+    Format a single value and append it to the property list on an item dict.
+
+    Calls ctx.get_property_id() to obtain the numeric Omeka property ID for
+    the given term. The cache on ctx ensures this API call is made at most once
+    per unique term per run.
+
+    Parameters:
+    * ctx      - OmekaContext; provides get_property_id() and the API client
+    * item     - the Omeka item dict being built
+    * key      - Omeka property term string, e.g. "dcterms:title"
+    * value    - the scalar value to format
+    * datatype - Omeka data type string, e.g. "literal", "uri",
+                 "numeric:timestamp"
+    * label    - optional display label for URI values
+
+    Returns the item dict with the new value appended to item[key].
+    """
+    # Coerce to string for literal values to avoid sending a bare int or float
+    # in the API payload, which Omeka S may reject.
     if datatype == "literal":
         value = str(value)
-    prop_id = omeka.omeka_auth.get_property_id(key)
+
+    # Look up the property ID via the cache.
+    prop_id = ctx.get_property_id(key)
+
     prop_value = {
         "value": value,
-        "type": datatype
+        "type": datatype,
     }
-    formatted = omeka.prepare_property_value(prop_value, prop_id, label)
-    if key in item and type(item[key]) == list:
+    formatted = ctx.client.prepare_property_value(prop_value, prop_id, label)
+
+    if key in item and isinstance(item[key],list):
         item[key].append(formatted)
     else:
         item[key] = [formatted]
+
     return item
 
-def get_matching_ids_from_markdown(row, field):
-    # takes in an array of strings in markdown format, which include CDRH IDs
-    # returns an array of just the IDs
-    if row[field]:
-        markdown_values = sorted(get_json_value(row, field))
-        ids = []
-        if markdown_values:
-            #should be either single value or array
-            if type(markdown_values) == str:
-                match = re.search(r"\]\((.*)\)", markdown_values)
-                if match:
-                    id_no = match.group(1)
-                    ids.append(id_no)
-            else:
-                for value in markdown_values:
-                    #parse with regex to get ids
-                    match = re.search(r"\]\((.*)\)", value)
-                    if match:
-                        id_no = match.group(1)
-                        ids.append(id_no)
-                if len(ids) > 1:
-                    ids = list(filter(None, ids))
-            return ids
-            
-    else:
-        return []
-    
-def get_matching_names_from_markdown(row, field):
-    # takes in an array of strings in markdown format, which include names
-    # returns an array of just the names
-    # filters out the ones that have a corresponding id, it is not necessary to get their names
-    if row[field]:
-        markdown_values = get_json_value(row, field)
-        names = []
+def get_omeka_ids(ctx, lookup_values, filter_property, item_set_id="ctx_default"):
+    """
+    Resolve a list of lookup values to Omeka numeric item IDs.
 
-        if markdown_values:
-            #should be either single value or array
-            if type(markdown_values) == str:
-                name_match = re.search(r"\[(.*?)\]", markdown_values)
-                # filter out entries that have ids
-                id_match = re.search(r"\]\((.*)\)", markdown_values)
-                if name_match and not id_match.group(1):
-                    name = name_match.group(1)
-                    names.append(name)
-            else:
-                for value in markdown_values:
-                    #parse with regex to get ids
-                    name_match = re.search(r"\[(.*?)\]", value)
-                    id_match = re.search(r"\]\((.*)\)", value)
-                    if name_match and not id_match.group(1):
-                        name = name_match.group(1)
-                        names.append(name)
-            return names
-    else:
-        return []
+    For each lookup value, queries the Omeka API to find the matching item. 
+    Used during the linking pass to convert CDRH identifiers into the Omeka IDs 
+    required for resource:item links.
 
-def get_omeka_ids(lookup_values, filter_property, item_set_id = None):
-    item_set_id = omeka.get_item_set()
+    Parameters:
+    * ctx            - OmekaContext providing the API client and item_set_id
+    * lookup_values  - a single value or list of values to look up; typically
+                       CDRH identifier strings but may be Omeka IDs directly
+                       when filter_property is "o:id"
+    * filter_property - the Omeka property to match against, e.g.
+                        "dcterms:identifier" or "o:id"
+    * item_set_id    - restricts the search to a specific Omeka item set.
+                       Defaults to ctx.item_set_id (the current collection).
+                       Pass None to search across all item sets — useful when
+                       the target items (e.g. a personography) live in a
+                       separate item set from the collection being ingested.
+
+    Returns a list of integer Omeka item IDs for all successfully resolved values.
+    Logs a warning for values that cannot be resolved.
+    """
     omeka_ids = []
-    #lookup_values are usually a list of cdrh_ids, but may be another value
+
+    # Resolve the sentinel to ctx.item_set_id so existing callers are unaffected.
+    resolved_item_set_id = ctx.item_set_id if item_set_id == "ctx_default" else item_set_id
+
+    # Normalise a single value to a list for uniform iteration.
     lookup_values = [lookup_values] if not isinstance(lookup_values, list) else lookup_values
+
     for lookup_value in lookup_values:
+        # Skip blank or None values — these are common when optional relation
+        # fields are absent in some records but not others.
         if not lookup_value or lookup_value == '':
             continue
+
         if filter_property == "o:id":
+            # The value is already an Omeka ID; cast to int and add directly.
             omeka_ids.append(int(lookup_value))
         else:
-            match = omeka.omeka_auth.filter_items_by_property(filter_property = filter_property, filter_value = lookup_value, item_set_id=item_set_id)
+            match = ctx.client.filter_items_by_property(
+                filter_property=filter_property,
+                filter_value=lookup_value,
+                item_set_id=resolved_item_set_id,
+            )
             if match["total_results"] >= 1:
                 if match["total_results"] > 1:
-                    print(f"warning: multiple matches for {lookup_value}, taking first match")
-                omeka_id = match['results'][0]["o:id"]
-                omeka_ids.append(omeka_id)
+                    # Multiple matches indicate a data integrity issue; take
+                    # the first result and log a warning for investigation.
+                    logger.warning(
+                        "Multiple matches for %r, taking first result", lookup_value
+                    )
+                omeka_ids.append(match['results'][0]["o:id"])
             else:
-                print(f"Unable to link {lookup_value}, no matches")
+                logger.warning("Unable to link %r: no matching items found", lookup_value)
+
     return omeka_ids
 
 
+def link_item_record(ctx, item, key, values, item_set=False, filter_property="dcterms:identifier"):
+    """
+    Resolve lookup values to Omeka IDs and attach them as resource links on
+    the item dict.
 
-def link_item_record(item, key, values, item_set=False, filter_property = "dcterms:identifier"):
-    omeka_ids = values if item_set else get_omeka_ids(values, filter_property)
-    #dedupe
+    Clears the existing value list for the key before writing, so re-running
+    this function replaces stale links rather than appending duplicates.
+
+    Parameters:
+    * ctx             - OmekaContext providing the API client
+    * item            - the Omeka item dict being built
+    * key             - Omeka property term for this relationship,
+                        e.g. "dcterms:hasPart" or "dh:orderNext"
+    * values          - lookup values to resolve; either already-resolved Omeka
+                        IDs (when item_set=True) or CDRH identifiers to look up
+    * item_set        - if True, treat values as Omeka item set IDs rather than
+                        item IDs; uses "resource:itemset" type and adds the
+                        extra fields required by the item-sets plugin
+    * filter_property - the Omeka property to use when looking up items by value;
+                        defaults to "dcterms:identifier"
+
+    Returns the updated item dict.
+    """
+    # When item_set=True the caller has already resolved the IDs; otherwise
+    # resolve them from CDRH identifiers via the API.
+    omeka_ids = values if item_set else get_omeka_ids(ctx, values, filter_property)
+
+    # Deduplicate while preserving order (dict.fromkeys is stable in Python 3.7+).
     omeka_ids = list(dict.fromkeys(omeka_ids))
-    prop_id = omeka.omeka_auth.get_property_id(key)
-    #always clear items
+
+    # Look up the property ID via the cache.
+    prop_id = ctx.get_property_id(key)
+
+    # Always clear the existing values for this relationship field so that
+    # stale links from a prior ingest are removed.
     item[key] = []
 
     resource_type = "resource:itemset" if item_set else "resource:item"
-    for omeka_id in omeka_ids:
-        #make sure item isn't already linked, to avoid duplicates
-        if not item[key] or not omeka_id in [value.get("value_resource_id") for value in item[key]]:
-            prop_value = {
-                "type": resource_type,
-                "value": omeka_id
-            }
-            formatted = omeka.omeka_auth.prepare_property_value(prop_value, prop_id)
-            #different format for item sets, plugin doesn't do it automatically
-            if item_set:
-                formatted['@id'] = f'{omeka.omeka_auth.api_url}/item_sets/{omeka_id}'
-                formatted['value_resource_id'] = omeka_id
-                formatted["value_resource_name"] = "item_sets"
-            item[key].append(formatted)
-    return item
 
-def build_citation(row):
-    # TODO format the date better
-    if row["publisher"]:
-        return f"""
-            "{row["title"]}", {json.loads(row["publisher"])[0]}, {row["Article Date (formatted)"]}, {row["Source page no"]}.
-            Accessed {row["Source access date"]}. {row["Source link"]}.
-        """
+    for omeka_id in omeka_ids:
+        prop_value = {
+            "type": resource_type,
+            "value": omeka_id,
+        }
+        formatted = ctx.client.prepare_property_value(prop_value, prop_id)
+
+        if item_set:
+            # The item-sets plugin requires these extra fields in addition
+            # to what prepare_property_value generates.
+            formatted["@id"] = f"{ctx.client.api_url}/item_sets/{omeka_id}"
+            formatted["value_resource_id"] = omeka_id
+            formatted["value_resource_name"] = "item_sets"
+
+        item[key].append(formatted)
+
+    return item

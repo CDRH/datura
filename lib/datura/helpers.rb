@@ -1,6 +1,7 @@
 require 'fileutils'
 require 'net/http'
 require 'nokogiri'
+require 'shellwords'
 require 'yaml'
 require 'uri'
 
@@ -239,6 +240,31 @@ module Datura::Helpers
     req.body = body if body
 
     http.request(req)
+  end
+
+  def self.run_omeka_script(script_path, options)
+    '''
+    Build and run a Python Omeka posting script.
+
+    Handles common CLI flag forwarding (-e, -r, -m).
+    Called by bin/post_omeka and bin/post_omeka_html.
+
+    Parameters:
+    * script_path - absolute path to the Python script to run
+    * options     - hash of parsed CLI options ("environment", "regex", "media_skip")
+    '''
+    unless File.exist?(script_path)
+      puts "Omeka script not found at #{script_path}".red
+      return
+    end
+    command = ["python3", script_path]
+    command.append("-e", Shellwords.escape(options["environment"])) if options["environment"]
+    command.append("-r", Shellwords.escape(options["regex"])) if options["regex"]
+    command.append("-c", Shellwords.escape(options["csv_rows"])) if options["csv_rows"]
+    command.append("-f", Shellwords.escape(options["format"])) if options["format"]
+    command.append("-m") if options["media_skip"]
+    command.append("-j") if options["json_output"]
+    system(*command)
   end
 
 end

@@ -1,7 +1,6 @@
 require "colorize"
 require "logger"
 require "yaml"
-
 require_relative "./requirer.rb"
 
 class Datura::DataManager
@@ -61,6 +60,13 @@ class Datura::DataManager
     Dir[path].each do |f|
       puts "requiring" + f
       require f
+    end
+  end
+
+  def check_omeka_options
+    %w[omeka_server key_identity key_credential iiif_server
+       resource_template omeka_data_base item_set].each do |opt|
+      assert_option(opt)
     end
   end
 
