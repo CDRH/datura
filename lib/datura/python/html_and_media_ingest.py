@@ -44,8 +44,11 @@ try:
         OmekaConfigError,
         OmekaContext,
         OmekaMediaError,
+        checkpoint_path,
         configure_logging,
         finish_run,
+        read_checkpoint,
+        write_checkpoint,
     )
 except ModuleNotFoundError as err:
     raise SystemExit(
@@ -69,8 +72,12 @@ def _parse_args():
     Parse command-line arguments for the HTML/media ingest entrypoint.
 
     Returns an argparse.Namespace with:
+    * csv_rows     - optional identifier regex for -c item filter, or None
     * environment   - "development" or "production" (default: "development")
     * format_filter - optional format string for -f (directory-based) filter, or None
+    * media_skip    - bool; True skips items that already have 2+ media objects
+    * proceed      - False (not given), None (-p with no value), or a regex
+                     string (-p "pattern") for checkpoint-based resumption
     * regex         - optional file-filter pattern string, or None
     * update_time   - optional date/time string for -u filter, or None
     * media_skip    - bool; True skips items that already have 2+ media objects
@@ -78,6 +85,15 @@ def _parse_args():
     """
     parser = argparse.ArgumentParser(
         description="Attach HTML and IIIF thumbnail media to existing Omeka S items."
+    )
+    parser.add_argument(
+        "-c", "--csv-rows",
+        default=None,
+        dest="csv_rows",
+        help=(
+            "Only process items whose identifier matches this regex.  "
+            "Mirrors the Ruby -c flag, which filters CSV rows by identifier."
+        ),
     )
     parser.add_argument(
         "-e", "--environment",
@@ -89,6 +105,29 @@ def _parse_args():
         default=None,
         dest="format_filter",
         help="Only post files of this format (tei, csv, vra, ead, html, pdf, webs).",
+    )
+    parser.add_argument(
+        "-m", "--media-skip",
+        action="store_true",
+        dest="media_skip",
+        help=(
+            "Skip re-ingesting media for items that already have 2 or more "
+            "media objects (thumbnail + HTML).  Useful when re-running the "
+            "script after a partial failure to avoid re-uploading media that "
+            "was already successfully ingested."
+        ),
+    )
+    parser.add_argument(
+        "-p", "--proceed",
+        nargs="?",
+        default=False,
+        const=None,
+        dest="proceed",
+        help=(
+            "Proceed with media ingest from (and including) the JSON file "
+            "matching this regex.  If given without a value, resumes from "
+            "the last checkpoint saved in logs/proceed_omeka_html_{environment}."
+        ),
     )
     parser.add_argument(
         "-r", "--regex",
@@ -107,17 +146,6 @@ def _parse_args():
             "Only process items whose source file was modified at or after "
             "this date/time.  Accepts 'today', a date (2015-01-01), or "
             "date-time (2015-01-01T18:24)."
-        ),
-    )
-    parser.add_argument(
-        "-m", "--media-skip",
-        action="store_true",
-        dest="media_skip",
-        help=(
-            "Skip re-ingesting media for items that already have 2 or more "
-            "media objects (thumbnail + HTML).  Useful when re-running the "
-            "script after a partial failure to avoid re-uploading media that "
-            "was already successfully ingested."
         ),
     )
     parser.add_argument(
@@ -414,7 +442,9 @@ def process_items(ctx, pathlist, html_dir, iiif_dir):
         rel = path.relative_to(Path.cwd())
         with open(filename) as jsonfile:
             json_items = json.load(jsonfile)
-
+        # Apply --csv-rows identifier filter if provided.
+        if ctx.csv_rows:
+            json_items = omeka.filter_items_by_identifier(ctx.csv_rows, json_items)
         for json_item in json_items:
             identifier = json_item.get("identifier")
             if not identifier:
@@ -488,9 +518,10 @@ def main():
     2. Configure root logger.
     3. Build OmekaContext (loads config, validates keys, creates API client).
     4. Resolve output directories for the requested environment.
-    5. Discover JSON files; apply regex filter if -r was passed.
-    6. Run media ingest for all items.
-    7. Report errors; exit 1 if any failures, 0 if clean.
+    5. Discover JSON files; apply csv (-c), format (-f), regex (-r), and update-time (-u) filters.
+    6. Apply proceed filter (-p): resume from a checkpoint or a named file.
+    7. Run media ingest for all items; writes a checkpoint after each JSON file.
+    8. Report errors; exit 1 if any failures, 0 if clean.
     """
     args = _parse_args()
     start_time = time.time()
@@ -515,6 +546,27 @@ def main():
         pathlist = filter_items(ctx.regex, pathlist)
     if ctx.update_time:
         pathlist = filter_items_by_date(ctx.update_time, pathlist)
+
+    # Apply -p / --proceed: resume from a specific file or the last checkpoint.
+    # args.proceed is False (not given), None (-p with no value), or a string.
+    proceed = args.proceed
+    if proceed is None:
+        # -p given with no value — prompt to resume from the saved checkpoint.
+        last = read_checkpoint(ctx, "omeka_html")
+        if last is None:
+            print(
+                "ERROR: --proceed given with no value but no checkpoint file "
+                "found at {}.".format(checkpoint_path(ctx, "omeka_html"))
+            )
+            sys.exit(1)
+        response = input("Continue from {}? (y/n): ".format(last)).strip().lower()
+        if response == "y":
+            proceed = last
+        else:
+            print("Exiting.")
+            sys.exit(0)
+    if proceed:
+        pathlist = omeka.proceed_files(proceed, pathlist)
 
     logger.info(
         "Found %d JSON file(s) in %s (environment=%r, media_skip=%s)",
