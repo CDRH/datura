@@ -95,6 +95,10 @@ if options.key?("proceed")
   ARGV.push("--proceed=#{proceed_value}")
   options["proceed"] = proceed_value
 end
+#if -c/--csv-rows is set and no format was specified, restrict generation to CSV only
+if options["csv_rows"] && !options["format"] && !ARGV.any? { |a| a == "-f" || a == "--format" || a.start_with?("--format=") }
+  ARGV.push("-f", "csv")
+end
 #add option to generate html
 ARGV.unshift("-x", "html")
 #create DataManager before conditional run

@@ -99,6 +99,10 @@ if options.key?("proceed")
 end
 ARGV.delete("-j")
 ARGV.delete("--json-output")
+#if -c/--csv-rows is set and no format was specified, restrict generation to CSV only
+if options["csv_rows"] && !options["format"] && !ARGV.any? { |a| a == "-f" || a == "--format" || a.start_with?("--format=") }
+  ARGV.push("-f", "csv")
+end
 #add options to output a json file instead of posting it to Elasticsearch
 ARGV.unshift("-x", "es", "-o", "-t")
 #create DataManager before conditional run

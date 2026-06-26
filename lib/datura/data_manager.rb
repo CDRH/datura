@@ -211,6 +211,10 @@ class Datura::DataManager
     formats = []
     if @options["format"]
       formats = [@options["format"]]
+    elsif @options["csv_rows"]
+      msg = "csv_rows filter set (-c); restricting processing to CSV format only"
+      puts msg.cyan
+      formats = ["csv"]
     else
       formats = Datura::DataManager.format_to_class.keys
     end
