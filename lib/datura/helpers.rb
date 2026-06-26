@@ -258,11 +258,18 @@ module Datura::Helpers
       return
     end
     command = ["python3", script_path]
-    command.append("-e", Shellwords.escape(options["environment"])) if options["environment"]
-    command.append("-r", Shellwords.escape(options["regex"])) if options["regex"]
     command.append("-c", Shellwords.escape(options["csv_rows"])) if options["csv_rows"]
+    command.append("-e", Shellwords.escape(options["environment"])) if options["environment"]
     command.append("-f", Shellwords.escape(options["format"])) if options["format"]
+    command.append("-r", Shellwords.escape(options["regex"])) if options["regex"]
+    command.append("-u", Shellwords.escape(options["update_time"])) if options["update_time"]
     command.append("-m") if options["media_skip"]
+    # -p may be given with no value (nil, meaning "use last checkpoint") or
+    # with a regex string.  key? distinguishes "not provided" from nil.
+    if options.key?("proceed")
+      command.append("-p")
+      command.append(Shellwords.escape(options["proceed"])) if options["proceed"]
+    end
     command.append("-j") if options["json_output"]
     system(*command)
   end
