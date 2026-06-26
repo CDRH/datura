@@ -227,6 +227,7 @@ class OmekaContext:
                                        filter, or None
                    .regex           str   optional file-filter pattern, or None
                    .update_time     str   optional date/time string for -u filter, or None
+                   .csv_rows        str   optional identifier regex for -c filter, or None
                    .media_skip      bool  skip re-ingesting existing media
                                        (html_and_media_ingest only; absent on
                                        json_to_omeka args, defaults to False)
@@ -261,6 +262,7 @@ class OmekaContext:
             media_skip=getattr(args, "media_skip", False),
             update_time=parse_update_time(raw_update) if raw_update else None,
             format_filter=getattr(args, "format_filter", None),
+            csv_rows=getattr(args, "csv_rows", None),
         )
 
     @staticmethod
@@ -300,7 +302,7 @@ class OmekaContext:
 
         return contents[env]
 
-    def __init__(self, env_config, environment, regex, media_skip, update_time=None, format_filter=None):
+    def __init__(self, env_config, environment, regex, media_skip, update_time=None, format_filter=None, csv_rows=None):
         """
         Initialise the context. Prefer OmekaContext.from_args() over calling
         this constructor directly except in tests.
@@ -321,6 +323,9 @@ class OmekaContext:
         * update_time   - optional datetime; if set, only items whose source file
                           mtime >= this value are processed (mirrors the -u flag
                           from the main Datura post command)
+        * csv_rows    - optional regex string; if set, only items whose 
+                        "identifier" field matches are processed (mirrors the 
+                        -c flag from the main Datura post command)
         """
         # ---- Validate required config keys --------------------------------
         # Validate up front so that failures are immediate and descriptive.
@@ -356,6 +361,7 @@ class OmekaContext:
         self.media_skip = media_skip
         self.update_time = update_time
         self.format_filter = format_filter
+        self.csv_rows = csv_rows
 
         # ---- Config values ------------------------------------------------
         self.template_number = env_config["resource_template"]
@@ -422,6 +428,7 @@ class OmekaContext:
         self._fn_build_thumbnail_url = None
 
         _process_override_path = Path.cwd() / "scripts" / "python" / "process_overrides.py"
+        _process_override_relative_path = "scripts/python/process_overrides.py"
         if _process_override_path.exists():
             try:
                 _spec = importlib.util.spec_from_file_location(
@@ -444,12 +451,12 @@ class OmekaContext:
                 if _active:
                     logger.warning(
                         "Process overrides found at %s; active overrides: %s",
-                        _process_override_path,
+                        _process_override_relative_path,
                         _active,
                     )
             except Exception as e:
                 raise OmekaConfigError(
-                    f"Failed to load process overrides from {_process_override_path}: {e}"
+                    f"Failed to load process overrides from {_process_override_relative_path}: {e}"
                 ) from e
 
 
@@ -610,3 +617,60 @@ def finish_run(ctx, args, start_time):
     mins, secs = divmod(rem, 60)
     print(f"{CYAN}Script finished in {hours:02d} hrs {mins:02d} mins {secs:02d} secs{RESET}")
     sys.exit(1 if ctx._errors else 0)
+
+# ---------------------------------------------------------------------------
+# Checkpoint helpers  (-p / --proceed support)
+# ---------------------------------------------------------------------------
+
+def checkpoint_path(ctx, label):
+    """
+    Return the Path to the checkpoint file for this environment and pipeline.
+
+    The checkpoint file records the stem of the last JSON file that was
+    successfully processed so that a subsequent run with -p (no value) can
+    resume from the same point rather than restarting from the beginning.
+
+    Parameters:
+    * ctx   - OmekaContext providing the current environment string
+    * label - pipeline label used to keep each script's checkpoint separate,
+              e.g. "omeka" for json_to_omeka or "omeka_html" for
+              html_and_media_ingest
+    """
+    return Path.cwd() / "logs" / f"proceed_{label}_{ctx.environment}"
+
+
+def read_checkpoint(ctx, label):
+    """
+    Read the last-saved checkpoint stem for this pipeline and environment.
+
+    Returns the identifier stem string written by the most recent
+    write_checkpoint() call, or None if no checkpoint file exists or the
+    file is empty (e.g. first run, or file was manually cleared).
+
+    Parameters:
+    * ctx   - OmekaContext
+    * label - pipeline label (see checkpoint_path)
+    """
+    path = checkpoint_path(ctx, label)
+    if not path.exists():
+        return None
+    content = path.read_text().strip()
+    return content if content else None
+
+
+def write_checkpoint(stem, ctx, label):
+    """
+    Save stem as the most recently processed item identifier for this pipeline.
+
+    Called after each JSON file is processed so that a run interrupted
+    mid-way can be resumed with -p. Creates the logs/ directory if it does
+    not yet exist.
+
+    Parameters:
+    * stem  - identifier string (JSON file stem) to record, e.g. "abc123"
+    * ctx   - OmekaContext
+    * label - pipeline label (see checkpoint_path)
+    """
+    path = checkpoint_path(ctx, label)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(f"{stem}\n")
