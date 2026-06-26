@@ -41,7 +41,7 @@ class FieldDefinitions:
         * datatype    - Omeka data type string
 
         prepare_item() in api_fields.py iterates this manifest to build the
-        item payload, calling getattr(ctx.fields, method_name)(row) for each
+        item payload, calling getattr(ctx.fields, method_name)(json_item) for each
         entry. Overriding field_manifest in a CustomFields subclass is the
         recommended way to add collection-specific Omeka properties without
         touching prepare_item() itself.

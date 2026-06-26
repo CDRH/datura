@@ -6,8 +6,8 @@ Omeka S REST API, and resolves inter-item relationships (links) by looking up
 CDRH identifiers in the live Omeka instance.
 
 The two primary entry points called by json_to_omeka.py are:
-  prepare_item(ctx, row, existing_item)  — build or update item metadata
-  link_records(ctx, row, existing_item)  — resolve and attach relationships
+  prepare_item(ctx, json_item, existing_item)  — build or update item metadata
+  link_records(ctx, json_item, existing_item)  — resolve and attach relationships
 
 All functions that need API access or configuration now receive a ctx
 (OmekaContext) parameter. The property ID cache on ctx (ctx.get_property_id()) 
@@ -27,7 +27,7 @@ from datetime import datetime
 logger = logging.getLogger(__name__)
 
 
-def prepare_item(ctx, row, existing_item=None):
+def prepare_item(ctx, json_item, existing_item=None):
     """
     Build a complete Omeka item dict from a Datura JSON record.
 
@@ -39,7 +39,7 @@ def prepare_item(ctx, row, existing_item=None):
 
     Parameters:
     * ctx           - OmekaContext providing config and the property ID cache
-    * row           - raw JSON item dict from the Datura ES output
+    * json_item     - raw JSON item dict from the Datura ES output
     * existing_item - existing Omeka item dict to update in-place, or None
                       when creating a new item (an empty dict is used instead)
 
@@ -51,7 +51,7 @@ def prepare_item(ctx, row, existing_item=None):
         built_item = existing_item if existing_item else {}
         _update = ctx._fn_update_item_value or update_item_value
         for omeka_term, method_name, datatype in ctx.fields.field_manifest():
-            value = getattr(ctx.fields, method_name)(row)
+            value = getattr(ctx.fields, method_name)(json_item)
             _update(ctx, built_item, omeka_term, value, datatype)
         return built_item
     except ValueError as e:
@@ -59,7 +59,7 @@ def prepare_item(ctx, row, existing_item=None):
         raise
 
 
-def link_records(ctx, row, existing_item):
+def link_records(ctx, json_item, existing_item):
     """
     Resolve inter-item relationships for a single item and attach them to the
     existing Omeka item dict.
@@ -73,48 +73,48 @@ def link_records(ctx, row, existing_item):
 
     Parameters:
     * ctx           - OmekaContext providing the API client and item_set_id
-    * row           - raw JSON item dict from the Datura ES output
+    * json_item     - raw JSON item dict from the Datura ES output
     * existing_item - the current Omeka item dict, deepcopied by the caller
 
     Returns the updated existing_item dict with relationship fields populated.
 
     """
-    identifier = row.get("identifier")
+    identifier = json_item.get("identifier")
     _link = ctx._fn_link_item_record or link_item_record
 
     try:
-        part_ids = [part['id'] for part in row["has_part"]]
+        part_ids = [part['id'] for part in json_item["has_part"]]
         _link(ctx, existing_item, "dcterms:hasPart", part_ids)
     except (KeyError, TypeError) as e:
         logger.debug("No has_part data for %s: %s", identifier, e)
 
     try:
-        _link(ctx, existing_item, "dcterms:isPartOf", row["is_part_of"]["id"])
+        _link(ctx, existing_item, "dcterms:isPartOf", json_item["is_part_of"]["id"])
     except (KeyError, TypeError) as e:
         logger.debug("No is_part_of data for %s: %s", identifier, e)
 
     try:
-        _link(ctx, existing_item, "dcterms:relation", row["has_relation"]["id"])
+        _link(ctx, existing_item, "dcterms:relation", json_item["has_relation"]["id"])
     except (KeyError, TypeError) as e:
         logger.debug("No has_relation data for %s: %s", identifier, e)
 
     try:
-        _link(ctx, existing_item, "dh:orderPrev", row["previous_item"]["id"])
+        _link(ctx, existing_item, "dh:orderPrev", json_item["previous_item"]["id"])
     except (KeyError, TypeError) as e:
         logger.debug("No previous_item data for %s: %s", identifier, e)
 
     try:
-        _link(ctx, existing_item, "dh:orderNext", row["next_item"]["id"])
+        _link(ctx, existing_item, "dh:orderNext", json_item["next_item"]["id"])
     except (KeyError, TypeError) as e:
         logger.debug("No next_item data for %s: %s", identifier, e)
 
     try:
-        _link(ctx, existing_item, "tei:correspNext", row["correspNext_omeka_s"])
+        _link(ctx, existing_item, "tei:correspNext", json_item["correspNext_omeka_s"])
     except (KeyError, TypeError) as e:
         logger.debug("No correspNext_omeka_s data for %s: %s", identifier, e)
 
     try:
-        _link(ctx, existing_item, "tei:correspPrev", row["correspPrev_omeka_s"])
+        _link(ctx, existing_item, "tei:correspPrev", json_item["correspPrev_omeka_s"])
     except (KeyError, TypeError) as e:
         logger.debug("No correspPrev_omeka_s data for %s: %s", identifier, e)
 
