@@ -13,8 +13,6 @@ class SolrPoster
     end
   end
 
-  # TODO this is very similar to the below _by_regex function
-  # so could stick them together later
   def clear_index
     del_str = "<delete><query>*:*</query></delete>"
     res = post_xml(del_str)
@@ -53,11 +51,11 @@ class SolrPoster
   end
 
   def post(content, type)
-    url = URI.parse(@url)
-    http = Net::HTTP.new(url.host, url.port)
-    http.use_ssl = @url[/^https/] ? true : false
+    uri = URI.parse(@url)
+    http = Net::HTTP.new(uri.host, uri.port)
+    http.use_ssl = true if uri.scheme == "https"
     http.open_timeout = 10
-    request = Net::HTTP::Post.new(url.request_uri)
+    request = Net::HTTP::Post.new(uri.request_uri)
     request.body = content
     request["Content-Type"] = type
     http.request(request)
@@ -65,7 +63,6 @@ class SolrPoster
 
   # post_file
   #  assumes xml file because of historical usage of this script
-  #  TODO refactor?
   def post_file(file_location)
     file = IO.read(file_location)
     post_xml(file)

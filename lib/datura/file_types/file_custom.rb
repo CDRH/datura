@@ -1,8 +1,6 @@
 require_relative "../helpers.rb"
 require_relative "../file_type.rb"
 
-require "rest-client"
-
 class FileCustom < FileType
   attr_reader :es_req, :format
 

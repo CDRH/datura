@@ -31,6 +31,14 @@ The above does the following:
 Displays usage and list of options
 
 ```bash
+-c, --csv-rows [input]
+```
+
+Transforms / posts only csv lines whose identifier (id/identifier column) matches a specific regular expression.
+
+Examples: `post -c cat_001 (exact), cat_ (prefix), 'cat_00[1-3]' (range), 'cat_\d' (use digit character)`
+
+```bash
 -e, --environment [input]
 ```
 
@@ -84,6 +92,26 @@ Solr specific, this will post documents but will not "commit" them to the index.
 *Default setting: false*
 
 Outputs transformed files to a collection's `output/[environment]/[type]`. This is useful for debugging and inspection purposes.
+
+```bash
+-p, --proceed [input]
+```
+
+Proceed with posting from (and including) the file matching this regex. Files are sorted alphabetically before the proceed point is located. The regex must match exactly one file or the script will exit with an error. Can be combined with `-r` to proceed within a filtered set.
+
+Example: `post -p let0050` (post all files from `let0050` onward)
+
+Example: `post -r let -p let0050` (post all `let` files from `let0050` onward)
+
+**Checkpoint file**: After each batch of files is posted (not in `--transform-only` mode), Datura writes the last posted filename to `logs/proceed_{environment}` in your collection directory. 
+
+**Interactive resume**: When `-p` is given with no value (`post -p`), Datura reads the checkpoint file and prompts:
+
+```
+Continue from <filename>? (y/n):
+```
+
+Enter `y` to resume posting from that file, or `n` to exit. If no checkpoint file exists yet, the script exits with an error directing you to run `post` at least once first.
 
 ```bash
 -r, --regex [input]

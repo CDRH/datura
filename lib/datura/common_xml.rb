@@ -45,14 +45,13 @@ module CommonXml
     file_xml
   end
 
+  # TODO: this method is deprecated with switch to saxonche
+  # but leaving it in place until testing is complete
   # saxon accepts params in following manner
   #   fw=true pb=true figures=false
-  def self.stringify_params(param_hash)
-    params = ""
-    if param_hash
-      params = param_hash.map{ |k, v| "#{k}=#{v}" }.join(" ")
-    end
-    params
+  def self.arrayify_params(param_hash)
+    return [] unless param_hash
+    param_hash.map { |k, v| "#{k}=#{v}"}
   end
 
   def self.sub_corrections(aXml)

@@ -33,6 +33,12 @@ optparse = OptionParser.new do |opts|
         end
     end
 
+    opts.on('-c', '--csv-rows [input]', 'only process CSV rows matching this identifier regex') do |input|
+        if input && input.length > 0
+            options["csv_rows"] = input
+        end
+    end
+
     opts.on('-[!-~]', '-[!-~] [input]', 'arguments for the main Datura script') do |name, value|
         #does nothing, this is a placeholder to catch all arguments not needed now and pass them along to the main script
     end
