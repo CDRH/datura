@@ -33,6 +33,10 @@ optparse = OptionParser.new do |opts|
         options["json_output"] = true
     end
 
+    opts.on('-p', '--proceed [input]', 'proceed from the file matching this regex, or from the last checkpoint if no value given') do |input|
+        options["proceed"] = input
+    end
+
     opts.on('-r', '--regex [input]', 'only generate and post files matching this regex') do |input|
         if input && input.length > 0
             options["regex"] = input
@@ -41,6 +45,12 @@ optparse = OptionParser.new do |opts|
 
     opts.on('-s', '--skip', 'skip generation step and just post to Omeka') do
         generate_es = false
+    end
+
+    opts.on('-u', '--update [input]', 'only post files updated after this date (today, 2015-01-01, or 2015-01-01T18:24)') do |input|
+        if input && input.length > 0
+            options["update_time"] = input
+        end
     end
 
     opts.on('-[!-~]', '-[!-~] [input]', 'arguments for the main Datura script') do |name, value|
@@ -52,6 +62,41 @@ optparse.parse(ARGV)
 #remove options not used in the main script
 ARGV.delete("-s")
 ARGV.delete("--skip")
+#-p checkpointing belongs to the Omeka posting step (Python); strip it so
+#DataManager does not trigger the Ruby proceed/checkpoint logic instead
+ARGV.delete("-p")
+ARGV.delete("--proceed")
+ARGV.reject! { |arg| arg.start_with?("--proceed=") || (arg.start_with?("-p") && arg.length > 2) }
+#if -p was given, resolve the proceed value from the Python checkpoint and
+#re-inject into ARGV so DataManager also starts from the same file, preventing
+#all source files from being transformed unnecessarily
+if options.key?("proceed")
+  proceed_value = options["proceed"]
+  if proceed_value.nil?
+    env = options["environment"] || "development"
+    checkpoint_file = File.join("logs", "proceed_omeka_#{env}")
+    if File.exist?(checkpoint_file)
+      last = File.read(checkpoint_file).strip
+      unless last.empty?
+        print "Continue from #{last}? (y/n): "
+        $stdout.flush
+        response = $stdin.gets&.chomp&.downcase || ""
+        if response == "y"
+          proceed_value = last
+        else
+          puts "Exiting."
+          exit 0
+        end
+      end
+    end
+    if proceed_value.nil?
+      puts "ERROR: --proceed given with no value but no checkpoint file found at #{checkpoint_file}"
+      exit 1
+    end
+  end
+  ARGV.push("--proceed=#{proceed_value}")
+  options["proceed"] = proceed_value
+end
 ARGV.delete("-j")
 ARGV.delete("--json-output")
 #add options to output a json file instead of posting it to Elasticsearch
