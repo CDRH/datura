@@ -1,6 +1,7 @@
+import importlib.util
 import logging
-import sys
 from datetime import datetime
+from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
@@ -28,6 +29,76 @@ class FieldDefinitions:
         """
         # Stored as a private attribute and accessed only by uriData().
         self._omeka_data_base = omeka_data_base
+
+    def field_manifest(self):
+        """
+        Declare the ordered list of Omeka property mappings for this collection.
+
+        Each entry is a (omeka_term, method_name, datatype) triple:
+        * omeka_term  - Omeka S property term string, e.g. "dcterms:title"
+        * method_name - name of the extractor method on this FieldDefinitions
+                        instance to call for each JSON item
+        * datatype    - Omeka data type string
+
+        prepare_item() in api_fields.py iterates this manifest to build the
+        item payload, calling getattr(ctx.fields, method_name)(json_item) for each
+        entry. Overriding field_manifest in a CustomFields subclass is the
+        recommended way to add collection-specific Omeka properties without
+        touching prepare_item() itself.
+        """
+        return [
+            ("dcterms:title",             "title",                "literal"),
+            ("dcterms:identifier",        "identifier",           "literal"),
+            ("dh:collection",             "collection",           "literal"),
+            ("dh:category",               "category",             "literal"),
+            ("dh:category2",              "category2",            "literal"),
+            ("dh:uriData",                "uriData",              "uri"),
+            ("dcterms:type",              "dcterms_type",         "literal"),
+            ("dcterms:creator",           "creator",              "literal"),
+            ("dcterms:contributor",       "contributor",          "literal"),
+            ("dcterms:date",              "date",                 "numeric:timestamp"),
+            ("dh:dateDisplay",            "dateDisplay",          "literal"),
+            ("dh:dateYear",               "dateYear",             "literal"),
+            ("dcterms:description",       "description",          "literal"),
+            ("dcterms:format",            "dcterms_format",       "literal"),
+            ("dcterms:relation",          "relation",             "literal"),
+            ("dcterms:publisher",         "publisher",            "literal"),
+            ("dh:biblID",                 "biblID",               "literal"),
+            ("tei:biblTitle",             "biblTitle",            "literal"),
+            ("tei:biblPubPlace",          "biblPubPlace",         "literal"),
+            ("bibo:issue",                "issue",                "literal"),
+            ("bibo:pageStart",            "pageStart",            "literal"),
+            ("bibo:pageEnd",              "pageEnd",              "literal"),
+            ("bibo:section",              "section",              "literal"),
+            ("bibo:volume",               "volume",               "literal"),
+            ("tei:biblTitleA",            "biblTitleA",           "literal"),
+            ("tei:biblTitleM",            "biblTitleM",           "literal"),
+            ("tei:biblTitleJ",            "biblTitleJ",           "literal"),
+            ("dcterms:rightsHolder",      "rightsHolder",         "literal"),
+            ("dcterms:license",           "license",              "literal"),
+            ("dcterms:subject",           "subject",              "literal"),
+            ("dh:topic",                  "topic",                "literal"),
+            ("dh:category3",              "category3",            "literal"),
+            ("dh:category4",              "category4",            "literal"),
+            ("dh:category5",              "category5",            "literal"),
+            ("dh:note",                   "note",                 "literal"),
+            ("dcterms:abstract",          "abstract",             "literal"),
+            ("dh:keyword",                "keyword",              "literal"),
+            ("dh:keyword2",               "keyword2",             "literal"),
+            ("dh:keyword3",               "keyword3",             "literal"),
+            ("dh:keyword4",               "keyword4",             "literal"),
+            ("dh:keyword5",               "keyword5",             "literal"),
+            ("dcterms:source",            "source",               "literal"),
+            ("dcterms:medium",            "medium",               "literal"),
+            ("dcterms:extent",            "extent",               "literal"),
+            ("dcterms:language",          "language",             "literal"),
+            ("dh:box",                    "box",                  "literal"),
+            ("dh:folder",                 "folder",               "literal"),
+            ("foaf:name",                 "name",                 "literal"),
+            ("dh:spatial_short_name",     "spatial_short_name",   "literal"),
+            ("dh:annotationsText",        "annotationsText",      "literal"),
+            ("dh:itemText",               "itemText",             "literal"),
+        ]
 
     def _get_citation(self, json):
         """Return the citation sub-dict, or {} if absent or null."""
@@ -228,9 +299,10 @@ def get_fields(omeka_data_base=""):
     """
     Return the appropriate FieldDefinitions instance for this collection.
 
-    Attempts to import CustomFields from scripts/python/omeka_overrides.py
-    in the collection directory. If that file does not exist, falls back to
-    the default FieldDefinitions class.
+    Looks for a CustomFields class in scripts/python/field_overrides.py in
+    the collection directory (resolved from the current working directory).
+    If that file does not exist, falls back to the default FieldDefinitions
+    class. If the file exists but cannot be loaded, raises RuntimeError.
 
     Parameters:
     * omeka_data_base - passed through to the FieldDefinitions constructor
@@ -239,16 +311,29 @@ def get_fields(omeka_data_base=""):
 
     Returns a FieldDefinitions instance (or a CustomFields subclass of it).
     """
-    try:
-        # Insert at position 0 so the collection's scripts/python directory
-        # takes precedence over any system-installed omeka_overrides module.
-        sys.path.insert(0, './scripts/python')
-        from omeka_overrides import CustomFields
-        # CustomFields inherits __init__ from FieldDefinitions, so
-        # omeka_data_base is passed through automatically. Override __init__
-        # in CustomFields only if you need additional constructor logic.
-        logger.warning("Omeka overrides found at %s; custom field mappings will be applied.", "scripts/python/omeka_overrides.py")
-        return CustomFields(omeka_data_base=omeka_data_base)
-    except ImportError:
-        # No collection-specific overrides found; use the defaults.
+    override_path = Path.cwd() / "scripts" / "python" / "field_overrides.py"
+    if not override_path.exists():
         return FieldDefinitions(omeka_data_base=omeka_data_base)
+
+    try:
+        spec = importlib.util.spec_from_file_location("field_overrides", override_path)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+    except Exception as e:
+        raise RuntimeError(
+            f"Failed to load field overrides from {override_path}: {e}"
+        ) from e
+
+    CustomFields = getattr(module, "CustomFields", None)
+    if CustomFields is None:
+        # File exists but defines no CustomFields class — use defaults.
+        return FieldDefinitions(omeka_data_base=omeka_data_base)
+
+    # CustomFields inherits __init__ from FieldDefinitions, so
+    # omeka_data_base is passed through automatically. Override __init__
+    # in CustomFields only if you need additional constructor logic.
+    logger.warning(
+        "Field overrides found at %s; custom field mappings will be applied.",
+        override_path,
+    )
+    return CustomFields(omeka_data_base=omeka_data_base)

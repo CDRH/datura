@@ -415,7 +415,8 @@ def _link_item(ctx, json_item, matching_items):
     item_to_link = copy.deepcopy(matching_items["results"][0])
 
     try:
-        linked_item = api_fields.link_records(ctx, json_item, item_to_link)
+        _link_records = ctx._fn_link_records or api_fields.link_records
+        linked_item = _link_records(ctx, json_item, item_to_link)
     except Exception as err:
         ctx.record_error(OmekaAPIError(item_id, "link_records", err))
         return

@@ -179,37 +179,25 @@ def delete_media_items(ctx, matching_item):
                 OmekaMediaError(f"Unexpected error deleting media {media_id}: {err}")
             )
 
-
-def ingest_thumbnail(ctx, json_item, matching_item, iiif_dir):
+def build_thumbnail_url(ctx, json_item):
     """
-    Download a IIIF thumbnail and upload it to Omeka as the item's primary media.
+    Construct the remote IIIF URL and local cache filename for this item's thumbnail.
 
-    Thumbnail ingest is performed before HTML ingest so that Omeka designates
-    the image as the item's primary_media (Omeka S uses the first media object
-    as the primary).
-
-    If the source JSON record has no cover_image field, the function returns
-    immediately — not all items have thumbnails.
-
-    If the thumbnail cannot be downloaded (network error, 4xx/5xx from the
-    IIIF server) or if the upload to Omeka fails, the failure is logged and
-    the function returns — the HTML ingest still proceeds.
+    Returns a (remote_url, local_filename) tuple, or None if the item has no
+    cover_image. local_filename is a string suitable for joining with iiif_dir;
+    ingest_thumbnail() appends it to the iiif_dir path.
 
     Parameters:
-    * ctx           - OmekaContext (provides iiif_server, client, item_set_id)
-    * json_item     - dict: one record from a Datura ES JSON file
-    * matching_item - dict: the Omeka item to attach the thumbnail to
-    * iiif_dir      - pathlib.Path pointing to the local IIIF output directory
-                      where the downloaded thumbnail is cached temporarily
+    * ctx       - OmekaContext (provides iiif_server, iiif_collection)
+    * json_item - dict: one record from a Datura ES JSON file
+
     """
+
     collection_name = ctx.iiif_collection if ctx.iiif_collection else json_item.get("collection", "")
     cover_image = json_item.get("cover_image")
-    identifier = json_item.get("identifier", "unknown")
 
     if not cover_image:
-        # No thumbnail configured for this item — nothing to do.
-        logger.debug("No cover_image for %r; skipping thumbnail ingest", identifier)
-        return
+        return None
 
     # Parse any existing extension from the cover_image name. Image identifiers
     # often contain dots that are not extensions (e.g. loc.00001, ccda.let00001),
@@ -224,12 +212,49 @@ def ingest_thumbnail(ctx, json_item, matching_item, iiif_dir):
     # Construct the IIIF Image API URL for the thumbnail.
     # The !200,200 size specifier requests a thumbnail that fits within a
     # 200×200 bounding box while preserving aspect ratio.
-    thumbnail_remote = (
+    remote = (
         f"{ctx.iiif_server}/iiif/2/{collection_name}%2F{stem}{image_ext}/full/!200,200/0/default.jpg"
     )
     # Cache the thumbnail locally using the same URL-encoded filename so that
     # re-runs can be inspected on disk if needed.
-    thumbnail_local = iiif_dir / f"{collection_name}%2F{stem}{image_ext}"
+    local_name = f"{collection_name}%2F{stem}{image_ext}"
+
+    return remote, local_name
+
+
+def ingest_thumbnail(ctx, json_item, matching_item, iiif_dir):
+    """
+    Download a IIIF thumbnail and upload it to Omeka as the item's primary media.
+
+    Thumbnail ingest is performed before HTML ingest so that Omeka designates
+    the image as the item's primary_media (Omeka S uses the first media object
+    as the primary).
+
+    URL construction is delegated to build_thumbnail_url(), which can be
+    overridden independently. 
+    
+    If build_thumbnail_url() returns None (no cover_image on the item), or if
+    the download or upload fails, the function returns — the HTML ingest still
+    proceeds.
+
+    Parameters:
+    * ctx           - OmekaContext (provides iiif_server, client, item_set_id)
+    * json_item     - dict: one record from a Datura ES JSON file
+    * matching_item - dict: the Omeka item to attach the thumbnail to
+    * iiif_dir      - pathlib.Path pointing to the local IIIF output directory
+                      where the downloaded thumbnail is cached temporarily
+    """
+    identifier = json_item.get("identifier", "unknown")
+
+    _build_thumbnail_url = ctx._fn_build_thumbnail_url or build_thumbnail_url
+    result = _build_thumbnail_url(ctx, json_item)
+    if result is None:
+        # No thumbnail for this item — nothing to do.
+        logger.debug("No cover_image for %r; skipping thumbnail ingest", identifier)
+        return
+
+    thumbnail_remote, local_name = result
+    thumbnail_local = iiif_dir / local_name
 
     # --- Download ---
     try:
@@ -343,6 +368,30 @@ def ingest_html(ctx, json_item, matching_item, html_dir):
 # Main processing loop
 # ---------------------------------------------------------------------------
 
+def ingest_item_media(ctx, json_item, matching_item, html_dir, iiif_dir):
+    """
+    Run the full media pipeline for a single Omeka item.
+
+    Encapsulates the delete-then-reingest sequence so that collections needing
+    a different media pipeline (e.g. adding a PDF step, skipping thumbnails for
+    certain item types) can override this function without touching the item-lookup and
+    skip logic in process_items().
+
+    Order matters: thumbnail must be uploaded before HTML so that Omeka
+    designates the image as primary_media (Omeka S uses the first media object
+    attached to an item as its primary).
+
+    Parameters:
+    * ctx           - OmekaContext
+    * json_item     - dict: one record from a Datura ES JSON file
+    * matching_item - dict: the current Omeka item retrieved from the API
+    * html_dir      - pathlib.Path to output/<env>/html/
+    * iiif_dir      - pathlib.Path to output/<env>/iiif/
+    """
+    delete_media_items(ctx, matching_item)
+    ingest_thumbnail(ctx, json_item, matching_item, iiif_dir)
+    ingest_html(ctx, json_item, matching_item, html_dir)
+
 def process_items(ctx, pathlist, html_dir, iiif_dir):
     """
     For each JSON record, look up the Omeka item and ingest its media.
@@ -422,12 +471,8 @@ def process_items(ctx, pathlist, html_dir, iiif_dir):
                 continue
 
             # --- Media pipeline ---
-            # Delete first, then re-upload. Order matters: thumbnail must be
-            # uploaded before HTML so that Omeka designates the image as
-            # primary_media.
-            delete_media_items(ctx, matching_item)
-            ingest_thumbnail(ctx, json_item, matching_item, iiif_dir)
-            ingest_html(ctx, json_item, matching_item, html_dir)
+            ingest_item_media(ctx, json_item, matching_item, html_dir, iiif_dir)
+
 
 
 # ---------------------------------------------------------------------------
