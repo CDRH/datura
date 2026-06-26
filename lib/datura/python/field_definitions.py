@@ -312,6 +312,7 @@ def get_fields(omeka_data_base=""):
     Returns a FieldDefinitions instance (or a CustomFields subclass of it).
     """
     override_path = Path.cwd() / "scripts" / "python" / "field_overrides.py"
+    override_relative_path = "scripts/python/field_overrides.py"
     if not override_path.exists():
         return FieldDefinitions(omeka_data_base=omeka_data_base)
 
@@ -321,7 +322,7 @@ def get_fields(omeka_data_base=""):
         spec.loader.exec_module(module)
     except Exception as e:
         raise RuntimeError(
-            f"Failed to load field overrides from {override_path}: {e}"
+            f"Failed to load field overrides from {override_relative_path}: {e}"
         ) from e
 
     CustomFields = getattr(module, "CustomFields", None)
@@ -334,6 +335,6 @@ def get_fields(omeka_data_base=""):
     # in CustomFields only if you need additional constructor logic.
     logger.warning(
         "Field overrides found at %s; custom field mappings will be applied.",
-        override_path,
+        override_relative_path,
     )
     return CustomFields(omeka_data_base=omeka_data_base)
