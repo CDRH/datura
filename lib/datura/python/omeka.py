@@ -166,3 +166,57 @@ def filter_items_by_format(format_type, pathlist):
     # Build the set of stems once
     source_stems = {sf.stem for sf in source_dir.glob("*")}
     return [p for p in pathlist if Path(p).stem in source_stems]
+
+
+def filter_items_by_identifier(csv_rows, json_items):
+    """
+    Filter a list of JSON item dicts to those whose identifier matches a regex.
+
+    Used by both entrypoint scripts when -c / --csv-rows is passed on the
+    command line. Mirrors the Ruby FileCsv row filter: the regex is matched
+    against the item's "identifier" field (equivalent to the CSV id/identifier
+    column).
+
+    Parameters:
+    * csv_rows   - regex pattern string, compiled with re.compile()
+    * json_items - list of item dicts loaded from a Datura ES JSON file
+
+    Returns a (possibly shorter) list containing only the items whose
+    "identifier" value matches the pattern.
+    """
+    pat = re.compile(csv_rows)
+    return [item for item in json_items if pat.search(item.get("identifier") or "")]
+
+
+def proceed_files(regex, pathlist):
+    """
+    Filter a sorted list of file paths to those from the first match onward.
+
+    Used by both entrypoint scripts when -p / --proceed is given with a value.
+    Mirrors the Ruby Helpers.proceed_files() behavior: sorts the list by stem,
+    finds exactly one matching file, and returns every file from that point to
+    the end of the list.
+
+    Parameters:
+    * regex    - regex pattern string to locate the starting file by stem
+    * pathlist - iterable of pathlib.Path objects to filter
+
+    Exits with a descriptive error message if the regex matches zero files
+    (typo or stale checkpoint) or more than one file (ambiguous — refine the
+    regex so it matches exactly one starting point).
+    """
+    sorted_paths = sorted(pathlist, key=lambda p: p.stem)
+    pat = re.compile(regex)
+    matches = [p for p in sorted_paths if pat.search(p.stem)]
+    if not matches:
+        print(f"ERROR: --proceed regex '{regex}' matched no files. Exiting.")
+        sys.exit(1)
+    if len(matches) > 1:
+        names = ", ".join(p.stem for p in matches)
+        print(
+            f"ERROR: --proceed regex '{regex}' matched {len(matches)} files ({names}). "
+            "Refine your regex to match exactly one file. Exiting."
+        )
+        sys.exit(1)
+    idx = sorted_paths.index(matches[0])
+    return sorted_paths[idx:]
