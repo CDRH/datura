@@ -155,9 +155,7 @@ class FileCsv < FileType
     begin
       Regexp.new(@options["csv_rows"])
     rescue RegexpError => e
-      puts "Warning: --csv-rows value '#{@options["csv_rows"]}' is not a valid regex: #{e.message}".red
-      puts "Proceeding without row filter — all rows will be processed.".yellow
-      nil
+      raise ArgumentError, "Invalid regex '#{options["csv_rows"]}': #{e.message}"
     end
   end
 
