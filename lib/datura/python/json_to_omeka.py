@@ -214,11 +214,19 @@ def post_items(ctx, pathlist, json_output_dir=None):
             if json_output_dir is not None:
                 # JSON output mode: build the payload and write it to disk
                 # rather than to the Omeka API.
-                new_item = api_fields.prepare_item(ctx, json_item)
+                try:
+                    new_item = api_fields.prepare_item(ctx, json_item)
+                except Exception as err:
+                    ctx.record_error(OmekaAPIError(identifier, "prepare_item", err))
+                    continue
                 if not new_item:
                     logger.warning("Could not prepare payload for %r; skipping", identifier)
                     continue
-                payload = prepare_item_payload_using_template(ctx, new_item, template_number)
+                try:
+                    payload = prepare_item_payload_using_template(ctx, new_item, template_number)
+                except Exception as err:
+                    ctx.record_error(OmekaAPIError(identifier, "prepare_template_payload", err))
+                    continue
                 out_path = json_output_dir / f"{identifier}.json"
                 relative_path = f"output/{ctx.environment}/{identifier}.json"
                 logger.info("Writing Omeka payload for %r to %s", identifier, relative_path)
