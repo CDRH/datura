@@ -503,7 +503,9 @@ def process_items(ctx, pathlist, html_dir, iiif_dir):
             # --- Media pipeline ---
             ingest_item_media(ctx, json_item, matching_item, html_dir, iiif_dir)
 
-
+        # Record the last-processed file so that -p (no value) can resume
+        # from this point on the next run.
+        write_checkpoint(path.stem, ctx, "omeka_html")
 
 # ---------------------------------------------------------------------------
 # Entrypoint
