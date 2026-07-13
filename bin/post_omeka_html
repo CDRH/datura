@@ -55,6 +55,8 @@ optparse = OptionParser.new do |opts|
 end
 #parse, but do not consume, command line arguments (the usual parse! would consume them)
 optparse.parse(ARGV)
+Datura::Helpers.validate_regex(options["regex"], "--regex") if options["regex"]
+Datura::Helpers.validate_regex(options["csv_rows"], "--csv-rows") if options["csv_rows"]
 #remove options not used in the main script
 ARGV.delete("-m")
 ARGV.delete("--media_skip")

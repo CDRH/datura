@@ -48,6 +48,7 @@ try:
         configure_logging,
         finish_run,
         read_checkpoint,
+        validate_regex_arg,
         write_checkpoint,
     )
     from omeka import filter_items, filter_items_by_date, filter_items_by_format, prepare_item_payload_using_template
@@ -504,6 +505,12 @@ def main():
     # Configure root logger first so that even OmekaContext initialisation
     # errors are captured at the correct level.
     configure_logging(args.log_level)
+
+    # Validate regex for -r and -c option input
+    if args.regex:
+        validate_regex_arg(args.regex, "--regex")
+    if args.csv_rows:
+        validate_regex_arg(args.csv_rows, "--csv-rows")
 
     # OmekaContext.from_args() raises OmekaConfigError (a subclass of
     # OmekaError) if config/private.yml is missing, unparseable, or missing
