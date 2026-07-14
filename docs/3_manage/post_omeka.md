@@ -2,15 +2,15 @@
 
 See (omeka setup instructions)[../1_setup/omeka_setup.md] for how to prepare and configure your data repository and activate the Python virtual environment.
 
-Running the `post_omeka` script will first run the Datura scripts to generate JSON files with the standard fields and values of the CDRH API (this is what is normally sent to ElasticSearch when you run `post`). This first step is equivalent to running `post -x es -o -t`. It then sends the generated JSON to the Python scripts to be ingested into Omeka S.
+Running the `post_omeka` script will first run the Datura scripts to generate JSON files with the standard fields and values of the CDRH API (this is what is normally sent to ElasticSearch when you run `post`). This first step is equivalent to running `post -x es -o -t`. It then sends the generated JSON to the Python scripts to be ingested into Omeka S. Note that this command also deletes existing content from the output `es` directory so that any files that have been deleted from source do not populate from stale JSON. 
 
-Use the `-s` option to skip the generation step and only post to Omeka S (requires that you have already generated the needed documents by running `post_omeka` normally).
+NOTE: if and only if you are posting a subset of items, you may use the `-s` option to skip the JSON generation step and only post to Omeka S (requires that you have already generated the needed documents by running `post_omeka` normally). If you run `post_omeka` with `-s` and no filter, the script will delete all JSON output in the `es` directory and will therefore have nothing to post to Omeka. 
 
 It is possible to run `post_omeka` with Datura's other command line options as described in [post.md] (for instance `-f` to filter by format and `-r` to filter by regex), but it is not recommended to override the default options such as `-x es`.
 
 You can specify the environment with `-e [environment]` but you must set an `item_set` with the desired environment in `config/private.yml.` See (omeka setup instructions)[../1_setup/omeka_setup.md] for more details.
 
-For information on how to override field definitions, see [Omeka Overrides](../2_customization/omeka_overrides.md).
+For information on how to override processes and field definitions, see [Omeka Overrides](../2_customization/omeka_overrides.md).
 
 ## Troubleshooting
 
