@@ -43,7 +43,7 @@ Next, confirm you have a `requirements.txt` file in the root directory of your c
 pip3 install -r requirements.txt
 ```
 
-The `packaging` library may need to be installed separately if the `omeka_s_tools` installation (part of the `requirements.txt` list) does not install correctly. If installation fails, `pip` may need to be upgraded (the error message should advise this).
+The `packaging` and `setuptools` libraries may need to be installed separately if the `omeka_s_tools` installation (part of the `requirements.txt` list) does not install correctly. If installation fails, `pip` may need to be upgraded (the error message should advise this).
 
 ### Step 4: Set up config for Omeka S posting
 

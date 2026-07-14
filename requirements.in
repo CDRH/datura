@@ -1,0 +1,4 @@
+# requirements.in
+omeka_s_tools @ git+https://github.com/CDRH/omeka_s_tools.git@will_changes
+pyyaml>=6.0.2,<7.0
+saxonche>=12.9,<13.0 # 12.5.0 wheels unavailable for recent Python/platform updates; 12.9 is latest stable 12.x per Saxonica docs
