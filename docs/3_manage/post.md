@@ -125,7 +125,7 @@ Example: `post -r let0001`
 -s, --skip
 ```
 
-Omeka specific, this skips the JSON or HTML generation step and only posts to Omeka S (it can be used with both `post_omeka` and `post_omeka_html`).
+Omeka specific, this skips the JSON or HTML generation step and only posts to Omeka S (it can be used with both `post_omeka` and `post_omeka_html`). Note however in the case of `post_omeka` that it should only be used with a filtered subset of files (otherwise nothing will be posted, because JSON files are deleted as part of unfiltered posts).
 
 ```bash
 -t, --transform-only
