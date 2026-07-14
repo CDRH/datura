@@ -18,8 +18,6 @@ source "https://rubygems.org"
 gem "datura", git: "https://github.com/CDRH/datura.git", tag: "v0.0.0"
 ```
 
-If this is the first datura repository on your machine, you will need to install Python 3 and `saxonche`. `saxonche` is included in `requirements.txt`, so you can install it by following the Omeka setup [instructions](/docs/1_setup/omeka_setup.md#enabling-a-virtual-environment) for installing Python dependencies. 
-
 After that, in the directory with the Gemfile, run the following:
 
 ```
@@ -29,7 +27,10 @@ bundle install
 bundle exec setup
 ```
 
-The last step should add files and some basic directories. Have a look at the [setup instructions](/docs/1_setup/collection_setup.md) to learn how to add your files and start working with the data!
+The setup step should add files and some basic directories. If this is the first datura repository on your machine, you will need to install Python 3. You will also need to install a few `saxonche`. `saxonche` is included in `requirements.txt`, which should have been added as part of setup, so you can install it by following the Omeka setup [instructions](/docs/1_setup/omeka_setup.md#enabling-a-virtual-environment) for installing Python dependencies. 
+
+Now you are ready to have a look at the [setup instructions](/docs/1_setup/collection_setup.md) to learn how to add your files and start working with the data!
+
 
 ### RVM
 
