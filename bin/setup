@@ -25,6 +25,7 @@ File.open(File.join(coll, "config", "private.yml"), "w") do |file|
 default:
   # number of files processed at the same time, increase for more powerful computers
   threads: 5
+  api_version: "2.0"
 
   # Omeka S posting (required only if using post_omeka / post_omeka_html)
   # omeka_server: servername.unl.edu/path/to/api
