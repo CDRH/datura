@@ -119,8 +119,18 @@ if generate_es && !is_limited_run
   env = options.fetch("environment", "development")
   out_es = File.join(Dir.pwd, "output", env, "es")
   if Dir.exist?(out_es)
-    cleared = Dir.glob("#{out_es}/*.json").count { |f| File.delete(f) }
-    puts "Cleared #{cleared} file(s) from output/#{env}/es" if cleared > 0
+    files = Dir.glob("#{out_es}/*.json")
+    cleared = 0
+
+    files.each do |f|
+        begin
+            File.delete(f)
+            cleared += 1
+        rescue => e
+            puts "There was an error deleting a file: #{e.message}".red
+        end
+    end
+    puts "Cleared #{cleared} file(s) from output/#{env}/es"
   end
 end
 if generate_es
