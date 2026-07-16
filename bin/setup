@@ -25,6 +25,7 @@ File.open(File.join(coll, "config", "private.yml"), "w") do |file|
 default:
   # number of files processed at the same time, increase for more powerful computers
   threads: 5
+  api_version: "2.0"
 
   # Omeka S posting (required only if using post_omeka / post_omeka_html)
   # omeka_server: servername.unl.edu/path/to/api
@@ -98,7 +99,8 @@ FileUtils.touch(File.join(coll, "scripts", "overrides", ".keep"))
 
 puts "-- Place Python overrides in scripts/python"
 FileUtils.mkdir_p(File.join(coll, "scripts", "python"))
-FileUtils.cp(File.join(datura, "lib", "datura", "python", "omeka_overrides_example.py"), File.join(coll, "scripts", "python", "omeka_overrides_example.py"))
+FileUtils.cp(File.join(datura, "lib", "datura", "python", "field_overrides_example.py"), File.join(coll, "scripts", "python", "field_overrides_example.py"))
+FileUtils.cp(File.join(datura, "lib", "datura", "python", "process_overrides_example.py"), File.join(coll, "scripts", "python", "process_overrides_example.py"))
 
 puts "-- Copying requirements.txt for Python/Omeka pipeline".green
 FileUtils.cp(File.join(datura, "requirements.txt"), File.join(coll, "requirements.txt"))

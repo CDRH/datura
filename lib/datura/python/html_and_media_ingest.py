@@ -48,6 +48,7 @@ try:
         configure_logging,
         finish_run,
         read_checkpoint,
+        validate_regex_arg,
         write_checkpoint,
     )
 except ModuleNotFoundError as err:
@@ -503,7 +504,9 @@ def process_items(ctx, pathlist, html_dir, iiif_dir):
             # --- Media pipeline ---
             ingest_item_media(ctx, json_item, matching_item, html_dir, iiif_dir)
 
-
+        # Record the last-processed file so that -p (no value) can resume
+        # from this point on the next run.
+        write_checkpoint(path.stem, ctx, "omeka_html")
 
 # ---------------------------------------------------------------------------
 # Entrypoint
@@ -526,6 +529,12 @@ def main():
     args = _parse_args()
     start_time = time.time()
     configure_logging(args.log_level)
+
+    # Validate regex for -r and -c option input
+    if args.regex:
+        validate_regex_arg(args.regex, "--regex")
+    if args.csv_rows:
+        validate_regex_arg(args.csv_rows, "--csv-rows")
 
     # OmekaConfigError propagates here as a fatal error — missing or broken
     # config means no API access is possible.

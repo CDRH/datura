@@ -4,7 +4,7 @@
 
 #### If you would like to create a new repository
 
-Follow [the steps](https://github.com/CDRH/datura/blob/dev/docs/1_setup/collection_setup.md#step-1--create-a-new-collection-directory) in the `collection_setup` documentation for Datura, specifying any recent release of Datura in your Gemfile. If you know out of the gate that you plan to create overrides for any Omeka fields, copy `omeka_overrides_examples.py` (in the `/scripts/python` directory) to `omeka_overrides.py`. 
+Follow [the steps](https://github.com/CDRH/datura/blob/dev/docs/1_setup/collection_setup.md#step-1--create-a-new-collection-directory) in the `collection_setup` documentation for Datura, specifying any recent release of Datura in your Gemfile. If you know out of the gate that you plan to create overrides for any Omeka processes or fields, copy `process_overrides_examples.py` and/or `field_overrides_examples.py` (in the `/scripts/python` directory) to `process_overrides.py` or `field_overrides.py`. 
 
 #### If you are working with an existing data repository
 
@@ -40,11 +40,10 @@ You should now see a `(.venv)` at the front of the command line prompt. You will
 Next, confirm you have a `requirements.txt` file in the root directory of your collection. If you are working with an existing repository, you may need to copy this over from Datura. Then, to install the dependencies, run: 
 
 ```bash
-pip3 install packaging
 pip3 install -r requirements.txt
 ```
 
-The `packaging` library will need to be installed separately so the `omeka_s_tools` installation (part of the `requirements.txt` list) will install correctly. If installation fails, `pip` may need to be upgraded (the error message should advise this).
+The `packaging` and `setuptools` libraries may need to be installed separately if the `omeka_s_tools` installation (part of the `requirements.txt` list) does not install correctly. If installation fails, `pip` may need to be upgraded (the error message should advise this).
 
 ### Step 4: Set up config for Omeka S posting
 

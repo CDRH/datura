@@ -9,6 +9,7 @@ import importlib.util
 import logging
 from logging.handlers import RotatingFileHandler
 import os
+import re
 import sys
 
 from field_definitions import get_fields
@@ -189,6 +190,28 @@ def parse_update_time(s):
         f"Expected 'today', a date (2015-01-01), or date-time (2015-01-01T18:24).{RESET}"
     )
 
+# ---------------------------------------------------------------------------
+# Regex parsing
+# ---------------------------------------------------------------------------
+
+def validate_regex_arg(pattern, flag):
+    """
+    Compile a regex string, raising OmekaConfigError immediately if invalid.
+
+    Mirrors the Ruby Datura::Helpers.validate_regex check. Called in each
+    entrypoint's main() before OmekaContext is built, so that an invalid
+    -r or -c value exits with a clean error message rather than a traceback.
+
+    Parameters:
+    * pattern - the regex string from the CLI argument
+    * flag    - the flag name for the error message, e.g. "--regex"
+    """
+    try:
+        re.compile(pattern)
+    except re.error as e:
+        raise OmekaConfigError(
+            f"Invalid regex for {flag} {pattern!r}: {e}"
+        )
 
 # ---------------------------------------------------------------------------
 # Context
