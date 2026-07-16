@@ -109,6 +109,30 @@ end
 ARGV.unshift("-x", "es", "-o", "-t")
 #create DataManager before conditional run
 manager = Datura::DataManager.new
+# On full runs (no limiting flags), clear all ES output before transforms so
+# that deleted source files do not persist in the output directory. This makes
+# the output directory a faithful reflection of the current source tree.
+# -s (skip transforms) is supported for limited runs only; combining -s with
+# an unrestricted full run would clear the output and leave nothing to post.
+is_limited_run = options["regex"] || options["format"] || options["proceed"] || options["csv_rows"]
+if generate_es && !is_limited_run
+  env = options.fetch("environment", "development")
+  out_es = File.join(Dir.pwd, "output", env, "es")
+  if Dir.exist?(out_es)
+    files = Dir.glob("#{out_es}/*.json")
+    cleared = 0
+
+    files.each do |f|
+        begin
+            File.delete(f)
+            cleared += 1
+        rescue => e
+            puts "There was an error deleting a file: #{e.message}".red
+        end
+    end
+    puts "Cleared #{cleared} file(s) from output/#{env}/es"
+  end
+end
 if generate_es
     manager.run
 end
