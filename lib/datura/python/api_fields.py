@@ -202,6 +202,9 @@ def add_formatted_value(ctx, item, key, value, datatype, label=""):
     }
     formatted = ctx.client.prepare_property_value(prop_value, prop_id, label)
 
+    if key in ctx.fields.private_fields():
+        formatted["is_public"] = False
+
     if key in item and isinstance(item[key],list):
         item[key].append(formatted)
     else:
