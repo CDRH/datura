@@ -502,13 +502,16 @@ class OmekaContext:
     def is_public(self):
         # type: () -> bool
         """
-        True only when environment is "production".
+        Always returns False. Items are posted as private (visible only to logged-in Omeka
+        admins) regardless of environment. Visibility can be changed manually in the Omeka S
+        admin interface after ingest if needed. 
 
-        Items created with is_public=False are visible only to logged-in Omeka
-        admins, which prevents in-progress development ingests from appearing
-        to public users of the site.
+        If it is desired to change this behavior at some future point such that items posted 
+        to the production environment will be public by default, replace `return False` below 
+        with `return self.environment == "production"`.
+
         """
-        return self.environment == "production"
+        return False
 
     # -----------------------------------------------------------------------
     # API helpers
