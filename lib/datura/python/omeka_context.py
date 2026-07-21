@@ -425,8 +425,13 @@ class OmekaContext:
 
         # ---- Error accumulator --------------------------------------------
         # Non-fatal per-item errors are appended here rather than aborting the
-        # run. report_errors() logs a consolidated summary at the end.
+        # run. report_run() logs a consolidated summary at the end.
         self._errors = []  # type: List[OmekaError]
+
+        # ---- Warning accumulator ------------------------------------------
+        # Non-fatal per-item warnings (skipped items, ambiguous matches, etc.)
+        # are appended here. report_run() displays a consolidated block at end.
+        self._warnings = []  # type: List[str]
 
         # ---- Field definitions --------------------------------------------
         # Load collection-specific field mappings once here. get_fields() returns 
@@ -603,38 +608,71 @@ class OmekaContext:
         logger.error(str(err))
         self._errors.append(err)
 
-    def report_errors(self):
+    def record_warning(self, msg):
+        # type: (str) -> None
         """
-        Log a consolidated summary of all errors recorded during the run.
+        Record a non-fatal per-item warning without halting the run.
 
-        Called by entrypoint scripts just before sys.exit(). If any errors
+        Logs immediately at WARNING level and appends the message to
+        _warnings for consolidated display at the end of the run via
+        report_run().
+
+        Parameters:
+        * msg - human-readable warning string
+        """
+        logger.warning(msg)
+        self._warnings.append(msg)
+
+    def report_run(self):
+        """
+        Log a consolidated summary of all warnings and errors recorded during the run.
+
+        Called by finish_run() just before sys.exit(). If any errors
         were recorded, the entrypoint should exit with code 1 so that the
         calling Ruby process (system() in bin/post_omeka or bin/post_omeka_html)
         can detect that the run completed with failures.
 
-        If no errors were recorded, logs a single success message.
+        If no warnings or errors were recorded, logs a single success message.
         """
+        if self._warnings:
+            logger.warning("Run completed with %d warning(s):", len(self._warnings))
+            for w in self._warnings:
+                logger.warning("  %s", w)
         if self._errors:
             logger.warning("Run completed with %d error(s):", len(self._errors))
             for err in self._errors:
                 logger.warning("  %s", err)
-        else:
-            logger.info("Run completed successfully with no errors.")
+        if not self._warnings and not self._errors:
+            logger.info("Run completed successfully with no warnings or errors.")
 
 def finish_run(ctx, args, start_time):
     """
-    Report errors, print error count and timing, and exit.
+    Report warnings and errors, print summary block and timing, and exit.
 
     Called at the end of each Omeka entrypoint script's main() function.
     Exits 0 on success, 1 if any errors were recorded.
 
     Parameters:
-    * ctx        - OmekaContext whose _errors list is inspected
+    * ctx        - OmekaContext whose _warnings and _errors lists are inspected
     * args       - argparse.Namespace (unused; kept for call-site compatibility)
     * start_time - float from time.time() captured at the top of main()
     """
-    ctx.report_errors()
+    ctx.report_run()
+    # Count summary
+    print(f"{len(ctx._warnings)} Omeka warning(s)")
     print(f"{len(ctx._errors)} Omeka posting error(s)")
+    # Warning detail block
+    if ctx._warnings:
+        print("\n--- Warning details ---")
+        for w in ctx._warnings:
+            print(f"  {w}")
+        print("-----------------------")
+    # Error detail block
+    if ctx._errors:
+        print(RED + "\n--- Error details ---" + RESET)
+        for err in ctx._errors:
+            print(RED + f"  {err}" + RESET)
+        print(RED + "---------------------" + RESET)
     elapsed = int(time.time() - start_time)
     hours, rem = divmod(elapsed, 3600)
     mins, secs = divmod(rem, 60)
