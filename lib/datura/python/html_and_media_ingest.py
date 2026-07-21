@@ -183,7 +183,7 @@ def delete_media_items(ctx, matching_item):
     for media_item in matching_item.get("o:media", []):
         media_id = media_item["o:id"]
         try:
-            logger.info("Deleting media item %s", media_id)
+            logger.info(f"Deleting media item {media_id}")
             ctx.client.delete_resource(media_id, "media")
         except HTTPError as err:
             if err.response.status_code == 401 or err.response.status_code == 403:
@@ -195,10 +195,7 @@ def delete_media_items(ctx, matching_item):
             elif err.response.status_code == 500:
                 # 500 on DELETE is treated as "already gone" by convention.
                 # Log at DEBUG so it does not clutter normal output.
-                logger.debug(
-                    "HTTP 500 deleting media %s (may already be absent); continuing",
-                    media_id,
-                )
+                logger.debug(f"HTTP 500 deleting media {media_id} (may already be absent); continuing")
             else:
                 ctx.record_error(
                     OmekaMediaError(f"HTTP {err.response.status_code} deleting media {media_id}: {err}")
@@ -279,7 +276,7 @@ def ingest_thumbnail(ctx, json_item, matching_item, iiif_dir):
     result = _build_thumbnail_url(ctx, json_item)
     if result is None:
         # No thumbnail for this item — nothing to do.
-        logger.debug("No cover_image for %r; skipping thumbnail ingest", identifier)
+        logger.debug(f"No cover_image for {identifier!r}; skipping thumbnail ingest")
         return
 
     thumbnail_remote, local_name = result
@@ -287,17 +284,13 @@ def ingest_thumbnail(ctx, json_item, matching_item, iiif_dir):
 
     # --- Download ---
     try:
-        logger.info("Downloading thumbnail for %r", identifier)
+        logger.info(f"Downloading thumbnail for {identifier!r}")
         response = requests.get(thumbnail_remote, timeout=30)
         response.raise_for_status()
         with open(thumbnail_local, "wb") as thumb_file:
             thumb_file.write(response.content)
     except Exception as err:
-        logger.warning(
-            "Could not download thumbnail for %r: %s; skipping thumbnail ingest",
-            identifier,
-            err,
-        )
+        ctx.record_warning(f"Could not download thumbnail for {identifier!r}: {err}; skipping thumbnail ingest")
         return
 
     # --- Upload ---
@@ -315,16 +308,13 @@ def ingest_thumbnail(ctx, json_item, matching_item, iiif_dir):
             },
             "o:ingester": "upload",
         }
-        logger.info("Posting thumbnail for %r", identifier)
+        logger.info(f"Posting thumbnail for {identifier!r}")
         ctx.client.add_media_to_item(matching_item["o:id"], thumbnail_local, payload=media_payload)
     except FileNotFoundError:
         # The download step wrote the file, but something removed it between
         # download and upload. Unlikely in practice but handled explicitly
         # so the error message is clear.
-        logger.warning(
-            "Thumbnail file %s not found at upload time; skipping",
-            thumbnail_local,
-        )
+        ctx.record_warning(f"Thumbnail file {thumbnail_local} not found at upload time; skipping")
     except Exception as err:
         ctx.record_error(
             OmekaMediaError(
@@ -362,15 +352,14 @@ def ingest_html(ctx, json_item, matching_item, html_dir):
         # A missing HTML file is common for items that have no text
         # representation (e.g. pure image records). Log at INFO so users
         # can see which items were skipped without it being alarming.
-        logger.info("HTML file %s not found; skipping", file_path)
+        logger.info(f"HTML file {file_path} not found; skipping")
         return
 
     # Guard against empty or whitespace-only files.
     if not html_content.strip():
-        logger.warning(
-            "HTML file for %r is empty; skipping.  "
-            "Check whether the XSLT transform produced output for this item.",
-            identifier,
+        ctx.record_warning(
+            f"HTML file for {identifier!r} is empty; skipping.  "
+            "Check whether the XSLT transform produced output for this item."
         )
         return
 
@@ -383,7 +372,7 @@ def ingest_html(ctx, json_item, matching_item, html_dir):
     }
 
     try:
-        logger.info("Posting HTML for %r", identifier)
+        logger.info(f"Posting HTML for {identifier!r}")
         ctx.client.add_media_to_item(matching_item["o:id"], file_path, payload=media_payload)
     except Exception as err:
         ctx.record_error(
@@ -449,12 +438,12 @@ def process_items(ctx, pathlist, html_dir, iiif_dir):
         for json_item in json_items:
             identifier = json_item.get("identifier")
             if not identifier:
-                logger.warning("Skipping item without identifier in %s", rel)
+                ctx.record_warning(f"Skipping item without identifier in {rel}")
                 continue
 
             title = json_item.get("title")
             if not title:
-                logger.warning("Skipping item without title in %s", rel)
+                ctx.record_warning(f"Skipping item without title in {rel}")
                 continue
 
             # --- Look up the item in Omeka ---
@@ -469,22 +458,15 @@ def process_items(ctx, pathlist, html_dir, iiif_dir):
                 continue
 
             if not matching_items:
-                logger.warning(
-                    "Unexpected empty response from filter_items for %r; skipping",
-                    identifier,
-                )
+                ctx.record_warning(f"Unexpected empty response from filter_items for {identifier!r}; skipping")
                 continue
 
             total = matching_items.get("total_results", 0)
             if total == 0:
-                logger.warning("No Omeka item found for %r; skipping media ingest", identifier)
+                ctx.record_warning(f"No Omeka item found for {identifier!r}; skipping media ingest")
                 continue
             if total > 1:
-                logger.warning(
-                    "Multiple Omeka items (%d) found for %r; check admin site and skip",
-                    total,
-                    identifier,
-                )
+                ctx.record_warning(f"Multiple Omeka items ({total}) found for {identifier!r}; check admin site and skip")
                 continue
 
             matching_item = matching_items["results"][0]
@@ -494,11 +476,7 @@ def process_items(ctx, pathlist, html_dir, iiif_dir):
             # (thumbnail + HTML), assume it was already fully ingested and
             # skip it to avoid redundant deletion and re-upload.
             if ctx.media_skip and media_count >= 2:
-                logger.info(
-                    "Skipping media for %r: already has %d media object(s)",
-                    identifier,
-                    media_count,
-                )
+                logger.info(f"Skipping media for {identifier!r}: already has {media_count} media object(s)")
                 continue
 
             # --- Media pipeline ---

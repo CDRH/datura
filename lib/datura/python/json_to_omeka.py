@@ -204,12 +204,12 @@ def post_items(ctx, pathlist, json_output_dir=None):
             identifier = json_item.get("identifier")
             if not identifier:
                 # Records without an identifier cannot be matched or created.
-                logger.warning("Skipping item without identifier in %s", rel)
+                ctx.record_warning(f"Skipping item without identifier in {rel}")
                 continue
 
             title = json_item.get("title")
             if not title:
-                logger.warning("Skipping item without title in %s", rel)
+                ctx.record_warning(f"Skipping item without title in {rel}")
                 continue
 
             if json_output_dir is not None:
@@ -221,7 +221,7 @@ def post_items(ctx, pathlist, json_output_dir=None):
                     ctx.record_error(OmekaAPIError(identifier, "prepare_item", err))
                     continue
                 if not new_item:
-                    logger.warning("Could not prepare payload for %r; skipping", identifier)
+                    ctx.record_warning(f"Could not prepare payload for {identifier!r}; skipping")
                     continue
                 try:
                     payload = prepare_item_payload_using_template(ctx, new_item, template_number)
@@ -230,7 +230,7 @@ def post_items(ctx, pathlist, json_output_dir=None):
                     continue
                 out_path = json_output_dir / f"{identifier}.json"
                 relative_path = f"output/{ctx.environment}/{identifier}.json"
-                logger.info("Writing Omeka payload for %r to %s", identifier, relative_path)
+                logger.info(f"Writing Omeka payload for {identifier!r} to {relative_path}")
                 with open(out_path, "w") as f:
                     json.dump(payload, f, indent=2)
                 continue
@@ -248,10 +248,7 @@ def post_items(ctx, pathlist, json_output_dir=None):
             if not matching_items:
                 # API returned no response object at all — treat as a lookup
                 # failure rather than "zero results".
-                logger.warning(
-                    "Unexpected empty response from filter_items for %r; skipping",
-                    identifier,
-                )
+                ctx.record_warning(f"Unexpected empty response from filter_items for {identifier!r}; skipping")
                 continue
 
             total = matching_items.get("total_results", 0)
@@ -264,11 +261,7 @@ def post_items(ctx, pathlist, json_output_dir=None):
                 add_new_item(ctx, json_item, template_number)
             else:
                 # More than one match — cannot determine which to update.
-                logger.warning(
-                    "Multiple matches (%d) for %r; check Omeka admin site",
-                    total,
-                    identifier,
-                )
+                ctx.record_warning(f"Multiple matches ({total}) for {identifier!r}; check Omeka admin site",)
 
         # Record the last-processed file so that -p (no value) can resume
         # from this point on the next run.
@@ -293,7 +286,7 @@ def add_new_item(ctx, json_item, template_number):
 
     new_item = api_fields.prepare_item(ctx, json_item)
     if not new_item:
-        logger.warning("Could not prepare payload for %r; skipping", identifier)
+        ctx.record_warning(f"Could not prepare payload for {identifier!r}; skipping")
         return
 
     # Log the identifier we are about to create. Use .get() with a default
@@ -302,7 +295,7 @@ def add_new_item(ctx, json_item, template_number):
     title_val = (
         new_item.get("dcterms:identifier", [{}])[0].get("@value", identifier)
     )
-    logger.info("Creating item %r", title_val)
+    logger.info(f"Creating item {title_val!r}")
 
     # Validate terms against the resource template and wrap values in the
     # JSON-LD structure Omeka S expects.
@@ -341,14 +334,14 @@ def update_existing_item(ctx, json_item, matching_items):
         .get("dcterms:identifier", [{}])[0]
         .get("@value", identifier)
     )
-    logger.info("Updating item %r", omeka_id_display)
+    logger.info(f"Updating item {omeka_id_display!r}")
 
     # Deep-copy to avoid mutating the dict returned by the API client; the
     # original might be referenced elsewhere (e.g. in link_items).
     item_to_update = copy.deepcopy(matching_items["results"][0])
     updated_item = api_fields.prepare_item(ctx, json_item, item_to_update)
     if not updated_item:
-        logger.warning("Could not prepare update payload for %r; skipping", identifier)
+        ctx.record_warning(f"Could not prepare update payload for {identifier!r}; skipping")
         return
 
     try:
@@ -392,12 +385,12 @@ def link_items(ctx, pathlist):
         for json_item in json_items:
             identifier = json_item.get("identifier")
             if not identifier:
-                logger.debug("Skipping item without identifier in %s", rel)
+                ctx.record_warning(f"Skipping item without identifier in {rel}")
                 continue
 
             title = json_item.get("title")
             if not title:
-                logger.warning("Skipping item without title in %s", rel)
+                ctx.record_warning(f"Skipping item without title in {rel}")
                 continue
 
             try:
@@ -411,10 +404,7 @@ def link_items(ctx, pathlist):
                 continue
 
             if not matching_items:
-                logger.warning(
-                    "Unexpected empty response from filter_items for %r during link pass; skipping",
-                    identifier,
-                )
+                ctx.record_warning(f"Unexpected empty response from filter_items for {identifier!r} during link pass; skipping")
                 continue
 
             total = matching_items.get("total_results", 0)
@@ -424,11 +414,7 @@ def link_items(ctx, pathlist):
                 # total == 0: item was not successfully posted in pass 1.
                 # total > 1: data integrity problem (duplicate identifiers).
                 # In both cases, linking is impossible.
-                logger.warning(
-                    "Skipping link pass for %r: expected 1 match, got %d",
-                    identifier,
-                    total,
-                )
+                ctx.record_warning(f"Skipping link pass for {identifier!r}: expected 1 match, got {total}")
 
 
 def _link_item(ctx, json_item, matching_items):
@@ -452,7 +438,7 @@ def _link_item(ctx, json_item, matching_items):
         .get("dcterms:identifier", [{}])[0]
         .get("@value", json_item.get("identifier", "unknown"))
     )
-    logger.info("Linking records for %r", item_id)
+    logger.info(f"Linking records for {item_id!r}")
 
     # Deep-copy so that api_fields.link_records() can modify the item dict
     # without affecting the in-memory copy used elsewhere in this pass.
@@ -565,10 +551,7 @@ def main():
         relative_dir = f"output/{ctx.environment}/omeka"
         omeka_out_dir = ctx.resolve_path(relative_dir)
         Path(omeka_out_dir).mkdir(parents=True, exist_ok=True)
-        logger.info(
-            "JSON output mode: writing Omeka S payloads to %s (API will not be called)",
-            relative_dir,
-        )
+        logger.info(f"JSON output mode: writing Omeka S payloads to {relative_dir} (API will not be called)")
         post_items(ctx, pathlist, json_output_dir=Path(omeka_out_dir))
         finish_run(ctx, args, start_time)
         return
