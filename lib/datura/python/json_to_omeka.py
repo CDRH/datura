@@ -561,10 +561,7 @@ def main():
     )
 
     if not pathlist:
-        logger.warning(
-            "No JSON files found in output/%s/es — nothing to post or link. Exiting.",
-            ctx.environment,
-        )
+        logger.warning(f"No JSON files found in output/{ctx.environment}/es — nothing to post or link. Exiting.")
         sys.exit(0)
 
     # --- JSON output mode (-j / --json-output) ---
