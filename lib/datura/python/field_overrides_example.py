@@ -38,3 +38,9 @@ class CustomFields(FieldDefinitions):
     #         return datetime.strptime(date_to_parse, "%Y-%m-%d").year
     #     else:
     #         return date_to_parse
+
+    # Pattern 6: mark specific metadata fields as private at the value level
+    # values for these terms will be posted with is_public: false in the Omeka S API payload,
+    # hiding them from public view regardless of item-level visibility
+    # def private_fields(self):
+    #     return {"dcterms:identifier", "dcterms:source"}

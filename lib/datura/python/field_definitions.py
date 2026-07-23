@@ -30,6 +30,18 @@ class FieldDefinitions:
         # Stored as a private attribute and accessed only by uriData().
         self._omeka_data_base = omeka_data_base
 
+    def private_fields(self):
+        """
+        Return a set of Omeka property terms whose values should be posted with
+        is_public=False. Override in field_overrides.py to mark specific fields
+        as private for this collection.
+
+        Example:
+            def private_fields(self):
+                return {"dcterms:identifier", "dcterms:source"}
+        """
+        return set()
+
     def field_manifest(self):
         """
         Declare the ordered list of Omeka property mappings for this collection.
