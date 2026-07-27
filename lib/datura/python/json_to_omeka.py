@@ -560,6 +560,10 @@ def main():
         ctx.environment,
     )
 
+    if not pathlist:
+        logger.warning(f"No JSON files found in output/{ctx.environment}/es — nothing to post or link. Exiting.")
+        sys.exit(0)
+
     # --- JSON output mode (-j / --json-output) ---
     if args.json_output:
         relative_dir = f"output/{ctx.environment}/omeka"
