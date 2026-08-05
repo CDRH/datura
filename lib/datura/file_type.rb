@@ -70,7 +70,7 @@ class FileType
     if transformed && transformed.length > 0
       transformed.each do |doc|
         if doc["identifier"].to_s.empty? || doc["title"].to_s.empty?
-          msg = "skipping item without id or title\n check line #{new_row.values.join("; ").strip[0..100]}"
+          msg = "Skipping item without id or title: #{doc.values.join('; ').strip[0..100]}"
           puts msg.yellow
           @skipped_es << msg
           next
