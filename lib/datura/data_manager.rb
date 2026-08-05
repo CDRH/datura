@@ -11,6 +11,7 @@ class Datura::DataManager
   attr_accessor :error_html
   attr_accessor :error_iiif
   attr_accessor :error_solr
+  attr_accessor :skipped_es
 
   attr_accessor :files
   attr_accessor :options
@@ -37,6 +38,7 @@ class Datura::DataManager
     @error_html = []
     @error_iiif = []
     @error_solr = []
+    @skipped_es = []
 
     # combine user input and config files
     params = Datura::Parser.post_params
@@ -173,6 +175,7 @@ class Datura::DataManager
     error_msg << "#{@error_html.length} HTML transform error(s)\n"
     error_msg << "#{@error_iiif.length} IIIF Manifest transform error(s)\n"
     error_msg << "#{@error_solr.length} Solr transform / post error(s)\n"
+    error_msg << "#{@skipped_es.length} ES item(s) skipped (missing id or title)\n"
     puts error_msg
     @log.info(error_msg)
 
@@ -180,7 +183,8 @@ class Datura::DataManager
       "ES" => @error_es,
       "HTML" => @error_html,
       "IIIF" => @error_iiif,
-      "Solr" => @error_solr
+      "Solr" => @error_solr,
+      "ES skipped" => @skipped_es
     }.reject { |_, v| v.empty? }
 
     if all_errors.any?
@@ -418,6 +422,7 @@ class Datura::DataManager
     rescue => e
       error_with_transform_and_post("#{e}", @error_es)
     end
+    @skipped_es.concat(file.skipped_es) if file.skipped_es.any?
 
     # html
     begin

@@ -6,6 +6,7 @@ class FileType
   # general information about file
   attr_reader :file_location
   attr_reader :options
+  attr_reader :skipped_es
 
   # script locations
   attr_accessor :script_es
@@ -22,6 +23,7 @@ class FileType
   def initialize(location, options)
     @file_location = location
     @options = options
+    @skipped_es = []
     add_xsl_params_options
     # set output directories
     output = File.join(@options["collection_dir"], "output", @options["environment"])
@@ -68,8 +70,9 @@ class FileType
     if transformed && transformed.length > 0
       transformed.each do |doc|
         if doc["identifier"].to_s.empty? || doc["title"].to_s.empty?
-          puts "skipping item without id or title".red
-          puts "check line ".red + doc.values.join("; ").strip.red
+          msg = "Skipping item without id or title: #{doc.values.join('; ').strip[0..100]}"
+          puts msg.yellow
+          @skipped_es << msg
           next
         end
         id = doc["identifier"]
