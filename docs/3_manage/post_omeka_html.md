@@ -14,12 +14,12 @@ For information on how to override field definitions, see [Omeka Overrides](../2
 
 ### Media ingesters (for developers)
 
-The media payload, set in `html_and_media_ingest.py`, must be structured in a specific way to add items. It is different in the case of html and iiif images. The `is_public` field is set in `omeka_context.py` and is based on environment (`production = True`, everything else = `False`).
+The media payload, set in `html_and_media_ingest.py`, must be structured in a specific way to add items. It is different in the case of html and iiif images. 
 
 For an html field:
 ```json
 {
-    "o:is_public": ctx.is_public,
+    "o:is_public": True,
     "data": {
         "html": html_content,
     },
@@ -29,7 +29,7 @@ For an html field:
 For a file upload (i.e. to upload):
 ```json
 {
-    "o:is_public": ctx.is_public,
+    "o:is_public": True,
     "data": {
         "upload": html_content,
     },
@@ -39,7 +39,7 @@ For a file upload (i.e. to upload):
  For posting to the IIIF ingester (not currently implemented):
  ```json
  {
-    "o:is_public": ctx.is_public,
+    "o:is_public": True,
     "data": {
         "upload": iiif_url
     },

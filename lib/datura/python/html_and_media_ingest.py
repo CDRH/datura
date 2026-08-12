@@ -305,7 +305,7 @@ def ingest_thumbnail(ctx, json_item, matching_item, iiif_dir):
     # the same term do not make redundant API requests.
     try:
         media_payload = {
-            "o:is_public": ctx.is_public,
+            "o:is_public": True,
             "data": {
                 "upload": str(thumbnail_local),
                 "dcterms:title": ctx.client.prepare_property_value(
@@ -375,7 +375,7 @@ def ingest_html(ctx, json_item, matching_item, html_dir):
         return
 
     media_payload = {
-        "o:is_public": ctx.is_public,
+        "o:is_public": True,
         "data": {
             "html": html_content,
         },
