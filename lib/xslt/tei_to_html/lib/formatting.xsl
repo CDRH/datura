@@ -558,10 +558,16 @@
     <xsl:value-of select="$iiif_path_local"/>
     <xsl:text>%2F</xsl:text>
     <xsl:value-of select="$figure_id_local"/>
-    <xsl:text>.jpg/full/!</xsl:text>
-    <xsl:value-of select="$image_size_local"/>
-    <xsl:text>,</xsl:text>
-    <xsl:value-of select="$image_size_local"/>
+    <xsl:text>.jpg/full/</xsl:text>
+    <xsl:choose>
+      <xsl:when test="$image_size_local and $image_size_local != 'full'">
+        <xsl:text>!</xsl:text>
+        <xsl:value-of select="$image_size_local"/>
+        <xsl:text>,</xsl:text>
+        <xsl:value-of select="$image_size_local"/>
+      </xsl:when>
+      <xsl:otherwise><xsl:text>full</xsl:text></xsl:otherwise>
+    </xsl:choose>
     <xsl:text>/0/default.jpg</xsl:text>
   </xsl:template>
 
@@ -577,10 +583,16 @@
     <xsl:text>%252F</xsl:text>
     <!-- %2F Must be double encoded or it comes out as / -->
     <xsl:value-of select="$figure_id_local"/>
-    <xsl:text>.jpg/full/!</xsl:text>
-    <xsl:value-of select="$image_size_local"/>
-    <xsl:text>,</xsl:text>
-    <xsl:value-of select="$image_size_local"/>
+    <xsl:text>.jpg/full/</xsl:text>
+    <xsl:choose>
+      <xsl:when test="$image_size_local and $image_size_local != 'full'">
+        <xsl:text>!</xsl:text>
+        <xsl:value-of select="$image_size_local"/>
+        <xsl:text>,</xsl:text>
+        <xsl:value-of select="$image_size_local"/>
+      </xsl:when>
+      <xsl:otherwise><xsl:text>full</xsl:text></xsl:otherwise>
+    </xsl:choose>
     <xsl:text>/0/default.jpg</xsl:text>
   </xsl:template>
 
