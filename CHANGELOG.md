@@ -25,7 +25,7 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 ### Security
 -->
 
-## [v2.0.0] - 2026-08-20 - Shift to saxonche, improve error handling, refactor Omeka S posting, add post options
+## [v2.0.0] - Shift to saxonche, improve error handling, refactor Omeka S posting, add post options
 [v2.0.0]: https://github.com/CDRH/datura/compare/v1.1.0...v2.0.0
 
 ### Added
