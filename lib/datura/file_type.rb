@@ -6,6 +6,7 @@ class FileType
   # general information about file
   attr_reader :file_location
   attr_reader :options
+  attr_reader :skipped_es
 
   # script locations
   attr_accessor :script_es
@@ -22,6 +23,7 @@ class FileType
   def initialize(location, options)
     @file_location = location
     @options = options
+    @skipped_es = []
     add_xsl_params_options
     # set output directories
     output = File.join(@options["collection_dir"], "output", @options["environment"])
@@ -33,6 +35,12 @@ class FileType
     @auth_header = Datura::Helpers.construct_auth_header(options)
     Datura::Helpers.make_dirs(@out_es, @out_html, @out_iiif, @out_solr)
     # script locations set in child classes
+  end
+
+  def debug_info(error)
+    if options["verbose"]
+      puts "Backtrace: " << error.backtrace.join("\n ")
+    end
   end
 
   def filename(ext=true)
@@ -56,13 +64,15 @@ class FileType
     begin
       transformed = transform_es
     rescue => e
+      debug_info(e)
       return { "error" => "Error transforming ES for #{self.filename(false)}: #{e.full_message}" }
     end
     if transformed && transformed.length > 0
       transformed.each do |doc|
         if doc["identifier"].to_s.empty? || doc["title"].to_s.empty?
-          puts "skipping item without id or title".red
-          puts "check line ".red + doc.values.join("; ").strip.red
+          msg = "Skipping item without id or title: #{doc.values.join('; ').strip[0..100]}"
+          puts msg.yellow
+          @skipped_es << msg
           next
         end
         id = doc["identifier"]
@@ -74,9 +84,17 @@ class FileType
           # NOTE: If you need to do partial updates rather than replacement of doc
           # you will need to add _update at the end of this URL
           begin
-            RestClient.put("#{es.index_url}/_doc/#{id}", doc.to_json, @auth_header.merge({:content_type => :json }) )
+            response = Datura::Helpers.es_http_request("PUT", "#{es.index_url}/_doc/#{id}",
+              body: doc.to_json,
+              headers: @auth_header.merge("Content-Type" => "application/json"))
+            raise "#{response.code} error posting to Elasticsearch: #{response.body}" unless response.code.start_with?("2")
+          rescue Errno::ECONNREFUSED, SocketError, Errno::ETIMEDOUT => e
+            error = "Could not connect to ElasticSearch at #{es.index_url}. " \
+                    "Confirm you have specified the correct environment " \
+                    "(currently: #{@options['environment']}. Use -e to specify an environment."
           rescue => e
-            error = "Error transforming or posting to ES for #{self.filename(false)}: #{e}"
+            debug_info(e)
+            error = "Error transforming or posting to ES for #{self.filename(false)}: #{e.message}"
           end
         else
           error = "Document #{id} did not validate against the elasticsearch schema"
@@ -109,7 +127,8 @@ class FileType
         return { "error" => "Error posting to Solr for #{self.filename}: #{res.body}" }
       end
     rescue => e
-      return { "error" => "Error posting to Solr for #{self.filename}: #{e.inspect}" }
+      debug_info(e)
+      return { "error" => "Error posting to Solr for #{self.filename}: #{e.message}" }
     end
   end
 
@@ -147,9 +166,6 @@ class FileType
       end
       return es_req
     rescue => e
-      puts "something went wrong transforming #{self.filename}"
-      puts e
-      puts e.backtrace
       raise e
     end
   end
@@ -187,25 +203,34 @@ class FileType
     end
   end
 
-  # TODO can remove most of these parameters and grab them from instance variables
   def exec_xsl(input, xsl, ext, outpath=nil, params=nil)
-    saxon_params = CommonXml.stringify_params(params)
-    cmd = "saxon -s:#{input} -xsl:#{xsl}"
-    # TODO which way would we rather do this?
-    # cmd << " -o:#{outpath}/#{filename(false)}.#{ext}" if outpath
-    cmd << " #{saxon_params}"
-    cmd << " | tee #{outpath}/#{filename(false)}.#{ext}" if outpath
-    puts "using command #{cmd}" if @options["verbose"]
-    Open3.popen3(cmd) do |stdin, stdout, stderr|
-      out = stdout.read
-      err = stderr.read
-      if err.length > 0
-        msg = "There was an error transforming #{filename}: #{err}"
-        return { "error" => msg }
-      else
-        puts "Successfully transformed #{filename}"
-        return { "doc" => out }
+    # build the python script path
+    python_script = File.join(
+      @options["datura_dir"], "lib", "datura", "python", "xslt_transform.py"
+    )
+    # initialize the command as an array, then apppend xslt params
+    cmd = ["python3", python_script, "--input", input, "--xsl", xsl]
+    if params
+      params.each do |k, v|
+        cmd += ["--param", k.to_s, v.to_s]
       end
+    end
+    # append output path and base output URI for xsl:result-document secondary outputs if configured
+    if outpath
+      cmd += ["--output", File.join(outpath, filename(false) + "." + ext)]
+      cmd += ["--base-output-uri", outpath]
+    end
+    puts "using command #{cmd.inspect}" if @options["verbose"]
+    # run the command
+    out, err, status = Open3.capture3(*cmd)
+    
+    # check for errors
+    if !status.success? || err.length > 0
+      msg = "There was an error transforming #{filename}: #{err}"
+      return { "error" => msg }
+    else
+      puts "Successfully transformed #{filename}"
+      return { "doc" => out }
     end
   end
 

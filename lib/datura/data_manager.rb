@@ -1,7 +1,6 @@
 require "colorize"
 require "logger"
 require "yaml"
-require "byebug"
 require_relative "./requirer.rb"
 
 class Datura::DataManager
@@ -12,6 +11,7 @@ class Datura::DataManager
   attr_accessor :error_html
   attr_accessor :error_iiif
   attr_accessor :error_solr
+  attr_accessor :skipped_es
 
   attr_accessor :files
   attr_accessor :options
@@ -38,6 +38,7 @@ class Datura::DataManager
     @error_html = []
     @error_iiif = []
     @error_solr = []
+    @skipped_es = []
 
     # combine user input and config files
     params = Datura::Parser.post_params
@@ -64,6 +65,13 @@ class Datura::DataManager
     end
   end
 
+  def check_omeka_options
+    %w[omeka_server key_identity key_credential iiif_server
+       resource_template omeka_data_base item_set].each do |opt|
+      assert_option(opt)
+    end
+  end
+
   def print_options
     pretty = JSON.pretty_generate(@options)
     puts "Options: #{pretty}"
@@ -80,6 +88,7 @@ class Datura::DataManager
     @log.info(msg)
     puts msg
     pre_file_preparation
+    handle_proceed_prompt
     @files = prepare_files
     pre_batch_processing
     batch_process_files
@@ -109,7 +118,6 @@ class Datura::DataManager
     files
   end
 
-  # TODO should this move to Options class?
   def assert_option(opt)
     if !@options.key?(opt)
       puts "Option #{opt} was not found!  Check config files and add #{opt} to continue".red
@@ -128,6 +136,16 @@ class Datura::DataManager
       end
       # wait for all the files to process before moving on with the next chunk
       threads.each { |t| t.join }
+      # save checkpoint after chunk completes
+      Datura::Helpers.write_checkpoint(files_subset.last.filename(false), @options)
+    end
+    # clear checkpoint if all files in the source directories were posted (not a filtered subset)
+    unless @files.empty?
+      last_overall = Datura::DataManager.format_to_class.keys.filter_map { |fmt|
+        found = Datura::Helpers.get_directory_files(File.join(@options["collection_dir"], "source", fmt))
+        found&.map { |f| File.basename(f, ".*") }&.sort&.last
+      }.last
+      Datura::Helpers.clear_checkpoint(@options) if @files.last.filename(false) == last_overall
     end
   end
 
@@ -157,8 +175,26 @@ class Datura::DataManager
     error_msg << "#{@error_html.length} HTML transform error(s)\n"
     error_msg << "#{@error_iiif.length} IIIF Manifest transform error(s)\n"
     error_msg << "#{@error_solr.length} Solr transform / post error(s)\n"
+    error_msg << "#{@skipped_es.length} ES item(s) skipped (missing id or title)\n"
     puts error_msg
     @log.info(error_msg)
+
+    all_errors = {
+      "ES" => @error_es,
+      "HTML" => @error_html,
+      "IIIF" => @error_iiif,
+      "Solr" => @error_solr,
+      "ES skipped" => @skipped_es
+    }.reject { |_, v| v.empty? }
+
+    if all_errors.any?
+      puts "\n--- Error details ---".red
+      all_errors.each do |type, errors|
+        errors.each { |e| puts "[#{type}] #{e}".red }
+      end
+      puts "---------------------".red
+      @log.error("Error details: #{all_errors.inspect}")
+    end
 
     # figure time for running
     @time << Time.now
@@ -179,6 +215,10 @@ class Datura::DataManager
     formats = []
     if @options["format"]
       formats = [@options["format"]]
+    elsif @options["csv_rows"]
+      msg = "csv_rows filter set (-c); restricting processing to CSV format only"
+      puts msg.cyan
+      formats = ["csv"]
     else
       formats = Datura::DataManager.format_to_class.keys
     end
@@ -190,12 +230,39 @@ class Datura::DataManager
     files
   end
 
+  def handle_proceed_prompt
+    # Only act when -p was given with no value (proceed is nil, not false)
+    return unless @options["proceed"].nil?
+
+    checkpoint = Datura::Helpers.read_checkpoint(@options)
+    if checkpoint.nil?
+      path = Datura::Helpers.checkpoint_path(@options)
+      msg = "ERROR: --proceed given with no value but no checkpoint file found at #{path}. Run post at least once without -p to create a checkpoint.".red
+      puts msg
+      @log.error(msg)
+      exit 1
+    end
+
+    print "Continue from #{checkpoint}? (y/n): "
+    STDOUT.flush
+    response = STDIN.gets&.chomp&.downcase || ""
+    if response == "y"
+      @options["proceed"] = checkpoint
+      msg = "Resuming from checkpoint: #{checkpoint}"
+      puts msg
+      @log.info(msg)
+    else
+      puts "Exiting."
+      exit 0
+    end
+  end
+
   def options_msg
     msg = "Start Time: #{Time.now}\n"
     msg << "Running script with following options:\n"
     msg << "collection:           #{@options['collection']}\n"
     msg << "Environment:          #{@options['environment']}\n"
-    msg << "Posting to:           #{@es.index_url}\n\n" if should_post?("es")
+    msg << "Posting to:           #{@es.index_url}\n\n" if should_post?("es") && @es
     msg << "Posting to:           #{@solr_url}\n\n" if should_post?("solr")
     msg << "Format:               #{@options['format']}\n" if @options["format"]
     msg << "Regex:                #{@options['regex']}\n" if @options["regex"]
@@ -233,8 +300,19 @@ class Datura::DataManager
     allowed = allowed_files(files)
     # filter by regex
     regexed = Datura::Helpers.regex_files(allowed, @options["regex"])
+    if @options["regex"] && regexed.empty?
+      msg = "No files matched regex: #{@options['regex']}"
+      puts msg.yellow
+      @log.warn(msg)
+    end
+    # proceed from (and including) a specific file
+    proceeded = if @options["proceed"]
+      Datura::Helpers.proceed_files(regexed, @options["proceed"])
+    else
+      regexed
+    end
     # filter by date
-    filtered = regexed.select { |f| Datura::Helpers.should_update?(f, @options["update_time"]) }
+    filtered = proceeded.select { |f| Datura::Helpers.should_update?(f, @options["update_time"]) }
 
     file_classes = []
     @log.info("After filters (regex, update time), #{filtered.length}/#{files.length} files remaining")
@@ -264,7 +342,13 @@ class Datura::DataManager
 
     if !t1 || !t2 || t1 > t2
       puts "Copying datura XSLT default scripts into collection"
-      FileUtils.cp_r(datura_xslt, dest)
+      begin
+        FileUtils.cp_r(datura_xslt, dest)
+      rescue Errno::ENOENT
+        raise "Could not copy XSLT scripts into the collection. " \
+            "Confirm you are running this command from the root of the collection repository, " \
+            "not from a subdirectory."
+      end
     end
   end
 
@@ -281,15 +365,35 @@ class Datura::DataManager
     )
   end
 
+  def check_xslt_dependency
+    _, err, status = Open3.capture3("python3", "-c", "import saxonche")
+    unless status.success?
+      puts "saxonche Python module is not installed. Install it with: pip install saxonche\n#{err}".red
+      exit
+    end
+  end
+
   def set_up_services
     if should_post?("es")
-      # set up elasticsearch instance
-      @es = Datura::Elasticsearch::Index.new(@options, schema_mapping: true)
+      begin
+        # set up elasticsearch instance
+        @es = Datura::Elasticsearch::Index.new(@options, schema_mapping: true)
+      rescue Errno::ECONNREFUSED, SocketError, Errno::ETIMEDOUT
+        msg = "Could not connect to Elasticsearch at #{File.join(@options['es_path'], @options['es_index'])}. " \
+            "Confirm you have specified the correct environment " \
+            "(currently: #{@options['environment']}). Use -e to specify an environment."
+        error_with_transform_and_post(msg, @error_es)
+        @es = nil
+      end
     end
 
     if should_post?("solr")
       # set up posting URLs
       @solr_url = File.join(options["solr_path"], options["solr_core"], "update")
+    end
+
+    if should_transform?("html") || should_transform?("solr")
+      check_xslt_dependency
     end
   end
 
@@ -304,22 +408,21 @@ class Datura::DataManager
 
   def transform_and_post(file)
     # elasticsearch
-    if should_transform?("es")
-      if @options["transform_only"]
-        # TODO transformation is not treated the same way here as in
-        # most post methods, so having to use try catch block
-        begin
+    begin
+      if should_transform?("es")
+        if @options["transform_only"]
           res_es = file.transform_es
-        rescue => e
-          error_with_transform_and_post("#{e}", @error_es)
-        end
-      else
-        res_es = file.post_es(@es)
-        if res_es && res_es.has_key?("error")
-          error_with_transform_and_post(res_es["error"], @error_es)
+        elsif @es
+          res_es = file.post_es(@es)
+          if res_es && res_es.has_key?("error")
+            error_with_transform_and_post(res_es["error"], @error_es)
+          end
         end
       end
+    rescue => e
+      error_with_transform_and_post("#{e}", @error_es)
     end
+    @skipped_es.concat(file.skipped_es) if file.skipped_es.any?
 
     # html
     begin

@@ -39,9 +39,20 @@ module Datura::Parser
         options["commit"] = false
       end
 
+      options["csv_rows"] = nil
+      opts.on('-c', '--csv-rows [input]',
+              'Only process CSV rows whose identifier (id/identifier column) matches this regex.') do |input|
+        options["csv_rows"] = input
+      end
+
       options["output"] = false
       opts.on('-o', '--output', 'Write solr and elasticsearch docs to file') do
         options["output"] = true
+      end
+
+      options["proceed"] = false
+      opts.on('-p', '--proceed [input]', 'Proceed with posting from (and including) the file matching this regex') do |input|
+        options["proceed"] = input
       end
 
       options["regex"] = nil
@@ -61,7 +72,6 @@ module Datura::Parser
           puts "'today', date (2015-01-01), or date and time (2015-01-01T18:24)".light_yellow
           exit
         else
-          # TODO should verify that this is a correct date and turn it into a time object
           datetime = timify(input)
           if datetime.nil?
             exit

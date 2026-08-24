@@ -7,9 +7,19 @@ class FileCsv < FileType
     @csv = read_csv(file_location, options["csv_encoding"])
   end
 
+  # Builds one HTML file per CSV row. Respects the --csv-rows filter option:
+  # if @options["csv_rows"] is set, only rows with identifier matching that
+  # regex are written. Note: if overriding this method in a collection, call
+  # build_csv_row_filter / row_matches_filter? to preserve filter behavior.
   def build_html_from_csv
+    row_filter = build_csv_row_filter
+    if row_filter
+      puts "csv_rows filter active: only processing rows matching /#{@options["csv_rows"]}/".cyan
+    end
     @csv.each_with_index do |row, index|
       next if row.header_row?
+      # Skip rows that don't match the identifier filter (if one is active)
+      next if row_filter && !row_matches_filter?(row, row_filter)
       # Note: if overriding this function, it's recommended to use
       # a more specific identifier for each row of the CSV
       # but since this is a generic version, simply using the current iteration number
@@ -64,16 +74,23 @@ class FileCsv < FileType
     puts "transforming #{self.filename}"
     es_doc = []
 
+    row_filter = build_csv_row_filter
+    if row_filter
+      puts "csv_rows filter active: only processing rows matching /#{@options["csv_rows"]}/".cyan
+    end
+
     @csv.each do |row|
-      if !row.header_row?
-        row_to_es = row_to_es(@csv.headers, row)
-        if !row_to_es["identifier"].to_s.empty? && !row_to_es["title"].to_s.empty?
-          es_doc << row_to_es
-        else
-          puts "skipping item without id or title".red
-          puts "check line ".red + row.to_s.strip[0..400].red
-          next
-        end
+      next if row.header_row?
+      next if row_filter && !row_matches_filter?(row, row_filter)
+
+      row_to_es = row_to_es(@csv.headers, row)
+      if !row_to_es["identifier"].to_s.empty? && !row_to_es["title"].to_s.empty?
+        es_doc << row_to_es
+      else
+        msg = "Skipping item without id or title: check line #{row.to_s.strip[0..200]}"
+        puts msg.yellow
+        @skipped_es << msg
+        next
       end
     end
     if @options["output"]
@@ -89,6 +106,7 @@ class FileCsv < FileType
 
   def transform_html
     puts "transforming #{self.filename} to HTML subdocuments"
+    # build_html_from_csv handles the --csv-rows filter internally
     build_html_from_csv
     # transform_html method is expected to send back a hash
     # but already wrote to filesystem so just sending back empty
@@ -100,14 +118,20 @@ class FileCsv < FileType
   # it will have to do! (transmississippi only collection so far)
   def transform_solr
     puts "transforming #{self.filename}"
+    # Build and apply the identifier filter, if --csv-rows was passed
+    row_filter = build_csv_row_filter
+    if row_filter
+      puts "csv_rows filter active: only processing rows matching /#{@options["csv_rows"]}/".cyan
+    end
     solr_doc = Nokogiri::XML("<add></add>")
     @csv.each do |row|
-      if !row.header_row?
-        doc = Nokogiri::XML::Node.new("doc", solr_doc)
-        # row_to_solr should return an XML::Node object with children
-        doc = row_to_solr(doc, @csv.headers, row)
-        solr_doc.at_css("add").add_child(doc)
-      end
+      next if row.header_row?
+      # Skip rows that don't match the identifier filter (if one is active)
+      next if row_filter && !row_matches_filter?(row, row_filter)
+      doc = Nokogiri::XML::Node.new("doc", solr_doc)
+      # row_to_solr should return an XML::Node object with children
+      doc = row_to_solr(doc, @csv.headers, row)
+      solr_doc.at_css("add").add_child(doc)
     end
     # Uncomment to debug
     # puts solr_doc.root.to_xml
@@ -122,5 +146,22 @@ class FileCsv < FileType
     filepath = "#{@out_html}/#{index}.html"
     puts "writing to #{filepath}" if @options["verbose"]
     File.open(filepath, "w") { |f| f.write(builder.to_xml) }
+  end
+
+  private
+
+  def build_csv_row_filter
+    return nil unless @options["csv_rows"]
+
+    begin
+      Regexp.new(@options["csv_rows"])
+    rescue RegexpError => e
+      raise ArgumentError, "Invalid regex '#{options["csv_rows"]}': #{e.message}"
+    end
+  end
+
+  def row_matches_filter?(row, filter)
+    id = row["id"] || row["identifier"] || row["Identifier"] || ""
+    !!filter.match(id)
   end
 end

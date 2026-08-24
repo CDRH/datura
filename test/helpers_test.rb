@@ -103,6 +103,84 @@ class Datura::HelpersTest < Minitest::Test
     # return a specific id
     files = Datura::Helpers.regex_files(test_files, "cat.let0001")
     assert_equal 1, files.length
+
+    # invalid regex: exits with error
+    assert_raises(SystemExit) do
+      Datura::Helpers.regex_files(test_files, "[unclosed")
+    end
+  end
+
+  def test_proceed_files
+    test_files = %w[
+      /path/to/cody.book.002.xml
+      /path/to/cat.let0001.xml
+      /path/to/cody.book.001.xml
+      /path/to/transmiss.mem.001.xml
+      /path/to/cody.news.001.xml
+    ]
+
+    # exact match on one file: returns that file and all alphabetically after it
+    # alphabetical order: cat.let0001, cody.book.001, cody.book.002, cody.news.001, transmiss.mem.001
+    files = Datura::Helpers.proceed_files(test_files, "cody\.book\.002")
+    basenames = files.map { |f| File.basename(f, ".*") }
+    assert_equal %w[cody.book.002 cody.news.001 transmiss.mem.001], basenames
+
+    # match on first file alphabetically: returns all files
+    files = Datura::Helpers.proceed_files(test_files, "cat\.let0001")
+    assert_equal 5, files.length
+
+    # match on last file: returns only that file
+    files = Datura::Helpers.proceed_files(test_files, "transmiss\.mem\.001")
+    assert_equal 1, files.length
+    assert_equal "transmiss.mem.001", File.basename(files.first, ".*")
+
+    # no match: exits with error
+    assert_raises(SystemExit) do
+      Datura::Helpers.proceed_files(test_files, "zzz_no_such_file")
+    end
+
+    # multiple matches: exits with error
+    assert_raises(SystemExit) do
+      Datura::Helpers.proceed_files(test_files, "cody")
+    end
+
+    # invalid regex: exits with error
+    assert_raises(SystemExit) do
+      Datura::Helpers.proceed_files(test_files, "[unclosed")
+    end
+  end
+
+  def test_checkpoint_helpers
+    Dir.mktmpdir do |tmpdir|
+      opts = {
+        "collection_dir" => tmpdir,
+        "environment" => "test"
+      }
+      log_dir = File.join(tmpdir, "logs")
+      FileUtils.mkdir_p(log_dir)
+      expected_path = File.join(log_dir, "proceed_test")
+
+      assert_equal expected_path, Datura::Helpers.checkpoint_path(opts)
+
+      # returns nil when file does not exist
+      assert_nil Datura::Helpers.read_checkpoint(opts)
+
+      # creates file with correct content
+      Datura::Helpers.write_checkpoint("let0050", opts)
+      assert File.exist?(expected_path)
+      assert_equal "let0050", File.read(expected_path).strip
+
+      # returns the stored basename
+      assert_equal "let0050", Datura::Helpers.read_checkpoint(opts)
+
+      # overwrites on second write
+      Datura::Helpers.write_checkpoint("let0100", opts)
+      assert_equal "let0100", Datura::Helpers.read_checkpoint(opts)
+
+      # returns nil for empty/whitespace file
+      File.write(expected_path, "   \n")
+      assert_nil Datura::Helpers.read_checkpoint(opts)
+    end
   end
 
   def test_should_update?

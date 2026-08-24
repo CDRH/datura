@@ -1,5 +1,4 @@
 require "json"
-require "rest-client"
 require "yaml"
 require "base64"
 
@@ -25,7 +24,7 @@ class Datura::Elasticsearch::Index
     @mapping_url = File.join(@index_url, "_mapping?pretty=true")
 
     # yaml settings (if exist) and mappings
-    @requested_schema = YAML.load_file(@options["es_schema"])
+    @requested_schema = YAML.safe_load_file(@options["es_schema"], permitted_classes: [Symbol])
     @auth_header = Datura::Helpers.construct_auth_header(@options)
     # if requested, grab the mapping currently associated with this index
     # otherwise wait until after the requested schema is loaded
@@ -36,42 +35,36 @@ class Datura::Elasticsearch::Index
     json = @requested_schema["settings"].to_json
     puts "Creating ES index for API version #{@options["api_version"]}: #{@pretty_url}"
     if json && json != "null"
-      RestClient.put(@pretty_url, json, @auth_header.merge({ content_type: :json })) { |res, req, result|
-        if result.code == "200"
-          puts res
-        else
-          raise "#{result.code} error creating Elasticsearch index: #{res}"
-        end
-      }
+      response = Datura::Helpers.es_http_request("PUT", @pretty_url,
+        body: json,
+        headers: @auth_header.merge("Content-Type" => "application/json"))
     else
-      RestClient.put(@pretty_url, nil, @auth_header) { |res, req, result|
-        if result.code == "200"
-          puts res
-        else
-          raise "#{result.code} error creating Elasticsearch index: #{res}"
-        end
-      }
+      response = Datura::Helpers.es_http_request("PUT", @pretty_url,
+        headers: @auth_header)
+    end
+    if response.code == "200"
+      puts response.body
+    else
+      raise "#{response.code} error creating Elasticsearch index: #{response.body}"
     end
   end
 
   def delete
     puts "Deleting #{@options["es_index"]} via url #{@pretty_url}"
 
-    RestClient.delete(@pretty_url, @auth_header) { |res, req, result|
-      if result.code != "200"
-        raise "#{result.code} error deleting Elasticsearch index: #{res}"
-      end
-    }
+    response = Datura::Helpers.es_http_request("DELETE", @pretty_url,
+      headers: @auth_header)
+    raise "#{response.code} error deleting Elasticsearch index: #{response.body}" if response.code != "200"
   end
 
   def get_schema
-    RestClient.get(@mapping_url, @auth_header) { |res, req, result|
-      if result.code == "200"
-        JSON.parse(res)
-      else
-        raise "#{result.code} error getting Elasticsearch schema: #{res}"
-      end
-    }
+    response = Datura::Helpers.es_http_request("GET", @mapping_url,
+      headers: @auth_header)
+    if response.code == "200"
+      JSON.parse(response.body)
+    else
+      raise "#{response.code} error getting Elasticsearch schema: #{response.body}"
+    end
   end
 
   def get_schema_mapping
@@ -114,13 +107,14 @@ class Datura::Elasticsearch::Index
     json = @requested_schema["mappings"].to_json
 
     puts "Setting schema: #{@mapping_url}"
-    RestClient.put(@mapping_url, json, @auth_header.merge({ content_type: :json })) { |res, req, result|
-      if result.code == "200"
-        puts res
-      else
-        raise "#{result.code} error setting Elasticsearch schema: #{res}"
-      end
-    }
+    response = Datura::Helpers.es_http_request("PUT", @mapping_url,
+      body: json,
+      headers: @auth_header.merge("Content-Type" => "application/json"))
+    if response.code == "200"
+      puts response.body
+    else
+      raise "#{response.code} error setting Elasticsearch schema: #{response.body}"
+    end
   end
 
   # doc: ruby hash corresponding with Elasticsearch document JSON
@@ -213,13 +207,14 @@ class Datura::Elasticsearch::Index
       url = File.join(options["es_path"], options["es_index"], "_delete_by_query?pretty=true")
       auth_header = Datura::Helpers.construct_auth_header(options)
       json = { "query" => { "match_all" => {} } }
-      RestClient.post(url, json.to_json, auth_header.merge({ content_type: :json })) { |res, req, result|
-        if result.code == "200"
-          puts res
-        else
-          raise "#{result.code} error when clearing entire index: #{res}"
-        end
-      }
+      response = Datura::Helpers.es_http_request("POST", url,
+        body: json.to_json,
+        headers: auth_header.merge("Content-Type" => "application/json"))
+      if response.code == "200"
+        puts response.body
+      else
+        raise "#{response.code} error when clearing entire index: #{response.body}"
+      end
     else
       puts "You typed '#{confirm}'. This is incorrect, exiting program"
       exit
@@ -233,13 +228,14 @@ class Datura::Elasticsearch::Index
     if confirmation
       data = self.build_clear_data(options)
       auth_header = Datura::Helpers.construct_auth_header(options)
-      RestClient.post(url, data.to_json, auth_header.merge({content_type: :json })) { |res, req, result|
-        if result.code == "200" || result.code == "201"
-          puts res
-        else
-          raise "#{result.code} error when clearing index: #{res}"
-        end
-      }
+      response = Datura::Helpers.es_http_request("POST", url,
+        body: data.to_json,
+        headers: auth_header.merge("Content-Type" => "application/json"))
+      if response.code == "200" || response.code == "201"
+        puts response.body
+      else
+        raise "#{response.code} error when clearing index: #{response.body}"
+      end
     else
       puts "come back anytime!"
       exit

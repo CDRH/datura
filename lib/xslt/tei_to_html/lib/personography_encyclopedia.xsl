@@ -39,9 +39,8 @@
 
     <!-- this is the same as the above but written to a specific file -->
     <xsl:for-each select="//person">
-      <!-- the filename will start relative to the html-generated (output) directory of a specific collection -->
-      <xsl:variable name="filename" select="concat('collections/', $collection, '/output/', $environment, '/html/', @xml:id, '.html')"/>
-      <xsl:result-document href="{$filename}">
+      <!-- the filename is relative to the html output directory, set via base-output-uri in xslt_transform.py -->
+      <xsl:result-document href="{@xml:id}.html">
         <xsl:call-template name="person_info"/>
       </xsl:result-document>
     </xsl:for-each>

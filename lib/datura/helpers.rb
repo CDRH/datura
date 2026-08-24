@@ -1,7 +1,9 @@
 require 'fileutils'
 require 'net/http'
 require 'nokogiri'
+require 'shellwords'
 require 'yaml'
+require 'uri'
 
 module Datura::Helpers
 
@@ -74,8 +76,10 @@ module Datura::Helpers
   # get_url
   #   sends a request to a given url
   def self.get_url(url)
-    url = URI.parse(url)
-    Net::HTTP.get_response(url)
+    uri = URI.parse(url)
+    http = Net::HTTP.new(uri.host, uri.port)
+    http.use_ssl = true if uri.scheme == "https"
+    http.request(Net::HTTP::Get.new(uri.request_uri))
   end
 
   # make_dirs
@@ -109,7 +113,7 @@ module Datura::Helpers
   def self.regex_files(files, regex=nil)
     array = files.nil? ? [] : files
     if !files.nil? && !regex.nil?
-      exp = Regexp.new(regex)
+      exp = validate_regex(regex, "--regex")
       array = files.select do |file|
         file_name = File.basename(file, ".*")
         match = exp.match(file_name)
@@ -117,6 +121,70 @@ module Datura::Helpers
       end
     end
     array
+  end
+
+  # proceed_files
+  #   returns all files from the first file matching the proceed regex onward (inclusive),
+  #   preserving directory order and sorting alphabetically within each directory.
+  #   Exits with an error if the regex matches zero or more than one file.
+  #   params: files (array of file paths), regex (string)
+  #   returns: array
+  def self.proceed_files(files, regex)
+    # Preserve directory order from input list; sort alphabetically within each directory
+    sorted = files.group_by { |f| File.dirname(f) }
+                  .sort_by { |dir, _| dir }
+                  .flat_map { |_, fs| fs.sort_by { |f| File.basename(f, ".*") } }
+    exp = validate_regex(regex, "--proceed")
+    matches = sorted.select { |f| exp.match(File.basename(f, ".*")) }
+
+    if matches.empty?
+      puts "ERROR: --proceed regex '#{regex}' matched no files. Exiting.".red
+      exit 1
+    elsif matches.length > 1
+      names = matches.map { |f| File.basename(f, ".*") }.join(", ")
+      puts "ERROR: --proceed regex '#{regex}' matched #{matches.length} files (#{names}). Refine your regex to match exactly one file. Exiting.".red
+      exit 1
+    end
+
+    proceed_index = sorted.index(matches.first)
+    sorted[proceed_index..]
+  end
+
+  # checkpoint_path
+  #   returns the full path to the proceed checkpoint file
+  #   params: options (hash with "collection_dir" and "environment" keys)
+  #   returns: string
+  def self.checkpoint_path(options)
+    File.join(options["collection_dir"], "logs", "proceed_#{options["environment"]}")
+  end
+
+  # read_checkpoint
+  #   reads the proceed checkpoint file and returns its contents
+  #   params: options (hash)
+  #   returns: string (basename without extension) or nil if file missing/empty
+  def self.read_checkpoint(options)
+    path = checkpoint_path(options)
+    return nil unless File.exist?(path)
+    content = File.read(path).strip
+    content.empty? ? nil : content
+  end
+
+  # write_checkpoint
+  #   writes the basename of the last posted file to the checkpoint file
+  #   params: basename (string, filename without extension), options (hash)
+  #   returns: nil
+  def self.write_checkpoint(basename, options)
+    path = checkpoint_path(options)
+    File.write(path, "#{basename}\n")
+  end
+
+  # clear_checkpoint
+  #   writes empty content to the checkpoint file, signaling no resume point
+  #   params: options (hash)
+  #   returns: nil
+  def self.clear_checkpoint(options)
+    path = checkpoint_path(options)
+    File.write(path, "")
   end
 
   # should_update?
@@ -134,10 +202,76 @@ module Datura::Helpers
     end
   end
 
+  # validate_regex
+  #   compiles a regex string; prints a readable error and exits if invalid
+  #   params: regex (string), flag (string, e.g. "--regex" or "--proceed")
+  #   returns: Regexp
+  def self.validate_regex(regex, flag)
+    Regexp.new(regex)
+  rescue RegexpError => e
+    puts "ERROR: Invalid regex for #{flag} '#{regex}': #{e.message}".red
+    exit 1
+  end
+
   def self.construct_auth_header(options)
     username = options["es_user"]
     password = options["es_password"]
-    { "Authorization" => "Basic #{Base64::encode64("#{username}:#{password}")}" }
+
+    if (username || password) && options["es_path"]&.start_with?("http://")
+      warn "[SECURITY WARNING] ES credentials are set but es_path uses unencrypted HTTP. " \
+           "Credentials will be transmitted in cleartext. Use HTTPS in production."
+    end
+
+    { "Authorization" => "Basic #{Base64::strict_encode64("#{username}:#{password}")}" }
+  end
+
+  def self.es_http_request(method, url, body: nil, headers: {})
+    uri = URI.parse(url)
+    http = Net::HTTP.new(uri.host, uri.port)
+    http.use_ssl = (uri.scheme == "https")
+    req_class = {
+      "GET"    => Net::HTTP::Get,
+      "PUT"    => Net::HTTP::Put,
+      "POST"   => Net::HTTP::Post,
+      "DELETE" => Net::HTTP::Delete
+    }.fetch(method.upcase)
+    req = req_class.new(uri.request_uri)
+    headers.each { |k, v| req[k.to_s] = v }
+    req.body = body if body
+
+    http.request(req)
+  end
+
+  def self.run_omeka_script(script_path, options)
+    '''
+    Build and run a Python Omeka posting script.
+
+    Handles common CLI flag forwarding (-e, -r, -m).
+    Called by bin/post_omeka and bin/post_omeka_html.
+
+    Parameters:
+    * script_path - absolute path to the Python script to run
+    * options     - hash of parsed CLI options ("environment", "regex", "media_skip")
+    '''
+    unless File.exist?(script_path)
+      puts "Omeka script not found at #{script_path}".red
+      return
+    end
+    command = ["python3", script_path]
+    command.append("-c", Shellwords.escape(options["csv_rows"])) if options["csv_rows"]
+    command.append("-e", Shellwords.escape(options["environment"])) if options["environment"]
+    command.append("-f", Shellwords.escape(options["format"])) if options["format"]
+    command.append("-r", Shellwords.escape(options["regex"])) if options["regex"]
+    command.append("-u", Shellwords.escape(options["update_time"])) if options["update_time"]
+    command.append("-m") if options["media_skip"]
+    # -p may be given with no value (nil, meaning "use last checkpoint") or
+    # with a regex string.  key? distinguishes "not provided" from nil.
+    if options.key?("proceed")
+      command.append("-p")
+      command.append(Shellwords.escape(options["proceed"])) if options["proceed"]
+    end
+    command.append("-j") if options["json_output"]
+    system(*command)
   end
 
 end

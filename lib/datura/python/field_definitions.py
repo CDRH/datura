@@ -1,10 +1,121 @@
-import sys
-import os
+import importlib.util
+import logging
 from datetime import datetime
-import omeka
+from pathlib import Path
+
+logger = logging.getLogger(__name__)
 
 class FieldDefinitions:
-    #these are the default field definitions, which may be overridden in specific projects
+    """
+    Default field extraction patterns for the Omeka S ingestion pipeline.
+
+    Each method receives the raw JSON item dict (a single record from the
+    Datura-generated ES output file) and returns the value to be posted for
+    that Omeka property, or None if the field is absent.
+
+    To override any method for a specific collection, copy
+    omeka_overrides_example.py to scripts/python/omeka_overrides.py in the
+    collection repository and subclass FieldDefinitions there. The get_fields()
+    factory below will load the override class automatically.
+    """
+
+    def __init__(self, omeka_data_base=""):
+        """
+        Parameters:
+        * omeka_data_base - base URL used to construct media URIs in uriData().
+                            Passed in from OmekaContext.omeka_data_base.
+                            Defaults to "" (empty string) so that instantiation
+                            without arguments is safe in tests.
+        """
+        # Stored as a private attribute and accessed only by uriData().
+        self._omeka_data_base = omeka_data_base
+
+    def private_fields(self):
+        """
+        Return a set of Omeka property terms whose values should be posted with
+        is_public=False. Override in field_overrides.py to mark specific fields
+        as private for this collection.
+
+        Example:
+            def private_fields(self):
+                return {"dcterms:identifier", "dcterms:source"}
+        """
+        return set()
+
+    def field_manifest(self):
+        """
+        Declare the ordered list of Omeka property mappings for this collection.
+
+        Each entry is a (omeka_term, method_name, datatype) triple:
+        * omeka_term  - Omeka S property term string, e.g. "dcterms:title"
+        * method_name - name of the extractor method on this FieldDefinitions
+                        instance to call for each JSON item
+        * datatype    - Omeka data type string
+
+        prepare_item() in api_fields.py iterates this manifest to build the
+        item payload, calling getattr(ctx.fields, method_name)(json_item) for each
+        entry. Overriding field_manifest in a CustomFields subclass is the
+        recommended way to add collection-specific Omeka properties without
+        touching prepare_item() itself.
+        """
+        return [
+            ("dcterms:title",             "title",                "literal"),
+            ("dcterms:identifier",        "identifier",           "literal"),
+            ("dh:collection",             "collection",           "literal"),
+            ("dh:category",               "category",             "literal"),
+            ("dh:category2",              "category2",            "literal"),
+            ("dh:uriData",                "uriData",              "uri"),
+            ("dcterms:type",              "dcterms_type",         "literal"),
+            ("dcterms:creator",           "creator",              "literal"),
+            ("dcterms:contributor",       "contributor",          "literal"),
+            ("dcterms:date",              "date",                 "numeric:timestamp"),
+            ("dh:dateDisplay",            "dateDisplay",          "literal"),
+            ("dh:dateYear",               "dateYear",             "literal"),
+            ("dcterms:description",       "description",          "literal"),
+            ("dcterms:format",            "dcterms_format",       "literal"),
+            ("dcterms:relation",          "relation",             "literal"),
+            ("dcterms:publisher",         "publisher",            "literal"),
+            ("dh:biblID",                 "biblID",               "literal"),
+            ("tei:biblTitle",             "biblTitle",            "literal"),
+            ("tei:biblPubPlace",          "biblPubPlace",         "literal"),
+            ("bibo:issue",                "issue",                "literal"),
+            ("bibo:pageStart",            "pageStart",            "literal"),
+            ("bibo:pageEnd",              "pageEnd",              "literal"),
+            ("bibo:section",              "section",              "literal"),
+            ("bibo:volume",               "volume",               "literal"),
+            ("tei:biblTitleA",            "biblTitleA",           "literal"),
+            ("tei:biblTitleM",            "biblTitleM",           "literal"),
+            ("tei:biblTitleJ",            "biblTitleJ",           "literal"),
+            ("dcterms:rightsHolder",      "rightsHolder",         "literal"),
+            ("dcterms:license",           "license",              "literal"),
+            ("dcterms:subject",           "subject",              "literal"),
+            ("dh:topic",                  "topic",                "literal"),
+            ("dh:category3",              "category3",            "literal"),
+            ("dh:category4",              "category4",            "literal"),
+            ("dh:category5",              "category5",            "literal"),
+            ("dh:note",                   "note",                 "literal"),
+            ("dcterms:abstract",          "abstract",             "literal"),
+            ("dh:keyword",                "keyword",              "literal"),
+            ("dh:keyword2",               "keyword2",             "literal"),
+            ("dh:keyword3",               "keyword3",             "literal"),
+            ("dh:keyword4",               "keyword4",             "literal"),
+            ("dh:keyword5",               "keyword5",             "literal"),
+            ("dcterms:source",            "source",               "literal"),
+            ("dcterms:medium",            "medium",               "literal"),
+            ("dcterms:extent",            "extent",               "literal"),
+            ("dcterms:language",          "language",             "literal"),
+            ("dh:box",                    "box",                  "literal"),
+            ("dh:folder",                 "folder",               "literal"),
+            ("foaf:name",                 "name",                 "literal"),
+            ("dh:spatial_short_name",     "spatial_short_name",   "literal"),
+            ("dh:annotationsText",        "annotationsText",      "literal"),
+            ("dh:itemText",               "itemText",             "literal"),
+        ]
+
+    def _get_citation(self, json):
+        """Return the citation sub-dict, or {} if absent or null."""
+        return json.get("citation") or {}
+
     def title(self, json):
         return json.get("title", None)
     
@@ -23,9 +134,10 @@ class FieldDefinitions:
     def uriData(self, json):
         uri_data = json.get("uri_data", None)
         if uri_data:
+            # Strip the original path and reconstruct the URI under the
+            # collection's configured media base URL. 
             filename = uri_data.split("/")[-1]
-            omeka_data_base = omeka.omeka_data_base
-            new_uri_data = f"{omeka_data_base}/{filename}"
+            new_uri_data = f"{self._omeka_data_base}/{filename}"
             return new_uri_data
     
     def dcterms_type(self, json):
@@ -33,27 +145,30 @@ class FieldDefinitions:
         return json.get("type", None)
     
     def creator(self, json):
-        creator_names = [creator['name'] for creator in json.get("creator") or [] if 'name' in creator]
-        return creator_names
+        # Return dicts with name+id so the dedup in api_fields preserves
+        # entries that share a name but have different ids.
+        return [{"name": creator["name"], "id": creator.get("id", "")}
+                for creator in json.get("creator") or [] if "name" in creator]
     
     def contributor(self, json):
-        contributor_names = [contributor['name'] for contributor in json.get("contributor") or [] if 'name' in contributor]
-        return contributor_names
+        # Return dicts with name+id so the dedup in api_fields preserves
+        # entries that share a name but have different ids.
+        return [{"name": contrib["name"], "id": contrib.get("id", "")}
+                for contrib in json.get("contributor") or [] if "name" in contrib]
     
+    # NOTE: use Pattern 5 in omeka_overrides if automatic conversion of dates with year or month only to yyyy-01-01
+    # back to yyyy for Omeka is desired
     def date(self, json):
         date_to_parse = json.get("date", None)
-        if date_to_parse and "-01-01" in date_to_parse:
-            #dates are automatically converted by Datura to yyyy-01-01 if month and date are missing
-            #convert such dates back to yyyy for Omeka S (since it is allowed by the date parser)
-            return datetime.strptime(date_to_parse, "%Y-%m-%d").year
-        else:
-            return date_to_parse
+        return date_to_parse
     
     def dateYear(self, json):
         date_to_parse = json.get("date", None)
         if date_to_parse:
-            year = datetime.strptime(date_to_parse, "%Y-%m-%d").year
-            return year
+            try:
+                return datetime.strptime(date_to_parse, "%Y-%m-%d").year
+            except ValueError:
+                return None
     
     def dateDisplay(self, json):
         return json.get("date_display", None)
@@ -66,48 +181,46 @@ class FieldDefinitions:
         return json.get("format", None)
     
     def relation(self, json):
-        relation_ids = [relation['id'] for relation in json.get("has_relation") or [] if 'id' in relation]
+        relations = json.get("has_relation") or {}
+        relation_ids = [relations['id']] if relations.get('id') is not None else []
         return relation_ids
-        
-    #citation fields
-    #TODO is citation always single-valued? if array might need to add code to deal with that
     
     def publisher(self, json):
-        return (json.get("citation") or {}).get("publisher", None)
+        return self._get_citation(json).get("publisher", None)
         
     def biblID(self, json):
         #note: this field is not yet implemented in the schema
-        return (json.get("citation") or {}).get("id", None)
+        return self._get_citation(json).get("id", None)
         
     def biblTitle(self, json):
-        return (json.get("citation") or {}).get("title", None)
+        return self._get_citation(json).get("title", None)
         
     def biblPubPlace(self, json):
-        return (json.get("citation") or {}).get("pubplace", None)
+        return self._get_citation(json).get("pubplace", None)
         
     def issue(self, json):
-        return (json.get("citation") or {}).get("issue", None)
+        return self._get_citation(json).get("issue", None)
         
     def pageStart(self, json):
-        return (json.get("citation") or {}).get("page_start", None)
+        return self._get_citation(json).get("page_start", None)
         
     def pageEnd(self, json):
-        return (json.get("citation") or {}).get("page_end", None)
+        return self._get_citation(json).get("page_end", None)
         
     def section(self, json):
-        return (json.get("citation") or {}).get("section", None)
+        return self._get_citation(json).get("section", None)
         
     def volume(self, json):
-        return (json.get("citation") or {}).get("volume", None)
+        return self._get_citation(json).get("volume", None)
         
     def biblTitleA(self, json):
-        return (json.get("citation") or {}).get("title_a", None)
+        return self._get_citation(json).get("title_a", None)
         
     def biblTitleM(self, json):
-        return (json.get("citation") or {}).get("title_m", None)
+        return self._get_citation(json).get("title_m", None)
     
     def biblTitleJ(self, json):
-        return (json.get("citation") or {}).get("title_j", None)
+        return self._get_citation(json).get("title_j", None)
         
     def rightsHolder(self, json):
         return json.get("rights_holder", None)
@@ -152,7 +265,7 @@ class FieldDefinitions:
         return json.get("keywords5", None)
     
     def source(self, json):
-        return json.get("has_source") and json.get("has_source", {}).get("title")
+        return (json.get("has_source") or {}).get("title")
         
     def medium(self, json):
         return json.get("medium", None)
@@ -170,8 +283,10 @@ class FieldDefinitions:
         return json.get("container_folder", None)
     
     def name(self, json):
-        person_names = [person['name'] for person in json.get("person") or [] if  'name' in person]
-        return person_names
+        # Return dicts with name+id so the dedup in api_fields preserves
+        # entries that share a name but have different ids.
+        return [{"name": person["name"], "id": person.get("id", "")}
+                for person in json.get("person") or [] if "name" in person]
     
     def spatial_short_name(self, json):
         spatial = json.get("spatial")
@@ -180,48 +295,58 @@ class FieldDefinitions:
         places = [spatial] if isinstance(spatial, dict) else spatial
         short_names = [place['short_name'] for place in places if 'short_name' in place]
         return short_names
-        
-    def correspSentName(self, json):
-        return json.get("correspSentName_omeka_s", None)
-    
-    def correspSentPlace(self, json):
-        return json.get("correspSentPlace_omeka_s", None)
-    
-    def correspSentDate(self, json):
-        return json.get("correspSentDate_omeka_s", None)
-    
-    def correspDeliveredName(self, json):
-        return json.get("correspDeliveredName_omeka_s", None)
-    
-    def correspDeliveredPlace(self, json):
-        return json.get("correspDeliveredPlace_omeka_s", None)
-    
-    def correspDeliveredDate(self, json):
-        return json.get("correspDeliveredDate_omeka_s", None)
-    
-    def distributor(self, json):
-        return json.get("distributor_omeka_s", None)
-    
-    def authority(self, json):
-        return json.get("authority_omeka_s", None)
-    
-    def biblNote(self, json):
-        return json.get("biblNote_omeka_s", None)
     
     def annotationsText(self, json):
         return json.get("annotations_text", None)
     
     def itemText(self, json):
         text = json.get("text", None)
-        if json.get("data_type"):
-            text += (" " + self.identifier(json))
+        if text and json.get("data_type"):
+            identifier = self.identifier(json)
+            if identifier:
+                text += (" " + identifier)
         return text
     
-def get_fields():
+def get_fields(omeka_data_base=""):
+    """
+    Return the appropriate FieldDefinitions instance for this collection.
+
+    Looks for a CustomFields class in scripts/python/field_overrides.py in
+    the collection directory (resolved from the current working directory).
+    If that file does not exist, falls back to the default FieldDefinitions
+    class. If the file exists but cannot be loaded, raises RuntimeError.
+
+    Parameters:
+    * omeka_data_base - passed through to the FieldDefinitions constructor
+                        so that uriData() can build correct media URIs.
+                        Callers should pass ctx.omeka_data_base.
+
+    Returns a FieldDefinitions instance (or a CustomFields subclass of it).
+    """
+    override_path = Path.cwd() / "scripts" / "python" / "field_overrides.py"
+    override_relative_path = "scripts/python/field_overrides.py"
+    if not override_path.exists():
+        return FieldDefinitions(omeka_data_base=omeka_data_base)
+
     try:
-        #make sure it can override from the right directly
-        sys.path.insert(0, './scripts/python')
-        from omeka_overrides import CustomFields
-        return CustomFields()
-    except ImportError:
-        return FieldDefinitions()
+        spec = importlib.util.spec_from_file_location("field_overrides", override_path)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+    except Exception as e:
+        raise RuntimeError(
+            f"Failed to load field overrides from {override_relative_path}: {e}"
+        ) from e
+
+    CustomFields = getattr(module, "CustomFields", None)
+    if CustomFields is None:
+        # File exists but defines no CustomFields class — use defaults.
+        return FieldDefinitions(omeka_data_base=omeka_data_base)
+
+    # CustomFields inherits __init__ from FieldDefinitions, so
+    # omeka_data_base is passed through automatically. Override __init__
+    # in CustomFields only if you need additional constructor logic.
+    logger.warning(
+        "Field overrides found at %s; custom field mappings will be applied.",
+        override_relative_path,
+    )
+    return CustomFields(omeka_data_base=omeka_data_base)

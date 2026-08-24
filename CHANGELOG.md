@@ -25,6 +25,40 @@ Versioning](https://semver.org/spec/v2.0.0.html).
 ### Security
 -->
 
+## [v2.0.0] - Shift to saxonche, improve error handling, refactor Omeka S posting, add post options
+[v2.0.0]: https://github.com/CDRH/datura/compare/v1.1.0...v2.0.0
+
+### Added
+- `--csv-rows` filter option added to enable line-by-line transformation of CSV data
+- `--json-output` option (Omeka specific) added to output JSON instead of posting to Omeka S
+- `--proceed` option added to enable restarting of post from a checkpoint
+
+### Changed
+- Omeka S posting pipeline refactored to, among other things: 
+  - introduce `OmekaContext` dataclass to encapsulate shared runtime state into a single object
+  - restructure overrides and update example files
+  - add filter from Ruby side (`--update`)
+  - remove all output JSON as part of a complete post to Omeka S
+  - adjust params for Omeka S API calls (see [`omeka_s_tools` fork](https://github.com/CDRH/omeka_s_tools))
+  - update dependency list and create `requirements.in` file from which `requirements.txt` can be auto-generated
+  - improve logging and error handling
+  - fix bugs
+- Updated Ruby and Python dependencies where possible, removed unused/deprecated dependencies
+- Improved error handling: clarify XML/CSV parse errors and environment errors, show all errors at end of post
+- Created option and fall-back to `full` for iiif URL creation
+
+### Removed
+- Removed `RestClient` in favor of built-in `net-http` library
+
+### Migration
+- Shifted to use Python `saxonche` package instead of Saxon calls to eliminate per-file JVM startup
+
+### Security
+- `safe_load` added for YAML
+- SSL verification and regex validation added
+
+Note that several of the above changes and some of the language and description in the documentation were created with Claude Code. All code and documentation has been reviewed and updated by CDRH staff. 
+
 ## [v1.1.0] - Omeka S Posting
 [v1.1.0]: https://github.com/CDRH/datura/compare/v1.0.1...v1.1.0
 
