@@ -8,6 +8,8 @@
 # including it do not each need to redefine the JSON
 # request structure
 
+require "byebug"
+
 module EsRequest
 
   def assemble_json
@@ -19,9 +21,9 @@ module EsRequest
 
     # below not alphabetical to reflect their position
     # in the cdrh api schema
-    if @options["api_version"] == "1.0"
+    if @options["api_version"].to_s == "1.0"
       assemble_json_1
-    elsif @options["api_version"] == "2.0"
+    elsif @options["api_version"].to_s == "2.0"
       assemble_json_2
     end
     assemble_collection_specific
