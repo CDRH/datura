@@ -398,7 +398,9 @@
 
   <xsl:template match="lb">
     <xsl:apply-templates/>
-    <br/>
+    <div class="tei_linebreak">
+      <xsl:text> </xsl:text>
+    </div>
   </xsl:template>
 
   <!-- ================================================ -->
